@@ -3,19 +3,21 @@ id: charles-proxy
 title: Setting Up Charles Proxy
 hide_title: true
 sidebar_label: Setting Up Charles Proxy
-description: This article will guide you on how to setup Charles Proxy for the tests run on LambdaTest platform through LambdaTest Tunnel.
+description: This article will guide you on how to setup Charles Proxy for the tests run on TestMu AI platform through TestMu AI Tunnel.
 keywords:
   - Charles Proxy
   - Network Logs With Charles Proxy
   - Network Logs
-  - LambdaTest Tunnel
-  - LambdaTest with Charles Proxy
-  - Charles Proxy With LambdaTest
-  - LambdaTest Cloud Platform
-url: https://www.lambdatest.com/support/docs/charles-proxy/
+  - TestMu AI Tunnel
+  - TestMu AI with Charles Proxy
+  - Charles Proxy With TestMu AI
+  - TestMu AI Cloud Platform
+url: https://www.testmu.ai/support/docs/charles-proxy
 site_name: LambdaTest
-slug: charles-proxy/
+slug: charles-proxy
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,27 +27,27 @@ slug: charles-proxy/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/charles-proxy/"
+          "item": `${BRAND_URL}/support/docs/charles-proxy/`
         }]
       })
     }}
 ></script>
 
-# Setting Up Charles Proxy Through LambdaTest Tunnel
+# Setting Up Charles Proxy Through <BrandName /> Tunnel
 
 ---
 
-This article will guide you on how to setup Charles Proxy for the tests run on LambdaTest platform through LambdaTest Tunnel.
+This article will guide you on how to setup Charles Proxy for the tests run on <BrandName /> platform through <BrandName /> Tunnel.
 
 ## Objective
 
@@ -53,8 +55,8 @@ This article will guide you on how to setup Charles Proxy for the tests run on L
 
 By the end of this article, you will be able to :
 
-- Configure **LambdaTest Tunnel** and setup **Charles Proxy** for your tests through the created tunnel.
-- View Network Logs of the tests run on the **LambdaTest Cloud Platform** on Charles Interface.
+- Configure **<BrandName /> Tunnel** and setup **Charles Proxy** for your tests through the created tunnel.
+- View Network Logs of the tests run on the **<BrandName /> Cloud Platform** on Charles Interface.
 - Manipulate the **Network Requests** of the tests through **SSL Proxying** on Charles.
 
 ## What is Charles Proxy?
@@ -77,11 +79,11 @@ Before getting started with the setup, you would have to follow these steps:
    > - [MacOS](https://www.charlesproxy.com/download/#)
    > - [Linux](https://www.charlesproxy.com/download/#)
 
-2. Download the LambdaTest Tunnel binary file and extract it to setup the tunnel.
+2. Download the <BrandName /> Tunnel binary file and extract it to setup the tunnel.
 
-   > - [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-   > - [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-   > - [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+   > - [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+   > - [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+   > - [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 3. Or you can download the **GUI** tunnel application **Underpass** to setup the tunnel easily without using terminal.
 
@@ -116,19 +118,19 @@ Now, navigate to the **Proxy Settings** on Charles to view the **Port Number** u
 
 ---
 
-> In this case the Port number which is in use is `8888`. We will be using it to configure the LambdaTest Tunnel.
+> In this case the Port number which is in use is `8888`. We will be using it to configure the <BrandName /> Tunnel.
 
-## Configuring The LambdaTest Tunnel
+## Configuring The <BrandName /> Tunnel
 
 ---
 
-Now you need to setup and configure the LambdaTest Tunnel through which you will be able to route the traffic of your tests run using Charles Proxy. You can configure a LambdaTest Tunnel by using the tunnel **binary file** or by downloading the **GUI** application **Underpass** by LambdaTest.
+Now you need to setup and configure the <BrandName /> Tunnel through which you will be able to route the traffic of your tests run using Charles Proxy. You can configure a <BrandName /> Tunnel by using the tunnel **binary file** or by downloading the **GUI** application **Underpass** by <BrandName />.
 
 ### Through The Binary File
 
 ---
 
-To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the Prerequisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
+To configure the tunnel, you need to download the **<BrandName />'s Tunnel Binary File** following the steps mentioned in the Prerequisites before. You can find the shell command in the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
 <img loading="lazy" src={require('../assets/images/charles/Charles_RD.png').default} alt="cmd" className="doc_img" width="806" height="544"/>
 
@@ -142,7 +144,7 @@ But here we need to add the Charles proxy server through which we want to route 
 --proxy-port 8888
 ```
 
-> You can get your LambdaTest Access Key from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/).
+> You can get your <BrandName /> Access Key from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
 
 You need to run the above command from the terminal in the directory where you have extracted the **LT binary file** as shown. Make sure that **Charles Proxy Session** is up and running before you can start the tunnel. Now once the tunnel is setup, you will be able to see **"You can start testing now"** in the terminal as shown.
 
@@ -152,7 +154,7 @@ You need to run the above command from the terminal in the directory where you h
 
 ---
 
-Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the Prerequisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](https://www.lambdatest.com/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **LambdaTest authentication credentials** as shown below.
+Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the Prerequisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **<BrandName /> authentication credentials** as shown below.
 
 
 
@@ -169,7 +171,7 @@ On clicking the **Launch** button, you will be able to start the tunnel with the
 
 <img loading="lazy" src={require('../assets/images/charles/underpass3.png').default} alt="cmd" className="doc_img"/>
 
-## Steps to download the SSL certificate in the LambdaTest Private Real Devices:
+## Steps to download the SSL certificate in the <BrandName /> Private Real Devices:
 
 ---
 > Only for **Private Cloud** Users.
@@ -284,12 +286,12 @@ Now when we try opening the URL, we can see the `lambdatest` appear in the place
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

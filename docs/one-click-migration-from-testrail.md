@@ -3,15 +3,18 @@ id: one-click-migration-from-testrail
 title: One Click Migration from TestRail
 hide_title: true
 sidebar_label: One Click Migration from TestRail
-description: Effortlessly migrate from TestRail to LambdaTest with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
+description: Effortlessly migrate from TestRail to TestMu AI with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
 keywords:
   - testrail
   - import data from testrail
   - import data
-url: https://www.lambdatest.com/support/docs/one-click-migration-from-testrail/
+url: https://www.testmu.ai/support/docs/one-click-migration-from-testrail
 site_name: LambdaTest
-slug: one-click-migration-from-testrail/
+slug: one-click-migration-from-testrail
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: one-click-migration-from-testrail/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "One Click Migration from TestRail",
-          "item": "https://www.lambdatest.com/support/docs/one-click-migration-from-testrail/"
+          "item": `${BRAND_URL}/support/docs/one-click-migration-from-testrail/`
         }]
       })
     }}
@@ -73,12 +76,12 @@ Efficiently importing data from TestRail streamlines your test management proces
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

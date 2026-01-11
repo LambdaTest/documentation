@@ -3,14 +3,17 @@ id: insights-dashboard
 title: Insights Dashboard
 hide_title: true
 sidebar_label: Insights Dashboard
-description: Manage system and custom fields in LambdaTest's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
+description: Manage system and custom fields in TestMu AI's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
 keywords:
   - insights
   - insights dashboard
-url: https://www.lambdatest.com/support/docs/insights-dashboard/
+url: https://www.testmu.ai/support/docs/insights-dashboard
 site_name: LambdaTest
-slug: insights-dashboard/
+slug: insights-dashboard
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,18 +22,18 @@ slug: insights-dashboard/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Insights Dashboard",
-          "item": "https://www.lambdatest.com/support/docs/insights-dashboard/"
+          "item": `${BRAND_URL}/support/docs/insights-dashboard/`
         }]
       })
     }}
@@ -72,12 +75,12 @@ These insights help in monitoring and improving the testing process, ensuring co
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -3,20 +3,20 @@ id: hyperexecute-algoqa-integration
 title: Integrate algoQA with HyperExecute
 hide_title: false
 sidebar_label: algoQA
-description:  Unleash the power of algoQA & LambdaTest HyperExecute! Streamline test management & experience fast execution.
+description:  Unleash the power of algoQA & TestMu AI HyperExecute! Streamline test management & experience fast execution.
 keywords:
-  - LambdaTest HyperExecute
-  - LambdaTest HyperExecute help
-  - LambdaTest HyperExecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - algoQA
   - Integrations
   - Products
   - Test case management
   - Automated testing
   - Cloud-based testing
-url: https://www.lambdatest.com/support/docs/hyperexecute-algoqa-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration
 site_name: LambdaTest
-slug: hyperexecute-algoqa-integration/
+slug: hyperexecute-algoqa-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,17 +35,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-algoqa-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-algoqa-integration/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ This document will guide you how to integrate your algoQA project with HyperExec
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environment Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
@@ -67,7 +69,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the algoQA from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the algoQA from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/algoQA-HyperExecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -90,7 +92,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

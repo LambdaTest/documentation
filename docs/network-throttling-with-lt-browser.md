@@ -10,10 +10,13 @@ keywords:
   - test over different network profiles
   - responsive testing
   - responsive testing using network throttling
-url: https://www.lambdatest.com/support/docs/network-throttling-for-responsive-testing/
+url: https://www.testmu.ai/support/docs/network-throttling-for-responsive-testing
 site_name: LambdaTest
-slug: network-throttling-for-responsive-testing/
+slug: network-throttling-for-responsive-testing
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +25,18 @@ slug: network-throttling-for-responsive-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/network-throttling-for-responsive-testing/"
+          "item": `${BRAND_URL}/support/docs/network-throttling-for-responsive-testing/`
         }]
       })
     }}
@@ -80,12 +83,12 @@ That's all folks!. In case you come across any doubts, feel free to reach out th
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -5,16 +5,19 @@ hide_title: true
 sidebar_label: Stage Widgets
 description: HyperExecute Stage Widgets track and group stages by status (Completed, Skipped, Failed, Aborted, etc.) for efficient monitoring.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Stage
-url: https://www.lambdatest.com/support/docs/hyperexecute-stage-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-stage-widgets
 site_name: LambdaTest
-slug: hyperexecute-stage-widgets/
+slug: hyperexecute-stage-widgets
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-stage-widgets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Widgets",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-stage-widgets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-stage-widgets/`
         }]
       })
     }}

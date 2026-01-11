@@ -13,13 +13,14 @@ keywords:
     - test cases
     - azure binaries
     - azure test plan integration
-url: https://www.lambdatest.com/support/docs/hyperexecute-integrate-azure-test-plan/
+url: https://www.testmu.ai/support/docs/hyperexecute-integrate-azure-test-plan
 site_name: LambdaTest
-slug: hyperexecute-integrate-azure-test-plan/
+slug: hyperexecute-integrate-azure-test-plan
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Test Plan Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-integrate-azure-test-plan/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-integrate-azure-test-plan/`
         }]
       })
     }}

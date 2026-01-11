@@ -2,22 +2,22 @@
 id: desired-capabilities-in-appium
 title: Desired Capabilities 
 sidebar_label: Desired Capabilities
-description: This document will teach you how to leverage LambdaTest Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.
+description: This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.
 keywords:
   - cross browser testing
   - appium capabilities generator
   - appium desired capabilities
-  - lambdatest appium grid capabilities
-  - lambdatest automation capabilities generator
+  - testmu ai appium grid capabilities
+  - testmu ai automation capabilities generator
   - appium capability configuration
   - appium automation testing
   - appium automation grid online
   - configure appium tests with desired capabilities
-  - appium webdriver capabilities for running tests on lambdatest
+  - appium webdriver capabilities for running tests on testmu ai
 
-url: https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/
+url: https://www.testmu.ai/support/docs/desired-capabilities-in-appium
 site_name: LambdaTest
-slug: desired-capabilities-in-appium/
+slug: desired-capabilities-in-appium
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
@@ -38,17 +40,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Desired Capabilities In appium",
-          "item": "https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/"
+          "item": `${BRAND_URL}/support/docs/desired-capabilities-in-appium/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ Desired capabilities in [Appium](https://www.lambdatest.com/appium) are essentia
 
 By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.lambdatest.com/mobile-app-testing). 
 
-> **Note:** With LambdaTest [capabilities generator](https://www.lambdatest.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
+> **Note:** With <BrandName /> [capabilities generator](https://www.lambdatest.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 
 <div class="desired-capabilities-page">
 
@@ -92,7 +94,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | newCommandTimeout | TYPE: STRING <br/> DEFAULT: 60 <br/> `newCommandTimeout=60` | How long (in seconds) Appium will wait for a new command from the client before assuming the client quit and ending the session. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | automationName | TYPE: STRING <br/> DEFAULT (Android): UiAutomator2 <br/> DEFAULT (iOS): XCUITest <br/> `automationName = UiAutomator2` | Choose which automation engine you'd like to use. <br/> Android - `UiAutomator2`, `Flutter`. <br/> iOS - `XCUITest`, `Flutter`. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | eventTimings | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `true` | Enable or disable the reporting of the timings for various Appium-internal events (e.g., the start and end of each command, etc.). To enable, use true. The timings are then reported as events property on response to querying the current session. See the event timing docs for the the structure of this response. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
-| otherApps | TYPE: ARRAY OF STRINGS <br/> DEFAULT: [ ] or Empty Array <br/> `"otherApps":` <br/> `["lt://APP1002211081648217405891389",` <br/> `"lt://APP1002211081648217429465823"]` | Accepts a list of App URLs returned after uploading an app on the LambdaTest servers. <br/> Conditions to be satisfied:<br/>1. App should also be passed if "otherApps" is passed.<br/> 2. Length of app URL <br/>array &le; 3.<br/>3. At max 3 other apps can be installed.<br/>4. App should not be present inside 'otherApp' array.<br/>5. No duplicates in ‘otherApp’ array. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
+| otherApps | TYPE: ARRAY OF STRINGS <br/> DEFAULT: [ ] or Empty Array <br/> `"otherApps":` <br/> `["lt://APP1002211081648217405891389",` <br/> `"lt://APP1002211081648217429465823"]` | Accepts a list of App URLs returned after uploading an app on the <BrandName /> servers. <br/> Conditions to be satisfied:<br/>1. App should also be passed if "otherApps" is passed.<br/> 2. Length of app URL <br/>array &le; 3.<br/>3. At max 3 other apps can be installed.<br/>4. App should not be present inside 'otherApp' array.<br/>5. No duplicates in ‘otherApp’ array. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | globalHttpProxy | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/>  globalHttpProxy = true | This is only for Android specific applications and devices. <br/> If the customer’s app requires Proxy to enable Data Transfer that is not possible otherwise, they can reach out to the CS & LT will enable it for them from BE.This is not available for customers directly unless set from BE by LT. | <RealDeviceTag value="Real Device" /> |
 | region | TYPE: STRING <br/> DEFAULT: Location of the nearest data center <br/> `region = US` | 1. By default, it picks the location of the nearest data center.<br/>2.  If you would like to change the region of the Data Center manually, you can pass this capability.<br/> 3. Currently, only three regions are supported: Europe - "EU", USA - "US" and Asia-Pacific - "AP" | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | waitForIdleTimeout | TYPE: BOOLEAN <br/> `waitForIdleTimeout = 0` | 1. Sets the timeout for waiting for the user interface to go into an idle state before starting a UI Automator action.<br/>2.  It changes the timeout of the configuration in UIAutomator and could help to make interaction speed faster.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
@@ -119,7 +121,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
 | language | TYPE: STRING <br/> `fr` | Language to set for iOS (XCUITest driver only) and Android. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
-| locale | TYPE: STRING <br/> `fr_CA, CA` | Locale to set for iOS (XCUITest driver only) and Android. fr_CA format (language code and country name abbreviationfor iOS). CA format (country name abbreviation) for Android.<br/> For more info, [click here.](https://www.lambdatest.com/support/docs/list-of-supported-locales/) | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
+| locale | TYPE: STRING <br/> `fr_CA, CA` | Locale to set for iOS (XCUITest driver only) and Android. fr_CA format (language code and country name abbreviationfor iOS). CA format (country name abbreviation) for Android.<br/> For more info, [click here.](/support/docs/list-of-supported-locales/) | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | disableAnimation | TYPE: BOOLEAN <br/> DEFAULT: False <br/>`disableAnimation = true` | Disable all kinds of animations on the complete device [including all applications] that is running the test.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | lambdaMaskCommands | TYPE: Array of Strings <br/> DEFAULT: Empty Array <br/>`["setValues", "setCookies", "getCookies"]` | Used to make sure that the values aren't shown on the device. The text could be a Password.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | timezone | TYPE: String <br/>`timezone=UTC+13:00`<br/>`timezone=UTC-0400` | Used to set the timezone on the device using the UTC Time. <br/>If this capability is not passed, the device will auto update the timezone based on the physical location of the device.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
@@ -139,7 +141,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 ## Network configuration
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
-| tunnel | TYPE: BOOLEAN <br/> `tunnel=TRUE` <br/> OR <br/> `tunnel=FALSE` | To test local applications with LambdaTest.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
+| tunnel | TYPE: BOOLEAN <br/> `tunnel=TRUE` <br/> OR <br/> `tunnel=FALSE` | To test local applications with <BrandName />.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | tunnelName | TYPE: STRING <br/> `tunnelName=RabbitHole` | Name of the tunnel. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | dedicatedProxy | TYPE: BOOLEAN <br/> `dedicatedProxy=TRUE` <br/> OR <br/> `dedicatedProxy=FALSE` | Dedicated Proxy. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | blockDomains | TYPE: Array of Strings <br/> `"blockDomains": ["www.facebook.com", "www.amazon.com"]  ` | It is used to block the mentioned domains on the device.|  <RealDeviceTag value="Real Device" /> |
@@ -152,12 +154,12 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

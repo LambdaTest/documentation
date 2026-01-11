@@ -5,14 +5,16 @@ hide_title: false
 sidebar_label: Configurations
 description: Learn how to levearge configurations to execute your tests in multiple environments.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - kaneai
   - test manager
   - configurations
-url: https://www.lambdatest.com/support/docs/test-runs-configurations/
+url: https://www.testmu.ai/support/docs/test-runs-configurations
 site_name: LambdaTest
-slug: test-runs-configurations/
+slug: test-runs-configurations
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: test-runs-configurations/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Configurations in KaneAI & Test Manager",
-          "item": "https://www.lambdatest.com/support/docs/test-runs-configurations"
+          "item": `${BRAND_URL}/support/docs/test-runs-configurations`
         }]
       })
     }}
@@ -83,7 +85,7 @@ The following options are only available for only KaneAI generated test runs
 :::
 
 ###### Device Type: Private Cloud vs Public Cloud
-Available for organisations with a private cloud real device plan with LambdaTest. The option allows for users to choose from set of public pool of devices vs private pool dedicated specifically for that organisation.
+Available for organisations with a private cloud real device plan with <BrandName />. The option allows for users to choose from set of public pool of devices vs private pool dedicated specifically for that organisation.
 
 ##### Multi‑select for KaneAI configurations
 * KaneAI allows multi‑select for Manufacturer, Device, and OS Version to allow for larger set of device pool for any configuration. Using multiple devices ensures that you always are able to proceed with executions on HyperExecute.
@@ -94,7 +96,7 @@ Available for organisations with a private cloud real device plan with LambdaTes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="kaneai-update-app-config" className="doc_img"/>
 
-* **Custom ID** – In case you are using [API](https://www.lambdatest.com/support/docs/application-setup-via-api/#upload-your-application) to upload your application and using the custom_id parameter, you can choose to add a custom ID while creating a configuration, so  that the application gets updated automatically each time you upload a new app with the same custom_id.
+* **Custom ID** – In case you are using [API](/support/docs/application-setup-via-api/#upload-your-application) to upload your application and using the custom_id parameter, you can choose to add a custom ID while creating a configuration, so  that the application gets updated automatically each time you upload a new app with the same custom_id.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/CustomID.png').default} alt="kaneai-custom-id-app" className="doc_img"/>
 

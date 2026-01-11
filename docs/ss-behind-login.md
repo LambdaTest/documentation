@@ -3,7 +3,7 @@ id: ss-behind-login
 title: Taking Screenshots of Pages Behind Login
 hide_title: true
 sidebar_label: Taking Screenshots Behind Login
-description: With LambdaTest, now you can capture bulk screenshots of your web app or webpages, whether they behind a sign-in form or on a private staging server, for different browsers to measure the cross-browser compatibility.
+description: With TestMu AI, now you can capture bulk screenshots of your web app or webpages, whether they behind a sign-in form or on a private staging server, for different browsers to measure the cross-browser compatibility.
 keywords:
   - screenshot behind login
   - screenshot after login
@@ -12,10 +12,12 @@ keywords:
   - screenshot testing after login page
 
 
-url: https://www.lambdatest.com/support/docs/taking-screenshots-of-pages-behind-login/
+url: https://www.testmu.ai/support/docs/taking-screenshots-of-pages-behind-login
 site_name: LambdaTest
-slug: taking-screenshots-of-pages-behind-login/
+slug: taking-screenshots-of-pages-behind-login
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: taking-screenshots-of-pages-behind-login/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Taking Screenshots of Pages Behind Login",
-          "item": "https://www.lambdatest.com/support/docs/taking-screenshots-of-pages-behind-login/"
+          "item": `${BRAND_URL}/support/docs/taking-screenshots-of-pages-behind-login/`
         }]
       })
     }}
@@ -43,7 +45,7 @@ slug: taking-screenshots-of-pages-behind-login/
 
 # Taking Screenshots of Pages Behind Login
 ***
-LambdaTest offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.lambdatest.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
+<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.lambdatest.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="HT8ODEExxZM">
@@ -56,7 +58,7 @@ This document will help you understand how you can capture bulk screenshots of y
 ## Understanding The Basics Of Login Profile
 ***
 
-To capture screenshots after your website's login page, you are required to configure a **login profile** in your LambdaTest account. This login profile will help you store the values for respective login fields such as ID, E-mail, along with the **submit** button using the **Locators**.
+To capture screenshots after your website's login page, you are required to configure a **login profile** in your <BrandName /> account. This login profile will help you store the values for respective login fields such as ID, E-mail, along with the **submit** button using the **Locators**.
 
 **What are locators?**
 
@@ -89,7 +91,7 @@ Finally, the Screenshot test URL is fed into the Screenshot driver, allowing it 
 
 To begin, we need to configure a login profile that would specify the website under test, locators, and login credentials. This is a one-time process. Without further ado, let’s configure the Login profile.
 
-Login into your LambdaTest account and go to **Screenshot** by clicking on the drop down for Visual UI Testing from the left-navigation menu.
+Login into your <BrandName /> account and go to **Screenshot** by clicking on the drop down for Visual UI Testing from the left-navigation menu.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-1.webp').default} alt="Image"  width="1344" height="644" className="doc_img"/>
 
@@ -113,7 +115,7 @@ Select the **locator** as per your respective fields in the Login form.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-4.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
-For the demonstration, let us capture the details for [LambdaTest Login](https://accounts.lambdatest.com/login).
+For the demonstration, let us capture the details for [<BrandName /> Login](https://accounts.lambdatest.com/login).
 >
 **Note:** If you are already logged in to [LambdaTest](https://www.lambdatest.com), make sure to perform this drill in **incognito mode**.
 
@@ -130,11 +132,11 @@ For the demonstration, let us capture the details for [LambdaTest Login](https:/
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-7.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
-**Step 4:** Switch to your normal browser where you are logged into the LambdaTest application. Provide the Email field details in the **Username Locators**.
+**Step 4:** Switch to your normal browser where you are logged into the <BrandName /> application. Provide the Email field details in the **Username Locators**.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-8.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
-**Step 5:** Switch back to incognito mode and inspect the **password** field in the LambdaTest login form.
+**Step 5:** Switch back to incognito mode and inspect the **password** field in the <BrandName /> login form.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-9.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
@@ -148,7 +150,7 @@ For the demonstration, let us capture the details for [LambdaTest Login](https:/
 
 
 >
-**Note:** In the above demonstration, you will find the class name placed for the login button in the LambdaTest login.  However, the class name may be similar for multiple HTML elements located in a login form, so it is considered a best practice to copy the XPath for such scenarios.
+**Note:** In the above demonstration, you will find the class name placed for the login button in the <BrandName /> login.  However, the class name may be similar for multiple HTML elements located in a login form, so it is considered a best practice to copy the XPath for such scenarios.
 
 **Step 8:** Now, on your normal browser, Select the XPath locator and paste the copied XPath for the **Login button locator**, and hit **Next**.
 
@@ -167,7 +169,7 @@ Once you select ChroPath, you can copy the locator value. For example, in the sh
 
 ### Provide The Login Credentials
 
-Under the credentials, provide your login details for the website you wish to test and hit **Next**. For a demonstration, you can provide your LambdaTest login details.
+Under the credentials, provide your login details for the website you wish to test and hit **Next**. For a demonstration, you can provide your <BrandName /> login details.
 
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-15.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
@@ -184,14 +186,14 @@ Once you hit the save button, you will find the below prompt indicating that the
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-17.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
-Kudos, you have successfully configured the Login profile. This profile will be saved in your LambdaTest account, so the next time you need to run a similar test, all you need is to enable the flag for this Login profile.
+Kudos, you have successfully configured the Login profile. This profile will be saved in your <BrandName /> account, so the next time you need to run a similar test, all you need is to enable the flag for this Login profile.
 
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-18.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
 ## Running Automated Screenshot After The Login Page
 ***
-**Step 1:** Login to LambdaTest and go to [Screenshot Testing](https://www.lambdatest.com/support/docs/automated-screenshot-testing/). Enable the flag for the profile you wish to test.
+**Step 1:** Login to <BrandName /> and go to [Screenshot Testing](/support/docs/automated-screenshot-testing/). Enable the flag for the profile you wish to test.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-19.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
@@ -209,12 +211,12 @@ In case you have any questions, drop us an email at support@lambdatest.com or si
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

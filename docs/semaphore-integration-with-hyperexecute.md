@@ -3,19 +3,21 @@ id: semaphore-integration-with-hyperexecute
 title: Semaphore CI Integration With HyperExecute
 hide_title: true
 sidebar_label: Semaphore
-description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with LambdaTest HyperExecute for enhanced testing performance.
+description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with TestMu AI HyperExecute for enhanced testing performance.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration
   - continuous delivery
   - continuous integration tools
   - semaphore ci
-url: https://www.lambdatest.com/support/docs/semaphore-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/semaphore-integration-with-hyperexecute
 site_name: LambdaTest
-slug: semaphore-integration-with-hyperexecute/
+slug: semaphore-integration-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,18 +26,18 @@ slug: semaphore-integration-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Semaphore Integration",
-          "item": "https://www.lambdatest.com/support/docs/semaphore-integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/semaphore-integration-with-hyperexecute/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ To integrate Semaphore Pipeline with HyperExecute, follow the below steps:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/semaphore" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -76,7 +78,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/4.png').default} alt="Image"  className="doc_img"/>
 
-**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your LambdaTest [UserName and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your <BrandName /> [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

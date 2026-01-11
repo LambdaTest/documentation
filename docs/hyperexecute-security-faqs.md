@@ -5,14 +5,16 @@ hide_title: true
 sidebar_label: Security FAQs
 description: Explore answers to all your HyperExecute Security-related queries with our comprehensive FAQs, designed to clarify all your concerns!
 keywords:
-  - LambdaTest HyperExecute
-  - LambdaTest HyperExecute help
-  - LambdaTest HyperExecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-security-faqs/
+url: https://www.testmu.ai/support/docs/hyperexecute-security-faqs
 site_name: LambdaTest
-slug: hyperexecute-security-faqs/
+slug: hyperexecute-security-faqs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-security-faqs/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-cli-faqs/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-faqs/`
         }]
       })
     }}
@@ -97,7 +99,7 @@ We follow strict security levels at each step. We are SOC 2 compliant.
 ***
  
 #### 10. What is the data retention time period? Can we ask to delete it anytime?
-We store the data for a max of 60 days. Yes, you can ask the LambdaTest team fore the deletion of your data via email.
+We store the data for a max of 60 days. Yes, you can ask the <BrandName /> team fore the deletion of your data via email.
  
 ***
 
@@ -120,12 +122,12 @@ SAS token is generated only for 60 min in use and is different every time. This 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

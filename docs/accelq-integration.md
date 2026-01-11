@@ -3,15 +3,17 @@ id: accelq-integration
 title: ACCELQ Integration
 hide_title: true
 sidebar_label: ACCELQ
-description: Accelerate your end-to-end digital testing journey with LambdaTest and ACCELQ.  Automate your web and mobile apps across 3000+ real browsers, devices and operating system combinations.
+description: Accelerate your end-to-end digital testing journey with TestMu AI and ACCELQ.  Automate your web and mobile apps across 3000+ real browsers, devices and operating system combinations.
 keywords:
-  - lambdatest integration with accelq
-  - lambdatest and accelq integration 
+  - testmu ai integration with accelq
+  - testmu ai and accelq integration 
   - accelq integration
-url: https://www.lambdatest.com/support/docs/accelq-integration/
+url: https://www.testmu.ai/support/docs/accelq-integration
 site_name: LambdaTest
-slug: accelq-integration/
+slug: accelq-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: accelq-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ACCELQ Integration",
-          "item": "https://www.lambdatest.com/support/docs/accelq-integration/"
+          "item": `${BRAND_URL}/support/docs/accelq-integration/`
         }]
       })
     }}
@@ -42,20 +44,20 @@ slug: accelq-integration/
 
 ACCELQ is an AI Native Codeless automation testing and management platform. It enables you automate web, mobile, API, database, and packaged applications.
 
-By integrating LambdaTest with ACCELQ, you can perform web and mobile app automation on an online device farm of 3000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.
+By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 3000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.
 
 ## Prerequisites
 ---
 
-1. Make sure you have a LambdaTest account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
 
-2. To integrate LambdaTest with ACCELQ, you will need a LambdaTest username and access key.
+2. To integrate <BrandName /> with ACCELQ, you will need a <BrandName /> username and access key.
 
 <img loading="lazy" src={require('../assets/images/accelq-integration/key.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 3. Install the ACCELQ Agent Dashboard.
 
-## Integrating LambdaTest From ACCELQ Agent Dashboard
+## Integrating <BrandName /> From ACCELQ Agent Dashboard
 ---
 
 1. Open your ACCELQ Agent Dashboard.
@@ -68,11 +70,11 @@ By integrating LambdaTest with ACCELQ, you can perform web and mobile app automa
 
 <img loading="lazy" src={require('../assets/images/accelq-integration/accel_1.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-4. Now enter your LambdaTest username and access key and save/restart the ACCELQ Agent.
+4. Now enter your <BrandName /> username and access key and save/restart the ACCELQ Agent.
 
 ### Executing The Tests
 
-1. Once the agent is operable, you can choose browser, device and OS combinations from the list that LambdaTest support.
+1. Once the agent is operable, you can choose browser, device and OS combinations from the list that <BrandName /> support.
 
 2. From the Run modal, select the agent from the AGENT/HOST section. After that, choose browser and device from the corresponding sections.
 
@@ -81,13 +83,13 @@ By integrating LambdaTest with ACCELQ, you can perform web and mobile app automa
 
 1. From the **Record View** dialog box, click **Cloud Provider**.
 
-2. Select *LambdaTest* from the **Provider** dropdown. Enter your LambdaTest username and access key, and click **Authenticate**.
+2. Select *<BrandName />* from the **Provider** dropdown. Enter your <BrandName /> username and access key, and click **Authenticate**.
 
 <img loading="lazy" src={require('../assets/images/accelq-integration/accel_3.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-3. Once the authentication is successful, you can select the real devices that is fetched from the LambdaTest platform.
+3. Once the authentication is successful, you can select the real devices that is fetched from the <BrandName /> platform.
 
-4. In the **App Url**, provider your LambdaTest App URL.
+4. In the **App Url**, provider your <BrandName /> App URL.
 
 5. Now click **Start Capture** and it will launch your test session on the selected device.
 
@@ -95,12 +97,12 @@ By integrating LambdaTest with ACCELQ, you can perform web and mobile app automa
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -9,13 +9,13 @@ keywords:
   - app test automation
   - media upload
   - upload automate
-  - framework on lambdatest
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/uploadMedia/
+url: https://www.testmu.ai/support/docs/uploadMedia
 site_name: LambdaTest
-slug: upload-media/
+slug: upload-media
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -34,17 +36,17 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Camera Image Injection",
-          "item": "https://www.lambdatest.com/support/docs/uploadFileMedia/"
+          "item": `${BRAND_URL}/support/docs/uploadFileMedia/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 # Uploading Files and Media on Real Devices
 <RealDeviceTag value="Real Device" />
-LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
+<BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -75,7 +77,7 @@ By the end of this topic, you will be able to:
 
 ### Supported File Types
 
-LambdaTest supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
+<BrandName /> supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
 - **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
@@ -88,11 +90,11 @@ This section provides a comprehensive guide on leveraging this feature within au
 - Uploading the files and obtaining the `media_url`.
 - Using `media_url` into your tests using `uploadMedia` capability.
 
-### Step 1 : Uploading the files on Lambdatest Cloud
+### Step 1 : Uploading the files on TestMu AI Cloud
 
 #### Using REST API
 
-You can use the following curl command to upload any file `media` and `non-media` from your system to the LambdaTest cloud.
+You can use the following curl command to upload any file `media` and `non-media` from your system to the <BrandName /> cloud.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -118,13 +120,13 @@ Below is a sample response demonstrating the return of the `media_url` parameter
 ```
 #### Using App Automation Interface
 
-You can also utilize LambdaTest's user-friendly UI to upload the files on Lambdatest cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
+You can also utilize <BrandName />'s user-friendly UI to upload the files on TestMu AI cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
 
 ----
 
 ### Step 2 : Setting Capability in Your Test Script
 
-Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
+Once the files are uploaded to <BrandName />'s cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
 
 <Tabs className="docs__val">
   <TabItem value="Java" label="Java">
@@ -167,12 +169,12 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

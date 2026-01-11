@@ -1,18 +1,20 @@
 ---
 id: cypress-cli-commands
-title: List of LambdaTest Cypress CLI Commands
+title: List of TestMu AI Cypress CLI Commands
 hide_title: false
 sidebar_label: Cypress CLI Commands
-description: List of all the commands and arguments supported by LambdaTest-Cypress CLI.
+description: List of all the commands and arguments supported by TestMu AI-Cypress CLI.
 keywords:
   - cypress cli commands
-  - lambdatest cypress cli commands
-  - lambdatest cypress cli flags
-  - lambdatest cypress cli arguments
-url: https://www.lambdatest.com/support/docs/cypress-cli-commands/
+  - testmu ai cypress cli commands
+  - testmu ai cypress cli flags
+  - testmu ai cypress cli arguments
+url: https://www.testmu.ai/support/docs/cypress-cli-commands
 site_name: LambdaTest
-slug: cypress-cli-commands/
+slug: cypress-cli-commands
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,25 +24,25 @@ slug: cypress-cli-commands/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Cypress",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "CLI Commands",
-          "item": "https://www.lambdatest.com/support/docs/cypress-cli-commands/"
+          "item": `${BRAND_URL}/support/docs/cypress-cli-commands/`
         }]
       })
     }}
 ></script>
-The LambdaTest-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the LambdaTest platform. Below is a comprehensive list of supported commands and their usage.
+The <BrandName />-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the <BrandName /> platform. Below is a comprehensive list of supported commands and their usage.
 
 ## General Syntax
-To use any command in the LambdaTest-Cypress CLI, follow this basic syntax:
+To use any command in the <BrandName />-Cypress CLI, follow this basic syntax:
 ```bash
 lambdatest-cypress <command> [options]
 ```
@@ -49,7 +51,7 @@ lambdatest-cypress <command> [options]
 | -------------- | ------------------------------------------------------ |
 | `--help`     | To get information of all the commands that can be run |
 | `init`       | To create an initial config file                       |
-| `run`        | To run tests on LambdaTest                             |
+| `run`        | To run tests on <BrandName />                             |
 | `build-info` | To get information about the build                     |
 | `build-stop` | To stop all the tests in the build                     |
 | `generate-report` | To generate the test session report               |
@@ -68,16 +70,16 @@ lambdatest-cypress init
 
 On running the above command, it will generate `base_reporter_config.json`,`custom_support_file.js` and `lambdatest-config.json` files. 
 
-- **`base_reporter_config.json`**: This is the configuration file for mochawesome reporter, that LambdaTest uses to generate mochawesome reports which in turn is used to generate the commands section on the LambdaTest dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
+- **`base_reporter_config.json`**: This is the configuration file for mochawesome reporter, that <BrandName /> uses to generate mochawesome reports which in turn is used to generate the commands section on the <BrandName /> dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
 
 - **`custom_support_file.js`**: By default, Cypress automatically captures screenshots when a test fails. For Cypress 10, in order to make the screenshot visible with the failed tests on our dashboard, we recommend you move and import this file as recommended.
 
-- **`lambdatest-config.json`**: This file contains configurations like LambdaTest credentials, capabilities, run settings etc., that are required to run the test.
+- **`lambdatest-config.json`**: This file contains configurations like <BrandName /> credentials, capabilities, run settings etc., that are required to run the test.
 
 ## `run` command
 
 :::info Note
-For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](https://www.lambdatest.com/support/docs/run-settings/).
+For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](/support/docs/run-settings/).
 :::
 
 To start running the test build, you can use the given-below command.
@@ -93,20 +95,20 @@ Given below are the additional flags available with the `run` command.
 | `--version`                               | Show version number <br /> e.g. `lambdatest-cypress run -–version` |NA|
 | `--help`                                  | Show help <br /> e.g. `lambdatest-cypress run -–help` |NA|
 | `--ccf, --cypress-config-file`            | Path of the config file <br /> e.g. `lambdatest-cypress run --ccf="base_reporter_config.json"` |String |
-| `--lcf, –lambdatest-config-file`          | Path of the LambdaTest config file <br /> e.g. `lambdatest-cypress run --lcf="lambdatest-config.json"` |String |
+| `--lcf, –lambdatest-config-file`          | Path of the <BrandName /> config file <br /> e.g. `lambdatest-cypress run --lcf="lambdatest-config.json"` |String |
 | `-s, --specs`                             | Path of the spec file or directory or pattern <br /> e.g. `lambdatest-cypress run --s=”path_from_content_root"` |String |
 | `--bn, --build-name`                      | Build name                                             |String |
 | `-t, --tags`                              | Test tags                                              |String |
 | `-p, --parallels`                         | No of parallel sessions                                |String |
 | `--envs, --env-variables` (Cypress 9)     | Set environment variables to configure before your test runs |String |
 | `--envs, --environment` (Cypress 10)      | Set environment variables to configure before your test runs |String |
-| `--tun, --tunnel`                         | Configure LambdaTest tunnel <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
-| `--tname, --tunnel_name`                  | Set the name of LambdaTest tunnel name <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
+| `--tun, --tunnel`                         | Configure <BrandName /> tunnel <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
+| `--tname, --tunnel_name`                  | Set the name of <BrandName /> tunnel name <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
 | `--brs, --browsers`                       | Test will be run on the specified browsers <br/> in the format: `platform:browser:version` <br /><br /> e.g. `--brs="MacOS Catalina:chrome:latest"`  <br /><br /> `--brs="MacOS Catalina:chrome:112.0,MacOS mojave:firefox:111.0"` |String |
 | `--bi, --build-identifier`                | Build identifier or build counter                      |String |
 | `--if, --ignore_files`                    | Files to ignore in the zip project <br /> e.g. `lambdatest-cypress run --if="cypress/e2e/1-getting-started/actions.cy.js"` |String |
 | `--sync, --sync-mode`                     | Wait on terminal to get the status of the tests <br /> e.g. `lambdatest-cypress run --sync=true` |String |
-| `--autostart, --tat`                      | LambdaTest Tunnel auto Start <br /> e.g. `lambdatest-cypress run --autostart=true` |String |
+| `--autostart, --tat`                      | <BrandName /> Tunnel auto Start <br /> e.g. `lambdatest-cypress run --autostart=true` |String |
 | `--headless, --headless-mode`             | Run in Headless mode <br /> e.g. `lambdatest-cypress run --headless=true` |Boolean |
 | `--net, --network`                        | To capture Network logs <br /> e.g. `lambdatest-cypress run --net="true"` |String |
 | `--eof, --exit-on-failure`                | Exit with Code 1 on failure <br /> e.g. `lambdatest-cypress run ---exit-on-failure=”true”` |String |
@@ -131,8 +133,8 @@ Given below are the additional arguments available with the `build-info` command
 | Flag   | Purpose    | Type |
 | --------| -----------| -----|
 | `--id, --build-id` | Build Identifier | String, Required |
-| `--user, --username` | Your LambdaTest username | String |
-| `--ak, --access_key` | Your LambdaTest access key | String |
+| `--user, --username` | Your <BrandName /> username | String |
+| `--ak, --access_key` | Your <BrandName /> access key | String |
 
 <img loading="lazy" src={require('../assets/images/cypressten/2.png').default} alt="Image" width="710" height="224"  className="doc_img"/>
 

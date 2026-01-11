@@ -1,11 +1,11 @@
 {
     "index_name": "lambdatest",
     "start_urls": [
-        "https://www.lambdatest.com/support/docs"
+        "https://www.testmu.ai/support/docs"
     ],
     "stop_urls": [],
     "sitemap_urls": [
-      "https://www.lambdatest.com/support/sitemap.xml"
+      "https://www.testmu.ai/support/sitemap.xml"
     ],
     "selectors": {
       "lvl0": {

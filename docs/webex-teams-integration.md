@@ -3,24 +3,26 @@ id: webex-teams-integration
 title: Webex Teams Integration
 hide_title: true
 sidebar_label: Webex Teams
-description: LambdaTest helps you manage your bugs in Webex Teams by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your Webex Teams Space.
+description: TestMu AI helps you manage your bugs in Webex Teams by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Webex Teams Space.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to webex teams
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest webex teams integration
-  - integrate webex teams with lambdatest
-  - create issue in webex teams from lambdatest
-  - webex teams integration with lambdatest
-  - create webex teams issues from lambdatest
+  - testmu ai webex teams integration
+  - integrate webex teams with testmu ai
+  - create issue in webex teams from testmu ai
+  - webex teams integration with testmu ai
+  - create webex teams issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/webex-teams-integration/
+url: https://www.testmu.ai/support/docs/webex-teams-integration
 site_name: LambdaTest
-slug: webex-teams-integration/
+slug: webex-teams-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: webex-teams-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Webex Teams Integration",
-          "item": "https://www.lambdatest.com/support/docs/webex-teams-integration/"
+          "item": `${BRAND_URL}/support/docs/webex-teams-integration/`
         }]
       })
     }}
@@ -56,13 +58,13 @@ Cisco Webex Teams is a collaboration platform designed to help you and your team
 </div>
 </div>
 
-LambdaTest and Webex Teams can be integrated to create detailed test cards in Webex Team Spaces for logged bugs in LambdaTest. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the LambdaTest platform to your Webex Teams instance.
+<BrandName /> and Webex Teams can be integrated to create detailed test cards in Webex Team Spaces for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your Webex Teams instance.
 
 
-## Integrating Webex Teams With LambdaTest
+## Integrating Webex Teams With <BrandName />
 ***
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 **Step 2:** Select **Integrations** from the left sidebar and then Webex.
 
@@ -76,20 +78,20 @@ LambdaTest and Webex Teams can be integrated to create detailed test cards in We
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-three.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 5:** Click on **Accept** to allow LambdaTest to gain access to your **Webex Teams account** to complete the integration. 
+**Step 5:** Click on **Accept** to allow <BrandName /> to gain access to your **Webex Teams account** to complete the integration. 
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-four.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 6:** After accepting, you will be redirected back to the LambdaTest dashboard. Now select your preferred **Space** from the dropdown. In this case, we will select the **Welcome Space** and click on **Confirm Space**.
+**Step 6:** After accepting, you will be redirected back to the <BrandName /> dashboard. Now select your preferred **Space** from the dropdown. In this case, we will select the **Welcome Space** and click on **Confirm Space**.
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-five.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-You have now successfully integrated LambdaTest with Webex Teams.
+You have now successfully integrated <BrandName /> with Webex Teams.
 
 ## One-Click Bug Logging With Webex Teams
 ***
 
-**Step 1:** In your LambdaTest Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
+**Step 1:** In your <BrandName /> Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
 
 **Step 2:** To perform **live-interactive testing** of your website or a web app, enter the web URL, select the testing type (Desktop/Mobile), select the browser version, OS, and resolution, and click **Start**.
 
@@ -101,7 +103,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-seven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 4:** After marking the bugs, click on the **Bug icon** in front of LambdaTest under the integrations section.
+**Step 4:** After marking the bugs, click on the **Bug icon** in front of <BrandName /> under the integrations section.
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-eight.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -122,23 +124,23 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 ***
 
-**Step 1:** Sign in to your LambdaTest account and visit **Integrations** from the left sidebar menu.
+**Step 1:** Sign in to your <BrandName /> account and visit **Integrations** from the left sidebar menu.
 
 **Step 2:** From the **My Integrations** section, click the **remove option** under the Webex Teams block.
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-twelve.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Webex Teams Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Webex Teams Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

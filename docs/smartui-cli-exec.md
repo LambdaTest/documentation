@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli-exec/
-slug: smartui-cli-exec/
+url: https://www.testmu.ai/support/docs/smartui-cli-exec
+slug: smartui-cli-exec
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
@@ -60,8 +61,8 @@ npx smartui exec [options] -- <command>
 | `--buildName <string>` | Specify a custom build name for the test run |
 | `--scheduled <string>` | Specify the schedule ID for scheduled test runs |
 | `--show-render-errors` | Show render errors from SmartUI build |
-| `--userName <string>` | Override LambdaTest username (overrides environment variable) |
-| `--accessKey <string>` | Override LambdaTest access key (overrides environment variable) |
+| `--userName <string>` | Override <BrandName /> username (overrides environment variable) |
+| `--accessKey <string>` | Override <BrandName /> access key (overrides environment variable) |
 | `--config <file>` | Specify a configuration file to use |
 | `-h, --help` | Display help information |
 
@@ -279,7 +280,7 @@ Review the server logs for error messages.
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 ## Additional Resources
@@ -294,12 +295,12 @@ If you encounter issues not covered here:
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,17 +1,19 @@
 ---
 id: responsive-testing
-title: Check Responsiveness of Your Website | LambdaTest
+title: Check Responsiveness of Your Website | TestMu AI
 hide_title: true
 sidebar_label: Responsive Testing
-description: Check responsiveness of your website across multiple devices and screensize with LambdaTest with just one click.
+description: Check responsiveness of your website across multiple devices and screensize with TestMu AI with just one click.
 keywords:
-  - responsive testing in lambdatest
-  - lambdatest responsive testing
+  - responsive testing in testmu ai
+  - testmu ai responsive testing
   - online responsive testing
-url: https://www.lambdatest.com/support/docs/responsive-testing/
+url: https://www.testmu.ai/support/docs/responsive-testing
 site_name: LambdaTest
-slug: responsive-testing/
+slug: responsive-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,27 +22,27 @@ slug: responsive-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Responsive Testing",
-          "item": "https://www.lambdatest.com/support/docs/responsive-testing/"
+          "item": `${BRAND_URL}/support/docs/responsive-testing/`
         }]
       })
     }}
 ></script>
 # Responsive Testing
-> This feature is **deprecated** and as a result, no further support will be provided for this feature by the LambdaTest Organization. 
+> This feature is **deprecated** and as a result, no further support will be provided for this feature by the <BrandName /> Organization. 
 
 * * *
-As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At LambdaTest, you can [check RWD](https://www.lambdatest.com/responsive-test-online) through 50+ different devices in a single go!
+As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At <BrandName />, you can [check RWD](https://www.lambdatest.com/responsive-test-online) through 50+ different devices in a single go!
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ttdcrgDcDgo">
@@ -82,7 +84,7 @@ Let us know if you have any questions, drop us an email at support@lambdatest.co
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

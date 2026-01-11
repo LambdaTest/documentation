@@ -9,13 +9,15 @@ keywords:
   - playwright e2e testing 
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/playwright-test-execution-setup/
+url: https://www.testmu.ai/support/docs/playwright-test-execution-setup
 site_name: LambdaTest
-slug: playwright-test-execution-setup/
+slug: playwright-test-execution-setup
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,18 +25,18 @@ slug: playwright-test-execution-setup/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Execution Setup",
-          "item": "https://www.lambdatest.com/support/docs/playwright-test-execution-setup/"
+          "item": `${BRAND_URL}/support/docs/playwright-test-execution-setup/`
         }]
       })
     }}
@@ -43,7 +45,7 @@ slug: playwright-test-execution-setup/
 # Playwright - Test Execution Setup
 * * *
 
-Whenever you run a Playwright test, you must specify the operating system and the browser you wish to use. The LambdaTest Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Playwright automation scripts on LambdaTest. 
+Whenever you run a Playwright test, you must specify the operating system and the browser you wish to use. The <BrandName /> Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Playwright automation scripts on <BrandName />. 
 
 In this document, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.
 
@@ -52,7 +54,7 @@ In this document, learn how to configure the desired capability for selecting br
 ***
 
 
-To perform Playwright testing on LambdaTest, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+To perform Playwright testing on <BrandName />, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
 
 | Key | Expected Values | Description | Capability|
 | -------- | -----| ------------ | --------------|
@@ -63,7 +65,7 @@ To perform Playwright testing on LambdaTest, you need to define the `browserName
 ### Playwright Supported Browsers
 ---
 
-Following is a list of compatible Playwright bundled browsers that you can use to run tests on the LambdaTest platform.
+Following is a list of compatible Playwright bundled browsers that you can use to run tests on the <BrandName /> platform.
 
 | Playwright Versions | Compatible Browsers | 
 | --------------------|---------------------| 
@@ -227,7 +229,7 @@ const capabilities = {
 ## Getting Session Details
 ***
 
-When you run a Playwright test on LambdaTest, it generates different logs for each test session. To get relevant information for the specific session, use the snippet provided below in your Playwright test scripts. 
+When you run a Playwright test on <BrandName />, it generates different logs for each test session. To get relevant information for the specific session, use the snippet provided below in your Playwright test scripts. 
 
 ```js
 let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))
@@ -291,7 +293,7 @@ By specifying the capabilities for the debugging tools, you can debug and fix yo
 ## Mark Tests As Passed Or Failed
 ***
 
-While running Playwright tests on the LambdaTest platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on LambdaTest. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
+While running Playwright tests on the <BrandName /> platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on <BrandName />. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
 
 By default, the Status of each test that runs successfully is marked as **Completed**, and if there are any issues, the Status is marked as **Failed**.
 

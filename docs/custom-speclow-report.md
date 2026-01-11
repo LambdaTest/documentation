@@ -4,13 +4,15 @@ title: Custom Specflow Report
 sidebar_label: Custom Specflow
 description: Custom specflow report
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/custom-speclow-report/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/custom-speclow-report
 site_name: LambdaTest
-slug: custom-speclow-report/
+slug: custom-speclow-report
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,25 +22,25 @@ slug: custom-speclow-report/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Custom Specflow Report",
-          "item": "https://www.lambdatest.com/support/docs/custom-speclow-report/"
+          "item": `${BRAND_URL}/support/docs/custom-speclow-report/`
         }]
       })
     }}
 ></script>
-This guide provides step-by-step instructions on how to generate a custom SpecFlow report in LambdaTest HyperExecute. By following the specified changes in the YAML file and modifying the test script, users can receive detailed test reports via email.
+This guide provides step-by-step instructions on how to generate a custom SpecFlow report in <BrandName /> HyperExecute. By following the specified changes in the YAML file and modifying the test script, users can receive detailed test reports via email.
 
 ## Prerequisites
-- A valid LambdaTest account.
+- A valid <BrandName /> account.
 - A configured HyperExecute environment.
 - A SpecFlow-based test suite.
 
@@ -73,7 +75,7 @@ Add the following capability in your test script to ensure the correct execution
 `((IJavaScriptExecutor)driver).ExecuteScript($"lambda-info=suitename:YOUR_SUITE_NAME:passed");`
 
 Explanation:
-- This script sends test execution information (suite name and status) to LambdaTest.
+- This script sends test execution information (suite name and status) to <BrandName />.
 - Replace `YOUR_SUITE_NAME` with the appropriate suite name.
 - The passed status can be dynamically changed based on the test result.
 

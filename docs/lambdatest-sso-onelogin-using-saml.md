@@ -1,20 +1,22 @@
 ---
 id: lambdatest-sso-onelogin-using-saml
-title: LambdaTest SSO & OneLogin Using SAML
+title: TestMu AI SSO & OneLogin Using SAML
 hide_title: true
 sidebar_label: OneLogin
-description: Now integrate your OneLogin user directory with your LambdaTest organization subscription through an IDP, so that your team could leverage the SSO setup.
+description: Now integrate your OneLogin user directory with your TestMu AI organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso
-  - lambdatest sso
+  - testmu ai sso
   - onelogin
   - saml
-  - lambdatest onelogin integration
-  - lambdatest onelogin sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-onelogin-using-saml/
+  - testmu ai onelogin integration
+  - testmu ai onelogin sso
+url: https://www.testmu.ai/support/docs/testmu-sso-onelogin-using-saml
 site_name: LambdaTest
-slug: lambdatest-sso-onelogin-using-saml/
+slug: testmu-sso-onelogin-using-saml
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,44 +25,44 @@ slug: lambdatest-sso-onelogin-using-saml/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "OneLogin Integration",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-onelogin-using-saml/"
+          "item": `${BRAND_URL}/support/docs/lambdatest-sso-onelogin-using-saml/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest SSO & OneLogin Using SAML
+# <BrandName /> SSO & OneLogin Using SAML
 
 * * *
 
-LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so that your team could leverage the Single Sign-on setup. This document will help you integrate your LambdaTest organization with your OneLogin identity provider to configure SSO(Single sign-on).
+<BrandName /> allows you to integrate an external user directory with your <BrandName /> Organization through an IDP so that your team could leverage the Single Sign-on setup. This document will help you integrate your <BrandName /> organization with your OneLogin identity provider to configure SSO(Single sign-on).
 
 ## Prerequisites
 
 * * *
 
-To set-up and use OneLogin & LambdaTest Single Sign-on (SSO) feature:
+To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 
-*   An Enterprise plan with LambdaTest. ( Learn how to [manage your subscriptions](/docs/manage-subscriptions/). )
-*   The Admin level access to your LambdaTest organization.
+*   An Enterprise plan with <BrandName />. ( Learn how to [manage your subscriptions](/docs/manage-subscriptions/). )
+*   The Admin level access to your <BrandName /> organization.
 *   The Admin level access of your organization’s OneLogin instance
 
-## Configure LambdaTest SSO & OneLogin Integration
+## Configure <BrandName /> SSO & OneLogin Integration
 
 * * *
 
-1. Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+1. Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
 2. Enter Connection Name and Click on  **Add New Connection**.
@@ -92,11 +94,11 @@ To set-up and use OneLogin & LambdaTest Single Sign-on (SSO) feature:
 
 <img loading="lazy" src={require('../assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="493"/>
 
-11. Click on configurations tab in the sidebar and fill the details as per the details copied from LambdaTest in step 4.
+11. Click on configurations tab in the sidebar and fill the details as per the details copied from <BrandName /> in step 4.
     <img loading="lazy" src={require('../assets/images/sso/img_12.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
 
-12. Click on the parameters tab and fill the details as per the details copied from LambdaTest in step 5.
+12. Click on the parameters tab and fill the details as per the details copied from <BrandName /> in step 5.
     <img loading="lazy" src={require('../assets/images/sso/img_13.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
 
@@ -108,7 +110,7 @@ To set-up and use OneLogin & LambdaTest Single Sign-on (SSO) feature:
 
 <img loading="lazy" src={require('../assets/images/sso/img_17.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
-15. Go back to LambdaTest and paste the copied Issuer URL in the **Metadata URL** field. Fill the required fields  and click on **Create Connection**:
+15. Go back to <BrandName /> and paste the copied Issuer URL in the **Metadata URL** field. Fill the required fields  and click on **Create Connection**:
 
 * SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
 * Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
@@ -116,17 +118,17 @@ To set-up and use OneLogin & LambdaTest Single Sign-on (SSO) feature:
 
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-> That's it. Your enterprise's LambdaTest SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

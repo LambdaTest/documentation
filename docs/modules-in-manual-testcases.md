@@ -10,10 +10,13 @@ keywords:
   - test step management 
   - test case
   - test steps
-url: https://www.lambdatest.com/support/docs/modules-in-manual-testcases/
+url: https://www.testmu.ai/support/docs/modules-in-manual-testcases
 site_name: LambdaTest
-slug: modules-in-manual-testcases/
+slug: modules-in-manual-testcases
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +25,18 @@ slug: modules-in-manual-testcases/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Modules in Manual Testcases",
-          "item": "https://www.lambdatest.com/support/docs/modules-in-manual-testcases/"
+          "item": `${BRAND_URL}/support/docs/modules-in-manual-testcases/`
         }]
       })
     }}

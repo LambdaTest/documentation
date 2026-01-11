@@ -8,10 +8,12 @@ keywords:
 - debug espresso tests
 - how to debug espresso tests
 - mobile app testing
-url: https://www.lambdatest.com/support/docs/debugging-espresso-tests/
+url: https://www.testmu.ai/support/docs/debugging-espresso-tests
 site_name: LambdaTest
-slug: debugging-espresso-tests/
+slug: debugging-espresso-tests
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,17 +22,17 @@ slug: debugging-espresso-tests/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Debugging your Espresso Tests",
-          "item": "https://www.lambdatest.com/support/docs/debugging-espresso-tests/"
+          "item": `${BRAND_URL}/support/docs/debugging-espresso-tests/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ By the end of this guide, you will be able to:
 ## Debugging Tests
 ***
 
-LambdaTest offers a variety of logs to help you locate the root cause:
+<BrandName /> offers a variety of logs to help you locate the root cause:
 
 * Instrumentation Logs
 * Device Logs
@@ -113,7 +115,7 @@ KEY|VALUE|DESCRIPTION
 
 ### Video Recording
 
-All tests executed on the LambdaTest Real Devices are recorded & the recording is viewable when you click on a Test. The video is downloadable as well so you can use it as you like.
+All tests executed on the <BrandName /> Real Devices are recorded & the recording is viewable when you click on a Test. The video is downloadable as well so you can use it as you like.
 
 By viewing this video recording, you can see where the test failed & the point from where it could not continue executing.
 
@@ -126,7 +128,7 @@ KEY|VALUE|DESCRIPTION
 --|--|--
 | video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video= TRUE`<br/> OR `video = FALSE` | Video recording of the complete screen |
 
-Refer to our [Espresso testing documentation](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
+Refer to our [Espresso testing documentation](/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
 
 >
 If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@lambdatest.com
@@ -134,12 +136,12 @@ If you still have any questions for us, please feel free to let us know via our 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

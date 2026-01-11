@@ -5,24 +5,26 @@ hide_title: false
 sidebar_label: Provar
 description:  Integrate Provar with HyperExecute for Salesforce test automation. Configure, generate build files, set up licenses, and execute tests seamlessly.
 keywords:
-  - LambdaTest HyperExecute
-  - LambdaTest HyperExecute help
-  - LambdaTest HyperExecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - provar
   - Integrations
   - Products
   - Test case management
   - Automated testing 
   - Cloud-based testing
-url: https://www.lambdatest.com/support/docs/hyperexecute-provar-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-provar-integration
 site_name: LambdaTest
-slug: hyperexecute-provar-integration/
+slug: hyperexecute-provar-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-provar-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-provar-integration/`
         }]
       })
     }}
@@ -61,23 +63,23 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
 - Update the Desktop Settings to **HyperExecuteGrid: ANY Chrome**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/1.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/1.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - Click on **Test Settings** >> **Browser Providers** section. Click on the **+** symbol to add a new Browser Provider. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/2.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/2.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - You will receive a pop-up to enter your configurations:
 
     - Enter the **Name** for your new Browser Provider.
-    - Select the **Type** as **LambdaTest**
-    - Enter your [LambdaTest **User Name** and **Access Key**](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+    - Select the **Type** as **<BrandName />**
+    - Enter your [<BrandName /> **User Name** and **Access Key**](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
     - Update all the **browser** options that you want to run your tests on.
     - Update all the **capabilities** that you want to pass through the test.
 
 - Click on **Test Connection** >> **OK**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/3.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/3.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 ## Step 2: Generate and Update the build.xml file
 
@@ -127,7 +129,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -216,4 +218,4 @@ OR use this command if you have not exported your username and access key in the
 
 - Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/4.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img" />
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/4.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img" />

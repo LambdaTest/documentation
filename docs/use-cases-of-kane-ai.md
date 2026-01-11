@@ -7,13 +7,14 @@ description: Discover the key use cases of KaneAI, an AI-powered testing tool th
 keywords:
   - kaneai
   - use cases of kaneai
-url: https://www.lambdatest.com/support/docs/use-cases-of-kane-ai
+url: https://www.testmu.ai/support/docs/use-cases-of-kane-ai
 site_name: LambdaTest
-slug: use-cases-of-kane-ai/
+slug: use-cases-of-kane-ai
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +24,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Use Cases of KaneAI",
-          "item": "https://www.lambdatest.com/support/docs/use-cases-of-kane-ai"
+          "item": `${BRAND_URL}/support/docs/use-cases-of-kane-ai`
         }]
       })
     }}

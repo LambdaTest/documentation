@@ -3,20 +3,22 @@ id: playwright-cucumberjs
 title: Running Playwright Tests With Cucumber.js
 hide_title: true
 sidebar_label: Integrate With Cucumber.js 
-description: Learn how to perform Playwright testing using Cucumber.js across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform Playwright testing using Cucumber.js across 40+ browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner
   - playwright mobile testing with Playwright test runner
-  - playwright testing on lambdatest Playwright test runner
-  - playwright testing lambdatest 
+  - playwright testing on testmu ai Playwright test runner
+  - playwright testing testmu ai 
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.lambdatest.com/support/docs/playwright-with-cucumberjs/
+url: https://www.testmu.ai/support/docs/playwright-with-cucumberjs
 site_name: LambdaTest
-slug: playwright-with-cucumberjs/
+slug: playwright-with-cucumberjs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,18 +26,18 @@ slug: playwright-with-cucumberjs/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright Testing With Cucumber.js",
-          "item": "https://www.lambdatest.com/support/docs/playwright-with-cucumberjs/"
+          "item": `${BRAND_URL}/support/docs/playwright-with-cucumberjs/`
         }]
       })
     }}
@@ -46,15 +48,15 @@ slug: playwright-with-cucumberjs/
 
 Cucumber.js is a JavaScript-based open-source framework for web automation testing. It runs on Node.js and latest web browsers. Cucumber.js allows you to write and execute tests in Gherkin - a non-technical and human-readable language.
 
-LambdaTest enables you to run Playwright tests with Cucumber.js test runner on a browser farm of 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the LambdaTest platform using the Cucumber.js test runner.
+<BrandName /> enables you to run Playwright tests with Cucumber.js test runner on a browser farm of 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the <BrandName /> platform using the Cucumber.js test runner.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img" width="50" height="50" /> View on GitHub</a>
 
-1. Clone the LambdaTest-Playwright repository on your system.
+1. Clone the <BrandName />-Playwright repository on your system.
 
 2. Install the npm dependencies.
 
@@ -62,7 +64,7 @@ LambdaTest enables you to run Playwright tests with Cucumber.js test runner on a
 npm install
 ```
 
-3. In order to run your Playwright tests with Playwright test runner, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+3. In order to run your Playwright tests with Playwright test runner, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -84,7 +86,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Running Playwright Tests With Cucumber.js
 *** 
 
-In your `setup.js` file, specify your LambdaTest Username and LambdaTest Access Key, add the browserName, browserVersion, and platform.
+In your `setup.js` file, specify your <BrandName /> Username and <BrandName /> Access Key, add the browserName, browserVersion, and platform.
 
 ```js
 const { setWorldConstructor, World, Before, After} = require("@cucumber/cucumber");
@@ -136,9 +138,9 @@ Pass the below command to run the test.
 npm run test
 ```
 
-Visit the LambdaTest Automation dashboard to view the results of your executed test with Playwright test runner.
+Visit the <BrandName /> Automation dashboard to view the results of your executed test with Playwright test runner.
 
-## Testing With Cucumber.js When Migrating To LambdaTest
+## Testing With Cucumber.js When Migrating To <BrandName />
 ***
 
 1. In your `setup.js` file, add before and after code block for setting up and closing the remote browsers.
@@ -179,7 +181,7 @@ After(async () => {
 setWorldConstructor(CustomWorld);
 ```
 
-2. In the class CustomWorld, create a function `setTestStatus` that will mark your test passed or failed on the LambdaTest platform.
+2. In the class CustomWorld, create a function `setTestStatus` that will mark your test passed or failed on the <BrandName /> platform.
 
 ```js
 class CustomWorld extends World{
@@ -194,7 +196,7 @@ class CustomWorld extends World{
 ```js
 try {
     assert.equal(title,
-        "How to use HyperExecute for scalable and reliable web automation testing | LambdaTest",
+        "How to use HyperExecute for scalable and reliable web automation testing | TestMu AI",
         "Page title does not match");
 
     await this.setTestStatus("passed", "Title matched");
@@ -210,12 +212,12 @@ try {
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

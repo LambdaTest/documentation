@@ -3,16 +3,18 @@ id: link-ado-issues-with-test-manager
 title: Link Azure DevOps Issues with Test Manager
 hide_title: true
 sidebar_label: Link Azure DevOps Issues with Test Manager
-description: Effortlessly link Azure DevOps issues with Test Manager using LambdaTest to streamline workflows and enhance project management efficiency.
+description: Effortlessly link Azure DevOps issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link Azure DevOps issues
   - link Azure DevOps issues with test manager
   - link ADO issues
   - link ADO issues with test manager
-url: https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/
+url: https://www.testmu.ai/support/docs/link-ado-issues-with-test-manager
 site_name: LambdaTest
-slug: link-ado-issues-with-test-manager/
+slug: link-ado-issues-with-test-manager
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: link-ado-issues-with-test-manager/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Link Azure DevOps Issues with Test Manager",
-          "item": "https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/"
+          "item": `${BRAND_URL}/support/docs/link-ado-issues-with-test-manager/`
         }]
       })
     }}
@@ -48,9 +50,9 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 
 ### Initial Setup and Configuration
 
-> **Note:** If you have already integrated Azure DevOps with your LambdaTest account, you can skip this section and proceed directly to [Linking Azure DevOps Work Items](#linking-azure-devops-work-items)
+> **Note:** If you have already integrated Azure DevOps with your <BrandName /> account, you can skip this section and proceed directly to [Linking Azure DevOps Work Items](#linking-azure-devops-work-items)
 
-1. Navigate to the [Integration page](https://integrations.lambdatest.com/) to integrate your LambdaTest account with Azure DevOps. Click on **Connect** as shown in the image.
+1. Navigate to the [Integration page](https://integrations.lambdatest.com/) to integrate your <BrandName /> account with Azure DevOps. Click on **Connect** as shown in the image.
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/1.png').default} alt="Azure DevOps Integration Card" className="doc_img" width="1366" height="629"/>
 
@@ -58,7 +60,7 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/2.png').default} alt="Azure DevOps Install Drawer" className="doc_img" width="1366" height="629"/>
 
-3. Select your Azure DevOps Organization and click **Install**. Azure DevOps is now integrated with your LambdaTest account.
+3. Select your Azure DevOps Organization and click **Install**. Azure DevOps is now integrated with your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/3.png').default} alt="Azure DevOps Organization Selection" className="doc_img" width="1366" height="629"/>
 
@@ -89,12 +91,12 @@ Once the integration is complete, follow these steps to link work items with you
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

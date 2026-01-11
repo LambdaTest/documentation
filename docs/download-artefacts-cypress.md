@@ -1,8 +1,8 @@
----
+﻿---
 id: download-artefacts-cypress
 title: Downloading Artefacts For A Cypress Project
 sidebar_label: Download Artefacts For Cypress Project
-description: This article guides you on how to download the artefacts for a cypress project from LambdaTest Cloud machine.
+description: This article guides you on how to download the artefacts for a cypress project from TestMu AI Cloud machine.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide
@@ -14,9 +14,9 @@ keywords:
   - Running Cypress Tests
   - Cypress Project
 
-url: https://www.lambdatest.com/support/docs/download-artefacts-cypress/
+url: https://www.testmu.ai/support/docs/download-artefacts-cypress
 site_name: LambdaTest
-slug: download-artefacts-cypress/
+slug: download-artefacts-cypress
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,21 +26,24 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-This article guides you on how to download the artefacts for a Cypress project from LambdaTest Cloud machine.
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+This article guides you on how to download the artefacts for a Cypress project from <BrandName /> Cloud machine.
 
 :::tip Sample repo
 
-In this demo we are demonstrating using LambdaTest's sample Cypress Cloud repo. You can find all the resources used for this article in the linked repo. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+In this demo we are demonstrating using <BrandName />'s sample Cypress Cloud repo. You can find all the resources used for this article in the linked repo. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
-## Downloading The Data From The LambdaTest Cloud Machine
+## Downloading The Data From The <BrandName /> Cloud Machine
 
 ---
 
-Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on LambdaTest), you need to follow these steps below:
+Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 
-### Update LambdaTest Cypress CLI
+### Update <BrandName /> Cypress CLI
 
 ---
 
@@ -62,7 +65,7 @@ Add **"downloads"** capability in the `lambdatest-config.json` file and define t
 
 ---
 
-Append `–-sync` flag in the run command as mentioned below and run your test on the LambdaTest platform. 
+Append `–-sync` flag in the run command as mentioned below and run your test on the <BrandName /> platform. 
 
 ```bash
 lambdatest-cypress run --sync=true
@@ -108,12 +111,12 @@ That’s all! In case you have any questions or need any additional information,
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

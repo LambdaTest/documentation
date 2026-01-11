@@ -2,7 +2,7 @@
 id: set-date-time-hour-format-real-devices-browser
 title: Set Custom Date, Time & Hour Format on Real Devices
 sidebar_label: Date & Time Settings
-description: Configure date, time, and hour-format on iOS and Android devices during manual and Appium-based automation testing on LambdaTest.
+description: Configure date, time, and hour-format on iOS and Android devices during manual and Appium-based automation testing on TestMu AI.
 
 keywords:
   - set device time iOS
@@ -10,20 +10,22 @@ keywords:
   - iOS 12-hour format testing
   - real device date time change
   - Appium date override
-  - LambdaTest date configuration
+  - TestMu AI date configuration
   - real device time simulation
   - app testing on real device
   - simulate date time
   - iOS automation hooks
-url: https://www.lambdatest.com/support/docs/set-date-time-hour-format-real-devices-browser/
+url: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices-browser
 site_name: LambdaTest
-slug: set-date-time-hour-format-real-devices-browser/
+slug: set-date-time-hour-format-real-devices-browser
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,31 +35,31 @@ import TabItem from '@theme/TabItem';
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.lambdatest.com"
+      "item": BRAND_URL
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Support",
-      "item": "https://www.lambdatest.com/support/docs/"
+      "item": `${BRAND_URL}/support/docs/`
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "Set Date and Time on Real Devices",
-      "item": "https://www.lambdatest.com/support/docs/set-date-time-hour-format-real-devices-browser/"
+      "item": `${BRAND_URL}/support/docs/set-date-time-hour-format-real-devices-browser/`
     }]
   }) }}
 ></script>
 
 
-Testing applications often requires validation across different date, time, and format scenarios. LambdaTest now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real iOS and Android devices — both in **manual** sessions and via **Appium automation hooks**.
+Testing applications often requires validation across different date, time, and format scenarios. <BrandName /> now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real iOS and Android devices — both in **manual** sessions and via **Appium automation hooks**.
 
 This enables use cases like testing scheduled alerts, AM/PM behaviors, time-bound features, and regional formatting validations.
 
 ---
 
-## Access Date & Time Settings on LambdaTest Real Devices
+## Access Date & Time Settings on <BrandName /> Real Devices
 
-**Step 1:** Log into your LambdaTest dashboard and navigate to **Real Devices** > **App Testing**.
+**Step 1:** Log into your <BrandName /> dashboard and navigate to **Real Devices** > **App Testing**.
 
 **Step 2:** Select your desired app and an iOS device (iOS 14+), then click **Start** to launch your session.
 

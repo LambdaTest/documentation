@@ -2,20 +2,19 @@
 id: espresso-env-variables-settings
 title: Setting Up Espresso Environment Variables
 sidebar_label: Environment Variable Settings
-description: Now you can run your Espresso framework on LambdaTest and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.
+description: Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.
 keywords:
   - espresso
   - environment
-  - lambdatest java
+  - testmu ai java
   - stage
   - production
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/espresso-env-variables-settings/
+url: https://www.testmu.ai/support/docs/espresso-env-variables-settings
 site_name: LambdaTest
-slug: espresso-env-variables-settings/
+slug: espresso-env-variables-settings
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +22,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,23 +33,23 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Environment Variable Settings",
-          "item": "https://www.lambdatest.com/support/docs/espresso-env-variables-settings/"
+          "item": `${BRAND_URL}/support/docs/espresso-env-variables-settings/`
         }]
       })
     }}
 ></script>
 
-This feature allows you to dynamically set and test environment variables during Espresso test execution on LambdaTest.
+This feature allows you to dynamically set and test environment variables during Espresso test execution on <BrandName />.
 
 ## Step 1: Create Variables in Your Test Suite
 Define environment variables in your Espresso test suite to fetch the variable values during execution.
@@ -65,9 +66,9 @@ String prod = InstrumentationRegistry.getArguments().getString(“PROD”);
 
 ## Step 2: Upload Your Application
 
-To begin testing, upload your Android application (.apk file) to LambdaTest's servers. You'll use our **REST API** for this process.
+To begin testing, upload your Android application (.apk file) to <BrandName />'s servers. You'll use our **REST API** for this process.
 
-- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Authentication :** You'll need your <BrandName /> Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
 <Tabs className="docs__val">
@@ -100,7 +101,7 @@ To begin testing, upload your Android application (.apk file) to LambdaTest's se
 
 ## Step 3: Upload Your Test Suite
 
-Upload your Espresso test suite (.apk) file to LambdaTest servers using our REST API.
+Upload your Espresso test suite (.apk) file to <BrandName /> servers using our REST API.
 
 The following sample cURL command shows how to upload a test suite:
 

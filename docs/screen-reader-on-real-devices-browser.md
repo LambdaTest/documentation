@@ -2,21 +2,21 @@
 id: screen-reader-on-real-devices-browser
 title: Screen Reader (TalkBack) for Android - Web Browser
 sidebar_label: Screen Reader
-description: Test the accessibility of your website with the Screen Reader from LambdaTest. Using actual Android devices, navigate through elements with spoken descriptions to make sure they adhere to WCAG standards.
+description: Test the accessibility of your website with the Screen Reader from TestMu AI. Using actual Android devices, navigate through elements with spoken descriptions to make sure they adhere to WCAG standards.
 keywords:
   - image injection
   - app test automation
   - camera image
   - QR code scanning
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-browser/
+url: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-browser
 site_name: LambdaTest
-slug: screen-reader-on-real-devices-browser/
+slug: screen-reader-on-real-devices-browser
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,17 +35,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Screen Reader on Real Devices Web",
-          "item": "https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-browser/"
+          "item": `${BRAND_URL}/support/docs/screen-reader-on-real-devices-browser/`
         }]
       })
     }}
@@ -51,7 +53,7 @@ import TabItem from '@theme/TabItem';
 
 Manual accessibility testing is crucial to ensure that your mobile apps and websites are fully compliant with the Web Content Accessibility Guidelines (WCAG). This guarantees that your websites are usable by people with disabilities, regardless of their device or browsing capabilities.
 
-LambdaTest's Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI—similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
+<BrandName />'s Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI—similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
 
 > This feature is currently in **Beta**
 

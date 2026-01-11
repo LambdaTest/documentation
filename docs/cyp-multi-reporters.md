@@ -15,19 +15,20 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/cyp-multi-reporters/
+url: https://www.testmu.ai/support/docs/cyp-multi-reporters
 site_name: LambdaTest
-slug: cyp-multi-reporters/
+slug: cyp-multi-reporters
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-With LambdaTest, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.
+With <BrandName />, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.
 
 ***
 
@@ -106,12 +107,12 @@ The reports are grouped on the basis of your session_id with a designated _brows
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -5,17 +5,18 @@ hide_title: false
 sidebar_label: How to Run Tests on HyperExecute using Local Selenium Web Driver
 description: How to Run Tests on HyperExecute using Local Selenium Web Driver
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Get my Username and Access key
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers
 site_name: LambdaTest
-slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
+slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +26,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Guides",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/`
         }]
       })
     }}
@@ -58,7 +59,7 @@ To utilize the native Selenium driver support in HyperExecute, you need to incor
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/tree/localdriver" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -166,7 +167,7 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/how-to-guide/local-driver-os.png').default} alt="Image"  className="doc_img"/>
 
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Step 3: Run Your Tests:
 

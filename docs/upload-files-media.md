@@ -3,7 +3,7 @@ id: upload-files-media
 title: Files and Media
 hide_title: true
 sidebar_label: Files and Media
-description: Learn how to upload and download files and media on real Android and iOS devices during app testing on LambdaTest.
+description: Learn how to upload and download files and media on real Android and iOS devices during app testing on TestMu AI.
 keywords:
   - files upload
   - media upload
@@ -12,9 +12,9 @@ keywords:
   - app test automation
   - real devices
   - app testing
-  - LambdaTest
-slug: upload-files-media/
-url: https://www.lambdatest.com/support/docs/upload-files-media/
+  - TestMu AI
+slug: upload-files-media
+url: https://www.testmu.ai/support/docs/upload-files-media
 site_name: LambdaTest
 ---
 
@@ -23,11 +23,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Upload & Download Files and Media on Real Devices
 
 
-LambdaTest’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download app-generated files or media back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices.
+<BrandName />’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download app-generated files or media back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices.
 
 ---
 

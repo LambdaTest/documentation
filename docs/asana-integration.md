@@ -1,18 +1,19 @@
 ---
 id: asana-integration
-title: Asana Integration For Easy Browser Testing | LambdaTest
+title: Asana Integration For Easy Browser Testing | TestMu AI
 hide_title: true
 sidebar_label: Asana
-description: With LambdaTest - Asana integration, now you can mark your bug to Asana dashboard directly from LambdaTest while performing testing.
+description: With TestMu AI - Asana integration, now you can mark your bug to Asana dashboard directly from TestMu AI while performing testing.
 keywords:
-  - LambdaTest Asana integration
-  - How to integrate Asana with LambdaTest
-  - bug management tools in LambdaTest
-image: /assets/images/og-images/default-user-image.png
-url: https://staging.lambdatest.com/support/docs/asana-integration/
+  - TestMu AI Asana integration
+  - How to integrate Asana with TestMu AI
+  - bug management tools in TestMu AI
+url: https://testmu.ai/support/docs/asana-integration
 site_name: LambdaTest
-slug: asana-integration/
+slug: asana-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +23,17 @@ slug: asana-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Asana Integration",
-          "item": "https://www.lambdatest.com/support/docs/asana-integration/"
+          "item": `${BRAND_URL}/support/docs/asana-integration/`
         }]
       })
     }}
@@ -43,23 +44,23 @@ slug: asana-integration/
 
 > Asana is a popular tool for teams following Agile methodology as a part of their Software Development Life Cycle. With Asana, you can coordinate all your team’s work by eliminating roadblocks and pinpointing risks. It offers a free flowing dashboard for sprint planning. Allowing everyone to acknowledge who is doing what and when! You can manipulate tasks freely from one state to another. You can also set out ambitious goals and create a path towards achieving it by different tasks displayed on the dashboard.
 
-The LambdaTest Asana Integration allows you to create a task directly to your specified Asana dashboard from LambdaTest platform. Share your UI observations and input with your teammates anytime, by capturing a screenshot, even in the middle of your test session. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as bug through LambdaTest are displayed as information on Asana for that testing instance.
+The <BrandName /> Asana Integration allows you to create a task directly to your specified Asana dashboard from <BrandName /> platform. Share your UI observations and input with your teammates anytime, by capturing a screenshot, even in the middle of your test session. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as bug through <BrandName /> are displayed as information on Asana for that testing instance.
 
-**Asana Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Asana Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Integrate Asana With Your LambdaTest Account?
+## How To Integrate Asana With Your <BrandName /> Account?
 
 * * *
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'ADD'** under the block that says 'Asana'.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-1.webp').default} alt="asana-integration" width="1341" height="605" className="doc_img"/>
 
-**Step 4:** If you are already logged into **Asana**, you'll be asked to grant permission to LambdaTest for accessing your user-owned resources.
+**Step 4:** If you are already logged into **Asana**, you'll be asked to grant permission to <BrandName /> for accessing your user-owned resources.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-2.webp').default} alt="asana-integration" width="1365" height="638" className="doc_img"/>
 
@@ -92,7 +93,7 @@ In scenarios where OAuth is excessively utilized, Personal Access Tokens comes t
 
 * * *
 
-> **Note:** If you are using Asana for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your LambdaTest account.
+> **Note:** If you are using Asana for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your <BrandName /> account.
 
 **Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "**Real Time Testing**" option.
 
@@ -125,7 +126,7 @@ At the bottom of the form you will find a button **"Create Issue"**.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-integration-10.webp').default} alt="asana-integration" width="347" height="75" className="doc_img"/>
 
-Login to your Asana workspace and you will be able to notice the logged issue right away! All the data you provided through Lambdatest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the screenshot as attachments.
+Login to your Asana workspace and you will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-integration-11.webp').default} alt="asana-integration" width="1357" height="620" className="doc_img"/>
 
@@ -137,9 +138,9 @@ You can set a due date to the task in Asana to help you organize your tasks easi
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **Remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'Remove'**. You can find the Revoke button right under the **'Asana'** block which would be highlighted with a green tick.
 
@@ -147,19 +148,19 @@ You can set a due date to the task in Asana to help you organize your tasks easi
 
 ---
 
-That was all you need to know for LambdaTest + Asana Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + Asana Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 ---
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

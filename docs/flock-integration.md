@@ -3,22 +3,24 @@ id: flock-integration
 title: Flock Integration
 hide_title: true
 sidebar_label: Flock
-description: LambdaTest's integration with Flock lets you log bugs directly into Flock team channels with just one click while running cross browser testing of websites across 3000+ browser and OS combinations.
+description: TestMu AI's integration with Flock lets you log bugs directly into Flock team channels with just one click while running cross browser testing of websites across 3000+ browser and OS combinations.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to flock
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest flock integration
-  - integrate flock with lambdatest
-  - create issue in flock from lambdatest
-  - flock integration with lambdatest
+  - testmu ai flock integration
+  - integrate flock with testmu ai
+  - create issue in flock from testmu ai
+  - flock integration with testmu ai
   - communication tools
-url: https://www.lambdatest.com/support/docs/flock-integration/
+url: https://www.testmu.ai/support/docs/flock-integration
 site_name: LambdaTest
-slug: flock-integration/
+slug: flock-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,18 +29,18 @@ slug: flock-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Flock Integration",
-          "item": "https://www.lambdatest.com/support/docs/flock-integration/"
+          "item": `${BRAND_URL}/support/docs/flock-integration/`
         }]
       })
     }}
@@ -49,14 +51,14 @@ slug: flock-integration/
 
 Flock is a communication and collaboration platform for cross-functional teams. Using Flock, you can streamline all communication and decision-making processes. Flock provides top-notch features such as easy file sharing and management, simple onboarding, 24x7 support, and data security & privacy. 
 
-Integrating Flock with LambdaTest, you can post bugs or issues to Flock's team channels directly from the LambdaTest platform and collaborate faster on websites and web apps issues. 
+Integrating Flock with <BrandName />, you can post bugs or issues to Flock's team channels directly from the <BrandName /> platform and collaborate faster on websites and web apps issues. 
 
-## Integrating Flock With Your LambdaTest Account
+## Integrating Flock With Your <BrandName /> Account
 ***
 
-1. Login to your LambdaTest account. Before configuring integrations, ensure you have administrator or user access.
+1. Login to your <BrandName /> account. Before configuring integrations, ensure you have administrator or user access.
 
-2. Select **Integrations** from the LambdaTest left menu.
+2. Select **Integrations** from the <BrandName /> left menu.
 
 3. From the COMMUNICATION category, select **FLOCK**.
 
@@ -92,12 +94,12 @@ Paste the Webhook URL in the provided field and click **Install**.
 
 <img loading="lazy" src={require('../assets/images/flock-integration/enter-install.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-You now have successfully integrated Flock with your LambdaTest account.
+You now have successfully integrated Flock with your <BrandName /> account.
 
 ## One-Click Bug Logging With Flock Integration
 ***
 
-1. From the LambdaTest dashboard, navigate to **Real Time Testing** from the left menu.
+1. From the <BrandName /> dashboard, navigate to **Real Time Testing** from the left menu.
 
 2. Specify the test URL, select the browser, browser versions, operating system, and click **START**.
 
@@ -128,9 +130,9 @@ Your bugs will be logged to the selected Flock's channel.
 ## Uninstalling The Flock Integration
 ***
 
-1. Login to your LambdaTest account.
+1. Login to your <BrandName /> account.
 
-2. Select **Integrations** from the LambdaTest left menu.
+2. Select **Integrations** from the <BrandName /> left menu.
 
 3. Click **REMOVE** adjacent to the Flock logo in the **MY INTEGRATION** category. 
 
@@ -140,17 +142,17 @@ Alternatively, you can remove the integration by navigating to Flock under the C
 
 <img loading="lazy" src={require('../assets/images/flock-integration/remove-2.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
->If you have any questions or need further assistance regarding LambdaTest + Flock integration, feel free to reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com).
+>If you have any questions or need further assistance regarding <BrandName /> + Flock integration, feel free to reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

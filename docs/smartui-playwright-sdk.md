@@ -2,7 +2,7 @@
 id: smartui-playwright-sdk
 title: Integrate SmartUI SDK with Playwright-JavaScript
 sidebar_label: JavaScript
-description: In this documentation, learn how integrate your Playwright automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Playwright automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-playwright-sdk/
-slug: smartui-playwright-sdk/
+url: https://www.testmu.ai/support/docs/smartui-playwright-sdk
+slug: smartui-playwright-sdk
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,18 +34,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-playwright-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-playwright-sdk/`
         }]
       })
     }}
@@ -56,9 +58,9 @@ Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK 
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Playwright is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Playwright SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Playwright SDK integration.
 
 ## Create a SmartUI Project
 
@@ -84,7 +86,7 @@ cd smartui-playwright-sample/sdk
 ```
 ### Step 2: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Playwright SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Playwright SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
@@ -557,7 +559,7 @@ await smartuiSnapshot.smartuiSnapshot(page, Page Loaded");
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
@@ -684,7 +686,7 @@ If you encounter issues not covered here:
 
 - Review the [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - Check [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

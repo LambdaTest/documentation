@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli-upload/
-slug: smartui-cli-upload/
+url: https://www.testmu.ai/support/docs/smartui-cli-upload
+slug: smartui-cli-upload
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 ---
 
@@ -34,30 +36,30 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-upload/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-upload/`
         }]
       })
     }}
 ></script>
-With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI CLI.
 
 ## Create a SmartUI Web-Project
 
@@ -71,7 +73,7 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -144,8 +146,8 @@ Please read the following table for more information about the options available
 | -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
 |    | --fetch-results [filename] | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results [custom-results.json]`|
 |    | --buildName &lt;string&gt; | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
-|    | --userName &lt;string&gt; | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
-|    | --accessKey &lt;string&gt; | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
+|    | --userName &lt;string&gt; | Override <BrandName /> username | `npx smartui upload <directoryName> --userName "user"`|
+|    | --accessKey &lt;string&gt; | Override <BrandName /> access key | `npx smartui upload <directoryName> --accessKey "key"`|
 |    | --config &lt;filepath&gt; | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
 
 :::note
@@ -224,12 +226,12 @@ npx smartui upload <directoryName>  --buildName "Sample Build Name"
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

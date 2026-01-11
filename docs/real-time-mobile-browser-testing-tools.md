@@ -3,10 +3,10 @@ id: real-time-mobile-browser-testing-tools
 title: How to use Testing Tools for Mobile Browsers?
 hide_title: false
 sidebar_label: Testing Tools
-description: Enhance your mobile app testing with LambdaTest's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
+description: Enhance your mobile app testing with TestMu AI's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool
@@ -16,10 +16,12 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-mobile-browser-testing-tools/
+url: https://www.testmu.ai/support/docs/real-time-mobile-browser-testing-tools
 site_name: LambdaTest
-slug: real-time-mobile-browser-testing-tools/
+slug: real-time-mobile-browser-testing-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ slug: real-time-mobile-browser-testing-tools/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Desktop Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/real-time-mobile-browser-testing-tools/"
+          "item": `${BRAND_URL}/support/docs/real-time-mobile-browser-testing-tools/`
         }]
       })
     }}
 ></script>
-LambdaTest offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
+<BrandName /> offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
 
 ## Device Controls
 The Device Controls feature allows you to simulate various actions on your test device during a testing session, enabling comprehensive testing of your web applications' behavior in real-world scenarios.
@@ -89,7 +91,7 @@ The IP Geolocation feature enables you to simulate website and mobile experience
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
  
 ## Network Throttling
-LambdaTest's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/network-throttling.png').default} alt="Image" className="doc_img"/>
 

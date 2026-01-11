@@ -6,13 +6,13 @@ description: This guide will explain how to perform operations with your applica
 keywords:
   - appium
   - application operations
-  - lambdatest
+  - testmu ai
   - mobile testing
   - apis
   - setup application
-url: https://www.lambdatest.com/support/docs/application-setup-via-api/
+url: https://www.testmu.ai/support/docs/application-setup-via-api
 site_name: LambdaTest
-slug: application-setup-via-api/
+slug: application-setup-via-api
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
@@ -33,30 +35,30 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Applications",
-          "item": "https://www.lambdatest.com/support/docs/application-setup-via-api/"
+          "item": `${BRAND_URL}/support/docs/application-setup-via-api/`
         }]
       })
     }}
 ></script>
 
-To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on LambdaTest, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
+To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on <BrandName />, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 :::note
 The maximum size for application should not exceed 1GB.
 :::
 
 :::tip
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 :::
 
 ## Upload your Application
@@ -64,7 +66,7 @@ The maximum size for application should not exceed 1GB.
 | PARAMETER | EXAMPLE | DESCRIPTION |
 |-----------------|-------------|------------|
 | `custom_id` | `-F "custom_id="Proverbial_1.0"` | You do not have to remember the `app_URL` and only use the `custom_id` to run your automation on the same app. |
-| `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way LambdaTest stores the link. <br/> Used when we Upload using App URL |
+| `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way <BrandName /> stores the link. <br/> Used when we Upload using App URL |
 | `visibility` | `-F "visibility=team"` <br/> DEFAULT: `individual` | Used to change the visibility of the application being uploaded. Once the app is uploaded using the `team`, everyone in the organisation can use the same URL to run the tests. |
 
 ### Using App File

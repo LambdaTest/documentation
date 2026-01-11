@@ -3,18 +3,21 @@ id: travis-ci-with-hyperexecute
 title: Travis CI Integration
 hide_title: true
 sidebar_label: Travis CI
-description: HyperExecute integrates with Travis CI Pipeline to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: HyperExecute integrates with Travis CI Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.lambdatest.com/support/docs/travis-ci-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute
 site_name: LambdaTest
-slug: travis-ci-with-hyperexecute/
+slug: travis-ci-with-hyperexecute
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +26,18 @@ slug: travis-ci-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Travis CI Pipeline Integration",
-          "item": "https://www.lambdatest.com/support/docs/travis-ci-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/travis-ci-with-hyperexecute/`
         }]
       })
     }}
@@ -106,12 +109,12 @@ Now commit your job and run the build.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

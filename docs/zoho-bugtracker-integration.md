@@ -3,15 +3,17 @@ id: zoho-bugtracker-integration
 title: Zoho BugTracker Integration
 hide_title: true
 sidebar_label: Zoho BugTracker 
-description: Integrate LambdaTest with Zoho BugTracker and perform effortless one-click bug logging from LambdaTest platform to Zoho BugTracker projects. Capture screenshots, annotate bugs, and more.
+description: Integrate TestMu AI with Zoho BugTracker and perform effortless one-click bug logging from TestMu AI platform to Zoho BugTracker projects. Capture screenshots, annotate bugs, and more.
 keywords:
-  - lambdatest integration with zoho bugtracker
-  - lambdatest and zoho bugtracker integration 
+  - testmu ai integration with zoho bugtracker
+  - testmu ai and zoho bugtracker integration 
   - zoho bugtracker integration
-url: https://www.lambdatest.com/support/docs/zoho-bugtracker-integration/
+url: https://www.testmu.ai/support/docs/zoho-bugtracker-integration
 site_name: LambdaTest
-slug: zoho-bugtracker-integration/
+slug: zoho-bugtracker-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: zoho-bugtracker-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Zoho BugTracker Integration",
-          "item": "https://www.lambdatest.com/support/docs/zoho-bugtracker-integration/"
+          "item": `${BRAND_URL}/support/docs/zoho-bugtracker-integration/`
         }]
       })
     }}
@@ -42,12 +44,12 @@ slug: zoho-bugtracker-integration/
 
 Zoho BugTracker is a robust cloud-based bug reporting platform that allows you to keep track of bugs and fix them rapidly. With its multitude of customizations and automation features, issue tracking is simple and effective. Additionally, Zoho BugTracker includes SLA management, time tracking, collaboration, analytics, document management, and automation.
 
-The LambdaTest integration with Zoho BugTracker allows you to log bugs while performing [cross browser testing](https://www.lambdatest.com/) of your websites and web apps across over 3000+ browsers and OS combinations on the cloud. From the LambdaTest platform, you can easily log bugs to Zoho BugTracker dashboard.
+The <BrandName /> integration with Zoho BugTracker allows you to log bugs while performing [cross browser testing](https://www.lambdatest.com/) of your websites and web apps across over 3000+ browsers and OS combinations on the cloud. From the <BrandName /> platform, you can easily log bugs to Zoho BugTracker dashboard.
 
-## Integrating Zoho BugTracker With LambdaTest
+## Integrating Zoho BugTracker With <BrandName />
 ***
 
-1. Login to your LambdaTest account. Before you configure integrations, make sure you have administrator or user level access.
+1. Login to your <BrandName /> account. Before you configure integrations, make sure you have administrator or user level access.
 
 2. Select **Integrations** from the left menu, then **ZOHO BUGTRACKER**.
 
@@ -61,12 +63,12 @@ The LambdaTest integration with Zoho BugTracker allows you to log bugs while per
 
 <img loading="lazy" src={require('../assets/images/Zohobugtracker-integration/accept.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-You now have LambdaTest integrated with Zoho BugTracker. 
+You now have <BrandName /> integrated with Zoho BugTracker. 
 
 ## One-Click Bug Logging With Zoho BugTracker
 ***
 
-1. From the LambdaTest dashboard, select **Real Time Testing** from the left menu.
+1. From the <BrandName /> dashboard, select **Real Time Testing** from the left menu.
 
 2. Enter the test URL, select the browser, browser versions, operating system, and click **START**.
 
@@ -88,7 +90,7 @@ It will redirect you to the cloud-based VM (virtual machine).
 
 Your bugs will now be marked to the Zoho BugTracker dashboard.
 
-7. Now visit LambdaTest dashboard. From the left menu, select **Issue Tracker**. 
+7. Now visit <BrandName /> dashboard. From the left menu, select **Issue Tracker**. 
 
 8. On opening Issue Tracker, you'll notice the logged bugs along with the test environment details on the right. To view logged bugs in Zoho BugTracker, click **upper right arrow in square** button.
 
@@ -102,7 +104,7 @@ It will route you to the Zoho BugTracker dashboard where you can find your marke
 ## Uninstalling The Zoho BugTracker Integration
 ***
 
-1. Login to your LambdaTest account and visit **Integrations** from the left menu.
+1. Login to your <BrandName /> account and visit **Integrations** from the left menu.
 
 2. From **My Integrations**, click **REMOVE** under the ZOHO BUGTRACKER block.
 
@@ -111,17 +113,17 @@ It will route you to the Zoho BugTracker dashboard where you can find your marke
 The Zoho BugTracker integration will be uninstalled.
 
 >
-In case you have any questions or need further assistance regarding LambdaTest + Zoho BugTracker integration, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
+In case you have any questions or need further assistance regarding <BrandName /> + Zoho BugTracker integration, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

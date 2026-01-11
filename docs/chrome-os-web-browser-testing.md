@@ -7,16 +7,18 @@ description: LChromeOS web browser testing with features like bug marking, IP ge
 keywords:
     - ChromeOS
     - ChromeOS webapp
-    - LambdaTest
+    - TestMu AI
     - Virtual Testing
     - Emulator
     - Simulator
     - realtime
     - web browser
-url: https://www.lambdatest.com/support/docs/chrome-os-web-browser-testing/
+url: https://www.testmu.ai/support/docs/chrome-os-web-browser-testing
 site_name: LambdaTest
-slug: chrome-os-web-browser-testing/
+slug: chrome-os-web-browser-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,31 +27,31 @@ slug: chrome-os-web-browser-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ChromeOS Web Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/chrome-os-web-browser-testing/"
+          "item": `${BRAND_URL}/support/docs/chrome-os-web-browser-testing/`
         }]
       })
     }}
 ></script>
 This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
 
-Apart from these features, LambdaTest also offers you the 
+Apart from these features, <BrandName /> also offers you the 
 
 ## Steps to start your ChromeOS Web Browser Testing
 
-**Step 1:** Click on the Real Time option from your LambdaTest dashboard. <br />
+**Step 1:** Click on the Real Time option from your <BrandName /> dashboard. <br />
 **Step 2:** Click on the **Virtual Mobile** option in **Web Browser Testing** section. <br />
-**Step 3:** Select the **ChromeOS** option, and enter your URL in the space provided. (We are using the lambdatest website for the demo purpose)
+**Step 3:** Select the **ChromeOS** option, and enter your URL in the space provided. (We are using the <BrandName /> website for the demo purpose)
 **Step 4:** Select your screen resolution and click on **Start** button.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/launch-chromos-web.gif').default} style={{ height: '380px' }} className="doc_img"/>
@@ -92,7 +94,7 @@ The IP Geolocation feature enables you to simulate website and mobile experience
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/ip.png').default} style={{ height: '350px' }} className="doc_img"/>
  
 ## Network Throttling
-LambdaTest's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/network.png').default} style={{ height: '350px' }}className="doc_img"/>
  

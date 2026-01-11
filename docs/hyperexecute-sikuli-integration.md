@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Sikuli
 description:  Automate the visual testing of any software by integrating Sikuli with HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - sikuli
   - Integrations
   - Products
@@ -16,9 +16,9 @@ keywords:
   - Visual UI automation
   - Desktop application automation
   - Cross-platform automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-sikuli-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration
 site_name: LambdaTest
-slug: hyperexecute-sikuli-integration/
+slug: hyperexecute-sikuli-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,17 +37,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-sikuli-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-sikuli-integration/`
         }]
       })
     }}
@@ -56,7 +58,7 @@ Sikuli is an open-source tool that empowers you to automate tasks on your comput
 This documentation guides you on how to integrate Sikuli seamlessly with HyperExecute to leverage the power of image recognition.
 
 ## Prerequisites
-- An active LambdaTest account with Admin or User-level access.
+- An active <BrandName /> account with Admin or User-level access.
 - Refer to the [Sikuli](https://www.softwaretestinghelp.com/sikuli-tutorial-part-1/) documentation to understand how to write a sikuli test.
 
 ## Step 1: Build your Visual Test with SikuliX
@@ -122,7 +124,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

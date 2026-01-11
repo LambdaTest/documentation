@@ -3,15 +3,17 @@ id: algoshack-integration
 title: algoQA Integration
 hide_title: true
 sidebar_label: algoQA
-description: Integrate LambdaTest with algoQA and automate your browser testing on an online browser farm of 3000+ real browsers and operating system combinations.
+description: Integrate TestMu AI with algoQA and automate your browser testing on an online browser farm of 3000+ real browsers and operating system combinations.
 keywords:
-  - lambdatest integration with algoqa
-  - lambdatest and algoqa integration 
+  - testmu ai integration with algoqa
+  - testmu ai and algoqa integration 
   - algoqA integration
-url: https://www.lambdatest.com/support/docs/algoqa-integration/
+url: https://www.testmu.ai/support/docs/algoqa-integration
 site_name: LambdaTest
-slug: algoqa-integration/
+slug: algoqa-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: algoqa-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "algoQA Integration",
-          "item": "https://www.lambdatest.com/support/docs/algoQA-integration/"
+          "item": `${BRAND_URL}/support/docs/algoQA-integration/`
         }]
       })
     }}
@@ -42,29 +44,29 @@ slug: algoqa-integration/
 
 algoQA is an end-to-end automation testing platform powered by artificial intelligence. It lets you generate test cases, executable automation scripts and datasets in a jiffy, thereby saving your testing and test maintenance cost and enhance your overall test coverage.
 
-By integrating LambdaTest with algoQA, you can perform automated browser testing on an online browser farm of 3000+ real browsers and operating system combinations, and achieve greater test coverage.
+By integrating <BrandName /> with algoQA, you can perform automated browser testing on an online browser farm of 3000+ real browsers and operating system combinations, and achieve greater test coverage.
 
 ## Prerequisites
 ---
 
-1. Make sure you have a LambdaTest account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
 
-2. To run automated tests, you will need LambdaTest Username and Access Key. You can get them from the LambdaTest Automation Dashboard under **Access Key**.
+2. To run automated tests, you will need <BrandName /> Username and Access Key. You can get them from the <BrandName /> Automation Dashboard under **Access Key**.
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/access_key.png').default} alt="Image" width="412" height="353"  className="doc_img img_center"/>
 
 
-## Integrating algoQA With LambdaTest
+## Integrating algoQA With <BrandName />
 ---
 
-1. Login to your LambdaTest account.
+1. Login to your <BrandName /> account.
 
-2.  Paste your LambdaTest Username and Access Key in the test scripts for generating a secure remote connection with algoQA through LambdaTest Remote URL.
+2.  Paste your <BrandName /> Username and Access Key in the test scripts for generating a secure remote connection with algoQA through <BrandName /> Remote URL.
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/remote.png').default} alt="Image" width="1428" height="274"  className="doc_img img_center"/>
 
 
-3. Navigate to LambdaTest [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
+3. Navigate to <BrandName /> [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/caps.PNG').default} alt="Image" width="1274" height="565"  className="doc_img"/>
 
@@ -76,11 +78,11 @@ By integrating LambdaTest with algoQA, you can perform automated browser testing
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/src_directory.png').default} alt="Image" width="2530" height="1230"  className="doc_img"/>
 
-6. Open ApplicationSettings.xml file to modify LambdaTest environment changes as highlighted below.
+6. Open ApplicationSettings.xml file to modify <BrandName /> environment changes as highlighted below.
 
 * BrowserType
-* LambdaTestBuild
-* LambdaTestURL
+* <BrandName />Build
+* <BrandName />URL
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/env_params.png').default} alt="Image" width="2549" height="1300"  className="doc_img"/>
 

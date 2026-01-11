@@ -3,15 +3,17 @@ id: bugsnag-integration
 title: Bugsnag Integration
 hide_title: true
 sidebar_label: Bugsnag 
-description: With LambdaTest and Bugsnag integration, you can easily mark your bugs, keep a track of them, share, and collaborate with your team on your Bugsnag projects.
+description: With TestMu AI and Bugsnag integration, you can easily mark your bugs, keep a track of them, share, and collaborate with your team on your Bugsnag projects.
 keywords:
-  - LambdaTest integration with Bugsnag
-  - LambdaTest and Bugsnag Integration
+  - TestMu AI integration with Bugsnag
+  - TestMu AI and Bugsnag Integration
   - Bugsnag Integration
-url: https://www.lambdatest.com/support/docs/bugsnag-integration/
+url: https://www.testmu.ai/support/docs/bugsnag-integration
 site_name: LambdaTest
-slug: bugsnag-integration/
+slug: bugsnag-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: bugsnag-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bugsnag Integration",
-          "item": "https://www.lambdatest.com/support/docs/bugsnag-integration/"
+          "item": `${BRAND_URL}/support/docs/bugsnag-integration/`
         }]
       })
     }}
@@ -42,12 +44,12 @@ slug: bugsnag-integration/
 
 Bugsnag is an error-monitoring tool that allows your developers to quickly find, prioritize, and reproduce errors. Individual crashes are gathered together by underlying cause and shown as discrete errors in Bugsnag to allow for easy prioritizing; the error inbox can be sorted by event count, impacted users, error severity, or it can be limited to provide a list of errors matching a specified search parameter. 
 
-The LambdaTest and Bugsnag integration allows you to perform one-click bug logging from LambdaTest to your Bugsnag projects while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps).
+The <BrandName /> and Bugsnag integration allows you to perform one-click bug logging from <BrandName /> to your Bugsnag projects while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps).
 
-## Integrating Bugsnag With LambdaTest
+## Integrating Bugsnag With <BrandName />
 ***
 
-1. Login to your LambdaTest account. Make sure you have admin or user level access before you begin configuring integrations.
+1. Login to your <BrandName /> account. Make sure you have admin or user level access before you begin configuring integrations.
 
 2. From the left menu, select **Integrations** then **Bugsnag**.
 
@@ -88,7 +90,7 @@ The Bugsnag Auth token gives you access to information about your organization, 
 
 <img loading="lazy" src={require('../assets/images/bugsnag-integration/install-bugsnag.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-The Bugsnag will be integrated with your LambdaTest account.
+The Bugsnag will be integrated with your <BrandName /> account.
 
 ## One-Click Bug Logging With Bugsnag
 ***
@@ -119,14 +121,14 @@ Your bugs will be logged right away.
 
 <img loading="lazy" src={require('../assets/images/bugsnag-integration/logged-issues.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-7. Select the **Exceptions** tab and you will notice the data you submitted via LambdaTest would already be presented in it. LambdaTest attaches test environment data and related screenshots to tickets automatically.
+7. Select the **Exceptions** tab and you will notice the data you submitted via <BrandName /> would already be presented in it. <BrandName /> attaches test environment data and related screenshots to tickets automatically.
 
 <img loading="lazy" src={require('../assets/images/bugsnag-integration/bug-details.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
 ## Uninstalling The Bugsnag Integration
 ***
 
-1. Login to your LambdaTest account and visit Integrations from the left menu.
+1. Login to your <BrandName /> account and visit Integrations from the left menu.
 
 2. Navigate to 'My Integrations'and click on **REMOVE** under the Bugsnag block.
 
@@ -140,12 +142,12 @@ For any queries, feel free to drop them at our <span className="doc__lt" onClic
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

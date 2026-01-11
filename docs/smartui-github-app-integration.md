@@ -2,7 +2,7 @@
 id: smartui-github-app-integration
 title: GitHub App Integration with SmartUI
 sidebar_label: GitHub App
-description: Integrate GitHub with LambdaTest SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.
+description: Integrate GitHub with TestMu AI SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-github-app-integration/
+url: https://www.testmu.ai/support/docs/smartui-github-app-integration
 site_name: LambdaTest
-slug: smartui-github-app-integration/
+slug: smartui-github-app-integration
 
 ---
 
@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": "https://www.lambdatest.com/support/docs/smartui-upload-api-v2/"
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
@@ -58,9 +60,9 @@ This is the guide to setup your GitHub Repos with SmartUI projects and run your 
 - Basic understanding of Continuous Integration tools (CI) is required.
 - Should have setup the SmartUI suite, else please read [this](/docs/selenium-visual-regression/)
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest SmartUI platform using GitHub App-
+The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform using GitHub App-
 
-## Step 1: Integrate the your LambdaTest Account with GitHub App
+## Step 1: Integrate the your <BrandName /> Account with GitHub App
 
 The following are the steps to integrate your account with GitHub App:
 

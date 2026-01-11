@@ -3,16 +3,18 @@ id: inside-lambdatest-automation-platform
 title: Guided Walkthrough of Web Automation Platform
 hide_title: false
 sidebar_label: Guided Walkthrough
-description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the LambdaTest.
+description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the TestMu AI.
 keywords:
   - Automation Platform
   - Dashboard
   - Automation Testing
-  - Lambdatest Dashboard
-url: https://www.lambdatest.com/support/docs/inside-lambdatest-platform/
+  - testmu ai Dashboard
+url: https://www.testmu.ai/support/docs/inside-testmu-platform
 site_name: LambdaTest
-slug: inside-lambdatest-platform/
+slug: inside-testmu-platform
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,23 +24,23 @@ slug: inside-lambdatest-platform/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Guided Walkthrough",
-          "item": "https://www.lambdatest.com/support/docs/inside-lambdatest-platform/"
+          "item": `${BRAND_URL}/support/docs/inside-testmu-platform/`
         }]
       })
     }}
 ></script>
 
-This page gives you a guided walkthrough of all the things on the LambdaTest [Web Automation Dashboard](https://automation.lambdatest.com/build) and how you can get the most out of the platform, once you have successfully ran you first test.
+This page gives you a guided walkthrough of all the things on the <BrandName /> [Web Automation Dashboard](https://automation.lambdatest.com/build) and how you can get the most out of the platform, once you have successfully ran you first test.
 
 We provide both Test and Build view for filtering your tests as per your requirement.
 
@@ -62,7 +64,7 @@ The Test Summary section provides a high-level overview of the test run, allowin
 #### Core Test Information
 - Build Name: "Demo: Cucumber TestNG on HyperTest Grid"
 - Test status (passed or failed)
-- Test Name: "Perform Bing Search for LambdaTest"
+- Test Name: "Perform Bing Search for <BrandName />"
 - Time taken for execution
 - Configurations used (resolution, browser, operating system, framework)
 - Last updated timestamp
@@ -81,6 +83,6 @@ You can access the commands involved in the test, and the logs on the right hand
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/commandLogsAndVideos.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
 
 ### Test Videos
-LambdaTest provides you videos of your tests to give you a clear picture of what goes on in the background.
+<BrandName /> provides you videos of your tests to give you a clear picture of what goes on in the background.
 
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testVideo.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>

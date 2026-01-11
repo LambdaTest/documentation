@@ -2,16 +2,19 @@
 id: test-case-versioning
 title: Test Case Versioning
 sidebar_label: Manage Versions
-description: Learn efficient manual test case versioning with LambdaTest's Test Manager. 
+description: Learn efficient manual test case versioning with TestMu AI's Test Manager. 
 keywords:
   - test case creation
   - test case update
   - test cases
   - version
-url: https://www.lambdatest.com/support/docs/test-case-versioning/
+url: https://www.testmu.ai/support/docs/test-case-versioning
 site_name: LambdaTest
-slug: test-case-versioning/
+slug: test-case-versioning
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: test-case-versioning/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Manual Test Case Creation",
-          "item": "https://www.lambdatest.com/support/docs/manual-test-case-creation/"
+          "item": `${BRAND_URL}/support/docs/manual-test-case-creation/`
         }]
       })
     }}

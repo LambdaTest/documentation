@@ -5,15 +5,16 @@ hide_title: false
 sidebar_label: HyperExecute YAML
 description: This document list enumerates the diverse configuration options supported by HyperExecute YAML, providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-parameters
 site_name: LambdaTest Deep dive into hyperexecute yaml
-slug: hyperexecute-yaml-parameters/
+slug: hyperexecute-yaml-parameters
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +24,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Deep Dive into HyperExecute YAML",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-parameters/`
         }]
       })
     }}
@@ -170,12 +171,12 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

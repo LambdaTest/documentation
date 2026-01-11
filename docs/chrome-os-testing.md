@@ -3,21 +3,24 @@ id: chrome-os-testing
 title: ChromeOS Testing
 hide_title: false
 sidebar_label: ChromeOS Testing
-description: LambdaTest provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.s
+description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.s
 keywords:
     - ChromeOS
     - ChromeOS App
-    - LambdaTest
+    - TestMu AI
     - Virtual Testing
     - Emulator
     - Simulator
     - real time
     - application
     - Webapp
-url: https://www.lambdatest.com/support/docs/chrome-os-testing/
+url: https://www.testmu.ai/support/docs/chrome-os-testing
 site_name: LambdaTest
-slug: chrome-os-testing/
+slug: chrome-os-testing
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,18 +29,18 @@ slug: chrome-os-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ChromeOS App Testing",
-          "item": "https://www.lambdatest.com/support/docs/chrome-os-testing/"
+          "item": `${BRAND_URL}/support/docs/chrome-os-testing/`
         }]
       })
     }}

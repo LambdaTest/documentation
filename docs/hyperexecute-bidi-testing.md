@@ -2,24 +2,26 @@
 id: hyperexecute-bidi-testing
 title: Execute BiDi Framework Tests on HyperExecute
 sidebar_label: BiDi
-description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via LambdaTest.
+description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.
 keywords:
   - xcui
   - iOS
-  - lambdatest 
-  - framework on lambdatest
+  - testmu ai 
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/hyperexecute-bidi-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-bidi-testing
 site_name: LambdaTest
-slug: hyperexecute-bidi-testing/
+slug: hyperexecute-bidi-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Bidi Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-bidi-testing/"
+          "name": "Getting Started With Bidi Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/hyperexecute-bidi-testing/`
         }]
       })
     }}
@@ -57,15 +59,15 @@ BiDi brings modern automation capabilities that were missing in Selenium until n
 - DOM and page lifecycle tracking
 - Ensures your tests are aligned with the latest W3C standards.
 
-[HyperExecute](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+[HyperExecute](/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
-This guide details how to execute your **BiDi** tests on **HyperExecute** using [YAML 0.1](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/)
+This guide details how to execute your **BiDi** tests on **HyperExecute** using [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/)
 
 ## Run a Sample Project
 ### Step 1: Clone Sample Repository
 
 :::tip BiDi repo
-Download or Clone the BiDi sample from LambdaTest’s GitHub Repository
+Download or Clone the BiDi sample from <BrandName />’s GitHub Repository
 
 <a href="https://github.com/LambdaTest/hyperexecute-bidi-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

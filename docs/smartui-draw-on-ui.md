@@ -2,7 +2,7 @@
 id: smartui-draw-on-ui
 title: Ignore or Select Annotated Regions
 sidebar_label: Ignore or Select Regions
-description: In this documentation, learn how to ignore, select the annotated regions of the tests with LambdaTest's SmartUI, including ignore colors, floating regions, and select ignore features.
+description: In this documentation, learn how to ignore, select the annotated regions of the tests with TestMu AI's SmartUI, including ignore colors, floating regions, and select ignore features.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -20,8 +20,8 @@ keywords:
   - Floating Regions
   - Ignore Colors
 
-url: https://www.lambdatest.com/support/docs/smartui-ignore-regions/
-slug: smartui-draw-on-ui/
+url: https://www.testmu.ai/support/docs/smartui-ignore-regions
+slug: smartui-draw-on-ui
 
 ---
 import Tabs from '@theme/Tabs';
@@ -29,6 +29,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,18 +38,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-draw-on-ui/"
+          "item": `${BRAND_URL}/support/docs/smartui-draw-on-ui/`
         }]
       })
     }}

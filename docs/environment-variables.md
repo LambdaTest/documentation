@@ -3,15 +3,17 @@ id: environment-variables
 title: Using Environment Variables For Authentication Credentials
 hide_title: true
 sidebar_label: Set Up Environment Variables
-description: Find out how to get access to LambdaTest authentication credentials, fetching them from the Automation tab in your LambdaTest profile, and configuring them on Mac OSX/Linux, Windows systems.
+description: Find out how to get access to TestMu AI authentication credentials, fetching them from the Automation tab in your TestMu AI profile, and configuring them on Mac OSX/Linux, Windows systems.
 keywords:
-- LambdaTest automation
-- LambdaTest environment variables
-- LambdaTest setup
-url: https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials/
+- TestMu AI automation
+- TestMu AI environment variables
+- TestMu AI setup
+url: https://www.testmu.ai/support/docs/using-environment-variables-for-authentication-credentials
 site_name: LambdaTest
-slug: using-environment-variables-for-authentication-credentials/
+slug: using-environment-variables-for-authentication-credentials
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: using-environment-variables-for-authentication-credentials/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Using Environment Variables For Authentication Credentials",
-          "item": "https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials/"
+          "item": `${BRAND_URL}/support/docs/using-environment-variables-for-authentication-credentials/`
         }]
       })
     }}
@@ -43,17 +45,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Using Environment Variables For Authentication Credentials
 ***
 
-To provide you with a secure [cross-browser testing](https://www.lambdatest.com) environment on-cloud, we recommend integrating LambdaTest Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and our [cloud-based Selenium Grid](https://www.lambdatest.com/selenium-automation). This document will help you understand how to set up your LambdaTest authentication credentials as environment variables for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
+To provide you with a secure [cross-browser testing](https://www.lambdatest.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and our [cloud-based Selenium Grid](https://www.lambdatest.com/selenium-automation). This document will help you understand how to set up your <BrandName /> authentication credentials as environment variables for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
 
-## Where To Find LambdaTest Authentication Credentials?
+## Where To Find <BrandName /> Authentication Credentials?
 ***
 
-LambdaTest Authentication Credentials consists of two fields:
+<BrandName /> Authentication Credentials consists of two fields:
 
-1. LambdaTest Username
-2. LambdaTest Access Key
+1. <BrandName /> Username
+2. <BrandName /> Access Key
 
->You can find these authentication credentials by either visiting the [Automation Dashboard](https://automation.lambdatest.com) or your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile).
+>You can find these authentication credentials by either visiting the [Automation Dashboard](https://automation.lambdatest.com) or your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile).
 
 ### Fetching Authentication Credential From The Automation Tab
 ***
@@ -64,10 +66,10 @@ LambdaTest Authentication Credentials consists of two fields:
 
 <img loading="lazy" src={require('../assets/images/environment-variables/dashboard-access-key.webp').default} alt="Image" width="1919" height="878" className="doc_img"/>
 
-### Fetching Authentication Credential From Your LambdaTest Profile
+### Fetching Authentication Credential From Your <BrandName /> Profile
 ***
 
-**Step 1**: Visit your LambdaTest Profile by clicking on the user icon on the top-right followed by clicking on Profile.
+**Step 1**: Visit your <BrandName /> Profile by clicking on the user icon on the top-right followed by clicking on Profile.
 
 <img loading="lazy" src={require('../assets/images/environment-variables/environment-variable-2.webp').default} alt="Image" width="1363" height="544" className="doc_img"/>
 
@@ -82,7 +84,7 @@ LambdaTest Authentication Credentials consists of two fields:
 
 **Step 2**: To perform text-insertion into your profile, you would need to press the **i** button from your keyboard.
 
-**Step 3**: Feed LambdaTest Authentication credentials using the code below:
+**Step 3**: Feed <BrandName /> Authentication credentials using the code below:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
@@ -109,13 +111,13 @@ $ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 **Step 3**: You will notice a dialog would prompt open for the **Environment Variables**. Now, click on **New** under the **System variables**.
 
-**Step 4**: Enter `LT_USERNAME` as the **Variable name** & provide your `LambdaTest Username` as the **Variable value**.
+**Step 4**: Enter `LT_USERNAME` as the **Variable name** & provide your `TestMu AI Username` as the **Variable value**.
 
-**Step 5**: Hit **Ok** & repeat the steps for adding `LambdaTest Access Key` as another **System Environment Variable**.
+**Step 5**: Hit **Ok** & repeat the steps for adding `TestMu AI Access Key` as another **System Environment Variable**.
 
 ## Incorporating Environment Variable In Selenium Automation Scripts
 
-Now that we have set up our LambdaTest Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.lambdatest.com/selenium-automation) scripts for invoking your automation test suites on LambdaTest Selenium Grid. In this section, you will learn how to reference environment variables for different programming languages with respect to LambdaTest Selenium Grid.
+Now that we have set up our <BrandName /> Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.lambdatest.com/selenium-automation) scripts for invoking your automation test suites on <BrandName /> Selenium Grid. In this section, you will learn how to reference environment variables for different programming languages with respect to <BrandName /> Selenium Grid.
 
 ### Java
 ***
@@ -192,12 +194,12 @@ $accesskey = getenv('LT_ACCESS_KEY')
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -2,21 +2,21 @@
 id: appium-uploading-retrieving-files
 title: Uploading/Retrieving files on Real Devices 
 sidebar_label: Uploading/Retrieving files on Real Devices
-description: You can use sample data provided by LambdaTest in case you need to check uploading files, contacts etc. to your application. This document also shows how to retrieve files from LambdaTest rela devices to local and vice-versa.
+description: You can use sample data provided by TestMu AI in case you need to check uploading files, contacts etc. to your application. This document also shows how to retrieve files from TestMu AI rela devices to local and vice-versa.
 keywords:
   - upload a file
   - app test automation
   - sample data
   - push pull
   - retrieving files
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-uploading-retrieving-files/
+url: https://www.testmu.ai/support/docs/appium-uploading-retrieving-files
 site_name: LambdaTest
-slug: appium-uploading-retrieving-files/
+slug: appium-uploading-retrieving-files
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <RealDeviceTag value="Real Device" /> 
 
@@ -36,24 +38,24 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Uploading/Retrieving files on Real Devices",
-          "item": "https://www.lambdatest.com/support/docs/appium-uploading-retrieving-files/"
+          "item": `${BRAND_URL}/support/docs/appium-uploading-retrieving-files/`
         }]
       })
     }}
 ></script>
 ---
 
-Whenever you are testing your application on **LambdaTest Real Devices**, you might have felt the need for some set of sample data that can help you achieve required output. Thus, to fulfill this need LambdaTest provides you with sample data like **pre-loaded contacts, media files etc.**
+Whenever you are testing your application on **<BrandName /> Real Devices**, you might have felt the need for some set of sample data that can help you achieve required output. Thus, to fulfill this need <BrandName /> provides you with sample data like **pre-loaded contacts, media files etc.**
 
 You can also upload files to the real device for testing and can also save the files produced for future reference. Let's see how.
 
@@ -62,7 +64,7 @@ You can also upload files to the real device for testing and can also save the f
 
 ### How to copy a file or folder to the real device?
 
-We recognise that you need some files or folders on the device to test various things, such as uploading something to your app etc. Therefore, LambdaTest provides you with a set of pre-loaded media files on the real device so that you can test your apps. But, in case you need to **upload** something specific, you can upload and use it wherever required. For this functionality, we generally use Appium’s [push file](https://appium.readthedocs.io/en/latest/en/commands/device/files/push-file/) command to copy files into any folder.
+We recognise that you need some files or folders on the device to test various things, such as uploading something to your app etc. Therefore, <BrandName /> provides you with a set of pre-loaded media files on the real device so that you can test your apps. But, in case you need to **upload** something specific, you can upload and use it wherever required. For this functionality, we generally use Appium’s [push file](https://appium.readthedocs.io/en/latest/en/commands/device/files/push-file/) command to copy files into any folder.
 
 ### How to retrieve a file or directory from the real device?
 
@@ -74,7 +76,7 @@ Refer to the code snippets given below for push and pull commands in different l
 
 <TabItem value="Android" label="Android" default>
 
-While using pull and push features of Appium, please copy the files and retrieve them from the given folders, `/sdcard/Downloads/`, `/sdcard/Pictures` and `/sdcard/Android/data/<app_package>`, on the LambdaTest Real Device.
+While using pull and push features of Appium, please copy the files and retrieve them from the given folders, `/sdcard/Downloads/`, `/sdcard/Pictures` and `/sdcard/Android/data/<app_package>`, on the <BrandName /> Real Device.
 
 <Tabs className="docs__val">
 
@@ -243,12 +245,12 @@ byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:Documents/sample
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

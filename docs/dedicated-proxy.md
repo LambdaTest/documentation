@@ -3,16 +3,18 @@ id: dedicated-proxy
 title: Dedicated Proxy - IP Whitelisting
 hide_title: true
 sidebar_label: Dedicated Proxy for IP whitelisting
-description: This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
+description: This article will guide you on how does TestMu AI Cloud access network restricted resources using a dedicated proxy server.
 keywords:
   - dedicated proxy
   - inbound ip whitelisting
   - ip whitelisting
-  - ip whitelsiting lambdatest
-url: https://www.lambdatest.com/support/docs/dedicated-proxy/
+  - ip whitelsiting testmu ai
+url: https://www.testmu.ai/support/docs/dedicated-proxy
 site_name: LambdaTest
-slug: dedicated-proxy/
+slug: dedicated-proxy
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: dedicated-proxy/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/dedicated-proxy/"
+          "item": `${BRAND_URL}/support/docs/dedicated-proxy/`
         }]
       })
     }}
@@ -42,7 +44,7 @@ slug: dedicated-proxy/
 
 ---
 
-This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
+This article will guide you on how does TestMu AI cloud access network restricted resources using a dedicated proxy server.
 
 ## Prerequisites
 
@@ -57,11 +59,11 @@ This article will guide you on how does Lambdatest Cloud access network restrict
 
 IP whitelisting can help the client to have control over who has the access to resources hosted on their network. IP whitelist is an approved list of IP addresses or IP domains that have permission to access the resource domain. Reserved for only trusted users, it is only set and updated by the client network administrators. With dedicated proxy solution, **only a single IP** needs to be whitelisted which saves the hassle of whitelisting multiple IP ranges.
 
-## Dedicated Proxy Server of LambdaTest
+## Dedicated Proxy Server of <BrandName />
 
 ---
 
-LambdaTest provides a dedicated proxy server solution that can be whitelisted to provide access to the client’s network-restricted resources.
+<BrandName /> provides a dedicated proxy server solution that can be whitelisted to provide access to the client’s network-restricted resources.
 
 ### How does it work?
 
@@ -71,8 +73,8 @@ LambdaTest provides a dedicated proxy server solution that can be whitelisted to
 
 ---
 
-1. The test script from the client network machine makes a call to the LambdaTest cloud platform to start the test session.
-2. LambdaTest cloud then allocates a device to the user with the specified capabilities to run the user’s test on the LambdaTest cloud.
+1. The test script from the client network machine makes a call to the <BrandName /> cloud platform to start the test session.
+2. <BrandName /> cloud then allocates a device to the user with the specified capabilities to run the user’s test on the <BrandName /> cloud.
 3. This allocated device makes all the network requests via the dedicated Proxy allocated to the client. The dedicated proxy checks whether resources can be attained through the public internet or need to be fetched from the client’s network.
 4. The dedicated proxy accesses the network restricted resources by reaching out to the client’s network via the whitelisted IP.
 
@@ -81,12 +83,12 @@ LambdaTest provides a dedicated proxy server solution that can be whitelisted to
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

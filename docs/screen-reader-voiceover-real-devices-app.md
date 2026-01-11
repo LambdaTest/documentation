@@ -2,16 +2,16 @@
 id: screen-reader-voiceover-real-devices-app
 title: Screen Reader (VoiceOver) on iOS Devices
 sidebar_label: Screen Reader (VoiceOver)
-description: Test your app's and website's accessibility with LambdaTest's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
+description: Test your app's and website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
 keywords:
   - screen reader
   - voiceover
   - accessibility
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/screen-reader-voiceover-real-devices-app/
+url: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app
 site_name: LambdaTest
-slug: screen-reader-voiceover-real-devices-app/
+slug: screen-reader-voiceover-real-devices-app
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -19,6 +19,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Screen Reader on Real Devices App",
-          "item": "https://www.lambdatest.com/support/docs/screen-reader-voiceover-real-devices-app/"
+          "item": `${BRAND_URL}/support/docs/screen-reader-voiceover-real-devices-app/`
         }]
       })
     }}
 ></script>
 
-Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on LambdaTest, you can test the accessibility of your website on supported real iOS devices. 
+Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on <BrandName />, you can test the accessibility of your website on supported real iOS devices. 
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 

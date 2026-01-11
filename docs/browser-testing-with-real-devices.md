@@ -3,14 +3,16 @@ id: browser-testing-on-real-devices
 title: Getting started with Real Device Browser Testing
 hide_title: true
 sidebar_label: Getting Started
-description: With LambdaTest, conduct live interactive testing of websites and web apps on real Android and iOS devices to ensure a seamless user experience.
+description: With TestMu AI, conduct live interactive testing of websites and web apps on real Android and iOS devices to ensure a seamless user experience.
 keywords:
 - real device browser testing 
-- lambdatest real device browser testing 
-url: https://www.lambdatest.com/support/docs/browser-testing-on-real-devices/
+- testmu ai real device browser testing 
+url: https://www.testmu.ai/support/docs/browser-testing-on-real-devices
 site_name: LambdaTest
-slug: browser-testing-on-real-devices/
+slug: browser-testing-on-real-devices
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,18 +21,18 @@ slug: browser-testing-on-real-devices/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Native Mobile Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/browser-testing-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/browser-testing-on-real-devices/`
         }]
       })
     }}
@@ -39,7 +41,7 @@ slug: browser-testing-on-real-devices/
 # Getting Started with Real Device Browser Testing
 ***
 
-Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With LambdaTest’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
+Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With <BrandName />’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="zzjTXzJkLtA" data-loading-attribute="eager">
@@ -49,7 +51,7 @@ Real device browser testing refers to the process of testing web applications an
 
 ***
 
-**Step 1:** Login to your LambdaTest account. From the left sidebar, head to Real Device and select **Browser Testing**.
+**Step 1:** Login to your <BrandName /> account. From the left sidebar, head to Real Device and select **Browser Testing**.
 
 **Step 2**: Select the **OS** and **browser** of your choice. 
 
@@ -63,7 +65,7 @@ In the case of **iOS** devices, you can enter the website URL once the session h
  
 **Step 5**: Select the **Tunnel** option in the top right corner to test your locally hosted and privately hosted websites. 
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
+Check out our detailed [support documentation](/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
 
 **Step 6**: Click on Start to run your test session.
 
@@ -77,12 +79,12 @@ Check out our detailed [support documentation](https://www.lambdatest.com/suppor
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

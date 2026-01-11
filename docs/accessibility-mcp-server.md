@@ -3,21 +3,23 @@ id: accessibility-mcp-server
 title: Introducing Accessibility MCP Server
 hide_title: false
 sidebar_label: Accessibility MCP Server
-description: LambdaTest’s Accessibility MCP Server tests public URLs and React apps, providing detailed reports and AI-driven insights to quickly identify and fix accessibility issues.
+description: TestMu AI’s Accessibility MCP Server tests public URLs and React apps, providing detailed reports and AI-driven insights to quickly identify and fix accessibility issues.
 
 keywords:
   - accessibility testing
   - accessibility
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/accessibility-mcp-server/
+url: https://www.testmu.ai/support/docs/accessibility-mcp-server
 site_name: LambdaTest
-slug: accessibility-mcp-server/
+slug: accessibility-mcp-server
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,24 +29,24 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-mcp-server/"
+          "item": `${BRAND_URL}/support/docs/accessibility-mcp-server/`
         }]
       })
     }}
 ></script>
 
 # Getting Started with Accessibility MCP Server
-LambdaTest’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
+<BrandName />’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
 
 Users receive actionable insights that not only helps to pinpoint and report roadblocks within web applications but also help in resolving them.
 
@@ -73,18 +75,18 @@ Here are the key benefits of using Accessibility MCP Server:
 Accessibility MCP Server provides following two core tools:
 
 1. `getAccessibilityReport`: Fetches detailed accessibility report for the specified public URL. Users can view this report in their browser to analyse the issues.
-2. `buildLocalAppForAnalysis`:  Builds and serves your local react application via LambdaTest and identifies accessibility issues in the application.
-3. `AnalyseAppViaTunnel`: Helps test local apps which are already running via LambdaTest tunnel for accessibility failures.
+2. `buildLocalAppForAnalysis`:  Builds and serves your local react application via <BrandName /> and identifies accessibility issues in the application.
+3. `AnalyseAppViaTunnel`: Helps test local apps which are already running via <BrandName /> tunnel for accessibility failures.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

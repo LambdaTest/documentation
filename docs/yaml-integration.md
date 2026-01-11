@@ -1,25 +1,27 @@
 ---
 id: yaml-integration
-title: Configure YAML For Integrating GoCD Pipelines With LambdaTest
+title: Configure YAML For Integrating GoCD Pipelines With TestMu AI
 sidebar_label: YAML
 description: This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with an online Selenium Grid.
 keywords:
   - gocd
-  - lambdatest
+  - testmu ai
   - gocd integrations
   - gocd pipelines
-  - gocd lambdatest
-  - gocd integration with lambdatest
-  - lambdatest integration with gocd pipelines
+  - gocd testmu ai
+  - gocd integration with testmu ai
+  - testmu ai integration with gocd pipelines
   - ci/cd
-url: https://www.lambdatest.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
+url: https://www.testmu.ai/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online
 site_name: LambdaTest
-slug: configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
+slug: configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online
 ---
 
-Through our previous document, you were able to integrate GoCD pipelines with LambdaTest, and executed your first Selenium testing script through GoCD on LambdaTest. However, in our previous chapter we ran the test by copying the YAML from the cloned [repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample). This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with our online Selenium Grid.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-> **Note:** If you are just getting started with GoCD then make sure to visit our documentation to [integrate LambdaTest with GoCD](/docs/gocd-integration-with-lambdatest/).
+Through our previous document, you were able to integrate GoCD pipelines with <BrandName />, and executed your first Selenium testing script through GoCD on <BrandName />. However, in our previous chapter we ran the test by copying the YAML from the cloned [repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample). This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with our online Selenium Grid.
+
+> **Note:** If you are just getting started with GoCD then make sure to visit our documentation to [integrate <BrandName /> with GoCD](/docs/gocd-integration-with-testmu/).
 
 ## Configuring YAML through GoCD
 
@@ -45,7 +47,7 @@ npm install
 
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-3.webp').default} alt="Image"  className="doc_img"/>
 
-**Step 5:** Under Advanced setting, you need to specify your LambdaTest authentication credentials as the environment variables.
+**Step 5:** Under Advanced setting, you need to specify your <BrandName /> authentication credentials as the environment variables.
 
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-4.webp').default} alt="Image"  className="doc_img"/>
 
@@ -53,4 +55,4 @@ npm install
 
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-5.webp').default} alt="Image"  className="doc_img"/>
 
-Now, you just need to execute the job like we did in the previous chapter when we [integrated GoCD with LambdaTest](/docs/gocd-integration-with-lambdatest/). That is all you need to do if you wish to configure a private YAML file before you run your Selenium testing scripts over LambdaTest Selenium Grid.
+Now, you just need to execute the job like we did in the previous chapter when we [integrated GoCD with <BrandName />](/docs/gocd-integration-with-testmu/). That is all you need to do if you wish to configure a private YAML file before you run your Selenium testing scripts over <BrandName /> Selenium Grid.

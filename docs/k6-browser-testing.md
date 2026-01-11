@@ -1,9 +1,9 @@
 ---
 id: k6-browser-testing
-title: How To Run k6 Browser Tests On LambdaTest Platform
+title: How To Run k6 Browser Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: k6 Browser Testing
-description: Learn how to run your k6 Browser tests across 40+ browsers and operating systems on the LambdaTest automation platform
+description: Learn how to run your k6 Browser tests across 40+ browsers and operating systems on the TestMu AI automation platform
 keywords:
   - k6 browser testing
   - grafana browser testing
@@ -11,12 +11,14 @@ keywords:
   - how to use k6 for testing
   - test k6
   - k6 testing tutorial
-  - k6 testing lambdatest
+  - k6 testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/k6-browser-testing/
+url: https://www.testmu.ai/support/docs/k6-browser-testing
 site_name: LambdaTest
-slug: k6-browser-testing/
+slug: k6-browser-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,18 +27,18 @@ slug: k6-browser-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With k6 browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/k6-browser-testing/"
+          "item": `${BRAND_URL}/support/docs/k6-browser-testing/`
         }]
       })
     }}
@@ -55,7 +57,7 @@ k6 browser module aims to provide rough compatibility with the Playwright API, s
 </div>
 </div>
 
-LambdaTest allows you to run k6 Browser tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with K6 testing on the LambdaTest platform.
+<BrandName /> allows you to run k6 Browser tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with K6 testing on the <BrandName /> platform.
 
 **Note**: k6 Browser is an experimental module that supports browser testing through the Chrome DevTools Protocol (CDP).
 
@@ -63,14 +65,14 @@ LambdaTest allows you to run k6 Browser tests on a browser farm of 40+ real brow
 
 ***
 
-> Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either
+> Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either
 > download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/k6-browser-tests-sample" className="github__anchor"><img loading="lazy"
 > src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
 1. Install k6. Refer the installation guide here: https://k6.io/docs/get-started/installation/
 
-2. In order to run your k6 tests, you will need to set your LambdaTest username and access key in the environment
+2. In order to run your k6 tests, you will need to set your <BrandName /> username and access key in the environment
    variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444"
@@ -94,7 +96,7 @@ export LT_ACCESS_KEY = "YOUR_LAMBDATEST_ACCESS_KEY"
 
 * * *
 
-Shown below are the steps on running k6 tests on the LambdaTest platform.
+Shown below are the steps on running k6 tests on the <BrandName /> platform.
 
 1. Clone the [k6-browser-tests-sample GitHub repository](https://github.com/LambdaTest/k6-browser-tests-sample) and
    switch to the cloned directory.
@@ -106,9 +108,9 @@ cd k6-browser-tests-sample
 
 2. Ensure you have K6 installed.
 
-3. Configure your LambdaTest authentication credentials.
+3. Configure your <BrandName /> authentication credentials.
 
-Once you are done with the above-mentioned steps, you can initiate your first k6 test on LambdaTest.
+Once you are done with the above-mentioned steps, you can initiate your first k6 test on <BrandName />.
 
 > **Test Scenario**: The below test script runs on Chrome browser on macOS Ventura. It visits the DuckDuckGo search engine and searches for Playwright.
 
@@ -177,9 +179,9 @@ K6_BROWSER_ENABLED=true k6 run k6_sample.js
 
 ***
 
-The LambdaTest Automation Dashboard is where you can see the results of your k6 tests after running them on the LambdaTest platform.
+The <BrandName /> Automation Dashboard is where you can see the results of your k6 tests after running them on the <BrandName /> platform.
 
-The below screenshot of LambdaTest Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of <BrandName /> Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/k6-testing/k6-dashboard.png').default} alt="Image" width="1444"
 height="703"  className="doc_img"/>

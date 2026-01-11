@@ -8,13 +8,15 @@ keywords:
  - agent to agent testing
  - agentic testing
  - ai agent testing
-url: https://www.lambdatest.com/support/docs/getting-started-with-agent-to-agent-testing
+url: https://www.testmu.ai/support/docs/getting-started-with-agent-to-agent-testing
 site_name: LambdaTest
-slug: getting-started-with-agent-to-agent-testing/
+slug: getting-started-with-agent-to-agent-testing
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Agent to Agent Testing",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-agent-to-agent-testing"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-agent-to-agent-testing`
         }]
       })
     }}
@@ -42,7 +44,7 @@ import TabItem from '@theme/TabItem';
 
 # Getting Started With Agent to Agent Testing Platform
 
-LambdaTest's Agent-to-Agent Testing platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
+<BrandName />'s Agent-to-Agent Testing platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
 
 This unified platform enables comprehensive testing of AI agents including chatbots, voice assistants, and autonomous systems across real-world scenarios, ensuring precision and relevance in performance validation. By matching intelligent systems with equally sophisticated testing frameworks, organizations can achieve the thorough validation that traditional testing methods simply cannot provide for AI applications.
 

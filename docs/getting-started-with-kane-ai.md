@@ -8,15 +8,17 @@ keywords:
   - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/getting-started-with-kane-ai
+  - testmu ai automation
+  - testmu ai kaneai
+url: https://www.testmu.ai/support/docs/getting-started-with-kane-ai
 site_name: LambdaTest
-slug: getting-started-with-kane-ai/
+slug: getting-started-with-kane-ai
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With KaneAI on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-kane-ai"
+          "name": "Getting Started With KaneAI on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-kane-ai`
         }]
       })
     }}
@@ -49,7 +51,7 @@ With KaneAI you can:
 
 - **Remove coding barrier** – Author tests with natural language, or let KaneAI write automation scripts for you.
 
-- **Scale without friction** – Run tests across browsers, devices, and environments with LambdaTest’s cloud.
+- **Scale without friction** – Run tests across browsers, devices, and environments with <BrandName />’s cloud.
 
 - **Make testing Adaptive & intelligent** – KaneAI auto-heals tests when your UI changes, so your team keeps moving.
 

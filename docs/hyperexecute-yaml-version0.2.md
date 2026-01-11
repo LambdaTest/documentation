@@ -5,13 +5,16 @@ hide_title: false
 sidebar_label: HyperExecute Yaml Version 0.2
 description: Learn more about HyperExecute YAML 0.2
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-version0.2
 site_name: Hyperexecute Yaml Version 0.2
-slug: hyperexecute-yaml-version0.2/
+slug: hyperexecute-yaml-version0.2
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +24,17 @@ slug: hyperexecute-yaml-version0.2/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Hyperexecute Yaml Version 0.2",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-version0.2`
         }]
       })
     }}

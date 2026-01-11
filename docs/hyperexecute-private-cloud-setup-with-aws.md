@@ -8,10 +8,12 @@ keywords:
 - hyperexecute aws
 - hyperexecute private cloud
 - hyperexecute private cloud aws
-url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
+url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup-with-aws
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-setup-with-aws/
+slug: hyperexecute-private-cloud-setup-with-aws
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: hyperexecute-private-cloud-setup-with-aws/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Private Cloud",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup-with-aws/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-private-cloud-setup-with-aws/`
         }]
       })
     }}
@@ -83,7 +85,7 @@ In the User Details section, provide the following details as required:
 
 | Parameter    | Description                                                                                           |
 |--------------|-------------------------------------------------------------------------------------------------------|
-| EmailID      | Your valid email ID to set up a LambdaTest account. If you already have a LambdaTest Account, you can specify that email ID. |
+| EmailID      | Your valid email ID to set up a <BrandName /> account. If you already have a <BrandName /> Account, you can specify that email ID. |
 | ManagedAppName | Provide a unique ManagedAppName to be used for the application environment in the cluster. It must be between 5 to 20 characters long and can only contain lowercase letters. |
 
 ### VPC Configuration
@@ -161,9 +163,9 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 
 **Step 5:** Access the Private Cloud deployment using the provided [link](https://dashboard.hyperexecute.cloud/).
 
-**Step 6:** If the emailID you used to setup this deployment is not an existing user on LambdaTest then check your Email, there should be a email titled `Create Password - LambdaTest`, generate a new password using the link provided in the email.
+**Step 6:** If the emailID you used to setup this deployment is not an existing user on <BrandName /> then check your Email, there should be a email titled `Create Password - LambdaTest`, generate a new password using the link provided in the email.
 
-**Step 7:** Login using your email and password and run jobs using the HyperExecute CLI. For further details about HyperExecute, refer to the [documentation](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/).
+**Step 7:** Login using your email and password and run jobs using the HyperExecute CLI. For further details about HyperExecute, refer to the [documentation](/support/docs/getting-started-with-hyperexecute/).
 
 ## Cleanup the Environment
 

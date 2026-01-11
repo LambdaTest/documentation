@@ -1,22 +1,24 @@
 ---
 id: gocd-integration
-title: How to integrate GoCD With LambdaTest
+title: How to integrate GoCD With TestMu AI
 sidebar_label: GoCD
 hide_title: true
-description: LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
+description: TestMu AI integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your TestMu AI automation dashboard.
 keywords:
   - gocd
-  - lambdatest
+  - testmu ai
   - gocd integrations
   - gocd pipelines
-  - gocd lambdatest
-  - gocd integration with lambdatest
-  - lambdatest integration with gocd pipelines
+  - gocd testmu ai
+  - gocd integration with testmu ai
+  - testmu ai integration with gocd pipelines
   - ci/cd
-url: https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/gocd-integration-with-testmu
 site_name: LambdaTest
-slug: gocd-integration-with-lambdatest/
+slug: gocd-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,37 +26,37 @@ slug: gocd-integration-with-lambdatest/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GoCD Integration",
-          "item": "https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/"
+          "item": `${BRAND_URL}/support/docs/gocd-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# GoCD Integration With LambdaTest
+# GoCD Integration With <BrandName />
 ***
 
 GoCD offers a free and open-source platform to help you configure robust CI/CD pipelines with ease. The intuitive UI offers an end-to-end view wherein you can visualize the entire migration path to production in a collective view. That way, you can easily pinpoint the inefficient areas to optimize the CI/CD process. By leveraging GoCD, you can achieve faster feedback loops through its modelling constructs which makes your complex CI/CD pipeline looks a lot simpler. You also get features like dependency management & parallel execution to help you deliver better products quicker.
 
-LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
+<BrandName /> integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your <BrandName /> automation dashboard.
 
 ## Prerequisites
 ***
 
 1. Copy the YAML configuration file from our [GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample/blob/master/nightwatch-gocd-sample.gocd.yaml).
 
-2. **LambdaTest Authentication Credentials**
-    Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+2. **<BrandName /> Authentication Credentials**
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -76,7 +78,7 @@ LambdaTest integration with GoCD will help your perform Selenium test automation
 
 3. Make sure to install GoCD in your system.
 
-## Configuring GoCD Pipeline For LambdaTest Selenium Grid
+## Configuring GoCD Pipeline For <BrandName /> Selenium Grid
 ***
 
 **Step 1:** Visit your GoCD Dashboard and create a new pipeline by selecting the option to "Use Pipeline as Code".
@@ -87,7 +89,7 @@ LambdaTest integration with GoCD will help your perform Selenium test automation
 
 <img loading="lazy" src={require('../assets/images/gocd-integration/gocd-1-1.webp').default} alt="GoCD Integration" width="1365" height="542" className="doc_img"/>
 
-**Step 3:** Provide the [LambdaTest GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) as the repository URL. Test you connection and provide a label for this repository. In our case, we have provided the label as Sample-Pipeline, you may keep something else for your instance.
+**Step 3:** Provide the [<BrandName /> GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) as the repository URL. Test you connection and provide a label for this repository. In our case, we have provided the label as Sample-Pipeline, you may keep something else for your instance.
 
 <img loading="lazy" src={require('../assets/images/gocd-integration/gocd-1-2.webp').default} alt="GoCD Integration" width="1123" height="402" className="doc_img"/>
 
@@ -111,18 +113,18 @@ LambdaTest integration with GoCD will help your perform Selenium test automation
 
 <img loading="lazy" src={require('../assets/images/gocd-integration/gocd-1-7.webp').default} alt="GoCD Integration" width="1344" height="570" className="doc_img"/>
 
-Great work! You have successfully integrated your GoCD instance with your LambdaTest account. Follow our another documentation, if you wish to configure a private YAML and then integrate your GoCD pipeline with LambdaTest.
+Great work! You have successfully integrated your GoCD instance with your <BrandName /> account. Follow our another documentation, if you wish to configure a private YAML and then integrate your GoCD pipeline with <BrandName />.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">GoCD Integration With LambdaTest</span>
+      <span className="breadcrumbs__link">GoCD Integration With <BrandName /></span>
     </li>
   </ul>
 </nav>

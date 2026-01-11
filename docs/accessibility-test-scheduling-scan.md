@@ -3,21 +3,22 @@ id: accessibility-test-scheduling-scan
 title: Steps to Schedule an Accessibility Scan
 hide_title: false
 sidebar_label: Schedule a Scan
-description: Learn how to schedule accessibility scans with LambdaTest. Configure scans, automate WCAG compliance checks, and analyze detailed reports with ease.
+description: Learn how to schedule accessibility scans with TestMu AI. Configure scans, automate WCAG compliance checks, and analyze detailed reports with ease.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-test-scheduling-scan/
+url: https://www.testmu.ai/support/docs/accessibility-test-scheduling-scan
 site_name: LambdaTest
-slug: accessibility-test-scheduling-scan/
+slug: accessibility-test-scheduling-scan
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +28,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Steps to Schedule an Accessibility Scan",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-test-scheduling-scan/"
+          "item": `${BRAND_URL}/support/docs/accessibility-test-scheduling-scan/`
         }]
       })
     }}

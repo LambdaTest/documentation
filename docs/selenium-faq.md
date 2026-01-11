@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: FAQs
 description: Get quick answers to all your Selenium queries with our Frequently Asked Questions documentation.
 keywords:
-  - LambdaTest Selenium
-  - LambdaTest Selenium help
-  - LambdaTest Selenium documentation
+  - TestMu AI Selenium
+  - TestMu AI Selenium help
+  - TestMu AI Selenium documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/selenium-faq/
+url: https://www.testmu.ai/support/docs/selenium-faq
 site_name: LambdaTest
-slug: selenium-faq/
+slug: selenium-faq
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: selenium-faq/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/selenium-faq/"
+          "item": `${BRAND_URL}/support/docs/selenium-faq/`
         }]
       })
     }}

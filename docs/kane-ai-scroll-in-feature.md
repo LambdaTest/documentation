@@ -5,19 +5,20 @@ hide_title: false
 sidebar_label: Scroll in Element
 description: Learn how to run scroll commands during your web testing.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.lambdatest.com/support/docs/kane-ai-scroll-in-feature/
+url: https://www.testmu.ai/support/docs/kane-ai-scroll-in-feature
 site_name: LambdaTest
-slug: kane-ai-scroll-in-feature/
+slug: kane-ai-scroll-in-feature
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +28,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Scroll In Elements",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-scroll-in-feature/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-scroll-in-feature/`
         }]
       })
     }}

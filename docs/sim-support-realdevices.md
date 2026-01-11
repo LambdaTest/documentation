@@ -2,7 +2,7 @@
 id: sim-support-realdevices
 title: SIM & eSIM on Real Devices
 sidebar_label: Enable SIM
-description: Learn how to manually test SIM and eSIM scenarios on real mobile devices using LambdaTest, including configurations, SMS validation, and supported devices.
+description: Learn how to manually test SIM and eSIM scenarios on real mobile devices using TestMu AI, including configurations, SMS validation, and supported devices.
 keywords:
   - SIM
   - eSIM
@@ -10,13 +10,14 @@ keywords:
   - Android
   - Real Devices
   - testing
-slug: sim-support-realdevices/
+slug: sim-support-realdevices
 site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/sim-support-realdevices/
+url: https://www.testmu.ai/support/docs/sim-support-realdevices
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # SIM Support On Public Real Devices
 
@@ -24,7 +25,7 @@ SIM & eSIM support allows testers to validate **SMS-driven workflows** on real m
 
 **SMS-based authentication** is a widely used security and identity verification method. Testing these flows manually on real devices ensures accurate results, provides hands-on visibility, and helps confirm a smooth experience for end-users.  
 
-With **LambdaTest**, you can manually test SIM and eSIM scenarios on **Real Devices**. From selecting SIM-enabled devices in the dashboard to receiving OTPs directly on-screen, LambdaTest offers a complete setup for validating SMS-driven features during live testing sessions.  
+With **<BrandName />**, you can manually test SIM and eSIM scenarios on **Real Devices**. From selecting SIM-enabled devices in the dashboard to receiving OTPs directly on-screen, <BrandName /> offers a complete setup for validating SMS-driven features during live testing sessions.  
 
 > To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@lambdatest.com**.<br />
 

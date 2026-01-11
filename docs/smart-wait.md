@@ -8,11 +8,13 @@ keywords:
 - smart wait selenium
 - smart wait selenium testing
 - smart wait automation
-url: https://www.lambdatest.com/support/docs/smart-wait/
+url: https://www.testmu.ai/support/docs/smart-wait
 site_name: LambdaTest
-slug: smart-wait/
+slug: smart-wait
 ---
-With LambdaTest's SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, it conducts a series of actionability checks. By using an intelligent algorithm, SmartWait holds off on performing an action until all relevant checks have been successfully completed. It returns the appropriate Selenium error message if the checks are not passed within a predetermined timeframe.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+With <BrandName />'s SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, it conducts a series of actionability checks. By using an intelligent algorithm, SmartWait holds off on performing an action until all relevant checks have been successfully completed. It returns the appropriate Selenium error message if the checks are not passed within a predetermined timeframe.
 
 You can use this feature to reduce the amount of code dedicated to explicit/implicit waits in your test suite, making it easier to read and maintain.
 
@@ -51,4 +53,4 @@ LT:Options {
 
 3. **View Test Results :** Upon executing the test suite, view your results. SmartWait will have returned the relevant Selenium error message if any actionability checks failed within the predetermined timeframe.
 
-LambdaTest's SmartWait feature enhances the capabilities of automated testing. SmartWait enhances the efficiency and accuracy of your testing processes by intelligently managing wait times and ensuring actions are executed at the most opportune time.
+<BrandName />'s SmartWait feature enhances the capabilities of automated testing. SmartWait enhances the efficiency and accuracy of your testing processes by intelligently managing wait times and ensuring actions are executed at the most opportune time.

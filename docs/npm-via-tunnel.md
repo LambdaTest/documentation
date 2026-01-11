@@ -7,19 +7,21 @@ keywords:
   - Cypress Automation
   - Cypress Testing Guide
   - cypress cli commands
-  - lambdatest cypress cli commands
-  - lambdatest cypress cli flags
-  - lambdatest cypress cli arguments
+  - testmu ai cypress cli commands
+  - testmu ai cypress cli flags
+  - testmu ai cypress cli arguments
   - Cypress Test Automation
   - Cypress Automation Testing
   - Running Cypress Tests
   - Cypress Project
 
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/npm-via-tunnel/
+url: https://www.testmu.ai/support/docs/npm-via-tunnel
 site_name: LambdaTest
-slug: npm-via-tunnel/
+slug: npm-via-tunnel
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ slug: npm-via-tunnel/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Install NPM Packages via Tunnel",
-          "item": "https://www.lambdatest.com/support/docs/npm-via-tunnel/"
+          "item": `${BRAND_URL}/support/docs/npm-via-tunnel/`
         }]
       })
     }}
@@ -77,7 +79,7 @@ If you are using `npm_via_tunnel` for the first time, here are a few things you 
 
 - Once you have followed these steps, npm will automatically route all of its traffic through the tunnel and you will be able to install npm packages from the specified registry.
 
-> To download private dependencies follow this [documentation](https://www.lambdatest.com/support/docs/private-dependencies-cypress/).
+> To download private dependencies follow this [documentation](/support/docs/private-dependencies-cypress/).
 
 ## Troubleshooting
 

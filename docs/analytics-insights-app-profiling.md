@@ -2,7 +2,7 @@
 id: insights-app-profiling
 title: App Profiling Insights
 sidebar_label: App Profiling
-description: Discover LambdaTest's App Profiling Insights for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's App Profiling Insights for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - analytics
   - test insights
@@ -11,10 +11,13 @@ keywords:
   - Desktop trends
   - Desktop status ratio
 
-url: https://www.lambdatest.com/support/docs/insights-app-profiling/
+url: https://www.testmu.ai/support/docs/insights-app-profiling
 site_name: LambdaTest
-slug: insights-app-profiling/
+slug: insights-app-profiling
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: insights-app-profiling/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/insights-app-profiling/"
+          "item": `${BRAND_URL}/support/docs/insights-app-profiling/`
         }]
       })
     }}

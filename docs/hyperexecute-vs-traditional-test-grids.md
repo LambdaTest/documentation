@@ -5,18 +5,20 @@ hide_title: false
 sidebar_label: HyperExecute vs Traditional Test Grids
 description: Discover the nuances in testing efficiency with HyperExecute vs. Traditional Test Grids Explore the comparison and choose the right approach for optimized testing. 
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
-  - lambdatest hypterest tutorial
+  - testmu ai automation
+  - testmu ai hyperexecute
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute vs traditional grids
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-vs-traditional-test-grids/
+url: https://www.testmu.ai/support/docs/hyperexecute-vs-traditional-test-grids
 site_name: LambdaTest hyperexecute vs traditional grids
-slug: hyperexecute-vs-traditional-test-grids/
+slug: hyperexecute-vs-traditional-test-grids
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: hyperexecute-vs-traditional-test-grids/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute v/s Traditional Test Grids",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-vs-traditional-test-grids/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-vs-traditional-test-grids/`
         }]
       })
     }}
@@ -83,4 +85,4 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 - <b>Fine-Grained Concurrency Control:</b> Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
 
-> For more details, please refer to our guide on [Key Features of HyperExecute](https://www.lambdatest.com/support/docs/key-features-of-hyperexecute/)
+> For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/key-features-of-hyperexecute/)

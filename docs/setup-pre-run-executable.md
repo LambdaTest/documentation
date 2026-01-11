@@ -6,17 +6,19 @@ sidebar_label: Setup Pre-run Executable
 description: Pre-run-executables allow you to run your custom scripts before the Selenium test is started. 
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - TCP with TLS 1.2 secure connection
   - TCP with TLS 1.2 secure connection tunnel
   - shared TCP with TLS 1.2 secure connection
-url: https://www.lambdatest.com/support/docs/setup-pre-run-executable/
+url: https://www.testmu.ai/support/docs/setup-pre-run-executable
 site_name: LambdaTest
-slug: setup-pre-run-executable/
+slug: setup-pre-run-executable
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,18 +27,18 @@ slug: setup-pre-run-executable/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Install Custom Certificates on the VM Through Pre-run-executables",
-          "item": "https://www.lambdatest.com/support/docs/setup-pre-run-executable/"
+          "item": `${BRAND_URL}/support/docs/setup-pre-run-executable/`
         }]
       })
     }}
@@ -126,7 +128,7 @@ Here are the `prerun` APIs:
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to our lambda storage.
 * **DELETE/`files`/`delete`:** Delete pre run from our lambda storage.
-* **POST/`files`/`validate`:** Check if the file is approved by LambdaTest.
+* **POST/`files`/`validate`:** Check if the file is approved by <BrandName />.
 * **PUT/`files`/`download`:** Download pre run executable file. 
 
 > **Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/). 
@@ -170,12 +172,12 @@ Please reach out at our <span className="doc__lt" onClick={() => window.openLTCh
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

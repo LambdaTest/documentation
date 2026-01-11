@@ -4,13 +4,13 @@ title: Configure Multiple Projects per repo
 sidebar_label: Multiple Projects per repo
 description: Learn how to manage multiple SmartUI projects in a single repository with ease using this detailed documentation.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - videos
   - storybook
-url: https://www.lambdatest.com/support/docs/smartui-multiple-projects-per-repo/
+url: https://www.testmu.ai/support/docs/smartui-multiple-projects-per-repo
 site_name: LambdaTest
-slug: smartui-multiple-projects-per-repo/
+slug: smartui-multiple-projects-per-repo
 
 ---
 
@@ -19,6 +19,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,18 +29,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Monorepo",
-          "item": "https://www.lambdatest.com/support/docs/smartui-multiple-projects-per-repo/"
+          "item": `${BRAND_URL}/support/docs/smartui-multiple-projects-per-repo/`
         }]
       })
     }}
@@ -48,14 +50,14 @@ SmartUI allows you to manage and test UI components effectively within a single 
 ## Setting Up Multiple Projects in a Repository
 
 ### Prerequisites
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Your SmartUI Project Token
 
 ### Step 1: Organize Your Repository
 Create a repository where you can organize your projects into various directories. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 <a href="https://github.com/LambdaTest/smartui-monorepo-sample/" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 

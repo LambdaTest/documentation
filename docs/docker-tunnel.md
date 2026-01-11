@@ -1,25 +1,26 @@
----
+﻿---
 id: docker-tunnel
 title: Localhost Testing With Docker Tunnel
 hide_title: true
 sidebar_label: Docker Tunnel
-description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the LambdaTest platform.
+description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the TestMu AI platform.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - ssh connection
   - shared ssh
   - secure-shell-tunnel
   - docker compose ssh tunnel
   - docker vpn tunnel
-image: /assets/images/og-images/docker-tunnel.png
-url: https://www.lambdatest.com/support/docs/docker-tunnel/
+url: https://www.testmu.ai/support/docs/docker-tunnel
 site_name: LambdaTest
-slug: docker-tunnel/
+slug: docker-tunnel
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,18 +29,18 @@ slug: docker-tunnel/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Docker Tunnel",
-          "item": "https://www.lambdatest.com/support/docs/docker-tunnel/"
+          "item": `${BRAND_URL}/support/docs/docker-tunnel/`
         }]
       })
     }}
@@ -48,18 +49,18 @@ slug: docker-tunnel/
 # Docker Tunnel
 
 ***
-With the help of the Docker Tunnel, i.e., Docker and LambdaTest Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the LambdaTest platform, with the help of 3000+ real browsers (desktop and mobile) and operating systems.
+With the help of the Docker Tunnel, i.e., Docker and <BrandName /> Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the <BrandName /> platform, with the help of 3000+ real browsers (desktop and mobile) and operating systems.
 
-With Docker Tunnel, you will also be able to create multiple instances of LambdaTest Tunnel.
+With Docker Tunnel, you will also be able to create multiple instances of <BrandName /> Tunnel.
 
-## Prerequisites To Get Started With LambdaTest Docker Tunnel
+## Prerequisites To Get Started With <BrandName /> Docker Tunnel
 
 * * *
 
 1. Download and set up Docker Desktop from [official Docker website](https://www.docker.com/products/docker-desktop).
-2. You also need your LambdaTest Username and Access Key. You can get these from your [LambdaTest’s profile](https://accounts.lambdatest.com/detail/profile).
+2. You also need your <BrandName /> Username and Access Key. You can get these from your [<BrandName />’s profile](https://accounts.lambdatest.com/detail/profile).
 
-## How To Use Docker With LambdaTest Tunnel
+## How To Use Docker With <BrandName /> Tunnel
 
 * * *
 
@@ -85,13 +86,13 @@ In order to pull the other docker images from the hub, use the below command:
 
 This image supports all the [tunnel modifier flags](/docs/lambda-tunnel-modifiers/) available in the tunnel command-line binary and passes them as the entry point. Let us see some of them:
 
-* **Version Checking**: You can check the installed version of the LambdaTest Tunnel using the below command.
+* **Version Checking**: You can check the installed version of the <BrandName /> Tunnel using the below command.
 
 `docker run -it  lambdatest/tunnel --version`
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel/version-tracking.webp').default} alt="Image" width="732" height="91" className="doc_img"/>
 
-* **Basic Authentication and Login**: You can login into your LambdaTest Tunnel with Docker image, with the help of below command:
+* **Basic Authentication and Login**: You can login into your <BrandName /> Tunnel with Docker image, with the help of below command:
 
 `docker run -it --name lt lambdatest/tunnel --user johndoe --key XXXXXXXXXXXX`
 
@@ -143,11 +144,11 @@ Consider the below example:
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel/info-api.webp').default} alt="Image" width="909" height="167" className="doc_img"/>
 
-## How To Make Use Of LambdaTest Tunnel With Docker Image For Development
+## How To Make Use Of <BrandName /> Tunnel With Docker Image For Development
 
 * * *
 
-By default LambdaTest tunnel can no longer access web apps running on host machines or other docker containers using *localhost* or *127.0.0.1* when you run it using docker container. This means that the test scripts need to be modified in a way that they can access the target web app, according to the docker network topology and host operating system.
+By default <BrandName /> tunnel can no longer access web apps running on host machines or other docker containers using *localhost* or *127.0.0.1* when you run it using docker container. This means that the test scripts need to be modified in a way that they can access the target web app, according to the docker network topology and host operating system.
 
 **For Linux Machines:**
 
@@ -165,19 +166,19 @@ The test scripts need to use this special hostname to access the web services ru
 
 ## Conclusion
 * * *
-Test your locally hosted pages and privately hosted pages at LambdaTest [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@lambdatest.com](mailto:support@lambdatest.com).
+Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@lambdatest.com](mailto:support@lambdatest.com).
 
 Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

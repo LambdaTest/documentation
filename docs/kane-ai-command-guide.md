@@ -4,14 +4,14 @@ title: KaneAI - Command Guide
 sidebar_label: Command Types
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai instructions
   - kane ai commands
-url: https://www.lambdatest.com/support/docs/kane-ai-command-guide
+url: https://www.testmu.ai/support/docs/kane-ai-command-guide
 site_name: LambdaTest
-slug: kane-ai-command-guide/
+slug: kane-ai-command-guide
 ---
 
 import Tabs from '@theme/Tabs';
@@ -177,7 +177,7 @@ Assertions are used to validate whether your expectations match the actual outco
 :::note
 Since **July 20, 2025**, all assertions fail tests immediately by default.  
 Older tests may still use *warn-and-continue* until edited.  
-More info: [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)  
+More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)  
 :::
 
 ---

@@ -5,12 +5,14 @@ sidebar_label: Flaky Test Detection
 description: Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the insights over the flakiness of the test.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/test-intelligence-flakiness-test-detection/
+url: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection
 site_name: LambdaTest
-slug: test-intelligence-flakiness-test-detection/
+slug: test-intelligence-flakiness-test-detection
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/test-intelligence-flakiness-test-detection/"
+          "item": `${BRAND_URL}/support/docs/test-intelligence-flakiness-test-detection/`
         }]
       })
     }}
@@ -55,7 +57,7 @@ To read more about the Flaky Tests Analytics, you can refer the documentation at
 
 There are following Prerequisites to use Flaky Test Detection:
 
-- You should have a LambdaTest account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
+- You should have a <BrandName /> account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
 - You should have a test suite with same test name run on the platform at least 10 times.
 
 ## How does the Flaky Test Detection work?
@@ -120,7 +122,7 @@ Currently, these features only support `Selenium` based tests for Web Automation
 
 To view the Flaky Test Detection report, you can follow the below steps:
 
-- Go to the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/).
+- Go to the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
 - Select the Build for which you want to view the flaky tests list.
 - For flaky marked tests, you will see a Flake icon <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />  in the test list.
 - Now, select the test for which you want to view the flaky test details.

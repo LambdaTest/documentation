@@ -3,15 +3,17 @@ id: pre-loaded-extension
 title: Pre-Loaded Extension for Chrome
 hide_title: false
 sidebar_label: Pre-Loaded Extension
-description: Learn how to install and manage Chrome extensions during real-time testing on LambdaTest. Enhance your manual testing sessions with ad blockers, debugging tools, and more.
+description: Learn how to install and manage Chrome extensions during real-time testing on TestMu AI. Enhance your manual testing sessions with ad blockers, debugging tools, and more.
 keywords:
-  - lambdatest pre loaded chrome extension
-  - lambdatest pre loaded extension for chrome 
-  - lambdatest pre loaded extension
-url: https://www.lambdatest.com/support/docs/pre-loaded-chrome-extension/
+  - testmu ai pre loaded chrome extension
+  - testmu ai pre loaded extension for chrome 
+  - testmu ai pre loaded extension
+url: https://www.testmu.ai/support/docs/pre-loaded-chrome-extension
 site_name: LambdaTest
-slug: pre-loaded-chrome-extension/
+slug: pre-loaded-chrome-extension
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,28 +23,28 @@ slug: pre-loaded-chrome-extension/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Pre-Loaded Chrome Extension",
-          "item": "https://www.lambdatest.com/support/docs/pre-loaded-chrome-extension/"
+          "item": `${BRAND_URL}/support/docs/pre-loaded-chrome-extension/`
         }]
       })
     }}
 ></script>
-The Pre-Loaded Chrome Extensions feature in LambdaTest's real-time testing allows users to install and use Chrome extensions during your testing sessions. This capability provides the flexibility to test web applications with various extensions, such as ad blockers, password managers, and developer tools, replicating real user environments more accurately.
+The Pre-Loaded Chrome Extensions feature in <BrandName />'s real-time testing allows users to install and use Chrome extensions during your testing sessions. This capability provides the flexibility to test web applications with various extensions, such as ad blockers, password managers, and developer tools, replicating real user environments more accurately.
 
 > The Pre-Loaded Extension is only accessible on **Chrome** browsers.
 
 ## Prerequisites
-- A LambdaTest account.
-- Access to the real-time testing feature in the LambdaTest platform.
+- A <BrandName /> account.
+- Access to the real-time testing feature in the <BrandName /> platform.
 - Chrome extensions to be tested 
 
 ## Accessing the Chrome Extensions Feature
@@ -80,12 +82,12 @@ The Pre-Loaded Chrome Extensions feature in LambdaTest's real-time testing allow
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

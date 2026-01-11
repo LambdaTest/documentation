@@ -2,7 +2,7 @@
 id: ios-keychain-cleanup
 title: Support for iOS keychain cleanup and access groups
 sidebar_label: iOS Keychain Cleanup
-description: Secure and clean iOS testing with LambdaTest's iOS Keychain cleanup and seamless access group handling support.
+description: Secure and clean iOS testing with TestMu AI's iOS Keychain cleanup and seamless access group handling support.
 keywords:
   - appium
   - manual testing
@@ -11,16 +11,17 @@ keywords:
   - cleanup
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/ios-keychain-cleanup/
+url: https://www.testmu.ai/support/docs/ios-keychain-cleanup
 site_name: LambdaTest
-slug: ios-keychain-cleanup/
+slug: ios-keychain-cleanup
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +31,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "iOS Keychain Cleanup",
-          "item": "https://www.lambdatest.com/support/docs/ios-keychain-cleanup/"
+          "item": `${BRAND_URL}/support/docs/ios-keychain-cleanup/`
         }]
       })
     }}
@@ -48,7 +49,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <RealDeviceTag value="Real Device" /> 
 Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.  
-LambdaTest now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
+<BrandName /> now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
 
 ## Keychain Cleanup After Sessions
 
@@ -56,15 +57,15 @@ Certain iOS apps may retain user data such as login details across different tes
 This happens because when an app is uninstalled, any Keychain data associated with it **remains on the device**, as iOS does not automatically clear it.  
 While this data is isolated from other apps, it can persist unless specifically removed.
 
-To prevent data from carrying over across sessions, LambdaTest offers an option to automatically clear all Keychain entries after your test ends — ensuring a clean environment for every run.
+To prevent data from carrying over across sessions, <BrandName /> offers an option to automatically clear all Keychain entries after your test ends — ensuring a clean environment for every run.
 
 ## Keychain Access Groups During App Resigning
 
-When LambdaTest resigns your iOS application using a wildcard provisioning profile (to enable installation on real devices), the app’s **keychain-access-groups** entitlement is preserved.  
+When <BrandName /> resigns your iOS application using a wildcard provisioning profile (to enable installation on real devices), the app’s **keychain-access-groups** entitlement is preserved.  
 However, the **Bundle Seed ID** (also known as Team ID) — a critical part of access groups — gets replaced during resigning.
 
 As a result, app functionalities that depend on the original access group may break if not handled properly.  
-By enabling Keychain support, LambdaTest takes care of these changes, allowing your app to continue using Keychain securely even after resigning.
+By enabling Keychain support, <BrandName /> takes care of these changes, allowing your app to continue using Keychain securely even after resigning.
 
 
 >This feature is currently in **Beta**. We are actively refining it based on real-world usage and feedback.
@@ -119,12 +120,12 @@ This approach ensures your app remains functional even if the Team ID changes af
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

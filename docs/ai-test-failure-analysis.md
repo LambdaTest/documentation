@@ -7,10 +7,13 @@ description: This documentation will help you leverage Root Cause Analysis and E
 keywords:
 - hyperexecute error classification
 - hyperexecute root cause analysis
-url: https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/
+url: https://www.testmu.ai/support/docs/ai-powered-test-failure-analysis
 site_name: LambdaTest
-slug: ai-powered-test-failure-analysis/
+slug: ai-powered-test-failure-analysis
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,18 +22,18 @@ slug: ai-powered-test-failure-analysis/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "AI Native Test Feature Analysis",
-          "item": "https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/"
+          "item": `${BRAND_URL}/support/docs/ai-powered-test-failure-analysis/`
         }]
       })
     }}

@@ -3,26 +3,28 @@ id: har-log-viewer
 title: HAR Log Viewer With Waterfall for Selenium Testing
 hide_title: true
 sidebar_label: HAR Log Viewer With Waterfall
-description: Learn how to use HAR Log Viewer With Waterfall for Selenium automation testing on LambdaTest.
+description: Learn how to use HAR Log Viewer With Waterfall for Selenium automation testing on TestMu AI.
 keywords:
 - har log viewer with waterfall
 - har log viewer
-- har log viewer with waterfall lambdatest
+- har log viewer with waterfall testmu ai
 - har log viewer network logs
 - har log viewer with waterfall selenium
-url: https://www.lambdatest.com/support/docs/har-log-viewer-with-waterfall/
+url: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall
 site_name: LambdaTest
-slug: har-log-viewer-with-waterfall/
+slug: har-log-viewer-with-waterfall
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # HAR Log Viewer With Waterfall for Selenium Testing
 ***
 
-LambdaTest Web Automation provides the HAR (HTTP Archive) Log Viewer with Waterfall that helps you analyze the performance of web pages for your Selenium automation tests. 
+<BrandName /> Web Automation provides the HAR (HTTP Archive) Log Viewer with Waterfall that helps you analyze the performance of web pages for your Selenium automation tests. 
 
 It provides a visual representation of how resources on a webpage are loaded and interact over time. The key component of this feature is the "waterfall" view, which graphically displays the sequence and duration of requests as a web page loads.
 
-## How to Use HAR Log Viewer With Waterfall on LambdaTest?
+## How to Use HAR Log Viewer With Waterfall on <BrandName />?
 ***
 
 To get the network logs using HAR Log Viewer With Waterfall, you need to pass `network.full.har = true` in your test scripts.

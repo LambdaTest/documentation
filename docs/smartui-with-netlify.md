@@ -1,19 +1,19 @@
 ---
 id: smartui-with-netlify
-title: Netlify Integration With LambdaTest
+title: Netlify Integration With TestMu AI
 hide_title: false
 sidebar_label: Netlify
-description: Simplify DevOps! Run blazing-fast Cypress tests on LambdaTest directly from your Netlify builds.
+description: Simplify DevOps! Run blazing-fast Cypress tests on TestMu AI directly from your Netlify builds.
 keywords:
-  - lambdatest integrations
-  - lambdatest netlify integration
-  - integrate netlify with lambdatest
-  - netlify integration with lambdatest
+  - testmu ai integrations
+  - testmu ai netlify integration
+  - integrate netlify with testmu ai
+  - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/smartui-with-netlify/
+url: https://www.testmu.ai/support/docs/smartui-with-netlify
 site_name: LambdaTest
-slug: smartui-with-netlify/
+slug: smartui-with-netlify
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Netlify Integration",
-          "item": "https://www.lambdatest.com/support/docs/smartui-with-netlify/"
+          "item": `${BRAND_URL}/support/docs/smartui-with-netlify/`
         }]
       })
     }}
@@ -51,21 +53,21 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
 
 ## Prerequisite
 
-1. A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
+1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
 
 2. You need to have a site deployed in your Netlify account.
 
 ## Steps to Setup the Netlify Plugin
 
-### Step 1: Configure your LambdaTest Integration on Netlify Dashboard
+### Step 1: Configure your <BrandName /> Integration on Netlify Dashboard
 
 - Go to your Netlify Dashboard.
-- Click on the Integrations tab, search for **LambdaTest** and click on the **Enable** button.
+- Click on the Integrations tab, search for **<BrandName />** and click on the **Enable** button.
 
 <img loading="lazy" src={require('../assets/images/netlify-integration/n1.png').default} alt="Image" className='doc_img'/>
 
 - You need to provide your configuration details
-    - Enter your **Username** and **Access Key** from the **LambdaTest Dashboard**.
+    - Enter your **Username** and **Access Key** from the **<BrandName /> Dashboard**.
     - Enter your **Smart-UI Project Name**
 
 :::info
@@ -139,7 +141,7 @@ Your changes will be triggered and deployed.
 
 **Integration Configuration**
 
-- Keep LambdaTest credentials secure
+- Keep <BrandName /> credentials secure
 - Use Netlify's environment variables for credentials
 - Rotate credentials regularly
 - Use different projects for different environments
@@ -178,15 +180,15 @@ Your changes will be triggered and deployed.
 
 **Possible Causes**:
 - Incorrect project name in Netlify integration
-- LambdaTest credentials incorrect
+- <BrandName /> credentials incorrect
 - Integration not enabled
 - Network connectivity issues
 
 **Solutions**:
 1. Verify project name matches exactly (case-sensitive) in Netlify integration settings
 
-2. Check LambdaTest credentials:
-   - Go to Netlify Dashboard → Integrations → LambdaTest
+2. Check <BrandName /> credentials:
+   - Go to Netlify Dashboard → Integrations → <BrandName />
    - Verify username and access key are correct
    - Re-enter credentials if needed
 
@@ -194,7 +196,7 @@ Your changes will be triggered and deployed.
    - Check integration status in Netlify dashboard
    - Re-enable if disabled
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review Netlify deployment logs for errors
 
@@ -237,7 +239,7 @@ Your changes will be triggered and deployed.
 
 **Solutions**:
 1. Verify integration is enabled:
-   - Go to Netlify Dashboard → Integrations → LambdaTest
+   - Go to Netlify Dashboard → Integrations → <BrandName />
    - Ensure integration shows as Enabled"
 
 2. Check integration configuration:
@@ -315,7 +317,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

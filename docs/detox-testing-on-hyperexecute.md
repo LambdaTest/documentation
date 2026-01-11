@@ -10,19 +10,21 @@ keywords:
   - Detox testing
   - detox testing react native
   - detox automation testing
-  - detox lambdatest
+  - detox testmu ai
   - hyperexecute
   - hyperexecute detox testing
   - detox tests on hyperexecute
   - hyperexecute automation testing
   - HyperExecute React Native automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing
 site_name: LambdaTest
-slug: hyperexecute-detox-testing/
+slug: hyperexecute-detox-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,29 +34,29 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Detox automation tests on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-detox-testing/`
         }]
       })
     }}
 ></script>
 
-Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on LambdaTest HyperExecute using your local system setup.
+Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on <BrandName /> HyperExecute using your local system setup.
 
 ## Run a Sample Project
 ### Step 1: Clone Sample Repository
 
 :::tip Detox repo
-Download or Clone the Detox sample from LambdaTest’s GitHub Repository
+Download or Clone the Detox sample from <BrandName />’s GitHub Repository
 
 <a href="https://github.com/LambdaTest/LT-detox" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -103,7 +105,7 @@ Use the sample YAML below to configure your execution:
 https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
 
-> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/).
+> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 3: Monitor the Test Execution
 

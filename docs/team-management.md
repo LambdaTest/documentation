@@ -3,14 +3,16 @@ id: team-management
 title: Team Management
 hide_title: false
 sidebar_label: Team Management
-description: This documentation will help you create and manage teams on LambdaTest.
+description: This documentation will help you create and manage teams on TestMu AI.
 keywords:
-- teams management lambdatest
+- teams management testmu ai
 - manage teams
-url: https://www.lambdatest.com/support/docs/team-management/
+url: https://www.testmu.ai/support/docs/team-management
 site_name: LambdaTest
-slug: team-management/
+slug: team-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,23 +22,23 @@ slug: team-management/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Settings and Security",
-          "item": "https://www.lambdatest.com/support/docs/team-management/"
+          "item": `${BRAND_URL}/support/docs/team-management/`
         }]
       })
     }}
 ></script>
 
-The LambdaTest Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
+The <BrandName /> Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 
 This functionality addresses the need for:
 

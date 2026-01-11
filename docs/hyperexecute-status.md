@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Status
 description: This documentation outlines the status list and the meaning of status used in job, test, task and scenario level at hyperexecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - hyperexecute status
   - hyperexecute status list
   - job status
@@ -16,10 +16,12 @@ keywords:
   - task status
   - list of hyperexecute status
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-status/
+url: https://www.testmu.ai/support/docs/hyperexecute-status
 site_name: LambdaTest
-slug: hyperexecute-status/
+slug: hyperexecute-status
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ slug: hyperexecute-status/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Status",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-status/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-status/`
         }]
       })
     }}
@@ -59,7 +61,7 @@ All the tests on HyperExecute get executed as a Job. Each Job has a Status, a un
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/partially-completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Partially Completed| This status indicates a non-standard scenario where all steps within the job's runner command execution finished, but no test session was created. <br /><br /> This can occur primarily in two cases: <br />  1. API/Desktop Tests <br />  2. Local Web Test Execution. <br />
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Failed| One or more test cases within the job encountered errors or failed assertions indicating an issue within the tests. |
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unexpected error or issue caused the job to terminate prematurely before all tests could run. |
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the job from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from <BrandName />'s side prevented the job from executing as planned. This could be a temporary glitch or require contacting <BrandName /> support for further investigation. |
 | <img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> | Time Out | The job exceeded the maximum allocated execution time limit. This might occur due to complex tests, slow environments, or resource limitations. |
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Ignored| It is a user-defined status, used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The job is currently stuck due to an external dependency or resource constraint. This could involve waiting for another job using the same resources to finish or limitations on available browsers/devices. |
@@ -78,7 +80,7 @@ A Task is a further subdivision within a job, often representing the execution o
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Ignored| Similar to the job level, the task was entirely disregarded, likely due to configuration issues or specific conditions set to trigger execution.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unforeseen error or issue caused the task to terminate prematurely before all steps could run.
 | <img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> | Time Out | The task exceeded the maximum allocated execution time limit. This might occur due to complex test steps, slow environments, or resource limitations
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the task from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from <BrandName />'s side prevented the task from executing as planned. This could be a temporary glitch or require contacting <BrandName /> support for further investigation.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The task is currently stuck due to an external dependency or resource constraint. This could involve waiting for another task using the same resources to finish or limitations on available browsers/devices.
 
 ## 3. Stage Level Status
@@ -96,10 +98,10 @@ A Stage can attain different statuses based on the completion level.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Ignored| It is a user-defined status which indicates that the stage was entirely bypassed during execution, likely due to configuration settings or conditional logic within your test script.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Skipped| It is a user-defined status indicates that the stage was intentionally bypassed, possibly due to configuration settings, conditional execution logic, or irrelevance to the current test scenario.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Failed| One or more assertions within the stage failed, signifying an issue within the tests.
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/muted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Muted| This stage's results are being suppressed due to the HyperExecute [test muting](https://www.lambdatest.com/support/docs/hyperexecute-test-muting/) functionality. 
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/muted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Muted| This stage's results are being suppressed due to the HyperExecute [test muting](/support/docs/hyperexecute-test-muting/) functionality. 
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unexpected error or issue caused the stage to terminate prematurely before all actions could be completed.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/cancelled.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Cancelled| If you have aborted your job in the middle of test execution, then all the left over tests will be marked as Cancelled.
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the stage from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from <BrandName />'s side prevented the stage from executing as planned. This could be a temporary glitch or require contacting <BrandName /> support for further investigation.
 
 ## 4. Tests Level Status
 
@@ -114,7 +116,7 @@ The most granular level, representing an individual test case verifying a specif
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/queue-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Queue Timeout| The wait time exceeded the maximum limit for the virtual machine to be allocated.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/stopped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Stopped| When you abort the stage, your tests are marked as Stopped.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Idle Timeout| It indicates that your session was inactive for the defined time.
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Lambda Error| An error originating from LambdaTest's side prevented the stage from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Lambda Error| An error originating from <BrandName />'s side prevented the stage from executing as planned. This could be a temporary glitch or require contacting <BrandName /> support for further investigation.
 
 ### User Defined Status
 HyperExecute allows users to define the status of tests using **lambda hooks**. This can be helpful for monitoring test status and results.
@@ -155,12 +157,12 @@ Now that you have understood the concepts of HyperExecute, you can [get started]
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

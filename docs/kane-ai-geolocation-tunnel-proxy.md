@@ -5,20 +5,21 @@ hide_title: false
 sidebar_label: Geolocation, Tunnel, and Proxy
 description: Learn how to run your web tests on KaneAI using geolocation, tunnel, and dedicated proxy configurations.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support
-url: https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/
+url: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy
 site_name: LambdaTest
-slug: kane-ai-geolocation-tunnel-proxy/
+slug: kane-ai-geolocation-tunnel-proxy
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Geolocation, Tunnel, and Proxy Support",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-geolocation-tunnel-proxy/`
         }]
       })
     }}
@@ -67,7 +68,7 @@ KaneAI also supports tunneling to allow you to test websites hosted locally or b
 
 ### Steps to Use Tunnel
 
-**Step 1 :** Configure the tunnel using the [LT tunnel binary](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
+**Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

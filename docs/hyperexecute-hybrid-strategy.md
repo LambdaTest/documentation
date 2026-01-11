@@ -5,13 +5,16 @@ hide_title: false
 sidebar_label: Hybrid Strategy
 description: Unlock efficient testing with HyperExecute’s Hybrid Strategy! Our guide walks you through combining AutoSplit and Matrix Strategy for parallel test execution, saving time without sacrificing test coverage.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-hybrid-strategy
 site_name: LambdaTest
-slug: hyperexecute-hybrid-strategy/
+slug: hyperexecute-hybrid-strategy
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,22 +24,22 @@ slug: hyperexecute-hybrid-strategy/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-hybrid-strategy/`
         }]
       })
     }}
 ></script>
-HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
+HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
 
 ## Why do you need the Hybrid Strategy?
 
@@ -63,7 +66,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 -   The version of the YAML file that you are using is `0.1`.    
 -   The test discovery mode has to be dynamic.
 
-> You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/).
+> You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 
 - **autosplit**: To use HyperExecute’s AutoSplit Strategy, you need to set this flag to `true`. Similarly, this flag should be set to `true` in Hybrid Strategy too.
@@ -193,12 +196,12 @@ jobLabel: ['hybrid-mode']
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

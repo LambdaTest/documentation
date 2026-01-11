@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Version 2.4.7
 description: Version 2.4.7
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-7/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-4-7
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-4-7/
+slug: hyperexecute-release-notes-2-4-7
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-release-notes-2-4-7/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-7/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-4-7/`
         }]
       })
     }}

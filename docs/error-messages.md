@@ -13,12 +13,14 @@ keywords:
   - common error messages
   - exceeded queue limit error
 
-url: https://www.lambdatest.com/support/docs/error-messages/
+url: https://www.testmu.ai/support/docs/error-messages
 site_name: LambdaTest
-slug: error-messages/
+slug: error-messages
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,18 +29,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Error Messages During Test Execution",
-          "item": "https://www.lambdatest.com/support/docs/error-messages/"
+          "item": `${BRAND_URL}/support/docs/error-messages/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ This happens due to Username or Access Key passed by you is missing or invalid.
 
 ### How To Resolve?
 
-1. Go to LambdaTest Automation Dashboard.
+1. Go to <BrandName /> Automation Dashboard.
 2. Click on the key icon at the right top of the dashboard.
 3. Copy username and access key.
 
@@ -90,7 +92,7 @@ When a test is placed under a queue but gets cancelled before execution.
 
 This might occur due to various reasons:
 
-* The connection between the local machine of the user and LambdaTest cloud server is aborted.
+* The connection between the local machine of the user and <BrandName /> cloud server is aborted.
 * High latency may also lead your test script to test cancellation.
 * User cancels the test manually after placing it in queue.
 
@@ -98,7 +100,7 @@ This might occur due to various reasons:
 
 * * *
 
-Your test runner started a new test on LambdaTest, but then closed the connection before we could make a new test session available.
+Your test runner started a new test on <BrandName />, but then closed the connection before we could make a new test session available.
 
 ### Possible Cause:
 
@@ -110,7 +112,7 @@ This might occur due to several things:
 ### Possible Solutions:
 
 * Increase the connection timeout setting in your test runner/framework. For example, for WebdriverIO, you can set connectionRetryTimeout: 210000.
-* Make sure you're not exceeding the total allowed concurrent test limit as per LambdaTest Automation plan you're subscribed to.
+* Make sure you're not exceeding the total allowed concurrent test limit as per <BrandName /> Automation plan you're subscribed to.
 
 ## Lambda Error
 
@@ -859,12 +861,12 @@ Thereafter you could use try-catch to catch the errors if any.
   <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

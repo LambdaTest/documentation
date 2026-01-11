@@ -12,10 +12,13 @@ keywords:
     - azure integration
     - azure associate test case
     - test case
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/
+url: https://www.testmu.ai/support/docs/hyperexecute-azure-associate-test-case
 site_name: LambdaTest
-slug: hyperexecute-azure-associate-test-case/
+slug: hyperexecute-azure-associate-test-case
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +28,17 @@ slug: hyperexecute-azure-associate-test-case/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Test Plan Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-azure-associate-test-case/`
         }]
       })
     }}

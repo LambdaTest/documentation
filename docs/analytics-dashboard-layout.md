@@ -1,14 +1,17 @@
 ---
 id: analytics-dashboard-edit-layout
-title: Lambdatest Analytics - Customizing Your Dashboard with the New Widget Management Feature
+title: TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature
 sidebar_label: Edit Dashboard Layout
-description: Enhance Your Analytics Dashboard Edit Layout with Lambdatest's Widget Management Feature Customizing Layout for Improved Insights 
+description: Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widget Management Feature Customizing Layout for Improved Insights 
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-overview/
+url: https://www.testmu.ai/support/docs/analytics-overview
 site_name: LambdaTest
-slug: analytics-dashboard-edit-layout/
+slug: analytics-dashboard-edit-layout
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +21,17 @@ slug: analytics-dashboard-edit-layout/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-overview/`
         }]
       })
     }}
@@ -38,7 +41,7 @@ slug: analytics-dashboard-edit-layout/
 
 ## Introduction
 
-Lambdatest insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
+TestMu AI insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
 
 This technical support document will walk you through the steps to utilize this feature effectively.
 
@@ -95,12 +98,12 @@ A: Yes, you can revert to the previous state by clicking the 'Cancel' button dur
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

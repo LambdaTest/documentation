@@ -5,15 +5,17 @@ hide_title: false
 sidebar_label: Override Capabilities in YAML
 description: "Easily override test capabilities using YAML in HyperExecute. No script changes needed. Flexible, scalable, and ideal for dynamic test environments."
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides
 site_name: LambdaTest Deep dive into hyperexecute yaml
-slug: hyperexecute-yaml-capability-overrides/
+slug: hyperexecute-yaml-capability-overrides
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,22 +25,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "YAML Based Capability Overrides",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-capability-overrides/`
         }]
       })
     }}
 ></script>
-In Selenium-based testing, [capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
+In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
 
 Previously, these capabilities were typically defined within the test script. With this new feature, you can now override or inject these directly from your **HyperExecute YAML** file. This gives you greater flexibility and eliminates the need to modify test scripts every time you change execution parameters.
 
@@ -53,7 +55,7 @@ Previously, these capabilities were typically defined within the test script. Wi
 - Define a new `ltOptions` section inside your HyperExecute YAML file.
 - Specify any desired capabilities as key-value pairs under `ltOptions`.
 - During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-> All the capabilities defined under the `ltOptions` section are fully aligned with LambdaTest's standard capability structure. You can use any capability listed in our [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ## 🔑 Key Behavior Rules
 

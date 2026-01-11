@@ -1,21 +1,22 @@
 ---
 id: web-scanner-getting-started
-title: Getting Started with LambdaTest Web Scanner
+title: Getting Started with TestMu AI Web Scanner
 hide_title: false
 sidebar_label: Getting Started
 description: A guide to accessing the Web Scanner dashboard and using the 4-step wizard to create and schedule your first Visual or Accessibility scan.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - getting started
   - schedule scan
-url: https://www.lambdatest.com/support/docs/web-scanner-getting-started
+url: https://www.testmu.ai/support/docs/web-scanner-getting-started
 site_name: LambdaTest
-slug: web-scanner-getting-started/
+slug: web-scanner-getting-started
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +26,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         }]
       })
     }}

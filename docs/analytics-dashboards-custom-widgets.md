@@ -1,6 +1,6 @@
 ---
 id: dashboards-custom-widgets
-title: Custom Widgets in LambdaTest Analytics Dashboards
+title: Custom Widgets in TestMu AI Analytics Dashboards
 sidebar_label: Create Custom Widgets
 description: A powerful tool to visualize your test data and gain insights into your testing process.
 keywords:
@@ -11,12 +11,14 @@ keywords:
   - custom dashboards
   - test data
 
-url: https://www.lambdatest.com/support/docs/dashboards-custom-widgets/
+url: https://www.testmu.ai/support/docs/dashboards-custom-widgets
 site_name: LambdaTest
-slug: dashboards-custom-widgets/
+slug: dashboards-custom-widgets
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,22 +28,22 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/dashboards-custom-widgets/"
+          "item": `${BRAND_URL}/support/docs/dashboards-custom-widgets/`
         }]
       })
     }}
 ></script>
-Custom widgets in LambdaTest Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
+Custom widgets in <BrandName /> Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/DEY1hhEme6Q?si=hBN9X2hK-QHvgHIA" title="Exploring Custom Widgets for Dashboards in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

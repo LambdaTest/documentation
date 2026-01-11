@@ -3,21 +3,23 @@ id: parallel-playwright-test
 title: How To Run Playwright Tests In Parallel
 hide_title: true
 sidebar_label: Parallel Testing
-description: Here you can learn how to run parallel tests with Playwright across 40+ browser versions on the LambdaTest automation platform.
+description: Here you can learn how to run parallel tests with Playwright across 40+ browser versions on the TestMu AI automation platform.
 keywords:
  -  playwright testing
   - playwright e2e testing 
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.lambdatest.com/support/docs/parallel-testing-with-playwright/
+url: https://www.testmu.ai/support/docs/parallel-testing-with-playwright
 site_name: LambdaTest
-slug: parallel-testing-with-playwright/
+slug: parallel-testing-with-playwright
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -25,18 +27,18 @@ slug: parallel-testing-with-playwright/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Parallel Testing With Playwright",
-          "item": "https://www.lambdatest.com/support/docs/parallel-testing-with-playwright/"
+          "item": `${BRAND_URL}/support/docs/parallel-testing-with-playwright/`
         }]
       })
     }}
@@ -45,12 +47,12 @@ slug: parallel-testing-with-playwright/
 # Parallel Testing With Playwright
 * * *
 
-LambdaTest allows you to perform parallel testing with Playwright across 40+ browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+<BrandName /> allows you to perform parallel testing with Playwright across 40+ browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
-Shown below are the steps on running parallel tests with Playwright on the LambdaTest platform. 
+Shown below are the steps on running parallel tests with Playwright on the <BrandName /> platform. 
 
-1. Clone the [LambdaTest-Playwright GitHub repository](https://github.com/LambdaTest/playwright-sample) and switch to the cloned directory.
+1. Clone the [<BrandName />-Playwright GitHub repository](https://github.com/LambdaTest/playwright-sample) and switch to the cloned directory.
 
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -59,11 +61,11 @@ cd playwright-sample-main
 
 2. Ensure you have npm dependencies installed. 
 
-3. Configure your LambdaTest authentication credentials.
+3. Configure your <BrandName /> authentication credentials.
 
-Once you are done with the above-mentioned steps, you can run your parallel tests with Playwright on LambdaTest. 
+Once you are done with the above-mentioned steps, you can run your parallel tests with Playwright on <BrandName />. 
 
-The below test script searches the term 'LambdaTest' on Bing.
+The below test script searches the term '<BrandName />' on Bing.
 
 ```js
 const { chromium } = require('playwright')
@@ -157,9 +159,9 @@ node playwright-parallel.js
 ## View your Playwright test results
 ***
 
-The LambdaTest Automation Dashboard is where you can see the results of your Playwright tests after running them on the LambdaTest platform. 
+The <BrandName /> Automation Dashboard is where you can see the results of your Playwright tests after running them on the <BrandName /> platform. 
 
-The below screenshot of LambdaTest Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/dashboard.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -170,12 +172,12 @@ On clicking the session name of the respective test, you can view the details of
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

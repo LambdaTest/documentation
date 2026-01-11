@@ -1,39 +1,33 @@
 require('dotenv').config();
 import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
-  title: 'LambdaTest',
+  title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
-  url: 'https://www.lambdatest.com',
+  url: 'https://www.testmu.ai',
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'Lambdatest', // Usually your GitHub org/user name.
-  projectName: 'Lambdatest', // Usually your repo name.
+  organizationName: 'TestMu AI', // Usually your GitHub org/user name.
+  projectName: 'TestMu AI', // Usually your repo name.
   clientModules: [
     require.resolve('./custom.js'),
   ],
   scripts: [
-    // {
-    //   src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
-    //   defer: true,
-    // },
+  
     {
-      src: 'https://www.lambdatest.com/resources/js/salesforce_chatwidget.js',
+      src: 'https://www.testmu.ai/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
-      src: 'https://www.lambdatest.com/resources/js/lambda_gtm.js',
+      src: 'https://www.testmu.ai/resources/js/lambda_gtm.js',
       defer: true,
     },
     {
-      src: 'https://www.lambdatest.com/resources/js/sf_chat.js',
+      src: 'https://www.testmu.ai/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
     },
-    // {
-    //   src: 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js',
-    //   defer: true,
-    // }
+   
   ],
   themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
@@ -77,7 +71,7 @@ module.exports = {
         alt: 'LambdaTest',
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
-        href: 'https://www.lambdatest.com',
+        href: 'https://www.testmu.ai',
         target: '_self',
         width: '147',
         height: '26',
@@ -116,11 +110,7 @@ module.exports = {
           position: 'left',
           value: '<a role="button" tabindex="0" href="https://github.com/LambdaTest" target="_blank" class="navbar__item navbar__link">GitHub<img src="https://www.lambdatest.com/support/img/Github.svg" alt="" role="presentation" title="LambdaTest GitHub" width="12" height="12" class="head_gitimg no-zoom" style="margin-left:5px;"/></a>',
         },
-        //         {
-        //   type: 'html',
-        //   position: 'left',
-        //   value: '<a role="button" tabindex="0" href="https://www.lambdatest.com/testmuconf-2025/" target="_blank" class="navbar__item navbar__link" style="padding-left:0;padding-right:0;" onclick="sendAmplitudeEvents(\'click CTA - web pages\', {cta_text: \'Register Now - Testmu\', cta_type: \'NavbarCTA\', page_category: \'Document header\'})">TestMu Conf 2025<img loading="lazy" src="https://www.lambdatest.com/resources/images/fire.svg" class="ml-5 " alt="TestMu Conference 2025" width="15" height="15" style="margin-left:5px;"></a>',
-        // }
+     
       ],
     },
   },

@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Scheduling Options
 description: A guide to the scheduling options available in Web Scanner, including one-time Quick Scans, recurring scans, and how to manage scheduled jobs.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - schedule scan
   - recurring scan
-url: https://www.lambdatest.com/support/docs/web-scanner-scheduling-options
+url: https://www.testmu.ai/support/docs/web-scanner-scheduling-options
 site_name: LambdaTest
-slug: web-scanner-scheduling-options/
+slug: web-scanner-scheduling-options
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,22 +25,22 @@ slug: web-scanner-scheduling-options/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Scheduling Options in Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-scheduling-options"
+          "item": `${BRAND_URL}/support/docs/web-scanner-scheduling-options`
         }]
       })
     }}

@@ -3,16 +3,19 @@ id: manual-test-cases-with-ai
 title: Manual Test Cases with AI
 hide_title: true
 sidebar_label: Manual Test Cases with AI
-description: Enhance your manual test cases with AI from LambdaTest's Test Manager, facilitating efficient management of all testing activities on a single platform.
+description: Enhance your manual test cases with AI from TestMu AI's Test Manager, facilitating efficient management of all testing activities on a single platform.
 keywords:
   - manual test cases with ai 
   - manual test cases
   - test cases
   - test case
-url: https://www.lambdatest.com/support/docs/manual-test-cases-with-ai/
+url: https://www.testmu.ai/support/docs/manual-test-cases-with-ai
 site_name: LambdaTest
-slug: manual-test-cases-with-ai/
+slug: manual-test-cases-with-ai
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +24,18 @@ slug: manual-test-cases-with-ai/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Manual Test Cases with AI",
-          "item": "https://www.lambdatest.com/support/docs/manual-test-cases-with-ai/"
+          "item": `${BRAND_URL}/support/docs/manual-test-cases-with-ai/`
         }]
       })
     }}
@@ -69,12 +72,12 @@ Test Manager enhances the process of manual test case creation by integrating AI
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

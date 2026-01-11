@@ -8,13 +8,14 @@ keywords:
   - database
   - sql
   - nosql
-url: https://www.lambdatest.com/support/docs/kaneai-database/
+url: https://www.testmu.ai/support/docs/kaneai-database
 site_name: LambdaTest
-slug: kaneai-database/
+slug: kaneai-database
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +24,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-database/"
+          "item": `${BRAND_URL}/support/docs/kaneai-database/`
         }]
       })
     }}
@@ -69,7 +70,7 @@ KaneAI supports both SQL and NoSQL database connections.
 
 ### Connecting local databases
 
-For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
+For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
 
 
 Following flag will be additionally required for database connections: `--expose database_type:host:port`. 

@@ -15,19 +15,20 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/cyp-environment/
+url: https://www.testmu.ai/support/docs/cyp-environment
 site_name: LambdaTest
-slug: cyp-environment/
+slug: cyp-environment
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the LambdaTest Cypress CLI. However, if we set environment variables via both LambdaTest CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below. 
+You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the <BrandName /> Cypress CLI. However, if we set environment variables via both <BrandName /> CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below. 
 
 ### 1. Via the Configuration File
 
@@ -85,9 +86,9 @@ describe('Sample test', () => {
 }
 ```
 
-### 3. Via the LambdaTest Cypress CLI
+### 3. Via the <BrandName /> Cypress CLI
 
-You can also add your environment variables via the parameter `--envs` in the LambdaTest Cypress CLI. 
+You can also add your environment variables via the parameter `--envs` in the <BrandName /> Cypress CLI. 
 
 ```bash
 lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
@@ -96,12 +97,12 @@ lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTI
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

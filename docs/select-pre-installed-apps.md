@@ -3,14 +3,16 @@ id: select-pre-installed-apps
 title: Select Pre-Installed App in Session
 hide_title: false
 sidebar_label: Select Pre-Installed Apps
-description: Accelerate testing with pre-installed apps on LambdaTest. Start sessions faster, reduce setup time, and enhance efficiency in private cloud environments.
+description: Accelerate testing with pre-installed apps on TestMu AI. Start sessions faster, reduce setup time, and enhance efficiency in private cloud environments.
 keywords:
 - select pre installed apps
 - select pre installed apps in session
-url: https://www.lambdatest.com/support/docs/select-pre-installed-apps/
+url: https://www.testmu.ai/support/docs/select-pre-installed-apps
 site_name: LambdaTest
-slug: select-pre-installed-apps/
+slug: select-pre-installed-apps
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,28 +21,28 @@ slug: select-pre-installed-apps/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Select Pre-Installed App in Session",
-          "item": "https://www.lambdatest.com/support/docs/select-pre-installed-apps/"
+          "item": `${BRAND_URL}/support/docs/select-pre-installed-apps/`
         }]
       })
     }}
 ></script>
 
-LambdaTest empowers developers with a comprehensive testing environment, enabling thorough examination of mobile applications and websites across real devices and browsers. One standout feature is the ability to start testing sessions with pre-installed applications, enhancing efficiency, and reducing test start time,  in **private cloud** setups where data retention and reusability are paramount.
+<BrandName /> empowers developers with a comprehensive testing environment, enabling thorough examination of mobile applications and websites across real devices and browsers. One standout feature is the ability to start testing sessions with pre-installed applications, enhancing efficiency, and reducing test start time,  in **private cloud** setups where data retention and reusability are paramount.
 
 Let's delve into the streamlined steps to initiate a testing session with pre-installed applications:
 
-**Step 1.** Login to your LambdaTest account. Go to **App Testing** under **Real Device** from the left sidebar. 
+**Step 1.** Login to your <BrandName /> account. Go to **App Testing** under **Real Device** from the left sidebar. 
 
 **Step 2.** Enable the toggle to enter into your **Private Cloud**.
 
@@ -52,19 +54,19 @@ Let's delve into the streamlined steps to initiate a testing session with pre-in
 
 **Step 5.** Upon initiating the session, gain instant access to the pre-installed applications on the designated device. This seamless integration accelerates testing scenarios, significantly reducing start time.
 
-By adhering to the above steps, you can seamlessly commence testing sessions with pre-installed applications on LambdaTest. This feature not only expedites the testing process but also enhances efficiency, making it particularly advantageous for private cloud environments. With data retained within the private cloud devices, LambdaTest ensures enhanced flexibility and productivity in testing workflows.
+By adhering to the above steps, you can seamlessly commence testing sessions with pre-installed applications on <BrandName />. This feature not only expedites the testing process but also enhances efficiency, making it particularly advantageous for private cloud environments. With data retained within the private cloud devices, <BrandName /> ensures enhanced flexibility and productivity in testing workflows.
 
 > **Note:** To access the pre-installed apps, you need to have a private cloud plan.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,6 +1,6 @@
----
+﻿---
 id: smartui-cli-figma-web
-title: Getting started with LambdaTest's SmartUI Figma-Web CLI
+title: Getting started with TestMu AI's SmartUI Figma-Web CLI
 sidebar_label: Figma-Web CLI
 description: In this documentation, learn how to compare your figma designs to live production websites and web applications.
 keywords:
@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-cli-figma-web/
+url: https://www.testmu.ai/support/docs/smartui-cli
+slug: smartui-cli-figma-web
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,24 +36,24 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-figma-web/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-figma-web/`
         }]
       })
     }}
 ></script>
 
-Welcome to the LambdaTest SmartUI Figma Web CLI documentation!
+Welcome to the <BrandName /> SmartUI Figma Web CLI documentation!
 
 With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying discrepancies between your designs and live websites. This guide will walk you through the process of running successful Figma-Web Visual tests using SmartUI CLI.
 
@@ -59,14 +61,14 @@ With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
 
-The following steps will guide you in running your visual tests for Figma files on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your visual tests for Figma files on <BrandName /> platform using SmartUI CLI.
 
 ## Understanding Figma Tokens
 
@@ -97,7 +99,7 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -211,7 +213,7 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-### **Step 4:** Configure your LambdaTest Credentials
+### **Step 4:** Configure your <BrandName /> Credentials
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
@@ -579,7 +581,7 @@ Check Project Type
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -603,12 +605,12 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

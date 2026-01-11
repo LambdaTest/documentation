@@ -5,14 +5,16 @@ hide_title: false
 sidebar_label: Smart Variables
 description: Learn how to utilize Smart Variables to dynamically adapt to various environments and conditions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai smart variables
   - kaneai parameters
-url: https://www.lambdatest.com/support/docs/kane-smart-variables/
+url: https://www.testmu.ai/support/docs/kane-smart-variables
 site_name: LambdaTest
-slug: kane-ai-smart-variables/
+slug: kane-ai-smart-variables
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: kane-ai-smart-variables/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Smart Variables",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-smart-variables/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-smart-variables/`
         }]
       })
     }}
@@ -105,7 +107,7 @@ Below is a comprehensive list of supported smart variables, organized by categor
 |                       | `os_version`          | `{{smart.os_version}}`        | Operating system version on which test is running (e.g., 10.0, 14.2)        |
 |                       | `browser_name`        | `{{smart.browser_name}}`      | Browser name on which test is running (e.g., Chrome, Firefox, Safari)       |
 |                       | `browser_version`     | `{{smart.browser_version}}`   | Browser version on which test is running (e.g., 112.0, 101.0.1)             |
-|                       | `user_name`           | `{{smart.user_name}}`         | Current user name on LambdaTest who trigger the test                        |
+|                       | `user_name`           | `{{smart.user_name}}`         | Current user name on <BrandName /> who trigger the test                        |
 | **Randomized**        | `random_int`          | `{{smart.random_int}}`        | Random 3 digit integer                                                      |
 |                       | `random_float`        | `{{smart.random_float}}`      | Random 2 digit float                                                        |
 |                       | `random_string_8`     | `{{smart.random_string_8}}`   | Random alphanumeric string of specified length                              |

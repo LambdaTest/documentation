@@ -2,21 +2,23 @@
 id: accessibility-test-crawler
 title: Accessibility Crawler
 sidebar_label: URL Crawler
-description: Learn how to use LambdaTest’s Crawler to automate URL extraction for accessibility testing. Configure crawl settings, include/exclude URL patterns, and analyze scan results.
+description: Learn how to use TestMu AI’s Crawler to automate URL extraction for accessibility testing. Configure crawl settings, include/exclude URL patterns, and analyze scan results.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Crawler
     - Testing
     - URL Extraction
-url: https://www.lambdatest.com/support/docs/accessibility-test-crawler/
+url: https://www.testmu.ai/support/docs/accessibility-test-crawler
 site_name: LambdaTest
-slug: accessibility-test-crawler/
+slug: accessibility-test-crawler
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,39 +28,39 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest URL Crawler",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-test-crawler/"
+          "name": "TestMu AI URL Crawler",
+          "item": `${BRAND_URL}/support/docs/accessibility-test-crawler/`
         }]
       })
     }}
 ></script>
 
 
-## Why LambdaTest Crawler is Helpful for Accessibility Testing
+## Why <BrandName /> Crawler is Helpful for Accessibility Testing
 
-In accessibility testing, ensuring that all relevant URLs across a website are properly tested is crucial. Manual URL entry can be cumbersome and inefficient, especially for large websites with many pages. This is where LambdaTest’s URL Crawler comes into play, offering an automated and streamlined solution for accessibility testing.
+In accessibility testing, ensuring that all relevant URLs across a website are properly tested is crucial. Manual URL entry can be cumbersome and inefficient, especially for large websites with many pages. This is where <BrandName />’s URL Crawler comes into play, offering an automated and streamlined solution for accessibility testing.
 
-With the LambdaTest Crawler, you can:
+With the <BrandName /> Crawler, you can:
 
 - **Automatically extract URLs** from your site based on set parameters like crawl depth and maximum pages to be crawled.
 - **Scan large websites efficiently** without having to manually input each URL, saving time and resources.
 - **Crawl dynamically** generated content and sub-pages that might otherwise be missed in traditional testing methods.
 - **Ensure thorough coverage** by including/excluding specific URL patterns, which helps in targeting exactly the content you need to test for accessibility compliance.
 
-By automating the URL discovery process, the LambdaTest Crawler allows you to focus on accessibility issues without missing any pages that might contain potential accessibility barriers.
+By automating the URL discovery process, the <BrandName /> Crawler allows you to focus on accessibility issues without missing any pages that might contain potential accessibility barriers.
 
 
 ## Step 1: Access the URL Crawler Feature  
-- Open the LambdaTest Accessibility Testing Dashboard.  
+- Open the <BrandName /> Accessibility Testing Dashboard.  
 - Select the “Crawler” option from the “Add URLs” section.
 
 

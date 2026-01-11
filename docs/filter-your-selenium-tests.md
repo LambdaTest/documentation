@@ -3,24 +3,26 @@ id: filter-your-selenium-tests
 title: How To Filter Your Selenium Automation Tests
 hide_title: true
 sidebar_label: Filtering Your Selenium Tests
-description: Guide to help you filter your tests on LambdaTest, a platform to perform cross-browser testing on a scalable, secure, and reliable online Selenium grid.
+description: Guide to help you filter your tests on TestMu AI, a platform to perform cross-browser testing on a scalable, secure, and reliable online Selenium grid.
 keywords:
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - custom tags
     - group tests
-url: https://www.lambdatest.com/support/docs/filter-your-selenium-tests/
+url: https://www.testmu.ai/support/docs/filter-your-selenium-tests
 site_name: LambdaTest
-slug: filter-your-selenium-tests/
+slug: filter-your-selenium-tests
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: filter-your-selenium-tests/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Filtering Selenium Tests",
-          "item": "https://www.lambdatest.com/support/docs/group-tests-using-custom-tags/"
+          "item": `${BRAND_URL}/support/docs/group-tests-using-custom-tags/`
         }]
       })
     }}
@@ -50,7 +52,7 @@ slug: filter-your-selenium-tests/
 
 * * *
 
-You can filter your tests on LambdaTest, using the various filters available on the automation dashboard. On each of the tabs available on the automation dashboard, namely Timeline, Automation Logs, and Analytics; we have a _filter toolbar_ to help you filter your tests based on selected values. In this document, we will help you understand the filter toolbar of each tab and how you can filter your tests on each of them.
+You can filter your tests on <BrandName />, using the various filters available on the automation dashboard. On each of the tabs available on the automation dashboard, namely Timeline, Automation Logs, and Analytics; we have a _filter toolbar_ to help you filter your tests based on selected values. In this document, we will help you understand the filter toolbar of each tab and how you can filter your tests on each of them.
 
 ## Filtering Tests on Timeline
 
@@ -86,7 +88,7 @@ Once the ending date is selected, the tests will be automatically sorted based o
 
 * * *
 
-You might have multiple team members added to your LambdaTest account. So to filter out the tests by the member who ran the tests, you can use this option in the filter toolbar. When you click on the _Users_ option, you can see a list of members added to your account. Select the members whose tests you want to filter out, and the tests will be filtered automatically. You can even select multiple members in this option.
+You might have multiple team members added to your <BrandName /> account. So to filter out the tests by the member who ran the tests, you can use this option in the filter toolbar. When you click on the _Users_ option, you can see a list of members added to your account. Select the members whose tests you want to filter out, and the tests will be filtered automatically. You can even select multiple members in this option.
 
 <img loading="lazy" src={require('../assets/images/uploads/filter-users.webp').default} alt="automation users" width="1024" height="410" className="doc_img"/>
 
@@ -149,7 +151,7 @@ The Build, Date, Users, Status, and Clear Filters components behave in the same 
 
 * * *
 
-Now you can filter your Selenium tests on LambdaTest, using the [custom tags](/docs/group-tests-using-custom-tags/). Click on the Tags option to select the 'Tag', by which you want to filter the tests. You must have used the custom tags feature earlier to use this filter.
+Now you can filter your Selenium tests on <BrandName />, using the [custom tags](/docs/group-tests-using-custom-tags/). Click on the Tags option to select the 'Tag', by which you want to filter the tests. You must have used the custom tags feature earlier to use this filter.
 
 Here's an example showing tests filtered using _Demo1_ custom tag, as shown in the image below:
 
@@ -207,12 +209,12 @@ By default, the _THIS WEEK_ filter will be selected. You can use the Date filter
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

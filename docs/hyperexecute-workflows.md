@@ -4,15 +4,18 @@ title: Workflows in HyperExecute
 sidebar_label: Workflows
 description: Schedule and orchestrate HyperExecute jobs without a full CI/CD, chain workflows across projects, and parameterize runs with workflow variables.
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - HyperExecute Workflows
   - schedule tests
   - connected workflows
   - test chains
-url: https://www.lambdatest.com/support/docs/hyperexecute-workflows/
+url: https://www.testmu.ai/support/docs/hyperexecute-workflows
 site_name: LambdaTest
-slug: hyperexecute-workflows/
+slug: hyperexecute-workflows
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-workflows/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Workflows in HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-workflows/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-workflows/`
         }]
       })
     }}

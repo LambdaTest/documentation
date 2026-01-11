@@ -5,19 +5,20 @@ hide_title: false
 sidebar_label: Running Your First Job 
 description: Run your first job on HyperExecute
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Run your first job on HyperExecute
-url: https://www.lambdatest.com/support/docs/hyperexecute-running-your-first-job/
+url: https://www.testmu.ai/support/docs/hyperexecute-running-your-first-job
 site_name: LambdaTest
-slug: hyperexecute-running-your-first-job/
+slug: hyperexecute-running-your-first-job
 ---
 
 import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +28,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running Your First Job on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-running-your-first-job/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-running-your-first-job/`
         }]
       })
     }}
@@ -83,7 +84,7 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 
 We will be taking care of everything one by one, just follow the steps given below: 
 
@@ -159,12 +160,12 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

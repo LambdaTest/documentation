@@ -5,10 +5,13 @@ sidebar_label: Test Intelligence
 description: Test Intelligence is an AI Native analytics module that helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness of the test.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/test-intelligence-overview/
+url: https://www.testmu.ai/support/docs/test-intelligence-overview
 site_name: LambdaTest
-slug: test-intelligence-overview/
+slug: test-intelligence-overview
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +21,17 @@ slug: test-intelligence-overview/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/test-intelligence-overview/"
+          "item": `${BRAND_URL}/support/docs/test-intelligence-overview/`
         }]
       })
     }}

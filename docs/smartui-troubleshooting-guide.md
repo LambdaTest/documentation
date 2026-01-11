@@ -10,9 +10,9 @@ keywords:
   - error resolution
   - debugging smartui
   - common errors
-url: https://www.lambdatest.com/support/docs/smartui-troubleshooting-guide/
+url: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide
 site_name: LambdaTest
-slug: smartui-troubleshooting-guide/
+slug: smartui-troubleshooting-guide
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +20,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,18 +30,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Troubleshooting Guide",
-          "item": "https://www.lambdatest.com/support/docs/smartui-troubleshooting-guide/"
+          "item": `${BRAND_URL}/support/docs/smartui-troubleshooting-guide/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ Before diving into specific issues, run through this quick checklist:
 - [ ] Project token is set correctly (`PROJECT_TOKEN` environment variable)
 - [ ] SmartUI CLI is installed and up-to-date (`npx smartui --version`)
 - [ ] Configuration file (`.smartui.json`) exists and is valid JSON
-- [ ] Network connectivity to LambdaTest servers
+- [ ] Network connectivity to <BrandName /> servers
 - [ ] Project exists in SmartUI dashboard
 - [ ] Credentials (for Hooks) are set correctly (`LT_USERNAME`, `LT_ACCESS_KEY`)
 - [ ] Project name matches exactly (case-sensitive)
@@ -209,7 +211,7 @@ Before diving into specific issues, run through this quick checklist:
    </Tabs>
 
 2. **Get Correct Credentials**:
-   - Log into [LambdaTest Dashboard](https://accounts.lambdatest.com/detail/profile)
+   - Log into [<BrandName /> Dashboard](https://accounts.lambdatest.com/detail/profile)
    - Click "Access Key" button
    - Copy username and access key
 
@@ -719,7 +721,7 @@ Before diving into specific issues, run through this quick checklist:
    - Check for network errors
 
 3. **Verify Network Connectivity**:
-   - Ensure CI/CD runner can access LambdaTest servers
+   - Ensure CI/CD runner can access <BrandName /> servers
    - Check firewall/proxy settings
    - Verify DNS resolution
 
@@ -1078,7 +1080,7 @@ If you encounter issues not covered in this guide:
    - Review [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 2. **Search Existing Issues**:
-   - Check [LambdaTest Support](https://www.lambdatest.com/support)
+   - Check [<BrandName /> Support](https://www.lambdatest.com/support)
    - Review community forums
    - Search knowledge base
 

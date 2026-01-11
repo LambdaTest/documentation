@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Version 2.4.4
 description: Version 2.4.4
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-4/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-4-4
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-4-4/
+slug: hyperexecute-release-notes-2-4-4
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-release-notes-2-4-4/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-4/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-4-4/`
         }]
       })
     }}
@@ -40,7 +43,7 @@ slug: hyperexecute-release-notes-2-4-4/
 
 ## HyperExecute now integrates with k6
 
-HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file.
+HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file.
 
 ```yaml
 runtime:
@@ -58,4 +61,4 @@ env:
   HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
 ```
 
-📕 Check the [k6 integration documentation](https://www.lambdatest.com/support/docs/hyperexecute-k6-testing/) to learn more about it.
+📕 Check the [k6 integration documentation](/support/docs/hyperexecute-k6-testing/) to learn more about it.

@@ -3,18 +3,20 @@ id: mobile-web-automation-on-real-devices
 title: Mobile Web Automation Testing On Real Devices
 hide_title: true
 sidebar_label: Mobile Web Automation On Real Devices
-description: Perform mobile web automation via Appium on LambdaTest real device cloud. Test on real Android and iOS devices like iPhone, Samsung Galaxy, and Google Pixel.
+description: Perform mobile web automation via Appium on TestMu AI real device cloud. Test on real Android and iOS devices like iPhone, Samsung Galaxy, and Google Pixel.
 keywords:
 - mobile web automation
 - appium mobile web automation
 - mobile web test automation
-- mobile web automation lambdatest
+- mobile web automation testmu ai
 - mobile web automation real device
 - how to perform mobile web automation
-url: https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/
+url: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices
 site_name: LambdaTest
-slug: mobile-web-automation-on-real-devices/
+slug: mobile-web-automation-on-real-devices
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,17 +25,17 @@ slug: mobile-web-automation-on-real-devices/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile Web Automation On Real Devices (Beta)",
-          "item": "https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/mobile-web-automation-on-real-devices/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: mobile-web-automation-on-real-devices/
 
 Mobile web automation involves testing websites or web apps on real mobile devices like Android and iOS. Testing the appearance and performance of websites and web apps on a real device ensures that the test runs on real-world conditions, has better performance, and improves test coverage (across devices).
 
- LambdaTest allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices) from a wide range of OEMs like Samsung, Apple, Xiaomi, and more.
+ <BrandName /> allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices) from a wide range of OEMs like Samsung, Apple, Xiaomi, and more.
 
 Here are the Prerequisites for performing mobile web automation on real devices using Python language. 
 
@@ -128,7 +130,7 @@ time.sleep(5)
 driver.quit() 
 ```
 
-In the below test snippet, you will need to add your LambdaTest Username and LambdaTest Access Key. You can get them from the [LambdaTest dashboard](https://accounts.lambdatest.com/dashboard). In the Hub URL, we have added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
+In the below test snippet, you will need to add your <BrandName /> Username and <BrandName /> Access Key. You can get them from the [<BrandName /> dashboard](https://accounts.lambdatest.com/dashboard). In the Hub URL, we have added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
 
 ```
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"
@@ -140,7 +142,7 @@ Execute the below command in the terminal to run the test.
 python todo.py
 ```
 
-Visit the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/), you’ll find the complete mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
+Visit the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/), you’ll find the complete mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
 
 <img loading="lazy" src={require('../assets/images/mobile-web-automation/mobile-web-automation-2.webp').default} alt="Image"  className="doc_img"/>
 
@@ -149,12 +151,12 @@ Visit the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/),
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

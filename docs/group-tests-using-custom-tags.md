@@ -3,24 +3,26 @@ id: group-tests-using-custom-tags
 title: How To Create Custom Automation Tags
 hide_title: true
 sidebar_label: Group Tests Using Custom Tags
-description: Now group your tests and organize them efficiently with the help of Custom Tags. LambdaTest allows you to create custom tags and filter them with a click.
+description: Now group your tests and organize them efficiently with the help of Custom Tags. TestMu AI allows you to create custom tags and filter them with a click.
 keywords:
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - custom tags
     - group tests
-url: https://www.lambdatest.com/support/docs/group-tests-using-custom-tags/
+url: https://www.testmu.ai/support/docs/group-tests-using-custom-tags
 site_name: LambdaTest
-slug: group-tests-using-custom-tags/
+slug: group-tests-using-custom-tags
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: group-tests-using-custom-tags/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Group Test Using Custom Tags",
-          "item": "https://www.lambdatest.com/support/docs/group-tests-using-custom-tags/"
+          "item": `${BRAND_URL}/support/docs/group-tests-using-custom-tags/`
         }]
       })
     }}
@@ -50,9 +52,9 @@ slug: group-tests-using-custom-tags/
 
 * * *
 
-LambdaTest allows you to group your automation tests using custom tags. In this document, we will see how to create custom tags and use them. For demonstration purposes, we have used a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the LambdaTest platform.
+<BrandName /> allows you to group your automation tests using custom tags. In this document, we will see how to create custom tags and use them. For demonstration purposes, we have used a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the <BrandName /> platform.
 
-## How To Create Custom Tags While Performing Automation On LambdaTest Selenium Grid?
+## How To Create Custom Tags While Performing Automation On <BrandName /> Selenium Grid?
 
 * * *
 
@@ -82,7 +84,7 @@ You can create a custom tag using a simple step. While writing your Selenium aut
 
 You have successfully created the custom tags. Let's now see how to view the custom tags and how to group the test based on custom tags in the below section.
 
-## How To View Custom Tags On LambdaTest Platform?
+## How To View Custom Tags On <BrandName /> Platform?
 
 * * *
 
@@ -102,7 +104,7 @@ You can see the applied custom tags below the tests in this Test View. <img load
 
 Navigate to [Automation Logs](https://automation.lambdatest.com/logs) of your automation dashboard, and you can see the applied custom tags below the tests in the left panel. <img loading="lazy" src={require('../assets/images/uploads/tags-1.webp').default} alt="Automation logs" width="1024" height="407" className="doc_img"/>
 
-## How To Filter Tests Using Custom Tags On LambdaTest Platform?
+## How To Filter Tests Using Custom Tags On <BrandName /> Platform?
 
 * * *
 
@@ -125,12 +127,12 @@ You can even filter the tests by selecting multiple custom tags at once, from th
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

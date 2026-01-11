@@ -5,16 +5,19 @@ hide_title: false
 sidebar_label: Task Metrics
 description: HyperExecute Task Metrics helps you to understand your resource utilization for different stages of test execution.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
     - HyperExecute
   - HyperExecute Metrics
   - HyperExecute Task
-url: https://www.lambdatest.com/support/docs/hyperexecute-task-metrics/
+url: https://www.testmu.ai/support/docs/hyperexecute-task-metrics
 site_name: LambdaTest
-slug: hyperexecute-task-metrics/
+slug: hyperexecute-task-metrics
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-task-metrics/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Metrics",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-task-metrics/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-task-metrics/`
         }]
       })
     }}

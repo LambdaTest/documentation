@@ -12,9 +12,9 @@ keywords:
   - dark mode
   - virtual devices
 
-url: https://www.lambdatest.com/support/docs/set-device-dark-mode/
+url: https://www.testmu.ai/support/docs/set-device-dark-mode
 site_name: LambdaTest
-slug: set-device-dark-mode/
+slug: set-device-dark-mode
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +23,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,23 +34,23 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/set-device-dark-mode/"
+          "name": "Appium Inspector Integration on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/set-device-dark-mode/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-LambdaTest now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
+<BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
 ---
 
@@ -120,7 +122,7 @@ You can enable the dark mode setting through `darkMode` capability before the se
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

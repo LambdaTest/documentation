@@ -3,16 +3,18 @@ id: rktracer-integration
 title: RKTracer Integration
 hide_title: true
 sidebar_label: RKTracer
-description: LambdaTest and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
+description: TestMu AI and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
 keywords:
-- rktracer lambdatest
+- rktracer testmu ai
 - rktracer integration
-- rktracer integration with lambdatest
+- rktracer integration with testmu ai
 
-url: https://www.lambdatest.com/support/docs/rktracer-integration/
+url: https://www.testmu.ai/support/docs/rktracer-integration
 site_name: LambdaTest
-slug: rktracer-integration/
+slug: rktracer-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: rktracer-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "RKTracer Integration",
-          "item": "https://www.lambdatest.com/support/docs/rktracer-integration/"
+          "item": `${BRAND_URL}/support/docs/rktracer-integration/`
         }]
       })
     }}
@@ -43,12 +45,12 @@ slug: rktracer-integration/
 
 Developed by RKValidate, RKTracer is a Code coverage tool capable of generating coverage data for different programming languages like C, C++, C#, Java, Kotlin, JavaScript, Python, etc; regardless of what compiler, cross compiler, embedded targets, or servers you use to test your apps.
 
-With LambdaTest and RKTracer, you can generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
+With <BrandName /> and RKTracer, you can generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
 
-## RKTracer With Web Automation On LambdaTest
+## RKTracer With Web Automation On <BrandName />
 ***
 
-1. Download the LambdaTest [Java-TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium/).
+1. Download the <BrandName /> [Java-TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium/).
 
 2. To run the single test using TestNG, pass the build command by prefixing it with `"rktracer"`
 
@@ -67,13 +69,13 @@ rkresults
 <img loading="lazy" src={require('../assets/images/rktracer-integration/2.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 
 
-## RKTracer With App Automation On LambdaTest
+## RKTracer With App Automation On <BrandName />
 ***
 
 1. Build your app with the RKTracer tool embedded.
-2. Login to your LambdaTest account and perform the automated testing of your app.
-3. Navigate to the [App Automation dashboard](https://appautomation.lambdatest.com/build) on LambdaTest.
-4. Download the Device log file from LambdaTest App Automation dashboard.<br/>
+2. Login to your <BrandName /> account and perform the automated testing of your app.
+3. Navigate to the [App Automation dashboard](https://appautomation.lambdatest.com/build) on <BrandName />.
+4. Download the Device log file from <BrandName /> App Automation dashboard.<br/>
 
 <img loading="lazy" src={require('../assets/images/rktracer-integration/3.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 
@@ -91,11 +93,11 @@ rkresults
 <img loading="lazy" src={require('../assets/images/rktracer-integration/5.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 
 
-## RKTracer With Real Time App Testing On LambdaTest
+## RKTracer With Real Time App Testing On <BrandName />
 ***
 
 1. Build your app with the RKTracer tool embedded.
-2. Login to your LambdaTest account and perform the real-time testing of your app.
+2. Login to your <BrandName /> account and perform the real-time testing of your app.
 3. Download the App logs of the real-time app test and place them in the build code directory.<br/>
 
 <img loading="lazy" src={require('../assets/images/rktracer-integration/6.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
@@ -114,12 +116,12 @@ rkresults
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

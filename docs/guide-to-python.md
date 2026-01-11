@@ -1,18 +1,20 @@
 ---
 id: guide-to-python
-title: Guide - Running Python Tests On LambdaTest Selenium Grid
+title: Guide - Running Python Tests On TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Python
-description: Guide to running Python and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud
+description: Guide to running Python and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud
 keywords:
-  - LambdaTest automation using python
+  - TestMu AI automation using python
   - python and Selenium automation
-  - python documentation LambdaTest
-image: /assets/images/og-images/run-python-tests-on-selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/run-python-tests-on-selenium-grid/
+  - python documentation TestMu AI
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid
 site_name: LambdaTest
-slug: run-python-tests-on-selenium-grid/
+slug: run-python-tests-on-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,27 +23,27 @@ slug: run-python-tests-on-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Run Python Tests",
-          "item": "https://www.lambdatest.com/support/docs/run-python-tests-on-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/run-python-tests-on-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Quick Guide To Run Python Tests On LambdaTest Selenium Grid
+# Quick Guide To Run Python Tests On <BrandName /> Selenium Grid
 * * *
 
-LambdaTest Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.lambdatest.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage LambdaTest Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on LambdaTest Selenium cloud platform.
+<BrandName /> Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.lambdatest.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage <BrandName /> Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on <BrandName /> Selenium cloud platform.
 
 ## Prerequisites
 ***
@@ -63,7 +65,7 @@ Make sure that you have installed Selenium dependencies before executing your te
 ## Sample Python & Selenium Test To Get You started
 ***
 
-Now we are all set to execute the first Python test on LambdaTest Selenium Grid. Checkout the sample code below. This is a simple python code that uses LambdaTest Selenium grid to open up Google. You can also download it from our [GitHub repo](https://github.com/LambdaTest/python-selenium-sample).
+Now we are all set to execute the first Python test on <BrandName /> Selenium Grid. Checkout the sample code below. This is a simple python code that uses <BrandName /> Selenium grid to open up Google. You can also download it from our [GitHub repo](https://github.com/LambdaTest/python-selenium-sample).
 
 ### Sample Python & Selenium Automation Script
 ***
@@ -171,14 +173,14 @@ The first thing to note here, is the use of remote WebDriver. Also checkout how 
 
 To use your choice of environment for the test you can leverage our Capability Generator tool.
 
-<center><a href="https://www.lambdatest.com/capabilities-generator/"><button name="button">LambdaTest Capability Generator Tool</button></a></center>
+<center><a href="https://www.lambdatest.com/capabilities-generator/"><button name="button"><BrandName /> Capability Generator Tool</button></a></center>
 
-> **Tear Down**: The tear down method helps LambdaTest platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
+> **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

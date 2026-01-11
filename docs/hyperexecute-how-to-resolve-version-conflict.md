@@ -7,10 +7,13 @@ description: Resolve version conflicts by ensuring consistency across YAML, pack
 keywords:
     - hyperexecute yaml
     - resolve version conflicts
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 site_name: LambdaTest
-slug: hyperexecute-how-to-resolve-version-conflict/
+slug: hyperexecute-how-to-resolve-version-conflict
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +23,17 @@ slug: hyperexecute-how-to-resolve-version-conflict/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Resolve Version Conflict",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-resolve-version-conflict/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-resolve-version-conflict/`
         }]
       })
     }}
@@ -51,7 +54,7 @@ This section provides detailed instructions for version consistency across diffe
 ### Selenium - Java
 For Java projects using Selenium, TestNG and Cucumber dependencies should match between the YAML pre-steps and the pom.xml file.
 
-- **TestNG :** Ensure the TestNG version in your `pom.xml` matches the version specified in the YAML configuration under [`pre-steps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#pre):
+- **TestNG :** Ensure the TestNG version in your `pom.xml` matches the version specified in the YAML configuration under [`pre-steps`](/support/docs/deep-dive-into-hyperexecute-yaml/#pre):
 ```xml
 <dependency>
     <groupId>org.testng</groupId>

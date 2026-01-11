@@ -6,13 +6,13 @@ description: Explore how to perform operations with your applications like uploa
 keywords:
   - appium
   - application operations
-  - lambdatest
+  - testmu ai
   - mobile testing
   - apis
   - setup application
-url: https://www.lambdatest.com/support/docs/application-setup-via-gui/
+url: https://www.testmu.ai/support/docs/application-setup-via-gui
 site_name: LambdaTest
-slug: application-setup-via-gui/
+slug: application-setup-via-gui
 ---
 
 import Tabs from '@theme/Tabs';
@@ -22,6 +22,8 @@ import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
@@ -34,25 +36,25 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Applications",
-          "item": "https://www.lambdatest.com/support/docs/application-setup-via-gui/"
+          "item": `${BRAND_URL}/support/docs/application-setup-via-gui/`
         }]
       })
     }}
 ></script>
-To test your iOS (.ipa file) or Android (.apk or .aab file) application on LambdaTest, you can upload them directly from the dashboard. In this documentation, we have listed the the ways via which you can upload your application for both Virtual and Real Devices.
+To test your iOS (.ipa file) or Android (.apk or .aab file) application on <BrandName />, you can upload them directly from the dashboard. In this documentation, we have listed the the ways via which you can upload your application for both Virtual and Real Devices.
 
 ## Real Device Dashboard
-- **Access the Dashboard :** Log in to your LambdaTest account and navigate to the [Real Device dashboard](https://applive.lambdatest.com/app).
+- **Access the Dashboard :** Log in to your <BrandName /> account and navigate to the [Real Device dashboard](https://applive.lambdatest.com/app).
 - **Initiate the Upload :** Click the Upload button in the dashboard and select your application file from your local system:
   - **For Android :** Ensure the file is in `.apk` or `.aab` format.
   - **For iOS :** Use `.ipa` format.
@@ -63,7 +65,7 @@ Wait for the file to upload and process. A success message will indicate when yo
 <img loading="lazy" src={require('../assets/images/appium-app/application/real-device-upload.gif').default} alt="Image" className="doc_img"/>
 
 
-> Learn how to [Upload Apps on LambdaTest’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
+> Learn how to [Upload Apps on <BrandName />’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
 
 :::info
 - You can access the [**Virtual Device Dashboard**](https://app.lambdatest.com/console/realtime/app).
@@ -72,7 +74,7 @@ Wait for the file to upload and process. A success message will indicate when yo
 :::
 
 ## Automation Dashboard
-- **Access the App Automation Dashboard :** Log in to your LambdaTest account and navigate to the [App Automation Dashboard](https://appautomation.lambdatest.com/build).
+- **Access the App Automation Dashboard :** Log in to your <BrandName /> account and navigate to the [App Automation Dashboard](https://appautomation.lambdatest.com/build).
 - **Upload the Application :** Click the Browse File button in the App tab under the Real Device or Virtual Device section. Select your application file from your local system:
   - **Android :** Upload a `.aab` or `.apk` file.
   - **iOS :** Upload an `.ipa` file.

@@ -2,40 +2,41 @@
 id: playwright-sdk
 title: Playwright SDK
 sidebar_label: Playwright SDK
-description: A guide to getting started with the Playwright-Node.js SDK by LambdaTest.
+description: A guide to getting started with the Playwright-Node.js SDK by TestMu AI.
 keywords:
   - playwright
   - nodejs
   - sdk
-  - lambdatest
+  - testmu ai
   - automation
   - testing
-slug: /playwright-sdk/
+slug: /playwright-sdk
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-This document guides you through setting up and using the LambdaTest Playwright-Node.js SDK to run your Playwright tests on the LambdaTest platform.
+This document guides you through setting up and using the <BrandName /> Playwright-Node.js SDK to run your Playwright tests on the <BrandName /> platform.
 
 ## Overview
-The LambdaTest Playwright Node SDK is a command-line interface (CLI) tool designed to streamline the process of running your existing Playwright tests on the LambdaTest cloud grid. It eliminates the need for code modifications and provides a simple, configuration-driven approach to test execution.
+The <BrandName /> Playwright Node SDK is a command-line interface (CLI) tool designed to streamline the process of running your existing Playwright tests on the <BrandName /> cloud grid. It eliminates the need for code modifications and provides a simple, configuration-driven approach to test execution.
 
 Key benefits include:
 
-*   **Effortless Execution**: Run your entire test suite on the LambdaTest platform with a single, simple command. The SDK handles all the underlying complexity of connecting to the grid.
+*   **Effortless Execution**: Run your entire test suite on the <BrandName /> platform with a single, simple command. The SDK handles all the underlying complexity of connecting to the grid.
 *   **Zero Code Changes**: Integrate your existing Playwright tests without modifying your test scripts. All configuration is managed externally in the lambdatest.yml file.
 *   **Centralized Capabilities**: Define and manage all your test environments—including browser, platform, and resolution combinations—in a single, easy-to-read YAML file.
-*   **Local & Private Testing**: Seamlessly test internal, pre-production, or locally hosted websites using the LambdaTest Tunnel, which can be managed automatically by the SDK.
+*   **Local & Private Testing**: Seamlessly test internal, pre-production, or locally hosted websites using the <BrandName /> Tunnel, which can be managed automatically by the SDK.
 *   **CI/CD Integration**: The command-line nature of the SDK makes it trivial to integrate into any CI/CD pipeline (like Jenkins, GitHub Actions, CircleCI, etc.) for continuous testing.
-*   **Rich Test Artifacts**: All test runs are automatically reported to your LambdaTest Dashboard, complete with video recordings, step-by-step screenshots, browser logs, and network logs for easy debugging.
+*   **Rich Test Artifacts**: All test runs are automatically reported to your <BrandName /> Dashboard, complete with video recordings, step-by-step screenshots, browser logs, and network logs for easy debugging.
 
 ## Prerequisites
 
 Before proceeding, ensure the following requirements are met:
 
-*   A LambdaTest account. A free account can be created at [LambdaTest - AI Powered Testing Tool | AI Testing Agents On Cloud](https://www.lambdatest.com/signup).
-*   Your LambdaTest username and access key, which are available in your [LambdaTest profile](https://accounts.lambdatest.com/detail/profile).
+*   A <BrandName /> account. A free account can be created at [<BrandName /> - AI Powered Testing Tool | AI Testing Agents On Cloud](https://www.lambdatest.com/signup).
+*   Your <BrandName /> username and access key, which are available in your [<BrandName /> profile](https://accounts.lambdatest.com/detail/profile).
 *   A local installation of Node.js and npm.
 *   An existing Playwright project.
 
@@ -141,11 +142,11 @@ platforms:
 
 ### 2. Credentials Configuration
 
-In the `lambdatest.yml` file, replace the placeholder values for `user` and `accessKey` with your LambdaTest credentials.
+In the `lambdatest.yml` file, replace the placeholder values for `user` and `accessKey` with your <BrandName /> credentials.
 
 ### 3. Platform Configuration
 
-The `platforms` array defines the target environments (OS/browser combinations) for your test execution. You can specify multiple platform objects. For a complete list of valid platform configurations, consult the [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+The `platforms` array defines the target environments (OS/browser combinations) for your test execution. You can specify multiple platform objects. For a complete list of valid platform configurations, consult the [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ### 4. Run Settings
 
@@ -153,7 +154,7 @@ The `run_settings` section is not explicitly present in the provided YAML, but y
 
 ### 5. Playwright Project Options
 
-The `playwrightConfigOptions` section provides a powerful mechanism to override your project's native Playwright configuration for the LambdaTest run. This allows for dynamic adjustments without altering your source `playwright.config.js`.
+The `playwrightConfigOptions` section provides a powerful mechanism to override your project's native Playwright configuration for the <BrandName /> run. This allows for dynamic adjustments without altering your source `playwright.config.js`.
 
 *   **testDir**: Specifies the location of your test files.
 
@@ -195,12 +196,12 @@ The `playwrightConfigOptions` section provides a powerful mechanism to override 
 
 The `tunnel_settings` section is used for testing applications that are not publicly accessible (e.g., on localhost or behind a firewall).
 
-*   **tunnel: true**: Enables the LambdaTest Tunnel feature.
+*   **tunnel: true**: Enables the <BrandName /> Tunnel feature.
 *   **autostart: true**: Instructs the SDK to automatically manage the tunnel's lifecycle (start and stop).
 
 ## Running Your Tests
 
-To execute your tests on the LambdaTest platform, you will use the `playwright-node-sdk` CLI wrapper followed by the standard `playwright test` command.
+To execute your tests on the <BrandName /> platform, you will use the `playwright-node-sdk` CLI wrapper followed by the standard `playwright test` command.
 
 ```bash
 npx playwright-node-sdk playwright test --config Optional path-of-config.yml
@@ -211,10 +212,10 @@ npx playwright-node-sdk playwright test --config Optional path-of-config.yml
 When this command is run, the SDK performs the following steps:
 
 1.  Reads and parses the `lambdatest.yml` configuration file.
-2.  If `tunnel: true` and `autostart: true` are set, it establishes a secure connection via the LambdaTest Tunnel.
-3.  Generates a temporary, in-memory Playwright configuration that includes the necessary hooks to connect to the LambdaTest grid.
+2.  If `tunnel: true` and `autostart: true` are set, it establishes a secure connection via the <BrandName /> Tunnel.
+3.  Generates a temporary, in-memory Playwright configuration that includes the necessary hooks to connect to the <BrandName /> grid.
 4.  Executes your Playwright tests using this temporary configuration.
-5.  Upon test completion, it terminates the LambdaTest Tunnel (if started) and cleans up any temporary artifacts.
+5.  Upon test completion, it terminates the <BrandName /> Tunnel (if started) and cleans up any temporary artifacts.
 
 You can pass any standard Playwright CLI options directly to this command. For instance, to run a specific test file:
 

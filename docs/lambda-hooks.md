@@ -1,20 +1,21 @@
 ---
 id: lambda-hooks
-title: Lambda Hooks For Selenium Automation | LambdaTest
+title: Lambda Hooks For Selenium Automation | TestMu AI
 sidebar_label: Lambda Hooks
 hide_title: true
-description: LambdaTest offers a set of Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your selenium testing scripts.
+description: TestMu AI offers a set of Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your selenium testing scripts.
 keywords:
   - lambda hooks for selenium automation
   - lambda hooks
   - lambda hooks automation
   - lambda hooks automation testing
   - selenium lambda hooks
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/lambda-hooks/
+url: https://www.testmu.ai/support/docs/lambda-hooks
 site_name: LambdaTest
-slug: lambda-hooks/
+slug: lambda-hooks
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +25,17 @@ slug: lambda-hooks/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Lambda Hooks",
-          "item": "https://www.lambdatest.com/support/docs/lambda-hooks/"
+          "item": `${BRAND_URL}/support/docs/lambda-hooks/`
         }]
       })
     }}
@@ -42,7 +43,7 @@ slug: lambda-hooks/
 
 # Lambda Hooks For Selenium Automation
 * * *
-LambdaTest Selenium Grid offers a set of hooks also known as Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your automation scripts. 
+<BrandName /> Selenium Grid offers a set of hooks also known as Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your automation scripts. 
 
 Below is the representation of the available Lambda Hooks along with the function it performs.
 
@@ -55,7 +56,7 @@ Below is the representation of the available Lambda Hooks along with the functio
 | *lambda-file-list*  |  List down the file in download directory.<br />`print driver.execute_script("lambda-file-list={match string with filename}");` <br />`ie:print driver.execute_script("lambda-file-list=sample");Response: List of files in downloads dir starting with sample` |
 | *lambda-name*  |  For changing the test name.<br />`((JavascriptExecutor) driver).executeScript("lambda-name=TestName");` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-name=" + "name from hooks");` |
 | *lambda-build*  |  For updating the build name.<br />`executeScript("lambda-build=BUILD_NAME");` |
-| *lambda-action*  |  Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the LambdaTest Automation Dashboard inside the session view.<br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
+| *lambda-action*  |  Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the <BrandName /> Automation Dashboard inside the session view.<br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
 | *lambda-perform-keyboard-events* | You can seamlessly simulate keyboard shortcuts like **ctrl + c**, **ctrl + v** in automation test scenarios. This hook is supported on both Windows and MacOS. <br /> `js.executeScript("lambda-perform-keyboard-events:tab");`|
 | *lambda_breakpoint*          | Aborts the test execution to use the live interaction feature. <br/>`driver.executeScript("lambda-breakpoint=true");`|
 | *lambda_screenshot*          | Captures the async screenshot during test execution. <br/>`driver.executeScript("lambda-screenshot=true");`|
@@ -71,4 +72,4 @@ Below is the representation of the available Lambda Hooks along with the functio
 | *lambdaUpdateName*        | Sets the test name during test execution.<br/><br/>`driver.executeScript("lambdaUpdateName=TestName");` | 
 | *lambda-test-tags* | Dynamically update your test tags for a test session which can be used to organize and filter your test results. <br /> **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");` <br /> <br /> **Limitations :** <br /> **1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.  <br /> **2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
 
-> **Note**: These hooks will only work if you're connected to your [LambdaTest Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
+> **Note**: These hooks will only work if you're connected to your [<BrandName /> Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 

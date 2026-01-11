@@ -1,11 +1,11 @@
----
+﻿---
 id: smart-visual-testing
-title: Smart Visual Regression Testing Using LambdaTest
+title: Smart Visual Regression Testing Using TestMu AI
 hide_title: true
 sidebar_label: Smart Visual Testing
-description: Discover visual deviations and regression bugs with LambdaTest's Smart Visual Testing. Upload, compare, and ensure top-quality UI
+description: Discover visual deviations and regression bugs with TestMu AI's Smart Visual Testing. Upload, compare, and ensure top-quality UI
 keywords:
-  - smart visual testing in lambdatest
+  - smart visual testing in testmu ai
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
   - regression testing tool
@@ -15,10 +15,12 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smart-visual-testing/
+url: https://www.testmu.ai/support/docs/smart-visual-testing
 site_name: LambdaTest
-slug: smart-visual-testing/
+slug: smart-visual-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,18 +29,18 @@ slug: smart-visual-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-visual-testing/"
+          "item": `${BRAND_URL}/support/docs/smart-visual-testing/`
         }]
       })
     }}
@@ -129,7 +131,7 @@ You can change the baseline or comparison image easily. Just click on the settin
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

@@ -8,15 +8,16 @@ keywords:
   - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/why-we-need-kane-ai
+  - testmu ai automation
+  - testmu ai kaneai
+url: https://www.testmu.ai/support/docs/why-we-need-kane-ai
 site_name: LambdaTest
-slug: why-we-need-kane-ai/
+slug: why-we-need-kane-ai
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,21 +27,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Why do we need KaneAI",
-          "item": "https://www.lambdatest.com/support/docs/why-we-need-kane-ai"
+          "item": `${BRAND_URL}/support/docs/why-we-need-kane-ai`
         }]
       })
     }}
 ></script>
+
 KaneAI transforms the way teams approach test automation by bridging the gap between natural language requirements and executable test code. Built for modern development workflows, KaneAI empowers teams to plan, author, and evolve comprehensive test suites without the traditional barriers of complex scripting or framework expertise.
 
 ## Current Testing Scenario Challenge

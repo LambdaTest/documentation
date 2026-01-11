@@ -11,11 +11,13 @@ keywords:
     - continuous integration
     - continuous delivery
     - continuous integration tools
-image: /assets/images/og-images/JPG-4.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
+url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-ci-cd-tools
 site_name: LambdaTest
-slug: hyperexecute-integration-with-ci-cd-tools/
+slug: hyperexecute-integration-with-ci-cd-tools
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: hyperexecute-integration-with-ci-cd-tools/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration With CI/CD Tools",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-integration-with-ci-cd-tools/`
         }]
       })
     }}
@@ -136,19 +138,19 @@ Below are detailed instructions for CI/CD tool integrations to help you get the 
 
 ***
 
-Want to know more about Hyperexecute? Here’s a [link](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) to our Documentation.
+Want to know more about Hyperexecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

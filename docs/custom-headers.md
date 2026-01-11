@@ -1,24 +1,27 @@
----
+﻿---
 id: custom-header
 title: How to Bypass Firewalls using CustomHeaders Capability
 hide_title: true
 sidebar_label: CustomHeaders
-description: Learn how to use LambdaTest CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions.
+description: Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions.
 keywords:
-- custom headers lambdatest
+- custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.lambdatest.com/support/docs/custom-headers/
+url: https://www.testmu.ai/support/docs/custom-headers
 site_name: LambdaTest
-slug: custom-headers/
+slug: custom-headers
 ---
 
-# Overcoming Firewalls: A Deep Dive into LambdaTest's customHeaders and customUrlFilters Capabilities
+# Overcoming Firewalls: A Deep Dive into <BrandName />'s customHeaders and customUrlFilters Capabilities
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Every modern software company knows the importance of robust testing. As the development environment becomes increasingly complex, the tools we use for testing have to evolve to keep up. But sometimes, obstacles arise that make testing more difficult—one such obstacle being corporate firewalls. Designed to keep networks secure, these firewalls can occasionally interfere with your testing process.
 
-However, the software testing industry is nothing if not innovative. One solution that's gaining traction is the use of custom headers to bypass firewalls. Specifically, we'll explore how LambdaTest's customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
+However, the software testing industry is nothing if not innovative. One solution that's gaining traction is the use of custom headers to bypass firewalls. Specifically, we'll explore how <BrandName />'s customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 
 In this documеntation, wе will look at LambdaTеst CustomHеadеrs, a capability that allows you to add custom hеadеrs to your tеsts and bypass firеwall rеstrictions whilе pеrforming automatеd browser tеsting. 
 
@@ -27,10 +30,10 @@ In this documеntation, wе will look at LambdaTеst CustomHеadеrs, a capabili
 
 Custom hеadеrs providе you thе ability to kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt. You can modify thе paramеtеrs of thе HTTP rеquеsts dеlivеrеd by your tеsts by manipulating with thеsе hеadеrs, thеrеby around firеwall rеstrictions. 
 
-## How to use CustomHeaders Capability on LambdaTest?
+## How to use CustomHeaders Capability on <BrandName />?
 ---
 
-To add custom headers using LambdaTest's CustomHeader capability, you need to use LambdaTest's Desired Capabilities class. 
+To add custom headers using <BrandName />'s CustomHeader capability, you need to use <BrandName />'s Desired Capabilities class. 
 
 1. Create an instance of the Desired Capabilities class.
 
@@ -133,19 +136,19 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
 
-## LambdaTest: Testing Redefined
+## <BrandName />: Testing Redefined
 
-LambdaTest is a cloud-based cross-browser testing platform that allows you to perform both automated and live interactive testing on your web applications. The platform supports over 2,000 browser and operating system environments, making it a go-to tool for developers seeking comprehensive coverage.
+<BrandName /> is a cloud-based cross-browser testing platform that allows you to perform both automated and live interactive testing on your web applications. The platform supports over 2,000 browser and operating system environments, making it a go-to tool for developers seeking comprehensive coverage.
 
 ## CustomHeader Capability: Your Key to Bypass Firewalls
 
-Among LambdaTest's many features, the customHeaders capability stands out for teams dealing with firewall constraints. This capability allows you to inject custom headers into your HTTP requests, which can be used to bypass firewalls or simulate specific client behavior.
+Among <BrandName />'s many features, the customHeaders capability stands out for teams dealing with firewall constraints. This capability allows you to inject custom headers into your HTTP requests, which can be used to bypass firewalls or simulate specific client behavior.
 
 Custom headers are an integral part of HTTP requests and responses. They can carry essential information such as authentication tokens, user agents, API versioning, and more. By modifying these headers in your tests, you can adjust the network behavior of the browser and ensure compatibility with restricted environments.
 
 ## Targeted Control with customUrlFilters
 
-To provide even more precise control, LambdaTest introduces the customUrlFilters capability. When used in conjunction with customHeaders, it allows you to specify exactly which URLs should receive the custom headers. This ensures that headers are not indiscriminately applied to every request—only those matching your defined filters will carry the custom headers.
+To provide even more precise control, <BrandName /> introduces the customUrlFilters capability. When used in conjunction with customHeaders, it allows you to specify exactly which URLs should receive the custom headers. This ensures that headers are not indiscriminately applied to every request—only those matching your defined filters will carry the custom headers.
 
 ### Key Behavior:
 
@@ -268,21 +271,21 @@ X-Experiment-ID: variant_b
 
 ## Conclusion
 
-LambdaTest’s customHeaders and customUrlFilters capabilities empower you to simulate complex request scenarios, bypass firewalls responsibly, and selectively apply network rules—providing a flexible, developer-centric approach to browser testing.
+<BrandName />’s customHeaders and customUrlFilters capabilities empower you to simulate complex request scenarios, bypass firewalls responsibly, and selectively apply network rules—providing a flexible, developer-centric approach to browser testing.
 
-By turning obstacles like firewalls into controllable conditions, LambdaTest not only simplifies testing but enhances the realism and effectiveness of your QA process.
+By turning obstacles like firewalls into controllable conditions, <BrandName /> not only simplifies testing but enhances the realism and effectiveness of your QA process.
 
 Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

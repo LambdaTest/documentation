@@ -2,13 +2,15 @@
 id: analytics-test-case-insights
 title: Test Case Insights
 sidebar_label: Test Case Insights
-description: Gain insights into test case execution and performance with LambdaTest's analytics to optimize your testing strategy and enhance software quality.
+description: Gain insights into test case execution and performance with TestMu AI's analytics to optimize your testing strategy and enhance software quality.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-test-case-insights/
+url: https://www.testmu.ai/support/docs/analytics-test-case-insights
 site_name: LambdaTest
-slug: analytics-test-case-insights/
+slug: analytics-test-case-insights
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,29 +20,29 @@ slug: analytics-test-case-insights/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-test-case-insights/"
+          "item": `${BRAND_URL}/support/docs/analytics-test-case-insights/`
         }]
       })
     }}
 ></script>
 
-Analyzing the test case level insights of your test automation execution on LambdaTest is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
+Analyzing the test case level insights of your test automation execution on <BrandName /> is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
 
 ## Prerequisites For Insights:
 
-1. You should have an active LambdaTest account.
+1. You should have an active <BrandName /> account.
 2. You should han active subscription plan with HyperExecute or App Automation.
-3. You should have executed at least one test on the LambdaTest HyperExecute / App Automation platform.
+3. You should have executed at least one test on the <BrandName /> HyperExecute / App Automation platform.
 
 ## How To Access Test Case Insights?
 
@@ -100,7 +102,7 @@ To end a test case, use the `lambda-testCase-end` hook:
 
 ```
 
-To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#differentiating-test-cases-in-single-session) documentation.
+To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](/support/docs/appium-testmu-hooks/#differentiating-test-cases-in-single-session) documentation.
 
 ## Capture Test Case Insights for HyperExecute
 
@@ -197,9 +199,9 @@ You can analyze the test cases by their group by using the `Test Case Group View
 
 ## Test Case Use Cases
 
-The user can use the `Test Case Insights` module to analyze the test case level insights of their test automation execution on LambdaTest. The user can use the module to analyze the following use cases:
+The user can use the `Test Case Insights` module to analyze the test case level insights of their test automation execution on <BrandName />. The user can use the module to analyze the following use cases:
 
-- Analyze the test case level insights of your test automation execution on LambdaTest.
+- Analyze the test case level insights of your test automation execution on <BrandName />.
 - Check the health of your test cases.
 - Detect the test cases that are failing frequently.
 - Drill down to the test cases for faster debugging.

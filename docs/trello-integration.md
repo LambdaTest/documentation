@@ -1,18 +1,19 @@
 ---
 id: trello-integration
-title: Integrate LambdaTest with Trello | LambdaTest
+title: Integrate TestMu AI with Trello | TestMu AI
 hide_title: true
 sidebar_label: Trello
-description: LambdaTest provides integrations with Trello to help you log bugs directly from the middle of your test session on LambdaTest to your Trello card.
+description: TestMu AI provides integrations with Trello to help you log bugs directly from the middle of your test session on TestMu AI to your Trello card.
 keywords:
-  - LambdaTest integrations
-  - LambdaTest Trello integration
+  - TestMu AI integrations
+  - TestMu AI Trello integration
   - Push issues to Trello
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/trello-integration/
+url: https://www.testmu.ai/support/docs/trello-integration
 site_name: LambdaTest
-slug: trello-integration/
+slug: trello-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +23,17 @@ slug: trello-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Trello Integration",
-          "item": "https://www.lambdatest.com/support/docs/trello-integration/"
+          "item": `${BRAND_URL}/support/docs/trello-integration/`
         }]
       })
     }}
@@ -43,17 +44,17 @@ slug: trello-integration/
 
 > Trello – A project management tool that was acquired by Atlassian in 2017. It helps in project management under agile development. Providing a highly usable dashboard, where you can easily comprehend on who is working on what? Allowing a team to pinpoint the areas where they feel they are missing something out. Team can plan every sprint in an organized manner by creating and updating cards, lists & boards. Along with project management, Trello also aids in effective bug tracking by providing a space where all your bugs can be logged and prioritized according to your release bandwidth.
 
-The LambdaTest Trello Integration allows you to create a card directly in Trello dashboard from LambdaTest platform. Push an issue to your respective project anytime, even in the middle of your test session. The fields populated by you when marking as bug through LambdaTest are displayed as information on the card in Trello dashboard for a testing instance.
+The <BrandName /> Trello Integration allows you to create a card directly in Trello dashboard from <BrandName /> platform. Push an issue to your respective project anytime, even in the middle of your test session. The fields populated by you when marking as bug through <BrandName /> are displayed as information on the card in Trello dashboard for a testing instance.
 
-**Trello Integration with LambdaTest, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Trello Integration with <BrandName />, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Integrate Trello With Your LambdaTest Account?
+## How To Integrate Trello With Your <BrandName /> Account?
 
 ***
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'Add'** under the block that says 'Trello'.
 
@@ -127,7 +128,7 @@ If you are not logged into Trello then you will be redirected to the below scree
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-integration-10.webp').default} alt="trello-integration"  width="800" className="doc_img"/>
 
-Click on the recent card and you will find all the data that you provided through Lambdatest already presented in it. LambdaTest automatically includes test environment details and related screenshots in the card as attachments.
+Click on the recent card and you will find all the data that you provided through Lambdatest already presented in it. <BrandName /> automatically includes test environment details and related screenshots in the card as attachments.
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-integration-11.webp').default} alt="trello-integration"   width="800" className="doc_img"/>
 
@@ -137,25 +138,25 @@ Click on the recent card and you will find all the data that you provided throug
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'REMOVE'**. You can find the remove button right under the **'Trello'** block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-8.webp').default} alt="trello-integration"  width="1364" height="650" className="doc_img"/>
 
-That was all you need to know for LambdaTest + Trello Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + Trello Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

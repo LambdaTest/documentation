@@ -1,19 +1,21 @@
 ---
 id: docker-tunnel-extension
-title: LambdaTest Docker Tunnel Extension For Local Testing
+title: TestMu AI Docker Tunnel Extension For Local Testing
 hide_title: true
 sidebar_label: Docker Tunnel Extension
-description: Avoid the hassle of launching tunnels via the CLI. LambdaTest Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
+description: Avoid the hassle of launching tunnels via the CLI. TestMu AI Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
 keywords:
-  - lambdatest tunnel extension for docker
-  - lambdatest docker tunnel
+  - testmu ai tunnel extension for docker
+  - testmu ai docker tunnel
   - docker tunnel extension local testing
   - best docker extensions for developers
   - best docker extensions for testers
-url: https://www.lambdatest.com/support/docs/docker-tunnel-extension
+url: https://www.testmu.ai/support/docs/docker-tunnel-extension
 site_name: LambdaTest
-slug: docker-tunnel-extension/
+slug: docker-tunnel-extension
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,27 +24,27 @@ slug: docker-tunnel-extension/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Docker Tunnel Extension",
-          "item": "https://www.lambdatest.com/support/docs/docker-tunnel-extension/"
+          "name": "TestMu AI Docker Tunnel Extension",
+          "item": `${BRAND_URL}/support/docs/docker-tunnel-extension/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest Docker Tunnel Extension
+# <BrandName /> Docker Tunnel Extension
 ---
 
-LambdaTest Docker Tunnel Extension allows you to perform cross browser testing of locally hosted websites and web applications across 3000+ browser and OS environments, thereby eliminating the need to manually launch the tunnel through the CLI. This allows for a seamless and hassle-free experience when establishing a secure connection for testing locally hosted websites on the LambdaTest platform.
+<BrandName /> Docker Tunnel Extension allows you to perform cross browser testing of locally hosted websites and web applications across 3000+ browser and OS environments, thereby eliminating the need to manually launch the tunnel through the CLI. This allows for a seamless and hassle-free experience when establishing a secure connection for testing locally hosted websites on the <BrandName /> platform.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="6_bIrOkb4aY">
@@ -57,60 +59,60 @@ LambdaTest Docker Tunnel Extension allows you to perform cross browser testing o
 
 1. [Install the Docker Desktop](https://www.docker.com/products/docker-desktop) based on your operating system.
 
-2. A LambdaTest account. Don't have an account, [sign up on LambdaTest](https://accounts.lambdatest.com/register). 
+2. A <BrandName /> account. Don't have an account, [sign up on LambdaTest](https://accounts.lambdatest.com/register). 
 
-## Setting up the LambdaTest Docker Tunnel Extension
+## Setting up the <BrandName /> Docker Tunnel Extension
 ---
 
-Below are the steps to configure the LambdaTest Docker Tunnel Extension:
+Below are the steps to configure the <BrandName /> Docker Tunnel Extension:
 
 1. Launch the Docker Desktop and and navigate to the left sidebar under the Extensions category. From here, select the **+ Add Extensions** button to proceed further.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/1.PNG').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 
-2. It will redirect you to the Extensions Marketplace. Search for the *LambdaTest Tunnel* Extension and click on the **Install** button to begin the installation process.
+2. It will redirect you to the Extensions Marketplace. Search for the *<BrandName /> Tunnel* Extension and click on the **Install** button to begin the installation process.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/2.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 
-3. Upon the successful installation of the LambdaTest Docker Tunnel Extension, you can go to LambdaTest Docker Tunnel page either via clicking on *Open* button from the browse list or by navigating to the *LambdaTest Tunnel* from the Extensions category.
+3. Upon the successful installation of the <BrandName /> Docker Tunnel Extension, you can go to <BrandName /> Docker Tunnel page either via clicking on *Open* button from the browse list or by navigating to the *<BrandName /> Tunnel* from the Extensions category.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/3.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 
-4. Next, proceed to the LambdaTest Docker Tunnel page and click on the **Setup Tunnel** to configure the tunnel.
+4. Next, proceed to the <BrandName /> Docker Tunnel page and click on the **Setup Tunnel** to configure the tunnel.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/4.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 
-5. In the *Basic* tab, you need to provide your LambdaTest Username, Access Token, and preferred Tunnel Name. Then, click on **Launch Tunnel**.
+5. In the *Basic* tab, you need to provide your <BrandName /> Username, Access Token, and preferred Tunnel Name. Then, click on **Launch Tunnel**.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/5.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 *The respective fields can be reset using the **RESET** option, if required.*
 
-It will launch the LambdaTest Tunnel where you can notice different running Tunnel logs. 
+It will launch the <BrandName /> Tunnel where you can notice different running Tunnel logs. 
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/6.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 *In case you wish to launch another tunnel, click on **+ Configure New Tunnel**.*
 
-## Local Testing with LambdaTest Docker Tunnel Extension
+## Local Testing with <BrandName /> Docker Tunnel Extension
 ---
 
-Visit the [LambdaTest Dashboard](https://automation.lambdatest.com/build), you'll find the Active Tunnel icon on right-side corner. Now that you have set up your LambdaTest Docker Tunnel, you can begin local testing of your website and web pages.
+Visit the [<BrandName /> Dashboard](https://automation.lambdatest.com/build), you'll find the Active Tunnel icon on right-side corner. Now that you have set up your <BrandName /> Docker Tunnel, you can begin local testing of your website and web pages.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/7.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 :::info
-Head over to our documentation to get started: [Testing Locally Hosted Pages](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+Head over to our documentation to get started: [Testing Locally Hosted Pages](/support/docs/testing-locally-hosted-pages/).
 :::
 
-## Advanced Configurations in LambdaTest Docker Tunnel Extension
+## Advanced Configurations in <BrandName /> Docker Tunnel Extension
 ---
 
-LambdaTest Docker Tunnel also allows you to create a secure tunnel with some Advanced Configurations. 
+<BrandName /> Docker Tunnel also allows you to create a secure tunnel with some Advanced Configurations. 
 
 To do so, click on the **Advanced Configurations** tab, and an entire list of settings will pop up. Here, you can add Environment, Local File Server Directory, Info API Ports, and more.
 
@@ -122,7 +124,7 @@ Furthermore, when enabling **Show Proxy Config** toggle button, you can see the 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/9.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 
-Following are the features that you can leverage using LambdaTest Docker Tunnel Extension.
+Following are the features that you can leverage using <BrandName /> Docker Tunnel Extension.
 
 * **DNS Servers**: To add a list of DNS servers separated by commas.
 
@@ -148,12 +150,12 @@ Following are the features that you can leverage using LambdaTest Docker Tunnel 
 
 * **Ingress Only**:  It routes the incoming traffic or inbound requests via the specified proxy. 
 
-## Uninstalling the LambdaTest Docker Tunnel Extension
+## Uninstalling the <BrandName /> Docker Tunnel Extension
 ---
 
-Here are steps to uninstall the LambdaTest Docker Tunnel Extension.
+Here are steps to uninstall the <BrandName /> Docker Tunnel Extension.
 
-1. From the LambdaTest Docker Tunnel Extension page, click the three dots menu from the left sidebar and select **Manage**.
+1. From the <BrandName /> Docker Tunnel Extension page, click the three dots menu from the left sidebar and select **Manage**.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/10.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 

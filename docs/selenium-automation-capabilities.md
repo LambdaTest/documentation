@@ -3,23 +3,25 @@ id: selenium-automation-capabilities
 title: Desired Capabilities in Selenium 
 hide_title: false
 sidebar_label: Desired Capabilities In Selenium
-description: This document will teach you how to leverage LambdaTest Capability Generator to easily for declaring desired capabilities in selenium for both desktop and mobile browsers.
+description: This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in selenium for both desktop and mobile browsers.
 keywords:
 - cross browser testing
 - selenium capabilities generator
 - selenium desired capabilities
-- lambdatest selenium grid capabilities
-- lambdatest automation capabilities generator
+- testmu ai selenium grid capabilities
+- testmu ai automation capabilities generator
 - selenium capability configuration
 - selenium automation testing
 - selenium automation grid online
 - configure selenium tests with desired capabilities
-- selenium webdriver capabilities for running tests on lambdatest
-image: /assets/images/og-images/Selenium-Capabilities.jpg
-url: https://www.lambdatest.com/support/docs/selenium-automation-capabilities/
+- selenium webdriver capabilities for running tests on testmu ai
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmu.ai/support/docs/selenium-automation-capabilities
 site_name: LambdaTest
-slug: selenium-automation-capabilities/
+slug: selenium-automation-capabilities
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,25 +31,25 @@ slug: selenium-automation-capabilities/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Desired Capabilities In Selenium",
-          "item": "https://www.lambdatest.com/support/docs/selenium-automation-capabilities/"
+          "item": `${BRAND_URL}/support/docs/selenium-automation-capabilities/`
         }]
       })
     }}
 ></script>
-Desired Capabilities in Selenium test scripts, encoded as key-value pairs, allow you, as a tester or a developer, to define specific test environment requirements. These requirements encompass operating systems, browser combinations, versions, and other parameters supported by LambdaTest's Cloud Grid to run your desired [automation framework tests](/support/docs/getting-started-with-lambdatest-automation/#supported-languages-and-frameworks).
+Desired Capabilities in Selenium test scripts, encoded as key-value pairs, allow you, as a tester or a developer, to define specific test environment requirements. These requirements encompass operating systems, browser combinations, versions, and other parameters supported by <BrandName />'s Cloud Grid to run your desired [automation framework tests](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks).
 
 :::tip
-You can also use LambdaTest's [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium and Appium automation test scripts on the LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
+You can also use <BrandName />'s [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium and Appium automation test scripts on the <BrandName /> [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
 
 You can generate the capabilities in all of the six programming languages i.e. Java, PHP, Ruby, JavaScript, C#, and Python.
 :::
@@ -65,21 +67,21 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href = "/support/docs/selenium-three-capabilities/">
   <div className="support_inners">
     <h3>Selenium v3</h3>
-    <p>Understand the capabolities supported in LambdaTest for Selenium version 3</p>
+    <p>Understand the capabolities supported in <BrandName /> for Selenium version 3</p>
   </div>
   </a>
 
   <a href = "/support/docs/selenium-four-capabilities/">
   <div className="support_inners">
     <h3>Selenium v4</h3>
-    <p>Understand the capabolities supported in LambdaTest for Selenium version 4</p>
+    <p>Understand the capabolities supported in <BrandName /> for Selenium version 4</p>
   </div>
   </a>
 
   <a href = "/support/docs/lambdatest-selenium-advance-capabilities/">
   <div className="support_inners">
-    <h3>LambdaTest Advanced Capabilities</h3>
-    <p>Discover additional capabilities offered by LambdaTest beyond Selenium defaults for more control over test execution.</p>
+    <h3><BrandName /> Advanced Capabilities</h3>
+    <p>Discover additional capabilities offered by <BrandName /> beyond Selenium defaults for more control over test execution.</p>
   </div>
   </a>
   
@@ -135,7 +137,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/debugging-options/">
   <div className="support_inners">
     <h3>Debugging Options</h3>
-    <p>Explore debugging tools provided by LambdaTest to troubleshoot your tests.</p>
+    <p>Explore debugging tools provided by <BrandName /> to troubleshoot your tests.</p>
   </div>
   </a>
 
@@ -149,7 +151,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/smart-wait/">
   <div className="support_inners">
     <h3>SmartWait Functionality</h3>
-    <p>Understand how LambdaTest's SmartWait feature waits for elements to become interactive before proceeding with tests.</p>
+    <p>Understand how <BrandName />'s SmartWait feature waits for elements to become interactive before proceeding with tests.</p>
   </div>
   </a>
 
@@ -163,14 +165,14 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/auto-healing/">
   <div className="support_inners">
     <h3>Autohealing</h3>
-    <p>Learn about LambdaTest's autohealing functionality that automatically recovers from unexpected session issues.</p>
+    <p>Learn about <BrandName />'s autohealing functionality that automatically recovers from unexpected session issues.</p>
   </div>
   </a>
 
   <a href="/support/docs/command-annotations/">
   <div className="support_inners">
     <h3>Command Annotations</h3>
-    <p>Discover how to use LambdaTest's command annotations to control test execution flow.</p>
+    <p>Discover how to use <BrandName />'s command annotations to control test execution flow.</p>
   </div>
   </a>  
 
@@ -196,12 +198,12 @@ Please reach out at our <span className="doc__lt" onClick={() => window.openLTCh
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Jobs Prioritization
 description: Learn more about how to prioritize your tests with HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Prioritize Your Tests 
-url: https://www.lambdatest.com/support/docs/hyperexecute-prioritize-tests/
+url: https://www.testmu.ai/support/docs/hyperexecute-prioritize-tests
 site_name: LambdaTest
-slug: hyperexecute-prioritize-tests/
+slug: hyperexecute-prioritize-tests
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-prioritize-tests/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-prioritize-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-prioritize-tests/`
         }]
       })
     }}
@@ -41,7 +44,7 @@ HyperExecute's job prioritization feature empowers you to ensure that your most 
 
 ## `jobLabel`
 
-The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to prioritizing your jobs, you can also use the job labels to search for a job using the relevant label or tag that is assigned to it. To learn more about how to use this feature with the HyperExecute YAML, go through [this section](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#23-joblabel).
+The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to prioritizing your jobs, you can also use the job labels to search for a job using the relevant label or tag that is assigned to it. To learn more about how to use this feature with the HyperExecute YAML, go through [this section](/support/docs/deep-dive-into-hyperexecute-yaml/#23-joblabel).
 
 ## Prioritize your Jobs using `jobLabel`
 
@@ -67,12 +70,12 @@ As you can see in the diagram below, we have executed 6 jobs; one job is designa
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

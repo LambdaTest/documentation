@@ -5,18 +5,20 @@ hide_title: false
 sidebar_label: App Agent Instruction Guide
 description: Learn how to write instructions for running the kane ai app agent smoothly and without any problem
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai App test
   - kaneai guidelines
   - instructions writings
-url: https://www.lambdatest.com/support/docs/kane-ai-app-test-writing-guidelines
+url: https://www.testmu.ai/support/docs/kane-ai-app-test-writing-guidelines
 site_name: LambdaTest
-slug: kane-ai-app-test-writing-guidelines/
+slug: kane-ai-app-test-writing-guidelines
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI App Test",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-app-test-writing-guidelines"
+          "item": `${BRAND_URL}/support/docs/kane-ai-app-test-writing-guidelines`
         }]
       })
     }}
@@ -72,7 +74,7 @@ Use instruction:
 
 If issues arise:
 
-- Use LambdaTest App Live [UI Inspector](https://www.lambdatest.com/support/docs/ui-inspector/) to verify if the element class is supported.
+- Use <BrandName /> App Live [UI Inspector](/support/docs/ui-inspector/) to verify if the element class is supported.
 
 ## Dismissing Popups
 

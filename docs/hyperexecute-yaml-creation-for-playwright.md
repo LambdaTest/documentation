@@ -4,16 +4,18 @@ title: HyperExecute YAML Creation for Playwright
 sidebar_label: YAML Creation for Playwright
 description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-  - LambdaTest Projects
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+  - TestMu AI Projects
   - YAML Creation
   - Playwright
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-creation-for-playwright/
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-creation-for-playwright
 site_name: LambdaTest
-slug: hyperexecute-yaml-creation-for-playwright/
+slug: hyperexecute-yaml-creation-for-playwright
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,22 +25,22 @@ slug: hyperexecute-yaml-creation-for-playwright/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute YAML Creation for Playwright",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-creation-for-playwright/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-creation-for-playwright/`
         }]
       })
     }}
 ></script>
-This guide outlines common use cases and solutions for configuring Playwright test executions on **LambdaTest HyperExecute**. It covers dependency management, environment setup, caching, reporting, and troubleshooting common issues.
+This guide outlines common use cases and solutions for configuring Playwright test executions on **<BrandName /> HyperExecute**. It covers dependency management, environment setup, caching, reporting, and troubleshooting common issues.
 
 ## Q: How can private dependencies be accessed via a custom registry?
 If your project uses private dependencies hosted on a custom registry, you must configure access before installing the packages. Add the following commands in the `pre` section of your YAML file:

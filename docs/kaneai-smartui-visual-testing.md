@@ -4,15 +4,15 @@ title: Visual Test Creation with KaneAI
 hide_title: false
 description: A step-by-step guide on using KaneAI to automate visual regression tests. Learn to capture screenshots, establish baselines, compare visual changes with SmartUI, and schedule automated runs.
 keywords:
-  - lambdatest kaneai
+  - testmu ai kaneai
   - kaneai
   - smartui
   - visual testing
   - visual regression
   - automation
-url: https://www.lambdatest.com/support/docs/kaneai-smartui-visual-testing
+url: https://www.testmu.ai/support/docs/kaneai-smartui-visual-testing
 site_name: LambdaTest
-slug: kaneai-smartui-visual-testing/
+slug: kaneai-smartui-visual-testing
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Visual Regression Testing with KaneAI and SmartUI",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-smartui-visual-testing"
+          "item": `${BRAND_URL}/support/docs/kaneai-smartui-visual-testing`
         }]
       })
     }}
@@ -106,7 +107,7 @@ Once your test flow is complete, click **Finish test**. You will be prompted to 
 
 ### Execution and Scheduling
 
-Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/).
+Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 You can execute your test using one of two methods:
 
@@ -116,7 +117,7 @@ This option triggers an immediate, one-time execution of your test. It is ideal 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.png').default} alt="Run Test for automation" className="doc_img"/>
 
 * **Schedule Test Run**
-This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/).
+This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 

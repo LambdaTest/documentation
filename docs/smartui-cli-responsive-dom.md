@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli-responsive-dom/
-slug: smartui-cli-responsive-dom/
+url: https://www.testmu.ai/support/docs/smartui-cli-responsive-dom
+slug: smartui-cli-responsive-dom
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,10 +24,11 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](https://www.lambdatest.com/support/docs/smartui-sdk-config-options/).
+If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](/support/docs/smartui-sdk-config-options/).
 
 Therefore, if your application adjusts DOM elements between different screen sizes, ensure that you resize the viewport of your test browser and capture a snapshot at each required width.
 
@@ -106,18 +107,18 @@ Resize your viewport according to your framework and take the screenshot. For ex
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-responsive-dom/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-responsive-dom/`
         }]
       })
     }}
@@ -126,12 +127,12 @@ Resize your viewport according to your framework and take the screenshot. For ex
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

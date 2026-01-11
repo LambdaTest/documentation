@@ -2,22 +2,23 @@
 id: error-handling-kaneai
 title: Error Handling in Authoring
 sidebar_label: Error Handling
-description: Use LambdaTest Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/error-handling-kaneai/
+url: https://www.testmu.ai/support/docs/error-handling-kaneai
 site_name: LambdaTest
-slug: error-handling-kaneai/
+slug: error-handling-kaneai
 ---
  
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Rules",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-rules/"
+          "item": `${BRAND_URL}/support/docs/accessibility-android-rules/`
         }]
       })
     }}

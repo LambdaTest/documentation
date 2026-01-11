@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-git-branching-strategy
 title: Git Branching Strategy in SmartUI Storybook Integration
 sidebar_label: Storybook Git Baseline Branching
-description: In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the LambdaTest Automation Cloud across 40+ browser versions.
+description: In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-github-app-integration/
+url: https://www.testmu.ai/support/docs/smartui-github-app-integration
 site_name: LambdaTest
-slug: smartui-git-branching-strategy/
+slug: smartui-git-branching-strategy
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,17 +37,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": "https://www.lambdatest.com/support/docs/smartui-upload-api-v2/"
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
@@ -67,7 +69,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@lambdatest.com for further information or requests.
 :::
 
-The following steps will guide you in running your Git branching Visual Regression test on LambdaTest SmartUI platform:
+The following steps will guide you in running your Git branching Visual Regression test on <BrandName /> SmartUI platform:
 
 :::info
 **Baseline Branch**: A baseline branch build is a set of screenshots which are captured using SmartUI where all the screenshots are compared against for the non-baseline branch builds.

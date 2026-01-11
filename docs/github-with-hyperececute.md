@@ -3,18 +3,20 @@ id: github-with-hyperexecute
 title: GitHub CI Integration
 hide_title: true
 # sidebar_label: Gitlab CI Integration
-description: LambdaTest now integrates with GitLab CI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: TestMu AI now integrates with GitLab CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.lambdatest.com/support/docs/github-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/github-with-hyperexecute
 site_name: LambdaTest
-slug: github-with-hyperexecute/
+slug: github-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +25,18 @@ slug: github-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GitLab CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/github-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/github-with-hyperexecute/`
         }]
       })
     }}
@@ -74,9 +76,9 @@ npm install npm@latest –g
 npm install webdriverio
 ```
 
-2. **LambdaTest Authentication Credentials**
+2. **<BrandName /> Authentication Credentials**
 
-Keep your LambdaTest login, access key, and HubURL handy for authentication purposes. They must be configured as environment variables. You can find them on your LambdaTest automation dashboard by clicking on the key symbol next to the help button.
+Keep your <BrandName /> login, access key, and HubURL handy for authentication purposes. They must be configured as environment variables. You can find them on your <BrandName /> automation dashboard by clicking on the key symbol next to the help button.
 
 * **For Linux/Mac**
 
@@ -111,12 +113,12 @@ HyperExecute CLI provides different command-line flags that let you customize th
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

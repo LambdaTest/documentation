@@ -6,12 +6,14 @@ sidebar_label: JUnit XML
 description: Generate a consolidated JUnit XML report with HyperExecute. Track test results, including pass/fail statuses, with easy-to-follow configuration steps
 keywords:
   - junit xml reports
-  - report junit xml lambdatest 
+  - report junit xml testmu ai 
   
-url: https://www.lambdatest.com/support/docs/junit-xml-report/
+url: https://www.testmu.ai/support/docs/junit-xml-report
 site_name: LambdaTest
-slug: junit-xml-report/
+slug: junit-xml-report
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,18 +21,18 @@ slug: junit-xml-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "JUnit XML Report",
-          "item": "https://www.lambdatest.com/support/docs/junit-xml-report/"
+          "item": `${BRAND_URL}/support/docs/junit-xml-report/`
         }]
       })
     }}

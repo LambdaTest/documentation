@@ -2,19 +2,21 @@
 id: analytics-modules-test-manager-widgets
 title: Test Manager Dashboard Widgets
 sidebar_label: Test Manager
-description: Discover LambdaTest's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
  - analytics
  - Test cases management
  - Test Manager analytics
  - Test Cases trends
  - Test Case Build Status
-url: https://www.lambdatest.com/support/docs/analytics-modules-test-manager-widgets/
+url: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets
 site_name: LambdaTest
-slug: analytics-modules-test-manager-widgets/
+slug: analytics-modules-test-manager-widgets
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,22 +26,22 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-test-manager-widgets/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-test-manager-widgets/`
         }]
       })
     }}
 ></script>
-LambdaTest Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
+<BrandName /> Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
 
 :::note
 The Test Manager Widgets module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).

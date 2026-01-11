@@ -1,18 +1,19 @@
 ---
 id: azure-devops-integration
-title: Integrate LambdaTest with Azure DevOps | LambdaTest
+title: Integrate TestMu AI with Azure DevOps | TestMu AI
 hide_title: true
 sidebar_label: Azure DevOps
-description: LambdaTest provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on LambdaTest to your Azure DevOps project.
+description: TestMu AI provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on TestMu AI to your Azure DevOps project.
 keywords:
-  - LambdaTest integrations
-  - LambdaTest Azure DevOps integration
+  - TestMu AI integrations
+  - TestMu AI Azure DevOps integration
   - Push issues to Azure DevOps
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/vsts-integration/
+url: https://www.testmu.ai/support/docs/vsts-integration
 site_name: LambdaTest
-slug: vsts-integration/
+slug: vsts-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +23,17 @@ slug: vsts-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure DevOps Integration",
-          "item": "https://www.lambdatest.com/support/docs/vsts-integration/"
+          "item": `${BRAND_URL}/support/docs/vsts-integration/`
         }]
       })
     }}
@@ -43,27 +44,27 @@ slug: vsts-integration/
 
 Azure DevOps, previously known as **VSTS: Visual Studio Team Services** – A software developed by Microsoft Corporations to provide an IDE(Integrated Development Environment) for facilitating management & development regarding a software project. Azure DevOps provides a set of specific, cloud-based collaboration tools for developers, testers & software architects. So you can plan smarter and ship even faster with the help of effective collaboration. With their **Azure Pipelines** you can deploy your development to any Git provider cloud.
 
-The LambdaTest Azure DevOps Integration allows you to create a work item directly in your project from LambdaTest platform. Push a bug, epic, task, story to your respective project anytime, even in the middle of your test session. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the work item in Azure DevOps project for that testing instance.
+The <BrandName /> Azure DevOps Integration allows you to create a work item directly in your project from <BrandName /> platform. Push a bug, epic, task, story to your respective project anytime, even in the middle of your test session. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the work item in Azure DevOps project for that testing instance.
 
 :::info
 We recently added support for custom fields to our integration. From now on, all required custom fields in your Azure Devops account will be visible in your bug marking form on lambdatest.
 :::
 
-**Azure DevOps Integration with LambdaTest, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Azure DevOps Integration with <BrandName />, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Integrate Azure DevOps With Your LambdaTest Account?
+## How To Integrate Azure DevOps With Your <BrandName /> Account?
 
 * * *
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'Add'** under the block that says 'Azure DevOps'.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-1.webp').default} alt="azure-devops-integration" width="1350" height="621" className="doc_img"/>
 
-**Step 4:** As you hit **"INSTALL"**, you will be directed to a page where you have to provide your **Azure DevOps URL**, your **Azure DevOps Email** & your **Azure DevOps Access Token**. By doing so you will grant LambdaTest the access to your user-owned resources on Microsoft's Visual Studio Team Services account. This is necessary for authorization purpose between APIs of two different applications.
+**Step 4:** As you hit **"INSTALL"**, you will be directed to a page where you have to provide your **Azure DevOps URL**, your **Azure DevOps Email** & your **Azure DevOps Access Token**. By doing so you will grant <BrandName /> the access to your user-owned resources on Microsoft's Visual Studio Team Services account. This is necessary for authorization purpose between APIs of two different applications.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-282.webp').default} alt="azure-devops-integration" width="1345" height="622" className="doc_img"/>
 
@@ -102,7 +103,7 @@ Access tokens are strings with authorization key required to access an API. They
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-278.webp').default} alt="azure-devops-integration" width="1365" height="648" className="doc_img"/>
 
-**Step 6:** After you click on **'+ New Token'**, mention a **name** for the access token. Define the **scopes** for authorizing access. By doing so, you will be providing the level of access you want to provide to any 3rd party API. For Lambdatest integration with Azure DevOps, select the radio button for **'Full access'** & click on **'Create'**.
+**Step 6:** After you click on **'+ New Token'**, mention a **name** for the access token. Define the **scopes** for authorizing access. By doing so, you will be providing the level of access you want to provide to any 3rd party API. For TestMu AI integration with Azure DevOps, select the radio button for **'Full access'** & click on **'Create'**.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-279.webp').default} alt="azure-devops-integration" width="1365" height="650" className="doc_img"/>
 
@@ -124,7 +125,7 @@ For revoking a token, click on any personal access token and hit the **'Revoke'*
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-275.webp').default} alt="azure-devops-integration" width="311" height="96" className="doc_img"/>
 
-That's it! Go to Integrations again and you will be able to see Azure DevOps under 'My Integrations' section. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your project directly by a single click.
+That's it! Go to Integrations again and you will be able to see Azure DevOps under 'My Integrations' section. You can now experience bug logging in a fly from any of your running test session in TestMu AI to your project directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-13.webp').default} alt="azure-devops-integration" width="1347" height="623" className="doc_img"/>
 
@@ -170,7 +171,7 @@ That's it! Go to Integrations again and you will be able to see Azure DevOps und
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-19.webp').default} alt="azure-devops-integration" width="1365" height="689" className="doc_img"/>
 
-**Step 8:** Click on the **Title** to open the details. All the data you provided through Lambdatest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in your work item on the respective project.
+**Step 8:** Click on the **Title** to open the details. All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in your work item on the respective project.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-20.webp').default} alt="azure-devops-integration" width="1365" height="650" className="doc_img"/>
 
@@ -180,9 +181,9 @@ That's it! Go to Integrations again and you will be able to see Azure DevOps und
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select '**Settings**' from the left navigation menu bar & click on '**Integrations**'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select '**Settings**' from the left navigation menu bar & click on '**Integrations**'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Under '**My Integrations**',you'll now see '**Azure Devops**'. Click on '**REMOVE**'. You can find the remove button right next to **'Azure DevOps'.**
 
@@ -190,19 +191,19 @@ That's it! Go to Integrations again and you will be able to see Azure DevOps und
 
 ---
 
-That was all you need to know for LambdaTest + Azure DevOps Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + Azure DevOps Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 ---
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -5,21 +5,23 @@ hide_title: false
 sidebar_label: HyperExecute GUI App
 description: This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - HyperExecute
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - CLI
   - HyperExecute-GUI
   - test execute
   - hyperexecute job
   - automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-gui/
+url: https://www.testmu.ai/support/docs/hyperexecute-cli-gui
 site_name: LambdaTest
-slug: hyperexecute-cli-gui/
+slug: hyperexecute-cli-gui
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Status",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-cli-gui/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-gui/`
         }]
       })
     }}
@@ -63,11 +65,11 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 
 :::
 
-**1. HyperExecute Access** : You need a LambdaTest account to use the HyperExecute GUI. If you don’t have one, [sign up](https://accounts.lambdatest.com/register?) now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
+**1. HyperExecute Access** : You need a <BrandName /> account to use the HyperExecute GUI. If you don’t have one, [sign up](https://accounts.lambdatest.com/register?) now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
 
-**2. UnderPass App Download** : Before getting started, download the LambdaTest UnderPass installer from your dashboard and install it on your system. Run the installer by following the on-screen instructions and launch the application.
+**2. UnderPass App Download** : Before getting started, download the <BrandName /> UnderPass installer from your dashboard and install it on your system. Run the installer by following the on-screen instructions and launch the application.
 
-Currently HyperExecute GUI is a part of the **LambdaTest UnderPass Application**. If you already have UnderPass app on your system, please update it to the latest version.
+Currently HyperExecute GUI is a part of the **<BrandName /> UnderPass Application**. If you already have UnderPass app on your system, please update it to the latest version.
 
 :::tip Download the GUI 🔗
 You can download the app directly from your **HyperExecute Dashboard** or simply click the links below based on your operating system:
@@ -88,10 +90,10 @@ For those who prefer a visual approach, we’ve created a comprehensive video tu
 ---
 
 ### Step 1: Select and Analyze Your Project
-Launch the application, log in with your LambdaTest credentials, and select your test project folder. The GUI analyzes your project i.e. the framework and language, network connectivity etc. Once the analysis completes, click **"Proceed"** to continue to the next step.
+Launch the application, log in with your <BrandName /> credentials, and select your test project folder. The GUI analyzes your project i.e. the framework and language, network connectivity etc. Once the analysis completes, click **"Proceed"** to continue to the next step.
 
 <!-- - Detect your testing framework and language
-- Verifies network connectivity (enabling a tunnel if needed) and checks LambdaTest URL access (prompting for proxy settings if required)
+- Verifies network connectivity (enabling a tunnel if needed) and checks <BrandName /> URL access (prompting for proxy settings if required)
 - Set up a secure connection to your account -->
 
 :::tip Sample Project 🔗
@@ -105,7 +107,7 @@ If you do not have a project handy, please feel free to use this **[Sample Proje
 :::note Common Issues & Solutions
 The GUI will check the system and your project to ensure everything is ready. If any issues are found, you'll see clear instructions to resolve them. Some common issues faced by the users are:
 - **Missing programming language or package manager**: If your project uses a language or package manager that isn't installed on your computer, the GUI will guide you through installing it.
-- **Network connectivity issues**: If the GUI can't connect to LambdaTest servers, it will ask you to set up the necessary network settings through proxy.
+- **Network connectivity issues**: If the GUI can't connect to <BrandName /> servers, it will ask you to set up the necessary network settings through proxy.
 :::
 
 ---

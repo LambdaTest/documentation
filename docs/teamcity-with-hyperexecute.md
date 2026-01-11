@@ -3,20 +3,22 @@ id: teamcity-with-hyperexecute
 title: How to integrate TeamCity with HyperExecute
 hide_title: true
 sidebar_label: TeamCity
-description: Integrate TeamCity with HyperExecute effortlessly! Speed up your CI/CD pipeline while ensuring UI/UX consistency with LambdaTest’s reliable testing platform
+description: Integrate TeamCity with HyperExecute effortlessly! Speed up your CI/CD pipeline while ensuring UI/UX consistency with TestMu AI’s reliable testing platform
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - hyperexecute integrations
   - hyperexecute integrations with ci/cd tools
   - continuous integration
   - aws codepipeline
   - continuous integration tools
   
-url: https://www.lambdatest.com/support/docs/teamcity-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute
 site_name: LambdaTest
-slug: teamcity-with-hyperexecute/
+slug: teamcity-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,7 +26,7 @@ slug: teamcity-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com/"
         },{
           "@type": "ListItem",
@@ -35,7 +37,7 @@ slug: teamcity-with-hyperexecute/
           "@type": "ListItem",
           "position": 4,
           "name": "AWS CodePipeline Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/teamcity-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/teamcity-with-hyperexecute/`
         }]
       })
     }}
@@ -118,6 +120,6 @@ chmod +x hyperexecute
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step7.webp').default} alt="Image"  className="doc_img"/>
 
-- After the build is successful, go to your LambdaTest Dashboard and check the output of the triggered Job.
+- After the build is successful, go to your <BrandName /> Dashboard and check the output of the triggered Job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step8.webp').default} alt="Image"  className="doc_img"/>

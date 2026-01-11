@@ -3,16 +3,18 @@ id: youtrack-integration
 title: YouTrack Integration
 hide_title: true
 sidebar_label: YouTrack 
-description: LambdaTest provides YouTrack integration to help you perform one-click bug logging from the LambdaTest to your YouTrack dashboard right away.
+description: TestMu AI provides YouTrack integration to help you perform one-click bug logging from the TestMu AI to your YouTrack dashboard right away.
 keywords:
-  - LambdaTest integration with YouTrack 
-  - LambdaTest and YouTrack integration 
+  - TestMu AI integration with YouTrack 
+  - TestMu AI and YouTrack integration 
   - YouTrack integration
   
-url: https://www.lambdatest.com/support/docs/youtrack-integration/
+url: https://www.testmu.ai/support/docs/youtrack-integration
 site_name: LambdaTest
-slug: youtrack-integration/
+slug: youtrack-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: youtrack-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "YouTrack Integration",
-          "item": "https://www.lambdatest.com/support/docs/youtrack-integration/"
+          "item": `${BRAND_URL}/support/docs/youtrack-integration/`
         }]
       })
     }}
@@ -43,13 +45,13 @@ slug: youtrack-integration/
 
 YouTrack is a bug tracking and project management tool developed by JetBrains. It allows you to create agile boards, use reports and Gantt charts, dashboards, and time tracking. With YouTrack, you can find issues easily based on autocomplete queries and manipulate them in batches, customize all problem attributes, and create custom workflows.
 
-With LambdaTest and YouTrack integration, you can push bugs directly from LambdaTest to your YouTrack's project. Also, capture screenshots, annotate bugs, and share them with your teammates and colleagues.
+With <BrandName /> and YouTrack integration, you can push bugs directly from <BrandName /> to your YouTrack's project. Also, capture screenshots, annotate bugs, and share them with your teammates and colleagues.
 
-## How To Integrate YouTrack With Your LambdaTest Account?
+## How To Integrate YouTrack With Your <BrandName /> Account?
 
 * * *
 
-**Step 1**: Login to your LambdaTest account. To install integrations, you need to have admin or user level access.
+**Step 1**: Login to your <BrandName /> account. To install integrations, you need to have admin or user level access.
 
 **Step 2**: Go to **'Integrations'** from the left menu bar. You will be routed to the integration page where you can find list of third-party applications.
 
@@ -58,7 +60,7 @@ With LambdaTest and YouTrack integration, you can push bugs directly from Lambda
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-172.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 >
-**Note:** If you already have an existing LambdaTest integration with any project management tool then you will be asked to uninstall the existing LambdaTest integration.
+**Note:** If you already have an existing <BrandName /> integration with any project management tool then you will be asked to uninstall the existing <BrandName /> integration.
 
 
 **Step 4**: You will come across two different options to choose from - **Cloud** and **Self Hosted**.
@@ -106,7 +108,7 @@ An API token is required to authenticate a user's identity from one server to an
 
 <img loading="lazy" src={require('../assets/images/uploads/install.webp').default} alt="Image" width="1351" height="622" className="doc_img"/>
 
-You have successfully integrated YouTrack with your LambdaTest account. Visit the **'Integrations'** again and you'll notice a green check on YouTrack block under the category _My Integrations_.
+You have successfully integrated YouTrack with your <BrandName /> account. Visit the **'Integrations'** again and you'll notice a green check on YouTrack block under the category _My Integrations_.
 
 <img loading="lazy" src={require('../assets/images/uploads/youtrack-added.webp').default} alt="Image" width="1351" height="622" className="doc_img"/>
 
@@ -151,23 +153,23 @@ Click on your Project, you'll find all the test environment details along with c
 
 * * *
 
-**Step 1**: Login to your LambdaTest account. Visit Integrations and navigate to **'My Integrations'**.
+**Step 1**: Login to your <BrandName /> account. Visit Integrations and navigate to **'My Integrations'**.
 
 **Step 2**: Click on **'REMOVE'** adjacent to YouTrack block. <img loading="lazy" src={require('../assets/images/uploads/remove.webp').default} alt="Image"  width="1351" height="622" className="doc_img"/> Your YouTrack integration will be removed successfully.
 
 >
-That's all about YouTrack integration with LambdaTest. In case, you have any questions or want any further integration with your favorite integration tools, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
+That's all about YouTrack integration with <BrandName />. In case, you have any questions or want any further integration with your favorite integration tools, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
  **Happy testing!**
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

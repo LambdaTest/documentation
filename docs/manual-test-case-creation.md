@@ -2,16 +2,19 @@
 id: manual-test-case-creation
 title: Create & Manage Test Cases
 sidebar_label: Create & Manage Test Cases
-description: Learn efficient manual test case creation with LambdaTest's Test Manager, streamlining testing processes and enhancing test execution.
+description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
   - test case
   - test cases
   - manual test case creation
-url: https://www.lambdatest.com/support/docs/manual-test-case-creation/
+url: https://www.testmu.ai/support/docs/manual-test-case-creation
 site_name: LambdaTest
-slug: manual-test-case-creation/
+slug: manual-test-case-creation
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: manual-test-case-creation/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Manual Test Case Creation",
-          "item": "https://www.lambdatest.com/support/docs/manual-test-case-creation/"
+          "item": `${BRAND_URL}/support/docs/manual-test-case-creation/`
         }]
       })
     }}
@@ -97,7 +100,7 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 - Import existing Modules by clicking on the Modules button. 
 
-To know more about how to use Modules refer the [Modules doc](https://www.lambdatest.com/support/docs/create-modules/).
+To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
 #### Add New Step:
 
@@ -115,7 +118,7 @@ You can use the **Generate with AI** option to ask agent to analyse your test ca
 To save the changes made in the Test Case click on the `Save Changes` button OR use the `Command + /` for Mac & `Ctrl + /` shortcut. 
 
 :::note
- Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](https://www.lambdatest.com/support/docs/test-case-versioning/). 
+ Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](/support/docs/test-case-versioning/). 
 :::
 
 ***
@@ -141,25 +144,25 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 ### Issues section
 
-This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/)
+This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](/support/docs/link-jira-issues-with-test-manager/)
 
 ***
 
 ### Version History
 
-This section allows you to manage the Version History of the test caase by comparing Versions, Viewing or Reverting to them. For more information refer [this page](https://www.lambdatest.com/support/docs/test-case-versioning). 
+This section allows you to manage the Version History of the test caase by comparing Versions, Viewing or Reverting to them. For more information refer [this page](/support/docs/test-case-versioning). 
 
 ***
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

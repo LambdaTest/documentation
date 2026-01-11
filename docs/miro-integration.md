@@ -1,18 +1,20 @@
 ---
 id: miro-integration
-title: Miro Integration with LambdaTest
+title: Miro Integration with TestMu AI
 hide_title: true
 sidebar_label: Miro
-description: LambdaTest’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
+description: TestMu AI’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - miro whiteboard
   - free cross browser testing tool
   - miro integration
-url: https://www.lambdatest.com/support/docs/miro-integration/
+url: https://www.testmu.ai/support/docs/miro-integration
 site_name: LambdaTest
-slug: miro-integration/
+slug: miro-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: miro-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Miro Integration",
-          "item": "https://www.lambdatest.com/support/docs/miro-integration/"
+          "item": `${BRAND_URL}/support/docs/miro-integration/`
         }]
       })
     }}
@@ -44,21 +46,21 @@ slug: miro-integration/
 
 Miro is a cloud-based collaborative whiteboard platform helping teams to manage their projects effectively. Miro gives the team access to digital whiteboards and sticky notes to enable them to brainstorm and do many other collaborative activities such as research, planning, managing workflows and more.
 
-LambdaTest's integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
+<BrandName />'s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
 
-## How To Integrate Miro With Your LambdaTest Account?
+## How To Integrate Miro With Your <BrandName /> Account?
 
 * * *
 
-**Step 1:** Login to your LambdaTest account. Select 'integration' from the left navigation bar. This page includes all the integrations provided with 3rd party tools for LambdaTest. You'll find Miro under the Project Management category. Hover on it and you'll see a plus icon, click on it go further with integration
+**Step 1:** Login to your <BrandName /> account. Select 'integration' from the left navigation bar. This page includes all the integrations provided with 3rd party tools for <BrandName />. You'll find Miro under the Project Management category. Hover on it and you'll see a plus icon, click on it go further with integration
 
 <img loading="lazy" src={require('../assets/images/miro-integration/1.webp').default} alt="Miro Integration" width="1345" height="571" className="doc_img"/>
 
-**Step 2:** If you've already logged into your Miro account, you'll be taken to another screen asking to install 'LambdaTest' in your team. You can click on the 'install' icon next to 'test'.
+**Step 2:** If you've already logged into your Miro account, you'll be taken to another screen asking to install '<BrandName />' in your team. You can click on the 'install' icon next to 'test'.
 
 <img loading="lazy" src={require('../assets/images/miro-integration/2.webp').default} alt="Miro Integration" width="1338" height="620" className="doc_img"/>
 
-**Step 3:** After you click on the install button, the integration of LambdaTest will be completed. You can verify the integration by selecting 'integrations' from the left navigation bar, here under the 'My Integration' section you can see 'Miro'. 
+**Step 3:** After you click on the install button, the integration of <BrandName /> will be completed. You can verify the integration by selecting 'integrations' from the left navigation bar, here under the 'My Integration' section you can see 'Miro'. 
 
 <img loading="lazy" src={require('../assets/images/miro-integration/3.webp').default} alt="Miro Integration" width="1338" height="620" className="doc_img"/>
 
@@ -66,7 +68,7 @@ LambdaTest's integration with Miro will help you to log bugs to boards on Miro. 
 
 <img loading="lazy" src={require('../assets/images/miro-integration/4.webp').default} alt="Miro Integration" width="1353" height="612" className="doc_img"/>
 
-## Log Your First Bug From LambdaTest Integration With Miro
+## Log Your First Bug From <BrandName /> Integration With Miro
 
 * * *
 
@@ -98,25 +100,25 @@ LambdaTest's integration with Miro will help you to log bugs to boards on Miro. 
 
 <img loading="lazy" src={require('../assets/images/miro-integration/11.webp').default} alt="Miro Integration" width="1359" height="571" className="doc_img"/>
 
-**Step 8:** Upon clicking on the task, you will be able to view all the details you entered while logging the bug on LambdaTest. You'll be able to see the screenshot of the bug along with the configuration you tested on
+**Step 8:** Upon clicking on the task, you will be able to view all the details you entered while logging the bug on <BrandName />. You'll be able to see the screenshot of the bug along with the configuration you tested on
 
 <img loading="lazy" src={require('../assets/images/miro-integration/12.webp').default} alt="Miro Integration" width="1354" height="569" className="doc_img"/>
 
-## Remove LambdaTest Integration With Miro 
+## Remove <BrandName /> Integration With Miro 
 
 * * *
 
-### On LambdaTest's Platform
+### On <BrandName />'s Platform
 
 * * *
 
-In case you want to remove your Miro integration with LambdaTest, Here is how you can do that.
+In case you want to remove your Miro integration with <BrandName />, Here is how you can do that.
 
-**Step 1:** Log in to your LambdaTest account.
+**Step 1:** Log in to your <BrandName /> account.
 
 **Step 2:** From the left navigation menu click on Integration. Under the My Integration section, you can see a remove button next to your Miro integration. By clicking on the remove button you can remove the integration.
 
->**Note**: While removing the integration make sure you do the same from Miro so that you'll be able to integrate LambdaTest with Miro again.
+>**Note**: While removing the integration make sure you do the same from Miro so that you'll be able to integrate <BrandName /> with Miro again.
 
 ###  On Miro's Platform
 
@@ -124,7 +126,7 @@ In case you want to remove your Miro integration with LambdaTest, Here is how yo
 
 <img loading="lazy" src={require('../assets/images/miro-integration/13.webp').default} alt="Miro Integration" width="1351" height="575" className="doc_img"/>
 
-**Step 2:** Click on Select 'Apps and Integrations' from the left navigation bar. Further, scroll down to "Installed Apps" and click on the LambdaTest icon. 
+**Step 2:** Click on Select 'Apps and Integrations' from the left navigation bar. Further, scroll down to "Installed Apps" and click on the <BrandName /> icon. 
 
 <img loading="lazy" src={require('../assets/images/miro-integration/14.webp').default} alt="Miro Integration" width="1346" height="571" className="doc_img"/>
 
@@ -132,17 +134,17 @@ In case you want to remove your Miro integration with LambdaTest, Here is how yo
 
 <img loading="lazy" src={require('../assets/images/miro-integration/15.webp').default} alt="Miro Integration" width="1346" height="571" className="doc_img"/>
 
-That was all you need to know for integrating LambdaTest with Miro. In case you have any doubts or questions, feel free to share them with our product experts on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
+That was all you need to know for integrating <BrandName /> with Miro. In case you have any doubts or questions, feel free to share them with our product experts on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

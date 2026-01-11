@@ -1,6 +1,6 @@
 ---
 id: performance-tips
-title: How To Maximize Test Execution Performance on Automation Platform | LambdaTest
+title: How To Maximize Test Execution Performance on Automation Platform | TestMu AI
 hide_title: true
 sidebar_label: Performance Tips
 description: This page will help you tom maximize test execution in a minimum time period.
@@ -12,16 +12,18 @@ keywords:
   - developer tools
   - sequential tests
   - automation tests
-url: https://www.lambdatest.com/support/docs/performance-tips/
+url: https://www.testmu.ai/support/docs/performance-tips
 site_name: LambdaTest
-slug: performance-tips/
+slug: performance-tips
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Performance Tips
 * * *
 
 ## Maximizing Test Execution In A Minimum Time Period
 
-Please note, if you are running your tests on a [cloud based Selenium Grid](https://www.lambdatest.com/selenium-automation) then it may take a little longer time to complete an execution when compared with Local WebDriver execution. When running one to one sequential automation test threads, with LambdaTest cloud grid it may take around 1.3-1.5 times longer to complete the test depending upon the network latency.
+Please note, if you are running your tests on a [cloud based Selenium Grid](https://www.lambdatest.com/selenium-automation) then it may take a little longer time to complete an execution when compared with Local WebDriver execution. When running one to one sequential automation test threads, with <BrandName /> cloud grid it may take around 1.3-1.5 times longer to complete the test depending upon the network latency.
 
 To serve you better we are running multiple complementary services in our machines that perform various functions like [take screenshots](https://www.lambdatest.com/full-page-screen-capture) after every command given, capture complete test execution video logs, capture network logs, console logs etc. This takes a little bit processing power which when combined with network latency leads to higher overall test execution times.
 
@@ -61,10 +63,10 @@ traceroute hub.lambdatest.com
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Maximizing Test Execution Performance</span>

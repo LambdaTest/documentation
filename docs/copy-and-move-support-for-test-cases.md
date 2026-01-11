@@ -3,15 +3,18 @@ id: copy-and-move-support-for-test-cases
 title: Copy and Move Support for Test Cases
 hide_title: true
 sidebar_label: Copy and Move Test Cases
-description: Learn how to efficiently copy and move test cases within LambdaTest, streamlining your testing process and enhancing organization across multiple projects.
+description: Learn how to efficiently copy and move test cases within TestMu AI, streamlining your testing process and enhancing organization across multiple projects.
 keywords:
   - copy test cases
   - move test cases
   - copy and move test cases to different folders
-url: https://www.lambdatest.com/support/docs/copy-and-move-support-for-test-cases/
+url: https://www.testmu.ai/support/docs/copy-and-move-support-for-test-cases
 site_name: LambdaTest
-slug: copy-and-move-support-for-test-cases/
+slug: copy-and-move-support-for-test-cases
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: copy-and-move-support-for-test-cases/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Copy and Move Support for Test Cases",
-          "item": "https://www.lambdatest.com/support/docs/copy-and-move-support-for-test-cases/"
+          "item": `${BRAND_URL}/support/docs/copy-and-move-support-for-test-cases/`
         }]
       })
     }}

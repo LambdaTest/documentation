@@ -11,10 +11,13 @@ keywords:
   - secrets
   - smart variables
   - environments
-url: https://www.lambdatest.com/support/docs/kaneai-variables-and-parameters/
+url: https://www.testmu.ai/support/docs/kaneai-variables-and-parameters
 site_name: Variables & Parameters in KaneAI
-slug: kaneai-variables-and-parameters/
+slug: kaneai-variables-and-parameters
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: kaneai-variables-and-parameters/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Variables & Parameters",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-variables-and-parameters"
+          "item": `${BRAND_URL}/support/docs/kaneai-variables-and-parameters`
         }]
       })
     }}

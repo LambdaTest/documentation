@@ -1,8 +1,8 @@
 ---
 id: katalon-integration
-title: Katalon Integration with LambdaTest
+title: Katalon Integration with TestMu AI
 sidebar_label: Katalon - Real Devices
-description: Leverage LambdaTest's cloud mobile devices to run automation testing using Katalon Studio.
+description: Leverage TestMu AI's cloud mobile devices to run automation testing using Katalon Studio.
 keywords:
   - katalon studio
   - integraion
@@ -12,10 +12,12 @@ keywords:
   - no code mobile automation
   - gui based mobile automation
   - real devices
-url: https://www.lambdatest.com/support/docs/katalon-integration/
+url: https://www.testmu.ai/support/docs/katalon-integration
 site_name: LambdaTest
-slug: katalon-integration/
+slug: katalon-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: katalon-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Katalon Integration",
-          "item": "https://www.lambdatest.com/support/docs/katalon-integration/"
+          "item": `${BRAND_URL}/support/docs/katalon-integration/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ import TabItem from '@theme/TabItem';
 
 Katalon Studio offers cross-platform testing — from Windows, macOS, and Linux for web automation, to Android and iOS for mobile automation. It also comes with a built-in intuitive interface for codeless automation testing and validating the UI elements of your web application.
 
-This integration between LambdaTest and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 real devices.
+This integration between <BrandName /> and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 real devices.
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
@@ -64,9 +66,9 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 
 By the end of this topic, you will know:
 
-1. How can we use Katalon Spy with LambdaTest.
+1. How can we use Katalon Spy with <BrandName />.
 2. How can we record interactions using Katalon Record Mobile and create Automation Scripts.
-3. Executing Katalon Scripts using LambdaTest’s real device cloud.
+3. Executing Katalon Scripts using <BrandName />’s real device cloud.
 
 ## Prerequisites for Getting Started
 
@@ -74,18 +76,18 @@ By the end of this topic, you will know:
 
 Before you can start performing App automation using Katalon Studio with Lambdatest, you would need to follow these steps:
 
-- You will need a LambdaTest username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+- You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
 - [Katalon Studio](https://katalon.com/)
 - Access to an Android app (.apk) or an iOS app (.ipa).
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next steps.
 
 :::
 
-## Katalon Spy with LambdaTest
+## Katalon Spy with <BrandName />
 
 ---
 
@@ -118,7 +120,7 @@ The first one is the Katalon Spy and the next one is the Katalon Mobile Record.
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/004.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
 ### 4. Katalon Spy Kick-start
-To start using Katalon Spy with LambdaTest, just click on the Katalon Spy icon dropdown and select Remote Devices.
+To start using Katalon Spy with <BrandName />, just click on the Katalon Spy icon dropdown and select Remote Devices.
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/005.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
@@ -155,7 +157,7 @@ Add in all the [Desired Capabilities](https://www.lambdatest.com/capabilities-ge
 
 Now for the last step we need the App ID.
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your LambdaTest **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for the authentication. Make sure to add the path of the **appFile** in the cURL request if required. Here is an example cURL request to upload your app using our REST API:
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your <BrandName /> **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for the authentication. Make sure to add the path of the **appFile** in the cURL request if required. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
 
@@ -195,10 +197,10 @@ We can now begin to select the elements on the screen and Capture them using the
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/015.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
 
-## Katalon Mobile Recorder with LambdaTest
+## Katalon Mobile Recorder with <BrandName />
 
 ### 1. Starting off with Katalon Mobile Recorder
-To start using Katalon Mobile Recorder with LambdaTest, just click on the Katalon Mobile Recorder the icon dropdown and select Remote Devices.
+To start using Katalon Mobile Recorder with <BrandName />, just click on the Katalon Mobile Recorder the icon dropdown and select Remote Devices.
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/016.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
@@ -226,7 +228,7 @@ Once saved, we can now see how it looks like!
 
 Now for the final task, let’s run this saved script.
 
-## Executing Katalon Scripts using LambdaTest’s Cloud Devices
+## Executing Katalon Scripts using <BrandName />’s Cloud Devices
 
 ### 1. Run Saved actions
 Click on the dropdown next to the Run Test icon on Katalon Studio and click Remote.
@@ -240,7 +242,7 @@ Now we can see that the test starts running.
 
 ### 3. View test execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/023.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
@@ -249,18 +251,18 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

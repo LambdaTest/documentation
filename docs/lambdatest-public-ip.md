@@ -1,17 +1,19 @@
 ---
 id: lambdatest-public-ip
-title: LambdaTest Public IP Ranges
+title: TestMu AI Public IP Ranges
 hide_title: false
-sidebar_label: LambdaTest Public IP
-description: Learn which IP addresses needs to be whitelisted before running your tests on lambdatest grid and its other products
+sidebar_label: TestMu AI Public IP
+description: Learn which IP addresses needs to be whitelisted before running your tests on TestMu AI grid and its other products
 keywords:
-  - LambdaTest Public IP address
-  - LambdaTest IP whitelist
-  - LambdaTest 
-url: https://www.lambdatest.com/support/docs/lambdatest-public-ip/
+  - TestMu AI Public IP address
+  - TestMu AI IP whitelist
+  - TestMu AI 
+url: https://www.testmu.ai/support/docs/testmu-public-ip
 site_name: LambdaTest
-slug: lambdatest-public-ip/
+slug: testmu-public-ip
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,23 +23,23 @@ slug: lambdatest-public-ip/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Public IPs",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-public-ip/"
+          "item": `${BRAND_URL}/support/docs/testmu-public-ip/`
         }]
       })
     }}
 ></script> 
 
-These are the list of the IP ranges that you need to whitelist with respect to the specific LambdaTest products.
+These are the list of the IP ranges that you need to whitelist with respect to the specific <BrandName /> products.
 
 | Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |
 |--------------|-----------------------------|-------------|--------|
@@ -105,5 +107,5 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 - **50.85.251.115**
 - **20.171.1.172**
 
-## LambdaTest Integration Tools
+## <BrandName /> Integration Tools
 - **3.208.126.109**

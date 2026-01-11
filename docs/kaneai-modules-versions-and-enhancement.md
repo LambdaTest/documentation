@@ -8,10 +8,13 @@ keywords:
 - modules versioning
 - enhancements
 - modules
-url: https://www.lambdatest.com/support/docs/kaneai-modules-versions-and-enhancement/
+url: https://www.testmu.ai/support/docs/kaneai-modules-versions-and-enhancement
 site_name: LambdaTest
-slug: kaneai-modules-versions-and-enhancement/
+slug: kaneai-modules-versions-and-enhancement
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +24,17 @@ slug: kaneai-modules-versions-and-enhancement/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Modules Versioning",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-modules-versions-and-enhancement/"
+          "item": `${BRAND_URL}/support/docs/kaneai-modules-versions-and-enhancement/`
         }]
       })
     }}

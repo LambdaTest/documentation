@@ -13,15 +13,16 @@ keywords:
     - playwright hyperexecute
     - real device playwright
     - real device test
-url: https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/
+url: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute
 site_name: LambdaTest
-slug: playwright-real-device-on-hyperexecute/
+slug: playwright-real-device-on-hyperexecute
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run playwright real deices automation tests on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/playwright-real-device-on-hyperexecute/`
         }]
       })
     }}
@@ -51,7 +52,7 @@ This guide explains how to run your **Playwright** tests on **Real devices (Andr
 ## Prerequisites
 Before running your tests, ensure you have:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file with the test configuration.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 
@@ -59,7 +60,7 @@ Before running your tests, ensure you have:
 You can use your own Playwright project or try the sample repo:. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Playwright Real Device from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Playwright Real Device from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -81,7 +82,7 @@ Update your test configuration with the required capabilities.
   </TabItem>
 </Tabs>
 
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Configure the CDP URL
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.

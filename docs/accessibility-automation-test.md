@@ -2,22 +2,23 @@
 id: accessibility-automation-test
 title: Automating Accessibility Testing with Selenium
 sidebar_label: Selenium
-description: Identify and log accessibility issues with LambdaTest Accessibility Automation, ensuring automated compliance with WCAG accessibility standards.
+description: Identify and log accessibility issues with TestMu AI Accessibility Automation, ensuring automated compliance with WCAG accessibility standards.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Automation
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-automation-test/
+url: https://www.testmu.ai/support/docs/accessibility-automation-test
 site_name: LambdaTest
-slug: accessibility-automation-test/
+slug: accessibility-automation-test
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,29 +28,29 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Test",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-automation-test/"
+          "item": `${BRAND_URL}/support/docs/accessibility-automation-test/`
         }]
       })
     }}
 ></script>
 
-This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using LambdaTest's Accessibility Tool.
+This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > Compatible only with Chrome and Edge browser versions >= 90.
 
 ## Prerequisites
 
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -59,7 +60,7 @@ This document walks you through the process of evaluating the accessibility of y
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
 <a href="https://github.com/LambdaTest/lambdatest-accessibility-selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -77,11 +78,11 @@ capabilities.setCapability("build", "LambdaTestSampleApp");
 capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
-> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

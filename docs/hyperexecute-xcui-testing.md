@@ -2,19 +2,18 @@
 id: hyperexecute-xcui-testing
 title: Execute XCUI Framework Tests on HyperExecute
 sidebar_label: XCUI
-description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via LambdaTest.
+description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.
 keywords:
   - xcui
   - iOS
-  - lambdatest 
-  - framework on lambdatest
+  - testmu ai 
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
-# image: /assets/images/og-images/espresso-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-xcui-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-xcui-testing
 site_name: LambdaTest
-slug: hyperexecute-xcui-testing/
+slug: hyperexecute-xcui-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,6 +21,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With XCUI Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-xcui-testing/"
+          "name": "Getting Started With XCUI Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/hyperexecute-xcui-testing/`
         }]
       })
     }}
@@ -53,7 +54,7 @@ This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
@@ -64,7 +65,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 
-Download or Clone the code sample for the XCUI framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the XCUI framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-xcui-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
@@ -88,7 +89,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -121,7 +122,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ### Upload your App
 
-Upload your **iOS** application (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
+Upload your **iOS** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
 
 Here is an example cURL request to upload your app using our REST API:
 
@@ -157,7 +158,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 ### Upload your Test Suite
 
-Upload your **test suite** (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 <Tabs className="docs__val">
 

@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Secrets
 description: Learn how to create, update and use custom secrets from the test manager and while executing your tests using the Kane AI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai secrets
   - kaneai parameters
-url: https://www.lambdatest.com/support/docs/kane-ai-secrets/
+url: https://www.testmu.ai/support/docs/kane-ai-secrets
 site_name: LambdaTest
-slug: kane-ai-secrets/
+slug: kane-ai-secrets
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: kane-ai-secrets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Secrets",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-secrets/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-secrets/`
         }]
       })
     }}

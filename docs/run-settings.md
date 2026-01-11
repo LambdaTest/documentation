@@ -3,7 +3,7 @@ id: run-settings
 title: Configuring Cypress Test Execution
 hide_title: false
 sidebar_label: Configure Cypress Test Execution
-description: Explore LambdaTest's comprehensive guide on configuring run settings for seamless cross-browser testing. Optimize your testing workflow today.
+description: Explore TestMu AI's comprehensive guide on configuring run settings for seamless cross-browser testing. Optimize your testing workflow today.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide
@@ -15,15 +15,17 @@ keywords:
   - Cypress Run Specific Test
   - Cypress Testing Environment
   - How to Run Cypress Tests
-url: https://www.lambdatest.com/support/docs/run-settings/
+url: https://www.testmu.ai/support/docs/run-settings
 site_name: LambdaTest
-slug: run-settings/
+slug: run-settings
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,22 +35,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Run Settings",
-          "item": "https://www.lambdatest.com/support/docs/run-settings/"
+          "item": `${BRAND_URL}/support/docs/run-settings/`
         }]
       })
     }}
 ></script>
-You can specify Cypress CLI flags to run on LambdaTest in two ways:
+You can specify Cypress CLI flags to run on <BrandName /> in two ways:
 
 1. Adding the CLI flag details in `lambdatest-config.json` file
 2. Using the CLI 
@@ -359,9 +361,9 @@ You can generate Network logs with Cypress by setting the `network` key to `true
 ```
 
 ## NPM Package Dependencies
-In order to run your tests on LambdaTest, we refer to your `package.json` and use those dependencies and devDependencies. Since, `package.json` may contain several dependencies which may not be required to run your Cypress tests. We recommend to use `npm_dependencies` parameter to list down the required dependencies to run your test, because it will reduce your build time on LambdaTest.
+In order to run your tests on <BrandName />, we refer to your `package.json` and use those dependencies and devDependencies. Since, `package.json` may contain several dependencies which may not be required to run your Cypress tests. We recommend to use `npm_dependencies` parameter to list down the required dependencies to run your test, because it will reduce your build time on <BrandName />.
 
-Below are the ways through which LambdaTest detects the dependencies which has to be installed before running the test on LambdaTest.
+Below are the ways through which <BrandName /> detects the dependencies which has to be installed before running the test on <BrandName />.
 
 #### Using `npm_dependencies`
 Inside `run_settings` of `lambdatest-config.json`, you can provide the list of NPM dependencies:
@@ -375,7 +377,7 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 ```
 
 #### Using `package.json`
-LambdaTest will automatically detects the dependencies that has to be installed from `package.json`.
+<BrandName /> will automatically detects the dependencies that has to be installed from `package.json`.
 
 ```javascript title="package.json"
 "devDependencies": {
@@ -391,7 +393,7 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
 :::
 
 ## Specific Node Version
-LambdaTest allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
+<BrandName /> allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
 
 > Supported Versions are 18, 20 and 22. The exact version will be used are `18.17.1`, `20.18.0`, and `22.11.0` respectively
 

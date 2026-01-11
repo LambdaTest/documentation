@@ -2,23 +2,24 @@
 id: hyperexecute-webapp-appium-testing
 title: Appium Testing On HyperExecute - WebApp
 sidebar_label: Appium - WebApp
-description: Now you can run your automation scripts using Selenium with Behave on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Behave on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-webapp-appium-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-webapp-appium-testing
 site_name: LambdaTest
-slug: hyperexecute-webapp-appium-testing/
+slug: hyperexecute-webapp-appium-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Appium Testing on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-webapp-appium-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-webapp-appium-testing/`
         }]
       })
     }}
@@ -50,13 +51,13 @@ This page outlines how to execute your Appium tests on HyperExecute for WebApps 
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the Environmental Variable
 - Ensure you have Appium’s [Java client library](https://github.com/appium/java-client) installed.
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 
-<!-- > If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa). -->
+<!-- > If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa). -->
 
 ### Download HyperExecute CLI
 
@@ -69,7 +70,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 ### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
@@ -98,7 +99,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ### Steps to Run Your Test
-**Step 1:** Write your Automation Script in the client language of your choice from the ones supported by [Appium](https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/). An automation script for the sample applications have been provided below.
+**Step 1:** Write your Automation Script in the client language of your choice from the ones supported by [Appium](/support/docs/appium-languages-and-frameworks/). An automation script for the sample applications have been provided below.
 
 Here is a sample automation script in Java. Ensure to update the `username` and `accesskey` in the below code.
 
@@ -330,7 +331,7 @@ public class iosWeb {
 
 **Step 2:** Execute Your Test Case. Debug and run your code.
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
 
 ## Sample YAML 0.2
 
@@ -413,12 +414,12 @@ By following the instructions in this documentation, you can seamlessly execute 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

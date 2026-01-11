@@ -2,24 +2,26 @@
 id: accessibility-native-app-automation-test
 title: Native App Accessibility Automation
 sidebar_label: Automation
-description: Detect and report accessibility issues automatically using LambdaTest Accessibility Native App Automationv, aligned with WCAG guidelines.
+description: Detect and report accessibility issues automatically using TestMu AI Accessibility Native App Automationv, aligned with WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Automation
     - Accessibility Testing Settings
     - Android Accessibility 
     - iOS Accessibility
-url: https://www.lambdatest.com/support/docs/accessibility-android-automation-test/
+url: https://www.testmu.ai/support/docs/accessibility-android-automation-test
 site_name: LambdaTest
-slug: accessibility-native-app-automation-test/
+slug: accessibility-native-app-automation-test
 ---
  
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,38 +31,38 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Test",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-automation-test/"
+          "item": `${BRAND_URL}/support/docs/accessibility-android-automation-test/`
         }]
       })
     }}
 ></script>
-LambdaTest now enables native Accessibility Automation Testing for Android and iOS apps using Appium. This feature helps developers and QA teams to validate the accessibility of their mobile apps programmatically by leveraging LambdaTest's device cloud.
+<BrandName /> now enables native Accessibility Automation Testing for Android and iOS apps using Appium. This feature helps developers and QA teams to validate the accessibility of their mobile apps programmatically by leveraging <BrandName />'s device cloud.
 
 With built-in support for `lambda-accessibility-scan`, this integration ensures that your apps are tested for compliance with accessibility standards and best practices like WCAG (Web Content Accessibility Guidelines).
 
 ## Prerequisites
 Before getting started, ensure the following:
 
-- You have a LambdaTest account.
-- LambdaTest credentials (username & access key).
-- App uploaded to LambdaTest App Storage (lt://APP_ID).
-- Access to a valid Android or iOS device on LambdaTest.
+- You have a <BrandName /> account.
+- <BrandName /> credentials (username & access key).
+- App uploaded to <BrandName /> App Storage (lt://APP_ID).
+- Access to a valid Android or iOS device on <BrandName />.
 
 > Native app accessibility automation supports both Android and iOS applications.
 
 ## Step 1: Setup the Environment Variables
 
-You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [LambdaTest Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
@@ -82,7 +84,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ## Step 2: Upload your Application
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
@@ -108,7 +110,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
@@ -133,7 +135,7 @@ You may call `lambda-accessibility-scan` multiple times to scan different app sc
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

@@ -3,9 +3,9 @@ id: smart-ui-testing
 title: SmartUI Testing Using HyperExecute
 hide_title: false
 sidebar_label: HyperExecute SmartUI Testing
-description: Improve bug discovery using LambdaTest's Advanced Visual UI Regression Testing. Effortlessly pinpoint visual discrepancies and regression issues in recent builds to ensure impeccable app deployment.
+description: Improve bug discovery using TestMu AI's Advanced Visual UI Regression Testing. Effortlessly pinpoint visual discrepancies and regression issues in recent builds to ensure impeccable app deployment.
 keywords:
-  - smart ui testing in lambdatest
+  - smart ui testing in testmu ai
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
@@ -16,9 +16,9 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smart-ui-testing/
+url: https://www.testmu.ai/support/docs/smart-ui-testing
 site_name: LambdaTest
-slug: smart-ui-testing/
+slug: smart-ui-testing
 
 ---
 
@@ -27,6 +27,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,25 +37,25 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-testing/"
+          "item": `${BRAND_URL}/support/docs/smart-ui-testing/`
         }]
       })
     }}
 ></script>
 SmartUI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
 
-In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with LambdaTest's HyperExecute, allowing you to execute **SmartUI** Tests on the platform.
+In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with <BrandName />'s HyperExecute, allowing you to execute **SmartUI** Tests on the platform.
 
 ## Features of SmartUI Testing
 HyperExecute's SmartUITesting offers the following features:
@@ -92,7 +94,7 @@ To execute SmartUI Testing using HyperExecute, you can opt for the following met
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

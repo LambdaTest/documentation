@@ -3,13 +3,15 @@ id: ui-inspector
 title: UI Inspector
 hide_title: false
 sidebar_label: UI Inspector
-description: Inspect and interact with mobile app elements using LambdaTest UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
+description: Inspect and interact with mobile app elements using TestMu AI UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
 keywords:
 - ui inspector 
-url: https://www.lambdatest.com/support/docs/ui-inspector/
+url: https://www.testmu.ai/support/docs/ui-inspector
 site_name: LambdaTest
-slug: ui-inspector/
+slug: ui-inspector
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,23 +20,23 @@ slug: ui-inspector/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "UI Inspector",
-          "item": "https://www.lambdatest.com/support/docs/ui-inspector/"
+          "item": `${BRAND_URL}/support/docs/ui-inspector/`
         }]
       })
     }}
 ></script>
-LambdaTest UI App Inspector provides a graphical interface to inspect and interact with the elements of a mobile application. When you launch your mobile app, it retrieves the DOM (Document Object Model) of the app. This DOM includes various UI elements such as buttons, text fields, labels, etc., organised in a hierarchical structure.
+<BrandName /> UI App Inspector provides a graphical interface to inspect and interact with the elements of a mobile application. When you launch your mobile app, it retrieves the DOM (Document Object Model) of the app. This DOM includes various UI elements such as buttons, text fields, labels, etc., organised in a hierarchical structure.
 
 ## Benefits of UI Inspector
 
@@ -43,7 +45,7 @@ LambdaTest UI App Inspector provides a graphical interface to inspect and intera
 - **Element Identification:** When you select an element, it provides information about that element, such as its type, attributes, and location within the DOM. This information helps in identifying elements uniquely for automation purposes.
 - **Automation:** It aids in generating Xpath by providing information about the elements in the DOM. Test scripts can locate and interact with UI elements by referencing their properties in the DOM. For example, you can create Xpath to tap on a button by specifying its unique identifier, XPath expression, or accessibility label within the DOM.
 
-LambdaTest UI Inspector is divided into various components such as 
+<BrandName /> UI Inspector is divided into various components such as 
 
 - Search Bar
 - Hierarchy View
@@ -83,12 +85,12 @@ Let's have a detailed look at each of these components:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

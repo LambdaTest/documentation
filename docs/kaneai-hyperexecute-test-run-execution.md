@@ -5,18 +5,20 @@ hide_title: false
 sidebar_label: Execute Test Runs on HyperExecute
 description: Learn how to execute KaneAI-generated test runs directly on HyperExecute with this step-by-step guide for efficient and rapid test execution.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai test runs
   - hyperexecute
   - test run
   - test manager
   - generate and manage test cases
-url: https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution
+url: https://www.testmu.ai/support/docs/kaneai-hyperexecute-test-run-execution
 site_name: LambdaTest
-slug: kaneai-hyperexecute-test-run-execution/
+slug: kaneai-hyperexecute-test-run-execution
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: kaneai-hyperexecute-test-run-execution/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Test Run",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution"
+          "item": `${BRAND_URL}/support/docs/kaneai-hyperexecute-test-run-execution`
         }]
       })
     }}
@@ -46,7 +48,7 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 ## Prerequisites
 - Access to Test Manager.
 - A project with KaneAI-generated test cases.
-- Credentials for LambdaTest platform.
+- Credentials for <BrandName /> platform.
 
 ## Step-by-Step Guide
 ### Step 1: Navigate to the Projects Page

@@ -5,10 +5,13 @@ sidebar_label: Dashboard Settings
 description: Customize your Analytics Dashboard settings for optimal test analysis. Learn how to adjust settings to fit your testing needs.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-dashboard-settings/
+url: https://www.testmu.ai/support/docs/analytics-dashboard-settings
 site_name: LambdaTest
-slug: analytics-dashboard-settings/
+slug: analytics-dashboard-settings
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +21,17 @@ slug: analytics-dashboard-settings/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-settings/"
+          "item": `${BRAND_URL}/support/docs/analytics-dashboard-settings/`
         }]
       })
     }}

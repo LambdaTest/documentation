@@ -2,7 +2,7 @@
 id: basic-authentication-for-web-automation
 title: Basic Authentication for Safari Web Automation
 sidebar_label: Basic Authentication for Safari Web Automation
-description: Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
 keywords:
   - basic authentication
   - safari web automation
@@ -10,9 +10,9 @@ keywords:
   - basic authentication for web automation
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/basic-authentication-for-web-automation/
+url: https://www.testmu.ai/support/docs/basic-authentication-for-web-automation
 site_name: LambdaTest
-slug: basic-authentication-for-web-automation/
+slug: basic-authentication-for-web-automation
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -20,6 +20,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/basic-authentication-for-web-automation/"
+          "item": `${BRAND_URL}/support/docs/basic-authentication-for-web-automation/`
         }]
       })
     }}
@@ -82,12 +84,12 @@ Please note, this hook is designed to be used exclusively with Safari on iOS Rea
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

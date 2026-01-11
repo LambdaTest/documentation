@@ -5,15 +5,17 @@ hide_title: false
 sidebar_label: Starting an Accessibility Scan
 description: Learn how to configure an Accessibility scan, including WCAG version, handling of review issues, and advanced settings like local testing and authentication.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - accessibility scan
   - wcag
   - ada compliance
-url: https://www.lambdatest.com/support/docs/web-scanner-accessibility-scan
+url: https://www.testmu.ai/support/docs/web-scanner-accessibility-scan
 site_name: LambdaTest
-slug: web-scanner-accessibility-scan/
+slug: web-scanner-accessibility-scan
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,22 +25,22 @@ slug: web-scanner-accessibility-scan/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Starting an Accessibility Scan",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-accessibility-scan"
+          "item": `${BRAND_URL}/support/docs/web-scanner-accessibility-scan`
         }]
       })
     }}
@@ -70,7 +72,7 @@ Once you select **Accessibility** in Step 1 of the scan wizard, the following co
 ## Advanced Options (Accessibility Scan)
 
 ### Local Testing Setup
-* Activates LambdaTest Tunnel to scan localhost or staging environments.
+* Activates <BrandName /> Tunnel to scan localhost or staging environments.
 
 ### Login Configurations
 * Reuse or create new login setups.

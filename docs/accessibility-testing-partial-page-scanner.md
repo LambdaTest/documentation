@@ -5,20 +5,22 @@ hide_title: false
 sidebar_label: Partial Page Scanner
 description: Partial Page Scanner scans specific webpage elements, tests components, investigates reported issues and evaluates changes made to a specific area.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
     - run quick scan
     - test issues
     - Partial Page Scanner
-url: https://www.lambdatest.com/support/docs/accessibility-testing-partial-page-scanner/
+url: https://www.testmu.ai/support/docs/accessibility-testing-partial-page-scanner
 site_name: LambdaTest
-slug: accessibility-testing-partial-page-scanner/
+slug: accessibility-testing-partial-page-scanner
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Partial Page Scanner",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-partial-page-scanner/"
+          "item": `${BRAND_URL}/support/docs/accessibility-testing-partial-page-scanner/`
         }]
       })
     }}
@@ -66,7 +68,7 @@ It analyzes specific regions or elements within a webpage instead of the entire 
 
 ### Trigger the Accessibility DevTool
 
-- Go to the **Inspect** panel >> **LambdaTest Accessibility DevTools** of your required website.
+- Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
 - Click on the **Partial Page Scan** button to start the scanning for **Accessibility Issue** for that particular section of the webpage.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/partial-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>

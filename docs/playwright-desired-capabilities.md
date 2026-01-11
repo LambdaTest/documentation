@@ -9,13 +9,15 @@ keywords:
   - playwright e2e testing
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/capabilities-for-playwright/
+url: https://www.testmu.ai/support/docs/capabilities-for-playwright
 site_name: LambdaTest
-slug: capabilities-for-playwright/
+slug: capabilities-for-playwright
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,24 +26,24 @@ slug: capabilities-for-playwright/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Execution Setup",
-          "item": "https://www.lambdatest.com/support/docs/capabilities-for-playwright/"
+          "item": `${BRAND_URL}/support/docs/capabilities-for-playwright/`
         }]
       })
     }}
 ></script>
-The LambdaTest Capability Generator allows you to automatically create the capabilities class needed to run your
-Playwright automation scripts on LambdaTest. Here are a few capabilities that you can configure to run your Playwright
+The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your
+Playwright automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Playwright
 tests.
 
 | Key | Expected Values | Description |Capability|
@@ -65,5 +67,5 @@ tests.
 | geoLocation | AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}`|
 | idleTimeout | number| Specifies the timeout of the commands in seconds. <br /><br /> <b>Default value:</b> 300 <br /><br /> <b>Max value:</b> 1800<br /><br /> If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "<number>",}}`|
 | lambdaMaskCommands | array | <b> `sendType` or `sendFill` </b> Masks the type method of the ElementHandle and Locator class. <br /><br /> <b>`sendPress`</b> Masks the press method of the ElementHandle and Locator class. <br /><br /> <b>`setHTTPCredentials`</b> Masks the HTTP credentials parameter in the newContext and newPage method of the browser class. <br/><br /> <b>`setStorageState`</b> Masks the storage state parameter in the newContext and newPage method of the browser class <br /><br /> <b>`setGeolocation`</b> Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}` <br /><br /> |
-| useSpecificBundleVersion | Boolean | If set **`true`:** LambdaTest will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers). <br /><br /> If the value set in the `browser version` capability is supported by multiple Playwright versions, LambdaTest checks your Playwright client version and sets the Playwright version accordingly. <br /><br /><br /> If set **`false` :** LambdaTest will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capability = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
+| useSpecificBundleVersion | Boolean | If set **`true`:** <BrandName /> will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers). <br /><br /> If the value set in the `browser version` capability is supported by multiple Playwright versions, <BrandName /> checks your Playwright client version and sets the Playwright version accordingly. <br /><br /><br /> If set **`false` :** <BrandName /> will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capability = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
 | lambdaSetBrowserPosition | | The `lambdaSetBrowserPosition` function is designed to arrange two browser windows on the screen, ensuring each occupies exactly half of the available screen space. This layout facilitates side-by-side browser comparisons or multitasking workflows. <br /> <br /> OS Supported - Windows <br /><br /> Browsers supported : Chrome, Microsoft Edge , pw-chroium, pw-webkit & pw-firefox | `const capability = {action: 'lambdaSetBrowserPosition',}` |

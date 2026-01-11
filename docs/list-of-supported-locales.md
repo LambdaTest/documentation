@@ -3,16 +3,19 @@ id: list-of-supported-locales
 title: Supported Locales And Languages - Appium
 hide_title: false
 sidebar_label: Supported Locales And Languages
-description: Checkout the list of all supported locales by LambdaTest.
+description: Checkout the list of all supported locales by TestMu AI.
 keywords:
   - Supported locales
   - Locales
   - Appium supported locales
   
-url: https://www.lambdatest.com/support/docs/list-of-supported-locales/
+url: https://www.testmu.ai/support/docs/list-of-supported-locales
 site_name: LambdaTest
-slug: list-of-supported-locales/
+slug: list-of-supported-locales
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: list-of-supported-locales/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "List of Supported Locales",
-          "item": "https://www.lambdatest.com/support/docs/list-of-supported-locales/"
+          "item": `${BRAND_URL}/support/docs/list-of-supported-locales/`
         }]
       })
     }}

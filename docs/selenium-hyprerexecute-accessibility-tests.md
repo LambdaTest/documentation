@@ -3,23 +3,24 @@ id: selenium-hyprerexecute-accessibility-tests
 title: Automation Tests with Accessibility Tool using Selenium
 hide_title: false
 sidebar_label:  Selenium
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your selenium tests
+description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your selenium tests
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - selenium
     - Automation
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/selenium-hyprerexecute-accessibility-tests/
+url: https://www.testmu.ai/support/docs/selenium-hyprerexecute-accessibility-tests
 site_name: LambdaTest
-slug: selenium-hyprerexecute-accessibility-tests/
+slug: selenium-hyprerexecute-accessibility-tests
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,22 +30,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/selenium-hyprerexecute-accessibility-tests/"
+          "item": `${BRAND_URL}/support/docs/selenium-hyprerexecute-accessibility-tests/`
         }]
       })
     }}
 ></script>
-This document provides a detailed, step-by-step way to execute your accessibility tests using LambdaTest's Accessibility Tool on HyperExecute.
+This document provides a detailed, step-by-step way to execute your accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute.
 :::note
 This documentation is applicable for all [supported languages](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium framework.
 
@@ -55,7 +56,7 @@ Please reach out to our <span className="doc__lt" onClick={() => window.openLTCh
 To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/).
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/).
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -65,7 +66,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own Selenium project to configure and test it. For demo purposes, we are using the TestNG sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -83,7 +84,7 @@ capabilities.setCapability("build", "LambdaTestSampleApp");
 capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -103,7 +104,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 #### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

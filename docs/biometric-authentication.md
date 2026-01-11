@@ -2,7 +2,7 @@
 id: biometric-authentication
 title: Biometric Authentication
 sidebar_label: Biometric Authentication
-description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
 keywords:
   - biometric authentication
   - Fingerprint authentication
@@ -10,15 +10,15 @@ keywords:
   - Biometric security
   - Biometric Authentication Testing
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - Facial recognition
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/biometric-authentication/
+url: https://www.testmu.ai/support/docs/biometric-authentication
 site_name: LambdaTest
-slug: biometric-authentication/
+slug: biometric-authentication
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -27,6 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,17 +38,17 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/biometric-authentication/"
+          "item": `${BRAND_URL}/support/docs/biometric-authentication/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ import RealDeviceTag from '../src/component/realDevice';
 <RealDeviceTag value="Real Device" /> 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
-LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
+<BrandName /> now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
 :::info
 **OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.

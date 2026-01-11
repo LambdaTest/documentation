@@ -1,23 +1,23 @@
 ---
 id: saucelabs-to-lambdatest-migration-guide
-title: How to migrate from Sauce Labs to LambdaTest
+title: How to migrate from Sauce Labs to TestMu AI
 hide_title: true
-sidebar_label: Sauce Labs To LambdaTest Migration
-description: Using this guide, you can seamlessly migrate from SauceLabs to LambdaTest. It showcases a hands-on implementation using which you can run tests on LambdaTest (within few minutes)
+sidebar_label: Sauce Labs To TestMu AI Migration
+description: Using this guide, you can seamlessly migrate from SauceLabs to TestMu AI. It showcases a hands-on implementation using which you can run tests on TestMu AI (within few minutes)
 keywords:
-  - saucelabs lambdatest migration
-  - saucelabs lambdatest porting
-  - saucelabs lambdatest selenium testing
-  - saucelabs lambdatest migration guide
-  - how to migrate from saucelabs to lambdatest
-  - sauce labs lambdatest migration
-  - sauce labs lambdatest porting
-  - sauce labs lambdatest selenium testing
-  - sauce labs lambdatest migration guide
-  - how to migrate from sauce labs to lambdatest
-url: https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide/
+  - saucelabs testmu ai migration
+  - saucelabs testmu ai porting
+  - saucelabs testmu ai selenium testing
+  - saucelabs testmu ai migration guide
+  - how to migrate from saucelabs to testmu ai
+  - sauce labs testmu ai migration
+  - sauce labs testmu ai porting
+  - sauce labs testmu ai selenium testing
+  - sauce labs testmu ai migration guide
+  - how to migrate from sauce labs to testmu ai
+url: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide
 site_name: LambdaTest
-slug: saucelabs-to-lambdatest-migration-guide/
+slug: saucelabs-to-testmu-migration-guide
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -35,25 +37,25 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Sauce Labs to LambdaTest migration",
-          "item": "https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide"
+          "name": "Sauce Labs to TestMu AI migration",
+          "item": `${BRAND_URL}/support/docs/saucelabs-to-testmu-migration-guide`
         }]
       })
     }}
 ></script>
 
-# Migrating From Sauce Labs To LambdaTest
+# Migrating From Sauce Labs To <BrandName />
 * * *
-LambdaTest and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to LambdaTest.
+<BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />.
 
 
 <b>[Note: This guide covers the migration of tests running on the cloud grid that uses Selenium 4 and Selenium 3]</b>
@@ -62,14 +64,14 @@ LambdaTest and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you c
 
 ***
 ## Authentication
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on LambdaTest Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on LambdaTest, visit the [LambdaTest signup page](https://accounts.lambdatest.com/register) and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the [<BrandName /> signup page](https://accounts.lambdatest.com/register) and create a new account.
 
 
-When migrating your Selenium 4 tests from BrowserStack to LambdaTest, the following updates are required in your existing code:
+When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the following updates are required in your existing code:
 
-1.  <b>Get LambdaTest Credentials</b>: You can find these credentials under Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey) and copy your Username and Access Key, then add them to the .env file to keep them safe from public exposure.
+1.  <b>Get <BrandName /> Credentials</b>: You can find these credentials under Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey) and copy your Username and Access Key, then add them to the .env file to keep them safe from public exposure.
 
-2. <b>Create .env file</b>: Securely store your LambdaTest credentials, create a .env file in the root of your project and add the following values:
+2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
 
 <Tabs className="docs__val">
@@ -82,7 +84,7 @@ public static final String access_key = "SauceLabs_AccessKey";
 ```
 </TabItem>
 
-<TabItem value="android" label="LambdaTest Selenium Grid Credentials" default>
+<TabItem value="android" label="<BrandName /> Selenium Grid Credentials" default>
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -90,7 +92,7 @@ LT_ACCESS_KEY="<your_access_key>"
 </TabItem>
 </Tabs>
 
-Once the .env file is set up, ensure your test framework correctly reads these variables at runtime. This helps keep your authentication secure and avoids hard-coding credentials within your scripts. With the credentials in place, you’re now ready to update your Hub URL for LambdaTest execution.
+Once the .env file is set up, ensure your test framework correctly reads these variables at runtime. This helps keep your authentication secure and avoids hard-coding credentials within your scripts. With the credentials in place, you’re now ready to update your Hub URL for <BrandName /> execution.
 
 
 ## Changes in Hub URL
@@ -105,7 +107,7 @@ You need to now change the hub URL in the configuration settings of your test su
 ```
 </TabItem>
 
-<TabItem value="android" label="LambdaTest Selenium Grid URL" default>
+<TabItem value="android" label="<BrandName /> Selenium Grid URL" default>
 
 ```js
 @hub.lambdatest.com/wd/hub
@@ -114,10 +116,10 @@ You need to now change the hub URL in the configuration settings of your test su
 
 </Tabs>
 
-## Configuring Selenium 4 Tests on LambdaTest
-Migrating your existing tests running on Sauce Labs Cloud to LambdaTest Selenium cloud can be done with just a few lines of change. In this guide, we will see how you can use LambdaTest desired capabilities in your tests, authenticate your test session, and run tests on the browsers in our cloud.
+## Configuring Selenium 4 Tests on <BrandName />
+Migrating your existing tests running on Sauce Labs Cloud to <BrandName /> Selenium cloud can be done with just a few lines of change. In this guide, we will see how you can use <BrandName /> desired capabilities in your tests, authenticate your test session, and run tests on the browsers in our cloud.
 
-###  LambdaTest Automation Capabilities
+###  <BrandName /> Automation Capabilities
 
 Capabilities generator let you configure the desired capabilities (or capabilities) which are configuration options that let you set the following:
 * Desired browser
@@ -126,10 +128,10 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
-To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
-For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and LambdaTest:
+For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:
 
 
 <Tabs className="docs__val">
@@ -151,7 +153,7 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 
 </TabItem>
 
-<TabItem value="android" label="LambdaTest Capabilities" default>
+<TabItem value="android" label="<BrandName /> Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -170,10 +172,10 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 
 
-## Configuring Selenium 3 Tests on LambdaTest
-Migrating your existing tests running on Sauce Labs Cloud to LambdaTest Selenium cloud can be done with just a few lines of change. In this guide, we will see how you can use LambdaTest desired capabilities in your tests, authenticate your test session, and run tests on the browsers in our cloud.
+## Configuring Selenium 3 Tests on <BrandName />
+Migrating your existing tests running on Sauce Labs Cloud to <BrandName /> Selenium cloud can be done with just a few lines of change. In this guide, we will see how you can use <BrandName /> desired capabilities in your tests, authenticate your test session, and run tests on the browsers in our cloud.
 
-###  LambdaTest Automation Capabilities
+###  <BrandName /> Automation Capabilities
 
 Capabilities generator let you configure the desired capabilities (or capabilities) which are configuration options that let you set the following:
 * Desired browser
@@ -182,10 +184,10 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
-To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
-For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and LambdaTest:
+For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:
 
 <Tabs className="docs__val">
 
@@ -206,7 +208,7 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 
 </TabItem>
 
-<TabItem value="android" label="LambdaTest Capabilities" default>
+<TabItem value="android" label="<BrandName /> Capabilities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -226,20 +228,20 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 
 
-## Hands On Guide -  LambdaTest Migration
+## Hands On Guide -  <BrandName /> Migration
 ***
-Let’s walk through a practical example demonstrating how to migrate a Selenium 4 test to LambdaTest. In this scenario, we launch the latest Chrome browser on a Windows 10 machine.
+Let’s walk through a practical example demonstrating how to migrate a Selenium 4 test to <BrandName />. In this scenario, we launch the latest Chrome browser on a Windows 10 machine.
 
 **Test Scenario**:
 
-This test script performs a basic text validation on the website [LambdaTest eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the LambdaTest cloud.
+This test script performs a basic text validation on the website [<BrandName /> eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the <BrandName /> cloud.
 
 
 
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="LambdaTest Execution With Selenium 4 Capabilities" default>
+<TabItem value="ios" label="<BrandName /> Execution With Selenium 4 Capabilities" default>
 
 ```java
 // TextValidationTest.java
@@ -305,7 +307,7 @@ public class TextValidationTest {
 
 </TabItem>
 
-<TabItem value="android" label="LambdaTest Execution With Selenium 3 Capabilities" default>
+<TabItem value="android" label="<BrandName /> Execution With Selenium 3 Capabilities" default>
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
@@ -377,25 +379,25 @@ public class TextValidationTest {
 
 **Result**
 
-Visit LambdaTest Web Automation dashboard to view your test execution result.
+Visit <BrandName /> Web Automation dashboard to view your test execution result.
 
-<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="TestMu AI text validation result" width="1024" height="667" />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Sauce Labs To LambdaTest Migration
+       Sauce Labs To <BrandName /> Migration
       </span>
     </li>
   </ul>

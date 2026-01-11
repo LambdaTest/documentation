@@ -4,16 +4,16 @@ title: GitHub Actions Pipeline Integration with SmartUI
 sidebar_label: GitHub Actions
 description: SmartUI now integrates with GitHub Actions Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - smart ui integration
   - smart ui integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
   - github ci cd
-url: https://www.lambdatest.com/support/docs/smartui-with-github-actions/
+url: https://www.testmu.ai/support/docs/smartui-with-github-actions
 site_name: LambdaTest
-slug: smartui-with-github-actions/
+slug: smartui-with-github-actions
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GitHub Actions Pipeline Integration",
-          "item": "https://www.lambdatest.com/support/docs/smartui-with-github-actions/"
+          "item": `${BRAND_URL}/support/docs/smartui-with-github-actions/`
         }]
       })
     }}
@@ -53,7 +55,7 @@ This document will show you how to integrate GitHub Actions Pipeline with SmartU
 To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
 <a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
@@ -344,7 +346,7 @@ If you encounter issues not covered here:
 
 - Review [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -360,12 +362,12 @@ If you encounter issues not covered here:
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

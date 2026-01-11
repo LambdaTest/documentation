@@ -5,19 +5,21 @@ hide_title: false
 sidebar_label: Browser Options
 description: This document leverages you to play around your browser options for setting up in the selenium
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium browser
   - chrome
   - firefox
   - edge
-url: https://www.lambdatest.com/support/docs/selenium-set-browser-options/
+url: https://www.testmu.ai/support/docs/selenium-set-browser-options
 site_name: LambdaTest
-slug: selenium-set-browser-options/
+slug: selenium-set-browser-options
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,18 +28,18 @@ import TabItem from '@theme/TabItem';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Browser Configuration",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Set Browser Option",
-          "item": "https://www.lambdatest.com/support/docs/selenium-set-browser-options/"
+          "item": `${BRAND_URL}/support/docs/selenium-set-browser-options/`
         }]
       })
     }}
@@ -121,7 +123,7 @@ Selenium lets you set browser arguments for Chromium based browsers. When select
 
 ## Desired Capability to Automate IE Mode in Microsoft Edge
 
-LambdaTest's Automation allows you to automate IE Mode in Microsoft Edge on Windows 11. You can pass the below desired capability in your test script and execute your tests.
+<BrandName />'s Automation allows you to automate IE Mode in Microsoft Edge on Windows 11. You can pass the below desired capability in your test script and execute your tests.
 
 ```java
 InternetExplorerOptions browserOptions = new InternetExplorerOptions();

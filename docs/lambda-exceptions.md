@@ -1,9 +1,9 @@
 ---
 id: lambda-exceptions
-title: View Assertion Errors On LambdaTest
+title: View Assertion Errors On TestMu AI
 hide_title: true
 sidebar_label: View Assertion Errors Using Lambda Exceptions
-description: Learn how to manage and handle GET request errors in your Selenium automation scripts using the Lambda Exceptions features of LambdaTest.
+description: Learn how to manage and handle GET request errors in your Selenium automation scripts using the Lambda Exceptions features of TestMu AI.
 keywords:
 - AssertionError
 - Assertion Errors
@@ -14,10 +14,12 @@ keywords:
 - Lambda Exception
 - Assertion Failure
 
-url: https://www.lambdatest.com/support/docs/lambda-exceptions/
+url: https://www.testmu.ai/support/docs/lambda-exceptions
 site_name: LambdaTest
-slug: lambda-exceptions/
+slug: lambda-exceptions
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,31 +28,31 @@ slug: lambda-exceptions/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "View Assertion Errors",
-          "item": "https://www.lambdatest.com/support/docs/lambda-exceptions/"
+          "item": `${BRAND_URL}/support/docs/lambda-exceptions/`
         }]
       })
     }}
 ></script>
 
-# View Assertion Errors On LambdaTest
+# View Assertion Errors On <BrandName />
 
 ***
 While handling GET requests in your Selenium scripts, many times the assertion might fail. To view these assertion errors as exceptions and handle them better, you can now use the Lambda Exceptions feature.
 
 ## What Are Lambda Exceptions?
 * * *
-Lambda Exception is the feature of LambdaTest, by which you can easily manage and handle your GET request errors, like AssertionError. By using this feature, the error gets displayed as an exception in the Exception tab of your test.
+Lambda Exception is the feature of <BrandName />, by which you can easily manage and handle your GET request errors, like AssertionError. By using this feature, the error gets displayed as an exception in the Exception tab of your test.
 
 For example:
 
@@ -58,7 +60,7 @@ For example:
 
 ## How To Use Lambda Exception?
 * * *
-While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer the below Java syntax to catch this error and push it to LambdaTest using Lambda Exceptions.
+While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer the below Java syntax to catch this error and push it to <BrandName /> using Lambda Exceptions.
 
 ```javascript
 try {
@@ -71,7 +73,7 @@ try {
 }
 ```
 
-In the above syntax, when the AssertionError is caught in the catch{} block, the exception message is added in the form of an array of Strings. This message is then pushed to LambdaTest using the Lambda Exceptions feature, as shown via the JavascriptExecutor command.
+In the above syntax, when the AssertionError is caught in the catch{} block, the exception message is added in the form of an array of Strings. This message is then pushed to <BrandName /> using the Lambda Exceptions feature, as shown via the JavascriptExecutor command.
 
 ## Lambda Exception Demo
 * * *
@@ -81,7 +83,7 @@ For demo purpose, we will create a script to:
 * Fetch the title
 * Assert the title with expected value
 
-### View Exception on LambdaTest Using Lambda Exception
+### View Exception on <BrandName /> Using Lambda Exception
 * * *
 Below is the complete code for this script, using TestNG framework in Java.
 
@@ -172,9 +174,9 @@ Upon executing the above test as a TestNG script, you will notice that the test 
 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception-error.webp').default} alt="lambdatest exceptions"  className="doc_img" width="768" height="346"/>
 
-### View StackTrace on LambdaTest Using Lambda Exception
+### View StackTrace on <BrandName /> Using Lambda Exception
 * * *
-You can even view the complete StackTrace on the LambdaTest platform, using the Lambda Exceptions feature. For this, you need to convert the StackTrace to String and print it in the form of an array of Strings. Below is the complete script to print the StackTrace, using the TestNG framework in Java:
+You can even view the complete StackTrace on the <BrandName /> platform, using the Lambda Exceptions feature. For this, you need to convert the StackTrace to String and print it in the form of an array of Strings. Below is the complete script to print the StackTrace, using the TestNG framework in Java:
 
 ```javascript
 package com.lambdatest;
@@ -268,7 +270,7 @@ Upon executing the above test as a TestNG script, it will provide you the same r
 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-StackTrace.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
-Below is the complete StackTrace printed on the LambdaTest platform, generated from above script.
+Below is the complete StackTrace printed on the <BrandName /> platform, generated from above script.
 
 ```javascript
 java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [Most Powerful Cross Browser Testing Tool Online | Lambdatest] at
@@ -315,12 +317,12 @@ That’s it! You can now easily handle and manage exceptions using the Lambda Ex
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

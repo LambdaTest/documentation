@@ -1,8 +1,8 @@
----
+﻿---
 id: smart-ui-cypress
-title: Getting started with SmartUI using Cypress On LambdaTest
+title: Getting started with SmartUI using Cypress On TestMu AI
 sidebar_label: Cypress
-description: Master Visual UI Testing with Cypress on LambdaTest Automation Cloud across 40+ browser versions through this comprehensive documentation.
+description: Master Visual UI Testing with Cypress on TestMu AI Automation Cloud across 40+ browser versions through this comprehensive documentation.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smart-ui-cypress/
-slug: smart-ui-cypress/
+url: https://www.testmu.ai/support/docs/smart-ui-cypress
+slug: smart-ui-cypress
 
 ---
 
@@ -27,6 +27,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,33 +37,33 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": `${BRAND_URL}/support/docs/smart-ui-cypress/`
         }]
       })
     }}
 ></script>
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with Cypress
 
 - Basic understanding of Cypress is required.
 - Cypress version should be higher than 9.5.0. Click [here](https://docs.cypress.io/guides/references/changelog) to know more
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Steps to create a SmartUI Project
 
@@ -149,7 +151,7 @@ describe("Cypress test with Visual Regression", () => {
 });
 ```
 
-**Step 5:** Run the test on the LambdaTest platform by executing the below-run command:
+**Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
 
 ```bash
 lambdatest-cypress run
@@ -157,30 +159,30 @@ lambdatest-cypress run
 
 **Step 6:** You can now see the SmartUI dashboard to view the results.
 
-For additional information about Cypress framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/)
+For additional information about Cypress framework please explore the documentation [here](/support/docs/getting-started-with-cypress-testing/)
 
 
 
 ## Advanced Options for Screenshot Comparison
 
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
   
 
-  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
+  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](/support/docs/test-settings-options/).
   
 
-  **HTML DOM Config and Options** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](https://www.lambdatest.com/support/docs/html-dom-smartui-options/).
+  **HTML DOM Config and Options** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

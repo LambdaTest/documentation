@@ -5,29 +5,30 @@ hide_title: false
 sidebar_label: HyperExecute CLI - Run test on HyperExecute
 description: Explains about HyperExecute CLI
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute
   - hyperexecute automation grid online
-  - lambdatest hypterest tutorial
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute matrix execution
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid
 site_name: LambdaTest
-slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
+slug: hyperexecute-cli-run-tests-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,24 +38,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With HyperExecute on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/"
+          "name": "Getting Started With HyperExecute on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-hyperexecute/`
         }]
       })
     }}
 ></script>
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
-> HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the LambdaTest-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. LambdaTest assumes no liability for any losses arising from failure to comply.
+> HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the <BrandName />-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. <BrandName /> assumes no liability for any losses arising from failure to comply.
 
 ## Download the HyperExecute CLI
 
@@ -67,7 +68,7 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
 ## Verifying the Authenticity of the CLI
-To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. LambdaTest signs all official HyperExecute CLI releases for security and integrity assurance.
+To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. <BrandName /> signs all official HyperExecute CLI releases for security and integrity assurance.
 
 <Tabs className="docs__val">
 
@@ -101,7 +102,7 @@ codesign -dvvv <PATH_TO_CLI>
 **Step 4:** Select the listed signature and click Details. <br />
 **Step 5:** Click View Certificate → Details to inspect the certificate information. <br />
 
-This certificate should display LambdaTest, Inc. as the verified publisher.
+This certificate should display <BrandName />, Inc. as the verified publisher.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cli/windows-verification.png').default} alt="Image"  className="doc_img"/>
 
@@ -135,7 +136,7 @@ The various flags that are supported are listed below.
 | [--force-clean-artifacts](#--force-clean-artifacts) | NA | Download the updated artifacts of your job. |
 | [-h, --help](#-h---help) | NA | Help for hyperexecute. |
 | [--job-secret-file](#--job-secret-file) | string | Enter your secrets file path |
-| [-k, --key](#-k---key) | string | LambdaTest Access Key. |
+| [-k, --key](#-k---key) | string | <BrandName /> Access Key. |
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
 --onprem-host
@@ -148,7 +149,7 @@ The various flags that are supported are listed below.
 | [--target-path](#--target-path) | string | Upload the files and folders as part of the suite payload. |
 | [--tests-per-tunnel](#--tests-per-tunnel) | INT | Run the number of tests via tunnel. |
 | [-z, --use-zip](#-z---use-zip) | string | Path of the zip file that needs to be uploaded. |
-| [-u, --user](#-u---user) | string | LambdaTest username. |
+| [-u, --user](#-u---user) | string | <BrandName /> username. |
 | [--vars](#--vars) | string |  Method used to name keys. |
 | [--validate](#--validate) | NA |  Validate HyperExecute YAML file. |
 | [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
@@ -325,7 +326,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 ***
 
 ### `-k, --key`
-The access key of your LambdaTest account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
+The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -358,15 +359,15 @@ This flag allows you to preserve the job payload after the job is completed succ
 ***
 
 ### `--runson`
-This flag overrides the defined OS value in your YAML file's [`runson`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode execution.
+This flag overrides the defined OS value in your YAML file's [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode execution.
 
-In case of [AutoSplit](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/) mode:
+In case of [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/) mode:
 
 ```bash
 --runson linux
 ```
 
-In case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode:
+In case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode:
 
 ```bash
 --runson linux,win,win11,mac,mac13
@@ -438,7 +439,7 @@ In another scenario, suppose you first created a folder. Inside that folder, you
 ***
 
 ### `-u, --user`
-The username of your LambdaTest account. 
+The username of your <BrandName /> account. 
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

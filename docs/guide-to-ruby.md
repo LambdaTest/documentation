@@ -3,23 +3,25 @@ id: guide-to-ruby
 title: How To Run Ruby Tests On Online Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Ruby
-description: Guide to running Ruby and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.
+description: Guide to running Ruby and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.
 keywords:
-  - lambdatest automation using ruby
+  - testmu ai automation using ruby
   - ruby and selenium automation
-  - ruby documentation lambdatest
+  - ruby documentation testmu ai
   - ruby and selenium tutorial
-  - ruby and lambdatest tutorial
-  - ruby on lambdatest selenium grid
+  - ruby and testmu ai tutorial
+  - ruby on testmu ai selenium grid
   - getting started with ruby and selenium
   - selenium testing using ruby
   - ruby selenium scripts
 
-image: /assets/images/og-images/run-ruby-tests-on-online-Selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmu.ai/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
+slug: quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,26 +31,26 @@ slug: quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Quick Guide To Run Ruby Tests On LambdaTest Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/"
+          "name": "Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid",
+          "item": `${BRAND_URL}/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Quick Guide To Run Ruby Tests On LambdaTest Selenium Grid
+# Quick Guide To Run Ruby Tests On <BrandName /> Selenium Grid
 ***
 
-LambdaTest Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 3000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on LambdaTest Selenium Grid.
+<BrandName /> Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 3000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on <BrandName /> Selenium Grid.
 
 ## Prerequisites
 ***
@@ -75,7 +77,7 @@ Once you have Ruby and Gem setup, you would now have to install Selenium depende
 ## Sample Ruby & Selenium Test To Get You started
 ***
 
-Once you have installed necessary dependencies, you are all set to run your Ruby automation scripts on LambdaTest Selenium grid. To get started you can try out the code below. It’s a simple Ruby scripts that opens up [Google.com](https://www.google.com/), searches LambdaTest in Google search bar, and then displays the title of the search result page. You can also fork it from our [Ruby GitHub repository](https://github.com/LambdaTest/ruby-selenium-sample).
+Once you have installed necessary dependencies, you are all set to run your Ruby automation scripts on <BrandName /> Selenium grid. To get started you can try out the code below. It’s a simple Ruby scripts that opens up [Google.com](https://www.google.com/), searches <BrandName /> in Google search bar, and then displays the title of the search result page. You can also fork it from our [Ruby GitHub repository](https://github.com/LambdaTest/ruby-selenium-sample).
 
 ```ruby
 //Sample Ruby and Selenium Automation Script
@@ -163,7 +165,7 @@ Here’s how you can execute the test from your terminal.
 
     ruby google-search-lambdatest.rb
 
-The first thing to note in this code is the use of remote webdriver. To access LambdaTest grid, you would have to invoke remote webdriver instead of local webdrivers. In addition, the browser enthronement details are passed on through desired_capabilities.
+The first thing to note in this code is the use of remote webdriver. To access <BrandName /> grid, you would have to invoke remote webdriver instead of local webdrivers. In addition, the browser enthronement details are passed on through desired_capabilities.
 
 In this example we are running a test on **Windows 10**, **Chrome 67 environment**. You can test your own choice of an environment by changing the parameters in the object. You can leverage our capabilities generator tool to create code for your environments.
 
@@ -171,23 +173,23 @@ In this example we are running a test on **Windows 10**, **Chrome 67 environment
 <a href="https://www.lambdatest.com/capabilities-generator">LambdaTest Capability Generator Tool</a>
 </div> 
 
-> **Tear Down**: The tear down method helps LambdaTest platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
+> **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Quick Guide To Run Ruby Tests On LambdaTest Selenium Grid
+       Quick Guide To Run Ruby Tests On <BrandName /> Selenium Grid
       </span>
     </li>
   </ul>

@@ -1,18 +1,20 @@
 ---
 id: selenium-bidi-integration
-title: BiDi Testing with Selenium WebDriver on LambdaTest
+title: BiDi Testing with Selenium WebDriver on TestMu AI
 hide_title: false
 sidebar_label: BiDi Testing
-description: Discover BiDi testing with Selenium WebDriver on LambdaTest. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
+description: Discover BiDi testing with Selenium WebDriver on TestMu AI. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium bidi testing
   - online selenium automation
-url: https://www.lambdatest.com/support/docs/selenium-bidi-integration/
+url: https://www.testmu.ai/support/docs/selenium-bidi-integration
 site_name: LambdaTest
-slug: selenium-bidi-integration/
+slug: selenium-bidi-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: selenium-bidi-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Knowledge Base",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium BiDi Testing",
-          "item": "https://www.lambdatest.com/support/docs/selenium-bidi-integration/"
+          "item": `${BRAND_URL}/support/docs/selenium-bidi-integration/`
         }]
       })
     }}
@@ -43,13 +45,13 @@ Selenium WebDriver BiDi is a W3C standard protocol used to establish communicati
 
 ## Why to use WebDriver BiDi Protocol?
 
-There are several compelling reasons to consider using BiDi testing with Selenium WebDriver on LambdaTest:
+There are several compelling reasons to consider using BiDi testing with Selenium WebDriver on <BrandName />:
 
 - **Enhanced Test Maintainability :** Traditional WebDriver relies on a request-response model, where the test script dictates every action. BiDi introduces a standardized protocol, making your tests less vulnerable to breaking due to browser version changes. This reduces maintenance overhead as your tests adapt more gracefully to browser updates.
 
 - **Boosted Automation Capabilities :** BiDi's key strength lies in its bi-directional communication and event-driven architecture. This allows for a more dynamic and responsive testing experience compared to the traditional approach. Your tests can react to events happening within the browser itself, leading to more robust and adaptable automation.
 
-- **Seamless Cross-Browser Support :** BiDi is a W3C standard, meaning it strives for consistent implementation across different browsers. This eliminates the need to write and maintain separate test scripts for each browser you want to support. With LambdaTest's vast browser grid, you can leverage BiDi for wider test coverage with a single, unified test suite.
+- **Seamless Cross-Browser Support :** BiDi is a W3C standard, meaning it strives for consistent implementation across different browsers. This eliminates the need to write and maintain separate test scripts for each browser you want to support. With <BrandName />'s vast browser grid, you can leverage BiDi for wider test coverage with a single, unified test suite.
 
 - **Fine-Grained Control over Browser Interactions :** BiDi offers access to lower-level browser functionalities that weren't readily available with traditional WebDriver. You can now interact with browser features like console logs and network traffic, providing finer control over the testing process. This can be particularly useful for debugging complex test scenarios or monitoring browser behavior in more detail.
 
@@ -57,18 +59,18 @@ There are several compelling reasons to consider using BiDi testing with Seleniu
 
 ## Steps to run tests 
 
-Following are the steps to run tests on LambdaTest using **WebdriverIO with BiDi Protocol**:
+Following are the steps to run tests on <BrandName /> using **WebdriverIO with BiDi Protocol**:
 
 ### Prerequisites
 - Node.js >= 12
-- Your LambdaTest [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your <BrandName /> [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/)
 
 ### Step 1: Setup the project
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Selenium WebdriverIO BiDi from the LambdaTest GitHub repository to run the tests.
+Download or Clone the code sample for the Selenium WebdriverIO BiDi from the <BrandName /> GitHub repository to run the tests.
 
 <a href="https://github.com/4DvAnCeBoY/wdio-bidi-tests" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -79,10 +81,10 @@ Install all the necessary dependencies of the project by running the following c
 npm install
 ```
 
-### Step 2: Set up your LambdaTest credentials
+### Step 2: Set up your <BrandName /> credentials
 
 - Create a `.env` file in the root folder of your project.
-- Add your LambdaTest [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/) in place of `<YOUR_USERNAME>` and `<YOUR_ACCESS_KEY>`
+- Add your <BrandName /> [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/) in place of `<YOUR_USERNAME>` and `<YOUR_ACCESS_KEY>`
 
 ```yaml
 LT_USERNAME = <YOUR_USERNAME>
@@ -97,7 +99,7 @@ LT_ACCESS_KEY = <YOUR_ACCESS_KEY>
   webSocketUrl: true
   ```
 
-- Run the following command in your terminal to trigger the tests on LambdaTest platform using the specified configuration.
+- Run the following command in your terminal to trigger the tests on <BrandName /> platform using the specified configuration.
 
   ```bash
   npm run wdio

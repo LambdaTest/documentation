@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Keyboard Scan
 description: Keyboard Accessibility Scanning tools highlight tab stops sequentially, making tab order identification effortless. Users can review the results, mark any overlooked interactive elements, and generate detailed keyboard accessibility reports.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - Accessibility
   - Testing
   - DevTools
@@ -13,13 +13,14 @@ keywords:
   - test issues
   - Keyboard Scan
   - Tab Order
-url: https://www.lambdatest.com/support/docs/accessibility-keyboard-scan/
+url: https://www.testmu.ai/support/docs/accessibility-keyboard-scan
 site_name: LambdaTest
-slug: accessibility-keyboard-scan/
+slug: accessibility-keyboard-scan
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "What is Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-keyboard-scan/"
+          "item": `${BRAND_URL}/support/docs/accessibility-keyboard-scan/`
         }]
       })
     }}

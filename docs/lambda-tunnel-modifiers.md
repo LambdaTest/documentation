@@ -1,20 +1,22 @@
 ---
 id: lambda-tunnel-modifiers
-title: LambdaTest Tunnel Modifiers
+title: TestMu AI Tunnel Modifiers
 hide_title: true
-sidebar_label: LambdaTest Tunnel Modifiers
-description: This document will help you understand all the modifiers/arguments used with LambdaTest Tunnel to help you test your locally hosted web pages.
+sidebar_label: TestMu AI Tunnel Modifiers
+description: This document will help you understand all the modifiers/arguments used with TestMu AI Tunnel to help you test your locally hosted web pages.
 keywords:
-  - lambdatest tunnel modifiers
-  - lambdatest help
-  - lambdatest local tunnel
-  - lambdatest tunnel tutorials
-  - lambdatest tunnel guide
-  - lambdatest tunnel guide
-url: https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/
+  - testmu ai tunnel modifiers
+  - testmu ai help
+  - testmu ai local tunnel
+  - testmu ai tunnel tutorials
+  - testmu ai tunnel guide
+  - testmu ai tunnel guide
+url: https://www.testmu.ai/support/docs/lambda-tunnel-modifiers
 site_name: LambdaTest
-slug: lambda-tunnel-modifiers/
+slug: lambda-tunnel-modifiers
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,34 +25,34 @@ slug: lambda-tunnel-modifiers/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Tunnel Modifiers",
-          "item": "https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/"
+          "item": `${BRAND_URL}/support/docs/lambda-tunnel-modifiers/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest Tunnel Modifiers
+# <BrandName /> Tunnel Modifiers
 
 ---
 
-LambdaTest Tunnel provides several command-line arguments that you can leverage to define LambdaTest Tunnel parameters. You can pass command-line arguments to either a **‘config’** file or an environment variable. It is recommended to use the latest version of LambdaTest tunnel binary to ensure compatibility with variables.
+<BrandName /> Tunnel provides several command-line arguments that you can leverage to define <BrandName /> Tunnel parameters. You can pass command-line arguments to either a **‘config’** file or an environment variable. It is recommended to use the latest version of <BrandName /> tunnel binary to ensure compatibility with variables.
 
-This document will help you understand all the modifiers/arguments used with LambdaTest Tunnel to help you test your locally hosted web pages.
+This document will help you understand all the modifiers/arguments used with <BrandName /> Tunnel to help you test your locally hosted web pages.
 
 | FLAG (SHORT) | FLAG (LONG) | DESCRIPTION | TYPE |
 |--------------|-------------|-------------|------|
-|| --allowHosts | Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
+|| --allowHosts | Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
 | | --bypassHosts | Comma separated list of hosts to bypass from tunnel. These will be routed via internet.                                                             | String  |
 |              | --callbackURL   | Callback URL for tunnel status.                                                                                                                     | String  |
 | -c           | --config        | Path of the config file to use                                                                                                                      | String  |
@@ -60,18 +62,18 @@ This document will help you understand all the modifiers/arguments used with Lam
 | -d           | --dir           | Specify the Local Directory that will be server by a file server on port 33000                                                                      | String  |
 |              | --dns           | Comma Separated List of DNS Servers                                                                                                                 | String  |
 |              | --egress-only   | Uses proxy settings only for outbound requests.                                                                                                     | N/A     |
-| -e           | --env           | The environment on which the LambdaTest Tunnel will run.                                                                                            | String  |
-| -h           | --help          | Help for the LambdaTest Tunnel                                                                                                                      | N/A     |
-|              | --infoAPIPort   | Exposes [Tunnel Info API](https://www.lambdatest.com/support/docs/advanced-tunnel-features/#tunnelinfoapis) At The Specified Port                   | Integer |
+| -e           | --env           | The environment on which the <BrandName /> Tunnel will run.                                                                                            | String  |
+| -h           | --help          | Help for the <BrandName /> Tunnel                                                                                                                      | N/A     |
+|              | --infoAPIPort   | Exposes [Tunnel Info API](/support/docs/advanced-tunnel-features/#tunnelinfoapis) At The Specified Port                   | Integer |
 |              | --ingress-only  | Routes Only Incoming Traffic Via The Proxy Specified                                                                                                | N/A     |
-| -k           | --key           | LambdaTest Access Key.                                                                                                                              | String  |
-| -l           | --load-balanced | Activates [Load Balancing](https://www.lambdatest.com/support/docs/load-balancing-in-lambda-tunnel/) for LambdaTest Tunnel                          | N/A     |
-|              | --logFile       | Location of the LambdaTest Tunnel Log File                                                                                                          | String  |
-| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](https://www.lambdatest.com/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for LambdaTest Tunnel | N/A     |
+| -k           | --key           | <BrandName /> Access Key.                                                                                                                              | String  |
+| -l           | --load-balanced | Activates [Load Balancing](/support/docs/load-balancing-in-lambda-tunnel/) for <BrandName /> Tunnel                          | N/A     |
+|              | --logFile       | Location of the <BrandName /> Tunnel Log File                                                                                                          | String  |
+| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for <BrandName /> Tunnel | N/A     |
 |              | --mode          | Specifies in which mode tunnel should run [ssh,tcp,ws]. (default "ssh")                                                                             | String  |
 |              | --ntlm          | To use Microsoft NTLM (Windows NT LAN Manager) authentication for communication or transport purposes.                                              | Boolean |
 |              | --pidfile       | Path Of Pidfile, Where Process ID will Be Written                                                                                                   | String  |
-| -p           | --port          | Port for LambdaTest Tunnel to activate.                                                                                                             | Integer |
+| -p           | --port          | Port for <BrandName /> Tunnel to activate.                                                                                                             | Integer |
 |              | --proxy-host    | Specifies the Tunnel Proxy Port hostname.                                                                                                           | String  |
 |              | --proxy-pass    | Specifies the Tunnel Proxy Port password.                                                                                                           | String  |
 |              | --proxy-port    | Specifies the port number where Tunnel proxy will activate.                                                                                         | Integer |
@@ -80,27 +82,27 @@ This document will help you understand all the modifiers/arguments used with Lam
 | -s           | --shared-tunnel | Sharing Tunnel Among Team Members                                                                                                                   | N/A     |
 |              | --sshConnType   | Specify type of ssh connection (over_22, over_443, over_ws).To use –sshConnType, specify ––mode ssh flag first.                                     | String  |
 | N/A | --maxSSHConnections | Increase the SSH Connection from Tunnel Client to Tunnel Server. Maximum allow is 30 | N/A |
-| -n           | --tunnelName    | Specifies the custom LambdaTest Tunnel name to be used.                                                                                             | String  |
-| -u           | --user          | LambdaTest Username.                                                                                                                                | String  |
+| -n           | --tunnelName    | Specifies the custom <BrandName /> Tunnel name to be used.                                                                                             | String  |
+| -u           | --user          | <BrandName /> Username.                                                                                                                                | String  |
 |              | --use-private-ip         | Sets remote address to an internal IP of client machine.                                                                                      | Boolean  |
 | -v           | --verbose       | Should Every Proxy Request Be Logged To Stdout                                                                                                      | N/A     |
-|              | --version       | Displays the installed version for LambdaTest Tunnel                                                                                                | N/A     |
+|              | --version       | Displays the installed version for <BrandName /> Tunnel                                                                                                | N/A     |
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        LambdaTest Tunnel Modifiers
+        <BrandName /> Tunnel Modifiers
       </span>
     </li>
   </ul>

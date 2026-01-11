@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-k6-setup
 title: Getting started with SmartUI using K6
 sidebar_label: K6
-description: In this documentation, learn how to perform Visual Regression testing with K6 on the LambdaTest Automation Cloud across 40+ browser versions.
+description: In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-k6-setup/
+url: https://www.testmu.ai/support/docs/smartui-k6-setup
 site_name: LambdaTest
-slug: smartui-k6-setup/
+slug: smartui-k6-setup
 
 ---
 import Tabs from '@theme/Tabs';
@@ -27,6 +27,9 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
 
@@ -60,7 +63,7 @@ $env:LT_USERNAME=YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -111,7 +114,7 @@ winget install k6
 </TabItem>
 </Tabs>
 
-4. Set up the LambdaTest credentials by using the commands below in the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+4. Set up the <BrandName /> credentials by using the commands below in the terminal. The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -172,7 +175,7 @@ Execute the test using the following command:
 npx smartui exec k6 run test.js
 ```
 
-  - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+  - You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Best Practices
 
@@ -276,7 +279,7 @@ smartuiSnapshot(response, "Page-Loaded");
    npx smartui exec k6 run test.js
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
@@ -418,8 +421,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/) for K6-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -433,24 +436,24 @@ If you encounter issues not covered here:
 - [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+- [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-For additional information about K6 framework please explore the documentation [here](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+For additional information about K6 framework please explore the documentation [here](/support/docs/k6-browser-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
@@ -462,17 +465,17 @@ For additional information about K6 framework please explore the documentation [
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

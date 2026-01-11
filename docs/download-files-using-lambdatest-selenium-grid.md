@@ -1,9 +1,9 @@
 ---
 id: download-files-using-lambdatest-selenium-grid
-title: Download Files Using LambdaTest Selenium Grid
+title: Download Files Using TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: Download Files Inside Test Machine
-description: LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts.
+description: TestMu AI Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts.
 keywords:
   - Selenium grid
   - download test
@@ -13,10 +13,12 @@ keywords:
   - base64
   - base64 encryption
   - base64 decryption
-url: https://www.lambdatest.com/support/docs/download-files-using-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/download-files-using-testmu-selenium-grid
 site_name: LambdaTest
-slug: download-files-using-lambdatest-selenium-grid/
+slug: download-files-using-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,18 +27,18 @@ slug: download-files-using-lambdatest-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Download Files",
-          "item": "https://www.lambdatest.com/support/docs/download-files-using-lambdatest-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/download-files-using-testmu-selenium-grid/`
         }]
       })
     }}
@@ -45,13 +47,13 @@ slug: download-files-using-lambdatest-selenium-grid/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Download Files Using LambdaTest Selenium Grid
+# Download Files Using <BrandName /> Selenium Grid
 
 ***
 
-While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
+While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With <BrandName /> Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
 
-LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, LambdaTest has provided three main flags using JavascriptExecutor to:
+<BrandName /> Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, <BrandName /> has provided three main flags using JavascriptExecutor to:
 
 - Check whether the downloaded file exists in the test machine.
 
@@ -670,12 +672,12 @@ Got Questions? Give a <span className="doc__lt" onClick={() => window.openLTC
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

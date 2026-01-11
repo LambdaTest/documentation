@@ -1,24 +1,26 @@
 ---
 id: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid
-title: Guide to Run Selenium IDE Tests Using LambdaTest
+title: Guide to Run Selenium IDE Tests Using TestMu AI
 hide_title: true
 sidebar_label:  Selenium IDE
-description: Guide on how to run Selenium IDE tests with LambdaTest online Selenium automation grid, for testing on 3000+ real browsers & browser versions hosted on LambdaTest cloud servers.
+description: Guide on how to run Selenium IDE tests with TestMu AI online Selenium automation grid, for testing on 3000+ real browsers & browser versions hosted on TestMu AI cloud servers.
 keywords:
  - lamdatest
  - selenium ide
- - selenium ide lambdatest
+ - selenium ide testmu ai
  - selenium ide runner
  - side runner
- - side lambdatest
+ - side testmu ai
  - how to run test cases in selenium ide
  - how to run selenium ide tests from command line
  - selenium side runner
  - selenium ide side runner
-url: https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/
+url: https://www.testmu.ai/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid
 site_name: LambdaTest
-slug: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/
+slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,33 +29,33 @@ slug: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Codeless Automation Tools",
-          "item": "https://www.lambdatest.com/support/docs/integrations-with-codeless-automation-tools/"
+          "item": `${BRAND_URL}/support/docs/integrations-with-codeless-automation-tools/`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Running Selenium IDE Tests",
-          "item": "https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/"
+          "item": `${BRAND_URL}/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/`
         }]
       })
     }}
 ></script>
 
-# Run Selenium IDE Tests with LambdaTest Selenium Grid
+# Run Selenium IDE Tests with <BrandName /> Selenium Grid
 * * *
 [Selenium IDE](https://www.lambdatest.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
 
-In this document, we will see how to run Selenium IDE tests on LambdaTest cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
+In this document, we will see how to run Selenium IDE tests on <BrandName /> cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
 
 ## Prerequisites
 
@@ -69,11 +71,11 @@ In this document, we will see how to run Selenium IDE tests on LambdaTest cloud 
 ```
 
 
-*   You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
+*   You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
 
-<img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="LambdaTest Access Key" width="462" height="325" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="<BrandName /> Access Key" width="462" height="325" className="doc_img"/>
 
-For the demonstration of executing Selenium IDE tests on the LambdaTest grid, we’ll create a test suite that comprises of four test cases- two to perform a search for ‘LambdaTest’ on Google & DuckDuckGo, and the other two to perform a search for ‘LambdaTest Blog’ on Google & DuckDuckGo.
+For the demonstration of executing Selenium IDE tests on the <BrandName /> grid, we’ll create a test suite that comprises of four test cases- two to perform a search for ‘<BrandName />’ on Google & DuckDuckGo, and the other two to perform a search for ‘<BrandName /> Blog’ on Google & DuckDuckGo.
 
 ## Enabling Parallel Testing for Selenium IDE
 
@@ -85,15 +87,15 @@ The parallel testing on the [Cloud Selenium Grid](https://www.lambdatest.com/sel
 *   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src={require('../assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp').default} alt="Test Suite Properties" width="893" height="323" className="doc_img"/>
 *   Save the SIDE project.
 
-We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on LambdaTest Selenium Cloud Grid.
+We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on <BrandName /> Selenium Cloud Grid.
 
-## Executing Selenium IDE Tests on LambdaTest Selenium Cloud Grid
+## Executing Selenium IDE Tests on <BrandName /> Selenium Cloud Grid
 
 * * *
 
 1.  **Set the [Desired Capabilities in Selenium](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
-    The [LambdaTest Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
+    The [<BrandName /> Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 ```javascript
         capabilities = {
                 "platform" : "Windows 10",
@@ -105,7 +107,7 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
     In the string format, it will be represented as: **"browserName='chrome' version='72.0' platform='Windows 10'"**
 ```
 
-2.  **Get the Grid URL for executing tests on LambdaTest.** Get your username and access key from your LambdaTest's Profile section (as shown in the prerequisites), and replace it in the below URL.
+2.  **Get the Grid URL for executing tests on <BrandName />.** Get your username and access key from your <BrandName />'s Profile section (as shown in the prerequisites), and replace it in the below URL.
 
     ```javascript
     https://user-name:access-key@hub.lambdatest.com/wd/hub
@@ -131,14 +133,14 @@ selenium-side-runner --max-workers <num of="" parallel="" processes="">--server 
         
     For this article, we have set the number of parallel processes as '4'
 
-5.  Now we have all the components of the SIDE Runner command to execute the tests. So we will **run the Selenium IDE tests on LambdaTest Selenium Cloud Grid.** Navigate to the directory where the .SIDE file is located (here it is located at "_LambdaTest-IDE.side_") and execute the below command in the terminal, after replacing the GRID URL:
+5.  Now we have all the components of the SIDE Runner command to execute the tests. So we will **run the Selenium IDE tests on <BrandName /> Selenium Cloud Grid.** Navigate to the directory where the .SIDE file is located (here it is located at "_<BrandName />-IDE.side_") and execute the below command in the terminal, after replacing the GRID URL:
 
 ```javascript
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c "browserName='chrome' version='72.0' platform='Windows 10'"
 ```
 
 
-We have successfully executed all the steps to run Selenium IDE tests on LambdaTest Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your LambdaTest profile](https://automation.lambdatest.com/timeline).
+We have successfully executed all the steps to run Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your <BrandName /> profile](https://automation.lambdatest.com/timeline).
 
 Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests: <img loading="lazy" src={require('../assets/images/uploads/SIDE-Runner-execution-snapshot-1.webp').default} alt="test execution snapshots" width="1353" height="493" className="doc_img"/> <img loading="lazy" src={require('../assets/images/uploads/automation-timeline-snapshot.webp').default} alt="automation test timeline" width="1353" height="493" className="doc_img"/>
 
@@ -161,12 +163,12 @@ selenium-side-runner --params "a='example-value' a.b='another example-value' a.b
 
 * * *
 
-Congrats! We have successfully executed our Selenium IDE tests on LambdaTest Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.lambdatest.com) on 3000+ real browsers and operating systems online.
+Congrats! We have successfully executed our Selenium IDE tests on <BrandName /> Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.lambdatest.com) on 3000+ real browsers and operating systems online.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

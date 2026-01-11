@@ -3,15 +3,17 @@ id: devrev-integration
 title: DevRev Integration
 hide_title: true
 sidebar_label: DevRev
-description: Integrate LambdaTest with DevRev for efficient one-click bug logging of your web applications and eliminate the painpoint of maintaining bugs and tasks manually.
+description: Integrate TestMu AI with DevRev for efficient one-click bug logging of your web applications and eliminate the painpoint of maintaining bugs and tasks manually.
 keywords:
-  - lambdatest integration with devrev
-  - lambdatest and devrev integration 
+  - testmu ai integration with devrev
+  - testmu ai and devrev integration 
   - devrev integration
-url: https://www.lambdatest.com/support/docs/devrev-integration/
+url: https://www.testmu.ai/support/docs/devrev-integration
 site_name: LambdaTest
-slug: devrev-integration/
+slug: devrev-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: devrev-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "DevRev Integration",
-          "item": "https://www.lambdatest.com/support/docs/devrev-integration/"
+          "item": `${BRAND_URL}/support/docs/devrev-integration/`
         }]
       })
     }}
@@ -42,22 +44,22 @@ slug: devrev-integration/
 
 DevRev is a customer relationship management (CRM) system that seamlessly integrates customer support conversations and tickets with developer issues and product enhancements.
 
-With the help of LambdaTest and DevRev Integration, you can file bugs while performing live-interactive testing of your web applications from the LambdaTest platform to your DevRev instance, thus saving time and effort.
+With the help of <BrandName /> and DevRev Integration, you can file bugs while performing live-interactive testing of your web applications from the <BrandName /> platform to your DevRev instance, thus saving time and effort.
 
-## Integrating DevRev With LambdaTest
+## Integrating DevRev With <BrandName />
 ***
 
 :::info Note
-Before enabling LambdaTest and DevRev integration, ensure you have administrator or user level access.
+Before enabling <BrandName /> and DevRev integration, ensure you have administrator or user level access.
 :::
 
-1. Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+1. Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 2. Select **Integrations** from the left sidebar. Then choose **DevRev** from the BUG TRACKER section.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/select_devrev.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-3. It will route you to the LambdaTest installing console where you need to enter DevOrg URL and DevRev Personal Access Token.
+3. It will route you to the <BrandName /> installing console where you need to enter DevOrg URL and DevRev Personal Access Token.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/2.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
@@ -73,7 +75,7 @@ Before enabling LambdaTest and DevRev integration, ensure you have administrator
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/general.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-4. You will notice the DevOrg URL. Copy this URL and paste it in the LambdaTest installing console.
+4. You will notice the DevOrg URL. Copy this URL and paste it in the <BrandName /> installing console.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/devorg_url.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
@@ -96,16 +98,16 @@ Before enabling LambdaTest and DevRev integration, ensure you have administrator
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/token.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-5. Paste the copied API token in the LambdaTest installing console.
+5. Paste the copied API token in the <BrandName /> installing console.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/install.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-It will now integrate your LambdaTest account with DevRev.
+It will now integrate your <BrandName /> account with DevRev.
 
 ## One-Click Bug Logging With DevRev
 ***
 
-1. Once you are in the LambdaTest Dashboard, navigate to **Real Time Testing > Browser Testing** from the left sidebar menu.
+1. Once you are in the <BrandName /> Dashboard, navigate to **Real Time Testing > Browser Testing** from the left sidebar menu.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/browser_testing.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
@@ -129,20 +131,20 @@ A cloud-based real operating system will fire up running real browsers where you
 
 It will log your bugs to the DevRev instance.
 
-6. Navigate to the LambdaTest Dashboard and go to **Manage > Issue Tracker**. 
+6. Navigate to the <BrandName /> Dashboard and go to **Manage > Issue Tracker**. 
 
 8. In Issue Tracker, you will see the bugs that you just logged in DevRev along with their associated test environment details. To view your logged bugs, click on the **upper right arrow in the square button**.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/arrow_icon.png').default} alt="Image" width="1127" height="425"  className="doc_img"/>
 
-It will redirect to the DevRev instance where you can view your filed bugs along with their test environment details such as Test ID, Reproduce on LambdaTest link, Test URL, Operating System, Browser, and Resolution.
+It will redirect to the DevRev instance where you can view your filed bugs along with their test environment details such as Test ID, Reproduce on <BrandName /> link, Test URL, Operating System, Browser, and Resolution.
 
 <img loading="lazy" src={require('../assets/images/devrev-integration/logged_issue.png').default} alt="Image" width="1366" height="625"  className="doc_img"/>
 
 ## Uninstalling The DevRev Integration
 ***
 
-1. Sign in to your LambdaTest account and visit **Integrations** from the left sidebar menu.
+1. Sign in to your <BrandName /> account and visit **Integrations** from the left sidebar menu.
 
 2. From **My Integrations**, click **REMOVE** under the DevRev block.
 
@@ -152,12 +154,12 @@ It will redirect to the DevRev instance where you can view your filed bugs along
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

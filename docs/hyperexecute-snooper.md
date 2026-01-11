@@ -5,13 +5,15 @@ hide_title: false
 sidebar_label: Using Snooper on Hyperexecute
 description: Learn more about Using Snooper on Hyperexecute
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-snooper/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-snooper
 site_name: Using Snooper on Hyperexecute
-slug: hyperexecute-snooper/
+slug: hyperexecute-snooper
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: hyperexecute-snooper/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Using Snooper on Hyperexecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-snooper"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-snooper`
         }]
       })
     }}

@@ -3,10 +3,10 @@ id: getting-started-with-mobile-app-real-time-testing
 title: Getting started with Mobile App Real Time Testing
 hide_title: false
 sidebar_label: Getting Started
-description: Test your mobile apps on real devices in real-time with LambdaTest. Easily launch virtual machines and test across various OS and versions.
+description: Test your mobile apps on real devices in real-time with TestMu AI. Easily launch virtual machines and test across various OS and versions.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool
@@ -16,10 +16,12 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/getting-started-with-mobile-app-real-time-testing/
+url: https://www.testmu.ai/support/docs/getting-started-with-mobile-app-real-time-testing
 site_name: LambdaTest
-slug: getting-started-with-mobile-app-real-time-testing/
+slug: getting-started-with-mobile-app-real-time-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ slug: getting-started-with-mobile-app-real-time-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-mobile-app-real-time-testing/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-mobile-app-real-time-testing/`
         }]
       })
     }}
 ></script>
-Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With LambdaTest, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
+Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With <BrandName />, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
 
 ## Launch the Virtual Machine
 
@@ -68,6 +70,6 @@ The Real-Time Testing dashboard provides an intuitive interface for managing you
 
 - **Tunnel :** For testing on environments that are not publicly accessible, configure the Tunnel settings to enable testing on staging or local sites.
 
-- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access LambdaTest's real device cloud.
+- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access <BrandName />'s real device cloud.
 
 - **Start Button :** Located on the right side of the URL field, this button initializes the testing session once you have chosen your device and browser configuration.

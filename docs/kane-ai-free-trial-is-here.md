@@ -5,16 +5,17 @@ hide_title: false
 sidebar_label: KaneAI Free Trial
 description: Here's what your KaneAI free trial plan includes. 
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai Web test
-url: https://www.lambdatest.com/support/docs/kane-ai-free-trial-is-here
+url: https://www.testmu.ai/support/docs/kane-ai-free-trial-is-here
 site_name: LambdaTest
-slug: kane-ai-free-trial-is-here/
+slug: kane-ai-free-trial-is-here
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +25,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Free Trial",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-free-trial-is-here"
+          "item": `${BRAND_URL}/support/docs/kane-ai-free-trial-is-here`
         }]
       })
     }}

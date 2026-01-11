@@ -3,23 +3,25 @@ id: hyperexecute-slack-integration
 title: Receive Instant Notification on your Jobs Directly in your Slack
 hide_title: false
 sidebar_label: Slack
-description:  Streamline testing & communication! Integrate LambdaTest HyperExecute with Slack for real-time test notifications & updates. 
+description:  Streamline testing & communication! Integrate TestMu AI HyperExecute with Slack for real-time test notifications & updates. 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - slack
   - Integrations
   - Products
   - Automated testing alerts
   - DevOps communication
-url: https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-slack-integration
 site_name: LambdaTest
-slug: hyperexecute-slack-integration/
+slug: hyperexecute-slack-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-slack-integration/`
         }]
       })
     }}
@@ -49,12 +51,12 @@ This document details the seamless integration between HyperExecute and Slack, e
 
 ## Prerequisite
 
-- An active LambdaTest account with Admin or User-level access. 
+- An active <BrandName /> account with Admin or User-level access. 
 - Set up a dedicated Slack channel where you want to receive notifications from HyperExecute.
 
 ## Step 1: Navigate to the Integration Page
 
-- Login to your LambdaTest Account.
+- Login to your <BrandName /> Account.
 - Navigate to the **Settings** > **Integration** page.
 - Select the **Communication** tab and search for Slack.
 
@@ -62,7 +64,7 @@ This document details the seamless integration between HyperExecute and Slack, e
 <source src= {require('../assets/videos/hyperexecute/integration/products/slack/1.mp4').default} type="video/mp4" />
 </video>
 
-## Step 2: Integrate the Slack with your LambdaTest Account
+## Step 2: Integrate the Slack with your <BrandName /> Account
 
 - Click on the **Connect** button and then **Install** for the Slack integration.
 

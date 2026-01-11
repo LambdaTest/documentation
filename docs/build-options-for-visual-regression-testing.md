@@ -1,8 +1,8 @@
----
+﻿---
 id: smart-ui-build-options
 title: Build Configuration and Options for Smart UI
 sidebar_label: Build Config & Options
-description: Navigate through our support doc to adeptly build Configuration & Options for Smart UI using LambdaTest!
+description: Navigate through our support doc to adeptly build Configuration & Options for Smart UI using TestMu AI!
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,14 +15,16 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smart-ui-cypress/
-slug: smart-ui-build-options/
+url: https://www.testmu.ai/support/docs/smart-ui-cypress
+slug: smart-ui-build-options
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,24 +33,24 @@ import TabItem from '@theme/TabItem';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/build-options-for-visual-regression-testing/"
+          "item": `${BRAND_URL}/support/docs/build-options-for-visual-regression-testing/`
         }]
       })
     }}
 ></script>
 
-Using the LambdaTest platform, perform regression testing in just one click and explore various possible solutions for grouping your screenshots into different builds and map as per your testing suite needs.
+Using the <BrandName /> platform, perform regression testing in just one click and explore various possible solutions for grouping your screenshots into different builds and map as per your testing suite needs.
 
 ## Enabling build mapping for multiple screenshots
 
@@ -204,12 +206,12 @@ We are provide multiple build status options for the project owners to check the
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -14,8 +14,8 @@ description: In this documentation, learn how to group screenshots in a single b
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-cli-build-name/
+url: https://www.testmu.ai/support/docs/smartui-cli
+slug: smartui-cli-build-name
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,18 +33,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-build-name/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-build-name/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ SmartUI CLI allows you to group screenshots in a build name and append new scree
 ## Prerequisites
 
 - Basic understanding of Command Line Interface
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
 

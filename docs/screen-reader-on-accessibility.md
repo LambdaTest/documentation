@@ -2,15 +2,17 @@
 id: screen-reader-on-accessibility
 title: Screen Reader
 sidebar_label: Screen Reader
-description: Test your app's accessibility with LambdaTest's Screen Reader as per the WCAG standards.
+description: Test your app's accessibility with TestMu AI's Screen Reader as per the WCAG standards.
 keywords:
   - screen reader
-  - framework on lambdatest
+  - framework on testmu ai
   - accessibility
-url: https://www.lambdatest.com/support/docs/screen-reader-on-accessibility/
+url: https://www.testmu.ai/support/docs/screen-reader-on-accessibility
 site_name: LambdaTest
-slug: screen-reader-on-accessibility/
+slug: screen-reader-on-accessibility
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: screen-reader-on-accessibility/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Screen Reader on Accessibility",
-          "item": "https://www.lambdatest.com/support/docs/screen-reader-on-accessibility/"
+          "item": `${BRAND_URL}/support/docs/screen-reader-on-accessibility/`
         }]
       })
     }}
@@ -45,13 +47,13 @@ Screen readers are essential for making digital environments accessible to visua
 - **Improve Usability :** Highlight areas where the user experience can be improved for all users, not just those with visual impairments.
 - **Boost Engagement :** Make websites and applications more usable for a diverse audience, improving user satisfaction and reach.
 
-## Screen Reader Support in LambdaTest Accessibility Testing
-LambdaTest supports the following screen readers during Accessibility Testing:
+## Screen Reader Support in <BrandName /> Accessibility Testing
+<BrandName /> supports the following screen readers during Accessibility Testing:
 
 - **NVDA (NonVisual Desktop Access)** – Windows
 - **VoiceOver** – macOS
 - **TalkBack** – Android
-> 📕 To learn more about using TalkBack for Android devices, refer to the [TalkBack Documentation](https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-app/).
+> 📕 To learn more about using TalkBack for Android devices, refer to the [TalkBack Documentation](/support/docs/screen-reader-on-real-devices-app/).
 
 These tools allow developers and testers to evaluate how well their applications or websites perform for visually impaired users, ensuring accessibility compliance and usability.
 

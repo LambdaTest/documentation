@@ -11,10 +11,12 @@ keywords:
   - test failure analysis
   - debugging
   - AI insights
-url: https://www.lambdatest.com/support/docs/analytics-ai-root-cause-analysis/
+url: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis
 site_name: LambdaTest
-slug: analytics-ai-root-cause-analysis/
+slug: analytics-ai-root-cause-analysis
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,23 +26,23 @@ slug: analytics-ai-root-cause-analysis/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "AI Root Cause Analysis",
-          "item": "https://www.lambdatest.com/support/docs/analytics-ai-root-cause-analysis/"
+          "item": `${BRAND_URL}/support/docs/analytics-ai-root-cause-analysis/`
         }]
       })
     }}
 ></script>
 
-AI Root Cause Analysis (AI RCA) in LambdaTest Analytics automatically analyzes failed tests to identify probable root causes and provides actionable insights to improve test stability and reduce debugging time. This AI-powered feature accelerates your debugging process by eliminating manual investigation and providing instant, comprehensive failure analysis.
+AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics automatically analyzes failed tests to identify probable root causes and provides actionable insights to improve test stability and reduce debugging time. This AI-powered feature accelerates your debugging process by eliminating manual investigation and providing instant, comprehensive failure analysis.
 
 ## What is AI Root Cause Analysis?
 
@@ -54,11 +56,11 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 ## Prerequisites for AI RCA
 
-1. **Active LambdaTest Account**: You should have an active LambdaTest account with appropriate permissions.
+1. **Active <BrandName /> Account**: You should have an active <BrandName /> account with appropriate permissions.
 2. **Subscription Plan**: This feature is available for users with HyperExecute or App/Web Automation subscription plans.
 3. **Available Credits**: Tests will only be processed through RCA when sufficient credits are available. For more information on credit management, see our [Credits Management](/docs/credits-management/) documentation.
 4. **Test Failures**: AI RCA requires at least one test failure to generate analysis. The system learns from your test execution patterns.
-5. **Access to Insights**: You should have access to the LambdaTest Insights platform under **Insights** tab.
+5. **Access to Insights**: You should have access to the <BrandName /> Insights platform under **Insights** tab.
 
 ## Configuration & Setup
 
@@ -66,7 +68,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 ### Step 1: Access Organization Settings
 
-1. Navigate to **Organization Settings** in your LambdaTest dashboard
+1. Navigate to **Organization Settings** in your <BrandName /> dashboard
 2. In the left sidebar, expand the **Insights** section under **Org Product Preferences**
 3. Select **Automatic AI RCA** from the available options
 
@@ -232,7 +234,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 ### Where to View RCA Results
 
-AI RCA results are available in multiple locations across the LambdaTest platform:
+AI RCA results are available in multiple locations across the <BrandName /> platform:
 
 1. **TMS Dashboard**: View RCA results directly in your test execution dashboard
 2. **HyperExecute Dashboard**: Access detailed RCA analysis for HyperExecute jobs

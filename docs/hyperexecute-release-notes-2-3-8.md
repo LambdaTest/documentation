@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Version 2.3.8
 description: Version 2.3.8
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-3-8/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-3-8
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-3-8/
+slug: hyperexecute-release-notes-2-3-8
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-release-notes-2-3-8/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-3-8/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-3-8/`
         }]
       })
     }}
@@ -57,5 +60,5 @@ Now, you can simply set:
 capabilities.setCapability("timezone", "Kolkata");
 ```
 
-📕 Learn how to use [timezone capability](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/#lambdatest-advanced-selenium-capabilities:~:text=Name%20not%20exists-,timezone,-Example%3A%20UTC%2B07)
+📕 Learn how to use [timezone capability](/support/docs/selenium-automation-capabilities/#lambdatest-advanced-selenium-capabilities:~:text=Name%20not%20exists-,timezone,-Example%3A%20UTC%2B07)
 

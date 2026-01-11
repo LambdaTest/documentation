@@ -1,21 +1,23 @@
 ---
 id: github-repo-based-oauth
-title: Integrate LambdaTest With GitHub Using Repo-Based OAuth
+title: Integrate TestMu AI With GitHub Using Repo-Based OAuth
 hide_title: true
 sidebar_label: GitHub Repo-based OAuth
-description: Easily integrate LambdaTest with GitHub using repo-based OAuth to log bugs directly from the LambdaTest platform to your GitHub repositories.
+description: Easily integrate TestMu AI with GitHub using repo-based OAuth to log bugs directly from the TestMu AI platform to your GitHub repositories.
 keywords:
-- lambdatest github integration
-- github repo oauth lambdatest
-- lambdatest bug logging github
-- connect github to lambdatest
-- lambdatest oauth setup
-- log bugs from lambdatest to github
-- github repository integration lambdatest
-url: https://www.lambdatest.com/support/docs/github-repo-based-oauth-integration/
+- testmu ai github integration
+- github repo oauth testmu ai
+- testmu ai bug logging github
+- connect github to testmu ai
+- testmu ai oauth setup
+- log bugs from testmu ai to github
+- github repository integration testmu ai
+url: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration
 site_name: LambdaTest
-slug: github-repo-based-oauth-integration/
+slug: github-repo-based-oauth-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: github-repo-based-oauth-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GitHub Repo-Based OAuth Integration",
-          "item": "https://www.lambdatest.com/support/docs/github-repo-based-oauth-integration/"
+          "item": `${BRAND_URL}/support/docs/github-repo-based-oauth-integration/`
         }]
       })
     }}
@@ -44,12 +46,12 @@ slug: github-repo-based-oauth-integration/
 # GitHub Repo-Based OAuth Integration
 ---
 
-LambdaTest allows you to integrate with GitHub using repo-based OAuth to log issues directly to your GitHub repository from the LambdaTest platform. 
+<BrandName /> allows you to integrate with GitHub using repo-based OAuth to log issues directly to your GitHub repository from the <BrandName /> platform. 
 
 ## Integrating Your GitHub Account Using Repo-Based OAuth
 ***
 
-1. Log in to your LambdaTest account. Ensure that you have either admin or user level access to view and install third-party integrations.
+1. Log in to your <BrandName /> account. Ensure that you have either admin or user level access to view and install third-party integrations.
 
 2. Navigate to **Integrations** from the left-sidebar under **Settings**.
 
@@ -61,11 +63,11 @@ LambdaTest allows you to integrate with GitHub using repo-based OAuth to log iss
 
 <img loading="lazy" src={require('../assets/images/github-oauth-integration/click-repo-based-oauth.webp').default} alt="github-integration" width="1338" height="610" className="doc_img"/>
 
-5. Click **Install** to install the LambdaTest App. 
+5. Click **Install** to install the <BrandName /> App. 
 
 <img loading="lazy" src={require('../assets/images/github-oauth-integration/install-lambdatest-app.webp').default} alt="github-integration" width="1338" height="610" className="doc_img"/>
 
-6. Choose the installation location. Instead of granting access to all GitHub repositories, you also have the option to select a specific repository for installing the LambdaTest App. 
+6. Choose the installation location. Instead of granting access to all GitHub repositories, you also have the option to select a specific repository for installing the <BrandName /> App. 
 
 After selecting the installation location, click **Request** to get the approval for the repository authorization. 
  
@@ -79,17 +81,17 @@ After selecting the installation location, click **Request** to get the approval
 
 <img loading="lazy" src={require('../assets/images/github-oauth-integration/authorize-user.webp').default} alt="github-integration" width="1338" height="610" className="doc_img"/>
 
-10. After you complete the authorization, GitHub will install the LambdaTest App.
+10. After you complete the authorization, GitHub will install the <BrandName /> App.
 
 <img loading="lazy" src={require('../assets/images/github-oauth-integration/app-installed.webp').default} alt="github-integration" width="1338" height="610" className="doc_img"/>
 
-11. Navigate back to the Integrations console and you'll notice your LambdaTest account will be integrated with GitHub using repository-based OAuth authentication. 
+11. Navigate back to the Integrations console and you'll notice your <BrandName /> account will be integrated with GitHub using repository-based OAuth authentication. 
 
 <img loading="lazy" src={require('../assets/images/github-oauth-integration/integration-success.webp').default} alt="github-integration" width="1338" height="610" className="doc_img"/>
 
-You can now start testing your website or mobile app testing and log bugs directly from the LambdaTest platform to your GitHub repository.
+You can now start testing your website or mobile app testing and log bugs directly from the <BrandName /> platform to your GitHub repository.
 
-Looking to get started? Check out this documentation on [real-time testing on desktop browsers](https://www.lambdatest.com/support/docs/getting-started-with-desktop-browser-real-time-testing/).
+Looking to get started? Check out this documentation on [real-time testing on desktop browsers](/support/docs/getting-started-with-desktop-browser-real-time-testing/).
 
 
 

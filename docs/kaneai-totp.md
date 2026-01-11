@@ -10,10 +10,12 @@ keywords:
   - MFA
   - 2FA
   - authentication
-url: https://www.lambdatest.com/support/docs/kaneai-totp/
+url: https://www.testmu.ai/support/docs/kaneai-totp
 site_name: LambdaTest
-slug: kaneai-totp/
+slug: kaneai-totp
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: kaneai-totp/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TOTP Authentication in KaneAI",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-totp/"
+          "item": `${BRAND_URL}/support/docs/kaneai-totp/`
         }]
       })
     }}
@@ -61,7 +63,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 
 1. Start a web authoring session from [here](https://www.kaneai.lambdatest.com/objective) and press **/**.
 2. Choose **Add TOTP Authentication Key**.
-3. Enter the Base32 secret directly or user LambdaTest Secrets using `{{` syntax.
+3. Enter the Base32 secret directly or user <BrandName /> Secrets using `{{` syntax.
 4. Click **Save**.
 5. A **smart variable** gets generated which provides the 6-digit code based on above secret key when invoked.
 

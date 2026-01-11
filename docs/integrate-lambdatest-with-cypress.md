@@ -1,38 +1,41 @@
----
+﻿---
 id: integrate-lambdatest-with-cypress
-title: Integrate LambdaTest with Cypress Dashboard
-sidebar_label: Integrate LambdaTest with Cypress Dashboard
-description: This article guides you on how to integrate LambdaTest platform with Cypress Dashboard.
+title: Integrate TestMu AI with Cypress Dashboard
+sidebar_label: Integrate TestMu AI with Cypress Dashboard
+description: This article guides you on how to integrate TestMu AI platform with Cypress Dashboard.
 keywords:
   - Cypress Automation
-  - Cypress With LambdaTest
-  - LambdaTest With Cypress
+  - Cypress With TestMu AI
+  - TestMu AI With Cypress
   - Cypress Dashboard
-  - LambdaTest Cypress Integration
+  - TestMu AI Cypress Integration
   - Cypress Test Automation
   - Cypress Automation Testing
-  - Running Cypress Tests With LambdaTest
-  - Integrate LambdaTest With Cypress
-  - LambdaTest Cloud Platform
+  - Running Cypress Tests With TestMu AI
+  - Integrate TestMu AI With Cypress
+  - TestMu AI Cloud Platform
 
-url: https://www.lambdatest.com/support/docs/integrate-lambdatest-with-cypress/
+url: https://www.testmu.ai/support/docs/integrate-testmu-with-cypress
 site_name: LambdaTest
-slug: integrate-lambdatest-with-cypress/
+slug: integrate-testmu-with-cypress
 ---
 
 ---
 
-This article guides you on how to integrate **LambdaTest platform** with **The Cypress Dashboard**
 
-> In this demo we are demonstrating using [LambdaTest's Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-## Steps To Integrate LambdaTest With Cypress Dashboard
+This article guides you on how to integrate **<BrandName /> platform** with **The Cypress Dashboard**
+
+> In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+
+## Steps To Integrate <BrandName /> With Cypress Dashboard
 
 ---
 
-Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on LambdaTest), you need to follow these steps below:
+Assuming that you have run a Cypress test on TestMu AI platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 
-### Update LambdaTest Cypress CLI
+### Update <BrandName /> Cypress CLI
 
 ---
 
@@ -86,11 +89,11 @@ lambdatest-cypress run --cy="--record;--key <key_value>"
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-5.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
-### LambdaTest-Cypress Integration
+### <BrandName />-Cypress Integration
 
 ---
 
-The integration is now done, just open the **LambdaTest Dashboard** and **Cypress Dashboard** to view the results.
+The integration is now done, just open the **<BrandName /> Dashboard** and **Cypress Dashboard** to view the results.
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-6.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
@@ -105,18 +108,18 @@ The integration is now done, just open the **LambdaTest Dashboard** and **Cypres
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Integrate LambdaTest With Cypress Dashboard
+      Integrate <BrandName /> With Cypress Dashboard
       </span>
     </li>
   </ul>

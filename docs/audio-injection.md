@@ -2,7 +2,7 @@
 id: audio-injection
 title: Audio Injection on iOS Real Devices
 sidebar_label: Audio Injection
-description: Inject audio content in your tests with LambdaTest to simulate microphone inputs for automated testing, enhancing your app's audio capabilities.
+description: Inject audio content in your tests with TestMu AI to simulate microphone inputs for automated testing, enhancing your app's audio capabilities.
 
 keywords:
   - audio injection
@@ -10,14 +10,14 @@ keywords:
   - microphone input
   - voice commands
   - audio recording
-  - lambdatest audio testing
-  - framework on lambdatest
+  - testmu ai audio testing
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/audio-injection/
+url: https://www.testmu.ai/support/docs/audio-injection
 site_name: LambdaTest
-slug: audio-injection/
+slug: audio-injection
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,17 +37,17 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Audio Injection",
-          "item": "https://www.lambdatest.com/support/docs/audio-injection/"
+          "item": `${BRAND_URL}/support/docs/audio-injection/`
         }]
       })
     }}
@@ -53,7 +55,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 # Audio Injection on iOS Real Devices
 <RealDeviceTag value="Real Device" /> 
-Audio Injection allows you to inject microphone input on real iOS devices in the LambdaTest Real Device Cloud.  
+Audio Injection allows you to inject microphone input on real iOS devices in the <BrandName /> Real Device Cloud.  
 Use it to test audio-driven flows such as audio verification and in-app recording—without manual mic input.
 
 ## Key Use Cases
@@ -103,7 +105,7 @@ desired_caps = {
 ---
 
 ## Step 3: Control Audio in Test
-Inject the uploaded audio file from LambdaTest into the recorder or app when you are at the dedicated space for microphone input.
+Inject the uploaded audio file from <BrandName /> into the recorder or app when you are at the dedicated space for microphone input.
 
 **Inject File**
 ```python

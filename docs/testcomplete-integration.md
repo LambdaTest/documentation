@@ -1,25 +1,26 @@
----
+﻿---
 id: testcomplete-integration
 title: TestComplete
 hide_title: false
 sidebar_label: TestComplete
-description: LambdaTest offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
+description: TestMu AI offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
 keywords:
-- lambdatest integrations
-- lambdatest integrations with testcomplete
+- testmu ai integrations
+- testmu ai integrations with testcomplete
 - testcomplete integration
-- testcomplete integration with lambdatest
-- lambdatest integration with testcomplete
-- testcomplete lambdatest
-url: https://www.lambdatest.com/support/docs/testcomplete-integration/
+- testcomplete integration with testmu ai
+- testmu ai integration with testcomplete
+- testcomplete testmu ai
+url: https://www.testmu.ai/support/docs/testcomplete-integration
 site_name: LambdaTest
-slug: testcomplete-integration/
+slug: testcomplete-integration
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,36 +29,36 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TestComplete",
-          "item": "https://www.lambdatest.com/support/docs/testcomplete-integration/"
+          "item": `${BRAND_URL}/support/docs/testcomplete-integration/`
         }]
       })
     }}
 ></script>
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
-LambdaTest integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+<BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
 
 > The TestComplete application will only work on the **Windows** operating system.
 
 ## Prerequisites
 
-- LambdaTest account. You can [sign up for free.](https://accounts.lambdatest.com/login)
-- LambdaTest [Username and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- <BrandName /> account. You can [sign up for free.](https://accounts.lambdatest.com/login)
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - Download TestComplete from its official website and complete the signup process.
-- Generate your App Id by uploading it to the LambdaTest Server.
+- Generate your App Id by uploading it to the <BrandName /> Server.
 
-<!-- ## Web Automation Using TestComplete And LambdaTest
+<!-- ## Web Automation Using TestComplete And <BrandName />
 ---
 
 :::info Note
@@ -70,7 +71,7 @@ LambdaTest integration with TestComplete lets you perform web and app automation
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/1.png').default} alt="Synapse Architecture" width="1912" height="996" className="doc_img"/>
 
-2. Visit [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) and copy the LambdaTest Hub URL.
+2. Visit [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) and copy the <BrandName /> Hub URL.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/2.png').default} alt="Synapse Architecture" width="1908" height="846" className="doc_img"/>
 
@@ -78,7 +79,7 @@ LambdaTest integration with TestComplete lets you perform web and app automation
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/3.png').default} alt="Synapse Architecture" width="1920" height="1080" className="doc_img"/>
 
-4. Visit LambdaTest Automation Capabilities Generator. Select Selenium version, choose desired language, and the select the required browser and OS combinations to run the test on LambdaTest.
+4. Visit <BrandName /> Automation Capabilities Generator. Select Selenium version, choose desired language, and the select the required browser and OS combinations to run the test on <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/web-caps.png').default} alt="Synapse Architecture" width="1225" height="565" className="doc_img"/>
 
@@ -90,7 +91,7 @@ LambdaTest integration with TestComplete lets you perform web and app automation
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/5.png').default} alt="Synapse Architecture" width="1340" height="617" className="doc_img"/>
 
-7. Go to LambdaTest Automation Dashboard to view your test results.
+7. Go to <BrandName /> Automation Dashboard to view your test results.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/6.png').default} alt="Synapse Architecture" width="1904" height="829" className="doc_img"/>
 
@@ -100,7 +101,7 @@ You can also see the video recording and logs for individual test session in the
 
 ## Steps to Automate your Application
 
-**Step 1:** Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+**Step 1:** Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -170,7 +171,7 @@ Click on the run button to check your script.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/11.png').default} alt="configuration" className="doc_img"/>
 
-Your test results would be displayed on on the [**LambdaTest App Automation Dashboard**](https://appautomation.lambdatest.com/build).
+Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://appautomation.lambdatest.com/build).
 
 
 > In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@lambdatest.com**](mailto:support@lambdatest.com). <br />
@@ -178,7 +179,7 @@ Your test results would be displayed on on the [**LambdaTest App Automation Dash
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

@@ -5,15 +5,17 @@ hide_title: true
 sidebar_label: Integrations
 description: Learn more about the integrations HyperExecute offers.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
-url: https://www.lambdatest.com/support/docs/integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/integration-with-hyperexecute
 site_name: LambdaTest
-slug: integration-with-hyperexecute/
+slug: integration-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: integration-with-hyperexecute/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/integration-with-hyperexecute/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: integration-with-hyperexecute/
 
 # Integrations
 
-Integrate HyperExecute with your favourite CI/CD tools, products and LambdaTest tools to accelerate and optimize your testing ecosystem. 
+Integrate HyperExecute with your favourite CI/CD tools, products and <BrandName /> tools to accelerate and optimize your testing ecosystem. 
 
 <div className="download_btn mb-10">
 <a href="/support/docs/hyperexecute-integration-with-products/">Integration With Products</a>
@@ -52,7 +54,7 @@ Integrate HyperExecute with your favourite CI/CD tools, products and LambdaTest 
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/he-integration-with-lambdatest-products/">Integration With LambdaTest Products</a>
+<a href="/support/docs/he-integration-with-testmu-products/">Integration With <BrandName /> Products</a>
 </div>
 
 ***
@@ -62,12 +64,12 @@ Integrate HyperExecute with your favourite CI/CD tools, products and LambdaTest 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

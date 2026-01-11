@@ -7,16 +7,17 @@ description: HyperExecute MCP Server is an AI-native test orchestration platform
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/
+url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server
 site_name: LambdaTest
-slug: hyperexecute-mcp-server/
+slug: hyperexecute-mcp-server
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-mcp-server/`
         }]
       })
     }}

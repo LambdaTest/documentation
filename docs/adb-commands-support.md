@@ -2,26 +2,27 @@
 id: adb-commands-support
 title: ADB Commands Support
 sidebar_label: ADB Commands Support
-description: LambdaTest provides support for limited commands which can be executed in your app automation test scripts via javascript executors. 
+description: TestMu AI provides support for limited commands which can be executed in your app automation test scripts via javascript executors. 
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
   - adb commands
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/adb-commands-support/
+url: https://www.testmu.ai/support/docs/adb-commands-support
 site_name: LambdaTest
-slug: adb-commands-support/
+slug: adb-commands-support
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,24 +32,24 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ADB Commands Support",
-          "item": "https://www.lambdatest.com/support/docs/adb-commands-support/"
+          "item": `${BRAND_URL}/support/docs/adb-commands-support/`
         }]
       })
     }}
 ></script>
 Android Debug Bridge (adb) is a versatile command-line tool that lets users communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps. 
 
-LambdaTest provides support for limited commands which can be executed in your app automation test scripts via javascript executors. The following command with the below mentioned parameters need to be used to execute adb command with LambdaTest real device cloud.
+<BrandName /> provides support for limited commands which can be executed in your app automation test scripts via javascript executors. The following command with the below mentioned parameters need to be used to execute adb command with <BrandName /> real device cloud.
 
 ```python
 driver.execute_script("lambda-adb", params)
@@ -61,7 +62,7 @@ driver.execute_script("lambda-adb", params)
 ###  Swipe
 **adb shell input swipe** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  The command is used to generate a swipe gesture by defining the coordinates of starting and ending point of the swipe. The following is a Python sample of using the adb swipe command with LambdaTest executor.
+  The command is used to generate a swipe gesture by defining the coordinates of starting and ending point of the swipe. The following is a Python sample of using the adb swipe command with <BrandName /> executor.
 
   ```python
   params = {"command":"input-swipe", "startX":200,"startY":900,"endX": 200,"endY":300}
@@ -72,7 +73,7 @@ driver.execute_script("lambda-adb", params)
 
 **adb shell input sendKeys** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  The command is used to sends text as if typed at the keyboard in the real devices. The following is a Python sample of using the adb sendKeys command with LambdaTest executor.
+  The command is used to sends text as if typed at the keyboard in the real devices. The following is a Python sample of using the adb sendKeys command with <BrandName /> executor.
 
   ```python
   params = {"command":"input-text", "text":"this is my text"}
@@ -83,7 +84,7 @@ driver.execute_script("lambda-adb", params)
 
 - **Navigate to the home screen** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-The command is used to navigate to the home screen of the device while running an app automation test script. The following is a Python sample of using the adb command to navigate to the home screen with LambdaTest executor.
+The command is used to navigate to the home screen of the device while running an app automation test script. The following is a Python sample of using the adb command to navigate to the home screen with <BrandName /> executor.
 
 ```python
 params = {"command":"keyevent", "keycode":3}
@@ -94,7 +95,7 @@ result = driver.execute_script("lambda-adb",params)
 
 - **enableAutoRotate** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with LambdaTest executor.
+  The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with <BrandName /> executor.
 
   ```python
   params = {"command":"autorotate", "enableAutoRotate": True}
@@ -103,7 +104,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### ADB Shell Command
 
-LambdaTest allows execution of ADB shell commands during automated test runs. 
+<BrandName /> allows execution of ADB shell commands during automated test runs. 
 
 #### ADB Shell Command - Public 
 
@@ -310,7 +311,7 @@ LambdaTest allows execution of ADB shell commands during automated test runs.
 
 - **enableNotification** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them. The following is a Python sample using the adb command with LambdaTest executor:
+  These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them. The following is a Python sample using the adb command with <BrandName /> executor:
 
   ```python
   params = {"command": "enable-notification", "enableNotification":True/False}
@@ -326,7 +327,7 @@ LambdaTest allows execution of ADB shell commands during automated test runs.
 
 - **disableBatteryOptimization** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with LambdaTest executor:
+  This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with <BrandName /> executor:
 
   ```python
   params = {"command":"disable-battery-optimization", "disableBatteryOptimization":True/False}
@@ -337,7 +338,7 @@ LambdaTest allows execution of ADB shell commands during automated test runs.
 
 - **fixedToUserRotation** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-  This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the LambdaTest executor:
+  This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the <BrandName /> executor:
 
   ```python
   params = {"command":"fixed-to-user-rotation", "fixedToUserRotation":True}
@@ -364,7 +365,7 @@ By default, Automatic Timezone and Automatic Time settings are enabled on the de
 - `settings put global auto_time_zone 1`: Enables Automatic Timezone, allowing the device to adjust its timezone based on network data.
 - `settings put global auto_time 1`: Enables Automatic Time, ensuring that the device syncs time automatically from the network.
 
-These commands help maintain accurate time and timezone settings without requiring manual intervention. If you're using Python with LambdaTest’s App Automation, you can execute these commands using the `execute_script` function:
+These commands help maintain accurate time and timezone settings without requiring manual intervention. If you're using Python with <BrandName />’s App Automation, you can execute these commands using the `execute_script` function:
 
 ```python
 # Define ADB commands for enabling automatic time and timezone
@@ -380,12 +381,12 @@ This approach is particularly useful when testing applications that rely on corr
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

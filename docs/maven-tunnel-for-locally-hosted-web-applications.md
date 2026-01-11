@@ -3,18 +3,20 @@ id: maven-tunnel-for-locally-hosted-web-applications
 title: Maven Tunnel For Locally Hosted Web Applications
 hide_title: false
 sidebar_label: Maven Tunnel For Locally Hosted Web Apps
-description: Configure a secure LambdaTest Tunnel to execute your Selenium test automation scripts through your Maven project on our online Selenium Grid.
+description: Configure a secure TestMu AI Tunnel to execute your Selenium test automation scripts through your Maven project on our online Selenium Grid.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest Tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI Tunnel
   - local app testing for maven
-  - maven tunnel for lambdatest
-url: https://www.lambdatest.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/
+  - maven tunnel for testmu ai
+url: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications
 site_name: LambdaTest
-slug: maven-tunnel-for-locally-hosted-web-applications/
+slug: maven-tunnel-for-locally-hosted-web-applications
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,33 +25,33 @@ slug: maven-tunnel-for-locally-hosted-web-applications/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com/"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Maven Tunnel",
-          "item": "https://www.lambdatest.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/"
+          "item": `${BRAND_URL}/support/docs/maven-tunnel-for-locally-hosted-web-applications/`
         }]
       })
     }}
 ></script>
 
-Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. LambdaTest offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through LambdaTest Selenium Grid.
+Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. <BrandName /> offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through <BrandName /> Selenium Grid.
 
-This document will help you configure a secure LambdaTest Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
+This document will help you configure a secure <BrandName /> Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
-> LambdaTest Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
+> <BrandName /> Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
 
 ## Prerequisites
 
-**LambdaTest Authentication Credentials:**
-Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your LambdaTest automation dashboard by clicking on the key icon near the help button.
+**<BrandName /> Authentication Credentials:**
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button.
 
 **For Linux/Mac:**
 
@@ -320,11 +322,11 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 </dependency>
 ```
 
-## Optional Arguments For LambdaTest Tunnel
+## Optional Arguments For <BrandName /> Tunnel
 * * *
 | ARGUMENT | SYNTAX | DESCRIPTION |
 |---|---|---|
-| tunnelName | `tunnelArgs.put("tunnelName","YourName");` | To change the name of the LambdaTest Tunnel. |
+| tunnelName | `tunnelArgs.put("tunnelName","YourName");` | To change the name of the <BrandName /> Tunnel. |
 | pidFile | `tunnelArgs.put("pidFile","Your/pid/path");` | To change the PID path. |
 | dir | `tunnelArgs.put("dir","give/lambda/directory/path");` | To change the directory path. |
 | logFile | `tunnelArgs.put("logFile","give/tunnel/log/directory/path");` | To change the path for Tunnel logs. |
@@ -333,17 +335,17 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 | basicAuth | `tunnelArgs.put("basicAuth", "<YOUR BASIC AUTH>")` | Basic Auth. |
 | mitm | `tunnelArgs.put("mitm", "true")` | MITM only if basicAuth is provided. |
 
-> For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/).
+> For more arguments, refer to our document of [<BrandName /> Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

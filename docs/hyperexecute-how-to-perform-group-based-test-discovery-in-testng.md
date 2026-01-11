@@ -7,10 +7,13 @@ description: Perform group-based test discovery in TestNG with @BeforeGroups and
 keywords:
     - hyperexecute yaml
     - How to Perform Group-Based Test Discovery in TestNG
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 site_name: LambdaTest
-slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
+slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +23,17 @@ slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Perform group based Test Case Discovery",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/`
         }]
       })
     }}

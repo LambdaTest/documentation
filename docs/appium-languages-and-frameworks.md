@@ -2,7 +2,7 @@
 id: appium-languages-and-frameworks
 title: Supported Languages And Frameworks
 sidebar_label: Languages and Frameworks
-description: Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on LambdaTest Real Device Cloud Platform.
+description: Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on TestMu AI Real Device Cloud Platform.
 keywords:
   - supported languages
   - supported frameworks
@@ -11,13 +11,15 @@ keywords:
   - app automation
   - appium automation
   - appium testing
-url: https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/
+url: https://www.testmu.ai/support/docs/appium-languages-and-frameworks
 site_name: LambdaTest
-slug: appium-languages-and-frameworks/
+slug: appium-languages-and-frameworks
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,23 +29,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Appium Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/"
+          "name": "Getting Started With Appium Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
 
-Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on [LambdaTest Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 
@@ -150,12 +152,12 @@ We are preparing documentation for more frameworks. If you want us to prioritize
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

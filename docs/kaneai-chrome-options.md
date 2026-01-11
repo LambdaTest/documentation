@@ -11,10 +11,13 @@ keywords:
   - dynamic url
   - chrome options
   - chrome arguments
-url: https://www.lambdatest.com/support/docs/kaneai-chrome-options/
+url: https://www.testmu.ai/support/docs/kaneai-chrome-options
 site_name: LambdaTest
-slug: kaneai-chrome-options/
+slug: kaneai-chrome-options
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: kaneai-chrome-options/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Chrome Options",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-chrome-options/"
+          "item": `${BRAND_URL}/support/docs/kaneai-chrome-options/`
         }]
       })
     }}

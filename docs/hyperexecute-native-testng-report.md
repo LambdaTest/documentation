@@ -3,15 +3,18 @@ id: hyperexecute-native-testng-report
 title: Native TestNG Reports on HyperExecute
 hide_title: false
 sidebar_label: Native TestNG
-description: Learn how to generate Native TestNG test report for HyperExecute on lambdatest and download the reports from the dashboard
+description: Learn how to generate Native TestNG test report for HyperExecute on TestMu AI and download the reports from the dashboard
 keywords:
     - native testng reports
     - hyperexecute testng reports
     - hyperexecute native testng testing
-url: https://www.lambdatest.com/support/docs/hyperexecute-native-testng-report/
+url: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report
 site_name: LambdaTest
-slug: hyperexecute-native-testng-report/
+slug: hyperexecute-native-testng-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,18 +22,18 @@ slug: hyperexecute-native-testng-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Allure Reports",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-native-testng-report/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-native-testng-report/`
         }]
       })
     }}

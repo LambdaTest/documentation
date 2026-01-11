@@ -2,19 +2,21 @@
 id: analytics-modules-smartui-analytics
 title: SmartUI Analytics - Visual Regression Testing Insights
 sidebar_label: SmartUI
-description: Discover LambdaTest's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
+description: Discover TestMu AI's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
 keywords:
  - analytics
  - visual regression testing
  - smartui analytics
  - screenshot trends
  - build status ratio
-url: https://www.lambdatest.com/support/docs/analytics-modules-smartui-analytics/
+url: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics
 site_name: LambdaTest
-slug: analytics-modules-smartui-analytics/
+slug: analytics-modules-smartui-analytics
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,22 +26,22 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-smartui-analytics/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-smartui-analytics/`
         }]
       })
     }}
 ></script>
-The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the LambdaTest platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
+The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the <BrandName /> platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 
 :::note
 The SmartUI Analytics module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).
@@ -49,7 +51,7 @@ The SmartUI Analytics module is currently in  <NewTag value="BETA" bgColor="#ffe
 
 <!-- <img loading="lazy" src={require('../assets/images/analytics/smartui-snapshot.png').default} alt="SmartUI Snapshot" width="768" height="373" className="doc_img"/> -->
 
-The SmartUI Snapshot widget provides a comprehensive overview of the Visual Regression tests run on the LambdaTest platform. It offers key metrics to help you understand the scale and efficiency of your visual testing efforts.
+The SmartUI Snapshot widget provides a comprehensive overview of the Visual Regression tests run on the <BrandName /> platform. It offers key metrics to help you understand the scale and efficiency of your visual testing efforts.
 
 #### How It Works
 - The widget calculates the total number of projects, builds run, and screenshots compared on the platform.
@@ -62,7 +64,7 @@ By leveraging the SmartUI Snapshot widget, you can easily track the volume of yo
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-summary.png').default} alt="Builds Summary" width="768" height="373" className="doc_img"/> --> 
 
-The Builds Summary widget offers a detailed breakdown of the status distribution for the Visual Regression tests run on the LambdaTest platform. It provides valuable insights into the overall health and success rate of your visual testing builds.
+The Builds Summary widget offers a detailed breakdown of the status distribution for the Visual Regression tests run on the <BrandName /> platform. It provides valuable insights into the overall health and success rate of your visual testing builds.
 
 #### How It Works
 - The widget categorizes the builds based on their status, such as Approved, Pending-Approval, Rejected, Partially-Rejected, and Error.
@@ -76,7 +78,7 @@ By analyzing the Builds Summary widget, you can gain a deeper understanding of t
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-trends.png').default} alt="Builds Trends" width="768" height="373" className="doc_img"/> --> 
 
-The Builds Trends widget provides a visual representation of the status trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to analyze the performance and consistency of your visual testing builds.
+The Builds Trends widget provides a visual representation of the status trends for the Visual Regression tests run on the <BrandName /> platform over time. It allows you to analyze the performance and consistency of your visual testing builds.
 
 - X-Axis: Represents the time intervals at which the build trends are measured.
 - Y-Axis: Represents the number of builds categorized by their status (Current and Previous).
@@ -93,7 +95,7 @@ By examining the Builds Trends widget, you can identify patterns, fluctuations, 
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshot-trends.png').default} alt="Screenshot Trends" width="768" height="373" className="doc_img"/> --> 
 
-The Screenshot Trends widget provides a visual representation of the screenshot comparison trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to track the volume and progress of your visual testing screenshots.
+The Screenshot Trends widget provides a visual representation of the screenshot comparison trends for the Visual Regression tests run on the <BrandName /> platform over time. It allows you to track the volume and progress of your visual testing screenshots.
 
 - X-Axis: Represents the time intervals at which the screenshot trends are measured.
 - Y-Axis: Represents the number of screenshots compared (Current and Previous).
@@ -110,7 +112,7 @@ By analyzing the Screenshot Trends widget, you can gain insights into the volume
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-browsers-device-coverage.png').default} alt="Screenshots Browsers/Device Coverage" width="768" height="373" className="doc_img"/> --> 
 
-The Screenshots Browsers/Device Coverage widget provides a detailed breakdown of the browser and device coverage for the Visual Regression tests run on the LambdaTest platform. It helps you understand the distribution of your visual testing efforts across different browsers and devices.
+The Screenshots Browsers/Device Coverage widget provides a detailed breakdown of the browser and device coverage for the Visual Regression tests run on the <BrandName /> platform. It helps you understand the distribution of your visual testing efforts across different browsers and devices.
 
 #### How It Works
 - The widget calculates the total number of screenshots compared for each supported browser or device.
@@ -123,7 +125,7 @@ By leveraging the Screenshots Browsers/Device Coverage widget, you can ensure th
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-viewport-coverage.png').default} alt="Screenshots Viewport Coverage" width="768" height="373" className="doc_img"/> -->
 
-The Screenshots Viewport Coverage widget provides a comprehensive overview of the viewport coverage for the Visual Regression tests run on the LambdaTest platform. It helps you understand the distribution of your visual testing efforts across different viewport sizes.
+The Screenshots Viewport Coverage widget provides a comprehensive overview of the viewport coverage for the Visual Regression tests run on the <BrandName /> platform. It helps you understand the distribution of your visual testing efforts across different viewport sizes.
 
 #### How It Works
 - The widget calculates the total number of screenshots compared for each supported viewport size.
@@ -136,7 +138,7 @@ By analyzing the Screenshots Viewport Coverage widget, you can ensure that your 
 
 <!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/build-status-ratio.png').default} alt="Build Status Ratio" width="768" height="373" className="doc_img"/> -->
 
-The Build Status Ratio widget provides a visual representation of the status ratio trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to track the proportion of builds with different statuses and monitor the overall health of your visual testing process.
+The Build Status Ratio widget provides a visual representation of the status ratio trends for the Visual Regression tests run on the <BrandName /> platform over time. It allows you to track the proportion of builds with different statuses and monitor the overall health of your visual testing process.
 
 - X-Axis: Represents the time intervals at which the status ratio trends are measured.
 - Y-Axis: Represents the ratio of builds categorized by their status (Approved and Pending-Approval).
@@ -151,6 +153,6 @@ By examining the Build Status Ratio widget, you can gain insights into the overa
 
 ---
 
-The SmartUI Analytics widgets provide a comprehensive suite of tools to analyze and optimize your visual regression testing efforts on the LambdaTest platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
+The SmartUI Analytics widgets provide a comprehensive suite of tools to analyze and optimize your visual regression testing efforts on the <BrandName /> platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 
 Unlock the full potential of SmartUI Analytics today and take your visual regression testing to the next level!

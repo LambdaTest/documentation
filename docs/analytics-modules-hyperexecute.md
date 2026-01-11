@@ -5,10 +5,12 @@ sidebar_label: HyperExecute
 description: Analytics Modules - HyperExecute
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-modules-hyperexecute/
+url: https://www.testmu.ai/support/docs/analytics-modules-hyperexecute
 site_name: LambdaTest
-slug: analytics-modules-hyperexecute/
+slug: analytics-modules-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-modules-hyperexecute/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-hyperexecute/`
         }]
       })
     }}
@@ -37,7 +39,7 @@ slug: analytics-modules-hyperexecute/
 
 # HyperExecute Analytics
 
-The HyperExecute Analytics module empowers QA managers to gain comprehensive insights into their HyperExecute testing pipeline. This module provides a centralized view of all the key metrics related to jobs, tasks, and stages executed on the LambdaTest platform.
+The HyperExecute Analytics module empowers QA managers to gain comprehensive insights into their HyperExecute testing pipeline. This module provides a centralized view of all the key metrics related to jobs, tasks, and stages executed on the <BrandName /> platform.
 
 ## Job Trends
 
@@ -57,7 +59,7 @@ The Job Trends widget allows you to analyze the trends of jobs executed on the p
 By examining the Job Trends widget, you can identify patterns, fluctuations, or anomalies in your job execution over time. This information helps you assess the stability and reliability of your HyperExecute testing pipeline, allowing you to proactively address any emerging issues and ensure the consistent quality of your jobs.
 
 #### Use Case
-As a QA Manager, John's team runs over 50,000 jobs per month across various LambdaTest products. With the Job Trends widget, John can:
+As a QA Manager, John's team runs over 50,000 jobs per month across various <BrandName /> products. With the Job Trends widget, John can:
 - Understand the status distribution of jobs executed by his team.
 - Identify any failing job numbers and troubleshoot them by viewing the logs.
 
@@ -193,12 +195,12 @@ Unlock the full potential of HyperExecute Analytics today and take your testing 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

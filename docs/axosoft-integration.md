@@ -3,24 +3,26 @@ id: axosoft-integration
 title: Axosoft Integration
 hide_title: true
 sidebar_label: Axosoft
-description: With LambdaTest - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from LambdaTest while performing testing.
+description: With TestMu AI - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from TestMu AI while performing testing.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to axosoft
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest axosoft integration
-  - integrate axosoft with lambdatest
-  - create issue in axosoft from lambdatest
-  - axosoft integration with lambdatest
-  - create axosoft issues from lambdatest
+  - testmu ai axosoft integration
+  - integrate axosoft with testmu ai
+  - create issue in axosoft from testmu ai
+  - axosoft integration with testmu ai
+  - create axosoft issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/axosoft-integration/
+url: https://www.testmu.ai/support/docs/axosoft-integration
 site_name: LambdaTest
-slug: axosoft-integration/
+slug: axosoft-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: axosoft-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Axosoft Integration",
-          "item": "https://www.lambdatest.com/support/docs/axosoft-integration/"
+          "item": `${BRAND_URL}/support/docs/axosoft-integration/`
         }]
       })
     }}
@@ -57,17 +59,17 @@ Axosoft is a versatile project management tool designed for Agile teams and orga
 </div>
 </div>
 
-Axosoft Integration with LambdaTest streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.lambdatest.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
+Axosoft Integration with <BrandName /> streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.lambdatest.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
 
-Axosoft Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium and premium plans.
+Axosoft Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium and premium plans.
 
 
-## Integrate Axosoft With Your LambdaTest Account
+## Integrate Axosoft With Your <BrandName /> Account
 ***
 
-**Step 1:** Log in to your [LambdaTest account](https://accounts.lambdatest.com/register). You need to have Admin or User level access to see and install 3rd party integrations.
+**Step 1:** Log in to your [<BrandName /> account](https://accounts.lambdatest.com/register). You need to have Admin or User level access to see and install 3rd party integrations.
 
-**Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under "Settings". This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your LambdaTest account.
+**Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under "Settings". This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-one.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -75,7 +77,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-two.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 4:** You need to [create an account on Axosoft](https://www.axosoft.com/) to integrate your workspace with LambdaTest. If you don't have an account, you can create one. If you are already logged in, this step won't appear in the integration process. You will be required to enter the URL and OAuth token to enable integration. The Axosoft Base URL can be copied from the Axosoft website.
+**Step 4:** You need to [create an account on Axosoft](https://www.axosoft.com/) to integrate your workspace with <BrandName />. If you don't have an account, you can create one. If you are already logged in, this step won't appear in the integration process. You will be required to enter the URL and OAuth token to enable integration. The Axosoft Base URL can be copied from the Axosoft website.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-three.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -87,19 +89,19 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-five.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 7:** Once you click on Manage API Keys, you will get an option to create a new key, for which you will need to enter a name (e.g., "LambdaTest") and save it.
+**Step 7:** Once you click on Manage API Keys, you will get an option to create a new key, for which you will need to enter a name (e.g., "<BrandName />") and save it.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-six.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 8:** Click on the Manage Tokens section, and create a non-expiring token for the app you've just created. Select "LambdaTest" under app, "read and write" under scope, and enter create.
+**Step 8:** Click on the Manage Tokens section, and create a non-expiring token for the app you've just created. Select "<BrandName />" under app, "read and write" under scope, and enter create.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-seven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 9:** Copy the generated token, click Create, and paste it into your LambdaTest integration settings for Axosoft.
+**Step 9:** Copy the generated token, click Create, and paste it into your <BrandName /> integration settings for Axosoft.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-eight.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 10:** Once you enter "install" Axosoft will be integrated with LambdaTest, and an alert box will appear on the top right corner of the screen stating that the integration is in progress, you will be notified on your mail post successful integration.
+**Step 10:** Once you enter "install" Axosoft will be integrated with <BrandName />, and an alert box will appear on the top right corner of the screen stating that the integration is in progress, you will be notified on your mail post successful integration.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-nine.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -113,7 +115,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 ## How To Log Your First Bug Through Axosoft Integration?
 ***
 
-**Step 1:** Select any of the tests from the left navigation menu of LambdaTest. For this instance, we will be taking the "Real Time Testing" option.
+**Step 1:** Select any of the tests from the left navigation menu of <BrandName />. For this instance, we will be taking the "Real Time Testing" option.
 
 **Step 2:** Enter the URL of the web app to be tested in the URL box, and select "mobile" device for testing. Press 'Start' after selecting the configuration of the browser and operating system as per your choice. 
 
@@ -136,7 +138,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-fifteen.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 
-**Step 7:** Log in to your workspace on Axosoft and you will be able to notice the marked bug in the set channel assigned to the selected person. All the data you provided through the LambdaTest form would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the screenshot as attachments. 
+**Step 7:** Log in to your workspace on Axosoft and you will be able to notice the marked bug in the set channel assigned to the selected person. All the data you provided through the <BrandName /> form would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments. 
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-sixteen.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -145,7 +147,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 You can work with one integration at a time. So if you want to integrate into a similar 3rd party application, then you would have to remove your current integration. Here is how you can do that.
 
-**Step 1:** Log in to your LambdaTest account.
+**Step 1:** Log in to your <BrandName /> account.
 
 **Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you can remove the Axosoft integration under the tab that says "My Integrations".
 
@@ -158,18 +160,18 @@ You can work with one integration at a time. So if you want to integrate into a 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-eighteen.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 
-> That was all you need to know for LambdaTest + axosoft Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + axosoft Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

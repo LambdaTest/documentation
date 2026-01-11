@@ -1,31 +1,33 @@
 ---
 id: zalenium-integration-with-lambdatest
-title: Zalenium Integration With LambdaTest
+title: Zalenium Integration With TestMu AI
 sidebar_label: Zalenium 
-description: LambdaTest integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.
+description: TestMu AI integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.
 keywords:
   - Zelenium
-  - lambdatest intigration with zelenium
+  - testmu ai intigration with zelenium
   - cross browser testing
   - zelenium dashboard
   - automation on zelenium 
-url: https://www.lambdatest.com/support/docs/zalenium-integration-with-lambdatest
+url: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu
 site_name: LambdaTest
-slug: zalenium-integration-with-lambdatest/
+slug: zalenium-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 -----------------------------------------------------------------------------------------------------------------------------
 Brought up by Zalando, Zalenium is open-source with the vision to eliminate the hassle of maintaining an in-house [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). Zalenium does so by offering a Docker-based Selenium Grid on-cloud that gets auto-updated with the latest browsers and their driver versions.
 
 Zalenium offers capabilities to help you define your Desired Capabilities in your test automation suite. Zalenium also provides an intuitive dashboard representing all the detailed logs of your test script execution. Using Zalenium, you can even perform automation testing over your locally hosted web pages. However, you would only be able to perform automated cross browser testing over the browsers installed on your machine.
 
-LambdaTest integration with Zalenium will help you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed, and hosted on-cloud.
+<BrandName /> integration with Zalenium will help you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed, and hosted on-cloud.
 
 ## Prerequisites
 -----------------------------------------------------------------------------------------------------------------------------
 * Ensure you have a Zalenium Docker setup.
-* **LambdaTest Authentication Credentials**
+* **<BrandName /> Authentication Credentials**
 
-   Be aware of your LambdaTest authentication credentials i.e., your LambdaTest username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[LambdaTest automation dashboard](https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
+   Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
 * For Linux/Mac:  
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -36,9 +38,9 @@ LambdaTest integration with Zalenium will help you perform automated cross brows
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
-## Specify LambdaTest Environment Variables Into Zalenium Docker
+## Specify <BrandName /> Environment Variables Into Zalenium Docker
 -----------------------------------------------------------------------------------------------------------------------------
-Declare your LambdaTest environment variable into your respective Zalenium Docker over which you wish to perform automated cross browser testing. Below is an example code representing what you need to declare in your Zalenium Docker.
+Declare your <BrandName /> environment variable into your respective Zalenium Docker over which you wish to perform automated cross browser testing. Below is an example code representing what you need to declare in your Zalenium Docker.
 
 ```
 export LT_USERNAME=<your username>
@@ -50,7 +52,7 @@ export LT_USERNAME=<your username>
       -v /var/run/docker.sock:/var/run/docker.sock \
       --privileged dosel/zalenium start --lambdaTestEnabled true
 ```
-Kudos! As simple as that, you have integrated Zalenium with the LambdaTest account. In case you have any questions, feel free to let us know by dropping an email at [support@lambdatest.com][2], or just giving a shout to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
+Kudos! As simple as that, you have integrated Zalenium with the <BrandName /> account. In case you have any questions, feel free to let us know by dropping an email at [support@lambdatest.com][2], or just giving a shout to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
 
 [1]: https://automation.lambdatest.com
 [2]: mailto:support%40lambdatest.com

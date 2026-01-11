@@ -7,16 +7,18 @@ keywords:
   - appium
   - ios
   - app settings
-  - lambdatest ios
-  - automation on lambdatest
+  - testmu ai ios
+  - automation on testmu ai
   - ios app settings
   - app automation
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-ios-app-settings/
+url: https://www.testmu.ai/support/docs/appium-ios-app-settings
 site_name: LambdaTest
-slug: appium-ios-app-settings/
+slug: appium-ios-app-settings
 ---
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,23 +28,23 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "iOS App Settings",
-          "item": "https://www.lambdatest.com/support/docs/appium-ios-app-settings/"
+          "item": `${BRAND_URL}/support/docs/appium-ios-app-settings/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of LambdaTest due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
+**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of <BrandName /> due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
 This document will guide you on how to access and use iOS settings for **App Automation session.**
 
@@ -144,19 +146,19 @@ The title of the keys displayed on your iOS app settings page must be unique.
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

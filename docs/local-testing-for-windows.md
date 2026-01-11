@@ -2,28 +2,30 @@
 id: local-testing-for-windows
 title: Legacy Binary For Windows
 sidebar_label: Legacy Binary For Windows
-description: LambdaTest Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers.
+description: TestMu AI Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through TestMu AI cloud servers.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - lambdatest Tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - testmu ai Tunnel
   - local app testing for windows
-url: https://www.lambdatest.com/support/docs/local-testing-for-windows/
+url: https://www.testmu.ai/support/docs/local-testing-for-windows
 site_name: LambdaTest
-slug: local-testing-for-windows/
+slug: local-testing-for-windows
 ---
-***
-LambdaTest Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers. Through our TCP with TLS 1.2 secure connection tunneling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection network protocol hosted by LambdaTest Tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over production environment.
+***
+<BrandName /> Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our TCP with TLS 1.2 secure connection tunneling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
+
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection network protocol hosted by <BrandName /> Tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over production environment.
 
 > **Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for Windows](/docs/local-testing-windows/).
 
 You can download the binary file responsible for establishing a TCP with TLS 1.2 secure connection between your local device and our testing cloud by clicking on the downloadable link below.
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip">Download LambdaTest Tunnel For Windows</a>
+<a href="https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip">Download <BrandName /> Tunnel For Windows</a>
 </div>
 
 
@@ -35,7 +37,7 @@ This file is supported for the below listed windows:
 * Windows 7
 * Windows XP
 
-## Configuring TCP with TLS 1.2 secure connection with LambdaTest Tunnel 
+## Configuring TCP with TLS 1.2 secure connection with <BrandName /> Tunnel 
 * * *
 **Step 1**: Click the button **"Configure Tunnel"**. Download the binary zip file by clicking the **"Download Link"**. Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
@@ -43,7 +45,7 @@ This file is supported for the below listed windows:
 
 **What is this zip file for?**
 
-This zip file will help in establishing a secure connection to LambdaTest cloud servers so you could test your locally hosted web pages in a TCP with TLS 1.2 secure connection environment.
+This zip file will help in establishing a secure connection to <BrandName /> cloud servers so you could test your locally hosted web pages in a TCP with TLS 1.2 secure connection environment.
 
 **Step 2**: Extract the downloaded zip file. Go to **cmd(Command Prompt)** and route your pointer to the same directory where you extracted the zip file.
 
@@ -68,7 +70,7 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 ---
 
-## Testing locally hosted web pages using LambdaTest Tunnel
+## Testing locally hosted web pages using <BrandName /> Tunnel
 * * *
 **Step 1**: Navigate to **‘Real Time Testing’** menu and enter the localhost URL you want to test in the text field provided to enter URL.
 
@@ -90,11 +92,11 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 > **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string "localhost". Therefore if you test on URLs like `http://localhost/` or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to use "localhost.lambdatest.com" or replace the string "localhost" with machine IP address. For example if you wanted to test `http://localhost/dashboard` or, and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`".
 
-## Testing Local Folder Files Using LambdaTest Tunnel
+## Testing Local Folder Files Using <BrandName /> Tunnel
 * * *
 >**Note:** If you were already running a test session through tunnel then you will have to terminate the existing TCP with TLS 1.2 secure connection in cmd before you re-establish it for a new directory.
 
-**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double quotes as you run the command on Windows cmd to establish a TCP with TLS 1.2 secure connection with LambdaTest Tunnel.
+**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double quotes as you run the command on Windows cmd to establish a TCP with TLS 1.2 secure connection with <BrandName /> Tunnel.
 
 **Sample format:**
 
@@ -104,7 +106,7 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 `LT --user example@lambdatest.com --key 123asd123 --dir "/home/lambda/Downloads"`
 
-**Step 2:** After you establish a TCP with TLS 1.2 secure connection, go to LambdaTest and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
+**Step 2:** After you establish a TCP with TLS 1.2 secure connection, go to <BrandName /> and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-9.webp').default} alt="Image"  className="doc_img"/>
 
@@ -116,7 +118,7 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 **For example:** If you have a file ‘test.html’ in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file.
 
-In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in LambdaTest browser.
+In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in <BrandName /> browser.
 
 #### Testing Locally Hosted Web Pages On Android
 * * *
@@ -152,13 +154,13 @@ You will receive the below highlighted messages indicating the termination on TC
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-15.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the TCP with TLS 1.2 secure connection.
+**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of <BrandName /> interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the TCP with TLS 1.2 secure connection.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-16.webp').default} alt="Image"  className="doc_img"/>
 
-#### Geolocation Testing through VPN with LambdaTest Tunnel
+#### Geolocation Testing through VPN with <BrandName /> Tunnel
 * * *
-Test the performance of your web-app through different **geographic locations** using VPN in LambdaTest Tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different **geographic locations** using VPN in <BrandName /> Tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 **How can Geolocation Testing help you?**
 
@@ -222,7 +224,7 @@ As we offer a cloud-based platform to host a testing ecosystem to everyone aroun
 
 If you ever misplace your Access key into the hands of someone you don’t trust. You can always redefine it by clicking the button for "**Regenerate Access Key**".
 
-**Access Key** is pivotal for establishing a TCP with TLS 1.2 secure connection through LambdaTest Tunnel to test your locally hosted web-pages or web-apps.
+**Access Key** is pivotal for establishing a TCP with TLS 1.2 secure connection through <BrandName /> Tunnel to test your locally hosted web-pages or web-apps.
 
 Find your Access Key while performing any type of testing, from the left **navigation menu**. You will find a button that says "**Configure Tunnel**". Click on that button & a string containing your access key will be presented.
 
@@ -236,4 +238,4 @@ You can also find your Access Key by going to ‘**Settings**’ in the left nav
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/lambda-sshtunnel-access-key.webp').default} alt="Image"  className="doc_img"/>
 
-**LambdaTest Tunnel Update:** Earlier, when our LambdaTest Tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the LambdaTest Tunnel binary in a way that it auto-updates to the latest version every time you execute the LambdaTest Tunnel from cmd/terminal.
+**<BrandName /> Tunnel Update:** Earlier, when our <BrandName /> Tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> Tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> Tunnel from cmd/terminal.

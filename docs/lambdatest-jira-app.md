@@ -1,16 +1,18 @@
----
+﻿---
 id: lambdatest-jira-app
-title: LambdaTest Jira App
+title: TestMu AI Jira App
 hide_title: true
-sidebar_label: LambdaTest Jira App
-description: Efficiently manage your tests with LambdaTest Jira App, seamlessly integrating Test Manager capabilities into your Jira environment to enhance collaboration.
+sidebar_label: TestMu AI Jira App
+description: Efficiently manage your tests with TestMu AI Jira App, seamlessly integrating Test Manager capabilities into your Jira environment to enhance collaboration.
 keywords:
   - Jira app
-  - LambdaTest Jira App
-url: https://www.lambdatest.com/support/docs/lambdatest-jira-app/
+  - TestMu AI Jira App
+url: https://www.testmu.ai/support/docs/testmu-jira-app
 site_name: LambdaTest
-slug: lambdatest-jira-app/
+slug: testmu-jira-app
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,38 +21,38 @@ slug: lambdatest-jira-app/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Jira App",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-jira-app/"
+          "item": `${BRAND_URL}/support/docs/lambdatest-jira-app/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest Jira App
+# <BrandName /> Jira App
 
-LambdaTest Test Manager integrates directly with the Jira App, allowing you to manage tests seamlessly within the Jira interface. It provides Test Manager functionalities in your Jira environment, boosting workflow efficiency and facilitating improved collaboration among teams.
+<BrandName /> Test Manager integrates directly with the Jira App, allowing you to manage tests seamlessly within the Jira interface. It provides Test Manager functionalities in your Jira environment, boosting workflow efficiency and facilitating improved collaboration among teams.
 
-**Let’s have a look at how to use the LambdaTest Jira App:**
+**Let’s have a look at how to use the <BrandName /> Jira App:**
 
 1. Download the Jira app from the Atlassian Marketplace. Once installed, navigate to **Manage your Apps** under the **Apps** section in your Jira project.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/download-jira-app.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-2. Navigate to the sidebar on the left, select **LambdaTest** from the **Apps** menu, and enter the required credentials, such as your **Username** and **Access Token**. Then, click on **Authenticate** to proceed. 
+2. Navigate to the sidebar on the left, select **<BrandName />** from the **Apps** menu, and enter the required credentials, such as your **Username** and **Access Token**. Then, click on **Authenticate** to proceed. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/required-credentials.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. Go to any Jira issue and click on the LambdaTest icon located just below the issue name. This will display the Test Cases linked to that issue.
+3. Go to any Jira issue and click on the <BrandName /> icon located just below the issue name. This will display the Test Cases linked to that issue.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/click-on-issue-name.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -72,18 +74,18 @@ This allows you to seamlessly connect Test Cases right from Jira issues, enhanci
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       LambdaTest Jira App
+       <BrandName /> Jira App
       </span>
     </li>
   </ul>

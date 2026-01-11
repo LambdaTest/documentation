@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Version 2.1.1
 description: Version 2.1.1
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-1-1/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-1-1
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-1-1/
+slug: hyperexecute-release-notes-2-1-1
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,24 +25,24 @@ slug: hyperexecute-release-notes-2-1-1/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-1-1/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-1-1/`
         }]
       })
     }}
 ></script>
 ## Email Delivery of HyperExecute Job Artifacts
 
-You can now receive [Job Artifacts](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
+You can now receive [Job Artifacts](/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
 
 To receive the Artifacts via mail, you simply need to pass a `email` flag in your YAML file.
 
@@ -52,4 +55,4 @@ uploadArtifacts:
         - <another_email_id@example.com>
 ```
 
-> Refer to the detailed documentation on [how to receive artifacts via email](https://www.lambdatest.com/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)
+> Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)

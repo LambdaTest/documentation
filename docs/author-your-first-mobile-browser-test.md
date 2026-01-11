@@ -8,15 +8,16 @@ keywords:
  - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/author-your-first-mobile-browser-test
+  - testmu ai automation
+  - testmu ai kaneai
+url: https://www.testmu.ai/support/docs/author-your-first-mobile-browser-test
 site_name: LambdaTest
-slug: author-your-first-mobile-browser-test/
+slug: author-your-first-mobile-browser-test
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Author Your First Mobile Browser Test",
-          "item": "https://www.lambdatest.com/support/docs/author-your-first-mobile-browser-test"
+          "item": `${BRAND_URL}/support/docs/author-your-first-mobile-browser-test`
         }]
       })
     }}

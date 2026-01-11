@@ -4,17 +4,20 @@ title: HyperExecute CSharp Use Cases
 sidebar_label: CSharp Use Cases
 description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-  - LambdaTest Projects
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+  - TestMu AI Projects
   - C Sharp
   - NUnit
   - Specflow
-url: https://www.lambdatest.com/support/docs/hyperexecute-csharp-use-cases/
+url: https://www.testmu.ai/support/docs/hyperexecute-csharp-use-cases
 site_name: LambdaTest
-slug: hyperexecute-csharp-use-cases/
+slug: hyperexecute-csharp-use-cases
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-csharp-use-cases/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute CSharp Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-csharp-use-cases/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-csharp-use-cases/`
         }]
       })
     }}

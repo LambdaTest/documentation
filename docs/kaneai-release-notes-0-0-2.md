@@ -5,16 +5,17 @@ hide_title: false
 sidebar_label: Version 0.0.2
 description: Beta Version 0.0.2
 keywords:
-  - LambdaTest kaneai
-  - LambdaTest kaneai help
-  - LambdaTest kaneai documentation
+  - TestMu AI kaneai
+  - TestMu AI kaneai help
+  - TestMu AI kaneai documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/kaneai-release-notes-0-0-2/
+url: https://www.testmu.ai/support/docs/kaneai-release-notes-0-0-2
 site_name: LambdaTest
-slug: kaneai-release-notes-0-0-2/
+slug: kaneai-release-notes-0-0-2
 ---
 import FeatureTag from '../src/component/featureTag';
 import BugFixTag from '../src/component/bugFixTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +25,17 @@ import BugFixTag from '../src/component/bugFixTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-release-notes-0-0-2/"
+          "item": `${BRAND_URL}/support/docs/kaneai-release-notes-0-0-2/`
         }]
       })
     }}

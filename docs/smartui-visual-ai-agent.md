@@ -7,17 +7,18 @@ keywords:
   - Visual AI Agent
   - SmartUI AI
   - Intelligent Visual Testing
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Regression AI
-url: https://www.lambdatest.com/support/docs/smartui-visual-ai/
+url: https://www.testmu.ai/support/docs/smartui-visual-ai
 site_name: LambdaTest
-slug: smartui-visual-ai/
+slug: smartui-visual-ai
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +28,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Visual AI Agent",
-          "item": "https://www.lambdatest.com/support/docs/smartui-visual-ai/"
+          "item": `${BRAND_URL}/support/docs/smartui-visual-ai/`
         }]
       })
     }}

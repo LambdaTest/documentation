@@ -3,15 +3,18 @@ id: selenium-default-capabilities
 title: Selenium Default Capabilities
 hide_title: false
 sidebar_label: Default Capabilities
-description: This document list downs the default Capabilities in selenium that are supported in LambdaTest
+description: This document list downs the default Capabilities in selenium that are supported in TestMu AI
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium capabilities
-url: https://www.lambdatest.com/support/docs/selenium-default-capabilities/
+url: https://www.testmu.ai/support/docs/selenium-default-capabilities
 site_name: LambdaTest
-slug: selenium-default-capabilities/
+slug: selenium-default-capabilities
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: selenium-default-capabilities/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Selenium Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Default Capability",
-          "item": "https://www.lambdatest.com/support/docs/selenium-default-capabilities/"
+          "item": `${BRAND_URL}/support/docs/selenium-default-capabilities/`
         }]
       })
     }}

@@ -5,16 +5,19 @@ hide_title: false
 sidebar_label: Building Mobile Applications Using Tools
 description: Building Mobile Applications Using Tools
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - gradle
   - maven
   - sdk
   - mobile apps
   - tools
-url: https://www.lambdatest.com/support/docs/hyperexecute-build-mobile-apps-using-tools/
+url: https://www.testmu.ai/support/docs/hyperexecute-build-mobile-apps-using-tools
 site_name: LambdaTest
-slug: hyperexecute-build-mobile-apps-using-tools/
+slug: hyperexecute-build-mobile-apps-using-tools
 --- 
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-build-mobile-apps-using-tools/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-build-mobile-apps-using-tools/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-build-mobile-apps-using-tools/`
         }]
       })
     }}
@@ -46,7 +49,7 @@ HyperExecute facilitate the development of mobile applications using various too
 
 ## Building Apps with `runtime` Flag
 
-HyperExecute provides a [`runtime`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
+HyperExecute provides a [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
 
 ```bash
 runtime:
@@ -61,7 +64,7 @@ runtime:
 
 ## Leveraging DataJsonPaths for Dependency Management
 
-[`DataJsonPaths`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file.
+[`DataJsonPaths`](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file.
 
 This is useful when you have the project and you have to build it across different java, gradle and android-sdk versions.
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: tosca-integration-with-hyperexecute-using-commander
 title: Tosca Integration using Commander
 hide_title: true
@@ -10,13 +10,14 @@ keywords:
     - products
     - tosca
     - tricentis
-url: https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
+url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-using-commander
 site_name: LambdaTest
-slug: tosca-integration-with-hyperexecute-using-commander/
+slug: tosca-integration-with-hyperexecute-using-commander
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Tosca Integration with HyperExecute using Commander",
-          "item": "https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-commander/"
+          "item": `${BRAND_URL}/support/docs/tosca-integration-with-hyperexecute-using-commander/`
         }]
       })
     }}
@@ -92,7 +93,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [LambdaTest’s cloud-based Selenium Grid](https://www.lambdatest.com/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/).
+-  Ensure that you have integrated Tosca with [<BrandName />’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 

@@ -3,15 +3,18 @@ id: csv-import
 title: Import Test Cases from CSV
 hide_title: false
 sidebar_label: Import CSV
-description: Simplify your csv import with LambdaTest's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
+description: Simplify your csv import with TestMu AI's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
 keywords:
   - test case import
   - csv import
   - test case
-url: https://www.lambdatest.com/support/docs/csv-import/
+url: https://www.testmu.ai/support/docs/csv-import
 site_name: LambdaTest
-slug: csv-import/
+slug: csv-import
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: csv-import/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Import Test Cases form CSV",
-          "item": "https://www.lambdatest.com/support/docs/csv-import/"
+          "item": `${BRAND_URL}/support/docs/csv-import/`
         }]
       })
     }}
@@ -66,7 +69,7 @@ Following entities can be mapped & imported:
 
 #### Prerequisites:
 - To map Custom Fields, ensure the custom fields are created and linked to the project before beginning the import process.
-- To import Jira Tickets, ensure your Jira instance is connected to Test Manager (refer [here](https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/)). If you forget to connect it before starting the import, don't worry, the test cases will automatically link to the appropriate Jira tickets once the integration is set up.
+- To import Jira Tickets, ensure your Jira instance is connected to Test Manager (refer [here](/support/docs/link-jira-issues-with-test-manager/)). If you forget to connect it before starting the import, don't worry, the test cases will automatically link to the appropriate Jira tickets once the integration is set up.
 
 **Following format of Test Cases are supported for Importing:**
 1. **Test cases use a single row:** Use this option when your steps, outcomes, or BDDs are combined in one row per test case & indexed like: 
@@ -108,12 +111,12 @@ Let's see the imported data:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -3,18 +3,21 @@ id: hyperexecute-winapp-integration
 title: WinAppDriver
 hide_title: true
 sidebar_label: WinAppDriver
-description: Unlock enhanced automation testing by seamlessly integrating Excel with HyperExecute using LambdaTest's support documentation.
+description: Unlock enhanced automation testing by seamlessly integrating Excel with HyperExecute using TestMu AI's support documentation.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
   - Microsoft Excel
-url: https://www.lambdatest.com/support/docs/hyperexecute-winapp-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-winapp-integration
 site_name: LambdaTest
-slug: hyperexecute-winapp-integration/
+slug: hyperexecute-winapp-integration
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-winapp-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-winapp-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-winapp-integration/`
         }]
       })
     }}
@@ -219,12 +222,12 @@ You can now run your Excel tests on HyperExecute. Happy testing!
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

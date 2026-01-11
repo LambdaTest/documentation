@@ -3,7 +3,7 @@ id: perform-selenium-automation-on-headless-browsers
 title: How To Perform Headless Browser Testing
 hide_title: true
 sidebar_label: Headless Browser Testing
-description: Learn how to perform Headless browser testing on the LambdaTest platform, to perform cross-browser testing on 3000+ combinations of real devices, browsers, and OS.
+description: Learn how to perform Headless browser testing on the TestMu AI platform, to perform cross-browser testing on 3000+ combinations of real devices, browsers, and OS.
 keywords:
 - Headless Browser Testing
 - Headless Testing Selenium
@@ -16,10 +16,12 @@ keywords:
 - Selenium Headless Firefox
 - Headless Testing
 
-url: https://www.lambdatest.com/support/docs/perform-selenium-automation-on-headless-browsers/
+url: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers
 site_name: LambdaTest
-slug: perform-selenium-automation-on-headless-browsers/
+slug: perform-selenium-automation-on-headless-browsers
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,18 +30,18 @@ slug: perform-selenium-automation-on-headless-browsers/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Headless Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/perform-selenium-automation-on-headless-browsers/"
+          "item": `${BRAND_URL}/support/docs/perform-selenium-automation-on-headless-browsers/`
         }]
       })
     }}
@@ -48,11 +50,11 @@ slug: perform-selenium-automation-on-headless-browsers/
 # Perform Headless Browser Testing On Cloud Selenium Grid
 
 ***
-Performing automated tests on the Headless browsers can be challenging as it does not contain any UI. LambdaTest now allows you to perform Headless browser testing easily on its cloud-based Selenium Grid. In this document, you will learn how to enable and perform Headless browser testing on the LambdaTest platform.
+Performing automated tests on the Headless browsers can be challenging as it does not contain any UI. <BrandName /> now allows you to perform Headless browser testing easily on its cloud-based Selenium Grid. In this document, you will learn how to enable and perform Headless browser testing on the <BrandName /> platform.
 
-## Enabling The Headless Browser Testing On LambdaTest
+## Enabling The Headless Browser Testing On <BrandName />
 * * *
-For Headless browser testing on LambdaTest, you need to enable the desired capability of Headless browsing – ‘*headless*’. You can enable this capability using any one of the two methods mentioned below:
+For Headless browser testing on <BrandName />, you need to enable the desired capability of Headless browsing – ‘*headless*’. You can enable this capability using any one of the two methods mentioned below:
 
 ### Enable Headless Browser Testing On Desired Capabilities Generator
 * * *
@@ -153,7 +155,7 @@ capabilities = {
 	}
 ```
 
-## Perform Headless Browser Testing on LambdaTest
+## Perform Headless Browser Testing on <BrandName />
 * * *
 
 Below is a example to perform Headless browser testing. For demo purpose, we have used TestNG framework of Java language.
@@ -242,7 +244,7 @@ public class HeadlessAutomation {
 }
 ```
 
-Upon executing the above code, the test will run on your LambdaTest successfully. You can view the status of the test on your [Automation dashboard](https://automation.lambdatest.com/timeline).
+Upon executing the above code, the test will run on your <BrandName /> successfully. You can view the status of the test on your [Automation dashboard](https://automation.lambdatest.com/timeline).
 
 <img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.webp').default} alt="Image"  className="doc_img" width="768" height="348"/>
 
@@ -253,12 +255,12 @@ That's it folks! If you have any doubt or questions, feel free to contact our ex
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -3,24 +3,26 @@ id: google-chat-integration
 title: Google Chat Integration
 hide_title: true
 sidebar_label: Google Chat
-description: LambdaTest helps you manage your bugs in Google Chat by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your Google Chat Space.
+description: TestMu AI helps you manage your bugs in Google Chat by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Google Chat Space.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to Google Chat
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest Google Chat integration
-  - integrate Google Chat with lambdatest
-  - create issue in Google Chat from lambdatest
-  - Google Chat integration with lambdatest
-  - create Google Chat issues from lambdatest
+  - testmu ai Google Chat integration
+  - integrate Google Chat with testmu ai
+  - create issue in Google Chat from testmu ai
+  - Google Chat integration with testmu ai
+  - create Google Chat issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/google-chat-integration/
+url: https://www.testmu.ai/support/docs/google-chat-integration
 site_name: LambdaTest
-slug: google-chat-integration/
+slug: google-chat-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: google-chat-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Google Chat Integration",
-          "item": "https://www.lambdatest.com/support/docs/google-chat-integration/"
+          "item": `${BRAND_URL}/support/docs/google-chat-integration/`
         }]
       })
     }}
@@ -50,10 +52,10 @@ slug: google-chat-integration/
 ***
 Google Chat enables business teams to streamline their communications within Google Workspace. With Google Chat, you can chat using text, create collaborative chat rooms, share files, and hold virtual conferences.
 
-LambdaTest and Google Chat can be used to create test cards in Google Chats Spaces for logged bugs in LambdaTest. This will notify you every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com/) of websites.
+<BrandName /> and Google Chat can be used to create test cards in Google Chats Spaces for logged bugs in <BrandName />. This will notify you every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com/) of websites.
 
 
-## Integrating Google Chat With LambdaTest
+## Integrating Google Chat With <BrandName />
 ***
 **Step 1:** Sign in to your Google account and head to **Google Chat**.
 
@@ -73,7 +75,7 @@ LambdaTest and Google Chat can be used to create test cards in Google Chats Spac
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/new-space.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 6:** Head to the **Integrations** in your LambdaTest Dashboard. Add **Google Chat** from under the Communication section.
+**Step 6:** Head to the **Integrations** in your <BrandName /> Dashboard. Add **Google Chat** from under the Communication section.
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/integrate-google-chat.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -85,7 +87,7 @@ LambdaTest and Google Chat can be used to create test cards in Google Chats Spac
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/google-account.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 9:** Click on **Allow** to let LambdaTest access your Google Account to complete the integration.  
+**Step 9:** Click on **Allow** to let <BrandName /> access your Google Account to complete the integration.  
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/allow.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -93,7 +95,7 @@ LambdaTest and Google Chat can be used to create test cards in Google Chats Spac
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/install.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 11:** You can now see in your **Google Chat Dashboard** that we have successfully integrated LambdaTest with Google Chat.  
+**Step 11:** You can now see in your **Google Chat Dashboard** that we have successfully integrated <BrandName /> with Google Chat.  
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/dashboard.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -132,23 +134,23 @@ To demonstrate, we take an example of Real-time testing.
 
 ***
 
-**Step 1:** Sign in to your LambdaTest account and visit Integrations from the left sidebar menu.
+**Step 1:** Sign in to your <BrandName /> account and visit Integrations from the left sidebar menu.
 
 **Step 2:** From the My Integrations section, click the remove option under the Google Chat block.
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/uninstall.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Google Chat Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Google Chat Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

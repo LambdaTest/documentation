@@ -6,12 +6,14 @@ sidebar_label: Custom DNS Mapping
 description: Learn how to provide Custom IP for Domains.
 keywords:
     - custom dns mapping
-    - lambdatest custom dns map
+    - testmu ai custom dns map
 
-url: https://www.lambdatest.com/support/docs/custom-dns-map/
+url: https://www.testmu.ai/support/docs/custom-dns-map
 site_name: LambdaTest
-slug: custom-dns-map/
+slug: custom-dns-map
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,18 +21,18 @@ slug: custom-dns-map/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Custom DNS Mapping",
-          "item": "https://www.lambdatest.com/support/docs/custom-dns-map/"
+          "item": `${BRAND_URL}/support/docs/custom-dns-map/`
         }]
       })
     }}
@@ -89,4 +91,4 @@ The `customDnsMap` capability offers a number of benefits, including:
 
 ## Conclusion
 
-The `customDnsMap` capability is a powerful tool that can be used to improve the efficiency and flexibility of testing and development workflows. It is a valuable addition to the LambdaTest platform, and it is sure to be used by many testers and developers to improve the quality of their software.
+The `customDnsMap` capability is a powerful tool that can be used to improve the efficiency and flexibility of testing and development workflows. It is a valuable addition to the <BrandName /> platform, and it is sure to be used by many testers and developers to improve the quality of their software.

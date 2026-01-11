@@ -5,18 +5,20 @@ hide_title: true
 sidebar_label: Widgets
 description: HyperExecute Widgets offer comprehensive insights into executed Jobs, all in one convenient location for easy exploration.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Jobs
   - HyperExecute Stage
   - HyperExecute Tasks
-url: https://www.lambdatest.com/support/docs/hyperexecute-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-widgets
 site_name: LambdaTest
-slug: hyperexecute-widgets/
+slug: hyperexecute-widgets
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: hyperexecute-widgets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Widgets",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-widgets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-widgets/`
         }]
       })
     }}
@@ -84,7 +86,7 @@ The HyperExecute Widgets enables you to get all the insights of the Jobs execute
 
 To create your widgets dashboard, follow the below mentioned steps:
 
-**Step 1:** Go to the Insights section from the LambdaTest Dashboard.
+**Step 1:** Go to the Insights section from the <BrandName /> Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step1.png').default} alt="job-trends" className="doc_img"/>
 
@@ -104,7 +106,7 @@ To create your widgets dashboard, follow the below mentioned steps:
 
 To create your widgets dashboard, follow the below mentioned steps:
 
-**Step 1:** Go to the Insights from the LambdaTest Dashboard.
+**Step 1:** Go to the Insights from the <BrandName /> Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step1.png').default} alt="job-trends" className="doc_img"/>
 

@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: How To Guide
 description: Discover the HyperExecute cases 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How To guide?
-url: https://www.lambdatest.com/support/docs/hyperexecute-knowledge-base/
+url: https://www.testmu.ai/support/docs/hyperexecute-knowledge-base
 site_name: LambdaTest
-slug: hyperexecute-how-to-guide/
+slug: hyperexecute-how-to-guide
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-how-to-guide/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-guide"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-guide`
         }]
       })
     }}

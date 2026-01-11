@@ -1,8 +1,8 @@
----
+﻿---
 id: puppeteer-visual-regression
 title: Getting started with SmartUI using Puppeteer
 sidebar_label: Puppeteer
-description: Learn Puppeteer Visual Regression Set up SmartUI, run tests on LambdaTest Cloud across 40+ browsers. Step-by-step guide for seamless testing.
+description: Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across 40+ browsers. Step-by-step guide for seamless testing.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/puppteer-visual-regression/
+url: https://www.testmu.ai/support/docs/puppteer-visual-regression
 site_name: LambdaTest
-slug: puppeteer-visual-regression/
+slug: puppeteer-visual-regression
 
 ---
 import Tabs from '@theme/Tabs';
@@ -27,6 +27,9 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This documentation will act as your step-by-step guide in to perform Puppteer test with SmartUI.
 
@@ -60,7 +63,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -91,7 +94,7 @@ git clone https://github.com/LambdaTest/puppeteer-sample.git
 npm i
 ```
 
-3. Set up the LambdaTest credentials by following the instructions mentioned in the `README.md` file.
+3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
@@ -160,13 +163,13 @@ Execute the test using the following command to run the test suite using `puppet
 node navigation.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 For additional information about Puppteer framework please explore the documentation [here](/docs/puppeteer-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
@@ -175,12 +178,12 @@ For additional information about Puppteer framework please explore the documenta
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

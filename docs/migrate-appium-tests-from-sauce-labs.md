@@ -3,15 +3,17 @@ id: migrate-appium-test-suites-from-sauce-labs
 title:  Migrate Appium Tests From Sauce Labs
 hide_title: true
 sidebar_label: Migrate From Sauce Labs
-description: This documentation will guide you through the process of migrating your Appium test suites from Sauce Labs to LambdaTest.
+description: This documentation will guide you through the process of migrating your Appium test suites from Sauce Labs to TestMu AI.
 keywords:
 - migrate appium tests from sauce labs 
-- migrate appium tests from sauce labs to lambdatest
-- how to migrate appium tests from sauce labs to lambdatest
-url: https://www.lambdatest.com/support/docs/migrate-appium-tests-from-sauce-labs/
+- migrate appium tests from sauce labs to testmu ai
+- how to migrate appium tests from sauce labs to testmu ai
+url: https://www.testmu.ai/support/docs/migrate-appium-tests-from-sauce-labs
 site_name: LambdaTest
-slug: migrate-appium-tests-from-sauce-labs/
+slug: migrate-appium-tests-from-sauce-labs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,52 +23,52 @@ slug: migrate-appium-tests-from-sauce-labs/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/migrate-appium-tests-from-sauce-labs/"
+          "item": `${BRAND_URL}/support/docs/migrate-appium-tests-from-sauce-labs/`
         }]
       })
     }}
 ></script>
 
-# Migrate Appium Tests From Sauce Labs To LambdaTest
+# Migrate Appium Tests From Sauce Labs To <BrandName />
 ***
 
-The online Appium Grid is available on both LambdaTest and Sauce Labs. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from Sauce Labs to LambdaTest.
+The online Appium Grid is available on both <BrandName /> and Sauce Labs. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from Sauce Labs to <BrandName />.
 
 ## Introduction
 ***
 
-Migrating your current Sauce Labs tests to LambdaTest requires a few tweaks in your code. In this guide, we'll look at how to leverage LambdaTest's desired capabilities in your tests, authenticate your test session, and execute tests on our cloud browsers.
+Migrating your current Sauce Labs tests to <BrandName /> requires a few tweaks in your code. In this guide, we'll look at how to leverage <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute tests on our cloud browsers.
 
 ### Changes In The Test Script
 ***
 
-To move from the Sauce Labs to LambdaTest, you need to make some changes to your test suites such as authentication, desired capabilities etc.
+To move from the Sauce Labs to <BrandName />, you need to make some changes to your test suites such as authentication, desired capabilities etc.
 
 ### Authentication
 ***
 
-Firstly, you need to change the authentication in the configuration settings of your test suite. For running tests on LambdaTest Appium Grid, you need to have a valid user_name and access_key to perform tests on our cloud Grid. In case you don’t have an account on LambdaTest, visit the LambdaTest signup page and create a new account.
+Firstly, you need to change the authentication in the configuration settings of your test suite. For running tests on <BrandName /> Appium Grid, you need to have a valid user_name and access_key to perform tests on our cloud Grid. In case you don’t have an account on <BrandName />, visit the <BrandName /> signup page and create a new account.
 
 The following are the changes in the parameters:
 
 * Username
 * Access Key
 
-You can find the Username and Access Key in the LambdaTest Profile Section of the Automation Dashboard.
+You can find the Username and Access Key in the <BrandName /> Profile Section of the Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-creds.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
-When migrating from Sauce Labs to LambdaTest, you need to make the following changes in the existing code:
+When migrating from Sauce Labs to <BrandName />, you need to make the following changes in the existing code:
 
 1. UserName
 2. AccessKey
@@ -75,10 +77,10 @@ When migrating from Sauce Labs to LambdaTest, you need to make the following cha
 
 Here is a side-by-side comparison of each of the fields that we have highlighted above:
 
-| Property | Type | Sauce Labs | LambdaTest |
+| Property | Type | Sauce Labs | <BrandName /> |
 | -------- | -----| ------------ | ---------- |
-|    UserName      |   String   |       UserName to access Appium Grid on Sauce Labs       |   UserName to access Appium Grid on LambdaTest         |
-|     AccessKey     |     String |      AccessKey to access Appium Grid on Sauce Labs        |   AccessKey to access Appium Grid on LambdaTest         |
+|    UserName      |   String   |       UserName to access Appium Grid on Sauce Labs       |   UserName to access Appium Grid on <BrandName />         |
+|     AccessKey     |     String |      AccessKey to access Appium Grid on Sauce Labs        |   AccessKey to access Appium Grid on <BrandName />         |
 |     Hub URL     |   String   |     ondemand.us-west-1.saucelabs.com/wd/hub |     @hub.lambdatest.com/wd/hub       |
 
 For a Python-based implementation, here are the changes in the script for the authentication process.
@@ -89,7 +91,7 @@ For a Python-based implementation, here are the changes in the script for the au
 userName = "SAUCE_USERNAME"
 accessKey = "SAUCE_ACCESS_KEY"
 ```
-**LambdaTest**
+**<BrandName />**
 
 ```python
 userName = "LambdaTest_UserName"
@@ -108,7 +110,7 @@ For a Python-based implementation, here are the changes in the script for Hub UR
 @ondemand.us-west-1.saucelabs.com/wd/hub
 ```
 
-**LambdaTest**
+**<BrandName />**
 
 ```
 @mobile-hub.lambdatest.com/wd/hub
@@ -122,21 +124,21 @@ Capabilities generator allows you to specify the desired capabilities (or capabi
 1. Device
 2. Operating system
 
-You can also select other advanced options available in the LambdaTest Capabilities Generator.
+You can also select other advanced options available in the <BrandName /> Capabilities Generator.
 
-For the migration, we have taken Java-based Appium tests. Below are the screenshots of the capability generator of Sauce Labs and LambdaTest.
+For the migration, we have taken Java-based Appium tests. Below are the screenshots of the capability generator of Sauce Labs and <BrandName />.
 
 **Sauce Labs**
 
 <img loading="lazy" src={require('../assets/images/getting-started-app-automation/sl-caps.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
-**LambdaTest**
+**<BrandName />**
 
 <img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-caps.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
-The comparison of the capabilities generated by Sauce Labs and LambdaTest capabilities generator:
+The comparison of the capabilities generated by Sauce Labs and <BrandName /> capabilities generator:
 
-| Capabilities | Sauce Labs | LambdaTest |
+| Capabilities | Sauce Labs | <BrandName /> |
 | -------- | -----| ------------ | 
 | Device   |  deviceName |   deviceName    |
 | Operating System   |   platformVersion    |  platformVersion |
@@ -157,7 +159,7 @@ caps = {
 }
 ```
 
-**LambdaTest**
+**<BrandName />**
 
 ```py
 # demo.py
@@ -174,7 +176,7 @@ caps = [
 ]
 ```
 
-## Example: Sauce Labs To LambdaTest Migration
+## Example: Sauce Labs To <BrandName /> Migration
 ***
 
 Let's look an example that shows the entire migration process. The test scenario is to open a Wikipedia app that search the term ‘lambdatest’. The following test runs on Google Pixel 3 running Android 11.
@@ -251,7 +253,7 @@ for cap in caps:
     Thread(target=run_session, args=(cap,)).start()
 ```
 
-**LambdaTest**
+**<BrandName />**
 
 ```python
 #samplewikipedia.py
@@ -325,7 +327,7 @@ def run_session(desired_cap):
 for cap in caps:
     Thread(target=run_session, args=(cap,)).start()
 ```
-The majority of the implementation, as shown above, remains unchanged. Only changes to the infrastructure are made (i.e. instead of Sauce Labs, the app automation tests would be run on LambdaTest).
+The majority of the implementation, as shown above, remains unchanged. Only changes to the infrastructure are made (i.e. instead of Sauce Labs, the app automation tests would be run on <BrandName />).
 
 Let's analyze what has changed from the implementation point of view.
 
@@ -368,7 +370,7 @@ def run_session(desired_cap):
 
 ```
 
-**LambdaTest**
+**<BrandName />**
 
 ```python
 from threading import Thread
@@ -397,17 +399,17 @@ def run_session(desired_cap):
     driver = webdriver.Remote(command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub", desired_capabilities=desired_cap)
 
 ```
->That’s all about Sauce Labs to LambdaTest migration. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+>That’s all about Sauce Labs to <BrandName /> migration. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

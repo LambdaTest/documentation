@@ -3,15 +3,17 @@ id: integrate-test-reporting-test-management-tools
 title:  How to integrate test reporting & test management tools
 hide_title: true
 sidebar_label: Test Reporting & Test Management Tools
-description: Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over LambdaTest.
+description: Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over TestMu AI.
 keywords:
-  - LambdaTest integration
-  - lambdatest integration with test management tools
-  - lambdatest selenium grid integration
-url: https://www.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools
+  - TestMu AI integration
+  - testmu ai integration with test management tools
+  - testmu ai selenium grid integration
+url: https://www.testmu.ai/support/docs/integrate-test-reporting-test-management-tools
 site_name: LambdaTest
-slug: integrate-test-reporting-test-management-tools/
+slug: integrate-test-reporting-test-management-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: integrate-test-reporting-test-management-tools/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "lambdatest integration with test management tools",
+          "name": "TestMu AI integration with test management tools",
           "item": "https://staging.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools/"
         }]
       })
@@ -40,24 +42,24 @@ slug: integrate-test-reporting-test-management-tools/
 # Test Reporting & Test Management Tools
 
 ***
-LambdaTest offers integration with test reporting and test management tools, allowing you to conveniently manage your test execution reports, as you perform cross browser testing using LambdaTest. Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over LambdaTest.
+<BrandName /> offers integration with test reporting and test management tools, allowing you to conveniently manage your test execution reports, as you perform cross browser testing using <BrandName />. Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over <BrandName />.
 
-| [PractiTest Integration With LambdaTest](/docs/practitest-integration/) |
+| [PractiTest Integration With <BrandName />](/docs/practitest-integration/) |
 |:--------------------------------------------------------------------------------------------:|
 
-| [Test Rail Integration With LambdaTest](/docs/testrail-integration-with-lambdatest-selenium-grid/) |
+| [Test Rail Integration With <BrandName />](/docs/testrail-integration-with-testmu-selenium-grid/) |
 |:--------------------------------------------------------------------------------------------:|
 
 | [Calliope Integration With LambdaTest](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
-| [Zebrunner Integration With LambdaTest](/docs/zebrunner-integration/) |
+| [Zebrunner Integration With <BrandName />](/docs/zebrunner-integration/) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
-| [Zephyr Scale Integration With LambdaTest](/docs/zephyr-scale-integration/) |
+| [Zephyr Scale Integration With <BrandName />](/docs/zephyr-scale-integration/) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
-| [TestMo Integration With LambdaTest](/docs/testmo-integration/) |
+| [TestMo Integration With <BrandName />](/docs/testmo-integration/) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
 
@@ -66,10 +68,10 @@ If your favourite test reporting and test management tool is not in the above me
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Test Reporting & Test Management Tools</span>

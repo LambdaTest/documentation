@@ -5,13 +5,16 @@ hide_title: true
 sidebar_label: VNet Peering and VNet Links
 description: Secure your HyperExecute Private setup with VNet Peering & Links! Our guide helps provision resources, deploy ARM templates, and connect VNets for optimal testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-vnet-peering-for-private-cloud/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-vnet-peering-for-private-cloud
 site_name: LambdaTest
-slug: hyperexecute-vnet-peering-for-private-cloud/
+slug: hyperexecute-vnet-peering-for-private-cloud
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +24,17 @@ slug: hyperexecute-vnet-peering-for-private-cloud/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-vnet-peering-for-private-cloud/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-vnet-peering-for-private-cloud/`
         }]
       })
     }}
@@ -260,12 +263,12 @@ If you have any questions about this process, you can reach out to the HyperExec
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

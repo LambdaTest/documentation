@@ -1,16 +1,16 @@
----
+﻿---
 id: appium-custom-header
 title: How to Use CustomHeaders Capability
 hide_title: true
 sidebar_label: CustomHeaders
-description: Learn how to use LambdaTest CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
+description: Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
 keywords:
-- custom headers lambdatest
+- custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.lambdatest.com/support/docs/appium-custom-headers/
+url: https://www.testmu.ai/support/docs/appium-custom-headers
 site_name: LambdaTest
-slug: appium-custom-headers/
+slug: appium-custom-headers
 ---
 
 
@@ -21,11 +21,11 @@ Custom hеadеrs providе you thе ability to kееp crucial information about t
 In this documеntation, wе will look at LambdaTеst CustomHеadеrs, a `capability` that allows you to add custom hеadеrs to your tеsts and bypass firеwall rеstrictions whilе pеrforming automatеd browser tеsting. 
 
 
-## How to use CustomHeaders Capability on LambdaTest?
+## How to use CustomHeaders Capability on <BrandName />?
 
 ----
 
-To add custom headers using LambdaTest's CustomHeader capability, you need to use LambdaTest's Desired Capabilities class. 
+To add custom headers using <BrandName />'s CustomHeader capability, you need to use <BrandName />'s Desired Capabilities class. 
 
 1. Create an instance of the Desired Capabilities class.
 
@@ -42,6 +42,9 @@ In the above code snippet, you need to replace **headerName** and **headerValue*
 
 ## CustomHeaders: Use Cases and Examples
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Custom headers serves different purposes for development and network communications. Here are some of its key use cases:
 
@@ -131,12 +134,12 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

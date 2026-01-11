@@ -3,20 +3,22 @@ id: appium-firebase-app-upload
 title: Uploading app via Firebase
 hide_title: false
 sidebar_label: Uploading app via Firebase
-description: Discover how to test an app uploaded on Firebase seamlessly through Appium at LambdaTest! Our guide simplifies your Appium Firebase app upload process for efficient testing!
+description: Discover how to test an app uploaded on Firebase seamlessly through Appium at TestMu AI! Our guide simplifies your Appium Firebase app upload process for efficient testing!
 keywords:
-  - lambdatest automation
-  - lambdatest appium
-  - lambdatest real device
+  - testmu ai automation
+  - testmu ai appium
+  - testmu ai real device
   - firebase
-  - lambdatest firebase
+  - testmu ai firebase
   - firebase app upload
   - app automation
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/appium-firebase-app-upload/
+image: /assets/images/og-images/appium-testing-og-image
+url: https://www.testmu.ai/support/docs/appium-firebase-app-upload
 site_name: Uploading app via Firebase
-slug: appium-firebase-app-upload/
+slug: appium-firebase-app-upload
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -25,17 +27,17 @@ slug: appium-firebase-app-upload/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With HyperExecute on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/appium-firebase-app-upload/"
+          "name": "Getting Started With HyperExecute on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-firebase-app-upload/`
         }]
       })
     }}
@@ -52,12 +54,12 @@ import RealDeviceTag from '../src/component/realDevice';
 <RealDeviceTag value="Real Device" /> 
 ## Tutorial to test an app uploaded on Firebase
 
-**Firebase** is a platform developed by **Google** for creating mobile and web applications. **LambdaTest cloud platform** provides you various methods to upload your files on a real device like from playstore and appstore. Uploading an app through Firebase is one such method.
+**Firebase** is a platform developed by **Google** for creating mobile and web applications. **<BrandName /> cloud platform** provides you various methods to upload your files on a real device like from playstore and appstore. Uploading an app through Firebase is one such method.
 
 ## How to Start with Firebase
 ---
 
-Before using LambdaTest you should have a Firebase account where you can upload your app and use later. We will demonstrate the steps required to set up a Firebase account.
+Before using <BrandName /> you should have a Firebase account where you can upload your app and use later. We will demonstrate the steps required to set up a Firebase account.
 
 1. Visit [**official website**](https://firebase.google.com/) of Firebase if you have not used it earlier and get started.
 2. You will find an option to **Add a Project**.
@@ -93,27 +95,27 @@ After you have created the **Firebase account** and added a project. Now, you ne
 ## How to use Firebase App for Real Device App Testing?
 ---
 
-After you have uploaded your application to your Firebase account, you can use the same account on a **LambdaTest Real Device** to retrieve your app and start testing. Below are the steps for the same:
+After you have uploaded your application to your Firebase account, you can use the same account on a **<BrandName /> Real Device** to retrieve your app and start testing. Below are the steps for the same:
 
-1. Go to [**Real Device App Testing**](https://applive.lambdatest.com/app) on LambdaTest console and start the test session.
+1. Go to [**Real Device App Testing**](https://applive.lambdatest.com/app) on <BrandName /> console and start the test session.
 2. After you start the test, go to the **Gmail** or any other mail client on the phone and login to your registered **Google Account**. You would have received an invitation if you added yourself as a tester. 
 
 <img loading="lazy" src={require('../assets/images/app-automation/mail1.png').default} alt="Image"  className="doc_img doc_img_dimension" width="1234" height="564"/>
 
 3. Post accepting the invite received you will be taken to Firebase console on the real device where you can see your app with a **download link**.
 4. Download the app and **Allow installation of unknown apps** to install the app on the selected real device.
-5. Finally you have your application running on a LambdaTest real device. Continue testing the features of your app.
+5. Finally you have your application running on a <BrandName /> real device. Continue testing the features of your app.
 
 ## How to use Firebase App for App Automation?
 ---
 
-After you have uploaded your application to your Firebase account, you can use the same account on a **LambdaTest Real Device** to retrieve your app and start testing. Below are the steps for the same:
+After you have uploaded your application to your Firebase account, you can use the same account on a **<BrandName /> Real Device** to retrieve your app and start testing. Below are the steps for the same:
 
 1. Get the Firebase **projects.apps.releases.get** API. You can find it from [Firebase official documentation](https://firebase.google.com/docs/reference/app-distribution/rest/v1/projects.apps.releases/get).
 
 2. It will generate a **Release** response containing a public downloadable URI.
 
-3. You can use this downloadable URI while uploading apps using App URL on the LambdaTest cloud.
+3. You can use this downloadable URI while uploading apps using App URL on the <BrandName /> cloud.
 
 
 <div className="lambdatest__codeblock">

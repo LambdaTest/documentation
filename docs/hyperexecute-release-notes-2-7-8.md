@@ -5,18 +5,19 @@ hide_title: false
 sidebar_label: Version 2.7.8
 description: Version 2.7.8
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-7-8/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-7-8
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-7-8/
+slug: hyperexecute-release-notes-2-7-8
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';
 import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,23 +27,23 @@ import BugFixTag from '../src/component/bugFixTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-7-8/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-7-8/`
         }]
       })
     }}
 ></script>
 ## Default Reporter Configuration in CypressOps
-You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
+You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
 
 ```yaml
 cypressOps:
@@ -68,7 +69,7 @@ Value of this JSON:
 ```
 
 ## Setup Runtime Updates
-HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
+HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
 
 ```yaml
 runtime:
@@ -77,7 +78,7 @@ runtime:
 ```
 
 ## Support for Project Capability in CypressOps
-You can now define your [Project](https://www.lambdatest.com/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
+You can now define your [Project](/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
 
 ```yaml
 cypressOps:

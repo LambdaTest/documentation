@@ -5,16 +5,17 @@ hide_title: false
 sidebar_label: Starting a Visual UI Scan
 description: Learn how to configure a Visual UI scan, including default settings for browsers and resolutions, and advanced options using a SmartUI JSON config.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - visual ui scan
   - smartui config
-url: https://www.lambdatest.com/support/docs/web-scanner-visual-scan
+url: https://www.testmu.ai/support/docs/web-scanner-visual-scan
 site_name: LambdaTest
-slug: web-scanner-visual-scan/
+slug: web-scanner-visual-scan
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,22 +25,22 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Starting a Visual UI Scan",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-visual-scan"
+          "item": `${BRAND_URL}/support/docs/web-scanner-visual-scan`
         }]
       })
     }}

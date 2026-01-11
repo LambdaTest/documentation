@@ -3,15 +3,18 @@ id: bypass-proxy-domains
 title: How to Bypass Proxy Domains
 hide_title: false
 sidebar_label: Bypass Proxy Domains
-description: Learn how to use LambdaTest bypassProxyDomains capability to specify domains that should bypass the dedicated proxy.
+description: Learn how to use TestMu AI bypassProxyDomains capability to specify domains that should bypass the dedicated proxy.
 keywords:
-- custom headers lambdatest
+- custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.lambdatest.com/support/docs/bypass-proxy-domains/
+url: https://www.testmu.ai/support/docs/bypass-proxy-domains
 site_name: LambdaTest
-slug: bypass-proxy-domains/
+slug: bypass-proxy-domains
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,19 +25,19 @@ slug: bypass-proxy-domains/
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.lambdatest.com"
+        "item": BRAND_URL
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Support",
-        "item": "https://www.lambdatest.com/support/docs/"
+        "item": `${BRAND_URL}/support/docs/`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Bypass Proxy Domains",
-        "item": "https://www.lambdatest.com/support/docs/bypass-proxy-domains/"
+        "item": `${BRAND_URL}/support/docs/bypass-proxy-domains/`
       }
     ]})
   }}>

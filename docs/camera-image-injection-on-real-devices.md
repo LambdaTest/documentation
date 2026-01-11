@@ -2,21 +2,21 @@
 id: camera-image-injection-on-real-devices
 title: Media Injection on Real Devices
 sidebar_label: Media Injection
-description: Test camera features on real devices with LambdaTest's Image Injection. Easily inject custom images for QR codes, photos, and more.
+description: Test camera features on real devices with TestMu AI's Image Injection. Easily inject custom images for QR codes, photos, and more.
 keywords:
   - image injection
   - app test automation
   - camera image
   - QR code scanning
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/camera-image-injection-on-real-devices/
+url: https://www.testmu.ai/support/docs/camera-image-injection-on-real-devices
 site_name: LambdaTest
-slug: camera-image-injection-on-real-devices/
+slug: camera-image-injection-on-real-devices
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,22 +35,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Camera Image Injection on Real Devices",
-          "item": "https://www.lambdatest.com/support/docs/camera-image-injection-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/camera-image-injection-on-real-devices/`
         }]
       })
     }}
 ></script>
-LambdaTest's Media Injection empowers you to test various camera-related functionalities (Image Injection and Video Injection) of your app across a vast array of real mobile devices. This innovative feature supports image capture testing, QR code scanning verification and Barcode scanning assessment.
+<BrandName />'s Media Injection empowers you to test various camera-related functionalities (Image Injection and Video Injection) of your app across a vast array of real mobile devices. This innovative feature supports image capture testing, QR code scanning verification and Barcode scanning assessment.
 
 ## Use Cases
 
@@ -59,7 +61,7 @@ LambdaTest's Media Injection empowers you to test various camera-related functio
 
 ## How It Works
 
-The Image and Video Injection processes leverages **Sensor Instrumentation** technology. When activated for a test session, it injects LambdaTest's proprietary camera module into your application and emulates or supersedes the native Android/iOS camera SDK
+The Image and Video Injection processes leverages **Sensor Instrumentation** technology. When activated for a test session, it injects <BrandName />'s proprietary camera module into your application and emulates or supersedes the native Android/iOS camera SDK
 
 ### Key Features
 
@@ -73,7 +75,7 @@ The Image and Video Injection processes leverages **Sensor Instrumentation** tec
 
 ## Supported Camera APIs
 
-Below given is the list of Camera APIs which are supported by LambdaTest Image Injection tool. Please ensure that your app uses these APIs only to enable Video Injection.
+Below given is the list of Camera APIs which are supported by <BrandName /> Image Injection tool. Please ensure that your app uses these APIs only to enable Video Injection.
 
 <Tabs className="docs__val">
 
@@ -104,7 +106,7 @@ Below given is the list of Camera APIs which are supported by LambdaTest Image I
 
 ## Supported Camera Video APIs
 
-Below given is the list of Camera APIs which are supported by LambdaTest Video Injection tool. Please ensure that your app uses these APIs only to enable Image Injection.
+Below given is the list of Camera APIs which are supported by <BrandName /> Video Injection tool. Please ensure that your app uses these APIs only to enable Image Injection.
 
 <Tabs className="docs__val">
 
@@ -158,6 +160,6 @@ This feature helps you inject any video or image which you want your app to clic
 
 :::info
 
-The clicked image is black because the **Cameras** of LambdaTest Real Devices are taped for security reasons. Thus we inject image through **Sensor Instrumentation**.
+The clicked image is black because the **Cameras** of <BrandName /> Real Devices are taped for security reasons. Thus we inject image through **Sensor Instrumentation**.
 
 :::

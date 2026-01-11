@@ -5,14 +5,17 @@ description: This document will help you debug your failed job if you are facing
 hide_title: true
 sidebar_label: Scenario Errors
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.lambdatest.com/support/docs/hyperexecute-scenario-steps-error/
+url: https://www.testmu.ai/support/docs/hyperexecute-scenario-steps-error
 site_name: LambdaTest
-slug: hyperexecute-scenario-steps-error/
+slug: hyperexecute-scenario-steps-error
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-scenario-steps-error/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Debug Failed Job",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-scenario-steps-error/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-scenario-steps-error/`
         }]
       })
     }}

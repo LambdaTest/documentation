@@ -5,20 +5,21 @@ hide_title: false
 sidebar_label: Modules
 description: Learn how to use custom modules while executing your tests using the Kane AI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support
-url: https://www.lambdatest.com/support/docs/kane-ai-modules/
+url: https://www.testmu.ai/support/docs/kane-ai-modules
 site_name: LambdaTest
-slug: kane-ai-modules/
+slug: kane-ai-modules
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Modules",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-modules/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-modules/`
         }]
       })
     }}

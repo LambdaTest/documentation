@@ -8,9 +8,9 @@ keywords:
 - apis for manual app testing
 - api sfor app automation
 - mobile app testing apis
-url: https://www.lambdatest.com/support/docs/app-testing-apis/
+url: https://www.testmu.ai/support/docs/app-testing-apis
 site_name: LambdaTest
-slug: app-testing-apis/
+slug: app-testing-apis
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -19,6 +19,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Commonly Used APIs For Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/app-testing-apis"
+          "item": `${BRAND_URL}/support/docs/app-testing-apis`
         }]
       })
     }}
@@ -68,7 +70,7 @@ To fetch the Devices that are available for running Tests.
 | PARAMETER | EXAMPLE | DESCRIPTION |
 |-----------------|-------------|------------|
 | `custom_id` | `-F "custom_id="Proverbial_1.0"` | You do not have to remember the `app_URL` and only use the `custom_id` to run your automation on the same app. |
-| `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way LambdaTest stores the link. <br/> Used when we Upload using App URL |
+| `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way <BrandName /> stores the link. <br/> Used when we Upload using App URL |
 | `visibility` | `-F "visibility=team"` <br/> DEFAULT: `individual` | Used to change the visibility of the application being uploaded. Once the app is uploaded using the `team`, everyone in the organisation can use the same URL to run the tests. |
 
 -----
@@ -93,7 +95,7 @@ To fetch the Devices that are available for running Tests.
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789``
 
 :::
@@ -280,12 +282,12 @@ The shareable links are valid for a period of 7, 15, or 30 days, after which the
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

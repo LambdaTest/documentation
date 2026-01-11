@@ -3,18 +3,20 @@ id: autoheal-with-hooks
 title: How to use AutoHeal using Hooks
 hide_title: false
 sidebar_label: AutoHeal using Hooks
-description: Learn how to use LambdaTest Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
+description: Learn how to use TestMu AI Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
-- auto heal lambdatest
+- auto heal testmu ai
 - auto heal test flakiness restrictions
-- auto healing lambdatest
-url: https://www.lambdatest.com/support/docs/autoheal-with-hooks/
+- auto healing testmu ai
+url: https://www.testmu.ai/support/docs/autoheal-with-hooks
 site_name: LambdaTest
-slug: autoheal-with-hooks/
+slug: autoheal-with-hooks
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -25,24 +27,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "AutoHeal with Hooks",
-          "item": "https://www.lambdatest.com/support/docs/autoheal-with-hooks/"
+          "item": `${BRAND_URL}/support/docs/autoheal-with-hooks/`
         }]
       })
     }}
 ></script>
 Autoheal feature automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements’ IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
 
-Autoheal can be started or stopped at any point in your test script using simple hooks. This allows for precise control over when your tests should attempt element healing, improving reliability and reducing flaky tests. This guide explains how to enable and disable Autoheal in your Selenium scripts using the lambdatest hooks.
+Autoheal can be started or stopped at any point in your test script using simple hooks. This allows for precise control over when your tests should attempt element healing, improving reliability and reducing flaky tests. This guide explains how to enable and disable Autoheal in your Selenium scripts using the TestMu AI hooks.
 
 ## Using Autoheal Hooks in Tests
 Autoheal hooks can be inserted anywhere in the script depending on where you need dynamic element handling. Typical flow:
@@ -125,4 +127,4 @@ def OneTest(caps, sleepTime):
 test_autoheal(desired_cap_chrome)
 ```
 
-With these steps, you can seamlessly integrate LambdaTest HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.
+With these steps, you can seamlessly integrate <BrandName /> HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.

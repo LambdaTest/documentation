@@ -3,7 +3,7 @@ id: supported-appium-versions
 title: Supported Appium Versions - Real Devices
 hide_title: false
 sidebar_label: Supported Appium Versions
-description: This document provides information about configuring Appium versions for tests on the LambdaTest platform and also provides list of supported versions.
+description: This document provides information about configuring Appium versions for tests on the TestMu AI platform and also provides list of supported versions.
 keywords:
  - appium
  - appium languages
@@ -13,11 +13,11 @@ keywords:
  - automation testing framework
  - test automation frameworks
  - app testing
- - lambdaTest 
+ - testmu ai 
  - appium version selection
-url: https://www.lambdatest.com/support/docs/supported-appium-versions/
+url: https://www.testmu.ai/support/docs/supported-appium-versions
 site_name: LambdaTest
-slug: supported-appium-versions/
+slug: supported-appium-versions
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Appium Testing ",
-          "item": "https://www.lambdatest.com/support/docs/supported-appium-versions/"
+          "item": `${BRAND_URL}/support/docs/supported-appium-versions/`
         }]
       })
     }}
@@ -53,7 +55,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
 
-Customize your testing experience on LambdaTest by selecting the appropriate Appium version for your tests on real devices. LambdaTest offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
+Customize your testing experience on <BrandName /> by selecting the appropriate Appium version for your tests on real devices. <BrandName /> offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
 
 :::info
 - We also provide Support for Appium 3.0.2 on following versions
@@ -63,7 +65,7 @@ Customize your testing experience on LambdaTest by selecting the appropriate App
 
 
 ## Appium Version Configuration for Real Devices
-To configure the Appium version for your tests on LambdaTest, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
+To configure the Appium version for your tests on <BrandName />, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
 
 | Platform Versions | Supported Versions | Default Version | Latest Version |
 |-------------------|--------------------|-----------------|----------------|

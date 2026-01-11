@@ -3,15 +3,18 @@ id: specflow-report
 title: SpecFlow Report
 hide_title: false
 sidebar_label: SpecFlow
-description: Learn how to generate SpecFlow Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate SpecFlow Report on TestMu AI and download the reports from the dashboard
 keywords:
   - specflow testing reports
-  - specflow testing lambdatest 
+  - specflow testing testmu ai 
   
-url: https://www.lambdatest.com/support/docs/specflow-report/
+url: https://www.testmu.ai/support/docs/specflow-report
 site_name: LambdaTest
-slug: specflow-report/
+slug: specflow-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,18 +22,18 @@ slug: specflow-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Native Extent Report",
-          "item": "https://www.lambdatest.com/support/docs/specflow-report/"
+          "item": `${BRAND_URL}/support/docs/specflow-report/`
         }]
       })
     }}
@@ -38,7 +41,7 @@ slug: specflow-report/
 SpecFlow is a free tool for automating tests using BDD. It's often used to create automation scripts for .NET projects.
 This technical document provides a guide on generating SpecFlow reports after executing tests on HyperExecute.
 
-> We also offer [Custom Specflow report](https://www.lambdatest.com/support/docs/custom-speclow-report/).
+> We also offer [Custom Specflow report](/support/docs/custom-speclow-report/).
 
 ## Steps to Generate Specflow Reports on HyperExecute
 

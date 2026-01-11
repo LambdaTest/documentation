@@ -4,16 +4,16 @@ title: Handle Pages with Videos
 sidebar_label: Handle Videos
 description: Learn how SmartUI automatically handles video content in visual regression tests by capturing the first frame, preventing false positives from dynamic video playback.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - videos
   - video testing
   - dynamic content
   - visual testing
   - false positives
-url: https://www.lambdatest.com/support/docs/smartui-handle-videos/
+url: https://www.testmu.ai/support/docs/smartui-handle-videos
 site_name: LambdaTest
-slug: smartui-handle-videos/
+slug: smartui-handle-videos
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +30,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Handle Videos",
-          "item": "https://www.lambdatest.com/support/docs/smartui-handle-videos/"
+          "item": `${BRAND_URL}/support/docs/smartui-handle-videos/`
         }]
       })
     }}

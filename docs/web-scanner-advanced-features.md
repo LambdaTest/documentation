@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Advanced Features
 description: Learn how to configure advanced features in Web Scanner including authentication (Basic Auth and Form Selectors), dedicated proxy, geolocation, and tunnel for testing locally hosted pages.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - advanced features
   - authentication
@@ -15,13 +15,15 @@ keywords:
   - geolocation
   - tunnel
   - local testing
-url: https://www.lambdatest.com/support/docs/web-scanner-advanced-features
+url: https://www.testmu.ai/support/docs/web-scanner-advanced-features
 site_name: LambdaTest
-slug: web-scanner-advanced-features/
+slug: web-scanner-advanced-features
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,22 +33,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Advanced Features in Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-advanced-features"
+          "item": `${BRAND_URL}/support/docs/web-scanner-advanced-features`
         }]
       })
     }}
@@ -164,7 +166,7 @@ For detailed information about dedicated proxy configuration and IP whitelisting
 
 ### How Dedicated Proxy Works
 
-1. LambdaTest allocates a dedicated proxy server with a static IP address
+1. <BrandName /> allocates a dedicated proxy server with a static IP address
 2. Your network administrator whitelists this IP address
 3. Web Scanner routes all scan requests through the dedicated proxy
 4. The proxy accesses your network-restricted resources using the whitelisted IP
@@ -176,7 +178,7 @@ For detailed information about dedicated proxy configuration and IP whitelisting
 3. Select your dedicated proxy region from the dropdown
 4. The proxy will be active for your scan session
 
-> **Note:** Dedicated Proxy is an enterprise feature. Contact your LambdaTest account manager to enable this feature for your organization.
+> **Note:** Dedicated Proxy is an enterprise feature. Contact your <BrandName /> account manager to enable this feature for your organization.
 
 ### Benefits of Dedicated Proxy
 
@@ -260,10 +262,10 @@ For comprehensive tunnel setup instructions, configuration options, and troubles
 
 ### How Tunnel Works
 
-LambdaTest Tunnel creates a secure, encrypted connection between your local machine and the LambdaTest cloud infrastructure:
+<BrandName /> Tunnel creates a secure, encrypted connection between your local machine and the <BrandName /> cloud infrastructure:
 
-1. You download and run the LambdaTest Tunnel binary on your local machine
-2. The tunnel establishes a secure connection to LambdaTest's cloud
+1. You download and run the <BrandName /> Tunnel binary on your local machine
+2. The tunnel establishes a secure connection to <BrandName />'s cloud
 3. Web Scanner routes requests through the tunnel to access your local resources
 4. All communication is encrypted and secure
 
@@ -271,7 +273,7 @@ LambdaTest Tunnel creates a secure, encrypted connection between your local mach
 
 #### Step 1: Download Tunnel Binary
 
-Download the LambdaTest Tunnel binary for your platform:
+Download the <BrandName /> Tunnel binary for your platform:
 
 <Tabs className="docs__val" groupId="platform">
 <TabItem value="windows" label="Windows" default>
@@ -336,8 +338,8 @@ chmod +x LT
 </Tabs>
 
 Replace:
-- `YOUR_LAMBDATEST_USERNAME`: Your LambdaTest username
-- `YOUR_LAMBDATEST_ACCESS_KEY`: Your LambdaTest access key
+- `YOUR_LAMBDATEST_USERNAME`: Your <BrandName /> username
+- `YOUR_LAMBDATEST_ACCESS_KEY`: Your <BrandName /> access key
 - `YOUR_TUNNEL_NAME`: A unique name for your tunnel (e.g., "web-scanner-tunnel")
 
 #### Step 3: Configure Tunnel in Web Scanner

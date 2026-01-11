@@ -5,13 +5,16 @@ hide_title: false
 sidebar_label: Rerun Failed Tests
 description: Speed up debugging by rerunning only failed tests or entire jobs on HyperExecute using the rerun job feature.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-rerun-failed-tests/
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests
 site_name: LambdaTest
-slug: hyperexecute-rerun-failed-tests/
+slug: hyperexecute-rerun-failed-tests
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,17 +23,17 @@ slug: hyperexecute-rerun-failed-tests/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-rerun-failed-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-rerun-failed-tests/`
         }]
       })
     }}

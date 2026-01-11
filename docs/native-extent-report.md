@@ -3,17 +3,20 @@ id: native-extent-report
 title: Native Extent Report
 hide_title: false
 sidebar_label: Extent Native
-description: Learn how to generate Native Extent Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate Native Extent Report on TestMu AI and download the reports from the dashboard
 keywords:
   - native testing reports
-  - native testing lambdatest 
+  - native testing testmu ai 
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.lambdatest.com/support/docs/native-extent-report/
+url: https://www.testmu.ai/support/docs/native-extent-report
 site_name: LambdaTest
-slug: native-extent-report/
+slug: native-extent-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -21,18 +24,18 @@ slug: native-extent-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Native Extent Report",
-          "item": "https://www.lambdatest.com/support/docs/native-extent-report/"
+          "item": `${BRAND_URL}/support/docs/native-extent-report/`
         }]
       })
     }}

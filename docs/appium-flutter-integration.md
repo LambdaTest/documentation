@@ -2,17 +2,17 @@
 id: appium-flutter-integration
 title: Appium Flutter Integration Driver Testing
 sidebar_label: Flutter Integration Driver
-description: Guide to testing Flutter apps using Appium Flutter Integration Driver on LambdaTest real device cloud.
+description: Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.
 keywords:
   - flutter app testing
   - appium flutter integration
   - real device testing
-  - lambdatest
+  - testmu ai
   - flutter automation
   - mobile test automation
-url: https://www.lambdatest.com/support/docs/appium-flutter-integration/
+url: https://www.testmu.ai/support/docs/appium-flutter-integration
 site_name: LambdaTest
-slug: appium-flutter-integration/
+slug: appium-flutter-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,13 +22,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-LambdaTest supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
+<BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
 Testing Flutter apps requires embedding the **Flutter Integration Server** inside your app to enable communication between Appium and Flutter UI elements.
 
-After preparing your Flutter app with this integration (refer to the setup documentation below), you can build, upload, and execute your tests on LambdaTest real devices using the Appium Flutter Integration Driver.
+After preparing your Flutter app with this integration (refer to the setup documentation below), you can build, upload, and execute your tests on <BrandName /> real devices using the Appium Flutter Integration Driver.
 
 ---
 
@@ -52,7 +53,7 @@ After preparing your Flutter app with this integration (refer to the setup docum
 - **Seamless context switching:** No manual switching between Flutter and native app contexts.
 - **Powerful gesture support:** Supports long press, drag and drop, scroll to element, double-click, and more.
 - **Element chaining:** Easily find child elements under specific parent widgets.
-- **Real device cloud ready:** Supported on LambdaTest real Android and iOS devices.
+- **Real device cloud ready:** Supported on <BrandName /> real Android and iOS devices.
 
 ---
 
@@ -119,12 +120,12 @@ void main() {
 
 ---
 
-## Uploading Your Flutter App to LambdaTest
+## Uploading Your Flutter App to <BrandName />
 
 
 
-- For detailed instructions on how to upload your application to LambdaTest, please refer to our comprehensive guide.
-- Visit the [**Upload your Application**](https://www.lambdatest.com/support/docs/application-setup-via-api/#upload-your-application) documentation to learn more.
+- For detailed instructions on how to upload your application to <BrandName />, please refer to our comprehensive guide.
+- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
 
 
@@ -173,7 +174,7 @@ void main() {
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

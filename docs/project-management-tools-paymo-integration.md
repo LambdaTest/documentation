@@ -3,16 +3,18 @@ id: project-management-tools-paymo-integration
 title: Paymo Integration
 hide_title: true
 sidebar_label: Paymo
-description: LambdaTest helps you manage your bugs in Paymo by moving them to project in a single click with details like task list, assignee, title and description in Paymo project.
+description: TestMu AI helps you manage your bugs in Paymo by moving them to project in a single click with details like task list, assignee, title and description in Paymo project.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to paymo
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/paymo-integration/
+url: https://www.testmu.ai/support/docs/paymo-integration
 site_name: LambdaTest
-slug: paymo-integration/
+slug: paymo-integration
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: paymo-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Paymo Integration",
-          "item": "https://www.lambdatest.com/support/docs/paymo-integration/"
+          "item": `${BRAND_URL}/support/docs/paymo-integration/`
         }]
       })
     }}
@@ -42,25 +44,25 @@ slug: paymo-integration/
 
 ---
 
-> Paymo is an online project management application that helps your team work better by getting everyone on the same page. Preferred by freelancers, small and medium businesses across globe, Paymo is dedicated to helping business in their planning, task management, and integrated time tracking. LambdaTest integration with Paymo helps to manage your bugs in Paymo by moving them into a project through a single click effort. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on Paymo.
+> Paymo is an online project management application that helps your team work better by getting everyone on the same page. Preferred by freelancers, small and medium businesses across globe, Paymo is dedicated to helping business in their planning, task management, and integrated time tracking. <BrandName /> integration with Paymo helps to manage your bugs in Paymo by moving them into a project through a single click effort. All the details you provide in <BrandName /> like task list, assignee, title and description would automatically be presented in the project on Paymo.
 
-The LambdaTest Paymo integration helps you in filing issues to your project in Paymo directly from LambdaTest platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in LambdaTest platform. The fields populated by you when marking as bug through LambdaTest are displayed as information on the Paymo for a testing instance.
+The <BrandName /> Paymo integration helps you in filing issues to your project in Paymo directly from <BrandName /> platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in <BrandName /> platform. The fields populated by you when marking as bug through <BrandName /> are displayed as information on the Paymo for a testing instance.
 
-**Paymo Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Paymo Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Establish Integration With Paymo From Your LambdaTest Account?
+## How To Establish Integration With Paymo From Your <BrandName /> Account?
 
 ---
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **‘ADD’** under the block that says **‘Paymo’.**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-integration.webp').default} alt="pymo integration" className="doc_img" width="1344" height="642"/>
 
-**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your **Paymo API Token** credentials in the highlighted fields to establish integration with LambdaTest.
+**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your **Paymo API Token** credentials in the highlighted fields to establish integration with <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-api-token.webp').default} alt="api token" className="doc_img" width="1365" height="644"/>
 
@@ -87,7 +89,7 @@ You can keep a note of this API token with you for future authentication. Althou
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-apitoken.webp').default} alt="api token" className="doc_img" width="1363" height="651"/>
 
-**Step 9:** Paste the API token into the field provided at LambdaTest & hit the **‘Next’** button. You are all set to experience **one-click bug** logging to share your issues directly from your LambdaTest account to your project on Paymo.
+**Step 9:** Paste the API token into the field provided at <BrandName /> & hit the **‘Next’** button. You are all set to experience **one-click bug** logging to share your issues directly from your <BrandName /> account to your project on Paymo.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-buglogging.webp').default} alt="bug logging" className="doc_img" width="1365" height="650"/>
 
@@ -128,7 +130,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-bugmarked.webp').default} alt="bug marked" className="doc_img" width="347" height="75"/>
 
-**Step 7:** Visit your Paymo dashboard. You will be able to notice the logged issue right away by going to the particular project and task list you assigned it to! All the data you provided through Lambdatest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments.
+**Step 7:** Visit your Paymo dashboard. You will be able to notice the logged issue right away by going to the particular project and task list you assigned it to! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-dashboard.webp').default} alt="dashboard" className="doc_img" width="1365" height="653"/>
 
@@ -138,25 +140,25 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select **‘Settings’** from the left navigation menu bar & click on **‘Integrations’.** This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Settings’** from the left navigation menu bar & click on **‘Integrations’.** This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **‘REMOVE’.** You can find the **remove** button right under the **‘Paymo’** block which would be highlighted with a **green tick.**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-remove.webp').default} alt="pymo remove" className="doc_img" width="1358" height="642"/>
 
-> That was all you need to know for LambdaTest + Paymo Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Paymo Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

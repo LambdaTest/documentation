@@ -3,17 +3,20 @@ id: public-cloud-vs-private-cloud
 title: Public Cloud VS Private Cloud
 hide_title: false
 sidebar_label: Public Cloud VS Private Cloud
-description: Discover how LambdaTest's private real device cloud ensures seamless app and website functionality across devices with tailored, robust testing solutions for accuracy and flexibility.
+description: Discover how TestMu AI's private real device cloud ensures seamless app and website functionality across devices with tailored, robust testing solutions for accuracy and flexibility.
 keywords:
   - real device app testing
   - real device browser testing
   - private cloud
   - public cloud
   - public vs private cloud
-url: https://www.lambdatest.com/support/docs/public-cloud-vs-private-cloud/
+url: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud
 site_name: LambdaTest
-slug: public-cloud-vs-private-cloud/
+slug: public-cloud-vs-private-cloud
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +25,18 @@ slug: public-cloud-vs-private-cloud/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to use testing tools in-session?",
-          "item": "https://www.lambdatest.com/support/docs/public-cloud-vs-private-cloud/"
+          "item": `${BRAND_URL}/support/docs/public-cloud-vs-private-cloud/`
         }]
       })
     }}
@@ -67,12 +70,12 @@ To conclude, both Public Device Cloud and Private Device Cloud are useful for re
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

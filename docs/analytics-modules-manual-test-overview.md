@@ -2,7 +2,7 @@
 id: analytics-modules-manual-test-overview
 title: Realtime & Real-Device Modules
 sidebar_label: Realtime & Real-Device
-description: A complete guide to understanding LambdaTest Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
+description: A complete guide to understanding TestMu AI Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
 keywords:
  - analytics
  - test overview
@@ -11,10 +11,12 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-modules-manual-test-overview/
+url: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview
 site_name: LambdaTest
-slug: analytics-modules-manual-test-overview/
+slug: analytics-modules-manual-test-overview
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,26 +26,26 @@ slug: analytics-modules-manual-test-overview/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-manual-test-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-manual-test-overview/`
         }]
       })
     }}
 ></script>
-The Test Overview module in LambdaTest Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
+The Test Overview module in <BrandName /> Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 
 ## Browser Testing Summary
 
-The Browser Testing Summary widget offers a comprehensive overview of your browser testing efforts on the LambdaTest platform. It provides key metrics such as total tests executed, issues/bugs identified, time consumed, and unique launch URLs tested.
+The Browser Testing Summary widget offers a comprehensive overview of your browser testing efforts on the <BrandName /> platform. It provides key metrics such as total tests executed, issues/bugs identified, time consumed, and unique launch URLs tested.
 
 #### How It Works
 - The widget calculates the total number of tests executed on the platform.
@@ -55,7 +57,7 @@ This widget enables you to assess the overall health and effectiveness of your b
 
 ## App Testing Summary
 
-The App Testing Summary widget provides a holistic view of your app testing efforts on the LambdaTest platform. It showcases essential metrics such as total tests executed, issues/bugs identified, time consumed, and total apps tested.
+The App Testing Summary widget provides a holistic view of your app testing efforts on the <BrandName /> platform. It showcases essential metrics such as total tests executed, issues/bugs identified, time consumed, and total apps tested.
 
 #### How It Works
 - The widget calculates the total number of tests executed on the platform.
@@ -67,7 +69,7 @@ This widget allows you to evaluate the effectiveness and efficiency of your app 
 
 ## Browser Testing - OS
 
-The Browser Testing - OS widget provides a detailed breakdown of your browser tests across different operating systems on the LambdaTest platform. It visualizes the distribution of tests executed on each supported OS, giving you valuable insights into your test coverage.
+The Browser Testing - OS widget provides a detailed breakdown of your browser tests across different operating systems on the <BrandName /> platform. It visualizes the distribution of tests executed on each supported OS, giving you valuable insights into your test coverage.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each operating system.
@@ -79,7 +81,7 @@ By analyzing the OS distribution, you can ensure that your web application is th
 
 ## App Testing - OS
 
-The App Testing - OS widget offers a comprehensive breakdown of your app tests across different operating systems on the LambdaTest platform. It presents a visual representation of the distribution of tests executed on each supported mobile OS, providing valuable insights into your app test coverage.
+The App Testing - OS widget offers a comprehensive breakdown of your app tests across different operating systems on the <BrandName /> platform. It presents a visual representation of the distribution of tests executed on each supported mobile OS, providing valuable insights into your app test coverage.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each operating system.
@@ -91,7 +93,7 @@ By examining the OS distribution, you can ensure that your mobile app is rigorou
 
 ## Browser Testing - Browser
 
-The Browser Testing - Browser widget provides a granular view of your browser tests across different web browsers on the LambdaTest platform. It showcases the distribution of tests executed on each supported browser, offering insights into your browser compatibility testing efforts.
+The Browser Testing - Browser widget provides a granular view of your browser tests across different web browsers on the <BrandName /> platform. It showcases the distribution of tests executed on each supported browser, offering insights into your browser compatibility testing efforts.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each browser.
@@ -103,7 +105,7 @@ By analyzing the browser distribution, you can ensure that your web application 
 
 ## Browser Testing - Device
 
-The Browser Testing - Device widget provides a detailed breakdown of your browser tests across different devices on the LambdaTest platform. It visualizes the distribution of tests executed on each supported device, giving you valuable insights into your cross-device browser testing coverage.
+The Browser Testing - Device widget provides a detailed breakdown of your browser tests across different devices on the <BrandName /> platform. It visualizes the distribution of tests executed on each supported device, giving you valuable insights into your cross-device browser testing coverage.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each device.
@@ -115,7 +117,7 @@ By analyzing the device distribution, you can ensure that your web application i
 
 ## App Testing - Device
 
-The App Testing - Device widget offers a comprehensive breakdown of your app tests across different devices on the LambdaTest platform. It presents a visual representation of the distribution of tests executed on each supported device, providing valuable insights into your app testing coverage.
+The App Testing - Device widget offers a comprehensive breakdown of your app tests across different devices on the <BrandName /> platform. It presents a visual representation of the distribution of tests executed on each supported device, providing valuable insights into your app testing coverage.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each device.
@@ -127,7 +129,7 @@ By examining the device distribution, you can ensure that your mobile app is rig
 
 ## Browser Testing Trends
 
-The Browser Testing Trends widget provides a visual representation of your browser testing activity over time on the LambdaTest platform. It allows you to track the volume of tests executed and analyze trends in your testing efforts.
+The Browser Testing Trends widget provides a visual representation of your browser testing activity over time on the <BrandName /> platform. It allows you to track the volume of tests executed and analyze trends in your testing efforts.
 
 - X-Axis: Represents the time intervals at which the browser tests are executed.
 - Y-Axis: Represents the number of browser tests executed at each time interval.
@@ -142,7 +144,7 @@ By examining the browser testing trends, you can gain valuable insights into you
 
 ## App Testing Trends
 
-The App Testing Trends widget provides a visual representation of your app testing activity over time on the LambdaTest platform. It allows you to track the volume of tests executed and analyze trends in your app testing efforts.
+The App Testing Trends widget provides a visual representation of your app testing activity over time on the <BrandName /> platform. It allows you to track the volume of tests executed and analyze trends in your app testing efforts.
 
 - X-Axis: Represents the time intervals at which the app tests are executed.
 - Y-Axis: Represents the number of app tests executed at each time interval.

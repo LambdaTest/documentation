@@ -1,21 +1,23 @@
 ---
 id: lambdatest-sso-google
-title: LambdaTest SSO & Google Custom Using SAML
+title: TestMu AI SSO & Google Custom Using SAML
 hide_title: true
 sidebar_label: Google Workspace 
-description: Now integrate your Google Workspace user directory with your LambdaTest organization subscription through an IDP, so that your team could leverage the SSO setup.
+description: Now integrate your Google Workspace user directory with your TestMu AI organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso
-  - lambdatest sso
+  - testmu ai sso
   - google custom
   - google workspace
   - saml
-  - lambdatest google integration
-  - lambdatest google sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-google/
+  - testmu ai google integration
+  - testmu ai google sso
+url: https://www.testmu.ai/support/docs/testmu-sso-google
 site_name: LambdaTest
-slug: lambdatest-sso-google/
+slug: testmu-sso-google
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,30 +26,30 @@ slug: lambdatest-sso-google/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Google Custom Integration",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-google-custom-using-saml/"
+          "item": `${BRAND_URL}/support/docs/lambdatest-sso-google-custom-using-saml/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest SSO & Google Workspace Using SAML
+# <BrandName /> SSO & Google Workspace Using SAML
 
 * * *
 
-LambdaTest provides seamless Single Sign-On (SSO) integration with Google Workspace, enabling your team to access LambdaTest using their existing Google credentials. This integration streamlines user management and enhances security by centralizing authentication through your Google Workspace identity provider.
+<BrandName /> provides seamless Single Sign-On (SSO) integration with Google Workspace, enabling your team to access <BrandName /> using their existing Google credentials. This integration streamlines user management and enhances security by centralizing authentication through your Google Workspace identity provider.
 
-This comprehensive guide will walk you through configuring SAML-based SSO between your LambdaTest organization and Google Workspace, ensuring a smooth and secure authentication experience for your team.
+This comprehensive guide will walk you through configuring SAML-based SSO between your <BrandName /> organization and Google Workspace, ensuring a smooth and secure authentication experience for your team.
 
 ## Prerequisites
 
@@ -55,15 +57,15 @@ This comprehensive guide will walk you through configuring SAML-based SSO betwee
 
 Before configuring SSO integration, ensure you have the following:
 
-*   **LambdaTest Enterprise Plan**: SSO functionality is available with our Enterprise subscription. Learn more about [managing your subscription](/docs/manage-subscriptions/).
-*   **LambdaTest Organization Admin Access**: You must have administrative privileges within your LambdaTest organization to configure SSO settings.
+*   **<BrandName /> Enterprise Plan**: SSO functionality is available with our Enterprise subscription. Learn more about [managing your subscription](/docs/manage-subscriptions/).
+*   **<BrandName /> Organization Admin Access**: You must have administrative privileges within your <BrandName /> organization to configure SSO settings.
 *   **Google Workspace Super Admin Access**: Administrative access to your organization's Google Workspace instance is required to create and configure SAML applications.
 
 ## Configuration Guide
 
 * * *
 
-The SSO integration process involves configuring both Google Workspace and LambdaTest. We'll guide you through each step to ensure a successful setup.
+The SSO integration process involves configuring both Google Workspace and <BrandName />. We'll guide you through each step to ensure a successful setup.
 
 ### Step 1: Create SAML App in Google Workspace
 
@@ -71,13 +73,13 @@ The SSO integration process involves configuring both Google Workspace and Lambd
 
 2. **Navigate to Web and Mobile Apps**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps** to access the application management section.
 
-3. **Add Custom SAML App**: Click **Add App** and select **Add custom SAML app** to create a new SAML application for LambdaTest integration.
+3. **Add Custom SAML App**: Click **Add App** and select **Add custom SAML app** to create a new SAML application for <BrandName /> integration.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/add-custom-saml-app.png').default} alt="Navigate to Web and Mobile Apps" width="944" height="487" className="doc_img"/>
 
 
 4. **Configure Application Details**: 
-   - **App name**: Enter a descriptive name such as "LambdaTest SSO" or "LambdaTest SSO App" to easily identify this application in your Google Workspace admin console.
+   - **App name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> SSO App" to easily identify this application in your Google Workspace admin console.
    - Click **Continue** to proceed to the next configuration step.
 
 
@@ -85,43 +87,43 @@ The SSO integration process involves configuring both Google Workspace and Lambd
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/custom-app-creation.png').default} alt="Add custom SAML app" width="944" height="487" className="doc_img"/>
 
-5. **Retrieve Google Identity Provider Details**: On the **Google Identity Provider details** page, you'll need to collect the following information for LambdaTest configuration:
+5. **Retrieve Google Identity Provider Details**: On the **Google Identity Provider details** page, you'll need to collect the following information for <BrandName /> configuration:
 
-    - **SSO URL**: Copy this URL - LambdaTest will use this endpoint to initiate authentication requests
+    - **SSO URL**: Copy this URL - <BrandName /> will use this endpoint to initiate authentication requests
     - **Entity ID**: Copy this unique identifier - this serves as Google's identity in the SAML exchange
-    - **Certificate**: Download the X.509 certificate file in PEM format - LambdaTest will use this to verify Google's SAML responses
+    - **Certificate**: Download the X.509 certificate file in PEM format - <BrandName /> will use this to verify Google's SAML responses
     
-    **Important**: Keep this information secure and readily accessible, as you'll need to enter these details in LambdaTest's SSO configuration.
+    **Important**: Keep this information secure and readily accessible, as you'll need to enter these details in <BrandName />'s SSO configuration.
     
     Click **Continue** to proceed.
 
-    <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sp-details.png').default} alt="LambdaTest Configuration Details" width="944" height="487" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sp-details.png').default} alt="<BrandName /> Configuration Details" width="944" height="487" className="doc_img"/>
 
 
-### Step 2: Create Connection in LambdaTest
+### Step 2: Create Connection in <BrandName />
 
-6. **Access LambdaTest SSO Configuration**: Navigate to the [LambdaTest Authentication & SSO settings](https://accounts.lambdatest.com/auth/sso) page. This dashboard provides comprehensive management of your organization's single sign-on configuration. Click **Setup SSO** to initiate the integration process.
+6. **Access <BrandName /> SSO Configuration**: Navigate to the [<BrandName /> Authentication & SSO settings](https://accounts.lambdatest.com/auth/sso) page. This dashboard provides comprehensive management of your organization's single sign-on configuration. Click **Setup SSO** to initiate the integration process.
 
-7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "LambdaTest Google SSO". This name will help you identify and manage this connection in your LambdaTest organization. Click **Add New Connection** to proceed.
+7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "<BrandName /> Google SSO". This name will help you identify and manage this connection in your <BrandName /> organization. Click **Add New Connection** to proceed.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sso-setup-lambdatest.png').default} alt="LambdaTest SSO Settings" width="944" height="487" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sso-setup-lambdatest.png').default} alt="<BrandName /> SSO Settings" width="944" height="487" className="doc_img"/>
 
 8. **Select Identity Provider**: From the list of supported identity providers, select **Other SAML Provider** to configure Google Workspace integration.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/idp-selector.png').default} alt="Select Other SAML Provider" width="944" height="487" className="doc_img"/>
 
-9. **Retrieve LambdaTest Configuration Details**: LambdaTest will generate and display the configuration details required for your Google Workspace setup. These critical details include:
+9. **Retrieve <BrandName /> Configuration Details**: <BrandName /> will generate and display the configuration details required for your Google Workspace setup. These critical details include:
     - **Assertion Consumer Service (ACS) URL**: The secure endpoint where Google will send SAML authentication responses
-    - **Entity ID**: LambdaTest's unique identifier in the SAML exchange protocol
-    - **X.509 Certificate**: LambdaTest's public certificate for verifying SAML response authenticity
+    - **Entity ID**: <BrandName />'s unique identifier in the SAML exchange protocol
+    - **X.509 Certificate**: <BrandName />'s public certificate for verifying SAML response authenticity
     
     **Important**: Securely copy these details as you'll need to enter them in your Google Workspace admin console to complete the integration.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/configure-idp.png').default} alt="LambdaTest Configuration Details" width="944" height="487" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/configure-idp.png').default} alt="<BrandName /> Configuration Details" width="944" height="487" className="doc_img"/>
 
 Click **Continue** to proceed to the next step.
 
-10. **Review Attribute Mapping Requirements**: LambdaTest displays the user attributes that must be mapped from your Google Workspace directory. The essential attributes for proper user provisioning include:
+10. **Review Attribute Mapping Requirements**: <BrandName /> displays the user attributes that must be mapped from your Google Workspace directory. The essential attributes for proper user provisioning include:
     - **Email Address**: User's primary email address for account identification
     - **First Name**: User's given name for personalization
     - **Last Name**: User's surname for complete user profiles
@@ -133,10 +135,10 @@ Click **Continue** to proceed to the next step.
 
 11. **Return to Google Workspace Configuration**: Navigate back to the Google Admin Console tab where you were configuring the SAML application.
 
-12. **Configure Service Provider Details**: In the **Service Provider Details** window, enter the LambdaTest configuration details you copied in step 9:
-    - **ACS URL**: Paste the Assertion Consumer Service URL from LambdaTest. This secure endpoint will receive SAML authentication responses from Google.
-    - **Entity ID**: Enter LambdaTest's Entity ID. This unique identifier enables Google to recognize LambdaTest in the SAML exchange.
-    - **Start URL**: (Optional) Leave blank or enter your LambdaTest organization URL for direct user redirection after authentication.
+12. **Configure Service Provider Details**: In the **Service Provider Details** window, enter the <BrandName /> configuration details you copied in step 9:
+    - **ACS URL**: Paste the Assertion Consumer Service URL from <BrandName />. This secure endpoint will receive SAML authentication responses from Google.
+    - **Entity ID**: Enter <BrandName />'s Entity ID. This unique identifier enables Google to recognize <BrandName /> in the SAML exchange.
+    - **Start URL**: (Optional) Leave blank or enter your <BrandName /> organization URL for direct user redirection after authentication.
     - **Name ID Format**: Set to **"X509_SUBJECT"** - this specifies the format for the Name ID attribute
     - **Name ID**: Set to **"Basic Information > Primary Email"** - this serves as the primary user identifier
 
@@ -144,9 +146,9 @@ Click **Continue** to proceed to the next step.
 
 
 
-13. **Configure Attribute Mapping**: Click **Add mapping** to establish the user attribute mappings required by LambdaTest:
+13. **Configure Attribute Mapping**: Click **Add mapping** to establish the user attribute mappings required by <BrandName />:
     - **Google Directory attributes**: Select the appropriate field from the Google directory attributes dropdown
-    - **App attributes**: Enter the corresponding attribute name that LambdaTest expects
+    - **App attributes**: Enter the corresponding attribute name that <BrandName /> expects
     
     Configure the following essential mappings:
     - **Primary Email**: Map to `email`
@@ -160,7 +162,7 @@ Click **Continue** to proceed to the next step.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/app-detail-google.png').default} alt="Enter app details" width="944" height="487" className="doc_img"/>
 
-15. **Enable SAML Application**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps**, locate the LambdaTest SAML application you created, click **User access**, then configure access for your organization:
+15. **Enable SAML Application**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps**, locate the <BrandName /> SAML application you created, click **User access**, then configure access for your organization:
     - **On for everyone**: Enable access for all users in your organization
     - **On for some organizations**: Enable access for specific organizational units
     - **On for some groups**: Enable access for specific groups of users
@@ -170,9 +172,9 @@ Click **Continue** to proceed to the next step.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/update-app-for-user-access.png').default} alt="Turn On SAML App" width="944" height="487" className="doc_img"/>
 
-### Step 4: Complete LambdaTest Integration
+### Step 4: Complete <BrandName /> Integration
 
-16. **Return to LambdaTest Configuration**: Navigate back to the LambdaTest SSO configuration page to complete the integration by providing Google Workspace details.
+16. **Return to <BrandName /> Configuration**: Navigate back to the <BrandName /> SSO configuration page to complete the integration by providing Google Workspace details.
 
 17. **Provide Google Workspace Configuration**: Enter the Google Workspace SAML configuration details you collected earlier:
     - **Sign-in URL**: Enter the SSO URL copied from Google Workspace in [step 5](#step-1-create-saml-app-in-google-workspace)
@@ -190,7 +192,7 @@ Click **Continue** to proceed to the next step.
     - The X.509 certificate file has been successfully uploaded and validated
     - SSO URL and Entity ID values are accurately entered
     - SSO domain restrictions align with your organization's email domains
-    - Configuration details are consistent between Google Workspace and LambdaTest
+    - Configuration details are consistent between Google Workspace and <BrandName />
 
 20. **Finalize SSO Integration**: After verification, click **Create Connection** to complete the SSO integration and activate the authentication flow.
 
@@ -203,19 +205,19 @@ After completing the integration, verify that your SSO setup is functioning corr
 ### Identity Provider-Initiated (IdP) SSO Testing
 
 1. **Access Test Functionality**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps**.
-2. **Select LambdaTest Application**: Locate and select the LambdaTest SAML application you configured.
+2. **Select <BrandName /> Application**: Locate and select the <BrandName /> SAML application you configured.
 3. **Execute Test Login**: Click **Test SAML login** in the top-left corner of the application details page.
-4. **Verify Successful Redirect**: LambdaTest should open in a new browser tab. If the test fails, review the SAML error messages and update your configuration accordingly, then retest.
+4. **Verify Successful Redirect**: <BrandName /> should open in a new browser tab. If the test fails, review the SAML error messages and update your configuration accordingly, then retest.
 
 ### Service Provider-Initiated (SP) SSO Testing
 
-1. **Access LambdaTest SSO**: Navigate to [https://accounts.lambdatest.com/sso](https://accounts.lambdatest.com/sso) to access the LambdaTest SSO login page.
+1. **Access <BrandName /> SSO**: Navigate to [https://accounts.lambdatest.com/sso](https://accounts.lambdatest.com/sso) to access the <BrandName /> SSO login page.
 2. **Enter Email Address**: Enter your Google Workspace email address in the email field.
 3. **Initiate SSO**: Click **CONTINUE WITH SSO** to begin the authentication process.
 4. **Complete Authentication**: You'll be redirected to Google's sign-in page. Enter your Google Workspace credentials.
-5. **Verify Successful Authentication**: After successful authentication, you should be automatically redirected to your LambdaTest organization.
+5. **Verify Successful Authentication**: After successful authentication, you should be automatically redirected to your <BrandName /> organization.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sp-initiated-sso.png').default} alt="LambdaTest SSO Login Page" width="944" height="487" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sp-initiated-sso.png').default} alt="<BrandName /> SSO Login Page" width="944" height="487" className="doc_img"/>
 
 ## Troubleshooting Common Issues
 
@@ -233,24 +235,24 @@ If you receive an "App not enabled" error, the SAML application hasn't been prop
 
 ### Common Configuration Issues
 
-1. **Certificate Mismatch**: Verify that the X.509 certificate uploaded to LambdaTest exactly matches the certificate from Google Workspace
+1. **Certificate Mismatch**: Verify that the X.509 certificate uploaded to <BrandName /> exactly matches the certificate from Google Workspace
 2. **URL Configuration**: Ensure the ACS URL and Entity ID are accurately copied between both platforms
-3. **Attribute Mapping**: Confirm that attribute names match precisely between Google Workspace and LambdaTest
-4. **Domain Restrictions**: Verify that SSO domains in LambdaTest correspond to your organization's email domains
+3. **Attribute Mapping**: Confirm that attribute names match precisely between Google Workspace and <BrandName />
+4. **Domain Restrictions**: Verify that SSO domains in <BrandName /> correspond to your organization's email domains
 5. **User Permissions**: Ensure users have appropriate access to the SAML application in Google Workspace
 
 
-> **Integration Complete!** Your LambdaTest organization is now successfully integrated with Google Workspace SSO. Your team can now access LambdaTest using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+> **Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

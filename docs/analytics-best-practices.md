@@ -1,7 +1,7 @@
 ---
 id: insights-best-practices
 title: Insights Best Practices
-description: Best practices for using LambdaTest Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
+description: Best practices for using TestMu AI Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
 keywords:
   - insights
   - dashboards
@@ -11,12 +11,14 @@ keywords:
   - data visualization
   - reporting
   - optimization
-slug: insights-best-practices/
+slug: insights-best-practices
 ---
 
-# Best Practices for LambdaTest Insights
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-Unlock the full potential of LambdaTest Insights by following these best practices for dashboards, widgets, and insights modules. These guidelines are distilled from the current knowledge base and are designed to help you optimize your testing process, improve reporting, and drive actionable insights.
+# Best Practices for <BrandName /> Insights
+
+Unlock the full potential of <BrandName /> Insights by following these best practices for dashboards, widgets, and insights modules. These guidelines are distilled from the current knowledge base and are designed to help you optimize your testing process, improve reporting, and drive actionable insights.
 
 ## 1. Dashboard and Widget Design
 
@@ -105,15 +107,15 @@ Performance monitoring ensures high-quality, efficient applications, reduces use
 
 ## 8. General Recommendations
 
-- **Stay Updated:** Regularly check for new widgets, features, and best practices in the LambdaTest documentation.
-- **Seek Support:** Contact LambdaTest support for help with advanced configurations or troubleshooting.
+- **Stay Updated:** Regularly check for new widgets, features, and best practices in the <BrandName /> documentation.
+- **Seek Support:** Contact <BrandName /> support for help with advanced configurations or troubleshooting.
 
 **Use Case:**
 A QA lead stays informed about new analytics features and best practices, quickly adopting improvements that streamline reporting and boost team productivity.
 
 **How it helps:**
-Staying current and seeking support ensures you always get the most value from LambdaTest Analytics and can resolve issues efficiently.
+Staying current and seeking support ensures you always get the most value from <BrandName /> Analytics and can resolve issues efficiently.
 
 ---
 
-By following these best practices, you can maximize the value of LambdaTest Analytics, drive continuous improvement, and deliver high-quality, data-driven testing outcomes.
+By following these best practices, you can maximize the value of <BrandName /> Analytics, drive continuous improvement, and deliver high-quality, data-driven testing outcomes.

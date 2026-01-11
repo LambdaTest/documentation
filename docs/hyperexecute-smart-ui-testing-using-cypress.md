@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Cypress
 description: Boost bug detection speed using HyperExecute smart UI testing with Cypress. Perform Visual UI Regression Testing for perfect app delivery.
 keywords:
-  - smart ui testing in lambdatest
+  - smart ui testing in testmu ai
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
@@ -16,9 +16,9 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/
+url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-cypress
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-testing-using-cypress/
+slug: hyperexecute-smart-ui-testing-using-cypress
 
 ---
 
@@ -27,6 +27,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,18 +37,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-testing-using-cypress/`
         }]
       })
     }}
@@ -78,7 +80,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 
 ### Setup Environment Variable
 
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 For macOS / Linux:

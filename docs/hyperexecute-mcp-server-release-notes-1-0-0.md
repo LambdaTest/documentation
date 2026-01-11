@@ -5,14 +5,16 @@ hide_title: false
 sidebar_label: Version 1.0.0
 description: Check out the release notes for HyperExecute MCP Server 1.0.0, introducing new features, improvements, and bug fixes for streamlined testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/
+url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0
 site_name: LambdaTest
-slug: hyperexecute-mcp-server-release-notes-1-0-0/
+slug: hyperexecute-mcp-server-release-notes-1-0-0
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,24 +24,24 @@ slug: hyperexecute-mcp-server-release-notes-1-0-0/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/`
         }]
       })
     }}
 ></script>
 
 
-# MCP LambdaTest Release Notes
+# MCP <BrandName /> Release Notes
 
 ## Version 1.0.0 - Major Release
 
@@ -47,7 +49,7 @@ slug: hyperexecute-mcp-server-release-notes-1-0-0/
 
 #### Rebranding & Package Updates
 
-- **MCP Hyperexecute** is now **MCP LambdaTest** to better reflect our expanded capabilities
+- **MCP Hyperexecute** is now **MCP <BrandName />** to better reflect our expanded capabilities
 - Updated package name to `mcp-lambdatest` on NPM
 - Stable 1.0.0 release with comprehensive feature set
 
@@ -59,7 +61,7 @@ slug: hyperexecute-mcp-server-release-notes-1-0-0/
 
 #### Enhanced Migration Tools
 
-- Expanded migration capabilities for easier transition to LambdaTest platform
+- Expanded migration capabilities for easier transition to <BrandName /> platform
 - Improved app upload functionality for mobile testing
 - Resolved template loading and asset management for migration tools
 
@@ -131,9 +133,9 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 
 1. **Choose your connection method** (Remote or Local STDIO)
 2. **Update your configuration** with the new format above
-3. **Replace credentials** with your LambdaTest username and access key
+3. **Replace credentials** with your <BrandName /> username and access key
 4. **Verify connection** by asking your AI assistant to list available MCP tools
-5. **Start using** LambdaTest tools directly within your AI assistant
+5. **Start using** <BrandName /> tools directly within your AI assistant
 
 ### 📋 Available Tools
 
@@ -158,7 +160,7 @@ This release is compatible with:
 
 ### 📞 Support
 
-For questions or issues with the connection methods, please refer to our documentation or contact LambdaTest support.
+For questions or issues with the connection methods, please refer to our documentation or contact <BrandName /> support.
 
 ---
 

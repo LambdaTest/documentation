@@ -3,16 +3,18 @@ id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
 sidebar_label: Generate Test Cases with AI
-description: Learn efficient test case generation with in LambdaTest's Test Manager using AI.
+description: Learn efficient test case generation with in TestMu AI's Test Manager using AI.
 keywords:
   - test case creation
   - test case
   - test cases
   - generate test cases
-url: https://www.lambdatest.com/support/docs/generate-test-cases-with-ai/
+url: https://www.testmu.ai/support/docs/generate-test-cases-with-ai
 site_name: LambdaTest
-slug: generate-test-cases-with-ai/
+slug: generate-test-cases-with-ai
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +23,18 @@ slug: generate-test-cases-with-ai/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Generate Test Cases with AI",
-          "item": "https://www.lambdatest.com/support/docs/generate-test-cases/"
+          "item": `${BRAND_URL}/support/docs/generate-test-cases/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: generate-test-cases-with-ai/
 # AI Test Case Generator 
 
 ## What is the AI Test Case Generator?
-The **AI Test Case Generator** is an intelligent feature within LambdaTest Test Manager that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
+The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
 ## How It Works: Step-by-Step
@@ -96,8 +98,8 @@ We support multiple input formats, including:
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/uploaded_files_test_cases_generation.png').default} alt="uploaded_files_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 #### Add Issue Links:
-- Integrate your LambdaTest account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[LambdaTest Jira Integration](https://www.lambdatest.com/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [LambdaTest Azure DevOps Integration](https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/)
+- Integrate your <BrandName /> account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
+[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/)
 
 - After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
 
@@ -173,7 +175,7 @@ Click on regenerate after updating the input.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/regenerate_test_cases_generation.png').default} alt="regenerate_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 ### Step 7: Select and Save Test Cases
- Once satisfied, **select the test cases** you want to keep and **save them directly** to your **Test Case Repository** in LambdaTest Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual or automated test planning.
+ Once satisfied, **select the test cases** you want to keep and **save them directly** to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual or automated test planning.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/save_generated_test_cases.png').default} alt="save_generated_test_cases" width="1347" height="616"  className="doc_img"/>
 

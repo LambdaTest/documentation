@@ -21,19 +21,21 @@ keywords:
     - how is lighthouse performance score calculated 
     - lighthouse audit for performance 
     - lighthouse check performance 
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
 url: https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/
 site_name: LambdaTest
 slug: view-lighthouse-performance-metrics/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,17 +45,17 @@ slug: view-lighthouse-performance-metrics/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "View Lighthouse Performance Metrics Using Online Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/"
+          "item": `${BRAND_URL}/support/docs/view-lighthouse-performance-metrics/`
         }]
       })
     }}
@@ -62,7 +64,7 @@ slug: view-lighthouse-performance-metrics/
 # View Lighthouse Performance Metrics Using Online Selenium Grid
 * * *
 
-LambdaTest now integrates [**Lighthouse**](https://developers.google.com/web/tools/lighthouse) to view the performance metrics (**Lighthouse Audits**) on its online cloud based [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can now view the scores of:
+<BrandName /> now integrates [**Lighthouse**](https://developers.google.com/web/tools/lighthouse) to view the performance metrics (**Lighthouse Audits**) on its online cloud based <a href={`${BRAND_URL}/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/`}>Selenium Grid</a>. You can now view the scores of:
 
 *   **Performance**,
 *   **Accessibility**,
@@ -70,20 +72,20 @@ LambdaTest now integrates [**Lighthouse**](https://developers.google.com/web/too
 *   **SEO**
 *   **Progressive Web App**
 
-metrics with the help of LambdaTest. LambdaTest also allows you to perform cross-browser testing on 3000+ combinations of real devices, browsers and operating systems.
+metrics with the help of <BrandName />. <BrandName /> also allows you to perform cross-browser testing on 3000+ combinations of real devices, browsers and operating systems.
 
-> **Note:** As of now, LambdaTest supports **Lighthouse** on Chrome browsers for all Windows OS, macOS BigSur, macOS Mojave, and macOS Catalina.
+> **Note:** As of now, <BrandName /> supports **Lighthouse** on Chrome browsers for all Windows OS, macOS BigSur, macOS Mojave, and macOS Catalina.
 
 ## Prerequisites
 
 * * *
 
-You will need a [LambdaTest account](https://accounts.lambdatest.com/login) to run your tests on its cloud based online Selenium Grid. Use your:
+You will need a [<BrandName /> account](https://accounts.lambdatest.com/login) to run your tests on its cloud based online Selenium Grid. Use your:
 
-*   LambdaTest Username
-*   LambdaTest Access Key
+*   <BrandName /> Username
+*   <BrandName /> Access Key
 
-to run your tests on LambdaTest and view the **Lighthouse performance metrics**. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
+to run your tests on <BrandName /> and view the **Lighthouse performance metrics**. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
 
 ## How To Include Lighthouse Performance Metrics In Selenium Automation?
 
@@ -91,7 +93,7 @@ to run your tests on LambdaTest and view the **Lighthouse performance metrics**.
 
 You can easily add the lighthouse performance metrics of the website you want to test, using the [Desired Capabilities](/docs/selenium-automation-capabilities/). Use the **`Performance`** feature of the **Desired Capabilities Generator** in order to do so.
 
-For example, if you are using **TestNG** for Selenium Automation on LambdaTest, you can include the **Lighthouse** performance feature with the help of below code snippet:
+For example, if you are using **TestNG** for Selenium Automation on <BrandName />, you can include the **Lighthouse** performance feature with the help of below code snippet:
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 .
@@ -100,7 +102,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
 // To view performance metrics
 caps.setCapability("performance", true);
 ```
-Below is the code snippet to trigger the **Lighthouse** performance metrics on LambdaTest in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+Below is the code snippet to trigger the **Lighthouse** performance metrics on <BrandName /> in **macOS Catalina** with **Google Chrome** browser version **86.0**.
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
                     caps.setCapability("browser", "Chrome");
@@ -117,13 +119,13 @@ DesiredCapabilities caps = new DesiredCapabilities();
                     // To view performance metrics
                     caps.setCapability("performance", true);
 ```
-## How To View Lighthouse Performance Metrics On LambdaTest?
+## How To View Lighthouse Performance Metrics On <BrandName />?
 ***
-Once you have run your selenium automation tests on LambdaTest platform, you can view the Lighthouse performance metrics on the website under test. 
+Once you have run your selenium automation tests on <BrandName /> platform, you can view the Lighthouse performance metrics on the website under test. 
 
 >**Note:** It is suggested for the test duration to be of minimum 30 seconds in order to generate the **Lighthouse Performance Report**.
 
-Follow the below steps to view the **Lighthouse performance metrics** on LambdaTest platform:
+Follow the below steps to view the **Lighthouse performance metrics** on <BrandName /> platform:
 
 **1.**  Go to the [Automation Dashboard](https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo purpose, we have used a sample **TestNG** script, from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium). 
 
@@ -145,21 +147,21 @@ Follow the below steps to view the **Lighthouse performance metrics** on LambdaT
 
 <img loading="lazy" src={require('../assets/images/uploads/lighthouse_5.webp').default} alt="Image" width="1714" height="813" className="doc_img"/>
 
-Similarly, you can click on any of the performance metrics to view it in detail. Performance reports can also be downloaded in various formats. Not only this, but LambdaTest also helps you view the Passed Audits, individual metrics, detailed diagnosis, and improvement opportunities about that particular Lighthouse Audit.
+Similarly, you can click on any of the performance metrics to view it in detail. Performance reports can also be downloaded in various formats. Not only this, but <BrandName /> also helps you view the Passed Audits, individual metrics, detailed diagnosis, and improvement opportunities about that particular Lighthouse Audit.
 
 * * *
 
-That's it folks! That's all about the Lighthouse Performance Metrics with LambdaTest. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+That's it folks! That's all about the Lighthouse Performance Metrics with <BrandName />. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

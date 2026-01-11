@@ -11,18 +11,19 @@ keywords:
   - Custom Gestures
   - Double tap
   - Triple tap
-slug: gesture-support-ios/
+slug: gesture-support-ios
 site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/gesture-support-ios/
+url: https://www.testmu.ai/support/docs/gesture-support-ios
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # iOS Gestures on Real Devices
-When testing iOS apps on **LambdaTest Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
+When testing iOS apps on **<BrandName /> Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
 
-To make this easier, LambdaTest provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
+To make this easier, <BrandName /> provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
 
 ---
 # Supported Gestures & Shortcuts
@@ -85,8 +86,8 @@ To make this easier, LambdaTest provides keyboard shortcuts that simulate these 
 ---
 ## Additional Links
 
-- [Manual Testing on Real Devices](https://www.lambdatest.com/support/docs/app-testing-on-real-devices/)
-- [Apple Pay Manual Testing Guide](https://www.lambdatest.com/support/docs/apple-pay-manual/)
-- [Assistive Touch](https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-devices/)
+- [Manual Testing on Real Devices](/support/docs/app-testing-on-real-devices/)
+- [Apple Pay Manual Testing Guide](/support/docs/apple-pay-manual/)
+- [Assistive Touch](/support/docs/assistive-touch-on-real-ios-devices/)
 
 

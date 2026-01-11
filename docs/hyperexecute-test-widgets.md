@@ -5,16 +5,19 @@ hide_title: true
 sidebar_label: Test Widgets
 description: HyperExecute Test Widgets allow trend analysis of tests over time, providing insights into platform performance.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
     - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Test
-url: https://www.lambdatest.com/support/docs/hyperexecute-test-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-test-widgets
 site_name: LambdaTest
-slug: hyperexecute-test-widgets/
+slug: hyperexecute-test-widgets
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-test-widgets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Widgets",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-test-widgets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-test-widgets/`
         }]
       })
     }}

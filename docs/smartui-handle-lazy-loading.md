@@ -4,16 +4,16 @@ title: Handle Pages with Lazy Loading
 sidebar_label: Handle Lazy Loading
 description: Learn how to handle lazy-loaded content in SmartUI visual regression tests using scrolling techniques and waitForTimeout configuration.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - lazy loading
   - scroll
   - waitForTimeout
   - visual testing
   - dynamic content
-url: https://www.lambdatest.com/support/docs/smartui-handle-lazy-loading/
+url: https://www.testmu.ai/support/docs/smartui-handle-lazy-loading
 site_name: LambdaTest
-slug: smartui-handle-lazy-loading/
+slug: smartui-handle-lazy-loading
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +30,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Handle Lazy Loading",
-          "item": "https://www.lambdatest.com/support/docs/smartui-handle-lazy-loading/"
+          "item": `${BRAND_URL}/support/docs/smartui-handle-lazy-loading/`
         }]
       })
     }}

@@ -2,18 +2,20 @@
 id: appium-install-uninstall-lambdatest-hooks
 title: Ability to Install and Uninstall Apps in App Automation Scripts
 sidebar_label: Install/Uninstall app
-description: Now you can install or uninstall applications using hooks in your App Automation scripts that you run on LambdaTest.
+description: Now you can install or uninstall applications using hooks in your App Automation scripts that you run on TestMu AI.
 keywords:
 - appium
-- lambdatest hooks
+- testmu ai hooks
 - app automation
 - mobile test
 - app testing
 - real devices
-url: https://www.lambdatest.com/support/docs/appium-install-uninstall-lambdatest-hooks/
+url: https://www.testmu.ai/support/docs/appium-install-uninstall-testmu-hooks
 site_name: LambdaTest
-slug: appium-install-uninstall-lambdatest-hooks/
+slug: appium-install-uninstall-testmu-hooks
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: appium-install-uninstall-lambdatest-hooks/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Hooks for install or uninstall application",
-          "item": "https://www.lambdatest.com/support/docs/appium-install-uninstall-lambdatest-hooks/"
+          "name": "TestMu AI Hooks for install or uninstall application",
+          "item": `${BRAND_URL}/support/docs/appium-install-uninstall-testmu-hooks/`
         }]
       })
     }}
@@ -53,16 +55,16 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 ## Introduction
 
-LambdaTest now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.
+<BrandName /> now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.
 
 ## Installing and Uninstalling Apps  
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-LambdaTest enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
+<BrandName /> enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 
 ### Install App
 
-You can install apps uploaded to the LambdaTest platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the LambdaTest-generated ID or a custom ID assigned during upload.
+You can install apps uploaded to the <BrandName /> platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the <BrandName />-generated ID or a custom ID assigned during upload.
 
 **Python example:**
 ```python
@@ -159,7 +161,7 @@ You might encounter some errors while using these features. The following are so
 
 
 
-Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the[LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the[<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 
 > **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
@@ -168,12 +170,12 @@ Multiple errors may occur based on the scenario. Understanding these errors will
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

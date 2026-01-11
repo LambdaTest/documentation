@@ -2,22 +2,22 @@
 id: ip-geolocation-on-real-devices-app
 title: IP Geolocation on Real Devices App
 sidebar_label: IP Geolocation
-description: Test your app and website across real devices with LambdaTest.
+description: Test your app and website across real devices with TestMu AI.
 
 keywords:
   - change geolocation on real device
-  - LambdaTest geolocation testing
+  - TestMu AI geolocation testing
   - simulate GPS location Android
   - real device location testing
   - simulate GPS location iOS
   - test app in different countries
-  - framework on lambdatest
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/ip-geolocation-on-real-devices-app/
+url: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app
 site_name: LambdaTest
-slug: ip-geolocation-on-real-devices-app/
+slug: ip-geolocation-on-real-devices-app
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Screen Reader on Real Devices App",
-          "item": "https://www.lambdatest.com/support/docs/ip-geolocation-on-real-devices-app"
+          "item": `${BRAND_URL}/support/docs/ip-geolocation-on-real-devices-app`
         }]
       })
     }}
@@ -52,10 +54,10 @@ import TabItem from '@theme/TabItem';
 
 Location-specific behavior is crucial to ensure your mobile apps and websites deliver accurate and localized experiences to users worldwide. Whether it's testing region-based content, geo-restricted features, or local SEO implementations, manually simulating different geolocations is essential for a robust QA process.
 
-LambdaTest's Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions—without needing to physically move devices or use external GPS spoofing tools.
+<BrandName />'s Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions—without needing to physically move devices or use external GPS spoofing tools.
 
 
-## Update Geolocation for Real Devices on LambdaTest
+## Update Geolocation for Real Devices on <BrandName />
 
 **Step 1:** Click on the **Real Devices** > **App Testing**
 
@@ -88,7 +90,7 @@ LambdaTest's Geolocation Simulation feature allows you to manually set and updat
 
 ## Supported Country 
 
-You can simulate geolocation for the following countries in LambdaTest's Real Device App Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test. 
+You can simulate geolocation for the following countries in <BrandName />'s Real Device App Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test. 
 
 ---
 

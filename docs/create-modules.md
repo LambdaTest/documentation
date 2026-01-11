@@ -10,10 +10,12 @@ keywords:
   - test step management 
   - test case
   - test steps
-url: https://www.lambdatest.com/support/docs/create-modules/
+url: https://www.testmu.ai/support/docs/create-modules
 site_name: LambdaTest
-slug: create-modules/
+slug: create-modules
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +24,18 @@ slug: create-modules/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Create Modules",
-          "item": "https://www.lambdatest.com/support/docs/create-modules/"
+          "item": `${BRAND_URL}/support/docs/create-modules/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: create-modules/
 
 # Modules - Creation and Management
 ***
-Tired of recreating the same test steps for repetitive testing flows? With Modules in LambdaTest Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.
+Tired of recreating the same test steps for repetitive testing flows? With Modules in <BrandName /> Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.
 
 ## 1.1 Module Creation from existing Test Steps
 

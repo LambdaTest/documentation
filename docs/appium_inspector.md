@@ -1,8 +1,8 @@
 ---
 id: appium-inspector
-title: Appium Inspector Integration on LambdaTest
+title: Appium Inspector Integration on TestMu AI
 sidebar_label: Appium Inspector
-description: This documentation will help you integrate Appium Inspector with LambdaTest to interact with LambdaTest's Real Devices. With LambdaTest mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
+description: This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices
@@ -12,13 +12,15 @@ keywords:
   - appium desktop
   - appium inspector
 
-url: https://www.lambdatest.com/support/docs/appium-inspector-integration/
+url: https://www.testmu.ai/support/docs/appium-inspector-integration
 site_name: LambdaTest
-slug: appium-inspector-integration/
+slug: appium-inspector-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/appium-inspector-integration/"
+          "name": "Appium Inspector Integration on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-inspector-integration/`
         }]
       })
     }}
@@ -46,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 
-This post will help you in integrating **Appium Inspector** to interact with **LambdaTest's Real Devices**.
+This post will help you in integrating **Appium Inspector** to interact with **<BrandName />'s Real Devices**.
 
 ## Introduction
 
@@ -56,7 +58,7 @@ A **GUI inspector** for mobile apps and more, powered by a (separately installed
 
 By the end of this topic, you will be able to:
 
-1. Upload your Application to LambdaTest Server & Receive the Unique App URL.
+1. Upload your Application to <BrandName /> Server & Receive the Unique App URL.
 2. Run the Test using the Unique App URL.
 
 :::tip
@@ -71,7 +73,7 @@ Please download the latest version of Appium Inspector - :link: [Official Appium
 
 ### Step 1: Upload your Application.
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -126,7 +128,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
@@ -135,32 +137,32 @@ import TabItem from '@theme/TabItem';
 
 ### Step 2: Start a Session on Appium Inspector
 
-Start the Appium Inspector & Select LambdaTest from the list of Cloud Test Providers.
+Start the Appium Inspector & Select <BrandName /> from the list of Cloud Test Providers.
 
 ---
 
 ### Step 3: Configure your Credentials
 
-Enter in your UserName & Access Key. You may find the credentials available on [LambdaTest Dashboard](https://appautomation.lambdatest.com/)
+Enter in your UserName & Access Key. You may find the credentials available on [<BrandName /> Dashboard](https://appautomation.lambdatest.com/)
 
 ---
 
 ### Step 4: Configure Desired Capabilities & Start the Session
 
-Configure LambdaTest capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+Configure <BrandName /> capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
 Alternatively, we can also go to our [capabilities generator](https://www.lambdatest.com/capabilities-generator/) and generate the Capability Representation using GUI.
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-Once this is complete, you can now run the test by clicking on start session. Once you start the session, a video recording along with detailed information and logs of the test run will be available on the [LambdaTest Dashboard](https://appautomation.lambdatest.com/build).
+Once this is complete, you can now run the test by clicking on start session. Once you start the session, a video recording along with detailed information and logs of the test run will be available on the [<BrandName /> Dashboard](https://appautomation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## Attaching to a running session in Appium Inspector
 
 ### Step 1: Configure your Credentials
-After you have added your credentials from [Step 2 of Starting an Appium Session](https://www.lambdatest.com/support/docs/appium-inspector-integration/#attaching-to-a-running-session-in-appium-inspector), click on Attach to Session.
+After you have added your credentials from [Step 2 of Starting an Appium Session](/support/docs/appium-inspector-integration/#attaching-to-a-running-session-in-appium-inspector), click on Attach to Session.
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector3.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -188,12 +190,12 @@ We have now successfully attached to the session and can see & perform operation
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

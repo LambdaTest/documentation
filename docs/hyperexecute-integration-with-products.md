@@ -3,17 +3,19 @@ id: hyperexecute-integration-with-products
 title: Integration With Products
 hide_title: true
 sidebar_label: Integration With Products
-description:  Boost your testing workflow with LambdaTest's seamless integrations. Achieve efficient cross-browser testing with popular tools for faster, more reliable results.
+description:  Boost your testing workflow with TestMu AI's seamless integrations. Achieve efficient cross-browser testing with popular tools for faster, more reliable results.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
-url: https://www.lambdatest.com/support/docs/hyperexecute-integration-with-products/
+url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-products
 site_name: LambdaTest
-slug: hyperexecute-integration-with-products/
+slug: hyperexecute-integration-with-products
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: hyperexecute-integration-with-products/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-integration-with-products/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-integration-with-products/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: hyperexecute-integration-with-products/
 
 # HyperExecute Integrations with Products
 
-LambdaTest now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
+<BrandName /> now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/hyp-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
@@ -144,12 +146,12 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

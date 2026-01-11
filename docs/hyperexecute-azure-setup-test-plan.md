@@ -11,10 +11,13 @@ keywords:
     - azure test plan
     - azure integration
     - azure test-plan setup 
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-setup-test-plan/
+url: https://www.testmu.ai/support/docs/hyperexecute-azure-setup-test-plan
 site_name: LambdaTest
-slug: hyperexecute-azure-setup-test-plan/
+slug: hyperexecute-azure-setup-test-plan
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: hyperexecute-azure-setup-test-plan/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Test Plan Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-azure-setup-test-plan/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-azure-setup-test-plan/`
         }]
       })
     }}

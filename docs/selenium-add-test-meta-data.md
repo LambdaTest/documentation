@@ -5,20 +5,22 @@ hide_title: false
 sidebar_label: Adding Test Metadata
 description: The customData capability allows users to associate additional metadata with test runs, enabling better traceability, debugging, and reporting.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - metadata
   - custom data
   - traceability
   - debugging
   - reporting
-url: https://www.lambdatest.com/support/docs/selenium-add-test-meta-data/
+url: https://www.testmu.ai/support/docs/selenium-add-test-meta-data
 site_name: LambdaTest
-slug: selenium-add-test-meta-data/
+slug: selenium-add-test-meta-data
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,25 +29,25 @@ import TabItem from '@theme/TabItem';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Other Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Custom Data",
-          "item": "https://www.lambdatest.com/support/docs/selenium-add-test-meta-data/"
+          "item": `${BRAND_URL}/support/docs/selenium-add-test-meta-data/`
         }]
       })
     }}
 ></script>
 The `customData` capability allows you to associate additional metadata with test runs, enabling better traceability, debugging, and reporting. This metadata can include information like issue tracker links, test case IDs, and other critical test context. By embedding this metadata in test configurations, your team can easily integrate with their existing tools and workflows, such as GitHub, Jira, or any test management system.
 
-## How to add custom metadata for running automation tests on LambdaTest
+## How to add custom metadata for running automation tests on <BrandName />
 To add custom metadata in your automation tests, simply add the capability `customData` in your test script with all the metadata information that we support to add:
 
 <Tabs className="docs__val">

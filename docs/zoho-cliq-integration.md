@@ -3,24 +3,26 @@ id: zoho-cliq-integration
 title: Zoho Cliq Integration
 hide_title: true
 sidebar_label: Zoho Cliq
-description: Seamless Zoho Cliq Integration with LambdaTest Streamline Bug Management Effortlessly. Get real-time bug notifications in your Zoho Cliq Channels.
+description: Seamless Zoho Cliq Integration with TestMu AI Streamline Bug Management Effortlessly. Get real-time bug notifications in your Zoho Cliq Channels.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to zoho cliq
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest zoho cliq integration
-  - integrate zoho cliq with lambdatest
-  - create issue in zoho cliq from lambdatest
-  - zoho cliq integration with lambdatest
-  - create zoho cliq issues from lambdatest
+  - testmu ai zoho cliq integration
+  - integrate zoho cliq with testmu ai
+  - create issue in zoho cliq from testmu ai
+  - zoho cliq integration with testmu ai
+  - create zoho cliq issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/zoho-cliq-integration/
+url: https://www.testmu.ai/support/docs/zoho-cliq-integration
 site_name: LambdaTest
-slug: zoho-cliq-integration/
+slug: zoho-cliq-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ slug: zoho-cliq-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Zoho Cliq Integration",
-          "item": "https://www.lambdatest.com/support/docs/zoho-cliq-integration/"
+          "item": `${BRAND_URL}/support/docs/zoho-cliq-integration/`
         }]
       })
     }}
@@ -55,7 +57,7 @@ slug: zoho-cliq-integration/
 Zoho Cliq is a team communication and collaboration platform designed to enhance productivity and streamline communication within organizations. It offers a range of features to facilitate real-time messaging, audio and video calls, file sharing, and integrations with other business applications.
 
 
-Integrating LambdaTest with Zoho Cliq, users can create detailed test cards in Zoho Cliq Channels for logged bugs in LambdaTest. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the LambdaTest platform to your Zoho Cliq instance.
+Integrating <BrandName /> with Zoho Cliq, users can create detailed test cards in Zoho Cliq Channels for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your Zoho Cliq instance.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="GSSvxCZ_ysE">
@@ -64,10 +66,10 @@ Integrating LambdaTest with Zoho Cliq, users can create detailed test cards in Z
 </div>
 
 
-## Integrating Zoho Cliq With LambdaTest
+## Integrating Zoho Cliq With <BrandName />
 ***
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 **Step 2:** Select **Integrations** from the left sidebar and then click on **Zoho Cliq**.
 
@@ -81,20 +83,20 @@ Integrating LambdaTest with Zoho Cliq, users can create detailed test cards in Z
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/zoho-login.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 5:** Click the **Accept** button to allow LambdaTest to access data in your Zoho Account. 
+**Step 5:** Click the **Accept** button to allow <BrandName /> to access data in your Zoho Account. 
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/zoho-accept.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 6:** You will be redirected back to the LambdaTest dashboard. Select the **Zoho Cliq Channel** from the dropdown. In this case, we will select the **#announcements** channel and click **Confirm Channel**.
+**Step 6:** You will be redirected back to the <BrandName /> dashboard. Select the **Zoho Cliq Channel** from the dropdown. In this case, we will select the **#announcements** channel and click **Confirm Channel**.
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/select-channel.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-You have now successfully integrated LambdaTest with Zoho Cliq. 
+You have now successfully integrated <BrandName /> with Zoho Cliq. 
 
 ## One-Click Bug Logging With Zoho Cliq
 ***
 
-**Step 1:** In your LambdaTest Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
+**Step 1:** In your <BrandName /> Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
 
 **Step 2:** To perform **live-interactive testing** of your website or a web app, enter the web URL, select the testing type (Desktop/Mobile), select the browser version, OS, and resolution, and click **Start**.
 
@@ -106,7 +108,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-seven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 4:** After marking the bugs, click on the **Bug icon** in front of LambdaTest under the integrations section.
+**Step 4:** After marking the bugs, click on the **Bug icon** in front of <BrandName /> under the integrations section.
 
 <img loading="lazy" src={require('../assets/images/webex-teams-integration/webex-eight.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -114,7 +116,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/mark-as-bug.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 6:** Head to **More Tools** in the LambdaTest dashboard and click on **Issue Tracker**. You'll notice the marked bugs along with the test details.
+**Step 6:** Head to **More Tools** in the <BrandName /> dashboard and click on **Issue Tracker**. You'll notice the marked bugs along with the test details.
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/issue-tracker.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -127,23 +129,23 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 ***
 
-**Step 1:** Sign in to your LambdaTest account and visit **Integrations** from the left sidebar menu.
+**Step 1:** Sign in to your <BrandName /> account and visit **Integrations** from the left sidebar menu.
 
 **Step 2:** From the **My Integrations** section, click the **remove option** under the Zoho Cliq block.
 
 <img loading="lazy" src={require('../assets/images/zoho-cliq-integration/uninstall.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Zoho Cliq Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Zoho Cliq Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

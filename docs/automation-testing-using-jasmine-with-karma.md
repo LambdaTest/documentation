@@ -1,9 +1,9 @@
 ---
 id: automation-testing-using-jasmine-with-karma
-title: Jasmine Test Runner:Run Jasmine Testing on LambdaTest Selenium Grid | LambdaTest
+title: Jasmine Test Runner:Run Jasmine Testing on TestMu AI Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: Jasmine for BDD
-description: Now you can run your automation scripts using Jasmine with Karma on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Jasmine with Karma on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - jasmine selenium
   - karma selenium
@@ -12,11 +12,12 @@ keywords:
   - selenium webdriver javascript
   - selenium javascript testing tutorial
   - javascript selenium framework
-image: /assets/images/og-images/jasmine-with-karma.jpg
-url: https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
+slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,34 +26,34 @@ slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Jasmine for BDD",
-          "item": "https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Jasmine Test Runner: Run Jasmine Testing on LambdaTest Selenium Grid
+# Jasmine Test Runner: Run Jasmine Testing on <BrandName /> Selenium Grid
 * * *
 
-LambdaTest Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
+<BrandName /> Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
 
 This topic will help you demonstrate:
 
-* How to run a Jasmine testing and Selenium testing script on LambdaTest Selenium Cloud with Karma test runner for Angular?
+* How to run a Jasmine testing and Selenium testing script on <BrandName /> Selenium Cloud with Karma test runner for Angular?
 * How to test your locally hosted pages using Jasmine test runner?
 * How to run your test cases in parallel to reduce build times?
-* How to leverage LambdaTest’s Advanced capabilities?
+* How to leverage <BrandName />’s Advanced capabilities?
 
 ### Jasmine Testing Using Jasmine Test Runner
 * * *
@@ -62,12 +63,12 @@ Jasmine test runner is a BDD test automation framework which helps you to write 
 * * *
 Developed by AngularJS team, Karma is a Javascript test runner that helps to evaluate your source code across different browsers on the basis of your test code. The results are displayed using CLI to represent the test’s pass/fail status on various browsers. To know more refer to the [Karma’s official website](http://karma-runner.github.io/3.0/index.html).
 
-## Prerequisites For Running Karma With LambdaTest Selenium Grid
+## Prerequisites For Running Karma With <BrandName /> Selenium Grid
 * * *
->All the code samples in this documentation can be found in the [Jasmine LambdaTest Repository on <img src={require('../assets/images/GitHub_icon/github-icon.webp').default} alt="Image" width="25" height="25" /> GitHub](https://github.com/LambdaTest/karma-jasmine-sample). You can either download or clone the repository to quickly run your tests.
+>All the code samples in this documentation can be found in the [Jasmine <BrandName /> Repository on <img src={require('../assets/images/GitHub_icon/github-icon.webp').default} alt="Image" width="25" height="25" /> GitHub](https://github.com/LambdaTest/karma-jasmine-sample). You can either download or clone the repository to quickly run your tests.
 
 
-In order to perform your karma tests with LambdaTest, you would need the below things to be already set up:
+In order to perform your karma tests with <BrandName />, you would need the below things to be already set up:
 
 #### 1. Global Dependencies
 
@@ -82,9 +83,9 @@ In order to perform your karma tests with LambdaTest, you would need the below t
 
 `npm install npm@latest -g`
 
-#### 2. LambdaTest Authentication Credentials
+#### 2. <BrandName /> Authentication Credentials
 
-Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
 * **For Linux/Mac:**
 ```
@@ -144,7 +145,7 @@ or you could also run the test using:
 
 ## Browser Launcher Configuration
 * * *
-If you look at ***karma.conf.js*** file you will find that we are passing browser, browser version, and operating system information, along with LambdaTest [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) capabilities via capabilities object. The capabilities object in the above code is defined as:
+If you look at ***karma.conf.js*** file you will find that we are passing browser, browser version, and operating system information, along with <BrandName /> [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) capabilities via capabilities object. The capabilities object in the above code is defined as:
 
 ``` js
 customLaunchers: {
@@ -166,17 +167,17 @@ The most important capabilities to understand here are ‘browserName’, ‘ver
 
 ## Testing Locally Hosted Projects Using Jasmine Test Runner
 * * *
-To help you perform cross browser testing of your locally stored web pages, LambdaTest provides an SSH(Secure Shell) tunnel connection with the name LambdaTest tunnel. With LambdaTest tunnel, you can run your Jasmine tests using Karma to perform automated cross browser testing on browsers offered by online Selenium Grid at LambdaTest. So you make sure how well your changes look, even before your customers. Curious to know more about LambdaTest tunnel?
+To help you perform cross browser testing of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name <BrandName /> tunnel. With <BrandName /> tunnel, you can run your Jasmine tests using Karma to perform automated cross browser testing on browsers offered by online Selenium Grid at <BrandName />. So you make sure how well your changes look, even before your customers. Curious to know more about <BrandName /> tunnel?
 
-> Follow our documentation on LambdaTest tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
+> Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
 > * [Documentation For Windows User](/docs/local-testing-for-windows/)
 > * [Documentation For Mac User](/docs/local-testing-for-macos/)
 > * [Documentation For Linux User](/docs/local-testing-for-linux/)
 
 > Download the binary file of:
-> * [LambdaTest tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-> * [LambdaTest tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-> * [LambdaTest tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+> * [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+> * [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+> * [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
@@ -201,17 +202,17 @@ customLaunchers: { chrome: {
 
 > **Note**: psuedoActivityInternal is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
 
-Execute Jasmine testing using Karma & increase your test coverage using LambdaTest’s online Selenium Grid. Happy Testing!
+Execute Jasmine testing using Karma & increase your test coverage using <BrandName />’s online Selenium Grid. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

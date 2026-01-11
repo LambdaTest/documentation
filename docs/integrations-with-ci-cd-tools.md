@@ -1,21 +1,22 @@
 ---
 id: integrations-with-ci-cd-tools
-title: LambdaTest Integrations With CI/CD Tools
+title: TestMu AI Integrations With CI/CD Tools
 hide_title: true
 sidebar_label: Integrations With CI/CD Tools 
-description: LambdaTest offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. 
+description: TestMu AI offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. 
 keywords:
-    - lambdatest integrations
-    - lambdatest integrations with ci/cd tools
+    - testmu ai integrations
+    - testmu ai integrations with ci/cd tools
     - ci/cd tools
     - continuous integration
     - continuous delivery
     - continuous integration tools
-image: /assets/images/og-images/JPG-4.jpg
-url: https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/
+url: https://www.testmu.ai/support/docs/integrations-with-ci-cd-tools
 site_name: LambdaTest
-slug: integrations-with-ci-cd-tools/
+slug: integrations-with-ci-cd-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +26,17 @@ slug: integrations-with-ci-cd-tools/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations With CI/CD Tools",
-          "item": "https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/"
+          "item": `${BRAND_URL}/support/docs/integrations-with-ci-cd-tools/`
         }]
       })
     }}
@@ -43,82 +44,82 @@ slug: integrations-with-ci-cd-tools/
 
 # Integrations With CI/CD Tools
 ***
-LambdaTest offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. Below are the step-by-step documentation for all our integrations with CI/CD tools to help you leverage the maximum output from LambdaTest Selenium Grid.
+<BrandName /> offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. Below are the step-by-step documentation for all our integrations with CI/CD tools to help you leverage the maximum output from <BrandName /> Selenium Grid.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-lambdatest/">Bitbucket Pipeline Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-testmu/">Bitbucket Pipeline Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-lambdatest/">AWS CodePipeline Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-testmu/">AWS CodePipeline Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bamboo-integration-with-lambdatest/">Bamboo Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/bamboo-integration-with-testmu/">Bamboo Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/">Jenkins Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/jenkins-with-testmu/">Jenkins Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/">CircleCI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/circleci-integration-with-testmu/">CircleCI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/">Travis CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/travis-ci-with-testmu/">Travis CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-lambdatest/">GitLab CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-testmu/">GitLab CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/semaphore-integration-with-lambdatest/">Semaphore Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/semaphore-integration-with-testmu/">Semaphore Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/codeship-integration-with-lambdatest/">Codeship Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/codeship-integration-with-testmu/">Codeship Pipelines Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-lambdatest/">Codefresh CI Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-testmu/">Codefresh CI Pipelines Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/teamcity-integration-with-lambdatest/">TeamCity Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/teamcity-integration-with-testmu/">TeamCity Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-lambdatest/">Azure Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-testmu/">Azure Pipelines Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-lambdatest/">Concourse CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/">Concourse CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/">GOCD Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/gocd-integration-with-testmu/">GOCD Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/drone-ci-integration-with-lambdatest/">Drone CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/drone-ci-integration-with-testmu/">Drone CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/appveyor-ci-integration/">Appveyor CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/appveyor-ci-integration/">Appveyor CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/google-cloud-ci-integration/">Google Cloud CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/google-cloud-ci-integration/">Google Cloud CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bitrise-integration/">Bitrise CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/bitrise-integration/">Bitrise CI Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/">Buildkite Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/buildkite-integration-with-testmu/">Buildkite Integration With <BrandName /></a>
 </div>
 
 >If your favourite CI/CD tools is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
@@ -126,12 +127,12 @@ LambdaTest offers integrations with numerous CI/CD tools to help you fast-track 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

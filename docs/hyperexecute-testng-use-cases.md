@@ -4,15 +4,18 @@ title: HyperExecute TestNG Use Cases
 sidebar_label: TestNG Use Cases
 description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-  - LambdaTest Projects
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+  - TestMu AI Projects
   - TestNG Use Cases
-url: https://www.lambdatest.com/support/docs/hyperexecute-testng-use-cases/
+url: https://www.testmu.ai/support/docs/hyperexecute-testng-use-cases
 site_name: LambdaTest
-slug: hyperexecute-testng-use-cases/
+slug: hyperexecute-testng-use-cases
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-testng-use-cases/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute TestNG Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-testng-use-cases/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-testng-use-cases/`
         }]
       })
     }}
@@ -41,7 +44,7 @@ This guide outlines common **Java + TestNG** scenarios for running tests on [Hyp
 
 ## Q: How can I ensure my tests operate with the appropriate Java version on HyperExecute?
 
-By default, HyperExecute VMs are provisioned with **Java 8**. If your project requires another version (e.g., **11, 15, 18, 22**), you can use the [`runtime`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) feature and specify the compatible version in the `hyperexecute.yaml`.
+By default, HyperExecute VMs are provisioned with **Java 8**. If your project requires another version (e.g., **11, 15, 18, 22**), you can use the [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) feature and specify the compatible version in the `hyperexecute.yaml`.
 
 **YAML Example for Java 11**
 
@@ -52,7 +55,7 @@ runtime:
 ```
 
 ## Q: What is test discovery in HyperExecute, and how does it help?
-[Test discovery](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) is the process of pre-identifying the tests (classes, scenarios, or feature files) to be executed.
+[Test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) is the process of pre-identifying the tests (classes, scenarios, or feature files) to be executed.
 
 #### Why Use Test Discovery?
 - **Selective Execution →** Run only the tests you need.
@@ -89,8 +92,8 @@ testDiscovery:
 ```
 
 #### Discovery Modes
-- [local](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=mode%3A%20remote-,mode%3A%20local,-Purpose%3A%20Test) → Runs discovery on your machine (useful for small/simple projects).
-- [remote](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=locally%2C%20limiting%20visibility.-,mode%3A%20remote,-NEW) → Runs discovery on HyperExecute VM (recommended for large projects).
+- [local](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=mode%3A%20remote-,mode%3A%20local,-Purpose%3A%20Test) → Runs discovery on your machine (useful for small/simple projects).
+- [remote](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=locally%2C%20limiting%20visibility.-,mode%3A%20remote,-NEW) → Runs discovery on HyperExecute VM (recommended for large projects).
 
 ## Q: How do I include/exclude tests using tags?
 You can pass logical tag expressions in testDiscovery or use the ignoredTags parameter.

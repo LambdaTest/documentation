@@ -3,18 +3,19 @@ id: local-testing-macos
 title: Local Testing For MacOS
 hide_title: true
 sidebar_label: Local Testing For MacOS
-description: This documentation will help you perform Localhost testing on macOS via LambdaTest tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure LambdaTest cloud infrastructure.
+description: This documentation will help you perform Localhost testing on macOS via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud infrastructure.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - lambdatest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - testmu ai tunnel
   - local app testing for MacOS
-image: /assets/images/og-images/local-testing-for-macos-online.jpg
-url: https://www.lambdatest.com/support/docs/local-testing-macos/
+url: https://www.testmu.ai/support/docs/local-testing-macos
 site_name: LambdaTest
-slug: local-testing-macos/
+slug: local-testing-macos
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +24,18 @@ slug: local-testing-macos/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Local Testing MacOS",
-          "item": "https://www.lambdatest.com/support/docs/local-testing-macos/"
+          "item": `${BRAND_URL}/support/docs/local-testing-macos/`
         }]
       })
     }}
@@ -43,13 +44,13 @@ slug: local-testing-macos/
 # Local Testing For MacOS
 
 ***
-LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
+<BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through <BrandName />. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />. You can leverage the new <BrandName /> tunnel binary for corporate firewalls and proxy settings without any restrictions. <BrandName /> tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and <BrandName /> cloud servers.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with LambdaTest tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with <BrandName /> tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
 
 You can download the binary file responsible for establishing a tunnel connection between your local device and our testing cloud by clicking on the downloadable link below.
 
-| [DOWNLOAD LambdaTest tunnel ZIP FOR MAC 64 BIT](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) |
+| [DOWNLOAD <BrandName /> tunnel ZIP FOR MAC 64 BIT](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) |
 |:------------------------------------------------------------------------------------------------------------:|
 
 
@@ -68,14 +69,14 @@ You can download the binary file responsible for establishing a tunnel connectio
 * OS X Mountain Lion
 * OS X Lion
 
-## Configuring Connection With LambdaTest tunnel
+## Configuring Connection With <BrandName /> tunnel
 ***
 **Step 1**:  Click the button **‘Configure Tunnel’**. Download the binary zip file by clicking the **‘Download Link’**. Press the **‘Copy’**  button in the form that opens up to copy the complete string to your system’s clipboard.
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-1.webp').default} alt="tunnel configuration for testing on macos" width="1336" height="622" className="doc_img"/>
 
 >**What is this zip file for?**   
-This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to LambdaTest cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using LambdaTest.
+This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to <BrandName /> cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using <BrandName />.
 
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
 
@@ -85,7 +86,7 @@ This zip file contains the tunnel binary which will help in establishing a secur
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
-So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is LambdaTest, the command would be:
+So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
 ```
@@ -94,7 +95,7 @@ LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelN
 In a few seconds, after you execute the command, a tunnel connection will be established. You will receive a message inside your command prompt mentioning **"You can start testing now"**.   
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-3.webp').default} alt="Establishing Tunnel Connection" width="1371" height="258" className="doc_img"/>
 
-## Testing Locally Hosted Web Pages Using LambdaTest tunnel
+## Testing Locally Hosted Web Pages Using <BrandName /> tunnel
 ***
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **‘Apache’**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
@@ -103,7 +104,7 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
 
 
-<img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-5.webp').default} alt="Realtime Testing with LambdaTest" width="1355" height="613" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-5.webp').default} alt="Realtime Testing with <BrandName />" width="1355" height="613" className="doc_img"/>
 
 **Step 3**:  Select the test configuration of your choice. You can select from various major browsers & their assorted versions to perform a test session. After selecting the configuration, click on the **‘Start’**  button.
 
@@ -115,7 +116,7 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 >**NOTE:** If `http://localhost:{port}`  does not work then try with either `http://localhost.lambdatest.com:{port}`  or your machine’s private IP `http://{IP}:{port}`.
 
-## Testing Local Folder Files Using LambdaTest tunnel
+## Testing Local Folder Files Using <BrandName /> tunnel
 ***
 >**Note:**  If you were already running a test session through tunnel then you will have to terminate the existing tunnel connection in cmd before you re-establish it for a new directory.
 
@@ -127,7 +128,7 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-9.webp').default} alt="setting up localhost testing for mac machine" width="1343" height="559" className="doc_img"/>
 
-**Step 3:**  After you establish a tunnel connection, go to LambdaTest and navigate to **‘Real Time Test’**. Enter `local-folder.lambdatest.com`  in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice. Click on the **‘Start’**  button.
+**Step 3:**  After you establish a tunnel connection, go to <BrandName /> and navigate to **‘Real Time Test’**. Enter `local-folder.lambdatest.com`  in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice. Click on the **‘Start’**  button.
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-10.webp').default} alt="localhost realtime testing" width="1348" height="613" className="doc_img"/>
 
@@ -137,9 +138,9 @@ Once the VM (Virtual Machine) is launched, you will be able to access your local
 
 >**Note:**  Similarly, if you want to run any file in the specified directory, you need to give URL as `local-folder.lambdatest.com/filename`.   
 For example: If you have a file `test.html`  in your folder. You need to give URL as `local-folder.lambdatest.com/test.html`  to run the same file.   
-In this way, you can run any HTML, PHP, Python, or similar web files present in any folder of your system, directly in the LambdaTest browser.
+In this way, you can run any HTML, PHP, Python, or similar web files present in any folder of your system, directly in the <BrandName /> browser.
 
-## Terminating The LambdaTest tunnel Connection
+## Terminating The <BrandName /> tunnel Connection
 ***
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in the following ways:
 
@@ -147,13 +148,13 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-12.webp').default} alt="stopping ssh tunnel" width="755" height="104" className="doc_img"/>
 
-**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the LambdaTest interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
+**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the <BrandName /> interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-13.webp').default} alt="Terminate tunnel connection" width="1349" height="622" className="doc_img"/>
 
-## Geolocation Testing Through VPN with LambdaTest tunnel
+## Geolocation Testing Through VPN with <BrandName /> tunnel
 ***
-Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in LambdaTest tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 Use the following arguments in your command line.
 
@@ -216,7 +217,7 @@ Following is the list of command arguments which can be used as modifiers while 
  
 
 >An Access Key is a unique string used for the identification of your account.   
->As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your LambdaTest account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
+>As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your <BrandName /> account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
 >If you ever misplace your Access key in the hands of someone you don’t trust. You can always regenerate it by clicking the tilt arrow button.
 
 Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says **‘Configure Tunnel’**. Click on that button & a string containing your access key will be presented.
@@ -231,17 +232,17 @@ You can also find your Access Key by going to **‘Settings’**  in the left 
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-16.webp').default} alt="Access key in account settings" width="1348" height="618" className="doc_img"/>
 
->**LambdaTest tunnel Update:**  Earlier, when our LambdaTest tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com) experience of locally hosted web pages. Not anymore! We have now updated the LambdaTest tunnel binary in a way that it auto-updates to the latest version every time you execute the LambdaTest tunnel from cmd/terminal.
+>**<BrandName /> tunnel Update:**  Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

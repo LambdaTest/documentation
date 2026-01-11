@@ -2,19 +2,19 @@
 id: xcresult
 title: XCResult
 sidebar_label: XCResult
-description: Learn how to generate and download Xcode Result Bundles (.xcresult) for XCUI test executions on LambdaTest. Debug smarter with detailed reports directly in Xcode.
+description: Learn how to generate and download Xcode Result Bundles (.xcresult) for XCUI test executions on TestMu AI. Debug smarter with detailed reports directly in Xcode.
 keywords:
   - xcuitest
   - xcui result bundle
   - xcuitest report
   - xcuitest logs
-  - lambdatest xcuitest
+  - testmu ai xcuitest
   - xcui xcresult
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/xcresult/
+url: https://www.testmu.ai/support/docs/xcresult
 site_name: LambdaTest
-slug: xcresult/
+slug: xcresult
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,6 +22,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,31 +33,31 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "XCUI Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/"
+          "name": "XCUI Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
         }]
       })
     }}
 ></script>
-# XCResult on LambdaTest
+# XCResult on <BrandName />
 <RealDeviceTag value="Real Device" />
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.  
 
-On LambdaTest, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
+On <BrandName />, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
 
 ---
 ## Prerequisites
 
-- Your LambdaTest [Username and Access Key](https://accounts.lambdatest.com/security).  
+- Your <BrandName /> [Username and Access Key](https://accounts.lambdatest.com/security).  
 - Access to an **iOS app (.ipa)** and an **XCUI Test app (.ipa)**.  
 - Xcode installed locally to view `.xcresult` bundles.  
 
@@ -65,9 +67,9 @@ On LambdaTest, you can now **generate and download `.xcresult` bundles** for you
 
 ### Step 1: Upload Your Application and Test Suite
 
-To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to LambdaTest. These files are required before executing tests.
+To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to <BrandName />. These files are required before executing tests.
 
-Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
+Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
 
 ### Step 2: Execute Your Tests with Result Bundles
 
@@ -148,7 +150,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 Result bundles are generated at the Build level. To download the `.xcresult` bundle for a specific session, use the following GET endpoint:
 
 :::note
-- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](https://www.lambdatest.com/support/docs/sharding-rd-hyperexec/).
+- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 :::
 
@@ -171,7 +173,7 @@ Example cURL command to download the result bundle:
 
 :::tip
 You will need your **BASIC_AUTH_TOKEN** (Base64 encoded `username:accesskey`) in the request header.  
-If you’re unsure how to generate it, follow the instructions here: [Executing the Test](https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
+If you’re unsure how to generate it, follow the instructions here: [Executing the Test](/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
 :::
 
 The response is a binary ZIP file containing the `.xcresult` bundle, which you can unzip and open directly in Xcode for detailed analysis.

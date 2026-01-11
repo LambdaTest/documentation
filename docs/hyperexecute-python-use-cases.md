@@ -4,17 +4,19 @@ title: HyperExecute Python Use Cases
 sidebar_label: Python Use Cases
 description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-  - LambdaTest Projects
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+  - TestMu AI Projects
   - Python
   - Behave
   - Robot
-url: https://www.lambdatest.com/support/docs/hyperexecute-python-use-cases/
+url: https://www.testmu.ai/support/docs/hyperexecute-python-use-cases
 site_name: LambdaTest
-slug: hyperexecute-python-use-cases/
+slug: hyperexecute-python-use-cases
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,22 +26,22 @@ slug: hyperexecute-python-use-cases/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Python Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-python-use-cases/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-python-use-cases/`
         }]
       })
     }}
 ></script>
-This guide covers the most common real-world scenarios and troubleshooting cases when running **Python**, **Pytest**, and **Behave** test frameworks on **LambdaTest HyperExecute**. Each section describes a use case, its root cause, and the precise YAML translation required to configure or fix the issue within your `hyperexecute.yaml`.
+This guide covers the most common real-world scenarios and troubleshooting cases when running **Python**, **Pytest**, and **Behave** test frameworks on **<BrandName /> HyperExecute**. Each section describes a use case, its root cause, and the precise YAML translation required to configure or fix the issue within your `hyperexecute.yaml`.
 
 ## 1. Handling Python Version Compatibility Issues
 Sometimes, test scripts fail due to Python version incompatibility. For example:
@@ -376,7 +378,7 @@ WARNING:root:Test warning message
 ERROR:root:Test error message
 ```
 
-## 16. Automating Screenshot Download and PDF Generation from LambdaTest
+## 16. Automating Screenshot Download and PDF Generation from <BrandName />
 During native app automation, screenshots captured per session ID can be retrieved using:
 
 ```bash
@@ -387,7 +389,7 @@ curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions
 
 **Problem :** Manually downloading, extracting, and arranging screenshots into a PDF is time-consuming.
 
-**Solution :** Use the LambdaTest Screenshot Downloader & PDF Generator CLI.
+**Solution :** Use the <BrandName /> Screenshot Downloader & PDF Generator CLI.
 
 - **Installation :**
 ```bash
@@ -411,7 +413,7 @@ lambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Deskto
 - Extracts screenshots in the original execution order.
 - Generates a screenshots.pdf containing the ordered screenshots.
 - Cleans up temporary files automatically.
-- Ensure your AUTH_HEADER is a valid Base64-encoded API key from LambdaTest.
+- Ensure your AUTH_HEADER is a valid Base64-encoded API key from <BrandName />.
 
 ## 17. Base YAML Configuration for Pytest on Windows with Autosplit
 

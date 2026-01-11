@@ -5,13 +5,13 @@ hide_title: false
 sidebar_label: Version 2.9.1
 description: Version 2.9.1
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-9-1/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-9-1
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-9-1/
+slug: hyperexecute-release-notes-2-9-1
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';
@@ -19,6 +19,7 @@ import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-9-1/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-9-1/`
         }]
       })
     }}
@@ -57,4 +58,4 @@ These headers are attached to your outbound HTTP requests and can help:
 - Pass custom metadata
 - Work around network/firewall restrictions
 
-> 📘 Refer to our detailed documentation, [Custom Headers](https://www.lambdatest.com/support/docs/custom-headers/) for detailed explanation and examples.
+> 📘 Refer to our detailed documentation, [Custom Headers](/support/docs/custom-headers/) for detailed explanation and examples.

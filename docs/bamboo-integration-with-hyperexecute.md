@@ -3,18 +3,21 @@ id: bamboo-integration-with-hyperexecute
 title: Bamboo CI
 hide_title: true
 sidebar_label: Bamboo CI
-description: LambdaTest now integrates with Bamboo CI Pipeline to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: TestMu AI now integrates with Bamboo CI Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/bamboo-integration-with-hyperexecute
 site_name: LambdaTest
-slug: bamboo-integration-with-hyperexecute/
+slug: bamboo-integration-with-hyperexecute
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +26,18 @@ slug: bamboo-integration-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bamboo CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/bamboo-integration-with-hyperexecute/`
         }]
       })
     }}

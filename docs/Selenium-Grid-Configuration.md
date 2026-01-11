@@ -1,18 +1,20 @@
 ---
 id: Selenium-Grid-Configuration
-title: Selenium Grid Configuration Guide | How to Configure Lambdatest Automation Grid
+title: Selenium Grid Configuration Guide | How to Configure TestMu AI Automation Grid
 hide_title: true
-sidebar_label: LambdaTest Selenium Grid Configuration
-description: This support guide tells you how can you configure LambdaTest Online Selenium Grid of 3000+ real desktop and mobile browsers.
+sidebar_label: TestMu AI Selenium Grid Configuration
+description: This support guide tells you how can you configure TestMu AI Online Selenium Grid of 3000+ real desktop and mobile browsers.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium grid online
   - selenium versions  
-url: https://www.lambdatest.com/support/docs/lambdatest-grid-configuration
+url: https://www.testmu.ai/support/docs/testmu-grid-configuration
 site_name: LambdaTest
-slug: lambdatest-grid-configuration/
+slug: testmu-grid-configuration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,24 +23,24 @@ slug: lambdatest-grid-configuration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Grid Configuration",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-grid-configuration"
+          "item": `${BRAND_URL}/support/docs/lambdatest-grid-configuration`
         }]
       })
     }}
 ></script>
 
-# LambdaTest Selenium Grid Configuration
+# <BrandName /> Selenium Grid Configuration
 
 ***
 
@@ -64,12 +66,12 @@ Currently we use: **Selenium 2.53.1 updated**
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-figma-app
-title: Getting Started with LambdaTest's SmartUI Figma-App CLI
+title: Getting Started with TestMu AI's SmartUI Figma-App CLI
 sidebar_label: Figma-App CLI
 description: Learn how to compare your Figma mobile designs with native app screenshots on real devices using SmartUI CLI.
 keywords:
@@ -8,10 +8,10 @@ keywords:
   - Mobile App Visual Testing
   - Figma to App Comparison
   - SmartUI CLI
-  - LambdaTest Mobile
+  - TestMu AI Mobile
   - Design to Production Validation
-url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-cli-figma-app/
+url: https://www.testmu.ai/support/docs/smartui-cli
+slug: smartui-cli-figma-app
 
 ---
 import Tabs from '@theme/Tabs';
@@ -19,6 +19,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -29,7 +30,7 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 ## Prerequisites
 
 - Node.js and npm installed
-- LambdaTest SmartUI account with App Automation plan
+- <BrandName /> SmartUI account with App Automation plan
 - Real device screenshots captured via Appium, SDK, or SmartUI platform
 - Figma Personal Access Token ([how to get one](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens))
 
@@ -342,7 +343,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [TestMu AI Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -358,7 +359,7 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 - [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-- [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
+- [SmartUI CLI Docs](/support/docs/smartui-cli/)
 - [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
 
 ---

@@ -3,23 +3,24 @@ id: getting-started-with-appium-testing
 title: Getting Started with Appium Testing
 hide_title: false
 sidebar_label: Appium Testing
-description: Getting Started with Appium Testing on LambdaTest Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
+description: Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/getting-started-with-appium-testing/
+url: https://www.testmu.ai/support/docs/getting-started-with-appium-testing
 site_name: LambdaTest
-slug: getting-started-with-appium-testing/
+slug: getting-started-with-appium-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -30,17 +31,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Appium Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-appium-testing/"
+          "name": "Getting Started With Appium Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-appium-testing/`
         }]
       })
     }}
@@ -56,7 +57,7 @@ Appium is an open-source framework that allows you to automate tests for mobile 
 
 Appium leverages the WebDriver protocol, similar to how Selenium automates web applications. This makes it compatible with [popular programming languages](/support/docs/appium-languages-and-frameworks/) for writing test scripts.
 
-Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on [LambdaTest Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 
@@ -162,12 +163,12 @@ We support all languages and frameworks that are compatible with Selenium, so in
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

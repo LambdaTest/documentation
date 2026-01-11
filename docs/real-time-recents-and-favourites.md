@@ -3,10 +3,10 @@ id: real-time-recents-and-favourites
 title: Recents and Favourites
 hide_title: false
 sidebar_label: Recents and Favourites
-description: Discover how to use the Recents and Favourites feature under Quick Links in LambdaTest. Quickly access recently used items and mark important resources for faster navigation.
+description: Discover how to use the Recents and Favourites feature under Quick Links in TestMu AI. Quickly access recently used items and mark important resources for faster navigation.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool
@@ -16,10 +16,13 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-recents-and-favourites/
+url: https://www.testmu.ai/support/docs/real-time-recents-and-favourites
 site_name: LambdaTest
-slug: real-time-recents-and-favourites/
+slug: real-time-recents-and-favourites
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,18 +31,18 @@ slug: real-time-recents-and-favourites/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Recents and Favourites",
-          "item": "https://www.lambdatest.com/support/docs/real-time-recents-and-favourites/"
+          "item": `${BRAND_URL}/support/docs/real-time-recents-and-favourites/`
         }]
       })
     }}

@@ -3,14 +3,16 @@ id: test-run-creation-and-management
 title: Test Run - Creation and Management
 hide_title: false
 sidebar_label: Create & Manage Test Run
-description: Gain insights into effective Test Run Creation with LambdaTest, designed to streamline your workflow.
+description: Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.
 keywords:
   - test run
   - test run creation 
-url: https://www.lambdatest.com/support/docs/test-run-creation-and-management/
+url: https://www.testmu.ai/support/docs/test-run-creation-and-management
 site_name: LambdaTest
-slug: test-run-creation-and-management/
+slug: test-run-creation-and-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,23 +21,23 @@ slug: test-run-creation-and-management/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Run Creation",
-          "item": "https://www.lambdatest.com/support/docs/test-run-creation-and-management/"
+          "item": `${BRAND_URL}/support/docs/test-run-creation-and-management/`
         }]
       })
     }}
 ></script>
-This guide outlines the steps required to create, configure, and manage test runs within LambdaTest's Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
+This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
 
 ## 1. Creating a Test Run
 ### Step 1: Initiate a New Test Run
@@ -112,8 +114,8 @@ Use descriptive names to easily identify test runs later.
 <img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Real "  className="doc_img"/>
 
 ## 5. Executing and Archiving Test Runs
-### Step 11: Execute on LambdaTest Cloud
-- Click the Play Icon to execute test instances on the LambdaTest Cloud.
+### Step 11: Execute on <BrandName /> Cloud
+- Click the Play Icon to execute test instances on the <BrandName /> Cloud.
 <img loading="lazy" src={require('../assets/images/test-run/11.png').default} alt="Real "  className="doc_img"/>
 
 - During execution, manually update the status of test cases and test steps as needed.

@@ -9,9 +9,9 @@ keywords:
 - ignore displacement differences
 - smart ignore layout shifts
 - AI based auto ignore
-url: https://www.lambdatest.com/support/docs/smartui-smartignore/
+url: https://www.testmu.ai/support/docs/smartui-smartignore
 site_name: LambdaTest
-slug: smartui-smartignore/
+slug: smartui-smartignore
 
 ---
 import Tabs from '@theme/Tabs';
@@ -248,4 +248,4 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 
 ---
 
-> **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](https://www.lambdatest.com/support/docs/) for updates.
+> **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](/support/docs/) for updates.

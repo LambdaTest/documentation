@@ -1,24 +1,26 @@
 ---
 id: mark-as-bug-responsive-testing
-title: How To Mark As Bug In Responsive Testing | LambdaTest
+title: How To Mark As Bug In Responsive Testing | TestMu AI
 hide_title: true
 sidebar_label: Mark As Bug In Responsive Testing
-description: Perform responsive testing with LambdaTest and mark your UI bugs in just a single click. Share them with your colleagues on respective project management tool such as Jira, Trello, Paymo, and more.
+description: Perform responsive testing with TestMu AI and mark your UI bugs in just a single click. Share them with your colleagues on respective project management tool such as Jira, Trello, Paymo, and more.
 keywords:
   - bug reporting
   - mark as bug
   - test session
   - test report
-  - lambdatest mark as a bug
+  - testmu ai mark as a bug
   - real time testing
   - responsive testing
   - smart ui testing
   - screenshot testing
 
-url: https://www.lambdatest.com/support/docs/mark-as-bug-in-responsive-testing/
+url: https://www.testmu.ai/support/docs/mark-as-bug-in-responsive-testing
 site_name: LambdaTest
-slug: mark-as-bug-in-responsive-testing/
+slug: mark-as-bug-in-responsive-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,18 +29,18 @@ slug: mark-as-bug-in-responsive-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mark as Bug in Responsive Testing",
-          "item": "https://www.lambdatest.com/support/docs/mark-as-bug-in-responsive-testing/"
+          "item": `${BRAND_URL}/support/docs/mark-as-bug-in-responsive-testing/`
         }]
       })
     }}
@@ -46,12 +48,12 @@ slug: mark-as-bug-in-responsive-testing/
 
 # Mark As Bug In Responsive Testing
 * * *
-You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. LambdaTest does it all for you.
-**Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on LambdaTest. And it let you share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task or bug. You can even mention the description to help them understand your point better. You can do all that while testing on LambdaTest, without having to hop on to any other platform or tool.
+You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. <BrandName /> does it all for you.
+**Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on <BrandName />. And it let you share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task or bug. You can even mention the description to help them understand your point better. You can do all that while testing on <BrandName />, without having to hop on to any other platform or tool.
 
->**Note:** Mark as Bug feature is not restricted to any particular feature at LambdaTest. In other words, every type of testing that you perform on LambdaTest will have a mark as a bug embedded in it. Below are various types of testing that we offer at LambdaTest.
+>**Note:** Mark as Bug feature is not restricted to any particular feature at <BrandName />. In other words, every type of testing that you perform on <BrandName /> will have a mark as a bug embedded in it. Below are various types of testing that we offer at <BrandName />.
 
-* **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by LambdaTest cloud server.
+* **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by <BrandName /> cloud server.
 
 * **Screenshot Testing:** Automated bulk screenshot testing on 25(browsers + OS) combinations in a single test session.
 
@@ -63,7 +65,7 @@ You can now avoid the hassle of capturing a screenshot, annotating the same befo
 
 >
 **Did You Know?**<br />
-LambdaTest offers more than 2000 real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
+<BrandName /> offers more than 2000 real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
 
 ## How Can I Mark As Bug While Responsive Testing?
 ***
@@ -118,7 +120,7 @@ LambdaTest offers more than 2000 real browsers and browser versions on every typ
 ## Pushing Bugs To Third Party Tools
 ***
 
-LambdaTest provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The **"Mark as Bug"** button will help you to push your edited screenshot to your integrated workspace instantly. You can integrate with the below mentioned 3rd party tools.
+<BrandName /> provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The **"Mark as Bug"** button will help you to push your edited screenshot to your integrated workspace instantly. You can integrate with the below mentioned 3rd party tools.
 
 - [JIRA](/docs/jira-integration/)
 - [Slack](/docs/slack-integration/)
@@ -135,17 +137,17 @@ LambdaTest provides integration with various 3rd party applications to help you 
 - [BugHerd](/docs/bugherd-integration/)
 - [Mantis](/docs/mantis-integration/)
 - [Monday.com](/docs/monday-com-integration/)
-- [Breeze](/docs/breeze-integration-with-lambdatest/)
+- [Breeze](/docs/breeze-integration-with-testmu/)
 - [Clickup](/docs/clickup-integration/)
 - [Zipboard](/docs/zipboard-integration/)
-- [Backlog](/docs/backlog-integration-with-lambdatest/)
+- [Backlog](/docs/backlog-integration-with-testmu/)
 - [Pivotal](/docs/pivotal-tracker-integration/)
 - [Practitest](/docs/practitest-integration/)
 - [Miro](/docs/miro-integration/)
 
 We are continually adding more integration to our platform. If you use some other tool, don’t hesitate to share it with us! Just drop a message through <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> & we’ll bring it here on our platform for you.
 
-As you click on the **"Mark as Bug"** button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed LambdaTest + Asana integration, you can fill the below represented fields.
+As you click on the **"Mark as Bug"** button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed <BrandName /> + Asana integration, you can fill the below represented fields.
 
 - You can select which workspace the should the task go under.
 - You can specify which project the task should be placed under.
@@ -155,7 +157,7 @@ As you click on the **"Mark as Bug"** button, an integration specific form would
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/mark-as-bug/mark-10.webp').default} alt="share the bugs in project management tool" width="1346" height="649" className="doc_img"/>
 
-All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your LambdaTest account. In the above case, the changes would be reflecting on the respective Asana instance.
+All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your <BrandName /> account. In the above case, the changes would be reflecting on the respective Asana instance.
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/mark-as-bug/mark-11.webp').default} alt="share the bugs in project management tool" width="1346" height="649" className="doc_img"/>
 
@@ -167,7 +169,7 @@ Feel free to share them with our <span className="doc__lt" onClick={() => win
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

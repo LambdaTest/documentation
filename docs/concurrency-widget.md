@@ -1,20 +1,22 @@
 ---
 id: concurrency-widget
-title: Understanding Your LambdaTest Concurrency
+title: Understanding Your TestMu AI Concurrency
 hide_title: true
 sidebar_label: Concurrency Widget
-description: Learn how your LambdaTest concurrency works and how to understand the concurrency widget that shows your parallel test usage across different plans and test types.
+description: Learn how your TestMu AI concurrency works and how to understand the concurrency widget that shows your parallel test usage across different plans and test types.
 keywords:
-  - lambdatest concurrency
+  - testmu ai concurrency
   - parallel tests
   - concurrency widget
   - test plans
   - license pool
 
-url: https://www.lambdatest.com/support/docs/concurrency-widget/
+url: https://www.testmu.ai/support/docs/concurrency-widget
 site_name: LambdaTest
-slug: concurrency-widget/
+slug: concurrency-widget
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,26 +25,26 @@ slug: concurrency-widget/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Concurrency Widget",
-          "item": "https://www.lambdatest.com/support/docs/concurrency-widget/"
+          "item": `${BRAND_URL}/support/docs/concurrency-widget/`
         }]
       })
     }}
 ></script>
 
-# Understanding Your LambdaTest Concurrency
+# Understanding Your <BrandName /> Concurrency
 
-Your LambdaTest subscription is designed to be flexible, allowing you and your team to run different types of tests. This guide explains how your concurrency (the number of tests you can run in parallel) is managed.
+Your <BrandName /> subscription is designed to be flexible, allowing you and your team to run different types of tests. This guide explains how your concurrency (the number of tests you can run in parallel) is managed.
 
 ---
 
@@ -195,12 +197,12 @@ However, your total number of parallel tests is capped at 3 (regardless of type 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

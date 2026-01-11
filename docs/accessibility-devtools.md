@@ -1,21 +1,23 @@
 ---
 id: accessibility-devtools
-title: LambdaTest Accessibility DevTools
+title: TestMu AI Accessibility DevTools
 hide_title: false
 sidebar_label: Accessibility DevTools
-description: Ensure your digital products are accessible to people with disabilities through comprehensive testing and improvement using LambdaTest Accessibility DevTools.
+description: Ensure your digital products are accessible to people with disabilities through comprehensive testing and improvement using TestMu AI Accessibility DevTools.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
-url: https://www.lambdatest.com/support/docs/accessibility-devtools/
+url: https://www.testmu.ai/support/docs/accessibility-devtools
 site_name: LambdaTest
-slug: accessibility-devtools/
+slug: accessibility-devtools
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "What is Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-devtools/"
+          "item": `${BRAND_URL}/support/docs/accessibility-devtools/`
         }]
       })
     }}
 ></script>
 
-LambdaTest Accessibility DevTools is a browser extension designed to help developers and testers identify and resolve accessibility issues within web applications. It simplifies the process of ensuring your website is usable by everyone, regardless of their abilities.
+<BrandName /> Accessibility DevTools is a browser extension designed to help developers and testers identify and resolve accessibility issues within web applications. It simplifies the process of ensuring your website is usable by everyone, regardless of their abilities.
 
 <a href="https://chromewebstore.google.com/detail/lambdatest-accessibility/mmbbmjhbidfflcbiffppojapgonepmab" target="_blank">
 <img loading="lazy" src={require('../assets/images/accessibility-testing/download.png').default} alt="automation-dashboard" style={{width: '300px'}} className="doc_img no-zoom"/>
@@ -53,7 +55,7 @@ LambdaTest Accessibility DevTools is a browser extension designed to help develo
 - **Compliance with Standards:** The scanning process is powered by Axe-core, a popular accessibility testing engine, and helps ensure your website adheres to accessibility standards like WCAG (Web Content Accessibility Guidelines).
 - **Detailed Reporting:** After a scan, the DevTools generate a comprehensive report that details all identified accessibility issues. This report includes the severity level (critical, serious, or minor) of each issue, along with a clear explanation and suggested remediation steps.
 
-## Benefits of LambdaTest Accessibility DevTools
+## Benefits of <BrandName /> Accessibility DevTools
 
 - **Improved User Experience:** By identifying and fixing accessibility issues, you create a website that's usable for everyone, including users with disabilities.
 - **Reduced Legal Risks:** Many countries have regulations regarding website accessibility. Using the DevTools helps mitigate potential legal risks associated with non-compliance.
@@ -65,7 +67,7 @@ LambdaTest Accessibility DevTools is a browser extension designed to help develo
   <a href="/support/docs/accessibility-testing-install-devtools">
     <div className="support_inners">
       <h3>Install the DevTools Toolkit</h3>
-      <p>Step-by-Step guide to install the LambdaTest DevTools browser extension</p>
+      <p>Step-by-Step guide to install the <BrandName /> DevTools browser extension</p>
     </div>
   </a>
   <a href="/support/docs/accessibility-testing-run-quick-scan">

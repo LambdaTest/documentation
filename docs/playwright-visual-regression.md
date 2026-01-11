@@ -15,15 +15,16 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/playwright-visual-regression/
+url: https://www.testmu.ai/support/docs/playwright-visual-regression
 site_name: LambdaTest
-slug: playwright-visual-regression/
+slug: playwright-visual-regression
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
@@ -55,7 +56,7 @@ $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### Step 1: Create a SmartUI Project
 
@@ -86,7 +87,7 @@ git clone https://github.com/LambdaTest/playwright-sample
 npm i
 ```
 
-3. Set up the LambdaTest credentials by using the commands below in the terminal.The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
    
 For macOS:
 ```bash
@@ -162,7 +163,7 @@ const { expect } = require('@playwright/test');
 node playwright-smartui.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Fetching Screenshot Status and Results using WebHook <NewTag value='New' color='#000' bgColor='#ffec02' />
 
@@ -239,15 +240,15 @@ const capabilities: {
   ...
 }
 ```
-:::tip For step by step guide for  `Github Integration` click [here](https://www.lambdatest.com/support/docs/smartui-github-app-integration/)
+:::tip For step by step guide for  `Github Integration` click [here](/support/docs/smartui-github-app-integration/)
 :::
 
-For additional information about Playwright framework please explore the documentation [here](https://www.lambdatest.com/support/docs/playwright-testing/)
+For additional information about Playwright framework please explore the documentation [here](/support/docs/playwright-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
@@ -370,7 +371,7 @@ await page.waitForLoadState('networkidle');
    echo $LT_ACCESS_KEY
    ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </TabItem>
 <TabItem value="project-not-found-error" label="Project Not Found Error">
@@ -475,8 +476,8 @@ await page.waitForLoadState('networkidle');
 If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -485,7 +486,7 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)
 
@@ -494,12 +495,12 @@ If you encounter issues not covered here:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

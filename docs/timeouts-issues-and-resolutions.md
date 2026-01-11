@@ -11,10 +11,12 @@ keywords:
   - cross browser testing app
   - developer tools
   - debugging tools
-url: https://www.lambdatest.com/support/docs/timeouts-issues-and-resolutions/
+url: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions
 site_name: LambdaTest
-slug: timeouts-issues-and-resolutions/
+slug: timeouts-issues-and-resolutions
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 To make sure our machines are not held for long due to some incorrect test, we have come up with a restriction on the number of seconds that our machine is kept reserved for you. In cases, where our servers fail to retrieve a request from your local machine for more than 120 seconds, then your tests are aborted from the queue with the error message related to Timeouts. 
 
@@ -24,7 +26,7 @@ There could be several reasons related to a timeouts. We are going to highlight 
 
 ### 1. Idle Timeout
 
-If the LambdaTest Selenium grid detects inactivity for 120 seconds then you may encounter the below error:
+If the <BrandName /> Selenium grid detects inactivity for 120 seconds then you may encounter the below error:
 
 **Idle Timeout :** Test was terminated because grid hasn't received any requests for 120 second. To avoid this use idleTimeout using desired capabilities. e.g: set 'idleTimeout':'270′.  
 The timeout could also occur due to network latency, or due to improper declaration of driver.quit().
@@ -55,10 +57,10 @@ If you are using a VPN, use this tool to audit your network latency.
 
 ### 4. Queuing Timeout
 
-The maximum number of test that are allowed to be queued for your LambdaTest account will depend upon the number of concurrent sessions you are eligible for. You can figure out the maximum number of test cases you are allowed to queue with the below formula.
+The maximum number of test that are allowed to be queued for your <BrandName /> account will depend upon the number of concurrent sessions you are eligible for. You can figure out the maximum number of test cases you are allowed to queue with the below formula.
 
 **Maximum Queuing Capacity**
-Here is an example, if your LambdaTest account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases i.e. 160 queued test cases. The scheduling and execution of test cases in your queue will be taken care of by LambdaTest.
+Here is an example, if your <BrandName /> account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases i.e. 160 queued test cases. The scheduling and execution of test cases in your queue will be taken care of by <BrandName />.
 
 ```javascript
 Maximum number of test cases that can be queued = n + 150 
@@ -74,17 +76,17 @@ Queuing timeout could happen because of the below:
 
 ### 5. Firewall Protected Network
 
-If you are working under an organization which has an active firewall setup to help employees securely connect with servers that are working inside the organization's network. If you are trying to access LambdaTest Selenium grid under a firewall protected network then it may lead to your tests facing a timeout.
+If you are working under an organization which has an active firewall setup to help employees securely connect with servers that are working inside the organization's network. If you are trying to access <BrandName /> Selenium grid under a firewall protected network then it may lead to your tests facing a timeout.
 
-Browse `https://hub.lambdatest.com/wd/hub/session` to validate whether your network has restricted access to LambdaTest platform. It should return some response. For example: **:```{"status":404,"value":{"message":"method not allowed"}}```** If **no response** is received from LambdaTest then **you may need to white-list this host from URL firewall.**
+Browse `https://hub.lambdatest.com/wd/hub/session` to validate whether your network has restricted access to <BrandName /> platform. It should return some response. For example: **:```{"status":404,"value":{"message":"method not allowed"}}```** If **no response** is received from <BrandName /> then **you may need to white-list this host from URL firewall.**
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Timeouts: Issues and Resolutions</span>

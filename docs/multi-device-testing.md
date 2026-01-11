@@ -2,23 +2,24 @@
 id: multi-device-testing
 title: Multi-Device Testing on Real Devices
 sidebar_label: Multi-Device Testing
-description: Learn how to test multiple devices simultaneously in a single session on LambdaTest App Live, including setup, workflow, and best practices.
+description: Learn how to test multiple devices simultaneously in a single session on TestMu AI App Live, including setup, workflow, and best practices.
 keywords:
   - Multi-Device Testing
   - App Live
   - Real Devices
   - Parallel Testing
-slug: multi-device-testing/
+slug: multi-device-testing
 site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/multi-device-testing/
+url: https://www.testmu.ai/support/docs/multi-device-testing
 ---
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Multi-Device Testing on Real Devices
 
 **Multi-Device Testing** enables you to run multiple devices simultaneously in a single App Live session, allowing you to validate your application across different devices and OS versions faster and more efficiently. This approach simplifies **cross-device testing** by bringing multiple devices into a single session.
 
-LambdaTest allows you to run **up to 6 devices at a time** within a single session, depending on your plan’s parallel limit. You can choose different applications for each device or test multiple versions of the same app concurrently, all from a single interface, without the need to start separate sessions.
+<BrandName /> allows you to run **up to 6 devices at a time** within a single session, depending on your plan’s parallel limit. You can choose different applications for each device or test multiple versions of the same app concurrently, all from a single interface, without the need to start separate sessions.
 
 ---
 

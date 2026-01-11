@@ -13,9 +13,9 @@ keywords:
   - puppeteer pytest
   - puppeteer mocha
   - automation testing with puppeteer
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/
+url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-sdk-using-puppeteer/
+slug: hyperexecute-smart-ui-sdk-using-puppeteer
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,18 +33,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/`
         }]
       })
     }}
@@ -53,11 +55,11 @@ This documentation will guide you step-by-step to execute the SmartUI tests on t
 
 You must do the following in order to run the tests on HyperExecute from your local system:
 
-- Get your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
+- Get your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
 - Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- Use your login credentials to access [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- Use your login credentials to access [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Step 1: Create a SmartUI Project
 
@@ -78,7 +80,7 @@ After creating the project, you will get your `PROJECT_TOKEN`. You need to keep 
 To configure and test it, you can use your own project. We are using the sample repository for demonstration purposes.
 
 :::tip Sample repo
-Download or Clone the code sample for the Puppeteer framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Puppeteer framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-puppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -114,7 +116,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

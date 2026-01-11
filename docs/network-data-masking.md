@@ -3,20 +3,22 @@ id: network-data-masking
 title: Network Data Masking
 hide_title: true
 sidebar_label: Network Data Masking
-description: LambdaTest provides network data masking capability to protect sensitive information during automation testing sessions.
+description: TestMu AI provides network data masking capability to protect sensitive information during automation testing sessions.
 keywords:
 - Network logs
 - Network Data Masking
 - custom headers bypass firewalls
 - masking of sensitive data
-url: https://www.lambdatest.com/support/docs/network-data-masking/
+url: https://www.testmu.ai/support/docs/network-data-masking
 site_name: LambdaTest
-slug: network-data-masking/
+slug: network-data-masking
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Network Data Masking 
 
-LambdaTest provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on LambdaTest platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
+<BrandName /> provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on <BrandName /> platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
 
 By the end of this document, you will be able to:
 
@@ -25,7 +27,7 @@ By the end of this document, you will be able to:
 
 ## What is Network Data Masking?
 
-Network data masking automatically identifies and masks sensitive information in HTTP network logs on LambdaTest traffic during test execution. When enabled, the system scans for predefined sensitive keywords in network requests and responses on LambdaTest, replacing their values with masked placeholders to prevent data exposure.
+Network data masking automatically identifies and masks sensitive information in HTTP network logs on <BrandName /> traffic during test execution. When enabled, the system scans for predefined sensitive keywords in network requests and responses on <BrandName />, replacing their values with masked placeholders to prevent data exposure.
 
 
 ## Sensitive Keywords Detected

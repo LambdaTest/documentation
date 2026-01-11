@@ -3,7 +3,7 @@ id: cypress-detailed-command-logs
 title: Detailed Command Logs for Cypress
 hide_title: true
 sidebar_label: Cypress Detailed Command Logs
-description: Learn how to generate detailed command logs for the test reports of cypress framework testing on lambdatest and download the reports from the dashboard.
+description: Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.
 keywords:
     - cypress testing
     - cypress automation testing
@@ -12,10 +12,13 @@ keywords:
     - hyperexecute cypressv10 testing
     - hyperexecute cypress testing
   
-url: https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/
+url: https://www.testmu.ai/support/docs/cypress-detailed-command-logs
 site_name: LambdaTest
-slug: cypress-detailed-command-logs/
+slug: cypress-detailed-command-logs
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,18 +26,18 @@ slug: cypress-detailed-command-logs/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Detailed Command Logs for Cypress",
-          "item": "https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/"
+          "item": `${BRAND_URL}/support/docs/cypress-detailed-command-logs/`
         }]
       })
     }}
@@ -182,6 +185,6 @@ installLogsCollector()
 ## View Generated Logs
 Once the Cypress tests are executed, you can view the detailed command logs in the **"Detailed Command Logs"** tab on the test details page.
 
-For more information, visit [Artefacts For A Cypress Project](https://www.lambdatest.com/support/docs/download-artefacts-cypress/)
+For more information, visit [Artefacts For A Cypress Project](/support/docs/download-artefacts-cypress/)
 
 <img loading="lazy" src={require('../assets/images/cypress/detailed-cypress-logs.png').default} alt="Image" className="doc_img"/>

@@ -1,17 +1,19 @@
----
+﻿---
 id: queuing-appium-tests
 hide_title: true
 title:  Queuing Appium Automated Tests
 sidebar_label: Queuing Appium Tests
-description: To avoid overuse of LambdaTest , we have put a capacity limit on the number of tests queued on our platform. Here's a brief guide on queuing your Appium automated tests.
+description: To avoid overuse of TestMu AI , we have put a capacity limit on the number of tests queued on our platform. Here's a brief guide on queuing your Appium automated tests.
 keywords:
   - appium test session queuing
   - queuing
-  - lambdatest queuing
-url: https://www.lambdatest.com/support/docs/queuing-appium-tests/
+  - testmu ai queuing
+url: https://www.testmu.ai/support/docs/queuing-appium-tests
 site_name: LambdaTest
-slug: queuing-appium-tests/
+slug: queuing-appium-tests
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +22,18 @@ slug: queuing-appium-tests/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Queuing And Parallel Execution",
-          "item": "https://www.lambdatest.com/support/docs/queuing-appium-tests/"
+          "item": `${BRAND_URL}/support/docs/queuing-appium-tests/`
         }]
       })
     }}
@@ -40,7 +42,7 @@ slug: queuing-appium-tests/
 # Queuing Appium Tests
 ***
 
-To avoid over-exploitation of LambdaTest, we have imposed a capacity constraint on the number of tests queued on our platform. The maximum number of queued items for your LambdaTest account is determined by the number of concurrent sessions you are registered for. Using the formula below, you can calculate the maximum number of Appium test cases you are entitled queue.
+To avoid over-exploitation of <BrandName />, we have imposed a capacity constraint on the number of tests queued on our platform. The maximum number of queued items for your <BrandName /> account is determined by the number of concurrent sessions you are registered for. Using the formula below, you can calculate the maximum number of Appium test cases you are entitled queue.
 
 ```js
 Maximum number of Appium test cases that can be queued = n + 150
@@ -48,13 +50,13 @@ Maximum number of Appium test cases that can be queued = n + 150
 Here, n = number of concurrent sessions.
 ```
 
-For example, if your LambdaTest account enables 10 concurrent sessions, your queue can hold a maximum of (10 + 150) queued test cases, or 160 queued test cases. LambdaTest will handle the scheduling and parallel execution of Appium test cases in your queue.
+For example, if your <BrandName /> account enables 10 concurrent sessions, your queue can hold a maximum of (10 + 150) queued test cases, or 160 queued test cases. <BrandName /> will handle the scheduling and parallel execution of Appium test cases in your queue.
 
 If you send more tests for execution than your concurrency limit allows, they will be queued until the queue hits their maximum holding capacity. So, if you have a concurrency of 100 but send 200 tests, the "additional" tests will be queued and performed as soon as the first round of tests is completed. After the number of running tests reaches 99 in this case, one test from the queue will start running, and when the next test ends, another test from the queue will start running. This process is repeated until all of the queued tests are completed.
 
 >
-Here are some key points to keep in mind while running Appium automated tests on LambdaTest platform.
-1. As mentioned above, the number of tests that can be queued for a single instance is limited. This limit is determined by the amount of concurrent LambdaTest sessions, and exceeding your maximum queuing capacity will result in the test cases being discarded.<br/>
+Here are some key points to keep in mind while running Appium automated tests on <BrandName /> platform.
+1. As mentioned above, the number of tests that can be queued for a single instance is limited. This limit is determined by the amount of concurrent <BrandName /> sessions, and exceeding your maximum queuing capacity will result in the test cases being discarded.<br/>
 2. There is also a maximum time restriction for how long a test can be in the queue. So, if you have automated test cases in a queue for more than 15 minutes, they will be timed out and will not be executed.
 
 ## Rate Limiter and Penalty
@@ -72,12 +74,12 @@ An account can exceed the authorized queuing limit seven times per month. For ex
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

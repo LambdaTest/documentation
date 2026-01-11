@@ -47,6 +47,8 @@ url: https://www.lambdatest.com/support/docs/lt-browser/
 site_name: LambdaTest
 slug: lt-browser/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,18 +57,18 @@ slug: lt-browser/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LT Browser",
-          "item": "https://www.lambdatest.com/support/docs/lt-browser/"
+          "item": `${BRAND_URL}/support/docs/lt-browser/`
         }]
       })
     }}
@@ -99,7 +101,7 @@ To get started, you need to download the executable file from here.
 <a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Linux</a>
 </div>
 
-**Note:** After you are done with the installation, you will need to login to the LT Browser through your LambdaTest login credentials.
+**Note:** After you are done with the installation, you will need to login to the LT Browser through your <BrandName /> login credentials.
 
 >This document will help you:
 >
@@ -113,12 +115,12 @@ To get started, you need to download the executable file from here.
 >*   Test Locally Hosted Web-Apps or Websites
 >*   Test Web Pages Behind Login
 >*   Debug Your Website Using LT Browser
->*   [View Performance Report Of Your Website Using LT Browser](https://www.lambdatest.com/support/docs/performance-report/)
->*   [Network Throttling To Test Website Responsiveness](https://www.lambdatest.com/support/docs/network-throttling-for-responsive-testing/)
->*   [What Is Scroll Sync In LT Browser?](https://www.lambdatest.com/support/docs/scroll-sync/)
->*   [Capturing Full-Page Screenshots Of Your Websites](https://www.lambdatest.com/support/docs/full-page-screenshots/)
+>*   [View Performance Report Of Your Website Using LT Browser](/support/docs/performance-report/)
+>*   [Network Throttling To Test Website Responsiveness](/support/docs/network-throttling-for-responsive-testing/)
+>*   [What Is Scroll Sync In LT Browser?](/support/docs/scroll-sync/)
+>*   [Capturing Full-Page Screenshots Of Your Websites](/support/docs/full-page-screenshots/)
 >*   Using Mouse Pointer For Touch Mode
->*   [Getting The JavaScript Error Report Of Your Website](https://www.lambdatest.com/support/docs/error-reports/)
+>*   [Getting The JavaScript Error Report Of Your Website](/support/docs/error-reports/)
 >*   What Is LT Browser Feedback Board?
 >*   Keyboard Shortcuts
 
@@ -201,7 +203,7 @@ If you open the LT Browser, you will notice a search bar displayed over the top-
 
 ### How To Edit Captured Screenshot? Use Built-In Image Editor
 
-LambdaTest offers a built-in image editor to help you easily mark the bugs over your website and share it across your teammates. You can highlight the bugs in various shapes with different colors. Let us have a look at everything that you can do with the image editor.
+<BrandName /> offers a built-in image editor to help you easily mark the bugs over your website and share it across your teammates. You can highlight the bugs in various shapes with different colors. Let us have a look at everything that you can do with the image editor.
 
 #### Draw A Line
 
@@ -281,11 +283,11 @@ If you click on it, you will generate a shareable link to access the highlighted
 
 ### 5\. Mark As Bug Directly To Third-Party Tools
 
-LambdaTest offers numerous integrations to third-party tools for project management, bug tracking, instant messaging, CI/CD and more. Once you integrate your LambdaTest account with your desired third-party integration. You can leverage the mark as bug button to push the bugs directly to your projects over third-party platforms. Meaning, you can share your highlighted screenshots across Jira, asana, Trello, slack and more.
+<BrandName /> offers numerous integrations to third-party tools for project management, bug tracking, instant messaging, CI/CD and more. Once you integrate your <BrandName /> account with your desired third-party integration. You can leverage the mark as bug button to push the bugs directly to your projects over third-party platforms. Meaning, you can share your highlighted screenshots across Jira, asana, Trello, slack and more.
 
 <img loading="lazy" src={require('../assets/images/uploads/mark-as-bug-1.webp').default} alt="mark as bug"  className="doc_img" width="1191" height="576"/>
 
-As you click on the mark as bug button, you will be presented with the screen which will present you few of LambdaTest integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [LambdaTest integrations](https://www.lambdatest.com/integrations).
+As you click on the mark as bug button, you will be presented with the screen which will present you few of <BrandName /> integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [<BrandName /> integrations](https://www.lambdatest.com/integrations).
 
 <img loading="lazy" src={require('../assets/images/uploads/integrations.webp').default} alt="Integrations"  className="doc_img" width="1366" height="656"/>
 
@@ -353,7 +355,7 @@ It is as simple as that!
 
 Yes, you can! LT Browser aims at providing responsive testing along with live-interactive testing experience. You can simply load a website, login to the web-application and start testing your web pages that come after login.
 
-Here is a screenshot of the LambdaTest web-application which is captured after logging in from the LambdaTest website.
+Here is a screenshot of the <BrandName /> web-application which is captured after logging in from the <BrandName /> website.
 
 <img loading="lazy" src={require('../assets/images/uploads/pages-behind-login.webp').default} alt="page behind login"  className="doc_img" width="1366" height="728"/>
 
@@ -449,12 +451,12 @@ That is all about the LT browser. Don't forget to share you experience or questi
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

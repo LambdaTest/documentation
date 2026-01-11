@@ -1,21 +1,22 @@
----
+﻿---
 id: private-device-allocation-to-teams
 title: Private Device Allocation to Teams
 hide_title: false
 sidebar_label: Private Device Allocation to Teams
-description: Efficiently manage private cloud devices with LambdaTest's Teams feature. Allocate or deallocate devices to teams for secure and streamlined testing workflows.
+description: Efficiently manage private cloud devices with TestMu AI's Teams feature. Allocate or deallocate devices to teams for secure and streamlined testing workflows.
 keywords:
 - private device
 - private decive allocation to teams
 - real device
 - virtual device
-url: https://www.lambdatest.com/support/docs/private-device-allocation-to-teams/
+url: https://www.testmu.ai/support/docs/private-device-allocation-to-teams
 site_name: LambdaTest
-slug: private-device-allocation-to-teams/
+slug: private-device-allocation-to-teams
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,18 +25,18 @@ import TabItem from '@theme/TabItem';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Private Device Allocation to Teams",
-          "item": "https://www.lambdatest.com/support/docs/private-device-allocation-to-teams/"
+          "item": `${BRAND_URL}/support/docs/private-device-allocation-to-teams/`
         }]
       })
     }}

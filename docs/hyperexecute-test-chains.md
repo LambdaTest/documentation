@@ -4,18 +4,21 @@ title: HyperExecute Test Chains
 sidebar_label: Test Chains
 description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-  - LambdaTest Projects
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+  - TestMu AI Projects
   - Workflows
   - Schedule Workflows
   - Connected Workflows
   - Chained tests
-url: https://www.lambdatest.com/support/docs/hyperexecute-test-chains/
+url: https://www.testmu.ai/support/docs/hyperexecute-test-chains
 site_name: LambdaTest
-slug: hyperexecute-test-chains/
+slug: hyperexecute-test-chains
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +28,17 @@ slug: hyperexecute-test-chains/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-test-chains/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-test-chains/`
         }]
       })
     }}

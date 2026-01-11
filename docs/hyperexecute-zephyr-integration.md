@@ -4,15 +4,15 @@ title: Integrate Zephyr Scale with HyperExecute
 sidebar_label: Zephyr
 description:  Zephyr, a test case management tool, and HyperExecute, a cloud-based test execution platform streamline your testing process by efficiently managing test cases.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - zephyr
   - Integrations
   - Products
-url: https://www.lambdatest.com/support/docs/hyperexecute-zephyr-scale-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-zephyr-scale-integration
 site_name: LambdaTest
-slug: hyperexecute-zephyr-scale-integration/
+slug: hyperexecute-zephyr-scale-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -20,6 +20,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,30 +31,30 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-zephyr-scale-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-zephyr-scale-integration/`
         }]
       })
     }}
 ></script>
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams
 
-This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by LambdaTest.
+This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by <BrandName />.
 
 ## Prerequisites
 
 - Install the [Zephyr Scale - Test Management](https://marketplace.atlassian.com/apps/1213259/zephyr-scale-test-management-for-jira?hosting=cloud&tab=overview) for Jira application from the Atlassian Marketplace.
-- LambdaTest account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
-- LambdaTest [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- <BrandName /> account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - A Jira Project key.
 - A Zephyr Scale Access token. You can get this from the `profiles and settings` option of your Jira Board.
 
@@ -62,7 +64,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 
-Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Maestro framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/amanchopra1905/hyp-zephyr-scale-integration" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
@@ -86,7 +88,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -207,14 +209,14 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 
 ### Viewing the Test Results in Zephyr Scale
 
-To view test results in Zephyr Scale, head over to your Zephyr Scale project. The below screenshot shows the Test Case in Zephyr Scale that you executed on LambdaTest.
+To view test results in Zephyr Scale, head over to your Zephyr Scale project. The below screenshot shows the Test Case in Zephyr Scale that you executed on <BrandName />.
 
-<img loading="lazy" src={require('../assets/images/zephyr-integration/1.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/zephyr-integration/1.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 You can also view the executed build by navigating to **Test Cycles**.
 
-<img loading="lazy" src={require('../assets/images/zephyr-integration/2.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/zephyr-integration/2.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 To view the build details, click on the Zephyr project *Key* or *Name*.
 
-<img loading="lazy" src={require('../assets/images/zephyr-integration/3.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/zephyr-integration/3.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>

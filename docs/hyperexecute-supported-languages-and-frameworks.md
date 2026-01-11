@@ -14,17 +14,17 @@ keywords:
  - automation testing framework
  - test automation frameworks
  - selenium frameworks
- - LambdaTest HyperExecute
+ - TestMu AI HyperExecute
  - Super fast Selenium grid
-image: /assets/images/og-images/selenium-grid-supported-languages-frameworks.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/
+url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-frameworks
 site_name: LambdaTest
-slug: hyperexecute-supported-languages-and-frameworks/
+slug: hyperexecute-supported-languages-and-frameworks
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageDocs';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +34,17 @@ import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguag
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Frameworks Supported on HyperExecute ",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-supported-languages-and-frameworks/`
         }]
       })
     }}

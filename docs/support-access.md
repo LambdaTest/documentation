@@ -3,17 +3,19 @@ id: support-access
 title: Support Access
 hide_title: true
 sidebar_label: Support Access
-description: Grant backend access to LambdaTest for efficient debugging & delegated tasks, with the ability to revoke anytime.
+description: Grant backend access to TestMu AI for efficient debugging & delegated tasks, with the ability to revoke anytime.
 keywords:
-  - lambdatest support access
+  - testmu ai support access
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
 
-url: https://www.lambdatest.com/support/docs/support-access/
+url: https://www.testmu.ai/support/docs/support-access
 site_name: LambdaTest
-slug: support-access/
+slug: support-access
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,32 +24,32 @@ slug: support-access/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Support Access",
-          "item": "https://www.lambdatest.com/support/docs/support-access/"
+          "item": `${BRAND_URL}/support/docs/support-access/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest Support Access
+# <BrandName /> Support Access
 ***
-The Support Access feature allows LambdaTest to take access to your LambdaTest account and log in on your behalf from the backend. By granting access to your account, our team can help you with debugging issues or do activities on your behalf. You can revoke this access anytime
+The Support Access feature allows <BrandName /> to take access to your <BrandName /> account and log in on your behalf from the backend. By granting access to your account, our team can help you with debugging issues or do activities on your behalf. You can revoke this access anytime
 
 
 ## Granting Support Access
 ***
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 <img loading="lazy" src={require('../assets/images/support-access/lambdatest-dashboard.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -61,12 +63,12 @@ The Support Access feature allows LambdaTest to take access to your LambdaTest a
 
 <img loading="lazy" src={require('../assets/images/support-access/granted-access.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-You have now successfully granted support access to LambdaTest. 
+You have now successfully granted support access to <BrandName />. 
 
 ## Revoking Support Access
 ***
 
-* Simply click on Revoke LambdaTest Access. 
+* Simply click on Revoke <BrandName /> Access. 
 
 <img loading="lazy" src={require('../assets/images/support-access/revoke-access.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -75,12 +77,12 @@ You have now successfully granted support access to LambdaTest.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

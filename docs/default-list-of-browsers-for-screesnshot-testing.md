@@ -3,7 +3,7 @@ id: default-list-of-browsers-for-screesnshot-testing
 title: Default List Of Browsers For Screenshot Testing
 hide_title: true
 sidebar_label: Default List Of Browsers For Automated Screenshot Testing
-description: The default list of Mobile and Desktop browsers for Automated Screenshot Testing on LambdaTest platform.
+description: The default list of Mobile and Desktop browsers for Automated Screenshot Testing on TestMu AI platform.
 keywords: 
 - Automated Screenshot Testing
 - Browser Screenshots
@@ -21,10 +21,13 @@ keywords:
 - Safari Screenshot Testing
 - Opera Screenshot Testing
 
-url: https://www.lambdatest.com/support/docs/default-list-of-browsers-for-screesnshot-testing/
+url: https://www.testmu.ai/support/docs/default-list-of-browsers-for-screesnshot-testing
 site_name: LambdaTest
 slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +37,17 @@ slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testi
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Default List Of Mobile And Desktop Browsers For Automated Screenshot Testing",
-          "item": "https://www.lambdatest.com/support/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/"
+          "item": `${BRAND_URL}/support/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/`
         }]
       })
     }}
@@ -90,12 +93,12 @@ The default list of Mobile and Desktop browsers for [Automated Screenshot Testin
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

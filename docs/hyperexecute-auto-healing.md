@@ -8,13 +8,14 @@ keywords:
 - hyperexecute auto healing
 - auto healing
 - recover flaky tests
-url: https://www.lambdatest.com/support/docs/hyperexecute-auto-healing/
+url: https://www.testmu.ai/support/docs/hyperexecute-auto-healing
 site_name: LambdaTest
-slug: hyperexecute-auto-healing/
+slug: hyperexecute-auto-healing
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,18 +24,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Background Services",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-auto-healing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-auto-healing/`
         }]
       })
     }}

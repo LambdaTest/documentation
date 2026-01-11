@@ -9,14 +9,15 @@ keywords:
   - automation
   - testing
   - payment
-slug: apple-pay-auto/
+slug: apple-pay-auto
 site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/apple-pay-auto/
+url: https://www.testmu.ai/support/docs/apple-pay-auto
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Apple Pay Automation on Real Devices
 <RealDeviceTag value="Real Device" /> 
@@ -24,7 +25,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely—without relying on production cards.
 
-With LambdaTest, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, LambdaTest provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
+With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
@@ -48,7 +49,7 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | iPhone 14    | 16      |
 | iPhone 13    | 15      |
 
-> We are actively working on expanding coverage to **all supported iOS devices** on LambdaTest Real Device Cloud.
+> We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 ---
 ## Capabilities
 
@@ -61,9 +62,9 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 
 ## Apple Pay Workflow in Automation Test
 
-### Step 1: Upload Your App to LambdaTest
+### Step 1: Upload Your App to <BrandName />
 
-1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](https://www.lambdatest.com/support/docs/application-setup-via-api/) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
@@ -97,7 +98,7 @@ To enable Apple Pay automation, include the following capability in your automat
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 
@@ -106,7 +107,7 @@ To enable Apple Pay automation, include the following capability in your automat
 ### Step 3: Confirm Apple Pay Payment
 
 - To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment.
-- This can be done using LambdaTest hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
+- This can be done using <BrandName /> hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
 
 
 ```python

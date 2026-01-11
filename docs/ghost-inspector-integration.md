@@ -1,21 +1,23 @@
 ---
 id: ghost-inspector-integration
-title: Ghost Inspector Integration With LambdaTest’s Cloud 
+title: Ghost Inspector Integration With TestMu AI’s Cloud 
 hide_title: true
 sidebar_label: Ghost Inspector
-description: LambdaTest now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: TestMu AI now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
   - ghost inspector
   - ghost inspector integration
-url: https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/ghost-inspector-integration-with-testmu
 site_name: LambdaTest
-slug: ghost-inspector-integration-with-lambdatest/
+slug: ghost-inspector-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,38 +26,38 @@ slug: ghost-inspector-integration-with-lambdatest/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Ghost Inspector Integration",
-          "item": "https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-lambdatest/"
+          "item": `${BRAND_URL}/support/docs/ghost-inspector-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Ghost Inspector Integration With LambdaTest’s Cloud
+# Ghost Inspector Integration With <BrandName />’s Cloud
 ***
 
-LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on LambdaTest.
+<BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on <BrandName />.
 
 
 ## What is Ghost Inspector?
 * * *
 Ghost Inspector is a codeless automation tool that lets a software tester automate the process of writing test scripts.
 
-This integration between LambdaTest and Ghost Inspector enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 browsers.
+This integration between <BrandName /> and Ghost Inspector enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 browsers.
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
-# How To Integrate LambdaTest With Ghost Inspector?
+# How To Integrate <BrandName /> With Ghost Inspector?
 * * *
 * All the test suites will be reflected in the Ghost Inspector dashboard.
 
@@ -90,7 +92,7 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 ```bash
 npm install -g selenium-side-runner
 ```
-* You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the "key" icon left to the help button, on the top right corner.
+* You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your <BrandName /> automation dashboard and click on the "key" icon left to the help button, on the top right corner.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/ghost-inspector-dashboard-5.webp').default} alt="Integrate Ghost Inspector" width="775" height="647" className="doc_img"/>
@@ -115,13 +117,13 @@ npm install -g selenium-side-runner
 </p>
 
 * Save the SIDE project.
-* We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on LambdaTest Selenium Cloud Grid.
+* We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on <BrandName /> Selenium Cloud Grid.
 
-## Executing Selenium IDE Tests on LambdaTest Selenium Cloud Grid
+## Executing Selenium IDE Tests on <BrandName /> Selenium Cloud Grid
 ***
 
 * Set the Desired Capabilities in Selenium. For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
-* The LambdaTest Selenium Desired Capabilities Generator is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
+* The <BrandName /> Selenium Desired Capabilities Generator is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 
 ```bash
 capabilities = {
@@ -136,7 +138,7 @@ In the string format, it will be represented as:
  **"browserName='chrome' version='72.0' platform='Windows 10'"**
  ```
 
-* Get the Grid URL for executing tests on LambdaTest. Get your username and access key from your LambdaTest's Profile section (as shown in the prerequisites), and replace it in the below URL.
+* Get the Grid URL for executing tests on <BrandName />. Get your username and access key from your <BrandName />'s Profile section (as shown in the prerequisites), and replace it in the below URL.
 
 ```bash
 https://user-name:access-key@hub.lambdatest.com/wd/hub
@@ -163,7 +165,7 @@ https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
 
 For this article, we have set the number of parallel processes as '4'.
 
-* Now we have all the components of the SIDE Runner command to execute the tests. So we will run the Selenium IDE tests on LambdaTest Selenium Cloud Grid. Navigate to the directory where the .SIDE file is located (here it is located at "LambdaTest-IDE.side") and execute the below command in the terminal, after replacing the GRID URL:
+* Now we have all the components of the SIDE Runner command to execute the tests. So we will run the Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Navigate to the directory where the .SIDE file is located (here it is located at "<BrandName />-IDE.side") and execute the below command in the terminal, after replacing the GRID URL:
 
 ```bash
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server 
@@ -171,7 +173,7 @@ https://user-name:acces-key@hub.lambdatest.com/wd/hub -c "browserName='chrome'
 version='72.0' platform='Windows 10'"
 ```
 
-* We have successfully executed all the steps to run Selenium IDE tests on LambdaTest Selenium Cloud Grid. Now you can see our tests being executed along with their status in the Automation Timeline of your LambdaTest profile.
+* We have successfully executed all the steps to run Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Now you can see our tests being executed along with their status in the Automation Timeline of your <BrandName /> profile.
 
 * Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests: test execution snapshots automation test timeline.
 
@@ -187,12 +189,12 @@ version='72.0' platform='Windows 10'"
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

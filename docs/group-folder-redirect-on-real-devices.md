@@ -2,21 +2,23 @@
 id: group-folder-redirect-on-real-device
 title: Group Folder Redirect for iOS Apps in App Live
 sidebar_label: Group Folder Redirect
-description: Enable Group Folder Redirect support for iOS apps on LambdaTest Real Devices.
+description: Enable Group Folder Redirect support for iOS apps on TestMu AI Real Devices.
 keywords:
-  - lambdatest real devices
+  - testmu ai real devices
   - ios app live
   - group folder redirect
   - ios file system testing
   - private app container testing
-url: https://www.lambdatest.com/support/docs/group-folder-redirect-on-real-device/
+url: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device
 site_name: LambdaTest
-slug: group-folder-redirect-on-real-device/
+slug: group-folder-redirect-on-real-device
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Group Folder Redirect On Real Devices  
 
-LambdaTest supports **Group Folder Redirect** for iOS apps on Real Devices.  
+<BrandName /> supports **Group Folder Redirect** for iOS apps on Real Devices.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
 ---

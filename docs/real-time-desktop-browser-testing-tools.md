@@ -3,10 +3,10 @@ id: real-time-desktop-browser-testing-tools
 title: How to use Testing Tools for Desktop Browsers?
 hide_title: false
 sidebar_label: Testing Tools
-description: Enhance your web testing with LambdaTest's comprehensive tool suite. Capture screenshots, record sessions, manage files, and more. Test across devices, browsers, and locations for optimal results.
+description: Enhance your web testing with TestMu AI's comprehensive tool suite. Capture screenshots, record sessions, manage files, and more. Test across devices, browsers, and locations for optimal results.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool
@@ -16,10 +16,12 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-desktop-browser-testing-tools/
+url: https://www.testmu.ai/support/docs/real-time-desktop-browser-testing-tools
 site_name: LambdaTest
-slug: real-time-desktop-browser-testing-tools/
+slug: real-time-desktop-browser-testing-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ slug: real-time-desktop-browser-testing-tools/
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
-      "name": "LambdaTest",
-      "item": "https://www.lambdatest.com"
+      "name": "TestMu AI",
+      "item": BRAND_URL
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Support",
-      "item": "https://www.lambdatest.com/support/docs/"
+      "item": `${BRAND_URL}/support/docs/`
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "Real Time Desktop Browser Testing",
-      "item": "https://www.lambdatest.com/support/docs/real-time-desktop-browser-testing-tools/"
+      "item": `${BRAND_URL}/support/docs/real-time-desktop-browser-testing-tools/`
     }]
   })
 }}
 ></script>
-LambdaTest offers a comprehensive suite of real-time desktop web browser testing tools designed to enhance the efficiency and accuracy of your testing process. This guide provides detailed instructions on how to utilize each tool to its fullest potential.
+<BrandName /> offers a comprehensive suite of real-time desktop web browser testing tools designed to enhance the efficiency and accuracy of your testing process. This guide provides detailed instructions on how to utilize each tool to its fullest potential.
 
 ## Screenshot
 Capture high-quality screenshots of the current screen on your test device instantly. Screenshots are essential for documenting bugs, UI issues, and other anomalies during testing. Click on the Screenshot icon in the sidebar to take a snapshot of the current screen and will automatically start downloading in your local machine and it will be saved in the [gallery](/support/docs/real-time-desktop-browser-testing-tools/#gallery) as well.
@@ -89,12 +91,12 @@ The [Upload and Download Files](/support/docs/real-time-upload-and-download-file
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/upload.png').default} alt="Image" className="doc_img"/>
 
 ## Chrome Extension
-Enhance your testing capabilities with LambdaTest by leveraging various Chrome extensions that provide additional functionalities and streamline your testing process. These extensions can help automate repetitive tasks, assist in accessibility checks, and integrate AI tools into your workflow.
+Enhance your testing capabilities with <BrandName /> by leveraging various Chrome extensions that provide additional functionalities and streamline your testing process. These extensions can help automate repetitive tasks, assist in accessibility checks, and integrate AI tools into your workflow.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/chrome-extension.png').default} alt="Image" className="doc_img"/>
 
 ## Screen Reader
-Ensure your web applications are accessible to all users, including those with disabilities, using LambdaTest's accessibility testing tools. This tool helps identify and address potential accessibility issues to enhance your website's usability and compliance with accessibility standards like WCAG (Web Content Accessibility Guidelines).
+Ensure your web applications are accessible to all users, including those with disabilities, using <BrandName />'s accessibility testing tools. This tool helps identify and address potential accessibility issues to enhance your website's usability and compliance with accessibility standards like WCAG (Web Content Accessibility Guidelines).
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/accessibility.png').default} alt="Image" className="doc_img"/>
 

@@ -5,14 +5,16 @@ hide_title: true
 sidebar_label: CLI Errors
 description: This document will help you debug your failed job if you are facing any CLI issues.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-error/
+url: https://www.testmu.ai/support/docs/hyperexecute-cli-error
 site_name: LambdaTest
-slug: hyperexecute-cli-error/
+slug: hyperexecute-cli-error
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-cli-error/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Debug Failed Job",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-cli-error/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-error/`
         }]
       })
     }}
@@ -43,7 +45,7 @@ slug: hyperexecute-cli-error/
 This document will help you debug your failed job if you are facing any CLI issues. 
 
 :::tip
-If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
+If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
 :::
 
 
@@ -80,4 +82,4 @@ Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud
 | FQDN | Protocol:Port | Reason |
 |------|---------------|--------|
 |*.hyperexecute.cloud | Https:443 |HyperExecute’s registered wildcard domain to allow access to all HyperExecute’s services|
-|*.lambdatest.com | Https:443 | LambdaTest’s registered wildcard domain to allow access to all LambdaTest’s services (like auth, plan-validation) |
+|*.lambdatest.com | Https:443 | <BrandName />’s registered wildcard domain to allow access to all <BrandName />’s services (like auth, plan-validation) |

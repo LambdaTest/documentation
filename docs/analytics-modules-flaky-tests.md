@@ -5,10 +5,13 @@ sidebar_label: Flaky Tests Insights
 description: Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
+url: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-flaky-test-analytics
 site_name: LambdaTest
-slug: analytics-modules-test-intelligence-flaky-test-analytics/
+slug: analytics-modules-test-intelligence-flaky-test-analytics
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +21,17 @@ slug: analytics-modules-test-intelligence-flaky-test-analytics/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/`
         }]
       })
     }}

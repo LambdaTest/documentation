@@ -5,17 +5,18 @@ hide_title: false
 sidebar_label: Adding URLs for Web Scanner
 description: A guide on the different methods for adding URLs to your scan, including manual input, CSV file upload, and importing from a sitemap XML.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - add urls
   - csv import
   - sitemap import
-url: https://www.lambdatest.com/support/docs/web-scanner-adding-urls
+url: https://www.testmu.ai/support/docs/web-scanner-adding-urls
 site_name: LambdaTest
-slug: web-scanner-adding-urls/
+slug: web-scanner-adding-urls
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,22 +26,22 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
+          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Adding URLs for Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-adding-urls"
+          "item": `${BRAND_URL}/support/docs/web-scanner-adding-urls`
         }]
       })
     }}

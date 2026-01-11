@@ -9,14 +9,16 @@ keywords:
   - debugging using telemetry logs
   - selenium telemetry logs
 
-url: https://www.lambdatest.com/support/docs/selenium-telemetry-logs/
+url: https://www.testmu.ai/support/docs/selenium-telemetry-logs
 site_name: LambdaTest
-slug: selenium-telemetry-logs/
+slug: selenium-telemetry-logs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Debugging in Selenium using Telemetry Logs
 ---
 
-LambdaTest Automation allows you to perform parallel test execution through a standalone mode that connects to the Selenium server, where each test can have multiple requests. 
+<BrandName /> Automation allows you to perform parallel test execution through a standalone mode that connects to the Selenium server, where each test can have multiple requests. 
 
 To trace each request, you can leverage Selenium 4 and OpenTelemetry integration to achieve greater visibility into the tracing of requests and event logs for each request. Tracing enables the monitoring of a request's life cycle and stores essential information about the request's critical operations. You can use this information to identify issues and optimize the performance of your web applications.
 
@@ -31,7 +33,7 @@ However, managing several requests, tracing logs, and troubleshooting request fa
 ## Supported Operating Systems
 ---
 
-Following are the supported OS that supports Telemetry logs on LambdaTest.
+Following are the supported OS that supports Telemetry logs on <BrandName />.
 
 * Windows 11 
 * Windows 10 
@@ -44,10 +46,10 @@ Following are the supported OS that supports Telemetry logs on LambdaTest.
 ---
 
 :::info Note
-LambdaTest Automation support Telemetry logs on the Selenium version above than 4.2.0.
+<BrandName /> Automation support Telemetry logs on the Selenium version above than 4.2.0.
 :::
 
-By default, Telemetry logs are disabled for Selenium automation on LambdaTest. To enable them in your test sessions:
+By default, Telemetry logs are disabled for Selenium automation on <BrandName />. To enable them in your test sessions:
 
 1. Pass the `seTelemetryLogs` capability in your test scripts and set it as true.
 
@@ -64,7 +66,7 @@ caps.setCapability("selenium_version", "4.2.0");
 ## Visualizing Telemetry Logs using Jaeger 
 ---
 
-Jaeger is an open-source, end-to-end distributed tracing system to monitor and troubleshoot complex distributed systems. Using Jaeger, you can visualize the request traces of your tests run on LambdaTest.
+Jaeger is an open-source, end-to-end distributed tracing system to monitor and troubleshoot complex distributed systems. Using Jaeger, you can visualize the request traces of your tests run on <BrandName />.
 
 Here are the steps to integrate Jaeger with your test suites:
 
@@ -72,7 +74,7 @@ Here are the steps to integrate Jaeger with your test suites:
 
 2. Extract the compressed (*.tar.gz* or *.zip*) Jaeger file  to the directory where your test script resides.  You'll now have several Jaeger files like `jaeger-query`, `jaeger-collector`, etc, in your test script directory.
 
-3. Download Telemetry logs of your test session from the **Telemetry Logs** tab of your LambdaTest Automation Dashboard.
+3. Download Telemetry logs of your test session from the **Telemetry Logs** tab of your <BrandName /> Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/telemetry-logs/download.png').default} alt="cmd" className="doc_img"/>
 
@@ -83,11 +85,11 @@ Here are the steps to integrate Jaeger with your test suites:
 jaeger-all-in-one
 ```
 
-5. Visit `http://localhost:16686/search` and click the **Upload** tab to upload the downloaded Telemetry logs from the LambdaTest Automation Dashboard.
+5. Visit `http://localhost:16686/search` and click the **Upload** tab to upload the downloaded Telemetry logs from the <BrandName /> Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/telemetry-logs/upload.png').default} alt="cmd" className="doc_img"/>
 
-Post that, you can view the request traces in the Jaeger UI for your LambdaTest test sessions.
+Post that, you can view the request traces in the Jaeger UI for your <BrandName /> test sessions.
 
 
 

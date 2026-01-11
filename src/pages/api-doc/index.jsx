@@ -30,8 +30,8 @@ function ApiDoc() {
         }
     }, [location.pathname]);
     return (
-        <Layout title="LambdaTest API Documentation"
-            description="Manage and organize your test builds, test sessions, tunnel status and more with LambdaTest APIs for Selenium automation, App automation, Smart UI automation and Automated screenshots. ">
+        <Layout title="TestMu AI API Documentation"
+            description="Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs for Selenium automation, App automation, Smart UI automation and Automated screenshots. ">
             <div className="lambda-api">
                 <Tabs groupId="key" queryString>
                     <TabItem value="selenium-automation-api" label="Selenium Automation API">

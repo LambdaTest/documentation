@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Hyperexecute Knowledge Base
 description: Discover the HyperExecute Knowledge Base for insights on concepts, setup, configuration, and more. Get answers to your questions about HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How To?
-url: https://www.lambdatest.com/support/docs/hyperexecute-knowledge-base/
+url: https://www.testmu.ai/support/docs/hyperexecute-knowledge-base
 site_name: LambdaTest
-slug: hyperexecute-knowledge-base/
+slug: hyperexecute-knowledge-base
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-knowledge-base/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-knowledge-base"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-knowledge-base`
         }]
       })
     }}
@@ -82,12 +85,12 @@ slug: hyperexecute-knowledge-base/
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

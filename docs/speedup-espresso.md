@@ -8,14 +8,14 @@ keywords:
   - app test automation
   - espresso
   - filter
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai
+  - framework on testmu ai
   - testing in espresso
   - espresso testing
   - real devices
-url: https://www.lambdatest.com/support/docs/speedup-espresso/
+url: https://www.testmu.ai/support/docs/speedup-espresso
 site_name: LambdaTest
-slug: speedup-espresso/
+slug: speedup-espresso
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +23,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Filters for Espresso Test",
-          "item": "https://www.lambdatest.com/support/docs/speedup-espresso/"
+          "item": `${BRAND_URL}/support/docs/speedup-espresso/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 
-To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s [REST API](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by LambdaTest.
+To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s [REST API](/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by <BrandName />.
 
 Given below is the REST API endpoint:
 
@@ -213,12 +215,12 @@ This configuration will run tests annotated with multiple annotations, i.e., onl
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

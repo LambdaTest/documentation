@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: Version 2.4.0
 description: Version 2.4.0
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-0/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-4-0
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-4-0/
+slug: hyperexecute-release-notes-2-4-0
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-release-notes-2-4-0/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-0/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-4-0/`
         }]
       })
     }}
@@ -50,4 +53,4 @@ Benefits of Network HAR Logs:
 - **Performance Optimization:** Identify performance bottlenecks by pinpointing slow requests and optimizing network interactions.
 - **Improved Load Order Diagnosis:** Gain insights into load order issues that might affect your application's functionality.
 
-📕 Check the [Cypress documentation](https://www.lambdatest.com/support/docs/cypressv10-on-hyperexecute/#har-logs) to learn more about it.
+📕 Check the [Cypress documentation](/support/docs/cypressv10-on-hyperexecute/#har-logs) to learn more about it.

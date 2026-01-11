@@ -3,14 +3,17 @@ id: cucumber-report
 title: Cucumber Report
 hide_title: false
 sidebar_label: Cucumber
-description: Learn how to generate Cucumber Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate Cucumber Report on TestMu AI and download the reports from the dashboard
 keywords:
   - cucumber testing reports
-  - cucumber testing lambdatest 
-url: https://www.lambdatest.com/support/docs/cucumber-report/
+  - cucumber testing testmu ai 
+url: https://www.testmu.ai/support/docs/cucumber-report
 site_name: LambdaTest
-slug: cucumber-report/
+slug: cucumber-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -18,18 +21,18 @@ slug: cucumber-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cucumber Report",
-          "item": "https://www.lambdatest.com/support/docs/cucumber-report/"
+          "item": `${BRAND_URL}/support/docs/cucumber-report/`
         }]
       })
     }}
@@ -64,7 +67,7 @@ Explanation of plugin Options:
 - **rerun:target/cucumber-reports/rerun.txt :** Logs any failed scenarios for rerun.
 
 ### Step 2: Configure the HyperExecute YAML File
-In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 ```yaml title="hyperexecute.yaml"
 report: true

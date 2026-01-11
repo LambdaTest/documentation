@@ -5,18 +5,19 @@ hide_title: true
 sidebar_label: Password and Access Key Expiration Policy
 description: Guide to Manage your Password and Access Key Expiration Policies.
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute
   - hyperexecute automation grid online
   - hyperexecute getting started
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/password-and-access-key-expiration-policy/
+url: https://www.testmu.ai/support/docs/password-and-access-key-expiration-policy
 site_name: LambdaTest
-slug: password-and-access-key-expiration-policy/
+slug: password-and-access-key-expiration-policy
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ slug: password-and-access-key-expiration-policy/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Password and Access Key Expiration Policy",
-          "item": "https://www.lambdatest.com/support/docs/password-and-access-key-expiration-policy/"
+          "item": `${BRAND_URL}/support/docs/password-and-access-key-expiration-policy/`
         }]
       })
     }}
@@ -44,7 +45,7 @@ slug: password-and-access-key-expiration-policy/
 
 # Password and Access Key Expiration Policy
 
-LambdaTest allows you to set an expiry policy to passwords and access keys for users in your organisation. This means that your password and access keys will expire after a certain number of days, and you will be required to change them or update them, respectively.
+<BrandName /> allows you to set an expiry policy to passwords and access keys for users in your organisation. This means that your password and access keys will expire after a certain number of days, and you will be required to change them or update them, respectively.
 
 > **Note:** Only organization administrators are able to view and manage the Password and Access Key Expiration Policy.
 

@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Search Query in GUI
 description: This documentation outlines the steps on how to use search query in hyperexecute gui app.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - HyperExecute
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - CLI
   - Search Query
   - Filter
@@ -15,13 +15,14 @@ keywords:
   - test execute
   - hyperexecute job
   - automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-gui-query/
+url: https://www.testmu.ai/support/docs/hyperexecute-gui-query
 site_name: LambdaTest
-slug: hyperexecute-gui-query/
+slug: hyperexecute-gui-query
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Status",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-gui-query/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-gui-query/`
         }]
       })
     }}

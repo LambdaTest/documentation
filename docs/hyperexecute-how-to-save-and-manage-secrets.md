@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: How to Manage Secrets in HyperExecute
 description: Find out how to Save and Manage Secrets
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Save and Manage Secrets
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-save-and-manage-secrets
 site_name: LambdaTest
-slug: hyperexecute-how-to-save-and-manage-secrets/
+slug: hyperexecute-how-to-save-and-manage-secrets
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-how-to-save-and-manage-secrets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-save-and-manage-secrets/`
         }]
       })
     }}
@@ -149,12 +152,12 @@ In the above sample YAML file:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

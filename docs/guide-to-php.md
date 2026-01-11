@@ -1,19 +1,21 @@
 ---
 id: guide-to-php
-title: Running PHP Tests on Online Selenium Grid | LambdaTest
+title: Running PHP Tests on Online Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: Quick Guide To Run PHP
-description: Guide to running PHP and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud
+description: Guide to running PHP and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud
 keywords:
-  - LambdaTest automation using php
+  - TestMu AI automation using php
   - php and Selenium automation
-  - php documentation LambdaTest
-image: /assets/images/og-images/runnning-php-tests-on-selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
+  - php documentation TestMu AI
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmu.ai/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
+slug: quick-guide-to-run-php-tests-on-testmu-selenium-grid
 ---
-# Quick Guide To Run PHP Tests on LambdaTest Selenium Grid
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+# Quick Guide To Run PHP Tests on <BrandName /> Selenium Grid
 ***
 
 <script type="application/ld+json"
@@ -23,24 +25,24 @@ slug: quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running PHP Tests",
-          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-LambdaTest's cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.lambdatest.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on LambdaTest Selenium grid.
+<BrandName />'s cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.lambdatest.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on <BrandName /> Selenium grid.
 
 ## Prerequisites
 ***
@@ -85,7 +87,7 @@ If you are using XAMPP or MAMP you may have to be a little more specific.
 ## Sample PHP & Selenium Test To Get You started
 ***
 
-Once you have installed and setup PHP and Selenium, you are now ready to run PHP automation scripts on LambdaTest Selenium Grid. Checkout the simple sample code below. This is a simple PHP and Selenium automation script that opens up google.com, searches LambdaTest and outputs the title of the resultant google search page. You can also fork it from our [PHP GitHub repository](https://github.com/LambdaTest/php-selenium-sample).
+Once you have installed and setup PHP and Selenium, you are now ready to run PHP automation scripts on <BrandName /> Selenium Grid. Checkout the simple sample code below. This is a simple PHP and Selenium automation script that opens up google.com, searches <BrandName /> and outputs the title of the resultant google search page. You can also fork it from our [PHP GitHub repository](https://github.com/LambdaTest/php-selenium-sample).
 
 ### PHP Sample Test
 ***
@@ -183,17 +185,17 @@ Do note the use of remote webdriver here. We have passed browser environment con
 
 To setup your own environment for the test you can leverage our Capability Generator tool.
 
-<center><a href="https://www.lambdatest.com/capabilities-generator/"><button name="button">LambdaTest Capability Generator Tool</button></a></center>
+<center><a href="https://www.lambdatest.com/capabilities-generator/"><button name="button"><BrandName /> Capability Generator Tool</button></a></center>
 
-> **Tear Down**: The tear down method helps LambdaTest platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors
+> **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guide To Run PHP Tests on Selenium Grid</span>

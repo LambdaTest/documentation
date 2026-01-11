@@ -5,18 +5,19 @@ hide_title: false
 sidebar_label: All Issues
 description: Access a detailed breakdown of issues, including type, WCAG guideline violations, and customizable filtering options for a seamless user experience.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
     - all issues
-url: https://www.lambdatest.com/support/docs/accessibility-testing-dashboard-issue-summary/
+url: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary
 site_name: LambdaTest
-slug: accessibility-testing-dashboard-all-issues/
+slug: accessibility-testing-dashboard-all-issues
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Navigating Dashboard",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-dashboard-all-issues/"
+          "item": `${BRAND_URL}/support/docs/accessibility-testing-dashboard-all-issues/`
         }]
       })
     }}

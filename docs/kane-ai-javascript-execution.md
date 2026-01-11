@@ -5,18 +5,19 @@ hide_title: false
 sidebar_label: JavaScript Execution
 description: Learn how to execute your tests on Kane AI using custom javascript snippets
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai prompts
   - kane ai commands
-url: https://www.lambdatest.com/support/docs/kane-ai-javascript-execution/
+url: https://www.testmu.ai/support/docs/kane-ai-javascript-execution
 site_name: LambdaTest
-slug: kane-ai-javascript-execution/
+slug: kane-ai-javascript-execution
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI JavaScript Execution",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-javascript-execution/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-javascript-execution/`
         }]
       })
     }}

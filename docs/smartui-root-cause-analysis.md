@@ -7,17 +7,19 @@ keywords:
   - SmartUI RCA
   - Root Cause Analysis
   - Visual Regression Debugging
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Testing Troubleshooting
-url: https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/
+url: https://www.testmu.ai/support/docs/smartui-root-cause-analysis
 site_name: LambdaTest
-slug: smartui-root-cause-analysis/
+slug: smartui-root-cause-analysis
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Root Cause Analysis",
-          "item": "https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/"
+          "item": `${BRAND_URL}/support/docs/smartui-root-cause-analysis/`
         }]
       })
     }}
@@ -74,7 +76,7 @@ Visual testing often tells you that something is wrong but not what caused it. S
 ### Prerequisites
 
 :::info
-Before you begin, please ensure the build was generated using a **LambdaTest CLI (exec)** command.
+Before you begin, please ensure the build was generated using a **<BrandName /> CLI (exec)** command.
 :::
 
 ### Step 1: Activate RCA Mode

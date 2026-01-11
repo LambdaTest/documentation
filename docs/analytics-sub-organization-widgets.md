@@ -11,10 +11,13 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-sub-organization-widgets/
+url: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets
 site_name: LambdaTest
-slug: analytics-sub-organization-widgets/
+slug: analytics-sub-organization-widgets
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,17 +26,17 @@ slug: analytics-sub-organization-widgets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-automation-test-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-automation-test-overview/`
         }]
       })
     }}

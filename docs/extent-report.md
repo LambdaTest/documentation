@@ -3,15 +3,18 @@ id: extent-report
 title: Extent Report
 hide_title: false
 sidebar_label: Extent
-description: Learn how to generate Extent Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate Extent Report on TestMu AI and download the reports from the dashboard
 keywords:
   - extent testing reports
-  - extent testing lambdatest 
+  - extent testing testmu ai 
   
-url: https://www.lambdatest.com/support/docs/extent-report/
+url: https://www.testmu.ai/support/docs/extent-report
 site_name: LambdaTest
-slug: extent-report/
+slug: extent-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,18 +22,18 @@ slug: extent-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Extent Report",
-          "item": "https://www.lambdatest.com/support/docs/extent-report/"
+          "item": `${BRAND_URL}/support/docs/extent-report/`
         }]
       })
     }}
@@ -112,7 +115,7 @@ public class ExtentReportListener implements ITestListener {
 ```
 
 ## Configure the HyperExecute YAML File
-In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 ```yaml
 report: true

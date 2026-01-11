@@ -5,18 +5,19 @@ hide_title: false
 sidebar_label: Key Features of HyperExecute
 description: Various key features of HyperExecute is mentioned in this document
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
-  - lambdatest hypterest tutorial
+  - testmu ai automation
+  - testmu ai hyperexecute
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute key features
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/key-features-of-hyperexecute/
+url: https://www.testmu.ai/support/docs/key-features-of-hyperexecute
 site_name: LambdaTest Key features of Hyperexecute
-slug: key-features-of-hyperexecute/
+slug: key-features-of-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,25 +27,25 @@ slug: key-features-of-hyperexecute/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Key features of HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/key-features-of-hyperexecute"
+          "item": `${BRAND_URL}/support/docs/key-features-of-hyperexecute`
         }]
       })
     }}
 ></script>
 
-HyperExecute provides you with the tools that you need to run your tests at the fastest speeds possible. In addition to all of the core features that LambdaTest cloud provides to your tests (for example: detailed logs, smart CI features, network insights, video recording, access to browsers & platforms on the cloud), HyperExecute takes a step forward to improve your experience. It supports all [programming languages and major test automation frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/).
+HyperExecute provides you with the tools that you need to run your tests at the fastest speeds possible. In addition to all of the core features that <BrandName /> cloud provides to your tests (for example: detailed logs, smart CI features, network insights, video recording, access to browsers & platforms on the cloud), HyperExecute takes a step forward to improve your experience. It supports all [programming languages and major test automation frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
->Check out [LambdaTest HyperExecute on Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)
+>Check out [<BrandName /> HyperExecute on Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)
     
 <!-- ### Core Features -->
 <div className="support_main">
@@ -156,10 +157,10 @@ To ensure that your testing environment can be optimised, HyperExecute provides 
   </div>
   </a>
 
-  <a href="/support/docs/he-integration-with-lambdatest-products/">
+  <a href="/support/docs/he-integration-with-testmu-products/">
   <div className="support_inners">
-    <h3>Integration with LambdaTest Products</h3>
-    <p>Integrate seamlessly with other LambdaTest products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.</p>
+    <h3>Integration with <BrandName /> Products</h3>
+    <p>Integrate seamlessly with other <BrandName /> products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.</p>
   </div>
   </a>  
 </div>
@@ -181,12 +182,12 @@ You can use HyperExecute’s [Quickstart feature](https://hyperexecute.lambdates
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

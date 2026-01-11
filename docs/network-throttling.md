@@ -3,24 +3,26 @@ id: network-throttling
 title: Network Throttling
 hide_title: true
 sidebar_label: Network Throttling
-description: Now test the functionality of your website over low latency networks ( 2G/3G/LTE) or even offline with different upload and download speeds. LambdaTest allows you to validate your website by simulating these network conditions by using its desired capabilities.
+description: Now test the functionality of your website over low latency networks ( 2G/3G/LTE) or even offline with different upload and download speeds. TestMu AI allows you to validate your website by simulating these network conditions by using its desired capabilities.
 keywords:
   - cross browser testing
   - network throttling
   - selenium capabilities generator
   - selenium desired capabilities
-  - lambdatest selenium grid capabilities
-  - lambdatest automation capabilities generator
+  - testmu ai selenium grid capabilities
+  - testmu ai automation capabilities generator
   - selenium capability configuration
   - selenium automation testing
   - selenium automation grid online
   - configure selenium tests with network throttling desired capabilities
   - network throttling capabilities
-  - throttling test on lambdatest
-url: https://www.lambdatest.com/support/docs/network-throttling/
+  - throttling test on testmu ai
+url: https://www.testmu.ai/support/docs/network-throttling
 site_name: LambdaTest
-slug: network-throttling/
+slug: network-throttling
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -28,18 +30,18 @@ slug: network-throttling/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/network-throttling/"
+          "item": `${BRAND_URL}/support/docs/network-throttling/`
         }]
       })
     }}
@@ -96,7 +98,7 @@ Map<String, Object> throttleParams = Map.of(
 driver.executeScript("lambda-throttle-network", throttleParams);
 
 ```
-LambdaTest now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
+<BrandName /> now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
 
 | JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS | EXAMPLE |
 | ----------------------- | ------------------------------------------ | -------------------- |
@@ -106,7 +108,7 @@ LambdaTest now allows you to select a network profile before running automation 
 
 ---
 
-To configure network throttling in automation, we have used the [LambdaTest TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
+To configure network throttling in automation, we have used the [<BrandName /> TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
 
 ### Configuring Capabilities For Pre-defined Network Settings
 ```java
@@ -117,7 +119,7 @@ caps.setCapability("name", "TestNG-Todo-Script-1");
 caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to Regular 4G 
 ```
 
-The following below is the TestNG code. It will validate your LambdaTest credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
+The following below is the TestNG code. It will validate your <BrandName /> credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
 
 ### Configuring Custom Network Settings
 ```java
@@ -254,12 +256,12 @@ public class TestNGTodo1 {
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -3,16 +3,19 @@ id: hyperexecute-how-to-find-correct-concurrency
 title: How to Find the Correct Concurrency for my Job
 hide_title: true
 sidebar_label: How to Find the Correct Concurrency 
-description: Discover the right concurrency levels with HyperExecute using LambdaTest's guide for effective automation testing.
+description: Discover the right concurrency levels with HyperExecute using TestMu AI's guide for effective automation testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Find the Correct Concurrency 
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-find-correct-concurrency/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-find-correct-concurrency
 site_name: LambdaTest
-slug: hyperexecute-how-to-find-correct-concurrency/
+slug: hyperexecute-how-to-find-correct-concurrency
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-how-to-find-correct-concurrency/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-tunnel/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-configure-tunnel/`
         }]
       })
     }}
@@ -65,12 +68,12 @@ You can also see the overall concurrency trends using our analytics widgets. [Le
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

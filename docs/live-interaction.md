@@ -9,10 +9,12 @@ keywords:
   - live interaction
   - selenium automation
   - debug tests
-url: https://www.lambdatest.com/support/docs/live-interaction/
+url: https://www.testmu.ai/support/docs/live-interaction
 site_name: LambdaTest
-slug: live-interaction/
+slug: live-interaction
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: live-interaction/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/live-interaction/"
+          "item": `${BRAND_URL}/support/docs/live-interaction/`
         }]
       })
     }}
@@ -64,7 +66,7 @@ slug: live-interaction/
 Safari browser will be added in the upcoming releases.
 :::
 
-## How to use the Live Interaction feature in LambdaTest?
+## How to use the Live Interaction feature in <BrandName />?
 
 <img loading="lazy" src={require('../assets/images/selenium/live-interaction1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -72,7 +74,7 @@ Safari browser will be added in the upcoming releases.
 
 Follow the below-mentioned steps to interact with the browser manually in an automation test:
 
-- Open the test summary page in the **LambdaTest dashboard**
+- Open the test summary page in the **<BrandName /> dashboard**
 - Click on the **"Click to view live test"** button
 - The status of the test changes to **idle_timeout** while using the Live Interaction feature
 - Take complete control of the browser ✅
@@ -80,12 +82,12 @@ Follow the below-mentioned steps to interact with the browser manually in an aut
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

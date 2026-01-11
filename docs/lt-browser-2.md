@@ -47,6 +47,8 @@ url: https://www.lambdatest.com/support/docs/lt-browser-2/
 site_name: LambdaTest
 slug: lt-browser-2/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,18 +57,18 @@ slug: lt-browser-2/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LT Browser 2.0",
-          "item": "https://www.lambdatest.com/support/docs/lt-browser-2/"
+          "item": `${BRAND_URL}/support/docs/lt-browser-2/`
         }]
       })
     }}
@@ -76,7 +78,7 @@ slug: lt-browser-2/
 # Getting Started With LT Browser 2.0
 * * *
 
-> **Note:** This product is deprecated and as a result, no further support will be provided for this feature by the LambdaTest Organization.
+> **Note:** This product is deprecated and as a result, no further support will be provided for this feature by the <BrandName /> Organization.
 
 [LT Browser 2.0](https://www.lambdatest.com/lt-browser) is a Chromium-based mobile-friendly browser that enables web developers to build, test and debug their mobile websites for responsiveness across a wide range of 50+ pre-installed device viewports, including mobile, tablet, desktop and laptop.
 
@@ -356,7 +358,7 @@ While performing responsive testing, you can mark any website issues as bugs.
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/mark_as_bug.png').default} alt="view screen"  className="doc_img" width="1366" height="716"/><br/><br/>
 
-When you click the Mark as Bug, you'll be presented with a list of LambdaTest integrations. If your favorite integration isn't presented, then you can click **More Integrations** to view all available LambdaTest integrations. 
+When you click the Mark as Bug, you'll be presented with a list of <BrandName /> integrations. If your favorite integration isn't presented, then you can click **More Integrations** to view all available <BrandName /> integrations. 
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/more_integrations.png').default} alt="view screen"  className="doc_img" width="1366" height="716"/><br/><br/>
 
@@ -449,7 +451,7 @@ The locally-hosted image will be rendered on your selected device viewports.
 
 LT Browser 2.0 aims to provide responsive testing and a live-interactive testing experience. You can load a website, login to the LT Browser 2.0 web application, and start testing your pages.
 
-Following screenshot shows LambdaTest web-application that is captured after logging in from the LambdaTest website.
+Following screenshot shows <BrandName /> web-application that is captured after logging in from the <BrandName /> website.
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/test_behind.png').default} alt="page behind login"  className="doc_img" width="1366" height="724"/><br/><br/>
 
@@ -520,12 +522,12 @@ Here are the keyboard shortcuts for LT Browser 2.0.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

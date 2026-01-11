@@ -8,10 +8,12 @@ keywords:
 - how to upload .app files on ios simulators
 - how to upload .app files on simulators
 - how to upload .app files for ios simulator testing
-url: https://www.lambdatest.com/support/docs/troubleshooting-ios-app-testing/
+url: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing
 site_name: LambdaTest
-slug: troubleshooting-ios-app-testing/
+slug: troubleshooting-ios-app-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +22,18 @@ slug: troubleshooting-ios-app-testing/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Troubleshooting iOS App Testing",
-          "item": "https://www.lambdatest.com/support/docs/troubleshooting-ios-app-testing/"
+          "item": `${BRAND_URL}/support/docs/troubleshooting-ios-app-testing/`
         }]
       })
     }}
@@ -40,7 +42,7 @@ slug: troubleshooting-ios-app-testing/
 # Troubleshooting iOS App Testing
 ***
 
-While uploading .app files on Simulators, you may come across an error on the LambdaTest platform - *No .app found inside zip*. In such cases, you may need to re-evaluate how you're building your iOS applications. To upload and test `. apps` files on Simulators, your iOS app need to be build for Simulators. 
+While uploading .app files on Simulators, you may come across an error on the <BrandName /> platform - *No .app found inside zip*. In such cases, you may need to re-evaluate how you're building your iOS applications. To upload and test `. apps` files on Simulators, your iOS app need to be build for Simulators. 
 
 Shown below are the steps for converting your `.app` file to a `.zip` file.
 
@@ -48,20 +50,20 @@ Shown below are the steps for converting your `.app` file to a `.zip` file.
 
 2. Open your testing project in Xcode.
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/project-file.webp').default} alt="Integrating LambdaTest With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/project-file.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 
 3. Head to **File** and click **Show in Finder** option to open the .app file once your build runs successfully.
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/show-in-finder.webp').default} alt="Integrating LambdaTest With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/show-in-finder.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 
 4. Compress the `.app` file into a `.zip` file.
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/zip-file.webp').default} alt="Integrating LambdaTest With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/zip-file.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 
-Your `.zip` file is now ready for upload on LambdaTest servers.
+Your `.zip` file is now ready for upload on <BrandName /> servers.
 
->**Note**: If you are unable to install the iOS zip file on the LambdaTest platform, you need to remove the arm64 architecture from both your project and the pod project.<br /> <br />
+>**Note**: If you are unable to install the iOS zip file on the <BrandName /> platform, you need to remove the arm64 architecture from both your project and the pod project.<br /> <br />
 To do so, go to the **Build Settings** of your project. From **Excluded Architecture** dropdown, add any iOS Simulator SDK with value arm64 .<br /><br />
-<img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/6.webp').default} alt="Integrating LambdaTest With Testsigma" width="1281" height="722" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/6.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 
 That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.

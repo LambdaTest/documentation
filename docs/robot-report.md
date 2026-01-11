@@ -6,11 +6,14 @@ sidebar_label: Robot
 description: Learn how to configure and generate Robot test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
 keywords:
   - cucumber testing reports
-  - robot report lambdatest 
-url: https://www.lambdatest.com/support/docs/robot-report/
+  - robot report testmu ai 
+url: https://www.testmu.ai/support/docs/robot-report
 site_name: LambdaTest
-slug: robot-report/
+slug: robot-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -18,18 +21,18 @@ slug: robot-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Karate Report",
-          "item": "https://www.lambdatest.com/support/docs/robot-report/"
+          "item": `${BRAND_URL}/support/docs/robot-report/`
         }]
       })
     }}

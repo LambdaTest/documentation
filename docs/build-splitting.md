@@ -10,10 +10,12 @@ keywords:
   - automation build preference
   - build inactivity time
 
-url: https://www.lambdatest.com/support/docs/build-inactivity-time/
+url: https://www.testmu.ai/support/docs/build-inactivity-time
 site_name: LambdaTest
-slug: build-inactivity-time/
+slug: build-inactivity-time
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Setting Up the Build Inactivity Time [Build Splitting]
 ---
@@ -24,7 +26,7 @@ Build Splitting, or Build Inactivity Time, is a feature that allows you to organ
 ## How it works?
 ---
 
-Previously, when you ran a build on LambdaTest, all tests were merged into the same build, making it difficult to identify those tests that were run at specific intervals. As a result, we have introduced Build Splitting logic, which helps you organize your tests better.
+Previously, when you ran a build on <BrandName />, all tests were merged into the same build, making it difficult to identify those tests that were run at specific intervals. As a result, we have introduced Build Splitting logic, which helps you organize your tests better.
 
 Build Splitting logic requires you to set Build Inactivity Time. For instance, if the Build Inactivity Time is set to 5 minutes, the system will wait 5 minutes after the last test is completed before marking the build as complete. Upon completion of the build before the inactivity time, the test will be run in the existing build. However, if you run a test (even with the same name) after the specified inactivity time (i.e., 5 minutes), it will come under the new build.
 
@@ -38,7 +40,7 @@ Build Splitting logic requires you to set Build Inactivity Time. For instance, i
 
 To use the Build Splitting functionality, follow the below steps:
 
-1. Log in to your LambdaTest account. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+1. Log in to your <BrandName /> account. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
 
 2. From the top-right corner, click on the Profile avatar, and navigate to **Profile > Product Preferences**.

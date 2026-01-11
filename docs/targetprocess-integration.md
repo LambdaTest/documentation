@@ -3,19 +3,21 @@ id: targetprocess-integration
 title: TargetProcess Integration
 hide_title: true
 sidebar_label: TargetProcess 
-description: Using LambdaTest integration with TargetProcess, you&#039;ll be able to log bugs over your project in TargetProcess from LambdaTest in just a single click.
+description: Using TestMu AI integration with TargetProcess, you&#039;ll be able to log bugs over your project in TargetProcess from TestMu AI in just a single click.
 keywords:
   - targetprocess integration
-  - lambdatest integration
-  - targetprocess lambdatest
-  - targetprocess integration with lambdatest
+  - testmu ai integration
+  - targetprocess testmu ai
+  - targetprocess integration with testmu ai
   - mark bugs
   - cross browser testing
   - browser compatibility testing
-url: https://www.lambdatest.com/support/docs/target-process-integration/
+url: https://www.testmu.ai/support/docs/target-process-integration
 site_name: LambdaTest
-slug: target-process-integration/
+slug: target-process-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,18 +26,18 @@ slug: target-process-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TargetProcess Integration",
-          "item": "https://www.lambdatest.com/support/docs/target-process-integration/"
+          "item": `${BRAND_URL}/support/docs/target-process-integration/`
         }]
       })
     }}
@@ -46,18 +48,18 @@ slug: target-process-integration/
 
 TargetProcess is an integrated project management tool that offers teams with a modern, customizable, and powerful Agile approach. TargetProcess provides an intuitive visual interface for teams to manage projects with ease. Whether you are new to Agile or want to scale it across, this tool has options to manage projects based on Scrum, Kanban, SAFe, NEXUS, or any other approach. You can create custom reports, dynamic visualizations, and more in seconds. The powerful boards make it unique enabling you to plan and track progress, and can be shared to broadcast information to others. Overall TargetProcess provides users a holistic solution to help them plan, track, and steer complex work at all levels.
 
-Using LambdaTest integration with TargetProcess, you’ll be able to log bugs over your project in TargetProcess from LambdaTest in just a single click. You can [capture a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title, and description to help relay further actions. You can do all that directly from LambdaTest.
+Using <BrandName /> integration with TargetProcess, you’ll be able to log bugs over your project in TargetProcess from <BrandName /> in just a single click. You can [capture a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title, and description to help relay further actions. You can do all that directly from <BrandName />.
 
-## How To Integrate TargetProcess With Your LambdaTest Account?
+## How To Integrate TargetProcess With Your <BrandName /> Account?
 ***
 
-**Step 1**: Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1**: Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2**: Select Integrations from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account. Search for TargetProcess and click on the block.
+**Step 2**: Select Integrations from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account. Search for TargetProcess and click on the block.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-1.webp').default} alt="Image" width="1917" height="705" className="doc_img"/>
 
->**Note**: If you have already installed a LambdaTest integration to any project management tool then you would come across a prompt asking you to disable your existing LambdaTest integration for integrating TargetProcess with your LambdaTest account.
+>**Note**: If you have already installed a <BrandName /> integration to any project management tool then you would come across a prompt asking you to disable your existing <BrandName /> integration for integrating TargetProcess with your <BrandName /> account.
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-2.webp').default} alt="Image" width="694" height="243"  className="doc_img"/>
 
 **Step 3**: You would now be routed to a screen where you’ll need to enter your TargetProcess **Dashboard URL**, Access Domain and **TargetProcess Access Token**.
@@ -85,19 +87,19 @@ Go to Access Tokens tab and Add a new token.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-6.webp').default} alt="Image" width="1920" height="702" className="doc_img"/>
 
-As you create a new token a key would be generated. Copy this key as you will need to provide it on LambdaTest application to integrate with TargetProcess.
+As you create a new token a key would be generated. Copy this key as you will need to provide it on <BrandName /> application to integrate with TargetProcess.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-6.webp').default} alt="Image" width="1920" height="702"  className="doc_img"/>
 
-**Step 4**: Provide the access token, Dashboard URL and Domain URL to LambdaTest for integrating TargetProcess and hit the install button.
+**Step 4**: Provide the access token, Dashboard URL and Domain URL to <BrandName /> for integrating TargetProcess and hit the install button.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-8.webp').default} alt="Image" width="1920" height="733"  className="doc_img"/>
 
-Kudos! You’ve successfully integrated LambdaTest with TargetProcess. You will find TargetProcess Integration highlighted under the section **"My Integration"**.
+Kudos! You’ve successfully integrated <BrandName /> with TargetProcess. You will find TargetProcess Integration highlighted under the section **"My Integration"**.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-9.webp').default} alt="Image" width="1920" height="938"  className="doc_img"/>
 
-## How To Log Bug Using LambdaTest Integration To TargetProcess?
+## How To Log Bug Using <BrandName /> Integration To TargetProcess?
 
 **Step 1**: Go for any of the test from the left navigation menu. For demo, we will be taking Real Time Test option.
 
@@ -127,37 +129,37 @@ Kudos! You’ve successfully integrated LambdaTest with TargetProcess. You will 
 
 > **Note**: After you click on Create Issue, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message Bug successfully marked indicating that the screenshot has been pushed to your TargetProcess project.
 
-**Step 6**: Visit your Task Board in TargetProcess and you’ll find the bug that you logged from LambdaTest in it on the appropriate User Story that you specified while logging the bug.
+**Step 6**: Visit your Task Board in TargetProcess and you’ll find the bug that you logged from <BrandName /> in it on the appropriate User Story that you specified while logging the bug.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-14.webp').default} alt="Image" width="1920" height="891"  className="doc_img"/>
 
-**Step 7**: If you click on the bug, you will find all the details specified by you while logging it from LambdaTest. Along with the screenshot of the bug, test ID, environment details and a link to reproduce the issue which would open the same test environment over LambdaTest.
+**Step 7**: If you click on the bug, you will find all the details specified by you while logging it from <BrandName />. Along with the screenshot of the bug, test ID, environment details and a link to reproduce the issue which would open the same test environment over <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-15.webp').default} alt="Image" width="1920" height="941"  className="doc_img"/>
 
-## How To Remove LambdaTest Integration With TargetProcess?
+## How To Remove <BrandName /> Integration With TargetProcess?
 
 > You can work with one integration at a time. So if you would want to integrate into a similar 3rd party application, then you would have to remove your current integration. Here is how you can do that.
 
-**Step 1**: Login to your LambdaTest account.
+**Step 1**: Login to your <BrandName /> account.
 
-**Step 2**: Select **Integrations** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2**: Select **Integrations** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
-**Step 3**: Under **"My Integrations"**, you’ll find the TargetProcess Integration. Click on Remove button to uninstall the integration with LambdaTest and TargetProcess.
+**Step 3**: Under **"My Integrations"**, you’ll find the TargetProcess Integration. Click on Remove button to uninstall the integration with <BrandName /> and TargetProcess.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-16.webp').default} alt="Image" width="1920" height="931"  className="doc_img"/>
 
-That was all you need to know for LambdaTest + TargetProcess Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
+That was all you need to know for <BrandName /> + TargetProcess Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

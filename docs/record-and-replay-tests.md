@@ -10,10 +10,12 @@ keywords:
   - chrome devtools recorder
   - lt debug 2
 
-url: https://www.lambdatest.com/support/docs/record-and-replay-tests/
+url: https://www.testmu.ai/support/docs/record-and-replay-tests
 site_name: LambdaTest
-slug: record-and-replay-tests/
+slug: record-and-replay-tests
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Record and Replay Tests using LT Debug 2.0
 ---
@@ -30,7 +32,7 @@ With LT Debug 2.0, you now have the ability to record user interactions through 
 ---
 
 1. Install the [LT Debug Chrome Extension](https://chrome.google.com/webstore/detail/lt-debug/kofahhnmgobkidipanhejacffiigppcd).
-2. Login to your LambdaTest Account via LT Debug Dashboard. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+2. Login to your <BrandName /> Account via LT Debug Dashboard. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
 <img loading="lazy" src={require('../assets/images/record-replay/login.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
@@ -57,12 +59,12 @@ With LT Debug 2.0, you now have the ability to record user interactions through 
 
 <img loading="lazy" src={require('../assets/images/record-replay/end.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
-## Recording and Replaying Tests on LambdaTest
+## Recording and Replaying Tests on <BrandName />
 ---
 
-After ending the recording process in Chrome DevTools, you will notice a LambdaTest button appear on the screen. 
+After ending the recording process in Chrome DevTools, you will notice a <BrandName /> button appear on the screen. 
 
-1. To replay or retest the recorded user flow on LambdaTest, simply click on the LambdaTest button. 
+1. To replay or retest the recorded user flow on <BrandName />, simply click on the <BrandName /> button. 
 
 <br/><img loading="lazy" src={require('../assets/images/record-replay/lt.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
@@ -70,11 +72,11 @@ After ending the recording process in Chrome DevTools, you will notice a LambdaT
 
 <img loading="lazy" src={require('../assets/images/record-replay/caps.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
-3. Once the test successful runs, it will generate the test IDs and a link to LambdaTest Automation Dashboard.
+3. Once the test successful runs, it will generate the test IDs and a link to <BrandName /> Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/record-replay/dash.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
-4. To view your record automated test results, visit the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build).
+4. To view your record automated test results, visit the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/record-replay/results.png').default} alt="image"  className="doc_img" width="1341" height="498"/>
 

@@ -2,21 +2,22 @@
 id: smartui-baseline-management
 title: Baseline Management in SmartUI
 sidebar_label: Baseline Management
-description: Learn how to manage baselines effectively in LambdaTest SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
+description: Learn how to manage baselines effectively in TestMu AI SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
 keywords:
   - SmartUI Baseline
   - Visual Regression Baseline
   - Baseline Management
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Testing
   - Automatic Baseline
-url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
+url: https://www.testmu.ai/support/docs/smartui-baseline-management
 site_name: LambdaTest
-slug: smartui-baseline-management/
+slug: smartui-baseline-management
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +27,17 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Baseline Management",
-          "item": "https://www.lambdatest.com/support/docs/smartui-baseline-management/"
+          "item": `${BRAND_URL}/support/docs/smartui-baseline-management/`
         }]
       })
     }}

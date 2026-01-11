@@ -3,20 +3,22 @@ id: aws-codepipeline-with-hyperexecute
 title: How to integrate AWS CodePipeline with HyperExecute
 hide_title: true
 sidebar_label: AWS CodePipeline
-description: Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with LambdaTest's comprehensive guide.
+description: Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with TestMu AI's comprehensive guide.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - hyperexecute integrations
   - hyperexecute integrations with ci/cd tools
   - continuous integration
   - aws codepipeline
   - continuous integration tools
   
-url: https://www.lambdatest.com/support/docs/aws-codepipeline-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute
 site_name: LambdaTest
-slug: aws-codepipeline-with-hyperexecute/
+slug: aws-codepipeline-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,7 +26,7 @@ slug: aws-codepipeline-with-hyperexecute/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com/"
         },{
           "@type": "ListItem",
@@ -35,7 +37,7 @@ slug: aws-codepipeline-with-hyperexecute/
           "@type": "ListItem",
           "position": 4,
           "name": "AWS CodePipeline Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/aws-codepipeline-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/aws-codepipeline-with-hyperexecute/`
         }]
       })
     }}
@@ -56,7 +58,7 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/aws-codebuild" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

@@ -4,22 +4,24 @@ title: Network Configurations in App Live
 sidebar_label: Network Configurations
 description: Learn how to configure and capture HTTP/S traffic on real devices during manual testing in App Live & Browser Live, with options for content capture and domain filtering.
 keywords:
-  - lambdatest manual testing
+  - testmu ai manual testing
   - network logs
   - mitm proxy
   - http traffic capture
   - domain filtering
   - network configurations
-url: https://www.lambdatest.com/support/docs/network-configurations-in-real-devices/
+url: https://www.testmu.ai/support/docs/network-configurations-in-real-devices
 site_name: LambdaTest
-slug: network-configurations-in-real-devices/
+slug: network-configurations-in-real-devices
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Network Logs and Configurations in real devices
 
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services—all without leaving your testing workflow.
 
-On LambdaTest, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
+On <BrandName />, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
@@ -39,7 +41,7 @@ On LambdaTest, you can enable **network configurations** to capture and analyze 
 
 ### Step 1: Access App Testing
 
-Log into your LambdaTest dashboard and navigate to Real Devices > App Testing.
+Log into your <BrandName /> dashboard and navigate to Real Devices > App Testing.
 
 ### Step 2: Select your device or browser
 

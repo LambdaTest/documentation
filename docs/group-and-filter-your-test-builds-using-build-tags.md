@@ -2,29 +2,31 @@
 id: group-and-filter-your-test-builds-using-build-tags
 title: Group and Filter Your Test Builds Using Build Tags
 sidebar_label: Group/Filter Tests Using Build Tags
-description: Now group your tests and organize them efficiently with the help of Build Tags on LambdaTest. Create one or more build tags, and filter them with just a click.
+description: Now group your tests and organize them efficiently with the help of Build Tags on TestMu AI. Create one or more build tags, and filter them with just a click.
 keywords:
-    - lambdatest automation
+    - testmu ai automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - lambdatest selenium automation grid
+    - testmu ai selenium automation grid
     - selenium tutorial
     - selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - Build tags
     - group tests
     - filter test builds
     - group test builds
-url: https://www.lambdatest.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
+url: https://www.testmu.ai/support/docs/group-and-filter-your-test-builds-using-build-tags
 site_name: LambdaTest
-slug: group-and-filter-your-test-builds-using-build-tags/
+slug: group-and-filter-your-test-builds-using-build-tags
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 * * *
 
-With LambdaTest, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the LambdaTest Automation Dashboard.
+With <BrandName />, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the <BrandName /> Automation Dashboard.
 
 ## How To Create Build Tags?
 
@@ -63,11 +65,11 @@ While writing your automation tests, you need to just add another capability whe
     driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
     ```
 
-You have successfully created the Build tags. Now when you run your test, and navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), you can see the tags being present in that build, as shown below:
+You have successfully created the Build tags. Now when you run your test, and navigate to [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/timeline/), you can see the tags being present in that build, as shown below:
 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp').default} alt="Group/filter" width="1281" height="721" className="doc_img"/>
 
-## Guildelines To Create Build Tags On LambdaTest?
+## Guildelines To Create Build Tags On <BrandName />?
 
 While creating Build Tags, make sure to follow the below Guidelines:
 
@@ -81,7 +83,7 @@ While creating Build Tags, make sure to follow the below Guidelines:
 
 To group or filter the tests on your automation dashboard with these Build tags:
 
-Navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags**, on right corner of the filter toolbar. 
+Navigate to [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags**, on right corner of the filter toolbar. 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp').default} alt="Group/filter" width="1281" height="722" className="doc_img"/>
 
 Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, as shown below, only the test builds with the tag "Tag1" will be shown:

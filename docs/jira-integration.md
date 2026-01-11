@@ -1,18 +1,19 @@
 ---
 id: jira-integration
-title: Integrate LambdaTest with Jira | LambdaTest
+title: Integrate TestMu AI with Jira | TestMu AI
 hide_title: true
 sidebar_label: Jira
-description: LambdaTest provides integrations with JIRA to help you log bugs directly from the middle of your test session on LambdaTest to JIRA platform.
+description: TestMu AI provides integrations with JIRA to help you log bugs directly from the middle of your test session on TestMu AI to JIRA platform.
 keywords:
-  - LambdaTest integrations
+  - TestMu AI integrations
   - Push issues to Jira
-  - LambdaTest Jira integration
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/jira-integration/
+  - TestMu AI Jira integration
+url: https://www.testmu.ai/support/docs/jira-integration
 site_name: LambdaTest
-slug: jira-integration/
+slug: jira-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +23,17 @@ slug: jira-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Jira Integration",
-          "item": "https://www.lambdatest.com/support/docs/jira-integration/"
+          "item": `${BRAND_URL}/support/docs/jira-integration/`
         }]
       })
     }}
@@ -42,23 +43,23 @@ slug: jira-integration/
 
 <!-- > Developed by Atlassian, Jira is one of the most popular enterprise project management tool. Equipped with a highly usable dashboard, task management features, and project analytics. It is used by development as well as testing teams to track user stories & progress on every sprint. Along with project management, Jira also aids in effective bug tracking by providing a space where you can log bugs and prioritized them according to your release bandwidth. -->
 
-The LambdaTest Jira integration helps you create issues in Jira directly from the LambdaTest platform itself. With simple one-click integration, you can push annotated issues to the project of your choice, assign them to the required teammate, and attach screenshots. You can do all that while in the middle of a test session in the LambdaTest platform. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the Jira ticket for a testing instance.
+The <BrandName /> Jira integration helps you create issues in Jira directly from the <BrandName /> platform itself. With simple one-click integration, you can push annotated issues to the project of your choice, assign them to the required teammate, and attach screenshots. You can do all that while in the middle of a test session in the <BrandName /> platform. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the Jira ticket for a testing instance.
 
-**Jira Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Jira Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
 <img loading="lazy" src={require('../assets/images/jira-integration/0.png').default} alt="jira"  className="doc_img" width="371" height="441"/>
 
-## How to Establish Integration with Jira from Your LambdaTest Account?
+## How to Establish Integration with Jira from Your <BrandName /> Account?
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
-**Step 2:** Select 'Integration' from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select 'Integration' from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on 'ADD' under the block that says 'Jira'.
 
 <img loading="lazy" src={require('../assets/images/jira-integration/1.png').default} alt="jira"  className="doc_img" width="1346" height="610"/>
 
-**Step 4:** Once you click on **Connect**, you will be redirected to the below screen. Where You have to select Instance type. If you have a **Self Hosted Jira** instance, you can prefer this document [Self-hosted](https://www.lambdatest.com/support/docs/jira-self-hosted-integration/).
+**Step 4:** Once you click on **Connect**, you will be redirected to the below screen. Where You have to select Instance type. If you have a **Self Hosted Jira** instance, you can prefer this document [Self-hosted](/support/docs/jira-self-hosted-integration/).
 
 <img loading="lazy" src={require('../assets/images/jira-integration/2.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 
@@ -76,7 +77,7 @@ The LambdaTest Jira integration helps you create issues in Jira directly from th
 
 <img loading="lazy" src={require('../assets/images/jira-integration/5.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 
-That's it! Go to Integrations again, and you will be able to notice a **green tick** indicating that Jira is successfully **installed**. You are all set to experience **one-click bug logging** to share your issues directly from your LambdaTest account with our teammates on the Jira project.
+That's it! Go to Integrations again, and you will be able to notice a **green tick** indicating that Jira is successfully **installed**. You are all set to experience **one-click bug logging** to share your issues directly from your <BrandName /> account with our teammates on the Jira project.
 
 <img loading="lazy" src={require('../assets/images/jira-integration/6.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 
@@ -132,14 +133,14 @@ After capturing multiple screenshots for issues, you can easily share them direc
 
 <img loading="lazy" src={require('../assets/images/jira-integration/11.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 
-**Step 7:** Log in to your Jira dashboard. You will be able to notice the logged issue right away! All the data you provided through Lambdatest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments.
+**Step 7:** Log in to your Jira dashboard. You will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
 
 ## How To Remove Jira Integration?
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
 **Step 2:** Select '**Integration**' from the left navigation menu bar. This will guide you to a screen where you will 
-find 3rd party applications, available to integrate with your LambdaTest account.
+find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on '**Remove**'. You can find the **Remove** button when you click on  ellipsis in **‘Jira’** block.
 
@@ -147,17 +148,17 @@ find 3rd party applications, available to integrate with your LambdaTest account
 
 ---
 
-That was all you need to know for LambdaTest + Jira Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + Jira Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

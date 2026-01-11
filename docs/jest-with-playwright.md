@@ -1,9 +1,9 @@
 ---
 id: jest-with-playwright
-title: Run your Jest test scripts with Playwright on LambdaTest
+title: Run your Jest test scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: Jest
-description: Run your Jest scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your Jest scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - jest playwright
   - jest automation testing
@@ -11,13 +11,15 @@ keywords:
   - playwright jest testing guide
   - jest playwright framework
 
-url: https://www.lambdatest.com/support/docs/jest-with-playwright/
+url: https://www.testmu.ai/support/docs/jest-with-playwright
 site_name: LambdaTest
-slug: jest-with-playwright/
+slug: jest-with-playwright
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Jest with Playwright",
-          "item": "https://www.lambdatest.com/support/docs/jest-with-playwright/"
+          "item": `${BRAND_URL}/support/docs/jest-with-playwright/`
         }]
       })
     }}
@@ -46,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Jest with Playwright: Running Your First Test
 * * *
 
-Learn how to use Playwright with Jest framework to automate web application testing across 50+ real browsers and operating systems on LambdaTest cloud platform.
+Learn how to use Playwright with Jest framework to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
 
 ## Prerequisites
 ***
@@ -54,7 +56,7 @@ Learn how to use Playwright with Jest framework to automate web application test
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or clone the code sample for the Playwright Jest from the LambdaTest GitHub repository to run the tests.
+Download or clone the code sample for the Playwright Jest from the <BrandName /> GitHub repository to run the tests.
 
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-jest-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -71,17 +73,17 @@ cd playwright-jest-js
 npm install
 ```
 
-3. A LambdaTest Username and Access key. You can get it from your LambdaTest Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-4. To run Playwright tests, set your LambdaTest Username and Access key in the Environment Variables.
+4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
 
 
 ## Run your Playwright tests with Jest
 ---
 
-Navigate to the `jest-playwright.config.js` file in the `playwright-jest-js` directory and provide your LambdaTest Username and Access key.
+Navigate to the `jest-playwright.config.js` file in the `playwright-jest-js` directory and provide your <BrandName /> Username and Access key.
 
 ```js
 const cp = require('child_process');
@@ -167,7 +169,7 @@ npm run test
 ## View your test results
 ---
 
-Go to the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.
+Go to the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.
 
 
 

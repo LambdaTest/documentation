@@ -1,26 +1,28 @@
 ---
 id: teamwork-integration
-title: Teamwork Integration With LambdaTest
+title: Teamwork Integration With TestMu AI
 hide_title: false
 sidebar_label: Teamwork
-description: LambdaTest helps you to push bugs directly in Teamwork project with details like task list, assignee, title and description with a single click.
+description: TestMu AI helps you to push bugs directly in Teamwork project with details like task list, assignee, title and description with a single click.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest teamwork integration
-  - integrate teamwork with lambdatest
-  - create issue in teamwork from lambdatest
-  - teamwork integration with lambdatest
+  - testmu ai teamwork integration
+  - integrate teamwork with testmu ai
+  - create issue in teamwork from testmu ai
+  - teamwork integration with testmu ai
   - create teamwork issues from teamwork
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/teamwork-integration/
+url: https://www.testmu.ai/support/docs/teamwork-integration
 site_name: LambdaTest
-slug: teamwork-integration/
+slug: teamwork-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,37 +31,37 @@ slug: teamwork-integration/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Teamwork Integration",
-          "item": "https://www.lambdatest.com/support/docs/teamwork-integration/"
+          "item": `${BRAND_URL}/support/docs/teamwork-integration/`
         }]
       })
     }}
 ></script>
-Teamwork Projects is a cloud-based project management tool that tracks project operations and business functionality. It is available on iOS, Android, Google Chrome, and the Web. LambdaTest allows users to push bugs directly to the project.
+Teamwork Projects is a cloud-based project management tool that tracks project operations and business functionality. It is available on iOS, Android, Google Chrome, and the Web. <BrandName /> allows users to push bugs directly to the project.
 
-LambdaTest integrates with Teamwork Projects, allowing users to file issues directly to their chosen project, assign them to teammates, and attach necessary screenshots during a test session.
+<BrandName /> integrates with Teamwork Projects, allowing users to file issues directly to their chosen project, assign them to teammates, and attach necessary screenshots during a test session.
 
-> Teamwork Integration with LambdaTest is available for freemium as well as premium plan.
+> Teamwork Integration with <BrandName /> is available for freemium as well as premium plan.
 
-## Integrate Teamwork from your LambdaTest Account
+## Integrate Teamwork from your <BrandName /> Account
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Project Management.
 
 **Step 3:** Click on **Connect** button of `Teamwork` block.
 
-**Step 4:** Now, provide your Teamwork API Token and Teamwork site address to establish integration with LambdaTest and click on **install** button.
+**Step 4:** Now, provide your Teamwork API Token and Teamwork site address to establish integration with <BrandName /> and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/integration/project-management/teamwork/teamwork-integration.mp4').default} type="video/mp4" />
@@ -78,7 +80,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 
 ## Lodge your First Bug
 
-> Note: If you are using Teamwork for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your LambdaTest account.
+> Note: If you are using Teamwork for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your <BrandName /> account.
 
 **Step 1:** Start with any type of testing, for the demo purpose we are going with the **Real Time Testing**.
 
@@ -101,7 +103,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 
 ## Uninstall Teamwork Integration
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Project Management.
 
@@ -111,17 +113,17 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 <source src= {require('../assets/videos/integration/project-management/teamwork/uninstall-teamwork.mp4').default} type="video/mp4" />
 </video>
 
-> That was all you need to know for LambdaTest + Teamwork Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Teamwork Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

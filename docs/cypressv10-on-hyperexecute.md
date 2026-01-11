@@ -32,6 +32,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,17 +43,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run cypress automation tests on HyperExecute using cypress v10 framework",
-          "item": "https://www.lambdatest.com/support/docs/cypressv10-on-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/cypressv10-on-hyperexecute/`
         }]
       })
     }}
@@ -78,11 +80,11 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - Setup the Environmental Variable
 
 :::tip Sample repo
-You can either download or clone the code samples of Cypress v9 from the **LambdaTest's GitHub Repository** to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-cypress-v10-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+You can either download or clone the code samples of Cypress v9 from the **<BrandName />'s GitHub Repository** to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-cypress-v10-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 #### Download HyperExecute CLI
@@ -96,7 +98,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
@@ -132,7 +134,7 @@ Cypress Tests can be executed on HyperExecute using 2 methods:
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
-> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/#smart-auto-test-splitting)
+> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/getting-started-with-hyperexecute/#smart-auto-test-splitting)
 
 #### Core
 
@@ -448,7 +450,7 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 [<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Cypress&framework=Cypress-v10)
 
-**Step 2:** Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
+**Step 2:** Login with TestMu AI credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
@@ -482,7 +484,7 @@ HAR logs offer a comprehensive view of your application's network activity durin
 - Analyzing performance bottlenecks
 - Diagnosing Load Order Issues
 
-Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
+Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
 
 ```yaml
 cypressOps:
@@ -507,18 +509,18 @@ pre:
 ```
 
 :::tip
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
 :::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

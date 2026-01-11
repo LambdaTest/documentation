@@ -1,8 +1,8 @@
----
+﻿---
 id: selenium-visual-regression
 title: Getting Started With Visual Regression Testing Using Selenium On SmartUI
 sidebar_label: Selenium
-description: Master Selenium Visual Regression testing with LambdaTest. Detect visual deviations early in your web applications to ensure a seamless user experience.
+description: Master Selenium Visual Regression testing with TestMu AI. Detect visual deviations early in your web applications to ensure a seamless user experience.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/selenium-visual-regression/
+url: https://www.testmu.ai/support/docs/selenium-visual-regression
 site_name: LambdaTest
-slug: selenium-visual-regression/
+slug: selenium-visual-regression
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,7 +26,10 @@ import NewTag from '../src/component/newTag';
 
 ---
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 - Basic understanding of Selenium and WebDriver is required.
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
@@ -58,7 +61,7 @@ $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### Step 1: Create a SmartUI Project
 
@@ -83,7 +86,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 git clone https://github.com/LambdaTest/smartui-node-sample
 ```
 
-2. Set up the LambdaTest credentials by following the instructions mentioned in the `README.md` file.
+2. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 3. Edit the required capabilities for your test suite.
 
 <Tabs className="docs__val" groupId="language">
@@ -619,10 +622,10 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 ## Advanced Options for Screenshot Comparison
 
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
   
 
-  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
+  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](/support/docs/test-settings-options/).
   
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
@@ -732,7 +735,7 @@ let capabilities = {
    echo $LT_ACCESS_KEY
    ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </TabItem>
 <TabItem value="project-not-found-error" label="Project Not Found Error">
@@ -861,8 +864,8 @@ let capabilities = {
 If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -871,7 +874,7 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)
 
@@ -879,12 +882,12 @@ If you encounter issues not covered here:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
