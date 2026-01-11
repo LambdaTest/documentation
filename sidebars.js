@@ -3895,11 +3895,6 @@ module.exports = {
         id: "analytics-widgets",
       },
       items: [
-        "dashboards-custom-widgets",
-        "analytics-test-case-insights",
-
-        "analytics-modules-resource-utilization",
-        "analytics-test-time-trends",
         {
           type: "category",
           collapsed: true,
@@ -3915,6 +3910,23 @@ module.exports = {
         },
         {
           type: "category",
+          collapsed: false,
+          label: "Custom Widgets",
+          link: {
+            type: "doc",
+            id: "dashboards-custom-widgets",
+          },
+          items: [
+            "analytics-heatmap-widgets",
+            "analytics-bar-line-widgets",
+            "analytics-table-widgets",
+          ],
+        },
+        "analytics-test-case-insights",
+        "analytics-modules-resource-utilization",
+        "analytics-test-time-trends",
+        {
+          type: "category",
           collapsed: true,
           label: "Error Insights",
           items: [
@@ -3923,7 +3935,6 @@ module.exports = {
           ],
         },
         "analytics-allure-api-widgets",
-
         "analytics-modules-groups",
       ],
     },
