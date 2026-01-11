@@ -58,7 +58,7 @@ Bar chart widgets display data using rectangular bars where the length of each b
 - **Highlighting differences** between categories at a glance
 - **Grouped comparisons** when using the Group By feature
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart.png').default} alt="Bar Chart Widget Example" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart.webp').default} alt="Bar Chart Widget Example" className="doc_img"/>
 
 ### Line Chart Widgets
 
@@ -69,7 +69,7 @@ Line chart widgets display data as a series of points connected by lines. They a
 - **Comparing multiple series** on the same chart
 - **Forecasting** based on historical patterns
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-line-chart.png').default} alt="Line Chart Widget Example" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-line-chart.webp').default} alt="Line Chart Widget Example" className="doc_img"/>
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ For prerequisites and common setup steps (Navigate to Insights, Create Dashboard
    - **Bar** for bar chart visualization
    - **Line** for line chart visualization
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart-config.png').default} alt="Custom Widgets Bar Chart Configuration Interface" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart-config.webp').default} alt="Custom Widgets Bar Chart Configuration Interface" className="doc_img"/>
 
 ### Step 7: Configure What to Plot
 

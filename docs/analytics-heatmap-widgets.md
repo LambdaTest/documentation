@@ -83,7 +83,7 @@ For prerequisites and common setup steps (Navigate to Insights, Create Dashboard
 
 1. In the **Choose Visualisation** section, select **Heatmap** from the available options (Line, Bar, Pie, Table, Billboard, Heatmap).
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-heatmap.png').default} alt="Custom Widgets Creation Interface" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-heatmap-config.webp').default} alt="Custom Widgets Creation Interface" className="doc_img"/>
 
 ### Step 7: Configure Grouping
 

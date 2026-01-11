@@ -56,7 +56,7 @@ A table widget displays data in rows and columns, providing a structured view of
 - **Grouping data** by multiple fields to create hierarchical views
 - **Creating summary reports** with multiple columns of information
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-table-config.png').default} alt="Table Widget Configuration Interface" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-table-config.webp').default} alt="Table Widget Configuration Interface" className="doc_img"/>
 
 ## Prerequisites
 
