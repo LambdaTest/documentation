@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import NewTag from '../src/component/newTag';
 
-# Lambdatest products usage insights
+# TestMu AI products usage insights
 
 <BrandName /> Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
 

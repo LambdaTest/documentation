@@ -77,11 +77,11 @@ Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automat
     1.  <BrandName /> Username
     2.  <BrandName /> Access KeyYou can fetch your account credentials on <BrandName /> from your [profile section](https://accounts.lambdatest.com/detail/profile).
 
-## How To Install Lambdatest Extension
+## How To Install TestMu AI Extension
 
 * * *
 
-Follow the below steps to install Lambdatest Extension from Azure DevOps marketplace:
+Follow the below steps to install TestMu AI Extension from Azure DevOps marketplace:
 
 1.  Go to [Azure DevOps marketplace](https://marketplace.visualstudio.com/) and search for "<BrandName />" in the search box.
 

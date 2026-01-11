@@ -12,7 +12,6 @@ keywords:
   - project management tools
   - integrate rally with testmu ai
   - create issue in rally from testmu ai
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/rally-integration
 site_name: LambdaTest
 slug: rally-integration

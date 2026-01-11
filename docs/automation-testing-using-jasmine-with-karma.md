@@ -12,7 +12,6 @@ keywords:
   - selenium webdriver javascript
   - selenium javascript testing tutorial
   - javascript selenium framework
-image: /assets/images/og-images/jasmine-with-karma.jpg
 url: https://www.testmu.ai/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid

@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Oxygen LambdaTest Integration",
+          "name": "Oxygen TestMu AI Integration",
           "item": `${BRAND_URL}/support/docs/ranorex-integration-with-lambdatest/`
         }]
       })

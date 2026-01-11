@@ -16,7 +16,8 @@ keywords:
   - selenium automation testing
   - selenium testing tool
   - selenium testing tutorial
-image: /assets/images/og-images/PHPUnit-Test-Framework.jpg
+image: /assets/images/og-images/selenium-testing-og.png
+
 url: https://www.testmu.ai/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid

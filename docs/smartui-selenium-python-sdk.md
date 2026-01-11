@@ -105,7 +105,7 @@ source venv/bin/activate
 
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli

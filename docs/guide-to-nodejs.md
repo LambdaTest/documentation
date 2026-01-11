@@ -14,7 +14,7 @@ keywords:
   - getting started with node.js and selenium
   - selenium testing using node.js
   - node.js selenium scripts
-image: /assets/images/og-images/run-nodejs-tests-on-selenium-grid-cloud.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
@@ -159,7 +159,7 @@ Do note the use of the remote webdriver here. We have passed browser environment
 To set up your own choice of environment for the test in the code, you can leverage our Capability Generator tool.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/capabilities-generator">LambdaTest Capability Generator Tool</a>
+<a href="https://www.lambdatest.com/capabilities-generator">TestMu AI Capability Generator Tool</a>
 </div>
 
 > **Tear Down**: The tear down method helps the <BrandName /> platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.

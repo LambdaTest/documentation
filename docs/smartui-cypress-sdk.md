@@ -88,7 +88,7 @@ cd smartui-cypress-sdk-sample
 ```
 ### **Step 2**: Install the Dependencies
 
-1. Install required NPM modules for `LambdaTest SmartUI Cypress SDK` in your **Frontend** project.
+1. Install required NPM modules for `TestMu AI SmartUI Cypress SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13

@@ -12,7 +12,6 @@ keywords:
   - performance testing
   - web protocol
   - automatic proxy
-image: /assets/images/og-images/Sharing-Lambda-Tunnel.jpg
 url: https://www.testmu.ai/support/docs/http2-support
 site_name: LambdaTest
 slug: http2-support

@@ -11,7 +11,6 @@ keywords:
   - testng
   - app testing
   - real devices
-# image: /assets/images/og-images/espresso-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/hyperexecute-xcui-testing
 site_name: LambdaTest
 slug: hyperexecute-xcui-testing

@@ -11,7 +11,7 @@ keywords:
   - testmu ai jest integration
   - jest and selenium
   - jest selenium
-image: /assets/images/og-images/automated-testing-with-selenium-jest.jpg  
+image: /assets/images/og-images/selenium-testing-og.png  
 url: https://www.testmu.ai/support/docs/automation-testing-with-selenium-and-jest
 site_name: LambdaTest
 slug: automation-testing-with-selenium-and-jest

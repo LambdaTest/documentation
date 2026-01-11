@@ -13,7 +13,7 @@ keywords:
   - junit tutorial
   - junit test cases
   - selenium junit
-image: /assets/images/og-images/JUnit-automation-testing-with-selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid

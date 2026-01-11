@@ -11,7 +11,6 @@ keywords:
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/hyperexecute-webapp-appium-testing
 site_name: LambdaTest
 slug: hyperexecute-webapp-appium-testing
@@ -52,7 +51,7 @@ This page outlines how to execute your Appium tests on HyperExecute for WebApps 
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the Environmental Variable
 - Ensure you have Appium’s [Java client library](https://github.com/appium/java-client) installed.

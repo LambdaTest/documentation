@@ -8,7 +8,6 @@ keywords:
   - TestMu AI integrations
   - TestMu AI Azure DevOps integration
   - Push issues to Azure DevOps
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/vsts-integration
 site_name: LambdaTest
 slug: vsts-integration
@@ -104,7 +103,7 @@ Access tokens are strings with authorization key required to access an API. They
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-278.webp').default} alt="azure-devops-integration" width="1365" height="648" className="doc_img"/>
 
-**Step 6:** After you click on **'+ New Token'**, mention a **name** for the access token. Define the **scopes** for authorizing access. By doing so, you will be providing the level of access you want to provide to any 3rd party API. For Lambdatest integration with Azure DevOps, select the radio button for **'Full access'** & click on **'Create'**.
+**Step 6:** After you click on **'+ New Token'**, mention a **name** for the access token. Define the **scopes** for authorizing access. By doing so, you will be providing the level of access you want to provide to any 3rd party API. For TestMu AI integration with Azure DevOps, select the radio button for **'Full access'** & click on **'Create'**.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-279.webp').default} alt="azure-devops-integration" width="1365" height="650" className="doc_img"/>
 
@@ -126,7 +125,7 @@ For revoking a token, click on any personal access token and hit the **'Revoke'*
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-275.webp').default} alt="azure-devops-integration" width="311" height="96" className="doc_img"/>
 
-That's it! Go to Integrations again and you will be able to see Azure DevOps under 'My Integrations' section. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your project directly by a single click.
+That's it! Go to Integrations again and you will be able to see Azure DevOps under 'My Integrations' section. You can now experience bug logging in a fly from any of your running test session in TestMu AI to your project directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-13.webp').default} alt="azure-devops-integration" width="1347" height="623" className="doc_img"/>
 
@@ -172,7 +171,7 @@ That's it! Go to Integrations again and you will be able to see Azure DevOps und
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-19.webp').default} alt="azure-devops-integration" width="1365" height="689" className="doc_img"/>
 
-**Step 8:** Click on the **Title** to open the details. All the data you provided through Lambdatest would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in your work item on the respective project.
+**Step 8:** Click on the **Title** to open the details. All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in your work item on the respective project.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-20.webp').default} alt="azure-devops-integration" width="1365" height="650" className="doc_img"/>
 

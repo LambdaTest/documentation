@@ -13,7 +13,7 @@ keywords:
   - automated browser testing
   - automation testing
   - cross browser testing with gauge
-image: /assets/images/og-images/Gauge-Automation-Tests.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/running-gauge-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: running-gauge-tests-on-testmu-selenium-grid

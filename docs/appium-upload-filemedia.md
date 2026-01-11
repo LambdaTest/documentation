@@ -90,7 +90,7 @@ This section provides a comprehensive guide on leveraging this feature within au
 - Uploading the files and obtaining the `media_url`.
 - Using `media_url` into your tests using `uploadMedia` capability.
 
-### Step 1 : Uploading the files on Lambdatest Cloud
+### Step 1 : Uploading the files on TestMu AI Cloud
 
 #### Using REST API
 
@@ -120,7 +120,7 @@ Below is a sample response demonstrating the return of the `media_url` parameter
 ```
 #### Using App Automation Interface
 
-You can also utilize <BrandName />'s user-friendly UI to upload the files on Lambdatest cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
+You can also utilize <BrandName />'s user-friendly UI to upload the files on TestMu AI cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
 
 ----
 

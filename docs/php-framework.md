@@ -13,7 +13,8 @@ keywords:
   - selenium automation testing
   - selenium testing tool
   - selenium testing tutorial
-image: /assets/images/og-images/PHP-automated-testing.jpg
+image: /assets/images/og-images/selenium-testing-og.png
+
 url: https://www.testmu.ai/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid

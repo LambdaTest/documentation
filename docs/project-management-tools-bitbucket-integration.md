@@ -78,7 +78,7 @@ Bitbucket APIs uses OAuth 2.0’s [authorization code grant flow](https://tools.
 
 Access tokens are strings with authorization key required to access an API. They are issued to the client-server and are usually opaque. They are used for requesting access to protected, user-specific resources. Access tokens are vital from a security point of view & can be generated in different formats, depending upon security requirements specified on the resource server.
 
-That is it, you will be notified with a prompt message on top mentioning that Bitbucket is successfully installed. If you look at your Integrations again and you will be able to notice a **green tick** indicating the same. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your respective repository directly by a single click.
+That is it, you will be notified with a prompt message on top mentioning that Bitbucket is successfully installed. If you look at your Integrations again and you will be able to notice a **green tick** indicating the same. You can now experience bug logging in a fly from any of your running test session in TestMu AI to your respective repository directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-integration.webp').default} alt="Integration"  className="doc_img" width="1357" height="650"/>
 

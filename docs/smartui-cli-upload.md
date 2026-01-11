@@ -73,7 +73,7 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash

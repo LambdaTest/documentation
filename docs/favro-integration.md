@@ -139,11 +139,11 @@ At the bottom of the form you will find a button **'Create Issue'**.
 
 <img loading="lazy" src={require('../assets/images/favro-integration/Capture15.webp').default} alt="Bug Marking" width="347" height="75" className="doc_img"/>
 
-**Step 7:** Visit your dashboard. You will be able to notice the logged issue right away! All the data you provided through Lambdatest would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
+**Step 7:** Visit your dashboard. You will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
 
 <img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-230.webp').default} alt="screenshot testing dashboard" width="1365" height="579" className="doc_img"/>
 
-Click on the **'Testing'** Widget Column and you will find all the data that you provided through Lambdatest already presented in it.
+Click on the **'Testing'** Widget Column and you will find all the data that you provided through TestMu AI already presented in it.
 
 <img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-231.webp').default} alt="screenshot testing demo" width="1366" height="577" className="doc_img"/>
 

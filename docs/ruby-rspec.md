@@ -8,7 +8,8 @@ keywords:
   - rspec
   - rspec selenium
   - ruby selenium
-image: /assets/images/og-images/Run-RSpec-Tests.jpg
+image: /assets/images/og-images/selenium-testing-og.png
+
 url: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid

@@ -13,7 +13,7 @@ keywords:
   - automation testing
   - selenium automation
   - selenium testing
-image: /assets/images/og-images/Mocha-Selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/automation-testing-with-mocha-and-selenium
 site_name: LambdaTest
 slug: /automation-testing-with-mocha-and-selenium

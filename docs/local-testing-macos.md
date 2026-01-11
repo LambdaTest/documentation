@@ -10,7 +10,6 @@ keywords:
   - testmu ai local tunnel
   - testmu ai tunnel
   - local app testing for MacOS
-image: /assets/images/og-images/local-testing-for-macos-online.jpg
 url: https://www.testmu.ai/support/docs/local-testing-macos
 site_name: LambdaTest
 slug: local-testing-macos

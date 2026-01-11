@@ -16,7 +16,7 @@ keywords:
   - selenium automation testing
   - selenium testing tool
   - selenium testing tutorial
-image: /assets/images/og-images/Codeception-Integration-With-LambdaTest.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/codeception-integration-with-testmu
 site_name: LambdaTest
 slug: codeception-integration-with-testmu

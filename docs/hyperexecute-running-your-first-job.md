@@ -84,7 +84,7 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 
 We will be taking care of everything one by one, just follow the steps given below: 
 

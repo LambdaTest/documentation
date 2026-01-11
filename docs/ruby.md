@@ -8,7 +8,8 @@ keywords:
   - ruby selenium
   - Automation Testing Scripts
   - Selenium Grid
-image: /assets/images/og-images/Ruby-with-Selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
+
 url: https://www.testmu.ai/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid

@@ -18,7 +18,7 @@ keywords:
 - test automation
 - keyword driven testing
 
-image: /assets/images/og-images/Tesbo-selenium-testing.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/executing-tesbo-automation-script-over-online-selenium-grid
 site_name: LambdaTest
 slug: executing-tesbo-automation-script-over-online-selenium-grid

@@ -6,7 +6,6 @@ sidebar_label: Daily Usage Limit Per Organization
 description: To ensure fair usage and best practices, TestMu AI enforces a daily capacity limit on the total test time for each organization.
 keywords:
   - over-exploitation
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/shared-cloud-usage
 site_name: LambdaTest
 slug: shared-cloud-usage

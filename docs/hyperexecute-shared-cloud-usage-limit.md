@@ -11,7 +11,6 @@ keywords:
   - concurrency
   - parallel sessions
   - automation
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/hyperexecute-shared-cloud-usage-limit
 site_name: LambdaTest
 slug: hyperexecute-shared-cloud-usage-limit

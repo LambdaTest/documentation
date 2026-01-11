@@ -58,7 +58,7 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 ## Prerequisites for Using SmartUI
 
 - Familiarity with HTTP APIs is essential.
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 In the following section, we will walk you through the process of conducting your first Visual Regression test using <BrandName />'s SmartUI platform.

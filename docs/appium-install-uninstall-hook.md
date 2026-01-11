@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Hooks for install or uninstall application",
+          "name": "TestMu AI Hooks for install or uninstall application",
           "item": `${BRAND_URL}/support/docs/appium-install-uninstall-testmu-hooks/`
         }]
       })

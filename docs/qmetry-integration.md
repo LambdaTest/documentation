@@ -9,7 +9,7 @@ keywords:
  - QMetry
  - Test Automation for GUI Testing
  - test automation
- - QMetry integration with Lambdatest
+ - QMetry integration with TestMu AI
  - testmu ai integration with QMetry
 url: https://www.testmu.ai/support/docs/qmetry-integration
 site_name: LambdaTest
@@ -35,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "QMetry LambdaTest Integration",
+          "name": "QMetry TestMu AI Integration",
           "item": `${BRAND_URL}/support/docs/qmetry-integration/`
         }]
       })

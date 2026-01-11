@@ -15,7 +15,7 @@ keywords:
   - selenium testing using ruby
   - ruby selenium scripts
 
-image: /assets/images/og-images/run-ruby-tests-on-online-Selenium-grid.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Quick Guide To Run Ruby Tests On LambdaTest Selenium Grid",
+          "name": "Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid",
           "item": `${BRAND_URL}/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/`
         }]
       })

@@ -86,7 +86,7 @@ cd smartui-playwright-sample/sdk
 ```
 ### Step 2: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Playwright SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Playwright SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright

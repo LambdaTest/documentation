@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/deep-dive-into-hyperexecute-yaml
-site_name: LambdaTest Deep dive into hyperexecute yaml
+site_name: TestMu AI Deep dive into hyperexecute yaml
 slug: deep-dive-into-hyperexecute-yaml
 ---
 

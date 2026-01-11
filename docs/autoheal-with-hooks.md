@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 Autoheal feature automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements’ IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
 
-Autoheal can be started or stopped at any point in your test script using simple hooks. This allows for precise control over when your tests should attempt element healing, improving reliability and reducing flaky tests. This guide explains how to enable and disable Autoheal in your Selenium scripts using the lambdatest hooks.
+Autoheal can be started or stopped at any point in your test script using simple hooks. This allows for precise control over when your tests should attempt element healing, improving reliability and reducing flaky tests. This guide explains how to enable and disable Autoheal in your Selenium scripts using the TestMu AI hooks.
 
 ## Using Autoheal Hooks in Tests
 Autoheal hooks can be inserted anywhere in the script depending on where you need dynamic element handling. Typical flow:

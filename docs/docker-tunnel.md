@@ -15,7 +15,6 @@ keywords:
   - secure-shell-tunnel
   - docker compose ssh tunnel
   - docker vpn tunnel
-image: /assets/images/og-images/docker-tunnel.png
 url: https://www.testmu.ai/support/docs/docker-tunnel
 site_name: LambdaTest
 slug: docker-tunnel

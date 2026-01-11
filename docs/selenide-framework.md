@@ -13,7 +13,7 @@ keywords:
   - Selenium Grid
   - Selenium Automation
 
-image: /assets/images/og-images/Selenide-Tests-with-Selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 
 url: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing
 site_name: LambdaTest

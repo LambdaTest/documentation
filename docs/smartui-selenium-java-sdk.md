@@ -103,7 +103,7 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 :::
 ### **Step 3**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
