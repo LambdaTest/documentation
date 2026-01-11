@@ -1,0 +1,561 @@
+---
+id: analytics-bar-line-widgets
+title: Bar and Line Chart Widgets
+sidebar_label: Bar & Line Chart Widgets
+description: Learn how to create and configure Bar and Line chart widgets to visualize test data trends, comparisons, and patterns over time or across categories.
+keywords:
+  - analytics
+  - dashboards
+  - bar chart widgets
+  - line chart widgets
+  - data visualization
+  - custom widgets
+  - test insights
+  - trend analysis
+  - time series analysis
+
+url: https://www.lambdatest.com/support/docs/analytics-bar-line-widgets/
+site_name: LambdaTest
+slug: analytics-bar-line-widgets/
+---
+
+import NewTag from '../src/component/newTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bar and Line Chart Widgets",
+          "item": "https://www.lambdatest.com/support/docs/analytics-bar-line-widgets/"
+        }]
+      })
+    }}
+></script>
+
+Bar and Line chart widgets in LambdaTest Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
+
+## What are Bar and Line Chart Widgets?
+
+### Bar Chart Widgets
+
+Bar chart widgets display data using rectangular bars where the length of each bar represents the value. They are particularly effective for:
+
+- **Comparing values** across different categories (e.g., test counts by browser, pass rates by OS)
+- **Showing distributions** of data across groups
+- **Highlighting differences** between categories at a glance
+- **Grouped comparisons** when using the Group By feature
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart.png').default} alt="Bar Chart Widget Example" className="doc_img"/>
+
+### Line Chart Widgets
+
+Line chart widgets display data as a series of points connected by lines. They are particularly effective for:
+
+- **Tracking trends** over time (e.g., test execution trends, pass rate changes)
+- **Identifying patterns** and anomalies in time series data
+- **Comparing multiple series** on the same chart
+- **Forecasting** based on historical patterns
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-line-chart.png').default} alt="Line Chart Widget Example" className="doc_img"/>
+
+## Prerequisites
+
+Before creating a bar or line chart widget, ensure you have:
+
+1. An active LambdaTest account with access to Insights
+2. Executed tests on the LambdaTest platform to generate data
+3. Access to the Custom Widgets feature
+
+## Step-by-Step Guide to Creating Bar and Line Chart Widgets
+
+### Step 1: Navigate to Insights
+
+1. Log in to your [LambdaTest account](https://accounts.lambdatest.com/login).
+2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
+3. Click on the **Dashboards** tab.
+
+### Step 2: Create a New Dashboard or Select Existing
+
+1. Click on the **+ Create New** button located at the top right of the dashboard list.
+2. From the dropdown menu, select **Custom Widgets**.
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart-config.png').default} alt="Custom Widgets Bar Chart Configuration Interface" className="doc_img"/>
+
+### Step 3: Choose a Product
+
+Select the product for which you want to create the chart widget. Available options include:
+
+- **Web Automation**: Visualize web testing data trends and comparisons
+- **App Automation**: Analyze mobile testing data patterns
+- **HyperExecute**: Monitor HyperExecute test runs and trends
+- **Real Time Testing**: Visualize real-time testing data patterns
+- **Real Device Testing**: Analyze real device testing trends
+- **Smart UI Testing**: Visualize Smart UI testing data patterns
+
+### Step 4: Select Data Source
+
+Choose the data source that will power your chart:
+
+- **Tests**: Visualize test execution data including pass/fail rates, test counts, and execution times
+- **Auto Heal**: Visualize Auto Heal statistics and trends (available for Web Automation and HyperExecute only)
+
+### Step 5: Configure Filters (Optional)
+
+Use filters to narrow down your data based on specific requirements:
+
+1. Click **+ Add a Filter** to add filter criteria.
+2. Select a **Key** from the dropdown (e.g., browser, OS, resolution, custom data).
+3. Choose an **Operator** (equals, contains, greater than, etc.).
+4. Select or enter the **Value** to filter by.
+5. Add multiple filters as needed to refine your dataset.
+
+:::tip
+Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable charts.
+:::
+
+### Step 6: Choose Visualization Type
+
+1. In the **Choose Visualisation** section, select either:
+   - **Bar** for bar chart visualization
+   - **Line** for line chart visualization
+
+### Step 7: Configure What to Plot
+
+This is the most critical step for creating meaningful charts:
+
+#### X-Axis Configuration
+
+1. **X-Axis Field*** (Mandatory): Select the field to display on the horizontal axis. This determines what categories or time points will be shown.
+   - For time-based trends: Use fields like `create_timestamp`, `start_time`, or `end_time`
+   - For categorical comparisons: Use fields like `browser`, `os`, `status`, `project_name`
+   
+2. **Label for X-Axis** (Optional): Provide a custom label for the X-axis to make your chart more readable (e.g., "Test Execution Date", "Browser Type").
+
+#### Y-Axis Configuration
+
+1. **Y-Axis Field*** (Mandatory): Select the field to aggregate and display on the vertical axis.
+   - Common fields: `test_id`, `duration`, or any numeric field
+
+2. **Aggregation Function*** (Mandatory): Choose how to aggregate the Y-axis field:
+   - **Count**: Number of records (most common for test counts)
+   - **Sum**: Sum of values
+   - **Average**: Average value
+   - **Minimum**: Minimum value
+   - **Maximum**: Maximum value
+   - **Unique Count**: Count of unique values
+   - **Percentiles** (50th, 75th, 90th, 95th, 99th): For duration and other numeric fields
+
+3. **Label for Y-Axis** (Optional): Provide a custom label for the Y-axis (e.g., "Number of Tests", "Average Duration (seconds)").
+
+:::tip
+For a complete list of available keys for each product, see the [Available Keys for Meaningful Insights](#available-keys-for-meaningful-insights) section below.
+:::
+
+### Step 8: Configure Group By (Optional)
+
+The **Group By** field allows you to create multiple series on the same chart:
+
+1. Select a field to group by (e.g., `status`, `browser`, `os`).
+2. This will create separate bars or lines for each unique value in the selected field.
+3. Each group will be displayed with a different color and appear in the legend.
+
+**Example**: Grouping by `status` will show separate bars/lines for "passed", "failed", "queued", etc., allowing you to compare test statuses over time or across categories.
+
+### Step 9: Name Your Widget
+
+1. Enter a descriptive name in the **Widget Name** field (e.g., "Test Execution Trends by Status", "Browser Comparison - Test Counts").
+2. Use clear, descriptive names that indicate what the chart shows.
+
+### Step 10: Preview Your Chart
+
+1. Click the **Preview** button to see how your chart will look with the current configuration.
+2. Review the visualization to ensure it displays the data as expected.
+3. Use the refresh icon to update the preview if you make changes.
+
+### Step 11: Create the Dashboard
+
+1. Enter a **Dashboard Name** in the bottom section.
+2. Click **Create Dashboard** to save your chart widget.
+3. Your chart will be added to the dashboard and ready for analysis.
+
+## How Bar and Line Charts Work
+
+Understanding how charts encode information is crucial for effective analysis:
+
+### X-Axis: Categories or Time
+
+The **X-axis** represents the categories or time points you want to analyze:
+
+- **Time-based X-axis**: Use timestamp fields to show trends over time. The chart will display data points chronologically.
+- **Category-based X-axis**: Use categorical fields (browser, OS, status) to compare values across different groups.
+
+### Y-Axis: Aggregated Values
+
+The **Y-axis** represents the aggregated metric you want to visualize:
+
+- The value is calculated using the selected aggregation function (Count, Sum, Average, etc.)
+- For each X-axis value, the Y-axis shows the aggregated result
+- Multiple Y-axis values can be shown when using Group By
+
+### Group By: Multiple Series
+
+When you use **Group By**, the chart displays multiple series:
+
+- Each unique value in the Group By field becomes a separate series
+- Each series is displayed with a different color
+- A legend shows what each color represents
+- This allows you to compare multiple dimensions simultaneously
+
+**Example**: 
+- X-axis: `create_timestamp` (time)
+- Y-axis: `test_id` with Count aggregation
+- Group By: `status`
+
+This creates a chart showing test counts over time, with separate lines/bars for each status (passed, failed, queued, etc.).
+
+## Generating Meaningful Insights from Charts
+
+### Understanding Bar Charts
+
+- **Bar Height**: Indicates the magnitude of the value
+- **Bar Comparison**: Compare heights across categories to identify patterns
+- **Stacked Bars**: When using Group By, bars are displayed as stacked segments, with each segment representing a different group value (e.g., different statuses). Each segment is color-coded according to the legend, allowing you to see both the total value and the breakdown within each bar
+- **Segment Analysis**: Each colored segment in a stacked bar represents the contribution of that group to the total value
+
+### Understanding Line Charts
+
+Line charts display multiple data series as colored lines, each representing a different group when using Group By. Key elements to understand:
+
+- **Trend Direction**: Upward trends indicate growth, downward trends indicate decline
+- **Steepness**: Steep lines indicate rapid changes
+- **Plateaus**: Flat sections indicate stable periods
+- **Intersections**: Where lines cross indicates when values become equal
+- **Gaps**: Missing data points may indicate issues or gaps in testing
+- **Multiple Series**: When using Group By, each unique value becomes a separate line with its own color, allowing you to compare trends across different groups simultaneously
+- **Data Points**: Each point on a line represents the aggregated value at that X-axis position
+- **Legend**: The legend shows which color corresponds to which group, helping you identify each series
+
+### Key Insights to Look For
+
+1. **Trends Over Time**: Identify increasing, decreasing, or stable patterns in your test execution
+2. **Peaks and Valleys**: Spot unusual spikes or drops that may indicate issues or changes
+3. **Comparisons**: Compare values across categories to identify best/worst performers
+4. **Correlations**: When using Group By, observe relationships between different series
+5. **Anomalies**: Unexpected patterns that deviate from normal behavior
+6. **Seasonality**: Recurring patterns that repeat at regular intervals
+
+### Interacting with Charts
+
+Bar and line charts provide interactive features to explore your data in detail:
+
+- **Hover**: Hover over bars (in bar charts) or data points (in line charts) to see detailed tooltips showing:
+  - The exact X-axis value (timestamp or category)
+  - Breakdown of values for each group (when using Group By)
+  - Specific counts or aggregated values for each series
+  - Color-coded indicators matching the legend
+  
+  **Example for Bar Charts**: When hovering over a bar in a chart grouped by `status`, the tooltip will show the timestamp or category, along with separate counts for "passed", "failed", "queued", "completed", etc., each with its corresponding color indicator.
+  
+  **Example for Line Charts**: When hovering over a data point on a line chart grouped by `status`, the tooltip displays the exact timestamp and shows the breakdown of values for all statuses at that point in time (e.g., passed: 4,721, failed: 1,015, error: 24, etc.), allowing you to see the complete picture for that specific moment.
+
+- **Legend Interaction**: Click on legend items to show/hide specific series, allowing you to focus on particular groups
+- **Zoom and Pan**: Some chart configurations may support zooming and panning for detailed exploration
+- **Export**: Charts can be exported or shared as part of your dashboard
+
+## Use Cases for Bar and Line Chart Widgets
+
+### 1. Test Execution Trends Over Time
+
+**Use Case**: Track the number of tests executed over time to monitor testing activity.
+
+**Configuration**:
+- X-Axis: `create_timestamp` or `start_time`
+- Y-Axis: `test_id` with Count aggregation
+- Group By: `status` (optional, to see breakdown by status)
+- Visualization: Line Chart
+
+**Insight**: Identify testing activity patterns, peak testing periods, and trends in test execution volume. When grouped by status, you can see separate trend lines for passed, failed, and other test statuses, making it easy to compare how different statuses change over time.
+
+### 2. Test Status Distribution by Browser
+
+**Use Case**: Compare test results across different browsers to identify browser-specific issues.
+
+**Configuration**:
+- X-Axis: `browser`
+- Y-Axis: `test_id` with Count aggregation
+- Group By: `status`
+- Visualization: Bar Chart
+
+**Insight**: Quickly identify which browsers have the most failures and which perform best.
+
+### 3. Average Test Duration by OS
+
+**Use Case**: Analyze test execution times across different operating systems.
+
+**Configuration**:
+- X-Axis: `os`
+- Y-Axis: `duration` with Average aggregation
+- Visualization: Bar Chart
+
+**Insight**: Identify OS-specific performance differences and optimize testing strategy.
+
+### 4. Test Count Trends by Project
+
+**Use Case**: Monitor testing activity across different projects over time.
+
+**Configuration**:
+- X-Axis: `create_timestamp`
+- Y-Axis: `test_id` with Count aggregation
+- Group By: `project_name`
+- Visualization: Line Chart
+
+**Insight**: Track project-specific testing trends and ensure balanced testing across projects.
+
+### 5. Pass Rate Trends Over Time
+
+**Use Case**: Monitor test pass rates to track quality improvements or regressions.
+
+**Configuration**:
+- X-Axis: `create_timestamp`
+- Y-Axis: Calculate pass rate (may require custom aggregation or filtering)
+- Visualization: Line Chart
+
+**Insight**: Identify quality trends and correlate with releases or changes.
+
+### 6. Browser Version Comparison
+
+**Use Case**: Compare test execution across different browser versions.
+
+**Configuration**:
+- X-Axis: `browser_version`
+- Y-Axis: `test_id` with Count aggregation
+- Group By: `status`
+- Visualization: Bar Chart
+
+**Insight**: Identify problematic browser versions and ensure comprehensive version coverage.
+
+### 7. Daily Test Execution Summary
+
+**Use Case**: Get a daily overview of test execution activity.
+
+**Configuration**:
+- X-Axis: `create_timestamp` (grouped by day)
+- Y-Axis: `test_id` with Count aggregation
+- Group By: `status`
+- Visualization: Bar Chart or Line Chart
+
+**Insight**: Understand daily testing patterns and identify days with unusual activity.
+
+## Available Keys for Meaningful Insights
+
+The following keys are available for configuring X-axis, Y-axis, and Group By fields in bar and line chart widgets. The availability of specific keys depends on the selected product and data source.
+
+:::note
+Choose keys that represent categorical dimensions (like browser, OS, project name) for X-axis, and numeric or countable fields for Y-axis aggregation. For time-based trends, use timestamp fields for the X-axis.
+:::
+
+<details>
+<summary><strong>Web Automation Keys</strong></summary>
+
+The following keys are available for Web Automation charts and can be used for X-axis, Y-axis, or Group By:
+
+| Key | Description | Recommended Use |
+|-----|-------------|-----------------|
+| `browser` | Browser name (Chrome, Firefox, Edge, Safari, etc.) | X-axis (comparison) or Group By |
+| `browser_version` | Browser version number | X-axis (comparison) or Group By |
+| `build_name` | Build name identifier | X-axis (trends) or Group By |
+| `build_status` | Status of the build | Group By |
+| `buildtag_name` | Build tag name | X-axis or Group By |
+| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
+| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
+| `custom_data.product` | Product identifier from custom data | Group By |
+| `device` | Device name/type | X-axis or Group By |
+| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
+| `end_time` | Test end timestamp | X-axis (time trends) |
+| `failure_category` | Category of test failures | Group By |
+| `os` | Operating system (Windows, macOS, Linux) | X-axis (comparison) or Group By |
+| `os_version` | Operating system version | X-axis or Group By |
+| `product` | Product name | Group By |
+| `project_name` | Project name | X-axis or Group By |
+| `resolution` | Screen resolution | X-axis or Group By |
+| `start_time` | Test start timestamp | X-axis (time trends) |
+| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
+| `test_id` | Test identifier | Y-axis (with Count aggregation) |
+| `test_name` | Test case name | X-axis (for specific test analysis) |
+| `test_type` | Type of test | Group By |
+| `testtag_name` | Test tag name | Group By |
+| `username` | User who executed the test | Group By |
+
+**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
+
+</details>
+
+<details>
+<summary><strong>App Automation Keys</strong></summary>
+
+The following keys are available for App Automation charts and can be used for X-axis, Y-axis, or Group By:
+
+| Key | Description | Recommended Use |
+|-----|-------------|-----------------|
+| `app_name` | Application name | X-axis or Group By |
+| `app_type` | Type of application | Group By |
+| `brand` | Device brand name | X-axis or Group By |
+| `build_name` | Build name identifier | X-axis (trends) or Group By |
+| `build_status` | Status of the build | Group By |
+| `build_type` | Type of build | Group By |
+| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
+| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
+| `device` | Device name/model | X-axis or Group By |
+| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
+| `end_time` | Test end timestamp | X-axis (time trends) |
+| `failure_category` | Category of test failures | Group By |
+| `os` | Mobile OS (Android, iOS) | X-axis (comparison) or Group By |
+| `os_version` | OS version number | X-axis or Group By |
+| `product` | Product name | Group By |
+| `project_name` | Project name | X-axis or Group By |
+| `start_time` | Test start timestamp | X-axis (time trends) |
+| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
+| `test_id` | Test identifier | Y-axis (with Count aggregation) |
+| `test_name` | Test case name | X-axis (for specific test analysis) |
+| `test_type` | Type of test | Group By |
+| `username` | User who executed the test | Group By |
+
+**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
+
+</details>
+
+<details>
+<summary><strong>HyperExecute Keys</strong></summary>
+
+The following keys are available for HyperExecute charts and can be used for X-axis, Y-axis, or Group By:
+
+| Key | Description | Recommended Use |
+|-----|-------------|-----------------|
+| `app_name` | Application name (for app tests) | X-axis or Group By |
+| `app_type` | Type of application | Group By |
+| `browser` | Browser name | X-axis or Group By |
+| `browser_version` | Browser version number | X-axis or Group By |
+| `build_name` | Build name identifier | X-axis (trends) or Group By |
+| `build_status` | Status of the build | Group By |
+| `buildtag_name` | Build tag name | X-axis or Group By |
+| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
+| `custom_data.product` | Product identifier from custom data | Group By |
+| `device` | Device name/type | X-axis or Group By |
+| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
+| `end_time` | Test end timestamp | X-axis (time trends) |
+| `failure_category` | Category of test failures | Group By |
+| `job_created_at` | Job creation timestamp | X-axis (time trends) |
+| `job_labels` | Job labels | Group By |
+| `job_status` | Status of the HyperExecute job | Group By |
+| `job_test_type` | Type of test in the job | Group By |
+| `os` | Operating system | X-axis or Group By |
+| `os_version` | Operating system version | X-axis or Group By |
+| `product` | Product name | Group By |
+| `project_name` | Project name | X-axis or Group By |
+| `resolution` | Screen resolution | X-axis or Group By |
+| `stage_name` | Stage name in the job | X-axis or Group By |
+| `stage_status` | Status of the stage | Group By |
+| `stage_type` | Type of stage | Group By |
+| `start_time` | Test start timestamp | X-axis (time trends) |
+| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
+| `test_id` | Test identifier | Y-axis (with Count aggregation) |
+| `test_name` | Test case name | X-axis (for specific test analysis) |
+| `test_type` | Type of test | Group By |
+| `testtag_name` | Test tag name | Group By |
+| `username` | User who executed the test | Group By |
+
+**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
+
+</details>
+
+## Best Practices for Bar and Line Chart Widgets
+
+### 1. Choose Appropriate Chart Type
+
+- **Use Bar Charts** for:
+  - Comparing values across categories
+  - Showing distributions
+  - When categories are discrete and not time-based
+  
+- **Use Line Charts** for:
+  - Showing trends over time
+  - Comparing multiple time series
+  - Identifying patterns in sequential data
+
+### 2. Select Meaningful Axes
+
+- **X-Axis**: Choose fields that create logical groupings or time sequences
+- **Y-Axis**: Select fields that provide meaningful metrics when aggregated
+- **Aggregation**: Choose the right aggregation function (Count for test counts, Average for durations, etc.)
+
+### 3. Use Group By Strategically
+
+- Use Group By to compare multiple dimensions simultaneously
+- Avoid too many groups (more than 5-7) as it can make charts cluttered
+- Choose grouping fields that create meaningful comparisons
+
+### 4. Apply Filters Effectively
+
+- Use filters to focus on relevant subsets of data
+- Combine multiple filters to create highly targeted charts
+- Filter by time ranges, projects, or other relevant dimensions
+
+### 5. Name Widgets Clearly
+
+Use descriptive names that indicate what the chart shows, including:
+- The metric being visualized
+- The time period or categories
+- Any grouping applied
+
+### 6. Regular Review and Updates
+
+- Review charts regularly to identify new patterns or issues
+- Update filters and dimensions as your testing strategy evolves
+- Create multiple charts with different configurations to explore various aspects
+
+## Troubleshooting
+
+### Chart Shows No Data
+
+- **Check Filters**: Ensure filters aren't too restrictive
+- **Verify Data Source**: Confirm you have test data for the selected product
+- **Check Field Selection**: Ensure the selected X-axis and Y-axis fields have data
+- **Verify Time Range**: If using time-based X-axis, ensure data exists in the selected time period
+
+### Chart is Too Cluttered
+
+- **Reduce Group By Values**: Use filters to limit the number of groups
+- **Simplify X-Axis**: Choose X-axis fields with fewer unique values
+- **Use Filters**: Narrow down the data using filters
+
+### Chart Doesn't Show Expected Trends
+
+- **Check Aggregation**: Verify the aggregation function is appropriate for your Y-axis field
+- **Review Data Range**: Ensure you have sufficient data points
+- **Adjust Time Granularity**: For time-based charts, the granularity may affect trend visibility
+
+## Next Steps
+
+After creating your bar or line chart widget:
+
+1. **Add to Dashboard**: Combine charts with other widgets for comprehensive analysis
+2. **Share Dashboard**: Share your dashboard with team members for collaborative insights
+3. **Create Variations**: Create multiple charts with different configurations to explore various aspects
+4. **Review Regularly**: Use insights from charts to identify areas needing attention and track improvements
+
+## Support
+
+If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@lambdatest.com) or visit our [Support Center](https://www.lambdatest.com/support/).

@@ -3918,6 +3918,8 @@ module.exports = {
           },
           items: [
             "analytics-heatmap-widgets",
+            "analytics-bar-line-widgets",
+            "analytics-table-widgets",
           ],
         },
         "analytics-test-case-insights",
