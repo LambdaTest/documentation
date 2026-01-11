@@ -401,4 +401,4 @@ After creating your bar or line chart widget:
 
 ## Support
 
-If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@lambdatest.com) or visit our [Support Center](https://www.lambdatest.com/support/).
+If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@testmu.ai) or visit our [Support Center](https://www.lambdatest.com/support/).

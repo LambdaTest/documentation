@@ -79,7 +79,7 @@ As the word responsive suggests, this type of testing is used to check the appea
 <img loading="lazy" src={require('../assets/images/responsive-testing/responsive-6.webp').default} alt="Share bug in project management tool" width="1349" height="627" className="doc_img"/>
 
 
-Let us know if you have any questions, drop us an email at support@lambdatest.com, or simply give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span>. We are here to help you speed your test suites 24/7. Happy testing! 🙂
+Let us know if you have any questions, drop us an email at support@testmu.ai, or simply give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span>. We are here to help you speed your test suites 24/7. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

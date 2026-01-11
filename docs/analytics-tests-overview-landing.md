@@ -87,5 +87,5 @@ Analytics in <BrandName /> allows the QA managers and executives to efficiently 
 </div>
 
 :::info
-The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
+The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmu.ai).
 :::

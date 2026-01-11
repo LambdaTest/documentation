@@ -114,7 +114,7 @@ As an admin, you can remove the members from an organization.
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/confirm-delete.webp').default} alt="Delete account" width="1354" height="605" className="doc_img"/> The user will be removed successfully.
 
 >
-In case you have any questions or need any additional information regarding <BrandName /> account deletion, you can contact at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 Chat Support</span>** or mail us at [**support@lambdatest.com**](mailto:support@lambdatest.com). 
+In case you have any questions or need any additional information regarding <BrandName /> account deletion, you can contact at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 Chat Support</span>** or mail us at [**support@testmu.ai**](mailto:support@testmu.ai). 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

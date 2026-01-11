@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Single sign-on is an authentication feature that allows you to access multiple applications with one set of login credentials. Once you log in, you don't need to login repeatedly for every application linked to a particular application. <BrandName /> supports Security Assertion Markup Language (SAML) that allows you to create a team account and authenticate to the <BrandName /> dashboard with Identity Provider (IdP).
 
-> SSO is supported in our Enterprise Plans. Please reach out to your account manager or [support@lambdatest.com](mailto:support@lambdatest.com) for questions.
+> SSO is supported in our Enterprise Plans. Please reach out to your account manager or [support@testmu.ai](mailto:support@testmu.ai) for questions.
 
 ## Benefits Of Authenticating Single Sign On (SSO)
 
@@ -90,7 +90,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 You can contact the **Support Team**, who will help you enable the SSO feature for your <BrandName /> account. 
 
 
-> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
 
 
 <nav aria-label="breadcrumbs">

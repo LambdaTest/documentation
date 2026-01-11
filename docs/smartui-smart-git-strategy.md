@@ -265,4 +265,4 @@ Regularly clean up old branches and their builds.
 
 ### Getting Help
 
-If you encounter any issues with Smart Git, please contact our support team at support@lambdatest.com.
+If you encounter any issues with Smart Git, please contact our support team at support@testmu.ai.

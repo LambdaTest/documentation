@@ -27,7 +27,7 @@ For **testing payment flows**, validating Apple Pay becomes critical. Automation
 
 With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 ---
 ## Use Cases

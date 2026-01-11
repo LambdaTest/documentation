@@ -1085,7 +1085,7 @@ If you encounter issues not covered in this guide:
    - Search knowledge base
 
 3. **Contact Support**:
-   - Email: support@lambdatest.com
+   - Email: support@testmu.ai
    - [24/7 Chat Support](https://www.lambdatest.com/support)
    - Include error messages, logs, and configuration details
 

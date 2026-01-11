@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 Testing hybrid apps or mobile websites that rely on embedded web views often requires advanced debugging capabilities. With <BrandName />, you can inspect and debug these web views directly on **real Android and iOS devices** using familiar tools like [**Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Safari Web Inspector**](https://developer.apple.com/safari/tools/#current).
 

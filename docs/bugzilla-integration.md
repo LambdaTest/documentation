@@ -133,7 +133,7 @@ Scroll down to view the complete details of the marked bugs: Screenshot, Test ID
 The Bugzilla integration will be uninstalled.
 
 >
-That's all! In case you have any doubts or questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+That's all! In case you have any doubts or questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -60,7 +60,7 @@ In the case of **iOS**, you can install from the App Store, install from Test Fl
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. If you would like to choose devices from specific regions, please reach out to [support@lambdatest.com](mailto:support@lambdatest.com) to get the option enabled.
+**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. If you would like to choose devices from specific regions, please reach out to [support@testmu.ai](mailto:support@testmu.ai) to get the option enabled.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-region-feature.webp').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
 

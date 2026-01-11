@@ -176,7 +176,7 @@ You can find the tunnel logs stored in the following location:
 * On Linux: `~/.config/Underpass/logs`
 
 >
-That was all for <BrandName /> Underpass tunnel application, in case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! 🙂
+That was all for <BrandName /> Underpass tunnel application, in case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

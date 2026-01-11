@@ -141,7 +141,7 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 
 **Getting Help**
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmu.ai.
 
 </TabItem>
 </Tabs>
@@ -158,4 +158,4 @@ If you encounter any issues with build merging in SmartUI, please contact our su
 
 ### Getting Help
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmu.ai.

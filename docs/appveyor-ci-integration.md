@@ -100,7 +100,7 @@ Below is the step-by-step execution of the AppVeyor CI pipeline.
 
 ***
 
-> Deploy your code in a reliable manner at scale using AppVeyor CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. If you have any doubt, please feel free to reach out to us via **24/7 chat support** or by mailing to us on [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! 
+> Deploy your code in a reliable manner at scale using AppVeyor CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. If you have any doubt, please feel free to reach out to us via **24/7 chat support** or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

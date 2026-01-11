@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Top 10 URLs Issue Criticality, and more.
 
 :::note
-The Accessibility Widgets module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).
+The Accessibility Widgets module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmu.ai](mailto:support@testmu.ai).
 :::
 
 ## Accessibility Test Overview

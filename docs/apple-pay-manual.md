@@ -26,7 +26,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 With <BrandName /> App Live, you can test Apple Pay flows on **Real iOS Devices**. This guide walks you through enabling Apple Pay, configuring wallets, running the application, and completing transactions manually.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 ---
 

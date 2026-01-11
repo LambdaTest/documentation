@@ -124,7 +124,7 @@ This pattern will match strings like:
 
 ## Need Help?
 
-If you have any questions or need assistance with Regex filtering, feel free to reach out to our [support team](mailto:support@lambdatest.com). We're here to help you make the most of our advanced analytics features!
+If you have any questions or need assistance with Regex filtering, feel free to reach out to our [support team](mailto:support@testmu.ai). We're here to help you make the most of our advanced analytics features!
 
 
 

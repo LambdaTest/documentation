@@ -163,7 +163,7 @@ A: Use the export/download option in the dashboard (feature availability may dep
 
 **Q: Who can I contact for support?**
 
-A: Reach out to [support@lambdatest.com](mailto:support@lambdatest.com) for assistance.
+A: Reach out to [support@testmu.ai](mailto:support@testmu.ai) for assistance.
 
 </TabItem>
 <TabItem value="executive" label="For Executives">

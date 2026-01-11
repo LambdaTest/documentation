@@ -92,7 +92,7 @@ You can learn more about the HyperExecute Private Cloud by going through our doc
 <a href="/support/docs/hyperexecute-guided-walkthrough/">Guided Walkthrough of the HyperExecute Portal</a>
 </div> -->
 
-> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@lambdatest.com](mailto:hyperexecute-privatecloudsupport@lambdatest.com).
+> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai).
 
 
 

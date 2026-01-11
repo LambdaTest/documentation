@@ -113,7 +113,7 @@ It will route you to the Zoho BugTracker dashboard where you can find your marke
 The Zoho BugTracker integration will be uninstalled.
 
 >
-In case you have any questions or need further assistance regarding <BrandName /> + Zoho BugTracker integration, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
+In case you have any questions or need further assistance regarding <BrandName /> + Zoho BugTracker integration, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@testmu.ai](mailto:support@testmu.ai). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

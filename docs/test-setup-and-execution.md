@@ -120,7 +120,7 @@ You can mark a test status as failed/passed using JavaScript executer on <BrandN
 `driver.executeScript('lambda-status=passed')`
 
 
->In case you have any questions or need any additional information, drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+>In case you have any questions or need any additional information, drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

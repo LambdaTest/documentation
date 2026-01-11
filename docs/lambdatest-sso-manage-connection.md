@@ -64,7 +64,7 @@ Navigate to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Aut
 2. Check the toggle for the users you want to exempt from SSO login
    <img loading="lazy" src={require('../assets/images/sso-self-serve/exempt-users-toggle.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-That's all you need to know for Managing <BrandName /> SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+That's all you need to know for Managing <BrandName /> SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

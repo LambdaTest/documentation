@@ -64,7 +64,7 @@ The following steps will guide you on how to export data from the Drill-Down wid
 By exporting data from the Drill-Down widgets, you can share detailed insights with your team members, stakeholders, or save the data for future reference. This feature enables you to collaborate effectively, make informed decisions, and optimize your testing processes.
 
 :::warning Export Limitations
-We only allow a limit of maximum **1000** records to be exported at a time. If you have more than 1000 records, you can apply filters to narrow down the data and export it in parts. For further assistance, you can reach out to our [support team](mailto:support@lambdatest.com).
+We only allow a limit of maximum **1000** records to be exported at a time. If you have more than 1000 records, you can apply filters to narrow down the data and export it in parts. For further assistance, you can reach out to our [support team](mailto:support@testmu.ai).
 :::
 
 <nav aria-label="breadcrumbs">

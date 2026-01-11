@@ -104,7 +104,7 @@ Just press on this Stop button against the tunnel you want to stop, and it will 
 
 * * *
 >
-That’s all! You can now successfully activate and use the Load Balancing feature of <BrandName /> Tunnel, to test your locally hosted website in parallel. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@lambdatest.com**](mailto:support@lambdatest.com). <br /> Happy testing! 
+That’s all! You can now successfully activate and use the Load Balancing feature of <BrandName /> Tunnel, to test your locally hosted website in parallel. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmu.ai**](mailto:support@testmu.ai). <br /> Happy testing! 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

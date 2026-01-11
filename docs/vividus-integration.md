@@ -157,7 +157,7 @@ Parallel execution is available out of the box and limited only with machine res
 
 <img loading="lazy" src={require('../assets/images/vividus-integration/vividus-parallel.webp').default} alt="Test Suite Properties" width="1676" height="781" className="doc_img"/>
 
-> Congrats! You have successfully integrated the Vividus tool with your <BrandName /> account. Now run your test cases over the <BrandName />'s cloud-based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at support@lambdatest.com. Happy testing! 🙂
+> Congrats! You have successfully integrated the Vividus tool with your <BrandName /> account. Now run your test cases over the <BrandName />'s cloud-based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at support@testmu.ai. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -142,7 +142,7 @@ Alternatively, you can remove the integration by navigating to Flock under the C
 
 <img loading="lazy" src={require('../assets/images/flock-integration/remove-2.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
->If you have any questions or need further assistance regarding <BrandName /> + Flock integration, feel free to reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com).
+>If you have any questions or need further assistance regarding <BrandName /> + Flock integration, feel free to reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or email us at [support@testmu.ai](mailto:support@testmu.ai).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

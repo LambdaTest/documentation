@@ -193,7 +193,7 @@ Below is the screenshot of the above-executed local tests.
 <img loading="lazy" src={require('../assets/images/uploads/image.webp').default} alt="Google Cloud CI Integration" width="102" height="585" className="doc_img"/>
 
 >
-That's all! Ship your quality product faster using <BrandName /> and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+That's all! Ship your quality product faster using <BrandName /> and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

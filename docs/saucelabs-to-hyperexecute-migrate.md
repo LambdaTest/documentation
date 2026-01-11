@@ -254,4 +254,4 @@ If you are having trouble migrating your tests from Sauce Labs to HyperExecute, 
 
   To fix this, you can check the [documentation](/support/docs/hyperexecute-how-to-debug-job/) explaining how you can debug a failed job on your own.
 
-> If you are still having trouble migrating your tests, you can contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**HyperExecute 24×7 Chat Support**</span>  or you can also drop a mail to **support@lambdatest.com**.<br /> for assistance.
+> If you are still having trouble migrating your tests, you can contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**HyperExecute 24×7 Chat Support**</span>  or you can also drop a mail to **support@testmu.ai**.<br /> for assistance.

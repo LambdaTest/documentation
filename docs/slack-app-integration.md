@@ -173,7 +173,7 @@ The <BrandName /> Slack App will be removed successfully from Slack.
 
 The Slack will be uninstalled from your <BrandName /> account.
 
-> That’s all about <BrandName />+Slack App integration. If you have any questions or require any further information, you can reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat portal**</span> or drop us a mail at support@lambdatest.com.
+> That’s all about <BrandName />+Slack App integration. If you have any questions or require any further information, you can reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat portal**</span> or drop us a mail at support@testmu.ai.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -193,7 +193,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 **Description:** This error indicates an internal issue within the system. it may be caused by problems such as creating input parameters, accessing secrets, or other internal issues. <br />
 **Common Authoring Error:** Errors related to parameter configuration, secret management, or system-level issues. <br />
-**Suggested Ways:** Please attempt to resolve the issue on your side. if the problem continues, contact support at support@lambdatest.com for assistance.
+**Suggested Ways:** Please attempt to resolve the issue on your side. if the problem continues, contact support at support@testmu.ai for assistance.
 
 ---
 
@@ -206,4 +206,4 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 ---
 
 <br />
-> _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
+> _Have any feedback or request? Reach out to us via support@testmu.ai and we would be happy to hear from you._

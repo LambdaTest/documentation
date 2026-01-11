@@ -866,7 +866,7 @@ If you encounter issues not covered here:
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
 - Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>

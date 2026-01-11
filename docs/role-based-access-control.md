@@ -122,4 +122,4 @@ Then click on **'Edit'**.
  Your selected group will be deleted.
 
 >
-In case you have any queries regarding <BrandName /> RBAC or need any additional information, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or drop us a mail to [**support@lambdatest.com**](mailto:support@lambdatest.com).
+In case you have any queries regarding <BrandName /> RBAC or need any additional information, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or drop us a mail to [**support@testmu.ai**](mailto:support@testmu.ai).

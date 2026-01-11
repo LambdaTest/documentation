@@ -111,7 +111,7 @@ You'll be taken to the Datadog interface where you can find your marked issues r
 The Datadog integration will be uninstalled.
 
 >
-For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

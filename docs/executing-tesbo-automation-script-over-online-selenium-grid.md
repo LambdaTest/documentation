@@ -356,7 +356,7 @@ Here is the new config.json to run parallel testing with Tesbo & <BrandName />.
 </div>
 
 
-That was all you need to know for running Tesbo automation scripts over <BrandName /> Selenium Grid. If you have any questions or doubts, feel free to share them with out or by mailing us to [support@lambdatest.com][7]. Happy testing!!! 🙂
+That was all you need to know for running Tesbo automation scripts over <BrandName /> Selenium Grid. If you have any questions or doubts, feel free to share them with out or by mailing us to [support@testmu.ai][7]. Happy testing!!! 🙂
 
 
 [1]: https://tesbo.io/
@@ -365,7 +365,7 @@ That was all you need to know for running Tesbo automation scripts over <BrandNa
 [4]: https://github.com/QAbleHQ/LamdaTest_Tesbo_Demo
 [5]: https://www.lambdatest.com/capabilities-generator/
 [6]: ../assets/images/uploads/desired-capabilities.png
-[7]: mailto:support@lambdatest.com
+[7]: mailto:support@testmu.ai
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

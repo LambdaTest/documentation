@@ -96,7 +96,7 @@ Not only this, but you can also confirm the test environment configuration, view
 
 * * *
 >
-Kudos! Now you can deploy your code in a reliable & faster manner at scale, using <BrandName /> integration with Zebrunner, and perform automated cross browser testing with our cloud based online Selenium Grid. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@lambdatest.com**](mailto:support@lambdatest.com). <br /> Happy testing!
+Kudos! Now you can deploy your code in a reliable & faster manner at scale, using <BrandName /> integration with Zebrunner, and perform automated cross browser testing with our cloud based online Selenium Grid. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmu.ai**](mailto:support@testmu.ai). <br /> Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

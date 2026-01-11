@@ -78,7 +78,7 @@ To enable <BrandName /> SSO through OIDC integration, you will need:
 - **Administrative Access**: Admin-level access to your <BrandName /> organization
 - **SSO Request**: Contact <BrandName /> support to enable SSO for your organization
 
-> **Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com)
+> **Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@testmu.ai](mailto:support@testmu.ai)
 .
 
 ## Step-by-Step Integration Guide
@@ -180,7 +180,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
    - **Connection Name**: A descriptive name like "Company OIDC" or "<BrandName /> SSO"
 
 2. **Contact <BrandName /> Support**: Reach out to our support team with the configuration details:
-   - **Email**: [support@lambdatest.com](mailto:support@lambdatest.com)
+   - **Email**: [support@testmu.ai](mailto:support@testmu.ai)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
    ```

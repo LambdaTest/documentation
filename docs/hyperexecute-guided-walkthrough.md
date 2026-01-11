@@ -146,7 +146,7 @@ Additionally, upon redirection, the automation dashboard opens the relevant tab 
 
 - #### Frontend Configuration :
 
-  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 - #### Backend Configuration :
 

@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 ## Steps to Allocate Devices to Teams
 

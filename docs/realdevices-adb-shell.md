@@ -115,7 +115,7 @@ All the public commands along with the following:
 :::note
 `adb shell` is already pre-applied in our **terminal environment**. Rewriting it explicitly may prevent the command from executing properly.
 :::
-> If the command you require is not listed, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or you could also mail us at support@lambdatest.com.
+> If the command you require is not listed, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or you could also mail us at support@testmu.ai.
 
 
 

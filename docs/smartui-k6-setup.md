@@ -423,7 +423,7 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>

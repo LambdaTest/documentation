@@ -182,7 +182,7 @@ https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real
 
 <TabItem value="android-emu" label="Android-Emulator" default>
 
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
 
 ```yaml reference title="maestro_Emulator_HyperEx.yaml"
 https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml

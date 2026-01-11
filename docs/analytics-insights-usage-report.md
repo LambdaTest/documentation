@@ -48,7 +48,7 @@ import NewTag from '../src/component/newTag';
 <BrandName /> Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
 
 :::note
-The Usage Report is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).
+The Usage Report is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmu.ai](mailto:support@testmu.ai).
 :::
 
 <img loading="lazy" src={require('../assets/images/analytics/analytics-usage-report-dashboard.webp').default} alt="Test Manager Snapshot" width="768" height="373" className="doc_img"/>
