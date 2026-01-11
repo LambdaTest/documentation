@@ -33,7 +33,7 @@ This article guides you on how to integrate **<BrandName /> platform** with **Th
 
 ---
 
-Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
+Assuming that you have run a Cypress test on TestMu AI platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 
 ### Update <BrandName /> Cypress CLI
 

@@ -114,7 +114,7 @@ You can seamlessly trigger your favorite mobile app framework test scripts with 
 
 ## Support
 
-We at Lambdatest take pride in our Support system. We ensure that we do the heavy lifting while our customers can focus on the test scripts and strategy. As a first step in the POC, our support engineers conduct a working session over Zoom or Gmeet to understand your use case and provide you with the right configuration to execute your test cases on HyperExecute. Our support engineers are always available over slack, mail and calls to ensure that we provide you with the right kind of support and set you up for a win. 
+We at TestMu AI take pride in our Support system. We ensure that we do the heavy lifting while our customers can focus on the test scripts and strategy. As a first step in the POC, our support engineers conduct a working session over Zoom or Gmeet to understand your use case and provide you with the right configuration to execute your test cases on HyperExecute. Our support engineers are always available over slack, mail and calls to ensure that we provide you with the right kind of support and set you up for a win. 
 
 Please feel free to give us a shout if you have any questions or require any assistance.
 

@@ -11,7 +11,6 @@ keywords:
   - cross browser testing
   - developer tools
   - npm package
-image: /assets/images/og-images/npm-testcafe-integration.jpg
 url: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu
 site_name: LambdaTest
 slug: npm-plugin-for-testcafe-integration-with-testmu

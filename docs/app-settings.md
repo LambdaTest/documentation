@@ -51,7 +51,7 @@ Check out our detailed [support documentation](/support/docs/camera-image-inject
 
 ## Biometric Authentication
 
-Enable this setting to effortlessly test your biometric authentication-reliant applications on designated remote Lambdatest devices. This functionality enables the emulation of diverse biometric authentication techniques such as fingerprint scanning, facial recognition and others. Leveraging this feature ensures thorough validation of your applications' security and functionality across a spectrum of realistic usage scenarios.
+Enable this setting to effortlessly test your biometric authentication-reliant applications on designated remote TestMu AI devices. This functionality enables the emulation of diverse biometric authentication techniques such as fingerprint scanning, facial recognition and others. Leveraging this feature ensures thorough validation of your applications' security and functionality across a spectrum of realistic usage scenarios.
 
 Check out our detailed [support documentation](/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
 

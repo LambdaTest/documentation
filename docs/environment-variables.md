@@ -111,9 +111,9 @@ $ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 **Step 3**: You will notice a dialog would prompt open for the **Environment Variables**. Now, click on **New** under the **System variables**.
 
-**Step 4**: Enter `LT_USERNAME` as the **Variable name** & provide your `LambdaTest Username` as the **Variable value**.
+**Step 4**: Enter `LT_USERNAME` as the **Variable name** & provide your `TestMu AI Username` as the **Variable value**.
 
-**Step 5**: Hit **Ok** & repeat the steps for adding `LambdaTest Access Key` as another **System Environment Variable**.
+**Step 5**: Hit **Ok** & repeat the steps for adding `TestMu AI Access Key` as another **System Environment Variable**.
 
 ## Incorporating Environment Variable In Selenium Automation Scripts
 

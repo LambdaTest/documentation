@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Ranorex LambdaTest Integration",
+          "name": "Ranorex TestMu AI Integration",
           "item": `${BRAND_URL}/support/docs/ranorex-integration-with-testmu/`
         }]
       })
@@ -143,7 +143,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/20.webp').default} alt="View Recording in Ranorex interface" width="1365" height="728" className="doc_img"/>
 
 >**Important:**  Once you are finished recording you actions, <BrandName /> recommends you to choose the repository item in the same instance where you recording is halted. This would help you to avoid any time out issue.   
-><img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/22.webp').default} alt="Ranorax Lambdatest integration" width="1365" height="728" className="doc_img"/>
+><img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/22.webp').default} alt="Ranorax TestMu AI integration" width="1365" height="728" className="doc_img"/>
 
 **Step 8:**  After you are done configuring the open browser, recording, & close browser file, come back to your test-suite & ensure that you have **WebDriver** set as an Endpoint to run the test on <BrandName />.
 

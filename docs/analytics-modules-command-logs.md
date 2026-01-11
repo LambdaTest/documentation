@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ### Introduction to AI Native Command Logs Analytics
 
-Lambdatest Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail. 
+TestMu AI Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail. 
 
 
 ### Prerequisites for using Command Logs Analytics

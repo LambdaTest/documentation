@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Hooks for Appium",
+          "name": "TestMu AI Hooks for Appium",
           "item": `${BRAND_URL}/support/docs/appium-testmu-hooks/`
         }]
       })

@@ -32,7 +32,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "lambdatest integration with test management tools",
+          "name": "TestMu AI integration with test management tools",
           "item": "https://staging.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools/"
         }]
       })

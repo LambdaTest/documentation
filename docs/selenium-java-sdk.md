@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Selenium Java SDK",
+          "name": "TestMu AI Selenium Java SDK",
           "item": `${BRAND_URL}/support/docs/selenium-java-sdk/`
         }]
       })

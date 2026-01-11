@@ -10,7 +10,7 @@ keywords:
   - java selenium
   - java selenium testing
 
-image: /assets/images/og-images/Java-with-Selenium-1-1.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid

@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
+This article will guide you on how does TestMu AI cloud access network restricted resources using a dedicated proxy server.
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ keywords:
   - selenium webdriver javascript
   - selenium javascript testing tutorial
   - javascript selenium framework
-image: /assets/images/og-images/Selenium-WD-Famework.jpg  
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid

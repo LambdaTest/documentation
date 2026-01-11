@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Network Whitelisting and Tunnel Guide",
+          "name": "TestMu AI Network Whitelisting and Tunnel Guide",
           "item": `${BRAND_URL}/support/docs/network-whitelisting-and-tunnel-guide/`
         }]
       })
@@ -147,7 +147,7 @@ A bank sets up a permanent S2S tunnel so all their staging/test environments can
 | ------------------------------------------------ | ------------------------------------------ |
 | Public site with IP restrictions                 | Inbound Whitelisting (Shared IPs)          |
 | Public site with strict compliance               | Dedicated Proxy Whitelisting               |
-| Corporate firewall blocks Lambdatest access      | Outbound Whitelisting (`*.lambdatest.com`) |
+| Corporate firewall blocks TestMu AI access      | Outbound Whitelisting (`*.lambdatest.com`) |
 | Slowness in live sessions / video issues         | STUN/TURN Server Whitelisting              |
 | Localhost or private subnet apps                 | Tunnel (Binary/Underpass)                  |
 | Always-on, enterprise-grade private connectivity | Site-to-Site Tunnel                        |

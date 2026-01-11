@@ -12,7 +12,7 @@ keywords:
   - selenium webdriver javascript
   - selenium javascript testing tutorial
   - javascript selenium framework
-image: /assets/images/og-images/Protractor-Selenium-1.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid

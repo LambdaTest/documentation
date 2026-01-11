@@ -8,7 +8,6 @@ keywords:
   - TestMu AI Asana integration
   - How to integrate Asana with TestMu AI
   - bug management tools in TestMu AI
-image: /assets/images/og-images/default-user-image.png
 url: https://testmu.ai/support/docs/asana-integration
 site_name: LambdaTest
 slug: asana-integration
@@ -127,7 +126,7 @@ At the bottom of the form you will find a button **"Create Issue"**.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-integration-10.webp').default} alt="asana-integration" width="347" height="75" className="doc_img"/>
 
-Login to your Asana workspace and you will be able to notice the logged issue right away! All the data you provided through Lambdatest would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
+Login to your Asana workspace and you will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-integration-11.webp').default} alt="asana-integration" width="1357" height="620" className="doc_img"/>
 

@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest Docker Tunnel Extension",
+          "name": "TestMu AI Docker Tunnel Extension",
           "item": `${BRAND_URL}/support/docs/docker-tunnel-extension/`
         }]
       })

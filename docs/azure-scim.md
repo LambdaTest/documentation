@@ -80,7 +80,7 @@ Integrate SCIM With <BrandName />:
  
 - **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: Custom attribute used to set <BrandName /> Organization Role for Users, If this attribute is not mapped User role would be set by default. Allowed values are (Admin/Guest/User)
 
-- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`**: Used to assign an existing group in Lambdatest to a new user created in lambdatest through SCIM. (Applicable only if organisation has group support active)
+- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`**: Used to assign an existing group in TestMu AI to a new user created in TestMu AI through SCIM. (Applicable only if organisation has group support active)
 
 For filtering only **userName** attribute is supported and must be selected for filtering, click edit on userPrincipalName and make sure **Apply this mapping** is set to **Always**
 

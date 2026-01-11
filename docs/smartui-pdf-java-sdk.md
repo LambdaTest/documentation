@@ -55,7 +55,7 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 - Java 8 or higher installed on your system
 - Maven or Gradle build tool
 - Familiarity with Java development
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project

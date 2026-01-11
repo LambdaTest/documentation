@@ -54,7 +54,7 @@ This document will guide you step-by-step method to integrate the SimplifyQA wit
 ## Steps to integrate SimplifyQA
 
 ### Step 1: Fetch your <BrandName /> Credentials
-- Login to Lambdatest account and click on the profile icon. 
+- Login to TestMu AI account and click on the profile icon. 
 - Navigate to **Account Settings** > **Password and Security**. Copy the provided **Username** and **Access Key**
 
 <img loading="lazy" src={require('../assets/images/integrations/simplifyqa/username-accesskey.gif').default} alt="Image"  className="doc_img"/>

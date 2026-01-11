@@ -47,10 +47,10 @@ Add widgets of multiple products and various insights to your dashboard. You can
 
 The following are requirements:
 
-- Should be logged in to the [Lambdatest application](https://accounts.lambdatest.com/login) using your credentials. If account is not created, please create an new account [here](https://accounts.lambdatest.com/register).
-- Have executed any tests on the Lambdatest Cloud Platform. _(Optional)_
+- Should be logged in to the [TestMu AI application](https://accounts.lambdatest.com/login) using your credentials. If account is not created, please create an new account [here](https://accounts.lambdatest.com/register).
+- Have executed any tests on the TestMu AI Cloud Platform. _(Optional)_
 
-### Step 1: Navigate to Lambdatest Insights
+### Step 1: Navigate to TestMu AI Insights
 
 Once, logged in to the application, please navigate to https://analytics.lambdatest.com/ or you can select **Insights** from the sidebar navigation as well.
 
@@ -78,7 +78,7 @@ Add **Dashboard Name** of your choice, according to the **report** which needs t
 
 <img loading="lazy" src={require('../assets/images/analytics/Custom-Dashboard-Name.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-Your dashboard is ready to start **Analyzing** the data of all your tests which are executed using the Lambdatest Cloud platform.
+Your dashboard is ready to start **Analyzing** the data of all your tests which are executed using the TestMu AI Cloud platform.
 
 <img loading="lazy" src={require('../assets/images/analytics/Demo-Dashboard-with-Widget.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

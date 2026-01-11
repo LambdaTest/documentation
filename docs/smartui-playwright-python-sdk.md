@@ -103,7 +103,7 @@ source venv/bin/activate
 
 ### Step 2: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Playwright Python SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Playwright Python SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli

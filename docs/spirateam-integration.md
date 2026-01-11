@@ -8,7 +8,6 @@ keywords:
   - TestMu AI integrations
   - Push issues to SpiraTeam
   - TestMu AI SpiraTeam integration
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/spirateam-integration
 site_name: LambdaTest
 slug: spirateam-integration

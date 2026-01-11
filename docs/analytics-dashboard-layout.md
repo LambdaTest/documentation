@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Introduction
 
-Lambdatest insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
+TestMu AI insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
 
 This technical support document will walk you through the steps to utilize this feature effectively.
 

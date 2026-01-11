@@ -14,7 +14,7 @@ keywords:
   - python selenium framework
   - testmu ai python
   - framework on testmu ai
-image: /assets/images/og-images/Behave-with-Selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid

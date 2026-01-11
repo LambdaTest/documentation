@@ -13,7 +13,7 @@ keywords:
   - selenium tutorial
   - selenium getting started
   - testmu ai getting started
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmu.ai/support/docs/getting-started-with-testmu-automation
 site_name: LambdaTest
 slug: getting-started-with-testmu-automation

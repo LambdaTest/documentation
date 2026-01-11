@@ -64,7 +64,7 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 ## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 - Access your Hub for your appium **remote connection** instance at `@mobile-hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
@@ -248,7 +248,7 @@ Appium with SmartUI is currently only supports the viewport based screenshot com
 npm i && node your_test_script.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [TestMu AI SmartUI](https://smartui.lambdatest.com/).
 
 ## Smart Crop With SmartUI
 
@@ -722,7 +722,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [TestMu AI Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

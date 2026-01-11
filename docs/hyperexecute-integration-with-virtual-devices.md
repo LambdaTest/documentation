@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Integration with LambdaTest Products",
+          "name": "Integration with TestMu AI Products",
           "item": `${BRAND_URL}/support/docs/hyperexecute-integration-with-virtual-devices/`
         }]
       })

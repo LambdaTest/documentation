@@ -11,7 +11,7 @@ keywords:
   - Behat
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
+image: /assets/images/og-images/appium-testing-og-image.png
 url: https://www.testmu.ai/support/docs/appium-php-behat
 site_name: LambdaTest
 slug: appium-php-behat

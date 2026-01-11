@@ -11,7 +11,6 @@ keywords:
   - cleanup
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/ios-keychain-cleanup
 site_name: LambdaTest
 slug: ios-keychain-cleanup

@@ -8,7 +8,6 @@ keywords:
   - TestMu AI integrations
   - Push issues to Jira
   - TestMu AI Jira integration
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/jira-integration
 site_name: LambdaTest
 slug: jira-integration
@@ -134,7 +133,7 @@ After capturing multiple screenshots for issues, you can easily share them direc
 
 <img loading="lazy" src={require('../assets/images/jira-integration/11.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 
-**Step 7:** Log in to your Jira dashboard. You will be able to notice the logged issue right away! All the data you provided through Lambdatest would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
+**Step 7:** Log in to your Jira dashboard. You will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
 
 ## How To Remove Jira Integration?
 

@@ -8,7 +8,6 @@ keywords:
   - TestMu AI integrations
   - TestMu AI Trello integration
   - Push issues to Trello
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/trello-integration
 site_name: LambdaTest
 slug: trello-integration

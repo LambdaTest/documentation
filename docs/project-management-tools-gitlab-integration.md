@@ -89,7 +89,7 @@ Access tokens are strings with authorization key required to access an API. They
 
 ---
 
-That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully **installed**. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your repository directly by a single click.
+That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully **installed**. You can now experience bug logging in a fly from any of your running test session in TestMu AI to your repository directly by a single click.
 
 **Note:** Make sure you already have a project in your Gitlab account before you integrate to avoid any issues
 
@@ -175,7 +175,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-issue-list.webp').default} alt="issues list"  className="doc_img" width="1347" height="625"/>
 
-**Step 9.** Click on the description of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through Lambdatest already presented in the bug. <BrandName /> automatically includes test environment details and related screenshots in the repository as attachments.
+**Step 9.** Click on the description of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through TestMu AI already presented in the bug. <BrandName /> automatically includes test environment details and related screenshots in the repository as attachments.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/lambda-gitlab.webp').default} alt="screenshot in the repo"  className="doc_img" width="1350 " height="611"/>
 

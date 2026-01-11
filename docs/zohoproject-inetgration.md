@@ -12,7 +12,6 @@ keywords:
   - project management tools
   - integrate zoho project with testmu ai
   - create issue in zoho project from testmu ai
-image: /assets/images/og-images/default-user-image.png
 url: https://www.testmu.ai/support/docs/zohoproject-integration
 site_name: LambdaTest
 slug: zohoproject-integration

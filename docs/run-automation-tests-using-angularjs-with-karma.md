@@ -8,7 +8,7 @@ keywords:
   - angularjs selenium testing
   - angularjs automated testing
   - angularjs test automation
-image: /assets/images/og-images/angular-automated-testing.jpg 
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid
@@ -50,7 +50,7 @@ In this topic, you will learn how to perform AngularJS Automated Testing using [
 ***
 By the end of this topic, you will be able to:
 
-1. Perform AngularJS automated testing on Lambdatest Selenium grid with **Karma** test runner.
+1. Perform AngularJS automated testing on TestMu AI Selenium grid with **Karma** test runner.
 2. Leverage <BrandName />’s Advanced capabilities for AngularJS test automation.
 3. Test your locally hosted pages using AngularJS test automation.
 4. Run your test cases in parallel using AngularJS test automation to reduce build times.

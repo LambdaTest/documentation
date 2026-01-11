@@ -60,7 +60,7 @@ In this documentation, you will learn step-by-step how to perform regression tes
 
 - Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
 :::tip
 If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android-app.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android_espressotest-app.apk).

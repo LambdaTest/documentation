@@ -18,7 +18,7 @@ keywords:
   - hyperexecute python testing
   - hyperexecute behave testing
   - hyperexecute automation testing
-image: /assets/images/og-images/Behave-with-Selenium.jpg
+image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/behave-on-hyperexecute-grid
 site_name: LambdaTest
 slug: behave-on-hyperexecute-grid

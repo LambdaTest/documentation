@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "PyTest Automation :Run PyTest Automation Testing on LambdaTest Selenium Grid",
+          "name": "PyTest Automation :Run PyTest Automation Testing on TestMu AI Selenium Grid",
           "item": `${BRAND_URL}/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/`
         }]
       })

@@ -130,7 +130,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-bugmarked.webp').default} alt="bug marked" className="doc_img" width="347" height="75"/>
 
-**Step 7:** Visit your Paymo dashboard. You will be able to notice the logged issue right away by going to the particular project and task list you assigned it to! All the data you provided through Lambdatest would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
+**Step 7:** Visit your Paymo dashboard. You will be able to notice the logged issue right away by going to the particular project and task list you assigned it to! All the data you provided through TestMu AI would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-dashboard.webp').default} alt="dashboard" className="doc_img" width="1365" height="653"/>
 
