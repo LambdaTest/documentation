@@ -14,7 +14,6 @@ keywords:
   - selenium webdriver javascript
   - selenium javascript testing tutorial
   - javascript selenium framework
-image: /assets/images/og-images/WebDriverIO-562-framework.jpg
 url: https://www.testmu.ai/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid

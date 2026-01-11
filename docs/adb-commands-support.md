@@ -12,7 +12,6 @@ keywords:
   - app testing
   - real devices
   - adb commands
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/adb-commands-support
 site_name: LambdaTest
 slug: adb-commands-support

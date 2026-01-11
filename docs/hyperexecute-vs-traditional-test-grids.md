@@ -12,7 +12,6 @@ keywords:
   - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute vs traditional grids
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.testmu.ai/support/docs/hyperexecute-vs-traditional-test-grids
 site_name: LambdaTest hyperexecute vs traditional grids
 slug: hyperexecute-vs-traditional-test-grids

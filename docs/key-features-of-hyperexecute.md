@@ -12,7 +12,6 @@ keywords:
   - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute key features
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.testmu.ai/support/docs/key-features-of-hyperexecute
 site_name: LambdaTest Key features of Hyperexecute
 slug: key-features-of-hyperexecute

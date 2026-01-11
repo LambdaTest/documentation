@@ -12,7 +12,6 @@ keywords:
   - behave
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/appium-python-behave
 site_name: LambdaTest
 slug: appium-python-behave

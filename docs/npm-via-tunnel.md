@@ -15,7 +15,6 @@ keywords:
   - Running Cypress Tests
   - Cypress Project
 
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.testmu.ai/support/docs/npm-via-tunnel
 site_name: LambdaTest
 slug: npm-via-tunnel

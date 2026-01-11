@@ -11,7 +11,6 @@ keywords:
   - mocha
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/appium-nodejs-mocha
 site_name: LambdaTest
 slug: appium-nodejs-mocha

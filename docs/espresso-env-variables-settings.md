@@ -12,7 +12,6 @@ keywords:
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/espresso-env-variables-settings
 site_name: LambdaTest
 slug: espresso-env-variables-settings

@@ -11,7 +11,6 @@ keywords:
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/appium-nodejs-webdriverio
 site_name: LambdaTest
 slug: appium-nodejs-webdriverio

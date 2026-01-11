@@ -18,7 +18,6 @@ keywords:
   - hyperexecute matrix execution
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.testmu.ai/support/docs/account-management
 site_name: LambdaTest
 slug: account-management
