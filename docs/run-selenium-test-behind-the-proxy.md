@@ -126,7 +126,7 @@ namespace TestSelenium3
 
 Execute the above NUnit test scripts, and you’ll be able to run your Selenium tests directly on the <BrandName /> Selenium grid behind the proxy server.
 
-If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@lambdatest.com.
+If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmu.ai.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

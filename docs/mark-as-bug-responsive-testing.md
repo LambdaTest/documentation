@@ -164,7 +164,7 @@ All the fields you populate will be directly reflected in your respective projec
 **Got any questions?**
 ***
 
-Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can drop us a mail at support@lambdatest.com. Happy testing!
+Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can drop us a mail at support@testmu.ai. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

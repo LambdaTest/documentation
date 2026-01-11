@@ -134,4 +134,4 @@ This action is irreversible. Once deleted, the dashboard and all its data cannot
 
 ### Additional Support
 
-For more information and advanced configuration options, reach out to our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
+For more information and advanced configuration options, reach out to our support team at [support@testmu.ai](mailto:support@testmu.ai).

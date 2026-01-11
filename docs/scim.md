@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your <BrandName /> workspace
-> SSO must be integrated before enabling SCIM. Please see [Getting Started With Single Sign On (SSO)](/support/docs/single-sign-on/) or [support@lambdatest.com](mailto:support@lambdatest.com) for questions.
+> SSO must be integrated before enabling SCIM. Please see [Getting Started With Single Sign On (SSO)](/support/docs/single-sign-on/) or [support@testmu.ai](mailto:support@testmu.ai) for questions.
 
 ## Benefits Of SCIM
 Here are the following benefits of integrating SCIM with <BrandName />:
@@ -46,7 +46,7 @@ Here are the following benefits of integrating SCIM with <BrandName />:
 - **Consistency:**: SCIM ensures that user data is consistent across different systems and services. When a user's attributes (like role) are updated in the identity provider, SCIM can be used to propagate those changes to all connected service providers, maintaining accurate and up-to-date information.
 - **Security and Access Control:**:  By centralizing identity management through SCIM, organizations can better enforce access control policies and ensure that users have appropriate access rights to the resources they need. This can help mitigate security risks associated with improper access permissions.
 - **Assigning Groups to Users (If Groups Are Activated in Your Organization) :** If your organization has group functionality enabled, you can assign existing <BrandName /> groups to users provisioned through an Identity Provider (IdP) such as Microsoft Azure AD, Okta, and others using SCIM. 
-> Connect with our [24/7 customer support](mailto:support@lambdatest.com) team to get the **Group** feature enabled for your organization.
+> Connect with our [24/7 customer support](mailto:support@testmu.ai) team to get the **Group** feature enabled for your organization.
 
 
 ## Feature Of SCIM
@@ -471,7 +471,7 @@ The following is the list of <BrandName /> SCIM limitations
 * Delete User Request only sets user account to inactive
 
 
-> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
 
 
 <nav aria-label="breadcrumbs">

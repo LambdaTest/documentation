@@ -47,7 +47,7 @@ The AI CoPilot Dashboard is an innovative feature designed to revolutionize the 
 
 To access and utilize the full potential of the AI CoPilot Dashboard, ensure that you meet the following requirements:
 
-1. **<BrandName /> Paid Account**: You must have an active <BrandName /> paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
+1. **<BrandName /> Paid Account**: You must have an active <BrandName /> paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@testmu.ai](mailto:support@testmu.ai).
 
 :::note
 This feature is exclusively available to our valued paid users.
@@ -109,6 +109,6 @@ We currently allow a maximum of **5 prompts per day** for each organization acco
 
 ## Support and Assistance
 
-We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@lambdatest.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
+We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@testmu.ai) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
 
 Embrace the future of data analysis with the AI CoPilot Dashboard and unlock the full potential of your data. Start exploring, asking questions, and discovering valuable insights today!

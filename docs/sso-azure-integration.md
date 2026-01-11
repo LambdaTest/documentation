@@ -59,7 +59,7 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
 
 *   Azure AD Subscription. If you haven't subscribed, you can subscribe by creating a [free Azure account](https://azure.microsoft.com/en-us/free/).
 *   An Enterprise plan with <BrandName />.
-*   The Admin of your <BrandName /> organization needs to raise a request for enabling SSO. They could drop us an email over [support@lambdatest.com](mailto:support@lambdatest.com) or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app chat support**</span>.
+*   The Admin of your <BrandName /> organization needs to raise a request for enabling SSO. They could drop us an email over [support@testmu.ai](mailto:support@testmu.ai) or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app chat support**</span>.
 *   The Admin level access to your <BrandName /> organization.
 *   The Admin level access of your organization in Azure AD.
 
@@ -121,7 +121,7 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 
-> That’s all you need to know <BrandName /> and Azure AD integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+> That’s all you need to know <BrandName /> and Azure AD integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

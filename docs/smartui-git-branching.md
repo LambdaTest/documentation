@@ -66,7 +66,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 - You must have created an Project on the SmartUI web app.
 
 :::caution Warning
-This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@lambdatest.com for further information or requests.
+This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@testmu.ai for further information or requests.
 :::
 
 The following steps will guide you in running your Git branching Visual Regression test on <BrandName /> SmartUI platform:

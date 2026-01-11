@@ -151,7 +151,7 @@ Similarly, you can click on any of the performance metrics to view it in detail.
 
 * * *
 
-That's it folks! That's all about the Lighthouse Performance Metrics with <BrandName />. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+That's it folks! That's all about the Lighthouse Performance Metrics with <BrandName />. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -118,7 +118,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-rea
 
 <TabItem value="android-emu" label="Android-Emulator" default>
 
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
 
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-emulator.yaml
@@ -126,7 +126,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android
 </TabItem>
 
 <TabItem value="ios-simu" label="iOS-Simulator" default>
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
 
 
 ```yaml reference title="hyperexecute.yaml"

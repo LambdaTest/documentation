@@ -350,4 +350,4 @@ Best practices for updating baselines:
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmu.ai or use the [24/7 Chat Support](https://www.lambdatest.com/support).

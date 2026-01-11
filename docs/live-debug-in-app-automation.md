@@ -71,7 +71,7 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 <img loading="lazy" src={require('../assets/images/live-debug/live-debug-option.webp').default} alt="Live Debug App Automation" width="1365" height="632" className="doc_img"/>
 
->**Note:**  Live interaction on iOS devices is currently under beta. Please reach out to [support@lambdatest.com](mailto:support@lambdatest.com) for any query.
+>**Note:**  Live interaction on iOS devices is currently under beta. Please reach out to [support@testmu.ai](mailto:support@testmu.ai) for any query.
 
 **Step 4:** You can simply click the Live Debug option to access the extended UI Inspector and inspect the frames.
 

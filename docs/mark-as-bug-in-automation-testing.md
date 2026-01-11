@@ -96,7 +96,7 @@ Similarly, you can find the mark as bug button in **EXCEPTION** and **COMMAND** 
 <img loading="lazy" src={require('../assets/images/mark-as-bug-in-automation-testing/5.webp').default} alt="command logs" width="1918" height="906" className="doc_img"/>
 
 **Got any questions?**  
-Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can drop a mail on support@lambdatest.com. Happy testing!
+Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can drop a mail on support@testmu.ai. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

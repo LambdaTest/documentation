@@ -118,7 +118,7 @@ To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

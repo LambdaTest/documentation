@@ -110,4 +110,4 @@ The <BrandName /> Group Management will help you in creating the different Group
 
 <br />
 
-> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@lambdatest.com.
+> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@testmu.ai.

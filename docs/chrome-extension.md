@@ -205,7 +205,7 @@ You can now perform the geolocation testing on the selected country.
 <img loading="lazy" src={require('../assets/images/uploads/tempsnip.webp').default} alt="Capture automated screenshots" width="679" height="527" className="doc_img"/>
 
 >
-That's all! Increase your productivity with <BrandName /> Chrome Extension. In case you have any queries, feel free to drop them at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span>** or you can also mail us at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+That's all! Increase your productivity with <BrandName /> Chrome Extension. In case you have any queries, feel free to drop them at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span>** or you can also mail us at **[support@testmu.ai](mailto:support@testmu.ai)**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

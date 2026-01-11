@@ -446,7 +446,7 @@ You can't really work with a browser which doesn't have any keyboard shortcuts, 
 | Ctrl+Shift+R	    | Replacing or adding a right device |
 
 
-That is all about the LT browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@lambdatest.com](mailto:support@lambdatest.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 customer chat support**</span>. Happy testing! :)
+That is all about the LT browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmu.ai](mailto:support@testmu.ai) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 customer chat support**</span>. Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

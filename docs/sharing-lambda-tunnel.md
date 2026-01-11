@@ -104,7 +104,7 @@ Example
 
 <img loading="lazy" src={require('../assets/images/sharing-lambda-tunnel/start-local-page-testing-with-shared-tunnel.webp').default} alt="Sharing <BrandName /> Tunnel" width="1342" height="609" className="doc_img"/>
 
-Kudos! You have successfully created a Shared <BrandName /> Tunnel for your organization. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! 🙂
+Kudos! You have successfully created a Shared <BrandName /> Tunnel for your organization. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

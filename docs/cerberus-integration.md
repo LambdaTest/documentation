@@ -91,7 +91,7 @@ Once the test is complete, you can view the result of the test on <BrandName />,
 
 * * *
 
-> Congrats! You have successfully executed your Cerberus test case on the <BrandName /> platform, which provides you 3000+ browser and operating system combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!! 🙂
+> Congrats! You have successfully executed your Cerberus test case on the <BrandName /> platform, which provides you 3000+ browser and operating system combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

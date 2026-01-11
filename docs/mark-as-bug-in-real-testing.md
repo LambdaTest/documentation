@@ -163,7 +163,7 @@ All the fields you populate, will be directly reflected in your respective proje
 
 >
 **Got any questions?**  
-Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can drop a mail on support@lambdatest.com. Happy testing!
+Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can drop a mail on support@testmu.ai. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

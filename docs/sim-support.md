@@ -28,7 +28,7 @@ SIM & eSIM support enables testing of SMS-driven use cases on real mobile device
 
 With **<BrandName />**, you can automate SIM and eSIM scenarios on **Real Devices**. From requesting SIM-enabled devices to retrieving phone numbers and polling incoming SMS for OTP validation, <BrandName /> provides an end-to-end setup for testing SMS-driven features in your automation suite.
 
-> To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@lambdatest.com**.<br />
+> To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@testmu.ai**.<br />
 
 ---
 

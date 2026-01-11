@@ -49,7 +49,7 @@ You can use HyperExecute run your tests that are based on Microsoft Office Suite
 
 You can go through the page below to understand how you can use HyperExecute to run your test cases. 
 
-> **Note**: This feature is only available on request. Please contact support@lambdatest.com to know more. 
+> **Note**: This feature is only available on request. Please contact support@testmu.ai to know more. 
 
 ## Configuring the WinAppDriver 
 

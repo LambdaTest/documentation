@@ -158,7 +158,7 @@ Click on your Project, you'll find all the test environment details along with c
 **Step 2**: Click on **'REMOVE'** adjacent to YouTrack block. <img loading="lazy" src={require('../assets/images/uploads/remove.webp').default} alt="Image"  width="1351" height="622" className="doc_img"/> Your YouTrack integration will be removed successfully.
 
 >
-That's all about YouTrack integration with <BrandName />. In case, you have any questions or want any further integration with your favorite integration tools, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
+That's all about YouTrack integration with <BrandName />. In case, you have any questions or want any further integration with your favorite integration tools, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@testmu.ai](mailto:support@testmu.ai). <br />
  **Happy testing!**
 
 <nav aria-label="breadcrumbs">

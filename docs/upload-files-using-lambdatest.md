@@ -195,7 +195,7 @@ driver.executeScript("lambda-files-download=file_name")
 
 * * *
 
-That's it! You can now successfully upload files and use them with Selenium Automation testing on <BrandName />'s cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com) <br />Happy Testing!
+That's it! You can now successfully upload files and use them with Selenium Automation testing on <BrandName />'s cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@testmu.ai](mailto:support@testmu.ai) <br />Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

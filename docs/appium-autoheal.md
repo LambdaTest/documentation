@@ -31,7 +31,7 @@ Locator failures can make tests brittle and cause frequent failures, slowing dow
 
 <BrandName /> now lets you enable **Smart Heal** for automation testing. This feature helps developers and testers handle locator failures without manual effort by intelligently detecting missing elements, analyzing the UI in real time, and applying the closest valid match. It keeps tests running smoothly despite UI changes and provides full visibility into healing actions, including both the **original and recovered locators** through logs and the <BrandName /> dashboard.
 
-> Smart Heal feature is currently in **closed beta** and continuously improving based on user feedback. Once publicly released, it will be available as part of AI credits—please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@lambdatest.com** to enable it for your organization and try it out.
+> Smart Heal feature is currently in **closed beta** and continuously improving based on user feedback. Once publicly released, it will be available as part of AI credits—please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmu.ai** to enable it for your organization and try it out.
 
 ---
 ## Use Cases

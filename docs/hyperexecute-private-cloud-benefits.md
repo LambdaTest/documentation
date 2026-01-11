@@ -74,7 +74,7 @@ You can go through the table below to understand exactly why HyperExecute Privat
 
 ***
 
-> If you need more information about the HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@lambdatest.com](mailto:hyperexecute-privatecloudsupport@lambdatest.com). Happy testing!
+> If you need more information about the HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai). Happy testing!
 
 
 <nav aria-label="breadcrumbs">

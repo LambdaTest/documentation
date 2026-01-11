@@ -105,7 +105,7 @@ lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23
   <img loading="lazy" src={require('../assets/images/cypress/cypress7.png').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
 :::tip Support
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@lambdatest.com.
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
 :::
 
 <nav aria-label="breadcrumbs">

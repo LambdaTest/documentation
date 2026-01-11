@@ -78,7 +78,7 @@ Once you are done with selecting the network, you can test your responsive mobil
 
 
 > 
-That's all folks!. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or you can also drop a mail to [support@lambdatest.com](mailto:support@lambdatest.com).<br />Happy Testing!
+That's all folks!. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or you can also drop a mail to [support@testmu.ai](mailto:support@testmu.ai).<br />Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

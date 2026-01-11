@@ -141,4 +141,4 @@ If you encounter execution issues, refer to the table below:
 
 ---
 
-> Have any feedback or request? Reach out to us via [support@lambdatest.com](mailto:support@lambdatest.com) and we would be happy to hear from you.
+> Have any feedback or request? Reach out to us via [support@testmu.ai](mailto:support@testmu.ai) and we would be happy to hear from you.

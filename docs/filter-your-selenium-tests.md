@@ -204,7 +204,7 @@ By default, the _THIS WEEK_ filter will be selected. You can use the Date filter
 
 * * *
 
->That's all! You can now successfully filter your tests using the filter toolbar on your automation dashboard. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+>That's all! You can now successfully filter your tests using the filter toolbar on your automation dashboard. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

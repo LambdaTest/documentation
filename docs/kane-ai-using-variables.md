@@ -161,6 +161,6 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 
 This will run the test case in the "staging" environment.
 
-If you have any feedback or suggestions, feel free to reach out at support@lambdatest.com with your comments.
+If you have any feedback or suggestions, feel free to reach out at support@testmu.ai with your comments.
 
 
