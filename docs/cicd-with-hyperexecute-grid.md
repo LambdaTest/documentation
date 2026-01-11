@@ -11,7 +11,6 @@ keywords:
     - continuous integration
     - continuous delivery
     - continuous integration tools
-image: /assets/images/og-images/JPG-4.jpg
 url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-ci-cd-tools
 site_name: LambdaTest
 slug: hyperexecute-integration-with-ci-cd-tools

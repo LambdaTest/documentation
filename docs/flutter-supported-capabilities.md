@@ -11,7 +11,6 @@ keywords:
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/flutter-supported-capabilities
 site_name: LambdaTest
 slug: flutter-supported-capabilities

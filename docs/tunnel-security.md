@@ -12,7 +12,6 @@ keywords:
   - online hyperexecute
   - hyperexecute automation grid online
   - hyperexecute getting started
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.testmu.ai/support/docs/tunnel-security
 site_name: LambdaTest
 slug: tunnel-security

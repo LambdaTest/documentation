@@ -11,7 +11,6 @@ keywords:
   - testng
   - app testing
   - virtual devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/hyperexecute-appium-virtual-device
 site_name: LambdaTest
 slug: hyperexecute-appium-virtual-device

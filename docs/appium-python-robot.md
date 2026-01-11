@@ -12,7 +12,6 @@ keywords:
   - robot
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
 url: https://www.testmu.ai/support/docs/appium-python-robot
 site_name: LambdaTest
 slug: appium-python-robot
