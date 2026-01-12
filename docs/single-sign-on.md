@@ -75,17 +75,15 @@ LambdaTest provides the support for the below Single sign-on features.
 
 **Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/new-dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-**Step 2:**  Head to **Settings** and select **Organization Settings** from the dropdown.
+**Step 2:**  Click on the **User Icon** on the top right and select **Organization Settings** from the dropdown.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings-new.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-**Step 3:**  Head to the **Authentication and SSO** tab and click the **Contact Sales** option.
+**Step 3:**  Head to the **Security** tab and click the **SSO** option.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso/contact-sales-for-sso.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-You can contact the **Support Team**, who will help you enable the SSO feature for your LambdaTest account. 
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sso-setup.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 
 > That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).

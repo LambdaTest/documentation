@@ -54,11 +54,11 @@ Create SSO Connection With LambdaTest:
 
 ## Configuring LambdaTest SSO Integration Using SAML
 ---
-1. Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
-<img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/> 
+1. Go to <a href="https://accounts.lambdatest.com/auth/sso">SSO Section</a> in the **Security** tab of **Organization Settings** and click on **Setup SSO**.
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sso-setup.webp').default} alt="setup sso button" width="944" height="409" className="doc_img"/> 
 
 2. Enter Connection Name and Click on  **Add New Connection**.
-<img loading="lazy" src={require('../assets/images/sso-self-serve/connection-name.png').default} alt="connection name button" width="944" height="409" className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sso-firs-step.webp').default} alt="connection name button" width="944" height="409" className="doc_img"/> 
 
 3. Select your **Identity Provider**.
 <img loading="lazy" src={require('../assets/images/sso-self-serve/select-idp.png').default} alt="select identity provider" width="944" height="407" className="doc_img"/>
