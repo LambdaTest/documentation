@@ -1,7 +1,7 @@
 ---
 id: lambdatest-sso-manage-connection
 title: Manage SSO Connection
-hide_title: true
+hide_title: false
 sidebar_label: Manage SSO Connection
 description: This document will help you set up and manage your TestMu AI SSO connection. 
 keywords:
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-Navigate to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a>.
+Before proceeding you need to navigate to <a href="https://accounts.lambdatest.com/auth/sso">SSO Section</a> in the **Security** tab of **Organization Settings**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
 
