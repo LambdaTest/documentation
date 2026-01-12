@@ -42,6 +42,26 @@ This guide provides step-by-step instructions on how to enhance the usability of
 - Navigate to the **Modules** section.
 - View the list of available modules or click **Create a New Module** to add one.
 - The updated interface allows for improved module visibility and usability.
+- Each module card displays the count of test cases linked to it.
+
+## Deleting a Module
+
+You can delete modules that are no longer needed from the module listing page.
+
+1. Navigate to the **Modules** section
+2. Locate the module you want to delete
+3. Click the meatball menu (•••) icon on the module card
+4. Select **Delete**
+
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/delete-module.png').default} alt="delete-module" className="doc_img img_center"/>
+
+---
+
+:::warning Important
+Only modules that are **not linked to any test cases** can be deleted. If a module is currently used in one or more test cases, the delete option will be disabled. You must first remove the module from all linked test cases before deleting it.
+:::
+
+---
 
 ## Step 2: Accessing Module Details
 - Click on a module to view its complete details, including:
