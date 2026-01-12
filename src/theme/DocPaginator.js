@@ -25,7 +25,7 @@ export default function DocPaginator(props) {
             <h2>Test across 3000+ combinations of browsers, real devices & OS.</h2>
             <DemoPopup />
           </div>
-          <img loading="lazy" src="https://www.lambdatest.com/blog/wp-content/uploads/2024/05/DocBottomImg.png" alt="Book Demo" title="Book Demo" width="887" height="477" className='left_sec no-zoom'></img>
+          <img loading="lazy" src="https://assets.testmu.ai/resources/uploads/2024/05/DocBottomImg.png" alt="Book Demo" title="Book Demo" width="887" height="477" className='left_sec no-zoom'></img>
         </div>
       </div>
       <h2 className='main_heading_support'>Help and Support</h2>
