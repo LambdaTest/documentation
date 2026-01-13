@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-php
 site_name: LambdaTest
 slug: appium-php
+canonical: https://www.testmu.ai/support/docs/appium-php/
 ---
 
 

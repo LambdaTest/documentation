@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/he-integration-with-testmu-products
 site_name: LambdaTest
 slug: he-integration-with-testmu-products
+canonical: https://www.testmu.ai/support/docs/he-integration-with-testmu-products/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

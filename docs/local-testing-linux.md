@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/local-testing-linux
 site_name: LambdaTest
 slug: local-testing-linux
+canonical: https://www.testmu.ai/support/docs/local-testing-linux/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testingwhiz-integration
 site_name: LambdaTest
 slug: testingwhiz-integration
+canonical: https://www.testmu.ai/support/docs/testingwhiz-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

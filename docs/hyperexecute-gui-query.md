@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-gui-query
 site_name: LambdaTest
 slug: hyperexecute-gui-query
+canonical: https://www.testmu.ai/support/docs/hyperexecute-gui-query/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed
 site_name: LambdaTest
 slug: hyperexecute-how-smart-caching-boosts-tests-speed
+canonical: https://www.testmu.ai/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/white-listing-proxy-with-testmu
 site_name: LambdaTest
 slug: white-listing-proxy-with-testmu
+canonical: https://www.testmu.ai/support/docs/white-listing-proxy-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

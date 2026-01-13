@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/test-case-repository
 site_name: LambdaTest
 slug: test-case-repository
+canonical: https://www.testmu.ai/support/docs/test-case-repository/
 ---
 
 

@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-center
 site_name: LambdaTest
 slug: app-center
+canonical: https://www.testmu.ai/support/docs/app-center/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

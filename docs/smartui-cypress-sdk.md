@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cypress-sdk
 slug: smartui-cypress-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-cypress-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

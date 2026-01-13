@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/set-device-dark-mode
 site_name: LambdaTest
 slug: set-device-dark-mode
+canonical: https://www.testmu.ai/support/docs/set-device-dark-mode/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/getting-started-with-agent-to-agent-testing
 site_name: LambdaTest
 slug: getting-started-with-agent-to-agent-testing
+canonical: https://www.testmu.ai/support/docs/getting-started-with-agent-to-agent-testing/
 ---
 
 import Tabs from '@theme/Tabs';

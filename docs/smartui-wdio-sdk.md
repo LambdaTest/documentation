@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-wdio-sdk
 slug: smartui-wdio-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-wdio-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

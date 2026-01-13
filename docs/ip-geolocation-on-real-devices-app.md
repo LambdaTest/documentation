@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app
 site_name: LambdaTest
 slug: ip-geolocation-on-real-devices-app
+canonical: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

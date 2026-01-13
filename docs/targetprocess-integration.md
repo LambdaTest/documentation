@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/target-process-integration
 site_name: LambdaTest
 slug: target-process-integration
+canonical: https://www.testmu.ai/support/docs/target-process-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

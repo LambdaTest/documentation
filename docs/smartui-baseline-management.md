@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-baseline-management
 site_name: LambdaTest
 slug: smartui-baseline-management
+canonical: https://www.testmu.ai/support/docs/smartui-baseline-management/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

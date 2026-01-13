@@ -22,6 +22,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-karate-testing
 site_name: LambdaTest
 slug: hyperexecute-karate-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-karate-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

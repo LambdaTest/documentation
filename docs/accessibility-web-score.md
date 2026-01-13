@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-web-score
 site_name: LambdaTest
 slug: accessibility-web-score
+canonical: https://www.testmu.ai/support/docs/accessibility-web-score/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

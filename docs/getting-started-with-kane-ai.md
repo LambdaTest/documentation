@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/getting-started-with-kane-ai
 site_name: LambdaTest
 slug: getting-started-with-kane-ai
+canonical: https://www.testmu.ai/support/docs/getting-started-with-kane-ai/
 ---
 
 import Tabs from '@theme/Tabs';

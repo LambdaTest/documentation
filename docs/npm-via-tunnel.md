@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/npm-via-tunnel
 site_name: LambdaTest
 slug: npm-via-tunnel
+canonical: https://www.testmu.ai/support/docs/npm-via-tunnel/
 ---
 
 

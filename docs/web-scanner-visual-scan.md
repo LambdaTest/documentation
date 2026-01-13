@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/web-scanner-visual-scan
 site_name: LambdaTest
 slug: web-scanner-visual-scan
+canonical: https://www.testmu.ai/support/docs/web-scanner-visual-scan/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

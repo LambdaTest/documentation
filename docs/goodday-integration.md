@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/goodday-integration
 site_name: LambdaTest
 slug: goodday-integration
+canonical: https://www.testmu.ai/support/docs/goodday-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

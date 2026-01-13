@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-modules-command-logs
 site_name: LambdaTest
 slug: analytics-modules-test-intelligence-command-logs-analytics
+canonical: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
 ---
 
 import NewTag from '../src/component/newTag';

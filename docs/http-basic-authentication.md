@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/http-basic-authentication
 site_name: LambdaTest
 slug: http-basic-authentication
+canonical: https://www.testmu.ai/support/docs/http-basic-authentication/
 ---
 
 

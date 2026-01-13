@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-python-behave
 site_name: LambdaTest
 slug: appium-python-behave
+canonical: https://www.testmu.ai/support/docs/appium-python-behave/
 ---
 
 

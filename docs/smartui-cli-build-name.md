@@ -16,6 +16,7 @@ description: In this documentation, learn how to group screenshots in a single b
 
 url: https://www.testmu.ai/support/docs/smartui-cli
 slug: smartui-cli-build-name
+canonical: https://www.testmu.ai/support/docs/smartui-cli-build-name/
 
 ---
 import Tabs from '@theme/Tabs';

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud
 site_name: LambdaTest
 slug: public-cloud-vs-private-cloud
+canonical: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud/
 ---
 
 

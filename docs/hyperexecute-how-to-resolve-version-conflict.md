@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 site_name: LambdaTest
 slug: hyperexecute-how-to-resolve-version-conflict
+canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-resolve-version-conflict/
 ---
 
 

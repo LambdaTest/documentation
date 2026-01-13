@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall
 site_name: LambdaTest
 slug: har-log-viewer-with-waterfall
+canonical: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

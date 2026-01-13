@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/cypress-mochaawesome-report
 site_name: LambdaTest
 slug: cypress-mochaawesome-report
+canonical: https://www.testmu.ai/support/docs/cypress-mochaawesome-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

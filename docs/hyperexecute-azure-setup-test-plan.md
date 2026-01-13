@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-azure-setup-test-plan
 site_name: LambdaTest
 slug: hyperexecute-azure-setup-test-plan
+canonical: https://www.testmu.ai/support/docs/hyperexecute-azure-setup-test-plan/
 ---
 
 

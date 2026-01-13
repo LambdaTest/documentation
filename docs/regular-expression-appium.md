@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/regular-expression-appium
 site_name: LambdaTest
 slug: regular-expression-appium
+canonical: https://www.testmu.ai/support/docs/regular-expression-appium/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

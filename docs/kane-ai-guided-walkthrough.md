@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-guided-walkthrough
 site_name: LambdaTest
 slug: kane-ai-guided-walkthrough
+canonical: https://www.testmu.ai/support/docs/kane-ai-guided-walkthrough/
 ---
 
 import Tabs from '@theme/Tabs';

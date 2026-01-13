@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/supported-browsers-and-os
 site_name: LambdaTest
 slug: supported-browsers-and-os
+canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 ---
 
 <BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:

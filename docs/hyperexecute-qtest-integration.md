@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-qtest-integration
 site_name: LambdaTest
 slug: hyperexecute-qtest-integration
+canonical: https://www.testmu.ai/support/docs/hyperexecute-qtest-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

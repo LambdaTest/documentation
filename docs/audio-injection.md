@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/audio-injection
 site_name: LambdaTest
 slug: audio-injection
+canonical: https://www.testmu.ai/support/docs/audio-injection/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

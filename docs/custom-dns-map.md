@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/custom-dns-map
 site_name: LambdaTest
 slug: custom-dns-map
+canonical: https://www.testmu.ai/support/docs/custom-dns-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

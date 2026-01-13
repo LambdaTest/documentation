@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/cucumber-report
 site_name: LambdaTest
 slug: cucumber-report
+canonical: https://www.testmu.ai/support/docs/cucumber-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

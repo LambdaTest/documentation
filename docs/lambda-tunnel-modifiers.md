@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/lambda-tunnel-modifiers
 site_name: LambdaTest
 slug: lambda-tunnel-modifiers
+canonical: https://www.testmu.ai/support/docs/lambda-tunnel-modifiers/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

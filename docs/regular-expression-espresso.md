@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/regular-expression-espresso
 site_name: LambdaTest
 slug: regular-expression-espresso
+canonical: https://www.testmu.ai/support/docs/regular-expression-espresso/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

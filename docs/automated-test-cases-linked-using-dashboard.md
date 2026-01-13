@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/automated-test-cases-linked-using-dashboard
 site_name: LambdaTest
 slug: automated-test-cases-linked-using-dashboard
+canonical: https://www.testmu.ai/support/docs/automated-test-cases-linked-using-dashboard/
 ---
 
 

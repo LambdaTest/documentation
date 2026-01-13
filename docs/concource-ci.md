@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu
 site_name: LambdaTest
 slug: selenium-testing-with-concourse-ci-and-testmu
+canonical: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

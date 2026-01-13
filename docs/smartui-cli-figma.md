@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cli
 slug: smartui-cli-figma
+canonical: https://www.testmu.ai/support/docs/smartui-cli-figma/
 
 ---
 import Tabs from '@theme/Tabs';

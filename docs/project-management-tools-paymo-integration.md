@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/paymo-integration
 site_name: LambdaTest
 slug: paymo-integration
+canonical: https://www.testmu.ai/support/docs/paymo-integration/
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

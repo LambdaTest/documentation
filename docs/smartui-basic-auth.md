@@ -11,6 +11,7 @@ keywords:
   - Authentication Headers
 url: https://www.testmu.ai/support/docs/smartui-basic-auth
 slug: smartui-cli-basic-auth
+canonical: https://www.testmu.ai/support/docs/smartui-cli-basic-auth/
 
 ---
 import Tabs from '@theme/Tabs';

@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/assistive-touch-on-real-ios-devices
 site_name: LambdaTest
 slug: assistive-touch-on-real-ios-devices
+canonical: https://www.testmu.ai/support/docs/assistive-touch-on-real-ios-devices/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";

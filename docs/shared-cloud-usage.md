@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/shared-cloud-usage
 site_name: LambdaTest
 slug: shared-cloud-usage
+canonical: https://www.testmu.ai/support/docs/shared-cloud-usage/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements
 site_name: LambdaTest
 slug: smartui-handle-sticky-elements
+canonical: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements/
 
 ---
 import Tabs from '@theme/Tabs';

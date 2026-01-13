@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/sso-azure-integration
 site_name: LambdaTest
 slug: sso-azure-integration
+canonical: https://www.testmu.ai/support/docs/sso-azure-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

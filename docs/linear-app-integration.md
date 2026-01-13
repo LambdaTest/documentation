@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/linear-app-integration
 site_name: LambdaTest
 slug: linear-app-integration
+canonical: https://www.testmu.ai/support/docs/linear-app-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

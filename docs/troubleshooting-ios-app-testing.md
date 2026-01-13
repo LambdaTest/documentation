@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing
 site_name: LambdaTest
 slug: troubleshooting-ios-app-testing
+canonical: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

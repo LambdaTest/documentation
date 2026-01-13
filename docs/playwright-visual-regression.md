@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-visual-regression
 site_name: LambdaTest
 slug: playwright-visual-regression
+canonical: https://www.testmu.ai/support/docs/playwright-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';

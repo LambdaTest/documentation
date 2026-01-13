@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration
 site_name: LambdaTest
 slug: github-repo-based-oauth-integration
+canonical: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/espresso-supported-capabilities
 site_name: LambdaTest
 slug: espresso-supported-capabilities
+canonical: https://www.testmu.ai/support/docs/espresso-supported-capabilities/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

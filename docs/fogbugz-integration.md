@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/fogbugz-integration
 site_name: LambdaTest
 slug: fogbugz-integration
+canonical: https://www.testmu.ai/support/docs/fogbugz-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

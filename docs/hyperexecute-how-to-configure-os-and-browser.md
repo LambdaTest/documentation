@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-os-and-browser
 site_name: LambdaTest
 slug: hyperexecute-how-to-configure-os-and-browser
+canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-os-and-browser/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-pdf-comparison
 site_name: LambdaTest
 slug: smartui-pdf-comparison
+canonical: https://www.testmu.ai/support/docs/smartui-pdf-comparison/
 ---
 
 import Tabs from '@theme/Tabs';

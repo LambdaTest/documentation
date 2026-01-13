@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/taiga-integration
 site_name: LambdaTest
 slug: taiga-integration
+canonical: https://www.testmu.ai/support/docs/taiga-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

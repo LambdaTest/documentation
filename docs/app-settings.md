@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-settings
 site_name: LambdaTest
 slug: app-settings
+canonical: https://www.testmu.ai/support/docs/app-settings/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

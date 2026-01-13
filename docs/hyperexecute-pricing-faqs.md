@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-pricing-faqs
 site_name: LambdaTest
 slug: hyperexecute-pricing-faqs
+canonical: https://www.testmu.ai/support/docs/hyperexecute-pricing-faqs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

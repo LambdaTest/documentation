@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-cli-faqs
 site_name: LambdaTest
 slug: hyperexecute-cli-faqs
+canonical: https://www.testmu.ai/support/docs/hyperexecute-cli-faqs/
 ---
 
 

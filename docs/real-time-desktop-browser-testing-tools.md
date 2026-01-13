@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/real-time-desktop-browser-testing-tools
 site_name: LambdaTest
 slug: real-time-desktop-browser-testing-tools
+canonical: https://www.testmu.ai/support/docs/real-time-desktop-browser-testing-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

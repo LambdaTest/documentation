@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload
 site_name: LambdaTest
 slug: smartui-pdf-cli-upload
+canonical: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload/
 
 ---
 import Tabs from '@theme/Tabs';

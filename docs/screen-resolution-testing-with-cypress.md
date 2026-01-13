@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/screen-resolution-testing-with-cypress
 site_name: LambdaTest
 slug: screen-resolution-testing-with-cypress
+canonical: https://www.testmu.ai/support/docs/screen-resolution-testing-with-cypress/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

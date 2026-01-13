@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/bypass-proxy-domains
 site_name: LambdaTest
 slug: bypass-proxy-domains
+canonical: https://www.testmu.ai/support/docs/bypass-proxy-domains/
 ---
 
 

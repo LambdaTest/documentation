@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/gocd-integration-with-testmu
 site_name: LambdaTest
 slug: gocd-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/gocd-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

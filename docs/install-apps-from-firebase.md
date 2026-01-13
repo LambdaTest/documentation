@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/install-apps-from-firebase
 site_name: LambdaTest
 slug: install-apps-from-firebase
+canonical: https://www.testmu.ai/support/docs/install-apps-from-firebase/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

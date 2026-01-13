@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/insights-dashboard
 site_name: LambdaTest
 slug: insights-dashboard
+canonical: https://www.testmu.ai/support/docs/insights-dashboard/
 ---
 
 

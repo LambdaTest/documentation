@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/extended-debugging-options
 site_name: LambdaTest
 slug: extended-debugging-options
+canonical: https://www.testmu.ai/support/docs/extended-debugging-options/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

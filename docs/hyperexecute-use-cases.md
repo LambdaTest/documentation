@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-use-cases
 site_name: LambdaTest
 slug: hyperexecute-use-cases
+canonical: https://www.testmu.ai/support/docs/hyperexecute-use-cases/
 ---
 
 import DocCard from '../src/component/DocCard';

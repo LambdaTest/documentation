@@ -12,6 +12,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-5/
 site_name: LambdaTest
 slug: hyperexecute-release-notes-3-1-5/
+canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-3-1-5//
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

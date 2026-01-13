@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/xcui-visual-regression
 site_name: LambdaTest
 slug: xcui-visual-regression
+canonical: https://www.testmu.ai/support/docs/xcui-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';

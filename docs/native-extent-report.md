@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/native-extent-report
 site_name: LambdaTest
 slug: native-extent-report
+canonical: https://www.testmu.ai/support/docs/native-extent-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

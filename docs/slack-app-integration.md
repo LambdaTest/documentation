@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/slack-app
 site_name: LambdaTest
 slug: slack-app
+canonical: https://www.testmu.ai/support/docs/slack-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

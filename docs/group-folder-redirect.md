@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/group-folder-redirects
 site_name: LambdaTest
 slug: group-folder-redirects
+canonical: https://www.testmu.ai/support/docs/group-folder-redirects/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

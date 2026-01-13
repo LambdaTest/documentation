@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/desired-capabilities-in-appium
 site_name: LambdaTest
 slug: desired-capabilities-in-appium
+canonical: https://www.testmu.ai/support/docs/desired-capabilities-in-appium/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

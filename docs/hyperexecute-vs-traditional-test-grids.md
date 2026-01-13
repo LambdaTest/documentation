@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-vs-traditional-test-grids
 site_name: LambdaTest hyperexecute vs traditional grids
 slug: hyperexecute-vs-traditional-test-grids
+canonical: https://www.testmu.ai/support/docs/hyperexecute-vs-traditional-test-grids/
 ---
 
 

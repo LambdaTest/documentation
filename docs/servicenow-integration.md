@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/servicenow-integration
 site_name: LambdaTest
 slug: servicenow-integration
+canonical: https://www.testmu.ai/support/docs/servicenow-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

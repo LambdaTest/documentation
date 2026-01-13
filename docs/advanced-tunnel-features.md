@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/advanced-tunnel-features
 site_name: LambdaTest
 slug: advanced-tunnel-features
+canonical: https://www.testmu.ai/support/docs/advanced-tunnel-features/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

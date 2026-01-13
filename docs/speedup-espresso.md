@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/speedup-espresso
 site_name: LambdaTest
 slug: speedup-espresso
+canonical: https://www.testmu.ai/support/docs/speedup-espresso/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

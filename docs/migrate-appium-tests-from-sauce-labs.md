@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/migrate-appium-tests-from-sauce-labs
 site_name: LambdaTest
 slug: migrate-appium-tests-from-sauce-labs
+canonical: https://www.testmu.ai/support/docs/migrate-appium-tests-from-sauce-labs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

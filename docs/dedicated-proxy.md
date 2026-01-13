@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/dedicated-proxy
 site_name: LambdaTest
 slug: dedicated-proxy
+canonical: https://www.testmu.ai/support/docs/dedicated-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

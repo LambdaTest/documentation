@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/github-integration
 site_name: LambdaTest
 slug: github-integration
+canonical: https://www.testmu.ai/support/docs/github-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

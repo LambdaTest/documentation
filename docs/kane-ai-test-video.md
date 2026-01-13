@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-test
 site_name: LambdaTest
 slug: kaneai-test
+canonical: https://www.testmu.ai/support/docs/kaneai-test/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-custom-css
 site_name: LambdaTest
 slug: smartui-custom-css
+canonical: https://www.testmu.ai/support/docs/smartui-custom-css/
 
 ---
 import Tabs from '@theme/Tabs';

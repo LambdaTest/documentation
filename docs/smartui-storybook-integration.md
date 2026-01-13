@@ -16,6 +16,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smart-ui-storybook
 slug: smart-ui-storybook
+canonical: https://www.testmu.ai/support/docs/smart-ui-storybook/
 
 ---
 import Tabs from '@theme/Tabs';

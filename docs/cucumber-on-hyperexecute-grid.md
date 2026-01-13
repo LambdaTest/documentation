@@ -22,6 +22,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/cucumber-on-hyperexecute-grid
 site_name: LambdaTest
 slug: cucumber-on-hyperexecute-grid
+canonical: https://www.testmu.ai/support/docs/cucumber-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

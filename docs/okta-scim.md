@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/scim/okta
 site_name: LambdaTest
 slug: scim/okta
+canonical: https://www.testmu.ai/support/docs/scim/okta/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

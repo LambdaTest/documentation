@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/xcui-supported-capabilities
 site_name: LambdaTest
 slug: xcui-supported-capabilities
+canonical: https://www.testmu.ai/support/docs/xcui-supported-capabilities/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

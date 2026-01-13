@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-android-rules
 site_name: LambdaTest
 slug: accessibility-android-rules
+canonical: https://www.testmu.ai/support/docs/accessibility-android-rules/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

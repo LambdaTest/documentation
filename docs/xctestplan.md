@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/xctestplan
 site_name: LambdaTest
 slug: xctestplan
+canonical: https://www.testmu.ai/support/docs/xctestplan/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

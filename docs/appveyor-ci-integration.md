@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appveyor-ci-integration
 site_name: LambdaTest
 slug: appveyor-ci-integration
+canonical: https://www.testmu.ai/support/docs/appveyor-ci-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

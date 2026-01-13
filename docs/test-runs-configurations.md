@@ -3,16 +3,20 @@ id: test-runs-configurations
 title: 'Configurations in KaneAI & Test Manager'
 hide_title: false
 sidebar_label: Configurations
-description: Learn how to levearge configurations to execute your tests in multiple environments.
+description: Learn how to create, manage, and apply reusable environment configurations for your test runs in LambdaTest Test Manager.
 keywords:
   - testmu ai automation
   - kaneai
   - test manager
   - configurations
-url: https://www.testmu.ai/support/docs/test-runs-configurations
+  - test runs
+  - environment setup
+url: https://www.testmu.ai/support/docs/test-runs-configurations/
 site_name: LambdaTest
 slug: test-runs-configurations
+canonical: https://www.testmu.ai/support/docs/test-runs-configurations/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -39,141 +43,273 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
 # Configurations in KaneAI & Test Manager
-This document explains how application and environment configurations behave across **Test Manager (TM)** and **KaneAI** for **Desktop**, **Real Device** and **Virtual Device** within test runs.
 
-## Creation of Configuration
-A new configuration can be created during creation or edit of a test run. While creating a configuration, users can choose either Desktop, Virtual Device or Real device. 
+Configurations in Test Manager allow you to define reusable environment setups for your test runs. You can specify platform, browser, OS, and device combinations once and apply them across multiple test runs.
 
-:::info
-Virtual device option will only be available for non-KaneAI generated test runs.
-:::
-
-### Desktop Configuration
-
-#### How to create a new configuration?
-Within a test run, while adding configuration to a test instance, you can choose to create a new configuration. By default, a desktop configuration is selected. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
-- Operating System
-- OS Version
-- Browser
-- Browser Version
-- Resolution
-
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/DesktopConfig.png').default} alt="kaneai-desktop-config" className="doc_img"/>
+**Key Benefits:**
+- **Centralized Management** - Create, edit, and delete configurations from a single dashboard
+- **Reusability** - Apply the same configuration across multiple test runs
+- **Multi-Platform Support** - Configure Desktop, Virtual Mobile, and Real Device environments
 
 ---
 
-### Real Device Configuration
+## Accessing Configurations
 
-Real device configuration supports two options for `native app` and `mobile browser` configurations. The option for `native app` is supported for only KaneAI test runs, while `mobile browser` is supported for both KaneAI and non-KaneAI test runs.
+Navigate to configurations using either method:
+
+| Access Method | Steps |
+|---------------|-------|
+| **Sidebar** | Click **Configurations** under Test Manager in the left menu |
+| **Test Runs** | Click **Manage Configurations** link within any test run |
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/configurations-sidebar.png').default} alt="configurations-sidebar" className="doc_img"/>
+
+---
+
+## Configurations Dashboard
+
+The central dashboard displays all your configurations with the following features:
+
+
+| Feature | Description |
+|---------|-------------|
+| **Search Bar** | Find configurations by name |
+| **Filters** | Filter by OS, Browser, or Resolution |
+| **Configuration Details** | View name, last updated date, OS, browser, version, and resolution |
+| **Usage Count** | See how many test runs use each configuration |
+| **Actions Menu** | Access Edit and Delete options via the ⋮ menu |
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/configurations-dashboard.png').default} alt="configurations-dashboard" className="doc_img"/>
+
+---
+
+## Creating a Configuration
+
+You can create configurations from the central Configurations page or directly within a test run.
+
+### Steps to Create
+
+1. Click **Create a Configuration** button
+2. Toggle the **KaneAI** switch based on your test run type: set it to **ON** for KaneAI-generated test runs, or **OFF** for Non-KaneAI test runs.
+3. Select your platform (Desktop, Real Device, or Virtual Mobile)
+4. Fill in the required configuration fields
+5. Click **Create Configuration**
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/create-configuration.png').default} alt="create-configuration" className="doc_img"/>
+
+### KaneAI Toggle
+
+The KaneAI toggle determines which platforms and options are available:
+
+| Toggle State | Available Platforms | Use Case |
+|--------------|---------------------|----------|
+| **ON** | Desktop, Real Device | KaneAI test cases |
+| **OFF** | Desktop, Virtual Mobile, Real Device | Non-KaneAI test cases |
+
+---
+
+### Platform Options
+
+| Platform | Details |
+|----------|---------|
+| **Desktop** | OS, OS Version, Browser, Browser Version, Resolution, URL |
+| **Virtual Mobile (non-KaneAI only)** | OS, Manufacturer, Device, OS Version, Browser/App |
+| **Real Device** | Device Type, OS, Manufacturer, Device, OS Version, Browser/App |
+
+### Desktop
+
+Configure browser-based testing on desktop environments.
+
+**Environment Variables:**
+| Field | Description |
+|-------|-------------|
+| Operating System | Windows, macOS, etc. |
+| OS Version | Specific version of the OS |
+| Browser | Chrome, Firefox, Safari, Edge, etc. |
+| Browser Version | Specific browser version |
+| Resolution | Screen resolution for testing |
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/DesktopConfig.png').default} alt="desktop-configuration" className="doc_img"/>
+
+---
+
+### Real Device
+
+Configure testing on physical mobile devices. Supports both **Native App** and **Mobile Browser** testing.
 
 #### Native Application
 
-##### How to select?
-Within a test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Real Device` section from the top navigation. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
-- Device Type
-- Operating System
-- Manufacturer
-- Device
-- OS Version
-- App
-
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="kaneai-real-device-config" className="doc_img"/>
-
-:::info
-The following options are only available for only KaneAI generated test runs
+:::info Note
+Native app testing on Real Devices is available only for KaneAI-generated test runs.
 :::
 
-###### Device Type: Private Cloud vs Public Cloud
-Available for organisations with a private cloud real device plan with <BrandName />. The option allows for users to choose from set of public pool of devices vs private pool dedicated specifically for that organisation.
+**Environment Variables:**
+| Field | Description |
+|-------|-------------|
+| Device Type | Public Cloud or Private Cloud |
+| Operating System | Android or iOS |
+| Manufacturer | Device manufacturer (Samsung, Apple, etc.) |
+| Device | Specific device model |
+| OS Version | Operating system version |
+| App | Application to test |
 
-##### Multi‑select for KaneAI configurations
-* KaneAI allows multi‑select for Manufacturer, Device, and OS Version to allow for larger set of device pool for any configuration. Using multiple devices ensures that you always are able to proceed with executions on HyperExecute.
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="real-device-configuration" className="doc_img"/>
 
-##### Application
+#### KaneAI-Exclusive Features
 
-* **Auto Update** – If you have new builds for application being uploaded quite frequently, ensure to check the `Update automatically when a new version is uploaded` option while selecting application in the configuration. This ensures that based on `appPackage` or `bundleId`, we automatically update your configuration with the latest build.
+The following options are available only for KaneAI-generated test runs:
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="kaneai-update-app-config" className="doc_img"/>
+**Device Type: Private Cloud vs Public Cloud**
 
-* **Custom ID** – In case you are using [API](/support/docs/application-setup-via-api/#upload-your-application) to upload your application and using the custom_id parameter, you can choose to add a custom ID while creating a configuration, so  that the application gets updated automatically each time you upload a new app with the same custom_id.
+For organizations with a private cloud real device plan, you can choose between:
+- **Public Cloud** - Shared pool of devices available to all LambdaTest users
+- **Private Cloud** - Dedicated device pool exclusive to your organization
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/CustomID.png').default} alt="kaneai-custom-id-app" className="doc_img"/>
+**Multi-Select Support**
 
-* **Private Device Type** - When private device type is chosen, you will get an option to `Select Pre‑Installed App in Session`; choosing it maps the app capability to `Stock` allowing you to proceed with creating a configuration without explicitly defining an application. This option should be used only when your test case has first step as "Open xyz application" where xyz is the application pre-installed in the device.
+KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version. This creates a larger device pool, ensuring test execution can proceed even if specific devices are unavailable.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="kaneai-preinstalled-app" className="doc_img"/>
+#### Application Options
 
-#### Browser
+| Option | Description |
+|--------|-------------|
+| **Auto Update** | Automatically updates the configuration when a new app version (matching `appPackage` or `bundleId`) is uploaded |
+| **Custom ID** | Links the configuration to an app uploaded via [API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
+| **Pre-Installed App** | Available for Private Cloud only. Maps app capability to `Stock` for testing pre-installed applications |
 
-:::info
-Available for only non-KaneAI generated test runs
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="auto-update-app" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/CustomID.png').default} alt="custom-id-app" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="preinstalled-app" className="doc_img"/>
+
+#### Mobile Browser
+
+:::info Note
+Mobile browser testing on Real Devices is available for non-KaneAI test runs only.
 :::
 
-##### How to select?
-Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Real Device` section from the top navigation. The choose the `Web Browser` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
-- Operating System
-- Browser
-- Manufacturer
-- Device
-- OS Version
+**Environment Variables:**
+| Field | Description |
+|-------|-------------|
+| Operating System | Android or iOS |
+| Browser | Mobile browser to test |
+| Manufacturer | Device manufacturer |
+| Device | Specific device model |
+| OS Version | Operating system version |
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/RDWebBrowser.png').default} alt="kaneai-rd-web-config" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/RDWebBrowser.png').default} alt="real-device-browser-configuration" className="doc_img"/>
 
 ---
 
-### Virtual Device Configuration
-:::info
-Available for only non-KaneAI generated test runs
+### Virtual Mobile
+
+:::info Note
+Virtual Mobile configurations are available for non-KaneAI test runs only.
 :::
+
+Configure testing on emulators and simulators for both Native App and Mobile Browser testing.
 
 #### Native Application
-Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Virtual Device` section from the top navigation. The choose the `Mobile App` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
-- Operating System
-- Manufacturer
-- Device
-- OS Version
-- App
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualWeb.png').default} alt="kaneai-virtual-web-config" className="doc_img"/>
+**Environment Variables:**
+| Field | Description |
+|-------|-------------|
+| Operating System | Android or iOS |
+| Manufacturer | Device manufacturer |
+| Device | Specific device model |
+| OS Version | Operating system version |
+| App | Application to test |
 
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualWeb.png').default} alt="virtual-device-app-configuration" className="doc_img"/>
 
-#### Browser
+#### Mobile Browser
 
-##### How to select?
-Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Virtual Device` section from the top navigation. The choose the `Web Browser` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
-- Operating System
-- Browser
-- Manufacturer
-- Device
-- OS Version
-- URL (Optional)
+**Environment Variables:**
+| Field | Description |
+|-------|-------------|
+| Operating System | Android or iOS |
+| Browser | Mobile browser to test |
+| Manufacturer | Device manufacturer |
+| Device | Specific device model |
+| OS Version | Operating system version |
+| URL *(Optional)* | Default URL to open |
 
-<img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualApp.png').default} alt="kaneai-virtual-app-config" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualApp.png').default} alt="virtual-device-browser-configuration" className="doc_img"/>
 
 ---
 
-## Addition of Configuration in Test Runs
+## Managing Configurations
 
-### Using the UI
-1. Open the **Add Configuration** dialog in a test run
-2. You can add configurations in two ways:
-   - Create a new configuration
-   - Select from existing configurations
+### Edit a Configuration
 
-### Filtering and Selection Options
-* Use the filter chips to narrow down configurations by:
-  - Operating System
-  - Device Type
-  - Browser
-* Use the search bar to find specific configurations
-* Use the **Select All** toggle to:
-  - Select all configurations matching current filters
-  - Mass assign configurations to test instances
+1. Navigate to the **Configurations** page from the sidebar
+2. Locate the configuration and click the **Actions menu** (⋮)
+3. Select **Edit**
+4. Modify the required fields
+5. Save your changes
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/edit-delete-configuration.png').default} alt="edit-delete-configuration" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/app-test/edit-configuration-modal.png').default} alt="edit-delete-configuration" className="doc_img"/>
+
+:::warning Important
+Any updates to the configuration will affect the new and planned test runs. Executed test runs will not be impacted.
+:::
+
+:::info Note
+Edit functionality is only available on the Configurations page, not within the test run modal.
+:::
+
+### Delete a Configuration
+
+1. Navigate to the **Configurations** page from the sidebar
+2. Locate the configuration and click the **Actions menu** (⋮)
+3. Select **Delete**
+4. Confirm the deletion
+
+:::warning Important
+Deleting a configuration is only allowed if it's not associated with any Test Instance.
+:::
+
+---
+
+## Using Configurations in Test Runs
+
+Apply configurations to test cases when creating or editing test runs.
+
+### Steps to Add Configurations
+
+1. Select the test cases you want to configure
+2. Click **Configure Test**
+3. In the **Add Configuration** modal:
+   - Search for existing configurations by name
+   - Use filters to narrow down options (OS, Device Type, Browser)
+   - Select configurations using checkboxes
+   - Optionally, create a new configuration
+   - Click **Manage Configurations** to open the central dashboard in a new tab
+
+<!-- <img loading="lazy" src={require('../assets/images/kane-ai/app-test/add-configuration-modal.png').default} alt="add-configuration-modal" className="doc_img"/> -->
+
+:::warning
+Adding configurations **appends** to existing ones. It does not replace previously assigned configurations.
+:::
+
+### Bulk Selection
+
+- Use the **Select All** toggle to select all configurations matching current filters
+- This is useful for applying multiple configurations to test instances at once
 
 ---
 
 ## Best Practices
-1. Use descriptive configuration names for easy identification
-2. Leverage filters to quickly find relevant configurations
-3. Use the **Select All** feature when you need to apply the same configuration to multiple test instances
+
+| Practice | Benefit |
+|----------|---------|
+| Use descriptive names | Easily identify configurations (e.g., "Chrome-Win11-1920x1080") |
+| Manage from central dashboard | Edit and organize all configurations in one place |
+| Enable Auto Update for apps | Always test with the latest app build |
+| Use multi-select for devices | Increase device pool availability for KaneAI test runs |
+| Review usage count before editing | Understand the impact of changes across test runs |

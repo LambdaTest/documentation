@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration
 site_name: LambdaTest
 slug: hyperexecute-sikuli-integration
+canonical: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

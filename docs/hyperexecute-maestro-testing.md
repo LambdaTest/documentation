@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-maestro-testing
 site_name: LambdaTest
 slug: hyperexecute-maestro-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-maestro-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

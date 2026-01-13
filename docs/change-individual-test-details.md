@@ -10,6 +10,7 @@ keywords:
   - selenium grid online
 url: https://www.testmu.ai/support/docs/change-individual-test-details
 slug: change-individual-test-details
+canonical: https://www.testmu.ai/support/docs/change-individual-test-details/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

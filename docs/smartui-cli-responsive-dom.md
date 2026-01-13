@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cli-responsive-dom
 slug: smartui-cli-responsive-dom
+canonical: https://www.testmu.ai/support/docs/smartui-cli-responsive-dom/
 
 ---
 import Tabs from '@theme/Tabs';

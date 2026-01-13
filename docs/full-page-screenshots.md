@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/full-page-screenshots
 site_name: LambdaTest
 slug: full-page-screenshots
+canonical: https://www.testmu.ai/support/docs/full-page-screenshots/
 ---
 
 

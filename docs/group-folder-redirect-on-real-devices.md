@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device
 site_name: LambdaTest
 slug: group-folder-redirect-on-real-device
+canonical: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

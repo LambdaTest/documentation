@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-8-9
 site_name: LambdaTest
 slug: hyperexecute-release-notes-2-8-9
+canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-8-9/
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';

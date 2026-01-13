@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-csharp-nunit
 site_name: LambdaTest
 slug: appium-csharp-nunit
+canonical: https://www.testmu.ai/support/docs/appium-csharp-nunit/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

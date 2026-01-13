@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/lambda-hooks
 site_name: LambdaTest
 slug: lambda-hooks
+canonical: https://www.testmu.ai/support/docs/lambda-hooks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

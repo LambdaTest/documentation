@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smart-visual-regression-testing
 site_name: LambdaTest
 slug: smart-visual-regression-testing
+canonical: https://www.testmu.ai/support/docs/smart-visual-regression-testing/
 ---
 
 import Tabs from '@theme/Tabs';

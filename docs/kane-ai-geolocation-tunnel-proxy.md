@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy
 site_name: LambdaTest
 slug: kane-ai-geolocation-tunnel-proxy
+canonical: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy/
 ---
 
 import Tabs from '@theme/Tabs';

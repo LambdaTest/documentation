@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-ios-app-settings
 site_name: LambdaTest
 slug: appium-ios-app-settings
+canonical: https://www.testmu.ai/support/docs/appium-ios-app-settings/
 ---
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

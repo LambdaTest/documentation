@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/zenkit-integration
 site_name: LambdaTest
 slug: zenkit-integration
+canonical: https://www.testmu.ai/support/docs/zenkit-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

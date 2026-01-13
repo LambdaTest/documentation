@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics
 site_name: LambdaTest
 slug: analytics-modules-smartui-analytics
+canonical: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics/
 ---
 
 import NewTag from '../src/component/newTag';

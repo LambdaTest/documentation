@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-selenium-ruby-sdk
 slug: smartui-selenium-ruby-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-selenium-ruby-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

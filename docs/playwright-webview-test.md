@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-webview-test
 site_name: LambdaTest
 slug: playwright-webview-test
+canonical: https://www.testmu.ai/support/docs/playwright-webview-test/
 ---
 
 import Tabs from '@theme/Tabs';

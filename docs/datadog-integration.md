@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/datadog-integration
 site_name: LambdaTest
 slug: datadog-integration
+canonical: https://www.testmu.ai/support/docs/datadog-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

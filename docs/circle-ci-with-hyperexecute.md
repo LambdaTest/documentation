@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute
 site_name: LambdaTest
 slug: circle-ci-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

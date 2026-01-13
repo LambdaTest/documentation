@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/chrome-os-testing
 site_name: LambdaTest
 slug: chrome-os-testing
+canonical: https://www.testmu.ai/support/docs/chrome-os-testing/
 ---
 
 

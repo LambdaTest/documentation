@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/puppteer-visual-regression
 site_name: LambdaTest
 slug: puppeteer-visual-regression
+canonical: https://www.testmu.ai/support/docs/puppeteer-visual-regression/
 
 ---
 import Tabs from '@theme/Tabs';

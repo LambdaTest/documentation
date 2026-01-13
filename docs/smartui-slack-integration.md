@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/ssmartui-slack-integration
 site_name: LambdaTest
 slug: smartui-slack-integration
+canonical: https://www.testmu.ai/support/docs/smartui-slack-integration/
 
 ---
 

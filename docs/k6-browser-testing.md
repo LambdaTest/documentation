@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/k6-browser-testing
 site_name: LambdaTest
 slug: k6-browser-testing
+canonical: https://www.testmu.ai/support/docs/k6-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
