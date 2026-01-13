@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-hybrid-strategy
 site_name: LambdaTest
 slug: hyperexecute-hybrid-strategy
+canonical: https://www.testmu.ai/support/docs/hyperexecute-hybrid-strategy/
 ---
 
 

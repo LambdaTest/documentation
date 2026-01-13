@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu
 site_name: LambdaTest
 slug: applitools-integration-cypress
+canonical: https://www.testmu.ai/support/docs/applitools-integration-cypress/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

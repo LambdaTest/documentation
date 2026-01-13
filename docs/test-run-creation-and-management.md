@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/test-run-creation-and-management
 site_name: LambdaTest
 slug: test-run-creation-and-management
+canonical: https://www.testmu.ai/support/docs/test-run-creation-and-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

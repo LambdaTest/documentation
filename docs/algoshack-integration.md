@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/algoqa-integration
 site_name: LambdaTest
 slug: algoqa-integration
+canonical: https://www.testmu.ai/support/docs/algoqa-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

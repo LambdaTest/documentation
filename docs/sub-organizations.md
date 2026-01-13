@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/sub-organizations
 site_name: LambdaTest
 slug: sub-organizations
+canonical: https://www.testmu.ai/support/docs/sub-organizations/
 ---
 
 # Sub Organizations

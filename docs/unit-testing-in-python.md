@@ -23,6 +23,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: running-unit-testing-in-python-on-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

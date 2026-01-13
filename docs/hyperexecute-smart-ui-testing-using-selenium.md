@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-selenium
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-testing-using-selenium
+canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-selenium/
 
 ---
 import Tabs from '@theme/Tabs';

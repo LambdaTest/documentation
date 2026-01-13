@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/disable-screenshot-block
 site_name: LambdaTest
 slug: disable-screenshot-block
+canonical: https://www.testmu.ai/support/docs/disable-screenshot-block/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

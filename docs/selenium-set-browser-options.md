@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-set-browser-options
 site_name: LambdaTest
 slug: selenium-set-browser-options
+canonical: https://www.testmu.ai/support/docs/selenium-set-browser-options/
 ---
 
 import Tabs from '@theme/Tabs';

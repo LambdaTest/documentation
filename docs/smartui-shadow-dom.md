@@ -16,6 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 url: https://www.testmu.ai/support/docs/smartui-shadow-dom
 slug: smartui-shadow-dom
+canonical: https://www.testmu.ai/support/docs/smartui-shadow-dom/
 
 ---
 import Tabs from '@theme/Tabs';

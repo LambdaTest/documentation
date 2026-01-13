@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-yaml-creation-for-playwright
 site_name: LambdaTest
 slug: hyperexecute-yaml-creation-for-playwright
+canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-creation-for-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

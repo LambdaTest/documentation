@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/service-accounts
 site_name: LambdaTest
 slug: service-accounts
+canonical: https://www.testmu.ai/support/docs/service-accounts/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

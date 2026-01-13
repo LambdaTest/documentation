@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets
 site_name: LambdaTest
 slug: analytics-modules-test-manager-widgets
+canonical: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets/
 ---
 
 import NewTag from '../src/component/newTag';

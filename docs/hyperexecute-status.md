@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-status
 site_name: LambdaTest
 slug: hyperexecute-status
+canonical: https://www.testmu.ai/support/docs/hyperexecute-status/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

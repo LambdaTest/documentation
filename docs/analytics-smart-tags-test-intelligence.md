@@ -9,6 +9,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-smart-tags-test-intelligence
 site_name: LambdaTest
 slug: analytics-smart-tags-test-intelligence
+canonical: https://www.testmu.ai/support/docs/analytics-smart-tags-test-intelligence/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

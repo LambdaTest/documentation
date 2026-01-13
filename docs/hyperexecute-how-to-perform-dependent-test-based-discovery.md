@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery
 site_name: LambdaTest
 slug: hyperexecute-how-to-perform-dependent-test-based-discovery
+canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/
 ---
 
 

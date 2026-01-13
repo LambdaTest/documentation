@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu
 site_name: LambdaTest
 slug: integrate-azure-pipelines-with-testmu
+canonical: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

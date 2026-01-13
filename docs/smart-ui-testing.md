@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smart-ui-testing
 site_name: LambdaTest
 slug: smart-ui-testing
+canonical: https://www.testmu.ai/support/docs/smart-ui-testing/
 
 ---
 

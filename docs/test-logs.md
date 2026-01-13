@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/test-logs
 site_name: LambdaTest
 slug: test-logs
+canonical: https://www.testmu.ai/support/docs/test-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

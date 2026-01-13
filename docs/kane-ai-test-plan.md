@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-test-plan
 site_name: LambdaTest
 slug: kane-ai-test-plan
+canonical: https://www.testmu.ai/support/docs/kane-ai-test-plan/
 ---
 
 

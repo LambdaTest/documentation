@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/upload-files-using-testmu
 site_name: LambdaTest
 slug: upload-files-using-testmu
+canonical: https://www.testmu.ai/support/docs/upload-files-using-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

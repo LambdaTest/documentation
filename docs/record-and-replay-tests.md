@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/record-and-replay-tests
 site_name: LambdaTest
 slug: record-and-replay-tests
+canonical: https://www.testmu.ai/support/docs/record-and-replay-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

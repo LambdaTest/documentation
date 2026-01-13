@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-failure-conditions
 site_name: LambdaTest
 slug: kaneai-failure-conditions
+canonical: https://www.testmu.ai/support/docs/kaneai-failure-conditions/
 ---
 
 import Tabs from '@theme/Tabs';

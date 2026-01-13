@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-smartignore
 site_name: LambdaTest
 slug: smartui-smartignore
+canonical: https://www.testmu.ai/support/docs/smartui-smartignore/
 
 ---
 import Tabs from '@theme/Tabs';

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing
 site_name: LambdaTest
 slug: mark-as-bug-in-screenshot-testing
+canonical: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

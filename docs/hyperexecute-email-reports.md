@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-email-reports
 site_name: LambdaTest
 slug: hyperexecute-email-reports
+canonical: https://www.testmu.ai/support/docs/hyperexecute-email-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

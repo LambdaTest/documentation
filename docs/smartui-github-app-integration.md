@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-github-app-integration
 site_name: LambdaTest
 slug: smartui-github-app-integration
+canonical: https://www.testmu.ai/support/docs/smartui-github-app-integration/
 
 ---
 

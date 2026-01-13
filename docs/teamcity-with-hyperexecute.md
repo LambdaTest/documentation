@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute
 site_name: LambdaTest
 slug: teamcity-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

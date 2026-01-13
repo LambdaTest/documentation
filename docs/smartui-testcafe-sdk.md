@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-testcafe-sdk
 slug: smartui-testcafe-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-testcafe-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

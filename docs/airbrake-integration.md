@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/airbrake-integration
 site_name: LambdaTest
 slug: airbrake-integration
+canonical: https://www.testmu.ai/support/docs/airbrake-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

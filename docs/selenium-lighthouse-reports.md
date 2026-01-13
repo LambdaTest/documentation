@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports
 site_name: LambdaTest
 slug: generate-multiple-lighthouse-reports
+canonical: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

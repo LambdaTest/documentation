@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-smartui-visual-testing
 site_name: LambdaTest
 slug: kaneai-smartui-visual-testing
+canonical: https://www.testmu.ai/support/docs/kaneai-smartui-visual-testing/
 
 ---
 import Tabs from '@theme/Tabs';

@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs
 site_name: LambdaTest
 slug: migrate-appium-tests-from-browserstack-and-saucelabs
+canonical: https://www.testmu.ai/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

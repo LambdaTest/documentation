@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests
 site_name: LambdaTest
 slug: hyperexecute-rerun-failed-tests
+canonical: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

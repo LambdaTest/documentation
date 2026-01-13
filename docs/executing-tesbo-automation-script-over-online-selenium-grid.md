@@ -22,6 +22,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/executing-tesbo-automation-script-over-online-selenium-grid
 site_name: LambdaTest
 slug: executing-tesbo-automation-script-over-online-selenium-grid
+canonical: https://www.testmu.ai/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

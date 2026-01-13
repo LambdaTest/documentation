@@ -12,6 +12,7 @@ keywords:
   - reporting
   - optimization
 slug: insights-best-practices
+canonical: https://www.testmu.ai/support/docs/insights-best-practices/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

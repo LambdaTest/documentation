@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-accessibility-test
 site_name: LambdaTest
 slug: playwright-accessibility-test
+canonical: https://www.testmu.ai/support/docs/playwright-accessibility-test/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

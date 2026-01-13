@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-testmu
 site_name: LambdaTest
 slug: run-oxygen-automation-scripts-on-testmu
+canonical: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

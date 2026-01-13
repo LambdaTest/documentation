@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/tricentis-tosca-integration-testmu-selenium-grid
 site_name: LambdaTest
 slug: tricentis-tosca-integration-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

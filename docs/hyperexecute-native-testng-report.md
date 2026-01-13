@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report
 site_name: LambdaTest
 slug: hyperexecute-native-testng-report
+canonical: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

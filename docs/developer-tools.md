@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/developer-tools
 site_name: LambdaTest
 slug: developer-tools
+canonical: https://www.testmu.ai/support/docs/developer-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

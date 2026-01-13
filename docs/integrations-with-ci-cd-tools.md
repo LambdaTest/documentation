@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/integrations-with-ci-cd-tools
 site_name: LambdaTest
 slug: integrations-with-ci-cd-tools
+canonical: https://www.testmu.ai/support/docs/integrations-with-ci-cd-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

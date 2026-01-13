@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/auto-healing
 site_name: LambdaTest
 slug: auto-healing
+canonical: https://www.testmu.ai/support/docs/auto-healing/
 ---
 
 import Tabs from '@theme/Tabs';

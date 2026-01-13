@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-mcp-server
 site_name: LambdaTest
 slug: accessibility-mcp-server
+canonical: https://www.testmu.ai/support/docs/accessibility-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

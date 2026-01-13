@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-automation-on-emulators-simulators
 site_name: LambdaTest
 slug: app-automation-on-emulators-simulators
+canonical: https://www.testmu.ai/support/docs/app-automation-on-emulators-simulators/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

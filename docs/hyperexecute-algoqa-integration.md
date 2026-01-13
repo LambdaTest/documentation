@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration
 site_name: LambdaTest
 slug: hyperexecute-algoqa-integration
+canonical: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

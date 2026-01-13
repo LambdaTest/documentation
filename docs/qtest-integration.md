@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/qtest-integration
 site_name: LambdaTest
 slug: qtest-integration
+canonical: https://www.testmu.ai/support/docs/qtest-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

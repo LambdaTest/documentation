@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/http2-support
 site_name: LambdaTest
 slug: http2-support
+canonical: https://www.testmu.ai/support/docs/http2-support/
 ---
 
 # HTTP/2 Support in <BrandName /> Tunnel

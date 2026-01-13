@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-auto-healing
 site_name: LambdaTest
 slug: hyperexecute-auto-healing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-auto-healing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

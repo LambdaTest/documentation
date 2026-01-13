@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-integration-with-hyperexecute
 site_name: LambdaTest
 slug: playwright-integration-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/playwright-integration-with-hyperexecute/
 ---
 
 

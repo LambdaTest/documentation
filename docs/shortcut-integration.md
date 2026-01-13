@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/shortcut-integration
 site_name: LambdaTest
 slug: shortcut-integration
+canonical: https://www.testmu.ai/support/docs/shortcut-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

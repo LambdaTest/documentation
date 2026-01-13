@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/authentication
 site_name: LambdaTest
 slug: authentication
+canonical: https://www.testmu.ai/support/docs/authentication/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

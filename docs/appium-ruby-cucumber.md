@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-ruby-cucumber
 site_name: LambdaTest
 slug: appium-ruby-cucumber
+canonical: https://www.testmu.ai/support/docs/appium-ruby-cucumber/
 ---
 
 

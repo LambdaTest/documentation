@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-guided-walkthrough
 site_name: LambdaTest
 slug: smartui-guided-walkthrough
+canonical: https://www.testmu.ai/support/docs/smartui-guided-walkthrough/
 
 ---
 

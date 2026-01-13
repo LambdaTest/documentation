@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-with-semaphore
 site_name: LambdaTest
 slug: smartui-with-semaphore
+canonical: https://www.testmu.ai/support/docs/smartui-with-semaphore/
 
 ---
 import Tabs from '@theme/Tabs';

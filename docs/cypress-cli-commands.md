@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/cypress-cli-commands
 site_name: LambdaTest
 slug: cypress-cli-commands
+canonical: https://www.testmu.ai/support/docs/cypress-cli-commands/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

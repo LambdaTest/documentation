@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide
 site_name: LambdaTest
 slug: saucelabs-to-testmu-migration-guide
+canonical: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/supported-timezone
 site_name: LambdaTest
 slug: supported-timezone
+canonical: https://www.testmu.ai/support/docs/supported-timezone/
 ---
 
 import Tabs from '@theme/Tabs';

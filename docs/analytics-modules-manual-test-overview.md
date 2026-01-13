@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview
 site_name: LambdaTest
 slug: analytics-modules-manual-test-overview
+canonical: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

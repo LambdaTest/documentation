@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-branch-merging
 site_name: LambdaTest
 slug: smartui-branch-merging
+canonical: https://www.testmu.ai/support/docs/smartui-branch-merging/
 
 ---
 import Tabs from '@theme/Tabs';

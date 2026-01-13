@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute
 site_name: LambdaTest
 slug: playwright-real-device-on-hyperexecute
+canonical: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

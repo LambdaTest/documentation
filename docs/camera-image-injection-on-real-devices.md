@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/camera-image-injection-on-real-devices
 site_name: LambdaTest
 slug: camera-image-injection-on-real-devices
+canonical: https://www.testmu.ai/support/docs/camera-image-injection-on-real-devices/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

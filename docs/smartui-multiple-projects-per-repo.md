@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-multiple-projects-per-repo
 site_name: LambdaTest
 slug: smartui-multiple-projects-per-repo
+canonical: https://www.testmu.ai/support/docs/smartui-multiple-projects-per-repo/
 
 ---
 

@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/key-features-of-hyperexecute
 site_name: LambdaTest Key features of Hyperexecute
 slug: key-features-of-hyperexecute
+canonical: https://www.testmu.ai/support/docs/key-features-of-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

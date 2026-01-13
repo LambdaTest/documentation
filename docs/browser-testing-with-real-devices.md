@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/browser-testing-on-real-devices
 site_name: LambdaTest
 slug: browser-testing-on-real-devices
+canonical: https://www.testmu.ai/support/docs/browser-testing-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

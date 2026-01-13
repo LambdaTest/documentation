@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers
 site_name: LambdaTest
 slug: perform-selenium-automation-on-headless-browsers
+canonical: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

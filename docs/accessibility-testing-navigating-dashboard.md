@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-testing-navigating-dashboard
 site_name: LambdaTest
 slug: accessibility-testing-navigating-dashboard
+canonical: https://www.testmu.ai/support/docs/accessibility-testing-navigating-dashboard/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

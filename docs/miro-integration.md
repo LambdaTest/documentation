@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/miro-integration
 site_name: LambdaTest
 slug: miro-integration
+canonical: https://www.testmu.ai/support/docs/miro-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

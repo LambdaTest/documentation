@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu
 site_name: LambdaTest
 slug: buildkite-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-browser-list-api
 site_name: LambdaTest
 slug: hyperexecute-browser-list-api
+canonical: https://www.testmu.ai/support/docs/hyperexecute-browser-list-api/
 ---
 
 

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/serenity-test-on-selenium-grid
 site_name: LambdaTest
 slug: serenity-test-on-selenium-grid
+canonical: https://www.testmu.ai/support/docs/serenity-test-on-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

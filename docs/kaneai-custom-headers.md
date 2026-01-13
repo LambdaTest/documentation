@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-custom-headers
 site_name: LambdaTest
 slug: kaneai-custom-headers
+canonical: https://www.testmu.ai/support/docs/kaneai-custom-headers/
 ---
 
 

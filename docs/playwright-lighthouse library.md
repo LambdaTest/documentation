@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-lighthouse-library
 site_name: LambdaTest
 slug: playwright-lighthouse-library
+canonical: https://www.testmu.ai/support/docs/playwright-lighthouse-library/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

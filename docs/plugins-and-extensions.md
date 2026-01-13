@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/plugins-and-extensions
 site_name: LambdaTest
 slug: plugins-and-extensions
+canonical: https://www.testmu.ai/support/docs/plugins-and-extensions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

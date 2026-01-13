@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/inside-testmu-platform
 site_name: LambdaTest
 slug: inside-testmu-platform
+canonical: https://www.testmu.ai/support/docs/inside-testmu-platform/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

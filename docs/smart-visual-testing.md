@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smart-visual-testing
 site_name: LambdaTest
 slug: smart-visual-testing
+canonical: https://www.testmu.ai/support/docs/smart-visual-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

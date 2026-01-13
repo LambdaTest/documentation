@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-bidi-testing
 site_name: LambdaTest
 slug: hyperexecute-bidi-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-bidi-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

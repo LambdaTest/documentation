@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/migrate-from-legacy-platform-to-testmu
 site_name: LambdaTest
 slug: migrate-from-legacy-platform-to-testmu
+canonical: https://www.testmu.ai/support/docs/migrate-from-legacy-platform-to-testmu/
 ---
 
 

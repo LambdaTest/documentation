@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-running-your-first-job
 site_name: LambdaTest
 slug: hyperexecute-running-your-first-job
+canonical: https://www.testmu.ai/support/docs/hyperexecute-running-your-first-job/
 ---
 
 import TabItem from '@theme/TabItem';

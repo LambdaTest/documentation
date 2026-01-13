@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/codeship-integration-with-testmu
 site_name: LambdaTest
 slug: codeship-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/codeship-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

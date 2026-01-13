@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/csv-import
 site_name: LambdaTest
 slug: csv-import
+canonical: https://www.testmu.ai/support/docs/csv-import/
 ---
 
 

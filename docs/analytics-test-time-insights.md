@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-test-time-trends
 site_name: LambdaTest
 slug: analytics-test-time-trends
+canonical: https://www.testmu.ai/support/docs/analytics-test-time-trends/
 ---
 
 import NewTag from '../src/component/newTag';

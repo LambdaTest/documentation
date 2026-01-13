@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-web-test-writing-guidelines
 site_name: LambdaTest
 slug: kane-ai-web-test-writing-guidelines
+canonical: https://www.testmu.ai/support/docs/kane-ai-web-test-writing-guidelines/
 ---
 
 import Tabs from '@theme/Tabs';

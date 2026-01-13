@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/performance-tips
 site_name: LambdaTest
 slug: performance-tips
+canonical: https://www.testmu.ai/support/docs/performance-tips/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

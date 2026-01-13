@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis
 site_name: LambdaTest
 slug: analytics-ai-root-cause-analysis
+canonical: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

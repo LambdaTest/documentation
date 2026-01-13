@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-geolocation-capabilities
 site_name: LambdaTest
 slug: selenium-geolocation-capabilities
+canonical: https://www.testmu.ai/support/docs/selenium-geolocation-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/espresso-junit-report
 site_name: LambdaTest
 slug: espresso-junit-report
+canonical: https://www.testmu.ai/support/docs/espresso-junit-report/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

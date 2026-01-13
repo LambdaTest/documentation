@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-selenium-advance-capabilities
 site_name: LambdaTest
 slug: testmu-selenium-advance-capabilities
+canonical: https://www.testmu.ai/support/docs/testmu-selenium-advance-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

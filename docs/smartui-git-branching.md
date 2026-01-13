@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-github-app-integration
 site_name: LambdaTest
 slug: smartui-git-branching-strategy
+canonical: https://www.testmu.ai/support/docs/smartui-git-branching-strategy/
 
 ---
 import Tabs from '@theme/Tabs';

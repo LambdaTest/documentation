@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/environment-variables-supported-by-lambda-tunnel
 site_name: LambdaTest
 slug: environment-variables-supported-by-lambda-tunnel
+canonical: https://www.testmu.ai/support/docs/environment-variables-supported-by-lambda-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

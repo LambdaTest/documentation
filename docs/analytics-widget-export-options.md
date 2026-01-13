@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export
 site_name: LambdaTest
 slug: analytics-widget-drill-down-export
+canonical: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

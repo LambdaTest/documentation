@@ -17,6 +17,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

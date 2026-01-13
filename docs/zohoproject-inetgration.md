@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/zohoproject-integration
 site_name: LambdaTest
 slug: zohoproject-integration
+canonical: https://www.testmu.ai/support/docs/zohoproject-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

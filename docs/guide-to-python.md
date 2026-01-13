@@ -12,6 +12,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid
 site_name: LambdaTest
 slug: run-python-tests-on-selenium-grid
+canonical: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

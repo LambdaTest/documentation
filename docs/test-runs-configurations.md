@@ -13,7 +13,8 @@ keywords:
   - environment setup
 url: https://www.testmu.ai/support/docs/test-runs-configurations/
 site_name: LambdaTest
-slug: test-runs-configurations/
+slug: test-runs-configurations
+canonical: https://www.testmu.ai/support/docs/test-runs-configurations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

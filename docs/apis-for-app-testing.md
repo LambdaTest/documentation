@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-testing-apis
 site_name: LambdaTest
 slug: app-testing-apis
+canonical: https://www.testmu.ai/support/docs/app-testing-apis/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

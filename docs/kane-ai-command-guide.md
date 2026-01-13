@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-command-guide
 site_name: LambdaTest
 slug: kane-ai-command-guide
+canonical: https://www.testmu.ai/support/docs/kane-ai-command-guide/
 ---
 
 import Tabs from '@theme/Tabs';

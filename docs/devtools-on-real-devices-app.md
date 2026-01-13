@@ -21,6 +21,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/devtools-on-real-devices-app
 site_name: LambdaTest
 slug: devtools-on-real-devices-app
+canonical: https://www.testmu.ai/support/docs/devtools-on-real-devices-app/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

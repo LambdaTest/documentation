@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/modules-in-manual-testcases
 site_name: LambdaTest
 slug: modules-in-manual-testcases
+canonical: https://www.testmu.ai/support/docs/modules-in-manual-testcases/
 ---
 
 

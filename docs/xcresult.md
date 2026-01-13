@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/xcresult
 site_name: LambdaTest
 slug: xcresult
+canonical: https://www.testmu.ai/support/docs/xcresult/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

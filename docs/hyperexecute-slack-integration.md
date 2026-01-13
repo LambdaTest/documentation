@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-slack-integration
 site_name: LambdaTest
 slug: hyperexecute-slack-integration
+canonical: https://www.testmu.ai/support/docs/hyperexecute-slack-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

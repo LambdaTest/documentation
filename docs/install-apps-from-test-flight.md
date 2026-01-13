@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/install-apps-from-test-flight
 site_name: LambdaTest
 slug: install-apps-from-test-flight
+canonical: https://www.testmu.ai/support/docs/install-apps-from-test-flight/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

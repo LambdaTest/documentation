@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/bugherd-integration
 site_name: LambdaTest
 slug: bugherd-integration
+canonical: https://www.testmu.ai/support/docs/bugherd-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

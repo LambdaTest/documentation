@@ -18,6 +18,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing
 site_name: LambdaTest
 slug: selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing
+canonical: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smart-heal-appium
 site_name: LambdaTest
 slug: smart-heal-appium
+canonical: https://www.testmu.ai/support/docs/smart-heal-appium/
 ---
 
 

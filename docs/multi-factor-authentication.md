@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/multi-factor-authentication
 site_name: LambdaTest
 slug: multi-factor-authentication
+canonical: https://www.testmu.ai/support/docs/multi-factor-authentication/
 ---
 
 

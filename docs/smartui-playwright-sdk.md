@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-playwright-sdk
 slug: smartui-playwright-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-playwright-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

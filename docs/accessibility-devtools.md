@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-devtools
 site_name: LambdaTest
 slug: accessibility-devtools
+canonical: https://www.testmu.ai/support/docs/accessibility-devtools/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

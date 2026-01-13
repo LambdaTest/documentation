@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/install-apps-from-play-store
 site_name: LambdaTest
 slug: install-apps-from-play-store
+canonical: https://www.testmu.ai/support/docs/install-apps-from-play-store/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

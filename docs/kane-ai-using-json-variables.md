@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-using-json-variables
 site_name: LambdaTest
 slug: kane-ai-using-json-variables
+canonical: https://www.testmu.ai/support/docs/kane-ai-using-json-variables/
 ---
 
 

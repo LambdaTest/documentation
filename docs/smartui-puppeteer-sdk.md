@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-puppeteer-sdk
 slug: smartui-puppeteer-sdk
+canonical: https://www.testmu.ai/support/docs/smartui-puppeteer-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

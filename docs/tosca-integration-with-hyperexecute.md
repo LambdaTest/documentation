@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute
 site_name: LambdaTest
 slug: tosca-integration-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute/
 ---
 
 

@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testcomplete-integration
 site_name: LambdaTest
 slug: testcomplete-integration
+canonical: https://www.testmu.ai/support/docs/testcomplete-integration/
 ---
 
 import Tabs from '@theme/Tabs';

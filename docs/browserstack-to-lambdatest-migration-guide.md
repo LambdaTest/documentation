@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/browserstack-to-testmu-migration-guide
 site_name: LambdaTest
 slug: browserstack-to-testmu-migration-guide
+canonical: https://www.testmu.ai/support/docs/browserstack-to-testmu-migration-guide/
 ---
 
 

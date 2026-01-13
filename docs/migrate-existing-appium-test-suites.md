@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites
 site_name: LambdaTest
 slug: migrate-existing-appium-test-suites
+canonical: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

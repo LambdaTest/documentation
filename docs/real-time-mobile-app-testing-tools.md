@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools
 site_name: LambdaTest
 slug: real-time-mobile-app-testing-tools
+canonical: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

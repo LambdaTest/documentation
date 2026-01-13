@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/web-scanner-adding-urls
 site_name: LambdaTest
 slug: web-scanner-adding-urls
+canonical: https://www.testmu.ai/support/docs/web-scanner-adding-urls/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

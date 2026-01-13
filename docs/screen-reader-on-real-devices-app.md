@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-app
 site_name: LambdaTest
 slug: screen-reader-on-real-devices-app
+canonical: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-app/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

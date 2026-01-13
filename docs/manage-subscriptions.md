@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/manage-subscriptions
 site_name: LambdaTest
 slug: manage-subscriptions
+canonical: https://www.testmu.ai/support/docs/manage-subscriptions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
