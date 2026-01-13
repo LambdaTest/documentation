@@ -3,7 +3,7 @@ name: 'Deployment (Prod - New Bucket)'
 on:
   push:
     branches:
-      - testmu
+      - main
 
 jobs:
   Docusaurus:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: testmu
+          ref: main
           fetch-depth: 0
 
       - name: Configure AWS Credentials
