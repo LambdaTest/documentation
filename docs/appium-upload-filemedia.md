@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/uploadMedia
 site_name: LambdaTest
 slug: upload-media
+canonical: https://www.testmu.ai/support/docs/upload-media/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

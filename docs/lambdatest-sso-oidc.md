@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-sso-oidc
 site_name: LambdaTest
 slug: testmu-sso-oidc
+canonical: https://www.testmu.ai/support/docs/testmu-sso-oidc/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

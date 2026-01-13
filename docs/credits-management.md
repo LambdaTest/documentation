@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/credits-management
 site_name: LambdaTest
 slug: credits-management
+canonical: https://www.testmu.ai/support/docs/credits-management/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

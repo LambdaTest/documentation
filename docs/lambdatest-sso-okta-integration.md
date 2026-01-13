@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-sso-okta-integration
 site_name: LambdaTest
 slug: testmu-sso-okta-integration
+canonical: https://www.testmu.ai/support/docs/testmu-sso-okta-integration/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

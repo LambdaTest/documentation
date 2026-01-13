@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/karate-report
 site_name: LambdaTest
 slug: karate-report
+canonical: https://www.testmu.ai/support/docs/karate-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

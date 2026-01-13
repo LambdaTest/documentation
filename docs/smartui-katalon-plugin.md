@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-katalon-plugin
 site_name: LambdaTest
 slug: smartui-katalon-plugin
+canonical: https://www.testmu.ai/support/docs/smartui-katalon-plugin/
 
 ---
 import Tabs from '@theme/Tabs';

@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-filter-by-custom-data
 site_name: LambdaTest
 slug: analytics-filter-by-custom-data
+canonical: https://www.testmu.ai/support/docs/analytics-filter-by-custom-data/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

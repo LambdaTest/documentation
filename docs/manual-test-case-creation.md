@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/manual-test-case-creation
 site_name: LambdaTest
 slug: manual-test-case-creation
+canonical: https://www.testmu.ai/support/docs/manual-test-case-creation/
 ---
 
 

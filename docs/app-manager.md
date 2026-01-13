@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-manager
 site_name: LambdaTest
 slug: app-manager
+canonical: https://www.testmu.ai/support/docs/app-manager/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

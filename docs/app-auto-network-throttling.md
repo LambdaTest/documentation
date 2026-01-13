@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/app-auto-network-throttling
 site_name: LambdaTest
 slug: app-auto-network-throttling
+canonical: https://www.testmu.ai/support/docs/app-auto-network-throttling/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

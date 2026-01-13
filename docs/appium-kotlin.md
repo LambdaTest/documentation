@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-kotlin
 site_name: LambdaTest
 slug: appium-kotlin
+canonical: https://www.testmu.ai/support/docs/appium-kotlin/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

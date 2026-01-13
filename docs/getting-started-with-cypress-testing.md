@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/getting-started-with-cypress-testing
 site_name: LambdaTest
 slug: getting-started-with-cypress-testing
+canonical: https://www.testmu.ai/support/docs/getting-started-with-cypress-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

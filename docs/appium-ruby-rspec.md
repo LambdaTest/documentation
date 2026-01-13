@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-ruby-rspec
 site_name: LambdaTest
 slug: appium-ruby-rspec
+canonical: https://www.testmu.ai/support/docs/appium-ruby-rspec/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

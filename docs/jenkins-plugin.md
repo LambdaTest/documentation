@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/jenkins-with-testmu
 site_name: LambdaTest
 slug: jenkins-with-testmu
+canonical: https://www.testmu.ai/support/docs/jenkins-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

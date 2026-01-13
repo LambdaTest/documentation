@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-using-variables
 site_name: LambdaTest
 slug: kane-ai-using-variables
+canonical: https://www.testmu.ai/support/docs/kane-ai-using-variables/
 ---
 
 import Tabs from '@theme/Tabs';

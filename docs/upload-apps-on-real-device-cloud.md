@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/upload-apps-on-real-device-cloud
 site_name: LambdaTest
 slug: upload-apps-on-real-device-cloud
+canonical: https://www.testmu.ai/support/docs/upload-apps-on-real-device-cloud/
 ---
 
 import Tabs from '@theme/Tabs';

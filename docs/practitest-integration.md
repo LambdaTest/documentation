@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/practitest-integration
 site_name: LambdaTest
 slug: practitest-integration
+canonical: https://www.testmu.ai/support/docs/practitest-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

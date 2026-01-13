@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/application-setup-via-api
 site_name: LambdaTest
 slug: application-setup-via-api
+canonical: https://www.testmu.ai/support/docs/application-setup-via-api/
 ---
 
 import Tabs from '@theme/Tabs';

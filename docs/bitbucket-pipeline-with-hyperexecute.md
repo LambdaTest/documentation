@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute
 site_name: LambdaTest
 slug: bitbucket-pipeline-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

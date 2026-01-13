@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-with-buildkite
 site_name: LambdaTest
 slug: smartui-with-buildkite
+canonical: https://www.testmu.ai/support/docs/smartui-with-buildkite/
 
 ---
 import Tabs from '@theme/Tabs';

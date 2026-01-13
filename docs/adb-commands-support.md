@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/adb-commands-support
 site_name: LambdaTest
 slug: adb-commands-support
+canonical: https://www.testmu.ai/support/docs/adb-commands-support/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

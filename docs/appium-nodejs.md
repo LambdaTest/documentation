@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-nodejs
 site_name: LambdaTest
 slug: appium-nodejs
+canonical: https://www.testmu.ai/support/docs/appium-nodejs/
 ---
 
 

@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-azure-devops-app
 site_name: LambdaTest
 slug: testmu-azure-devops-app
+canonical: https://www.testmu.ai/support/docs/testmu-azure-devops-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

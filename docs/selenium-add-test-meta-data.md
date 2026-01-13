@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-add-test-meta-data
 site_name: LambdaTest
 slug: selenium-add-test-meta-data
+canonical: https://www.testmu.ai/support/docs/selenium-add-test-meta-data/
 ---
 
 import Tabs from '@theme/Tabs';

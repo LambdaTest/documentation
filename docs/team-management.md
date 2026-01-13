@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/team-management
 site_name: LambdaTest
 slug: team-management
+canonical: https://www.testmu.ai/support/docs/team-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

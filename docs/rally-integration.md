@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/rally-integration
 site_name: LambdaTest
 slug: rally-integration
+canonical: https://www.testmu.ai/support/docs/rally-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

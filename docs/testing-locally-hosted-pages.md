@@ -19,6 +19,7 @@ image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
 url: https://www.testmu.ai/support/docs/testing-locally-hosted-pages
 site_name: LambdaTest
 slug: testing-locally-hosted-pages
+canonical: https://www.testmu.ai/support/docs/testing-locally-hosted-pages/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

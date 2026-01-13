@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-matrix-multiplexing-strategy
 site_name: LambdaTest
 slug: hyperexecute-matrix-multiplexing-strategy
+canonical: https://www.testmu.ai/support/docs/hyperexecute-matrix-multiplexing-strategy/
 ---
 
 

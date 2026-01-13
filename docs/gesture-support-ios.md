@@ -12,6 +12,7 @@ keywords:
   - Double tap
   - Triple tap
 slug: gesture-support-ios
+canonical: https://www.testmu.ai/support/docs/gesture-support-ios/
 site_name: LambdaTest
 url: https://www.testmu.ai/support/docs/gesture-support-ios
 ---

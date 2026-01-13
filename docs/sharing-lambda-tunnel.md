@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/sharing-lambda-tunnel
 site_name: LambdaTest
 slug: sharing-lambda-tunnel
+canonical: https://www.testmu.ai/support/docs/sharing-lambda-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

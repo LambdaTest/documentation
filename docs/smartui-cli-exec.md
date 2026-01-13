@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cli-exec
 slug: smartui-cli-exec
+canonical: https://www.testmu.ai/support/docs/smartui-cli-exec/
 
 ---
 import Tabs from '@theme/Tabs';

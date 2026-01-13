@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-api-testing
 site_name: LambdaTest
 slug: hyperexecute-api-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-api-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

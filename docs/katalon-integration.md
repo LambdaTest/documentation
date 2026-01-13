@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/katalon-integration
 site_name: LambdaTest
 slug: katalon-integration
+canonical: https://www.testmu.ai/support/docs/katalon-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

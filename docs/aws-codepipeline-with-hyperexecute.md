@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute
 site_name: LambdaTest
 slug: aws-codepipeline-with-hyperexecute
+canonical: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/ios-entitlements
 site_name: LambdaTest
 slug: ios-entitlements
+canonical: https://www.testmu.ai/support/docs/ios-entitlements/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

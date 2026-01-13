@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/getting-started-with-xcuitest
 site_name: LambdaTest
 slug: getting-started-with-xcuitest
+canonical: https://www.testmu.ai/support/docs/getting-started-with-xcuitest/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

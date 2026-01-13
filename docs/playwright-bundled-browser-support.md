@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/playwright-bundled-browser-support
 site_name: LambdaTest
 slug: playwright-bundled-browser-support
+canonical: https://www.testmu.ai/support/docs/playwright-bundled-browser-support/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

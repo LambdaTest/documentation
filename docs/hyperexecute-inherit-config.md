@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-inherit-config
 site_name: LambdaTest
 slug: hyperexecute-inherit-config
+canonical: https://www.testmu.ai/support/docs/hyperexecute-inherit-config/
 ---
 
 

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide
 site_name: LambdaTest
 slug: smartui-troubleshooting-guide
+canonical: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide/
 
 ---
 import Tabs from '@theme/Tabs';

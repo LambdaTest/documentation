@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-capability-map
 site_name: LambdaTest
 slug: testmu-capability-map
+canonical: https://www.testmu.ai/support/docs/testmu-capability-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

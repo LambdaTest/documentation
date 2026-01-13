@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-visual-regression
 site_name: LambdaTest
 slug: selenium-visual-regression
+canonical: https://www.testmu.ai/support/docs/selenium-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';

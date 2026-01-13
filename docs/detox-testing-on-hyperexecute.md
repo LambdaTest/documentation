@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing
 site_name: LambdaTest
 slug: hyperexecute-detox-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-detox-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

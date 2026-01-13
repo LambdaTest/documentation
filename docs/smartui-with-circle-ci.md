@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-with-circle-ci
 site_name: LambdaTest
 slug: smartui-with-circle-ci
+canonical: https://www.testmu.ai/support/docs/smartui-with-circle-ci/
 
 ---
 import Tabs from '@theme/Tabs';

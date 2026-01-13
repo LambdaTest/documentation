@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-edit-test-steps
 site_name: LambdaTest
 slug: kaneai-edit-test-steps
+canonical: https://www.testmu.ai/support/docs/kaneai-edit-test-steps/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-python-gauge
 site_name: LambdaTest
 slug: appium-python-gauge
+canonical: https://www.testmu.ai/support/docs/appium-python-gauge/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

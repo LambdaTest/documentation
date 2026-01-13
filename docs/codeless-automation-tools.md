@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/integrations-with-codeless-automation-tools
 site_name: LambdaTest
 slug: integrations-with-codeless-automation-tools
+canonical: https://www.testmu.ai/support/docs/integrations-with-codeless-automation-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

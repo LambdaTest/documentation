@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/run-settings
 site_name: LambdaTest
 slug: run-settings
+canonical: https://www.testmu.ai/support/docs/run-settings/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

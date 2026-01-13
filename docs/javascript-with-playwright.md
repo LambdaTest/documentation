@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/javascript-with-playwright
 site_name: LambdaTest
 slug: javascript-with-playwright
+canonical: https://www.testmu.ai/support/docs/javascript-with-playwright/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

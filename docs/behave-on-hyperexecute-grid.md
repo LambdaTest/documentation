@@ -22,6 +22,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/behave-on-hyperexecute-grid
 site_name: LambdaTest
 slug: behave-on-hyperexecute-grid
+canonical: https://www.testmu.ai/support/docs/behave-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

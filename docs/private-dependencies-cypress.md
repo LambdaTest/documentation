@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/private-dependencies-cypress
 site_name: LambdaTest
 slug: private-dependencies-cypress
+canonical: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 ---
 
 This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **<BrandName /> platform**.

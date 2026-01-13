@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cli-upload
 slug: smartui-cli-upload
+canonical: https://www.testmu.ai/support/docs/smartui-cli-upload/
 
 ---
 import Tabs from '@theme/Tabs';

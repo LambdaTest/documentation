@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/bulk-update-fields
 site_name: LambdaTest
 slug: bulk-update-fields
+canonical: https://www.testmu.ai/support/docs/bulk-update-fields/
 ---
 
 

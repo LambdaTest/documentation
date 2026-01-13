@@ -17,6 +17,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-bar-line-widgets/
 site_name: LambdaTest
 slug: analytics-bar-line-widgets/
+canonical: https://www.testmu.ai/support/docs/analytics-bar-line-widgets//
 ---
 
 import NewTag from '../src/component/newTag';

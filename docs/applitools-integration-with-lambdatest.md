@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu
 site_name: LambdaTest
 slug: applitools-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/applitools-integration-with-testmu/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

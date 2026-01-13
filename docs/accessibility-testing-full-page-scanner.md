@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-testing-full-page-scanner
 site_name: LambdaTest
 slug: accessibility-testing-full-page-scanner
+canonical: https://www.testmu.ai/support/docs/accessibility-testing-full-page-scanner/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/lambda-exceptions
 site_name: LambdaTest
 slug: lambda-exceptions
+canonical: https://www.testmu.ai/support/docs/lambda-exceptions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/deep-dive-into-hyperexecute-yaml
 site_name: TestMu AI Deep dive into hyperexecute yaml
 slug: deep-dive-into-hyperexecute-yaml
+canonical: https://www.testmu.ai/support/docs/deep-dive-into-hyperexecute-yaml/
 ---
 
 import Tabs from '@theme/Tabs';

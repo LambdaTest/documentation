@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-test-scheduling
 site_name: LambdaTest
 slug: accessibility-test-scheduling
+canonical: https://www.testmu.ai/support/docs/accessibility-test-scheduling/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/system-and-custom-fields
 site_name: LambdaTest
 slug: system-and-custom-fields
+canonical: https://www.testmu.ai/support/docs/system-and-custom-fields/
 ---
 
 

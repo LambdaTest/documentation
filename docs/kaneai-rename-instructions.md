@@ -14,6 +14,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/kaneai-rename-instructions/
 site_name: LambdaTest
 slug: kaneai-rename-instructions/
+canonical: https://www.testmu.ai/support/docs/kaneai-rename-instructions//
 ---
 
 <script type="application/ld+json"

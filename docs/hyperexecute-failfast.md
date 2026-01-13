@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-failfast
 site_name: LambdaTest
 slug: hyperexecute-failfast
+canonical: https://www.testmu.ai/support/docs/hyperexecute-failfast/
 ---
 
 

@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/use-cases-of-kane-ai
 site_name: LambdaTest
 slug: use-cases-of-kane-ai
+canonical: https://www.testmu.ai/support/docs/use-cases-of-kane-ai/
 ---
 
 import Tabs from '@theme/Tabs';

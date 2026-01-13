@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/automation-testing-selenium-with-lettuce
 site_name: LambdaTest
 slug: automation-testing-selenium-with-lettuce
+canonical: https://www.testmu.ai/support/docs/automation-testing-selenium-with-lettuce/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

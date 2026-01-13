@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-custom-headers
 site_name: LambdaTest
 slug: appium-custom-headers
+canonical: https://www.testmu.ai/support/docs/appium-custom-headers/
 ---
 
 

@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/html-dom-smartui-options
 slug: html-dom-smartui-options
+canonical: https://www.testmu.ai/support/docs/html-dom-smartui-options/
 ---
 
 import Tabs from '@theme/Tabs';

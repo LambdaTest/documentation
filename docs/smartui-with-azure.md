@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/smartui-with-azure
 site_name: LambdaTest
 slug: smartui-with-azure
+canonical: https://www.testmu.ai/support/docs/smartui-with-azure/
 
 ---
 import Tabs from '@theme/Tabs';

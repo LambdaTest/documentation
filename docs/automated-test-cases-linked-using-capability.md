@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/automated-test-cases-linked-using-capabilityr
 site_name: LambdaTest
 slug: automated-test-cases-linked-using-capability
+canonical: https://www.testmu.ai/support/docs/automated-test-cases-linked-using-capability/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

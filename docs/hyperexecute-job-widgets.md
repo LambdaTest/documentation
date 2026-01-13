@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-job-widgets
 site_name: LambdaTest
 slug: hyperexecute-job-widgets
+canonical: https://www.testmu.ai/support/docs/hyperexecute-job-widgets/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

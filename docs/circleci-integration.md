@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/circleci-integration-with-testmu
 site_name: LambdaTest
 slug: circleci-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/circleci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

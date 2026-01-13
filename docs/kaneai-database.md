@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-database
 site_name: LambdaTest
 slug: kaneai-database
+canonical: https://www.testmu.ai/support/docs/kaneai-database/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

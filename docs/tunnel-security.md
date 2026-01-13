@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/tunnel-security
 site_name: LambdaTest
 slug: tunnel-security
+canonical: https://www.testmu.ai/support/docs/tunnel-security/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

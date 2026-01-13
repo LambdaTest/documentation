@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-cli-gui
 site_name: LambdaTest
 slug: hyperexecute-cli-gui
+canonical: https://www.testmu.ai/support/docs/hyperexecute-cli-gui/
 ---
 
 import Tabs from '@theme/Tabs';

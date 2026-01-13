@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/test-intelligence-command-logs
 site_name: LambdaTest
 slug: test-intelligence-command-error-logs-analytics
+canonical: https://www.testmu.ai/support/docs/test-intelligence-command-error-logs-analytics/
 ---
 
 import NewTag from '../src/component/newTag';

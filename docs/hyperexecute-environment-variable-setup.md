@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-environment-variable-setup
 site_name: LambdaTest
 slug: hyperexecute-environment-variable-setup
+canonical: https://www.testmu.ai/support/docs/hyperexecute-environment-variable-setup/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

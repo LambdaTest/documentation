@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testsigma-integration
 site_name: LambdaTest
 slug: testsigma-integration
+canonical: https://www.testmu.ai/support/docs/testsigma-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

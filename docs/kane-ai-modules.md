@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-modules
 site_name: LambdaTest
 slug: kane-ai-modules
+canonical: https://www.testmu.ai/support/docs/kane-ai-modules/
 ---
 
 import Tabs from '@theme/Tabs';

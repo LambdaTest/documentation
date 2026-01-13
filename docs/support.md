@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs
 site_name: LambdaTest
 slug: /
+canonical: https://www.testmu.ai/support/docs///
 ---
 
 import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';

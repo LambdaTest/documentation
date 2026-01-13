@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/jumpcloud-scim
 site_name: LambdaTest
 slug: jumpcloud-scim
+canonical: https://www.testmu.ai/support/docs/jumpcloud-scim/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

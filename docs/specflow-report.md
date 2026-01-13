@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/specflow-report
 site_name: LambdaTest
 slug: specflow-report
+canonical: https://www.testmu.ai/support/docs/specflow-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

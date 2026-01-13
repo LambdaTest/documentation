@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/ios-ipa-files-xcui
 site_name: LambdaTest
 slug: ios-ipa-files-xcui
+canonical: https://www.testmu.ai/support/docs/ios-ipa-files-xcui/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

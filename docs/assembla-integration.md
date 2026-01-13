@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/assembla-integration
 site_name: LambdaTest
 slug: assembla-integration
+canonical: https://www.testmu.ai/support/docs/assembla-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

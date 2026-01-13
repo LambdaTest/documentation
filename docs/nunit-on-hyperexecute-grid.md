@@ -21,6 +21,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/nunit-on-hyperexecute-grid
 site_name: LambdaTest
 slug: nunit-on-hyperexecute-grid
+canonical: https://www.testmu.ai/support/docs/nunit-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

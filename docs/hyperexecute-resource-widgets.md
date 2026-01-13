@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-resource-widgets
 site_name: LambdaTest
 slug: hyperexecute-resource-widgets
+canonical: https://www.testmu.ai/support/docs/hyperexecute-resource-widgets/
 ---
 
 

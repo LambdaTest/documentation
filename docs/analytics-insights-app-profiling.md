@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/insights-app-profiling
 site_name: LambdaTest
 slug: insights-app-profiling
+canonical: https://www.testmu.ai/support/docs/insights-app-profiling/
 ---
 
 

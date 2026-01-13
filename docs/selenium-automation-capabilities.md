@@ -19,6 +19,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/selenium-automation-capabilities
 site_name: LambdaTest
 slug: selenium-automation-capabilities
+canonical: https://www.testmu.ai/support/docs/selenium-automation-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

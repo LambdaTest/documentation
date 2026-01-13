@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/device-passcode-appautomation
 site_name: LambdaTest
 slug: device-passcode-appautomation
+canonical: https://www.testmu.ai/support/docs/device-passcode-appautomation/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

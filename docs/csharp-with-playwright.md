@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/csharp-with-playwright
 site_name: LambdaTest
 slug: csharp-with-playwright
+canonical: https://www.testmu.ai/support/docs/csharp-with-playwright/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

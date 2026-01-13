@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-java-jbehave
 site_name: LambdaTest
 slug: appium-java-jbehave
+canonical: https://www.testmu.ai/support/docs/appium-java-jbehave/
 ---
 
 

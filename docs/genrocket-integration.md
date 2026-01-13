@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/genrocket-integration
 site_name: LambdaTest
 slug: genrocket-integration
+canonical: https://www.testmu.ai/support/docs/genrocket-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

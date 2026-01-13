@@ -21,6 +21,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/pytest-on-hyperexecute-grid
 site_name: LambdaTest
 slug: pytest-on-hyperexecute-grid
+canonical: https://www.testmu.ai/support/docs/pytest-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

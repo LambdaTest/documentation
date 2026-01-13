@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications
 site_name: LambdaTest
 slug: maven-tunnel-for-locally-hosted-web-applications
+canonical: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

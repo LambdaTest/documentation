@@ -18,6 +18,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/puppeteer-testing-with-mocha
 site_name: LambdaTest
 slug: puppeteer-testing-with-mocha
+canonical: https://www.testmu.ai/support/docs/puppeteer-testing-with-mocha/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

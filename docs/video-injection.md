@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/video-injection
 site_name: LambdaTest
 slug: video-injection
+canonical: https://www.testmu.ai/support/docs/video-injection/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

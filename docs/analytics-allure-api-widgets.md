@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/analytics-allure-api-widgets
 site_name: LambdaTest
 slug: analytics-allure-api-widgets
+canonical: https://www.testmu.ai/support/docs/analytics-allure-api-widgets/
 ---
 
 import NewTag from '../src/component/newTag';

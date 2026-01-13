@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/tms-reports
 site_name: LambdaTest
 slug: tms-reports
+canonical: https://www.testmu.ai/support/docs/tms-reports/
 ---
 
 

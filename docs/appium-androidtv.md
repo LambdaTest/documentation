@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-androidtv
 site_name: LambdaTest Docs
 slug: appium-androidtv
+canonical: https://www.testmu.ai/support/docs/appium-androidtv/
 
 ---
 

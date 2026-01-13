@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

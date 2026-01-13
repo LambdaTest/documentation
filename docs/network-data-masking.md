@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/network-data-masking
 site_name: LambdaTest
 slug: network-data-masking
+canonical: https://www.testmu.ai/support/docs/network-data-masking/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

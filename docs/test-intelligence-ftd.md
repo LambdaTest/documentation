@@ -8,6 +8,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection
 site_name: LambdaTest
 slug: test-intelligence-flakiness-test-detection
+canonical: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
 ---
 
 import NewTag from '../src/component/newTag';

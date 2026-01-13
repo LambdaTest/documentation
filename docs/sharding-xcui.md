@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/sharding-rd-hyperexec
 site_name: LambdaTest
 slug: sharding-rd-hyperexec
+canonical: https://www.testmu.ai/support/docs/sharding-rd-hyperexec/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

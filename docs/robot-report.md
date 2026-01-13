@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/robot-report
 site_name: LambdaTest
 slug: robot-report
+canonical: https://www.testmu.ai/support/docs/robot-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

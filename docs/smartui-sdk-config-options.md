@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-cli
 slug: smartui-sdk-config-options
+canonical: https://www.testmu.ai/support/docs/smartui-sdk-config-options/
 
 ---
 import Tabs from '@theme/Tabs';

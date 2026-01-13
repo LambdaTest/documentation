@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/deque-integration
 site_name: LambdaTest
 slug: deque-integration
+canonical: https://www.testmu.ai/support/docs/deque-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-projects
 site_name: LambdaTest
 slug: hyperexecute-projects
+canonical: https://www.testmu.ai/support/docs/hyperexecute-projects/
 ---
 
 

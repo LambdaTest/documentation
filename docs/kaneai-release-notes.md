@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-release-notes
 site_name: LambdaTest
 slug: kaneai-release-notes
+canonical: https://www.testmu.ai/support/docs/kaneai-release-notes/
 ---
 
 

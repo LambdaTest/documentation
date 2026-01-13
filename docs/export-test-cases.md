@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/export-test-cases
 site_name: LambdaTest
 slug: export-test-cases
+canonical: https://www.testmu.ai/support/docs/export-test-cases/
 ---
 
 

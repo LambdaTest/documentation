@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/custom-speclow-report
 site_name: LambdaTest
 slug: custom-speclow-report
+canonical: https://www.testmu.ai/support/docs/custom-speclow-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

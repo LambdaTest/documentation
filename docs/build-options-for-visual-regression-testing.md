@@ -17,6 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smart-ui-cypress
 slug: smart-ui-build-options
+canonical: https://www.testmu.ai/support/docs/smart-ui-build-options/
 ---
 
 import Tabs from '@theme/Tabs';

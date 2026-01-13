@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/download-files-using-testmu-selenium-grid
 site_name: LambdaTest
 slug: download-files-using-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/download-files-using-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

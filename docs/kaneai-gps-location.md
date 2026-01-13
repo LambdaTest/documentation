@@ -14,6 +14,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/kaneai-gps-location/
 site_name: LambdaTest
 slug: kaneai-gps-location/
+canonical: https://www.testmu.ai/support/docs/kaneai-gps-location//
 ---
 
 <script type="application/ld+json"

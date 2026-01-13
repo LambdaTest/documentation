@@ -19,6 +19,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/supported-appium-plugins
 site_name: LambdaTest
 slug: supported-appium-plugins
+canonical: https://www.testmu.ai/support/docs/supported-appium-plugins/
 ---
 
 import Tabs from '@theme/Tabs';

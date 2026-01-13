@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testmu-mcp-server
 site_name: LambdaTest
 slug: testmu-mcp-server
+canonical: https://www.testmu.ai/support/docs/testmu-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -15,6 +15,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-packages
 site_name: LambdaTest
 slug: hyperexecute-supported-languages-and-packages
+canonical: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-packages/
 ---
 
 import Tabs from '@theme/Tabs';

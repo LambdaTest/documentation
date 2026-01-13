@@ -10,6 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kaneai-scheduled-test-runs
 site_name: LambdaTest
 slug: kaneai-scheduled-test-runs
+canonical: https://www.testmu.ai/support/docs/kaneai-scheduled-test-runs/
 ---
 
 

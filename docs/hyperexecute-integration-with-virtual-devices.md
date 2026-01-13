@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-virtual-devices
 site_name: LambdaTest
 slug: hyperexecute-integration-with-virtual-devices
+canonical: https://www.testmu.ai/support/docs/hyperexecute-integration-with-virtual-devices/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

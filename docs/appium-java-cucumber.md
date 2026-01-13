@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/appium-java-cucumber
 site_name: LambdaTest
 slug: appium-java-cucumber
+canonical: https://www.testmu.ai/support/docs/appium-java-cucumber/
 ---
 
 

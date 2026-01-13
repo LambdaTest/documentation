@@ -16,6 +16,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/speedup-xcui
 site_name: LambdaTest
 slug: speedup-xcui
+canonical: https://www.testmu.ai/support/docs/speedup-xcui/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

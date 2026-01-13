@@ -11,6 +11,7 @@ keywords:
   - Real Devices
   - testing
 slug: sim-support-realdevices
+canonical: https://www.testmu.ai/support/docs/sim-support-realdevices/
 site_name: LambdaTest
 url: https://www.testmu.ai/support/docs/sim-support-realdevices
 ---

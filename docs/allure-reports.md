@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/allure-reports
 site_name: LambdaTest
 slug: allure-reports
+canonical: https://www.testmu.ai/support/docs/allure-reports/
 ---
 
 import NewTag from '../src/component/newTag';

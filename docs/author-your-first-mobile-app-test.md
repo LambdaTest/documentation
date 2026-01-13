@@ -13,6 +13,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/author-your-first-mobile-app-test
 site_name: LambdaTest
 slug: author-your-first-mobile-app-test
+canonical: https://www.testmu.ai/support/docs/author-your-first-mobile-app-test/
 ---
 
 import Tabs from '@theme/Tabs';

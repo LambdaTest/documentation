@@ -17,6 +17,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

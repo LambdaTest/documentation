@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hive-integration
 site_name: LambdaTest
 slug: hive-integration
+canonical: https://www.testmu.ai/support/docs/hive-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -22,6 +22,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing
 site_name: LambdaTest
 slug: hyperexecute-gattling-testing
+canonical: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

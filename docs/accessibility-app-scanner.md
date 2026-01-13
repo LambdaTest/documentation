@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/accessibility-app-scanner
 site_name: LambdaTest
 slug: accessibility-app-scanner
+canonical: https://www.testmu.ai/support/docs/accessibility-app-scanner/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

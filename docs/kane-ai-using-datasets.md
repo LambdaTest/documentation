@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-using-datasets
 site_name: LambdaTest
 slug: kane-ai-using-datasets
+canonical: https://www.testmu.ai/support/docs/kane-ai-using-datasets/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests
 site_name: LambdaTest
 slug: troubleshoot-espresso-tests
+canonical: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

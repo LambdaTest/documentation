@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testrail-integration-with-testmu-selenium-grid
 site_name: LambdaTest
 slug: testrail-integration-with-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/testrail-integration-with-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

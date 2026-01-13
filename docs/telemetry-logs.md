@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/selenium-telemetry-logs
 site_name: LambdaTest
 slug: selenium-telemetry-logs
+canonical: https://www.testmu.ai/support/docs/selenium-telemetry-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

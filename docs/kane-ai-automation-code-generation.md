@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation
 site_name: LambdaTest
 slug: kane-ai-automation-code-generation
+canonical: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation/
 ---
 
 import Tabs from '@theme/Tabs';

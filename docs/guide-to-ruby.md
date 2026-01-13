@@ -19,6 +19,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 site_name: LambdaTest
 slug: quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

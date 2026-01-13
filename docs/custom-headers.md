@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/custom-headers
 site_name: LambdaTest
 slug: custom-headers
+canonical: https://www.testmu.ai/support/docs/custom-headers/
 ---
 
 # Overcoming Firewalls: A Deep Dive into <BrandName />'s customHeaders and customUrlFilters Capabilities

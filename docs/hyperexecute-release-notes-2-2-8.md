@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-2-8
 site_name: LambdaTest
 slug: hyperexecute-release-notes-2-2-8
+canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-2-8/
 ---
 
 

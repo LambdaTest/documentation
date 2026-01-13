@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/concurrency-widget
 site_name: LambdaTest
 slug: concurrency-widget
+canonical: https://www.testmu.ai/support/docs/concurrency-widget/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

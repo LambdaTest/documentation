@@ -4,6 +4,7 @@ title: GitLab PR Checks with SmartUI Hooks
 sidebar_label: GitLab PR Checks (Hooks)
 description: Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI Hooks for web and mobile testing with Selenium, Playwright, WebdriverIO, Appium, and more.
 slug: smartui-gitlab-pr-checks-hooks
+canonical: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-hooks/
 keywords:
   - GitLab PR checks
   - SmartUI Hooks

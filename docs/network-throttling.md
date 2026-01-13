@@ -20,6 +20,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/network-throttling
 site_name: LambdaTest
 slug: network-throttling
+canonical: https://www.testmu.ai/support/docs/network-throttling/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -11,6 +11,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/testing-your-first-ai-agent
 site_name: LambdaTest
 slug: testing-your-first-ai-agent
+canonical: https://www.testmu.ai/support/docs/testing-your-first-ai-agent/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -12,6 +12,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/getting-started-with-flutter-dart-ios-automation
 site_name: LambdaTest
 slug: getting-started-with-flutter-dart-ios-automation
+canonical: https://www.testmu.ai/support/docs/getting-started-with-flutter-dart-ios-automation/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

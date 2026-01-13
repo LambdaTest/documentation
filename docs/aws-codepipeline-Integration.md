@@ -14,6 +14,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/aws-codepipeline-integration-with-testmu
 site_name: LambdaTest
 slug: aws-codepipeline-integration-with-testmu
+canonical: https://www.testmu.ai/support/docs/aws-codepipeline-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
