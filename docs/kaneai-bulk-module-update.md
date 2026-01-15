@@ -54,6 +54,10 @@ The **Bulk Module Update** feature solves this by allowing you to:
 Bulk Module Update is currently supported only for **KaneAI test cases**. Support for non-KaneAI test cases is coming soon.
 :::
 
+:::warning Limited Availability
+This feature is currently being rolled out gradually and may not be available to all users. If you don't see this feature in your account, it will be enabled for you soon.
+:::
+
 ---
 
 ## How to Use Bulk Module Update
