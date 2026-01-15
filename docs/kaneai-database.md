@@ -53,7 +53,7 @@ This document provides a step-by-step process to connect databases within the Ka
 
 ## Creating a database connection
 
-To begin, you need to access the [database connections](https://kaneai.lambdatest.com/databases "database connections") page within KaneAI from and initiate the creation of a new connection.
+To begin, you need to access the [database connections](https://kaneai.lambdatest.com/databases "database connections") page within KaneAI and initiate the creation of a new connection by clicking on **Create New Connection**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/create_database.png').default} alt="create-database" className="doc_img"/>
 
