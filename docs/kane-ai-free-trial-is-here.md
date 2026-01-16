@@ -8,7 +8,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai Web test
-url: https://www.testmu.ai/support/docs/kane-ai-free-trial-is-here/
+url: https://www.testmu.ai/support/docs/kane-ai-free-trial-is-here/
 site_name: LambdaTest
 slug: kane-ai-free-trial-is-here
 canonical: https://www.testmu.ai/support/docs/kane-ai-free-trial-is-here/

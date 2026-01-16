@@ -17,7 +17,7 @@ keywords:
   - create zoho cliq issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/zoho-cliq-integration/
+url: https://www.testmu.ai/support/docs/zoho-cliq-integration/
 site_name: LambdaTest
 slug: zoho-cliq-integration
 canonical: https://www.testmu.ai/support/docs/zoho-cliq-integration/

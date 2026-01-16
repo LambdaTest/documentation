@@ -10,7 +10,7 @@ keywords:
   - cross platform testing tools
   - check browser compatibility online
 
-url: https://www.testmu.ai/support/docs/support-access/
+url: https://www.testmu.ai/support/docs/support-access/
 site_name: LambdaTest
 slug: support-access
 canonical: https://www.testmu.ai/support/docs/support-access/
