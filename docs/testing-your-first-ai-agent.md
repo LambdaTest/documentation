@@ -8,9 +8,9 @@ keywords:
  - agent to agent testing
  - agentic testing
  - ai agent testing
-url: https://www.testmu.ai/support/docs/testing-your-first-ai-agent/
+url: https://www.testmu.ai/support/docs/testing-your-first-ai-agent/
 site_name: LambdaTest
-slug: testing-your-first-ai-agent/
+slug: testing-your-first-ai-agent/
 canonical: https://www.testmu.ai/support/docs/testing-your-first-ai-agent/
 ---
 

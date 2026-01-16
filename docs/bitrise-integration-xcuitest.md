@@ -12,9 +12,9 @@ keywords:
 - xcuitest bitrise
 - app testing with bitrise 
 - app automation bitrise
-url: https://www.testmu.ai/support/docs/bitrise-integration-xcuitest/
+url: https://www.testmu.ai/support/docs/bitrise-integration-xcuitest/
 site_name: LambdaTest
-slug: bitrise-integration-xcuitest/
+slug: bitrise-integration-xcuitest/
 canonical: https://www.testmu.ai/support/docs/bitrise-integration-xcuitest/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

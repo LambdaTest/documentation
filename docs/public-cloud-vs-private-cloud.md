@@ -10,9 +10,9 @@ keywords:
   - private cloud
   - public cloud
   - public vs private cloud
-url: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud/
+url: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud/
 site_name: LambdaTest
-slug: public-cloud-vs-private-cloud/
+slug: public-cloud-vs-private-cloud/
 canonical: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud/
 ---
 

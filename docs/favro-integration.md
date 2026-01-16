@@ -10,9 +10,9 @@ keywords:
   - favro
   - kanban
   - bug reporting
-url: https://www.testmu.ai/support/docs/favro-integration/
+url: https://www.testmu.ai/support/docs/favro-integration/
 site_name: LambdaTest
-slug: favro-integration/
+slug: favro-integration/
 canonical: https://www.testmu.ai/support/docs/favro-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

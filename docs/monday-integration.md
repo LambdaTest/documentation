@@ -17,9 +17,9 @@ keywords:
   - create monday.com issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/monday-com-integration/
+url: https://www.testmu.ai/support/docs/monday-com-integration/
 site_name: LambdaTest
-slug: monday-com-integration/
+slug: monday-com-integration/
 canonical: https://www.testmu.ai/support/docs/monday-com-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

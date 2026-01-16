@@ -17,9 +17,9 @@ keywords:
   - create localstack issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/localstack-integration-with-testmu/
+url: https://www.testmu.ai/support/docs/localstack-integration-with-testmu/
 site_name: LambdaTest
-slug: localstack-integration-with-testmu/
+slug: localstack-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/localstack-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

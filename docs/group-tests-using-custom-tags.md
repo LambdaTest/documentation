@@ -17,9 +17,9 @@ keywords:
     - filter tests
     - custom tags
     - group tests
-url: https://www.testmu.ai/support/docs/group-tests-using-custom-tags/
+url: https://www.testmu.ai/support/docs/group-tests-using-custom-tags/
 site_name: LambdaTest
-slug: group-tests-using-custom-tags/
+slug: group-tests-using-custom-tags/
 canonical: https://www.testmu.ai/support/docs/group-tests-using-custom-tags/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
