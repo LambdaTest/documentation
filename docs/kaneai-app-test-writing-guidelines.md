@@ -12,7 +12,7 @@ keywords:
   - instructions writings
 url: https://www.testmu.ai/support/docs/kane-ai-app-test-writing-guidelines/
 site_name: LambdaTest
-slug: kane-ai-app-test-writing-guidelines
+slug: kane-ai-app-test-writing-guidelines/
 canonical: https://www.testmu.ai/support/docs/kane-ai-app-test-writing-guidelines/
 ---
 

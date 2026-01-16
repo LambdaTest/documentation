@@ -9,7 +9,7 @@ keywords:
 - app store
 url: https://www.testmu.ai/support/docs/install-apps-from-app-store/
 site_name: LambdaTest
-slug: install-apps-from-app-store
+slug: install-apps-from-app-store/
 canonical: https://www.testmu.ai/support/docs/install-apps-from-app-store/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,7 +11,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid
+slug: testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
 ---
 

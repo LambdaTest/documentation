@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/smartui-appium-hooks/
 site_name: LambdaTest
-slug: smartui-appium-hooks
+slug: smartui-appium-hooks/
 canonical: https://www.testmu.ai/support/docs/smartui-appium-hooks/
 ---
 

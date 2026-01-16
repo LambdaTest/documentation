@@ -12,7 +12,7 @@ keywords:
  - accessibility status ratio
 url: https://www.testmu.ai/support/docs/analytics-modules-accessibility-widgets/
 site_name: LambdaTest
-slug: analytics-modules-accessibility-widgets
+slug: analytics-modules-accessibility-widgets/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-accessibility-widgets/
 ---
 

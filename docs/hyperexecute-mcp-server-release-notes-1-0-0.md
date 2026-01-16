@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/
 site_name: LambdaTest
-slug: hyperexecute-mcp-server-release-notes-1-0-0
+slug: hyperexecute-mcp-server-release-notes-1-0-0/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

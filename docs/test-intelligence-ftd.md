@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
 site_name: LambdaTest
-slug: test-intelligence-flakiness-test-detection
+slug: test-intelligence-flakiness-test-detection/
 canonical: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
 ---
 

@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/assembla-integration/
 site_name: LambdaTest
-slug: assembla-integration
+slug: assembla-integration/
 canonical: https://www.testmu.ai/support/docs/assembla-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

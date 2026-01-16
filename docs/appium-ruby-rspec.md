@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-ruby-rspec/
 site_name: LambdaTest
-slug: appium-ruby-rspec
+slug: appium-ruby-rspec/
 canonical: https://www.testmu.ai/support/docs/appium-ruby-rspec/
 ---
 

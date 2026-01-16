@@ -10,7 +10,7 @@ keywords:
 - kane ai
 url: https://www.testmu.ai/support/docs/kaneai-auto-heal/
 site_name: LambdaTest
-slug: kaneai-auto-heal
+slug: kaneai-auto-heal/
 canonical: https://www.testmu.ai/support/docs/kaneai-auto-heal/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

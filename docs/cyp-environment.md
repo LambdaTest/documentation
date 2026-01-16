@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/cyp-environment/
 site_name: LambdaTest
-slug: cyp-environment
+slug: cyp-environment/
 canonical: https://www.testmu.ai/support/docs/cyp-environment/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate/
 site_name: LambdaTest
-slug: saucelabs-to-hyperexecute-migrate
+slug: saucelabs-to-hyperexecute-migrate/
 canonical: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - kane ai instructions
 url: https://www.testmu.ai/support/docs/kane-ai-failure-conditions/
 site_name: LambdaTest
-slug: kaneai-failure-conditions
+slug: kaneai-failure-conditions/
 canonical: https://www.testmu.ai/support/docs/kaneai-failure-conditions/
 ---
 

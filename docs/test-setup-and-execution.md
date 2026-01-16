@@ -10,7 +10,7 @@ keywords:
 - mobile app automation testing using appium
 url: https://www.testmu.ai/support/docs/test-setup-and-execution/
 site_name: LambdaTest
-slug: test-setup-and-execution
+slug: test-setup-and-execution/
 canonical: https://www.testmu.ai/support/docs/test-setup-and-execution/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smartui-cypress-sdk/
-slug: smartui-cypress-sdk
+slug: smartui-cypress-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-cypress-sdk/
 
 ---

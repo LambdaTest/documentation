@@ -10,7 +10,7 @@ keywords:
   - TestMu AI 
 url: https://www.testmu.ai/support/docs/testmu-public-ip/
 site_name: LambdaTest
-slug: testmu-public-ip
+slug: testmu-public-ip/
 canonical: https://www.testmu.ai/support/docs/testmu-public-ip/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

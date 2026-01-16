@@ -11,7 +11,7 @@ keywords:
   - debug tests
 url: https://www.testmu.ai/support/docs/live-interaction/
 site_name: LambdaTest
-slug: live-interaction
+slug: live-interaction/
 canonical: https://www.testmu.ai/support/docs/live-interaction/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

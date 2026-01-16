@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/authentication/
 site_name: LambdaTest
-slug: authentication
+slug: authentication/
 canonical: https://www.testmu.ai/support/docs/authentication/
 ---
 

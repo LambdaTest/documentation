@@ -10,7 +10,7 @@ keywords:
   - testmu ai selenium grid integration
 url: https://www.testmu.ai/support/docs/integrate-test-reporting-test-management-tools/
 site_name: LambdaTest
-slug: integrate-test-reporting-test-management-tools
+slug: integrate-test-reporting-test-management-tools/
 canonical: https://www.testmu.ai/support/docs/integrate-test-reporting-test-management-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

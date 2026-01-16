@@ -12,7 +12,7 @@ keywords:
   - Build Promotion
 url: https://www.testmu.ai/support/docs/smartui-build-merging/
 site_name: LambdaTest
-slug: smartui-build-merging
+slug: smartui-build-merging/
 canonical: https://www.testmu.ai/support/docs/smartui-build-merging/
 
 ---

@@ -11,7 +11,7 @@ keywords:
   - ip whitelsiting testmu ai
 url: https://www.testmu.ai/support/docs/dedicated-proxy/
 site_name: LambdaTest
-slug: dedicated-proxy
+slug: dedicated-proxy/
 canonical: https://www.testmu.ai/support/docs/dedicated-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

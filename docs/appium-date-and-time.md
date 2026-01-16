@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-date-and-time/
 site_name: LambdaTest
-slug: appium-date-and-time
+slug: appium-date-and-time/
 canonical: https://www.testmu.ai/support/docs/appium-date-and-time/
 ---
 

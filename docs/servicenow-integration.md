@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/servicenow-integration/
 site_name: LambdaTest
-slug: servicenow-integration
+slug: servicenow-integration/
 canonical: https://www.testmu.ai/support/docs/servicenow-integration/
 ---
 

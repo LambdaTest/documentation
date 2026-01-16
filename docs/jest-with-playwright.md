@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/jest-with-playwright/
 site_name: LambdaTest
-slug: jest-with-playwright
+slug: jest-with-playwright/
 canonical: https://www.testmu.ai/support/docs/jest-with-playwright/
 ---
 

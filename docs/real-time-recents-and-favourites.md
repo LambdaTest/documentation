@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/real-time-recents-and-favourites/
 site_name: LambdaTest
-slug: real-time-recents-and-favourites
+slug: real-time-recents-and-favourites/
 canonical: https://www.testmu.ai/support/docs/real-time-recents-and-favourites/
 ---
 

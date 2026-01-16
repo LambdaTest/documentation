@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/python-with-playwright/
 site_name: LambdaTest
-slug: python-with-playwright
+slug: python-with-playwright/
 canonical: https://www.testmu.ai/support/docs/python-with-playwright/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - team communication
 url: https://www.testmu.ai/support/docs/microsoft-teams-integration/
 site_name: LambdaTest
-slug: microsoft-teams-integration
+slug: microsoft-teams-integration/
 canonical: https://www.testmu.ai/support/docs/microsoft-teams-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,7 +11,7 @@ keywords:
   - TestMu AI SmartUI
 url: https://www.testmu.ai/support/docs/smartui-multiselect-bulkops/
 site_name: LambdaTest
-slug: smartui-multiselect-bulkops
+slug: smartui-multiselect-bulkops/
 canonical: https://www.testmu.ai/support/docs/smartui-multiselect-bulkops/
 ---
 import Tabs from '@theme/Tabs';

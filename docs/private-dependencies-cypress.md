@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 site_name: LambdaTest
-slug: private-dependencies-cypress
+slug: private-dependencies-cypress/
 canonical: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 ---
 

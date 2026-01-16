@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/real-time-mobile-browser-testing-tools/
 site_name: LambdaTest
-slug: real-time-mobile-browser-testing-tools
+slug: real-time-mobile-browser-testing-tools/
 canonical: https://www.testmu.ai/support/docs/real-time-mobile-browser-testing-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

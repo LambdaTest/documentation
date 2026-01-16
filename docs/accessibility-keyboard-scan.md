@@ -15,7 +15,7 @@ keywords:
   - Tab Order
 url: https://www.testmu.ai/support/docs/accessibility-keyboard-scan/
 site_name: LambdaTest
-slug: accessibility-keyboard-scan
+slug: accessibility-keyboard-scan/
 canonical: https://www.testmu.ai/support/docs/accessibility-keyboard-scan/
 ---
 

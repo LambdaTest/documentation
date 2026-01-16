@@ -17,7 +17,7 @@ keywords:
   - local testing
 url: https://www.testmu.ai/support/docs/web-scanner-advanced-features/
 site_name: LambdaTest
-slug: web-scanner-advanced-features
+slug: web-scanner-advanced-features/
 canonical: https://www.testmu.ai/support/docs/web-scanner-advanced-features/
 ---
 

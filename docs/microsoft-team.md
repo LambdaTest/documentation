@@ -11,7 +11,7 @@ keywords:
 - how to integrate microsoft teams app with testmu ai
 url: https://www.testmu.ai/support/docs/microsoft-teams-app/
 site_name: LambdaTest
-slug: microsoft-teams-app
+slug: microsoft-teams-app/
 canonical: https://www.testmu.ai/support/docs/microsoft-teams-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -16,7 +16,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-browser/
 site_name: LambdaTest
-slug: screen-reader-on-real-devices-browser
+slug: screen-reader-on-real-devices-browser/
 canonical: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-browser/
 ---
 

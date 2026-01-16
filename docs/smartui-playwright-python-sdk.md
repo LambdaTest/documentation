@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smartui-playwright-python-sdk/
-slug: smartui-playwright-python-sdk
+slug: smartui-playwright-python-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-playwright-python-sdk/
 
 ---

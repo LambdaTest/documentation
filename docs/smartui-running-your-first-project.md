@@ -17,7 +17,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/smartui-running-your-first-project/
 site_name: LambdaTest
-slug: smartui-running-your-first-project
+slug: smartui-running-your-first-project/
 canonical: https://www.testmu.ai/support/docs/smartui-running-your-first-project/
 
 ---

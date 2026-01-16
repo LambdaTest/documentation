@@ -10,7 +10,7 @@ keywords:
   - PagerDutyIntegration
 url: https://www.testmu.ai/support/docs/pagerduty-integration/
 site_name: LambdaTest
-slug: pagerduty-integration
+slug: pagerduty-integration/
 canonical: https://www.testmu.ai/support/docs/pagerduty-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

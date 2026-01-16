@@ -13,7 +13,7 @@ keywords:
   - MCP server
 url: https://www.testmu.ai/support/docs/accessibility-mcp-server/
 site_name: LambdaTest
-slug: accessibility-mcp-server
+slug: accessibility-mcp-server/
 canonical: https://www.testmu.ai/support/docs/accessibility-mcp-server/
 ---
 

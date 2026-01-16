@@ -12,7 +12,7 @@ keywords:
   - testmu ai integration with google cloud ci
 url: https://www.testmu.ai/support/docs/google-cloud-ci-integration/
 site_name: LambdaTest
-slug: google-cloud-ci-integration
+slug: google-cloud-ci-integration/
 canonical: https://www.testmu.ai/support/docs/google-cloud-ci-integration/
 
 --- 

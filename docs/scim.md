@@ -8,7 +8,7 @@ keywords:
     - TestMu AI SCIM
 url: https://www.testmu.ai/support/docs/scim/
 site_name: LambdaTest
-slug: scim
+slug: scim/
 canonical: https://www.testmu.ai/support/docs/scim/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

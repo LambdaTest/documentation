@@ -13,7 +13,7 @@ keywords:
   - HyperExecute Stage
 url: https://www.testmu.ai/support/docs/hyperexecute-stage-widgets/
 site_name: LambdaTest
-slug: hyperexecute-stage-widgets
+slug: hyperexecute-stage-widgets/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-stage-widgets/
 ---
 

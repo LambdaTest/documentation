@@ -9,7 +9,7 @@ keywords:
 - manage user
 url: https://www.testmu.ai/support/docs/user-management/
 site_name: LambdaTest
-slug: user-management
+slug: user-management/
 canonical: https://www.testmu.ai/support/docs/user-management/
 ---
 

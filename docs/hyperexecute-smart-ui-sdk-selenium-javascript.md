@@ -15,7 +15,7 @@ keywords:
   - javascript
 url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-sdk-selenium-javascript
+slug: hyperexecute-smart-ui-sdk-selenium-javascript/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/
 
 ---

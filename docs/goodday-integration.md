@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/goodday-integration/
 site_name: LambdaTest
-slug: goodday-integration
+slug: goodday-integration/
 canonical: https://www.testmu.ai/support/docs/goodday-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

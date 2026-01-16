@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-selenium/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-testing-using-selenium
+slug: hyperexecute-smart-ui-testing-using-selenium/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-selenium/
 
 ---

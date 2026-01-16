@@ -13,7 +13,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/local-testing-with-puppeteer/
 site_name: LambdaTest
-slug: local-testing-with-puppeteer
+slug: local-testing-with-puppeteer/
 canonical: https://www.testmu.ai/support/docs/local-testing-with-puppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

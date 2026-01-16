@@ -9,7 +9,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/agent-to-agent-faqs/
 site_name: LambdaTest
-slug: agent-to-agent-faqs
+slug: agent-to-agent-faqs/
 canonical: https://www.testmu.ai/support/docs/agent-to-agent-faqs/
 ---
 

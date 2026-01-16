@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-cli-release-notes-0-2-249/
 site_name: LambdaTest
-slug: hyperexecute-cli-release-notes-0-2-249
+slug: hyperexecute-cli-release-notes-0-2-249/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-cli-release-notes-0-2-249/
 ---
 

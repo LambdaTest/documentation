@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting/
 site_name: LambdaTest
-slug: real-time-testing-troubleshooting
+slug: real-time-testing-troubleshooting/
 canonical: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

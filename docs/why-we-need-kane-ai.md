@@ -12,7 +12,7 @@ keywords:
   - testmu ai kaneai
 url: https://www.testmu.ai/support/docs/why-we-need-kane-ai/
 site_name: LambdaTest
-slug: why-we-need-kane-ai
+slug: why-we-need-kane-ai/
 canonical: https://www.testmu.ai/support/docs/why-we-need-kane-ai/
 ---
 

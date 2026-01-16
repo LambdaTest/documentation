@@ -11,7 +11,7 @@ keywords:
   - How to Debug a Failed Job
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-debug-job/
 site_name: LambdaTest
-slug: hyperexecute-how-to-debug-job
+slug: hyperexecute-how-to-debug-job/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-debug-job/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

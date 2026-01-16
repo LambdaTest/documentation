@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/html-dom-smartui-options/
-slug: html-dom-smartui-options
+slug: html-dom-smartui-options/
 canonical: https://www.testmu.ai/support/docs/html-dom-smartui-options/
 ---
 

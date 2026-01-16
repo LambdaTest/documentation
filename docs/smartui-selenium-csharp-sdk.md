@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smartui-selenium-csharp-sdk/
-slug: smartui-selenium-csharp-sdk
+slug: smartui-selenium-csharp-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-selenium-csharp-sdk/
 
 ---

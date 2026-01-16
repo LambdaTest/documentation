@@ -10,7 +10,7 @@ keywords:
 - create sub organizations
 url: https://www.testmu.ai/support/docs/sub-organizations/
 site_name: LambdaTest
-slug: sub-organizations
+slug: sub-organizations/
 canonical: https://www.testmu.ai/support/docs/sub-organizations/
 ---
 

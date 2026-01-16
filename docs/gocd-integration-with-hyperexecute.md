@@ -15,7 +15,7 @@ keywords:
   - ci/cd
 url: https://www.testmu.ai/support/docs/gocd-integration-with-hyperexecute/
 site_name: LambdaTest
-slug: gocd-integration-with-hyperexecute
+slug: gocd-integration-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/gocd-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

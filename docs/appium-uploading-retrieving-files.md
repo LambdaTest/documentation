@@ -16,7 +16,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-uploading-retrieving-files/
 site_name: LambdaTest
-slug: appium-uploading-retrieving-files
+slug: appium-uploading-retrieving-files/
 canonical: https://www.testmu.ai/support/docs/appium-uploading-retrieving-files/
 ---
 

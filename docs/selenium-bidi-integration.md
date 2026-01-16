@@ -11,7 +11,7 @@ keywords:
   - online selenium automation
 url: https://www.testmu.ai/support/docs/selenium-bidi-integration/
 site_name: LambdaTest
-slug: selenium-bidi-integration
+slug: selenium-bidi-integration/
 canonical: https://www.testmu.ai/support/docs/selenium-bidi-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -9,7 +9,7 @@ keywords:
 - select pre installed apps in session
 url: https://www.testmu.ai/support/docs/select-pre-installed-apps/
 site_name: LambdaTest
-slug: select-pre-installed-apps
+slug: select-pre-installed-apps/
 canonical: https://www.testmu.ai/support/docs/select-pre-installed-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

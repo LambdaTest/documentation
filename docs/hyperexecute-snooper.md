@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-snooper/
 site_name: Using Snooper on Hyperexecute
-slug: hyperexecute-snooper
+slug: hyperexecute-snooper/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-snooper/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

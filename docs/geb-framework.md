@@ -18,7 +18,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/run-geb-tests-on-selenium-grid/
 site_name: LambdaTest
-slug: run-geb-tests-on-selenium-grid
+slug: run-geb-tests-on-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/run-geb-tests-on-selenium-grid/
 ---
 

@@ -21,7 +21,7 @@ keywords:
 image: /assets/images/og-images/hyperexecute-og.png
 url: https://www.testmu.ai/support/docs/getting-started-with-hyperexecute/
 site_name: LambdaTest
-slug: getting-started-with-hyperexecute
+slug: getting-started-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/getting-started-with-hyperexecute/
 ---
 

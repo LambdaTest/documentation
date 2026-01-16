@@ -21,7 +21,7 @@ keywords:
   - HyperExecute Selenium automation
 url: https://www.testmu.ai/support/docs/nightwatch-on-hyperexecute-grid/
 site_name: LambdaTest
-slug: nightwatch-on-hyperexecute-grid
+slug: nightwatch-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/nightwatch-on-hyperexecute-grid/
 ---
 

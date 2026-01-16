@@ -11,7 +11,7 @@ keywords:
   - testmu ai redmine integration
 url: https://www.testmu.ai/support/docs/redmine-integration/
 site_name: LambdaTest
-slug: redmine-integration
+slug: redmine-integration/
 canonical: https://www.testmu.ai/support/docs/redmine-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

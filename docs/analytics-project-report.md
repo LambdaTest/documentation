@@ -11,7 +11,7 @@ keywords:
   - executive reporting
 url: https://www.testmu.ai/support/docs/analytics-project-report/
 site_name: LambdaTest
-slug: analytics-project-report
+slug: analytics-project-report/
 canonical: https://www.testmu.ai/support/docs/analytics-project-report/
 ---
 

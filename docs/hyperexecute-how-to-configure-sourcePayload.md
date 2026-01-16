@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-sourcePayload/
 site_name: LambdaTest
-slug: hyperexecute-how-to-configure-sourcePayload
+slug: hyperexecute-how-to-configure-sourcePayload/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-sourcePayload/
 ---
 

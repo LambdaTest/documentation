@@ -15,7 +15,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/xctestplan/
 site_name: LambdaTest
-slug: xctestplan
+slug: xctestplan/
 canonical: https://www.testmu.ai/support/docs/xctestplan/
 ---
 

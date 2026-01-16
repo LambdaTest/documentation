@@ -11,7 +11,7 @@ keywords:
   - How to Get my Username and Access key
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 site_name: LambdaTest
-slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers
+slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 ---
 

@@ -12,7 +12,7 @@ keywords:
   - Products
 url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-products/
 site_name: LambdaTest
-slug: hyperexecute-integration-with-products
+slug: hyperexecute-integration-with-products/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-integration-with-products/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

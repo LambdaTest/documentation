@@ -11,7 +11,7 @@ keywords:
  - Test Case Build Status
 url: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets/
 site_name: LambdaTest
-slug: analytics-modules-test-manager-widgets
+slug: analytics-modules-test-manager-widgets/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets/
 ---
 

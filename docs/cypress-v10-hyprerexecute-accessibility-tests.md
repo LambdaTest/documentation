@@ -14,7 +14,7 @@ keywords:
     - Accessibility Testing Settings
 url: https://www.testmu.ai/support/docs/cypress-v10-hyprerexecute-accessibility-tests/
 site_name: LambdaTest
-slug: cypress-v10-hyprerexecute-accessibility-tests
+slug: cypress-v10-hyprerexecute-accessibility-tests/
 canonical: https://www.testmu.ai/support/docs/cypress-v10-hyprerexecute-accessibility-tests/
 ---
 

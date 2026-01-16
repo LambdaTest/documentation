@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup/
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-setup
+slug: hyperexecute-private-cloud-setup/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

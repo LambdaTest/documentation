@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-dashboard-templates/
 site_name: LambdaTest
-slug: analytics-dashboard-templates
+slug: analytics-dashboard-templates/
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-templates/
 ---
 

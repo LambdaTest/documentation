@@ -10,7 +10,7 @@ keywords:
   - kaneai code gen
 url: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation/
 site_name: LambdaTest
-slug: kane-ai-automation-code-generation
+slug: kane-ai-automation-code-generation/
 canonical: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation/
 ---
 

@@ -13,7 +13,7 @@ keywords:
   - gitlab ci
 url: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute/
 site_name: LambdaTest
-slug: travis-ci-with-hyperexecute
+slug: travis-ci-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute/
 ---
 

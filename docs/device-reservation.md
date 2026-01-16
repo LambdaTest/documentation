@@ -10,7 +10,7 @@ keywords:
 - test scheduling
 url: https://www.testmu.ai/support/docs/device-reservation/
 site_name: LambdaTest
-slug: Device-reservation
+slug: Device-reservation/
 canonical: https://www.testmu.ai/support/docs/Device-reservation/
 ---
 import CodeBlock from '@theme/CodeBlock';

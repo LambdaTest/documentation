@@ -12,7 +12,7 @@ keywords:
     - Reports
 url: https://www.testmu.ai/support/docs/accessibility-report-bug/
 site_name: LambdaTest
-slug: accessibility-report-bug
+slug: accessibility-report-bug/
 canonical: https://www.testmu.ai/support/docs/accessibility-report-bug/
 ---
 

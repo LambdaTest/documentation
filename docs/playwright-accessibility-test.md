@@ -11,7 +11,7 @@ keywords:
     - Accessibility Testing Settings
 url: https://www.testmu.ai/support/docs/playwright-accessibility-test/
 site_name: LambdaTest
-slug: playwright-accessibility-test
+slug: playwright-accessibility-test/
 canonical: https://www.testmu.ai/support/docs/playwright-accessibility-test/
 ---
 

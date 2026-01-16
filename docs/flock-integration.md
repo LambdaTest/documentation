@@ -17,7 +17,7 @@ keywords:
   - communication tools
 url: https://www.testmu.ai/support/docs/flock-integration/
 site_name: LambdaTest
-slug: flock-integration
+slug: flock-integration/
 canonical: https://www.testmu.ai/support/docs/flock-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

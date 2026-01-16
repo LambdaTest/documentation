@@ -15,7 +15,7 @@ keywords:
 - testmu ai load balancing
 url: https://www.testmu.ai/support/docs/load-balancing-in-lambda-tunnel/
 site_name: LambdaTest
-slug: load-balancing-in-lambda-tunnel
+slug: load-balancing-in-lambda-tunnel/
 canonical: https://www.testmu.ai/support/docs/load-balancing-in-lambda-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -9,7 +9,7 @@ keywords:
 - testmu ai real device app testing 
 url: https://www.testmu.ai/support/docs/real-device-app-testing/
 site_name: LambdaTest
-slug: real-device-app-testing
+slug: real-device-app-testing/
 canonical: https://www.testmu.ai/support/docs/real-device-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

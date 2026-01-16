@@ -13,7 +13,7 @@ keywords:
   - Robot
 url: https://www.testmu.ai/support/docs/hyperexecute-python-use-cases/
 site_name: LambdaTest
-slug: hyperexecute-python-use-cases
+slug: hyperexecute-python-use-cases/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-python-use-cases/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -15,7 +15,7 @@ keywords:
  
 url: https://www.testmu.ai/support/docs/error-reports/
 site_name: LambdaTest
-slug: error-reports
+slug: error-reports/
 canonical: https://www.testmu.ai/support/docs/error-reports/
 ---
 

@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-test-time-trends/
 site_name: LambdaTest
-slug: analytics-test-time-trends
+slug: analytics-test-time-trends/
 canonical: https://www.testmu.ai/support/docs/analytics-test-time-trends/
 ---
 

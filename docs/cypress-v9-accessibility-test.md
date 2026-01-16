@@ -14,7 +14,7 @@ keywords:
     - Accessibility Testing Settings
 url: https://www.testmu.ai/support/docs/cypress-v9-accessibility-test/
 site_name: LambdaTest
-slug: cypress-v9-accessibility-test
+slug: cypress-v9-accessibility-test/
 canonical: https://www.testmu.ai/support/docs/cypress-v9-accessibility-test/
 ---
 

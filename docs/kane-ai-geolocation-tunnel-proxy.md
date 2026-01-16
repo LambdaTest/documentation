@@ -12,7 +12,7 @@ keywords:
   - kaneai proxy support
 url: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy/
 site_name: LambdaTest
-slug: kane-ai-geolocation-tunnel-proxy
+slug: kane-ai-geolocation-tunnel-proxy/
 canonical: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy/
 ---
 

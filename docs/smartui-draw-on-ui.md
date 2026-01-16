@@ -21,7 +21,7 @@ keywords:
   - Ignore Colors
 
 url: https://www.testmu.ai/support/docs/smartui-ignore-regions/
-slug: smartui-draw-on-ui
+slug: smartui-draw-on-ui/
 canonical: https://www.testmu.ai/support/docs/smartui-draw-on-ui/
 
 ---

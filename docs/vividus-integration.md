@@ -13,7 +13,7 @@ keywords:
 - testmu ai integration with vividus
 url: https://www.testmu.ai/support/docs/vividus-integration/
 site_name: LambdaTest
-slug: vividus-integration
+slug: vividus-integration/
 canonical: https://www.testmu.ai/support/docs/vividus-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

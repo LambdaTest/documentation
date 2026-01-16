@@ -13,7 +13,7 @@ keywords:
   - false positives
 url: https://www.testmu.ai/support/docs/smartui-handle-videos/
 site_name: LambdaTest
-slug: smartui-handle-videos
+slug: smartui-handle-videos/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-videos/
 
 ---

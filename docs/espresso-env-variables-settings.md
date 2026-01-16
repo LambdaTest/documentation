@@ -14,7 +14,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/espresso-env-variables-settings/
 site_name: LambdaTest
-slug: espresso-env-variables-settings
+slug: espresso-env-variables-settings/
 canonical: https://www.testmu.ai/support/docs/espresso-env-variables-settings/
 ---
 

@@ -9,7 +9,7 @@ keywords:
   - accessibility
 url: https://www.testmu.ai/support/docs/screen-reader-on-accessibility/
 site_name: LambdaTest
-slug: screen-reader-on-accessibility
+slug: screen-reader-on-accessibility/
 canonical: https://www.testmu.ai/support/docs/screen-reader-on-accessibility/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

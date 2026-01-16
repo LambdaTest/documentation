@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/test-settings-options/
 site_name: LambdaTest
-slug: test-settings-options
+slug: test-settings-options/
 canonical: https://www.testmu.ai/support/docs/test-settings-options/
 ---
 

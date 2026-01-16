@@ -11,7 +11,7 @@ keywords:
     - DevTools
 url: https://www.testmu.ai/support/docs/accessibility-update-devtools-extension/
 site_name: LambdaTest
-slug: accessibility-update-devtools-extension
+slug: accessibility-update-devtools-extension/
 canonical: https://www.testmu.ai/support/docs/accessibility-update-devtools-extension/
 ---
 

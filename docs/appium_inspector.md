@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-inspector-integration/
 site_name: LambdaTest
-slug: appium-inspector-integration
+slug: appium-inspector-integration/
 canonical: https://www.testmu.ai/support/docs/appium-inspector-integration/
 ---
 

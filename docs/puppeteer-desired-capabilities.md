@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/capabilities-for-puppeteer/
 site_name: LambdaTest
-slug: capabilities-for-puppeteer
+slug: capabilities-for-puppeteer/
 canonical: https://www.testmu.ai/support/docs/capabilities-for-puppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -9,7 +9,7 @@ keywords:
   - link jira issues with test manager
 url: https://www.testmu.ai/support/docs/link-jira-issues-with-test-manager/
 site_name: LambdaTest
-slug: link-jira-issues-with-test-manager
+slug: link-jira-issues-with-test-manager/
 canonical: https://www.testmu.ai/support/docs/link-jira-issues-with-test-manager/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

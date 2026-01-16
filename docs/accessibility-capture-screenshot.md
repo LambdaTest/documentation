@@ -13,7 +13,7 @@ keywords:
   - wcag
 url: https://www.testmu.ai/support/docs/accessibility-capture-screenshot/
 site_name: LambdaTest
-slug: accessibility-capture-screenshot
+slug: accessibility-capture-screenshot/
 canonical: https://www.testmu.ai/support/docs/accessibility-capture-screenshot/
 ---
 

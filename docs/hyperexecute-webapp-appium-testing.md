@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/hyperexecute-webapp-appium-testing/
 site_name: LambdaTest
-slug: hyperexecute-webapp-appium-testing
+slug: hyperexecute-webapp-appium-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-webapp-appium-testing/
 ---
 

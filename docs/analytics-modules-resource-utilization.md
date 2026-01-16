@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/
 site_name: LambdaTest
-slug: analytics-modules-resource-utilization
+slug: analytics-modules-resource-utilization/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

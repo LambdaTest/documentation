@@ -17,7 +17,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/smart-visual-regression-testing/
 site_name: LambdaTest
-slug: smart-visual-regression-testing
+slug: smart-visual-regression-testing/
 canonical: https://www.testmu.ai/support/docs/smart-visual-regression-testing/
 ---
 

@@ -15,7 +15,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-firetv/
 site_name: LambdaTest
-slug: appium-firetv
+slug: appium-firetv/
 canonical: https://www.testmu.ai/support/docs/appium-firetv/
 ---
 

@@ -11,7 +11,7 @@ keywords:
     - Accessibility Testing Settings
 url: https://www.testmu.ai/support/docs/accessibility-ios-rules/
 site_name: LambdaTest
-slug: accessibility-ios-rules
+slug: accessibility-ios-rules/
 canonical: https://www.testmu.ai/support/docs/accessibility-ios-rules/
 ---
  

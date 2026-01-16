@@ -11,7 +11,7 @@ keywords:
 - nemojs automation framework
 url: https://www.testmu.ai/support/docs/selenium-tests-with-nemojs/
 site_name: LambdaTest
-slug: selenium-tests-with-nemojs
+slug: selenium-tests-with-nemojs/
 canonical: https://www.testmu.ai/support/docs/selenium-tests-with-nemojs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

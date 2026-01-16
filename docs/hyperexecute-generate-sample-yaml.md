@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-generate-sample-yaml/
 site_name: LambdaTest generating hyperexecute yaml
-slug: hyperexecute-generate-sample-yaml
+slug: hyperexecute-generate-sample-yaml/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-generate-sample-yaml/
 ---
 

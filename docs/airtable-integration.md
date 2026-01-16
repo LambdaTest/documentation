@@ -12,7 +12,7 @@ keywords:
   - Airtable integration
 url: https://www.testmu.ai/support/docs/airtable-integration/
 site_name: LambdaTest
-slug: airtable-integration
+slug: airtable-integration/
 canonical: https://www.testmu.ai/support/docs/airtable-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

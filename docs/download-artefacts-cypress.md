@@ -16,7 +16,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/download-artefacts-cypress/
 site_name: LambdaTest
-slug: download-artefacts-cypress
+slug: download-artefacts-cypress/
 canonical: https://www.testmu.ai/support/docs/download-artefacts-cypress/
 ---
 

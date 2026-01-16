@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-csharp/
 site_name: LambdaTest
-slug: appium-csharp
+slug: appium-csharp/
 canonical: https://www.testmu.ai/support/docs/appium-csharp/
 ---
 

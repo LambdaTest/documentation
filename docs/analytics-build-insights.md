@@ -12,7 +12,7 @@ keywords:
   - test observability 
 url: https://www.testmu.ai/support/docs/analytics-build-insights/
 site_name: LambdaTest
-slug: analytics-build-insights
+slug: analytics-build-insights/
 canonical: https://www.testmu.ai/support/docs/analytics-build-insights/
 ---
 

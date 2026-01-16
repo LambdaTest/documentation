@@ -15,7 +15,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-rokutv/
 site_name: LambdaTest
-slug: appium-rokutv
+slug: appium-rokutv/
 canonical: https://www.testmu.ai/support/docs/appium-rokutv/
 ---
 

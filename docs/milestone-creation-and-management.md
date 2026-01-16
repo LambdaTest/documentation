@@ -8,7 +8,7 @@ keywords:
   - milestone creation 
 url: https://www.testmu.ai/support/docs/milestone-creation-and-management/
 site_name: LambdaTest
-slug: milestone-creation-and-management
+slug: milestone-creation-and-management/
 canonical: https://www.testmu.ai/support/docs/milestone-creation-and-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

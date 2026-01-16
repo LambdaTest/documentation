@@ -13,7 +13,7 @@ keywords:
     - test issues
 url: https://www.testmu.ai/support/docs/accessibility-testing-run-quick-scan/
 site_name: LambdaTest
-slug: accessibility-testing-run-quick-scan
+slug: accessibility-testing-run-quick-scan/
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-run-quick-scan/
 ---
 

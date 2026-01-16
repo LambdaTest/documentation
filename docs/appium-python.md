@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-python/
 site_name: LambdaTest
-slug: appium-python
+slug: appium-python/
 canonical: https://www.testmu.ai/support/docs/appium-python/
 ---
 

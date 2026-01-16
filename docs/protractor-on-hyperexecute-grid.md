@@ -21,7 +21,7 @@ keywords:
   - HyperExecute Selenium automation
 url: https://www.testmu.ai/support/docs/protractor-on-hyperexecute-grid/
 site_name: LambdaTest
-slug: protractor-on-hyperexecute-grid
+slug: protractor-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/protractor-on-hyperexecute-grid/
 ---
 

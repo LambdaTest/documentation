@@ -18,7 +18,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/run-your-cypress-tests-in-parallel/
 site_name: LambdaTest
-slug: run-your-cypress-tests-in-parallel
+slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmu.ai/support/docs/run-your-cypress-tests-in-parallel/
 ---
 # Run Your Cypress Tests In Parallel

@@ -18,7 +18,7 @@ keywords:
   - HyperExecute React Native automation
 url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing/
 site_name: LambdaTest
-slug: hyperexecute-detox-testing
+slug: hyperexecute-detox-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-detox-testing/
 ---
 

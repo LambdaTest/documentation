@@ -13,7 +13,7 @@ keywords:
   - gitlab ci
 url: https://www.testmu.ai/support/docs/github-actions-with-hyperexecute/
 site_name: LambdaTest
-slug: github-actions-with-hyperexecute
+slug: github-actions-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/github-actions-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

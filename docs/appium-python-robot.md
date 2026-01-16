@@ -14,7 +14,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-python-robot/
 site_name: LambdaTest
-slug: appium-python-robot
+slug: appium-python-robot/
 canonical: https://www.testmu.ai/support/docs/appium-python-robot/
 ---
 

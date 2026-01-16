@@ -13,7 +13,7 @@ keywords:
 - how to perform mobile web automation
 url: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices/
 site_name: LambdaTest
-slug: mobile-web-automation-on-real-devices
+slug: mobile-web-automation-on-real-devices/
 canonical: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

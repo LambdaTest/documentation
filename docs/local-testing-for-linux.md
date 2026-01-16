@@ -12,7 +12,7 @@ keywords:
   - local app testing for Linux
 url: https://www.testmu.ai/support/docs/local-testing-for-linux/
 site_name: LambdaTest
-slug: local-testing-for-linux
+slug: local-testing-for-linux/
 canonical: https://www.testmu.ai/support/docs/local-testing-for-linux/
 ---
 

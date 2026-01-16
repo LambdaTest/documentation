@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/mantis-integration/
 site_name: LambdaTest
-slug: mantis-integration
+slug: mantis-integration/
 canonical: https://www.testmu.ai/support/docs/mantis-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

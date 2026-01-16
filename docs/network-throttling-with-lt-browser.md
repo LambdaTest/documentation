@@ -12,7 +12,7 @@ keywords:
   - responsive testing using network throttling
 url: https://www.testmu.ai/support/docs/network-throttling-for-responsive-testing/
 site_name: LambdaTest
-slug: network-throttling-for-responsive-testing
+slug: network-throttling-for-responsive-testing/
 canonical: https://www.testmu.ai/support/docs/network-throttling-for-responsive-testing/
 ---
 

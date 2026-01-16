@@ -13,7 +13,7 @@ keywords:
 - testim testmu ai
 url: https://www.testmu.ai/support/docs/testim-integration/
 site_name: LambdaTest
-slug: testim-integration
+slug: testim-integration/
 canonical: https://www.testmu.ai/support/docs/testim-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

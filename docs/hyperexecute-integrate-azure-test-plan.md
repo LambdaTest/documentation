@@ -15,7 +15,7 @@ keywords:
     - azure test plan integration
 url: https://www.testmu.ai/support/docs/hyperexecute-integrate-azure-test-plan/
 site_name: LambdaTest
-slug: hyperexecute-integrate-azure-test-plan
+slug: hyperexecute-integrate-azure-test-plan/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-integrate-azure-test-plan/
 ---
 

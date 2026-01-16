@@ -9,7 +9,7 @@ keywords:
 - command annotations
 url: https://www.testmu.ai/support/docs/command-annotations/
 site_name: LambdaTest
-slug: command-annotations
+slug: command-annotations/
 canonical: https://www.testmu.ai/support/docs/command-annotations/
 ---
 

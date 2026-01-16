@@ -13,7 +13,7 @@ keywords:
     - protected assets
 url: https://www.testmu.ai/support/docs/smartui-cli-request-headers/
 site_name: LambdaTest
-slug: smartui-cli-request-headers
+slug: smartui-cli-request-headers/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-request-headers/
 
 ---

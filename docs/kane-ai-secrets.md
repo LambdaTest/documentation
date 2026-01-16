@@ -11,7 +11,7 @@ keywords:
   - kaneai parameters
 url: https://www.testmu.ai/support/docs/kane-ai-secrets/
 site_name: LambdaTest
-slug: kane-ai-secrets
+slug: kane-ai-secrets/
 canonical: https://www.testmu.ai/support/docs/kane-ai-secrets/
 ---
 

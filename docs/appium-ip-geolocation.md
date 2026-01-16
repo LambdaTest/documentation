@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/appium-ip-geolocation/
 site_name: LambdaTest
-slug: appium-ip-geolocation
+slug: appium-ip-geolocation/
 canonical: https://www.testmu.ai/support/docs/appium-ip-geolocation/
 ---
 

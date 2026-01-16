@@ -10,7 +10,7 @@ keywords:
   - test cases
 url: https://www.testmu.ai/support/docs/automated-test-cases-with-ai/
 site_name: LambdaTest
-slug: automated-test-cases-with-ai
+slug: automated-test-cases-with-ai/
 canonical: https://www.testmu.ai/support/docs/automated-test-cases-with-ai/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

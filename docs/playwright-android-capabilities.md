@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/capabilities-for-playwright-android/
 site_name: LambdaTest
-slug: capabilities-for-playwright-android
+slug: capabilities-for-playwright-android/
 canonical: https://www.testmu.ai/support/docs/capabilities-for-playwright-android/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -15,7 +15,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/playwright-html-report/
 site_name: LambdaTest
-slug: playwright-html-report
+slug: playwright-html-report/
 canonical: https://www.testmu.ai/support/docs/playwright-html-report/
 ---
 

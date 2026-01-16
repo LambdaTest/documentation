@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/junit-with-playwright/
 site_name: LambdaTest
-slug: junit-with-playwright
+slug: junit-with-playwright/
 canonical: https://www.testmu.ai/support/docs/junit-with-playwright/
 ---
 

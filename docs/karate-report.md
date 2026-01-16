@@ -9,7 +9,7 @@ keywords:
   - karate report testmu ai 
 url: https://www.testmu.ai/support/docs/karate-report/
 site_name: LambdaTest
-slug: karate-report
+slug: karate-report/
 canonical: https://www.testmu.ai/support/docs/karate-report/
 ---
 

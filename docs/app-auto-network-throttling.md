@@ -19,7 +19,7 @@ keywords:
     - throttling test on TestMu AI with Appium
 url: https://www.testmu.ai/support/docs/app-auto-network-throttling/
 site_name: LambdaTest
-slug: app-auto-network-throttling
+slug: app-auto-network-throttling/
 canonical: https://www.testmu.ai/support/docs/app-auto-network-throttling/
 ---
 import CodeBlock from '@theme/CodeBlock';

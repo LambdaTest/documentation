@@ -10,7 +10,7 @@ keywords:
 - lighthouse reports testmu ai
 url: https://www.testmu.ai/support/docs/playwright-lighthouse-library/
 site_name: LambdaTest
-slug: playwright-lighthouse-library
+slug: playwright-lighthouse-library/
 canonical: https://www.testmu.ai/support/docs/playwright-lighthouse-library/
 ---
 

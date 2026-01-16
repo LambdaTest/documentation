@@ -11,7 +11,7 @@ keywords:
   - Command Line
 url: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload/
 site_name: LambdaTest
-slug: smartui-pdf-cli-upload
+slug: smartui-pdf-cli-upload/
 canonical: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload/
 
 ---

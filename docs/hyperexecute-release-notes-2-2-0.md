@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-2-0/
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-2-0
+slug: hyperexecute-release-notes-2-2-0/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-2-0/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

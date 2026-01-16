@@ -10,7 +10,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/junit-xml-report/
 site_name: LambdaTest
-slug: junit-xml-report
+slug: junit-xml-report/
 canonical: https://www.testmu.ai/support/docs/junit-xml-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -10,7 +10,7 @@ keywords:
 - modules
 url: https://www.testmu.ai/support/docs/kaneai-modules-versions-and-enhancement/
 site_name: LambdaTest
-slug: kaneai-modules-versions-and-enhancement
+slug: kaneai-modules-versions-and-enhancement/
 canonical: https://www.testmu.ai/support/docs/kaneai-modules-versions-and-enhancement/
 ---
 

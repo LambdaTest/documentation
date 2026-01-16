@@ -14,7 +14,7 @@ keywords:
   - semaphore ci
 url: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/
 site_name: LambdaTest
-slug: semaphore-integration-with-testmu
+slug: semaphore-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
