@@ -14,7 +14,7 @@ keywords:
 - automated screenshot generation
 url: https://www.testmu.ai/support/docs/automated-screenshot-testing/
 site_name: LambdaTest
-slug: automated-screenshot-testing
+slug: automated-screenshot-testing/
 canonical: https://www.testmu.ai/support/docs/automated-screenshot-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

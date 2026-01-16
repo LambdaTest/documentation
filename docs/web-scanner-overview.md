@@ -12,7 +12,7 @@ keywords:
   - accessibility testing
 url: https://www.testmu.ai/support/docs/web-scanner-overview/
 site_name: LambdaTest
-slug: web-scanner-overview
+slug: web-scanner-overview/
 canonical: https://www.testmu.ai/support/docs/web-scanner-overview/
 ---
 

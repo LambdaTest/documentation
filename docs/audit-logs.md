@@ -14,7 +14,7 @@ keywords:
   - hyperexecute getting started
 url: https://www.testmu.ai/support/docs/audit-logs/
 site_name: LambdaTest
-slug: audit-logs
+slug: audit-logs/
 canonical: https://www.testmu.ai/support/docs/audit-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

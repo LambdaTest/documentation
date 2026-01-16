@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/java-with-playwright/
 site_name: LambdaTest
-slug: java-with-playwright
+slug: java-with-playwright/
 canonical: https://www.testmu.ai/support/docs/java-with-playwright/
 ---
 

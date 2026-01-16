@@ -14,7 +14,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-java-junit/
 site_name: LambdaTest
-slug: appium-java-junit
+slug: appium-java-junit/
 canonical: https://www.testmu.ai/support/docs/appium-java-junit/
 ---
 

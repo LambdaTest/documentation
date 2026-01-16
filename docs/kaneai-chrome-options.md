@@ -13,7 +13,7 @@ keywords:
   - chrome arguments
 url: https://www.testmu.ai/support/docs/kaneai-chrome-options/
 site_name: LambdaTest
-slug: kaneai-chrome-options
+slug: kaneai-chrome-options/
 canonical: https://www.testmu.ai/support/docs/kaneai-chrome-options/
 ---
 

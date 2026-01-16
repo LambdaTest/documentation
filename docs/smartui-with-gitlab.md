@@ -13,7 +13,7 @@ keywords:
   - gitlab ci cd
 url: https://www.testmu.ai/support/docs/smartui-with-gitlab/
 site_name: LambdaTest
-slug: smartui-with-gitlab
+slug: smartui-with-gitlab/
 canonical: https://www.testmu.ai/support/docs/smartui-with-gitlab/
 
 ---

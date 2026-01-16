@@ -11,7 +11,7 @@ keywords:
   - kaneai sidebar scroll
 url: https://www.testmu.ai/support/docs/kane-ai-using-datasets/
 site_name: LambdaTest
-slug: kane-ai-using-datasets
+slug: kane-ai-using-datasets/
 canonical: https://www.testmu.ai/support/docs/kane-ai-using-datasets/
 ---
 

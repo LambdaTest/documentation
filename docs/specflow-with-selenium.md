@@ -15,7 +15,7 @@ keywords:
   - c# selenium framework
 url: https://www.testmu.ai/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid
+slug: specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
 ---
 

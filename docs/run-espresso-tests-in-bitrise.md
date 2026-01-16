@@ -14,7 +14,7 @@ keywords:
 - app automation bitrise
 url: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise/
 site_name: LambdaTest
-slug: run-espresso-tests-in-bitrise
+slug: run-espresso-tests-in-bitrise/
 canonical: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

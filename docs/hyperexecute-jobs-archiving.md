@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-jobs-archiving/
 site_name: LambdaTest
-slug: hyperexecute-jobs-archiving
+slug: hyperexecute-jobs-archiving/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-jobs-archiving/
 ---
 

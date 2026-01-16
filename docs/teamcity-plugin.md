@@ -15,7 +15,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/teamcity-plugin/
 site_name: LambdaTest
-slug: teamcity-plugin
+slug: teamcity-plugin/
 canonical: https://www.testmu.ai/support/docs/teamcity-plugin/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

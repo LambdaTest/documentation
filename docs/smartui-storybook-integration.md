@@ -15,7 +15,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smart-ui-storybook/
-slug: smart-ui-storybook
+slug: smart-ui-storybook/
 canonical: https://www.testmu.ai/support/docs/smart-ui-storybook/
 
 ---

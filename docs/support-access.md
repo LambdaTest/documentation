@@ -12,7 +12,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/support-access/
 site_name: LambdaTest
-slug: support-access
+slug: support-access/
 canonical: https://www.testmu.ai/support/docs/support-access/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

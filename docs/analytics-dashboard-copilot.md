@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-dashboard-copilot/
 site_name: LambdaTest
-slug: analytics-dashboard-copilot
+slug: analytics-dashboard-copilot/
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-copilot/
 ---
 

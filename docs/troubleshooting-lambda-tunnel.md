@@ -11,7 +11,7 @@ keywords:
   - connection refused
 url: https://www.testmu.ai/support/docs/troubleshooting-lambda-tunnel/
 site_name: LambdaTest
-slug: troubleshooting-lambda-tunnel
+slug: troubleshooting-lambda-tunnel/
 canonical: https://www.testmu.ai/support/docs/troubleshooting-lambda-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

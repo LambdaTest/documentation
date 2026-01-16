@@ -11,7 +11,7 @@ keywords:
   - recurring scan
 url: https://www.testmu.ai/support/docs/web-scanner-scheduling-options/
 site_name: LambdaTest
-slug: web-scanner-scheduling-options
+slug: web-scanner-scheduling-options/
 canonical: https://www.testmu.ai/support/docs/web-scanner-scheduling-options/
 ---
 

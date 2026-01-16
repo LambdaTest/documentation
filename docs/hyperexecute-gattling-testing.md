@@ -21,7 +21,7 @@ keywords:
   - HyperExecute Selenium automation
 url: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing/
 site_name: LambdaTest
-slug: hyperexecute-gattling-testing
+slug: hyperexecute-gattling-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing/
 ---
 

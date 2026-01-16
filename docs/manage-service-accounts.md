@@ -10,7 +10,7 @@ keywords:
 - create service account
 url: https://www.testmu.ai/support/docs/service-accounts/
 site_name: LambdaTest
-slug: service-accounts
+slug: service-accounts/
 canonical: https://www.testmu.ai/support/docs/service-accounts/
 ---
 

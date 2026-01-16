@@ -9,7 +9,7 @@ keywords:
   - automation
   - testing
   - payment
-slug: apple-pay-auto
+slug: apple-pay-auto/
 canonical: https://www.testmu.ai/support/docs/apple-pay-auto/
 site_name: LambdaTest
 url: https://www.testmu.ai/support/docs/apple-pay-auto/

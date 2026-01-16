@@ -15,7 +15,7 @@ keywords:
   - testmu ai 3rd party integration
 url: https://www.testmu.ai/support/docs/breeze-integration-with-testmu/
 site_name: LambdaTest
-slug: breeze-integration-with-testmu
+slug: breeze-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/breeze-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

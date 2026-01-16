@@ -13,7 +13,7 @@ keywords:
   - test automation
 url: https://www.testmu.ai/support/docs/analytics-test-failure-classification/
 site_name: LambdaTest
-slug: analytics-test-failure-classification
+slug: analytics-test-failure-classification/
 canonical: https://www.testmu.ai/support/docs/analytics-test-failure-classification/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

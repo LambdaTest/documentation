@@ -13,7 +13,7 @@ keywords:
   - bitbucket ci cd
 url: https://www.testmu.ai/support/docs/smartui-with-bitbucket/
 site_name: LambdaTest
-slug: smartui-with-bitbucket
+slug: smartui-with-bitbucket/
 canonical: https://www.testmu.ai/support/docs/smartui-with-bitbucket/
 
 ---

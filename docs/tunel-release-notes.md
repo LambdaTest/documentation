@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/tunnel-release-notes/
 site_name: LambdaTest
-slug: tunnel-release-notes
+slug: tunnel-release-notes/
 canonical: https://www.testmu.ai/support/docs/tunnel-release-notes/
 ---
 

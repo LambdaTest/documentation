@@ -9,7 +9,7 @@ keywords:
   - robot report testmu ai 
 url: https://www.testmu.ai/support/docs/robot-report/
 site_name: LambdaTest
-slug: robot-report
+slug: robot-report/
 canonical: https://www.testmu.ai/support/docs/robot-report/
 ---
 

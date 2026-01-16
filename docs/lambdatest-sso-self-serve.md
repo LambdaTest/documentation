@@ -11,7 +11,7 @@ keywords:
   - SSO Self Serve
 url: https://www.testmu.ai/support/docs/testmu-sso-self-serve/
 site_name: LambdaTest
-slug: testmu-sso-self-serve
+slug: testmu-sso-self-serve/
 canonical: https://www.testmu.ai/support/docs/testmu-sso-self-serve/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

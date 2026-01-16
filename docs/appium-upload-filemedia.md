@@ -15,7 +15,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/uploadMedia/
 site_name: LambdaTest
-slug: upload-media
+slug: upload-media/
 canonical: https://www.testmu.ai/support/docs/upload-media/
 ---
 

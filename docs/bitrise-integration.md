@@ -14,7 +14,7 @@ keywords:
 - app automation bitrise
 url: https://www.testmu.ai/support/docs/bitrise-integration/
 site_name: LambdaTest
-slug: bitrise-integration
+slug: bitrise-integration/
 canonical: https://www.testmu.ai/support/docs/bitrise-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

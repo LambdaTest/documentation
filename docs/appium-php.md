@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-php/
 site_name: LambdaTest
-slug: appium-php
+slug: appium-php/
 canonical: https://www.testmu.ai/support/docs/appium-php/
 ---
 

@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/taking-screenshots-of-pages-behind-login/
 site_name: LambdaTest
-slug: taking-screenshots-of-pages-behind-login
+slug: taking-screenshots-of-pages-behind-login/
 canonical: https://www.testmu.ai/support/docs/taking-screenshots-of-pages-behind-login/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

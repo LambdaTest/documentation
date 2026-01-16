@@ -18,7 +18,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/biometric-authentication/
 site_name: LambdaTest
-slug: biometric-authentication
+slug: biometric-authentication/
 canonical: https://www.testmu.ai/support/docs/biometric-authentication/
 ---
 

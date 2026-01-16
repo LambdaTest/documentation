@@ -19,7 +19,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/codeception-integration-with-testmu/
 site_name: LambdaTest
-slug: codeception-integration-with-testmu
+slug: codeception-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/codeception-integration-with-testmu/
 ---
 

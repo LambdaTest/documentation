@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/typescript-with-playwright/
 site_name: LambdaTest
-slug: typescript-with-playwright
+slug: typescript-with-playwright/
 canonical: https://www.testmu.ai/support/docs/typescript-with-playwright/
 ---
 

@@ -14,7 +14,7 @@ keywords:
   - automatic proxy
 url: https://www.testmu.ai/support/docs/http2-support/
 site_name: LambdaTest
-slug: http2-support
+slug: http2-support/
 canonical: https://www.testmu.ai/support/docs/http2-support/
 ---
 

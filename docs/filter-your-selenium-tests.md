@@ -19,7 +19,7 @@ keywords:
     - group tests
 url: https://www.testmu.ai/support/docs/filter-your-selenium-tests/
 site_name: LambdaTest
-slug: filter-your-selenium-tests
+slug: filter-your-selenium-tests/
 canonical: https://www.testmu.ai/support/docs/filter-your-selenium-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

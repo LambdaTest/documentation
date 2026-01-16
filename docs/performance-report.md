@@ -12,7 +12,7 @@ keywords:
     - lt browser
 url: https://www.testmu.ai/support/docs/performance-report/
 site_name: LambdaTest
-slug: performance-report
+slug: performance-report/
 canonical: https://www.testmu.ai/support/docs/performance-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

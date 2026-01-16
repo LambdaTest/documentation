@@ -17,7 +17,7 @@ keywords:
   - docker vpn tunnel
 url: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support/
 site_name: LambdaTest
-slug: tunnel-allowHost-wildcard-support
+slug: tunnel-allowHost-wildcard-support/
 canonical: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

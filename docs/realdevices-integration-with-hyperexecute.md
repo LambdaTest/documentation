@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/realdevices-integration-with-hyperexecute/
 site_name: LambdaTest
-slug: real-devices-integration-with-hyperexecute
+slug: real-devices-integration-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/real-devices-integration-with-hyperexecute/
 ---
 

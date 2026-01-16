@@ -12,7 +12,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/zephyr-scale-integration/
 site_name: LambdaTest
-slug: zephyr-scale-integration
+slug: zephyr-scale-integration/
 canonical: https://www.testmu.ai/support/docs/zephyr-scale-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -13,7 +13,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/smartui-with-netlify/
 site_name: LambdaTest
-slug: smartui-with-netlify
+slug: smartui-with-netlify/
 canonical: https://www.testmu.ai/support/docs/smartui-with-netlify/
 
 ---

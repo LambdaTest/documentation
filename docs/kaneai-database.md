@@ -11,7 +11,7 @@ keywords:
   - gcp spanner
 url: https://www.testmu.ai/support/docs/kaneai-database/
 site_name: LambdaTest
-slug: kaneai-database
+slug: kaneai-database/
 canonical: https://www.testmu.ai/support/docs/kaneai-database/
 ---
 

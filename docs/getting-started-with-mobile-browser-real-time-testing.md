@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/getting-started-with-mobile-browser-real-time-testing/
 site_name: LambdaTest
-slug: getting-started-with-mobile-browser-real-time-testing
+slug: getting-started-with-mobile-browser-real-time-testing/
 canonical: https://www.testmu.ai/support/docs/getting-started-with-mobile-browser-real-time-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

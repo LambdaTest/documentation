@@ -20,7 +20,7 @@ keywords:
   - hyperexecute automation testing
 url: https://www.testmu.ai/support/docs/nunit-on-hyperexecute-grid/
 site_name: LambdaTest
-slug: nunit-on-hyperexecute-grid
+slug: nunit-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/nunit-on-hyperexecute-grid/
 ---
 

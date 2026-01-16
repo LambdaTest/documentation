@@ -13,7 +13,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmu.ai/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid
+slug: javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 ---
 

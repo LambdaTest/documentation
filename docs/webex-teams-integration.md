@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/webex-teams-integration/
 site_name: LambdaTest
-slug: webex-teams-integration
+slug: webex-teams-integration/
 canonical: https://www.testmu.ai/support/docs/webex-teams-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -12,7 +12,7 @@ keywords:
 - real devices
 url: https://www.testmu.ai/support/docs/appium-install-uninstall-testmu-hooks/
 site_name: LambdaTest
-slug: appium-install-uninstall-testmu-hooks
+slug: appium-install-uninstall-testmu-hooks/
 canonical: https://www.testmu.ai/support/docs/appium-install-uninstall-testmu-hooks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

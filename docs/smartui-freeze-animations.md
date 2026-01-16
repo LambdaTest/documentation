@@ -11,7 +11,7 @@ keywords:
   - animation svg screenshots
 url: https://www.testmu.ai/support/docs/smartui-freeze-animations/
 site_name: LambdaTest
-slug: smartui-freeze-animations
+slug: smartui-freeze-animations/
 canonical: https://www.testmu.ai/support/docs/smartui-freeze-animations/
 
 ---

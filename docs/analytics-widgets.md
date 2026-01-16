@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-widgets/
 site_name: LambdaTest
-slug: analytics-widgets
+slug: analytics-widgets/
 canonical: https://www.testmu.ai/support/docs/analytics-widgets/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

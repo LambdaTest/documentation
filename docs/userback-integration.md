@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/userback-integration/
 site_name: LambdaTest
-slug: userback-integration
+slug: userback-integration/
 canonical: https://www.testmu.ai/support/docs/userback-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

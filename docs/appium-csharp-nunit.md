@@ -14,7 +14,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-csharp-nunit/
 site_name: LambdaTest
-slug: appium-csharp-nunit
+slug: appium-csharp-nunit/
 canonical: https://www.testmu.ai/support/docs/appium-csharp-nunit/
 ---
 

@@ -12,7 +12,7 @@ keywords:
   - local app testing for Linux
 url: https://www.testmu.ai/support/docs/local-testing-linux/
 site_name: LambdaTest
-slug: local-testing-linux
+slug: local-testing-linux/
 canonical: https://www.testmu.ai/support/docs/local-testing-linux/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

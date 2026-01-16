@@ -11,7 +11,7 @@ keywords:
   - c# selenium testing
 url: https://www.testmu.ai/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
+slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

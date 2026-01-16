@@ -10,7 +10,7 @@ keywords:
   - import data
 url: https://www.testmu.ai/support/docs/one-click-migration-from-testrail/
 site_name: LambdaTest
-slug: one-click-migration-from-testrail
+slug: one-click-migration-from-testrail/
 canonical: https://www.testmu.ai/support/docs/one-click-migration-from-testrail/
 ---
 

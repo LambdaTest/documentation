@@ -21,7 +21,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 site_name: LambdaTest
-slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
+slug: running-groovy-script-in-katalon-with-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

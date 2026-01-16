@@ -13,7 +13,7 @@ keywords:
 - har file download
 url: https://www.testmu.ai/support/docs/extended-debugging-options/
 site_name: LambdaTest
-slug: extended-debugging-options
+slug: extended-debugging-options/
 canonical: https://www.testmu.ai/support/docs/extended-debugging-options/
 ---
 

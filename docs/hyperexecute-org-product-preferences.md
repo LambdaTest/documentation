@@ -11,7 +11,7 @@ keywords:
   - How to access and change org product preferences for hyperexecute
 url: https://www.testmu.ai/support/docs/hyperexecute-org-product-preferences/
 site_name: LambdaTest
-slug: hyperexecute-org-product-preferences
+slug: hyperexecute-org-product-preferences/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-org-product-preferences/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

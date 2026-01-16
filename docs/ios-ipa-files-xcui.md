@@ -16,7 +16,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/ios-ipa-files-xcui/
 site_name: LambdaTest
-slug: ios-ipa-files-xcui
+slug: ios-ipa-files-xcui/
 canonical: https://www.testmu.ai/support/docs/ios-ipa-files-xcui/
 ---
 

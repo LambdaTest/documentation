@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/deque-integration/
 site_name: LambdaTest
-slug: deque-integration
+slug: deque-integration/
 canonical: https://www.testmu.ai/support/docs/deque-integration/
 ---
 

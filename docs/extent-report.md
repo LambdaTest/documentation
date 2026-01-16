@@ -10,7 +10,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/extent-report/
 site_name: LambdaTest
-slug: extent-report
+slug: extent-report/
 canonical: https://www.testmu.ai/support/docs/extent-report/
 ---
 

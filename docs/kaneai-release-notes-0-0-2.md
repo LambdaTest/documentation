@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/kaneai-release-notes-0-0-2/
 site_name: LambdaTest
-slug: kaneai-release-notes-0-0-2
+slug: kaneai-release-notes-0-0-2/
 canonical: https://www.testmu.ai/support/docs/kaneai-release-notes-0-0-2/
 ---
 import FeatureTag from '../src/component/featureTag';

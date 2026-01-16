@@ -16,7 +16,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/camera-image-injection/
 site_name: LambdaTest
-slug: camera-image-injection
+slug: camera-image-injection/
 canonical: https://www.testmu.ai/support/docs/camera-image-injection/
 ---
 

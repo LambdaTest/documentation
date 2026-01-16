@@ -14,7 +14,7 @@ keywords:
   - adb commands
 url: https://www.testmu.ai/support/docs/adb-commands-support/
 site_name: LambdaTest
-slug: adb-commands-support
+slug: adb-commands-support/
 canonical: https://www.testmu.ai/support/docs/adb-commands-support/
 ---
 

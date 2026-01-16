@@ -17,7 +17,7 @@ keywords:
  - selenium ide side runner
 url: https://www.testmu.ai/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
 site_name: LambdaTest
-slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid
+slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
 canonical: https://www.testmu.ai/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

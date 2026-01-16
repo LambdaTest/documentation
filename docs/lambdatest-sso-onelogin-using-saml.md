@@ -13,7 +13,7 @@ keywords:
   - testmu ai onelogin sso
 url: https://www.testmu.ai/support/docs/testmu-sso-onelogin-using-saml/
 site_name: LambdaTest
-slug: testmu-sso-onelogin-using-saml
+slug: testmu-sso-onelogin-using-saml/
 canonical: https://www.testmu.ai/support/docs/testmu-sso-onelogin-using-saml/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

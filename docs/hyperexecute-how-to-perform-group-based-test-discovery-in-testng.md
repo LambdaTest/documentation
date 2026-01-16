@@ -9,7 +9,7 @@ keywords:
     - How to Perform Group-Based Test Discovery in TestNG
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 site_name: LambdaTest
-slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng
+slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 ---
 

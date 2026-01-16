@@ -10,7 +10,7 @@ keywords:
   - free cross browser testing tool
 url: https://www.testmu.ai/support/docs/pivotal-tracker-integration/
 site_name: LambdaTest
-slug: pivotal-tracker-integration
+slug: pivotal-tracker-integration/
 canonical: https://www.testmu.ai/support/docs/pivotal-tracker-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

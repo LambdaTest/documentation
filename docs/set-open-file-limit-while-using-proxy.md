@@ -12,7 +12,7 @@ keywords:
   - testmu ai proxy profile
 url: https://www.testmu.ai/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/
 site_name: LambdaTest
-slug: how-to-set-the-open-file-limit-while-using-tunnel
+slug: how-to-set-the-open-file-limit-while-using-tunnel/
 canonical: https://www.testmu.ai/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

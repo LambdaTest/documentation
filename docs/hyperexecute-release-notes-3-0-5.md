@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-3-0-5/
 site_name: LambdaTest
-slug: hyperexecute-release-notes-3-0-5
+slug: hyperexecute-release-notes-3-0-5/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-3-0-5/
 ---
 

@@ -15,7 +15,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/puppeteer-testing-with-jest/
 site_name: LambdaTest
-slug: puppeteer-testing-with-jest
+slug: puppeteer-testing-with-jest/
 canonical: https://www.testmu.ai/support/docs/puppeteer-testing-with-jest/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -15,7 +15,7 @@ keywords:
     - web browser
 url: https://www.testmu.ai/support/docs/chrome-os-web-browser-testing/
 site_name: LambdaTest
-slug: chrome-os-web-browser-testing
+slug: chrome-os-web-browser-testing/
 canonical: https://www.testmu.ai/support/docs/chrome-os-web-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

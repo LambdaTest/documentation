@@ -9,7 +9,7 @@ keywords:
   - free cross browser testing tool
 url: https://www.testmu.ai/support/docs/integrations-with-project-management-tools/
 site_name: LambdaTest
-slug: integrations-with-project-management-tools
+slug: integrations-with-project-management-tools/
 canonical: https://www.testmu.ai/support/docs/integrations-with-project-management-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

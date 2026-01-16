@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/cyp-multi-reporters/
 site_name: LambdaTest
-slug: cyp-multi-reporters
+slug: cyp-multi-reporters/
 canonical: https://www.testmu.ai/support/docs/cyp-multi-reporters/
 ---
 

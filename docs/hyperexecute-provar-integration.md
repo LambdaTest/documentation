@@ -16,7 +16,7 @@ keywords:
   - Cloud-based testing
 url: https://www.testmu.ai/support/docs/hyperexecute-provar-integration/
 site_name: LambdaTest
-slug: hyperexecute-provar-integration
+slug: hyperexecute-provar-integration/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-provar-integration/
 ---
 

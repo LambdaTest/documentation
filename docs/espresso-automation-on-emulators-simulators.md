@@ -9,7 +9,7 @@ keywords:
   - app automation simulators
 url: https://www.testmu.ai/support/docs/espresso-automation-on-emulators-simulators/
 site_name: LambdaTest
-slug: espresso-automation-on-emulators-simulators
+slug: espresso-automation-on-emulators-simulators/
 canonical: https://www.testmu.ai/support/docs/espresso-automation-on-emulators-simulators/
 ---
 

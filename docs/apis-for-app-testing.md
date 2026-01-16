@@ -10,7 +10,7 @@ keywords:
 - mobile app testing apis
 url: https://www.testmu.ai/support/docs/app-testing-apis/
 site_name: LambdaTest
-slug: app-testing-apis
+slug: app-testing-apis/
 canonical: https://www.testmu.ai/support/docs/app-testing-apis/
 ---
 

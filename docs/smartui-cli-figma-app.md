@@ -11,7 +11,7 @@ keywords:
   - TestMu AI Mobile
   - Design to Production Validation
 url: https://www.testmu.ai/support/docs/smartui-cli/
-slug: smartui-cli-figma-app
+slug: smartui-cli-figma-app/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-figma-app/
 
 ---

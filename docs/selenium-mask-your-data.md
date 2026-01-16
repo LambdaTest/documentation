@@ -11,7 +11,7 @@ keywords:
   - lambda mask commands
 url: https://www.testmu.ai/support/docs/selenium-mask-your-data/
 site_name: LambdaTest
-slug: selenium-mask-your-data
+slug: selenium-mask-your-data/
 canonical: https://www.testmu.ai/support/docs/selenium-mask-your-data/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

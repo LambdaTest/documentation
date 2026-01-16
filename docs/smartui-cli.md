@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smartui-cli/
-slug: smartui-cli
+slug: smartui-cli/
 canonical: https://www.testmu.ai/support/docs/smartui-cli/
 
 ---

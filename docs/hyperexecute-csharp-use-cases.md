@@ -13,7 +13,7 @@ keywords:
   - Specflow
 url: https://www.testmu.ai/support/docs/hyperexecute-csharp-use-cases/
 site_name: LambdaTest
-slug: hyperexecute-csharp-use-cases
+slug: hyperexecute-csharp-use-cases/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-csharp-use-cases/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - private app container testing
 url: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device/
 site_name: LambdaTest
-slug: group-folder-redirect-on-real-device
+slug: group-folder-redirect-on-real-device/
 canonical: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device/
 ---
 

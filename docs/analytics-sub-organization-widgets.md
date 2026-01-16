@@ -13,7 +13,7 @@ keywords:
  - test device coverage
 url: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets/
 site_name: LambdaTest
-slug: analytics-sub-organization-widgets
+slug: analytics-sub-organization-widgets/
 canonical: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets/
 ---
 

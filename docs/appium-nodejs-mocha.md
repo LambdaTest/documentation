@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/appium-nodejs-mocha/
 site_name: LambdaTest
-slug: appium-nodejs-mocha
+slug: appium-nodejs-mocha/
 canonical: https://www.testmu.ai/support/docs/appium-nodejs-mocha/
 ---
 

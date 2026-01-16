@@ -10,7 +10,7 @@ keywords:
   - bugasura integration
 url: https://www.testmu.ai/support/docs/bugasura-integration/
 site_name: LambdaTest
-slug: bugasura-integration
+slug: bugasura-integration/
 canonical: https://www.testmu.ai/support/docs/bugasura-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

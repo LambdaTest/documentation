@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 url: https://www.testmu.ai/support/docs/smartui-github-app-integration/
 site_name: LambdaTest
-slug: smartui-cli-git-branching-strategy
+slug: smartui-cli-git-branching-strategy/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-git-branching-strategy/
 
 ---

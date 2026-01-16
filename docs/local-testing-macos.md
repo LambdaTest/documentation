@@ -12,7 +12,7 @@ keywords:
   - local app testing for MacOS
 url: https://www.testmu.ai/support/docs/local-testing-macos/
 site_name: LambdaTest
-slug: local-testing-macos
+slug: local-testing-macos/
 canonical: https://www.testmu.ai/support/docs/local-testing-macos/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

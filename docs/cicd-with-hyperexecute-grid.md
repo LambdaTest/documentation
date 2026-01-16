@@ -13,7 +13,7 @@ keywords:
     - continuous integration tools
 url: https://www.testmu.ai/support/docs/hyperexecute-integration-with-ci-cd-tools/
 site_name: LambdaTest
-slug: hyperexecute-integration-with-ci-cd-tools
+slug: hyperexecute-integration-with-ci-cd-tools/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-integration-with-ci-cd-tools/
 ---
 

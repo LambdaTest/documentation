@@ -14,7 +14,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/playwright-ios-device/
 site_name: LambdaTest
-slug: playwright-ios-device
+slug: playwright-ios-device/
 canonical: https://www.testmu.ai/support/docs/playwright-ios-device/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

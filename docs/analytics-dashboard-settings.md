@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/analytics-dashboard-settings/
 site_name: LambdaTest
-slug: analytics-dashboard-settings
+slug: analytics-dashboard-settings/
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-settings/
 ---
 

@@ -10,7 +10,7 @@ keywords:
   - free cross browser testing tool
 url: https://www.testmu.ai/support/docs/bitbucket-integration/
 site_name: LambdaTest
-slug: bitbucket-integration
+slug: bitbucket-integration/
 canonical: https://www.testmu.ai/support/docs/bitbucket-integration/
 
 ---

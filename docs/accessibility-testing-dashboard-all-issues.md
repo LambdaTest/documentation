@@ -12,7 +12,7 @@ keywords:
     - all issues
 url: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary/
 site_name: LambdaTest
-slug: accessibility-testing-dashboard-all-issues
+slug: accessibility-testing-dashboard-all-issues/
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-all-issues/
 ---
 

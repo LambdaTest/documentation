@@ -10,7 +10,7 @@ keywords:
   - version
 url: https://www.testmu.ai/support/docs/test-case-versioning/
 site_name: LambdaTest
-slug: test-case-versioning
+slug: test-case-versioning/
 canonical: https://www.testmu.ai/support/docs/test-case-versioning/
 ---
 

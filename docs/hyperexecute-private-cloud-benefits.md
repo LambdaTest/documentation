@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-benefits/
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-benefits
+slug: hyperexecute-private-cloud-benefits/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-benefits/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

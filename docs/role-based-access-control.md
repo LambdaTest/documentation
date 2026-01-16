@@ -9,7 +9,7 @@ keywords:
 - testmu ai rbac
 url: https://www.testmu.ai/support/docs/role-based-access-control/
 site_name: LambdaTest
-slug: role-based-access-control
+slug: role-based-access-control/
 canonical: https://www.testmu.ai/support/docs/role-based-access-control/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

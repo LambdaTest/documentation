@@ -15,7 +15,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/puppeteer-test-execution-setup/
 site_name: LambdaTest
-slug: puppeteer-test-execution-setup
+slug: puppeteer-test-execution-setup/
 canonical: https://www.testmu.ai/support/docs/puppeteer-test-execution-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

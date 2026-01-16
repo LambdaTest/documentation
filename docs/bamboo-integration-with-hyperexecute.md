@@ -13,7 +13,7 @@ keywords:
   - gitlab ci
 url: https://www.testmu.ai/support/docs/bamboo-integration-with-hyperexecute/
 site_name: LambdaTest
-slug: bamboo-integration-with-hyperexecute
+slug: bamboo-integration-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/bamboo-integration-with-hyperexecute/
 ---
 

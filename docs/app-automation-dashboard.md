@@ -10,7 +10,7 @@ keywords:
 - mobile app automation testing using appium
 url: https://www.testmu.ai/support/docs/app-automation-dashboard/
 site_name: LambdaTest
-slug: app-automation-dashboard
+slug: app-automation-dashboard/
 canonical: https://www.testmu.ai/support/docs/app-automation-dashboard/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

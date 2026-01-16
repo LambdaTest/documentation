@@ -9,7 +9,7 @@ keywords:
 - manage user
 url: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management/
 site_name: LambdaTest
-slug: kaneai-test-manager-access-management
+slug: kaneai-test-manager-access-management/
 canonical: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

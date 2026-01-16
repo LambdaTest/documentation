@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-test-splitting-and-multiplexing/
 site_name: LambdaTest
-slug: hyperexecute-test-splitting-and-multiplexing
+slug: hyperexecute-test-splitting-and-multiplexing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-test-splitting-and-multiplexing/
 ---
 

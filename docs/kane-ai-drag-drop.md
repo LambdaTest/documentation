@@ -12,7 +12,7 @@ keywords:
   - click and drag
 url: https://www.testmu.ai/support/docs/kane-ai-drag-drop/
 site_name: LambdaTest
-slug: kane-ai-drag-drop
+slug: kane-ai-drag-drop/
 canonical: https://www.testmu.ai/support/docs/kane-ai-drag-drop/
 ---
 

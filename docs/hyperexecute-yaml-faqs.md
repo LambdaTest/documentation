@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-yaml-faqs/
 site_name: LambdaTest
-slug: hyperexecute-yaml-faqs
+slug: hyperexecute-yaml-faqs/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-faqs/
 ---
 

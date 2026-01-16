@@ -10,7 +10,7 @@ keywords:
   - Bugzilla Integration
 url: https://www.testmu.ai/support/docs/bugzilla-integration/
 site_name: LambdaTest
-slug: bugzilla-integration
+slug: bugzilla-integration/
 canonical: https://www.testmu.ai/support/docs/bugzilla-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

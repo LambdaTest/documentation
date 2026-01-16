@@ -3,7 +3,7 @@ id: smartui-gitlab-pr-checks-exec
 title: GitLab PR Checks with SmartUI Exec (SDK)
 sidebar_label: GitLab PR Checks (Exec)
 description: Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI SDK/Exec method for web and mobile testing with Selenium, Playwright, Appium, and more.
-slug: smartui-gitlab-pr-checks-exec
+slug: smartui-gitlab-pr-checks-exec/
 canonical: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-exec/
 keywords:
   - GitLab PR checks

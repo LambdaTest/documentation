@@ -12,7 +12,7 @@ keywords:
   - testmu ai kaneai
 url: https://www.testmu.ai/support/docs/author-your-first-mobile-browser-test/
 site_name: LambdaTest
-slug: author-your-first-mobile-browser-test
+slug: author-your-first-mobile-browser-test/
 canonical: https://www.testmu.ai/support/docs/author-your-first-mobile-browser-test/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - testmu ai fastlane plugin
 url: https://www.testmu.ai/support/docs/fastlane-with-testmu/
 site_name: LambdaTest
-slug: fastlane-with-testmu
+slug: fastlane-with-testmu/
 canonical: https://www.testmu.ai/support/docs/fastlane-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

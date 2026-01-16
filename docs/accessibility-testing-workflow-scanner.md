@@ -14,7 +14,7 @@ keywords:
     - Workflow Scanner
 url: https://www.testmu.ai/support/docs/accessibility-testing-workflow-scanner/
 site_name: LambdaTest
-slug: accessibility-testing-workflow-scanner
+slug: accessibility-testing-workflow-scanner/
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-workflow-scanner/
 ---
 

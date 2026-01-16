@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-artifacts/
 site_name: LambdaTest
-slug: hyperexecute-artifacts
+slug: hyperexecute-artifacts/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-artifacts/
 ---
 

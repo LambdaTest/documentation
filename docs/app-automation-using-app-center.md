@@ -13,7 +13,7 @@ keywords:
   - TestMu AI Cloud Platform
 url: https://www.testmu.ai/support/docs/app-automation-using-app-center/
 site_name: LambdaTest
-slug: app-automation-using-app-center
+slug: app-automation-using-app-center/
 canonical: https://www.testmu.ai/support/docs/app-automation-using-app-center/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

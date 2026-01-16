@@ -10,7 +10,7 @@ keywords:
   - bug management tools in TestMu AI
 url: https://testmu.ai/support/docs/asana-integration/
 site_name: LambdaTest
-slug: asana-integration
+slug: asana-integration/
 canonical: https://www.testmu.ai/support/docs/asana-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

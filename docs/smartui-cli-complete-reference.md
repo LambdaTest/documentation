@@ -13,7 +13,7 @@ keywords:
   - visual regression testing
 url: https://www.testmu.ai/support/docs/smartui-cli-complete-reference/
 site_name: LambdaTest
-slug: smartui-cli-complete-reference
+slug: smartui-cli-complete-reference/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-complete-reference/
 
 ---

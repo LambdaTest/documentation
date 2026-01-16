@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
 url: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides/
 site_name: LambdaTest Deep dive into hyperexecute yaml
-slug: hyperexecute-yaml-capability-overrides
+slug: hyperexecute-yaml-capability-overrides/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides/
 ---
 import Tabs from '@theme/Tabs';

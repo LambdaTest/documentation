@@ -10,7 +10,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/error-categorization-report/
 site_name: LambdaTest
-slug: error-categorization-report
+slug: error-categorization-report/
 canonical: https://www.testmu.ai/support/docs/error-categorization-report/
 ---
 

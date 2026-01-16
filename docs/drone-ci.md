@@ -22,7 +22,7 @@ keywords:
   - drone ci trigger
 url: https://www.testmu.ai/support/docs/drone-ci-integration-with-testmu/
 site_name: LambdaTest
-slug: drone-ci-integration-with-testmu
+slug: drone-ci-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/drone-ci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

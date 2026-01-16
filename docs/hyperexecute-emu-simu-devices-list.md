@@ -13,7 +13,7 @@ keywords:
   - hyperexecute dashboard
 url: https://www.testmu.ai/support/docs/hyperexecute-emu-simu-devices-list/
 site_name: LambdaTest
-slug: hyperexecute-emu-simu-devices-list
+slug: hyperexecute-emu-simu-devices-list/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-emu-simu-devices-list/
 ---
 

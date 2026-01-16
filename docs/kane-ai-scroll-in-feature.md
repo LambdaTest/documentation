@@ -11,7 +11,7 @@ keywords:
   - kaneai sidebar scroll
 url: https://www.testmu.ai/support/docs/kane-ai-scroll-in-feature/
 site_name: LambdaTest
-slug: kane-ai-scroll-in-feature
+slug: kane-ai-scroll-in-feature/
 canonical: https://www.testmu.ai/support/docs/kane-ai-scroll-in-feature/
 ---
 

@@ -13,7 +13,7 @@ keywords:
   - gitlab ci
 url: https://www.testmu.ai/support/docs/azure-with-hyperexecute/
 site_name: LambdaTest
-slug: azure-with-hyperexecute
+slug: azure-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/azure-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

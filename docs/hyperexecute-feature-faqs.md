@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-feature-faqs/
 site_name: LambdaTest
-slug: hyperexecute-feature-faqs
+slug: hyperexecute-feature-faqs/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-feature-faqs/
 ---
 

@@ -14,7 +14,7 @@ keywords:
   - best chrome extensions for testers
 url: https://www.testmu.ai/support/docs/chrome-extension/
 site_name: LambdaTest
-slug: chrome-extension
+slug: chrome-extension/
 canonical: https://www.testmu.ai/support/docs/chrome-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

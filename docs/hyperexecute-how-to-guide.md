@@ -11,7 +11,7 @@ keywords:
   - How To guide?
 url: https://www.testmu.ai/support/docs/hyperexecute-knowledge-base/
 site_name: LambdaTest
-slug: hyperexecute-how-to-guide
+slug: hyperexecute-how-to-guide/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-guide/
 ---
 

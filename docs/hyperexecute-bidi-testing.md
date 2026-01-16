@@ -13,7 +13,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/hyperexecute-bidi-testing/
 site_name: LambdaTest
-slug: hyperexecute-bidi-testing
+slug: hyperexecute-bidi-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-bidi-testing/
 ---
 

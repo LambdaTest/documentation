@@ -16,7 +16,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/parallel-testing-with-playwright/
 site_name: LambdaTest
-slug: parallel-testing-with-playwright
+slug: parallel-testing-with-playwright/
 canonical: https://www.testmu.ai/support/docs/parallel-testing-with-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

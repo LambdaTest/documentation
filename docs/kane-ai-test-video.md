@@ -10,7 +10,7 @@ keywords:
   - kaneai Web test
 url: https://www.testmu.ai/support/docs/kaneai-test/
 site_name: LambdaTest
-slug: kaneai-test
+slug: kaneai-test/
 canonical: https://www.testmu.ai/support/docs/kaneai-test/
 ---
 

@@ -11,7 +11,7 @@ keywords:
   - How to Configure Tunnel with HyperExecute
 url: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-tunnel/
 site_name: LambdaTest
-slug: hyperexecute-how-to-configure-tunnel
+slug: hyperexecute-how-to-configure-tunnel/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-tunnel/
 ---
 

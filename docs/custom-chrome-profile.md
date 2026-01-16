@@ -11,7 +11,7 @@ keywords:
 - custom chrome profile testmu ai
 url: https://www.testmu.ai/support/docs/upload-custom-chrome-profile/
 site_name: LambdaTest
-slug: upload-custom-chrome-profile
+slug: upload-custom-chrome-profile/
 canonical: https://www.testmu.ai/support/docs/upload-custom-chrome-profile/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

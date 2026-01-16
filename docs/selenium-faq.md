@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/selenium-faq/
 site_name: LambdaTest
-slug: selenium-faq
+slug: selenium-faq/
 canonical: https://www.testmu.ai/support/docs/selenium-faq/
 ---
 

@@ -14,7 +14,7 @@ keywords:
   - best wordpress plugin for testers
 url: https://www.testmu.ai/support/docs/wordpress-plugin/
 site_name: LambdaTest
-slug: wordpress-plugin
+slug: wordpress-plugin/
 canonical: https://www.testmu.ai/support/docs/wordpress-plugin/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

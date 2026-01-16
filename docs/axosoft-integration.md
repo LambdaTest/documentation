@@ -19,7 +19,7 @@ keywords:
   - project management tools
 url: https://www.testmu.ai/support/docs/axosoft-integration/
 site_name: LambdaTest
-slug: axosoft-integration
+slug: axosoft-integration/
 canonical: https://www.testmu.ai/support/docs/axosoft-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

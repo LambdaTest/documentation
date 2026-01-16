@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough/
 site_name: LambdaTest
-slug: hyperexecute-guided-walkthrough
+slug: hyperexecute-guided-walkthrough/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

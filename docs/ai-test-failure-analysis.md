@@ -9,7 +9,7 @@ keywords:
 - hyperexecute root cause analysis
 url: https://www.testmu.ai/support/docs/ai-powered-test-failure-analysis/
 site_name: LambdaTest
-slug: ai-powered-test-failure-analysis
+slug: ai-powered-test-failure-analysis/
 canonical: https://www.testmu.ai/support/docs/ai-powered-test-failure-analysis/
 ---
 

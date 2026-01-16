@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/kaneai-release-notes-0-0-1/
 site_name: LambdaTest
-slug: kaneai-release-notes-0-0-1
+slug: kaneai-release-notes-0-0-1/
 canonical: https://www.testmu.ai/support/docs/kaneai-release-notes-0-0-1/
 ---
 import NewTag from '../src/component/newTag';

@@ -11,7 +11,7 @@ keywords:
 - xunit testmu ai
 url: https://www.testmu.ai/support/docs/selenium-with-xunit/
 site_name: LambdaTest
-slug: selenium-with-xunit
+slug: selenium-with-xunit/
 canonical: https://www.testmu.ai/support/docs/selenium-with-xunit/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

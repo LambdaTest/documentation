@@ -10,7 +10,7 @@ keywords:
   - testmu ai testrigor
 url: https://www.testmu.ai/support/docs/testrigor-integration/
 site_name: LambdaTest
-slug: testrigor-integration
+slug: testrigor-integration/
 canonical: https://www.testmu.ai/support/docs/testrigor-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

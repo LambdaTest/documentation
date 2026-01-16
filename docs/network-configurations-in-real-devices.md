@@ -12,7 +12,7 @@ keywords:
   - network configurations
 url: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/
 site_name: LambdaTest
-slug: network-configurations-in-real-devices
+slug: network-configurations-in-real-devices/
 canonical: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/
 ---
 

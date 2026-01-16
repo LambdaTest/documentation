@@ -17,7 +17,7 @@ keywords:
   - real devices
 url: https://www.testmu.ai/support/docs/audio-injection/
 site_name: LambdaTest
-slug: audio-injection
+slug: audio-injection/
 canonical: https://www.testmu.ai/support/docs/audio-injection/
 ---
 

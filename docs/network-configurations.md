@@ -13,7 +13,7 @@ keywords:
   - domain filtering automation
 url: https://www.testmu.ai/support/docs/network-configurations/
 site_name: LambdaTest
-slug: network-configurations
+slug: network-configurations/
 canonical: https://www.testmu.ai/support/docs/network-configurations/
 ---
 

@@ -14,7 +14,7 @@ keywords:
   
 url: https://www.testmu.ai/support/docs/cypress-detailed-command-logs/
 site_name: LambdaTest
-slug: cypress-detailed-command-logs
+slug: cypress-detailed-command-logs/
 canonical: https://www.testmu.ai/support/docs/cypress-detailed-command-logs/
 ---
 

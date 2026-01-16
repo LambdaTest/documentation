@@ -8,7 +8,7 @@ keywords:
 - ui inspector 
 url: https://www.testmu.ai/support/docs/ui-inspector/
 site_name: LambdaTest
-slug: ui-inspector
+slug: ui-inspector/
 canonical: https://www.testmu.ai/support/docs/ui-inspector/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

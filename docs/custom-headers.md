@@ -10,7 +10,7 @@ keywords:
 - custom headers bypass firewalls
 url: https://www.testmu.ai/support/docs/custom-headers/
 site_name: LambdaTest
-slug: custom-headers
+slug: custom-headers/
 canonical: https://www.testmu.ai/support/docs/custom-headers/
 ---
 

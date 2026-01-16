@@ -13,7 +13,7 @@ keywords:
   - environments
 url: https://www.testmu.ai/support/docs/kaneai-variables-and-parameters/
 site_name: Variables & Parameters in KaneAI
-slug: kaneai-variables-and-parameters
+slug: kaneai-variables-and-parameters/
 canonical: https://www.testmu.ai/support/docs/kaneai-variables-and-parameters/
 ---
 

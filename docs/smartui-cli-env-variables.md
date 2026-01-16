@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmu.ai/support/docs/smartui-cli-env-variables/
-slug: smartui-cli-env-variables
+slug: smartui-cli-env-variables/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-env-variables/
 
 ---

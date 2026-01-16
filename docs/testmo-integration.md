@@ -10,7 +10,7 @@ keywords:
   - testmu ai selenium grid integration to testmo
 url: https://www.testmu.ai/support/docs/testmo-integration/
 site_name: LambdaTest
-slug: testmo-integration
+slug: testmo-integration/
 canonical: https://www.testmu.ai/support/docs/testmo-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

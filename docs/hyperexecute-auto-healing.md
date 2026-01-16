@@ -10,7 +10,7 @@ keywords:
 - recover flaky tests
 url: https://www.testmu.ai/support/docs/hyperexecute-auto-healing/
 site_name: LambdaTest
-slug: hyperexecute-auto-healing
+slug: hyperexecute-auto-healing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-auto-healing/
 ---
 

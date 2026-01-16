@@ -13,7 +13,7 @@ keywords:
 
 url: https://www.testmu.ai/support/docs/dashboards-custom-widgets/
 site_name: LambdaTest
-slug: dashboards-custom-widgets
+slug: dashboards-custom-widgets/
 canonical: https://www.testmu.ai/support/docs/dashboards-custom-widgets/
 ---
 

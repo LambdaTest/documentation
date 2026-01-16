@@ -13,7 +13,7 @@ keywords:
   - network configurations
 url: https://www.testmu.ai/support/docs/network-configurations-in-browser/
 site_name: LambdaTest
-slug: browser-network-configurations
+slug: browser-network-configurations/
 canonical: https://www.testmu.ai/support/docs/browser-network-configurations/
 
 ---

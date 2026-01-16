@@ -11,7 +11,7 @@ keywords:
   - local app testing for macos
 url: https://www.testmu.ai/support/docs/advanced-tunnel-features/
 site_name: LambdaTest
-slug: advanced-tunnel-features
+slug: advanced-tunnel-features/
 canonical: https://www.testmu.ai/support/docs/advanced-tunnel-features/
 ---
 

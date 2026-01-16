@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 url: https://www.testmu.ai/support/docs/smartui-upload-api-v2/
 site_name: LambdaTest
-slug: smartui-upload-api-v2
+slug: smartui-upload-api-v2/
 canonical: https://www.testmu.ai/support/docs/smartui-upload-api-v2/
 
 ---

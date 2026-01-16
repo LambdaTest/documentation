@@ -12,7 +12,7 @@ keywords:
   - clickup integrations
 url: https://www.testmu.ai/support/docs/clickup-integration/
 site_name: LambdaTest
-slug: clickup-integration
+slug: clickup-integration/
 canonical: https://www.testmu.ai/support/docs/clickup-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

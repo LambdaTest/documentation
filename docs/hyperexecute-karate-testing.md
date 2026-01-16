@@ -21,7 +21,7 @@ keywords:
   - HyperExecute Selenium automation
 url: https://www.testmu.ai/support/docs/hyperexecute-karate-testing/
 site_name: LambdaTest
-slug: hyperexecute-karate-testing
+slug: hyperexecute-karate-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-karate-testing/
 ---
 

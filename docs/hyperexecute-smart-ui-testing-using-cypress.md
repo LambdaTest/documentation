@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-cypress/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-testing-using-cypress
+slug: hyperexecute-smart-ui-testing-using-cypress/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-cypress/
 
 ---

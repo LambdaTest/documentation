@@ -13,7 +13,7 @@ keywords:
   - best vs code extensions for testers
 url: https://www.testmu.ai/support/docs/vs-code-extension/
 site_name: LambdaTest
-slug: vs-code-extension
+slug: vs-code-extension/
 canonical: https://www.testmu.ai/support/docs/vs-code-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

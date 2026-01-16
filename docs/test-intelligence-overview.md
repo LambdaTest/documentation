@@ -7,7 +7,7 @@ keywords:
   - analytics
 url: https://www.testmu.ai/support/docs/test-intelligence-overview/
 site_name: LambdaTest
-slug: test-intelligence-overview
+slug: test-intelligence-overview/
 canonical: https://www.testmu.ai/support/docs/test-intelligence-overview/
 ---
 

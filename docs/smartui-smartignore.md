@@ -11,7 +11,7 @@ keywords:
 - AI based auto ignore
 url: https://www.testmu.ai/support/docs/smartui-smartignore/
 site_name: LambdaTest
-slug: smartui-smartignore
+slug: smartui-smartignore/
 canonical: https://www.testmu.ai/support/docs/smartui-smartignore/
 
 ---

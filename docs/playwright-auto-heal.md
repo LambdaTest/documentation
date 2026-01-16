@@ -10,7 +10,7 @@ keywords:
   - auto healing testmu ai
 url: https://www.testmu.ai/support/docs/playwright-auto-healing/
 site_name: LambdaTest
-slug: playwright-auto-healing
+slug: playwright-auto-healing/
 canonical: https://www.testmu.ai/support/docs/playwright-auto-healing/
 ---
 

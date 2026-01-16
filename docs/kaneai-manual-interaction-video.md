@@ -10,7 +10,7 @@ keywords:
   - kaneai manual interaction
 url: https://www.testmu.ai/support/docs/kaneai-manual-interaction-video/
 site_name: LambdaTest
-slug: kaneai-manual-interaction-video
+slug: kaneai-manual-interaction-video/
 canonical: https://www.testmu.ai/support/docs/kaneai-manual-interaction-video/
 ---
 

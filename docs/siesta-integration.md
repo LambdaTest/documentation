@@ -10,7 +10,7 @@ keywords:
   - testmu ai siesta
 url: https://www.testmu.ai/support/docs/siesta-integration/
 site_name: LambdaTest
-slug: siesta-integration
+slug: siesta-integration/
 canonical: https://www.testmu.ai/support/docs/siesta-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -18,7 +18,7 @@ keywords:
   - apple mac el capitan virtual machine
 url: https://www.testmu.ai/support/docs/real-time-upload-and-download-files/
 site_name: LambdaTest
-slug: real-time-upload-and-download-files
+slug: real-time-upload-and-download-files/
 canonical: https://www.testmu.ai/support/docs/real-time-upload-and-download-files/
 ---
 

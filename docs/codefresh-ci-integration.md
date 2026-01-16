@@ -12,7 +12,7 @@ keywords:
   - testmu ai codefresh ci integration
 url: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu/
 site_name: LambdaTest
-slug: codefresh-ci-integration-with-testmu
+slug: codefresh-ci-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

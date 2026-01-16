@@ -11,7 +11,7 @@ keywords:
   - FAQs
 url: https://www.testmu.ai/support/docs/hyperexecute-general-faqs/
 site_name: LambdaTest
-slug: hyperexecute-general-faqs
+slug: hyperexecute-general-faqs/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-general-faqs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

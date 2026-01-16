@@ -12,7 +12,7 @@ keywords:
 - flutter test app
 url: https://www.testmu.ai/support/docs/virtual-device-flutter-apps/
 site_name: LambdaTest
-slug: virtual-device-flutter-apps
+slug: virtual-device-flutter-apps/
 canonical: https://www.testmu.ai/support/docs/virtual-device-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
