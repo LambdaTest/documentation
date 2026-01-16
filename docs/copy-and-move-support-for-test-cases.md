@@ -8,7 +8,7 @@ keywords:
   - copy test cases
   - move test cases
   - copy and move test cases to different folders
-url: https://www.testmu.ai/support/docs/copy-and-move-support-for-test-cases
+url: https://www.testmu.ai/support/docs/copy-and-move-support-for-test-cases/
 site_name: LambdaTest
 slug: copy-and-move-support-for-test-cases
 canonical: https://www.testmu.ai/support/docs/copy-and-move-support-for-test-cases/

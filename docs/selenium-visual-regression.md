@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/selenium-visual-regression
+url: https://www.testmu.ai/support/docs/selenium-visual-regression/
 site_name: LambdaTest
 slug: selenium-visual-regression
 canonical: https://www.testmu.ai/support/docs/selenium-visual-regression/

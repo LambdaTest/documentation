@@ -13,7 +13,7 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-appletv
+url: https://www.testmu.ai/support/docs/appium-appletv/
 site_name: LambdaTest
 slug: appium-appletv
 canonical: https://www.testmu.ai/support/docs/appium-appletv/

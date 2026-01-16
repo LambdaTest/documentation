@@ -10,7 +10,7 @@ keywords:
     - Testing
     - DevTools
     - Install Toolkit
-url: https://www.testmu.ai/support/docs/accessibility-testing-install-devtools
+url: https://www.testmu.ai/support/docs/accessibility-testing-install-devtools/
 site_name: LambdaTest
 slug: accessibility-testing-install-devtools
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-install-devtools/

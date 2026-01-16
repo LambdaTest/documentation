@@ -18,7 +18,7 @@ keywords:
   - chrome devtools mobile
   - safari devtools mobile
   - app testing webview
-url: https://www.testmu.ai/support/docs/devtools-on-real-devices-app
+url: https://www.testmu.ai/support/docs/devtools-on-real-devices-app/
 site_name: LambdaTest
 slug: devtools-on-real-devices-app
 canonical: https://www.testmu.ai/support/docs/devtools-on-real-devices-app/

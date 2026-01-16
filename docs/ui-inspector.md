@@ -6,7 +6,7 @@ sidebar_label: UI Inspector
 description: Inspect and interact with mobile app elements using TestMu AI UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
 keywords:
 - ui inspector 
-url: https://www.testmu.ai/support/docs/ui-inspector
+url: https://www.testmu.ai/support/docs/ui-inspector/
 site_name: LambdaTest
 slug: ui-inspector
 canonical: https://www.testmu.ai/support/docs/ui-inspector/

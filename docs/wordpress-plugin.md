@@ -12,7 +12,7 @@ keywords:
   - check browser compatibility online 
   - best wordpress plugin for developers
   - best wordpress plugin for testers
-url: https://www.testmu.ai/support/docs/wordpress-plugin
+url: https://www.testmu.ai/support/docs/wordpress-plugin/
 site_name: LambdaTest
 slug: wordpress-plugin
 canonical: https://www.testmu.ai/support/docs/wordpress-plugin/

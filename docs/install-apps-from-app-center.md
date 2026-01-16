@@ -7,7 +7,7 @@ description: Learn how to test apps installed from App Center on TestMu AI for o
 keywords:
 - install apps from app center
 - app center
-url: https://www.testmu.ai/support/docs/install-apps-from-app-center
+url: https://www.testmu.ai/support/docs/install-apps-from-app-center/
 site_name: LambdaTest
 slug: install-apps-from-app-center
 canonical: https://www.testmu.ai/support/docs/install-apps-from-app-center/

@@ -13,7 +13,7 @@ keywords:
     - Simulator
     - real time
     - application
-url: https://www.testmu.ai/support/docs/chrome-os-app-testing
+url: https://www.testmu.ai/support/docs/chrome-os-app-testing/
 site_name: LambdaTest
 slug: chrome-os-app-testing
 canonical: https://www.testmu.ai/support/docs/chrome-os-app-testing/

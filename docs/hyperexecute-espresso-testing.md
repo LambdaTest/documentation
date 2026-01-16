@@ -11,7 +11,7 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/hyperexecute-espresso-testing
+url: https://www.testmu.ai/support/docs/hyperexecute-espresso-testing/
 site_name: LambdaTest
 slug: hyperexecute-espresso-testing
 canonical: https://www.testmu.ai/support/docs/hyperexecute-espresso-testing/

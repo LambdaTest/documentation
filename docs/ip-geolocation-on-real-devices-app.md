@@ -15,7 +15,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app
+url: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app/
 site_name: LambdaTest
 slug: ip-geolocation-on-real-devices-app
 canonical: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-app/

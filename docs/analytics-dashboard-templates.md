@@ -5,7 +5,7 @@ sidebar_label: Create with Pre-Built templates
 description: Discover Dashboard Templates for streamlined test analysis. Save time with pre-built widgets tailored to specific testing needs. Learn more
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-dashboard-templates
+url: https://www.testmu.ai/support/docs/analytics-dashboard-templates/
 site_name: LambdaTest
 slug: analytics-dashboard-templates
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-templates/

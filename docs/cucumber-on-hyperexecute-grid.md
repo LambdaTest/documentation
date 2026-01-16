@@ -19,7 +19,7 @@ keywords:
   - hyperexecute Cucumber testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/cucumber-on-hyperexecute-grid
+url: https://www.testmu.ai/support/docs/cucumber-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: cucumber-on-hyperexecute-grid
 canonical: https://www.testmu.ai/support/docs/cucumber-on-hyperexecute-grid/

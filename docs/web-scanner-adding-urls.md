@@ -10,7 +10,7 @@ keywords:
   - add urls
   - csv import
   - sitemap import
-url: https://www.testmu.ai/support/docs/web-scanner-adding-urls
+url: https://www.testmu.ai/support/docs/web-scanner-adding-urls/
 site_name: LambdaTest
 slug: web-scanner-adding-urls
 canonical: https://www.testmu.ai/support/docs/web-scanner-adding-urls/

@@ -12,7 +12,7 @@ keywords:
   - ios app settings
   - app automation
   - real devices
-url: https://www.testmu.ai/support/docs/appium-ios-app-settings
+url: https://www.testmu.ai/support/docs/appium-ios-app-settings/
 site_name: LambdaTest
 slug: appium-ios-app-settings
 canonical: https://www.testmu.ai/support/docs/appium-ios-app-settings/

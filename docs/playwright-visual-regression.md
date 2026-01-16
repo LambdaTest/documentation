@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/playwright-visual-regression
+url: https://www.testmu.ai/support/docs/playwright-visual-regression/
 site_name: LambdaTest
 slug: playwright-visual-regression
 canonical: https://www.testmu.ai/support/docs/playwright-visual-regression/

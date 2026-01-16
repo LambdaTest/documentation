@@ -7,7 +7,7 @@ description: Run your tests using qTest Launch on TestMu AI.
 keywords:
   - TestMu AI integration
   - testmu ai integration with qTest
-url: https://www.testmu.ai/support/docs/qtest-integration
+url: https://www.testmu.ai/support/docs/qtest-integration/
 site_name: LambdaTest
 slug: qtest-integration
 canonical: https://www.testmu.ai/support/docs/qtest-integration/

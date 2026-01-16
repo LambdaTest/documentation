@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.testmu.ai/support/docs/hyperexecute-how-to-debug-job
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-debug-job/
 site_name: LambdaTest
 slug: hyperexecute-how-to-debug-job
 canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-debug-job/

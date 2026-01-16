@@ -15,7 +15,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/contacts-on-real-devices
+url: https://www.testmu.ai/support/docs/contacts-on-real-devices/
 site_name: LambdaTest
 slug: contacts-on-real-devices
 canonical: https://www.testmu.ai/support/docs/contacts-on-real-devices/

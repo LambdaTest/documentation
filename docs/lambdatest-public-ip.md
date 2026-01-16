@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Public IP address
   - TestMu AI IP whitelist
   - TestMu AI 
-url: https://www.testmu.ai/support/docs/testmu-public-ip
+url: https://www.testmu.ai/support/docs/testmu-public-ip/
 site_name: LambdaTest
 slug: testmu-public-ip
 canonical: https://www.testmu.ai/support/docs/testmu-public-ip/

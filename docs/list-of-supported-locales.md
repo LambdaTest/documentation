@@ -9,7 +9,7 @@ keywords:
   - Locales
   - Appium supported locales
   
-url: https://www.testmu.ai/support/docs/list-of-supported-locales
+url: https://www.testmu.ai/support/docs/list-of-supported-locales/
 site_name: LambdaTest
 slug: list-of-supported-locales
 canonical: https://www.testmu.ai/support/docs/list-of-supported-locales/

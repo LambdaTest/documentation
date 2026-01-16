@@ -13,7 +13,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/uploadMedia
+url: https://www.testmu.ai/support/docs/uploadMedia/
 site_name: LambdaTest
 slug: upload-media
 canonical: https://www.testmu.ai/support/docs/upload-media/

@@ -5,7 +5,7 @@ sidebar_label: FAQs
 description: Analytics - FAQs
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-faqs
+url: https://www.testmu.ai/support/docs/analytics-faqs/
 site_name: LambdaTest
 slug: analytics-faqs
 canonical: https://www.testmu.ai/support/docs/analytics-faqs/

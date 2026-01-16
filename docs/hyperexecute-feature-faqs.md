@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-feature-faqs
+url: https://www.testmu.ai/support/docs/hyperexecute-feature-faqs/
 site_name: LambdaTest
 slug: hyperexecute-feature-faqs
 canonical: https://www.testmu.ai/support/docs/hyperexecute-feature-faqs/

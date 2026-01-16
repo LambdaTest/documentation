@@ -6,7 +6,7 @@ sidebar_label: App Settings
 description: Explore App Settings in TestMu AI's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
 keywords:
 - app settings 
-url: https://www.testmu.ai/support/docs/app-settings
+url: https://www.testmu.ai/support/docs/app-settings/
 site_name: LambdaTest
 slug: app-settings
 canonical: https://www.testmu.ai/support/docs/app-settings/

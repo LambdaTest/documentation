@@ -15,7 +15,7 @@ keywords:
   - Integrate TestMu AI With Cypress
   - TestMu AI Cloud Platform
 
-url: https://www.testmu.ai/support/docs/integrate-testmu-with-cypress
+url: https://www.testmu.ai/support/docs/integrate-testmu-with-cypress/
 site_name: LambdaTest
 slug: integrate-testmu-with-cypress
 canonical: https://www.testmu.ai/support/docs/integrate-testmu-with-cypress/

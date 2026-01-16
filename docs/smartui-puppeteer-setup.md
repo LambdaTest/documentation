@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/puppteer-visual-regression
+url: https://www.testmu.ai/support/docs/puppteer-visual-regression/
 site_name: LambdaTest
 slug: puppeteer-visual-regression
 canonical: https://www.testmu.ai/support/docs/puppeteer-visual-regression/

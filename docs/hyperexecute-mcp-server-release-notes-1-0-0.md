@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0
+url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/
 site_name: LambdaTest
 slug: hyperexecute-mcp-server-release-notes-1-0-0
 canonical: https://www.testmu.ai/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/

@@ -13,7 +13,7 @@ keywords:
   - Visual regression testing
   - Selenium Playwright Appium
   - npx smartui exec
-url: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-exec
+url: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-exec/
 site_name: LambdaTest
 ---
 

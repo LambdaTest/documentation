@@ -10,7 +10,7 @@ keywords:
   - kaneai guided walkthrough
   - kane ai prompts
   - kane ai commands
-url: https://www.testmu.ai/support/docs/kane-ai-javascript-execution
+url: https://www.testmu.ai/support/docs/kane-ai-javascript-execution/
 site_name: LambdaTest
 slug: kane-ai-javascript-execution
 canonical: https://www.testmu.ai/support/docs/kane-ai-javascript-execution/

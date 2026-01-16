@@ -14,7 +14,7 @@ keywords:
   - Test case management
   - Automated testing
   - Cloud-based testing
-url: https://www.testmu.ai/support/docs/hyperexecute-qtest-integration
+url: https://www.testmu.ai/support/docs/hyperexecute-qtest-integration/
 site_name: LambdaTest
 slug: hyperexecute-qtest-integration
 canonical: https://www.testmu.ai/support/docs/hyperexecute-qtest-integration/

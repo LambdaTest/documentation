@@ -9,7 +9,7 @@ keywords:
  - smartui analytics
  - screenshot trends
  - build status ratio
-url: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics
+url: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics/
 site_name: LambdaTest
 slug: analytics-modules-smartui-analytics
 canonical: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics/

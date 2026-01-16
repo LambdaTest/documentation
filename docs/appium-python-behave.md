@@ -12,7 +12,7 @@ keywords:
   - behave
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-python-behave
+url: https://www.testmu.ai/support/docs/appium-python-behave/
 site_name: LambdaTest
 slug: appium-python-behave
 canonical: https://www.testmu.ai/support/docs/appium-python-behave/

@@ -10,7 +10,7 @@ keywords:
   - genai qa agent
   - testmu ai automation
   - testmu ai kaneai
-url: https://www.testmu.ai/support/docs/author-your-first-desktop-browser-test
+url: https://www.testmu.ai/support/docs/author-your-first-desktop-browser-test/
 site_name: LambdaTest
 slug: author-your-first-desktop-browser-test
 canonical: https://www.testmu.ai/support/docs/author-your-first-desktop-browser-test/

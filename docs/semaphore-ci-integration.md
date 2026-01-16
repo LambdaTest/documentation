@@ -12,7 +12,7 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - semaphore ci
-url: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu
+url: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/
 site_name: LambdaTest
 slug: semaphore-integration-with-testmu
 canonical: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/

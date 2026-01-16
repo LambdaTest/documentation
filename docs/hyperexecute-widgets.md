@@ -13,7 +13,7 @@ keywords:
   - HyperExecute Jobs
   - HyperExecute Stage
   - HyperExecute Tasks
-url: https://www.testmu.ai/support/docs/hyperexecute-widgets
+url: https://www.testmu.ai/support/docs/hyperexecute-widgets/
 site_name: LambdaTest
 slug: hyperexecute-widgets
 canonical: https://www.testmu.ai/support/docs/hyperexecute-widgets/

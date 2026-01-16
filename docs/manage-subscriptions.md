@@ -14,7 +14,7 @@ keywords:
   - Selenium tutorial
   - Selenium getting started
   - Switch plan testmu ai
-url: https://www.testmu.ai/support/docs/manage-subscriptions
+url: https://www.testmu.ai/support/docs/manage-subscriptions/
 site_name: LambdaTest
 slug: manage-subscriptions
 canonical: https://www.testmu.ai/support/docs/manage-subscriptions/

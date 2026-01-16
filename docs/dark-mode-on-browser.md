@@ -13,7 +13,7 @@ keywords:
   - web dark mode
   - testmu ai real browsers
   - light mode testing
-url: https://www.testmu.ai/support/docs/dark-mode-on-browser
+url: https://www.testmu.ai/support/docs/dark-mode-on-browser/
 site_name: LambdaTest
 slug: dark-mode-on-browser
 canonical: https://www.testmu.ai/support/docs/dark-mode-on-browser/

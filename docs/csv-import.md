@@ -8,7 +8,7 @@ keywords:
   - test case import
   - csv import
   - test case
-url: https://www.testmu.ai/support/docs/csv-import
+url: https://www.testmu.ai/support/docs/csv-import/
 site_name: LambdaTest
 slug: csv-import
 canonical: https://www.testmu.ai/support/docs/csv-import/

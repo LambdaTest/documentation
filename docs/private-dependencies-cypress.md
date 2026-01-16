@@ -15,7 +15,7 @@ keywords:
   - Execute With Private Dependencies
   - TestMu AI Cloud Platform
 
-url: https://www.testmu.ai/support/docs/private-dependencies-cypress
+url: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 site_name: LambdaTest
 slug: private-dependencies-cypress
 canonical: https://www.testmu.ai/support/docs/private-dependencies-cypress/

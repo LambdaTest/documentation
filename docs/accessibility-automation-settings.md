@@ -10,7 +10,7 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-automation-settings
+url: https://www.testmu.ai/support/docs/accessibility-automation-settings/
 site_name: LambdaTest
 slug: accessibility-automation-settings
 canonical: https://www.testmu.ai/support/docs/accessibility-automation-settings/

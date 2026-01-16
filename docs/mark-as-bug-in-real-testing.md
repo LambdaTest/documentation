@@ -15,7 +15,7 @@ keywords:
   - smart ui testing
   - screenshot testing
 
-url: https://www.testmu.ai/support/docs/mark-as-bug
+url: https://www.testmu.ai/support/docs/mark-as-bug/
 site_name: LambdaTest
 slug: mark-as-bug
 canonical: https://www.testmu.ai/support/docs/mark-as-bug/

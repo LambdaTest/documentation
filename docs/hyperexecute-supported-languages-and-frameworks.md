@@ -16,7 +16,7 @@ keywords:
  - selenium frameworks
  - TestMu AI HyperExecute
  - Super fast Selenium grid
-url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-frameworks
+url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-frameworks/
 site_name: LambdaTest
 slug: hyperexecute-supported-languages-and-frameworks
 canonical: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-frameworks/

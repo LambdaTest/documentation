@@ -7,7 +7,7 @@ description: Export multiple test cases with the export to csv option for easy d
 keywords:
   - export-test-cases
   - test cases
-url: https://www.testmu.ai/support/docs/export-test-cases
+url: https://www.testmu.ai/support/docs/export-test-cases/
 site_name: LambdaTest
 slug: export-test-cases
 canonical: https://www.testmu.ai/support/docs/export-test-cases/

@@ -11,7 +11,7 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - Travis CI ci cd
-url: https://www.testmu.ai/support/docs/smartui-with-travis-ci
+url: https://www.testmu.ai/support/docs/smartui-with-travis-ci/
 site_name: LambdaTest
 slug: smartui-with-travis-ci
 canonical: https://www.testmu.ai/support/docs/smartui-with-travis-ci/

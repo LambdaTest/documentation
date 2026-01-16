@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-testcafe-sdk
+url: https://www.testmu.ai/support/docs/smartui-testcafe-sdk/
 slug: smartui-testcafe-sdk
 canonical: https://www.testmu.ai/support/docs/smartui-testcafe-sdk/
 

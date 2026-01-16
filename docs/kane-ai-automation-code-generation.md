@@ -8,7 +8,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai code gen
-url: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation
+url: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation/
 site_name: LambdaTest
 slug: kane-ai-automation-code-generation
 canonical: https://www.testmu.ai/support/docs/kane-ai-automation-code-generation/

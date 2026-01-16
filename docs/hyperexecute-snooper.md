@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-snooper
+url: https://www.testmu.ai/support/docs/hyperexecute-snooper/
 site_name: Using Snooper on Hyperexecute
 slug: hyperexecute-snooper
 canonical: https://www.testmu.ai/support/docs/hyperexecute-snooper/

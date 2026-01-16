@@ -5,7 +5,7 @@ sidebar_label: Concurrency Usage Insights
 description: Optimize resource use with TestMu AI's Resource Utilization module. Monitor concurrency trends to manage parallel test sessions, reduce queuing times, and enhance efficiency.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization
+url: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/
 site_name: LambdaTest
 slug: analytics-modules-resource-utilization
 canonical: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/

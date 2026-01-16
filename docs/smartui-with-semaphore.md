@@ -11,7 +11,7 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - semaphore ci cd
-url: https://www.testmu.ai/support/docs/smartui-with-semaphore
+url: https://www.testmu.ai/support/docs/smartui-with-semaphore/
 site_name: LambdaTest
 slug: smartui-with-semaphore
 canonical: https://www.testmu.ai/support/docs/smartui-with-semaphore/

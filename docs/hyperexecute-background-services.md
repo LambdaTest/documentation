@@ -6,7 +6,7 @@ sidebar_label: Background Services
 description: This documentation will help you 
 keywords:
 - hyperexecute background services
-url: https://www.testmu.ai/support/docs/hyperexecute-background-services
+url: https://www.testmu.ai/support/docs/hyperexecute-background-services/
 site_name: LambdaTest
 slug: hyperexecute-background-services
 canonical: https://www.testmu.ai/support/docs/hyperexecute-background-services/

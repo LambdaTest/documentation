@@ -15,7 +15,7 @@ keywords:
   - sauce labs testmu ai selenium testing
   - sauce labs testmu ai migration guide
   - how to migrate from sauce labs to testmu ai
-url: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide
+url: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide/
 site_name: LambdaTest
 slug: saucelabs-to-testmu-migration-guide
 canonical: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide/

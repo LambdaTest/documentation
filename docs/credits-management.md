@@ -7,7 +7,7 @@ description: Guide for usage of credits for AI features in TestMu AI
 keywords:
   - credits
   - AI
-url: https://www.testmu.ai/support/docs/credits-management
+url: https://www.testmu.ai/support/docs/credits-management/
 site_name: LambdaTest
 slug: credits-management
 canonical: https://www.testmu.ai/support/docs/credits-management/

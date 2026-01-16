@@ -8,7 +8,7 @@ keywords:
   - insights
   - test intelligence
   - test analytics
-url: https://www.testmu.ai/support/docs/analytics-widget-filter-by-regex
+url: https://www.testmu.ai/support/docs/analytics-widget-filter-by-regex/
 site_name: LambdaTest
 slug: analytics-widget-filter-by-regex
 canonical: https://www.testmu.ai/support/docs/analytics-widget-filter-by-regex/

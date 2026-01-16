@@ -12,7 +12,7 @@ keywords:
   - performance testing
   - web protocol
   - automatic proxy
-url: https://www.testmu.ai/support/docs/http2-support
+url: https://www.testmu.ai/support/docs/http2-support/
 site_name: LambdaTest
 slug: http2-support
 canonical: https://www.testmu.ai/support/docs/http2-support/

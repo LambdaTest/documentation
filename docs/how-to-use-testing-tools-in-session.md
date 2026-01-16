@@ -9,7 +9,7 @@ keywords:
   - real device browser testing
   - mobile app testing
   - app automation
-url: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session
+url: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session/
 site_name: LambdaTest
 slug: how-to-use-testing-tools-in-session
 canonical: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session/

@@ -16,7 +16,7 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/getting-started-with-desktop-browser-real-time-testing
+url: https://www.testmu.ai/support/docs/getting-started-with-desktop-browser-real-time-testing/
 site_name: LambdaTest
 slug: getting-started-with-desktop-browser-real-time-testing
 canonical: https://www.testmu.ai/support/docs/getting-started-with-desktop-browser-real-time-testing/

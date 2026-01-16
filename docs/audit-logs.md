@@ -12,7 +12,7 @@ keywords:
   - online hyperexecute
   - hyperexecute automation grid online
   - hyperexecute getting started
-url: https://www.testmu.ai/support/docs/audit-logs
+url: https://www.testmu.ai/support/docs/audit-logs/
 site_name: LambdaTest
 slug: audit-logs
 canonical: https://www.testmu.ai/support/docs/audit-logs/

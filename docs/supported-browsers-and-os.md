@@ -15,7 +15,7 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.testmu.ai/support/docs/supported-browsers-and-os
+url: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 site_name: LambdaTest
 slug: supported-browsers-and-os
 canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/

@@ -12,7 +12,7 @@ keywords:
   - compare image to image
   - playwright parallel tests
   - parallel testing with playwright
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-using-playwright
+url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-using-playwright/
 slug: hyperexecute-smart-ui-sdk-using-playwright
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-using-playwright/
 

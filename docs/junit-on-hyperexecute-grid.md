@@ -19,7 +19,7 @@ keywords:
   - hyperexecute JUnit testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/junit-on-hyperexecute-grid
+url: https://www.testmu.ai/support/docs/junit-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: junit-on-hyperexecute-grid
 canonical: https://www.testmu.ai/support/docs/junit-on-hyperexecute-grid/

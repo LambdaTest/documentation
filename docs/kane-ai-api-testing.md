@@ -9,7 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.testmu.ai/support/docs/kane-ai-api-testing
+url: https://www.testmu.ai/support/docs/kane-ai-api-testing/
 site_name: LambdaTest
 slug: kane-ai-api-testing
 canonical: https://www.testmu.ai/support/docs/kane-ai-api-testing/

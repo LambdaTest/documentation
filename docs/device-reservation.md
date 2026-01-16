@@ -8,7 +8,7 @@ keywords:
 - device booking
 - testmu ai devices
 - test scheduling
-url: https://www.testmu.ai/support/docs/device-reservation
+url: https://www.testmu.ai/support/docs/device-reservation/
 site_name: LambdaTest
 slug: Device-reservation
 canonical: https://www.testmu.ai/support/docs/Device-reservation/

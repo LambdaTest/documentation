@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough
+url: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough/
 site_name: LambdaTest
 slug: hyperexecute-guided-walkthrough
 canonical: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough/

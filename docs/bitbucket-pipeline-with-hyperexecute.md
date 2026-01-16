@@ -11,7 +11,7 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute
+url: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute/
 site_name: LambdaTest
 slug: bitbucket-pipeline-with-hyperexecute
 canonical: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute/

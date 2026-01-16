@@ -9,7 +9,7 @@ keywords:
 - enhancements
 - modules
 - dynamic url
-url: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement
+url: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement/
 site_name: LambdaTest
 slug: kaneai-dynamic-url-replacement
 canonical: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement/
