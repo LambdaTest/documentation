@@ -11,9 +11,9 @@ keywords:
   - testim
   - Integrations
   - Products
-url: https://www.testmu.ai/support/docs/hyperexecute-testim-integration
+url: https://www.testmu.ai/support/docs/hyperexecute-testim-integration/
 site_name: LambdaTest
-slug: hyperexecute-testim-integration
+slug: hyperexecute-testim-integration/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-testim-integration/
 ---
 

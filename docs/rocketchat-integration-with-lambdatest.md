@@ -10,9 +10,9 @@ keywords:
   - bug reporting
   - team communication
 
-url: https://www.testmu.ai/support/docs/rocketchat-integration-with-testmu
+url: https://www.testmu.ai/support/docs/rocketchat-integration-with-testmu/
 site_name: LambdaTest
-slug: rocketchat-integration-with-testmu
+slug: rocketchat-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/rocketchat-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

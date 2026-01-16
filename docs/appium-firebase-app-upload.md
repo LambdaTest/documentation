@@ -13,9 +13,9 @@ keywords:
   - firebase app upload
   - app automation
 image: /assets/images/og-images/appium-testing-og-image
-url: https://www.testmu.ai/support/docs/appium-firebase-app-upload
+url: https://www.testmu.ai/support/docs/appium-firebase-app-upload/
 site_name: Uploading app via Firebase
-slug: appium-firebase-app-upload
+slug: appium-firebase-app-upload/
 canonical: https://www.testmu.ai/support/docs/appium-firebase-app-upload/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

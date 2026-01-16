@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.testmu.ai/support/docs/kane-ai-jira-integration
+url: https://www.testmu.ai/support/docs/kane-ai-jira-integration/
 site_name: LambdaTest
-slug: kane-ai-jira-integration
+slug: kane-ai-jira-integration/
 canonical: https://www.testmu.ai/support/docs/kane-ai-jira-integration/
 ---
 

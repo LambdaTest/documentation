@@ -5,9 +5,9 @@ sidebar_label: Error Logs Analytics
 description: Analyze your failed tests with Test Intelligence and get insights on the errors that are causing your test runs to fail.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/test-intelligence-command-logs
+url: https://www.testmu.ai/support/docs/test-intelligence-command-logs/
 site_name: LambdaTest
-slug: test-intelligence-command-error-logs-analytics
+slug: test-intelligence-command-error-logs-analytics/
 canonical: https://www.testmu.ai/support/docs/test-intelligence-command-error-logs-analytics/
 ---
 

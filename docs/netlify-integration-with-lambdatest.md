@@ -11,9 +11,9 @@ keywords:
   - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/netlify-integration-with-testmu
+url: https://www.testmu.ai/support/docs/netlify-integration-with-testmu/
 site_name: LambdaTest
-slug: netlify-integration-with-testmu
+slug: netlify-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/netlify-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

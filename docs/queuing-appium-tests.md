@@ -8,9 +8,9 @@ keywords:
   - appium test session queuing
   - queuing
   - testmu ai queuing
-url: https://www.testmu.ai/support/docs/queuing-appium-tests
+url: https://www.testmu.ai/support/docs/queuing-appium-tests/
 site_name: LambdaTest
-slug: queuing-appium-tests
+slug: queuing-appium-tests/
 canonical: https://www.testmu.ai/support/docs/queuing-appium-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

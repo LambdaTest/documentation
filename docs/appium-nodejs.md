@@ -11,9 +11,9 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-nodejs
+url: https://www.testmu.ai/support/docs/appium-nodejs/
 site_name: LambdaTest
-slug: appium-nodejs
+slug: appium-nodejs/
 canonical: https://www.testmu.ai/support/docs/appium-nodejs/
 ---
 

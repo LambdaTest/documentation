@@ -17,9 +17,9 @@ keywords:
   - create airbrake issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/airbrake-integration
+url: https://www.testmu.ai/support/docs/airbrake-integration/
 site_name: LambdaTest
-slug: airbrake-integration
+slug: airbrake-integration/
 canonical: https://www.testmu.ai/support/docs/airbrake-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

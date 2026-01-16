@@ -9,10 +9,10 @@ keywords:
   - manual testing
   - App Live
   - payment
-slug: apple-pay-manual
+slug: apple-pay-manual/
 canonical: https://www.testmu.ai/support/docs/apple-pay-manual/
 site_name: LambdaTest
-url: https://www.testmu.ai/support/docs/apple-pay-manual
+url: https://www.testmu.ai/support/docs/apple-pay-manual/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';

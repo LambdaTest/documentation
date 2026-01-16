@@ -10,9 +10,9 @@ keywords:
   - secure proxy testing
   - local app testing
   - bypass network restrictions
-url: https://www.testmu.ai/support/docs/socks5-proxy-support
+url: https://www.testmu.ai/support/docs/socks5-proxy-support/
 site_name: LambdaTest
-slug: socks5-proxy-support
+slug: socks5-proxy-support/
 canonical: https://www.testmu.ai/support/docs/socks5-proxy-support/
 ---
 

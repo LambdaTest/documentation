@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.png
-url: https://www.testmu.ai/support/docs/appium-php-behat
+url: https://www.testmu.ai/support/docs/appium-php-behat/
 site_name: LambdaTest
-slug: appium-php-behat
+slug: appium-php-behat/
 canonical: https://www.testmu.ai/support/docs/appium-php-behat/
 ---
 

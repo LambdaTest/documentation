@@ -10,9 +10,9 @@ keywords:
   - genai qa agent
   - testmu ai automation
   - testmu ai kaneai
-url: https://www.testmu.ai/support/docs/getting-started-with-kane-ai
+url: https://www.testmu.ai/support/docs/getting-started-with-kane-ai/
 site_name: LambdaTest
-slug: getting-started-with-kane-ai
+slug: getting-started-with-kane-ai/
 canonical: https://www.testmu.ai/support/docs/getting-started-with-kane-ai/
 ---
 

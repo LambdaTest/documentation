@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute
+url: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute/
 site_name: LambdaTest
-slug: circle-ci-with-hyperexecute
+slug: circle-ci-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

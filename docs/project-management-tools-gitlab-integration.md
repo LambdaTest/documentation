@@ -8,9 +8,9 @@ keywords:
   - testmu ai integrations
   - push issues to gitlab
   - free cross browser testing tool
-url: https://www.testmu.ai/support/docs/gitlab-integration
+url: https://www.testmu.ai/support/docs/gitlab-integration/
 site_name: LambdaTest
-slug: gitlab-integration
+slug: gitlab-integration/
 canonical: https://www.testmu.ai/support/docs/gitlab-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

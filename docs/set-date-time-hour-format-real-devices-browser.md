@@ -15,9 +15,9 @@ keywords:
   - app testing on real device
   - simulate date time
   - iOS automation hooks
-url: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices-browser
+url: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices-browser/
 site_name: LambdaTest
-slug: set-date-time-hour-format-real-devices-browser
+slug: set-date-time-hour-format-real-devices-browser/
 canonical: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices-browser/
 ---
 import CodeBlock from '@theme/CodeBlock';

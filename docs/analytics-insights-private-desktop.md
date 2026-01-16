@@ -11,9 +11,9 @@ keywords:
   - Desktop trends
   - Desktop status ratio
 
-url: https://www.testmu.ai/support/docs/insights-private-desktop
+url: https://www.testmu.ai/support/docs/insights-private-desktop/
 site_name: LambdaTest
-slug: insights-private-desktop
+slug: insights-private-desktop/
 canonical: https://www.testmu.ai/support/docs/insights-private-desktop/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

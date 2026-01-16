@@ -16,9 +16,9 @@ keywords:
  - app testing
  - testmu ai 
 
-url: https://www.testmu.ai/support/docs/supported-appium-plugins
+url: https://www.testmu.ai/support/docs/supported-appium-plugins/
 site_name: LambdaTest
-slug: supported-appium-plugins
+slug: supported-appium-plugins/
 canonical: https://www.testmu.ai/support/docs/supported-appium-plugins/
 ---
 

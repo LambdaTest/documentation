@@ -10,9 +10,9 @@ keywords:
 - wcag compliance
 - accessibility metrics
 - accessibility health
-url: https://www.testmu.ai/support/docs/accessibility-web-score
+url: https://www.testmu.ai/support/docs/accessibility-web-score/
 site_name: LambdaTest
-slug: accessibility-web-score
+slug: accessibility-web-score/
 canonical: https://www.testmu.ai/support/docs/accessibility-web-score/
 ---
 

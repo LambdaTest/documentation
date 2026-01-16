@@ -11,9 +11,9 @@ keywords:
   - sdk
   - mobile apps
   - tools
-url: https://www.testmu.ai/support/docs/hyperexecute-build-mobile-apps-using-tools
+url: https://www.testmu.ai/support/docs/hyperexecute-build-mobile-apps-using-tools/
 site_name: LambdaTest
-slug: hyperexecute-build-mobile-apps-using-tools
+slug: hyperexecute-build-mobile-apps-using-tools/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-build-mobile-apps-using-tools/
 --- 
 

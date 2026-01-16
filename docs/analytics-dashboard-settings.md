@@ -5,9 +5,9 @@ sidebar_label: Dashboard Settings
 description: Customize your Analytics Dashboard settings for optimal test analysis. Learn how to adjust settings to fit your testing needs.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-dashboard-settings
+url: https://www.testmu.ai/support/docs/analytics-dashboard-settings/
 site_name: LambdaTest
-slug: analytics-dashboard-settings
+slug: analytics-dashboard-settings/
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-settings/
 ---
 

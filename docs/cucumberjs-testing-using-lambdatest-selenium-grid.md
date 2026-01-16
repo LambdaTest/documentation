@@ -14,9 +14,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid
+url: https://www.testmu.ai/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid
+slug: cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/
 ---
 

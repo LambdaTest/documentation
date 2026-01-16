@@ -5,9 +5,9 @@ sidebar_label: Flaky Tests Insights
 description: Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-flaky-test-analytics
+url: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
 site_name: LambdaTest
-slug: analytics-modules-test-intelligence-flaky-test-analytics
+slug: analytics-modules-test-intelligence-flaky-test-analytics/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
 ---
 

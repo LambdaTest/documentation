@@ -11,9 +11,9 @@ keywords:
   - waitForTimeout
   - visual testing
   - dynamic content
-url: https://www.testmu.ai/support/docs/smartui-handle-lazy-loading
+url: https://www.testmu.ai/support/docs/smartui-handle-lazy-loading/
 site_name: LambdaTest
-slug: smartui-handle-lazy-loading
+slug: smartui-handle-lazy-loading/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-lazy-loading/
 
 ---

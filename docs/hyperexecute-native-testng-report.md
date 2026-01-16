@@ -8,9 +8,9 @@ keywords:
     - native testng reports
     - hyperexecute testng reports
     - hyperexecute native testng testing
-url: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report
+url: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report/
 site_name: LambdaTest
-slug: hyperexecute-native-testng-report
+slug: hyperexecute-native-testng-report/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-native-testng-report/
 ---
 

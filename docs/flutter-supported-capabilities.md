@@ -11,9 +11,9 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/flutter-supported-capabilities
+url: https://www.testmu.ai/support/docs/flutter-supported-capabilities/
 site_name: LambdaTest
-slug: flutter-supported-capabilities
+slug: flutter-supported-capabilities/
 canonical: https://www.testmu.ai/support/docs/flutter-supported-capabilities/
 ---
 

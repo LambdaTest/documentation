@@ -7,9 +7,9 @@ description: Learn how to generate Cucumber Report on TestMu AI and download the
 keywords:
   - cucumber testing reports
   - cucumber testing testmu ai 
-url: https://www.testmu.ai/support/docs/cucumber-report
+url: https://www.testmu.ai/support/docs/cucumber-report/
 site_name: LambdaTest
-slug: cucumber-report
+slug: cucumber-report/
 canonical: https://www.testmu.ai/support/docs/cucumber-report/
 ---
 

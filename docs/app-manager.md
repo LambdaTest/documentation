@@ -13,9 +13,9 @@ keywords:
     - Accessibility Testing Settings
     - TestMu AI app storage
     - test .apk .aab .ipa files
-url: https://www.testmu.ai/support/docs/app-manager
+url: https://www.testmu.ai/support/docs/app-manager/
 site_name: LambdaTest
-slug: app-manager
+slug: app-manager/
 canonical: https://www.testmu.ai/support/docs/app-manager/
 ---
 import Tabs from '@theme/Tabs';

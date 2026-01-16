@@ -8,9 +8,9 @@ keywords:
 - service account testmu ai
 - manage service account
 - create service account
-url: https://www.testmu.ai/support/docs/service-accounts
+url: https://www.testmu.ai/support/docs/service-accounts/
 site_name: LambdaTest
-slug: service-accounts
+slug: service-accounts/
 canonical: https://www.testmu.ai/support/docs/service-accounts/
 ---
 

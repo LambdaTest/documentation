@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integrations
   - TestMu AI Azure DevOps integration
   - Push issues to Azure DevOps
-url: https://www.testmu.ai/support/docs/vsts-integration
+url: https://www.testmu.ai/support/docs/vsts-integration/
 site_name: LambdaTest
-slug: vsts-integration
+slug: vsts-integration/
 canonical: https://www.testmu.ai/support/docs/vsts-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

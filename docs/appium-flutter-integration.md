@@ -10,9 +10,9 @@ keywords:
   - testmu ai
   - flutter automation
   - mobile test automation
-url: https://www.testmu.ai/support/docs/appium-flutter-integration
+url: https://www.testmu.ai/support/docs/appium-flutter-integration/
 site_name: LambdaTest
-slug: appium-flutter-integration
+slug: appium-flutter-integration/
 canonical: https://www.testmu.ai/support/docs/appium-flutter-integration/
 ---
 

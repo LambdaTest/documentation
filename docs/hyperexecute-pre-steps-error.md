@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.testmu.ai/support/docs/hyperexecute-pre-steps-error
+url: https://www.testmu.ai/support/docs/hyperexecute-pre-steps-error/
 site_name: LambdaTest
-slug: hyperexecute-pre-steps-error
+slug: hyperexecute-pre-steps-error/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-pre-steps-error/
 ---
 

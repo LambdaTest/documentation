@@ -10,9 +10,9 @@ keywords:
   - error resolution
   - debugging smartui
   - common errors
-url: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide
+url: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide/
 site_name: LambdaTest
-slug: smartui-troubleshooting-guide
+slug: smartui-troubleshooting-guide/
 canonical: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide/
 
 ---

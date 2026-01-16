@@ -8,9 +8,9 @@ keywords:
   - test manager
   - create projects
   - create project
-url: https://www.testmu.ai/support/docs/create-projects
+url: https://www.testmu.ai/support/docs/create-projects/
 site_name: LambdaTest
-slug: create-projects
+slug: create-projects/
 canonical: https://www.testmu.ai/support/docs/create-projects/
 ---
 

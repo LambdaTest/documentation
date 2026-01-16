@@ -8,9 +8,9 @@ keywords:
 - how to delete testmu ai account 
 - how can I delete my testmu ai account
 
-url: https://www.testmu.ai/support/docs/delete-testmu-account
+url: https://www.testmu.ai/support/docs/delete-testmu-account/
 site_name: LambdaTest
-slug: delete-testmu-account
+slug: delete-testmu-account/
 canonical: https://www.testmu.ai/support/docs/delete-testmu-account/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

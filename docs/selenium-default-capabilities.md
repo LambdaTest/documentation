@@ -8,9 +8,9 @@ keywords:
   - testmu ai automation
   - selenium automation grid
   - selenium capabilities
-url: https://www.testmu.ai/support/docs/selenium-default-capabilities
+url: https://www.testmu.ai/support/docs/selenium-default-capabilities/
 site_name: LambdaTest
-slug: selenium-default-capabilities
+slug: selenium-default-capabilities/
 canonical: https://www.testmu.ai/support/docs/selenium-default-capabilities/
 ---
 

@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Selenium help
   - TestMu AI Selenium documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/selenium-faq
+url: https://www.testmu.ai/support/docs/selenium-faq/
 site_name: LambdaTest
-slug: selenium-faq
+slug: selenium-faq/
 canonical: https://www.testmu.ai/support/docs/selenium-faq/
 ---
 

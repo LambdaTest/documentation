@@ -9,9 +9,9 @@ keywords:
   - insights
   - usage
   - test intelligence
-url: https://www.testmu.ai/support/docs/analytics-modules-groups
+url: https://www.testmu.ai/support/docs/analytics-modules-groups/
 site_name: LambdaTest
-slug: analytics-modules-groups
+slug: analytics-modules-groups/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-groups/
 ---
 

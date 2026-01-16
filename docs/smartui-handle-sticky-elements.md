@@ -11,9 +11,9 @@ keywords:
   - sticky footer
   - visual testing
   - false positives
-url: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements
+url: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements/
 site_name: LambdaTest
-slug: smartui-handle-sticky-elements
+slug: smartui-handle-sticky-elements/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements/
 
 ---

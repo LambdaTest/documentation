@@ -14,9 +14,9 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-python-gauge
+url: https://www.testmu.ai/support/docs/appium-python-gauge/
 site_name: LambdaTest
-slug: appium-python-gauge
+slug: appium-python-gauge/
 canonical: https://www.testmu.ai/support/docs/appium-python-gauge/
 ---
 

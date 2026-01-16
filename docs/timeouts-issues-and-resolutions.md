@@ -11,9 +11,9 @@ keywords:
   - cross browser testing app
   - developer tools
   - debugging tools
-url: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions
+url: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions/
 site_name: LambdaTest
-slug: timeouts-issues-and-resolutions
+slug: timeouts-issues-and-resolutions/
 canonical: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions/
 ---
 

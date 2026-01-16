@@ -5,9 +5,9 @@ sidebar_label: Widgets
 description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-widgets
+url: https://www.testmu.ai/support/docs/analytics-widgets/
 site_name: LambdaTest
-slug: analytics-widgets
+slug: analytics-widgets/
 canonical: https://www.testmu.ai/support/docs/analytics-widgets/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

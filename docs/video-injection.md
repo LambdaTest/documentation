@@ -14,9 +14,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/video-injection
+url: https://www.testmu.ai/support/docs/video-injection/
 site_name: LambdaTest
-slug: video-injection
+slug: video-injection/
 canonical: https://www.testmu.ai/support/docs/video-injection/
 ---
 

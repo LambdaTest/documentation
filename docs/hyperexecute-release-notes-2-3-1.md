@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-3-1
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-3-1/
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-3-1
+slug: hyperexecute-release-notes-2-3-1/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-3-1/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

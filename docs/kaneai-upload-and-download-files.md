@@ -8,9 +8,9 @@ keywords:
 - upload files
 - download files
 - kane ai
-url: https://www.testmu.ai/support/docs/kaneai-upload-and-download-files
+url: https://www.testmu.ai/support/docs/kaneai-upload-and-download-files/
 site_name: LambdaTest
-slug: kaneai-upload-and-download-files
+slug: kaneai-upload-and-download-files/
 canonical: https://www.testmu.ai/support/docs/kaneai-upload-and-download-files/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,9 +11,9 @@ keywords:
     - Accessibility Testing Settings
     - Android Accessibility 
     - iOS Accessibility
-url: https://www.testmu.ai/support/docs/accessibility-android-automation-test
+url: https://www.testmu.ai/support/docs/accessibility-android-automation-test/
 site_name: LambdaTest
-slug: accessibility-native-app-automation-test
+slug: accessibility-native-app-automation-test/
 canonical: https://www.testmu.ai/support/docs/accessibility-native-app-automation-test/
 ---
  

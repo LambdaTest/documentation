@@ -15,9 +15,9 @@ keywords:
   - selenium testing tutorial
 image: /assets/images/og-images/selenium-testing-og.png
 
-url: https://www.testmu.ai/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid
+url: https://www.testmu.ai/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid
+slug: php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/
 ---
 

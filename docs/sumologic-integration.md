@@ -8,9 +8,9 @@ keywords:
   - testmu ai integrations
   - testmu ai integration with sumo logic
   - sumo logic integration 
-url: https://www.testmu.ai/support/docs/sumo-logic-integration
+url: https://www.testmu.ai/support/docs/sumo-logic-integration/
 site_name: LambdaTest
-slug: sumo-logic-integration
+slug: sumo-logic-integration/
 canonical: https://www.testmu.ai/support/docs/sumo-logic-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

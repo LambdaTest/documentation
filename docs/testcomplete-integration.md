@@ -11,9 +11,9 @@ keywords:
 - testcomplete integration with testmu ai
 - testmu ai integration with testcomplete
 - testcomplete testmu ai
-url: https://www.testmu.ai/support/docs/testcomplete-integration
+url: https://www.testmu.ai/support/docs/testcomplete-integration/
 site_name: LambdaTest
-slug: testcomplete-integration
+slug: testcomplete-integration/
 canonical: https://www.testmu.ai/support/docs/testcomplete-integration/
 ---
 

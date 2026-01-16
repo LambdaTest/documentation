@@ -5,9 +5,9 @@ sidebar_label: Flaky Test Detection
 description: Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the insights over the flakiness of the test.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection
+url: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
 site_name: LambdaTest
-slug: test-intelligence-flakiness-test-detection
+slug: test-intelligence-flakiness-test-detection/
 canonical: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
 ---
 

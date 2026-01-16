@@ -14,9 +14,9 @@ keywords:
   - Test case management
   - Automated testing
   - Cloud-based testing
-url: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration
+url: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration/
 site_name: LambdaTest
-slug: hyperexecute-algoqa-integration
+slug: hyperexecute-algoqa-integration/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-algoqa-integration/
 ---
 

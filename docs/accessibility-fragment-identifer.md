@@ -11,9 +11,9 @@ keywords:
   - Accessibility Testing Settings
   - Fragment identifier
   - wcag
-url: https://www.testmu.ai/support/docs/accessibility-fragment-identifier
+url: https://www.testmu.ai/support/docs/accessibility-fragment-identifier/
 site_name: LambdaTest
-slug: accessibility-fragment-identifier
+slug: accessibility-fragment-identifier/
 canonical: https://www.testmu.ai/support/docs/accessibility-fragment-identifier/
 ---
 

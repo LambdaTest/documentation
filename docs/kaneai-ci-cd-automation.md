@@ -17,9 +17,9 @@ keywords:
   - github actions
   - api
   - postman
-url: https://www.testmu.ai/support/docs/kaneai-ci-cd-automation
+url: https://www.testmu.ai/support/docs/kaneai-ci-cd-automation/
 site_name: LambdaTest
-slug: kaneai-ci-cd-automation
+slug: kaneai-ci-cd-automation/
 canonical: https://www.testmu.ai/support/docs/kaneai-ci-cd-automation/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

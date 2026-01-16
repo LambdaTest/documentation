@@ -11,9 +11,9 @@ keywords:
   - playwright csharp testing guide
   - csharp playwright framework
 
-url: https://www.testmu.ai/support/docs/csharp-with-playwright
+url: https://www.testmu.ai/support/docs/csharp-with-playwright/
 site_name: LambdaTest
-slug: csharp-with-playwright
+slug: csharp-with-playwright/
 canonical: https://www.testmu.ai/support/docs/csharp-with-playwright/
 ---
 

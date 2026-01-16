@@ -13,9 +13,9 @@ keywords:
   - TCP with TLS 1.2 secure connection
   - TCP with TLS 1.2 secure connection tunnel
   - shared TCP with TLS 1.2 secure connection
-url: https://www.testmu.ai/support/docs/setup-pre-run-executable
+url: https://www.testmu.ai/support/docs/setup-pre-run-executable/
 site_name: LambdaTest
-slug: setup-pre-run-executable
+slug: setup-pre-run-executable/
 canonical: https://www.testmu.ai/support/docs/setup-pre-run-executable/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

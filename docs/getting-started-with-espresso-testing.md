@@ -11,9 +11,9 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/getting-started-with-espresso-testing
+url: https://www.testmu.ai/support/docs/getting-started-with-espresso-testing/
 site_name: LambdaTest
-slug: getting-started-with-espresso-testing
+slug: getting-started-with-espresso-testing/
 canonical: https://www.testmu.ai/support/docs/getting-started-with-espresso-testing/
 ---
 

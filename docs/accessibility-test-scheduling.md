@@ -10,9 +10,9 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-test-scheduling
+url: https://www.testmu.ai/support/docs/accessibility-test-scheduling/
 site_name: LambdaTest
-slug: accessibility-test-scheduling
+slug: accessibility-test-scheduling/
 canonical: https://www.testmu.ai/support/docs/accessibility-test-scheduling/
 ---
 

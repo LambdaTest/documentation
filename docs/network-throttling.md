@@ -17,9 +17,9 @@ keywords:
   - configure selenium tests with network throttling desired capabilities
   - network throttling capabilities
   - throttling test on testmu ai
-url: https://www.testmu.ai/support/docs/network-throttling
+url: https://www.testmu.ai/support/docs/network-throttling/
 site_name: LambdaTest
-slug: network-throttling
+slug: network-throttling/
 canonical: https://www.testmu.ai/support/docs/network-throttling/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
