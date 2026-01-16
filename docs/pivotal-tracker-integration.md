@@ -8,7 +8,7 @@ keywords:
   - testmu ai integrations
   - push issues to pivotal tracker
   - free cross browser testing tool
-url: https://www.testmu.ai/support/docs/pivotal-tracker-integration/
+url: https://www.testmu.ai/support/docs/pivotal-tracker-integration/
 site_name: LambdaTest
 slug: pivotal-tracker-integration
 canonical: https://www.testmu.ai/support/docs/pivotal-tracker-integration/

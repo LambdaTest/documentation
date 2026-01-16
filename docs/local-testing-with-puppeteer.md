@@ -11,7 +11,7 @@ keywords:
   - local cross browser testing
   - local testing puppeteer
   
-url: https://www.testmu.ai/support/docs/local-testing-with-puppeteer/
+url: https://www.testmu.ai/support/docs/local-testing-with-puppeteer/
 site_name: LambdaTest
 slug: local-testing-with-puppeteer
 canonical: https://www.testmu.ai/support/docs/local-testing-with-puppeteer/
