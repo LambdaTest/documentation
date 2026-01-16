@@ -8,7 +8,7 @@ keywords:
     - TestMu AI single sign on
     - TestMu AI single sign-on
     - TestMu AI SSO
-url: https://www.testmu.ai/support/docs/single-sign-on
+url: https://www.testmu.ai/support/docs/single-sign-on/
 site_name: LambdaTest
 slug: single-sign-on
 canonical: https://www.testmu.ai/support/docs/single-sign-on/

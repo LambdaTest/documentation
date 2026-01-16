@@ -8,7 +8,7 @@ keywords:
   - testmu ai integrations
   - testmu ai integration with sumo logic
   - sumo logic integration 
-url: https://www.testmu.ai/support/docs/sumo-logic-integration
+url: https://www.testmu.ai/support/docs/sumo-logic-integration/
 site_name: LambdaTest
 slug: sumo-logic-integration
 canonical: https://www.testmu.ai/support/docs/sumo-logic-integration/

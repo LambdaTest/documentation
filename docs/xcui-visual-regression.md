@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/xcui-visual-regression
+url: https://www.testmu.ai/support/docs/xcui-visual-regression/
 site_name: LambdaTest
 slug: xcui-visual-regression
 canonical: https://www.testmu.ai/support/docs/xcui-visual-regression/

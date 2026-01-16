@@ -6,7 +6,7 @@ sidebar_label: Firebase
 description: Learn how to test apps installed from the firebase on TestMu AI for optimal performance on real iOS devices.
 keywords:
 - install apps from firebase
-url: https://www.testmu.ai/support/docs/install-apps-from-firebase
+url: https://www.testmu.ai/support/docs/install-apps-from-firebase/
 site_name: LambdaTest
 slug: install-apps-from-firebase
 canonical: https://www.testmu.ai/support/docs/install-apps-from-firebase/

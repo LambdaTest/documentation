@@ -12,7 +12,7 @@ keywords:
   - how to migrate desired capabilities from sauce labs to testmu ai
   - how to migrate desired capabilities from browserstack to testmu ai
 
-url: https://www.testmu.ai/support/docs/testmu-capability-map
+url: https://www.testmu.ai/support/docs/testmu-capability-map/
 site_name: LambdaTest
 slug: testmu-capability-map
 canonical: https://www.testmu.ai/support/docs/testmu-capability-map/

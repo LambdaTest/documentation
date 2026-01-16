@@ -8,7 +8,7 @@ keywords:
   - extent testing reports
   - extent testing testmu ai 
   
-url: https://www.testmu.ai/support/docs/extent-report
+url: https://www.testmu.ai/support/docs/extent-report/
 site_name: LambdaTest
 slug: extent-report
 canonical: https://www.testmu.ai/support/docs/extent-report/

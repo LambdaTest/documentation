@@ -11,7 +11,7 @@ keywords:
   - playwright jest testing guide
   - jest playwright framework
 
-url: https://www.testmu.ai/support/docs/jest-with-playwright
+url: https://www.testmu.ai/support/docs/jest-with-playwright/
 site_name: LambdaTest
 slug: jest-with-playwright
 canonical: https://www.testmu.ai/support/docs/jest-with-playwright/

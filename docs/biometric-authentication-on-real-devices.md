@@ -16,7 +16,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/biometric-authentication-on-real-devices
+url: https://www.testmu.ai/support/docs/biometric-authentication-on-real-devices/
 site_name: LambdaTest
 slug: biometric-authentication-on-real-devices
 canonical: https://www.testmu.ai/support/docs/biometric-authentication-on-real-devices/

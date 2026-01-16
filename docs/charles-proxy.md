@@ -12,7 +12,7 @@ keywords:
   - TestMu AI with Charles Proxy
   - Charles Proxy With TestMu AI
   - TestMu AI Cloud Platform
-url: https://www.testmu.ai/support/docs/charles-proxy
+url: https://www.testmu.ai/support/docs/charles-proxy/
 site_name: LambdaTest
 slug: charles-proxy
 canonical: https://www.testmu.ai/support/docs/charles-proxy/

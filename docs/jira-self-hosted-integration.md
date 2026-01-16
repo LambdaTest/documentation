@@ -18,7 +18,7 @@ keywords:
     - Create Jira Issues from TestMu AI
     - bug tracking tools
     - project management tools
-url: https://www.testmu.ai/support/docs/jira-self-hosted-integration
+url: https://www.testmu.ai/support/docs/jira-self-hosted-integration/
 site_name: LambdaTest
 slug: jira-self-hosted-integration
 canonical: https://www.testmu.ai/support/docs/jira-self-hosted-integration/

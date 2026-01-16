@@ -9,7 +9,7 @@ keywords:
   - Dashboard
   - Automation Testing
   - testmu ai Dashboard
-url: https://www.testmu.ai/support/docs/testmu-running-your-first-selenium-test
+url: https://www.testmu.ai/support/docs/testmu-running-your-first-selenium-test/
 site_name: LambdaTest
 slug: testmu-running-your-first-selenium-test
 canonical: https://www.testmu.ai/support/docs/testmu-running-your-first-selenium-test/

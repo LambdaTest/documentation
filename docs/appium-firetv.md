@@ -13,7 +13,7 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-firetv
+url: https://www.testmu.ai/support/docs/appium-firetv/
 site_name: LambdaTest
 slug: appium-firetv
 canonical: https://www.testmu.ai/support/docs/appium-firetv/

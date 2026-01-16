@@ -8,7 +8,7 @@ keywords:
   - testmu ai automation
   - selenium automation grid
   - selenium grid online
-url: https://www.testmu.ai/support/docs/change-individual-test-details
+url: https://www.testmu.ai/support/docs/change-individual-test-details/
 slug: change-individual-test-details
 canonical: https://www.testmu.ai/support/docs/change-individual-test-details/
 ---

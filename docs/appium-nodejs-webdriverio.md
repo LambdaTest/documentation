@@ -11,7 +11,7 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-nodejs-webdriverio
+url: https://www.testmu.ai/support/docs/appium-nodejs-webdriverio/
 site_name: LambdaTest
 slug: appium-nodejs-webdriverio
 canonical: https://www.testmu.ai/support/docs/appium-nodejs-webdriverio/

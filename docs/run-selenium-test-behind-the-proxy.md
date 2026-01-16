@@ -9,7 +9,7 @@ keywords:
 - run selenium tests behind proxy
 - run selenium c# test script
 - run selenium tests behind firewall
-url: https://www.testmu.ai/support/docs/selenium-tests-behind-proxy
+url: https://www.testmu.ai/support/docs/selenium-tests-behind-proxy/
 site_name: LambdaTest
 slug: selenium-tests-behind-proxy
 canonical: https://www.testmu.ai/support/docs/selenium-tests-behind-proxy/

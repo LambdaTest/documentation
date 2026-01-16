@@ -17,7 +17,7 @@ keywords:
   - create zenkit issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/zenkit-integration
+url: https://www.testmu.ai/support/docs/zenkit-integration/
 site_name: LambdaTest
 slug: zenkit-integration
 canonical: https://www.testmu.ai/support/docs/zenkit-integration/

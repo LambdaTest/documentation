@@ -13,7 +13,7 @@ keywords:
   - aws codepipeline
   - continuous integration tools
   
-url: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute
+url: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute/
 site_name: LambdaTest
 slug: aws-codepipeline-with-hyperexecute
 canonical: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute/

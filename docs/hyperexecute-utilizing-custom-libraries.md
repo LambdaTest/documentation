@@ -9,7 +9,7 @@ keywords:
   - custom library
   - sikulix
   - visual verification
-url: https://www.testmu.ai/support/docs/hyperexecute-utilizing-custom-libraries
+url: https://www.testmu.ai/support/docs/hyperexecute-utilizing-custom-libraries/
 site_name: LambdaTest
 slug: hyperexecute-utilizing-custom-libraries
 canonical: https://www.testmu.ai/support/docs/hyperexecute-utilizing-custom-libraries/

@@ -11,7 +11,7 @@ keywords:
 - testsigma integration with testmu ai
 - testmu ai integration with testsigma
 - testsigma testmu ai
-url: https://www.testmu.ai/support/docs/testsigma-integration
+url: https://www.testmu.ai/support/docs/testsigma-integration/
 site_name: LambdaTest
 slug: testsigma-integration
 canonical: https://www.testmu.ai/support/docs/testsigma-integration/

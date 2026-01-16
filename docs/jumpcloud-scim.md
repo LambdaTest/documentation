@@ -7,7 +7,7 @@ description: Integrating TestMu AI SCIM with JumpCloud
 keywords:
     - TestMu AI SCIM
     - JumpCloud
-url: https://www.testmu.ai/support/docs/jumpcloud-scim
+url: https://www.testmu.ai/support/docs/jumpcloud-scim/
 site_name: LambdaTest
 slug: jumpcloud-scim
 canonical: https://www.testmu.ai/support/docs/jumpcloud-scim/

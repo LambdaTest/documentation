@@ -13,7 +13,7 @@ keywords:
   - web dark mode
   - testmu ai real devices
   - light mode testing
-url: https://www.testmu.ai/support/docs/dark-mode-on-real-devices
+url: https://www.testmu.ai/support/docs/dark-mode-on-real-devices/
 site_name: LambdaTest
 slug: dark-mode-on-real-devices
 canonical: https://www.testmu.ai/support/docs/dark-mode-on-real-devices/

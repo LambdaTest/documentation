@@ -16,7 +16,7 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools
+url: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools/
 site_name: LambdaTest
 slug: real-time-mobile-app-testing-tools
 canonical: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools/

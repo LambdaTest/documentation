@@ -8,7 +8,7 @@ keywords:
   - testmu ai integrations
   - push issues to PractiTest
   - free cross browser testing tool
-url: https://www.testmu.ai/support/docs/practitest-integration
+url: https://www.testmu.ai/support/docs/practitest-integration/
 site_name: LambdaTest
 slug: practitest-integration
 canonical: https://www.testmu.ai/support/docs/practitest-integration/

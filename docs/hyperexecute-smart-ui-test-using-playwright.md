@@ -16,7 +16,7 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-test-using-playwright
+url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-test-using-playwright/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-test-using-playwright
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-test-using-playwright/

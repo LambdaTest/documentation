@@ -10,7 +10,7 @@ keywords:
   - TestMu AI SmartUI
   - Visual Testing
   - Automatic Baseline
-url: https://www.testmu.ai/support/docs/smartui-baseline-management
+url: https://www.testmu.ai/support/docs/smartui-baseline-management/
 site_name: LambdaTest
 slug: smartui-baseline-management
 canonical: https://www.testmu.ai/support/docs/smartui-baseline-management/

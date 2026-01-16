@@ -13,7 +13,7 @@ keywords:
   - TCP with TLS 1.2 secure connection
   - TCP with TLS 1.2 secure connection tunnel
   - shared TCP with TLS 1.2 secure connection
-url: https://www.testmu.ai/support/docs/sharing-lambda-tunnel
+url: https://www.testmu.ai/support/docs/sharing-lambda-tunnel/
 site_name: LambdaTest
 slug: sharing-lambda-tunnel
 canonical: https://www.testmu.ai/support/docs/sharing-lambda-tunnel/

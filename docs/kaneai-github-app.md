@@ -10,7 +10,7 @@ keywords:
   - AI test generation
   - PR automation
   - test management
-url: https://www.testmu.ai/support/docs/github-app-integration
+url: https://www.testmu.ai/support/docs/github-app-integration/
 site_name: LambdaTest
 slug: github-app-integration
 canonical: https://www.testmu.ai/support/docs/github-app-integration/

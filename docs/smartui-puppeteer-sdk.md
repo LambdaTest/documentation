@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-puppeteer-sdk
+url: https://www.testmu.ai/support/docs/smartui-puppeteer-sdk/
 slug: smartui-puppeteer-sdk
 canonical: https://www.testmu.ai/support/docs/smartui-puppeteer-sdk/
 

@@ -9,7 +9,7 @@ keywords:
   - manual test cases
   - test cases
   - test case
-url: https://www.testmu.ai/support/docs/manual-test-cases-with-ai
+url: https://www.testmu.ai/support/docs/manual-test-cases-with-ai/
 site_name: LambdaTest
 slug: manual-test-cases-with-ai
 canonical: https://www.testmu.ai/support/docs/manual-test-cases-with-ai/

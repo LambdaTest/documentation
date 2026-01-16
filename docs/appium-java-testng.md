@@ -11,7 +11,7 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-java-testng
+url: https://www.testmu.ai/support/docs/appium-java-testng/
 site_name: LambdaTest
 slug: appium-java-testng
 canonical: https://www.testmu.ai/support/docs/appium-java-testng/

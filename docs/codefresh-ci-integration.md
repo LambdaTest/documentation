@@ -10,7 +10,7 @@ keywords:
   - codefresh
   - codefresh ci integration
   - testmu ai codefresh ci integration
-url: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu
+url: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu/
 site_name: LambdaTest
 slug: codefresh-ci-integration-with-testmu
 canonical: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu/

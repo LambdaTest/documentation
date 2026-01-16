@@ -10,7 +10,7 @@ keywords:
     - Testing
     - DevTools
     - Issue Summary
-url: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary
+url: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary/
 site_name: LambdaTest
 slug: accessibility-testing-dashboard-issue-summary
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary/

@@ -10,7 +10,7 @@ keywords:
   - test analytics
   - test performance
   - test failure classification
-url: https://www.testmu.ai/support/docs/analytics-test-insights
+url: https://www.testmu.ai/support/docs/analytics-test-insights/
 site_name: LambdaTest
 slug: analytics-test-insights
 canonical: https://www.testmu.ai/support/docs/analytics-test-insights/

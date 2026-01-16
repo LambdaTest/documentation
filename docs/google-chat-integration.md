@@ -17,7 +17,7 @@ keywords:
   - create Google Chat issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/google-chat-integration
+url: https://www.testmu.ai/support/docs/google-chat-integration/
 site_name: LambdaTest
 slug: google-chat-integration
 canonical: https://www.testmu.ai/support/docs/google-chat-integration/

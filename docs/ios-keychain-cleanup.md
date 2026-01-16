@@ -11,7 +11,7 @@ keywords:
   - cleanup
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/ios-keychain-cleanup
+url: https://www.testmu.ai/support/docs/ios-keychain-cleanup/
 site_name: LambdaTest
 slug: ios-keychain-cleanup
 canonical: https://www.testmu.ai/support/docs/ios-keychain-cleanup/

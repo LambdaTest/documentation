@@ -12,7 +12,7 @@ keywords:
     - run quick scan
     - test issues
     - Full Page Scanner
-url: https://www.testmu.ai/support/docs/accessibility-testing-full-page-scanner
+url: https://www.testmu.ai/support/docs/accessibility-testing-full-page-scanner/
 site_name: LambdaTest
 slug: accessibility-testing-full-page-scanner
 canonical: https://www.testmu.ai/support/docs/accessibility-testing-full-page-scanner/

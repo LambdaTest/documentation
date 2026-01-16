@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-gitignore
+url: https://www.testmu.ai/support/docs/hyperexecute-gitignore/
 site_name: LambdaTest
 slug: hyperexecute-gitignore
 canonical: https://www.testmu.ai/support/docs/hyperexecute-gitignore/

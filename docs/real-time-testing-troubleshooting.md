@@ -16,7 +16,7 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting
+url: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting/
 site_name: LambdaTest
 slug: real-time-testing-troubleshooting
 canonical: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting/

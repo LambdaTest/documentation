@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-vnet-peering-for-private-cloud
+url: https://www.testmu.ai/support/docs/hyperexecute-vnet-peering-for-private-cloud/
 site_name: LambdaTest
 slug: hyperexecute-vnet-peering-for-private-cloud
 canonical: https://www.testmu.ai/support/docs/hyperexecute-vnet-peering-for-private-cloud/

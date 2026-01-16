@@ -17,7 +17,7 @@ keywords:
   - create teamwork issues from teamwork
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/teamwork-integration
+url: https://www.testmu.ai/support/docs/teamwork-integration/
 site_name: LambdaTest
 slug: teamwork-integration
 canonical: https://www.testmu.ai/support/docs/teamwork-integration/

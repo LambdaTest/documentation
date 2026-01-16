@@ -9,7 +9,7 @@ keywords:
 - ignore displacement differences
 - smart ignore layout shifts
 - AI based auto ignore
-url: https://www.testmu.ai/support/docs/smartui-smartignore
+url: https://www.testmu.ai/support/docs/smartui-smartignore/
 site_name: LambdaTest
 slug: smartui-smartignore
 canonical: https://www.testmu.ai/support/docs/smartui-smartignore/

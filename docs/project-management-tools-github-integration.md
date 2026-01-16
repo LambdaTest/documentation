@@ -8,7 +8,7 @@ keywords:
   - testmu ai integrations
   - push issues to github
   - free cross browser testing tool
-url: https://www.testmu.ai/support/docs/github-integration
+url: https://www.testmu.ai/support/docs/github-integration/
 site_name: LambdaTest
 slug: github-integration
 canonical: https://www.testmu.ai/support/docs/github-integration/

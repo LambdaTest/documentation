@@ -8,7 +8,7 @@ keywords:
 - apis for manual app testing
 - api sfor app automation
 - mobile app testing apis
-url: https://www.testmu.ai/support/docs/app-testing-apis
+url: https://www.testmu.ai/support/docs/app-testing-apis/
 site_name: LambdaTest
 slug: app-testing-apis
 canonical: https://www.testmu.ai/support/docs/app-testing-apis/

@@ -5,7 +5,7 @@ sidebar_label: Edit Dashboard Layout
 description: Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widget Management Feature Customizing Layout for Improved Insights 
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-overview
+url: https://www.testmu.ai/support/docs/analytics-overview/
 site_name: LambdaTest
 slug: analytics-dashboard-edit-layout
 canonical: https://www.testmu.ai/support/docs/analytics-dashboard-edit-layout/

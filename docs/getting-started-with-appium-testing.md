@@ -12,7 +12,7 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/getting-started-with-appium-testing
+url: https://www.testmu.ai/support/docs/getting-started-with-appium-testing/
 site_name: LambdaTest
 slug: getting-started-with-appium-testing
 canonical: https://www.testmu.ai/support/docs/getting-started-with-appium-testing/

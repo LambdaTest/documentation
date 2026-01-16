@@ -12,7 +12,7 @@ keywords:
 slug: apple-pay-auto
 canonical: https://www.testmu.ai/support/docs/apple-pay-auto/
 site_name: LambdaTest
-url: https://www.testmu.ai/support/docs/apple-pay-auto
+url: https://www.testmu.ai/support/docs/apple-pay-auto/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';

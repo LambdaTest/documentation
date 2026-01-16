@@ -10,7 +10,7 @@ keywords:
   - basic authentication for web automation
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/basic-authentication-for-web-automation
+url: https://www.testmu.ai/support/docs/basic-authentication-for-web-automation/
 site_name: LambdaTest
 slug: basic-authentication-for-web-automation
 canonical: https://www.testmu.ai/support/docs/basic-authentication-for-web-automation/

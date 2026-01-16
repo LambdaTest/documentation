@@ -8,7 +8,7 @@ keywords:
   - TestMu AI integration with Linear App 
   - TestMu AI and Linear App integration 
   - Linear App integration
-url: https://www.testmu.ai/support/docs/linear-app-integration
+url: https://www.testmu.ai/support/docs/linear-app-integration/
 site_name: LambdaTest
 slug: linear-app-integration
 canonical: https://www.testmu.ai/support/docs/linear-app-integration/

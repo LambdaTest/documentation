@@ -10,7 +10,7 @@ keywords:
   - docker tunnel extension local testing
   - best docker extensions for developers
   - best docker extensions for testers
-url: https://www.testmu.ai/support/docs/docker-tunnel-extension
+url: https://www.testmu.ai/support/docs/docker-tunnel-extension/
 site_name: LambdaTest
 slug: docker-tunnel-extension
 canonical: https://www.testmu.ai/support/docs/docker-tunnel-extension/

@@ -7,7 +7,7 @@ description: This documentation will help you to understand how to allocate lice
 keywords:
 - users management testmu ai
 - manage user
-url: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management
+url: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management/
 site_name: LambdaTest
 slug: kaneai-test-manager-access-management
 canonical: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management/

@@ -13,7 +13,7 @@ keywords:
   - testing in XCUI
   - XCUI testing
   - real devices
-url: https://www.testmu.ai/support/docs/xctestplan
+url: https://www.testmu.ai/support/docs/xctestplan/
 site_name: LambdaTest
 slug: xctestplan
 canonical: https://www.testmu.ai/support/docs/xctestplan/

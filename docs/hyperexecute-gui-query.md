@@ -15,7 +15,7 @@ keywords:
   - test execute
   - hyperexecute job
   - automation
-url: https://www.testmu.ai/support/docs/hyperexecute-gui-query
+url: https://www.testmu.ai/support/docs/hyperexecute-gui-query/
 site_name: LambdaTest
 slug: hyperexecute-gui-query
 canonical: https://www.testmu.ai/support/docs/hyperexecute-gui-query/

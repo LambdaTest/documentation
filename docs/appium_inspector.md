@@ -12,7 +12,7 @@ keywords:
   - appium desktop
   - appium inspector
 
-url: https://www.testmu.ai/support/docs/appium-inspector-integration
+url: https://www.testmu.ai/support/docs/appium-inspector-integration/
 site_name: LambdaTest
 slug: appium-inspector-integration
 canonical: https://www.testmu.ai/support/docs/appium-inspector-integration/

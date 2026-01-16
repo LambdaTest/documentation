@@ -9,7 +9,7 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-url: https://www.testmu.ai/support/docs/accessibility-testing
+url: https://www.testmu.ai/support/docs/accessibility-testing/
 site_name: LambdaTest
 slug: accessibility-testing
 canonical: https://www.testmu.ai/support/docs/accessibility-testing/

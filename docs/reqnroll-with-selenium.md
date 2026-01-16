@@ -14,7 +14,7 @@ keywords:
   - selenium webdriver c#
   - selenium c# testing tutorial
   - c# selenium framework
-url: https://www.testmu.ai/support/docs/reqnroll-automation-with-selenium-appium-on-testmu
+url: https://www.testmu.ai/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/
 site_name: LambdaTest
 slug: reqnroll-automation-with-selenium-appium-on-testmu
 canonical: https://www.testmu.ai/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/

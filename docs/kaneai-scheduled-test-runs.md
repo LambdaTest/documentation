@@ -7,7 +7,7 @@ description: This documentation will help you to understand how to create a sche
 keywords:
 - users management testmu ai
 - manage user
-url: https://www.testmu.ai/support/docs/kaneai-scheduled-test-runs
+url: https://www.testmu.ai/support/docs/kaneai-scheduled-test-runs/
 site_name: LambdaTest
 slug: kaneai-scheduled-test-runs
 canonical: https://www.testmu.ai/support/docs/kaneai-scheduled-test-runs/

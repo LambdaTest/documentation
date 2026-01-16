@@ -11,7 +11,7 @@ keywords:
   - test stability
   - build diff
   - test observability
-url: https://www.testmu.ai/support/docs/analytics-build-comparison
+url: https://www.testmu.ai/support/docs/analytics-build-comparison/
 site_name: LambdaTest
 slug: analytics-build-comparison
 canonical: https://www.testmu.ai/support/docs/analytics-build-comparison/

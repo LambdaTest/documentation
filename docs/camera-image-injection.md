@@ -14,7 +14,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/camera-image-injection
+url: https://www.testmu.ai/support/docs/camera-image-injection/
 site_name: LambdaTest
 slug: camera-image-injection
 canonical: https://www.testmu.ai/support/docs/camera-image-injection/

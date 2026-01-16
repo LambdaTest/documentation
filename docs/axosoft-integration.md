@@ -17,7 +17,7 @@ keywords:
   - create axosoft issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/axosoft-integration
+url: https://www.testmu.ai/support/docs/axosoft-integration/
 site_name: LambdaTest
 slug: axosoft-integration
 canonical: https://www.testmu.ai/support/docs/axosoft-integration/

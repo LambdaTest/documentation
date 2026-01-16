@@ -9,7 +9,7 @@ keywords:
   - cross browser testing
   - zelenium dashboard
   - automation on zelenium 
-url: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu
+url: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu/
 site_name: LambdaTest
 slug: zalenium-integration-with-testmu
 canonical: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu/

@@ -5,7 +5,7 @@ sidebar_label: Test Case Insights
 description: Gain insights into test case execution and performance with TestMu AI's analytics to optimize your testing strategy and enhance software quality.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-test-case-insights
+url: https://www.testmu.ai/support/docs/analytics-test-case-insights/
 site_name: LambdaTest
 slug: analytics-test-case-insights
 canonical: https://www.testmu.ai/support/docs/analytics-test-case-insights/

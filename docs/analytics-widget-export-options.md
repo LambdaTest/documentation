@@ -5,7 +5,7 @@ sidebar_label: Export Data Options
 description: Export detailed testing analytics from TestMu AI's Drill-Down widgets to CSV, Excel, or PDF. Share insights, collaborate, and optimize testing processes effectively.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export
+url: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export/
 site_name: LambdaTest
 slug: analytics-widget-drill-down-export
 canonical: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export/

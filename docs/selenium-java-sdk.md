@@ -12,7 +12,7 @@ keywords:
   - selenium testing
   - testmu ai selenium
 
-url: https://www.testmu.ai/support/docs/selenium-java-sdk
+url: https://www.testmu.ai/support/docs/selenium-java-sdk/
 slug: selenium-java-sdk
 canonical: https://www.testmu.ai/support/docs/selenium-java-sdk/
 ---

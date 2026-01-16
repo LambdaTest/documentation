@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides/
 site_name: LambdaTest Deep dive into hyperexecute yaml
 slug: hyperexecute-yaml-capability-overrides
 canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-capability-overrides/

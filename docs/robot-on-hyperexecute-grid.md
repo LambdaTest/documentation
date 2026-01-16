@@ -18,7 +18,7 @@ keywords:
   - hyperexecute python robot testing
   - hyperexecute robot testing
   - hyperexecute automation testing
-url: https://www.testmu.ai/support/docs/robot-on-hyperexecute-grid
+url: https://www.testmu.ai/support/docs/robot-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: robot-on-hyperexecute-grid
 canonical: https://www.testmu.ai/support/docs/robot-on-hyperexecute-grid/

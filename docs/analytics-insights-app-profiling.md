@@ -11,7 +11,7 @@ keywords:
   - Desktop trends
   - Desktop status ratio
 
-url: https://www.testmu.ai/support/docs/insights-app-profiling
+url: https://www.testmu.ai/support/docs/insights-app-profiling/
 site_name: LambdaTest
 slug: insights-app-profiling
 canonical: https://www.testmu.ai/support/docs/insights-app-profiling/

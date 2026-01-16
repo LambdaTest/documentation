@@ -8,7 +8,7 @@ keywords:
   - TestMu AI integration with Bugzilla 
   - TestMu AI and Bugzilla Integration
   - Bugzilla Integration
-url: https://www.testmu.ai/support/docs/bugzilla-integration
+url: https://www.testmu.ai/support/docs/bugzilla-integration/
 site_name: LambdaTest
 slug: bugzilla-integration
 canonical: https://www.testmu.ai/support/docs/bugzilla-integration/

@@ -8,7 +8,7 @@ keywords:
   - bamboo integrations
   - testmu ai integrations with ci/cd tools
   - continuous integration
-url: https://www.testmu.ai/support/docs/bamboo-integration-with-testmu
+url: https://www.testmu.ai/support/docs/bamboo-integration-with-testmu/
 site_name: LambdaTest
 slug: bamboo-integration-with-testmu
 canonical: https://www.testmu.ai/support/docs/bamboo-integration-with-testmu/

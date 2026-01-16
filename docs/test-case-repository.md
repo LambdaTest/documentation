@@ -8,7 +8,7 @@ keywords:
   - test case repository
   - test cases
   - test case
-url: https://www.testmu.ai/support/docs/test-case-repository
+url: https://www.testmu.ai/support/docs/test-case-repository/
 site_name: LambdaTest
 slug: test-case-repository
 canonical: https://www.testmu.ai/support/docs/test-case-repository/

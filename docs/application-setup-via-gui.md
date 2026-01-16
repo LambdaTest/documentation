@@ -10,7 +10,7 @@ keywords:
   - mobile testing
   - apis
   - setup application
-url: https://www.testmu.ai/support/docs/application-setup-via-gui
+url: https://www.testmu.ai/support/docs/application-setup-via-gui/
 site_name: LambdaTest
 slug: application-setup-via-gui
 canonical: https://www.testmu.ai/support/docs/application-setup-via-gui/

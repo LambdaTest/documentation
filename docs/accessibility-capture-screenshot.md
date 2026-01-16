@@ -11,7 +11,7 @@ keywords:
   - Accessibility Testing Settings
   - Fragment identifier
   - wcag
-url: https://www.testmu.ai/support/docs/accessibility-capture-screenshot
+url: https://www.testmu.ai/support/docs/accessibility-capture-screenshot/
 site_name: LambdaTest
 slug: accessibility-capture-screenshot
 canonical: https://www.testmu.ai/support/docs/accessibility-capture-screenshot/

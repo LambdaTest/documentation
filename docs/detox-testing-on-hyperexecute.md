@@ -16,7 +16,7 @@ keywords:
   - detox tests on hyperexecute
   - hyperexecute automation testing
   - HyperExecute React Native automation
-url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing
+url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing/
 site_name: LambdaTest
 slug: hyperexecute-detox-testing
 canonical: https://www.testmu.ai/support/docs/hyperexecute-detox-testing/

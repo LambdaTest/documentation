@@ -11,7 +11,7 @@ keywords:
   - test failure analysis
   - debugging
   - AI insights
-url: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis
+url: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis/
 site_name: LambdaTest
 slug: analytics-ai-root-cause-analysis
 canonical: https://www.testmu.ai/support/docs/analytics-ai-root-cause-analysis/

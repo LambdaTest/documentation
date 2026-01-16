@@ -8,7 +8,7 @@ keywords:
 - debug espresso tests
 - how to debug espresso tests
 - mobile app testing
-url: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests
+url: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests/
 site_name: LambdaTest
 slug: troubleshoot-espresso-tests
 canonical: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests/
