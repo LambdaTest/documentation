@@ -16,9 +16,9 @@ keywords:
  - TestMu AI Appstore
  - TestMu AI apps
  - TestMu AI integrations
-url: https://www.testmu.ai/support/docs/integrating-wrike-with-testmu/
+url: https://www.testmu.ai/support/docs/integrating-wrike-with-testmu/
 site_name: LambdaTest
-slug: integrating-wrike-with-testmu/
+slug: integrating-wrike-with-testmu/
 canonical: https://www.testmu.ai/support/docs/integrating-wrike-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

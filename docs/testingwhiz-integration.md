@@ -10,9 +10,9 @@ keywords:
  - test automation 
  - integration with Lambdatest
  - testmu ai integration with testingwhiz
-url: https://www.testmu.ai/support/docs/testingwhiz-integration/
+url: https://www.testmu.ai/support/docs/testingwhiz-integration/
 site_name: LambdaTest
-slug: testingwhiz-integration/
+slug: testingwhiz-integration/
 canonical: https://www.testmu.ai/support/docs/testingwhiz-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
