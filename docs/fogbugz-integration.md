@@ -17,9 +17,9 @@ keywords:
   - create fogbugz issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/fogbugz-integration
+url: https://www.testmu.ai/support/docs/fogbugz-integration/
 site_name: LambdaTest
-slug: fogbugz-integration
+slug: fogbugz-integration/
 canonical: https://www.testmu.ai/support/docs/fogbugz-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

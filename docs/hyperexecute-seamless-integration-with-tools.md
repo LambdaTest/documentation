@@ -13,9 +13,9 @@ keywords:
   - Tosca
   - Excel
   - Accelq
-url: https://www.testmu.ai/support/docs/hyperexecute-seamless-integration-with-tools
+url: https://www.testmu.ai/support/docs/hyperexecute-seamless-integration-with-tools/
 site_name: LambdaTest
-slug: hyperexecute-seamless-integration-with-tools
+slug: hyperexecute-seamless-integration-with-tools/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-seamless-integration-with-tools/
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

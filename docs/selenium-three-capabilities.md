@@ -8,9 +8,9 @@ keywords:
   - testmu ai automation
   - selenium capabilities
   - selenium version <=3
-url: https://www.testmu.ai/support/docs/selenium-four-capabilities
+url: https://www.testmu.ai/support/docs/selenium-four-capabilities/
 site_name: LambdaTest
-slug: selenium-three-capabilities
+slug: selenium-three-capabilities/
 canonical: https://www.testmu.ai/support/docs/selenium-three-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

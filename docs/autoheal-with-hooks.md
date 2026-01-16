@@ -8,9 +8,9 @@ keywords:
 - auto heal testmu ai
 - auto heal test flakiness restrictions
 - auto healing testmu ai
-url: https://www.testmu.ai/support/docs/autoheal-with-hooks
+url: https://www.testmu.ai/support/docs/autoheal-with-hooks/
 site_name: LambdaTest
-slug: autoheal-with-hooks
+slug: autoheal-with-hooks/
 canonical: https://www.testmu.ai/support/docs/autoheal-with-hooks/
 ---
 

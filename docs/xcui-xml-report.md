@@ -13,9 +13,9 @@ keywords:
   - app testing
   - real devices
 
-url: https://www.testmu.ai/support/docs/xcui-report
+url: https://www.testmu.ai/support/docs/xcui-report/
 site_name: LambdaTest
-slug: xcui-report
+slug: xcui-report/
 canonical: https://www.testmu.ai/support/docs/xcui-report/
 ---
 

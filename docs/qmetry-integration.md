@@ -11,9 +11,9 @@ keywords:
  - test automation
  - QMetry integration with TestMu AI
  - testmu ai integration with QMetry
-url: https://www.testmu.ai/support/docs/qmetry-integration
+url: https://www.testmu.ai/support/docs/qmetry-integration/
 site_name: LambdaTest
-slug: qmetry-integration
+slug: qmetry-integration/
 canonical: https://www.testmu.ai/support/docs/qmetry-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

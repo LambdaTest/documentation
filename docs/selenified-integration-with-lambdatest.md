@@ -9,9 +9,9 @@ keywords:
   - selenified
   - selenium integration
   - Selenium Grid
-url: https://www.testmu.ai/support/docs/selenified-integration-with-testmu
+url: https://www.testmu.ai/support/docs/selenified-integration-with-testmu/
 site_name: LambdaTest
-slug: selenified-integration-with-testmu
+slug: selenified-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/selenified-integration-with-testmu/
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

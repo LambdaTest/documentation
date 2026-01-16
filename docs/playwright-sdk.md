@@ -10,7 +10,7 @@ keywords:
   - testmu ai
   - automation
   - testing
-slug: /playwright-sdk
+slug: /playwright-sdk/
 canonical: https://www.testmu.ai/support/docs//playwright-sdk/
 ---
 

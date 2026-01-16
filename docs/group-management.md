@@ -7,9 +7,9 @@ description: This documentation will help you in creating the different groups a
 keywords:
 - group-management-control
 - testmu ai
-url: https://www.testmu.ai/support/docs/group-management
+url: https://www.testmu.ai/support/docs/group-management/
 site_name: LambdaTest
-slug: group-management
+slug: group-management/
 canonical: https://www.testmu.ai/support/docs/group-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -12,9 +12,9 @@ keywords:
   - Schedule Workflows
   - Connected Workflows
   - Chained tests
-url: https://www.testmu.ai/support/docs/hyperexecute-test-chains
+url: https://www.testmu.ai/support/docs/hyperexecute-test-chains/
 site_name: LambdaTest
-slug: hyperexecute-test-chains
+slug: hyperexecute-test-chains/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-test-chains/
 ---
 

@@ -10,9 +10,9 @@ keywords:
   - buildkite
   - buildkite integration
   - testmu ai buildkite integration
-url: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu
+url: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu/
 site_name: LambdaTest
-slug: buildkite-integration-with-testmu
+slug: buildkite-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

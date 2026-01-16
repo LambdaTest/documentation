@@ -9,9 +9,9 @@ keywords:
   - local testing for app automation
   - local mobile app automation
   - local mobile app testing
-url: https://www.testmu.ai/support/docs/testing-locally-hosted-apps
+url: https://www.testmu.ai/support/docs/testing-locally-hosted-apps/
 site_name: LambdaTest
-slug: testing-locally-hosted-apps
+slug: testing-locally-hosted-apps/
 canonical: https://www.testmu.ai/support/docs/testing-locally-hosted-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

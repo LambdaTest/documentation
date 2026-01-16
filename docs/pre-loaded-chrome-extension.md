@@ -8,9 +8,9 @@ keywords:
   - testmu ai pre loaded chrome extension
   - testmu ai pre loaded extension for chrome 
   - testmu ai pre loaded extension
-url: https://www.testmu.ai/support/docs/pre-loaded-chrome-extension
+url: https://www.testmu.ai/support/docs/pre-loaded-chrome-extension/
 site_name: LambdaTest
-slug: pre-loaded-chrome-extension
+slug: pre-loaded-chrome-extension/
 canonical: https://www.testmu.ai/support/docs/pre-loaded-chrome-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

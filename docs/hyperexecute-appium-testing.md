@@ -11,9 +11,9 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/hyperexecute-appium-testing
+url: https://www.testmu.ai/support/docs/hyperexecute-appium-testing/
 site_name: LambdaTest
-slug: hyperexecute-appium-testing
+slug: hyperexecute-appium-testing/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-appium-testing/
 ---
 

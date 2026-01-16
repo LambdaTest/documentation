@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-email-reports
+url: https://www.testmu.ai/support/docs/hyperexecute-email-reports/
 site_name: LambdaTest
-slug: hyperexecute-email-reports
+slug: hyperexecute-email-reports/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-email-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

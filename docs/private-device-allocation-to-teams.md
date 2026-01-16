@@ -9,9 +9,9 @@ keywords:
 - private decive allocation to teams
 - real device
 - virtual device
-url: https://www.testmu.ai/support/docs/private-device-allocation-to-teams
+url: https://www.testmu.ai/support/docs/private-device-allocation-to-teams/
 site_name: LambdaTest
-slug: private-device-allocation-to-teams
+slug: private-device-allocation-to-teams/
 canonical: https://www.testmu.ai/support/docs/private-device-allocation-to-teams/
 ---
 

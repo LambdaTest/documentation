@@ -15,9 +15,9 @@ keywords:
   - secure-shell-tunnel
   - docker compose ssh tunnel
   - docker vpn tunnel
-url: https://www.testmu.ai/support/docs/docker-tunnel
+url: https://www.testmu.ai/support/docs/docker-tunnel/
 site_name: LambdaTest
-slug: docker-tunnel
+slug: docker-tunnel/
 canonical: https://www.testmu.ai/support/docs/docker-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

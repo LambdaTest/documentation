@@ -10,9 +10,9 @@ keywords:
   - test step management 
   - test case
   - test steps
-url: https://www.testmu.ai/support/docs/create-modules
+url: https://www.testmu.ai/support/docs/create-modules/
 site_name: LambdaTest
-slug: create-modules
+slug: create-modules/
 canonical: https://www.testmu.ai/support/docs/create-modules/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

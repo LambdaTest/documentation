@@ -13,9 +13,9 @@ keywords:
   - test run
   - test manager
   - generate and manage test cases
-url: https://www.testmu.ai/support/docs/kaneai-hyperexecute-test-run-execution
+url: https://www.testmu.ai/support/docs/kaneai-hyperexecute-test-run-execution/
 site_name: LambdaTest
-slug: kaneai-hyperexecute-test-run-execution
+slug: kaneai-hyperexecute-test-run-execution/
 canonical: https://www.testmu.ai/support/docs/kaneai-hyperexecute-test-run-execution/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

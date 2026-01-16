@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - Use cases
-url: https://www.testmu.ai/support/docs/hyperexecute-use-cases
+url: https://www.testmu.ai/support/docs/hyperexecute-use-cases/
 site_name: LambdaTest
-slug: hyperexecute-use-cases
+slug: hyperexecute-use-cases/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-use-cases/
 ---
 

@@ -13,9 +13,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid
+url: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid
+slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 ---
 

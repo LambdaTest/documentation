@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-selenium-ruby-sdk
-slug: smartui-selenium-ruby-sdk
+url: https://www.testmu.ai/support/docs/smartui-selenium-ruby-sdk/
+slug: smartui-selenium-ruby-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-selenium-ruby-sdk/
 
 ---

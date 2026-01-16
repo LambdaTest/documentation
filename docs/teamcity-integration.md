@@ -12,9 +12,9 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - TeamCity Integration 
-url: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu
+url: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu/
 site_name: LambdaTest
-slug: teamcity-integration-with-testmu
+slug: teamcity-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

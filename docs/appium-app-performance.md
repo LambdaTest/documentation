@@ -8,9 +8,9 @@ keywords:
 - regular expression testmu ai
 - regular expression app automation
 
-url: https://www.testmu.ai/support/docs/appium-app-performance-analytics
+url: https://www.testmu.ai/support/docs/appium-app-performance-analytics/
 site_name: LambdaTest
-slug: appium-app-performance-analytics
+slug: appium-app-performance-analytics/
 canonical: https://www.testmu.ai/support/docs/appium-app-performance-analytics/
 ---
 

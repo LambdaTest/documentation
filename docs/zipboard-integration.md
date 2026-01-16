@@ -14,9 +14,9 @@ keywords:
   - create zipboard issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/zipboard-integration
+url: https://www.testmu.ai/support/docs/zipboard-integration/
 site_name: LambdaTest
-slug: zipboard-integration
+slug: zipboard-integration/
 canonical: https://www.testmu.ai/support/docs/zipboard-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

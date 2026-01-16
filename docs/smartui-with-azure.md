@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - azure ci cd
-url: https://www.testmu.ai/support/docs/smartui-with-azure
+url: https://www.testmu.ai/support/docs/smartui-with-azure/
 site_name: LambdaTest
-slug: smartui-with-azure
+slug: smartui-with-azure/
 canonical: https://www.testmu.ai/support/docs/smartui-with-azure/
 
 ---

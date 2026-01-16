@@ -6,9 +6,9 @@ sidebar_label: Azure AD
 description: Integrating TestMu AI SCIM with Azure AD 
 keywords:
     - TestMu AI SCIM
-url: https://www.testmu.ai/support/docs/scim/azure
+url: https://www.testmu.ai/support/docs/scim/azure/
 site_name: LambdaTest
-slug: scim/azure
+slug: scim/azure/
 canonical: https://www.testmu.ai/support/docs/scim/azure/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

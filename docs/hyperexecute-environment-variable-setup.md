@@ -9,9 +9,9 @@ keywords:
 - TestMu AI environment variables
 - TestMu AI setup
 - Hyperexecute environment variables
-url: https://www.testmu.ai/support/docs/hyperexecute-environment-variable-setup
+url: https://www.testmu.ai/support/docs/hyperexecute-environment-variable-setup/
 site_name: LambdaTest
-slug: hyperexecute-environment-variable-setup
+slug: hyperexecute-environment-variable-setup/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-environment-variable-setup/
 ---
 

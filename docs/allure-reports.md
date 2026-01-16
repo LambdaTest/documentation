@@ -8,9 +8,9 @@ keywords:
     - allure reports
     - hyperexecute allure reports
     - hyperexecute testing
-url: https://www.testmu.ai/support/docs/allure-reports
+url: https://www.testmu.ai/support/docs/allure-reports/
 site_name: LambdaTest
-slug: allure-reports
+slug: allure-reports/
 canonical: https://www.testmu.ai/support/docs/allure-reports/
 ---
 

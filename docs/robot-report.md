@@ -7,9 +7,9 @@ description: Learn how to configure and generate Robot test execution reports on
 keywords:
   - cucumber testing reports
   - robot report testmu ai 
-url: https://www.testmu.ai/support/docs/robot-report
+url: https://www.testmu.ai/support/docs/robot-report/
 site_name: LambdaTest
-slug: robot-report
+slug: robot-report/
 canonical: https://www.testmu.ai/support/docs/robot-report/
 ---
 

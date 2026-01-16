@@ -12,9 +12,9 @@ keywords:
 - testmu ai oauth setup
 - log bugs from testmu ai to github
 - github repository integration testmu ai
-url: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration
+url: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration/
 site_name: LambdaTest
-slug: github-repo-based-oauth-integration
+slug: github-repo-based-oauth-integration/
 canonical: https://www.testmu.ai/support/docs/github-repo-based-oauth-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

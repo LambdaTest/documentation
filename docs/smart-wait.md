@@ -8,9 +8,9 @@ keywords:
 - smart wait selenium
 - smart wait selenium testing
 - smart wait automation
-url: https://www.testmu.ai/support/docs/smart-wait
+url: https://www.testmu.ai/support/docs/smart-wait/
 site_name: LambdaTest
-slug: smart-wait
+slug: smart-wait/
 canonical: https://www.testmu.ai/support/docs/smart-wait/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

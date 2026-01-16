@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-cli-upload
-slug: smartui-cli-upload
+url: https://www.testmu.ai/support/docs/smartui-cli-upload/
+slug: smartui-cli-upload/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-upload/
 
 ---

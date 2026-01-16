@@ -5,9 +5,9 @@ sidebar_label: Command Errors
 description: A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-modules-command-logs
+url: https://www.testmu.ai/support/docs/analytics-modules-command-logs/
 site_name: LambdaTest
-slug: analytics-modules-test-intelligence-command-logs-analytics
+slug: analytics-modules-test-intelligence-command-logs-analytics/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
 ---
 

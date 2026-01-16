@@ -8,9 +8,9 @@ keywords:
   - network throttling
   - network bandwidth
   - network setting
-url: https://www.testmu.ai/support/docs/kaneai-network-throttling
+url: https://www.testmu.ai/support/docs/kaneai-network-throttling/
 site_name: LambdaTest
-slug: kaneai-network-throttling
+slug: kaneai-network-throttling/
 canonical: https://www.testmu.ai/support/docs/kaneai-network-throttling/
 ---
 

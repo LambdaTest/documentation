@@ -11,9 +11,9 @@ keywords:
   - katalon vs selenium
   - katalon studio tutorial
   - katalon selenium
-url: https://www.testmu.ai/support/docs/katalon-integration-with-testmu
+url: https://www.testmu.ai/support/docs/katalon-integration-with-testmu/
 site_name: LambdaTest
-slug: katalon-integration-with-testmu
+slug: katalon-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/katalon-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

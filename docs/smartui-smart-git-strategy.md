@@ -10,9 +10,9 @@ keywords:
   - Visual Regression Testing
   - Git Integration
   - Branch Comparison
-url: https://www.testmu.ai/support/docs/smartui-smart-git-strategy
+url: https://www.testmu.ai/support/docs/smartui-smart-git-strategy/
 site_name: LambdaTest
-slug: smartui-smart-git-strategy
+slug: smartui-smart-git-strategy/
 canonical: https://www.testmu.ai/support/docs/smartui-smart-git-strategy/
 
 ---

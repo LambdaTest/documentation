@@ -13,9 +13,9 @@ keywords:
   - common error messages
   - exceeded queue limit error
 
-url: https://www.testmu.ai/support/docs/error-messages
+url: https://www.testmu.ai/support/docs/error-messages/
 site_name: LambdaTest
-slug: error-messages
+slug: error-messages/
 canonical: https://www.testmu.ai/support/docs/error-messages/
 ---
 import CodeBlock from '@theme/CodeBlock';

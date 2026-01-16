@@ -7,9 +7,9 @@ description: With TestMu AI, conduct live interactive testing of websites and we
 keywords:
 - real device browser testing 
 - testmu ai real device browser testing 
-url: https://www.testmu.ai/support/docs/browser-testing-on-real-devices
+url: https://www.testmu.ai/support/docs/browser-testing-on-real-devices/
 site_name: LambdaTest
-slug: browser-testing-on-real-devices
+slug: browser-testing-on-real-devices/
 canonical: https://www.testmu.ai/support/docs/browser-testing-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

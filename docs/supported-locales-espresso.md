@@ -9,9 +9,9 @@ keywords:
   - Locales
   - Appium supported locales
   
-url: https://www.testmu.ai/support/docs/supported-locales-espresso
+url: https://www.testmu.ai/support/docs/supported-locales-espresso/
 site_name: LambdaTest
-slug: supported-locales-espresso
+slug: supported-locales-espresso/
 canonical: https://www.testmu.ai/support/docs/supported-locales-espresso/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

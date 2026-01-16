@@ -11,9 +11,9 @@ keywords:
   - playwright javascript testing guide
   - javascript playwright framework
 
-url: https://www.testmu.ai/support/docs/javascript-with-playwright
+url: https://www.testmu.ai/support/docs/javascript-with-playwright/
 site_name: LambdaTest
-slug: javascript-with-playwright
+slug: javascript-with-playwright/
 canonical: https://www.testmu.ai/support/docs/javascript-with-playwright/
 ---
 

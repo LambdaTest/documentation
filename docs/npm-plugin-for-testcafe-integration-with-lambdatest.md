@@ -11,9 +11,9 @@ keywords:
   - cross browser testing
   - developer tools
   - npm package
-url: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu
+url: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu/
 site_name: LambdaTest
-slug: npm-plugin-for-testcafe-integration-with-testmu
+slug: npm-plugin-for-testcafe-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu/
 ---
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - applitools integration
   - cross browser testing
   - free cross browser testing tool
-url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu
+url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu/
 site_name: LambdaTest
-slug: applitools-integration-with-testmu
+slug: applitools-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/applitools-integration-with-testmu/
 ---
 

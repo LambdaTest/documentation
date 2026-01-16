@@ -10,9 +10,9 @@ keywords:
   - codeship
   - codeship integration
   - testmu ai codeship integration
-url: https://www.testmu.ai/support/docs/codeship-integration-with-testmu
+url: https://www.testmu.ai/support/docs/codeship-integration-with-testmu/
 site_name: LambdaTest
-slug: codeship-integration-with-testmu
+slug: codeship-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/codeship-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

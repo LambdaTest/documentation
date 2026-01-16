@@ -10,9 +10,9 @@ keywords:
 - har log viewer with waterfall testmu ai
 - har log viewer network logs
 - har log viewer with waterfall selenium
-url: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall
+url: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall/
 site_name: LambdaTest
-slug: har-log-viewer-with-waterfall
+slug: har-log-viewer-with-waterfall/
 canonical: https://www.testmu.ai/support/docs/har-log-viewer-with-waterfall/
 ---
 

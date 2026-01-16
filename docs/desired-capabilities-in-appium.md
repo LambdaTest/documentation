@@ -15,9 +15,9 @@ keywords:
   - configure appium tests with desired capabilities
   - appium webdriver capabilities for running tests on testmu ai
 
-url: https://www.testmu.ai/support/docs/desired-capabilities-in-appium
+url: https://www.testmu.ai/support/docs/desired-capabilities-in-appium/
 site_name: LambdaTest
-slug: desired-capabilities-in-appium
+slug: desired-capabilities-in-appium/
 canonical: https://www.testmu.ai/support/docs/desired-capabilities-in-appium/
 ---
 

@@ -10,10 +10,10 @@ keywords:
   - Android
   - automation
   - testing
-slug: sim-support
+slug: sim-support/
 canonical: https://www.testmu.ai/support/docs/sim-support/
 site_name: LambdaTest
-url: https://www.testmu.ai/support/docs/sim-support
+url: https://www.testmu.ai/support/docs/sim-support/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';

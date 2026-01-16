@@ -10,9 +10,9 @@ keywords:
   - zephyr
   - Integrations
   - Products
-url: https://www.testmu.ai/support/docs/hyperexecute-zephyr-scale-integration
+url: https://www.testmu.ai/support/docs/hyperexecute-zephyr-scale-integration/
 site_name: LambdaTest
-slug: hyperexecute-zephyr-scale-integration
+slug: hyperexecute-zephyr-scale-integration/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-zephyr-scale-integration/
 ---
 

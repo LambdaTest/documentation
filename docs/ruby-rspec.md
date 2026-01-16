@@ -10,9 +10,9 @@ keywords:
   - ruby selenium
 image: /assets/images/og-images/selenium-testing-og.png
 
-url: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid
+url: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
-slug: rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid
+slug: rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
 ---
 

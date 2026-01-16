@@ -11,9 +11,9 @@ keywords:
   - TestMu AI Tunnel
   - local app testing for maven
   - maven tunnel for testmu ai
-url: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications
+url: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 site_name: LambdaTest
-slug: maven-tunnel-for-locally-hosted-web-applications
+slug: maven-tunnel-for-locally-hosted-web-applications/
 canonical: https://www.testmu.ai/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

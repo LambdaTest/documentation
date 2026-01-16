@@ -9,9 +9,9 @@ keywords:
   - network logs assertion
   - assertion
   - testmu ai kaneai
-url: https://www.testmu.ai/support/docs/kane-ai-network-assertions
+url: https://www.testmu.ai/support/docs/kane-ai-network-assertions/
 site_name: LambdaTest
-slug: kane-ai-network-assertions
+slug: kane-ai-network-assertions/
 canonical: https://www.testmu.ai/support/docs/kane-ai-network-assertions/
 ---
 

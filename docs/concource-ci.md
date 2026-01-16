@@ -17,9 +17,9 @@ keywords:
   - testmu ai integrations
   - integrations with ci/cd tools
   - ci/cd integrations
-url: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu
+url: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu/
 site_name: LambdaTest
-slug: selenium-testing-with-concourse-ci-and-testmu
+slug: selenium-testing-with-concourse-ci-and-testmu/
 canonical: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

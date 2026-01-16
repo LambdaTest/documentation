@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to List Supported Browser in HyperExecute via API
-url: https://www.testmu.ai/support/docs/hyperexecute-browser-list-api
+url: https://www.testmu.ai/support/docs/hyperexecute-browser-list-api/
 site_name: LambdaTest
-slug: hyperexecute-browser-list-api
+slug: hyperexecute-browser-list-api/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-browser-list-api/
 ---
 

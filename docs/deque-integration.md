@@ -12,9 +12,9 @@ keywords:
   - testmu ai axe integration
   - web accessibility testing with axe
 
-url: https://www.testmu.ai/support/docs/deque-integration
+url: https://www.testmu.ai/support/docs/deque-integration/
 site_name: LambdaTest
-slug: deque-integration
+slug: deque-integration/
 canonical: https://www.testmu.ai/support/docs/deque-integration/
 ---
 

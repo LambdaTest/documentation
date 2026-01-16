@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-8-7
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-8-7/
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-8-7
+slug: hyperexecute-release-notes-2-8-7/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-8-7/
 ---
 

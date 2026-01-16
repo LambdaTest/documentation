@@ -10,9 +10,9 @@ keywords:
   - continuous delivery pipeline
   - bitbucket pipelines for continuous delivery
   
-url: https://www.testmu.ai/support/docs/bitbucket-pipelines-integration-with-testmu
+url: https://www.testmu.ai/support/docs/bitbucket-pipelines-integration-with-testmu/
 site_name: LambdaTest
-slug: bitbucket-pipelines-integration-with-testmu
+slug: bitbucket-pipelines-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/bitbucket-pipelines-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,9 +11,9 @@ keywords:
     - tosca
     - tricentis
     - tosca for sap
-url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-for-sap
+url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-for-sap/
 site_name: LambdaTest
-slug: tosca-integration-with-hyperexecute-for-sap
+slug: tosca-integration-with-hyperexecute-for-sap/
 canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-for-sap/
 ---
 

@@ -13,9 +13,9 @@ keywords:
     - continuous integration tools
     - Travis CI integration
     - Travis CI integration with testmu ai
-url: https://www.testmu.ai/support/docs/travis-ci-with-testmu
+url: https://www.testmu.ai/support/docs/travis-ci-with-testmu/
 site_name: LambdaTest
-slug: travis-ci-with-testmu
+slug: travis-ci-with-testmu/
 canonical: https://www.testmu.ai/support/docs/travis-ci-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

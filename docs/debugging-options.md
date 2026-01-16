@@ -12,9 +12,9 @@ keywords:
   - debugging options selenium testing
   - debugging options appium testing
 
-url: https://www.testmu.ai/support/docs/debugging-options
+url: https://www.testmu.ai/support/docs/debugging-options/
 site_name: LambdaTest
-slug: debugging-options
+slug: debugging-options/
 canonical: https://www.testmu.ai/support/docs/debugging-options/
 ---
 

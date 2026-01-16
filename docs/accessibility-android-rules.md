@@ -9,9 +9,9 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-android-rules
+url: https://www.testmu.ai/support/docs/accessibility-android-rules/
 site_name: LambdaTest
-slug: accessibility-android-rules
+slug: accessibility-android-rules/
 canonical: https://www.testmu.ai/support/docs/accessibility-android-rules/
 ---
  

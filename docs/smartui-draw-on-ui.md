@@ -20,8 +20,8 @@ keywords:
   - Floating Regions
   - Ignore Colors
 
-url: https://www.testmu.ai/support/docs/smartui-ignore-regions
-slug: smartui-draw-on-ui
+url: https://www.testmu.ai/support/docs/smartui-ignore-regions/
+slug: smartui-draw-on-ui/
 canonical: https://www.testmu.ai/support/docs/smartui-draw-on-ui/
 
 ---

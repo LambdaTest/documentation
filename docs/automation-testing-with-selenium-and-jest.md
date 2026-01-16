@@ -12,9 +12,9 @@ keywords:
   - jest and selenium
   - jest selenium
 image: /assets/images/og-images/selenium-testing-og.png  
-url: https://www.testmu.ai/support/docs/automation-testing-with-selenium-and-jest
+url: https://www.testmu.ai/support/docs/automation-testing-with-selenium-and-jest/
 site_name: LambdaTest
-slug: automation-testing-with-selenium-and-jest
+slug: automation-testing-with-selenium-and-jest/
 canonical: https://www.testmu.ai/support/docs/automation-testing-with-selenium-and-jest/
 ---
 

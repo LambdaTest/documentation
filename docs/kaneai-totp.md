@@ -10,9 +10,9 @@ keywords:
   - MFA
   - 2FA
   - authentication
-url: https://www.testmu.ai/support/docs/kaneai-totp
+url: https://www.testmu.ai/support/docs/kaneai-totp/
 site_name: LambdaTest
-slug: kaneai-totp
+slug: kaneai-totp/
 canonical: https://www.testmu.ai/support/docs/kaneai-totp/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

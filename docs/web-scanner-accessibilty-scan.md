@@ -10,9 +10,9 @@ keywords:
   - accessibility scan
   - wcag
   - ada compliance
-url: https://www.testmu.ai/support/docs/web-scanner-accessibility-scan
+url: https://www.testmu.ai/support/docs/web-scanner-accessibility-scan/
 site_name: LambdaTest
-slug: web-scanner-accessibility-scan
+slug: web-scanner-accessibility-scan/
 canonical: https://www.testmu.ai/support/docs/web-scanner-accessibility-scan/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

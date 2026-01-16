@@ -5,9 +5,9 @@ sidebar_label: Session Errors
 description: Analytics Modules - Error Insights
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-modules-error-insights
+url: https://www.testmu.ai/support/docs/analytics-modules-error-insights/
 site_name: LambdaTest
-slug: analytics-modules-error-insights
+slug: analytics-modules-error-insights/
 canonical: https://www.testmu.ai/support/docs/analytics-modules-error-insights/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -16,9 +16,9 @@ keywords:
   - Visual UI automation
   - Desktop application automation
   - Cross-platform automation
-url: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration
+url: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration/
 site_name: LambdaTest
-slug: hyperexecute-sikuli-integration
+slug: hyperexecute-sikuli-integration/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-sikuli-integration/
 ---
 

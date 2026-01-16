@@ -12,9 +12,9 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-ruby-cucumber
+url: https://www.testmu.ai/support/docs/appium-ruby-cucumber/
 site_name: LambdaTest
-slug: appium-ruby-cucumber
+slug: appium-ruby-cucumber/
 canonical: https://www.testmu.ai/support/docs/appium-ruby-cucumber/
 ---
 

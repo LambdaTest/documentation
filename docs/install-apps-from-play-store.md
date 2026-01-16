@@ -7,9 +7,9 @@ description: Learn how to test apps installed via Play Store on TestMu AI, ensur
 keywords:
 - install apps from play store
 - play store
-url: https://www.testmu.ai/support/docs/install-apps-from-play-store
+url: https://www.testmu.ai/support/docs/install-apps-from-play-store/
 site_name: LambdaTest
-slug: install-apps-from-play-store
+slug: install-apps-from-play-store/
 canonical: https://www.testmu.ai/support/docs/install-apps-from-play-store/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,9 +11,9 @@ keywords:
   - real devices trends
   - real devices status ratio
 
-url: https://www.testmu.ai/support/docs/insights-private-real-devices
+url: https://www.testmu.ai/support/docs/insights-private-real-devices/
 site_name: LambdaTest
-slug: insights-private-real-devices
+slug: insights-private-real-devices/
 canonical: https://www.testmu.ai/support/docs/insights-private-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

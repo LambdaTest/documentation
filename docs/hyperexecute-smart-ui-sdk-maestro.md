@@ -12,9 +12,9 @@ keywords:
     - visual testing android emulator
     - smartui app screenshots
     - hyperexecute yaml mobile
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-maestro
+url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-maestro/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-sdk-maestro
+slug: hyperexecute-smart-ui-sdk-maestro/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-maestro/
 
 ---

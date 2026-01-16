@@ -10,9 +10,9 @@ keywords:
   - testmu ai
   - MCP
   - MCP server
-url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server
+url: https://www.testmu.ai/support/docs/hyperexecute-mcp-server/
 site_name: LambdaTest
-slug: hyperexecute-mcp-server
+slug: hyperexecute-mcp-server/
 canonical: https://www.testmu.ai/support/docs/hyperexecute-mcp-server/
 ---
 

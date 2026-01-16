@@ -12,9 +12,9 @@ keywords:
   - project management tools
   - integrate rally with testmu ai
   - create issue in rally from testmu ai
-url: https://www.testmu.ai/support/docs/rally-integration
+url: https://www.testmu.ai/support/docs/rally-integration/
 site_name: LambdaTest
-slug: rally-integration
+slug: rally-integration/
 canonical: https://www.testmu.ai/support/docs/rally-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

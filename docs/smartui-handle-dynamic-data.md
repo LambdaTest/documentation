@@ -11,9 +11,9 @@ keywords:
   - select elements
   - visual testing
   - false positives
-url: https://www.testmu.ai/support/docs/smartui-handle-dynamic-data
+url: https://www.testmu.ai/support/docs/smartui-handle-dynamic-data/
 site_name: LambdaTest
-slug: smartui-handle-dynamic-data
+slug: smartui-handle-dynamic-data/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-dynamic-data/
 
 ---

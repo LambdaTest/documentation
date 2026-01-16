@@ -9,9 +9,9 @@ keywords:
 - migrate appium tests from local grid to testmu ai cloud
 - migrate appium tests from local grid to testmu ai
 - how to migrate appium tests from local grid to testmu ai
-url: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites
+url: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites/
 site_name: LambdaTest
-slug: migrate-existing-appium-test-suites
+slug: migrate-existing-appium-test-suites/
 canonical: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

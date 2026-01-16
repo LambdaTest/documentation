@@ -10,9 +10,9 @@ keywords:
 - mark as a bug in testmu ai
 - one click bug logging
 - one click bug logging in testmu ai
-url: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing
+url: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing/
 site_name: LambdaTest
-slug: mark-as-bug-in-screenshot-testing
+slug: mark-as-bug-in-screenshot-testing/
 canonical: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
