@@ -52,3 +52,9 @@ While specifying build environments, check the box to **Use Local Tunnel**. You 
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/6.webp').default} alt="Image" width="1024" height="483" className="doc_img"/> 
 
 Kudos! That is all you need to know for integrating your Jenkins freestyle project with LambdaTest. In case of any questions, feel free to give us a shout. You can also drop an email to [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+
+:::tip Best Practices
+**Build naming**
+
+Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each LambdaTest run is correctly mapped to its corresponding Jenkins build.
+:::
