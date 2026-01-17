@@ -50,6 +50,8 @@ AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powe
 - **Error timelines** - chronological sequence of events leading to failures
 - **Trend analysis** - identifies recurring patterns across test executions
 
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-output.webp').default} alt="RCA Output" width="800" height="400" className="doc_img"/>
+
 ## Prerequisites for AI RCA
 
 1. **Active <BrandName /> Account**: You should have an active <BrandName /> account with appropriate permissions.
@@ -57,6 +59,118 @@ AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powe
 3. **Available Credits**: Tests will only be processed through RCA when sufficient credits are available. For more information on credit management, see our [Credits Management](/docs/credits-management/) documentation.
 4. **Test Failures**: AI RCA requires at least one test failure to generate analysis. The system learns from your test execution patterns.
 5. **Access to Insights**: You should have access to the <BrandName /> Insights platform under **Insights** tab.
+
+## RCA Generation Methods
+
+<BrandName /> offers two methods to generate Root Cause Analysis:
+
+- **Automatic RCA**: RCA is generated automatically for failed tests based on your configuration settings. Set it up once in Organization Settings, and RCA runs continuously for matching test failures.
+
+- **Manual RCA**: Generate RCA on-demand for any failed test by clicking the **Generate RCA** button. Useful for investigating specific failures without setting up targeting rules.
+
+:::tip When to Use Each Method
+- Use **Automatic RCA** for continuous monitoring of critical test suites where you want immediate analysis of every failure.
+- Use **Manual RCA** for ad-hoc debugging when you need to investigate a specific test failure without setting up automated rules.
+:::
+
+| Feature | Automatic RCA | Manual RCA |
+|---------|---------------|------------|
+| **Trigger** | Runs automatically when configured tests fail | Click "Generate RCA" button |
+| **Targeting Rules** | Follows Analysis Scope and Intelligent Targeting settings | Any failed test on-demand |
+| **Custom RCA Categories** | ✓ Applied | ✓ Applied |
+| **Special Instructions** | ✓ Applied | ✓ Applied |
+| **Best For** | Continuous monitoring | Ad-hoc debugging |
+
+:::note Shared Configuration
+**Custom RCA Categories** and **Special Instructions** configured in Organization Settings apply to both Automatic and Manual RCA generation. This ensures consistent categorization and analysis context across all RCA results.
+:::
+
+## Generate RCA Manually
+
+You can manually generate RCA for any failed test from the **Test Manager** or **HyperExecute** dashboards.
+
+### From Test Manager (TMS)
+
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-tms.webp').default} alt="Generate RCA in Test Manager" width="800" height="400" className="doc_img"/>
+
+1. Navigate to **Test Manager** → open a **Test Run**
+2. Go to the **Test Instances** tab
+3. Locate the failed test and click the **Generate RCA** button
+4. View the RCA output with root cause, severity, and recommended fixes
+
+### From HyperExecute
+
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-hyperexecute.webp').default} alt="Generate RCA in HyperExecute" width="800" height="400" className="doc_img"/>
+
+1. Navigate to **HyperExecute** → open the failed **Job**
+2. Select the **Tasks** tab and expand the failed scenario
+3. Click the **Generate RCA** button next to the failed test
+4. View the generated RCA with actionable insights
+
+### From Insights Dashboard
+
+The Insights dashboard provides aggregated RCA analytics and trend analysis across all your test executions.
+
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.webp').default} alt="RCA Insights Dashboard" width="800" height="400" className="doc_img"/>
+
+1. Navigate to **Insights** from the <BrandName /> dashboard
+2. Access the **RCA Category Trends** widget to view aggregated data
+3. Click on specific categories to drill down into detailed analysis
+4. Track historical trends to monitor improvement over time
+
+## Understanding RCA Output
+
+When you generate or view an RCA, a detailed analysis panel opens with the following components:
+
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-output.webp').default} alt="RCA Output" width="800" height="400" className="doc_img"/>
+
+### Error Classification
+
+At the top of the RCA panel, you'll see:
+
+- **Failure Category**: The type of failure (e.g., `App Bug`, `Product Bug`)
+- **Root Cause Type**: The specific error category (e.g., `JavaScriptError`, `Backend Contract Violation`)
+- **Error Summary**: A one-line description of the error with file location
+- **Error Trends (Test)**: Shows how often this specific test has failed recently
+- **Error Trends (Global)**: Shows the error pattern across all tests over time
+
+### Detailed Analysis
+
+Expand this section to see AI-generated insights explaining:
+- Why the component or test failed
+- What the error indicates about the underlying issue
+- The specific file and line number where the error occurred
+
+### Event Timeline
+
+The Event Timeline shows the chronological sequence of events during test execution:
+
+- **✓ Passed steps**: Steps that completed successfully (e.g., "Test Execution Started")
+- **✗ Failed steps**: Steps where issues occurred, tagged as:
+  - **Root Cause**: The primary reason for failure
+  - **Effect**: Secondary failures caused by the root cause
+
+Click **Show/Hide** on any event to expand details including:
+- **Code**: View the relevant source code
+- **Stacktrace**: See the full error stack trace
+- **Assets**: Access screenshots, logs, or other artifacts
+
+### How to Fix It
+
+At the bottom of the RCA panel, you'll find numbered, actionable steps to resolve the issue. These recommendations include:
+- Specific actions to take in your application or test
+- Configuration changes to consider
+- Debugging steps to verify the fix
+
+### Provide Feedback
+
+Help improve RCA accuracy using the feedback options at the bottom:
+- **Thumbs up/down**: Rate if the analysis was helpful
+- **Suggest Improvements**: Click to open a feedback form where you can:
+  - Adjust the failure category and root cause classification
+  - Provide a custom root cause if the AI classification was incorrect
+  - Add additional context or feedback
+
 
 ## Configure Automatic RCA
 
@@ -227,117 +341,6 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 1. Click **Save Configuration** to apply your settings
 2. The settings will be applied to all users in your organization and cannot be modified by individual users or need admin level privileges.
-
-## RCA Generation Methods
-
-<BrandName /> offers two methods to generate Root Cause Analysis:
-
-- **Automatic RCA**: RCA is generated automatically for failed tests based on your configuration settings. Set it up once in Organization Settings, and RCA runs continuously for matching test failures.
-
-- **Manual RCA**: Generate RCA on-demand for any failed test by clicking the **Generate RCA** button. Useful for investigating specific failures without setting up targeting rules.
-
-:::tip When to Use Each Method
-- Use **Automatic RCA** for continuous monitoring of critical test suites where you want immediate analysis of every failure.
-- Use **Manual RCA** for ad-hoc debugging when you need to investigate a specific test failure without setting up automated rules.
-:::
-
-| Feature | Automatic RCA | Manual RCA |
-|---------|---------------|------------|
-| **Trigger** | Runs automatically when configured tests fail | Click "Generate RCA" button |
-| **Targeting Rules** | Follows Analysis Scope and Intelligent Targeting settings | Any failed test on-demand |
-| **Custom RCA Categories** | ✓ Applied | ✓ Applied |
-| **Special Instructions** | ✓ Applied | ✓ Applied |
-| **Best For** | Continuous monitoring | Ad-hoc debugging |
-
-:::note Shared Configuration
-**Custom RCA Categories** and **Special Instructions** configured in Organization Settings apply to both Automatic and Manual RCA generation. This ensures consistent categorization and analysis context across all RCA results.
-:::
-
-## Generate RCA Manually
-
-You can manually generate RCA for any failed test from the **Test Manager** or **HyperExecute** dashboards.
-
-### From Test Manager (TMS)
-
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-tms.webp').default} alt="Generate RCA in Test Manager" width="800" height="400" className="doc_img"/>
-
-1. Navigate to **Test Manager** → open a **Test Run**
-2. Go to the **Test Instances** tab
-3. Locate the failed test and click the **Generate RCA** button
-4. View the RCA output with root cause, severity, and recommended fixes
-
-### From HyperExecute
-
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-hyperexecute.webp').default} alt="Generate RCA in HyperExecute" width="800" height="400" className="doc_img"/>
-
-1. Navigate to **HyperExecute** → open the failed **Job**
-2. Select the **Tasks** tab and expand the failed scenario
-3. Click the **Generate RCA** button next to the failed test
-4. View the generated RCA with actionable insights
-
-## From Insights Dashboard
-
-The Insights dashboard provides aggregated RCA analytics and trend analysis across all your test executions.
-
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.webp').default} alt="RCA Insights Dashboard" width="800" height="400" className="doc_img"/>
-
-1. Navigate to **Insights** from the <BrandName /> dashboard
-2. Access the **RCA Category Trends** widget to view aggregated data
-3. Click on specific categories to drill down into detailed analysis
-4. Track historical trends to monitor improvement over time
-
-## Understanding RCA Output
-
-When you generate or view an RCA, a detailed analysis panel opens with the following components:
-
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-output.webp').default} alt="RCA Output" width="800" height="400" className="doc_img"/>
-
-### Error Classification
-
-At the top of the RCA panel, you'll see:
-
-- **Failure Category**: The type of failure (e.g., `App Bug`, `Product Bug`)
-- **Root Cause Type**: The specific error category (e.g., `JavaScriptError`, `Backend Contract Violation`)
-- **Error Summary**: A one-line description of the error with file location
-- **Error Trends (Test)**: Shows how often this specific test has failed recently
-- **Error Trends (Global)**: Shows the error pattern across all tests over time
-
-### Detailed Analysis
-
-Expand this section to see AI-generated insights explaining:
-- Why the component or test failed
-- What the error indicates about the underlying issue
-- The specific file and line number where the error occurred
-
-### Event Timeline
-
-The Event Timeline shows the chronological sequence of events during test execution:
-
-- **✓ Passed steps**: Steps that completed successfully (e.g., "Test Execution Started")
-- **✗ Failed steps**: Steps where issues occurred, tagged as:
-  - **Root Cause**: The primary reason for failure
-  - **Effect**: Secondary failures caused by the root cause
-
-Click **Show/Hide** on any event to expand details including:
-- **Code**: View the relevant source code
-- **Stacktrace**: See the full error stack trace
-- **Assets**: Access screenshots, logs, or other artifacts
-
-### How to Fix It
-
-At the bottom of the RCA panel, you'll find numbered, actionable steps to resolve the issue. These recommendations include:
-- Specific actions to take in your application or test
-- Configuration changes to consider
-- Debugging steps to verify the fix
-
-### Provide Feedback
-
-Help improve RCA accuracy using the feedback options at the bottom:
-- **Thumbs up/down**: Rate if the analysis was helpful
-- **Suggest Improvements**: Click to open a feedback form where you can:
-  - Adjust the failure category and root cause classification
-  - Provide a custom root cause if the AI classification was incorrect
-  - Add additional context or feedback
 
 ## Best Practices
 
