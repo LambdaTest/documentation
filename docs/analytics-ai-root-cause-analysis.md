@@ -259,7 +259,7 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 
 ### From Test Manager (TMS)
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-tms.png').default} alt="Generate RCA in Test Manager" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-tms.webp').default} alt="Generate RCA in Test Manager" width="800" height="400" className="doc_img"/>
 
 1. Navigate to **Test Manager** → open a **Test Run**
 2. Go to the **Test Instances** tab
@@ -268,7 +268,7 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 
 ### From HyperExecute
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-hyperexecute.png').default} alt="Generate RCA in HyperExecute" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-hyperexecute.webp').default} alt="Generate RCA in HyperExecute" width="800" height="400" className="doc_img"/>
 
 1. Navigate to **HyperExecute** → open the failed **Job**
 2. Select the **Tasks** tab and expand the failed scenario
@@ -279,7 +279,7 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 
 The Insights dashboard provides aggregated RCA analytics and trend analysis across all your test executions.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.png').default} alt="RCA Insights Dashboard" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.webp').default} alt="RCA Insights Dashboard" width="800" height="400" className="doc_img"/>
 
 1. Navigate to **Insights** from the <BrandName /> dashboard
 2. Access the **RCA Category Trends** widget to view aggregated data
@@ -290,7 +290,7 @@ The Insights dashboard provides aggregated RCA analytics and trend analysis acro
 
 When you generate or view an RCA, a detailed analysis panel opens with the following components:
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-output.png').default} alt="RCA Output" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-output.webp').default} alt="RCA Output" width="800" height="400" className="doc_img"/>
 
 ### Error Classification
 
