@@ -275,7 +275,7 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 3. Click the **Generate RCA** button next to the failed test
 4. View the generated RCA with actionable insights
 
-## View RCA in Insights Dashboard
+## From Insights Dashboard
 
 The Insights dashboard provides aggregated RCA analytics and trend analysis across all your test executions.
 
