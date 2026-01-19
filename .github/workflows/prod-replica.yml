@@ -1,4 +1,4 @@
-name: 'Deployment (Prod - New Bucket /help )' 
+name: 'Deployment (Prod - New Bucket /help )'  
 
 on:
   push:
