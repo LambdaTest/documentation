@@ -188,8 +188,8 @@ Kudos! You successfully executed your Selenium test suite using Jenkins with <Br
 
 ## Additional Links
 
-- [Integrate TestMu AI With Jenkins Freestyle Project](https://www.testmu.ai/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
-- [Integrating TestMu AI Report With Jenkins Pipeline](https://www.testmu.ai/support/docs/integrating-testmu-report-with-jenkins-pipeline/)
+- [Integrate TestMu AI With Jenkins Freestyle Project](/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
+- [Integrating TestMu AI Report With Jenkins Pipeline](/support/docs/integrating-testmu-report-with-jenkins-pipeline/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
