@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-<BrandName /> Tunnel now supports wildcard entries in the [`--allowHosts`](https://lambdatest.com/support/docs/lambda-tunnel-modifiers/#:~:text=TYPE-,%2D%2DallowHosts,-Comma%20separated%20list) flag. This enhancement allows users to specify patterns for hostnames instead of listing each subdomain separately, making it more flexible and efficient.
+<BrandName /> Tunnel now supports wildcard entries in the [`--allowHosts`](/support/docs/lambda-tunnel-modifiers/#:~:text=TYPE-,%2D%2DallowHosts,-Comma%20separated%20list) flag. This enhancement allows users to specify patterns for hostnames instead of listing each subdomain separately, making it more flexible and efficient.
 
 ## Usage of `--allowHosts` with Wildcards
 The `--allowHosts` flag enables users to define which domains should be routed through the <BrandName /> Tunnel while allowing other traffic to bypass it. With the new wildcard support, you can match multiple subdomains easily.
