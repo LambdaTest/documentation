@@ -43,6 +43,17 @@ It will route you to a Configuration dashboard.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/enter_script.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 
+:::tip Best Practices
+**Build naming**
+
+Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each TestMu AI run is correctly mapped to its corresponding Jenkins build.
+
+**Report publishing**
+
+Add a  `post { always { ... } }` block to your pipeline so that the report is generated after every run, regardless of the status.
+
+:::
+
 6. From the *Sample Step* dropdown, select `lambdaTestReportPublisher:LambdaTest Pipeline Report`.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/reportdrop.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
@@ -75,16 +86,7 @@ The test report will show up, containing build details such as **Name**, **Statu
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/generatedreport.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> 
 
-:::tip Best Practices
-**Build naming**
 
-Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each TestMu AI run is correctly mapped to its corresponding Jenkins build.
-
-**Report publishing**
-
-Add a  `post { always { ... } }` block to your pipeline so that the report is generated after every run, regardless of the status.
-
-:::
 
 
 
