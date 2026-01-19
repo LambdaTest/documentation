@@ -78,11 +78,11 @@ The test report will show up, containing build details such as **Name**, **Statu
 :::tip Best Practices
 **Build naming**
 
-Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each LambdaTest run is correctly mapped to its corresponding Jenkins build.
+Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each TestMu AI run is correctly mapped to its corresponding Jenkins build.
 
 **Report publishing**
 
-Add a  `post { always { ... } }` block to your pipeline so that the LambdaTest report is generated after every run, regardless of the status.
+Add a  `post { always { ... } }` block to your pipeline so that the report is generated after every run, regardless of the status.
 
 :::
 

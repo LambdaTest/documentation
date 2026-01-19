@@ -59,5 +59,5 @@ Kudos! That is all you need to know for integrating your Jenkins freestyle proje
 :::tip Best Practices
 **Build naming**
 
-Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures that each LambdaTest run is correctly mapped to its corresponding Jenkins build.
+Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures that each TestMu AI run is correctly mapped to its corresponding Jenkins build.
 :::
