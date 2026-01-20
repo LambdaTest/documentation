@@ -63,6 +63,14 @@ To generate the SmartUI SDK configuration file, please execute the following com
 npx smartui config:create .smartui.json
 ```
 
+:::note
+For the latest features including advanced configurations, ensure you are using the latest version of SmartUI CLI. Install or update using:
+
+```bash
+npm install -g @lambdatest/smartui-cli@latest
+```
+:::
+
 ## Configuration File Structure
 
 The SmartUI configuration file follows a JSON structure. Below is a sample configuration file with detailed explanations of each option:
@@ -189,6 +197,38 @@ The `enableJavaScript` option is a boolean parameter that determines whether Jav
 **allowedHostnames**
 
 The `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.
+
+</TabItem>
+
+<TabItem value='lazyload' label='Lazy Load Configuration'>
+
+**lazyLoadConfiguration**
+
+The `lazyLoadConfiguration` option is used to handle lazy-loaded content on web pages. This configuration helps ensure that all content is loaded before capturing screenshots, preventing incomplete captures due to lazy loading.
+
+To use this feature, ensure you have the latest version of SmartUI CLI installed:
+
+```bash
+npm install -g @lambdatest/smartui-cli@latest
+```
+
+Add the following configuration to your `.smartui.json` file:
+
+```json
+{
+  "lazyLoadConfiguration": {
+    "enabled": true,
+    "jumpBackToTop": true,
+    "scrollDelay": 250,
+    "scrollStep": 250
+  }
+}
+```
+
+- `enabled`: Boolean to enable/disable lazy load handling (default: false)
+- `jumpBackToTop`: Boolean to scroll back to top after scrolling to bottom (default: true)
+- `scrollDelay`: Delay in milliseconds between scroll actions (default: 250)
+- `scrollStep`: Pixels to scroll in each step (default: 250)
 
 </TabItem>
 
