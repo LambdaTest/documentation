@@ -186,6 +186,11 @@ When you click on the <BrandName /> Report icon from the left side, a report tab
 
 Kudos! You successfully executed your Selenium test suite using Jenkins with <BrandName /> plugin.
 
+## Additional Links
+
+- [Integrate TestMu AI With Jenkins Freestyle Project](/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
+- [Integrating TestMu AI Report With Jenkins Pipeline](/support/docs/integrating-testmu-report-with-jenkins-pipeline/)
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

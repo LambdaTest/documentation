@@ -144,6 +144,11 @@ Refer to our [Github sample repository](https://github.com/LambdaTest/nightwatch
   **Step 3:** Scroll down to Advanced Project Options. Paste the Code in the code pane or fetch it via SCM & hit the **Save** button. <img loading="lazy" src={require('../assets/images/uploads/jenkins-pipeline-3.webp').default} alt="Jenkins save button" width="1919" height="906" className="doc_img"/>
    **Note:** To run on the tunnel, Either you can use LT_TUNNEL Environment variable to set the tunnelling capability or you can pass in the code. Instructions on the tunnel are written in Repo Readme file.
 
+## Additional Links
+
+- [Integrate TestMu AI With Jenkins Freestyle Project](/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
+- [Integrating TestMu AI Report With Jenkins Pipeline](/support/docs/integrating-testmu-report-with-jenkins-pipeline/)
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
