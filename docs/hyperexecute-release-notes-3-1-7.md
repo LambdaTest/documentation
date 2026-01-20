@@ -45,4 +45,4 @@ HyperExecute now supports generating Lighthouse reports using Playwright, enabli
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/lighthouse-report.png').default} alt="Image" className="doc_img"/>
 
-> Learn more about [Lighthuouse PlayWright Reports](https://www.lambdatest.com/support/docs/playwright-lighthouse-library/)
+> Learn more about [Lighthuouse PlayWright Reports](/support/docs/playwright-lighthouse-library/)

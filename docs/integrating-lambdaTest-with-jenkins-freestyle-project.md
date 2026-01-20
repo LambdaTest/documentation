@@ -45,6 +45,13 @@ python google-search-lambdatest.py
 ```
 
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/5.webp').default} alt="Image" width="1024" height="484" className="doc_img"/> 
+
+:::tip Best Practices
+**Build naming**
+
+Define `LT_BUILD_NAME` in your script using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures that each TestMu AI run is correctly mapped to its corresponding Jenkins build.
+:::
+
 **Step 6:** Click on **Apply & Save** to set your configurations and then click on **"Build Now"** to execute your test.
 
 ## Test On Locally Hosted Web Applications
@@ -55,3 +62,4 @@ While specifying build environments, check the box to **Use Local Tunnel**. You 
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/6.webp').default} alt="Image" width="1024" height="483" className="doc_img"/> 
 
 Kudos! That is all you need to know for integrating your Jenkins freestyle project with <BrandName />. In case of any questions, feel free to give us a shout. You can also drop an email to [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
+

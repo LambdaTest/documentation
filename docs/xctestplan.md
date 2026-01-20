@@ -247,5 +247,5 @@ Once you have run your tests, you can view the test execution along with logs. Y
 > **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
 
 :::tip
-To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](https://lambdatest.com/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).
+To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).
 :::

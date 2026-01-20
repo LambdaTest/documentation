@@ -16,15 +16,15 @@ module.exports = {
   scripts: [
   
     {
-      src: 'https://www.testmu.ai/resources/js/salesforce_chatwidget.js',
+      src: 'https://assets.testmu.ai/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
-      src: 'https://www.testmu.ai/resources/js/lambda_gtm.js',
+      src: 'https://assets.testmu.ai/resources/js/lambda_gtm.js',
       defer: true,
     },
     {
-      src: 'https://www.testmu.ai/resources/js/sf_chat.js',
+      src: 'https://assets.testmu.ai/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
     },
