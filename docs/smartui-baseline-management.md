@@ -53,6 +53,10 @@ A baseline represents the "expected" state of your application's UI. When you ru
 
 A baseline in SmartUI represents the reference point for visual regression testing. It's the set of screenshots against which all future builds are compared.
 
+:::info
+For detailed guidance on approval, reject, move, and merge functions, see our comprehensive [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
+
 ### Types of Baselines
 
 1. **Project Baseline**: Set in project settings, used as the default comparison point
@@ -347,7 +351,11 @@ Best practices for updating baselines:
 1. Update after major releases
 2. Update after UI framework changes
 3. Update after design system updates
-4. Document baseline update reasons
+4. Document baseline update reason
+
+:::info
+For detailed guidance on approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
 
 ### Getting Help
 
