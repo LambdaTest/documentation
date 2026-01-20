@@ -56,6 +56,10 @@ Managing large visual regression builds can be time-consuming. **Multiselect & B
 
 This guide explains the end-to-end workflow, supported actions, and best practices to avoid accidental approvals or baseline edits.
 
+:::info
+For a complete understanding of approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
+
 ---
 
 ## Where multiselect appears
