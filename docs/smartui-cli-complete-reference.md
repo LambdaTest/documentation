@@ -910,6 +910,70 @@ test:
 - Log errors for debugging
 
 </TabItem>
+
+<TabItem value='results-reporting' label='Results Reporting'>
+**Results Reporting**
+
+Use the [SmartUI Reporter](https://smartui-reporter.netlify.app/) to visualize and analyze test results:
+
+1. **Export Results**: Use `--fetch-results` flag to generate JSON
+   ```bash
+   npx smartui capture urls.json --config config.json --fetch-results results.json
+   ```
+
+2. **Upload to Reporter**: Visit [SmartUI Reporter](https://smartui-reporter.netlify.app/) and upload `results.json`
+
+3. **View & Export**: Access tabular view with statistics, screenshot links, and export to PDF/CSV
+
+**Alternative**: Fetch results via [SmartUI API](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots)
+
+For detailed steps, see [Fetch Results Documentation](/support/docs/smartui-sdk-fetch-results/#using-smartui-reporter-tool).
+
+</TabItem>
+
+<TabItem value='url-grouping' label='URL Grouping for Large Test Suites'>
+**URL Grouping for Large Test Suites**
+
+When working with large numbers of URLs (1000+) that can be divided into sections/groups, you have two strategies:
+
+**Strategy 1: Single Project with Branching**
+- Use one SmartUI project with Smart Git branching
+- All sections in a single project dashboard
+- Each section can have its own branch
+- Unified tracking and reporting
+
+```bash
+# Enable Smart Git
+export SMART_GIT=true
+
+# Run different sections in different branches
+git checkout -b section1-bathroom
+npx smartui capture sections/section1.json --config config.json --buildName "Section1-Bathroom"
+```
+
+**Strategy 2: Separate Projects**
+- Create individual projects for each section
+- Complete isolation between sections
+- Independent baselines and approvals
+- Minimal projects with single branch
+
+```bash
+# Section 1 - Bathroom Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_BATHROOM}"
+npx smartui capture bathroom/urls.json --config config.json
+
+# Section 2 - Kitchens Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_KITCHENS}"
+npx smartui capture kitchens/urls.json --config config.json
+```
+
+**When to Use Each:**
+- **Single Project**: Unified dashboard, cross-section analysis, shared configs
+- **Separate Projects**: Complete isolation, independent workflows, different configs
+
+For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/support/docs/hyperexecute-smart-ui-capture-onboarding/#11-url-grouping-strategies-for-large-test-suites).
+
+</TabItem>
 </Tabs>
 
 ---
