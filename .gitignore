@@ -1,21 +1,129 @@
 # Dependencies
 /node_modules
+node_modules/
 
 # Production
 /build
+dist/
+out/
 
 # Generated files
 .docusaurus
 .cache-loader
+.cache/
+*.cache
 
-# Misc
+# OS Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.vscode-test/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log.*
+
+# Environment Variables
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Package Manager Lock Files
 pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+
+# Test Coverage
+coverage/
+.nyc_output/
+*.lcov
+.coveralls.yml
+
+# Build Artifacts
+*.map
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
+
+# Cache Directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.turbo/
+.eslintcache
+.stylelintcache
+
+# Runtime Data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Documentation Generator Agent (local tool only)
+/scripts/doc-generator-agent.js
+/scripts/*-doc-generator.md
+/scripts/QUICK-START-GUIDE.md
+/scripts/WORKFLOW-DIAGRAM.md
+/scripts/COMMAND-REFERENCE.md
+/scripts/INDEX.md
+/scripts/README.md
+/scripts/example-feature-config.json
+/scripts/example-output.md
+/scripts/dark-mode-feature.json
