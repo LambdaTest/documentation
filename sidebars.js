@@ -594,6 +594,11 @@ module.exports = {
             },
             items: [
               {
+                type: "doc",
+                label: "SmartUI Capture Onboarding",
+                id: "hyperexecute-smart-ui-capture-onboarding",
+              },
+              {
                 type: "category",
                 label: "HyperExecute Smart UI - Hooks",
                 collapsed: true,
