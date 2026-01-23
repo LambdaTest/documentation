@@ -3,7 +3,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
-  url: 'https://www.testmu.ai',
+  url: 'https://www.testmuai.com',
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -15,15 +15,15 @@ module.exports = {
   scripts: [
   
     {
-      src: 'https://assets.testmu.ai/resources/js/salesforce_chatwidget.js',
+      src: 'https://assets.testmuai.com/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
-      src: 'https://assets.testmu.ai/resources/js/lambda_gtm.js',
+      src: 'https://assets.testmuai.com/resources/js/lambda_gtm.js',
       defer: true,
     },
     {
-      src: 'https://assets.testmu.ai/resources/js/sf_chat.js',
+      src: 'https://assets.testmuai.com/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
     },
@@ -71,7 +71,7 @@ module.exports = {
         alt: 'LambdaTest',
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
-        href: 'https://www.testmu.ai',
+        href: 'https://www.testmuai.com',
         target: '_self',
         width: '147',
         height: '26',
