@@ -1,0 +1,286 @@
+---
+id: analytics-unique-instances-retry-detection
+title: Unique Test Instances and Intelligent Retry Detection
+sidebar_label: Unique Instances & Retry Detection
+description: Discover how LambdaTest Analytics intelligently detects unique test instances and consolidates retry attempts for precision test reporting
+keywords:
+  - analytics
+  - unique instances
+  - test retries
+  - retry detection
+  - test deduplication
+  - intelligent reporting
+  - test consolidation
+url: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
+site_name: LambdaTest
+slug: analytics-unique-instances-retry-detection/
+canonical: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Unique Instances & Retry Detection",
+          "item": `${BRAND_URL}/support/docs/analytics-unique-instances-retry-detection/`
+        }]
+      })
+    }}
+></script>
+
+---
+
+## Overview
+
+When executing automated tests with retry mechanisms, your results often contain multiple executions of the same test under identical conditions. This can distort metrics and obscure the true health of your test suite. <BrandName /> Analytics addresses this challenge with **Intelligent Unique Instance Detection**, which automatically consolidates retry attempts and surfaces only the definitive outcome.
+
+This guide explains how unique instances and retry attempts are detected, where this intelligence applies across <BrandName /> Analytics, and how to leverage these insights for precision reporting.
+
+## Core Concepts
+
+### What is a Unique Test Instance?
+
+A **Unique Test Instance** represents a distinct test-environment combination, defined by:
+
+- **Test Name**: The identifier of your test case
+- **Environment Fingerprint**: The complete execution context comprising:
+  - Browser (e.g., Chrome, Firefox, Safari)
+  - Operating System (e.g., Windows 10, macOS, Ubuntu)
+  - Device Type (Desktop, Mobile)
+  - Resolution (e.g., 1920x1080, 1366x768)
+
+Two test executions are classified as the **same instance** when they share identical values across all these attributes within a single build.
+
+**Example**: `Login Test` executing on `Chrome/Windows 10/Desktop/1920x1080` constitutes one unique instance. The same `Login Test` executing on `Firefox/Ubuntu/Desktop/1366x768` represents a separate unique instance.
+
+### What is a Retry Attempt?
+
+A **Retry Attempt** is any subsequent execution of an identical unique test instance within a single build. When your test framework or CI pipeline automatically re-executes a failed test, that re-execution is detected and classified as a retry.
+
+- The **initial execution** of a unique instance is classified as `Execution Type = Initial`
+- **Subsequent executions** of the same instance are classified as `Execution Type = Retry`
+
+### What is Definitive Status?
+
+The **Definitive Status** represents the conclusive outcome of the final execution for a unique test instance. When reporting with unique instances enabled, this authoritative status determines your metrics.
+
+- If a test fails initially but passes on retry, the **Definitive Status is Passed**
+- If a test fails across all retry attempts, the **Definitive Status is Failed**
+
+## How Intelligent Instance Detection Works
+
+### Raw Execution Data
+
+When tests execute on <BrandName />, every run is captured individually, including all retry attempts. Each execution record includes an **Execution Type** classification indicating whether it's an initial run or a retry.
+
+**Example: Raw Executions (5 total executions)**
+
+| # | Test Name | Environment | Status | Execution Type |
+|---|-----------|-------------|--------|----------------|
+| 1 | Login Test | Chrome/Win10/Desktop/1920x1080 | Failed | Initial |
+| 2 | Login Test | Chrome/Win10/Desktop/1920x1080 | Passed | Retry |
+| 1 | Login Test | Firefox/Ubuntu/Desktop/1366x768 | Failed | Initial |
+| 1 | Checkout Test | Chrome/Win10/Desktop/1920x1080 | Failed | Initial |
+| 2 | Checkout Test | Chrome/Win10/Desktop/1920x1080 | Failed | Retry |
+
+The **#** column indicates the execution sequence within each unique test-environment combination.
+
+### Step-by-Step Detection Process
+
+**Step 1: Identify Unique Instances**
+
+Executions are grouped by `Test Name + Environment Fingerprint`:
+
+- Instance 1: `Login Test` on `Chrome/Win10/Desktop/1920x1080` (2 executions)
+- Instance 2: `Login Test` on `Firefox/Ubuntu/Desktop/1366x768` (1 execution)
+- Instance 3: `Checkout Test` on `Chrome/Win10/Desktop/1920x1080` (2 executions)
+
+**Step 2: Resolve Definitive Status**
+
+For each instance, the status of the final execution is extracted:
+
+- Instance 1: Final execution was **Passed**
+- Instance 2: Single execution was **Failed**
+- Instance 3: Final execution was **Failed**
+
+**Step 3: Aggregate Retry Attempts**
+
+Executions classified as `Execution Type = Retry` are tallied for each instance:
+
+- Instance 1: 1 retry attempt (the second execution)
+- Instance 2: 0 retry attempts (single execution)
+- Instance 3: 1 retry attempt (the second execution)
+
+**Result: Consolidated Unique Instances**
+
+| Test Name | Environment | Definitive Status | Retry Attempts |
+|-----------|-------------|-------------------|----------------|
+| Login Test | Chrome/Win10/Desktop/1920x1080 | Passed | 1 |
+| Login Test | Firefox/Ubuntu/Desktop/1366x768 | Failed | 0 |
+| Checkout Test | Chrome/Win10/Desktop/1920x1080 | Failed | 1 |
+
+### Metrics Comparison
+
+This table illustrates how metrics transform between viewing all executions versus consolidated unique instances:
+
+| Metric | Toggle OFF (All Executions) | Toggle ON (Unique Instances) |
+|--------|----------------------------|------------------------------|
+| Total Tests | 5 | 3 |
+| Passed | 1 | 1 |
+| Failed | 4 | 2 |
+| Tests with Retries | - | 2 |
+| Pass Rate | 20% | 33.3% |
+
+The unique instances view delivers a more precise representation of your test suite health by reflecting tests that ultimately succeed after recovery attempts.
+
+## Where Unique Instance Detection Applies
+
+### Build Insights
+
+In [Build Insights](/support/docs/analytics-build-insights/), the **Show Unique Instances** toggle transforms both the Insights and Tests tabs:
+
+- **Insights Tab**: Key metrics, visualizations, and Smart Tags reflect deduplicated counts based on definitive results
+- **Tests Tab**: The test listing displays only the final execution per unique test-environment combination
+
+The toggle is positioned at the top of the Build Details page and governs all metrics displayed on that page.
+
+### Test Insights
+
+In [Test Insights](/support/docs/analytics-test-insights/), the **Show Unique Instances** toggle consolidates retry attempts across your test data:
+
+- When **ON**: Tests are grouped by test name + environment, surfacing only definitive results
+- When **OFF**: All individual executions are displayed, including every retry attempt
+
+### Dashboard Widgets
+
+The [Test Summary widget](/support/docs/analytics-modules-automation-test-overview/) in your Analytics dashboard includes a configuration option for retry handling:
+
+**"Show test retries separately"** checkbox in widget configuration:
+
+- **Checked**: All executions displayed individually (equivalent to toggle OFF)
+- **Unchecked**: Unique instances shown with definitive status only (equivalent to toggle ON)
+
+This enables you to customize how each dashboard widget processes retry data independently.
+
+## Practical Scenarios
+
+### Scenario 1: CI Pipeline with Automatic Retries
+
+Your pipeline automatically retries failed tests twice. A test run produces:
+
+| Execution | Test | Environment | Status |
+|-----------|------|-------------|--------|
+| 1 | API Test | Chrome/Linux | Failed |
+| 2 | API Test | Chrome/Linux | Failed |
+| 3 | API Test | Chrome/Linux | Passed |
+
+**With Unique Instances ON:**
+- Total Tests: 1
+- Passed: 1
+- Failed: 0
+- Retry Attempts: 2
+
+The test is reported as passed because it ultimately succeeded.
+
+### Scenario 2: Flaky Test Identification
+
+A test executes across multiple builds:
+
+| Build | Status (All Executions) | Status (Unique Instance) |
+|-------|------------------------|--------------------------|
+| Build 1 | Failed, Passed | Passed |
+| Build 2 | Passed | Passed |
+| Build 3 | Failed, Failed, Passed | Passed |
+| Build 4 | Failed, Failed | Failed |
+| Build 5 | Passed | Passed |
+
+**Analysis with Unique Instances:**
+- 4 out of 5 builds show Passed (80% build-level pass rate)
+- This test is flagged as potentially flaky due to requiring retry attempts
+
+### Scenario 3: Cross-Browser Validation
+
+You execute the same test across 3 browsers:
+
+| Test | Browser | Executions | Definitive Status |
+|------|---------|------------|-------------------|
+| Login | Chrome | 2 (Failed → Passed) | Passed |
+| Login | Firefox | 1 (Passed) | Passed |
+| Login | Safari | 3 (Failed → Failed → Failed) | Failed |
+
+**Unique Instances Summary:**
+- Total Unique Instances: 3
+- Passed: 2
+- Failed: 1
+- Pass Rate: 66.7%
+
+This clearly reveals Safari has a compatibility issue, while Chrome and Firefox are stable.
+
+## Best Practices
+
+1. **Enable Unique Instances for precision reporting**: When your pipeline employs automatic retries, activate the Unique Instances toggle to reveal the true pass/fail state of your tests.
+
+2. **Monitor retry frequency**: Elevated retry counts signal instability even when tests ultimately pass. Investigate tests with consistently high retry frequency.
+
+3. **Leverage both views strategically**:
+   - Use **All Executions** to debug specific failures and analyze retry patterns
+   - Use **Unique Instances** for release decisions and health assessments
+
+4. **Allow consolidation time**: Retry detection requires a brief processing period after test execution. Wait a moment before enabling the toggle if you've just completed a build.
+
+5. **Standardize environment configurations**: Consistent browser/OS/resolution combinations make unique instance grouping more meaningful and comparable across builds.
+
+6. **Track trends over time**: Use the unique instances view to monitor genuine improvements in test stability, filtering out noise from retry-based recoveries.
+
+## Frequently Asked Questions
+
+### Q: Why do my metrics change when I toggle Unique Instances?
+
+**A:** The toggle transforms what gets measured. With the toggle OFF, every execution counts individually (including retries). With the toggle ON, only unique test-environment combinations count, using the definitive execution's status.
+
+### Q: How are retry attempts detected?
+
+**A:** Retry attempts are detected by identifying multiple executions of the same test name and environment fingerprint within a single build. The count equals total executions minus one for each unique instance.
+
+### Q: Does this affect historical data?
+
+**A:** Yes, intelligent instance detection applies to all historical data within the selected date range. You can toggle between views at any time.
+
+### Q: What if the same test runs on different environments?
+
+**A:** Each test-environment combination constitutes a separate unique instance. `Login Test` on Chrome and `Login Test` on Firefox are two distinct instances, each with their own definitive status and retry count.
+
+### Q: Why might my pass rate be higher with Unique Instances enabled?
+
+**A:** Because only the definitive execution counts. Tests that fail initially but pass on retry display as "Passed" in the unique instances view, elevating your overall pass rate.
+
+### Q: Does this work with parallel test execution?
+
+**A:** Yes. The grouping is based on test name and environment fingerprint, regardless of execution timing. Parallel executions on different environments create separate unique instances.
+
+### Q: How long does processing take after a build completes?
+
+**A:** Typically a few moments. If you toggle on Unique Instances immediately after a build and observe unexpected results, wait briefly and refresh.
+
+## Related Documentation
+
+- [Build Insights](/support/docs/analytics-build-insights/) - Build-level health dashboard with unique instance toggle
+- [Test Insights](/support/docs/analytics-test-insights/) - Test-level analytics with unique instance support
+- [Web & App Automation Modules](/support/docs/analytics-modules-automation-test-overview/) - Dashboard widgets including Test Summary configuration
+- [Build Comparison](/support/docs/analytics-build-comparison/) - Compare builds side by side
+- [Flaky Test Analytics](/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/) - Identify and track flaky tests
