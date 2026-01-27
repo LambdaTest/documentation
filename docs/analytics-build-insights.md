@@ -259,14 +259,7 @@ The **Group By** dropdown allows you to organize tests by specific environment a
 
 **Default Behavior:**
 - By default, all grouping options are selected, which displays a flat list view showing all tests without grouping
-- Deselecting one or more options activates the grouped view for the remaining selected attributes
-
-**Grouped View Features:**
-- **Collapsible Group Headers**: Each group displays as a collapsible section with a header showing:
-  - The group name (e.g., "Chrome 120" or "Windows 10")
-  - Total test count within the group
-  - Pass/fail statistics for quick health assessment
-- **Expand/Collapse**: Click on group headers to expand or collapse individual groups for focused analysis
+- Deselecting one or more options groups the tests by the remaining selected attributes
 
 **Your Settings Are Remembered:**
 Your Group By selections are automatically saved, so when you return to Build Insights, your preferred grouping configuration is already applied.
