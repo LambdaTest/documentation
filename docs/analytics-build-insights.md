@@ -59,7 +59,7 @@ Build Insights is your build-level health dashboard. It shows how stable each bu
 
 With Build Insights, you can view all your unique builds in a centralized list, then drill down into individual build details to explore comprehensive metrics and test-level insights. The feature is designed to be intuitive and accessible, whether you're a QA engineer analyzing test results or a team lead tracking overall build health.
 
-Build Insights also supports **Unique Instances** view, which consolidates retry runs by grouping tests by name and environment (browser + OS + device + resolution), showing only the final run result for cleaner, more accurate reporting.
+Build Insights also supports **Unique Instances** view, which consolidates retry runs by grouping tests by name and environment (browser + OS + device + resolution), showing only the final run result for cleaner, more accurate reporting. For a comprehensive guide on how unique instances and retry attempts are detected, see [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/).
 
 ## Build Insights Flow
 
@@ -162,6 +162,10 @@ The grouping is scoped to the individual build ID, meaning each build's metrics 
 
 :::note Processing Time
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
+:::tip Learn More
+Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
 :::
 
 ## Tab 1: Insights

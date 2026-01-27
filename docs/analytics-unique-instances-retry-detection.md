@@ -1,6 +1,6 @@
 ---
 id: analytics-unique-instances-retry-detection
-title: Understanding Unique Test Instances and Retry Detection
+title: Understanding Unique Test Instances and Retry Calculation
 sidebar_label: Unique Instances & Retry Detection
 description: Discover how LambdaTest Analytics intelligently detects unique test instances and consolidates retry attempts for precision test reporting
 keywords:
@@ -11,10 +11,10 @@ keywords:
   - test deduplication
   - intelligent reporting
   - test consolidation
-url: https://www.testmuai.com/support/docs/analytics-unique-instances-retry-detection/
+url: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
 site_name: LambdaTest
 slug: analytics-unique-instances-retry-detection/
-canonical: https://www.testmuai.com/support/docs/analytics-unique-instances-retry-detection/
+canonical: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
