@@ -7,7 +7,7 @@ keywords:
   - analytics
   - build insights
   - build compare
-  - Perfecto test insights alternative 
+  - Perfecto test insights alternative
   - perfecto test insights
   - test observability
   - group by
@@ -16,7 +16,7 @@ keywords:
   - os grouping
   - environment filtering
   - unique instances 
-url: https://www.testmuai.com/support/docs/analytics-build-insights/
+url: https://www.testmu.ai/support/docs/analytics-build-insights/
 site_name: LambdaTest
 slug: analytics-build-insights/
 canonical: https://www.testmuai.com/support/docs/analytics-build-insights/
@@ -160,6 +160,9 @@ The **Show Unique Instances** toggle consolidates retry runs to give you a clean
 
 The grouping is scoped to the individual build ID, meaning each build's metrics reflect only the deduplicated results within that specific build run.
 
+**Your Settings Are Remembered:**
+Your Show Unique Instances preference is automatically saved, so you don't need to re-enable it each time you visit. Build Insights and Test Insights remember their settings independently, allowing you to configure each page to suit your workflow.
+
 :::note Processing Time
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
 :::
@@ -242,6 +245,31 @@ Want to compare two builds side by side? Use the **Compare** tab to identify new
 
 Use the search bar to jump straight to a specific test by name (for example, when a developer shares a failing spec file name).
 
+### Group By
+
+The **Group By** dropdown allows you to organize tests by specific environment attributes, making it easier to identify patterns across different configurations.
+
+**Location**: The Group By dropdown is positioned adjacent to the search bar.
+
+**Available Grouping Options:**
+- **Browser**: Group tests by browser version (e.g., Chrome 120, Firefox 115)
+- **OS**: Group tests by operating system version (e.g., Windows 10, macOS Ventura)
+- **Resolution**: Group tests by screen resolution (e.g., 1920x1080, 1366x768)
+- **Device**: Group tests by device type (e.g., Desktop, Mobile)
+
+**Default Behavior:**
+- By default, all grouping options are selected, which displays a flat list view showing all tests without grouping
+- Deselecting one or more options groups the tests by the remaining selected attributes
+
+**Your Settings Are Remembered:**
+Your Group By selections are automatically saved, so when you return to Build Insights, your preferred grouping configuration is already applied.
+
+**Use Cases:**
+- **Browser compatibility analysis**: Deselect all except Browser to quickly see which browsers have the most failures
+- **OS-specific debugging**: Group by OS to identify platform-specific issues
+- **Resolution testing**: Group by Resolution to spot responsive design problems
+- **Multi-dimensional grouping**: Combine multiple grouping options to create hierarchical views (e.g., group by Browser and then by OS within each browser group)
+
 ### Test Results Table
 
 The main table displays individual test executions with three key columns:
@@ -249,12 +277,26 @@ The main table displays individual test executions with three key columns:
 #### Test Name Column
 
 For each test, you'll see:
+
+**Primary Line:**
 - **Test Name**: The full name of the test (e.g., `PROD_Verify FTD feature for the build atxRD_flakyBuild - flaky_test_detection.spec.ts`)
-- **Duration**: How long the test took to execute (e.g., "82s", "84s")
-- **Execution Timestamp**: When the test was executed (e.g., "02/12/2025, 13:25:23")
+
+**Secondary Line (Environment Info):**
+Each test row displays detailed execution context with visual icons in the following order:
+- **Duration**: How long the test took to execute (e.g., "82s", "2m 15s")
+- **Timestamp**: When the test was executed in a readable format (e.g., "Jan 20, 2026 5:12 PM")
+- **Username**: The user who executed the test
+- **Browser**: Browser name and version with browser icon (e.g., Chrome icon with "Chrome 120")
+- **OS**: Operating system with OS icon (e.g., Windows icon with "Windows 10")
+- **Device**: Device type indicator (e.g., Desktop, Mobile)
+- **Resolution**: Screen resolution used (e.g., "1920x1080")
+- **Smart Tags**: Intelligent test categorization tags (e.g., "Flaky Test", "New Failure", "Performance Anomaly")
+
+**Additional Information:**
 - **Project/Tag**: Associated project or tag (e.g., "atxSmoke")
-- **Device Icon**: Visual indicator showing the device/platform used
 - **Test Tags**: Clickable tags associated with the test (e.g., "playwright_test", "atxSmoke_test")
+
+The environment icons match the visual style used throughout the Test Intelligence drilldown views, providing consistent visual identification of execution contexts.
 
 #### History Column
 
@@ -330,4 +372,6 @@ This approach ensures that Build Insights can provide you with meaningful histor
 4. **Share context, not just failures**: When sharing a build, also mention which metrics you looked at (for example, "pass rate dropped from 98% to 90% in the last 3 runs").
 5. **Standardize build names**: Maintain common build names so histories stay meaningful and easy to compare across days and weeks.
 6. **Use Unique Instances for accurate reporting**: Toggle on "Show Unique Instances" to consolidate retry runs and see the true pass/fail state of each test-environment combination, especially when your pipeline uses automatic retries.
+7. **Leverage Group By for pattern analysis**: Use the Group By dropdown in the Tests tab to organize tests by Browser, OS, Resolution, or Device. This helps quickly identify environment-specific failures and compatibility issues.
+8. **Combine grouping with filters**: Apply filters first to narrow down to relevant tests (for example, failed tests only), then use Group By to see how those failures distribute across environments.
 
