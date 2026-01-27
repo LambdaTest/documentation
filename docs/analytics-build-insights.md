@@ -160,11 +160,8 @@ The **Show Unique Instances** toggle consolidates retry runs to give you a clean
 
 The grouping is scoped to the individual build ID, meaning each build's metrics reflect only the deduplicated results within that specific build run.
 
-**Preference Persistence:**
-Your Show Unique Instances preference is automatically saved to your browser's local storage. This means:
-- Your toggle setting persists across browser sessions
-- Build Insights and Test Insights maintain separate preference settings, allowing you to configure each page independently
-- No need to re-enable your preferred view each time you visit the page
+**Your Settings Are Remembered:**
+Your Show Unique Instances preference is automatically saved, so you don't need to re-enable it each time you visit. Build Insights and Test Insights remember their settings independently, allowing you to configure each page to suit your workflow.
 
 :::note Processing Time
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
@@ -271,9 +268,8 @@ The **Group By** dropdown allows you to organize tests by specific environment a
   - Pass/fail statistics for quick health assessment
 - **Expand/Collapse**: Click on group headers to expand or collapse individual groups for focused analysis
 
-**Persistence:**
-- Your Group By selections are automatically saved to your browser's local storage
-- Settings persist across sessions, so your preferred grouping configuration is restored when you return
+**Your Settings Are Remembered:**
+Your Group By selections are automatically saved, so when you return to Build Insights, your preferred grouping configuration is already applied.
 
 **Use Cases:**
 - **Browser compatibility analysis**: Deselect all except Browser to quickly see which browsers have the most failures
