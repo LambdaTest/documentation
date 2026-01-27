@@ -85,6 +85,12 @@ The grouping is scoped to individual build IDs, meaning each build's metrics ref
 
 This feature is especially useful when your test pipeline uses automatic retries, as it shows the true pass/fail state of each test-environment combination rather than inflating counts with intermediate failures.
 
+**Preference Persistence:**
+Your Show Unique Instances preference is automatically saved to your browser's local storage. This means:
+- Your toggle setting persists across browser sessions
+- Test Insights and Build Insights maintain separate preference settings, allowing you to configure each page independently
+- No need to re-enable your preferred view each time you visit the page
+
 :::note Processing Time
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished running tests, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
 :::
