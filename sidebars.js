@@ -1615,6 +1615,7 @@ module.exports = {
         },
         items: [
           "slack-integration",
+          "opsgenie-integration",
           "microsoft-teams-integration",
           "rocketchat-integration-with-lambdatest",
           "integrating-mattermost-with-lambdatest",

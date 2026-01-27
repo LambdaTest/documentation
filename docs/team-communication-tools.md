@@ -46,14 +46,21 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> allows you to integrate your <BrandName /> account with your favourite communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by <BrandName /> cloud servers. Here are the instant messaging tools that you can integrate with <BrandName />.
 
-<table align="center">   
+<table align="center">
 
 | [Slack Integration](/docs/slack-integration/) |
 |:---------------------------------------:|
 
 </table>
 
-<table align="center"> 
+<table align="center">
+
+| [OpsGenie Integration](/docs/opsgenie-integration/) |
+|:---------------------------------------:|
+
+</table>
+
+<table align="center">
 
 | [Microsoft Teams Integration](/docs/microsoft-teams-integration/) |
 |:-----------------------------------------------------------:|
