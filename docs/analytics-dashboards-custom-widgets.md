@@ -11,10 +11,10 @@ keywords:
   - custom dashboards
   - test data
 
-url: https://www.testmu.ai/support/docs/dashboards-custom-widgets/
+url: https://www.testmuai.com/support/docs/dashboards-custom-widgets/
 site_name: LambdaTest
 slug: dashboards-custom-widgets/
-canonical: https://www.testmu.ai/support/docs/dashboards-custom-widgets/
+canonical: https://www.testmuai.com/support/docs/dashboards-custom-widgets/
 ---
 
 import NewTag from '../src/component/newTag';

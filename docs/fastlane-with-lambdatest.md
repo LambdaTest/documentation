@@ -9,10 +9,10 @@ keywords:
   - testmu ai integrations with ci/cd tools
   - continuous integration
   - testmu ai fastlane plugin
-url: https://www.testmu.ai/support/docs/fastlane-with-testmu/
+url: https://www.testmuai.com/support/docs/fastlane-with-testmu/
 site_name: LambdaTest
 slug: fastlane-with-testmu/
-canonical: https://www.testmu.ai/support/docs/fastlane-with-testmu/
+canonical: https://www.testmuai.com/support/docs/fastlane-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

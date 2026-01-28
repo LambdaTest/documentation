@@ -16,10 +16,10 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-cypress/
+url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-testing-using-cypress/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-testing-using-cypress/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/
 
 ---
 

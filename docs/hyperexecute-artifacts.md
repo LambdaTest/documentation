@@ -8,10 +8,10 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-artifacts/
+url: https://www.testmuai.com/support/docs/hyperexecute-artifacts/
 site_name: LambdaTest
 slug: hyperexecute-artifacts/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-artifacts/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-artifacts/
 ---
 
 

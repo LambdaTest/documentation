@@ -14,10 +14,10 @@ keywords:
   - apache
   - http
   - test plan
-url: https://www.testmu.ai/support/docs/hyperexecute-performance-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
 site_name: LambdaTest
 slug: hyperexecute-performance-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-performance-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

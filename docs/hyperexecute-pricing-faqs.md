@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-pricing-faqs/
+url: https://www.testmuai.com/support/docs/hyperexecute-pricing-faqs/
 site_name: LambdaTest
 slug: hyperexecute-pricing-faqs/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-pricing-faqs/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-pricing-faqs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

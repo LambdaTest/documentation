@@ -8,10 +8,10 @@ keywords:
   - testmu ai integration with devrev
   - testmu ai and devrev integration 
   - devrev integration
-url: https://www.testmu.ai/support/docs/devrev-integration/
+url: https://www.testmuai.com/support/docs/devrev-integration/
 site_name: LambdaTest
 slug: devrev-integration/
-canonical: https://www.testmu.ai/support/docs/devrev-integration/
+canonical: https://www.testmuai.com/support/docs/devrev-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

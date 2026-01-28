@@ -8,10 +8,10 @@ keywords:
   - Azure DevOps app
   - TestMu AI Azure DevOps App
   - Azure DevOps marketplace
-url: https://www.testmu.ai/support/docs/testmu-azure-devops-app/
+url: https://www.testmuai.com/support/docs/testmu-azure-devops-app/
 site_name: LambdaTest
 slug: testmu-azure-devops-app/
-canonical: https://www.testmu.ai/support/docs/testmu-azure-devops-app/
+canonical: https://www.testmuai.com/support/docs/testmu-azure-devops-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

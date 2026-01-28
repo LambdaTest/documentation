@@ -18,10 +18,10 @@ keywords:
   - hyperexecute matrix execution
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
-url: https://www.testmu.ai/support/docs/account-management/
+url: https://www.testmuai.com/support/docs/account-management/
 site_name: LambdaTest
 slug: account-management/
-canonical: https://www.testmu.ai/support/docs/account-management/
+canonical: https://www.testmuai.com/support/docs/account-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

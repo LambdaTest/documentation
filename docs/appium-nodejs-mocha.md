@@ -11,10 +11,10 @@ keywords:
   - mocha
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-nodejs-mocha/
+url: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
 site_name: LambdaTest
 slug: appium-nodejs-mocha/
-canonical: https://www.testmu.ai/support/docs/appium-nodejs-mocha/
+canonical: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
 ---
 
 

@@ -12,10 +12,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/hyperexecute-maestro-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-maestro-testing/
 site_name: LambdaTest
 slug: hyperexecute-maestro-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-maestro-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-maestro-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,10 +9,10 @@ keywords:
   - live interaction
   - selenium automation
   - debug tests
-url: https://www.testmu.ai/support/docs/live-interaction/
+url: https://www.testmuai.com/support/docs/live-interaction/
 site_name: LambdaTest
 slug: live-interaction/
-canonical: https://www.testmu.ai/support/docs/live-interaction/
+canonical: https://www.testmuai.com/support/docs/live-interaction/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

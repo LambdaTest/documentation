@@ -9,10 +9,10 @@ keywords:
   - testmu ai kaneai
   - kaneai smart variables
   - kaneai parameters
-url: https://www.testmu.ai/support/docs/kane-smart-variables/
+url: https://www.testmuai.com/support/docs/kane-smart-variables/
 site_name: LambdaTest
 slug: kane-ai-smart-variables/
-canonical: https://www.testmu.ai/support/docs/kane-ai-smart-variables/
+canonical: https://www.testmuai.com/support/docs/kane-ai-smart-variables/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

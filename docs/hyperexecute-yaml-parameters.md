@@ -8,10 +8,10 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-yaml-parameters/
+url: https://www.testmuai.com/support/docs/hyperexecute-yaml-parameters/
 site_name: LambdaTest Deep dive into hyperexecute yaml
 slug: hyperexecute-yaml-parameters/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-parameters/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-parameters/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

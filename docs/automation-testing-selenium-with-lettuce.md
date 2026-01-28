@@ -14,10 +14,10 @@ keywords:
   - python selenium framework
   - testmu ai python
   - framework on testmu ai
-url: https://www.testmu.ai/support/docs/automation-testing-selenium-with-lettuce/
+url: https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/
 site_name: LambdaTest
 slug: automation-testing-selenium-with-lettuce/
-canonical: https://www.testmu.ai/support/docs/automation-testing-selenium-with-lettuce/
+canonical: https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -8,10 +8,10 @@ keywords:
 - debug espresso tests
 - how to debug espresso tests
 - mobile app testing
-url: https://www.testmu.ai/support/docs/debugging-espresso-tests/
+url: https://www.testmuai.com/support/docs/debugging-espresso-tests/
 site_name: LambdaTest
 slug: debugging-espresso-tests/
-canonical: https://www.testmu.ai/support/docs/debugging-espresso-tests/
+canonical: https://www.testmuai.com/support/docs/debugging-espresso-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

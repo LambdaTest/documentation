@@ -8,10 +8,10 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai Web test
-url: https://www.testmu.ai/support/docs/kaneai-test/
+url: https://www.testmuai.com/support/docs/kaneai-test/
 site_name: LambdaTest
 slug: kaneai-test/
-canonical: https://www.testmu.ai/support/docs/kaneai-test/
+canonical: https://www.testmuai.com/support/docs/kaneai-test/
 ---
 
 import Tabs from '@theme/Tabs';

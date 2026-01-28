@@ -10,10 +10,10 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-test-scheduling/
+url: https://www.testmuai.com/support/docs/accessibility-test-scheduling/
 site_name: LambdaTest
 slug: accessibility-test-scheduling/
-canonical: https://www.testmu.ai/support/docs/accessibility-test-scheduling/
+canonical: https://www.testmuai.com/support/docs/accessibility-test-scheduling/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -10,10 +10,10 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - Test Muting
   - Mute test cases
-url: https://www.testmu.ai/support/docs/hyperexecute-test-muting/
+url: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
 site_name: LambdaTest
 slug: hyperexecute-test-muting/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-test-muting/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

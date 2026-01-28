@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/getting-started-with-espresso-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
 site_name: LambdaTest
 slug: getting-started-with-espresso-testing/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-espresso-testing/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

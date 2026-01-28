@@ -13,10 +13,10 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-firetv/
+url: https://www.testmuai.com/support/docs/appium-firetv/
 site_name: LambdaTest
 slug: appium-firetv/
-canonical: https://www.testmu.ai/support/docs/appium-firetv/
+canonical: https://www.testmuai.com/support/docs/appium-firetv/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

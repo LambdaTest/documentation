@@ -10,10 +10,10 @@ keywords:
   - resource utilization
   - parallel tests
   - insights widget
-url: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/
+url: https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/
 site_name: LambdaTest
 slug: analytics-modules-resource-utilization/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-resource-utilization/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

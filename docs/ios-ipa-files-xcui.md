@@ -14,10 +14,10 @@ keywords:
   - app testing xcuitest
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/ios-ipa-files-xcui/
+url: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
 site_name: LambdaTest
 slug: ios-ipa-files-xcui/
-canonical: https://www.testmu.ai/support/docs/ios-ipa-files-xcui/
+canonical: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

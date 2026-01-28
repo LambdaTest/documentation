@@ -10,10 +10,10 @@ keywords:
   - bug reporting
   - team communication
 
-url: https://www.testmu.ai/support/docs/integrating-mattermost-with-testmu/
+url: https://www.testmuai.com/support/docs/integrating-mattermost-with-testmu/
 site_name: LambdaTest
 slug: integrating-mattermost-with-testmu/
-canonical: https://www.testmu.ai/support/docs/integrating-mattermost-with-testmu/
+canonical: https://www.testmuai.com/support/docs/integrating-mattermost-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

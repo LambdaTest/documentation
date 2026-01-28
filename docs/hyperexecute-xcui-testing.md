@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/hyperexecute-xcui-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/
 site_name: LambdaTest
 slug: hyperexecute-xcui-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-xcui-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

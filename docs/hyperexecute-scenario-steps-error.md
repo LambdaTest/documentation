@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.testmu.ai/support/docs/hyperexecute-scenario-steps-error/
+url: https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-error/
 site_name: LambdaTest
 slug: hyperexecute-scenario-steps-error/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-scenario-steps-error/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-error/
 ---
 
 

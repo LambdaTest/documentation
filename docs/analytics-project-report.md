@@ -9,10 +9,10 @@ keywords:
   - dashboard
   - test insights
   - executive reporting
-url: https://www.testmu.ai/support/docs/analytics-project-report/
+url: https://www.testmuai.com/support/docs/analytics-project-report/
 site_name: LambdaTest
 slug: analytics-project-report/
-canonical: https://www.testmu.ai/support/docs/analytics-project-report/
+canonical: https://www.testmuai.com/support/docs/analytics-project-report/
 ---
 
 import Tabs from '@theme/Tabs';

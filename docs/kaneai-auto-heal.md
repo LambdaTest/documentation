@@ -8,10 +8,10 @@ keywords:
 - auto-heal
 - locators
 - kane ai
-url: https://www.testmu.ai/support/docs/kaneai-auto-heal/
+url: https://www.testmuai.com/support/docs/kaneai-auto-heal/
 site_name: LambdaTest
 slug: kaneai-auto-heal/
-canonical: https://www.testmu.ai/support/docs/kaneai-auto-heal/
+canonical: https://www.testmuai.com/support/docs/kaneai-auto-heal/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

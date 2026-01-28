@@ -11,10 +11,10 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets/
+url: https://www.testmuai.com/support/docs/analytics-sub-organization-widgets/
 site_name: LambdaTest
 slug: analytics-sub-organization-widgets/
-canonical: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets/
+canonical: https://www.testmuai.com/support/docs/analytics-sub-organization-widgets/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
