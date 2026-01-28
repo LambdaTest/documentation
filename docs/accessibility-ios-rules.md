@@ -9,10 +9,10 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-ios-rules/
+url: https://www.testmuai.com/support/docs/accessibility-ios-rules/
 site_name: LambdaTest
 slug: accessibility-ios-rules/
-canonical: https://www.testmu.ai/support/docs/accessibility-ios-rules/
+canonical: https://www.testmuai.com/support/docs/accessibility-ios-rules/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

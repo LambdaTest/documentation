@@ -5,10 +5,10 @@ sidebar_label: HyperExecute
 description: Analytics Modules - HyperExecute
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-modules-hyperexecute/
+url: https://www.testmuai.com/support/docs/analytics-modules-hyperexecute/
 site_name: LambdaTest
 slug: analytics-modules-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -5,10 +5,10 @@ sidebar_label: Setup Time Insights
 description: Monitor and optimize test environment setup times with TestMu AI's Setup Time Insights module. Analyze trends, compare across platforms, and receive AI-driven optimization recommendations
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-test-time-trends/
+url: https://www.testmuai.com/support/docs/analytics-test-time-trends/
 site_name: LambdaTest
 slug: analytics-test-time-trends/
-canonical: https://www.testmu.ai/support/docs/analytics-test-time-trends/
+canonical: https://www.testmuai.com/support/docs/analytics-test-time-trends/
 ---
 
 import NewTag from '../src/component/newTag';

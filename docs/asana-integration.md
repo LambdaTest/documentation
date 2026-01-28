@@ -11,7 +11,7 @@ keywords:
 url: https://testmu.ai/support/docs/asana-integration/
 site_name: LambdaTest
 slug: asana-integration/
-canonical: https://www.testmu.ai/support/docs/asana-integration/
+canonical: https://www.testmuai.com/support/docs/asana-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

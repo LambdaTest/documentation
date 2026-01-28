@@ -17,10 +17,10 @@ keywords:
   - create GoodDay issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/goodday-integration/
+url: https://www.testmuai.com/support/docs/goodday-integration/
 site_name: LambdaTest
 slug: goodday-integration/
-canonical: https://www.testmu.ai/support/docs/goodday-integration/
+canonical: https://www.testmuai.com/support/docs/goodday-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

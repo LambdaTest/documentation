@@ -9,10 +9,10 @@ keywords:
   - insights
   - usage
   - test intelligence
-url: https://www.testmu.ai/support/docs/analytics-modules-groups/
+url: https://www.testmuai.com/support/docs/analytics-modules-groups/
 site_name: LambdaTest
 slug: analytics-modules-groups/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-groups/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-groups/
 ---
 
 import NewTag from '../src/component/newTag';

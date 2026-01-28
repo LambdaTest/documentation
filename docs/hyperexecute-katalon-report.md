@@ -8,10 +8,10 @@ keywords:
     - Katalon reports
     - hyperexecute Katalon reports
     - hyperexecute testing
-url: https://www.testmu.ai/support/docs/hyperexecute-katalon-report/
+url: https://www.testmuai.com/support/docs/hyperexecute-katalon-report/
 site_name: LambdaTest
 slug: hyperexecute-katalon-report/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-katalon-report/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-katalon-report/
 ---
 
 import NewTag from '../src/component/newTag';

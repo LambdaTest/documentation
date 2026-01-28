@@ -13,10 +13,10 @@ keywords:
   - web dark mode
   - testmu ai real browsers
   - light mode testing
-url: https://www.testmu.ai/support/docs/dark-mode-on-browser/
+url: https://www.testmuai.com/support/docs/dark-mode-on-browser/
 site_name: LambdaTest
 slug: dark-mode-on-browser/
-canonical: https://www.testmu.ai/support/docs/dark-mode-on-browser/
+canonical: https://www.testmuai.com/support/docs/dark-mode-on-browser/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";

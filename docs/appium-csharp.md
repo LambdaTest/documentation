@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-csharp/
+url: https://www.testmuai.com/support/docs/appium-csharp/
 site_name: LambdaTest
 slug: appium-csharp/
-canonical: https://www.testmu.ai/support/docs/appium-csharp/
+canonical: https://www.testmuai.com/support/docs/appium-csharp/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

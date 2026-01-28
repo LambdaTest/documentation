@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Save and Manage Secrets
-url: https://www.testmu.ai/support/docs/hyperexecute-how-to-manage-project-level-secrets/
+url: https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
 site_name: LambdaTest
 slug: hyperexecute-how-to-manage-project-level-secrets/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-manage-project-level-secrets/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

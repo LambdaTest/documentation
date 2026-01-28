@@ -10,10 +10,10 @@ keywords:
 - wcag compliance
 - accessibility metrics
 - accessibility health
-url: https://www.testmu.ai/support/docs/accessibility-web-score/
+url: https://www.testmuai.com/support/docs/accessibility-web-score/
 site_name: LambdaTest
 slug: accessibility-web-score/
-canonical: https://www.testmu.ai/support/docs/accessibility-web-score/
+canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

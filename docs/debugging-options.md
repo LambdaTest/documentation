@@ -12,10 +12,10 @@ keywords:
   - debugging options selenium testing
   - debugging options appium testing
 
-url: https://www.testmu.ai/support/docs/debugging-options/
+url: https://www.testmuai.com/support/docs/debugging-options/
 site_name: LambdaTest
 slug: debugging-options/
-canonical: https://www.testmu.ai/support/docs/debugging-options/
+canonical: https://www.testmuai.com/support/docs/debugging-options/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

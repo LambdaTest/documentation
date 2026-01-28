@@ -8,10 +8,10 @@ keywords:
 - hyperexecute aws
 - hyperexecute private cloud
 - hyperexecute private cloud aws
-url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup-with-aws/
+url: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-setup-with-aws/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup-with-aws/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

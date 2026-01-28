@@ -10,10 +10,10 @@ keywords:
   - genai qa agent
   - testmu ai automation
   - testmu ai kaneai
-url: https://www.testmu.ai/support/docs/author-your-first-mobile-browser-test/
+url: https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/
 site_name: LambdaTest
 slug: author-your-first-mobile-browser-test/
-canonical: https://www.testmu.ai/support/docs/author-your-first-mobile-browser-test/
+canonical: https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/
 ---
 
 import Tabs from '@theme/Tabs';

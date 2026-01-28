@@ -11,10 +11,10 @@ keywords:
 - throttle cpu selenium
 - throttle network selenium
 - har file download
-url: https://www.testmu.ai/support/docs/extended-debugging-options/
+url: https://www.testmuai.com/support/docs/extended-debugging-options/
 site_name: LambdaTest
 slug: extended-debugging-options/
-canonical: https://www.testmu.ai/support/docs/extended-debugging-options/
+canonical: https://www.testmuai.com/support/docs/extended-debugging-options/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

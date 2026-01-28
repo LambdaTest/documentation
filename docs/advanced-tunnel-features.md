@@ -9,10 +9,10 @@ keywords:
   - testmu ai local tunnel
   - TestMu AI Tunnel
   - local app testing for macos
-url: https://www.testmu.ai/support/docs/advanced-tunnel-features/
+url: https://www.testmuai.com/support/docs/advanced-tunnel-features/
 site_name: LambdaTest
 slug: advanced-tunnel-features/
-canonical: https://www.testmu.ai/support/docs/advanced-tunnel-features/
+canonical: https://www.testmuai.com/support/docs/advanced-tunnel-features/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

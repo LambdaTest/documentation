@@ -7,10 +7,10 @@ description: Manage system and custom fields in TestMu AI's Test Manager, enhanc
 keywords:
   - insights
   - insights dashboard
-url: https://www.testmu.ai/support/docs/insights-dashboard/
+url: https://www.testmuai.com/support/docs/insights-dashboard/
 site_name: LambdaTest
 slug: insights-dashboard/
-canonical: https://www.testmu.ai/support/docs/insights-dashboard/
+canonical: https://www.testmuai.com/support/docs/insights-dashboard/
 ---
 
 

@@ -9,10 +9,10 @@ keywords:
   - open file limit testmu ai
   - testmu ai proxy settings
   - testmu ai proxy profile
-url: https://www.testmu.ai/support/docs/local-testing-for-macos/
+url: https://www.testmuai.com/support/docs/local-testing-for-macos/
 site_name: LambdaTest
 slug: local-testing-for-macos/
-canonical: https://www.testmu.ai/support/docs/local-testing-for-macos/
+canonical: https://www.testmuai.com/support/docs/local-testing-for-macos/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

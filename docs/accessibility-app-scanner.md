@@ -9,10 +9,10 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/accessibility-app-scanner/
+url: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 site_name: LambdaTest
 slug: accessibility-app-scanner/
-canonical: https://www.testmu.ai/support/docs/accessibility-app-scanner/
+canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

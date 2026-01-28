@@ -19,10 +19,10 @@ keywords:
   - hyperexecute Karate testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/hyperexecute-karate-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-karate-testing/
 site_name: LambdaTest
 slug: hyperexecute-karate-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-karate-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-karate-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

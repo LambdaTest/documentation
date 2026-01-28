@@ -11,10 +11,10 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.testmu.ai/support/docs/github-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/github-with-hyperexecute/
 site_name: LambdaTest
 slug: github-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/github-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/github-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

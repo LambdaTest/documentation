@@ -14,10 +14,10 @@ keywords:
   - screenshot testing
   - bulk screenshot testing
 
-url: https://www.testmu.ai/support/docs/automated-screenshot-api-for-cross-browser-testing/
+url: https://www.testmuai.com/support/docs/automated-screenshot-api-for-cross-browser-testing/
 site_name: LambdaTest
 slug: automated-screenshot-api-for-cross-browser-testing/
-canonical: https://www.testmu.ai/support/docs/automated-screenshot-api-for-cross-browser-testing/
+canonical: https://www.testmuai.com/support/docs/automated-screenshot-api-for-cross-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

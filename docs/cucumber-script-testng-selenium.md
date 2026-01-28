@@ -11,10 +11,10 @@ keywords:
   - cucumber testng
   - cucumber testng runner
   - cucmber testing tool
-url: https://www.testmu.ai/support/docs/running-cucumber-scripts-with-testng-and-selenium/
+url: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
 site_name: LambdaTest
 slug: running-cucumber-scripts-with-testng-and-selenium/
-canonical: https://www.testmu.ai/support/docs/running-cucumber-scripts-with-testng-and-selenium/
+canonical: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

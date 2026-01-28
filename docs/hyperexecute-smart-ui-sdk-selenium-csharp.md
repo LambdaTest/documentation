@@ -12,10 +12,10 @@ keywords:
   - smart ui sdk
   - csharp
   - hyperexecute integrations with csharp sdk
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
+url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-sdk-selenium-csharp/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
 
 ---
 import Tabs from '@theme/Tabs';

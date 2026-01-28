@@ -12,10 +12,10 @@ keywords:
     - Cypress version 10
     - Automation
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/cypress-v10-accessibility-test/
+url: https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/
 site_name: LambdaTest
 slug: cypress-v10-accessibility-test/
-canonical: https://www.testmu.ai/support/docs/cypress-v10-accessibility-test/
+canonical: https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

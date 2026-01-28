@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/flutter-supported-capabilities/
+url: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 site_name: LambdaTest
 slug: flutter-supported-capabilities/
-canonical: https://www.testmu.ai/support/docs/flutter-supported-capabilities/
+canonical: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

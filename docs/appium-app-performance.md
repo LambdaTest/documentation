@@ -8,10 +8,10 @@ keywords:
 - regular expression testmu ai
 - regular expression app automation
 
-url: https://www.testmu.ai/support/docs/appium-app-performance-analytics/
+url: https://www.testmuai.com/support/docs/appium-app-performance-analytics/
 site_name: LambdaTest
 slug: appium-app-performance-analytics/
-canonical: https://www.testmu.ai/support/docs/appium-app-performance-analytics/
+canonical: https://www.testmuai.com/support/docs/appium-app-performance-analytics/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

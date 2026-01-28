@@ -9,10 +9,10 @@ keywords:
   - testmu ai cypress cli commands
   - testmu ai cypress cli flags
   - testmu ai cypress cli arguments
-url: https://www.testmu.ai/support/docs/cypress-cli-commands/
+url: https://www.testmuai.com/support/docs/cypress-cli-commands/
 site_name: LambdaTest
 slug: cypress-cli-commands/
-canonical: https://www.testmu.ai/support/docs/cypress-cli-commands/
+canonical: https://www.testmuai.com/support/docs/cypress-cli-commands/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

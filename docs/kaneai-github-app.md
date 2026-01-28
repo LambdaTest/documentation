@@ -10,10 +10,10 @@ keywords:
   - AI test generation
   - PR automation
   - test management
-url: https://www.testmu.ai/support/docs/github-app-integration/
+url: https://www.testmuai.com/support/docs/github-app-integration/
 site_name: LambdaTest
 slug: github-app-integration/
-canonical: https://www.testmu.ai/support/docs/github-app-integration/
+canonical: https://www.testmuai.com/support/docs/github-app-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

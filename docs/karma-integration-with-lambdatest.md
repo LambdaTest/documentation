@@ -10,10 +10,10 @@ keywords:
   - testmu ai integrations
   - testacular
   - testmu ai app marketplace
-url: https://www.testmu.ai/support/docs/karma-integration-with-testmu/
+url: https://www.testmuai.com/support/docs/karma-integration-with-testmu/
 site_name: LambdaTest
 slug: karma-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/karma-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/karma-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
