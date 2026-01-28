@@ -123,7 +123,7 @@ You can even filter the tests by selecting multiple custom tags at once, from th
 
 * * *
 
-> Kudos! You have successfully created a custom tag and grouped your tests based on the custom tag. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
+> Kudos! You have successfully created a custom tag and grouped your tests based on the custom tag. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

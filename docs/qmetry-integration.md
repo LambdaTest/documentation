@@ -122,7 +122,7 @@ Once the test is complete, you can view the test result on the automation dashbo
 For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
 
 
-> Congrats! You have successfully integrated the QMetry app with your <BrandName /> account and ran your test cases over the <BrandName />'s cloud based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+> Congrats! You have successfully integrated the QMetry app with your <BrandName /> account and ran your test cases over the <BrandName />'s cloud based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

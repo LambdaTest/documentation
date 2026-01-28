@@ -90,4 +90,4 @@ The failure categorization AI helps you in the following ways:
 
 ## Support 
 
-For any queries or issues related to the Failure Categorization AI, please reach out to our [24/7 customer support](mailto:support@testmu.ai). We are here to help you!
+For any queries or issues related to the Failure Categorization AI, please reach out to our [24/7 customer support](mailto:support@testmuai.com). We are here to help you!

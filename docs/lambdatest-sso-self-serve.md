@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Create SSO Connection With <BrandName />:
 
 * You will need an Enterprise plan with <BrandName />.
-* The Admin of your <BrandName /> organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@testmu.ai">support@testmu.ai</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
+* The Admin of your <BrandName /> organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@testmuai.com">support@testmuai.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
 * You will also need the admin level access of OneLogin to configure the SSO.
 
 ## Configuring <BrandName /> SSO Integration Using SAML
@@ -91,7 +91,7 @@ Once configured, click on continue
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 
-That's all you need to know for Configuring <BrandName /> SSO Integration Using SAML. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
+That's all you need to know for Configuring <BrandName /> SSO Integration Using SAML. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

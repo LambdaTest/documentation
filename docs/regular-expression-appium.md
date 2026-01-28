@@ -86,7 +86,7 @@ Imagine you want to run a test on an iPhone. You don't need a specific model, ju
 | `^` | The `^` is used to negate a character from the search.  <br/><br/>**In the example given**:<br/>This matches os versions starting with 1 and not having immediate character = 5.<br/><br/> | `"1[^5].*"` |
 | <code> \| </code> | The <code> \|</code> is used to match any of the specified platform versions in the list. <br/><br/>**In the example given**: <br /> 1. We have added 2 regex characters <code> \| </code> and `.*` to show that using both in combination, we'll fetch any platform version that contains the string 13 or 14. <br /> 2. You'll be allocated any available platform version 13 or 14.| <code>"(1(3\|4).*)" </code> |
 
-> To run tests on **minor OS versions** while using `platformVersion` capability, please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](mailto:support@testmu.ai).
+> To run tests on **minor OS versions** while using `platformVersion` capability, please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 :::tip
 You can pass both `deviceName` and `platformVersion` regex patterns together or use any one of them as per your requirements. This flexibility allows you to match specific devices, versions, or combinations based on your needs.

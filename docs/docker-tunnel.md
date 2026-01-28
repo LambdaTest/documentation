@@ -167,7 +167,7 @@ The test scripts need to use this special hostname to access the web services ru
 
 ## Conclusion
 * * *
-Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmu.ai](mailto:support@testmu.ai).
+Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmuai.com](mailto:support@testmuai.com).
 
 Happy testing! 🙂
 

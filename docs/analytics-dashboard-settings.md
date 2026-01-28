@@ -135,4 +135,4 @@ This action is irreversible. Once deleted, the dashboard and all its data cannot
 
 ### Additional Support
 
-For more information and advanced configuration options, reach out to our support team at [support@testmu.ai](mailto:support@testmu.ai).
+For more information and advanced configuration options, reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com).

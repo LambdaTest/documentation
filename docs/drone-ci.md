@@ -61,7 +61,7 @@ Drone CI is one of the most popular modern open-source CI/CD tools. It not only 
 
 In order to perform your tests with <BrandName />, you would need the below things to be already set up:
 
-1. You need to get a VPN setup from <BrandName /> as Drone is not publicly accessible. Please contact our customer support or mail us at support@testmu.ai.
+1. You need to get a VPN setup from <BrandName /> as Drone is not publicly accessible. Please contact our customer support or mail us at support@testmuai.com.
 
 2. Some Global Dependencies, such as:
 

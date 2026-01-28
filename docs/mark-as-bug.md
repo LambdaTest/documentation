@@ -150,7 +150,7 @@ As you click on the "**Mark as Bug**" button, an integration specific form would
 All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your <BrandName /> account. In the above case, the changes would reflect on the respective Asana instance.
 
 >**Got any questions?**
-Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can drop a mail on support@testmu.ai. Happy testing!
+Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can drop a mail on support@testmuai.com. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

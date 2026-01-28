@@ -70,7 +70,7 @@ With now Scroll sync enabled you can compare your web-pages side by side.
 <br />
 
 >
-That is all about the Scroll Sync in LT Browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmu.ai](mailto:support@testmu.ai) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Customer Chat Support**</span>. <br />Happy testing!
+That is all about the Scroll Sync in LT Browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Customer Chat Support**</span>. <br />Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

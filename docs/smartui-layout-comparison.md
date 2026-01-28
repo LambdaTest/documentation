@@ -76,7 +76,7 @@ Before using the Layout Comparison feature, ensure you meet the following requir
 
 - SmartUI CLI version `4.1.8` or above is installed
 - The feature is only supported when using the `smartui exec` (smartUISnapshot) command
-- The feature must be enabled by contacting support@testmu.ai
+- The feature must be enabled by contacting support@testmuai.com
 
 ## How to Use Layout Comparison with SmartUI
 

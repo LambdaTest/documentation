@@ -55,7 +55,7 @@ Before configuring the integration, ensure you meet the following requirements:
 
 - **<BrandName /> Enterprise Plan :** Your organization must have an active Enterprise plan.
 - **SSO Enablement Request :** The admin of your <BrandName /> organization must request SSO enablement.
-> Raise a request via email at support@testmu.ai or through <BrandName />’s 24/7 in-app chat support.
+> Raise a request via email at support@testmuai.com or through <BrandName />’s 24/7 in-app chat support.
 - **Ping Identity Admin Access :** You need administrative access to your Ping Identity account.
 
 ## Configuring <BrandName /> & Ping Identity Integration

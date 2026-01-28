@@ -184,7 +184,7 @@ Status Issues
 - Verify build status
    - Check permissions
    - Review approval history
-If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmu.ai.
+If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmuai.com.
 
 </TabItem>
 </Tabs>

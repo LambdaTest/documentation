@@ -276,5 +276,5 @@ For detailed widget-specific use cases and examples, see:
 - [Bar and Line Chart Use Cases](/docs/analytics-bar-line-widgets#use-cases-for-bar-and-line-chart-widgets)
 - [Table Widget Use Cases](/docs/analytics-table-widgets#use-cases-for-table-widgets)
 
-> If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmu.ai](mailto:support@testmu.ai) or visit our [Support Center](https://www.lambdatest.com/support/).
+> If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).
 

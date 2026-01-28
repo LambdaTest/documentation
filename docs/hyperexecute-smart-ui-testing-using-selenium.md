@@ -367,4 +367,4 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 </Tabs>
 
-> **NOTE :** Please contact [Customer Support](mailto:support@testmu.ai) team to enable the **ignoreDOM** feature.
+> **NOTE :** Please contact [Customer Support](mailto:support@testmuai.com) team to enable the **ignoreDOM** feature.

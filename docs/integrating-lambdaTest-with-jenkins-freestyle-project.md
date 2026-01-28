@@ -61,5 +61,5 @@ Define `LT_BUILD_NAME` in your script using  `${BUILD_TAG}`, and reference the s
 While specifying build environments, check the box to **Use Local Tunnel**. You can then specify a Tunnel name if you like, your <BrandName /> Credentials will be automatically fetched.
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/6.webp').default} alt="Image" width="1024" height="483" className="doc_img"/> 
 
-Kudos! That is all you need to know for integrating your Jenkins freestyle project with <BrandName />. In case of any questions, feel free to give us a shout. You can also drop an email to [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
+Kudos! That is all you need to know for integrating your Jenkins freestyle project with <BrandName />. In case of any questions, feel free to give us a shout. You can also drop an email to [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)
 
