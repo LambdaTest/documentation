@@ -8,10 +8,10 @@ keywords:
   - TestMu AI integration with Datadog
   - TestMu AI and Datadog Integration
   - Datadog Integration
-url: https://www.testmu.ai/support/docs/datadog-integration/
+url: https://www.testmuai.com/support/docs/datadog-integration/
 site_name: LambdaTest
 slug: datadog-integration/
-canonical: https://www.testmu.ai/support/docs/datadog-integration/
+canonical: https://www.testmuai.com/support/docs/datadog-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

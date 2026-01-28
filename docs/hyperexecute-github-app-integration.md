@@ -13,10 +13,10 @@ keywords:
   - Products
   - Automated testing alerts
   - DevOps communication
-url: https://www.testmu.ai/support/docs/hyperexecute-github-app-integration/
+url: https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/
 site_name: LambdaTest
 slug: hyperexecute-github-app-integration/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-github-app-integration/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

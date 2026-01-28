@@ -8,10 +8,10 @@ keywords:
   - usage insights
   - usage trends
 
-url: https://www.testmu.ai/support/docs/insights-usage-report/
+url: https://www.testmuai.com/support/docs/insights-usage-report/
 site_name: LambdaTest
 slug: insights-usage-report/
-canonical: https://www.testmu.ai/support/docs/insights-usage-report/
+canonical: https://www.testmuai.com/support/docs/insights-usage-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

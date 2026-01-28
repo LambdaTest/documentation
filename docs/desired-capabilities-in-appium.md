@@ -15,10 +15,10 @@ keywords:
   - configure appium tests with desired capabilities
   - appium webdriver capabilities for running tests on testmu ai
 
-url: https://www.testmu.ai/support/docs/desired-capabilities-in-appium/
+url: https://www.testmuai.com/support/docs/desired-capabilities-in-appium/
 site_name: LambdaTest
 slug: desired-capabilities-in-appium/
-canonical: https://www.testmu.ai/support/docs/desired-capabilities-in-appium/
+canonical: https://www.testmuai.com/support/docs/desired-capabilities-in-appium/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -7,10 +7,10 @@ description: Learn how to test apps via Test Flight on TestMu AI, optimizing per
 keywords:
 - install apps from test flight
 - test flight
-url: https://www.testmu.ai/support/docs/install-apps-from-test-flight/
+url: https://www.testmuai.com/support/docs/install-apps-from-test-flight/
 site_name: LambdaTest
 slug: install-apps-from-test-flight/
-canonical: https://www.testmu.ai/support/docs/install-apps-from-test-flight/
+canonical: https://www.testmuai.com/support/docs/install-apps-from-test-flight/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -15,10 +15,10 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/espresso-visual-regression/
+url: https://www.testmuai.com/support/docs/espresso-visual-regression/
 site_name: LambdaTest
 slug: espresso-visual-regression/
-canonical: https://www.testmu.ai/support/docs/espresso-visual-regression/
+canonical: https://www.testmuai.com/support/docs/espresso-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';

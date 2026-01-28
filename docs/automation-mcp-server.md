@@ -12,10 +12,10 @@ keywords:
   - testmu ai
   - MCP
   - MCP server
-url: https://www.testmu.ai/support/docs/automation-mcp-server/
+url: https://www.testmuai.com/support/docs/automation-mcp-server/
 site_name: LambdaTest
 slug: automation-mcp-server/
-canonical: https://www.testmu.ai/support/docs/automation-mcp-server/
+canonical: https://www.testmuai.com/support/docs/automation-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -8,10 +8,10 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-on-jumphost/
+url: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-on-jumphost/
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-on-jumphost/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-on-jumphost/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-on-jumphost/
 ---
 
 

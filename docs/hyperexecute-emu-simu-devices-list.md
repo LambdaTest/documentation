@@ -11,10 +11,10 @@ keywords:
   - emulator
   - simulator
   - hyperexecute dashboard
-url: https://www.testmu.ai/support/docs/hyperexecute-emu-simu-devices-list/
+url: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
 site_name: LambdaTest
 slug: hyperexecute-emu-simu-devices-list/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-emu-simu-devices-list/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
 ---
 
 import Tabs from '@theme/Tabs';

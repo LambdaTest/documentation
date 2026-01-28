@@ -9,10 +9,10 @@ keywords:
   - real device browser testing
   - mobile app testing
   - app automation
-url: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session/
+url: https://www.testmuai.com/support/docs/how-to-use-testing-tools-in-session/
 site_name: LambdaTest
 slug: how-to-use-testing-tools-in-session/
-canonical: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session/
+canonical: https://www.testmuai.com/support/docs/how-to-use-testing-tools-in-session/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

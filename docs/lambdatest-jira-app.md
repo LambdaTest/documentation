@@ -7,10 +7,10 @@ description: Efficiently manage your tests with TestMu AI Jira App, seamlessly i
 keywords:
   - Jira app
   - TestMu AI Jira App
-url: https://www.testmu.ai/support/docs/testmu-jira-app/
+url: https://www.testmuai.com/support/docs/testmu-jira-app/
 site_name: LambdaTest
 slug: testmu-jira-app/
-canonical: https://www.testmu.ai/support/docs/testmu-jira-app/
+canonical: https://www.testmuai.com/support/docs/testmu-jira-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

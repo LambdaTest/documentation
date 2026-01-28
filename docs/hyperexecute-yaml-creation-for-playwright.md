@@ -10,10 +10,10 @@ keywords:
   - TestMu AI Projects
   - YAML Creation
   - Playwright
-url: https://www.testmu.ai/support/docs/hyperexecute-yaml-creation-for-playwright/
+url: https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/
 site_name: LambdaTest
 slug: hyperexecute-yaml-creation-for-playwright/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-yaml-creation-for-playwright/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

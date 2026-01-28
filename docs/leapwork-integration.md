@@ -18,10 +18,10 @@ keywords:
 - Leapwork Automation Testing Tool
 - Leapwork Automation Platform
 
-url: https://www.testmu.ai/support/docs/leapwork-integration-with-testmu/
+url: https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/
 site_name: LambdaTest
 slug: leapwork-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/leapwork-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

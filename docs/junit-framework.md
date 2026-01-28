@@ -14,10 +14,10 @@ keywords:
   - junit test cases
   - selenium junit
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

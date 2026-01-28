@@ -14,10 +14,10 @@ keywords:
   - Running Cypress Tests
   - Cypress Project
 
-url: https://www.testmu.ai/support/docs/download-artefacts-cypress/
+url: https://www.testmuai.com/support/docs/download-artefacts-cypress/
 site_name: LambdaTest
 slug: download-artefacts-cypress/
-canonical: https://www.testmu.ai/support/docs/download-artefacts-cypress/
+canonical: https://www.testmuai.com/support/docs/download-artefacts-cypress/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -12,10 +12,10 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - azure pipelines
-url: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu/
+url: https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/
 site_name: LambdaTest
 slug: integrate-azure-pipelines-with-testmu/
-canonical: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu/
+canonical: https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

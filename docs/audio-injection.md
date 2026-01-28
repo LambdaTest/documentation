@@ -15,10 +15,10 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/audio-injection/
+url: https://www.testmuai.com/support/docs/audio-injection/
 site_name: LambdaTest
 slug: audio-injection/
-canonical: https://www.testmu.ai/support/docs/audio-injection/
+canonical: https://www.testmuai.com/support/docs/audio-injection/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

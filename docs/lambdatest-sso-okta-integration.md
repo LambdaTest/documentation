@@ -10,10 +10,10 @@ keywords:
   - okta
   - testmu ai okta integration
   - testmu ai okta sso
-url: https://www.testmu.ai/support/docs/testmu-sso-okta-integration/
+url: https://www.testmuai.com/support/docs/testmu-sso-okta-integration/
 site_name: LambdaTest
 slug: testmu-sso-okta-integration/
-canonical: https://www.testmu.ai/support/docs/testmu-sso-okta-integration/
+canonical: https://www.testmuai.com/support/docs/testmu-sso-okta-integration/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

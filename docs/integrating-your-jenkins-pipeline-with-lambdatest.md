@@ -12,10 +12,10 @@ keywords:
     - continuous delivery
     - continuous integration tools
     - jenkins pipeline 
-url: https://www.testmu.ai/support/docs/integrating-your-jenkins-pipeline-with-testmu/
+url: https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/
 site_name: LambdaTest
 slug: integrating-your-jenkins-pipeline-with-testmu/
-canonical: https://www.testmu.ai/support/docs/integrating-your-jenkins-pipeline-with-testmu/
+canonical: https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

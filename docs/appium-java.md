@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-java/
+url: https://www.testmuai.com/support/docs/appium-java/
 site_name: LambdaTest
 slug: appium-java/
-canonical: https://www.testmu.ai/support/docs/appium-java/
+canonical: https://www.testmuai.com/support/docs/appium-java/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -10,10 +10,10 @@ keywords:
   - test analytics
   - test performance
   - test failure classification
-url: https://www.testmu.ai/support/docs/analytics-test-insights/
+url: https://www.testmuai.com/support/docs/analytics-test-insights/
 site_name: LambdaTest
 slug: analytics-test-insights/
-canonical: https://www.testmu.ai/support/docs/analytics-test-insights/
+canonical: https://www.testmuai.com/support/docs/analytics-test-insights/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

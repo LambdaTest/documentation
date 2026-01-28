@@ -9,10 +9,10 @@ keywords:
   - python and Selenium automation
   - python documentation TestMu AI
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid/
+url: https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/
 site_name: LambdaTest
 slug: run-python-tests-on-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -8,10 +8,10 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests/
+url: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
 site_name: LambdaTest
 slug: hyperexecute-rerun-failed-tests/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

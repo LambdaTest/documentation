@@ -10,10 +10,10 @@ keywords:
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support
-url: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy/
+url: https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/
 site_name: LambdaTest
 slug: kane-ai-geolocation-tunnel-proxy/
-canonical: https://www.testmu.ai/support/docs/kane-ai-geolocation-tunnel-proxy/
+canonical: https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/
 ---
 
 import Tabs from '@theme/Tabs';

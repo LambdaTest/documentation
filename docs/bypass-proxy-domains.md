@@ -8,10 +8,10 @@ keywords:
 - custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.testmu.ai/support/docs/bypass-proxy-domains/
+url: https://www.testmuai.com/support/docs/bypass-proxy-domains/
 site_name: LambdaTest
 slug: bypass-proxy-domains/
-canonical: https://www.testmu.ai/support/docs/bypass-proxy-domains/
+canonical: https://www.testmuai.com/support/docs/bypass-proxy-domains/
 ---
 
 

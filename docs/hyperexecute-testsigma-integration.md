@@ -11,10 +11,10 @@ keywords:
   - testsigma
   - Integrations
   - Products
-url: https://www.testmu.ai/support/docs/hyperexecute-testsigma-integration/
+url: https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/
 site_name: LambdaTest
 slug: hyperexecute-testsigma-integration/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-testsigma-integration/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

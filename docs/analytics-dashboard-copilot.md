@@ -5,10 +5,10 @@ sidebar_label: CoPilot - AI
 description: Analytics - Dashboard CoPilot to analyze your data and get insights faster then ever
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-dashboard-copilot/
+url: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
 site_name: LambdaTest
 slug: analytics-dashboard-copilot/
-canonical: https://www.testmu.ai/support/docs/analytics-dashboard-copilot/
+canonical: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
 ---
 
 import NewTag from '../src/component/newTag';

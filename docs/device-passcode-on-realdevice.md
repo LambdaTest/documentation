@@ -13,10 +13,10 @@ keywords:
   - enterprise apps
   - testmu ai ios
   - real devices
-url: https://www.testmu.ai/support/docs/device-passcode-on-realdevice/
+url: https://www.testmuai.com/support/docs/device-passcode-on-realdevice/
 site_name: LambdaTest
 slug: device-passcode-on-realdevice/
-canonical: https://www.testmu.ai/support/docs/device-passcode-on-realdevice/
+canonical: https://www.testmuai.com/support/docs/device-passcode-on-realdevice/
 
 ---
 

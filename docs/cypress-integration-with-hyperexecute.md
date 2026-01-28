@@ -10,10 +10,10 @@ keywords:
     - products
     - cypress integration
     - cypress integration with hyperexecute
-url: https://www.testmu.ai/support/docs/cypress-integration-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/
 site_name: LambdaTest
 slug: cypress-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/cypress-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/
 ---
 
 

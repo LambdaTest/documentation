@@ -16,10 +16,10 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/biometric-authentication/
+url: https://www.testmuai.com/support/docs/biometric-authentication/
 site_name: LambdaTest
 slug: biometric-authentication/
-canonical: https://www.testmu.ai/support/docs/biometric-authentication/
+canonical: https://www.testmuai.com/support/docs/biometric-authentication/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -13,10 +13,10 @@ keywords:
     - Simulator
     - real time
     - application
-url: https://www.testmu.ai/support/docs/chrome-os-app-testing/
+url: https://www.testmuai.com/support/docs/chrome-os-app-testing/
 site_name: LambdaTest
 slug: chrome-os-app-testing/
-canonical: https://www.testmu.ai/support/docs/chrome-os-app-testing/
+canonical: https://www.testmuai.com/support/docs/chrome-os-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

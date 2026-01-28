@@ -9,11 +9,17 @@ keywords:
   - build compare
   - Perfecto test insights alternative 
   - perfecto test insights
-  - test observability 
-url: https://www.testmu.ai/support/docs/analytics-build-insights/
+  - test observability
+  - group by
+  - test grouping
+  - browser grouping
+  - os grouping
+  - environment filtering
+  - unique instances 
+url: https://www.testmuai.com/support/docs/analytics-build-insights/
 site_name: LambdaTest
 slug: analytics-build-insights/
-canonical: https://www.testmu.ai/support/docs/analytics-build-insights/
+canonical: https://www.testmuai.com/support/docs/analytics-build-insights/
 ---
 
 
