@@ -121,4 +121,4 @@ Once you Run or Add query, your query will be recorded as a test step within Kan
 <iframe src="https://app.trupeer.ai/embed?slug=sMHMyK6dl" width="640" height="360" frameborder="0" allowfullscreen="true"></iframe>
 
 
-Have any feedback or request? Reach out to us via [support@testmu.ai](mailto:support@testmu.ai) and we would be happy to hear from you.
+Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.

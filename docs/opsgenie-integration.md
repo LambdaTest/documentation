@@ -176,7 +176,7 @@ Once the integration is set up, alerts from <BrandName /> will automatically app
 <img loading="lazy" src={require('../assets/images/opsgenie-integration/integration-disconnected.png').default} alt="OpsGenie Integration Disconnected" width="1353" height="622" className="doc_img"/>
 
 >
-For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.
+For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmuai.com](mailto:support@testmuai.com)**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

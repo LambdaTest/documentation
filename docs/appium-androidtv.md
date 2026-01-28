@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Android TV testing provides broader device coverage, enhances user experience by validating remote-based navigation and voice commands, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Android TV models. 
 In this guide, you will learn how to set up and run your **Android TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br /> 
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br /> 
 
 ## Objective
 ---

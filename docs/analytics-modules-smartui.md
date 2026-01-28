@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the <BrandName /> platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 
 :::note
-The SmartUI Analytics module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmu.ai](mailto:support@testmu.ai).
+The SmartUI Analytics module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 ## SmartUI Snapshot

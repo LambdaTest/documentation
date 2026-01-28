@@ -190,7 +190,7 @@ $user = getenv('LT_USERNAME')
 $accesskey = getenv('LT_ACCESS_KEY')
 ```
 
-> If you come across any issues during the setup, you can let us know. Our Support team is available <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7**</span>. You can also mail us at **support@testmu.ai**.
+> If you come across any issues during the setup, you can let us know. Our Support team is available <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7**</span>. You can also mail us at **support@testmuai.com**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

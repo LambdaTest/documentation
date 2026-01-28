@@ -78,7 +78,7 @@ The Pre-Loaded Chrome Extensions feature in <BrandName />'s real-time testing al
 - **Debugging with Developer Tools :** Use developer-focused extensions like Lighthouse, React DevTools, or Web Developer to inspect your web application.
 - **Accessibility Testing :** Install extensions such as Axe or WAVE to perform accessibility audits during manual testing.
 
-> If you have any questions or need further information about Pre-Loaded Chrome Extension, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@testmu.ai](mailto:support@testmu.ai). <br />
+> If you have any questions or need further information about Pre-Loaded Chrome Extension, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@testmuai.com](mailto:support@testmuai.com). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -251,7 +251,7 @@ Upon executing the above code, the test will run on your <BrandName /> successfu
 
 * * *
 
-That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

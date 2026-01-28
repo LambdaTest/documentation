@@ -67,7 +67,7 @@ This document details all you need to know about the tool.
 :::info
 **OS Version:** Android Disable Screenshot Unblock is supported for all os versions.
 
-This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).
+This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
 :::
 
@@ -116,7 +116,7 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
 **Disable Screenshot Block** will only work for applications that were uploaded after 28th June 2023.
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

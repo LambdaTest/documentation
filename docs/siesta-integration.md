@@ -100,7 +100,7 @@ C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/in
 ```
 ---
 
-> If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@testmu.ai](mailto:support@testmu.ai) Happy Testing!!
+> If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@testmuai.com](mailto:support@testmuai.com) Happy Testing!!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

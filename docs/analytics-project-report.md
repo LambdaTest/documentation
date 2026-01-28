@@ -164,7 +164,7 @@ A: Use the export/download option in the dashboard (feature availability may dep
 
 **Q: Who can I contact for support?**
 
-A: Reach out to [support@testmu.ai](mailto:support@testmu.ai) for assistance.
+A: Reach out to [support@testmuai.com](mailto:support@testmuai.com) for assistance.
 
 </TabItem>
 <TabItem value="executive" label="For Executives">

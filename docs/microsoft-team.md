@@ -199,7 +199,7 @@ After few seconds, you’ll receive the confirmation message stating- *'You have
 
 <img loading="lazy" src={require('../assets/images/microsoft-team/Screenshot-105.webp').default} alt="microsoft team app" width="1360" height="721"  className="doc_img"/>
 
-> That’s all about <BrandName />+Microsoft Teams App integration. If you have any questions or require any further information, you can reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat portal**</span> or drop us a mail at support@testmu.ai.
+> That’s all about <BrandName />+Microsoft Teams App integration. If you have any questions or require any further information, you can reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat portal**</span> or drop us a mail at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

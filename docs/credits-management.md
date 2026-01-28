@@ -174,4 +174,4 @@ Yes, it provides AI FinOps capabilities for cost control and spend management, e
 
 Additional AI features will join the credit system shortly. Watch the **<BrandName /> Changelog** and Support Docs for updates.
 
-If you have questions about credits, billing, or limits, reach out to **[support@testmu.ai](mailto:support@testmu.ai)**.
+If you have questions about credits, billing, or limits, reach out to **[support@testmuai.com](mailto:support@testmuai.com)**.

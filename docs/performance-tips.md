@@ -51,7 +51,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 ```
 
 
-If you are facing any latency or slowness even after setting the above capabilities as "false", you can reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**in-app chat support**</span> or by emailing to [automationsupport@testmu.ai](mailto:automationsupport@testmu.ai) with a screenshot of trace-route command that would really help us checking the reason behind latency.
+If you are facing any latency or slowness even after setting the above capabilities as "false", you can reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**in-app chat support**</span> or by emailing to [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com) with a screenshot of trace-route command that would really help us checking the reason behind latency.
 
 For Windows:
 ```

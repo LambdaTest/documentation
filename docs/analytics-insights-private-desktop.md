@@ -51,7 +51,7 @@ import NewTag from '../src/component/newTag';
 <BrandName /> Private desktop Insights provide comprehensive insights into your private desktop testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your desktop device usage insights, and more.
 
 :::note
-The Private desktop Insights is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmu.ai](mailto:support@testmu.ai).
+The Private desktop Insights is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 ## Device Usage Insights 
@@ -94,4 +94,4 @@ We provide a range of filters to help you customize your insights dashboard. You
 
 ## Support 
 
-If you have any questions or need further assistance, please feel free to reach out to our [24/7 customer support](mailto:support@testmu.ai). Our team of experts is always here to help you with your testing efforts.
+If you have any questions or need further assistance, please feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com). Our team of experts is always here to help you with your testing efforts.

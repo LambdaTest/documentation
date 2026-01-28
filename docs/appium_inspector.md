@@ -186,7 +186,7 @@ We have now successfully attached to the session and can see & perform operation
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector6.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

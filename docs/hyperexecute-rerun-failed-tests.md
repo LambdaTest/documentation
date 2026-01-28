@@ -93,4 +93,4 @@ Then click **Rerun** to start the new job.
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Image"  className="doc_img"/>
 
 
-> If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmu.ai](mailto:support@testmu.ai). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
+> If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmuai.com](mailto:support@testmuai.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.

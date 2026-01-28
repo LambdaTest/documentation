@@ -528,7 +528,7 @@ If you encounter issues not covered here:
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>

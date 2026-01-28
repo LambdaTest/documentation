@@ -59,7 +59,7 @@ To know more, refer to <a href="https://help.okta.com/en/prod/Content/Topics/Ref
 To enable <BrandName /> SSO through Okta integration:
 
 * You will need an Enterprise plan with <BrandName />.
-* The Admin of your <BrandName /> organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@testmu.ai">support@testmu.ai</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
+* The Admin of your <BrandName /> organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@testmuai.com">support@testmuai.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
 * You will also need the admin level access of Okta  to configure the SSO.
 
 ## Configuring <BrandName /> & Okta Integration Using SAML
@@ -109,7 +109,7 @@ To enable <BrandName /> SSO through Okta integration:
 <h4>Create Connection with Metadata URL </h4>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-> That's all you need to know for Configuring <BrandName /> SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
+> That's all you need to know for Configuring <BrandName /> SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

@@ -85,7 +85,7 @@ After the screenshots are taken, you will again receive a prompt message confirm
 
 
 >
-That's all! You have successfully captured your Full page Screenshots. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can also drop a mail to [support@testmu.ai](mailto:support@testmu.ai).<br />Happy testing!
+That's all! You have successfully captured your Full page Screenshots. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can also drop a mail to [support@testmuai.com](mailto:support@testmuai.com).<br />Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

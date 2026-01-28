@@ -97,4 +97,4 @@ You can choose multiple Build tags as well to filter your tests effectively, as 
 
 * * *
 
-> That's it! You have successfully created a Build tag, and grouped and filtered your tests based on these Build tags. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! :)
+> That's it! You have successfully created a Build tag, and grouped and filtered your tests based on these Build tags. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)
