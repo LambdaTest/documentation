@@ -12,10 +12,10 @@ keywords:
   - ios app settings
   - app automation
   - real devices
-url: https://www.testmu.ai/support/docs/appium-ios-app-settings/
+url: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 site_name: LambdaTest
 slug: appium-ios-app-settings/
-canonical: https://www.testmu.ai/support/docs/appium-ios-app-settings/
+canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 ---
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

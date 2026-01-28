@@ -12,10 +12,10 @@ keywords:
   - saml
   - testmu ai google integration
   - testmu ai google sso
-url: https://www.testmu.ai/support/docs/testmu-sso-google/
+url: https://www.testmuai.com/support/docs/testmu-sso-google/
 site_name: LambdaTest
 slug: testmu-sso-google/
-canonical: https://www.testmu.ai/support/docs/testmu-sso-google/
+canonical: https://www.testmuai.com/support/docs/testmu-sso-google/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

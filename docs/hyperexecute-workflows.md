@@ -9,10 +9,10 @@ keywords:
   - schedule tests
   - connected workflows
   - test chains
-url: https://www.testmu.ai/support/docs/hyperexecute-workflows/
+url: https://www.testmuai.com/support/docs/hyperexecute-workflows/
 site_name: LambdaTest
 slug: hyperexecute-workflows/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-workflows/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-workflows/
 ---
 
 

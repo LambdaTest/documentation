@@ -9,10 +9,10 @@ keywords:
   - group folder redirect
   - appium ios file system testing
   - private app container automation
-url: https://www.testmu.ai/support/docs/group-folder-redirects/
+url: https://www.testmuai.com/support/docs/group-folder-redirects/
 site_name: LambdaTest
 slug: group-folder-redirects/
-canonical: https://www.testmu.ai/support/docs/group-folder-redirects/
+canonical: https://www.testmuai.com/support/docs/group-folder-redirects/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -10,10 +10,10 @@ keywords:
   - test management tools
   - clickup
   - clickup integrations
-url: https://www.testmu.ai/support/docs/clickup-integration/
+url: https://www.testmuai.com/support/docs/clickup-integration/
 site_name: LambdaTest
 slug: clickup-integration/
-canonical: https://www.testmu.ai/support/docs/clickup-integration/
+canonical: https://www.testmuai.com/support/docs/clickup-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

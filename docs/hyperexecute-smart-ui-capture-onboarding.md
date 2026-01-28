@@ -11,10 +11,10 @@ keywords:
   - smartui cli capture
   - hyperexecute smartui integration
   - visual ui testing automation
-url: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-capture-onboarding/
+url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-capture-onboarding/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-smart-ui-capture-onboarding/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/
 
 ---
 

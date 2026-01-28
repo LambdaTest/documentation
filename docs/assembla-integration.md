@@ -17,10 +17,10 @@ keywords:
   - create assembla issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/assembla-integration/
+url: https://www.testmuai.com/support/docs/assembla-integration/
 site_name: LambdaTest
 slug: assembla-integration/
-canonical: https://www.testmu.ai/support/docs/assembla-integration/
+canonical: https://www.testmuai.com/support/docs/assembla-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

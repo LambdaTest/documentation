@@ -12,10 +12,10 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/getting-started-with-appium-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-appium-testing/
 site_name: LambdaTest
 slug: getting-started-with-appium-testing/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-appium-testing/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-appium-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

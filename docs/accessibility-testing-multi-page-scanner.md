@@ -12,10 +12,10 @@ keywords:
     - run quick scan
     - test issues
     - Multi Page Scanner
-url: https://www.testmu.ai/support/docs/accessibility-testing-multi-page-scanner/
+url: https://www.testmuai.com/support/docs/accessibility-testing-multi-page-scanner/
 site_name: LambdaTest
 slug: accessibility-testing-multi-page-scanner/
-canonical: https://www.testmu.ai/support/docs/accessibility-testing-multi-page-scanner/
+canonical: https://www.testmuai.com/support/docs/accessibility-testing-multi-page-scanner/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

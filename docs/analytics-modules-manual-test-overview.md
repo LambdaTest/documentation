@@ -11,10 +11,10 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview/
+url: https://www.testmuai.com/support/docs/analytics-modules-manual-test-overview/
 site_name: LambdaTest
 slug: analytics-modules-manual-test-overview/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-manual-test-overview/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
-url: https://www.testmu.ai/support/docs/hyperexecute-cli-error/
+url: https://www.testmuai.com/support/docs/hyperexecute-cli-error/
 site_name: LambdaTest
 slug: hyperexecute-cli-error/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-cli-error/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-error/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

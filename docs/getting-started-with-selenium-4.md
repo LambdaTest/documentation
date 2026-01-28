@@ -9,10 +9,10 @@ keywords:
 - Selenium 4 Automation
 - Selenium 4 Documentation
 
-url: https://www.testmu.ai/support/docs/getting-started-with-selenium-4/
+url: https://www.testmuai.com/support/docs/getting-started-with-selenium-4/
 site_name: LambdaTest
 slug: getting-started-with-selenium-4/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-selenium-4/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-selenium-4/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

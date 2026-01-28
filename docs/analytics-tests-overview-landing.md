@@ -5,10 +5,10 @@ sidebar_label: Tests Overview
 description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-widgets-tests-overview-landing/
+url: https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing/
 site_name: LambdaTest
 slug: analytics-widgets-tests-overview-landing/
-canonical: https://www.testmu.ai/support/docs/analytics-widgets-tests-overview-landing/
+canonical: https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

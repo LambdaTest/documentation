@@ -9,10 +9,10 @@ keywords:
   - test case
   - test cases
   - generate test cases
-url: https://www.testmu.ai/support/docs/generate-test-cases-with-ai/
+url: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 site_name: LambdaTest
 slug: generate-test-cases-with-ai/
-canonical: https://www.testmu.ai/support/docs/generate-test-cases-with-ai/
+canonical: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

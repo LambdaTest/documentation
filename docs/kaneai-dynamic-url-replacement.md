@@ -9,10 +9,10 @@ keywords:
 - enhancements
 - modules
 - dynamic url
-url: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement/
+url: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
 site_name: LambdaTest
 slug: kaneai-dynamic-url-replacement/
-canonical: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement/
+canonical: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

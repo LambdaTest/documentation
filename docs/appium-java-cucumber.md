@@ -11,10 +11,10 @@ keywords:
   - framework on testmu ai
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-java-cucumber/
+url: https://www.testmuai.com/support/docs/appium-java-cucumber/
 site_name: LambdaTest
 slug: appium-java-cucumber/
-canonical: https://www.testmu.ai/support/docs/appium-java-cucumber/
+canonical: https://www.testmuai.com/support/docs/appium-java-cucumber/
 ---
 
 

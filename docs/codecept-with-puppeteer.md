@@ -14,10 +14,10 @@ keywords:
   - puppeteer testing tutorial
   - puppeteer testing testmu ai
 
-url: https://www.testmu.ai/support/docs/puppeteer-testing-with-codecept/
+url: https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/
 site_name: LambdaTest
 slug: puppeteer-testing-with-codecept/
-canonical: https://www.testmu.ai/support/docs/puppeteer-testing-with-codecept/
+canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

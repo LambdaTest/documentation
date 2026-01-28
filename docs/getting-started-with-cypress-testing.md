@@ -16,10 +16,10 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.testmu.ai/support/docs/getting-started-with-cypress-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/
 site_name: LambdaTest
 slug: getting-started-with-cypress-testing/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-cypress-testing/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

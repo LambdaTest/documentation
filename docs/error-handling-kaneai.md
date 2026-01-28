@@ -9,10 +9,10 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/error-handling-kaneai/
+url: https://www.testmuai.com/support/docs/error-handling-kaneai/
 site_name: LambdaTest
 slug: error-handling-kaneai/
-canonical: https://www.testmu.ai/support/docs/error-handling-kaneai/
+canonical: https://www.testmuai.com/support/docs/error-handling-kaneai/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

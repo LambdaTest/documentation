@@ -9,10 +9,10 @@ keywords:
   - testmu ai local tunnel
   - testmu ai Tunnel
   - local app testing for windows
-url: https://www.testmu.ai/support/docs/local-testing-for-windows/
+url: https://www.testmuai.com/support/docs/local-testing-for-windows/
 site_name: LambdaTest
 slug: local-testing-for-windows/
-canonical: https://www.testmu.ai/support/docs/local-testing-for-windows/
+canonical: https://www.testmuai.com/support/docs/local-testing-for-windows/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

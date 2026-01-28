@@ -16,7 +16,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-table-widgets/
 site_name: LambdaTest
 slug: analytics-table-widgets/
-canonical: https://www.testmu.ai/support/docs/analytics-table-widgets//
+canonical: https://www.testmuai.com/support/docs/analytics-table-widgets//
 ---
 
 import NewTag from '../src/component/newTag';

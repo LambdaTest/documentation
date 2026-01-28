@@ -13,10 +13,10 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/appium-python-pytest/
+url: https://www.testmuai.com/support/docs/appium-python-pytest/
 site_name: LambdaTest
 slug: appium-python-pytest/
-canonical: https://www.testmu.ai/support/docs/appium-python-pytest/
+canonical: https://www.testmuai.com/support/docs/appium-python-pytest/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

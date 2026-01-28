@@ -9,10 +9,10 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.testmu.ai/support/docs/kane-ai-scroll-in-feature/
+url: https://www.testmuai.com/support/docs/kane-ai-scroll-in-feature/
 site_name: LambdaTest
 slug: kane-ai-scroll-in-feature/
-canonical: https://www.testmu.ai/support/docs/kane-ai-scroll-in-feature/
+canonical: https://www.testmuai.com/support/docs/kane-ai-scroll-in-feature/
 ---
 
 import Tabs from '@theme/Tabs';

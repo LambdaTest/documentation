@@ -10,10 +10,10 @@ keywords:
     - Testing
     - DevTools
     - all issues
-url: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-issue-summary/
+url: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-issue-summary/
 site_name: LambdaTest
 slug: accessibility-testing-dashboard-all-issues/
-canonical: https://www.testmu.ai/support/docs/accessibility-testing-dashboard-all-issues/
+canonical: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-all-issues/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

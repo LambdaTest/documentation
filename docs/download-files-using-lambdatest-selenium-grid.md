@@ -13,10 +13,10 @@ keywords:
   - base64
   - base64 encryption
   - base64 decryption
-url: https://www.testmu.ai/support/docs/download-files-using-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
 site_name: LambdaTest
 slug: download-files-using-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/download-files-using-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

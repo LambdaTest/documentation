@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-3-1-2/
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-2/
 site_name: LambdaTest
 slug: hyperexecute-release-notes-3-1-2/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-release-notes-3-1-2/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-2/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

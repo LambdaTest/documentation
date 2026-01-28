@@ -11,10 +11,10 @@ keywords:
   - testng
   - app testing
   - virtual devices
-url: https://www.testmu.ai/support/docs/hyperexecute-appium-virtual-device/
+url: https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/
 site_name: LambdaTest
 slug: hyperexecute-appium-virtual-device/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-appium-virtual-device/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
