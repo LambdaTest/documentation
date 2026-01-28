@@ -12,10 +12,10 @@ keywords:
   - playwright testing testmu ai
   - playwright real devices
 
-url: https://www.testmu.ai/support/docs/playwright-ios-device/
+url: https://www.testmuai.com/support/docs/playwright-ios-device/
 site_name: LambdaTest
 slug: playwright-ios-device/
-canonical: https://www.testmu.ai/support/docs/playwright-ios-device/
+canonical: https://www.testmuai.com/support/docs/playwright-ios-device/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

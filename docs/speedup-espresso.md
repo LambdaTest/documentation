@@ -13,10 +13,10 @@ keywords:
   - testing in espresso
   - espresso testing
   - real devices
-url: https://www.testmu.ai/support/docs/speedup-espresso/
+url: https://www.testmuai.com/support/docs/speedup-espresso/
 site_name: LambdaTest
 slug: speedup-espresso/
-canonical: https://www.testmu.ai/support/docs/speedup-espresso/
+canonical: https://www.testmuai.com/support/docs/speedup-espresso/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

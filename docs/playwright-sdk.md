@@ -11,7 +11,7 @@ keywords:
   - automation
   - testing
 slug: /playwright-sdk/
-canonical: https://www.testmu.ai/support/docs//playwright-sdk/
+canonical: https://www.testmuai.com/support/docs//playwright-sdk/
 ---
 
 import Tabs from '@theme/Tabs';

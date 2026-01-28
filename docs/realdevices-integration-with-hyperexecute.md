@@ -15,10 +15,10 @@ keywords:
     - fast mobile testing
     - mobile automation
 
-url: https://www.testmu.ai/support/docs/realdevices-integration-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/realdevices-integration-with-hyperexecute/
 site_name: LambdaTest
 slug: real-devices-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/real-devices-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/real-devices-integration-with-hyperexecute/
 ---
 
 

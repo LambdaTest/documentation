@@ -6,10 +6,10 @@ sidebar_label: SCIM
 description: The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your TestMu AI workspace  
 keywords:
     - TestMu AI SCIM
-url: https://www.testmu.ai/support/docs/scim/
+url: https://www.testmuai.com/support/docs/scim/
 site_name: LambdaTest
 slug: scim/
-canonical: https://www.testmu.ai/support/docs/scim/
+canonical: https://www.testmuai.com/support/docs/scim/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

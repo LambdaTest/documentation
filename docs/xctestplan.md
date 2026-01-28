@@ -13,10 +13,10 @@ keywords:
   - testing in XCUI
   - XCUI testing
   - real devices
-url: https://www.testmu.ai/support/docs/xctestplan/
+url: https://www.testmuai.com/support/docs/xctestplan/
 site_name: LambdaTest
 slug: xctestplan/
-canonical: https://www.testmu.ai/support/docs/xctestplan/
+canonical: https://www.testmuai.com/support/docs/xctestplan/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -10,10 +10,10 @@ keywords:
   - cross browser testing
   - test library
 
-url: https://www.testmu.ai/support/docs/test-logs/
+url: https://www.testmuai.com/support/docs/test-logs/
 site_name: LambdaTest
 slug: test-logs/
-canonical: https://www.testmu.ai/support/docs/test-logs/
+canonical: https://www.testmuai.com/support/docs/test-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

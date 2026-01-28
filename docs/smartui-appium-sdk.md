@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.testmu.ai/support/docs/smartui-appium-sdk/
+url: https://www.testmuai.com/support/docs/smartui-appium-sdk/
 slug: smartui-appium-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-appium-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-appium-sdk/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -16,10 +16,10 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/smart-ui-testing/
+url: https://www.testmuai.com/support/docs/smart-ui-testing/
 site_name: LambdaTest
 slug: smart-ui-testing/
-canonical: https://www.testmu.ai/support/docs/smart-ui-testing/
+canonical: https://www.testmuai.com/support/docs/smart-ui-testing/
 
 ---
 

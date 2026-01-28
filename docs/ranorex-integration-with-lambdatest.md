@@ -16,10 +16,10 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/ranorex-integration-with-testmu/
+url: https://www.testmuai.com/support/docs/ranorex-integration-with-testmu/
 site_name: LambdaTest
 slug: ranorex-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/ranorex-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/ranorex-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

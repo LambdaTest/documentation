@@ -7,10 +7,10 @@ description: There may be instances when the device you chose for a test on Test
 keywords:
 - regular expression testmu ai
 - regular expression app automation
-url: https://www.testmu.ai/support/docs/regular-expression-xcui/
+url: https://www.testmuai.com/support/docs/regular-expression-xcui/
 site_name: LambdaTest
 slug: regular-expression-xcui/
-canonical: https://www.testmu.ai/support/docs/regular-expression-xcui/
+canonical: https://www.testmuai.com/support/docs/regular-expression-xcui/
 ---
 
 import RealDeviceTag from '../src/component/realDevice';

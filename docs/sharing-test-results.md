@@ -11,10 +11,10 @@ keywords:
   - share the bug
   - session report
 
-url: https://www.testmu.ai/support/docs/sharing-test-results/
+url: https://www.testmuai.com/support/docs/sharing-test-results/
 site_name: LambdaTest
 slug: sharing-test-results/
-canonical: https://www.testmu.ai/support/docs/sharing-test-results/
+canonical: https://www.testmuai.com/support/docs/sharing-test-results/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

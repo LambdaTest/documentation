@@ -9,10 +9,10 @@ keywords:
   - TestMu AI and YouTrack integration 
   - YouTrack integration
   
-url: https://www.testmu.ai/support/docs/youtrack-integration/
+url: https://www.testmuai.com/support/docs/youtrack-integration/
 site_name: LambdaTest
 slug: youtrack-integration/
-canonical: https://www.testmu.ai/support/docs/youtrack-integration/
+canonical: https://www.testmuai.com/support/docs/youtrack-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

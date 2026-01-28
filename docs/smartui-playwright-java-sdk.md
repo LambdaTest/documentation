@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-playwright-java-sdk/
+url: https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/
 slug: smartui-playwright-java-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-playwright-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/
 ---
 
 import Tabs from '@theme/Tabs';

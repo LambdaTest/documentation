@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-wdio-sdk/
+url: https://www.testmuai.com/support/docs/smartui-wdio-sdk/
 slug: smartui-wdio-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-wdio-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-wdio-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

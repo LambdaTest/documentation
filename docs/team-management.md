@@ -7,10 +7,10 @@ description: This documentation will help you create and manage teams on TestMu 
 keywords:
 - teams management testmu ai
 - manage teams
-url: https://www.testmu.ai/support/docs/team-management/
+url: https://www.testmuai.com/support/docs/team-management/
 site_name: LambdaTest
 slug: team-management/
-canonical: https://www.testmu.ai/support/docs/team-management/
+canonical: https://www.testmuai.com/support/docs/team-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

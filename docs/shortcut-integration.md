@@ -17,10 +17,10 @@ keywords:
   - create Shortcut issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/shortcut-integration/
+url: https://www.testmuai.com/support/docs/shortcut-integration/
 site_name: LambdaTest
 slug: shortcut-integration/
-canonical: https://www.testmu.ai/support/docs/shortcut-integration/
+canonical: https://www.testmuai.com/support/docs/shortcut-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

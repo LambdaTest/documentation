@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smart-ui-storybook/
+url: https://www.testmuai.com/support/docs/smart-ui-storybook/
 slug: smart-ui-storybook/
-canonical: https://www.testmu.ai/support/docs/smart-ui-storybook/
+canonical: https://www.testmuai.com/support/docs/smart-ui-storybook/
 
 ---
 import Tabs from '@theme/Tabs';

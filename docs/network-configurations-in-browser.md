@@ -11,10 +11,10 @@ keywords:
   - http traffic capture
   - domain filtering
   - network configurations
-url: https://www.testmu.ai/support/docs/network-configurations-in-browser/
+url: https://www.testmuai.com/support/docs/network-configurations-in-browser/
 site_name: LambdaTest
 slug: browser-network-configurations/
-canonical: https://www.testmu.ai/support/docs/browser-network-configurations/
+canonical: https://www.testmuai.com/support/docs/browser-network-configurations/
 
 ---
 

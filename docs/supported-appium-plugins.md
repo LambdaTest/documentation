@@ -16,10 +16,10 @@ keywords:
  - app testing
  - testmu ai 
 
-url: https://www.testmu.ai/support/docs/supported-appium-plugins/
+url: https://www.testmuai.com/support/docs/supported-appium-plugins/
 site_name: LambdaTest
 slug: supported-appium-plugins/
-canonical: https://www.testmu.ai/support/docs/supported-appium-plugins/
+canonical: https://www.testmuai.com/support/docs/supported-appium-plugins/
 ---
 
 import Tabs from '@theme/Tabs';

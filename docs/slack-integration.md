@@ -9,10 +9,10 @@ keywords:
   - testmu ai integration
   - bug reporting
   - team communication
-url: https://www.testmu.ai/support/docs/slack-integration/
+url: https://www.testmuai.com/support/docs/slack-integration/
 site_name: LambdaTest
 slug: slack-integration/
-canonical: https://www.testmu.ai/support/docs/slack-integration/
+canonical: https://www.testmuai.com/support/docs/slack-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

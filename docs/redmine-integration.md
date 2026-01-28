@@ -9,10 +9,10 @@ keywords:
   - bug reporting
   - issue tracking
   - testmu ai redmine integration
-url: https://www.testmu.ai/support/docs/redmine-integration/
+url: https://www.testmuai.com/support/docs/redmine-integration/
 site_name: LambdaTest
 slug: redmine-integration/
-canonical: https://www.testmu.ai/support/docs/redmine-integration/
+canonical: https://www.testmuai.com/support/docs/redmine-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
