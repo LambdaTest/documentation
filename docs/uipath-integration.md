@@ -11,10 +11,10 @@ keywords:
   - mobile automation
   - automation testing
   - mobile test automation
-url: https://www.testmu.ai/support/docs/uipath-integration/
+url: https://www.testmuai.com/support/docs/uipath-integration/
 site_name: LambdaTest
 slug: uipath-integration/
-canonical: https://www.testmu.ai/support/docs/uipath-integration/
+canonical: https://www.testmuai.com/support/docs/uipath-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -7,10 +7,10 @@ keywords:
   - xcode
   - lambdamax
   - automation testing 
-url: https://www.testmu.ai/support/docs/xcode-plugin-testmu/
+url: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
 site_name: LambdaTest
 slug: xcode-plugin-testmu/
-canonical: https://www.testmu.ai/support/docs/xcode-plugin-testmu/
+canonical: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

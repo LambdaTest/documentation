@@ -15,10 +15,10 @@ keywords:
   - TCP with TLS 1.2 secure connection tunnel
   - docker compose TCP with TLS 1.2 secure connection tunnel
   - docker vpn tunnel
-url: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support/
+url: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
 site_name: LambdaTest
 slug: tunnel-allowHost-wildcard-support/
-canonical: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support/
+canonical: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

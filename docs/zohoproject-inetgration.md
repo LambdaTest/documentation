@@ -12,10 +12,10 @@ keywords:
   - project management tools
   - integrate zoho project with testmu ai
   - create issue in zoho project from testmu ai
-url: https://www.testmu.ai/support/docs/zohoproject-integration/
+url: https://www.testmuai.com/support/docs/zohoproject-integration/
 site_name: LambdaTest
 slug: zohoproject-integration/
-canonical: https://www.testmu.ai/support/docs/zohoproject-integration/
+canonical: https://www.testmuai.com/support/docs/zohoproject-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,10 +14,10 @@ keywords:
  - test automation frameworks
  - app testing
  - timezone
-url: https://www.testmu.ai/support/docs/supported-timezone/
+url: https://www.testmuai.com/support/docs/supported-timezone/
 site_name: LambdaTest
 slug: supported-timezone/
-canonical: https://www.testmu.ai/support/docs/supported-timezone/
+canonical: https://www.testmuai.com/support/docs/supported-timezone/
 ---
 
 import Tabs from '@theme/Tabs';

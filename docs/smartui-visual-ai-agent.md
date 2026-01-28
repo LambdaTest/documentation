@@ -9,10 +9,10 @@ keywords:
   - Intelligent Visual Testing
   - TestMu AI SmartUI
   - Visual Regression AI
-url: https://www.testmu.ai/support/docs/smartui-visual-ai/
+url: https://www.testmuai.com/support/docs/smartui-visual-ai/
 site_name: LambdaTest
 slug: smartui-visual-ai/
-canonical: https://www.testmu.ai/support/docs/smartui-visual-ai/
+canonical: https://www.testmuai.com/support/docs/smartui-visual-ai/
 ---
 
 import Tabs from '@theme/Tabs';

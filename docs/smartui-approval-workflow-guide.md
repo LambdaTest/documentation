@@ -12,10 +12,10 @@ keywords:
   - SmartUI Merge
   - CLI vs Hooks Workflow
   - Explicit Baseline Updates
-url: https://www.testmu.ai/support/docs/smartui-approval-workflow-guide/
+url: https://www.testmuai.com/support/docs/smartui-approval-workflow-guide/
 site_name: LambdaTest
 slug: smartui-approval-workflow-guide/
-canonical: https://www.testmu.ai/support/docs/smartui-approval-workflow-guide/
+canonical: https://www.testmuai.com/support/docs/smartui-approval-workflow-guide/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

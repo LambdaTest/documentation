@@ -16,10 +16,10 @@ keywords:
 - configure selenium tests with desired capabilities
 - selenium webdriver capabilities for running tests on testmu ai
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/selenium-automation-capabilities/
+url: https://www.testmuai.com/support/docs/selenium-automation-capabilities/
 site_name: LambdaTest
 slug: selenium-automation-capabilities/
-canonical: https://www.testmu.ai/support/docs/selenium-automation-capabilities/
+canonical: https://www.testmuai.com/support/docs/selenium-automation-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

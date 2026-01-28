@@ -8,10 +8,10 @@ keywords:
   - TestMu AI integrations
   - Push issues to SpiraTeam
   - TestMu AI SpiraTeam integration
-url: https://www.testmu.ai/support/docs/spirateam-integration/
+url: https://www.testmuai.com/support/docs/spirateam-integration/
 site_name: LambdaTest
 slug: spirateam-integration/
-canonical: https://www.testmu.ai/support/docs/spirateam-integration/
+canonical: https://www.testmuai.com/support/docs/spirateam-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

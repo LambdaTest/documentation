@@ -12,10 +12,10 @@ keywords:
 - cross browser screenshot generation
 - automated screenshot testing
 - automated screenshot generation
-url: https://www.testmu.ai/support/docs/visual-ui-testing/
+url: https://www.testmuai.com/support/docs/visual-ui-testing/
 site_name: LambdaTest
 slug: visual-ui-testing/
-canonical: https://www.testmu.ai/support/docs/visual-ui-testing/
+canonical: https://www.testmuai.com/support/docs/visual-ui-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

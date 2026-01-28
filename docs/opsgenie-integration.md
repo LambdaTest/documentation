@@ -8,10 +8,10 @@ keywords:
   - TestMu AI integration with OpsGenie
   - TestMu AI and OpsGenie Integration
   - OpsGenie Integration
-url: https://www.testmu.ai/support/docs/opsgenie-integration/
+url: https://www.testmuai.com/support/docs/opsgenie-integration/
 site_name: LambdaTest
 slug: opsgenie-integration/
-canonical: https://www.testmu.ai/support/docs/opsgenie-integration/
+canonical: https://www.testmuai.com/support/docs/opsgenie-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

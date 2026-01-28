@@ -13,10 +13,10 @@ keywords:
   - testing in XCUI
   - XCUI testing
   - real devices
-url: https://www.testmu.ai/support/docs/speedup-xcui/
+url: https://www.testmuai.com/support/docs/speedup-xcui/
 site_name: LambdaTest
 slug: speedup-xcui/
-canonical: https://www.testmu.ai/support/docs/speedup-xcui/
+canonical: https://www.testmuai.com/support/docs/speedup-xcui/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -8,10 +8,10 @@ keywords:
   - TestMu AI integration with Notion
   - TestMu AI and Notion Integration
   - Notion Integration
-url: https://www.testmu.ai/support/docs/notion-integration/
+url: https://www.testmuai.com/support/docs/notion-integration/
 site_name: LambdaTest
 slug: notion-integration/
-canonical: https://www.testmu.ai/support/docs/notion-integration/
+canonical: https://www.testmuai.com/support/docs/notion-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

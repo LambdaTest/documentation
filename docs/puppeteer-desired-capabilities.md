@@ -12,10 +12,10 @@ keywords:
   - puppeteer testing on testmu ai
   - puppeteer testing testmu ai
 
-url: https://www.testmu.ai/support/docs/capabilities-for-puppeteer/
+url: https://www.testmuai.com/support/docs/capabilities-for-puppeteer/
 site_name: LambdaTest
 slug: capabilities-for-puppeteer/
-canonical: https://www.testmu.ai/support/docs/capabilities-for-puppeteer/
+canonical: https://www.testmuai.com/support/docs/capabilities-for-puppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

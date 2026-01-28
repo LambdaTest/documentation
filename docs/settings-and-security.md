@@ -10,10 +10,10 @@ keywords:
   - Account Management
   - Settings
   - Security
-url: https://www.testmu.ai/support/docs/settings-and-security/
+url: https://www.testmuai.com/support/docs/settings-and-security/
 site_name: LambdaTest
 slug: settings-and-security/
-canonical: https://www.testmu.ai/support/docs/settings-and-security/
+canonical: https://www.testmuai.com/support/docs/settings-and-security/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

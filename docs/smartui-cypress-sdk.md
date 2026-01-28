@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-cypress-sdk/
+url: https://www.testmuai.com/support/docs/smartui-cypress-sdk/
 slug: smartui-cypress-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-cypress-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-cypress-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

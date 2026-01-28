@@ -8,10 +8,10 @@ keywords:
   - testmu ai integrations
   - testmu ai integration with new relic
   - new relic integration 
-url: https://www.testmu.ai/support/docs/new-relic-integration/
+url: https://www.testmuai.com/support/docs/new-relic-integration/
 site_name: LambdaTest
 slug: new-relic-integration/
-canonical: https://www.testmu.ai/support/docs/new-relic-integration/
+canonical: https://www.testmuai.com/support/docs/new-relic-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

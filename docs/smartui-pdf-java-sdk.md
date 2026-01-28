@@ -9,10 +9,10 @@ keywords:
   - Visual Regression Testing
   - PDF Testing
   - Java Development
-url: https://www.testmu.ai/support/docs/smartui-pdf-java-sdk/
+url: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
 site_name: LambdaTest
 slug: smartui-pdf-java-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-pdf-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

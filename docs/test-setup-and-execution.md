@@ -8,10 +8,10 @@ keywords:
 - desired capability for app automation
 - appium capabilities testmu ai
 - mobile app automation testing using appium
-url: https://www.testmu.ai/support/docs/test-setup-and-execution/
+url: https://www.testmuai.com/support/docs/test-setup-and-execution/
 site_name: LambdaTest
 slug: test-setup-and-execution/
-canonical: https://www.testmu.ai/support/docs/test-setup-and-execution/
+canonical: https://www.testmuai.com/support/docs/test-setup-and-execution/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

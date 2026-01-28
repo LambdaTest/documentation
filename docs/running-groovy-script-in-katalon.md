@@ -19,10 +19,10 @@ keywords:
 - Run Groovy Online
 - Groovy Test Online
 
-url: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 site_name: LambdaTest
 slug: running-groovy-script-in-katalon-with-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

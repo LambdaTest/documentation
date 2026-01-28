@@ -18,10 +18,10 @@ keywords:
   - selenium testing tutorial
 image: /assets/images/og-images/selenium-testing-og.png
 
-url: https://www.testmu.ai/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

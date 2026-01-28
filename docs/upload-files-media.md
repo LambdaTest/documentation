@@ -14,8 +14,8 @@ keywords:
   - app testing
   - TestMu AI
 slug: upload-files-media/
-canonical: https://www.testmu.ai/support/docs/upload-files-media/
-url: https://www.testmu.ai/support/docs/upload-files-media/
+canonical: https://www.testmuai.com/support/docs/upload-files-media/
+url: https://www.testmuai.com/support/docs/upload-files-media/
 site_name: LambdaTest
 ---
 

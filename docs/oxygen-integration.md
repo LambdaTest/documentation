@@ -12,10 +12,10 @@ keywords:
   - oxygen ide
   - record and playback
   - cross browser testing
-url: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-testmu/
+url: https://www.testmuai.com/support/docs/run-oxygen-automation-scripts-on-testmu/
 site_name: LambdaTest
 slug: run-oxygen-automation-scripts-on-testmu/
-canonical: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-testmu/
+canonical: https://www.testmuai.com/support/docs/run-oxygen-automation-scripts-on-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
