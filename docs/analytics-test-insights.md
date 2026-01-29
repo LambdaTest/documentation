@@ -85,8 +85,15 @@ The grouping is scoped to individual build IDs, meaning each build's metrics ref
 
 This feature is especially useful when your test pipeline uses automatic retries, as it shows the true pass/fail state of each test-environment combination rather than inflating counts with intermediate failures.
 
+**Your Settings Are Remembered:**
+Your Show Unique Instances preference is automatically saved, so you don't need to re-enable it each time you visit. Test Insights and Build Insights remember their settings independently, allowing you to configure each page to suit your workflow.
+
 :::note Processing Time
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished running tests, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
+:::tip Learn More
+Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
 :::
 
 ## Use Cases for Test Insights
