@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # AI Test Case Generator
 
 ## What is the AI Test Case Generator?
-The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
+The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
