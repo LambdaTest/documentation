@@ -1,9 +1,10 @@
 name: 'Deployment (Prod - testmucom New Bucket)'
 
 on:
-  push:
-    branches:
-      - testmuCom
+  # push:
+  #   branches:
+  #     - testmuCom
+  workflow_dispatch:
 
 jobs:
   Docusaurus:
