@@ -10,7 +10,7 @@ keywords:
 url: https://www.testmu.ai/support/docs/xcui-automation-on-emulators-simulators/
 site_name: LambdaTest
 slug: xcui-automation-on-emulators-simulators/
-canonical: https://www.testmu.ai/support/docs/xcui-automation-on-emulators-simulators/
+canonicalUrl: https://www.testmu.ai/support/docs/xcui-automation-on-emulators-simulators/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
