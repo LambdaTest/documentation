@@ -1,8 +1,8 @@
 ---
 id: kaneai-test-manager-access-management
-title: Access Management - Test Manager
+title: Access Management - KaneAI <> Test Manager
 hide_title: false
-sidebar_label: Access Management - Test Manager
+sidebar_label: Access Management - KaneAI <> Test Manager
 description: This documentation will help you to understand how to allocate licence to all the users present in your organization
 keywords:
 - users management testmu ai
@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-This document provides guidelines on managing access to Test Manager within <BrandName />. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
+This document provides guidelines on managing access to Test Manager and KaneAI within <BrandName />. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements. If you request access for 10 KaneAI Agents, you will automatically get 10 test manager seats and allocation happens through test manager itself.
 
 ## License Allocation Rules
 - **License Limitation :** Administrators can only allocate as many licenses as they have purchased or gained licenses through trials.
@@ -53,7 +53,10 @@ This document provides guidelines on managing access to Test Manager within <Bra
 **Step 2 :** Navigate to **Settings** > **Organization Settings** > **Products**. <br />
 **Step 3 :** Select Test Manager tab to allocate the desired product license.
 
-> If you request access for 10 KaneAI Agents, you will automatically get 10 test manager suites.
+### Assigning a License to a User
+**Step 1 :** Click on Allocate Licenses button. <br />
+**Step 2 :** Select and add users from your organization to allocate licenses. <br />
+**Step 3 :** Click Allocate Licenses to complete the process. Now, the user not only has access to KaneAI but also test manager seats. <br />
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/access-management/access-license-panel.mp4').default} type="video/mp4" />
