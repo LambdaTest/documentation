@@ -16,10 +16,10 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.testmu.ai/support/docs/getting-started-with-mobile-browser-real-time-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-mobile-browser-real-time-testing/
 site_name: LambdaTest
 slug: getting-started-with-mobile-browser-real-time-testing/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-mobile-browser-real-time-testing/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-mobile-browser-real-time-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

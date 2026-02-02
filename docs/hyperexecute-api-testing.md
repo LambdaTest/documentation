@@ -13,10 +13,10 @@ keywords:
   - troubleshooting api tests in hyperexecute
   - api testing tools hyperexecute
   - api test scripts hyperexecute
-url: https://www.testmu.ai/support/docs/hyperexecute-api-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-api-testing/
 site_name: LambdaTest
 slug: hyperexecute-api-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-api-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-api-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

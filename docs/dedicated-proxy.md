@@ -9,10 +9,10 @@ keywords:
   - inbound ip whitelisting
   - ip whitelisting
   - ip whitelsiting testmu ai
-url: https://www.testmu.ai/support/docs/dedicated-proxy/
+url: https://www.testmuai.com/support/docs/dedicated-proxy/
 site_name: LambdaTest
 slug: dedicated-proxy/
-canonical: https://www.testmu.ai/support/docs/dedicated-proxy/
+canonical: https://www.testmuai.com/support/docs/dedicated-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -11,10 +11,10 @@ keywords:
   - Accessibility Testing Settings
   - Fragment identifier
   - wcag
-url: https://www.testmu.ai/support/docs/accessibility-passed-test-cases/
+url: https://www.testmuai.com/support/docs/accessibility-passed-test-cases/
 site_name: LambdaTest
 slug: accessibility-passed-test-cases/
-canonical: https://www.testmu.ai/support/docs/accessibility-passed-test-cases/
+canonical: https://www.testmuai.com/support/docs/accessibility-passed-test-cases/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -12,10 +12,10 @@ keywords:
     - azure integration
     - azure associate test case
     - test case
-url: https://www.testmu.ai/support/docs/hyperexecute-azure-associate-test-case/
+url: https://www.testmuai.com/support/docs/hyperexecute-azure-associate-test-case/
 site_name: LambdaTest
 slug: hyperexecute-azure-associate-test-case/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-azure-associate-test-case/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-azure-associate-test-case/
 ---
 
 

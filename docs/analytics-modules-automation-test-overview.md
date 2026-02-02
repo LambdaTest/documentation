@@ -11,10 +11,10 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.testmu.ai/support/docs/analytics-modules-automation-test-overview/
+url: https://www.testmuai.com/support/docs/analytics-modules-automation-test-overview/
 site_name: LambdaTest
 slug: analytics-modules-automation-test-overview/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-automation-test-overview/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-automation-test-overview/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -84,6 +84,17 @@ The Test Summary widget provides a high-level overview of the total tests run on
 
 #### Value Proposition
 The Test Summary widget allows you to quickly gauge the overall health and performance of your tests. By understanding the distribution of test statuses and identifying common errors, you can take targeted actions to improve test stability, reduce errors, and optimize your testing process.
+
+### Understanding Unique Instances in Test Summary
+
+The Test Summary widget supports unique instance calculation, which consolidates retry runs for more accurate reporting. When configuring the widget, you can use the **"Show test retries separately"** option to control how retries are displayed:
+
+- **Checked (Show test retries separately)**: All test executions are displayed individually, including every retry attempt. Use this when you need to see the full execution history.
+- **Unchecked (Default)**: Tests are grouped by **test name + environment** (browser + OS + device + resolution), showing only the final status for each unique instance. This provides a cleaner view of your true test health.
+
+**Example**: If a test fails initially but passes on retry, with the option unchecked, it shows as "Passed" in the summary. With the option checked, both the failed and passed executions appear separately.
+
+For a comprehensive guide on how unique instances and retry attempts are detected, including step-by-step examples, see [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/).
 
 ## Test Browser Distribution
 

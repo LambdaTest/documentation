@@ -10,10 +10,10 @@ keywords:
     - products
     - azure test plan
     - azure integration
-url: https://www.testmu.ai/support/docs/hyperexecute-azure-test-plan/
+url: https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/
 site_name: LambdaTest
 slug: hyperexecute-azure-test-plan/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-azure-test-plan/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/
 ---
 
 

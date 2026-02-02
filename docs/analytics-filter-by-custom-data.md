@@ -5,10 +5,10 @@ sidebar_label: Filter by Custom Data
 description: Learn how to filter analytics data by custom attributes on TestMu AI to track and analyze your testing metrics more effectively.
 keywords:
   - analytics
-url: https://www.testmu.ai/support/docs/analytics-filter-by-custom-data/
+url: https://www.testmuai.com/support/docs/analytics-filter-by-custom-data/
 site_name: LambdaTest
 slug: analytics-filter-by-custom-data/
-canonical: https://www.testmu.ai/support/docs/analytics-filter-by-custom-data/
+canonical: https://www.testmuai.com/support/docs/analytics-filter-by-custom-data/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

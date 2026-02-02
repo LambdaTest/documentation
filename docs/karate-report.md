@@ -7,10 +7,10 @@ description: Learn how to configure and generate Karate test execution reports o
 keywords:
   - cucumber testing reports
   - karate report testmu ai 
-url: https://www.testmu.ai/support/docs/karate-report/
+url: https://www.testmuai.com/support/docs/karate-report/
 site_name: LambdaTest
 slug: karate-report/
-canonical: https://www.testmu.ai/support/docs/karate-report/
+canonical: https://www.testmuai.com/support/docs/karate-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

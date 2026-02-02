@@ -10,10 +10,10 @@ keywords:
     - Testing
     - Bug Reporting
     - Reports
-url: https://www.testmu.ai/support/docs/accessibility-report-bug/
+url: https://www.testmuai.com/support/docs/accessibility-report-bug/
 site_name: LambdaTest
 slug: accessibility-report-bug/
-canonical: https://www.testmu.ai/support/docs/accessibility-report-bug/
+canonical: https://www.testmuai.com/support/docs/accessibility-report-bug/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

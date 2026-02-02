@@ -15,10 +15,10 @@ keywords:
   - smart ui testing
   - screenshot testing
 
-url: https://www.testmu.ai/support/docs/mark-as-bug-in-responsive-testing/
+url: https://www.testmuai.com/support/docs/mark-as-bug-in-responsive-testing/
 site_name: LambdaTest
 slug: mark-as-bug-in-responsive-testing/
-canonical: https://www.testmu.ai/support/docs/mark-as-bug-in-responsive-testing/
+canonical: https://www.testmuai.com/support/docs/mark-as-bug-in-responsive-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

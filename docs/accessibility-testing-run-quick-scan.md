@@ -11,10 +11,10 @@ keywords:
     - DevTools
     - run quick scan
     - test issues
-url: https://www.testmu.ai/support/docs/accessibility-testing-run-quick-scan/
+url: https://www.testmuai.com/support/docs/accessibility-testing-run-quick-scan/
 site_name: LambdaTest
 slug: accessibility-testing-run-quick-scan/
-canonical: https://www.testmu.ai/support/docs/accessibility-testing-run-quick-scan/
+canonical: https://www.testmuai.com/support/docs/accessibility-testing-run-quick-scan/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

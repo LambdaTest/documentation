@@ -10,10 +10,10 @@ keywords:
   - local testing for windows
   - push issues to clubhouse
   - local cross browser testing
-url: https://www.testmu.ai/support/docs/local-testing-windows/
+url: https://www.testmuai.com/support/docs/local-testing-windows/
 site_name: LambdaTest
 slug: local-testing-windows/
-canonical: https://www.testmu.ai/support/docs/local-testing-windows/
+canonical: https://www.testmuai.com/support/docs/local-testing-windows/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

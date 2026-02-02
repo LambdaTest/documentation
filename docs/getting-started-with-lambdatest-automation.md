@@ -14,10 +14,10 @@ keywords:
   - selenium getting started
   - testmu ai getting started
 image: /assets/images/og-images/automation-testing-og.png
-url: https://www.testmu.ai/support/docs/getting-started-with-testmu-automation/
+url: https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/
 site_name: LambdaTest
 slug: getting-started-with-testmu-automation/
-canonical: https://www.testmu.ai/support/docs/getting-started-with-testmu-automation/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/
 ---
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

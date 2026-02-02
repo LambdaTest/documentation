@@ -17,10 +17,10 @@ keywords:
   - create bugherd issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/bugherd-integration/
+url: https://www.testmuai.com/support/docs/bugherd-integration/
 site_name: LambdaTest
 slug: bugherd-integration/
-canonical: https://www.testmu.ai/support/docs/bugherd-integration/
+canonical: https://www.testmuai.com/support/docs/bugherd-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

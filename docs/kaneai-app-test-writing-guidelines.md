@@ -10,10 +10,10 @@ keywords:
   - kaneai App test
   - kaneai guidelines
   - instructions writings
-url: https://www.testmu.ai/support/docs/kane-ai-app-test-writing-guidelines/
+url: https://www.testmuai.com/support/docs/kane-ai-app-test-writing-guidelines/
 site_name: LambdaTest
 slug: kane-ai-app-test-writing-guidelines/
-canonical: https://www.testmu.ai/support/docs/kane-ai-app-test-writing-guidelines/
+canonical: https://www.testmuai.com/support/docs/kane-ai-app-test-writing-guidelines/
 ---
 
 import Tabs from '@theme/Tabs';

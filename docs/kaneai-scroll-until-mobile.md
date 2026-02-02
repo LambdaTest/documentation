@@ -14,7 +14,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/kaneai-scroll-until-mobile/
 site_name: LambdaTest
 slug: kaneai-scroll-until-mobile/
-canonical: https://www.testmu.ai/support/docs/kaneai-scroll-until-mobile//
+canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile//
 ---
 
 <script type="application/ld+json"

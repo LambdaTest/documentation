@@ -19,10 +19,10 @@ keywords:
   - hyperexecute Gattling testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing/
+url: https://www.testmuai.com/support/docs/hyperexecute-gattling-testing/
 site_name: LambdaTest
 slug: hyperexecute-gattling-testing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-gattling-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-gattling-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

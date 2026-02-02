@@ -11,10 +11,10 @@ keywords:
     - katalon
     - katalon studio
 
-url: https://www.testmu.ai/support/docs/katalon-integration-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/
 site_name: LambdaTest
 slug: katalon-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/katalon-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

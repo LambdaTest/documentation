@@ -14,10 +14,10 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-uploading-retrieving-files/
+url: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
 site_name: LambdaTest
 slug: appium-uploading-retrieving-files/
-canonical: https://www.testmu.ai/support/docs/appium-uploading-retrieving-files/
+canonical: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

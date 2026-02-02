@@ -11,10 +11,10 @@ keywords:
   - playwright junit testing guide
   - junit playwright framework
 
-url: https://www.testmu.ai/support/docs/junit-with-playwright/
+url: https://www.testmuai.com/support/docs/junit-with-playwright/
 site_name: LambdaTest
 slug: junit-with-playwright/
-canonical: https://www.testmu.ai/support/docs/junit-with-playwright/
+canonical: https://www.testmuai.com/support/docs/junit-with-playwright/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

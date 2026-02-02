@@ -7,10 +7,10 @@ description: Effortlessly link Jira issues with Test Manager using TestMu AI to 
 keywords:
   - link jira issues
   - link jira issues with test manager
-url: https://www.testmu.ai/support/docs/link-jira-issues-with-test-manager/
+url: https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/
 site_name: LambdaTest
 slug: link-jira-issues-with-test-manager/
-canonical: https://www.testmu.ai/support/docs/link-jira-issues-with-test-manager/
+canonical: https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

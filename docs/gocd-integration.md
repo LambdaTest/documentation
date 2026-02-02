@@ -13,10 +13,10 @@ keywords:
   - gocd integration with testmu ai
   - testmu ai integration with gocd pipelines
   - ci/cd
-url: https://www.testmu.ai/support/docs/gocd-integration-with-testmu/
+url: https://www.testmuai.com/support/docs/gocd-integration-with-testmu/
 site_name: LambdaTest
 slug: gocd-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/gocd-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/gocd-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

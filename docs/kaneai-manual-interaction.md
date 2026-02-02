@@ -8,10 +8,10 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai manual interaction
-url: https://www.testmu.ai/support/docs/kaneai-manual-interaction/
+url: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
 site_name: LambdaTest
 slug: kaneai-manual-interaction/
-canonical: https://www.testmu.ai/support/docs/kaneai-manual-interaction/
+canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
 ---
 
 <script type="application/ld+json"

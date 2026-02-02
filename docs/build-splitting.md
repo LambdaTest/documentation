@@ -10,10 +10,10 @@ keywords:
   - automation build preference
   - build inactivity time
 
-url: https://www.testmu.ai/support/docs/build-inactivity-time/
+url: https://www.testmuai.com/support/docs/build-inactivity-time/
 site_name: LambdaTest
 slug: build-inactivity-time/
-canonical: https://www.testmu.ai/support/docs/build-inactivity-time/
+canonical: https://www.testmuai.com/support/docs/build-inactivity-time/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

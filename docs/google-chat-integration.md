@@ -17,10 +17,10 @@ keywords:
   - create Google Chat issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/google-chat-integration/
+url: https://www.testmuai.com/support/docs/google-chat-integration/
 site_name: LambdaTest
 slug: google-chat-integration/
-canonical: https://www.testmu.ai/support/docs/google-chat-integration/
+canonical: https://www.testmuai.com/support/docs/google-chat-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -12,10 +12,10 @@ keywords:
   - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute key features
-url: https://www.testmu.ai/support/docs/key-features-of-hyperexecute/
+url: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
 site_name: LambdaTest Key features of Hyperexecute
 slug: key-features-of-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/key-features-of-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

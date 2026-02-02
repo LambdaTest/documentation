@@ -12,10 +12,10 @@ keywords:
   - deeplink navigation
   - android deeplink
   - ios deeplink
-url: https://www.testmu.ai/support/docs/kane-ai-deeplink-support/
+url: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 site_name: LambdaTest
 slug: kane-ai-deeplink-support/
-canonical: https://www.testmu.ai/support/docs/kane-ai-deeplink-support/
+canonical: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 ---
 
 import Tabs from '@theme/Tabs';

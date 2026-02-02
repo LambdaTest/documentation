@@ -10,10 +10,10 @@ keywords:
   - testmu ai local tunnel
   - testmu ai tunnel
   - local app testing for MacOS
-url: https://www.testmu.ai/support/docs/local-testing-macos/
+url: https://www.testmuai.com/support/docs/local-testing-macos/
 site_name: LambdaTest
 slug: local-testing-macos/
-canonical: https://www.testmu.ai/support/docs/local-testing-macos/
+canonical: https://www.testmuai.com/support/docs/local-testing-macos/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

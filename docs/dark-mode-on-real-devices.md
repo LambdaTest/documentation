@@ -13,10 +13,10 @@ keywords:
   - web dark mode
   - testmu ai real devices
   - light mode testing
-url: https://www.testmu.ai/support/docs/dark-mode-on-real-devices/
+url: https://www.testmuai.com/support/docs/dark-mode-on-real-devices/
 site_name: LambdaTest
 slug: dark-mode-on-real-devices/
-canonical: https://www.testmu.ai/support/docs/dark-mode-on-real-devices/
+canonical: https://www.testmuai.com/support/docs/dark-mode-on-real-devices/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";
