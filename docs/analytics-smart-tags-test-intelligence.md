@@ -6,10 +6,10 @@ description: Analyze tests faster with Smart Tags in TestMu AI Analytics. Get in
 keywords:
   - analytics
   - smart tags
-url: https://www.testmu.ai/support/docs/analytics-smart-tags-test-intelligence/
+url: https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/
 site_name: LambdaTest
 slug: analytics-smart-tags-test-intelligence/
-canonical: https://www.testmu.ai/support/docs/analytics-smart-tags-test-intelligence/
+canonical: https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

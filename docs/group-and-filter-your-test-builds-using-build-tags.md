@@ -18,10 +18,10 @@ keywords:
     - group tests
     - filter test builds
     - group test builds
-url: https://www.testmu.ai/support/docs/group-and-filter-your-test-builds-using-build-tags/
+url: https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
 site_name: LambdaTest
 slug: group-and-filter-your-test-builds-using-build-tags/
-canonical: https://www.testmu.ai/support/docs/group-and-filter-your-test-builds-using-build-tags/
+canonical: https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

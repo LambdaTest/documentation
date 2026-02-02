@@ -14,10 +14,10 @@ keywords:
 - Lambda Exception
 - Assertion Failure
 
-url: https://www.testmu.ai/support/docs/lambda-exceptions/
+url: https://www.testmuai.com/support/docs/lambda-exceptions/
 site_name: LambdaTest
 slug: lambda-exceptions/
-canonical: https://www.testmu.ai/support/docs/lambda-exceptions/
+canonical: https://www.testmuai.com/support/docs/lambda-exceptions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

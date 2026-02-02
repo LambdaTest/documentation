@@ -16,7 +16,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-heatmap-widgets/
 site_name: LambdaTest
 slug: analytics-heatmap-widgets/
-canonical: https://www.testmu.ai/support/docs/analytics-heatmap-widgets//
+canonical: https://www.testmuai.com/support/docs/analytics-heatmap-widgets//
 ---
 
 import NewTag from '../src/component/newTag';

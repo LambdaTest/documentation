@@ -16,10 +16,10 @@ keywords:
   - tcp
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
-url: https://www.testmu.ai/support/docs/testmu-tunnel/
+url: https://www.testmuai.com/support/docs/testmu-tunnel/
 site_name: LambdaTest
 slug: testmu-tunnel/
-canonical: https://www.testmu.ai/support/docs/testmu-tunnel/
+canonical: https://www.testmuai.com/support/docs/testmu-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

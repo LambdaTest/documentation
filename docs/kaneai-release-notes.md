@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/kaneai-release-notes/
+url: https://www.testmuai.com/support/docs/kaneai-release-notes/
 site_name: LambdaTest
 slug: kaneai-release-notes/
-canonical: https://www.testmu.ai/support/docs/kaneai-release-notes/
+canonical: https://www.testmuai.com/support/docs/kaneai-release-notes/
 ---
 
 

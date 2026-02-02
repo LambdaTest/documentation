@@ -12,10 +12,10 @@ keywords:
 - Enforce SSO
 - SSO Self Serve
 - Exempt SSO Login
-url: https://www.testmu.ai/support/docs/testmu-sso-manage-connection/
+url: https://www.testmuai.com/support/docs/testmu-sso-manage-connection/
 site_name: LambdaTest
 slug: testmu-sso-manage-connection/
-canonical: https://www.testmu.ai/support/docs/testmu-sso-manage-connection/
+canonical: https://www.testmuai.com/support/docs/testmu-sso-manage-connection/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

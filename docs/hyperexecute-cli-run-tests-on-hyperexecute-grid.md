@@ -18,10 +18,10 @@ keywords:
   - hyperexecute matrix execution
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
-url: https://www.testmu.ai/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
+url: https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

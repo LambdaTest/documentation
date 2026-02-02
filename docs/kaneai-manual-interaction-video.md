@@ -8,10 +8,10 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai manual interaction
-url: https://www.testmu.ai/support/docs/kaneai-manual-interaction-video/
+url: https://www.testmuai.com/support/docs/kaneai-manual-interaction-video/
 site_name: LambdaTest
 slug: kaneai-manual-interaction-video/
-canonical: https://www.testmu.ai/support/docs/kaneai-manual-interaction-video/
+canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction-video/
 ---
 
 import Tabs from '@theme/Tabs';

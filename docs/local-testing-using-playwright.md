@@ -11,10 +11,10 @@ keywords:
   - local cross browser testing
   - local testing playwright
   
-url: https://www.testmu.ai/support/docs/local-testing-using-playwright/
+url: https://www.testmuai.com/support/docs/local-testing-using-playwright/
 site_name: LambdaTest
 slug: local-testing-using-playwright/
-canonical: https://www.testmu.ai/support/docs/local-testing-using-playwright/
+canonical: https://www.testmuai.com/support/docs/local-testing-using-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

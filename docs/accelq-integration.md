@@ -8,10 +8,10 @@ keywords:
   - testmu ai integration with accelq
   - testmu ai and accelq integration 
   - accelq integration
-url: https://www.testmu.ai/support/docs/accelq-integration/
+url: https://www.testmuai.com/support/docs/accelq-integration/
 site_name: LambdaTest
 slug: accelq-integration/
-canonical: https://www.testmu.ai/support/docs/accelq-integration
+canonical: https://www.testmuai.com/support/docs/accelq-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,10 +14,10 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/disable-screenshot-block/
+url: https://www.testmuai.com/support/docs/disable-screenshot-block/
 site_name: LambdaTest
 slug: disable-screenshot-block/
-canonical: https://www.testmu.ai/support/docs/disable-screenshot-block/
+canonical: https://www.testmuai.com/support/docs/disable-screenshot-block/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

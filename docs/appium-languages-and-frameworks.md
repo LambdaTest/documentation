@@ -11,10 +11,10 @@ keywords:
   - app automation
   - appium automation
   - appium testing
-url: https://www.testmu.ai/support/docs/appium-languages-and-frameworks/
+url: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
 site_name: LambdaTest
 slug: appium-languages-and-frameworks/
-canonical: https://www.testmu.ai/support/docs/appium-languages-and-frameworks/
+canonical: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

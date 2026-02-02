@@ -12,10 +12,10 @@ keywords:
   - robot
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/appium-python-robot/
+url: https://www.testmuai.com/support/docs/appium-python-robot/
 site_name: LambdaTest
 slug: appium-python-robot/
-canonical: https://www.testmu.ai/support/docs/appium-python-robot/
+canonical: https://www.testmuai.com/support/docs/appium-python-robot/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

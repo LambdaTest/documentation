@@ -13,10 +13,10 @@ keywords:
   - website error report
   - lt browser javascript
  
-url: https://www.testmu.ai/support/docs/error-reports/
+url: https://www.testmuai.com/support/docs/error-reports/
 site_name: LambdaTest
 slug: error-reports/
-canonical: https://www.testmu.ai/support/docs/error-reports/
+canonical: https://www.testmuai.com/support/docs/error-reports/
 ---
 
 

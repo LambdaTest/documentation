@@ -10,10 +10,10 @@ keywords:
   - androidtv
   - nvidia shield
   - python
-url: https://www.testmu.ai/support/docs/appium-androidtv/
+url: https://www.testmuai.com/support/docs/appium-androidtv/
 site_name: LambdaTest Docs
 slug: appium-androidtv/
-canonical: https://www.testmu.ai/support/docs/appium-androidtv/
+canonical: https://www.testmuai.com/support/docs/appium-androidtv/
 
 ---
 

@@ -7,10 +7,10 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.testmu.ai/support/docs/custom-speclow-report/
+url: https://www.testmuai.com/support/docs/custom-speclow-report/
 site_name: LambdaTest
 slug: custom-speclow-report/
-canonical: https://www.testmu.ai/support/docs/custom-speclow-report/
+canonical: https://www.testmuai.com/support/docs/custom-speclow-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

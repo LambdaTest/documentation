@@ -9,10 +9,10 @@ keywords:
   - cypress testing webkit
   - cypress testing webkit testmu ai
 
-url: https://www.testmu.ai/support/docs/cypress-testing-using-webkit/
+url: https://www.testmuai.com/support/docs/cypress-testing-using-webkit/
 site_name: LambdaTest
 slug: cypress-testing-using-webkit/
-canonical: https://www.testmu.ai/support/docs/cypress-testing-using-webkit/
+canonical: https://www.testmuai.com/support/docs/cypress-testing-using-webkit/
 ---
 
 import Tabs from '@theme/Tabs';

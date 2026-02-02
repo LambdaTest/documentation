@@ -9,10 +9,10 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Get my Username and Access key
-url: https://www.testmu.ai/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
+url: https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 site_name: LambdaTest
 slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

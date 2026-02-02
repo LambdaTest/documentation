@@ -7,10 +7,10 @@ description: This documentation will help you leverage Root Cause Analysis and E
 keywords:
 - hyperexecute error classification
 - hyperexecute root cause analysis
-url: https://www.testmu.ai/support/docs/ai-powered-test-failure-analysis/
+url: https://www.testmuai.com/support/docs/ai-powered-test-failure-analysis/
 site_name: LambdaTest
 slug: ai-powered-test-failure-analysis/
-canonical: https://www.testmu.ai/support/docs/ai-powered-test-failure-analysis/
+canonical: https://www.testmuai.com/support/docs/ai-powered-test-failure-analysis/
 ---
 
 

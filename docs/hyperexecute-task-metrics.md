@@ -11,10 +11,10 @@ keywords:
     - HyperExecute
   - HyperExecute Metrics
   - HyperExecute Task
-url: https://www.testmu.ai/support/docs/hyperexecute-task-metrics/
+url: https://www.testmuai.com/support/docs/hyperexecute-task-metrics/
 site_name: LambdaTest
 slug: hyperexecute-task-metrics/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-task-metrics/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-task-metrics/
 ---
 
 

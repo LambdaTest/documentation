@@ -8,10 +8,10 @@ keywords:
   - testmu ai integration with algoqa
   - testmu ai and algoqa integration 
   - algoqA integration
-url: https://www.testmu.ai/support/docs/algoqa-integration/
+url: https://www.testmuai.com/support/docs/algoqa-integration/
 site_name: LambdaTest
 slug: algoqa-integration/
-canonical: https://www.testmu.ai/support/docs/algoqa-integration/
+canonical: https://www.testmuai.com/support/docs/algoqa-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

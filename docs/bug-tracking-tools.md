@@ -10,10 +10,10 @@ keywords:
   - bug tracking tools
   - debugging
 
-url: https://www.testmu.ai/support/docs/bug-tracking-tools/
+url: https://www.testmuai.com/support/docs/bug-tracking-tools/
 site_name: LambdaTest
 slug: bug-tracking-tools/
-canonical: https://www.testmu.ai/support/docs/bug-tracking-tools/
+canonical: https://www.testmuai.com/support/docs/bug-tracking-tools/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

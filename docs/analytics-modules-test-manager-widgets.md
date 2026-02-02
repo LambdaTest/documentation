@@ -9,10 +9,10 @@ keywords:
  - Test Manager analytics
  - Test Cases trends
  - Test Case Build Status
-url: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets/
+url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: LambdaTest
 slug: analytics-modules-test-manager-widgets/
-canonical: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 ---
 
 import NewTag from '../src/component/newTag';

@@ -9,10 +9,10 @@ keywords:
   - TestMu AI HyperExecute help
   - TestMu AI HyperExecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/hyperexecute-security-faqs/
+url: https://www.testmuai.com/support/docs/hyperexecute-security-faqs/
 site_name: LambdaTest
 slug: hyperexecute-security-faqs/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-security-faqs/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-security-faqs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

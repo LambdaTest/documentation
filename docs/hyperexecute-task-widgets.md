@@ -11,10 +11,10 @@ keywords:
     - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Task
-url: https://www.testmu.ai/support/docs/hyperexecute-task-widgets/
+url: https://www.testmuai.com/support/docs/hyperexecute-task-widgets/
 site_name: LambdaTest
 slug: hyperexecute-task-widgets/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-task-widgets/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-task-widgets/
 ---
 
 

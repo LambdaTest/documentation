@@ -13,10 +13,10 @@ keywords:
   - gocd integration with hyperexecute
   - hyperexecute integration with gocd pipelines
   - ci/cd
-url: https://www.testmu.ai/support/docs/gocd-integration-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/
 site_name: LambdaTest
 slug: gocd-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/gocd-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

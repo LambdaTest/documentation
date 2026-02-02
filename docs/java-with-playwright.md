@@ -11,10 +11,10 @@ keywords:
   - playwright java testing guide
   - java playwright framework
 
-url: https://www.testmu.ai/support/docs/java-with-playwright/
+url: https://www.testmuai.com/support/docs/java-with-playwright/
 site_name: LambdaTest
 slug: java-with-playwright/
-canonical: https://www.testmu.ai/support/docs/java-with-playwright/
+canonical: https://www.testmuai.com/support/docs/java-with-playwright/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

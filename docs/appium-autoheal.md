@@ -10,10 +10,10 @@ keywords:
   - locator healing
   - mobile automation
   - testmu ai automation
-url: https://www.testmu.ai/support/docs/smart-heal-appium/
+url: https://www.testmuai.com/support/docs/smart-heal-appium/
 site_name: LambdaTest
 slug: smart-heal-appium/
-canonical: https://www.testmu.ai/support/docs/smart-heal-appium/
+canonical: https://www.testmuai.com/support/docs/smart-heal-appium/
 ---
 
 

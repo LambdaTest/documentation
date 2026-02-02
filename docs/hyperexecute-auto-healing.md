@@ -8,10 +8,10 @@ keywords:
 - hyperexecute auto healing
 - auto healing
 - recover flaky tests
-url: https://www.testmu.ai/support/docs/hyperexecute-auto-healing/
+url: https://www.testmuai.com/support/docs/hyperexecute-auto-healing/
 site_name: LambdaTest
 slug: hyperexecute-auto-healing/
-canonical: https://www.testmu.ai/support/docs/hyperexecute-auto-healing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-auto-healing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

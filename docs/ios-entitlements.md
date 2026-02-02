@@ -9,10 +9,10 @@ keywords:
 - entitlements for ios apps
 - mobile app testing
 - ios app testing
-url: https://www.testmu.ai/support/docs/ios-entitlements/
+url: https://www.testmuai.com/support/docs/ios-entitlements/
 site_name: LambdaTest
 slug: ios-entitlements/
-canonical: https://www.testmu.ai/support/docs/ios-entitlements/
+canonical: https://www.testmuai.com/support/docs/ios-entitlements/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
