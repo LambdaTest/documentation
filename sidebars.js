@@ -1982,6 +1982,11 @@ module.exports = {
             items: [
               {
                 type: "doc",
+                label: "Rules & Checklist",
+                id: "accessibility-rules-checklist",
+              },
+              {
+                type: "doc",
                 label: "Android",
                 id: "accessibility-android-rules",
               },
@@ -3659,16 +3664,6 @@ module.exports = {
                 type: "doc",
                 label: "GitLab",
                 id: "smartui-with-gitlab",
-              },
-              {
-                type: "doc",
-                label: "GitLab PR Checks (Hooks)",
-                id: "smartui-gitlab-pr-checks-hooks",
-              },
-              {
-                type: "doc",
-                label: "GitLab PR Checks (Exec)",
-                id: "smartui-gitlab-pr-checks-exec",
               },
               {
                 type: "doc",
