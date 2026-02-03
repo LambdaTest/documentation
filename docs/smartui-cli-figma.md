@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-cli/
+url: https://www.testmuai.com/support/docs/smartui-cli/
 slug: smartui-cli-figma/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-figma/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-figma/
 
 ---
 import Tabs from '@theme/Tabs';

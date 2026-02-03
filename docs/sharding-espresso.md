@@ -13,10 +13,10 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.testmu.ai/support/docs/sharding-espresso-rd-hyperexecute/
+url: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 site_name: LambdaTest
 slug: sharding-espresso-rd-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/sharding-espresso-rd-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

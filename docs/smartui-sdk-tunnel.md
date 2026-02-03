@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Tunnel
   - Local Testing
   - Internal Testing
-url: https://www.testmu.ai/support/docs/smartui-sdk-tunnel/
+url: https://www.testmuai.com/support/docs/smartui-sdk-tunnel/
 slug: smartui-sdk-tunnel/
-canonical: https://www.testmu.ai/support/docs/smartui-sdk-tunnel/
+canonical: https://www.testmuai.com/support/docs/smartui-sdk-tunnel/
 
 ---
 import Tabs from '@theme/Tabs';

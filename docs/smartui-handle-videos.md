@@ -11,10 +11,10 @@ keywords:
   - dynamic content
   - visual testing
   - false positives
-url: https://www.testmu.ai/support/docs/smartui-handle-videos/
+url: https://www.testmuai.com/support/docs/smartui-handle-videos/
 site_name: LambdaTest
 slug: smartui-handle-videos/
-canonical: https://www.testmu.ai/support/docs/smartui-handle-videos/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-videos/
 
 ---
 import Tabs from '@theme/Tabs';

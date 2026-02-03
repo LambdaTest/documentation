@@ -8,10 +8,10 @@ keywords:
   - Supported locales
   - Locales
   - Appium supported locales
-url: https://www.testmu.ai/support/docs/supported-locales-xcui/
+url: https://www.testmuai.com/support/docs/supported-locales-xcui/
 site_name: LambdaTest
 slug: supported-locales-xcui/
-canonical: https://www.testmu.ai/support/docs/supported-locales-xcui/
+canonical: https://www.testmuai.com/support/docs/supported-locales-xcui/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

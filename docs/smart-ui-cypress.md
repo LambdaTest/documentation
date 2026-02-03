@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smart-ui-cypress/
+url: https://www.testmuai.com/support/docs/smart-ui-cypress/
 slug: smart-ui-cypress/
-canonical: https://www.testmu.ai/support/docs/smart-ui-cypress/
+canonical: https://www.testmuai.com/support/docs/smart-ui-cypress/
 
 ---
 

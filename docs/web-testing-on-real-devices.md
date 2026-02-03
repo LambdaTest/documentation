@@ -15,10 +15,10 @@ keywords:
 - mobile web app testing tools 
 - how to test mobile web app on real devices
 - how to test mobile web apps
-url: https://www.testmu.ai/support/docs/web-testing-on-real-devices/
+url: https://www.testmuai.com/support/docs/web-testing-on-real-devices/
 site_name: LambdaTest
 slug: web-testing-on-real-devices/
-canonical: https://www.testmu.ai/support/docs/web-testing-on-real-devices/
+canonical: https://www.testmuai.com/support/docs/web-testing-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

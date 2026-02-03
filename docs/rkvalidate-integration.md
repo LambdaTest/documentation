@@ -9,10 +9,10 @@ keywords:
 - rktracer integration
 - rktracer integration with testmu ai
 
-url: https://www.testmu.ai/support/docs/rktracer-integration/
+url: https://www.testmuai.com/support/docs/rktracer-integration/
 site_name: LambdaTest
 slug: rktracer-integration/
-canonical: https://www.testmu.ai/support/docs/rktracer-integration/
+canonical: https://www.testmuai.com/support/docs/rktracer-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

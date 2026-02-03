@@ -15,10 +15,10 @@ keywords:
   - Cypress Run Specific Test
   - Cypress Testing Environment
   - How to Run Cypress Tests
-url: https://www.testmu.ai/support/docs/run-settings/
+url: https://www.testmuai.com/support/docs/run-settings/
 site_name: LambdaTest
 slug: run-settings/
-canonical: https://www.testmu.ai/support/docs/run-settings/
+canonical: https://www.testmuai.com/support/docs/run-settings/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

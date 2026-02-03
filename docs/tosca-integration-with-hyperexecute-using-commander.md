@@ -10,10 +10,10 @@ keywords:
     - products
     - tosca
     - tricentis
-url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-using-commander/
+url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
 site_name: LambdaTest
 slug: tosca-integration-with-hyperexecute-using-commander/
-canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-using-commander/
+canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

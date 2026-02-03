@@ -8,10 +8,10 @@ keywords:
 - migrate appium tests from sauce labs 
 - migrate appium tests from sauce labs to testmu ai
 - how to migrate appium tests from sauce labs to testmu ai
-url: https://www.testmu.ai/support/docs/migrate-appium-tests-from-sauce-labs/
+url: https://www.testmuai.com/support/docs/migrate-appium-tests-from-sauce-labs/
 site_name: LambdaTest
 slug: migrate-appium-tests-from-sauce-labs/
-canonical: https://www.testmu.ai/support/docs/migrate-appium-tests-from-sauce-labs/
+canonical: https://www.testmuai.com/support/docs/migrate-appium-tests-from-sauce-labs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

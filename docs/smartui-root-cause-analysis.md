@@ -9,10 +9,10 @@ keywords:
   - Visual Regression Debugging
   - TestMu AI SmartUI
   - Visual Testing Troubleshooting
-url: https://www.testmu.ai/support/docs/smartui-root-cause-analysis/
+url: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
 site_name: LambdaTest
 slug: smartui-root-cause-analysis/
-canonical: https://www.testmu.ai/support/docs/smartui-root-cause-analysis/
+canonical: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
 ---
 
 import Tabs from '@theme/Tabs';

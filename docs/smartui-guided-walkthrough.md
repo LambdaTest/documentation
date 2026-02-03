@@ -9,10 +9,10 @@ keywords:
   - TestMu AI SmartUI help
   - TestMu AI SamrtUI documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/smartui-guided-walkthrough/
+url: https://www.testmuai.com/support/docs/smartui-guided-walkthrough/
 site_name: LambdaTest
 slug: smartui-guided-walkthrough/
-canonical: https://www.testmu.ai/support/docs/smartui-guided-walkthrough/
+canonical: https://www.testmuai.com/support/docs/smartui-guided-walkthrough/
 
 ---
 

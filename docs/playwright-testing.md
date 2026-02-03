@@ -12,10 +12,10 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
 
-url: https://www.testmu.ai/support/docs/playwright-testing/
+url: https://www.testmuai.com/support/docs/playwright-testing/
 site_name: LambdaTest
 slug: playwright-testing/
-canonical: https://www.testmu.ai/support/docs/playwright-testing/
+canonical: https://www.testmuai.com/support/docs/playwright-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

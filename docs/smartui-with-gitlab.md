@@ -11,10 +11,10 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci cd
-url: https://www.testmu.ai/support/docs/smartui-with-gitlab/
+url: https://www.testmuai.com/support/docs/smartui-with-gitlab/
 site_name: LambdaTest
 slug: smartui-with-gitlab/
-canonical: https://www.testmu.ai/support/docs/smartui-with-gitlab/
+canonical: https://www.testmuai.com/support/docs/smartui-with-gitlab/
 
 ---
 import Tabs from '@theme/Tabs';

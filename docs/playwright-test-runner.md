@@ -13,10 +13,10 @@ keywords:
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.testmu.ai/support/docs/playwright-test-runner/
+url: https://www.testmuai.com/support/docs/playwright-test-runner/
 site_name: LambdaTest
 slug: playwright-test-runner/
-canonical: https://www.testmu.ai/support/docs/playwright-test-runner/
+canonical: https://www.testmuai.com/support/docs/playwright-test-runner/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

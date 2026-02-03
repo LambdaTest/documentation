@@ -12,10 +12,10 @@ keywords:
   - testmu ai
   - real device
   - simplifyqa real device
-url: https://www.testmu.ai/support/docs/simplifyqa-integration/
+url: https://www.testmuai.com/support/docs/simplifyqa-integration/
 site_name: LambdaTest
 slug: simplifyqa-integration/
-canonical: https://www.testmu.ai/support/docs/simplifyqa-integration/
+canonical: https://www.testmuai.com/support/docs/simplifyqa-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

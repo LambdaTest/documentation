@@ -15,10 +15,10 @@ keywords:
  - app testing
  - testmu ai 
  - appium version selection
-url: https://www.testmu.ai/support/docs/supported-appium-versions/
+url: https://www.testmuai.com/support/docs/supported-appium-versions/
 site_name: LambdaTest
 slug: supported-appium-versions/
-canonical: https://www.testmu.ai/support/docs/supported-appium-versions/
+canonical: https://www.testmuai.com/support/docs/supported-appium-versions/
 ---
 
 import Tabs from '@theme/Tabs';

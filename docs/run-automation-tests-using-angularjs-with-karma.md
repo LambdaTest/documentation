@@ -9,10 +9,10 @@ keywords:
   - angularjs automated testing
   - angularjs test automation
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

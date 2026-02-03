@@ -7,10 +7,10 @@ description: With TestMu AI, perform live interactive testing of mobile applicat
 keywords:
 - real device app testing 
 - testmu ai real device app testing 
-url: https://www.testmu.ai/support/docs/real-device-app-testing/
+url: https://www.testmuai.com/support/docs/real-device-app-testing/
 site_name: LambdaTest
 slug: real-device-app-testing/
-canonical: https://www.testmu.ai/support/docs/real-device-app-testing/
+canonical: https://www.testmuai.com/support/docs/real-device-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

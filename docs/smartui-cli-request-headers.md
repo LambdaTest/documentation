@@ -11,10 +11,10 @@ keywords:
     - visual testing configuration
     - smartui.json
     - protected assets
-url: https://www.testmu.ai/support/docs/smartui-cli-request-headers/
+url: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
 site_name: LambdaTest
 slug: smartui-cli-request-headers/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-request-headers/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
 
 ---
 import Tabs from '@theme/Tabs';

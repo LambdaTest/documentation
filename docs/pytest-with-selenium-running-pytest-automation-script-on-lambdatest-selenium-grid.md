@@ -14,10 +14,10 @@ keywords:
   - python selenium framework
   - testmu ai python
   - framework on testmu ai
-url: https://www.testmu.ai/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

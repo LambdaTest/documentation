@@ -15,10 +15,10 @@ keywords:
   - Running Cypress Tests
   - Cypress Project
 
-url: https://www.testmu.ai/support/docs/npm-via-tunnel/
+url: https://www.testmuai.com/support/docs/npm-via-tunnel/
 site_name: LambdaTest
 slug: npm-via-tunnel/
-canonical: https://www.testmu.ai/support/docs/npm-via-tunnel/
+canonical: https://www.testmuai.com/support/docs/npm-via-tunnel/
 ---
 
 

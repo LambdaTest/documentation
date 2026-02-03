@@ -17,10 +17,10 @@ keywords:
   - create servicenow issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/servicenow-integration/
+url: https://www.testmuai.com/support/docs/servicenow-integration/
 site_name: LambdaTest
 slug: servicenow-integration/
-canonical: https://www.testmu.ai/support/docs/servicenow-integration/
+canonical: https://www.testmuai.com/support/docs/servicenow-integration/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
