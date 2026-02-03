@@ -3662,16 +3662,6 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "GitLab PR Checks (Hooks)",
-                id: "smartui-gitlab-pr-checks-hooks",
-              },
-              {
-                type: "doc",
-                label: "GitLab PR Checks (Exec)",
-                id: "smartui-gitlab-pr-checks-exec",
-              },
-              {
-                type: "doc",
                 label: "Bitbucket",
                 id: "smartui-with-bitbucket",
               },
