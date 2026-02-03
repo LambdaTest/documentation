@@ -1982,11 +1982,6 @@ module.exports = {
             items: [
               {
                 type: "doc",
-                label: "Rules & Checklist",
-                id: "accessibility-rules-checklist",
-              },
-              {
-                type: "doc",
                 label: "Android",
                 id: "accessibility-android-rules",
               },
