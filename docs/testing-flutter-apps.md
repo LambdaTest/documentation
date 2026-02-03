@@ -49,7 +49,7 @@ Google's Flutter is an open-source tool for developing native mobile apps. It en
 
 You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium-testing`}>Appium testing</a> platform across 3000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
-## Prerequisites
+## Testing Apps Using Appium Flutter Driver
 ***
 
 Before automating Flutter apps using Appium, make sure you have the following things configured.
@@ -128,7 +128,93 @@ counter_element = FlutterElement(driver, counter_finder)
 print(counter_element.text)
 ```
 
->In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+## Testing Apps Using Appium Flutter Integration Driver
+---
+
+The [Appium Flutter Integration Driver](https://www.testmuai.com/support/docs/appium-flutter-integration/) lets you write tests in languages like Java, Python, JavaScript, and others that Appium supports. It works by embedding a small server inside your Flutter app which talks back to Appium and drives UI interactions.
+
+Check out this [Flutter Appium Java GitHub](https://github.com/LambdaTest/flutter-appium-java/) repository for a hands-on reference.
+
+
+To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *automationName* capability to *FlutterIntegration*.
+
+```java
+desired_caps = {
+  "deviceName": "Galaxy S20",
+  "platformName": "Android",
+  "platformVersion": "15",
+  "isRealMobile": True,   # Set False for virtual devices
+  "app": "YOUR_APP_URL",
+  "build": "Sample Build",
+  "name": "Sample Test",
+  "automationName": "FlutterIntegration"  # Use Flutter Integration Driver
+}
+```
+
+The example below shows a basic login flow for an Android Flutter app using the Appium Flutter Integration Driver. It covers driver setup, Flutter-specific capabilities, and widget interaction using *ValueKey*.
+
+```java
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Parameters;
+import java.net.URL;
+import java.util.HashMap;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.flutter.FlutterIntegrationTestDriver;
+import io.appium.java_client.flutter.android.FlutterAndroidDriver;
+
+public class AndroidApp_Flutter_Integration {
+
+    FlutterIntegrationTestDriver driver;
+
+    @Test
+    @Parameters(value = { "device", "version", "platform" })
+    public void AndroidApp1(String device, String version, String platform) {
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            HashMap<String, Object> ltOptions = new HashMap<>();
+
+            ltOptions.put("automationName", "FlutterIntegration");
+            ltOptions.put("nativeFlutterLaunch", true);
+            ltOptions.put("platformName", platform);
+            ltOptions.put("deviceName", device);
+            ltOptions.put("platformVersion", version);
+            ltOptions.put("isRealMobile", true);
+
+            capabilities.setCapability("LT:Options", ltOptions);
+
+            driver = new FlutterAndroidDriver(
+                new URL("https://username:accessKey@mobile-hub.lambdatest.com/wd/hub"),
+                capabilities
+            );
+
+            WebElement username = driver.findElement(AppiumBy.flutterKey("username"));
+            username.sendKeys("user@example.com");
+
+            WebElement password = driver.findElement(AppiumBy.flutterKey("password"));
+            password.sendKeys("password123");
+
+            WebElement loginBtn = driver.findElement(AppiumBy.flutterKey("login_btn"));
+            loginBtn.click();
+
+            driver.quit();
+        } catch (Exception e) {
+            driver.quit();
+        }
+    }
+}
+```
+
+Below is a screenshot showing Appium test automation running with the Flutter Integration Driver on the TestMu AI platform.
+
+<img loading="lazy" src={require('../assets/images/appium-flutter-integration-driver.webp').default} alt="Running Appium tests with Flutter Integration Driver on TestMu AI" width="1365" height="650" className="doc_img"/>
+
+
+
+
+>In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
