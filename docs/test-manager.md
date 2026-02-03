@@ -17,10 +17,10 @@ keywords:
   - executing build
   - build history
   - real time testing using test manager
-url: https://www.testmu.ai/support/docs/test-manager/
+url: https://www.testmuai.com/support/docs/test-manager/
 site_name: LambdaTest
 slug: test-manager/
-canonical: https://www.testmu.ai/support/docs/test-manager/
+canonical: https://www.testmuai.com/support/docs/test-manager/
 ---
 
 

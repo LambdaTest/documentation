@@ -15,10 +15,10 @@ keywords:
  - test automation frameworks
  - selenium frameworks
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/supported-languages-and-frameworks/
+url: https://www.testmuai.com/support/docs/supported-languages-and-frameworks/
 site_name: LambdaTest
 slug: supported-languages-and-frameworks/
-canonical: https://www.testmu.ai/support/docs/supported-languages-and-frameworks/
+canonical: https://www.testmuai.com/support/docs/supported-languages-and-frameworks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

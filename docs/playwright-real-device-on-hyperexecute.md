@@ -13,10 +13,10 @@ keywords:
     - playwright hyperexecute
     - real device playwright
     - real device test
-url: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute/
+url: https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/
 site_name: LambdaTest
 slug: playwright-real-device-on-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

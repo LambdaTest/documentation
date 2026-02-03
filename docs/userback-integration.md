@@ -17,10 +17,10 @@ keywords:
   - create userback issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/userback-integration/
+url: https://www.testmuai.com/support/docs/userback-integration/
 site_name: LambdaTest
 slug: userback-integration/
-canonical: https://www.testmu.ai/support/docs/userback-integration/
+canonical: https://www.testmuai.com/support/docs/userback-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

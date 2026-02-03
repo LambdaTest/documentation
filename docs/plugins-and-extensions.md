@@ -16,10 +16,10 @@ keywords:
   - testmu ai extensions 
   - chrome extensions for testers
   - plugins for testers 
-url: https://www.testmu.ai/support/docs/plugins-and-extensions/
+url: https://www.testmuai.com/support/docs/plugins-and-extensions/
 site_name: LambdaTest
 slug: plugins-and-extensions/
-canonical: https://www.testmu.ai/support/docs/plugins-and-extensions/
+canonical: https://www.testmuai.com/support/docs/plugins-and-extensions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

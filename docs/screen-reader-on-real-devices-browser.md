@@ -14,10 +14,10 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-browser/
+url: https://www.testmuai.com/support/docs/screen-reader-on-real-devices-browser/
 site_name: LambdaTest
 slug: screen-reader-on-real-devices-browser/
-canonical: https://www.testmu.ai/support/docs/screen-reader-on-real-devices-browser/
+canonical: https://www.testmuai.com/support/docs/screen-reader-on-real-devices-browser/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

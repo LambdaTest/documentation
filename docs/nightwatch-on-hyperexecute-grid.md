@@ -19,10 +19,10 @@ keywords:
   - hyperexecute Nightwatch testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/nightwatch-on-hyperexecute-grid/
+url: https://www.testmuai.com/support/docs/nightwatch-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: nightwatch-on-hyperexecute-grid/
-canonical: https://www.testmu.ai/support/docs/nightwatch-on-hyperexecute-grid/
+canonical: https://www.testmuai.com/support/docs/nightwatch-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

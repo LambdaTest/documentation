@@ -13,10 +13,10 @@ keywords:
   - selenium webdriver c#
   - selenium c# testing tutorial
   - c# selenium framework
-url: https://www.testmu.ai/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

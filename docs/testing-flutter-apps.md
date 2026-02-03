@@ -10,10 +10,10 @@ keywords:
 - test flutter apps on ios
 - test flutter apps on iphone
 - flutter test app
-url: https://www.testmu.ai/support/docs/testing-flutter-apps/
+url: https://www.testmuai.com/support/docs/testing-flutter-apps/
 site_name: LambdaTest
 slug: testing-flutter-apps/
-canonical: https://www.testmu.ai/support/docs/testing-flutter-apps/
+canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

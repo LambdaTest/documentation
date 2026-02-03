@@ -9,9 +9,9 @@ keywords:
   - Real Devices
   - Parallel Testing
 slug: multi-device-testing/
-canonical: https://www.testmu.ai/support/docs/multi-device-testing/
+canonical: https://www.testmuai.com/support/docs/multi-device-testing/
 site_name: LambdaTest
-url: https://www.testmu.ai/support/docs/multi-device-testing/
+url: https://www.testmuai.com/support/docs/multi-device-testing/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

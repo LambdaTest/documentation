@@ -12,10 +12,10 @@ keywords:
   - online hyperexecute
   - hyperexecute automation grid online
   - hyperexecute getting started
-url: https://www.testmu.ai/support/docs/tunnel-security/
+url: https://www.testmuai.com/support/docs/tunnel-security/
 site_name: LambdaTest
 slug: tunnel-security/
-canonical: https://www.testmu.ai/support/docs/tunnel-security/
+canonical: https://www.testmuai.com/support/docs/tunnel-security/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,10 +14,10 @@ keywords:
   - testmu ai supported browsers
   - selenium supported browsers
 
-url: https://www.testmu.ai/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
+url: https://www.testmuai.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
 site_name: LambdaTest
 slug: supported-browsers-and-operating-systems-for-the-web-interface/
-canonical: https://www.testmu.ai/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
+canonical: https://www.testmuai.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

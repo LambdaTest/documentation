@@ -8,10 +8,10 @@ keywords:
   - testmu ai integration with zoho bugtracker
   - testmu ai and zoho bugtracker integration 
   - zoho bugtracker integration
-url: https://www.testmu.ai/support/docs/zoho-bugtracker-integration/
+url: https://www.testmuai.com/support/docs/zoho-bugtracker-integration/
 site_name: LambdaTest
 slug: zoho-bugtracker-integration/
-canonical: https://www.testmu.ai/support/docs/zoho-bugtracker-integration/
+canonical: https://www.testmuai.com/support/docs/zoho-bugtracker-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

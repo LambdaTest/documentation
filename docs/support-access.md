@@ -10,10 +10,10 @@ keywords:
   - cross platform testing tools
   - check browser compatibility online
 
-url: https://www.testmu.ai/support/docs/support-access/
+url: https://www.testmuai.com/support/docs/support-access/
 site_name: LambdaTest
 slug: support-access/
-canonical: https://www.testmu.ai/support/docs/support-access/
+canonical: https://www.testmuai.com/support/docs/support-access/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

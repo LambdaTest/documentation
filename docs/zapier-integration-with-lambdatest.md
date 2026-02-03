@@ -9,10 +9,10 @@ keywords:
   - cross browser testing
   - zapier dashboard
   - automation on zapier 
-url: https://www.testmu.ai/support/docs/zapier-integration-with-testmu/
+url: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
 site_name: LambdaTest
 slug: zapier-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/zapier-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

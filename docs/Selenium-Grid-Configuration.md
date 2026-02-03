@@ -9,10 +9,10 @@ keywords:
   - selenium automation grid
   - selenium grid online
   - selenium versions  
-url: https://www.testmu.ai/support/docs/testmu-grid-configuration/
+url: https://www.testmuai.com/support/docs/testmu-grid-configuration/
 site_name: LambdaTest
 slug: testmu-grid-configuration/
-canonical: https://www.testmu.ai/support/docs/testmu-grid-configuration/
+canonical: https://www.testmuai.com/support/docs/testmu-grid-configuration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

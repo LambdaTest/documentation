@@ -12,9 +12,9 @@ keywords:
   - selenium testing
   - testmu ai selenium
 
-url: https://www.testmu.ai/support/docs/selenium-java-sdk/
+url: https://www.testmuai.com/support/docs/selenium-java-sdk/
 slug: selenium-java-sdk/
-canonical: https://www.testmu.ai/support/docs/selenium-java-sdk/
+canonical: https://www.testmuai.com/support/docs/selenium-java-sdk/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

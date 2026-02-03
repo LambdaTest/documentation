@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-selenium-python-sdk/
+url: https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/
 slug: smartui-selenium-python-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-selenium-python-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/
 
 ---
 import Tabs from '@theme/Tabs';

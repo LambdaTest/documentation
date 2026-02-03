@@ -15,10 +15,10 @@ keywords:
   - geolocation
   - tunnel
   - local testing
-url: https://www.testmu.ai/support/docs/web-scanner-advanced-features/
+url: https://www.testmuai.com/support/docs/web-scanner-advanced-features/
 site_name: LambdaTest
 slug: web-scanner-advanced-features/
-canonical: https://www.testmu.ai/support/docs/web-scanner-advanced-features/
+canonical: https://www.testmuai.com/support/docs/web-scanner-advanced-features/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -13,10 +13,10 @@ keywords:
   - app testing
   - real devices
 
-url: https://www.testmu.ai/support/docs/xcui-report/
+url: https://www.testmuai.com/support/docs/xcui-report/
 site_name: LambdaTest
 slug: xcui-report/
-canonical: https://www.testmu.ai/support/docs/xcui-report/
+canonical: https://www.testmuai.com/support/docs/xcui-report/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
