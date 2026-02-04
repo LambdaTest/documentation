@@ -1,4 +1,4 @@
-name: 'Sync testmuCom to upstream lt-docs'
+name: 'Deployment (Prod - testmucom New Bucket)'
 
 on:
   push:
@@ -6,74 +6,60 @@ on:
       - testmuCom
 
 jobs:
-  sync-to-upstream-lt-docs:
-    name: 'Sync to upstream lt-docs branch'
+  Docusaurus:
+    name: 'Deployment'
     runs-on: ubuntu-latest
+  
 
     steps:
-      - name: Generate GitHub App Token
-        uses: LambdatestIncPrivate/create_github_app_token@v1
-        id: token
-        with:
-          app-id: ${{ vars.LT_USER_ACCESS_TOKEN_APP_ID }}
-          private-key: ${{ secrets.LT_USER_ACCESS_TOKEN_PRIVATE_KEY }}
-          installation-id: ${{ secrets.GH_APP_INSTALLATION_ID }}
-          repositories: "documentation"
-          permissions: "write"
-
       - uses: actions/checkout@v4
         with:
+          ref: testmuCom
           fetch-depth: 0
-          token: ${{ steps.token.outputs.token }}
 
-      - name: Configure Git
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_MKT }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MKT }}
+          aws-region: us-east-1
+
+      - name: 'Create env file'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          touch .env
+          echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+          echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
 
-      - name: Sync changes to upstream lt-docs (excluding docusaurus.config.js)
+     
+
+      - name: Use Node.js 20.10.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.10.x
+
+      - name: Install dependencies and build
+        run: npm install --legacy-peer-deps && npm run build
+        env:
+          CI: false
+
+      - name: Copy files to S3 with AWS CLI
         run: |
-          # Get the latest commit from testmuCom
-          LATEST_COMMIT=$(git rev-parse HEAD)
-          COMMIT_MSG=$(git log -1 --pretty=%B)
+          cp -R assets/ build/
+          cd build/
+          aws s3 sync . s3://lambdatest-prod-support-docs-testmucom/support/ --exclude 'robots.txt' --delete
 
-          # Add upstream remote
-          git remote add upstream https://x-access-token:${{ steps.token.outputs.token }}@github.com/LambdaTest/documentation.git
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3GY6CDKYL9RFL \
+            --paths "/support/*"
+          sleep 90
 
-          # Fetch upstream lt-docs branch
-          git fetch upstream lt-docs
-
-          # Checkout upstream lt-docs branch
-          git checkout -b lt-docs-sync upstream/lt-docs
-
-          # Get list of changed files from the latest commit on testmuCom (excluding docusaurus.config.js)
-          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r $LATEST_COMMIT | grep -v '^docusaurus.config.js$' || true)
-
-          if [ -z "$CHANGED_FILES" ]; then
-            echo "No files to sync (only docusaurus.config.js was changed)"
-            exit 0
-          fi
-
-          # Copy the changes for each file (excluding docusaurus.config.js)
-          for file in $CHANGED_FILES; do
-            # Check if file exists in the commit
-            if git show "$LATEST_COMMIT:$file" > /dev/null 2>&1; then
-              # File exists, copy it
-              mkdir -p $(dirname "$file")
-              git show "$LATEST_COMMIT:$file" > "$file"
-              git add "$file"
-            else
-              # File was deleted
-              git rm "$file" 2>/dev/null || true
-            fi
-          done
-
-          # Check if there are changes to commit
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          # Commit and push to upstream lt-docs
-          git commit -m "Sync from testmuCom: $COMMIT_MSG"
-          git push upstream HEAD:lt-docs
+      - name: Cloudflare Invalidation
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "X-Auth-Email: ${{ secrets.CF_ACCOUNT }}" \
+            -H "X-Auth-Key: ${{ secrets.CF_API_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --data '{"hosts":["${{ secrets.PROD_WEBSITE_URL }}"] }'
+          sleep 60
