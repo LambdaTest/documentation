@@ -1,0 +1,79 @@
+name: 'Sync testmuCom to upstream lt-docs'
+
+on:
+  push:
+    branches:
+      - testmuCom
+
+jobs:
+  sync-to-upstream-lt-docs:
+    name: 'Sync to upstream lt-docs branch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate GitHub App Token
+        uses: LambdatestIncPrivate/create_github_app_token@v1
+        id: token
+        with:
+          app-id: ${{ vars.LT_USER_ACCESS_TOKEN_APP_ID }}
+          private-key: ${{ secrets.LT_USER_ACCESS_TOKEN_PRIVATE_KEY }}
+          installation-id: ${{ secrets.GH_APP_INSTALLATION_ID }}
+          repositories: "documentation"
+          permissions: "write"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.token.outputs.token }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync changes to upstream lt-docs (excluding docusaurus.config.js)
+        run: |
+          # Get the latest commit from testmuCom
+          LATEST_COMMIT=$(git rev-parse HEAD)
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+
+          # Add upstream remote
+          git remote add upstream https://x-access-token:${{ steps.token.outputs.token }}@github.com/LambdaTest/documentation.git
+
+          # Fetch upstream lt-docs branch
+          git fetch upstream lt-docs
+
+          # Checkout upstream lt-docs branch
+          git checkout -b lt-docs-sync upstream/lt-docs
+
+          # Get list of changed files from the latest commit on testmuCom (excluding docusaurus.config.js)
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r $LATEST_COMMIT | grep -v '^docusaurus.config.js$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No files to sync (only docusaurus.config.js was changed)"
+            exit 0
+          fi
+
+          # Copy the changes for each file (excluding docusaurus.config.js)
+          for file in $CHANGED_FILES; do
+            # Check if file exists in the commit
+            if git show "$LATEST_COMMIT:$file" > /dev/null 2>&1; then
+              # File exists, copy it
+              mkdir -p $(dirname "$file")
+              git show "$LATEST_COMMIT:$file" > "$file"
+              git add "$file"
+            else
+              # File was deleted
+              git rm "$file" 2>/dev/null || true
+            fi
+          done
+
+          # Check if there are changes to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          # Commit and push to upstream lt-docs
+          git commit -m "Sync from testmuCom: $COMMIT_MSG"
+          git push upstream HEAD:lt-docs
