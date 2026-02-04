@@ -141,6 +141,7 @@ The Memory Layer operates automatically in the background, you can choose to ena
 :::
 ---
 
+
 ## Generate Test Cases: Step-by-Step
 
 ### Step 1: Open the AI Test Case Generator
@@ -420,6 +421,16 @@ The **Create and Automate** option requires KaneAI access. If you do not have Ka
 | File upload fails | Verify the file does not exceed the 50 MB size limit and that you have not exceeded the 10-file session limit. |
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
+
+---
+
+## Video Walkthrough
+
+Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/images/mobile-app-testing/ai-test-case-generator-walkthrough.mp4').default} type="video/mp4" />
+</video>
 
 ---
 
