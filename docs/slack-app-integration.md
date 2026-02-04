@@ -9,7 +9,7 @@ keywords:
 - integrate testmu ai with slack app
 - run realtime and screenshot tests with slack app
 - how to integrate slack app with testmu ai
-url: https://www.testmu.ai/support/docs/slack-app/
+url: https://www.testmuai.com/support/docs/slack-app/
 site_name: LambdaTest
 slug: slack-app/
 canonical: https://www.testmu.ai/support/docs/slack-app/

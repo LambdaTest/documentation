@@ -8,7 +8,7 @@ keywords:
   - specflow testing reports
   - specflow testing testmu ai 
   
-url: https://www.testmu.ai/support/docs/specflow-report/
+url: https://www.testmuai.com/support/docs/specflow-report/
 site_name: LambdaTest
 slug: specflow-report/
 canonical: https://www.testmu.ai/support/docs/specflow-report/

@@ -9,7 +9,7 @@ keywords:
 - adb shell
 - adb command
 
-url: https://www.testmu.ai/support/docs/real-device-adb-shell/
+url: https://www.testmuai.com/support/docs/real-device-adb-shell/
 site_name: LambdaTest
 slug: real-device-adb-shell/
 canonical: https://www.testmu.ai/support/docs/real-device-adb-shell/

@@ -11,7 +11,7 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/
 site_name: LambdaTest
 slug: travis-ci-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute/

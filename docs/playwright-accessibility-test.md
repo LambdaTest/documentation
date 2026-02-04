@@ -9,7 +9,7 @@ keywords:
     - Testing
     - Automation
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/playwright-accessibility-test/
+url: https://www.testmuai.com/support/docs/playwright-accessibility-test/
 site_name: LambdaTest
 slug: playwright-accessibility-test/
 canonical: https://www.testmu.ai/support/docs/playwright-accessibility-test/

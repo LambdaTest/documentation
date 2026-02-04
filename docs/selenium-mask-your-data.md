@@ -9,7 +9,7 @@ keywords:
   - selenium automation grid
   - selenium masking data
   - lambda mask commands
-url: https://www.testmu.ai/support/docs/selenium-mask-your-data/
+url: https://www.testmuai.com/support/docs/selenium-mask-your-data/
 site_name: LambdaTest
 slug: selenium-mask-your-data/
 canonical: https://www.testmu.ai/support/docs/selenium-mask-your-data/

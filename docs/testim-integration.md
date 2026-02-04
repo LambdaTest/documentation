@@ -11,7 +11,7 @@ keywords:
 - testim integration with testmu ai
 - testmu ai integration with testim
 - testim testmu ai
-url: https://www.testmu.ai/support/docs/testim-integration/
+url: https://www.testmuai.com/support/docs/testim-integration/
 site_name: LambdaTest
 slug: testim-integration/
 canonical: https://www.testmu.ai/support/docs/testim-integration/

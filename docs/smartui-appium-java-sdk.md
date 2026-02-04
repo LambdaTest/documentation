@@ -17,7 +17,7 @@ keywords:
   - Mobile App Testing
   - App Visual Testing
 
-url: https://www.testmu.ai/support/docs/smartui-appium-java-sdk/
+url: https://www.testmuai.com/support/docs/smartui-appium-java-sdk/
 slug: smartui-appium-java-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-appium-java-sdk/
 

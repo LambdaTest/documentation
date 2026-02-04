@@ -11,7 +11,7 @@ keywords:
   - mitm proxy
   - http traffic capture
   - domain filtering automation
-url: https://www.testmu.ai/support/docs/network-configurations/
+url: https://www.testmuai.com/support/docs/network-configurations/
 site_name: LambdaTest
 slug: network-configurations/
 canonical: https://www.testmu.ai/support/docs/network-configurations/

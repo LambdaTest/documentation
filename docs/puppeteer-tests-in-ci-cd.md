@@ -13,7 +13,7 @@ keywords:
   - puppeteer testing testmu ai
 
   
-url: https://www.testmu.ai/support/docs/puppeteer-tests-in-ci-cd/
+url: https://www.testmuai.com/support/docs/puppeteer-tests-in-ci-cd/
 site_name: LambdaTest
 slug: puppeteer-tests-in-ci-cd/
 canonical: https://www.testmu.ai/support/docs/puppeteer-tests-in-ci-cd/

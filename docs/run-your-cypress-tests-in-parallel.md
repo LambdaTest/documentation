@@ -16,7 +16,7 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.testmu.ai/support/docs/run-your-cypress-tests-in-parallel/
+url: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
 site_name: LambdaTest
 slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmu.ai/support/docs/run-your-cypress-tests-in-parallel/

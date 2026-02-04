@@ -13,7 +13,7 @@ keywords:
 - selenium testing tool
 - selenium testing tutorial
 
-url: https://www.testmu.ai/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
+url: https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
 site_name: LambdaTest
 slug: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/

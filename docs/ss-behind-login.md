@@ -12,7 +12,7 @@ keywords:
   - screenshot testing after login page
 
 
-url: https://www.testmu.ai/support/docs/taking-screenshots-of-pages-behind-login/
+url: https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/
 site_name: LambdaTest
 slug: taking-screenshots-of-pages-behind-login/
 canonical: https://www.testmu.ai/support/docs/taking-screenshots-of-pages-behind-login/

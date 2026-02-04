@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate/
+url: https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/
 site_name: LambdaTest
 slug: saucelabs-to-hyperexecute-migrate/
 canonical: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate/

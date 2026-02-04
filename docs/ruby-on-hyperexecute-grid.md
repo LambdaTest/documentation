@@ -18,7 +18,7 @@ keywords:
   - hyperexecute Ruby testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.testmu.ai/support/docs/ruby-on-hyperexecute-grid/
+url: https://www.testmuai.com/support/docs/ruby-on-hyperexecute-grid/
 site_name: LambdaTest
 slug: ruby-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/ruby-on-hyperexecute-grid/

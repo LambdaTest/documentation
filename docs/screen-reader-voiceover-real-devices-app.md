@@ -9,7 +9,7 @@ keywords:
   - accessibility
   - app testing
   - real devices
-url: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app/
+url: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/
 site_name: LambdaTest
 slug: screen-reader-voiceover-real-devices-app/
 canonical: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app/

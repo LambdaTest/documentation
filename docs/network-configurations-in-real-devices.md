@@ -10,7 +10,7 @@ keywords:
   - http traffic capture
   - domain filtering
   - network configurations
-url: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/
+url: https://www.testmuai.com/support/docs/network-configurations-in-real-devices/
 site_name: LambdaTest
 slug: network-configurations-in-real-devices/
 canonical: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/

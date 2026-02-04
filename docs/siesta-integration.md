@@ -8,7 +8,7 @@ keywords:
   - testmu ai integration with siesta
   - testmu ai and siesta integration 
   - testmu ai siesta
-url: https://www.testmu.ai/support/docs/siesta-integration/
+url: https://www.testmuai.com/support/docs/siesta-integration/
 site_name: LambdaTest
 slug: siesta-integration/
 canonical: https://www.testmu.ai/support/docs/siesta-integration/

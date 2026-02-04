@@ -11,7 +11,7 @@ keywords:
   - testmu ai
   - MCP
   - MCP server
-url: https://www.testmu.ai/support/docs/smartui-mcp-server/
+url: https://www.testmuai.com/support/docs/smartui-mcp-server/
 site_name: LambdaTest
 slug: smartui-mcp-server/
 canonical: https://www.testmu.ai/support/docs/smartui-mcp-server/

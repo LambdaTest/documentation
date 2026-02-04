@@ -9,7 +9,7 @@ keywords:
   - Capabilities
   - Configuration
   - Visual Testing
-url: https://www.testmu.ai/support/docs/smartui-sdk-capabilities/
+url: https://www.testmuai.com/support/docs/smartui-sdk-capabilities/
 slug: smartui-sdk-capabilities/
 canonical: https://www.testmu.ai/support/docs/smartui-sdk-capabilities/
 

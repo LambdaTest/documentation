@@ -17,7 +17,7 @@ keywords:
   - Katalon Studio
   - Katalon SmartUI Integration
 
-url: https://www.testmu.ai/support/docs/smartui-katalon-plugin/
+url: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
 site_name: LambdaTest
 slug: smartui-katalon-plugin/
 canonical: https://www.testmu.ai/support/docs/smartui-katalon-plugin/

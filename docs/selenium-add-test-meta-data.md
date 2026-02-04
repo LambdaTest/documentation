@@ -12,7 +12,7 @@ keywords:
   - traceability
   - debugging
   - reporting
-url: https://www.testmu.ai/support/docs/selenium-add-test-meta-data/
+url: https://www.testmuai.com/support/docs/selenium-add-test-meta-data/
 site_name: LambdaTest
 slug: selenium-add-test-meta-data/
 canonical: https://www.testmu.ai/support/docs/selenium-add-test-meta-data/

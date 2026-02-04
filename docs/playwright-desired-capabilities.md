@@ -12,7 +12,7 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
 
-url: https://www.testmu.ai/support/docs/capabilities-for-playwright/
+url: https://www.testmuai.com/support/docs/capabilities-for-playwright/
 site_name: LambdaTest
 slug: capabilities-for-playwright/
 canonical: https://www.testmu.ai/support/docs/capabilities-for-playwright/

@@ -13,7 +13,7 @@ keywords:
   - Selenium Playwright WebdriverIO
   - Appium mobile testing
   - SmartUI webhooks
-url: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-hooks/
+url: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/
 site_name: LambdaTest
 ---
 

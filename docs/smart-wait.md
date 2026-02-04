@@ -8,7 +8,7 @@ keywords:
 - smart wait selenium
 - smart wait selenium testing
 - smart wait automation
-url: https://www.testmu.ai/support/docs/smart-wait/
+url: https://www.testmuai.com/support/docs/smart-wait/
 site_name: LambdaTest
 slug: smart-wait/
 canonical: https://www.testmu.ai/support/docs/smart-wait/

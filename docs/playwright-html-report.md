@@ -13,7 +13,7 @@ keywords:
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.testmu.ai/support/docs/playwright-html-report/
+url: https://www.testmuai.com/support/docs/playwright-html-report/
 site_name: LambdaTest
 slug: playwright-html-report/
 canonical: https://www.testmu.ai/support/docs/playwright-html-report/

@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-selenium-js-sdk/
+url: https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/
 slug: smartui-selenium-js-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-selenium-js-sdk/
 

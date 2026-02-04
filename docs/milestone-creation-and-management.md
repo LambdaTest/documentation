@@ -6,7 +6,7 @@ sidebar_label: Milestones
 description: Check the milestones - datasets, test run and 
 keywords:
   - milestone creation 
-url: https://www.testmu.ai/support/docs/milestone-creation-and-management/
+url: https://www.testmuai.com/support/docs/milestone-creation-and-management/
 site_name: LambdaTest
 slug: milestone-creation-and-management/
 canonical: https://www.testmu.ai/support/docs/milestone-creation-and-management/

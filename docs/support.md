@@ -16,7 +16,7 @@ keywords:
   - Test on Samsung A7 online
   - Test on Mac 10.9 Mavericks online
   - Apple Mac Mavericks Virtual Machine
-url: https://www.testmu.ai/support/docs/
+url: https://www.testmuai.com/support/docs/
 site_name: LambdaTest
 slug: /
 canonical: https://www.testmu.ai/support/docs///

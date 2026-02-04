@@ -15,7 +15,7 @@ keywords:
   - app testing on real device
   - simulate date time
   - iOS automation hooks
-url: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices/
+url: https://www.testmuai.com/support/docs/set-date-time-hour-format-real-devices/
 site_name: LambdaTest
 slug: set-date-time-hour-format-real-devices/
 canonical: https://www.testmu.ai/support/docs/set-date-time-hour-format-real-devices/
