@@ -11,7 +11,7 @@ keywords:
   - test deduplication
   - intelligent reporting
   - test consolidation
-url: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
+url: https://www.testmuai.com/support/docs/analytics-unique-instances-retry-detection/
 site_name: LambdaTest
 slug: analytics-unique-instances-retry-detection/
 canonical: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/

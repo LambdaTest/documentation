@@ -8,7 +8,7 @@ keywords:
   - test case update
   - test cases
   - version
-url: https://www.testmu.ai/support/docs/test-case-versioning/
+url: https://www.testmuai.com/support/docs/test-case-versioning/
 site_name: LambdaTest
 slug: test-case-versioning/
 canonical: https://www.testmu.ai/support/docs/test-case-versioning/

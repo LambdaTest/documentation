@@ -11,7 +11,7 @@ keywords:
   - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.testmu.ai/support/docs/smartui-with-netlify/
+url: https://www.testmuai.com/support/docs/smartui-with-netlify/
 site_name: LambdaTest
 slug: smartui-with-netlify/
 canonical: https://www.testmu.ai/support/docs/smartui-with-netlify/

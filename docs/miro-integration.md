@@ -9,7 +9,7 @@ keywords:
   - miro whiteboard
   - free cross browser testing tool
   - miro integration
-url: https://www.testmu.ai/support/docs/miro-integration/
+url: https://www.testmuai.com/support/docs/miro-integration/
 site_name: LambdaTest
 slug: miro-integration/
 canonical: https://www.testmu.ai/support/docs/miro-integration/

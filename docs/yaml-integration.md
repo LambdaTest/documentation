@@ -12,7 +12,7 @@ keywords:
   - gocd integration with testmu ai
   - testmu ai integration with gocd pipelines
   - ci/cd
-url: https://www.testmu.ai/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
+url: https://www.testmuai.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
 site_name: LambdaTest
 slug: configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
 canonical: https://www.testmu.ai/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/

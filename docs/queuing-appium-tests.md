@@ -8,7 +8,7 @@ keywords:
   - appium test session queuing
   - queuing
   - testmu ai queuing
-url: https://www.testmu.ai/support/docs/queuing-appium-tests/
+url: https://www.testmuai.com/support/docs/queuing-appium-tests/
 site_name: LambdaTest
 slug: queuing-appium-tests/
 canonical: https://www.testmu.ai/support/docs/queuing-appium-tests/

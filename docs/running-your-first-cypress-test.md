@@ -15,7 +15,7 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.testmu.ai/support/docs/running-your-first-cypress-test/
+url: https://www.testmuai.com/support/docs/running-your-first-cypress-test/
 site_name: LambdaTest
 slug: running-your-first-cypress-test/
 canonical: https://www.testmu.ai/support/docs/running-your-first-cypress-test/

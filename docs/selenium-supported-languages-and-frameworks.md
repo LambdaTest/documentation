@@ -17,7 +17,7 @@ keywords:
  - TestMu AI HyperExecute
  - Super fast Selenium grid
 image: /assets/images/og-images/selenium-testing-og.png
-url: https://www.testmu.ai/support/docs/selenium-supported-languages-and-frameworks/
+url: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
 site_name: LambdaTest
 slug: selenium-supported-languages-and-frameworks/
 canonical: https://www.testmu.ai/support/docs/selenium-supported-languages-and-frameworks/

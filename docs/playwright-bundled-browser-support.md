@@ -12,7 +12,7 @@ keywords:
     - bundled browser
     - playwright bundled
     - playwright browsers
-url: https://www.testmu.ai/support/docs/playwright-bundled-browser-support/
+url: https://www.testmuai.com/support/docs/playwright-bundled-browser-support/
 site_name: LambdaTest
 slug: playwright-bundled-browser-support/
 canonical: https://www.testmu.ai/support/docs/playwright-bundled-browser-support/

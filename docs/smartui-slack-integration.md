@@ -14,7 +14,7 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.testmu.ai/support/docs/ssmartui-slack-integration/
+url: https://www.testmuai.com/support/docs/ssmartui-slack-integration/
 site_name: LambdaTest
 slug: smartui-slack-integration/
 canonical: https://www.testmu.ai/support/docs/smartui-slack-integration/

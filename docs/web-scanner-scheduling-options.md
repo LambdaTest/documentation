@@ -9,7 +9,7 @@ keywords:
   - web scanner
   - schedule scan
   - recurring scan
-url: https://www.testmu.ai/support/docs/web-scanner-scheduling-options/
+url: https://www.testmuai.com/support/docs/web-scanner-scheduling-options/
 site_name: LambdaTest
 slug: web-scanner-scheduling-options/
 canonical: https://www.testmu.ai/support/docs/web-scanner-scheduling-options/

@@ -14,7 +14,7 @@ description: In this documentation, learn how to group screenshots in a single b
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.testmu.ai/support/docs/smartui-cli/
+url: https://www.testmuai.com/support/docs/smartui-cli/
 slug: smartui-cli-build-name/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-build-name/
 

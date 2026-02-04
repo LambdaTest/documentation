@@ -16,7 +16,7 @@ keywords:
 - Selenium Headless Firefox
 - Headless Testing
 
-url: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers/
+url: https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/
 site_name: LambdaTest
 slug: perform-selenium-automation-on-headless-browsers/
 canonical: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers/

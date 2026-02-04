@@ -12,7 +12,7 @@ keywords:
   - mark bugs
   - cross browser testing
   - browser compatibility testing
-url: https://www.testmu.ai/support/docs/target-process-integration/
+url: https://www.testmuai.com/support/docs/target-process-integration/
 site_name: LambdaTest
 slug: target-process-integration/
 canonical: https://www.testmu.ai/support/docs/target-process-integration/

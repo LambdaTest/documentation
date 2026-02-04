@@ -13,7 +13,7 @@ keywords:
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.testmu.ai/support/docs/playwright-with-cucumberjs/
+url: https://www.testmuai.com/support/docs/playwright-with-cucumberjs/
 site_name: LambdaTest
 slug: playwright-with-cucumberjs/
 canonical: https://www.testmu.ai/support/docs/playwright-with-cucumberjs/

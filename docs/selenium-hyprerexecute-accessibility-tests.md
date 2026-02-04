@@ -11,7 +11,7 @@ keywords:
     - selenium
     - Automation
     - Accessibility Testing Settings
-url: https://www.testmu.ai/support/docs/selenium-hyprerexecute-accessibility-tests/
+url: https://www.testmuai.com/support/docs/selenium-hyprerexecute-accessibility-tests/
 site_name: LambdaTest
 slug: selenium-hyprerexecute-accessibility-tests/
 canonical: https://www.testmu.ai/support/docs/selenium-hyprerexecute-accessibility-tests/

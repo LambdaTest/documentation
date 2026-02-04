@@ -11,7 +11,7 @@ export default function LayoutWrapper(props: Props): ReactNode {
   const location = useLocation();
 
   // Build canonical using testmu.ai + current path
-  const canonical = `https://www.testmu.ai${location.pathname}`;
+  const canonical = `https://www.testmuai.com${location.pathname}`;
   return (
     <>
     {canonical && (

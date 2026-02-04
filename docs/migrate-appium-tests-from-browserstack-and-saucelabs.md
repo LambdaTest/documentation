@@ -9,7 +9,7 @@ keywords:
   - migrate appium tests from browserstack and saucelabs to testmu ai
   - how to migrate appium tests from browserstack to testmu ai
   - how to migrate appium tests from saucelabs to testmu ai
-url: https://www.testmu.ai/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/
+url: https://www.testmuai.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/
 site_name: LambdaTest
 slug: migrate-appium-tests-from-browserstack-and-saucelabs/
 canonical: https://www.testmu.ai/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/

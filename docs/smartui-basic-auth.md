@@ -9,7 +9,7 @@ keywords:
   - Basic Authentication
   - Protected Assets
   - Authentication Headers
-url: https://www.testmu.ai/support/docs/smartui-basic-auth/
+url: https://www.testmuai.com/support/docs/smartui-basic-auth/
 slug: smartui-cli-basic-auth/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-basic-auth/
 
