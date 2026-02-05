@@ -45,7 +45,7 @@ Secrets in <BrandName /> HyperExecute are encrypted environment variables used t
 Managing sensitive information like API tokens, credentials, and access keys is crucial when running tests in <BrandName /> HyperExecute. To address this, HyperExecute offers a Secrets Management system, and one of its powerful features is Project Level Secrets. This feature lets you define secrets scoped to a specific project, making secret handling more secure, easier, and collaborative for your teams.
 
 ## What Are Project Level Secrets?
-Project-level secrets are bound to a specific HyperExecute project instead of a user or account. When a job runs using that project (referenced by name or id in the YAML configuration, which is a sub-parameter of project parameter), the project-level secrets are automatically available to the test environment.
+Project-level secrets are bound to a specific HyperExecute project instead of a user or account. When a job runs using that project ( referenced by id or both id and name in the YAML configuration, which is a sub-parameters of project parameter), the project-level secrets are automatically available to the test environment.
 
 ### Key Points
 - Define secrets once per project.
@@ -76,7 +76,9 @@ runson: linux
 autosplit: true
 concurrency: 2
 
-project: your-project-name
+project:
+  name: 'demo-project' 
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' 
 
 # highlight-start
 env:

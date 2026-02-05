@@ -952,14 +952,10 @@ alwaysRunPostSteps: true
 
 This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place. To know more about Projects [click here](/support/docs/hyperexecute-projects).
 
-```yaml
-project:
-  name: 'demo-project' #project name
-```
-
 :::info note
-Once you have created a project, you can either pass in your `project ID` or `project name` to trigger your job on the same project.
-
+- Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
+- If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
+:::
 ```yaml
 project:
   name: 'demo-project' #project name
