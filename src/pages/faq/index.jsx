@@ -2,7 +2,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
-            import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 export default function index() {
 
