@@ -1,0 +1,81 @@
+---
+title: "Adding URLs for Web Scanner"
+sidebarTitle: "Adding URLs for Web Scanner"
+keywords: ["lambdatest", "web scanner", "add urls", "csv import", "sitemap import"]
+---
+
+## Step 3: Add URLs to Your Scan
+
+After configuring the scan type (Step 2), the **Add URLs** section (Step 3) allows you to populate the test targets. You can choose from one of the following input methods.
+
+### 1. Add URLs Manually
+
+Use this method when you want full control over each scanned URL or you’re testing only a handful of critical paths.
+
+![Add URLs Manually](/assets/images/web-scanner/import-urls-manually.png)
+
+**Instructions:**
+* Paste each URL in a new line or input box.
+* Ensure proper formatting (`https://` required).
+
+**Best for:**
+* Login pages, checkout flows, admin pages.
+
+
+### 2. Import via CSV File
+
+Use this method when you already maintain URL lists in a spreadsheet or text file.
+
+
+**CSV Format:**
+One URL per line (no header).
+```csv
+[https://example.com](https://example.com)
+[https://example.com/pricing](https://example.com/pricing)
+[https://example.com/contact](https://example.com/contact)
+```
+
+**Instructions**:
+
+* Click on Import CSV.
+
+* Upload your .csv file.
+
+* URLs will auto-populate the scan list.
+
+Ideal for:
+
+* Large teams with pre-approved page lists.
+
+* Reusing URL sets across projects.
+
+![Import URLs via CSV File](/assets/images/web-scanner/import-urls-csv.png)
+
+
+### 3. Import via Sitemap
+Use this method when:
+* you want to extract URLs from an existing sitemap
+* you’re scanning a dynamic, live website.
+
+**Instructions**:
+* Paste the sitemap URL (XML format).
+* Click Fetch Sitemap.
+* The scanner will auto-detect URLs.
+* You can selectively check/uncheck desired pages.
+
+Ideal for:
+* Scanning large public websites.
+* Ensuring complete coverage.
+
+![Import URLs via Sitemap](/assets/images/web-scanner/import-urls-sitemap.png)
+
+### URL Limits and Validations
+**Max URL Limit**: would depend upon your SmartUI (*for visual scan*) and Accessibility (*for accessibility scan*) plan.
+
+**All URLs must be valid and working.**
+
+**Duplicate URLs will be auto-filtered**
+
+**Reusability Tips**
+* For frequently used URL sets, save them in CSVs and upload as needed.
+* Create and save CSV url lists from sitemap and use in CSV mode for future.

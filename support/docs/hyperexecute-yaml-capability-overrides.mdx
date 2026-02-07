@@ -1,0 +1,91 @@
+---
+title: "YAML-Based Capability Overrides for Selenium Tests on HyperExecute"
+sidebarTitle: "Override Capabilities in YAML"
+keywords: ['LambdaTest Hyperexecute', 'LambdaTest Hyperexecute help', 'LambdaTest Hyperexecute documentation']
+---
+
+In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
+
+Previously, these capabilities were typically defined within the test script. With this new feature, you can now override or inject these directly from your **HyperExecute YAML** file. This gives you greater flexibility and eliminates the need to modify test scripts every time you change execution parameters.
+
+## 🚀 Why Use YAML-Based Overrides?
+| Benefit                      | Description                                                                |
+| ---------------------------- | -------------------------------------------------------------------------- |
+| No Code Changes Required     | Easily change capabilities without modifying your test script.             |
+| Reusable & Configurable      | Use a single script across different environments with varying YAML files. |
+| Cleaner Test Scripts         | Keeps your scripts capability-agnostic and environment-independent.        |
+
+## ⚙️ How It Works
+- Define a new `ltOptions` section inside your HyperExecute YAML file.
+- Specify any desired capabilities as key-value pairs under `ltOptions`.
+- During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
+<Note>
+All the capabilities defined under the `ltOptions` section are fully aligned with LambdaTest's standard capability structure. You can use any capability listed in our [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+</Note>
+
+## 🔑 Key Behavior Rules
+
+| Case                                                | Behavior                                                   |
+| --------------------------------------------------- | ---------------------------------------------------------- |
+| Capability present in **both test script and YAML** | The **YAML value takes precedence**.                       |
+| Capability present in **YAML but not in script**    | It is **automatically added** to the session capabilities. |
+| Capability only in script                           | Used as-is unless overridden in YAML.                      |
+
+<Note>
+**📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
+</Note>
+
+## Sample YAML with Capability Overrides
+
+```yaml
+---
+version: 0.1
+runson: linux
+
+autosplit: true
+concurrency: 2
+
+runtime:
+  language: java
+  version: 11
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+
+pre:
+  - mvn dependency:resolve
+
+testDiscovery:
+  type: raw
+  mode: remote
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+
+testRunnerCommand: mvn test -Dplatname=linux -DselectedTests=$test
+
+retryOnFailure: true
+maxRetries: 1
+
+ltOptions:
+  browserName: firefox
+  build: 'testng_build_yaml_ltOptions'
+  console: true
+  name: 'testng_test_yaml_ltOptions'
+  network: true
+  selenium_version: 4.20.0
+  tunnel: false
+  version: latest
+  video: false
+
+jobLabel: [selenium-testng, linux, ltOptionsYamlDirective]
+```
+
+## 💡 Common Use Cases
+
+| Use Case                      | Example Capability           |
+| ----------------------------- | ---------------------------- |
+| Changing browser type/version | `browserName`, `version`     |
+| Controlling visual artifacts  | `video`, `console`, `visual` |
+| Defining test metadata        | `build`, `name`              |
+| Network capture and debugging | `network`, `tunnel`          |
+| Switching Selenium versions   | `selenium_version`           |

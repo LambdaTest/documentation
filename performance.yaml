@@ -1,0 +1,644 @@
+openapi: 3.0.0
+info:
+  title: LambdaTest's Performance Testing API Documentation
+  version: 1.0.1
+servers:
+    - url: 'https://api.hyperexecute.cloud'
+paths:
+  /v1.0/performance/summary/{jobId}:
+    get:
+      tags:
+        - Performance Testing
+      summary: Retrieve a summary of performance testing results for a specific job.
+      description: This API provides an overview of performance test results for a given job, including job ID, execution time, duration, request count, bandwidth, throughput, response times, ramp time, and user count. It helps assess the system's overall performance and scalability.
+      parameters:
+      - name: jobId
+        in: path
+        description: Enter your HyperExecute JobID
+        required: true
+        style: simple
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformanceTestingSummary'
+              example:
+                type: "summary"
+                data:
+                  job_id: "493bac0f-e412-445b-b85a-88df79f56de3"
+                  start_timestamp: "2025-10-16T08:11:21.000000000Z"
+                  end_timestamp: "2025-10-16T08:13:06.000000000Z"
+                  duration: 105000
+                  total_requests: 669
+                  total_errors: 668
+                  error_rate: 99.85052316890882
+                  avg_bandwidth: 0
+                  avg_throughput: 9.416666666666666
+                  min_response_time: 0
+                  max_response_time: 6127
+                  avg_response_time: 570.9144927998836
+                  avg_latency: 570.9144927998836
+                  ramp_time: 0
+                  users: 1
+        400:
+          description: Bad request error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              examples:
+                invalid_type:
+                  summary: Invalid type query param
+                  value:
+                    error: "invalid 'type' query param (use: summary | requestStats | errorStats)"
+                    status: "failed"
+        404:
+          description: No data found for the provided jobId.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "job not found or not accessible by this organization"
+                status: "failed"
+        500:
+          description: Server-side error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "error getting summary"
+                status: "failed"
+      security:
+        - basicAuth: []
+  /v1.0/performance/requestStats/{jobId}:
+    get:
+      tags:
+        - Performance Testing
+      summary: Fetch detailed request statistics for a performance test within a specific job.
+      description: This API retrieves detailed performance data for requests made during a test, including throughput, bandwidth, response times, and error counts, helping identify bottlenecks and analyze system performance under load.
+      parameters:
+      - name: jobId
+        in: path
+        description: Enter your HyperExecute JobID
+        required: true
+        style: simple
+        explode: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: Maximum number of records to return. Default value is 100
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        description: Number of records to skip before starting to return. Default-0, Max - 10,000
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: sortBy
+        in: query
+        description: Sort the records by a specific field.
+        required: false
+        style: form
+        explode: true
+        schema:
+          default: label
+          type: string
+          enum:
+            - label
+            - samples
+            - start_timestamp
+            - end_timestamp
+            - duration
+            - avg_throughput
+            - avg_bandwidth
+            - error_count
+            - error_rate_in_current_sample
+            - error_rate_in_all_samples
+            - min_response_time
+            - max_response_time
+            - avg_response_time
+            - min_latency
+            - max_latency
+            - avg_latency
+            - pct50
+            - pct90
+            - pct95
+            - pct99
+      - name: order
+        in: query
+        description: Sort order for the records.
+        required: false
+        style: form
+        explode: true
+        schema:
+          default: asc
+          type: string
+          enum:
+            - asc
+            - desc
+      - name: timeRange
+        in: query
+        description: Time range for filtering records in the format "startTimestamp,endTimestamp" (e.g., 2023-01-01T00:00:00,2023-02-01T00:00:00).
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: timeZone
+        in: query
+        description: "Time zone for filtering records. Must be in the format [+/-]HH:mm. Required when timeRange is provided. Example: +05:30"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformanceTestingRequestStatistics'
+              example:
+                type: "requestStats"
+                data:
+                  - label: "HTTP: This is label"
+                    avg_throughput: 1.9142857142857144
+                    avg_bandwidth: 194.6
+                    "#samples": 134
+                    start_timestamp: "2025-10-16T08:12:11.104000000Z"
+                    end_timestamp: "2025-10-16T08:13:03.044000000Z"
+                    response_time_stats:
+                      min: 64
+                      max: 284
+                      avg: 88.82213047398498
+                    response_time_percentiles:
+                      "50.0": 0
+                      "90.0": 105.13636363636364
+                      "95.0": 116.34090909090911
+                      "99.0": 169.53090909090895
+                    error_count: 134
+                    latency_stats:
+                      min: 64
+                      max: 284
+                      avg: 85.65517241379311
+                    duration: 51940
+                    error_rate_in_current_sample: 100
+                    error_rate_in_all_samples: 20.029895366218238
+        400:
+          description: Bad request error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              examples:
+                invalid_limit:
+                  summary: Invalid limit query param
+                  value:
+                    error: "invalid 'limit' query param: must be a positive integer"
+                    status: "failed"
+                invalid_time_range:
+                  summary: Invalid time range
+                  value:
+                    error: "invalid time range"
+                    message: "timeRange should be in the format: [startTimestamp,endTimestamp]"
+                invalid_time_zone:
+                  summary: Invalid time zone
+                  value:
+                    error: "timeZone is required when timeRange is provided: Format: [+/-]HH:mm"
+                invalid_offset:
+                  summary: Invalid offset
+                  value:
+                    error: "offset should be less than 10000"
+        404:
+          description: Job not found or not accessible
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "job not found or not accessible by this organization"
+                status: "failed"
+        500:
+          description: Server-side error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "error getting request stats"
+                status: "failed"
+      security:
+        - basicAuth: []
+  /v1.0/performance/errorStatsByLabel/{jobId}:
+    get:
+      tags:
+        - Performance Testing
+      summary: Fetch detailed error statistics for a performance test within a specific job.
+      description: This API retrieves detailed error statistics for requests made during a test, including error counts, error rates, and response times, helping identify bottlenecks and analyze system performance under load.
+      parameters:
+      - name: jobId
+        in: path
+        description: Enter your HyperExecute JobID
+        required: true
+        style: simple
+        explode: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: Maximum number of records to return. Default value is 100
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        description: Number of records to skip before starting to return. Default-0, Max - 10,000
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: sortBy
+        in: query
+        description: Sort the records by a specific field.
+        required: false
+        style: form
+        explode: true
+        schema:
+          default: label
+          type: string
+          enum:
+            - label
+            - response_code
+            - error_count
+            - error_rate_in_current_sample
+            - error_rate_in_all_samples
+      - name: order
+        in: query
+        description: Sort order for the records. Default is ascending.
+        required: false
+        style: form
+        explode: true
+        schema:
+          default: asc
+          type: string
+          enum:
+            - asc
+            - desc
+      - name: timeRange
+        in: query
+        description: Time range for filtering records in the format "startTimestamp,endTimestamp" (e.g., 2023-01-01T00:00:00,2023-02-01T00:00:00).
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: timeZone
+        in: query
+        description: "Time zone for filtering records. Must be in the format [+/-]HH:mm. Required when timeRange is provided. Example: +05:30"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformanceTestingErrorStatistics'
+              example:
+                type: "errorStats"
+                data:
+                  - label: "HTTP:1 - This is label"
+                    response_code: "404"
+                    error_count: 134
+                    error_rate_in_current_sample: 100
+                    error_rate_in_all_samples: 20.029895366218238
+        400:
+          description: Bad request error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              examples:
+                invalid_type:
+                  summary: Invalid type query param
+                  value:
+                    error: "invalid 'type' query param (use: summary | requestStats | errorStats)"
+                    status: "failed"
+                invalid_time_range:
+                  summary: Invalid time range
+                  value:
+                    error: "invalid time range"
+                    message: "timeRange should be in the format: [startTimestamp,endTimestamp]"
+                invalid_time_zone:
+                  summary: Invalid time zone
+                  value:
+                    error: "timeZone is required when timeRange is provided: Format: [+/-]HH:mm"
+                invalid_offset:
+                  summary: Invalid offset
+                  value:
+                    error: "offset should be less than 10000"
+        404:
+          description: Job not found or not accessible
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "job not found or not accessible by this organization"
+                status: "failed"
+        500:
+          description: Server-side error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  status:
+                    type: string
+              example:
+                error: "error getting error stats"
+                status: "failed"
+      security:
+        - basicAuth: []
+components:
+  schemas:
+    PerformanceTestingSummary:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - summary
+          description: Type of response data
+        data:
+          type: object
+          properties:
+            job_id:
+              type: string
+              example: "493bac0f-e412-445b-b85a-88df79f56de3"
+              description: Unique identifier for the Performance Test Job.
+            start_timestamp:
+              type: string
+              example: "2025-10-16T08:11:21.000000000Z"
+              description: Timestamp of the first request recorded in the test in format (e.g., "2024-09-20T07:09:30Z").
+            end_timestamp:
+              type: string
+              example: "2025-10-16T08:13:06.000000000Z"
+              description: Timestamp of the last request recorded in the test in format (e.g., "2024-09-20T07:09:42Z").
+            duration:
+              type: number
+              example: 105000
+              description: Duration of the test in milliseconds.
+            total_requests:
+              type: integer
+              example: 669
+              description: Total number of requests made during the performance test.
+            total_errors:
+              type: integer
+              example: 668
+              description: Total number of errors encountered during the test.
+            error_rate:
+              type: number
+              example: 99.85052316890882
+              description: Error rate in percentage.
+            avg_bandwidth:
+              type: integer
+              example: 0
+              description: Average bandwidth in bytes per second during the test.
+            avg_throughput:
+              type: number
+              example: 9.416666666666666
+              description: Average number of requests per second throughout the test.
+            min_response_time:
+              type: integer
+              example: 0
+              description: Minimum response time for the requests (in milliseconds).
+            max_response_time:
+              type: integer
+              example: 6127
+              description: Maximum response time for the requests (in milliseconds).
+            avg_response_time:
+              type: number
+              example: 570.9144927998836
+              description: Average response time for the requests (in milliseconds).
+            avg_latency:
+              type: number
+              example: 570.9144927998836
+              description: Average latency for the requests (in milliseconds).
+            ramp_time:
+              type: integer
+              example: 0
+              description: Configured ramp-up time (in seconds).
+            users:
+              type: integer
+              example: 1
+              description: Configured virtual users.
+      required:
+        - type
+        - data
+
+    PerformanceTestingRequestStatistics:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - requestStats
+          description: Type of response data
+        data:
+          type: array
+          items:
+            properties:
+              label:
+                type: string
+                example: "HTTP: This is label"
+                description: The name of the request made during the test.
+              avg_throughput:
+                type: number
+                example: 1.9142857142857144
+                description: Average number of requests per second.
+              avg_bandwidth:
+                type: number
+                example: 194.6
+                description: Average bandwidth usage (bytes per second).
+              "#samples":
+                type: number
+                example: 134
+                description: Total number of samples taken for this request.
+              start_timestamp:
+                type: string
+                example: "2025-10-16T08:12:11.104000000Z"
+                description: Timestamp indicating when the first request recorded in format (e.g., "2024-09-20T07:09:42Z").
+              end_timestamp:
+                type: string
+                example: "2025-10-16T08:13:03.044000000Z"
+                description: Timestamp indicating when the last request recorded in format (e.g., "2024-09-20T07:09:42Z").
+              response_time_stats:
+                type: object
+                properties:
+                  min:
+                    type: number
+                    example: 64
+                    description: Minimum response time for the request (in milliseconds).
+                  max:
+                    type: number
+                    example: 284
+                    description: Maximum response time for the request (in milliseconds).
+                  avg:
+                    type: number
+                    example: 88.82213047398498
+                    description: Average response time for the request (in milliseconds).
+              response_time_percentiles:
+                type: object
+                properties:
+                  "50.0":
+                    type: number
+                    example: 0
+                  "90.0":
+                    type: number
+                    example: 105.13636363636364
+                  "95.0":
+                    type: number
+                    example: 116.34090909090911
+                  "99.0":
+                    type: number
+                    example: 169.53090909090895
+                description: Percentiles for response times (50th, 90th, 95th, 99th).
+              error_count:
+                type: number
+                example: 134
+                description: Total number of errors encountered during the request.
+              latency_stats:
+                type: object
+                properties:
+                  min:
+                    type: number
+                    example: 64
+                    description: Minimum latency for the request (in milliseconds).
+                  max:
+                    type: number
+                    example: 284
+                    description: Maximum latency for the request (in milliseconds).
+                  avg:
+                    type: number
+                    example: 85.65517241379311
+                    description: Average latency for the request (in milliseconds).
+              duration:
+                type: number
+                example: 51940
+                description: Duration of the request in milliseconds.
+              error_rate_in_current_sample:
+                type: number
+                example: 100
+                description: Error rate in the current sample.
+              error_rate_in_all_samples:
+                type: number
+                example: 20.029895366218238
+                description: Error rate in all samples.
+      required:
+        - type
+        - data
+
+    PerformanceTestingErrorStatistics:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - errorStats
+          description: Type of response data
+        data:
+          type: array
+          items:
+            properties:
+              label:
+                type: string
+                example: "HTTP:1 - This is label"
+                description: The name of the request made during the test.
+              response_code:
+                type: string
+                example: "404"
+                description: The HTTP response code for the request.
+              error_count:
+                type: integer
+                example: 134
+                description: Total number of errors encountered during the request.
+              error_rate_in_current_sample:
+                type: number
+                example: 100
+                description: Error rate in the current sample.
+              error_rate_in_all_samples:
+                type: number
+                example: 20.029895366218238
+                description: Error rate in all samples.
+      required:
+        - type
+        - data
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

@@ -1,0 +1,55 @@
+---
+title: "algoQA Integration"
+sidebarTitle: "algoQA"
+keywords: ['algoQA','integration']
+---
+
+algoQA is an end-to-end automation testing platform powered by artificial intelligence. It lets you generate test cases, executable automation scripts and datasets in a jiffy, thereby saving your testing and test maintenance cost and enhance your overall test coverage.
+
+By integrating LambdaTest with algoQA, you can perform automated browser testing on an online browser farm of 3000+ real browsers and operating system combinations, and achieve greater test coverage.
+
+## Prerequisites
+
+1. Make sure you have a LambdaTest account. If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
+
+2. To run automated tests, you will need LambdaTest Username and Access Key. You can get them from the LambdaTest Automation Dashboard under **Access Key**.
+
+![Image](/assets/images/algoQA/access_key.png)
+
+## Integrating algoQA With LambdaTest
+
+1. Login to your LambdaTest account.
+
+2. Paste your LambdaTest Username and Access Key in the test scripts for generating a secure remote connection with algoQA through LambdaTest Remote URL.
+
+![Image](/assets/images/algoQA/remote.png)
+
+3. Navigate to LambdaTest [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
+
+![Image](/assets/images/algoQA/caps.png)
+4. Visit algoQA platform to generate Selenium scripts in Java.
+
+![Image](/assets/images/algoQA/algo_shack.png)
+
+5. After generating the Selenium Java scripts, open algoQA scripts and go to the directory `src/test/java`.
+
+![Image](/assets/images/algoQA/src_directory.png)
+
+6. Open ApplicationSettings.xml file to modify LambdaTest environment changes as highlighted below.
+   - BrowserType
+   - LambdaTestBuild
+   - LambdaTestURL
+
+![Image](/assets/images/algoQA/env_params.png)
+
+Once you have defined the above parameters, your script will be ready for execution.
+
+7. Navigate back to pom.xml directory and open Command Prompt in the same directory.
+
+![Image](/assets/images/algoQA/cmd.png)
+
+8. Pass the below command in the Command Prompt to trigger the script execution.
+
+```text
+mvn test
+```

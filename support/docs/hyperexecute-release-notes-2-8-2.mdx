@@ -1,0 +1,22 @@
+---
+title: "Version 2.8.2"
+sidebarTitle: "Version 2.8.2"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+
+## Validate your HyperExecute YAML with ease !!
+The [`--validate`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--validate) flag checks the syntax and structure of your YAML file without executing any tests, allowing you to quickly verify if the file is properly formatted.
+
+## How It Works
+When you pass the `--validate` flag along with your YAML file, the CLI will:
+- Validate the structure and syntax of the YAML file.
+- Return a success or error message indicating whether the file is correct or if there are issues that need attention.
+
+```
+./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE  --validate
+```

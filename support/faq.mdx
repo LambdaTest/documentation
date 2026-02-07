@@ -1,0 +1,695 @@
+---
+title: Frequently Asked Questions
+sidebarTitle: FAQ
+---
+
+import { BrandName, brandName } from '/snippets/BrandName.mdx';
+
+
+<Tabs>
+<Tab title="Real Time Testing">
+<AccordionGroup>
+<Accordion title={`Would I need to install a software or extension to use ${brandName} virtual machines?`}>
+
+No. You don't need to install any software or extension or plugin or setting configurations of any type. Just need to login to <BrandName />, open the virtual machine through launcher, and start testing. That's the beauty of cloud. It gets you started super quick.
+</Accordion>
+<Accordion title="Which operating systems, browsers, and browser versions are you providing for cross browser testing?">
+There are 3000+ browsers, browser versions, operating systems, devices, and resolutions to choose from. To find out about the complete list of available browsers, check out [list of browsers](https://www.lambdatest.com/list-of-browsers) page.
+</Accordion>
+<Accordion title="Are the sessions really running on real browsers or are they just emulators?">
+All desktop session right now are running on real browsers and operating system and are powered by real machines. Mobile browsers right now are running on both emulators/simulators as well as on real devices.
+</Accordion>
+<Accordion title="Why are you running Windows server edition? It is the same as Windows desktop edition?">
+Microsoft Windows Desktop Editions licences does not support remote access to users. So we use Windows Server editions and implement Desktop experience in it. It has exactly the same experience as Windows desktop editions and they are running Internet Explorers made for desktop editions.
+</Accordion>
+<Accordion title={`How much time it takes ${brandName} to add new browser version when it's released?`}>
+Whenever a new stable browser version is released we usually implement it in our platform within a week. We also test them ourselves first before providing it to customers to make sure that testing experience is optimum for all users.
+</Accordion>
+<Accordion title="Are operating systems 32 bit or 64 bit?">
+Here are the operating systems and browsers running on 32 Bit Operating systems. Windows XP: Internet Explorer 8 , Firefox, Chrome, Safari, Opera Windows 7: Internet Explorer 8, Firefox, Chrome, Safari, Opera Here are the operating system and browsers running on 64 Bit operating systems. Windows 7: Internet Explorer 10, Firefox, Chrome, Safari, Opera Windows 8: Internet Explorer 10, Firefox, Chrome, Safari, Opera Windows 10: Internet Explorer 11, Firefox, Chrome, Safari, Opera All Mac Operating systems run on 64 Bit operating systems.
+All our virtual machines comes with pre-installed latest versions of Adobe Flash, Adobe Shockwave, Adobe Reader, JAVA Runtime Environment, Microsoft Silverlight, and Quicktime.
+</Accordion>
+<Accordion title="Would I be able to use keyboard shortcuts like copy paste in remote desktops?">
+You would have full access to all keyboard shortcuts. For people using same operating systems on both their local computer and virtual machine won't have any problems. However people who are using Mac machines to access Windows VM or Windows machine to access Mac VM, would have to careful about OS specific shortcuts. For example when working on Mac OS, use Control Key instead of command key for copy pasting.
+Yes you can. You would have full access to download and upload functionalities. You can access Downloads folder through File - Open file, or Control+O shortcut. Be advised however, each downloaded file will be automatically erased on shutting down the sessions.
+</Accordion>
+<Accordion title="Would I be able to change browser settings?">
+You would have full access to all browsers settings. Be advised however, if you need very specific browser settings, you would have to re-configure browser settings on starting each new session.
+</Accordion>
+<Accordion title="I am not able to properly hear the sound in the virtual machine. What is happening?">
+For Chrome and Firefox browsers, you should be able to access audio streaming and therefore should be able to hear sounds properly. For mobile emulators, Internet Explorer, and Safari, we currently dont have support to provide you access to Audio. It's because of the inherent technology involved in these browsers. We are working on a workaround though so let's see.
+</Accordion>
+<Accordion title="How many simultaneous sessions can I start using one account?">
+In the free plan you can run only one session at a time. Paid plan users can run multiple sessions depending upon their plan. Visit [<BrandName /> Pricing page](https://www.lambdatest.com/pricing) to checkout multiple session plans and their pricing.
+</Accordion>
+<Accordion title="It is showing 'Session Limit reached' error even though I am not running a session.">
+The number of sessions is limited by number of sessions running by a organization, not by user. Therefore it is entirely possible that you reach out of session limit even if only one or two users are using <BrandName /> tool. Co-ordinate with your teammates in this case. If you are sure there is session issue from our end, you can raise a ticket at our support portal. Don't worry, we have a very fast turnaround time.
+</Accordion>
+<Accordion title="What happens when I leave the session idle?">
+By default, if you leave the Lamdatest Live session idle for 5 minutes, the app will prompt a reminder. If no action is taken then <BrandName /> would close the live session. You can change this setting from Live settings options. Checkout this link to understand more about it.
+</Accordion>
+<Accordion title="What happens when I switch to another tab in my browser?">
+Switching tab won't stop or pause the Live session. If left idle for 5 minutes or more, <BrandName /> will prompt a reminder and if unanswered will close the session.
+</Accordion>
+<Accordion title="When you give the machine to somebody else would they be able to access my history and saved passwords?">
+
+The moment you close the session, <BrandName /> automatically sanitize the whole virtual machine. What that means is that we delete all historical data, downloads, installed extensions, saved passwords, etc. We reset the browsers to factory settings. This automatically logs you out of all pages and auto deletes all data that you may have saved. You would still have access to screenshots and issues you may have generated during the session.
+</Accordion>
+<Accordion title="Would i have to reset and re-configure browser settings everytime I create a new session?">
+
+Yes! Every time you close a session we would reset all settings. We are working on a way to help you change and save a set of customized default browser settings. If your need is critical and changing browser settings in each new session takes a lot of your time, send us a message from here. We will try to find a solution for you.
+</Accordion>
+<Accordion title="It is showing that my IP is blocked. Why did this happen? How do I unblock it?">
+
+There may be a number of reasons why this happened which include <BrandName /> test flagged the IP for excessive spam registrations. <BrandName /> flagged the IP for violating terms of use or privacy policy To prevent our system from spam or security threats If you think that your IP has been flagged erroneously, raise a ticket at our support centre.
+</Accordion>
+<Accordion title="It is showing parallel user limit reached. What does that mean?">
+
+<BrandName /> test system allows only a limited number of concurrent running sessions per organization. This limit is defined by the plan that you have subscribed. If you need more concurrent sessions, you can change your plan, or contact one of our sales executive.
+</Accordion>
+<Accordion title={`I found a bug and now I want to take a screenshot of the webpage running on ${brandName} real time browser. How can I do that? Where are they saved?`}>
+It's simple. In real time browser, on left side you will find multiple action buttons in the controller. One of them will be a screenshot button with camera icon. Just click that and in no time your screenshot will be recorded. Once recorded, an image editor will pop up where you can edit the screenshot, mark it as a bug and comment about the details. Lastly, you can find them anytime in test logs section of the menu.
+</Accordion>
+<Accordion title="How do I report the issue to my team? How can I check the issues created by my organization and team? And can I still report a bug if I am the only one in team?">
+
+By going to the [Issue tracker](https://issues.lambdatest.com/), you can add your teammates as watchers for the particular issue and you can also assign them the issue by marking them as 'assignee'. Incase the team-mate is not added yet, you will also find an option in the tracker to invite them.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Developer">
+<AccordionGroup>
+<Accordion title={`What developer tools come pre-installed in each ${brandName} Live remote session browser?`}>
+
+<BrandName /> Live has all major developer debugging tools like Firebug, Web Developer, YSlow etc.
+</Accordion>
+<Accordion title="Can I install any additional tool that I like">
+
+Yes! You have full access to browser extensions and therefore can install any additional tool you like. However that tool be deleted once you close the Live session and you would have to reinstall it again in next session to use. If you are facing any problem around installing a tool on browser, raise an issue in <BrandName /> Support portal and we would be glad to help you out.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Automation Testing">
+
+<AccordionGroup>
+<Accordion title="What is WebDriverIO">
+
+WebdriverIO is a browser and automation test framework based in Node.js. Adding helper functions in WebDriverIO is really simple in WebDriverIO. Also, it can run both on WebDriver protocol and Chrome Devtools protocol, making it efficient for both Selenium Webdriver based cross browser testing or Chromium based automation. To top it off, since WebDriverIO is open source, you get a bunch of plugins for your automation needs.
+</Accordion>
+
+<Accordion title="Can I Mark My Test As Pass Or Fail?">
+
+The <BrandName /> Selenium grid doesn’t identify if you test ‘passed’ or ‘failed’. It only identifies whether a test has executed to it’s last command or whether it has stopped/timed-out before it. The user would have to pass on these parameters to <BrandName /> platform to make it possible for tracking these values at <BrandName /> platform. Make use of <BrandName /> API or <BrandName /> Annotations, for pushing additional metadata to <BrandName /> or to track the pass/fail status of a test.
+</Accordion>
+<Accordion title="Can I Run Parallel Testing using JUnit Framework?">
+
+Yes! One of the key features of <BrandName /> Selenium grid is the ability to run your test cases in parallel. Which means you can execute numerous automation test cases altogether and enable you to cut down on test times. With <BrandName /> Selenium grid you can run a single test scenario across different browsers or different test scenarios with the same browser (or any other combinations). Wondering how many parallel test cases can you run? That depends entirely on the number of concurrent sessions under your opted plan.
+</Accordion>
+<Accordion title="What Is The Maximum Queuing Capacity?">
+
+Maximum number of test cases that can be queued = n + 150 Here, n = number of concurrent sessions. For instance, if you are opting for pricing where you can avail up to 10 concurrent sessions. Then the maximum number of test cases that can be queued will be equal to 10 + 150 i.e. 160 queued test cases. <BrandName /> would automatically schedule and execute test cases for you. We have added a capacity constraint on the number of tests that can be queued to prevent over-exploitation of the platform. Refer <BrandName /> Queuing Policy to know more.
+</Accordion>
+<Accordion title="How Many Parallel Sessions Do I Need?">
+
+[<BrandName /> Concurrency Calculator](https://www.lambdatest.com/concurrency-calculator/) is here to help you calculate the number of parallel sessions you need for your test coverage. Feed the information to our Concurrency Calculator, and it would suggest to you the appropriate number of parallel sessions.
+</Accordion>
+<Accordion title="What is Live interaction?">
+
+By using Live-Interaction, you can take over the automation test execution manually. You can abort the automation test session and debug in real-time.
+</Accordion>
+<Accordion title="What is the pre-requisite for Live interaction?">
+
+You should be on five parallel sessions or above.
+</Accordion>
+<Accordion title="How can I access Live interaction while running an automation test?">
+
+To interact with a browser manually in an automation test, you can visit the <BrandName /> Automation dashboard and then click on **Click to view live test** to take control of the browser.
+</Accordion>
+<Accordion title="Is there any maximum time limit for Live interaction?">
+
+The maximum time limit for Live interaction is 15 minutes.
+</Accordion>
+<Accordion title="What platforms are available for Live interaction?">
+The Live interaction is accessible across all browsers except Safari for Windows 11, 10, 8.1, and 8, and macOS Big Sur.
+<Note>
+**Note:** *The Live interaction support on Safari browsers will be available soon.*
+</Note>
+</Accordion>
+<Accordion title="What would be the status of a test involving Live interaction?">
+
+The status of the test changes to \`idle\_timeout\`\` if you abort it using Live interaction.
+</Accordion>
+<Accordion title="Does idle_timeout capability work with Live interaction?">
+
+Once you access Live interaction, and abort a test, the test will time out within one minute if no keyboard or mouse events are recorded on your respective machine.
+</Accordion>
+
+<Accordion title="Is there any limit on how many tests can be accessed for Live interaction?">
+
+In this case, there is no such limit.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="HyperExecute">
+<Tabs>
+<Tab title="General FAQs">
+<AccordionGroup>
+<Accordion title="Which testing frameworks does HyperExecute support?">
+
+Though HyperExecute has a [very deep support](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.
+</Accordion>
+<Accordion title="Can I run a specific command before running tests on HyperExecute?">
+
+HyperExecute provides you with smart CI features where you can run any command before and after running tests using pre and post steps. Common use cases include, building/ compiling binaries, downloading dependencies, starting services in the background or any other arbitrary command.
+</Accordion>
+<Accordion title="Where will HyperExecute run my tests?">
+
+HyperExecute takes your test scripts and places them in virtual machines having all the components required to run your tests and collect logs and metrics. These virtual machines are hosted by HyperExecute in its secure cloud environment. HyperExecute is also available on dedicated and private clouds where virtual machines can run in your personal cloud accounts.
+</Accordion>
+<Accordion title="How to use HyperExecute?">
+
+Tests are triggered on HyperExecute using HyperExecute CLI using a YAML file to configure the executing settings including target OS, concurrency and other CI level information. This YAML file can be generated easily using a web based YAML generator that supports multiple languages and frameworks. As a user you need to focus on writing tests and running the CLI with YAML, everything else is taken care of by the orchestration platform.
+</Accordion>
+<Accordion title="Why is HyperExecute faster than other end to end testing platforms?">
+
+HyperExecute collects every possible log, including terminal logs, selenium and more (for every single test), and stores them separately from each other. These isolated logs ensure that the end user is not spending time in filtering useful logs and focuses on getting the insights from the logs as fast as possible. HyperExecute also streams these test logs in real time to drastically reduce time wasted in debugging failed tests.
+</Accordion>
+<Accordion title="Does HyperExecute provide the ability to store test artifacts?">
+
+Yes, HyperExecute provides convenient artifact management where you can upload test artifacts or any files or folders generated during test execution. These artifacts are stored on HyperExecute. HyperExecute exposes APIs to access these as well.
+</Accordion>
+<Accordion title="Can I run parallel tests using HyperExecute?">
+
+Absolutely, HyperExecute’s core feature is to provide a massively parallel testing infrastructure where the platform intelligently distributes tests across multiple nodes.
+</Accordion>
+<Accordion title="What are the configurations for HyperExecute virtual machines?">
+
+HyperExecute provides a generous configuration for virtual machines to run your tests. Windows comes with 7 GB of memory and 4 cores of processors, Linux comes with 4 GB of memory and 2 cores of processors, Mac comes with 7 GB of memory and 4 cores of processors. HyperExecute also provides the ability to customize the execution environment for enterprise accounts.
+</Accordion>
+<Accordion title="Can I group my tests to run in sequence instead of randomly distributing them?">
+
+Yes, HyperExecute provides directives to group dependent tests together which need to run in sequence. Using dynamic test discovery, users can write unique test discovery commands for every node, where dependent tests will run in sequence. HyperExecute allows various directives to construct sophisticated testing pipelines to fulfill your use cases.
+</Accordion>
+<Accordion title="In which regions does HyperExecute provide its testing infrastructure?">
+HyperExecute is available in more than 40 cloud availability regions across the globe. HyperExecute is supported by multiple hyper clouds which makes it available in most of the availability zones across the globe.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="YAML FAQs">
+
+<AccordionGroup>
+<Accordion title="What can I do with pre steps and post steps in the YAML file?">
+
+Pre and post steps open doors to large amounts of flexibility. You can add certificates just before running tests, start a background process to facilitate testing, compile applications, download dependencies and everything else that you need to do just before and after running your tests in the CI or your system.
+</Accordion>
+
+<Accordion title="How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?">
+
+You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by [setting the tunnel flag to true](/support/docs/hyperexecute-yaml-faqs/#3-how-can-i-install-private-artifactory-dependencies-that-can-only-be-accessed-on-my-organizations-internal-network-on-hyperexecute-machines) in HyperExecute’s YAML file.
+</Accordion>
+<Accordion title="How can I use the Jenkins job choice parameters in the YAML file?">
+
+You can do this by [directly calling the parameter keys](/support/docs/hyperexecute-yaml-faqs/#8-how-can-i-use-the-jenkins-job-choice-parameters-in-the-yaml-file) in the HyperExecute YAML file and use the Jenkins choice parameters.
+</Accordion>
+<Accordion title="I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?">
+
+You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. To learn more about how to use this feature, go through [this page](/support/docs/hyperexecute-inherit-config/).
+</Accordion>
+
+<Accordion title="I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?">
+
+You can use the "sourcePayload" flag to use HyperExecute's Yaml. With this, your test code is directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="CLI FAQs">
+
+<AccordionGroup>
+<Accordion title="Can HyperExecute CLI download test artifacts generated during execution?">
+
+Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.
+</Accordion>
+<Accordion title="I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?">
+
+The binary for Mac is unsigned. You might get a permission denied warning while executing HyperExecute on macOS and linux machines. To allow permissions you can use the following command: "chmod u+x ./hyperexecute". Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your System Preferences → Security & Privacy → General tab.
+</Accordion>
+<Accordion title="Is there a way where I can follow all of the steps in my test run on HyperExecute?">
+
+Every time you run a test via the HyperExecute CLI, a hyperexecute-cli.log file is generated. It is present in the parent directory of your test and contains the details of your entire test run. This hyperexecute-cli.log file will also help you in debugging any issues with your tests. You can view the file and figure out exactly where your test run failed. If you want more help with debugging your issues, you can always contact support@lambdatest.com and provide them with this file along with your Job ID.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Features FAQs">
+<AccordionGroup>
+<Accordion title="What smart CI features does HyperExecute provide?">
+HyperExecute provides you with the option to run pre and post steps that allow users to run any command before and after running tests on every VM, define custom environment variables, deep dependency caching, pick a specific version of language runtimes, artifacts management, and more. HyperExecute allows you to move your sophisticated pipelines for end to end testing completely. Triggering and execution of tests happens entirely on HyperExecute infrastructure and frees your CI or local system to do other meaningful tasks.
+</Accordion>
+<Accordion title="Can I test my private web applications on HyperExecute?">
+Absolutely. HyperExecute allows multiple provisions to test private applications by the following directives: automatically running tunnels using the CLI, and by creating dedicated NAT for organizations that can be whitelisted by their firewalls. We have users who are able to run VPN clients in the pre steps before starting their tests which allows them to securely connect to their private workloads.
+</Accordion>
+<Accordion title="Can I do geolocation testing on HyperExecute?">
+Yes, HyperExecute provides geolocation testing by providing capabilities in selenium, playwright, and cypress tests. All the geolocation testing features available on the standard platform are available on HyperExecute.
+</Accordion>
+<Accordion title="Can HyperExecute run my tests on virtual machines with custom specifications?">
+Yes, with the enterprise version, HyperExecute provides directives to use custom virtual machines based on the HyperExecute base virtual machine image. This allows for greater flexibility to run customer frameworks.
+</Accordion>
+<Accordion title="How is HyperExecute different from other testing clouds?">
+While other testing platforms throw infrastructure at the users to run their tests, HyperExecute is a smart orchestration cloud where the platform decides the best execution plan to finish the jobs in the least amount of time. HyperExecute accomplishes this by distributing tests smartly on available resources, providing other features, such as, retrying failed scenarios, automatic reordering and more. HyperExecute acts as a co-pilot for developers to run and triage their tests as fast as possible.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Platform FAQs">
+<AccordionGroup>
+<Accordion title="What OS does HyperExecute provide to execute tests?">
+HyperExecute provides the latest Windows, MacOS and Linux based virtual machines to run your tests. HyperExecute supports multiple versions of Windows, Linux and MacOS.
+</Accordion>
+<Accordion title="What browsers are available on HyperExecute to run cross browsers tests?">
+HyperExecute provides all the versions of Chrome, Firefox, Edge, Opera, and Safari (Mac only) available to run on the latest windows, MacOS and linux versions.
+</Accordion>
+<Accordion title="Is HyperExecute available as an on-prem tool?">
+Yes, HyperExecute is available as a dedicated cloud and on-prem mode option on Azure, AWS and GCP.
+</Accordion>
+<Accordion title="What analytics does HyperExecute provide for test execution?">
+HyperExecute provides fine-grained analytics over test steps, jobs, browser trends, consistently failing tests and error categorizations, and a lot more in the analytics dashboard. In addition to this, it provides a detailed downloadable html report for every job triggered. This report can be downloaded by the CLI after the job is completed or via the reports API.
+</Accordion>
+<Accordion title="Can I access the file system while running my tests?">
+Yes, with HyperExecute you get access to all the underlying virtual machines to completely customize the testing environment. Generating or reading files for your test case is very convenient with HyperExecute.
+</Accordion>
+<Accordion title="Do I have access to the underlying OS while running tests?">
+Yes, with HyperExecute, you get access to all the underlying virtual machines to completely customize the testing environment. Some good use cases of this are changing registry settings, downloading files, starting processes and more.
+</Accordion>
+<Accordion title="Can I customize the testing environment?">
+Yes, with HyperExecute, you can completely customize the test environment using pre and post steps in the YAML. For enterprise accounts, HyperExecute provides the ability to define custom virtual machine images for all the OS for deeper level customizations to the testing environments. Enterprise customers can create their own customized virtual machine images over HyperExecute base images as per their use case.
+</Accordion>
+<Accordion title="Can I create custom virtual machine images for my testing?">
+Yes. It’s very easy to integrate HyperExecute with your reporting tool by hitting their APIs in the post-steps using the YAML. HyperExecute is also bringing more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@lambdatest.com.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Pricing FAQs">
+<AccordionGroup>
+<Accordion title="Is there any limit on parallel testing on HyperExecute?">
+No, HyperExecute can provide virtually unlimited nodes to you for massive parallel testing as it is backed and spanned across multiple clouds. We have users distributing tests across thousands of nodes.
+</Accordion>
+<Accordion title="How does the licensing for HyperExecute work?">
+Each parallel test execution consumes a single HyperExecute license. For example, if you want to run 50 tests in parallel, you need 50 HyperExecute licenses. If you have 10 HyperExecute licenses and trigger 50 tests, only 10 will run in parallel and the rest 40 will be queued by the platform. Once every test finishes the execution, it will be dequeued and moved to the running state.
+</Accordion>
+<Accordion title="How many parallel tests can I run on a single HyperExecute license?">
+Each parallel test execution consumes a single HyperExecute license. HyperExecute puts no capping on the number of parallel tests that can run simultaneously. We have users running thousands of tests in parallel.
+</Accordion>
+<Accordion title={`Can I use the standard ${brandName} automation platform with the HyperExecute license?`}>
+Each HyperExecute license provides access to standard automation platforms and features. This makes transitioning to HyperExecute easier and makes sure that the best cross-browser platform features are still available to users purchasing a HyperExecute license.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Security FAQs">
+<AccordionGroup>
+<Accordion title="How secure is HyperExecute?">
+HyperExecute is built with security at its core and provides industry standard security on the entire infrastructure. HyperExecute provides fresh virtual machines every time a new job is triggered and deletes the infrastructure after the test execution of the job is completed. Dozens of microservices ensure that test scripts are deleted after the retention period and uniquely encrypted during their retention period. HyperExecute uses a powerful vault to store client side secrets for the users. Enterprise version enables users to add their own security policies over the HyperExecute infrastructure.
+</Accordion>
+<Accordion title="Does HyperExecute provide the ability to define secrets?">
+Yes, HyperExecute provides a vault service to securely store client side secrets instead of hardcoding them in the yaml or test script files. In enterprise versions, organizations can pick the vault of their choice.
+</Accordion>
+<Accordion title="What’s the retention period of logs on HyperExecute?">
+By default, HyperExecute has a retention period of 60 days where it keeps records and test execution logs. After the retention period, the logs and records are deleted permanently. Enterprise version allows a custom retention period to be defined.
+</Accordion>
+<Accordion title="How do I download private dependencies on HyperExecute?">
+HyperExecute provides multiple methods to connect to private artifactories and private package modules using automatic tunnel, dedicated NAT and using pre-steps to use VPN. Users usually add their private package management keys in the HyperExecute vault to fetch private repositories.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Enterprise FAQs">
+<AccordionGroup>
+<Accordion title="Does HyperExecute provide enterprise level features?">
+HyperExecute provides you with the best in class enterprise features including SSO, dedicated chat support, on-prem and dedicated cloud setups, custom retention period, usage analytics, advance access control, workflow management, and much more.
+</Accordion>
+<Accordion title="Can I use my own vault for testing with HyperExecute?">
+Yes, HyperExecute enterprise version allows organizations to integrate their custom vaults with the HyperExecute testing infrastructure for greater flexibility.
+</Accordion>
+</AccordionGroup>
+</Tab>
+
+</Tabs>
+</Tab>
+<Tab title="Automated Screenshots">
+<AccordionGroup>
+<Accordion title={`What resolutions, browsers, operating systems and devices are supported by the ${brandName} Automated Screenshot testing?`}>
+To know more about browsers, OS, and devices supported by <BrandName /> Automated Screenshot testinf, checkout [list of browsers](https://www.lambdatest.com/list-of-browsers) page.
+</Accordion>
+<Accordion title="Can I share these screenshots with my team?">
+Yes. You can share these screenshots with your team. To know more about how you can do it, check out this tutorial guide on [Automated Screenshot testing](/support/docs/automated-screenshot-testing/).
+</Accordion>
+<Accordion title="Is there anyway I can take screenshot of pages behind firewall or authenticated pages?">
+<BrandName /> comes with enterprise level local tunneling features. You can connect your local or production servers with <BrandName /> Servers via secure SSH protocols and test your secure pages easily.
+</Accordion>
+<Accordion title="What happens when I switch tabs during when screenshots are being generated?">
+<BrandName /> won't stop or pause the screenshot generation process. <BrandName /> Automated Screenshot feature will generate screenshots and then will wait for your further actions.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Realtime App Testing On Emulators & Simulators">
+<AccordionGroup>
+<Accordion title={`What type of file formats does ${brandName} Realtime Native App testing support??`}>
+Currently, we support the following file formats for Realtime Native Mobile App testing:
+
+For iOS, .app and .zip format.
+
+For Android-x86, .apk format.
+</Accordion>
+<Accordion title="Can I test apps from Google Play Store/App Store on emulators/simulators?">
+Currently, we don’t support the testing of apps from the Google Play Store/App Store on emulators/simulators.
+</Accordion>
+<Accordion title="Can I test ipa file on Realtime Native App testing?">
+For now, we don’t support ipa files on iOS simulators.
+</Accordion>
+<Accordion title="What privileges do I get with the freemium plan?">
+As a part of the freemium plan, you get one-time, non-renewable access to a limited set of devices (emulators and simulators). It limits to a maximum of 5 app uploads and 100 free minutes.
+</Accordion>
+<Accordion title="Can I access the camera and the mic on emulators/simulators?">
+Accessing hardware peripherals like camera and mic is currently not supported on emulators/simulators.
+</Accordion>
+<Accordion title="Do you support gestures like pinch to zoom in, double tap on emulators/simulators?">
+Gesture is currently not supported on emulators/simulators.
+</Accordion>
+<Accordion title="Can I use Developer Tools for Realtime Native App testing?">
+Yes! you can use Developer Tools for viewing the device logs, network logs, and app logs. Inspect element is currently not available on emulators/simulators.
+</Accordion>
+<Accordion title="Why I am getting ‘App Not Found error’ ?">
+As ipa files are not supported on iOS simulators, you would encounter ‘App Not Found error’.
+</Accordion>
+<Accordion title="Can I test my app that uses dependent app (e.g. Google Maps) using Realtime Native App testing?">
+You need to install the app being tested and the dependent app (e.g. Google Maps) in the same session.
+</Accordion>
+<Accordion title={`How long does my app remain uploaded on ${brandName} cloud?`}>
+As per our data retention policy, all uploaded apps will be deleted after sixty days.
+</Accordion>
+<Accordion title="Which architecture do you support for .apk file for App testing?">
+Emulators on which App testing is performed work on the x86 architecture. Hence, your .apk file should be built for x86 architecture to ensure seamless testing on <BrandName /> platform.
+</Accordion>
+<Accordion title="Which plan do I need to buy to get access to Realtime Native App testing?">
+Any premium plan will allow you to test apps on emulators/simulators. The number of parallel sessions will depend on your parallel session plan. Refer to our plans and pricing page for further information.
+</Accordion>
+<Accordion title="Does On-demand pass covers access to Realtime Native App testing on emulators/simulators?">
+Through On-demand pass you can get 120 minutes of manual testing time on <BrandName /> platform at $10 for 30 days. Currently, On-demand pass is not covered for Realtime Native App testing.
+</Accordion>
+<Accordion title="How does the concurrency for Realtime Native App testing works?">
+You need not opt for a seperate App Testing Plan, as parallelism (or concurrency) for app testing is synced with Realtime Browser testing. To run native mobile app tests parallely (or concurrently) with Realtime Browser testing, you need to ‘at least’ be on a two (or more) parallel session plan.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="App & Browser Testing On Real Devices">
+<AccordionGroup>
+<Accordion title={`What type of file formats does ${brandName} App testing on real devices support?`}>
+Currently, we support the following file formats for App testing on real devices:
+
+For iOS, .ipa format.
+
+For Android, .apk and .aab format.
+</Accordion>
+<Accordion title="Do I need to use appreset or fullReset capability while performing App testing on real devices?">
+No! Following each test session, the devices are thoroughly cleaned. During this phase, we uninstall the app and clear the user data and configurations generated on the device during the test session.
+</Accordion>
+<Accordion title={`What test automation frameworks are supported by ${brandName} for App automation?`}>
+Currently, we support Appium framework. However, support for other frameworks will be rolled out soon
+</Accordion>
+<Accordion title="Do you support QR code scanning of apps?">
+Currently, we don’t support the QR code scanning of apps on real devices.
+</Accordion>
+<Accordion title="Can I test biometric authentication like Fingerprint sensor, Face ID?">
+Accessing hardware sensors for biometric authentication is currently not supported on real devices.
+</Accordion>
+<Accordion title="How do I access camera for capturing the images?">
+The app file .apk can be generated using the command → ./gradlew assemble which saves the generated file in this directory → app/build/outputs/apk/debug/.
+
+The Test Suite file .apk can be generated using the command → ./gradlew assembleAndroidTest which saves the generated file in this directory → app/build/outputs/apk/androidTest/debug/
+</Accordion>
+<Accordion title="Can I monitor network traffic using Charles Proxy?">
+Currently, the Charles proxy for network traffic monitoring is not supported on <BrandName />.
+</Accordion>
+<Accordion title="What logs are available for debugging test failures ?">
+For debugging test failures, <BrandName /> App testing supports Appium logs, Visual logs, Device logs, Network logs, and Command logs.
+</Accordion>
+<Accordion title="How can I test locally hosted or private app URLs?">
+You can test locally hosted and apps behind firewall by performing local testing through <BrandName /> tunnel.
+</Accordion>
+<Accordion title="Do you support Network throttling?">
+Yes. Network throttling is supported on <BrandName /> real device cloud platform.
+</Accordion>
+<Accordion title="Can I simulate GPS location while performing Geolocation testing?">
+Yes! You can test location-based cases for your app with GPS Geolocation testing.
+</Accordion>
+<Accordion title="Can I select the subversions for Android and iOS while testing on real devices?">
+No! Only major versions of the Android and iOS are supported.
+</Accordion>
+<Accordion title="Do you support browser version on real devices?">
+We provide the latest browser versions on real devices. However, the choice for browser versions like Chrome 94 or Firefox sub-versions are not available.
+</Accordion>
+<Accordion title="What developer tools are supported for Browser testing?">
+We support the following developer tools for Browser testing:
+
+Android - Chrome
+
+iOS - Safari and Chrome
+</Accordion>
+<Accordion title="How do I test SMS verification and OTP based scenarios?">
+Currently, our real devices do not support SIM cards/eSIM. Therefore, phone calls or SMS cannot be received on the device. You can test OTP-based cases, but the SIM card must be present and accessible to the user in their local device.
+</Accordion>
+<Accordion title="Can I view App profiling data for resource consumption?">
+Currently, App profiling data on real devices are not supported
+</Accordion>
+<Accordion title="Can I test in-app browsers and Hybrid apps?">
+Yes, you can test both in-app browsers and Hybrid apps on our real device cloud.
+</Accordion>
+<Accordion title="Do you support private or dedicated devices for an organzation/account?">
+As of now, the dedicated devices are not supported on the <BrandName /> platform.
+</Accordion>
+<Accordion title="Do you support App Automation on Emulators and Simulators?">
+Currently, we don't support Mobile App automation on Emulators and Simulators.
+</Accordion>
+<Accordion title="What is the maximum session duration of Appium tests?">
+The maximum session duration of Appium tests is 4 hours.
+</Accordion>
+<Accordion title="How do I upload files from the app installed on devices?">
+As of now, we don't support uploading files from the app installed on real devices.
+</Accordion>
+<Accordion title="Can I upload and download files while perform Manual App testing?">
+Currently, we don't support uploading and downloading files while perform Manual App testing on real devices.
+</Accordion>
+<Accordion title="How to open pre-installed apps?">
+To open the pre-installed apps, run the below command.
+
+driver.activateApp("package_name");
+</Accordion>
+<Accordion title="Why I can't see the apps inside Google Playstore on Android?">
+To see the apps, you will need to login on the Google Playstore.
+</Accordion>
+<Accordion title="My app requires access to Apple Pay. Can I test this on real devices?">
+As of now, Apple Pay functionality is not supported on real devices.
+</Accordion>
+<Accordion title="Do you support Performance testing frameworks for App automation?">
+Currently, we don't support Performance testing frameworks.
+</Accordion>
+<Accordion title="Can I test my captive portal browsers?">
+If the captive portal requires the device to be connected to a specific WiFi network, you cannot test it on real devices. However, if the same webpage can be accessed using the default WiFi network or tunnel, you can test it on real devices.
+</Accordion>
+<Accordion title={`What is ADB? Does ${brandName} support ADB commands execution?`}>
+ADB (Android debug bridge) is a command-line tool for communicating with Android devices. The ADB command enables a variety of device actions, like installing apps, granting permissions, copying files, performance profiling, and so on.
+
+We do not expose the ADB shell to protect the security of devices and users. However, the same functionality can be achieved by using an equivalent Appium capability or <BrandName /> customer capabilities.
+</Accordion>
+<Accordion title="Can I interact with the app permission popups during Manual testing on iOS devices?">
+Yes, you can interact with the alert or actionSheet popups that are configured in your iOS application.
+</Accordion>
+<Accordion title="How can I generate 'app_url' using the cURL command?">
+To generate "app_url" using the cURL command, please refer to our Appium testing documentation.
+</Accordion>
+<Accordion title={`How do I resolve the localhost URL when using the ${brandName} tunnel?`}>
+For resolving the localhost URL for the real device, you can use localhost.lambdatest.com.
+</Accordion>
+<Accordion title="How long are screenshots retained on our system?">
+60 days
+</Accordion>
+<Accordion title="Why can't I see the password entered into my iOS device?">
+For iOS 13 and above, Apple prevents the streaming of the keyboard and the streaming of the password field whenever a password is being entered. This is part of its enhanced security features. Therefore, even if the password is entered successfully, you will not be able to see the keyboard, keystrokes, or characters entering the password.
+</Accordion>
+<Accordion title="Why am I encountering Network log issues when performing App automation?">
+Network logs on Real Devices and specifically on Android devices have some known limitations. Enhancements are currently under development and will be communicated to you based on your use cases.
+</Accordion>
+<Accordion title="What different types of logs are supported on real devices?">
+We currently support Appium logs, Visual logs, Device logs, Network logs, and Command logs on real devices.
+</Accordion>
+<Accordion title="How do I compile the Test Suite as an apk in Espresso app automation?">
+The app file .apk can be generated with the command ./gradlew assemble, which saves the generated file in the directory app/build/outputs/apk/debug/.
+
+The Test Suite file .apk can be generated using the command ./gradlew assembleAndroidTest, which saves the file in the directory app/build/outputs/apk/androidTest/debug.
+</Accordion>
+<Accordion title="How long a test session can run on each device?">
+You can run test for 6 hrs uninterrupted on a device.
+</Accordion>
+<Accordion title="How can we trigger long press gesture on real-time testing?">
+For Android, long press can be accessed by intimating long press on your mouse/trackpad. For iOS, the action can be triggered via CMD+click for macOS and via CTRL+ click for Windows.
+</Accordion>
+<Accordion title="How long does it take to take to add support for new device?">
+The new device addition requests can be catered to in 6-8 weeks’ time.
+</Accordion>
+<Accordion title={`Can I test my smart device (similar to Amazon Alexa) on ${brandName} platform with Real device? Also, I would need to connect this smart device with the Bluetooth of your mobile devices. Is this applicable?`}>
+This use case is not feasible at the moment as we do not support testing of Smart devices(Amazon Alexa) on the <BrandName /> platform.
+</Accordion>
+<Accordion title={`Can I test video calls on ${brandName} real devices?`}>
+Yes, you can test video calling apps on <BrandName />'s Real Devices but as the Camera is taped due to security reasons so it will show black image and audio will be blank as well.
+</Accordion>
+<Accordion title="Does your public cloud plan offer access to iOS device settings?">
+As of now, accessing settings on iOS is restricted with the public cloud plan. However, you can access iOS device settings with our private cloud plan.
+</Accordion>
+<Accordion title="How I can handle the location pop-up on iOS devices?">
+In order to handle the location pop-up, you can use below capability in the script and the location will be auto handle in the test.
+
+caps.setCapability("autoAcceptAlerts", true);
+
+Please note that autoAcceptAlerts: true won't work on iOS devices with iOS 14. This is a known issue and already raised on Appium.
+
+Note: For iOS 13 and above, pop-ups can have more than two buttons. When there are more than two buttons on popups, autoDismissAlerts and autoAcceptAlerts behavior is flipped. For such popups, use autoAcceptAlerts to automatically dismiss all popups and autoDismissAlerts to automatically accept all popups.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="LT Browser">
+
+<AccordionGroup>
+<Accordion title="Can I record video of a test session?">
+
+Yes. Open you website in any device and click on the video recording button, a timer will start and you will be able to record your interaction of the website within the device. The timer will continue to run unless you stop the recording by clicking over the same video recording button.
+</Accordion>
+<Accordion title="Can I test locally hosted websites using LT Browser?">
+
+Yes. All you need to do for testing your locally hosted web-apps or websites, is to provide the localhost string as the URL in the header of your LT browser and you’ll be able to access your localhost server.
+</Accordion>
+
+<Accordion title="How To Debug My Website In LT Browser?">
+
+With LT Browser, not only can you evaluate how your responsive web design might look over 50+ pre-installed device viewports but you can also debug your web-application to figure out the root cause behind a browser or UI bug.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Data & Security">
+<AccordionGroup>
+<Accordion title="Briefly describe your security policies.">
+<BrandName /> is a firm believer in secure experience and multifaceted security protocols, to ensure that every aspect including architecture, engineering, testing, and deployment, follows and complies with industry leading standards of security. As first line of defense, <BrandName /> application is protected by AWS’s firewalls which are tasked with countering regular DDoS attacks and malicious network intrusions. The next line of defense is <BrandName />’s own application firewall protocols which are tasked with protecting the application against spam, ill-intent users, and malicious IP. We have also implemented secure user access policies for accessing <BrandName /> platform and only users with valid user credentials can access the application. We have also implemented role based access to the application, each role having different access levels.
+
+Whenever a user initiates a test at <BrandName /> platform, they are allotted a thoroughly sanitized virtual machine. And as soon as a session ends, all data including cookies, registry, caches, and running processes are deleted and all browser settings are reset to default values. Each virtual machine has to pass a series of automated tests before it is used again. Any machine that fails a test gets redacted from the pool for auditing and manual cleaning. At the time of test only the user has access to machine and not even <BrandName /> has access to the user’s running test session. All machines have strict security protocols that prohibit any user from installing any external software in the machines.
+
+In our application we have implemented HTTPS by default, and use VNC protocols for secure data transfer. This data is also encrypted to ensure that data is not compromised in-transit.
+
+All our hosting centers are chosen based on their record of established security policies and excellent history. Our selection process is rigorous and we partner with only the best providers across globe that have been certified by major compliance regulators.
+
+All data saved in our application like login credentials, secure access keys, usage logs, test history, and billing details, are stored in an encrypted format.
+
+We have implemented strict 24×7 security protections at our on-premise development centers. Only authorized individuals have access to building and <BrandName /> office premises. Our application data is hosted on industry leading hosts like Amazon Web Services, who have been thoroughly tested by multiple third party auditors for security. You can also read more about Amazon Web Service’s [Security AWS Cloud Security](https://aws.amazon.com/security/).
+</Accordion>
+<Accordion title="Do you have a disaster recovery (DR) or Business Continuity Plan (BCP) plan? How often is it tested?">
+<BrandName /> has a formal Business Continuity Plan (BCP) and Disaster Recovery Plan (DRP) defined and implemented to enable people, process, and technology support during any crisis or business interruptions. The BC and DR Plan is tested and reviewed on a yearly basis. And, Disaster Recovery (DR) program ensures that our Services remain available and are easily recoverable in the case of a disaster. This is accomplished through building a robust technical environment and creating Disaster Recovery plans and testing activities. In the event of a disaster, the following objectives apply:
+
+1. **4-hour Recovery Time Objective (RTO):** <BrandName /> will aim to restore normal operations for your <BrandName /> platform account within four hours from the time a disaster is declared, unless a disaster, or multiple disasters, impacts all of the Availability Zones used on an account.
+
+2. **Under 1-hour Recovery Point Objective (RPO):** <BrandName /> will target one hour or less of data loss for your account. This is calculated from the point of the disruption, not from <BrandName />’s disaster declaration.
+
+Also, <BrandName /> employs service clustering and network redundancies to eliminate single points of failure. Our strict backup regime and/or our Disaster Recovery service offering allows us to deliver a high service availability, as customer or test data is replicated across availability zones. For more details, please refer to [<BrandName /> Trust](https://www.testmu.ai/trust/security/#business-continuity-and-disaster-recovery) page.
+</Accordion>
+<Accordion title="Do your employees sign/agree to a confidentiality statement?">
+Yes. All our employees sign confidentiality agreements which extends to user agreements between <BrandName /> and Clients. Also, we have strict user role based access to all our customer data therefore, only most important employees have access to only relevant data.
+</Accordion>
+<Accordion title="Do you hold any certifications related to information or system security? Can we see the audit reports?">
+Yes, we have Service Organisation Control (SOC2), CCPA and GDPR report compliance certification.
+</Accordion>
+<Accordion title="How is your application architected, in particular is it separated between publicly accessible parts of the application from the data storage?">
+Our application is micros-services based product. Database is restricted from public access. It is only accessible to the application though encrypted authentication based APIs and that also over a secure private network.
+</Accordion>
+<Accordion title="Describe your coding, testing, and deployment practices?">
+We at <BrandName /> follow Agile development methodologies with dedicated teams for automated deployment and testing. We use Jenkins as our preferred Continuous integration platform and use Sonar Cube for automated code quality control. We ensure maximum possible code coverage in our automated tests and each release is passed only before it pass all test scenarios.
+</Accordion>
+<Accordion title="Do you perform web application vulnerability testing or intrusion detection?">
+We periodically tests our applications for vulnerability both through automated and manual means. We perform regular audits of databases to check for irregularities, and our ELK stack implementation gives real-time insights on any possible attacks.
+</Accordion>
+<Accordion title="How do you manage access to production systems? Do you have a staff termination/offboarding policy and process? What is it? Do you log and audit performance of this process?">
+Access to production system is strictly controlled though role based authentication access. No <BrandName /> employee has complete access to all data, each having their relevant role based access to data. Each employee has his/her own email based authentication passwords for accessing applications and after termination we revoke their complete access to the application. In addition we maintain automated logs of each database ingress and regularly monitor the logs to find discrepancies.
+</Accordion>
+<Accordion title="Do you have an enforced password policy for admin accounts? Do you require MFA for admin accounts?">
+All user access is password protected. In addition user sign-ups are verified through a two-step verification workflow.
+</Accordion>
+<Accordion title="What logging do systems perform? How are logs protected? What encryption is used? Do you have BI systems? Do they hold PII?">
+At <BrandName />, we maintain a variety of logs such as syslog (system logs), auth (authentication) logs, firewall logs, web server logs, application server logs, database server logs, netflows etc. We have an inhouse implementation of ELK stack for logging and business intelligence. Our implementation gathers and consolidates data from all micro-applications into a secure private network. The data is used for product analysis by product team through our custom log processing and BI system. The BI system in turn is secured thorugh a IP based access policy. In addition only authorized <BrandName /> employees has access to relevant pieces of data based on their role. All log data is saved in encrypted format private storage volumes that is encrypted usign DM-Crypt disk encryption system
+</Accordion>
+<Accordion title="What is your system patching regime?">
+We follow SemVer versioning standards and publish hot-fixes and patches as it is required.
+</Accordion>
+<Accordion title="Do you have separate production, qa, test, dev environments?">
+Yes. We have separate Production, Dev, and Test Environments. Each Environment is hosted in separate instances and is secured behind a private network.
+</Accordion>
+<Accordion title="Are these systems separated from your corporate network and each other?">
+All environments are hosted on independent AWS instances. Only Live environment has critical user data. Rest of the environments have dummy or simulated data that covers all use cases.
+</Accordion>
+<Accordion title="Do you perform system vulnerability scans and penetration testing?">
+We perform periodic system vulnerability scans, both automated and manual, using a OpenVAS based solution. We check for all major vulnerabilities and security risks as enlisted in open source databases like [national vulnerability database](https://nvd.nist.gov/).
+</Accordion>
+<Accordion title="What type of firewalls/DDoS defense do you use?">
+Our application is hosted on Amazon Web Services and we follow all DDoS mitigation guidelines detailed by AWS in this [documentation paper](https://d1.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf). We use services such as Amazon Route 53, Amazon CloudFront, Elastic Load Balancing, and AWS WAF to control and absorb traffic, and deflect unwanted requests. We also have a Cisco ASA firewall in place as added security measure. In additon to all this we have put into place custom firewall and security measures based on Fail2Ban intrusion protection framework to prevent brute-force attacks.
+</Accordion>
+<Accordion title="How do you monitor your systems and networks?">
+We have implemented advanced analytics using Kibana, Kubernetics, and AWS data tools. We monitor all our networks constantly for suspicious activity. We also use Elastic.co’s Beats product for shipping data. Beats comes with in-built monitoring and data visualization tools that help in real-time monitoring of application.
+</Accordion>
+<Accordion title="Are user passwords stored in manner compliant with NIST Special publication 800-63B Digital Identity Guidelines">
+Yes. All user credentials are stored in a manner compliant with all NIST guidelines as defined in [NIST special publication](https://pages.nist.gov/800-63-3/sp800-63b.html).
+</Accordion>
+<Accordion title="How is user data stored? What encryption is used for data at rest? What about data in transit?">
+All user data is stored as encrypted data in secure AWS storage hosted databases. We use AWS S3 for data storage and have enabled advanced 2048bit Public Key encryption standards for Data at Rest. For Data in transit we use VNC and WSS security and encryption protocols.
+</Accordion>
+<Accordion title="Can unprotected user data be accessed by your staff? Is this access audited?">
+All data such as user credentials are secured in encrypted format and no <BrandName /> employee can access it, including administrators. User data such as company details, user contact details, test logs, etc. can be access by only relevant developers. We have strict user role based data access and only relevant developers have access to parts of user data. This security access is audited every month based on development and testing sprint plans.
+</Accordion>
+<Accordion title="How are backups managed? What encryption is used? How are they destroyed when no longer needed?">
+We use AWS services like AWS S3 to store and take backups of our data. All data stored on AWS instances are stored using advanced AES256 encryption standards. Any data that is not critically required gets deleted through standard DELETE requests on S3 buckets. However we have implemented versioning and rollback steps to prevent accidental deletion of data. Therefore, even delete requests do not immediately delete all data. For that we have implemented provisions to scrub all data including the historical backup data on client requests.
+</Accordion>
+<Accordion title="Do you operate physical infrastructure? If so what certifications do they hold related to physical security? Can we see the audit/certification reports?">
+Our application is hosted entirely on third party hosting providers like AWS, Hetzner, etc. All our hosting partners have very high security protocols. For example checkout [AWS security protocols](https://aws.amazon.com/security/), or Hetzner Security protocols.
+</Accordion>
+<Accordion title="What is your incident response process?">
+We, here, at <BrandName /> follow a 6 step incident reponse process. The various stages of the response proces are prepration, identification, containment, eradication, recovery, and learning. We use industry leading practices for each step and test our response workflow once a month.
+</Accordion>
+<Accordion title="What are your policies and processes around notification of a security breach?">
+In case of an identified breach, all related users are notified of the breach immediately so that they can take necessary measures to prevent further loss. We share this information with our signup users through our email channels, and also notify users through social media platforms like [LinkedIn](https://www.linkedin.com/company/13282763/), [Facebook](https://www.facebook.com/lambdatest/), and [Twitter](https://twitter.com/Lambdatesting).
+</Accordion>
+<Accordion title={`${brandName} Tunnel connects your servers with my system. How much of our local PC is exposed to your system?`}>
+None. Only web requests initiated on <BrandName /> platform are transported to your localsystem via SSH tunnel created by our tunnel binary. The data at rest and data at transit are both encrypted. Only web browsing data generated by a webbrowser selected on <BrandName /> platform can send data to your system. As such your system is not exposed to public. In addition, every tunnel created using Lambda Tunnel binary is isolated to users of the same account. All Information of the remote tunnel is secured by accesstoken and we employ latest technology in encrypted tokens. This information is only provided to the browser fired the user. With that said, <BrandName /> recommends using test data instead of production data as best practice.
+</Accordion>
+</AccordionGroup>
+</Tab>
+<Tab title="Plans & Billing">
+<AccordionGroup>
+<Accordion title="What do I get with a Free Trial?">
+When you sign up with <BrandName />, you receive 60 mins/month Realtime Browser Testing (6 Sessions of 10 minutes each), 100 Automation Minutes for 15 days, 10 Screenshot Tests per month, 10 Responsive Tests per month, 24x7 Support, and 3rd Party App Integrations. The Free Trial is the best way to get a feel for <BrandName /> and how it works. <BrandName /> is ideal for teams, and therefore you can invite any number of users to be part of your <BrandName /> Team for testing.
+</Accordion>
+<Accordion title="How does the FREE trial work?">
+When you sign up, you instantly get access to our Freemium plan. This plan has no trial time limit, it's there for you for Life. In the freemium plan you get 60 minutes of <BrandName /> Live testing usage which gets renewed per month. You can anytime upgrade your plan for more robust features and unlimited access to <BrandName /> Live Testing machines.
+</Accordion>
+<Accordion title={`How can I upgrade my ${brandName} subscription?`}>
+You can add more user accounts to your existing plan, or upgrade to another plan from the [Pricing page](https://www.lambdatest.com/pricing). Upgrades can be done any time, and are charged on a prorated basis. Thus, if your subscription is changed during a billing cycle, your billed amount for the month will be prorated. To know more, visit [Test Manage Subscription] documentation.
+</Accordion>
+<Accordion title="What forms of payment do you accept?">
+We accept all types of credit and debit cards for payment. We have provision of payment using PayPal payment method as well.
+</Accordion>
+<Accordion title="Will I get invoice for my subscription?">
+Yes, you will receive the invoice for the subscription opted. Invoice will be sent by default to the email ID that was used during sign up. You can also download the invoice from from your user account.
+</Accordion>
+<Accordion title="What do you mean by parallel session?">
+Live parallel sessions indicate the number of tests you can conduct at the same time. For example, if you have opted for 2 parallel sessions, two members of your team can execute live testing simultaneously. Or a single member can run 2 parallel sessions.
+</Accordion>
+<Accordion title="Is the pricing based on users or parallel sessions?">
+Pricing is purely based on parallel sessions. User limit is an add-on which comes along with the editions.
+</Accordion>
+<Accordion title="Can I upgrade or downgrade my subscription later?">
+<BrandName /> price is based on plan level and the no. of parallel sessions. As per your need you can upgrade and downgrade at any time. However, changes will not take effect until your next billing cycle.
+</Accordion>
+<Accordion title="What is a On Demand Pass and how does it work?">
+An On Demand Pass is a one time payment option for to those who wish to use <BrandName /> for a shorter duration. With On Demand Pass, you get 120 Minutes of testing time with full access to <BrandName /> features for 30 days at a price of just $10. This is a non recurring payment, i.e. if you wish to continue this plan you would have to purchase On Demand Pass again.
+</Accordion>
+</AccordionGroup>
+</Tab>
+</Tabs>

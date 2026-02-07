@@ -1,0 +1,20 @@
+export const VirtualDeviceTag = ({ value = "Virtual Device" }) => {
+    return (
+        <div style={{ display: 'inline-block' }}>
+            <span style={{
+                display: 'inline-block',
+                backgroundColor: '#007BFF',
+                color: '#ffffff',
+                padding: '4px 12px',
+                borderRadius: '50px',
+                fontSize: '13px',
+                fontWeight: '600',
+                lineHeight: '1.4',
+                marginRight: '8px',
+                marginBottom: '4px'
+            }}>
+                {value}
+            </span>
+        </div>
+    );
+};

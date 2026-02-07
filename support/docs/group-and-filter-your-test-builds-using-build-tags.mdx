@@ -1,0 +1,79 @@
+---
+title: "Group and Filter Your Test Builds Using Build Tags"
+sidebarTitle: "Group/Filter Tests Using Build Tags"
+keywords: ['lambdatest automation','selenium automation grid','selenium grid online','online selenium automation','selenium automation grid online','lambdatest selenium automation grid','selenium tutorial','selenium getting started','lambdatest getting started','filter tests','Build tags','group tests','filter test builds','group test builds']
+---
+* * *
+
+With LambdaTest, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the LambdaTest Automation Dashboard.
+
+## How To Create Build Tags?
+
+* * *
+
+While writing your automation tests, you need to just add another capability when you create the [Desired Capabilities](/support/docs/selenium-automation-capabilities/) via code. Just follow the below steps to do so:
+
+*   Create an array of String(s), that contains your Build tags, each separated by a comma.
+
+    ```java
+    // For example, when you have only 1 tag
+    String[] buildTagList = {"Build Tag"};
+
+    // For example, when you have multiple tags
+    String[] buildTagList = {"Tag 1", "Tag 2", "Tag 3", ...};
+    ```
+    
+
+*   Now you just need to add this Build tag array in your Desired Capabilities instance, as shown below: **For example:** While creating a sample Desired Capabilities instance in Java, the code will be:
+
+    ```java
+    // Creating the Build Tags
+    String[] buildTagList = {"Tag1", "Tag2", "Tag3", "BuildTagRishabh"};
+
+    DesiredCapabilities caps = new DesiredCapabilities();
+    caps.setCapability("browser", "Safari");
+    caps.setCapability("version", "13");
+    caps.setCapability("platform", "macos Catalina");
+    caps.setCapability("build", "Build Tags Demo");
+    caps.setCapability("name", "Sample Test");
+
+    // To create custom tags
+    caps.setCapability("buildTags", buildTagList); 
+
+    System.out.println("Desired Caps: " + caps);
+    driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+    ```
+
+You have successfully created the Build tags. Now when you run your test, and navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), you can see the tags being present in that build, as shown below:
+
+<img loading="lazy" src="/assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp" alt="Group/filter" width="1281" height="721" className="doc_img"/>
+
+## Guildelines To Create Build Tags On LambdaTest?
+
+While creating Build Tags, make sure to follow the below Guidelines:
+
+*   Maximum of 5 custom tags can be added to a build.
+*   User can update the existing build by specifying different tags
+*   If you change tag name, or number of tags, no new build will be created. Rather the existing build will be updated with a new tag, to avoid unnecessary build creation and exploitation of new build creation.
+
+## How To Filter Tests Using Build Tags?
+
+* * *
+
+To group or filter the tests on your automation dashboard with these Build tags:
+
+Navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags**, on right corner of the filter toolbar. 
+<img loading="lazy" src="/assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp" alt="Group/filter" width="1281" height="722" className="doc_img"/>
+
+Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, as shown below, only the test builds with the tag "Tag1" will be shown:
+
+<img loading="lazy" src="/assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-3.webp" alt="group/filter" width="930" height="524" className="doc_img"/>
+
+You can choose multiple Build tags as well to filter your tests effectively, as shown in the image below:
+
+<img loading="lazy" src="/assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-4.webp" alt="group/filter" width="1282" height="722" className="doc_img"/>
+
+* * *
+<Note>
+That's it! You have successfully created a Build tag, and grouped and filtered your tests based on these Build tags. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+</Note>

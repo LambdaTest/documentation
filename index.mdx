@@ -1,0 +1,523 @@
+---
+mode: "custom"
+title: "LambdaTest Docs"
+---
+
+<div className="w-full bg-gray-100 dark:bg-[#171a21]">
+  <div
+    style={{
+      maxWidth: '80rem',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingLeft: '1.25rem',
+      paddingRight: '1.25rem',
+      paddingTop: '2rem',
+      paddingBottom: '2rem',
+    }}
+  >
+    <div className="flex flex-col lg:flex-row items-center gap-10" >
+      <div className="w-full lg:w-2/3 text-left">
+        <h1 className="text-4xl font-semibold text-gray-900 dark:text-white" style={{ letterSpacing: '0px' }}>
+          TestMu AI Documentation and Knowledge Hub
+        </h1>
+        <p className="mt-4 text-md text-[#6d6e79] dark:text-[#a1a1a3] font-normal" style={{ maxWidth: '35rem' }}>
+          Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms
+        </p>
+        <div className="flex items-center justify-start">
+          <button
+            type="button"
+            className="hidden w-full lg:flex items-center text-sm leading-6 py-4 pl-4 pr-4 text-gray-500 rounded-full"
+            id="home-search-entry"
+            style={{
+              marginTop: '2rem',
+              maxWidth: '35rem',
+              background: '#FFF',
+              boxShadow: '0px 1px 4px 0px rgba(8, 9, 10, 0.25), 0px 0px 0px 4px rgba(255, 255, 255, 0.20)',
+              cursor: 'pointer',
+              textAlign: 'left',
+            }}
+            onClick={()=> document.getElementById('search-bar-entry').click()}
+          >
+            <svg
+              className="h-4 w-4 ml-1.5 flex-none bg-primary hover:bg-gray-600 dark:bg-primary-dark dark:hover:bg-white/70"
+              style={{
+              marginRight: '0.5rem',
+              maskImage:
+                'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center center',
+              }}
+            />
+            Search or ask...
+          </button>
+        </div>
+      </div>
+      <div className="w-full lg:w-1/2">
+        <img src="/assets/images/HomePage/TestMu-AI-Home-page.png" alt="Notion API" className="w-full max-h-90 object-contain" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="w-full">
+  <div
+    style={{
+      maxWidth: '80rem',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingLeft: '1.25rem',
+      paddingRight: '1.25rem',
+      paddingTop: '4rem',
+      paddingBottom: '4rem',
+    }}
+  >
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="window-restore" size={24} />
+      <h3 className="text-lg font-semibold m-0">Web Automation</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-lambdatest-automation" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Selenium Testing
+      </a>
+      <a href="/support/docs/getting-started-with-cypress-testing" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Cypress Testing
+      </a>
+      <a href="/support/docs/playwright-testing" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Playwright Testing
+      </a>
+      <a href="/support/docs/puppeteer-testing" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Puppeteer Testing
+      </a>
+      <a href="/support/docs/k6-browser-testing" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        K6 Testing
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="window" size={24} />
+      <h3 className="text-lg font-semibold m-0">App Automation</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-appium-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Appium Testing
+      </a>
+      <a href="/support/docs/getting-started-with-espresso-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Espresso Testing
+      </a>
+      <a href="/support/docs/getting-started-with-xcuitest/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        XCUI Testing
+      </a>
+      <a href="/support/docs/getting-started-with-flutter-dart-android-automation/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Flutter Testing
+      </a>
+      <a href="/support/docs/app-automation-on-emulators-simulators/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Virtual Devices
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="square-bolt" size={24} />
+      <h3 className="text-lg font-semibold m-0">HyperExecute</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-hyperexecute" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/hyperexecute-yaml-parameters" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        HyperExecute YAML
+      </a>
+      <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        HyperExecute CLI
+      </a>
+      <a href="/support/docs/hyperexecute-cli-gui" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        HyperExecute GUI <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>BETA</span>
+      </a>
+      <a href="/support/docs/hyperexecute-mcp-server" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        HyperExecute MCP Server
+      </a>
+      <a href="/support/docs/key-features-of-hyperexecute" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Features
+      </a>
+      <a href="/support/docs/integration-with-hyperexecute" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Integrations
+      </a>
+      <a href="/support/docs/hyperexecute-private-cloud-setup" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Private Cloud
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="chart-line-up" size={24} />
+      <h3 className="text-lg font-semibold m-0">Insights</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/analytics-dashboard-templates/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Pre-built Dashboards
+      </a>
+      <a href="/support/docs/analytics-create-dashboard/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Custom Dashboards
+      </a>
+      <a href="/support/docs/analytics-widgets/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Widgets
+      </a>
+      <a href="/support/docs/analytics-dashboard-copilot/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Dashboard CoPilot AI
+      </a>
+      <a href="/support/docs/analytics-test-case-insights/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Case Insights
+      </a>
+      <a href="/support/docs/analytics-build-comparison/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Build Insights
+      </a>
+      <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Flaky Test Insights
+      </a>
+      <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Command Logs Insights
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="magic" size={24} />
+      <h3 className="text-lg font-semibold m-0">SmartUI</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/smart-visual-regression-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/smartui-selenium-js-sdk/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Explore SDKs
+      </a>
+      <a href="/support/docs/smartui-cli/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        CLI
+      </a>
+      <a href="/support/docs/smartui-upload-api-v2/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Upload Screenshots
+      </a>
+      <a href="/support/docs/smartui-pdf-comparison/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Smart PDF Comparison
+      </a>
+      <a href="/support/docs/smart-ui-build-options/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Build Config and Options
+      </a>
+      <a href="/support/docs/test-settings-options/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Advance Comparison Options
+      </a>
+      <a href="/support/docs/html-dom-smartui-options/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Handling Dynamic Data
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="eye" size={24} />
+      <h3 className="text-lg font-semibold m-0">Web Scanner</h3> <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/web-scanner-overview/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Overview
+      </a>
+      <a href="/support/docs/web-scanner-getting-started/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/web-scanner-visual-scan/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Visual UI Scans
+      </a>
+      <a href="/support/docs/web-scanner-accessibility-scan/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Accessibility Scans
+      </a>
+      <a href="/support/docs/web-scanner-adding-urls/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Adding URLs
+      </a>
+      <a href="/support/docs/web-scanner-scheduling-options/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Scheduling Options
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="clock" size={24} />
+      <h3 className="text-lg font-semibold m-0">KaneAI</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-kane-ai" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/author-your-first-desktop-browser-test/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Author Desktop Browser Test
+      </a>
+      <a href="/support/docs/author-your-first-mobile-app-test/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Author Mobile App Test
+      </a>
+      <a href="/support/docs/kane-ai-api-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        API Testing
+      </a>
+      <a href="/support/docs/kane-ai-command-guide/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Command Types
+      </a>
+      <a href="/support/docs/kaneai-ci-cd-automation/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        CI/CD Automation
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="clock" size={24} />
+      <h3 className="text-lg font-semibold m-0">Agent To Agent</h3> <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>BETA</span>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-agent-to-agent-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/testing-your-first-ai-agent/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Your First AI Agent
+      </a>
+      <a href="/support/docs/testing-your-first-ai-agent/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        FAQs
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="clock" size={24} />
+      <h3 className="text-lg font-semibold m-0">Real Time</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Web Browser Testing
+      </a>
+      <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Mobile Browser Testing
+      </a>
+      <a href="/support/docs/getting-started-with-mobile-app-real-time-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Mobile App Testing
+      </a>
+      <a href="/support/docs/chrome-os-web-browser-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        ChromeOS Web Browser Testing
+      </a>
+      <a href="/support/docs/chrome-os-app-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        ChromeOS App Testing
+      </a>
+      <a href="/support/docs/developer-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Key Features
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="mobile-signal" size={24} />
+      <h3 className="text-lg font-semibold m-0">Real Device</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/app-testing-on-real-devices/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Real Device App Testing
+      </a>
+      <a href="/support/docs/browser-testing-on-real-devices/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Real Device Browser Testing
+      </a>
+      <a href="/support/docs/public-cloud-vs-private-cloud/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Private Cloud
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="list-check" size={24} />
+      <h3 className="text-lg font-semibold m-0">Test Manager</h3> <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/create-projects/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Create Projects
+      </a>
+      <a href="/support/docs/insights-dashboard/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Insights Dashboard
+      </a>
+      <a href="/support/docs/manual-test-case-creation/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Manual Test Cases
+      </a>
+      <a href="/support/docs/automated-test-cases-with-ai/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Automated Test Cases
+      </a>
+      <a href="/support/docs/test-run-creation-and-management/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Run
+      </a>
+      <a href="/support/docs/milestone-creation-and-management/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Milestones
+      </a>
+      <a href="/support/docs/link-jira-issues-with-test-manager/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Issue Tracker Integration
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="list-check" size={24} />
+      <h3 className="text-lg font-semibold m-0">LambdaTest MCP Server</h3> <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/testmu-mcp-server/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Setting up LambdaTest MCP Server
+      </a>
+     
+      
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="plug" size={24} />
+      <h3 className="text-lg font-semibold m-0">Integrations</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/bug-tracking-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Bug Tracking Tools
+      </a>
+      <a href="/support/docs/integrations-with-project-management-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Project Management Tools
+      </a>
+      <a href="/support/docs/integrations-with-ci-cd-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        CI/CD Tools
+      </a>
+      <a href="/support/docs/integrate-test-reporting-test-management-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Reporting Tools
+      </a>
+      <a href="/support/docs/team-communication-tools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Communication Tools
+      </a>
+      <a href="/support/docs/plugins-and-extensions/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Plugins and Extensions
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="shield-virus" size={24} />
+      <h3 className="text-lg font-semibold m-0">Accessibility Testing</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/accessibility-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Getting Started
+      </a>
+      <a href="/support/docs/accessibility-devtools/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Accessibility DevTools
+      </a>
+      <a href="/support/docs/accessibility-automation/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Accessibility Web Automation
+      </a>
+      <a href="/support/docs/accessibility-test-scheduling/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Sitemap Scheduling
+      </a>
+      <a href="/support/docs/accessibility-app-scanner/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Native App Scanner 
+      </a>
+      <a href="/support/docs/accessibility-native-app-automation-test/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Native App Automation 
+      </a>
+      <a href="/support/docs/screen-reader-on-accessibility/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Screen Reader
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="fingerprint" size={24} />
+      <h3 className="text-lg font-semibold m-0">Testing Locally</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/testing-locally-hosted-pages/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Testing Locally Hosted Pages
+      </a>
+      <a href="/support/docs/lambda-tunnel-modifiers/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        LambdaTest Tunnel Modifiers
+      </a>
+      <a href="/support/docs/docker-tunnel/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Docker Tunnel
+      </a>
+      <a href="/support/docs/troubleshooting-lambda-tunnel/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Troubleshooting Tunnel
+      </a>
+      <a href="/support/docs/load-balancing-in-lambda-tunnel/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Load Balancing in Tunnel
+      </a>
+      <a href="/support/docs/dedicated-proxy/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Dedicated Proxy
+      </a>
+      <a href="/support/docs/charles-proxy/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Charles Proxy
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="gear" size={24} />
+      <h3 className="text-lg font-semibold m-0">Settings and Security</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/account-management" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Account Management
+      </a>
+      <a href="/support/docs/network-whitelisting-and-tunnel-guide" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Network Whitelisting Guide
+      </a>
+      <a href="/support/docs/lambdatest-public-ip" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        LambdaTest Public IP
+      </a>
+      <a href="/support/docs/single-sign-on" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Single Sign-On
+      </a>
+      <a href="/support/docs/scim" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        SCIM
+      </a>
+    </div>
+  </div>
+
+  <div className="flex flex-col">
+    <div className="flex items-center gap-3 mb-3">
+      <Icon icon="folder" size={24} />
+      <h3 className="text-lg font-semibold m-0">Other Docs</h3>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="/support/docs/lt-browser/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        LT Browser
+      </a>
+      <a href="/support/docs/test-logs/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Logs
+      </a>
+      <a href="/support/docs/test-intelligence-overview/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Test Intelligence
+      </a>
+      <a href="/support/docs/automated-screenshot-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Automated Screenshot Testing
+      </a>
+      <a href="/support/docs/responsive-testing/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Responsive Testing
+      </a>
+      <a href="/support/docs/concurrency-widget/" className="text-[#2b7ade] dark:text-blue-400 transition-colors text-sm font-semibold py-1 hover:underline underline-offset-4 antialiased">
+        Concurrency Widget
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</div>

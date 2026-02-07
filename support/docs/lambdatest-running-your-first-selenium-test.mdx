@@ -1,0 +1,91 @@
+---
+title: "Run Your First Test on LambdaTest using Selenium"
+sidebarTitle: "Running Your First Job"
+keywords: ['Automation Platform', 'Dashboard', 'Automation Testing', 'Lambdatest Dashboard']
+
+---
+
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+LambdaTest provides a powerful Selenium Grid that allows you to perform automated cross-browser testing on over **3000+ real browsers** and operating systems. This guide will walk you through the process of setting up and running your first Selenium test on the LambdaTest platform.
+
+## Prerequisites
+Before you begin, ensure you have the following:
+
+- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/security)
+- Install Java Development Kit (JDK). We recommend Java version 11
+- Install [Maven](https://maven.apache.org/)
+- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
+
+## Run your first test
+
+### Step 1: Configure Your Test Suite
+
+<Check>
+**SAMPLE REPO**
+
+Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on our Standard Grid.
+
+<GitHubButton url="https://github.com/LambdaTest/Java-TestNG-Selenium" />
+</Check>
+
+```bash
+git clone https://github.com/LambdaTest/java-testng-selenium
+cd java-testng-selenium
+```
+
+### Step 2: Update the dependencies
+
+Before proceeding forward, run the below command to update the outdated dependencies 
+
+```bash
+mvn versions:display-dependency-updates
+```
+
+### Step 3: Setup your LambdaTest Credentials
+
+In your terminal (as per your respective Operating System), run these command to setup your LambdaTest credentials.
+<Note>
+ You can see your credentials below if you have logged into our platform.
+</Note>
+
+<Tabs>
+  <Tab title="Linux / MacOS">
+    ```bash
+    export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+    export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+  </Tab>
+  <Tab title="Windows">
+    ```powershell
+    set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+    set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+  </Tab>
+</Tabs>
+
+### Step 4: Execute your test
+
+Run the following command to execute your test on LambdaTest
+
+<Tabs>
+  <Tab title="Single Test">
+    ```bash
+    mvn test -D suite=single.xml
+    ```
+  </Tab>
+  <Tab title="Parallel Test">
+    ```bash
+    mvn test -D suite=parallel.xml
+    ```
+  </Tab>
+</Tabs>
+
+## Monitor the Test Execution
+Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+
+<Frame>
+<img loading="lazy" src="/assets/images/selenium/running-first-test/run-first-test.png" alt="Image"  className="doc_img"/>
+</Frame>

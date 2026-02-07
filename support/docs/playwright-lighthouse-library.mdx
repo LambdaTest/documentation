@@ -1,0 +1,231 @@
+---
+title: "Generate Lighthouse Reports With Playwright Lighthouse Library"
+sidebarTitle: "Playwright Lighthouse Library"
+keywords: ['playwright lighthouse', 'lighthouse reports playwright', 'playwright performance testing', 'playwright lambdatest']
+---
+
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
+
+LambdaTest lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
+
+<Warning>
+Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium** browsers.
+</Warning>
+
+<Check>
+**SAMPLE REPOSITORY**
+
+The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **LambdaTest's GitHub Repository**. You can either download or clone the repository to quickly run your tests.
+
+<GitHubButton url="https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js" />
+</Check>
+
+## Prerequisites
+- Ensure that you have the Playwright Lighthouse Library installed in your web project.
+  ```bash
+  npm install playwright-lighthouse
+  ```
+
+- Export the *LIGHTHOUSE_LAMBDATEST* environment variable to your project environment.
+  ```bash
+  export LIGHTHOUSE_LAMBDATEST='true'
+  ```
+
+## Write your Test Script
+<Note>
+**INFO**
+
+Generating lighthouse report within the test might increase the test duration. It is advisable to generate the lighthouse reports only in the required tests.
+</Note>
+
+You can easily add the Lighthouse Performance Metrics of the website you want to test by using the `lighthouseReport` action via the test. Following is the code snippet for generating Lighthouse report from the Playwright if you are using JavaScript:
+```js title="playwright-lighthouse-report.js"
+await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
+  action: 'lighthouseReport',
+  arguments: { url: 'https://www.example.com' }
+})}`)
+```
+
+### For Authenticated Pages
+<Warning>
+This feature is only supported on **Windows** and **macOS** platforms.
+</Warning>
+
+The feature allows you to generate Lighthouse reports for authenticated web pages using Playwright. This is particularly useful for testing performance, accessibility, SEO, and other quality metrics for pages that require authentication. By leveraging authentication tokens, you can analyze restricted pages in your Playwright tests on both **Windows** and **macOS** environments.
+
+<Tabs>
+<Tab title="Windows">
+
+```javascript
+await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
+  action: 'lighthouseReport', 
+  arguments: { url: 'https://www.example.com', 
+  args: `--extra-headers 
+  ${JSON.stringify({ authtoken: "YOUR_AUTH_TOKEN" })}` 
+} })}` ); 
+```
+</Tab>
+
+<Tab title="macOS">
+
+```javascript
+await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
+  action: 'lighthouseReport', 
+  arguments: { url: 'https://www.example.com', 
+  args: '--extra-headers 
+  "{\\"authtoken\\": \\"YOUR_AUTH_TOKEN\\"}"' 
+} })}`);
+```
+</Tab>
+</Tabs>
+
+### Sample Test Script
+
+This following script performs web automation testing using the Playwright and Lighthouse libraries on the LambdaTest platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
+
+```javascript reference title="playwright-lighthouse-report.js"
+require('dotenv').config();
+const { chromium } = require('playwright')
+const {expect} = require("expect");
+
+(async () => {
+  console.log('Starting Playwright Lighthouse Report test...');
+  console.log('Platform: Windows 10, Browser: Chrome');
+  console.log('Test: Performance testing with Lighthouse reports');
+  
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Test Lighthouse Report',
+      'name': 'Playwright Test with Lighthouse report',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '', // Optional
+      'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    }
+  }
+
+  console.log('Connecting to LambdaTest...');
+  console.log('Username:', process.env.LT_USERNAME);
+
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
+
+  console.log('Connected to LambdaTest successfully!');
+  console.log('Creating new page...');
+
+  const page = await browser.newPage()
+
+  console.log('Navigating to Bing...');
+  await page.goto('https://www.bing.com')
+
+  console.log('Generating Lighthouse report for Bing...');
+  // Generate the lighthouse report for the provided URL
+  await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'lighthouseReport', arguments: { url: 'https://www.bing.com' }})}`)
+
+  console.log('Finding search box...');
+  const element = await page.locator('[id="sb_form_q"]')
+  
+  console.log('Clicking search box...');
+  await element.click()
+  
+  console.log('Typing "LambdaTest"...');
+  await element.type('LambdaTest')
+  await page.waitForTimeout(1000)
+  
+  console.log('Pressing Enter...');
+  await page.keyboard.press('Enter')
+  
+  console.log('Waiting for search results...');
+  await page.waitForSelector('[class=" b_active"]')
+  const title = await page.title()
+  console.log('Page title:', title);
+
+  console.log('Generating second Lighthouse report for login.live.com...');
+  // Generate the lighthouse report
+  // You can generate multiple lighthouse reports in a test
+  await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'lighthouseReport', arguments: { url: "https://login.live.com" }})}`)
+
+  try {
+    console.log('Verifying search results title...');
+    expect(title).toEqual('LambdaTest - Search')
+    console.log('Lighthouse Test PASSED! Title matched successfully');
+    
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
+    console.log('Marked test as PASSED in LambdaTest dashboard');
+    
+    await teardown(page, browser)
+  } catch (e) {
+    console.log('Lighthouse Test FAILED!');
+    console.log('Error:', e.message);
+    console.log('Expected title: "LambdaTest - Search"');
+    console.log('Actual title:', title);
+    
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: e.stack } })}`)
+    console.log('Marked test as FAILED in LambdaTest dashboard');
+    
+    await teardown(page, browser)
+    throw e.stack
+  }
+})().catch(err => {
+  console.error('Unexpected error occurred in Lighthouse test:');
+  console.error(err);
+  process.exit(1);
+});
+
+async function teardown(page, browser) {
+  console.log('Cleaning up Lighthouse test resources...');
+  await page.close();
+  await browser.close();
+  console.log('Lighthouse test completed and resources cleaned up!');
+}
+```
+
+## Trigger your Test on LambdaTest
+### Set up your authentication
+
+Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+
+<Tabs>
+<Tab title="Linux / MacOS">
+```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</Tab>
+
+<Tab title="Windows">
+```powershell
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</Tab>
+</Tabs>
+
+### Run your test
+Pass the below command in the terminal to run the test:
+```bash
+node RELATIVE_PATH_OF_YOUR_TEST_FILE
+```
+
+### View Your Test Results
+To view your test runs that uses Playwright Lighthouse Library, go to the LambdaTest [Web Automation Dashboard](https://automation.lambdatest.com/).
+
+<img loading="lazy" src='/assets/images/playwright-testing/lighthouse-report.png' alt="Image" className="doc_img"/>
+
+
+
+
+
+

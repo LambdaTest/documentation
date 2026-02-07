@@ -1,0 +1,383 @@
+---
+title: "Running Playwright Real Device Tests on HyperExecute"
+sidebarTitle: "Real Device"
+keywords: ['hyperexecute', 'hyperexecute testing', 'real devices', 'playwright', 'playwright test', 'playwright hyperexecute', 'real device playwright', 'real device test']
+---
+
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+
+This guide explains how to run your **Playwright** tests on **Real devices (Android and iOS)**  using HyperExecute:
+
+## Prerequisites
+Before running your tests, ensure you have:
+
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file with the test configuration.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+
+## Step 1: Set Up Your Test Project
+You can use your own Playwright project or try the sample repo:. For demo purposes, we are using the sample repository.
+
+<Check>
+**SAMPLE REPO**
+
+Download or Clone the code sample for the Playwright Real Device from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<GitHubButton url="https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample" />
+</Check>
+
+### Configure Desired Capabilities
+Update your test configuration with the required capabilities.
+
+<Tabs>
+  <Tab title="Android">
+    ```javascript playwright-android-real-device.js expandable
+    const {_android} = require("playwright");
+const {expect} = require("expect");
+
+(async () => {
+  const capabilities = {
+    "LT:Options": {
+      "platformName": "android",
+      "deviceName": ".*",
+      "isRealMobile": true,
+      "build": "Playwright Android Build",
+      "name": "Playwright android test",
+      "user": process.env.LT_USERNAME,
+      "accessKey": process.env.LT_ACCESS_KEY,
+      "network": true,
+      "video": true,
+      "console": true,
+      "idleTimeout": 3000,
+      "queueTimeout": 900,
+      "projectName": "New UI",
+    },
+  };
+
+  // let device = await _android.connect(
+  //     `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+  //         JSON.stringify(capabilities))}`,
+  // );
+
+  console.log(`starting script execution`)
+
+  let device = await _android.connect(
+    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+      JSON.stringify(capabilities),
+    )}`);
+
+  console.log(`Model:: ${device.model()}, serial:: ${device.serial()}`);
+
+  // await device.shell("am force-stop com.android.chrome");
+
+  let context = await device.launchBrowser();
+  let page = await context.newPage();
+
+  await page.goto("https://duckduckgo.com");
+  let element = await page.locator("[name=\"q\"]");
+  await element.click();
+  await element.type("Playwright");
+  await element.press("Enter");
+  let title = await page.title();
+
+  try {
+    expect(title).toEqual("Playwright at DuckDuckGo");
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: "setTestStatus", arguments: {status: "passed", remark: "Assertions passed" },})}`);
+    await teardown(page, context, device)
+  } catch (e) {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: "setTestStatus", arguments: { status: "failed", remark: e.stack }})}`);
+    await teardown(page, context, device)
+    throw e.stack
+  }
+
+})();
+
+async function teardown(page, context, device) {
+  await page.close();
+  await context.close();
+  await device.close();
+}
+    ```
+  </Tab>
+  <Tab title="iOS">
+    ```javascript playwright-ios-real-device.js expandable
+    const {expect} = require("expect");
+const { webkit } = require("playwright");
+
+
+(async () => {
+  const capabilities = {
+    "LT:Options": {
+      "platformName": "ios",
+      "deviceName": "iphone*",
+      "platformVersion": "17",
+      "isRealMobile": true,
+      "build": "Playwright IOS Build",
+      "name": "Playwright IOS test",
+      "user": process.env.LT_USERNAME,
+      "accessKey": process.env.LT_ACCESS_KEY,
+      "network": true,
+      "video": true,
+      "console": true,
+      "idleTimeout": 3000,
+      "queueTimeout": 900,
+      "projectName": "New UI"
+    },
+  };
+  console.log('Connecting to LambdaTest iOS cloud...');
+  console.log('Username:', process.env.LT_USERNAME);
+  console.log('Platform: iOS 18, Device: iPhone 16');
+
+  let browser = await webkit.connect(
+      `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+          JSON.stringify(capabilities))}`,
+  );
+
+  console.log('Connected to iOS device successfully!');
+  console.log(`Device: iPhone 16, iOS 18`);
+
+  console.log('Creating browser context...');
+  let context = await browser.newContext({
+    hasTouch: true,  // Enable touch support for iOS
+    isMobile: true   // Enable mobile mode for iOS
+  });
+  let page = await context.newPage();
+
+  console.log('Navigating to Wikipedia...');
+  await page.goto('https://www.wikipedia.org/', { timeout: 30000 });
+  
+  console.log('Finding search input...');
+  let element = await page.locator('input[name="search"]');
+  
+  console.log('Clicking search input...');
+  await element.click();
+  
+  console.log('Typing "playwright"...');
+  await element.fill('playwright');
+  
+  console.log('Clicking search input again...');
+  await element.click();
+  
+  console.log('Current URL:', await page.url());
+  
+  console.log('Finding and clicking search button...');
+  await page.locator('#search-form > fieldset > button').click();
+  
+  console.log('Waiting for search results...');
+  await page.waitForTimeout(3000);
+  
+  console.log('Counting occurrences of "19th century"...');
+  const count = await page.getByText('19th century').count();
+  console.log('Found', count, 'occurrences of "19th century"');
+  
+  try {
+    console.log('Verifying count equals 3...');
+    expect(count).toEqual(3);
+    console.log('iOS Test PASSED! Found exactly 3 occurrences');
+    
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: "setTestStatus", arguments: {status: "passed", remark: "Wikipedia test passed - found 3 occurrences of '19th century'" },})}`);
+    console.log('Marked test as PASSED in LambdaTest dashboard');
+    
+    await teardown(page, context, browser)
+  } catch (e) {
+    console.log('iOS Test FAILED!');
+    console.log('Error:', e.message);
+    console.log('Expected: 3 occurrences of "19th century"');
+    console.log('Actual count:', count);
+    
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: "setTestStatus", arguments: { status: "failed", remark: e.message }})}`);
+    console.log('Marked test as FAILED in LambdaTest dashboard');
+    
+    await teardown(page, context, browser)
+    throw e.stack
+  }
+
+})().catch(err => {
+  console.error('Unexpected error occurred in iOS test:');
+  // teardown(page, context, browser)
+  console.error(err);
+  process.exit(1);
+});
+
+async function teardown(page, context, browser) {
+  console.log('Cleaning up iOS test resources...');
+  try {
+    console.log('   Closing page...');
+    await Promise.race([
+      page.close(),
+      new Promise(resolve => setTimeout(resolve, 10000)) // 10 second timeout
+    ]);
+    console.log('Page closed');
+    
+    console.log('Closing context...');
+    await Promise.race([
+      context.close(),
+      new Promise(resolve => setTimeout(resolve, 10000)) // 10 second timeout
+    ]);
+    console.log('Context closed');
+    
+    console.log('   Closing browser connection...');
+    await Promise.race([
+      browser.close(),
+      new Promise(resolve => setTimeout(resolve, 15000)) // 15 second timeout for browser
+    ]);
+    console.log('Browser closed');
+    
+    console.log('iOS test completed and resources cleaned up!');
+  } catch (error) {
+    console.log('Cleanup completed with warnings:', error.message);
+  }
+    process.exit(0);
+} 
+    ```
+  </Tab>
+</Tabs>
+
+<Note>
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+</Note>
+
+### Configure the CDP URL
+You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
+
+```javascript title="playwright-ios-real-device.js"
+const browser = await chromium.connect({
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+})
+```
+
+## Step 2: Download the CLI in your Project
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the project to execute the tests on HyperExecute.
+
+You can download the CLI for your desired platform from the below mentioned links:
+
+| Host Machine | HyperExecute CLI |
+| ---------| ---------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+## Step 3: Configure YAML in your Test Suite
+Use the sample YAML below to configure your execution:
+
+<Tabs>
+  <Tab title="Android">
+    ```yaml hyperexecute_android.yaml
+    version: "0.2"
+runson: android
+
+autosplit: true
+concurrency: 2
+
+runtime:
+  language: node
+  version: "18"
+
+pre:
+  - npm install
+  - npx playwright install
+
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+
+framework:
+  name: appium
+  args:
+    playwrightRD : true
+    region: us
+
+testDiscovery:
+  command: cat pw_androidtests.txt
+  mode: static
+  type: raw
+
+testRunnerCommand: npm run test-android --verbose
+
+jobLabel: [ 'HYP', 'Playwright-RD', 'Android']
+    ```
+  </Tab>
+  <Tab title="iOS">
+    ```yaml hyperexecute_ios.yaml" 
+    version: "0.2"
+runson: ios
+
+autosplit: true
+concurrency: 2
+
+runtime:
+  language: node
+  version: "18"
+
+pre:
+  - npm install
+  - npx playwright install
+  
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+
+framework:
+  name: appium
+  args:
+    playwrightRD : true
+    region: us
+    mobileDC: true
+
+testDiscovery:
+  command: cat pw_iostests.txt
+  mode: static
+  type: raw
+
+testRunnerCommand: npm run test-ios --verbose
+
+jobLabel: [ 'HYP', 'Playwright-RD', 'iOS']
+    ```
+  </Tab>
+</Tabs>
+
+<Note>
+**INFO**
+
+Test on Mobile Containers in a Particular Region
+
+```yaml title="hyperexecute.yaml"
+dynamicAllocation: true
+
+framework:
+  name: appium
+  args:
+    playwrightRD : true
+    region: ap       # supported regions -> ap, eu, us 
+    reservation: false
+```
+- If **`reservation : false`**, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the **`reservation : true`**.
+</Note>
+
+## Step 4: Execute your Test Suite
+
+<Note>
+**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Note>
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```
+
+## Step 5: Monitor the Test Execution
+
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<img loading="lazy" src="/assets/images/hyperexecute/frameworks/playwright/real-device/3.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+
+## Step 6: Download Artifacts and Reports
+
+HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
+
+<img loading="lazy" src="/assets/images/hyperexecute/frameworks/playwright/real-device/4.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>

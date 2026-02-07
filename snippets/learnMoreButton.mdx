@@ -1,0 +1,46 @@
+export const LearnMoreButton = ({ url, text = "Learn More" }) => {
+    return (
+        <a 
+            href={url} 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '8px 16px',
+                backgroundColor: '#000',
+                color: '#fff',
+                borderRadius: '6px',
+                fontWeight: '500',
+                fontSize: '14px',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+                border: '1px solid #000'
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = '#000';
+                e.currentTarget.querySelector('svg').style.fill = '#000';
+                e.currentTarget.querySelector('span').style.color = '#000';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#000';
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.querySelector('svg').style.fill = '#fff';
+                e.currentTarget.querySelector('span').style.color = '#fff';
+            }}
+        >
+            <svg 
+                width="20" 
+                height="20" 
+                fill="#fff" 
+                viewBox="0 0 24 24"
+                style={{ transition: 'fill 0.2s ease' }}
+            >
+                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+            </svg>
+            <span style={{ color: '#fff', transition: 'color 0.2s ease' }}>{text}</span>
+        </a>
+    );
+};

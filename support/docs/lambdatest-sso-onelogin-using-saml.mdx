@@ -1,0 +1,92 @@
+---
+title: "LambdaTest SSO & OneLogin Using SAML"
+sidebarTitle: "OneLogin"
+keywords: [ "sso", "lambdatest sso", "onelogin", "saml", "lambdatest onelogin integration", "lambdatest onelogin sso"]
+---
+import { BrandName } from '/snippets/BrandName.mdx';
+
+* * *
+
+<BrandName /> allows you to integrate an external user directory with your <BrandName /> Organization through an IDP so that your team could leverage the Single Sign-on setup. This document will help you integrate your <BrandName /> organization with your OneLogin identity provider to configure SSO(Single sign-on).
+
+## Prerequisites
+
+* * *
+
+To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
+
+*   An Enterprise plan with <BrandName />. ( Learn how to [manage your subscriptions](/support/docs/manage-subscriptions/). )
+*   The Admin level access to your <BrandName /> organization.
+*   The Admin level access of your organization’s OneLogin instance
+
+## Configure <BrandName /> SSO & OneLogin Integration
+
+* * *
+
+1. Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+   
+   ![setup sso button](/assets/images/sso-self-serve/setup-sso.png)
+
+2. Enter Connection Name and Click on  **Add New Connection**.
+
+   ![connection name button](/assets/images/sso-self-serve/connection-name.png)
+
+3. Select **OneLogin** as your identity provider.
+
+   ![select identity provider](/assets/images/sso-self-serve/select-idp.png)
+
+4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
+   Once configured, click on continue
+
+   ![okta integration](/assets/images/sso/img_10.png)
+
+5. Now Configure the Attributes and Claims in your **Identity Provider**.
+   Once configured, click on continue
+
+   ![okta integration](/assets/images/sso/img_11.png)
+
+6. Log in to the [OneLogin Dashboard](https://app.onelogin.com/login). 
+
+![lambdatest onlogin integration](/assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp)
+
+7. Go to Applications 
+
+![lambdatest onlogin integration](/assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp)
+
+8. Add a new Application, by clicking on Add App. 
+
+![lambdatest onlogin integration](/assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp)
+
+9. Search for SAML Test Connector and select **Add SAML Test Connector (Advanced)** 
+
+![lambdatest onlogin integration](/assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp)
+
+10. In the window that appears, choose a suitable name for your app, and **save**. 
+
+![lambdatest onlogin integration](/assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp)
+
+11. Click on configurations tab in the sidebar and fill the details as per the details copied from <BrandName /> in step 4.
+    ![okta integration](/assets/images/sso/img_12.png)
+
+
+12. Click on the parameters tab and fill the details as per the details copied from <BrandName /> in step 5.
+    ![okta integration](/assets/images/sso/img_13.png)
+
+
+13. Now go to the SSO tab set the SAML Signature Algorithm to SHA-256
+    ![okta integration](/assets/images/sso/img_16.png)
+
+
+14. Copy the Issuer URL 
+
+![okta integration](/assets/images/sso/img_17.png)
+
+15. Go back to <BrandName /> and paste the copied Issuer URL in the **Metadata URL** field. Fill the required fields  and click on **Create Connection**:
+
+* SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
+* Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
+* Metadata URL (Enter the metadata URL of your Identity Provider.)
+
+![sso-self serve](/assets/images/sso-self-serve/finalize-sso-metadata.png)
+
+<Warning> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing! </Warning>

@@ -1,36 +1,43 @@
-# [TestMu AI Documentation](https://testmu.ai/support/docs/)
-Welcome to TestMu AI's documentation repository! Help us enhance our documentation by contributing—whether it's fixing a typo or adding new topics. We appreciate all contributions.
+# Mintlify Starter Kit
 
-## Contributing Content
-We recommend forking the repo, creating all content changes in branches, and submitting pull requests. We will work with you to get this content reviewed, tested, and merged for publishing.
+Use the starter kit to get your docs deployed and ready to customize.
 
-## Building Locally
-Docusaurus requires the following to build on locals:
+Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
 
-- [NodeJS](https://nodejs.org/en/download/) version recommended: `16.14.0`
-- Verify the Node.js version by opening Command Prompt/Terminal and running `node -v`
-- Download Git [here](https://git-scm.com/downloads)
-- [VS Code Editor](https://code.visualstudio.com/download)
+- Guide pages
+- Navigation
+- Customizations
+- API reference pages
+- Use of popular components
 
-To build on your local:
+**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
 
-1. Clone the repo using Git or tools like GitHub Desktop.
-2. In a terminal, change to the cloned repo folder. Run the install command: `npm install --legacy --peer-deps`.
-3. To serve and review your content, use one of the following:
-   - Use start, hot reloads as you make changes: `npm start`. 
-4. To build locally and test your links, run `npm run build`. Any issues with broken links and images are listed according to file. Locate and update those issues, then run `npm serve` and start again to verify.
+## Development
 
-Note: If the command doesn't work, try `npm i react-scripts@latest` followed by `npm start`.
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
 
-The static files are generated in the build folder and run on your local machine at: http://localhost:3000/. To stop the build or served site, hit Ctrl + C to interrupt. You can enter new commands in terminal, rebuild, and restart.
+```
+npm i -g mint
+```
 
-[TestMu AI Documentation](https://testmu.ai/support/docs/) was created using [Docusaurus 2](https://docusaurus.io/) with React
+Run the following command at the root of your documentation, where your `docs.json` is located:
 
-## Publishing Content
-- Clone the repository to your local machine
-- Switch to the `stage` branch / you can create your desired branch as well.
-- Now after completing your changes, raise the PR for the `stage` branch only and ask to the docs team to review and merge it for `stage`.
-- Verify your changes on the stage domain.
-- Now to deploy your changes to the PROD, provide all the PRs related to that feature to the docs team, they will merge it to PROD.
+```
+mint dev
+```
 
-As pull requests are merged to the `main` branch by the [TestMu AI Documentation](https://testmu.ai/support/docs/) team, the content builds and deploys to a staging site. This allows you to review and test your content thoroughly on a server, rather than a local build, prior to merging your code to production.
+View your local preview at `http://localhost:3000`.
+
+## Publishing changes
+
+Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+
+## Need help?
+
+### Troubleshooting
+
+- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
+- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+
+### Resources
+- [Mintlify documentation](https://mintlify.com/docs)

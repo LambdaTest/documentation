@@ -1,0 +1,114 @@
+---
+title: "Login to Google account on Android"
+sidebarTitle: "Login To Google Account (Android)"
+keywords: ['login with google on android app automation','login to google account on android app automation','login to google account']
+
+---
+
+This documentation will guide you to log in to your Google Account on an Android Device on LambdaTest so you can test features/services that are linked to your Google Account.
+
+
+## Objective
+---
+
+To log in to Google Account on Real Devices [Android], and perform testing using Google account-related tasks.
+
+## Prerequisites
+---
+
+1. LambdaTest App Automation Account.
+2. Automation script for testing.
+
+## Logging into Google Account
+---
+
+Add the following HashMap structure to store the credentials:
+
+```java
+  HashMap<String, String> playstorelogin = new HashMap<>();
+        playstorelogin.put("email", "EMAIL_ID@gmail.com"); //Add in your Google account ID 
+        playstorelogin.put("password", "GOOGLE_PASSWORD"); //Add in your Google account Password
+```
+
+Once we have added this HashMap, we can now add the capability linking this HashMap to the capability.
+
+```java
+capabilities.setCapability("playStoreLogin", playstorelogin);
+```
+
+As shown, please add your Google Account ID and password in the fields that correspond to the same.
+
+Once you have done that, run the App Automation test and the test will start with the device already logged into the account with the mentioned credentials.
+
+Once the test has started, you can also verify the same by opening Google Play Store.
+
+A sample code showing the addition of Google Account is shown below:
+
+```java highlight={9,11}
+import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+
+public class gmailLoginCap {
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+    : System.getenv("LT_USERNAME");
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+    : System.getenv("LT_ACCESS_KEY");
+
+    private static AppiumDriver driver;
+
+    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("deviceName", "Pixel 5");
+        capabilities.setCapability("platformVersion", "11");
+        capabilities.setCapability("platformName", "android");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("video", true);
+        capabilities.setCapability("visual", true);
+        capabilities.setCapability("network", false);
+        capabilities.setCapability("devicelog", true);
+        capabilities.setCapability("console", true);
+        capabilities.setCapability("project", "labs");
+        capabilities.setCapability("build", "gmailLoginCap");
+        capabilities.setCapability("unicodeKeyboard", true);
+        capabilities.setCapability("autoGrantPermissions", true);
+        capabilities.setCapability("app", "APP_URL");               //Add in your app ID
+        capabilities.setCapability("autoGrantPermissions", true);
+        HashMap<String, String> playstorelogin = new HashMap<>();
+        playstorelogin.put("email", "EMAIL_ID@gmail.com");          //Add in your Google account ID 
+        playstorelogin.put("password", "GOOGLE_PASSWORD");          //Add in your Google account Password
+        capabilities.setCapability("playStoreLogin", playstorelogin);
+
+        AppiumDriver appiumDriver = new AppiumDriver(
+                new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
+
+        try {
+            Thread.sleep(5000);
+            appiumDriver.findElementById("google").click();
+            Thread.sleep(15000);
+            appiumDriver.quit();
+
+        } catch (Exception e) {
+            appiumDriver.quit();
+        }
+    }
+}
+```
+
+
+**Important**:
+
+1. The account should not be using any kind of 2-factor authentication, otherwise, the test can fail.
+2. The account should not require you to allow login using a trusted device using a pop-up or OTP.
+
+<Note>
+**Note**
+
+Since we clean the Device after each session, ensure you are logging in to the account during each session.
+
+</Note>
+

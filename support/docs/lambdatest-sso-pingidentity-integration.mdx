@@ -1,0 +1,76 @@
+---
+title: "LambdaTest SSO & PingIdentity Integration"
+sidebarTitle: "PingIdentity"
+keywords: [ "sso", "lambdatest sso", "pingidentity", "lambdatest pingidentity integration", "lambdatest pingidentity sso"]
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+<BrandName /> provides seamless integration with Ping Identity through SAML (Security Assertion Markup Language) to enable Single Sign-On (SSO) for your organization. By integrating Ping Identity with your <BrandName /> organization, you can streamline user authentication and enhance security.
+
+## Key Features of Ping Identity Integration:
+- **SP-Initiated SSO :** Single Sign-On initiated from the <BrandName /> platform.
+- **IdP-Initiated SSO :** Single Sign-On initiated from Ping Identity.
+
+## Prerequisites
+Before configuring the integration, ensure you meet the following requirements:
+
+- **<BrandName /> Enterprise Plan :** Your organization must have an active Enterprise plan.
+- **SSO Enablement Request :** The admin of your <BrandName /> organization must request SSO enablement.
+
+<Warning> Raise a request via email at support@testmu.ai or through <BrandName />’s 24/7 in-app chat support.</Warning>
+
+- **Ping Identity Admin Access :** You need administrative access to your Ping Identity account.
+
+## Configuring <BrandName /> & Ping Identity Integration
+Follow the steps below to configure the SAML-based integration between <BrandName /> and Ping Identity.
+
+### Step 1: Log in to Ping Identity
+Log in to your Ping Identity account using admin credentials.
+
+![setup sso button](/assets/images/sso/ping-identity/1.png)
+
+### Step 2: Setup SSO in <BrandName />
+
+- Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+   ![setup sso button](/assets/images/sso-self-serve/setup-sso.png)
+
+- Enter Connection Name and Click on  **Add New Connection**.
+   ![connection name button](/assets/images/sso-self-serve/connection-name.png)
+
+- Select **PingFederate** as your identity provider (PingIdentity & PingFederate has identical setup from <BrandName /> side).
+   ![select identity provider](/assets/images/sso/ping-identity/select-ping.png)
+
+### Step 3: Add a New Application in PingIdentity
+- Navigate to the Applications menu on the toolbar.
+- Click on Add Application.
+  ![add application](/assets/images/sso/ping-identity/2.png)
+
+- In the Add Application window, select Create New App to create a new application for <BrandName /> SSO integration.
+  ![create new app](/assets/images/sso/ping-identity/3.png)
+
+### Step 4: Add SAML configuration
+- In <BrandName /> SSO setup copy the **ACS URLs** and **Entity ID**.
+  ![ping-integration-sso-setup](/assets/images/sso/ping-identity/sso-setup.png)
+
+- In Pingidentity, select the **Manually Enter** option in **SAML Configuration** and enter **ACS URLs** and **Entity ID** copied from above step.
+  ![setup sso button](/assets/images/sso/ping-identity/4.png)
+
+### Step 5: Configure Attribute Mappings
+- Copy following attribute from Lambdatest SSO setup.
+   ![ping-integration-attribute-mapping](/assets/images/sso/ping-identity/sso-attribute.png)
+
+- Go to the Attribute Mappings tab of the created application in PingIdentity.
+- Update the saml_object attribute value from user_ID to emailaddress.
+- Add and update the other attributes
+  ![attribute-mapping](/assets/images/sso/ping-identity/6.png)
+
+### Step 6 : Upload Metadata URL & SSO Domain
+- SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
+- Copy the **IDP Metadata URL** from PingIdentity
+  ![ping-integration-idp-url](/assets/images/sso/ping-identity/7.png)
+
+- Go back to <BrandName /> and paste the copied URL in the **Issuer URL** field and click on **Create Connection**:
+  ![sso-self serve](/assets/images/sso/ping-identity/issuer-url.png)
+
+After completing these configurations, your <BrandName /> and Ping Identity integration for SSO will be ready to use. Both SP-initiated and IdP-initiated SSO flows will be enabled, and you can manage users and groups via Ping Identity.

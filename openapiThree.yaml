@@ -1,0 +1,428 @@
+openapi: 3.0.3
+info:
+    title: SCIM
+    version: 1.0.0
+    description: API documentation of SCIM
+servers:
+    - url: 'https://auth.lambdatest.com/'
+components:
+    securitySchemes:
+        bearerAuth:
+            type: http
+            scheme: bearer
+paths:
+    /api/scim/Users:
+        get:
+            tags:
+                - SCIM
+            summary: Get Users
+            security:
+                - bearerAuth: []
+            parameters:
+                - name: filter
+                  in: query
+                  schema:
+                      type: string
+                  example: userName eq test@lambdatest.com
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    schemas:
+                                        type: array
+                                        items:
+                                            type: string
+                                    totalResults:
+                                        type: integer
+                                    Resources:
+                                        type: array
+                                        items:
+                                            type: object
+                                            properties:
+                                                schemas:
+                                                    type: array
+                                                    items:
+                                                        type: string
+                                                id:
+                                                    type: string
+                                                userName:
+                                                    type: string
+                                                active:
+                                                    type: boolean
+                                                name:
+                                                    type: object
+                                                    properties:
+                                                        formatted:
+                                                            type: string
+                                                        familyName:
+                                                            type: string
+                                                        givenName:
+                                                            type: string
+                                                urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                                    type: object
+                                                    properties:
+                                                        OrganizationRole:
+                                                            type: string
+                                    startIndex:
+                                        type: integer
+                                    itemsPerPage:
+                                        type: integer
+                            examples:
+                                example1:
+                                    summary: Successful Response
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+                                        totalResults: 1
+                                        Resources:
+                                            - schemas:
+                                                  - "urn:ietf:params:scim:schemas:core:2.0:User"
+                                                  - "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+                                              id: "23123"
+                                              userName: "tester@test.com"
+                                              active: true
+                                              name:
+                                                  formatted: "givenName familyName"
+                                                  familyName: "familyName"
+                                                  givenName: "givenName"
+                                              urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                                  OrganizationRole: "User"
+                                        startIndex: 1
+                                        itemsPerPage: 20
+                                example2:
+                                    summary: Empty Response
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+                                        totalResults: 0
+                                        Resources: []
+                                        startIndex: 1
+                                        itemsPerPage: 20
+        post:
+            tags:
+                - SCIM
+            summary: Create User
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                schemas:
+                                    type: array
+                                    items:
+                                        type: string
+                                userName:
+                                    type: string
+                                active:
+                                    type: boolean
+                                name:
+                                    type: object
+                                    properties:
+                                        formatted:
+                                            type: string
+                                        familyName:
+                                            type: string
+                                        givenName:
+                                            type: string
+                                urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                    type: object
+                                    properties:
+                                        OrganizationRole:
+                                            type: string
+                            example:
+                                schemas:
+                                    - urn:ietf:params:scim:schemas:core:2.0:User
+                                    - urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User
+                                userName: tester@test.com
+                                active: true
+                                name:
+                                    formatted: givenName familyName
+                                    familyName: familyName
+                                    givenName: givenName
+                                urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                    OrganizationRole: User
+            security:
+                - bearerAuth: []
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    schemas:
+                                        type: array
+                                        items:
+                                            type: string
+                                    id:
+                                        type: string
+                                        description: The user's ID.
+                                    userName:
+                                        type: string
+                                        description: The user's username.
+                                    active:
+                                        type: boolean
+                                        description: Indicates if the user is active.
+                                    name:
+                                        type: object
+                                        properties:
+                                            formatted:
+                                                type: string
+                                                description: The formatted name.
+                                            familyName:
+                                                type: string
+                                                description: The family name.
+                                            givenName:
+                                                type: string
+                                                description: The given name.
+                                    urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                        type: object
+                                        properties:
+                                            OrganizationRole:
+                                                type: string
+                                                description: The organization role.
+                            examples:
+                                application/json:
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:schemas:core:2.0:User"
+                                            - "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+                                        id: "23123"
+                                        userName: "tester@test.com"
+                                        active: true
+                                        name:
+                                            formatted: "givenName familyName"
+                                            familyName: "familyName"
+                                            givenName: "givenName"
+                                        urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                            OrganizationRole: "User"
+    /api/scim/Users/{id}:
+        get:
+            tags:
+                - SCIM
+            summary: Get User by id
+            security:
+                - bearerAuth: []
+            parameters:
+                - name: id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+            responses:
+                '200':
+                    description: "Successful response"
+                    content:
+                        application/json:
+                            schema:
+                                type: "object"
+                                properties:
+                                    schemas:
+                                        type: "array"
+                                        items:
+                                            type: "string"
+                                    id:
+                                        type: "string"
+                                    userName:
+                                        type: "string"
+                                    active:
+                                        type: "boolean"
+                                    name:
+                                        type: "object"
+                                        properties:
+                                            formatted:
+                                                type: "string"
+                                            familyName:
+                                                type: "string"
+                                            givenName:
+                                                type: "string"
+                                    urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                        type: "object"
+                                        properties:
+                                            OrganizationRole:
+                                                type: "string"
+                            examples:
+                                application/json:
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:schemas:core:2.0:User"
+                                            - "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+                                        id: "23123"
+                                        userName: "tester@test.com"
+                                        active: true
+                                        name:
+                                            formatted: "givenName familyName"
+                                            familyName: "familyName"
+                                            givenName: "givenName"
+                                        urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                            OrganizationRole: "User"
+                404:
+                    description: "User not found"
+        put:
+            tags:
+                - SCIM
+            summary: Update User (PUT)
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            example:
+                                schemas:
+                                    - urn:ietf:params:scim:schemas:core:2.0:User
+                                urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                    OrganizationRole: User
+                                active: true
+            security:
+                - bearerAuth: []
+            parameters:
+                - name: id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    schemas:
+                                        type: array
+                                        items:
+                                            type: string
+                                    id:
+                                        type: string
+                                    userName:
+                                        type: string
+                                    active:
+                                        type: boolean
+                                    name:
+                                        type: object
+                                        properties:
+                                            formatted:
+                                                type: string
+                                            familyName:
+                                                type: string
+                                            givenName:
+                                                type: string
+                                    urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                        type: object
+                                        properties:
+                                            OrganizationRole:
+                                                type: string
+                            examples:
+                                application/json:
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:schemas:core:2.0:User"
+                                            - "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+                                        id: "23123"
+                                        userName: "tester@test.com"
+                                        active: true
+                                        name:
+                                            formatted: "givenName familyName"
+                                            familyName: "familyName"
+                                            givenName: "givenName"
+                                        urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                            OrganizationRole: "User"
+        patch:
+            tags:
+                - SCIM
+            summary: Update User (PATCH)
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            example:
+                                schemas:
+                                    - urn:ietf:params:scim:api:messages:2.0:PatchOp
+                                Operations:
+                                    - op: Replace
+                                      path: active
+                                      value: false
+                                    - op: Replace
+                                      path: >-
+                                          urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole
+                                      value: User
+            security:
+                - bearerAuth: []
+            parameters:
+                - name: id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+            responses:
+                '200':
+                    description: Successful response
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    schemas:
+                                        type: array
+                                        items:
+                                            type: string
+                                    id:
+                                        type: string
+                                    userName:
+                                        type: string
+                                    active:
+                                        type: boolean
+                                    name:
+                                        type: object
+                                        properties:
+                                            formatted:
+                                                type: string
+                                            familyName:
+                                                type: string
+                                            givenName:
+                                                type: string
+                                    urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                        type: object
+                                        properties:
+                                            OrganizationRole:
+                                                type: string
+                            examples:
+                                application/json:
+                                    value:
+                                        schemas:
+                                            - "urn:ietf:params:scim:schemas:core:2.0:User"
+                                            - "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+                                        id: "23123"
+                                        userName: "tester@test.com"
+                                        active: true
+                                        name:
+                                            formatted: "givenName familyName"
+                                            familyName: "familyName"
+                                            givenName: "givenName"
+                                        urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:
+                                            OrganizationRole: "User"
+        delete:
+            tags:
+                - SCIM
+            summary: Delete User
+            security:
+                - bearerAuth: []
+            parameters:
+                - name: id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+            responses:
+                '204':
+                    description: Successful response
+                    content:
+                        application/json: {}

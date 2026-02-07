@@ -1,0 +1,38 @@
+---
+title: "Prioritize Your Tests"
+sidebarTitle: "Jobs Prioritization"
+keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation','Prioritize Your Tests']
+---
+
+
+HyperExecute's job prioritization feature empowers you to ensure that your most crucial tests are executed with precision and timeliness. This feature not only enhances the order of execution but also enables effortless searchability within your testing repository.
+
+## `jobLabel`
+
+The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to prioritizing your jobs, you can also use the job labels to search for a job using the relevant label or tag that is assigned to it. To learn more about how to use this feature with the HyperExecute YAML, go through [this section](/support/docs/deep-dive-into-hyperexecute-yaml/#23-joblabel).
+
+## Prioritize your Jobs using `jobLabel`
+
+You can prioritize your jobs by assigning the job labels **low**, **medium** or **high** to your jobs. The jobs with the priority **high** will be executed first, followed by **medium** priority jobs with **low** priority jobs at the end.
+
+```yaml
+jobLabel: ['high', 'medium', 'low']
+```
+
+<Info>
+**NOTE**
+
+- By default, all of your jobs are assigned **medium** priority. 
+- The priority keys are not case sensitive. 
+- You can use the priority keys along with your regular job labels too. 
+</Info>
+
+## Visualizing Priority Levels
+As you can see in the diagram below, we have executed 6 jobs; one job is designated as **high** priority, three are assigned as **medium** priority, while the remaining two hold **lower** priority labels. HyperExecute is configured to adhere to this prioritization framework during execution. As a result, the high-priority job takes precedence and is processed first, followed sequentially by the medium-priority job and subsequently the low-priority job, even though the higher-priority job is executed later. This prioritized execution sequence ensures efficient task management aligned with the specified priority levels.
+
+<img loading="lazy" src="/assets/images/hyperexecute/features/job-prioritization/job_prioritize.png" alt="Image" width="1347" height="616"  className="doc_img"/>
+
+<Note>
+If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
+</Note>
+

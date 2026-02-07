@@ -1,0 +1,103 @@
+---
+title: "Steps to Schedule an Accessibility Scan"
+sidebarTitle: "Schedule a Scan"
+keywords:
+  [
+    "Lambdatest",
+    "Accessibility",
+    "Testing",
+    "DevTools",
+    "Accessibility Testing Settings",
+  ]
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+import { NewTag } from "/snippets/NewTag.mdx";
+
+## Step 1: Access the Scheduled Scan Feature
+
+- Open the Accessibility Testing Dashboard.
+- Click the “Scheduled Scan” option from the menu.
+
+![](/assets/images/accessibility-testing/schedule-scan/1.png)
+
+## Step 2: Configure the Scan
+
+- Enter the Scan Name for identification.
+- Select the desired WCAG version for compliance.
+
+![](/assets/images/accessibility-testing/schedule-scan/2.png)
+
+## Step 3. Add Pages for the Scan
+
+<Tabs>
+
+<Tab title="Extract URLs from Sitemap">
+  - Enter your domain URL or XML sitemap URL 
+  - Click on the Fetch Sitemap button to extract all the URLs
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/3.2.png)
+
+</Tab>
+
+<Tab title="Add URLs Manually">
+  - In the Add Pages field, input individual URLs. - Click Add for each URL.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/3.1.png)
+
+</Tab>
+
+<Tab title="Upload URLs via CSV">
+  - Prepare a CSV file with the list of URLs. - Click Upload CSV to import the
+  file.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/3.3.png)
+
+</Tab>
+
+</Tabs>
+
+### Advanced Options
+
+- **Local Testing Setup (Tunnel) :** If scanning locally hosted URLs, add a Local Testing Setup/Tunnel to access non-public environments. <NewTag value="Upcoming" />
+- **Login Configuration :** For pages requiring authentication, configure the Login Settings by providing credentials or session details.
+- **Review Issues :** Enable Needs Review for areas requiring manual inspection.
+- **Best Practices Issues :** Check Best Practices to include suggestions for better accessibility.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/3.4.png)
+
+## Step 4. Create the Scan
+
+- Select between a Recurring scan (Recommended) or a Quick scan which allow you to perform an immediate scan of the provided URLs without scheduling.
+- Specify the frequency (e.g., daily, weekly) and timing details.
+
+Once all details are configured, click Schedule Scan button.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/4.png)
+
+<Note>
+INFO <br />
+The **Run Initial Scan** checkbox, adds flexibility to the scheduling feature. If enabled:
+
+- The scan will run immediately after configuration, regardless of the chosen recurring schedule.
+- This is useful for verifying the setup and ensuring that the scan configuration works as intended.
+</Note>
+
+## Step 5: Access Reports
+
+- Navigate to the Website Scanner section on the dashboard.
+- Select the desired report from the Scan Summary list.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/5.png)
+
+## Step 6: Analyze the Scan Report
+
+After selecting a scan, A detailed scan report will open, as shown in the provided screenshot. The report will display the following key components:
+
+- **Total Issues :** A graph summarizing the trend of detected issues over the last few runs.
+- **Severity Trend :** A chart categorizing issues by severity (e.g., Critical, Serious, Moderate, Minor).
+- **Pages Scanned :** A list of scanned pages with their corresponding issue counts categorized by severity.
+
+You can drill down into individual page URLs to view the number of issues found on that specific page using filters provided. From the scan report page, you can also edit, share and stop recurring scan if its no longer required.
+
+![alt text](/assets/images/accessibility-testing/schedule-scan/6.png)

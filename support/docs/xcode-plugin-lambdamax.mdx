@@ -1,0 +1,77 @@
+---
+title: "LambdaMax XCode Plugin"
+sidebarTitle: "LambdaMax XCode Plugin"
+keywords: [ "xcode", "lambdamax", "automation testing" ]
+---
+
+Lambdatest have developed a new plugin to help developers execute tests on the Lambdatest Grid directly from the XCode (via LambdaMax). The all-new Lambdatest plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the Lambdatest real device cloud.
+
+XCUITest is a testing framework that can be used to automate UI tests for native iOS and macOS applications. The framework uses XCTest, an integrated testing framework developed by Apple. You can write automated UI tests using the XCUITest framework in Swift or Objective-C programming language.
+
+With this new plugin, testers and developers never have to leave XCode to execute a test on Lambdatest’s real device cloud. Follow these steps to install LambdaMax plugin:
+
+## How to Install LambdaMax Plugin
+---
+1. On **Xcode** on your machine.
+
+![Image](/assets/images/lambdamax/lambdamax-main.webp)<br/>
+
+2. Head to **Product** on the menu bar in the top-left corner.
+
+![Image](/assets/images/lambdamax/lambdamax-menu.webp)
+
+3. Hover on the **Scheme** option from the dropdown and click on the **Edit Scheme** from the dropdown list. 
+
+![Image](/assets/images/lambdamax/lambdamax-dropdown.webp)
+
+4. In the pop-up window, click and expland the **Build** option from the sidebar. 
+
+![Image](/assets/images/lambdamax/lambdamax-build-option.webp)
+
+5. Head to the **Post Actions** option from the sidebar and copy the sample code. 
+
+![Image](/assets/images/lambdamax/lambdamax-build-dropdown.webp)
+
+6. Click on **+** icon to add **"New Script Run Action"**. You can change the path and capabilities as per your preference, which will reflect directly on the Lambdatest Grid.
+
+![Image](/assets/images/lambdamax/lambdamax-build-code.webp)
+
+Here is the sample code for the Xcode plugin:
+
+```bash
+Xcode plugin:
+Custom Xcode Script and Images attached below:
+
+#!/bin/sh
+
+
+appId=$(awk '{sub(/.*\"app_url\":\"/,"");sub(/\",\"url.*/,"");print}' <<< "$AppUploadResponse")
+
+echo "$appId"
+
+TestAppUploadResponse=$(curl -w --location --request POST 'https://{username}:{accessKey}@manual-api.lambdatest.com/app/upload/realDevice' --form 'name="{name}"' --form 'appFile=@"{filePathWithNameAndExtension}"' --form 'custom_id="{custom_id}"')
+
+testAppID=$(awk '{sub(/.*\"app_url\":\"/,"");sub(/\",\"url.*/,"");print}' <<< "$TestAppUploadResponse")
+
+echo "$testAppID"
+
+TestExeuctionPayload="{\"app\": \"$appId\", \"testSuite\": \"$testAppID\", \"device\": [ \"iPhone X-14\" ], \"tunnel\": false, \"network\": true, \"devicelog\": true, \"queueTimeout\": 3000, \"idleTimeout\": 200, \"build\": \"otrium1\", \"project\": \"testerror\" }"
+
+echo "$TestExeuctionPayload"
+
+XCUITTestExecution=$(curl -w --location --request POST 'https://{username}:{accessKey}@mobile-api.lambdatest.com/framework/v1/xcui/build' --header 'Content-Type: application/json' --data-raw "$TestExeuctionPayload")
+
+echo "$XCUITTestExecution"
+```
+<Warning>
+**Note:** By clicking on the **Play** button in the top left corner, the script will automatically run on the Lambdatest Grid.
+</Warning>
+
+![Image](/assets/images/lambdamax/lambdamax-play.webp)<br/>
+
+7. In the above code, update the required Lambdatest credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://accounts.lambdatest.com/detail/profile).
+
+![Image](/assets/images/lambdamax/lambdamax-profile.webp)<br/>
+
+8. Along with this, you need to update the `{FilePathWithNameAndExtension}` with the path where your app and test suite is in local. 
+

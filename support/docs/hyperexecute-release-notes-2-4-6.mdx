@@ -1,0 +1,28 @@
+---
+title: "Version 2.4.6"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+## HyperExecute CLI `--runson` flag
+
+The HyperExecute CLI now supports a [`--runson`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--runson) flag, allowing you to override the [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) value specified in the YAML configuration file.
+
+### Key Values
+- **OS Override**: Overrides the OS value defined in the YAML file's `runson` flag
+- **Multi-Mode Support**: Compatible with all execution modes: [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/), [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and [Hybrid](/support/docs/hyperexecute-hybrid-strategy/).
+- **Multi-OS Specification**: Enables defining multiple operating systems for Matrix and Hybrid modes.
+
+### Usage
+Add the `--runson` flag to your HyperExecute CLI command, followed by the desired OS:
+
+```bash
+--runson YOUR_OS_NAME
+```
+
+<Note>
+📕 Read the documentation - [HyperExecute CLI `runson`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--runson) to learn more about it.
+</Note>

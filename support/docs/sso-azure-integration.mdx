@@ -1,0 +1,86 @@
+---
+title: "LambdaTest SSO & Azure AD Integration"
+sidebarTitle: "Azure AD"
+keywords: [ "LambdaTest single sign on", "LambdaTest SSO", "LambdaTest Azure AD Integration" ]
+---
+import { BrandName } from '/snippets/BrandName.mdx';
+
+* * *
+
+<BrandName /> allows you to integrate an external user directory with your <BrandName /> Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your <BrandName /> organization with your Azure AD directory to configure SSO(Single sign-on). After you integrate your Azure AD instance with your <BrandName /> for Single Sign-on, you can benefit from the following features:
+
+*   Monitor who access to <BrandName />
+*   Manage your account in Azure Active Directory.
+*   Sign-in directly to the <BrandName /> with Azure AD credentials.
+
+To know more, refer [How SSO is implemented in Azure](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis).
+
+## Prerequisites
+
+* * *
+
+To enable <BrandName /> SSO through Azure AD integration, you will need:
+
+*   Azure AD Subscription. If you haven't subscribed, you can subscribe by creating a [free Azure account](https://azure.microsoft.com/en-us/free/).
+*   An Enterprise plan with <BrandName />.
+*   The Admin of your <BrandName /> organization needs to raise a request for enabling SSO. They could drop us an email over [support@testmu.ai](mailto:support@testmu.ai) or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app chat support**</span>.
+*   The Admin level access to your <BrandName /> organization.
+*   The Admin level access of your organization in Azure AD.
+
+## How To Configure <BrandName /> & Azure AD Integration
+
+* * *
+
+**Step 1:** To begin, you will need to login with your [Microsoft Azure](https://portal.azure.com/#home) account.
+
+**Step 2:** Navigate to **Manage Azure Active Directory**.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/manage-azure-active-1.webp)
+
+**Step 3:** Select the **Enterprise Application** from the left sidebar.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/enterprise-application-1.webp)
+**Step 4:** Click on **New Application**.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/new-application-2.webp)
+
+**Step 5:** Then click on **Create your own application**.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/create-app-1.webp)
+
+**Step 6:** Now navigate back to the Enterprise applications category. Select the application that you just created and then click on **Set up single sign on**.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/set-up-sso-1.webp)
+
+**Step 7:** Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+   ![setup sso button](/assets/images/sso-self-serve/setup-sso.png)
+
+**Step 8:**  Enter Connection Name and Click on  **Add New Connection**.
+   ![connection name button](/assets/images/sso-self-serve/connection-name.png)
+
+**Step 9:** Select **Azure AD** from the list of Identity Providers.
+   ![select identity provider](/assets/images/sso-self-serve/select-idp.png)
+
+**Step 10:** Now copy the details required for setting up SSO connection in your **Identity Provider**.
+   ![configure IDP details](/assets/images/sso-self-serve/copy-info.png)
+
+**Step 11:** Click on **Basic SAML Configuration**. Enter your SSO identifier ID and Reply URL information that you copied from <BrandName /> SSO setup page and click on **Save**.
+
+![azure integration with lambdatest](/assets/images/sso-azure-integration/basic-saml-1-1.webp)
+
+**Step 12:** Copy the App Federation Metadata URL and paste it in the **Metadata URL** field in the <BrandName /> SSO setup page.
+
+![azure integration with lambdatest](/assets/images/uploads/azure-metadata-url.png)
+
+**Step 13:** Fill the required fields  and click on **Create Connection**:
+
+* SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
+* Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
+* Metadata URL (Enter the metadata file URL of your Identity Provider.)
+<h4>Create Connection with Metadata URL </h4>
+![sso-self serve](/assets/images/sso-self-serve/finalize-sso-metadata.png)
+
+**Step 14:** Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/lambdatest-sso-manage-connection/">Manage SSO Connection</a>.
+   ![sso-self serve](/assets/images/sso-self-serve/edit-connection.png)
+
+<Warning> That’s all you need to know <BrandName /> and Azure AD integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai). </Warning>

@@ -1,0 +1,21 @@
+---
+title: "Version 2.3.7"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+## Improved Data Handling for Distributed Tests
+
+[`dataJsonBuilder`](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonbuilder) flag provides you a more efficient way to manage JSON data for distributed testing scenarios.
+
+It empowers you to:
+
+- **Read JSON data:** Specify the path to your JSON file using the `path` configuration.
+- **Filter data (optional):** Employ the filters configuration to target specific data based on user-defined criteria.
+  - Leverage queries for complex filtering logic.
+  - Utilize attributes for simpler filtering with higher precedence over queries.
+- **Index JSON objects**: Enhance distribution efficiency by indexing objects using a chosen key with the index configuration.
+

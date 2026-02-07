@@ -1,0 +1,22 @@
+---
+
+title: Version 2.1.6
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Improved test execution flow with `alwaysRunPostSteps` flag
+
+The `alwaysRunPostSteps` flag provides finer control over post-step execution. When enabled, this flag ensures that all post-steps within a stage always execute, regardless of whether any preceding test scenarios within that stage fail. This guarantees the completion of critical post-execution actions, regardless of the test execution outcome.
+
+This enhancement streamlines your testing workflow by ensuring essential post-steps are consistently executed, even in the presence of failing test scenarios.
+
+```bash
+alwaysRunPostSteps: true
+```
+
+<Note>
+📕 Check the documentation to understand more about the [alwaysRunPostSteps](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) flag
+</Note>

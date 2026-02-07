@@ -1,0 +1,71 @@
+---
+title: "Environment Variables Support for Cypress Tests"
+sidebarTitle: "Environment Variables Support for Cypress Tests"
+keywords: ['cypress environment variables', 'cypress env', 'cypress configuration', 'cypress lambdatest']
+---
+
+You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the LambdaTest Cypress CLI. However, if we set environment variables via both LambdaTest CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below.
+
+## 1. Via the Configuration File
+
+### a. Cypress 9
+
+A sample `cypress.json` file:
+
+```bash
+{
+......
+	"env":{
+		"CYPRESS_BASE_URL":"https://example.cypress.io/",
+		"ACTIONS_URL": "commands/actions",
+		"WINDOW_URL": "commands/window"
+	},
+......
+}
+```
+
+### b. Cypress 10
+
+A sample `cypress.config.js` file:
+
+```bash
+module.exports = defineConfig({
+  env: {
+    'CYPRESS_BASE_URL':'https://example.cypress.io/',
+    'ACTIONS_URL' : 'commands/actions',
+    'WINDOW_URL': 'commands/window'
+  },
+```
+
+You can use both of these in your test specifications file. An example of a test specifications file is:
+
+```bash
+describe('Sample test', () => {
+    it('test case - actions', () => {
+      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
+      cy.wait(3000)
+    })
+    it('test case - window', () => {
+        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
+        cy.wait(3000)
+    })
+})
+```
+
+## 2. Via the `cypress.env.json` File
+
+```bash
+{
+    "CYPRESS_BASE_URL":"https://example.cypress.io/",
+    "ACTIONS_URL" : "commands/actions",
+    "WINDOW_URL": "commands/window"
+}
+```
+
+## 3. Via the LambdaTest Cypress CLI
+
+You can also add your environment variables via the parameter `--envs` in the LambdaTest Cypress CLI.
+
+```bash
+lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
+```

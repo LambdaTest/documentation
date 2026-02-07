@@ -1,0 +1,1529 @@
+openapi: 3.0.0
+info:
+  title: TestMu AI HyperExecute API Documentation
+  version: 1.0.1
+servers:
+    - url: 'https://api.hyperexecute.cloud'
+paths:
+  /v1.0/secrets/create:
+    put:
+      tags:
+        - Secrets
+      summary: Create Secrets and store sensitive information in the vault.
+      description: This API allows you to securely [**create and save secrets**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) like API keys or sensitive data, ensuring they remain protected throughout your testing. Industry-standard algorithms encrypt each secret.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSecret'
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretCreatedSuccessfully'
+      security:
+        - basicAuth: []
+  /v1.0/secrets/list/{username}:
+    get:
+      tags:
+        - Secrets
+      summary: Retrieve all secrets stored in your account.
+      description: This API lets you fetch all the secrets associated with your [**username**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). You get a comprehensive list of your stored confidential information, making it easier to manage and verify your secrets.
+      parameters:
+      - name: username
+        in: path
+        description: Enter your LambdaTest username
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretList'
+      security:
+        - basicAuth: []
+  /v1.0/secrets/delete:
+    post:
+      tags:
+        - Secrets
+      summary: Delete specific secrets permanently from the vault.
+      description: This API permanently [**removes specified secrets**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#delete-the-secrets) from the secure vault when they're no longer needed, helping maintain security and compliance with data retention policies.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteSecret'
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteSecretSuccessfully'
+      security:
+        - basicAuth: []
+  /v2.0/browsers:
+    get:
+      tags:
+        - Browsers
+      summary: Get a list of all browsers supported in HyperExecute.
+      description: This API returns a current list of all supported browser names and versions for a specific operating system in HyperExecute. This information assists you in planning your cross-browser testing strategy and ensuring compatibility across multiple browser environments.
+      parameters:
+      - name: platform
+        in: query
+        description: windows 11, windows 10, macos monterey, macos ventura, ubuntu 20
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: stable
+        in: query
+        description: If true, will return only stable version of browsers.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowserList'
+      security:
+        - basicAuth: []
+  /v2.0/job/{jobID}:
+    get:
+      tags:
+        - Jobs
+      summary: Check the status of a Job and its associated Tasks.
+      description: This API retrieve the [**status**](https://www.lambdatest.com/support/docs/hyperexecute-status/) of a specific [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page) by providing the `jobID`. It returns detailed information about each task's progress, including their completion status, execution times, and any errors encountered, giving you a full overview of the job lifecycle
+      parameters:
+      - name: jobID
+        in: path
+        description: "Enter your Job ID"
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStatusData'
+      security:
+        - basicAuth: []
+  /v2.0/job/{jobID}/scenarios:
+    get:
+      tags:
+        - Jobs
+      summary: Fetch Scenario details associated with your Job ID
+      description: This API retrieves scenario-level execution details for a given Job ID. A scenario in HyperExecute represents a logical stage or group of test cases executed within a [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page). Each job consists of multiple tasks, and each task may contain one or more scenarios.
+      parameters:
+      - name: jobID
+        in: path
+        description: "Enter your Job ID"
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        description: Limits the number of scenarios shown in the response (default is 10, max is 20).
+        schema:
+          type: integer
+          default: 10
+          maximum: 20
+      - name: cursor
+        in: query
+        required: false
+        description: |
+            Helps in moving across pagination. Accepts an "id" value and returns scenarios with an "id" greater than or equal to it.
+        schema:
+          type: string
+      - name: status
+        in: query
+        required: false
+        description: Filter scenarios based on their execution status.
+        schema:
+          type: string
+          example: "passed"
+      - name: search_text
+        in: query
+        required: false
+        description: Filter response based on occurrences of the search text in the 'name' field.
+        schema:
+          type: string
+          example: "regression_test"
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobScenarioData'
+      security:
+        - basicAuth: []
+  /v2.0/job/{jobID}/sessions:
+    get:
+      tags:
+        - Jobs
+      summary: Fetch Session-Level details associated with your Job ID.
+      description: This API retrieves session-level execution details for all tests that were executed as part of a given Job ID. A session represents an individual test execution instance, providing more granular insights into the execution of test cases.
+      parameters:
+      - name: jobID
+        in: path
+        description: "Enter your Job ID"
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        description: Limits the number of sessions shown in the response (default is 10, max is 20).
+        schema:
+          type: integer
+          default: 10
+          maximum: 20
+      - name: cursor
+        in: query
+        required: false
+        description: |
+          Helps in moving across pagination. Accepts an "id" value and returns sessions with an "id" greater than or equal to it.
+        schema:
+          type: string
+      - name: status
+        in: query
+        required: false
+        description: Filter sessions based on their execution status.
+        schema:
+          type: string
+          example: "passed"
+      - name: search_text
+        in: query
+        required: false
+        description: Filter response based on occurrences of the search text in the 'scenario_name' field.
+        schema:
+          type: string
+          example: "regression_test"
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobSessionData'
+      security:
+        - basicAuth: []
+  /v2.0/stage/{taskID}:
+    get:
+      tags:
+        - Jobs
+      summary: View all stages executed within a specific task
+      description: This API allows you to track all the stages that were part of a particular [**Task**](https://www.lambdatest.com/support/docs/hyperexecute-status/#2-task-level-status). By sending a GET request with the `taskID`, you get a complete breakdown of each stage executed.
+      parameters:
+      - name: taskID
+        in: path
+        description: Enter your Task ID of the Job
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: search_text
+        in: query
+        description: Implement filtereation based on scenario name
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: scenario_only
+        in: query
+        description: If set to false, it will render the data of pre, post and scenario level. Else it will show only scenario level data.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+      responses:
+        200:
+          description: 'When "scenario_only" is false, returns pre/post/scenario level data. When true, returns only scenario level data.'
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/StageListScenarioResponseFalse'
+                  - $ref: '#/components/schemas/StageListScenarioResponseTrue'
+      security:
+        - basicAuth: []
+  /v1.0/stage-tests/{stageID}:
+    get:
+      tags:
+        - Jobs
+      summary: Get detailed test results within a specific stage.
+      description: This API provides a deep dive into the tests conducted in a particular [**Stage**](https://www.lambdatest.com/support/docs/hyperexecute-status/#3-stage-level-status). By specifying the `stageID`, you receive information about each test, including success or failure, making it easier to pinpoint where things went right or wrong during execution.
+      parameters:
+      - name: stageID
+        in: path
+        description: Enter the stage ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StageTest'
+      security:
+        - basicAuth: []
+  /v1.0/stage/{stageID}/logs:
+    get:
+      tags:
+        - Jobs
+      summary: Get logs for a specific stage of a job.
+      description: This API provides access to the logs generated during a particular stage within a [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-status/#1-job-level-status). The logs are essential for troubleshooting and understanding the events that took place during that [**Stage**](https://www.lambdatest.com/support/docs/hyperexecute-status/#3-stage-level-status), aiding in quick issue identification and resolution.
+      parameters:
+      - name: stageID
+        in: path
+        description: Enter the stage ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessStageLogs'
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FailedStageLogs'
+      security:
+        - basicAuth: []
+  /v1.0/job/{number}/abort:
+    put:
+      tags:
+        - Jobs
+      summary: Abort an ongoing job execution immediately.
+      description: This API is used to abort a running [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-status/#1-job-level-status) that is no longer required. You can immediately terminate all associated processes, conserving resources and preventing unnecessary execution.
+      parameters:
+      - name: number
+        in: path
+        description: Write your Job Number to abort that particular Job
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successfull Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AbortJob'
+      security:
+        - basicAuth: []
+  /v1.0/jobs:
+    get:
+      tags:
+        - Jobs
+      summary: List all the Jobs of your organization.
+      description: This API is used to list all the Jobs of your organization.
+      parameters:
+      - name: show_test_summary
+        in: query
+        # description:
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+      - name: limit
+        in: query
+        description: Total number of Jobs to be rendered
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: is_cursor_base_pagination
+        in: query
+        # description:
+        required: true
+        explode: true
+        schema:
+          type: string
+          default: true
+          example: true
+      responses:
+        200:
+          description: Successfull Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobList'
+      security:
+        - basicAuth: []
+        
+  /v2.0/job/{jobID}/artefacts:
+    get:
+      tags:
+        - Artifacts
+      summary: Retrieve the metadata of all artifacts generated by a job.
+      description: This API fetches the metadata of all the [**artifacts**](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) that were produced during the execution of a Job. 
+      parameters:
+      - name: jobID
+        in: path
+        description: Enter your Job ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArtifactList'
+      security:
+        - basicAuth: []
+  /v2.0/artefacts/{jobID}/download:
+    get:
+      tags:
+        - Artifacts
+      summary: Download artifacts from a specific Job
+      description: This API allows you to download a bundle of all [**artifacts**](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) created during a job by providing the `jobID`. It’s ideal for archiving results or for conducting offline examination of logs and outputs to debug or verify test behavior.
+      parameters:
+      - name: jobID
+        in: path
+        description: Enter the Job ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: name
+        in: query
+        description: Enter the name of the artifact
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Artifact downloaded successfully
+        401:
+          description: Access denied. Auth error.
+      security:
+        - basicAuth: []
+
+  /v1.0/categorizederrors:
+    get:
+      tags:
+        - RCA
+      summary: Fetch RCA of your Task.
+      description: This API is used to fetch the RCA data for your required task id.
+      parameters:
+      - name: taskId
+        in: query
+        description: Enter the Task ID of your Job
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: order
+        in: query
+        description: Enter your order number. Example= 4
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: iteration
+        in: query
+        # description:
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: Successfull Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobRCA'
+      security:
+        - basicAuth: []
+components:
+  schemas:
+    
+    JobStatusData:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "08cd3816-6f0b-498a-9fae-99439f756cdb"
+            orgId:
+              type: string
+              example: "121431"
+            user:
+              type: string
+              example: "amanchopra"
+            status:
+              type: string
+              example: "completed"
+            jobNumber:
+              type: integer
+              example: "5644"
+            jobLabel:
+              type: string
+              example:
+            remark:
+              type: string
+              example:
+            createdAt:
+              type: string
+              example: "2023-01-23T07:48:04Z"
+            updateAt:
+              type: string
+              example: "023-01-23T07:53:18Z"
+            globalTimeout:
+              type: integer
+              example: 150
+            testSuiteTimeout:
+              type: integer
+              example: 150
+            retryOnFailure:
+              type: boolean
+              example: false
+            tunnelName:
+              type: string
+              example: ""
+            runson:
+              type: string
+              example: ""
+            startTime:
+              type: string
+              example: "2023-01-23T07:50:31Z"
+            endTime:
+              type: string
+              example: "2023-01-23T07:53:18Z"
+            type:
+              type: string
+              example: "autosplit"
+            tasks:
+              type: array
+              items:
+                properties:
+                  id:
+                    type: string
+                    example: "amanc"
+                  os:
+                    type: string
+                    example: "win"
+                  Job:
+                    type: string
+                    example: "08cd3816-6f0b-498a-9fae-99439f756cdb"
+                  context:
+                    type: string
+                    example: "{\"_jobId\": \"08cd3816-6f0b-498a-9fae-99439f756cdb\", \"_taskId\": \"147b7c8a-325f-46d9-8b52-5b9975d01591\"}"
+                  version:
+                    type: string
+                    example: "10"
+                  status:
+                    type: string
+                    example: "completed"
+                  remark:
+                    type: string
+                    example: "completed"
+                  tunnel_name:
+                    type: string
+                    example: ""
+                  createdAt:
+                    type: string
+                    example: "2023-01-23T07:48:15Z"
+                  updateAt:
+                    type: string
+                    example: "2023-01-23T07:53:18Z"
+                  startTime:
+                    type: string
+                    example: "2023-01-23T07:50:33Z"
+                  endTime:
+                    type: string
+                    example: "2023-01-23T07:53:18Z"
+                  groupNumber:
+                    type: integer
+                    example: 1
+                  iteration:
+                    type: integer
+                    example: 0
+                  debug:
+                    type: boolean
+                    example: false
+                  parentTaskId:
+                    type: string
+                    example: ""
+                  failedAt:
+                    type: string
+                    example:
+                  initiatedAt:
+                    type: string
+                    example:
+                  smartUIEnabled:
+                    type: boolean
+                    example: false
+                  type:
+                    type: string
+                    example: "infra"
+                  testIDs:
+                    type: string
+                    example:
+                  sessionIDs:
+                    type: string
+                    example:
+            frameworks:
+              type: array
+              items:
+                type: string
+              example:  ["selenium"]
+            taskCount:
+              type: object
+              properties:
+                aborted:
+                  type: integer
+                  example: 0
+                cancelled:
+                  type: integer
+                  example: 0
+                completed:
+                  type: integer
+                  example: 2
+                failed:
+                  type: integer
+                  example: 0
+                initiated:
+                  type: integer
+                  example: 0
+                lambdaError:
+                  type: integer
+                  example: 0
+                queued:
+                  type: integer
+                  example: 0
+                running:
+                  type: integer
+                  example: 0
+                skipped:
+                  type: integer
+                  example: 0
+                timeout:
+                  type: integer
+                  example: 0
+                total:
+                  type: integer
+                  example: 2
+            totalTests:
+              type: integer
+              example: 3
+            jobSummary:
+              type: object
+              properties:
+                preStatusCount:
+                  type: object
+                  properties:
+                    created:
+                      type: integer
+                      example: 0
+                    inPorgress:
+                      type: integer
+                      example: 0
+                    failed:
+                      type: integer
+                      example: 0
+                    aborted:
+                      type: integer
+                      example: 0
+                    completed:
+                      type: integer
+                      example: 6
+                    skipped:
+                      type: integer
+                      example: 0
+                    lambdaError:
+                      type: integer
+                      example: 0
+                    timeout:
+                      type: integer
+                      example: 0
+                    cancelled:
+                      type: integer
+                      example: 0
+                    logAvailable:
+                      type: integer
+                      example: 0
+                postStatusCount:
+                  type: object
+                  properties:
+                    created:
+                      type: integer
+                      example: 0
+                    inPorgress:
+                      type: integer
+                      example: 0
+                    failed:
+                      type: integer
+                      example: 0
+                    aborted:
+                      type: integer
+                      example: 0
+                    completed:
+                      type: integer
+                      example: 4
+                    skipped:
+                      type: integer
+                      example: 0
+                    lambdaError:
+                      type: integer
+                      example: 0
+                    timeout:
+                      type: integer
+                      example: 0
+                    cancelled:
+                      type: integer
+                      example: 0
+                    logAvailable:
+                      type: integer
+                      example: 0
+                scenarioStageSummary:
+                  type: object
+                  properties:
+                    totalExcludingRetries:
+                      type: integer
+                      example: 2
+                    totalExecutionTimeIncludingRetriesInSec:
+                      type: integer
+                      example: 125
+                    retries:
+                      type: integer
+                      example: 0
+                    totalRetriesTimeInSec:
+                      type: integer
+                      example: 0
+                    status_counts_excluding_retries:
+                      type: object
+                      properties:
+                        created:
+                          type: integer
+                          example: 0
+                        inPorgress:
+                          type: integer
+                          example: 0
+                        failed:
+                          type: integer
+                          example: 0
+                        aborted:
+                          type: integer
+                          example: 0
+                        completed:
+                          type: integer
+                          example: 4
+                        skipped:
+                          type: integer
+                          example: 0
+                        lambdaError:
+                          type: integer
+                          example: 0
+                        timeout:
+                          type: integer
+                          example: 0
+                        cancelled:
+                          type: integer
+                          example: 0
+                        logAvailable:
+                          type: integer
+                          example: 0
+            screenRecordingForScenarios:
+              type: boolean
+              example: false
+            testType:
+              type: string
+              example: ""
+        executionTime:
+          type: string
+          example: "1m41s"
+        metadata:
+          type: object
+          properties:
+            total:
+              type: integer
+              example: 2
+            cursor:
+              type: integer
+              example: 0
+            hasmore:
+              type: boolean
+              example: false
+        status:
+          type: string
+          example: "success"
+          
+    JobScenarioData:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            properties:
+              id:
+                type: string
+                example: "00x0x0xx-x0x0-0000-0000-00xx0x000x00"
+              taskID:
+                type: string
+                example: "00xx000-0x0x-000x-0xxx-00000x000xxx"
+              name:
+                type: string
+                example: "aliasing.spec.js"
+              iteration:
+                type: integer
+                example: 0
+              status:
+                type: string
+                example: "completed"
+              group_number:
+                type: integer
+                example: 2
+              duration:
+                type: string
+                example: "00:00:23"
+        metadata:
+          type: object
+          properties:
+            total:
+              type: integer
+              example: 1
+            cursor:
+              type: string
+              example: ""
+            hasmore:
+              type: boolean
+              example: false
+        status:
+          type: string
+          example: "success"                    
+             
+    JobSessionData:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            properties:
+              sessionID:
+                type: string
+                example: "XXXX-XXXX-XXXX-XXXX"
+              testID:
+                type: string
+                example: "XXXX-XXXX-XXXX-XXXX"
+              taskID:
+                type: string
+                example: "00xx000-0x0x-000x-0xxx-00000x000xxx"
+              name:
+                type: string
+                example: "aliasing.spec.js"
+              scenario_name:
+                type: string
+                example: "aliasing.spec.js"
+              status:
+                type: string
+                example: "passed"
+              group_number:
+                type: integer
+                example: 2
+              duration:
+                type: string
+                example: "00:00:16"
+              smartUI_enabled:
+                type: boolean
+                example: false
+        metadata:
+          type: object
+          properties:
+            total:
+              type: integer
+              example: 1
+            cursor:
+              type: string
+              example: ""
+            hasmore:
+              type: boolean
+              example: false
+        status:
+          type: string
+          example: "success"                    
+          
+    JobList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "f3e41-42e9-8095-e7cc3f46"
+              org_id:
+                type: string
+                example: "509662"
+              status:
+                type: string
+                example: "aborted"
+              job_number:
+                type: integer
+                example: 16311
+              job_label:
+                type: string
+                example: ""
+              remark:
+                type: string
+                example: "job has been aborted by user"
+              created_at:
+                type: string
+                example: "2024-11-20T08:54:13Z"
+              update_at:
+                type: string
+                example: "2024-11-20T08:54:23Z"
+              global_timeout:
+                type: integer
+                example: 0
+              test_suite_timeout:
+                type: integer
+                example: 0
+              retry_on_failure:
+                type: boolean
+                example: "false"
+              tunnel_name:
+                type: string
+                example: ""
+              runson:
+                type: string
+                example: ""
+              start_time:
+                type: string
+                example: null
+              end_time:
+                type: string
+                example: "2024-11-20T08:54:23Z"
+              type:
+                type: string
+                example: ""
+              user:
+                type: string
+                example: "amanc"
+              Tasks:
+                type: integer
+                example: 0
+              taskCount:
+                type: integer
+                example: null
+              archived_at:
+                type: string
+                example: null
+              archived_by:
+                type: string
+                example: ""
+              unarchived_at:
+                type: string
+                example: null
+              unarchived_by:
+                type: string
+                example: ""
+              is_archived:
+                type: integer
+                example: 0
+              executionTime:
+                type: string
+                example: "0s"
+              execution_time_sec:
+                type: integer
+                example: 0
+              total_tests:
+                type: integer
+                example: 0
+              job_summary:
+                type: string
+                example: null
+              project_id:
+                type: string
+                example: ""
+              test_type:
+                type: string
+                example: ""
+              workflow_details:
+                type: object
+                properties:
+                  workflow_id:
+                    type: string
+                    example: null
+              project_name:
+                type: string
+                example: ""
+        metadata:
+          type: object
+          properties:
+            total:
+              type: integer
+              example: 0
+            cursor:
+              type: integer
+              example: 16310
+            hasmore:
+              type: boolean
+              example: "true"
+            
+        status:
+          type: string
+          example: "success"
+          
+          
+    
+    StageListScenarioResponseFalse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            pre:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "af2ab1dc-55de-4057-9789-d414c2c23fcb"
+                  task:
+                    type: string
+                    example: "085d201b-0fc8-4985-a822-0ef3c46839f3"
+                  type:
+                    type: string
+                    example: "cache-download"
+                  status:
+                    type: string
+                    example: "completed"
+                  remark:
+                    type: string
+                    example: "completed"
+                  name:
+                    type: string
+                    example: "cache-download"
+                  iteration:
+                    type: integer
+                    example: 0
+                  order:
+                    type: integer
+                    example: 1
+                  link:
+                    type: string
+                    example: "cache-download.log"
+                  createdAt:
+                    type: string
+                    example: "2023-01-23T07:50:33Z"
+                  startedAt:
+                    type: string
+                    example: "2023-01-23T07:50:35Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-01-23T07:50:39Z"
+                  count:
+                    type: integer
+                    example: 0
+                  testType:
+                    type: string
+                    example: 
+            scenario:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "d7b0255e-f469-4e6f-8252-0ac0d95ef958"
+                  task:
+                    type: string
+                    example: "085d201b-0fc8-4985-a822-0ef3c46839f3"
+                  type:
+                    type: string
+                    example: "scenario"
+                  status:
+                    type: string
+                    example: "completed"
+                  remark:
+                    type: string
+                    example: "completed"
+                  name:
+                    type: string
+                    example: "\"Test_1\""
+                  iteration:
+                    type: integer
+                    example: 0
+                  order:
+                    type: integer
+                    example: 4
+                  link:
+                    type: string
+                    example: "command.1.0.log"
+                  createdAt:
+                    type: string
+                    example: "2023-01-23T07:51:04Z"
+                  startedAt:
+                    type: string
+                    example: "2023-01-23T07:51:06Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-01-23T07:52:30Z"
+                  count:
+                    type: integer
+                    example: 0
+                  testType:
+                    type: string
+                    example: 
+            post:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "2a9d14a4-fab8-49cb-88cd-0c0a6d22c13c"
+                  task:
+                    type: string
+                    example: "085d201b-0fc8-4985-a822-0ef3c46839f3"
+                  type:
+                    type: string
+                    example: "postrun"
+                  status:
+                    type: string
+                    example: "completed"
+                  remark:
+                    type: string
+                    example: "completed"
+                  name:
+                    type: string
+                    example: "post"
+                  iteration:
+                    type: integer
+                    example: 0
+                  order:
+                    type: integer
+                    example: 5
+                  link:
+                    type: string
+                    example: "post.log"
+                  createdAt:
+                    type: string
+                    example: "2023-01-23T07:51:04Z"
+                  startedAt:
+                    type: string
+                    example: "2023-01-23T07:52:32Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-01-23T07:52:34Z"
+                  count:
+                    type: integer
+                    example: 0
+                  testType:
+                    type: string
+                    example: 
+        status:
+          type: string
+          example: "success"
+    
+    StageListScenarioResponseTrue:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            scenario:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "d7b0255e-f469-4e6f-8252-0ac0d95ef958"
+                  task:
+                    type: string
+                    example: "085d201b-0fc8-4985-a822-0ef3c46839f3"
+                  type:
+                    type: string
+                    example: "scenario"
+                  status:
+                    type: string
+                    example: "completed"
+                  remark:
+                    type: string
+                    example: "completed"
+                  name:
+                    type: string
+                    example: "\"Test_1\""
+                  iteration:
+                    type: integer
+                    example: 0
+                  order:
+                    type: integer
+                    example: 4
+                  link:
+                    type: string
+                    example: "command.1.0.log"
+                  createdAt:
+                    type: string
+                    example: "2023-01-23T07:51:04Z"
+                  startedAt:
+                    type: string
+                    example: "2023-01-23T07:51:06Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-01-23T07:52:30Z"
+                  count:
+                    type: integer
+                    example: 0
+                  testType:
+                    type: string
+                    example: 
+        status:
+          type: string
+          example: "success"
+    
+    StageTest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: string
+          example:  ["D9HTK-NNIT3-STSWP-SNYWK"]
+        status:
+          type: string
+          example: "success"
+    
+    BrowserList:
+      type: object
+      properties:
+        message: 
+          example: ""
+        platforms:
+          type: object
+          properties:
+            desktop:
+              type: array
+              items:
+                $ref: '#/components/schemas/BorwserListProperties'
+        status:
+          type: integer
+          example: 200
+    SuccessStageLogs:
+      type: object
+      properties:
+        data:
+          type: string
+          items:
+            type: string
+          example: "https://hypertestproduction.blob.core.windows.net/task-logs/60d-a9e7-a4be-637a3/cache-download.log?rscd=attachment%3B+filename%3cc8-a9ea-4ae7-a4be-d182981637a3%2Fcache-download.log&se=2024-10-23T14%Qs9%3D&ske=2024-10-24T12%3A29&skoid=1f80-df57-295e&sks=b&skt=2024-10-39Z&sktid=b4968-80ca8c130456&skv=2020-10-02&sp=rl&spr=https&sr=c&st=2024-10-23T10%3A24%3A29Z&sv=2020-02-10"
+    FailedStageLogs:
+      properties:
+        error:
+          type: string
+          items:
+            type: string
+          example: "non-20x status code 500"
+        status:
+          type: string
+          items:
+            type: string
+          example: "failed"
+    BorwserListProperties:
+       type: object
+       properties:
+          platform:
+            type: string
+            example: "Windows 10"
+          browsers:
+            type: array
+            items:
+              $ref: '#/components/schemas/BrowserName'
+          resolutions:
+            type: array
+            items:
+              type: string
+            example:  ["1024x768", "1280x800", "1280x1024", "1366x768"]
+    
+    BrowserName:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Firefox
+        version:
+          type: string
+          example: "99.0"   
+    
+    ArtifactList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ArtifactListData'
+        status:
+          type: string
+          example: "success"
+    
+    ArtifactListData:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: string
+            example: "56bbe571-221a-4938-967c-2aabe5cdd379"
+          name:
+            type: string
+            example: Final-Report-2
+          job:
+            type: string
+            example: "d711f5eb-d629-48d1-9ebf-99cf7f3fa2f4"
+          removed:
+            type: boolean
+            example: false
+          link:
+            type: string
+            example:
+          size:
+            type: string
+            example: "159195"
+          remark:
+            type: string
+            example: "foreman"
+          status:
+            type: string
+            example: completed
+          createdAt:
+            type: string
+            example: "2022-11-11T08:04:13Z"
+          expiry:
+            type: string
+            example: "2022-12-11T08:04:13Z"
+          updatedAt:
+            type: string
+            example: "2022-11-11T08:07:30Z"
+          removedAt:
+            type: string
+            example:
+        
+    JobRCA:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              additional_suggestions:
+                type: string
+                example: ""
+              after:
+                type: string
+                example: "\n            Thread.sleep(500);\n            test1.log(LogStatus.PASS,  ..."
+              before:
+                type: string
+                example: "\n\n        WebElement temp_element;\n\n        int totalCount = item_count+5;\n ..."
+              created_at:
+                type: string
+                example: "2024-10-03T17:50:23Z"
+              error:
+                type: string
+                example: "[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, ..."
+              errorType:
+                type: string
+                example: ElementNotFoundError
+              filename:
+                type: string
+                example: "Test1.java"
+              id:
+                type: string
+                example: "01J99R26XDH1ZVBK4R3ZY29F70"
+              iteration:
+                type: integer
+                example: 0
+              lang:
+                type: string
+                example: "Java"
+              lineNumber:
+                type: integer
+                example: 88
+              order:
+                type: integer
+                example: 4
+              patch_diff:
+                type: string
+                example: ""
+              rca:
+                type: string
+                example: ""
+              remediation:
+                type: integer
+                example: ""
+              stack_trace_blob_path:
+                type: string
+                example: "logs/d2698ea8-39bf-4580-aea8-ad625bec1f70/command.1.0/1.log"
+              stacktraceFileLink:
+                type: string
+                example: ""
+              stageDetails:
+                type: object
+                properties:
+                  createdAt:
+                    type: string
+                    example: "0001-01-01T00:00:00Z"
+                  updatedAt:
+                    type: string
+                    example: "0001-01-01T00:00:00Z"
+              taskId:
+                type: string
+                example: "d2698ea0-aea8-ad625bec1f70"
+              updated_at:
+                type: string
+                example: "2024-10-03T17:50:23Z"
+        metadata:
+          type: object
+          properties:
+            cursor:
+              type: string
+              example: ""
+            hasmore:
+              type: boolean
+              example: "false"
+            next_cursor:
+              type: string
+              example: ""
+            
+        status:
+          type: string
+          example: "success"
+    
+    
+    AbortJob:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "success"
+    
+    CreateSecret:
+      type: object
+      required:
+        - secretKey
+      properties:
+        secretKey:
+          type: string
+          example: "Test-Secret"
+        secretValue:
+          type: string
+          example: "TestSecretValue"
+        username:
+          type: string
+          example: "<YOUR_LAMBDATEST_USERNAME>"
+        orgID:
+          type: string
+          example: "<YOUR_LAMBDATEST_ORG_ID>"
+
+    SecretCreatedSuccessfully:
+        type: object
+        properties:
+          message:
+            type: string
+            example: "Secret created successfully"
+          status:
+            type: string
+            example: "success"
+    
+    SecretList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            example: "TestSecret"
+        status:
+          type: string
+          example: "success"
+          
+    DeleteSecret:
+      type: object
+      required:
+        - secretKey
+      properties:
+        secretKey:
+          type: string
+          example: "Test-Secret"
+        username:
+          type: string
+          example: "<YOUR_LAMBDATEST_USERNAME>"
+        orgID:
+          type: string
+          example: "<YOUR_LAMBDATEST_ORG_ID>"
+    
+    DeleteSecretSuccessfully:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Secret deleted successfully"
+        status:
+          type: string
+          example: "success"
+  
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

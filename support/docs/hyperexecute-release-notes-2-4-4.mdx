@@ -1,0 +1,30 @@
+---
+title: "Version 2.4.4"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+## HyperExecute now integrates with k6
+
+HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file.
+
+```yaml
+runtime:
+    addons:
+      - name: k6
+        version: "v0.52.0"
+```
+
+Also, add these environment variables in your YAML file to install the necessary dependencies for your tests
+
+```yaml
+env: 
+  K6_BROWSER_ENABLED: true  
+  K6_BROWSER_HEADLESS: false 
+  HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
+```
+
+📕 Check the [k6 integration documentation](/support/docs/hyperexecute-k6-testing/) to learn more about it.

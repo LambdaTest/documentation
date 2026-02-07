@@ -1,0 +1,27 @@
+---
+
+title: "Version 2.5.5"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Extended Report Formats for JUnit Framework
+In addition to the existing JUnit XML report, support for generating reports in multiple formats (e.g., HTML, XML, JSON) has been added. This enhancement enables more flexible report generation to meet different user needs.
+
+<Note>
+To avail this feature, connect with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Support Team.</span>
+</Note>
+
+This can be configured with the following parameters:
+- **frameworkName:** junit
+- **type:** xml
+- **location:** Specify the directory where the reports will be generated.
+
+```yaml
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: xml
+  frameworkName: junit
+```

@@ -1,0 +1,96 @@
+export const FrameworkGrid = () => {
+  const frameworks = [
+    {
+      title: 'Java',
+      icon: '/assets/images/getting-started/java-icon.webp',
+      items: [
+        { name: 'Java', link: '/support/docs/appium-java/' },
+        { name: 'JUnit', link: '/support/docs/appium-java-junit/' },
+        { name: 'JBehave', link: '/support/docs/appium-java-jbehave/' },
+        { name: 'Cucumber', link: '/support/docs/appium-java-cucumber/' },
+        { name: 'TestNG', link: '/support/docs/appium-java-testng/' },
+      ]
+    },
+    {
+      title: 'JavaScript',
+      icon: '/assets/images/getting-started/color-js.webp',
+      items: [
+        { name: 'JavaScript', link: '/support/docs/appium-nodejs/' },
+        { name: 'WebDriverIO', link: '/support/docs/appium-nodejs-webdriverio/' },
+        { name: 'Mocha', link: '/support/docs/appium-nodejs-mocha/' },
+      ]
+    },
+    {
+      title: 'Python',
+      icon: '/assets/images/getting-started/python-icon.webp',
+      items: [
+        { name: 'Python', link: '/support/docs/appium-python/' },
+        { name: 'Behave', link: '/support/docs/appium-python-behave/' },
+        { name: 'Robot', link: '/support/docs/appium-python-robot/' },
+        { name: 'Gauge', link: '/support/docs/appium-python-gauge/' },
+        { name: 'PyTest', link: '/support/docs/appium-python-pytest/' },
+      ]
+    },
+    {
+      title: 'Ruby',
+      icon: '/assets/images/getting-started/ruby-icon.webp',
+      items: [
+        { name: 'Ruby', link: '/support/docs/appium-ruby/' },
+        { name: 'Cucumber', link: '/support/docs/appium-ruby-cucumber/' },
+        { name: 'RSpec', link: '/support/docs/appium-ruby-rspec/' },
+      ]
+    },
+    {
+      title: 'PHP',
+      icon: '/assets/images/getting-started/php-icon.webp',
+      items: [
+        { name: 'PHP', link: '/support/docs/appium-php/' },
+        { name: 'Behat', link: '/support/docs/appium-php-behat/' },
+      ]
+    },
+    {
+      title: 'C#',
+      icon: '/assets/images/getting-started/c-sharp-icon.webp',
+      items: [
+        { name: 'C#', link: '/support/docs/appium-csharp/' },
+        { name: 'NUnit', link: '/support/docs/appium-csharp-nunit/' },
+      ]
+    }
+  ];
+
+  return (
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 no-link my-6">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-8 p-8">
+        {frameworks.map((fw, index) => (
+          <div key={index} className="flex flex-col items-start">
+            <img 
+                src={fw.icon}
+                alt={fw.title}
+                className="w-12 h-12 mb-4 object-contain" 
+                loading="lazy"
+            />
+            
+            <div className="flex flex-col gap-2">
+              {fw.items.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.link}
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="bg-gray-50 dark:bg-gray-700/30 p-6 text-center border-t border-gray-200 dark:border-gray-700">
+        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed m-0">
+            We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.
+            <br />
+            Don't worry, you can still run the test. <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.
+        </p>
+      </div>
+    </div>
+  );
+};

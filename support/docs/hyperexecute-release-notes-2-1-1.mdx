@@ -1,0 +1,26 @@
+---
+title: "Version 2.1.1"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Email Delivery of HyperExecute Job Artifacts
+
+You can now receive [Job Artifacts](/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
+
+To receive the Artifacts via mail, you simply need to pass a `email` flag in your YAML file.
+
+```bash
+uploadArtifacts:
+    ...
+    email:
+      to: 
+        - <your_email_id@example.com>
+        - <another_email_id@example.com>
+```
+
+<Note>
+Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)
+</Note>

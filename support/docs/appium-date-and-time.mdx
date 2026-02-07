@@ -1,0 +1,78 @@
+---
+title: "Set Device Date & Time"
+sidebarTitle: "Set Date and Time"
+keywords: ['appium','LambdaTest','Set Date and Time','Device Time Automation','12-hour format','24-hour format']
+
+---
+
+LambdaTest now supports configuring custom **date**, **time**, and **hour-format** on Real Devices via Appium during automation testing sessions. This allows developers and testers to simulate specific date/time conditions to validate use cases like scheduled events, alarms, chats, or localization for time formats.
+
+By the end of this document, you will be able to:
+- Set a specific date and time on the device
+- Toggle between 12-hour and 24-hour formats
+- Enable/disable automatic time syncing with network settings
+
+---
+
+## Support for Automation on Real Devices
+
+To modify the date and time settings programmatically, use the `lambda_executor` Appium hook with the `updateDeviceSettings` action. You can provide multiple arguments including custom date, time, format toggle, and auto-time setting.
+
+
+---
+## Supported Arguments
+
+| Argument           | Format        | Description                                                                 |
+| ------------------ | ------------- | --------------------------------------------------------------------------- |
+| `customDate`       | `MMM DD YYYY` | Sets the device date. You can select a date up to **7 days** from today.    |
+| `customTime`       | `HH:MM`       |  Sets time in 24-hour format `(e.g., 13:30)`. Display adapts based on `twelveHourTime` (shown as `1:30 PM` if enabled).|
+| `twelveHourTime`   | `On` / `Off`  | `On` for 12-hour, `Off` for 24-hour format.                                 |
+| `setAutomatically` | `On` / `Off`  | Enables or disables syncing with network time.                              |
+
+<Warning>
+💡 **Note:** When `setAutomatically` is turned **On**, all Other Arguments for  **Date and Time**  are automatically disabled on the device.
+</Warning>
+
+
+---
+### Appium Hook Example
+
+```js 
+{`driver.execute_script('lambda_executor: { 
+  "action": "updateDeviceSettings", 
+  "arguments": { 
+    "customDate": "Jun 20 2025", 
+    "customTime": "15:05", 
+    "twelveHourTime": "On", 
+    "setAutomatically": "On" 
+  } 
+}')`}
+```
+
+
+
+---
+## Supported Platforms
+
+| Platform  | OS Version    | Support Status                  |
+| --------- | ------------- | ------------------------------- |
+| iOS       | 14 and above  |  Fully Supported               |
+
+<Info>
+**NOTE**
+
+This feature is currently not supported on Android. Support for Android is planned in a future update.
+</Info>
+
+---
+
+## Example Use Cases
+
+- Validate how the app behaves across different time zones or locales.
+- Test reminder or calendar event triggering logic.
+- Test 12-hour vs. 24-hour format layout rendering.
+
+
+<Warning>
+For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.
+</Warning>

@@ -1,0 +1,807 @@
+openapi: 3.0.3
+info:
+  title: TestMu AI Audit Logs API Documentation
+  version: 1.0.0
+  description: "API documentation of Audit logs"
+servers:
+- url: 'https://audit-logs.lambdatest.com/'
+- url: 'https://eu-audit-logs.lambdatest.com/'
+paths:
+  /api/logs:
+    get:
+      summary: Get Audit logs
+      description: Get Audit logs
+      operationId: getAuditLogs
+      security:
+        - basicAuth: []
+      tags:
+        - Audit logs
+      parameters:
+        - name: limit
+          in: query
+          description: limit number of events
+          schema:
+            type: string
+            example: '10'
+        - name: offset
+          in: query
+          description: beginning index of result
+          schema:
+            type: string
+            example: '0'
+        - name: start
+          in: query
+          description: Starting date
+          required: true
+          schema:
+            type: string
+            example: '2023-10-24'
+        - name: end
+          in: query
+          description: End date
+          required: true
+          schema:
+            type: string
+            example: '2023-11-07'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PageCount:
+                    type: number
+                    example: 2
+                  Result:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        activity_description:
+                          type: string
+                          example: Admin changed user's password
+                        activity_name:
+                          type: string
+                          example: Organization - User Password Changed
+                        changes:
+                          type: object
+                          nullable: true
+                          example: null
+                        email:
+                          type: string
+                          example: pawanr@lambdatest.com
+                        event:
+                          type: string
+                          example: org.user.password.changed
+                        event_id:
+                          type: string
+                          example: 9fa69cb3-e102-4a25-80ce-d1aa1705288a
+                        event_time:
+                          type: string
+                          example: '2023-11-07T12:16:47Z'
+                        ip:
+                          type: string
+                          example: 143.110.182.88
+                        metadata:
+                          nullable: true
+                          example: null
+                        name:
+                          type: string
+                          example: pawan1235
+                        organization_name:
+                          type: string
+                          example: 'lambdatest'
+                        original:
+                          type: object
+                          nullable: true
+                          example: null
+                        target_identifier:
+                          type: object
+                          properties:
+                            email:
+                              type: string
+                              example: pawanr@lambdatest.com
+                            role:
+                              type: string
+                              example: Admin
+                        user_agent:
+                          type: string
+                          example: >-
+                            Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                            AppleWebKit/537.36 (KHTML, like Gecko)
+                            Chrome/106.0.0.0 Safari/537.36
+                    example:
+                      - activity_description: Admin changed user's password
+                        activity_name: Organization - User Password Changed
+                        changes: null
+                        email: pawanr@lambdatest.com
+                        event: org.user.password.changed
+                        event_id: 9fa69cb3-e102-4a25-80ce-d1aa1705288a
+                        event_time: '2023-11-07T12:16:47Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: adb47d4c-1338-457a-b962-97595fa4c3e2
+                        event_time: '2023-11-07T08:28:26Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: 0c2ef83a-e70d-4fc8-8a99-4e6164708097
+                        event_time: '2023-11-03T12:54:14Z'
+                        ip: 14.97.133.26
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: 3ee12e5d-458a-481f-a473-44e298a06b0b
+                        event_time: '2023-11-03T11:49:30Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Admin updated user's role
+                        activity_name: Organization - User Role Updated
+                        changes:
+                          organization_role: User
+                        email: pawanr@lambdatest.com
+                        event: org.user.role.updated
+                        event_id: 33b3a96a-9f1d-4f39-be31-ded45a4872d6
+                        event_time: '2023-11-03T11:49:08Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          organization_role: Admin
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: c97da1fd-6fdb-477c-870d-6847a7566675
+                        event_time: '2023-11-03T11:48:31Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Invitation was accepted
+                        activity_name: Organization - Invitation Accepted
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: org.invitation.accepted
+                        event_id: 00f1d32b-bd9e-4c1c-9824-47a31fe3ddeb
+                        event_time: '2023-11-03T11:48:03Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: e7a71f57-9377-4716-b488-1fc3018ba2fc
+                        event_time: '2023-11-03T11:48:03Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Admin invited users to their organization
+                        activity_name: Organization - Invitation Sent
+                        changes: null
+                        email: pawanr@lambdatest.com
+                        event: org.invitation.sent
+                        event_id: 4f764665-8aaa-472d-a840-2b5b6dbc6d57
+                        event_time: '2023-11-03T11:47:18Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                          role: Admin
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 085b3823-5df2-482f-9026-0ecd7f9eb967
+                        event_time: '2023-10-26T08:38:27Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 7bcb8eb0-b5f6-4c38-aee1-04ab643dd8a7
+                        event_time: '2023-10-26T08:38:19Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          automation: false
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: false
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          marketing: false
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 3108990a-9c21-4b7c-b4f2-ca32321b8015
+                        event_time: '2023-10-26T08:38:18Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          marketing: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+              examples:
+                Success:
+                  value:
+                    PageCount: 2
+                    Result:
+                      - activity_description: Admin changed user's password
+                        activity_name: Organization - User Password Changed
+                        changes: null
+                        email: pawanr@lambdatest.com
+                        event: org.user.password.changed
+                        event_id: 9fa69cb3-e102-4a25-80ce-d1aa1705288a
+                        event_time: '2023-11-07T12:16:47Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: adb47d4c-1338-457a-b962-97595fa4c3e2
+                        event_time: '2023-11-07T08:28:26Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: 0c2ef83a-e70d-4fc8-8a99-4e6164708097
+                        event_time: '2023-11-03T12:54:14Z'
+                        ip: 14.97.133.26
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: 3ee12e5d-458a-481f-a473-44e298a06b0b
+                        event_time: '2023-11-03T11:49:30Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Admin updated user's role
+                        activity_name: Organization - User Role Updated
+                        changes:
+                          organization_role: User
+                        email: pawanr@lambdatest.com
+                        event: org.user.role.updated
+                        event_id: 33b3a96a-9f1d-4f39-be31-ded45a4872d6
+                        event_time: '2023-11-03T11:49:08Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          organization_role: Admin
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: c97da1fd-6fdb-477c-870d-6847a7566675
+                        event_time: '2023-11-03T11:48:31Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Invitation was accepted
+                        activity_name: Organization - Invitation Accepted
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: org.invitation.accepted
+                        event_id: 00f1d32b-bd9e-4c1c-9824-47a31fe3ddeb
+                        event_time: '2023-11-03T11:48:03Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User - Logged In
+                        activity_name: User - Logged In
+                        changes: null
+                        email: pawanr124@ltqa.lambdatestautomation.com
+                        event: user.login
+                        event_id: e7a71f57-9377-4716-b488-1fc3018ba2fc
+                        event_time: '2023-11-03T11:48:03Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: Pawan Rai
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: Admin invited users to their organization
+                        activity_name: Organization - Invitation Sent
+                        changes: null
+                        email: pawanr@lambdatest.com
+                        event: org.invitation.sent
+                        event_id: 4f764665-8aaa-472d-a840-2b5b6dbc6d57
+                        event_time: '2023-11-03T11:47:18Z'
+                        ip: 103.90.204.46
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original: null
+                        target_identifier:
+                          email: pawanr124@ltqa.lambdatestautomation.com
+                          role: Admin
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 085b3823-5df2-482f-9026-0ecd7f9eb967
+                        event_time: '2023-10-26T08:38:27Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          automation: true
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: true
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 7bcb8eb0-b5f6-4c38-aee1-04ab643dd8a7
+                        event_time: '2023-10-26T08:38:19Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          automation: false
+                          event: true
+                          feedback: true
+                          maintenance: true
+                          marketing: false
+                          newsletter: true
+                          offer: true
+                          product: true
+                          product_onboarding: true
+                          report: true
+                          weekly: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+                      - activity_description: User updated their email preferenece
+                        activity_name: User - Email Preference Updated
+                        changes:
+                          marketing: false
+                        email: pawanr@lambdatest.com
+                        event: user.email-preference.updated
+                        event_id: 3108990a-9c21-4b7c-b4f2-ca32321b8015
+                        event_time: '2023-10-26T08:38:18Z'
+                        ip: 143.110.182.88
+                        metadata: null
+                        name: pawan1235
+                        organization_name: ''
+                        original:
+                          marketing: true
+                        target_identifier:
+                          email: pawanr@lambdatest.com
+                        user_agent: >-
+                          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                          AppleWebKit/537.36 (KHTML, like Gecko)
+                          Chrome/106.0.0.0 Safari/537.36
+        '400':
+          description: Invalid date / Invalid limit
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid End Date
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid date:
+                  value:
+                    message: Invalid End Date
+                    title: Bad Request Error
+                    type: error
+                Invalid limit:
+                  value:
+                    message: Provided limit value is invalid, please try again !
+                    title: Bad Request Error
+                    type: error
+                    
+  /api/logs/{event_id}:
+    summary: Get event by ID
+    get:
+      summary: Get Logs by event ID
+      description: Get Audit logs
+      operationId: getEvent
+      security:
+        - basicAuth: []
+      tags:
+        - Audit logs
+      parameters:
+        - name: event_id
+          in: path
+          description: Event id of logs
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  activity_description:
+                    type: string
+                    example: User updated their email preferenece
+                  activity_name:
+                    type: string
+                    example: User Email Preference Updated
+                  changes:
+                    type: object
+                    properties:
+                      marketing:
+                        type: boolean
+                        example: false
+                  email:
+                    type: string
+                    example: pawanr@lambdatest.com
+                  event:
+                    type: string
+                    example: user.email-preference.updated
+                  event_id:
+                    type: string
+                    example: 3108990a-9c21-4b7c-b4f2-ca32321b8015
+                  event_time:
+                    type: string
+                    example: '2023-10-26T08:38:18Z'
+                  ip:
+                    type: string
+                    example: 143.110.182.88
+                  metadata:
+                    nullable: true
+                    example: null
+                  name:
+                    type: string
+                    example: pawan1235
+                  organization_name:
+                    type: string
+                    example: ''
+                  original:
+                    type: object
+                    properties:
+                      marketing:
+                        type: boolean
+                        example: true
+                  target_identifier:
+                    type: object
+                    properties:
+                      email:
+                        type: string
+                        example: pawanr@lambdatest.com
+                  user_agent:
+                    type: string
+                    example: >-
+                      Mozilla/5.0(Macintosh;IntelMacOSX10_15_7)AppleWebKit/537.36(KHTML,likeGecko)Chrome/106.0.0.0Safari/537.36
+              examples:
+                Success:
+                  value:
+                    activity_description: User updated their email preferenece
+                    activity_name: User - Email Preference Updated
+                    changes:
+                      marketing: false
+                    email: pawanr@lambdatest.com
+                    event: user.email-preference.updated
+                    event_id: 3108990a-9c21-4b7c-b4f2-ca32321b8015
+                    event_time: '2023-10-26T08:38:18Z'
+                    ip: 143.110.182.88
+                    metadata: null
+                    name: pawan1235
+                    organization_name: ''
+                    original:
+                      marketing: true
+                    target_identifier:
+                      email: pawanr@lambdatest.com
+                    user_agent: >-
+                      Mozilla/5.0(Macintosh;IntelMacOSX10_15_7)AppleWebKit/537.36(KHTML,likeGecko)Chrome/106.0.0.0Safari/537.36
+        '422':
+          description: Invalid event
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid Event ID
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Event:
+                  value:
+                    message: Invalid Event ID
+                    title: Bad Request Error
+                    type: error
+          
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

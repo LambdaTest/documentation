@@ -1,0 +1,152 @@
+---
+title: "Puppeteer Testing With Mocha"
+sidebarTitle: "Integrate With Mocha"
+description: "Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases."
+---
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+LambdaTest allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations.
+
+This guide will cover the basics of getting started with Puppeteer testing with Mocha on the LambdaTest platform.
+
+## Prerequisites
+
+<Note>
+Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<GitHubButton url="https://github.com/LambdaTest/puppeteer-sample" />
+</Note>
+
+<Steps>
+<Step>
+Clone the LambdaTest-Puppeteer repository on your system.
+</Step>
+<Step>
+Install the npm dependencies.
+
+```bash lines
+npm install
+```
+</Step>
+<Step>
+In order to run your Puppeteer tests with Mocha, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
+</Frame>
+</Step>
+</Steps>
+
+<CodeGroup>
+```bash lines Windows
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+```bash lines macOS/Linux
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</CodeGroup>
+
+## Running Tests Using Mocha
+
+<Warning>
+**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
+</Warning>
+
+<Steps>
+<Step>
+To run the Puppeteer Mocha tests on LambdaTest, you need make some tweaks to the `google.spec.js` file.
+
+```javascript 
+const puppeteer = require('puppeteer');
+const expect = require('chai').expect;
+const caps_chrome = {
+	browserName    : 'Chrome',
+	browserVersion : 'latest',
+	'LT:Options'   : {
+		platform   : 'Windows 10',
+		build      : 'Sample Puppeteer-Mocha',
+		name       : 'Puppeteer-mocha test on Chrome',
+		resolution : '1366x768',
+		user       : process.env.LT_USERNAME,
+		accessKey  : process.env.LT_ACCESS_KEY,
+		network    : true
+	}
+};
+const caps_edge = {
+	browserName    : 'MicrosoftEdge',
+	browserVersion : 'latest',
+	'LT:Options'   : {
+		platform   : 'Windows 10',
+		build      : 'Sample Puppeteer-Mocha',
+		name       : 'Puppeteer-mocha test on Edge',
+		resolution : '1366x768',
+		user       : process.env.LT_USERNAME,
+		accessKey  : process.env.LT_ACCESS_KEY,
+		network    : true
+	}
+};
+
+let browser = null;
+let page = null;
+describe('Search Text', () => {
+	beforeEach(async () => {
+		browser = await puppeteer.connect({
+			browserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(
+				JSON.stringify(caps_chrome)
+			)}`
+		});
+		page = await browser.newPage();
+	});
+
+	it('should be titled "Google"', async () => {
+		let text = 'Google';
+		await page.goto('https://www.duckduckgo.com');
+		var element = await page.$('[name="q"]');
+		await element.click();
+		await element.type(text);
+		await Promise.all([
+			page.keyboard.press('Enter'),
+			page.waitForNavigation()
+		]);
+		var title = await page.title();
+		try {
+			expect(title).equal(text + ' at DuckDuckGo', 'Expected page title is incorrect!');
+			await page.evaluate(
+				(_) => {},
+				`lambdatest_action: ${JSON.stringify({
+					action    : 'setTestStatus',
+					arguments : { status: 'passed', remark: 'assertion passed' }
+				})}`
+			);
+		} catch (e) {
+			await page.evaluate(
+				(_) => {},
+				`lambdatest_action: ${JSON.stringify({
+					action    : 'setTestStatus',
+					arguments : { status: 'failed', remark: e.name }
+				})}`
+			);
+		}
+	});
+
+	afterEach(async () => {
+		await page.close();
+		await browser.close();
+	});
+});
+```
+</Step>
+<Step>
+Now pass the below command to run your test.
+
+```bash lines
+npm run test
+```
+</Step>
+
+<Step>
+Visit the LambdaTest Automation Dashboard to see the results of your Puppeteer Mocha tests.
+</Step>
+</Steps>

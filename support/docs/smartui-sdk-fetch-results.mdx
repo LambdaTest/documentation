@@ -1,0 +1,224 @@
+---
+title: "Fetching Results through SmartUI SDK"
+sidebarTitle: "Fetch Results"
+keywords:
+  [
+    "Visual Regression",
+    "Visual Regression Testing Guide",
+    "Visual Regression Test Automation",
+    "Visual Regression Automation Testing",
+    "Running Visual Regression Tests",
+    "Visual Regression Testing Online",
+    "Run Visual Regression",
+    "Visual Regression Run Specific Test",
+    "Visual Regression Testing Environment",
+    "How to Run Visual Regression Tests"
+  ]
+---
+
+SmartUI CLI allows you to fetch detailed build results after executing your visual tests. This feature enables you to access comprehensive information about your build and screenshots in a JSON file, making it easier to integrate with your CI/CD pipelines and automation workflows.
+
+## Prerequisites
+
+- Basic understanding of Command Line Interface
+- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
+- A properly configured SmartUI CLI project
+
+<Note>
+NOTE
+
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+</Note>
+
+## Steps to Use
+
+### **Step 1:** Install SmartUI CLI
+
+If you haven't already installed SmartUI CLI, install it using npm:
+
+**Global Installation (Recommended):**
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
+```bash
+npm install @lambdatest/smartui-cli
+```
+
+### **Step 2:** Configure your Project Token
+
+Setup your project token shown in the **SmartUI** app after creating your project.
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+</Tabs>
+
+### **Step 3:** Execute Tests with Results Fetching
+
+You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
+
+#### Default Usage
+If no filename is specified, results will be stored in `results.json`:
+
+```bash
+npx smartui --config .smartui.json exec --fetch-results -- <execution-command>
+```
+
+>**Example:**
+>For a `Node.js` test script :
+>```bash
+>npx smartui --config .smartui.json exec --fetch-results -- node test.js
+>```
+
+#### Custom Filename
+Specify a custom filename for your results:
+
+```bash
+npx smartui --config .smartui.json exec --fetch-results custom-results.json -- node test.js
+```
+
+### **Step 4:** Understanding the Results
+
+The fetched results JSON file contains detailed information about your build and screenshots. Here's what you'll find in the results file:
+
+```json
+{
+  "screenshots": {
+    "Screenshot-1": [
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "edge",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "firefox",
+        "viewport": "1366",
+        "mismatch_percentage": 4.74,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1366",
+        "mismatch_percentage": 4.64,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+    ],
+    "Screenshot-2": [
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "edge",
+        "viewport": "1920",
+        "mismatch_percentage": 0.0,
+        "status": "Approved"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "firefox",
+        "viewport": "1366",
+        "mismatch_percentage": 4.74,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1366",
+        "mismatch_percentage": 4.64,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+    ]
+  },
+  "build": {
+    "build_id": "b420b7a9-77c6-****-****",
+    "baseline": false,
+    "build_type": "smartui-cli",
+    "build_status_ind": "completed",
+    "build_status": "pending-approval",
+    "commitId": "2b93***",
+    "branch": "main",
+    "commitAuthor": "John Doe",
+    "commitMessage": "Merge pull request from xyz/main"
+  },
+  "project": {
+    "project_id": "1dfb7712-7f20-446f-***-***",
+    "name": "Project-Name",
+    "username": "johndoe",
+    "project_type": "smartui-cli",
+    "projectCategory": "web",
+    "platform": "cli"
+  }
+}
+```
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+

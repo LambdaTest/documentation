@@ -1,0 +1,133 @@
+---
+title: "Starting a Visual UI Scan with Web Scanner"
+sidebarTitle: "Starting a Visual UI Scan"
+keywords: ["lambdatest", "web scanner", "visual ui scan", "smartui config"]
+---
+
+## Purpose of Visual UI Scan
+
+Visual UI scans identify layout shifts, broken styles, font mismatches, and other design anomalies across web pages. It compares page screenshots taken during each run against a previously saved baseline (initial scan).
+
+Scans run across combinations of:
+* **Browsers:** Chrome, Firefox, Safari, Edge
+* **Resolutions:** A total of 30 viewport options are available, including 10 standard desktop, 10 Android, and 10 iOS device viewports.
+
+Results are redirected to the SmartUI Dashboard for detailed comparison.
+
+![Visual Scan Purpose](/assets/images/web-scanner/visual-scan-config-purpose.png)
+
+## Step 2 (If Visual Scan is Selected)
+
+Once **Visual UI** is selected in Step 1 of the scheduling wizard, the following configuration appears.
+
+### Default Settings
+
+* **Browsers:** Chrome, Firefox, Safari, Edge
+* **Resolutions:** Desktop (1920x1080, 1366x768, 1024x768), Tablet, Mobile (Galaxy A12, Galaxy A31, iPhone 14 Pro)
+* **Full Page Mode “ON“:** Captures the full length of your website regardless of viewport height limitations.
+* **Delay “5 Seconds“:** To wait for animations or content to stabilize.
+
+![Visual Scan Default Settings](/assets/images/web-scanner/visual-scan-default-settings.png)
+
+### Advanced Options (Visual UI)
+
+Click the "Advanced” Tab to unlock additional configuration tabs.
+
+#### SmartUI Config Upload
+You can create your own `.smartui.json` file for full control over:
+* Browser selection
+* Resolutions
+* Delay setting
+* The integrated JSON validator checks your configuration.
+
+![Visual Scan Advanced Options](/assets/images/web-scanner/visual-scan-advanced-options.png)
+
+#### Default SmartUI Config
+
+<CodeBlock language="json">
+{`
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1024
+      ]
+    ]
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",
+      "Galaxy S24"
+    ],
+    "fullPage": true,
+    "orientation": "portrait"
+  },
+  "waitForTimeout": 1000,
+  "smartIgnore": true,
+  "enableJavaScript": false,
+  "ignoreHTTPSErrors": false,
+  "useGlobalCache": false
+`}
+</CodeBlock>
+
+<Warning>
+**Note:**
+
+ Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
+</Warning>
+
+
+#### Navigating Results for your Visual Scan
+
+
+## Dashboard Overview
+
+After running your tests, the **Visual Build** becomes available in the dashboard.
+
+![Visual Build](/assets/images/web-scanner/visual-build.png)
+
+### Build Status
+Easily track the state of each screenshot — **Approved**, **Changes Found**, **New**, **Under Review**, and more.
+
+![Build Status View](/assets/images/web-scanner/threedot-visual.png)
+
+### Three-Dot Menu Options
+Access additional functions for your build:
+
+![Three Dot Menu](/assets/images/web-scanner/history-page.png)
+
+1. **View History**  
+   Browse older builds with complete stats for quick comparison.
+
+2. **Edit Scan Config**  
+   Modify scan settings such as **schedule** and **viewports**.  
+
+   ![Edit Scan Config](/assets/images/web-scanner/editscan-visual.png)
+
+   ![Edit Scan Schedule](/assets/images/web-scanner/editscan-schedule.png)
+
+3. **Run Scan Now**  
+   Run a new scan on demand and create a new build for comparison. 
+
+4. **Delete Scan**  
+   Remove a scan from the dashboard.
+
+5. **Stop Recurring Scan**  
+   Halt any scheduled recurring scans instantly.
+
+
+**Access your SmartUI Dashboard**:
+SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
+
+![smartui dashboard](/assets/images/kane-ai/smartui/smartui_dashboard.png)

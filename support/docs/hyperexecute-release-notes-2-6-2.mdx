@@ -1,0 +1,33 @@
+---
+
+title: "Version 2.6.2"
+sidebarTitle: "Version 2.6.2"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Support for Appium and Maestro Android Emulator
+HyperExecute now supports the Appium and the Maestro Android Emulator, providing enhanced flexibility for mobile application testing on Android emulators.
+
+### Key Features:
+- **Streamlined Emulator Integration**: Perform testing on virtual devices without requiring physical hardware, reducing setup complexity.
+- **Parallel Execution :** Run multiple tests simultaneously on virtual devices using HyperExecute’s parallelism to speed up test cycles and reduce execution time for functional and UI tests.
+- **Customizable Capabilities:** Define emulator configurations such as device name, platform version, and orientation directly within your test files.
+
+To execute tests using the Android Emulator, add the following configurations to your `hyperexecute.yaml`:
+```yaml
+framework:
+  args:
+    isRealMobile: false
+```
+<Note>
+Refer to our detailed documentation for [Appium](/support/docs/hyperexecute-appium-virtual-device/) and [Maestro](/support/docs/hyperexecute-maestro-testing/) on configuring and running tests with Android emulators.
+</Note>
+
+## New Version Release for Beta and Dev Edge Browser
+HyperExecute expands its support for the latest versions of dev and beta browsers for the Windows platform. With this expanded compatibility, you can streamline your testing process and deliver exceptional user experiences with confidence!
+
+- **Dev version:** 132.0.2957.11
+- **Beta version:** 132.0.2957.11

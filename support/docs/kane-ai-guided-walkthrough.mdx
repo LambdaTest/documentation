@@ -1,0 +1,57 @@
+---
+title: "Guided Walkthrough of KaneAI"
+sidebarTitle: "Guided Walkthrough"
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough']
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+This guided walkthrough will help you understand the various components and features available, ensuring you can efficiently navigate and use the platform for managing your automated tests after you have successfully [run your first test](/support/docs/kane-ai-web-test/).
+
+<Note>
+Navigate to the [Test Manager](https://test-manager.lambdatest.com/projects) and [select your project and folder](/support/docs/kane-ai-web-test/#step-3-save-your-test-case) into which you have saved your tests to manage your tests.
+</Note>
+## Projects Page
+All the Test Cases generated are accessible from the Test Manager page in the Test Cases section. Each of the Test Case has a unique `Test Case ID` and `Labels` to uniquely identify them. The top section displays the project name, number of Test Cases in that particular project folder, Test Plans, Builds and its creation details.
+
+On this page you have other things such as **filters**, **adding test cases**, **importing csv files** and much more. You can also filter through all of the test cases on the basis of the status, creator, and tags.
+
+Click on the three dots (...) of your desired Test Case to Edit or Delete that particular Test Case.
+
+<img loading="lazy" src='/assets/images/kane-ai/kane-ai-project.png' alt="Image" />
+
+## Understanding Test Case Details
+The test case dashboard provides a comprehensive view of a specific test case, including its summary, code, runs, issues, and version history.
+
+### Summary
+
+- **Project:** The name of the project to which the test case belongs.
+- **Creator:** The person who created the test case.
+- **Created:** When was the test case created.
+- **Description:** A brief overview of the test case's purpose and steps.
+- **Steps Performed:** List of all the steps performed during that session.
+- **HyperExecute:** This button will trigger your steps to the [HyperExecute](/support/docs/getting-started-with-hyperexecute/).
+- **Edit Test Steps:** This button will open the playground where you can edit your test cases.
+
+<img loading="lazy" src='/assets/images/kane-ai/testcase-summary.png' alt="Image" />
+
+### Code
+
+The code page within the test manager provides a comprehensive view of the code used to execute a specific test case. This page typically includes the language and the framework used to create the test case code.
+
+- **Generate New Code:** If you want to generate another codebase in different language or framework for the same test case.
+- **HyperExecute:** This button will trigger your steps to the HyperExecute.
+- **View Code:** This opens the code in a built-in separate editor from where you can edit your code files and Download it as well.
+- **Download:** To download the entire test case code files.
+
+<img loading="lazy" src='/assets/images/kane-ai/testcase-code.png' alt="Image" />
+
+### Runs
+It shows the history of the test executed with meta data like time for the test completion, who has executed the test, browser and the Operating System.
+
+### Issues
+The number of reported issues or defects during test execution.
+
+### Version History
+
+This provides a detailed overview of the changes made to a test case over time. This functionality allows you to track the evolution of your test cases, identify the root causes of issues, and revert to specific versions if necessary.

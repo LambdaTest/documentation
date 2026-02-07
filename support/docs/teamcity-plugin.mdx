@@ -1,0 +1,101 @@
+---
+title: "TeamCity Plugin Integration"
+sidebarTitle: "TeamCity Plugin"
+keywords: [ "TeamCity Plugin", "TeamCity Integration with Selenium", "TeamCity Tntegration", "TeamCity Lambdatest", "TeamCity Lambdatest Integration", "TeamCity Tutorial", "Selenium Testing with TeamCity" ]
+---
+The TeamCity plugin will help you to manage your Lambdatest credentials, write and execute tests directly on the Lambdatest platform, and test your local, internal, dev, or stage environments securely with the help of Lambda Tunnel.
+
+## Downloading The TeamCity Plugin From Marketplace
+
+Visit the [JetBrains marketplace](https://plugins.jetbrains.com/) and enter "Lambdatest" in the search bar.
+
+![jetbrain](/assets/images/teamcity-plugin/teamcity-plugin-13-768x401.webp)
+
+You will need to clear the filter (set as default by JetBrains) to view the result, as shown in the image below.
+
+![marketplace](/assets/images/teamcity-plugin/teamcity-plugin-20-604x270.webp)
+
+Once you do, you can see the Lambdatest Plugin appearing in the search results.
+
+![marketplace](/assets/images/teamcity-plugin/teamcity-plugin-15-1-768x348.webp)
+
+Select the Lambdatest test result and click on Get button to download the Lambdatest’s TeamCity Plugin.
+
+![teamcity plugin](/assets/images/teamcity-plugin/teamcity-plugin-16-768x257.webp)
+
+## Installing the TeamCity plugin
+* * *
+To install the TeamCity plugin, you need to download the compressed zip file from [here](https://plugins.jetbrains.com/plugin/download?rel=true&updateId=105571). Once downloaded, follow the below steps to upload the plugin on your TeamCity server.
+
+1. Go to your server **Administration** and then to **Plugins List**
+
+![teamcity plugin](/assets/images/teamcity-plugin/server-administration.webp)
+
+2. Now inorder to add the Lambdatest’s TeamCity plugin, choose the option Upload ZIP file and upload the earlier downloaded zip file.
+
+![teamcity plugin](/assets/images/teamcity-plugin/lambdatest-plugins.webp)
+
+3. You will need to restart your TeamCity server. Once done, the Lambdatest TeamCity plugin will be shown, as an *External plugin*, as shown below.
+
+![teamcity plugin](/assets/images/teamcity-plugin/lambdatest-plugins-list.webp)
+
+That's it. The Lambdatest TeamCity plugin has been added in your TeacmCity Server successfully.
+
+## Configuring Project To Use Lambdatest TeamCity Plugin
+* * *
+For demo purpose, we have used this sample Github repository. Below are the steps on how to configure the project:
+
+1. In this sample TeamCity server project, we have used two basic steps as a part of the test, based on the Github repo.
+
+![teamcity github](/assets/images/teamcity-plugin/teamcity-server-project.webp)
+
+2. Now to configure your *Build Features*, visit the **Build Features** from the left bar and click on the button to **Add Build Feature**.
+
+![build feature](/assets/images/teamcity-plugin/build-feature.webp)
+
+3. In the drop down box that appears, choose the **Lambdatest** feature.
+
+![lambdatest feature](/assets/images/teamcity-plugin/lambdatest-features.webp)
+
+4. Now a window will appear where you can configure the Lambdatest feature. Insert your Lambdatest username and access key into it and save the feature. You can fetch your username and access key from your Lambdatest [profile](https://accounts.lambdatest.com/detail/profile).
+
+![lambdatest profile](/assets/images/teamcity-plugin/configure-lambdatest-feature.webp)
+
+5. Upon saving, you can see that the Lambdatest build feature has been added in your project.
+
+![teamcity project](/assets/images/teamcity-plugin/lt-build-features.webp)
+
+That’s it. Your project has been successfully configured to run tests using the Lambdatest TeamCity plugin.
+
+## Executing The Test On Lambdatest
+* * *
+Upon executing the project, you can see the test status and the automation report directly on your [automation dashboard](https://automation.lambdatest.com/timeline/).
+
+![automation dashboard](/assets/images/teamcity-plugin/test-execution.webp)
+
+## Configuring Lambda Tunnel For Local Testing
+* * *
+To test your locally or privately hosted website, or your dev or stage environments securely, you can make use of [Lambda Tunnel](/support/docs/testing-locally-hosted-pages/). To activate the Tunnel in your project, while adding the Lambdatest build feature, make sure to tick the **Enable LAMBDATEST TUNNEL** option.
+
+![lambda tunnel](/assets/images/teamcity-plugin/enable-lambda-tunnel.webp)
+
+If you want to save the Tunnel binary file in a specific location, you provide its path in the **LAMBDATEST TUNNEL Path** option. If not provided, ‘checkout directory’ will be chosen to download and install the Lambda Tunnel Binary.
+
+Also, you can also customize this tunnel based on your requirements, using the Tunnel modifiers. For example, we have used the *–tunnelName* modifier to customize the Tunnel connection name.
+
+`--tunnelName TeamCity`
+
+To know more about the Tunnel modifiers, please refer [here](/support/docs/lambda-tunnel-modifiers/).
+
+## Testing Privately Hosted Site Using Lambdatest TeamCity Plugin
+* * *
+After the above configuration of Lambda Tunnel in your project’s Build Features, you can now execute your local projects and test your localhost, dev, or even stage environments securely with just a click.
+
+Once you run your tests, you can see the Lambda Tunnel getting activated during your test execution, on the toolbar of your Lambdatest’s automation dashboard, as shown below.
+
+![automation tunnel](/assets/images/teamcity-plugin/automation-testing-dashboard.webp)
+
+* * *
+
+That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+

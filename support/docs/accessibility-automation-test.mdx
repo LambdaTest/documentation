@@ -1,0 +1,109 @@
+---
+title: "Automating Accessibility Testing with Selenium"
+sidebarTitle: "Selenium"
+keywords:
+  [
+    "LambdaTest",
+    "Accessibility",
+    "Testing",
+    "Automation",
+    "Accessibility Testing Settings",
+  ]
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+import { GitHubButton } from "/snippets/GitHubButton.mdx";
+
+This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
+
+<Warning > Compatible only with Chrome and Edge browser versions >= 90.</Warning>
+
+## Prerequisites
+
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Setup your local machine as per your testing framework.
+
+## Step-by-Step Guide to Trigger Your Test
+
+### Step 1: Setup Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+<Check> 
+**SAMPLE REPO**
+
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
+
+<GitHubButton url="https://github.com/LambdaTest/lambdatest-accessibility-selenium" />
+</Check>
+
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+
+Configure the desired capabilities based on your test requirements. For example:
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("browserName", "chrome");
+capabilities.setCapability("version", "70.0");
+capabilities.setCapability("platform", "win10"); # If this cap isn't specified, it will just get the any available one
+capabilities.setCapability("build", "LambdaTestSampleApp");
+capabilities.setCapability("name", "LambdaTestJavaSample");
+```
+
+<Warning>
+  You can generate capabilities for your test requirements with the help of our
+  inbuilt 🔗{" "}
+  <a href={`https://lambdatest.com/capabilities-generator/`}>
+    Capabilities Generator Tool
+  </a>
+  .
+</Warning>
+
+### Step 2: Establish User Authentication
+
+Now, you need to export your environment variables _LT_USERNAME_ and _LT_ACCESS_KEY_ that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+<Tabs>
+
+<Tab title="Linux / MacOS">
+  <div className="lambdatest__codeblock">
+    ```language-bash
+    {`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+    ```
+  </div>
+</Tab>
+
+<Tab title="Windows">
+  <div className="lambdatest__codeblock">
+  ```language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  ```
+</div>
+</Tab>
+
+</Tabs>
+
+### Step 3: Configure the Necessary Capabilities
+
+To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
+
+```java
+capability.setCapability("accessibility", true); // Enable accessibility testing
+capability.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
+capability.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
+capability.setCapability("accessibility.needsReview", true); // Include issues that need review
+```
+
+### Step 4: Execute and Monitor your Test
+
+Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
+
+```bash
+mvn test
+```
+
+![automation-dashboard](/assets/images/accessibility-testing/accessibility-automation.png)

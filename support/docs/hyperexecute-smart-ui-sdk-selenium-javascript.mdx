@@ -1,0 +1,185 @@
+---
+title: "UI Testing with Node.js using HyperExecute and SmartUI SDK"
+sidebarTitle: "JavaScript"
+keywords: ["smart ui testing in hyperexecute", "visual ui testing,image to image comparison", "regression testing tool", "perform visual ui testing online", "compare image to image", "selenium integration", "selenium javascript", "javascript"]
+---
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
+
+## Prerequisites
+
+To run the Tests on HyperExecute from your Local System, you are required:
+
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+
+## Step 1: Create a SmartUI Project
+
+The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
+
+1. Go to [Projects page](https://smartui.lambdatest.com/)
+2. Click on the `new project` button
+3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
+4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
+5. Click on the **Submit**.
+
+<Note>
+INFO
+
+After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
+</Note>
+
+## Step 2: Setup Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+<Check>
+**SAMPLE REPO**
+
+Download or Clone the code sample for the Selenium - JavaScript framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<GitHubButton url="https://github.com/LambdaTest/hyperexecute-smartui-sdk-selenium-javascript" />
+</Check>
+
+### Configure Your Test Suite
+
+In the `sdkCloud.js` file, update the following capabilities
+
+```java
+let capabilities = {
+  "LT:Options": {
+    project: "PROJECT_NAME", // Enter your Project Name
+    name: "TEST_NAME", // Provide the name of your test
+    build: "BUILD_NAME", // Mention your desired build name
+  },
+};
+```
+
+## Step 3: Setup the CLI in your Test Suite
+
+After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
+
+### Download the HyperExecute CLI
+
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+
+You can download the CLI for your desired platform from the below mentioned links:
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+### Setup Environment Variable
+
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+<Tabs>
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+  ```
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```bash
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+  ```
+
+</Tab>
+</Tabs>
+
+## Step 4: Configure YAML in your Test Suite
+
+You need to edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
+
+```yaml
+---
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+
+runson: win
+
+autosplit: true
+
+retryOnFailure: true
+maxRetries: 1
+
+concurrency: 1
+
+env:
+  CACHE_DIR: m2_cache_dir
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
+
+cacheKey: '{{ checksum "package.json" }}'
+cacheDirectories:
+  - node_modules
+
+pre:
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npx smartui config:create smartui-web.json
+
+post:
+  - cat hyp-smartui-sdk.yaml
+
+testDiscovery:
+  type: raw
+  mode: static
+  command: ls sdk/sdkCloud.js
+
+testRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.json
+
+jobLabel: ["smart-ui-sdk", "hyperexecute", "selenium", "javascript"]
+```
+
+<Note>
+INFO
+
+It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
+
+```bash
+pre:
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npx smartui config:create smartui-web.json
+```
+</Note>
+
+## Step 5: Execute your Test Suite
+
+<Note>
+
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Note>
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```
+
+OR use this command if you have not exported your username and access key in the step 3.
+
+```bash
+./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```
+
+## Step 6: Monitor the Test Execution
+
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/selenium-js.png)

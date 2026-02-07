@@ -1,0 +1,90 @@
+---
+title: "Cypress Testing On Different Screen Resolutions"
+sidebarTitle: "Test On Different Screen Resolutions"
+keywords: ['cypress screen resolution', 'cypress viewport testing', 'cypress responsive testing', 'cypress lambdatest']
+---
+
+As part of a responsive design process, it is important to ensure that websites or web applications under test run properly on different screen sizes.
+
+LambdaTest lets you test websites with Cypress across different screen resolutions on over 50+ browser versions on cloud.
+
+Cypress provides website testing on different resolutions using
+
+* Viewports
+* Full Screen mode
+
+
+## Test on Viewports
+
+When you define a viewport, Cypress automatically uses the browser's scaling capabilities to customize the size of the web application. Therefore, on defining a large viewport, Cypress will scale down the web application. If you specify a small viewport, Cypress will upscale it.
+
+To set the viewport's width and height globally, you need to define `viewportWidth` and `viewportHeight` in the Cypress configuration file.
+
+**Syntax**
+
+```js
+cy.viewport(550, 750) // Set viewport to 550px x 750px
+cy.viewport('iphone-6') // Set viewport to 375px x 667px
+```
+For more details, please check the [official Cypress documentation](https://docs.cypress.io/api/commands/viewport#Syntax).
+
+## Test on Full Screen mode
+
+<Check>
+**TIP**
+
+The use of full-screen mode in conjunction with viewports can help you achieve good results when performing screen resolution testing for web applications.
+</Check>
+
+To test your web applications in full screen mode, use the following event to change the browser options.
+
+```js
+before:browser:launch
+```
+
+For **Cypress v9 and below**, use the following script in the `plugin/index.js` file.
+
+```js
+module.exports = (on, config) => {
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    if (browser.family === 'chromium' && browser.name !== 'electron') {
+      launchOptions.args.push('--start-fullscreen')
+
+      return launchOptions
+    }
+
+    if (browser.name === 'electron') {
+      launchOptions.preferences.fullscreen = true
+
+      return launchOptions
+    }
+  })
+}
+```
+
+For **Cypress v10 and above**, you can add the below code in `cypress.config.js` file.
+
+```js
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+          launchOptions.args.push('--start-fullscreen')
+
+          return launchOptions
+        }
+
+        if (browser.name === 'electron') {
+          launchOptions.preferences.fullscreen = true
+
+          return launchOptions
+        }
+      })
+    }
+  }
+})
+```

@@ -1,0 +1,286 @@
+---
+title: "Appium With Cucumber"
+sidebarTitle: "Cucumber"
+keywords: ['appium','java','cucumber','lambdatest java','framework on lambdatest','app testing','real devices']
+---
+
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from '/snippets/BrandName.mdx';
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+<div>
+<RealDeviceTag value="Real Device" />
+</div>
+<div>
+<VirtualDeviceTag value="Virtual Device" />
+</div>
+
+In this documentation, you will learn how to trigger a automation script of **Cucumber** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
+
+## Prerequisites
+
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- You should have [Java client library](https://github.com/appium/java-client) installed for Selenium and Appium.
+- Install the latest Java development environment i.e. JDK 8 or higher. We recommend using the < JDK 11 version.
+- Download and install **Maven** from [the official website](https://maven.apache.org/). For **Linux/macOS** you can use [Homebrew](https://brew.sh/) package manager.
+
+## Try our Sample Repository
+
+### Step 1: Get a Sample Project
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+<Check>
+**SAMPLE REPO**
+
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
+<GitHubButton url="https://github.com/LambdaTest/LT-appium-java-cucumber" />
+</Check>
+
+### Step 2: Setup the Environment Variables
+
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
+
+<Tabs>
+  <Tab title="Linux / MacOS">
+    ```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+  </Tab>
+  <Tab title="Windows">
+    ```powershell
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+  </Tab>
+</Tabs>
+
+### Step 3: Upload your Application
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+
+Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
+
+<Tabs>
+  <Tab title="App File">
+    ```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
+    ```
+  </Tab>
+
+  <Tab title="App URL">
+    ```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
+    ```
+  </Tab>
+</Tabs>
+
+<Check>
+**TIP**
+
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
+</Check>
+
+### Step 4: Update your Automation Script
+
+An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
+
+```java highlight={52}
+import java.net.URL;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.TestNGCucumberRunner;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.AppiumDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+
+import org.openqa.selenium.JavascriptExecutor;
+import java.net.MalformedURLException;
+
+
+@CucumberOptions(
+        features = "src/main/java/Features/todo.feature",
+        glue = {"stepDefinitions"},
+        plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+
+public class TestRunner extends AbstractTestNGCucumberTests {
+    
+    private TestNGCucumberRunner testNGCucumberRunner;
+  
+    public static RemoteWebDriver connection;
+    
+    @BeforeClass(alwaysRun = true)
+    public void setUpCucumber() {
+         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    }
+    
+    @BeforeMethod(alwaysRun = true)
+    @Parameters({ "deviceName", "platformVersion", "platformName" })
+    public void setUpClass(String deviceName, String platformVersion, String platformName) throws Exception {
+
+            String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");      //Enter your LambdaTest username at the place of YOUR_LT_USERNAME 
+            String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESSKEY" : System.getenv("LT_ACCESS_KEY");     //Enter your LambdaTest accessKey at the place of YOUR_LT_ACCESSKEY
+
+            DesiredCapabilities capability = new DesiredCapabilities();         
+
+
+            capability.setCapability("platformName", platformName);
+            capability.setCapability("deviceName", deviceName);
+            capability.setCapability("platformVersion",platformVersion);
+                        
+            capability.setCapability("build", "Native App automate Demo");
+            capability.setCapability("test", "Test Parallel");          
+            capability.setCapability("isRealMobile", true);
+            capability.setCapability("app","lt://proverbial-android");     //Enter the app url here
+            capability.setCapability("network", false);
+            capability.setCapability("video", true);
+            capability.setCapability("console", true);
+            capability.setCapability("visual", true);
+
+            String gridURL = "https://" + username + ":" + accesskey + "@mobile-hub.lambdatest.com/wd/hub";
+            System.out.println(gridURL);
+            connection = new RemoteWebDriver(new URL(gridURL), capability);
+            System.out.println(capability);
+            System.out.println(connection.getSessionId());
+}
+
+
+    @DataProvider
+    public Object[][] features() {
+        return testNGCucumberRunner.provideScenarios();
+    }
+ 
+    @AfterClass(alwaysRun = true)
+    public void tearDownClass() {
+        testNGCucumberRunner.finish();
+    }
+}
+```
+
+<Check>
+**TIP**
+
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+</Check>
+
+### Step 5: Configure the Test Capabilities
+
+You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
+
+The capabilities object in the sample code are defined as:
+
+<Tabs>
+  <Tab title="Single">
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="1" parallel="tests"
+	thread-count="3" >
+    <test name="ANDROIDTEST" annotations="JDK"
+		preserve-order="true">
+        <parameter name="deviceName" value=".*"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner" />
+        </classes>
+    </test> <!-- Test -->
+</suite>
+```
+
+  </Tab>
+
+  <Tab title="Parallel">
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="1" parallel="tests"
+       thread-count="2">
+    <test name="Galaxy" annotations="JDK"
+          preserve-order="true">
+        <parameter name="deviceName" value="Galaxy.*"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="OnePlus" annotations="JDK"
+          preserve-order="true">
+        <parameter name="deviceName" value="Pixel.*"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite>
+```
+
+  </Tab>
+</Tabs>
+
+<Check>
+**TIP**
+
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+</Check>
+
+<Note>
+**INFO**
+
+- You must add the generated **APP_URL** to the `app` capability in the config file.
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+
+</Note>
+
+### Step 6: Execute and Monitor your Tests
+
+- Run the following commands to install the required dependencies:
+
+  ```bash
+  mvn clean install
+  ```
+
+- The tests can be executed in the terminal using the following command:
+
+  <Tabs>
+  <Tab title="Single">
+
+  ```bash
+  mvn test -D suite=single.xml
+  ```
+  </Tab>
+
+  <Tab title="Parallel">
+
+  ```bash
+  mvn test -D suite=parallel.xml
+  ```
+
+  </Tab>
+  </Tabs>
+
+<Warning>
+Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
+</Warning>
+
+## Reference Guides
+
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+

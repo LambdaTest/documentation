@@ -1,0 +1,258 @@
+---
+title: "Getting Started With Cypress Testing"
+description: "Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool."
+sidebarTitle: "Overview"
+---
+
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+Integrating LambdaTest with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
+
+In this guide, learn how to get started with Cypress testing on the LambdaTest platform. We will use Cypress’ kitchen sink sample app to execute our tests.
+
+## Prerequisites
+
+<Check>
+**SAMPLE REPO**
+
+Before we get started, make sure to clone the LambdaTest's sample Cypress Cloud repo, used in this document.
+
+<GitHubButton url="https://github.com/LambdaTest/Cypress-Cloud" />
+</Check>
+
+You can run your first Cypress test on the LambdaTest platform in a few simple steps:
+
+<Steps>
+<Step>
+Clone the LambdaTest-Cypress-Cloud GitHub repo and navigate to the cloned directory.
+
+```bash lines
+git clone https://github.com/LambdaTest/Cypress-Cloud.gitcd Cypress-Cloud
+```
+</Step>
+<Step>
+To run Cypress tests, you will need to set your LambdaTest username and access key in the environment variables. You can get them from the LambdaTest Automation Dashboard.
+
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
+</Frame>
+
+<CodeGroup>
+```bash lines Windows
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+```bash lines macOS/Linux
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</CodeGroup>
+</Step>
+
+<Step>
+Install Node.js version 12 or higher. You can download it from the [official Node.js website](https://nodejs.org/en/download/).
+</Step>
+</Steps>
+
+## Running Your First Test
+
+Following are the steps to run your first Cypress test on the LambdaTest platform.
+
+<Steps>
+<Step>
+Install the LambdaTest-Cypress CLI using the below command.
+
+```bash lines
+npm install -g lambdatest-cypress-cli
+```
+</Step>
+<Step>
+Clone the Cypress kitchen sink repo using the following command.
+
+<CodeGroup>
+```bash Cypress v10 lines
+# Clone the kitchen sink repo
+git clone https://github.com/cypress-io/cypress-example-kitchensink.git
+
+# Go to the cloned directory
+cd cypress-example-kitchensink
+```
+
+```bash Cypress v9 lines
+# Clone the kitchen sink repo
+git clone https://github.com/cypress-io/cypress-example-kitchensink.git
+
+# Go to the cloned directory
+cd cypress-example-kitchensink
+
+# Checkout to this commit
+git checkout ab10094ef7b199ae7febafec413a0626414bcd3c
+```
+</CodeGroup>
+
+Once you clone the kitchen sink repo, below will be the structure of your Cypress project.
+
+<CodeGroup>
+```bash Cypress v10 lines
+...
+cypress
+|-- fixtures
+|-- e2e
+|-- support
+cypress.config.js
+...
+```
+
+```bash Cypress v9 lines
+...
+cypress
+|-- fixtures
+|-- integration
+|-- plugins
+|-- support
+cypress.json
+...
+```
+</CodeGroup>
+</Step>
+
+<Step>
+Install the npm dependencies by passing the below command.
+
+```bash lines
+npm install
+```
+</Step>
+<Step>
+Create `lambdatest-config.json` file that contains configurations like auth, capabilities, test settings, etc. which need to be successfully executed at LambaTest.
+
+Use `init` command to generate the sample configuration files.
+
+<CodeGroup>
+```bash Cypress v10 lines
+lambdatest-cypress init --cv=10
+```
+
+```bash Cypress v9 lines
+lambdatest-cypress init
+```
+</CodeGroup>
+
+Once you run the above command, below is the project structure for the `lambdatest-config.json` file.
+
+<CodeGroup>
+
+```json Cypress v10 
+{
+  "lambdatest_auth": {
+     "username": "<Your LambdaTest username>",
+     "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+     {
+        "browser": "Chrome",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     },
+     {
+        "browser": "Firefox",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     }
+  ],
+  "run_settings": {
+     "cypress_config_file": "cypress.config.js",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.cy.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "10.0.0"
+     }
+  },
+  "tunnel_settings": {
+     "tunnel": false,
+     "tunnel_name": null
+  }
+}
+```
+
+```json Cypress v9 lines expandable
+app
+{
+  "lambdatest_auth": {
+     "username": "<Your LambdaTest username>",
+     "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+     {
+        "browser": "Chrome",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     },
+     {
+        "browser": "Firefox",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     }
+  ],
+  "run_settings": {
+     "cypress_config_file": "cypress.json",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.spec.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "9.0.0"
+     }
+  },
+  "tunnel_settings": {
+     "tunnel": false,
+     "tunnel_name": null
+  }
+}
+```
+</CodeGroup>
+</Step>
+
+<Step>
+Pass the below command to run the test.
+
+```bash lines
+lambdatest-cypress run
+```
+</Step>
+<Step>
+Visit LambdaTest Automation dashboard to view your test results. The CLI also has a link to view the Cypress test build.
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/cypress_results-3d56e11a24865ebbbc3031eb5e8e66d2.png)
+</Frame>
+</Step>
+</Steps>
+
+## Testing Locally Hosted or Privately Hosted Projects
+
+To tests locally hosted websites on the LambdaTest platform, you need to setup [LambdaTest tunnel](/support/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/support/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the LambdaTest tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
+
+Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel\_settings" as shown below:
+
+```json lines expandable
+  "tunnel_settings": {
+		"tunnel": true,
+		"tunnel_name": "LT_Tunnel"
+	}
+```
+
+You can provide the name of the **LambdaTest tunnel** as per your requirements.

@@ -1,0 +1,45 @@
+---
+title: "XCUI Supported Capabilities"
+sidebarTitle: "Supported Capabilities"
+keywords: ['xcui', 'xcuitest', 'lambdatest xcui', 'framework on lambdatest', 'xcui capabilities', 'app testing', 'real devices', 'ios testing', 'xcuitest capabilities']
+---
+
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+
+<div>
+<RealDeviceTag value="Real Device" />
+</div>
+<div>
+<VirtualDeviceTag value="Virtual Device" />
+</div>
+This document provide details about the features and capabilities supported for XCUI Framework on LambdaTest.
+
+<Note>
+The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+</Note>
+
+| Capability Name | Data Type | Description |
+|------|-----------|-------------|
+| app <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |
+| testSuite <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| String | Enter the test suite id generated while uploading the test suite to the platform. Example: `lt://APP123456789123456789` |
+| device <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| String | Enter the device name and os version in `DeviceName-OSVersion` format. Example: `"device" :  ["Galaxy S20-10","Pixel 3 XL-9"]` |
+| video <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Boolean | When you pass the `video: true`, it will generate the video for all the tests that are executed. |
+| queueTimeout <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Integer | Enter the time in seconds after which you want your build to timeout from queue. Example: `queueTimeout: 300` |
+| idleTimeout <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Integer | Enter the time in seconds for maximum running time of a test in a build. Example: `idleTimeout: 120`|
+| deviceLog <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Boolean | To generate the device logs, pass the value as `deviceLog: true` |
+| network <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| String | To generate the network logs, pass the value as `network: true`. |
+| build <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| String | To set the Espresso build name. Example: `build: My Espresso Build`. |
+| geoLocation <div><RealDeviceTag value="Real Device" /></div>| String | Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test. Example: `geoLocation: FR`|
+| gpsLocation <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.|
+| tunnel, tunnelName <div><RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /></div>| Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
+| enableBluetooth <div><RealDeviceTag value="Real Device" /></div>| Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
+| resignApp <br />Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
+| testRemarks <br /><RealDeviceTag value="Real Device" />| Boolean| Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
+| retries <br /><RealDeviceTag value="Real Device" />| Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
+
+<Info>
+**NOTE**
+
+Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
+</Info>

@@ -1,0 +1,11 @@
+export const BrandName = ({ type = 'default' }) => {
+    const getBrandName = () => 'LambdaTest';
+    const getBrandNameLowercase = () => 'lambdaTest';
+
+    if (type === 'lowercase') {
+        return getBrandNameLowercase();
+    }
+    return getBrandName();
+};
+
+export const brandName = 'lamdaTest';

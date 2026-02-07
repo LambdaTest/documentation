@@ -1,0 +1,32 @@
+---
+id: hyperexecute-release-notes-2-4-8
+title: Version 2.4.8
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+## HyperExecute: Set Dynamic Email Address for Report Sharing 
+HyperExecute CLI added an enhancement in the [`--vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag providing greater flexibility in specifying email addresses for report and artifact sharing. You can now use a variable to dynamically set the email address used to share reports or artifacts. This gives you more flexibility than hardcoding the email address in the YAML configuration file.
+
+```yaml hyperexecute.yaml highlight={5-8}
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+  email:
+      to:
+        - "${email}"
+        - "${email1}"
+```
+
+Pass the value of your email address via CLI by running the command
+
+```bash
+./hyperexecute --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
+```
+<Note>
+📕 Read the documentation - [How to dynamically set your email address?](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
+</Note>

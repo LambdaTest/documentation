@@ -1,0 +1,89 @@
+---
+title: "Local Testing Using Puppeteer"
+sidebarTitle: "Local Testing"
+---
+
+On LambdaTest, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new LambdaTest tunnel binary. To establish a secure and unique tunnel connection between your system and LambdaTest cloud servers, the LambdaTest tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+
+Learn how to perform local testing using Puppeteer across 40+ real browsers and operating systems.
+
+## Puppeteer Testing Of Locally Hosted Websites
+
+You can run Puppeteer testing of locally hosted websites and web apps via LambdaTest tunnel binary.
+
+<Steps>
+<Step>
+Clone the LambdaTest-Puppeteer repository on your system.
+</Step>
+<Step>
+Install the npm dependencies.
+
+```bash lines
+npm install
+```
+</Step>
+
+<Step>
+In order to run your Puppeteer tests, you will need to set your LambdaTest username and access key in the environment variables.
+
+<CodeGroup>
+```bash lines Windows
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+```bash lines macOS/Linux
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</CodeGroup>
+</Step>
+<Step>
+To establish a tunnel connection between your local device and LambdaTest, download the binary file based on your OS.
+- Windows **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/32bit/LT_Windows.zip)**
+- macOS **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/32bit/LT_Mac.zip)**
+- Linux **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/linux/32bit/LT_Linux.zip)**
+</Step>
+<Step>
+Extract the downloaded binary file.
+</Step>
+<Step>
+Navigate to the directory or folder where you extracted the binary file in the Command Prompt.
+</Step>
+<Step>
+Run the below command in the terminal.
+
+```bash lines
+./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
+```
+</Step>
+<Step>
+In desired capability, add the capability `tunnel: true`.
+</Step>
+</Steps>
+
+If multiple tunnels are running, you can add `tunnel` and `tunnel ID` capabilities.
+
+```json 
+'use strict';
+const { strict } = require('once');
+const puppeteer = require('puppeteer');
+const expect = require('chai').expect;
+
+(async () => {
+    const capabilities = {
+        'browserName': 'Chrome',
+        'browserVersion': 'latest',
+        'LT:Options': {
+            'platform': 'Windows 10',
+            'build': 'puppeteer-build-1',
+            'name': 'My first Puppeteer test',
+            'resolution':'1366x768',
+            'user': process.env.LT_USERNAME || "Your Username",
+            'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",
+            'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+            'tunnelName': '' // Optional
+        }
+   };
+```
+
+You can view test reports for your local tests on the LambdaTest automation dashboard.

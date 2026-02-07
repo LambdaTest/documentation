@@ -1,0 +1,217 @@
+---
+title: "Commonly Used APIs For Mobile App Testing"
+sidebarTitle: "APIs For App Testing"
+keywords:
+- apis for manual app testing
+- api sfor app automation
+- mobile app testing apis
+
+---
+
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+<div>
+<RealDeviceTag value="Real Device" /> 
+</div>
+<div>
+<VirtualDeviceTag value="Virtual Device" />
+</div>
+
+In this documentation, we look at some APIs that will help you optimize your mobile app testing workflow. If you are performing live or automated app testing, you can use these APIs in your scripts to perform various actions.
+
+## Fetching The Devices Available for Testing
+<RealDeviceTag value="Real Device" />
+To fetch the Devices that are available for running Tests.
+
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/list?region=us"
+```
+
+| PARAMETER | EXAMPLE | DESCRIPTION |
+|-----------------|-------------|------------|
+| `region` | `region=us` <br/> OR <br/> `region=ap` <br/> OR <br/> `region=eu`  | We can add a region parameter which will provide us the devices available in the relevant real device cloud. <br/> `us` - USA <br/> `ap` - Asia Pacific <br/> `eu` - Europe |
+
+## Uploading your Application
+
+
+| PARAMETER | EXAMPLE | DESCRIPTION |
+|-----------------|-------------|------------|
+| `custom_id` | `-F "custom_id="Proverbial_1.0"` | You do not have to remember the `app_URL` and only use the `custom_id` to run your automation on the same app. |
+| `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way <BrandName /> stores the link. <br/> Used when we Upload using App URL |
+| `visibility` | `-F "visibility=team"` <br/> DEFAULT: `individual` | Used to change the visibility of the application being uploaded. Once the app is uploaded using the `team`, everyone in the organisation can use the same URL to run the tests. |
+
+---
+
+**Using App File:**
+
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/Appname.apk" -F "name=appname"
+```
+
+**Using App URL:**
+
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
+```
+
+
+<Check>
+**TIP**
+
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789`
+</Check>
+
+## Fetching your Applications
+
+<Tabs>
+<Tab title="Android">
+```bash
+curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=android&level=user"
+```
+</Tab>
+
+<Tab title="iOS">
+```bash
+curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=ios&level=user"
+```
+</Tab>
+</Tabs>
+
+Shown below is the response to the above cURL request.
+
+```json
+{
+  "metaData": {
+    "type": "ios",
+    "total": 1
+  },
+  "data": [
+    {
+      "app_id": "APP100245789181570497850",
+      "name": "proverbial_ios.ipa",
+      "type": "ios",
+      "updated_at": "2022-05-10T11:19:30.000Z",
+      "shared": false,
+      "source": "web-client"
+    }
+  ]
+}
+```
+
+## Deleting your Application
+
+To delete your uploaded apps, run the below cURL command. 
+
+```bash
+curl --location --request DELETE "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/delete" \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "appIds" : "APPID1,APPID2"
+}'
+```
+
+Shown below is the response to the above cURL request.
+
+```json
+{
+  "message": "Deleted successfully."
+}
+```
+
+## Processing check for your Application
+
+To unlock features such as network logs, image injection, and screenshotunblock feature for your application, app needs to undergo a processing phase. This processing takes a few minutes after the application is uploaded. You can verify if the processing is complete before running your automation script using the following API.
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
+--header 'Authorization: Basic <YOUR_BASIC_AUTH>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "appId": "APP10160161171698993659206876",
+    "imageInjectionEnabled": true,
+    "screenshotUnblockEnabled": true
+}'
+```
+
+The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
+
+```json
+{
+    "data": {
+        "imageinjection_ready": false,
+        "patched_url": "",
+        "screenshotunblock_ready": false,
+        "status": "success"
+    },
+    "status": "success"
+}
+```
+
+
+## Fetching the concurrency details
+
+To get your concurrency details, run the below cURL command. 
+
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/org/concurrency"
+```
+
+Shown below is the response to the above cURL request.
+
+```json
+{
+   "data":{
+      "created":0,
+      "max_concurrency":10,
+      "max_queue":150,
+      "pqueued":0,
+      "queued":0,
+      "running":0
+   },
+   "status":"success"
+}
+```
+
+## Generate publicly shareable build and test links
+
+<div>
+<RealDeviceTag value="Real Device" />
+</div>
+<div>
+<VirtualDeviceTag value="Virtual Device" />
+</div>
+To generate public **shareable build link**, run the below cURL command. 
+
+```bash
+curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' -H 'Content-Type: application/json' -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --data-raw '{"entityIds":["buildID"],"entityType":"App Automation Build","expiresAt":7}'
+```
+
+
+To generate public **shareable test link**, run the below cURL command. 
+
+```bash
+curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' -H 'Content-Type: application/json' -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --data-raw '{"entityIds":["testID"],"entityType":"App Automation Test","expiresAt":7}'
+``` 
+
+| Type            | Parameter                                                       | Description |
+|-----------------|-------------                                                    |------------|
+| Test            | `entityIds` <br/>  <br/> `entityType` <br/>   <br/> `expiresAt`  | For tests, pass `entityIds` as the test id and pass `entityType` as "App Automation Test" <br/> `expiresAt` is the number of days after which the shareable test link will expire '|
+| Build            | `entityIds` <br/>  <br/> `entityType` <br/> <br/> `expiresAt`  | For builds, pass `entityIds` as the build id and pass `entityType` as "App Automation Build" <br/> `expiresAt` is the number of days after which the shareable build link will expire '|
+ 
+
+---
+
+<Info>
+**Note**
+
+The shareable links are valid for a period of 7, 15, or 30 days, after which they will expire.
+</Info>
+
+<Warning>
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+
+</Warning>

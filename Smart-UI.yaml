@@ -1,0 +1,550 @@
+openapi: 3.0.0
+info:
+  title: LambdaTest API Documentation
+  version: 1.0.1
+servers:
+#- url: https://virtserver.swaggerhub.com/faisal097/ltma16mar19/1.0.1
+#  description: SwaggerHub API Auto Mocking
+- url: 'https://api.lambdatest.com/automation/smart-ui'
+- url: 'https://eu-api.lambdatest.com/automation/smart-ui'
+paths:
+  /v2/upload:
+    post:
+      tags:
+      - Upload Screenshots
+      summary: Upload any locally captured images to SmartUI for visual regression testing.Maximum Upload Size:100MB
+      description:  Using this API you can upload any local images to our cloud comparsion. You can upload images and add their meta-data information to map the screenshots for comparsion.
+      requestBody:
+        description: Pass your list of screenshots which needs to be uploaded for comparison. (Minimum 1 file required)
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type : object
+              required:
+                - files
+                - projectToken
+              properties:
+                files:
+                  type: string
+                  format: binary
+                projectToken:
+                  type : string
+                  example: "projectToken#key"
+                buildName:
+                  type: string
+                  example: "any"
+                baseline:
+                  type: boolean
+                  example: false
+                screenshotNames:
+                  type: string
+                  example: "screenshot1,screenshot2"
+                githubURL:
+                  type: string
+                  example: "https://api.github.com/repos/OWNER/REPO/statuses/commitId"
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadScreenshotResponseV2'
+        400:
+          description: Invalid/Missing Project Token . Missing mandatory parameters or wrong input.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadScreenshotError'
+      security:
+      - basicAuth: []
+  /build/status:
+    get:
+      tags:
+        - Get Build Status
+      summary: Fetch build status by buildId or buildName
+      description: >
+        This API fetches the build status along with the count of different screenshot statuses.
+        **Note:** When both `buildId` and `buildName` are provided in the request, `buildId` will be given priority over `buildName`.
+
+      parameters:
+      - name: projectToken
+        in: query
+        description: Validate and map the project in which the build exists
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: buildId
+        in: query
+        description: Unique ID for the build. You can get it from the URL of build's tests page.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: buildName
+        in: query
+        description: Name of the build. (For storybook project, provide build ID)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildStatusResponse'
+        400:
+          description: Mandatory parameters are missing/empty in request. Please add/correct them in query parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildStatusError'
+      security:
+        - basicAuth: []
+  /screenshot/build/status:
+    get:
+      tags:
+        - Get Screenshot Status
+      summary: Fetch build status by buildId / buildName
+      description: >
+        This API fetches the status of all screenshots which are uploaded to smartui using either build id or build name.
+        **Note:** When both `buildId` and `buildName` are provided in the request, `buildId` will be given priority over `buildName`.
+      parameters:
+      - name: projectToken
+        in: query
+        description: To validate the project in which you want to map your uploaded screenshots
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: buildId
+        in: query
+        description: You can pass the id of speicifc build if you need to map multiple screenshots of different tests to one build. (Optional)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: buildName
+        in: query
+        description: You can pass the name of specific build if you need to map multiple screenshots of different tests to one build. (Optional)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScreenshotStatusBuildResponse'
+        400:
+          description: Either Screenshot don't exist or bad input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScreenshotStatusBuildError'
+      security:
+        - basicAuth: []
+  /build/screenshots:
+    get:
+      tags:
+        - Fetch Build Screenshots
+      summary: Fetch SmartUI build screenshots by project_id and build_id 
+      description: >
+        This API fetches all screenshots of a particular build with comparison details.
+        **Note:** When both `build_id` and `build_name` are provided in the request, `buildId` will be given priority over `buildName`.
+      parameters:
+      - name: project_name
+        in: query
+        description: The name of the particular project (project id can also be used)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: project_id
+        in: query
+        description: Unique identifier of the project (project name can also be used)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: build_name
+        in: query
+        description: Build name can also be used instead of build Id (Optional)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: build_id
+        in: query
+        description: Fetches all the screenshots of a particular build
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: baseline
+        in: query
+        description: Fetches the screenshots of the baseline build of the project
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+          default: false
+      - name: screenshot_name
+        in: query
+        description: Fetches details of a specific screenshot
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildScreenshotResponse'
+        400:
+          description: Either Screenshot don't exist or bad input specified
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildScreenshotError'
+      security:
+        - basicAuth: []
+      servers:
+        - url: https://api.lambdatest.com/smartui/2.0
+components:
+  schemas:
+    ScreenshotStatusBuildError:
+      type: object
+      properties:
+        data: 
+          type: object
+          properties:
+            Screenshots:
+               type: string
+               example: "null"
+            buildId:
+               type: string
+               example: "f3e9bf89-4b61-4eb2-ad60-aaa72150d05e"
+            buildName:
+               type: string
+               example: build-1
+            projectName:
+               type: string
+               example: demo-project
+        status:
+          type: string
+          example: "success"
+    ScreenshotStatusBuildResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            Screenshots: 
+               type: array
+               items:
+                 $ref: '#/components/schemas/ScreenshotProperties'
+            buildId:
+               type: string
+               example: 50af60e1-8709-40b1-981f-19636de5a590
+            buildName:
+               type: string
+               example: 0e1915b
+            projectName: 
+               type: string
+               example: FPS-Monterey
+            buildStatus:
+               type: string
+               example: 1 Under Review
+                  
+        status:
+          type: string
+          example: "success"
+    ScreenshotProperties:
+       type: object
+       properties:
+          screenshotId:
+             type: string
+             example: 3137e779-e00a-4d88-8cbe-9ff2eb8cceaf
+          mismatchPercentage:
+             type: number
+             example: 12.65
+          threshold:
+             type: number
+             example: 1200
+          status:
+             type: string
+             example: Under Screening
+    UploadScreenshotError:
+      type: object
+      properties:
+        data:
+          type: string
+          example: Please Specify Project Token. It is a mandatory parameter
+        message:
+          type: string
+          example: error
+        status:
+          type: string
+          example: fail
+    UploadScreenshotResponseV2:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            filesUploaded:
+              type: object
+              properties:
+                error: 
+                  type: string
+                  example : ""
+                message:
+                  type: string
+                  example: ""
+                fileName:
+                  type: string
+                  example: "Screenshot 2022-12-05 at 5.00.37 PM.png"
+                screenshotName:
+                  type: string
+                  example: "screenshot1"
+            buildName:
+              type: string
+              example: "build-1"
+            buildId:
+              type: string
+              example: "f3e9bf89-4b61-4eb2-ad60-aaa72150d05e"
+            projectName:
+              type: string
+              example: "demo-project"
+            totalFilesUploaded:
+              type: integer
+              example: 1
+            projectId:
+              type: string
+              example: "65bd1675-fe42-40bf-9698-7610cb4211bd"
+        status:
+          type: string
+          example: "success"
+    UploadScreenshotResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            filesUploaded:
+              type: object
+              properties:
+                error: 
+                  type: string
+                  example : ""
+                message:
+                  type: string
+                  example: ""
+                key:
+                  type: string
+                  example: "2fcf6664-5d60-4098-9df8-6bb7b38230cc.png"
+                screenshotName:
+                  type: string
+                  example: "screenshot1"
+            buildName:
+              type: string
+              example: "build-1"
+            buildId:
+              type: string
+              example: "f3e9bf89-4b61-4eb2-ad60-aaa72150d05e"
+            projectName:
+              type: string
+              example: "demo-project"
+            status:
+              type: string
+              example: active
+            projectId:
+              type: string
+              example: "65bd1675-fe42-40bf-9698-7610cb4211bd"
+        status:
+          type: string
+          example: "success"
+    BuildStatusError:
+      type: object
+      properties:
+        data: 
+          type: object
+          properties:
+            data: 
+              type: object
+              properties:
+                changesFound:
+                  type: integer
+                  example: 0
+                approved:
+                  type: integer
+                  example: 0
+                underReview:
+                  type: integer
+                  example: 0
+                rejected:
+                  type: integer
+                  example: 0
+                buildId:
+                  type: string
+                  example: ""
+                buildName:
+                  type: string
+                  example: ""
+                projectName:
+                  type: string
+                  example: ""
+                buildStatus:
+                  type: string
+                  example: ""
+                message:
+                  type: string
+                  example: ""
+        message:
+          type: string
+          example: "Mandatory parameters are missing/empty in request. Please add/correct them in query parameters"
+        status:
+          type: string
+          example: "fail"
+    BuildStatusResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            changesFound:
+              type: integer
+              example: 2
+            approved:
+              type: integer
+              example: 3
+            underReview:
+              type: integer
+              example: 0
+            rejected:
+              type: integer
+              example: 0    
+            buildId:
+              type: string
+              example: "2423e94d-7f12-460c-8de7-e35db3698d8a"
+            buildName:
+              type: string
+              example: "c24dd3e"
+            projectName:
+              type: string
+              example: "web-project"
+            buildStatus:
+              type: string
+              example: "Changes Need Approval"
+            message:
+              type: string
+              example: "Fetched Build Status Successfully"
+        status:
+          type: string
+          example: "success"
+    BuildScreenshotError:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "smartui project not found for specified input"
+    BuildScreenshotResponse:
+      type: object
+      properties:
+        screenshots:
+          type: array
+          items:
+            $ref: '#/components/schemas/BuildScreenshotProperties'
+        build:
+          type: object
+          properties:
+            build_id:
+               type: string
+               example: c74f72b5-2dd9-42a4-9478-cd8174a56152
+            name:
+               type: string
+               example: build-1
+            baseline: 
+               type: boolean
+               example: false
+            build_status:
+               type: string
+               example: Approved
+        project:
+          type: object
+          properties:
+            project_id:
+               type: string
+               example: ed2ee7bc-d90d-4719-91a7-19636de5a590
+            name:
+               type: string
+               example: web-project
+            username: 
+               type: string
+               example: dummy
+    BuildScreenshotProperties:
+       type: object
+       properties:
+          screenshot_name:
+             type: string
+             example: first
+          captured_image:
+             type: string
+             example: URL
+          baseline_image: 
+             type: string
+             example: URL
+          compared_image:
+             type: string
+             example: URL
+          browser_name:
+             type: string
+             example: chrome
+          browser_version:
+             type: string
+             example: "118.0"
+          viewport:
+             type: string
+             example: "1920x1080"
+          os:
+             type: string
+             example: default
+          mismatch_percentage:
+             type: number
+             example: 0.1
+          status:
+             type: string
+             example: Approved
+          approved_by:
+             type: string
+             example: dummy
+          captured_image_timestamp:
+             type: string
+             example: "2023-11-10 13:47:24"
+          compared_image_timestamp:
+             type: string
+             example: "2023-11-10 13:47:29"
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

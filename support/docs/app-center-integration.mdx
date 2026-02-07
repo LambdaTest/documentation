@@ -1,0 +1,133 @@
+---
+title: "Configuring App Center on Lambdatest"
+sidebarTitle: "Configuring App Center"
+keywords: [ "App Center", "Microsoft App Center", "VS App Center", "Configuring App Center on Lambdatest", "Auto upload apps on Lambdatest", "Lambdatest Cloud Platform" ]
+---
+---
+
+This article will guide you on how to configure App Center on Lambdatest & manage your applications.
+
+## Objective
+
+---
+
+By the end of this article, you will be able to :
+
+- Install apps from App Center by configuring them on Lambdatest.
+- Manage synced apps on Lambdatest.
+
+## What is App Center?
+
+---
+
+**Visual Studio App Center** is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitoring, diagnostics, etc., into one single integrated cloud solution. 
+
+It can be used to decrease the manual effort of uploading the app & **automate** the process.
+
+## Prerequisites
+
+---
+
+Before getting started with the setup, you would need access to the following:
+
+1. Access to Lambdatest [Real Devices](https://www.lambdatest.com/pricing).
+2. Access to App Center & permissions to be able to generate API Token on App Center.
+
+## Generating API Token on App Center
+
+---
+
+1. Click on your Profile icon > Account Settings
+
+  ![cmd](/assets/images/app-center-integration/app-center01.webp)
+
+  ***
+
+2. Click on the "User API Tokens" to generate a token.
+
+  ![cmd](/assets/images/app-center-integration/app-center02.webp)
+
+  ***
+
+3. Click on "Add new API token" to add the new token.
+
+  ![cmd](/assets/images/app-center-integration/app-center03.webp)
+
+  ***
+
+4. Now, you’ll get the API token, click on the Copy Button & we’ll use it in Step 2 in Lambdatest Steps.
+
+  ![cmd](/assets/images/app-center-integration/app-center04.webp)
+
+## Lambdatest Real-Time App Testing
+
+---
+
+1. Click on the "Configure" Button
+
+  ![cmd](/assets/images/app-center-integration/app-center05.webp)
+
+  ***
+
+2. Paste the API Token we copied 'App Center' & click 'Validate'.
+
+  ![cmd](/assets/images/app-center-integration/app-center06.webp)
+
+  ***
+
+3. Now Select your Builds on App Center by clicking on "Select Builds" to Select the "Builds" from App Center.
+
+  ![cmd](/assets/images/app-center-integration/app-center07.webp)
+
+  ***
+
+4. Click on Sync to sync the Builds with Lambdatest.
+<Warning>
+**Note:** Only the Builds synced will appear on Lambdatest. In case you missed something, Click on 'Configure' to select other Builds later.
+</Warning>
+
+  ![cmd](/assets/images/app-center-integration/app-center08.webp)
+
+App Center is now configured to be used with Lambdatest.
+  ***
+
+5. Selected Builds from App Center will now appear on Lambdatest. Click on them to toggle them & select the Version from the Build that you’d like to run the test on.
+
+  ![cmd](/assets/images/app-center-integration/app-center09.webp)
+
+  ***
+
+6. Click on the sync icon & start the test using the selected application.
+
+  ![cmd](/assets/images/app-center-integration/app-center10.webp)
+
+## Managing App Center Builds on Lambdatest
+
+---
+
+<Warning>
+If an app is not synced, the test will not start. Make sure to sync the app before starting the test.
+</Warning>
+
+1. The app is not Synced.
+
+  ![cmd](/assets/images/app-center-integration/app-center11.webp)
+
+  ***
+
+2. The app is ready for Testing
+
+  ![cmd](/assets/images/app-center-integration/app-center12.webp)
+
+  ***
+
+3. Delete the app by hovering over the Ready for Testing Apps.
+
+  ![cmd](/assets/images/app-center-integration/app-center13.webp)
+
+  ***
+
+<Warning>
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
+</Warning>
+

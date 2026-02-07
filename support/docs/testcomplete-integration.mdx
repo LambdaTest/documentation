@@ -1,0 +1,146 @@
+---
+title: "TestComplete"
+sidebarTitle: "TestComplete"
+keywords:
+ [
+	"testmu ai integrations",
+  "testmu ai integrations with testcomplete",
+  "testcomplete integration",
+  "testcomplete integration with testmu ai",
+  "testmu ai integration with testcomplete",
+  "testcomplete testmu ai",
+ ]
+---
+
+TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
+
+TestMu AI integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+
+<Warning>
+The TestComplete application will only work on the **Windows** operating system.
+</Warning>
+
+## Prerequisites
+
+- TestMu AI account. You can [sign up for free.](https://accounts.lambdatest.com/login)
+- TestMu AI [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- Download TestComplete from its official website and complete the signup process.
+- Generate your App Id by uploading it to the TestMu AI Server.
+
+{/* ## Web Automation Using TestComplete And TestMu AI
+---
+
+:::info Note
+
+- **Single Test**: To run a single test, you can use `Browsers.RemoteItem(server, capabilities).Run(url)` function in the test script. 
+- **Parallel Test**: To run the parallel tests, you can use `Parallel.RunEnvironments(tests, browser_caps, url, server);` function in the test script.
+:::
+
+1. Launch TestComplete and open your test script. 
+
+![Synapse Architecture](/assets/images/testcomplete-integration/1.png)
+
+2. Visit [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) and copy the TestMu AI Hub URL.
+
+![Synapse Architecture](/assets/images/testcomplete-integration/2.png)
+
+3. In your test script, paste the Hub URL to the " server".
+
+![Synapse Architecture](/assets/images/testcomplete-integration/3.png)
+
+4. Visit TestMu AI Automation Capabilities Generator. Select Selenium version, choose desired language, and the select the required browser and OS combinations to run the test on TestMu AI.
+
+![Synapse Architecture](/assets/images/testcomplete-integration/web-caps.png)
+
+5. Copy the generated desired capabilities and paste in your test script.
+
+![Synapse Architecture](/assets/images/testcomplete-integration/4.png)
+
+6. Now run the test.
+
+![Synapse Architecture](/assets/images/testcomplete-integration/5.png)
+
+7. Go to TestMu AI Automation Dashboard to view your test results.
+
+![Synapse Architecture](/assets/images/testcomplete-integration/6.png)
+
+You can also see the video recording and logs for individual test session in the Automation Dashboard. 
+
+![Synapse Architecture](/assets/images/testcomplete-integration/7.png) */}
+
+## Steps to Automate your Application
+
+**Step 1:** Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+
+Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+
+<Tabs>
+<Tab title="Linux / MacOS">
+
+<div className="lambdatest__codeblock">
+```bash
+ curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
+```
+</div>
+</Tab>
+
+<Tab title="Windows">
+<div className="lambdatest__codeblock">
+```powershell
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""`}
+```
+</div>
+</Tab>
+</Tabs>
+
+**Step 2 :** Click on the Record Test button.
+
+**Step 3 :** Enter your project name, select project location and select your desired test type. In this demo we are selecting the Javascript. Click on the Next button.
+
+![configuration](/assets/images/testcomplete-integration/7.png)
+
+**Step 4 :** Now select Mobile as your application type and click on Record button.
+
+![configuration](/assets/images/testcomplete-integration/8.png)
+
+**Step 5 :** Now your recording will start and a modal window will pop-up to enter the required capabilities in the parameters section as shown below. Click on OK button.
+
+![configuration](/assets/images/testcomplete-integration/9.png) <br /><br />
+
+<Note>
+**Update your **APP_ID**, **YOUR_LAMBDATEST_USERNAME**, and **YOUR_LAMBDATEST_ACCESS_KEY** while passing the capabilities.**
+</Note>
+
+```bash title="Sample code for capabilities"
+{
+    "platformName": "android",
+		"deviceName": "Galaxy s21 5G",
+	"lt:options": {
+		"w3c": true,
+		"platformName": "android",
+		"deviceName": "Galaxy s21 5G",
+		"platformVersion": "12",
+		"isRealMobile": true,
+                 "app":"<APP_ID>",
+                 "user":"<YOUR_LAMBDATEST_USERNAME>",
+                 "accessKey":"<YOUR_LAMBDATEST_ACCESS_KEY>"
+	}
+}
+```
+
+**Step 6 :** Now whatever steps you will perform in the application will get recorded. Click on the stop button when you are completed with your testing.
+
+![configuration](/assets/images/testcomplete-integration/10.png) <br /><br />
+
+**Step 7 :** This will start processing the complete recording and within no time-stamp you will be able to check your recordings.
+
+Click on the run button to check your script.
+
+![configuration](/assets/images/testcomplete-integration/11.png)
+
+Your test results would be displayed on on the [**TestMu AI App Automation Dashboard**](https://appautomation.lambdatest.com/build).
+
+<Warning>
+In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmu.ai**](mailto:support@testmu.ai). <br />
+</Warning>
+

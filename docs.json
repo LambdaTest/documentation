@@ -1,0 +1,2980 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "LambdaTest",
+  "colors": {
+    "primary": "#c24e00",
+    "light": "#c24e00",
+    "dark": "#c24e00"
+  },
+  "favicon": "/favicon.png",
+  "appearance": {
+    "default": "light"
+  },
+  "fonts": {
+    "heading": {
+      "family": "SF Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    },
+    "body": {
+      "family": "SF Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "icon": "house",
+        "pages": [
+          "index",
+          "support/docs/mintlify-components"
+        ]
+      },
+      {
+        "tab": "Docs",
+        "icon": "book-open-lines",
+        "pages": [
+          {
+            "group": "Web Automation",
+            "pages": [
+              {
+                "group": "Selenium Testing",
+                "pages": [
+                  {
+                    "group": "Getting Started",
+                    "pages": [
+                      "support/docs/getting-started-with-lambdatest-automation",
+                      "support/docs/lambdatest-running-your-first-selenium-test",
+                      "support/docs/inside-lambdatest-platform"
+                    ]
+                  },
+                  {
+                    "group": "Languages and Frameworks",
+                    "pages": [
+                      "support/docs/selenium-supported-languages-and-frameworks",
+                      {
+                        "group": "Java",
+                        "pages": [
+                          "support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/selenium-java-sdk",
+                          "support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/running-cucumber-scripts-with-testng-and-selenium",
+                          "support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing",
+                          "support/docs/running-gauge-tests-on-lambdatest-selenium-grid",
+                          "support/docs/run-geb-tests-on-selenium-grid",
+                          "support/docs/serenity-test-on-selenium-grid"
+                        ]
+                      },
+                      {
+                        "group": "JavaScript",
+                        "pages": [
+                          "support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/automation-testing-with-mocha-and-selenium",
+                          "support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/wd-with-selenium-running-wd-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/automation-testing-with-selenium-and-jest",
+                          "support/docs/angularjs-with-karma-running-angular-tests-on-lambdatest-selenium-grid",
+                          "support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid",
+                          "support/docs/karma-integration-with-lambdatest",
+                          "support/docs/npm-plugin-for-testcafe-integration-with-lambdatest",
+                          "support/docs/selenium-tests-with-nemojs"
+                        ]
+                      },
+                      {
+                        "group": "C#",
+                        "pages": [
+                          "support/docs/c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/selenium-with-xunit",
+                          "support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-lambdatest-selenium-grid"
+                        ]
+                      },
+                      {
+                        "group": "Python",
+                        "pages": [
+                          "support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
+                          "support/docs/running-unit-testing-in-python-on-lambdatest-selenium-grid",
+                          "support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
+                          "support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/automation-testing-selenium-with-lettuce"
+                        ]
+                      },
+                      {
+                        "group": "PHP",
+                        "pages": [
+                          "support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/codeception-integration-with-testmu",
+                          "support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid"
+                        ]
+                      },
+                      {
+                        "group": "Ruby",
+                        "pages": [
+                          "support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid",
+                          "support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid"
+                        ]
+                      },
+                      "support/docs/executing-tesbo-automation-script-over-online-selenium-grid"
+                    ]
+                  },
+                  {
+                    "group": "Test Capabilities",
+                    "pages": [
+                      "support/docs/selenium-automation-capabilities",
+                      {
+                        "group": "Selenium Capabilities",
+                        "pages": [
+                          "support/docs/selenium-default-capabilities",
+                          "support/docs/selenium-three-capabilities",
+                          "support/docs/selenium-four-capabilities",
+                          "support/docs/testmu-selenium-advance-capabilities"
+                        ]
+                      },
+                      {
+                        "group": "Browser Configuration",
+                        "pages": [
+                          "support/docs/perform-selenium-automation-on-headless-browsers",
+                          "support/docs/upload-custom-chrome-profile",
+                          "support/docs/selenium-set-browser-options"
+                        ]
+                      },
+                      {
+                        "group": "Organize Tests",
+                        "pages": [
+                          "support/docs/command-annotations",
+                          "support/docs/selenium-add-test-meta-data"
+                        ]
+                      },
+                      {
+                        "group": "Web Performance",
+                        "pages": [
+                          "support/docs/view-lighthouse-performance-metrics",
+                          "support/docs/generate-multiple-lighthouse-reports"
+                        ]
+                      },
+                      {
+                        "group": "Debugging",
+                        "pages": [
+                          "support/docs/debugging-options",
+                          "support/docs/selenium-telemetry-logs",
+                          "support/docs/extended-debugging-options"
+                        ]
+                      },
+                      {
+                        "group": "Advance Use Cases",
+                        "pages": [
+                          "support/docs/auto-healing",
+                          "support/docs/autoheal-with-hooks",
+                          "support/docs/selenium-geolocation-capabilities",
+                          "support/docs/selenium-mask-your-data",
+                          "support/docs/custom-headers",
+                          "support/docs/smart-wait",
+                          "support/docs/network-throttling",
+                          "support/docs/custom-dns-map",
+                          "support/docs/network-data-masking",
+                          "support/docs/upload-files-using-testmu",
+                          "support/docs/setup-pre-run-executable",
+                          "support/docs/har-log-viewer-with-waterfall",
+                          "support/docs/build-inactivity-time"
+                        ]
+                      }
+                    ]
+                  },
+                  "support/docs/automation-mcp-server",
+                  {
+                    "group": "Troubleshooting",
+                    "pages": [
+                      "support/docs/error-messages",
+                      "support/docs/timeouts-issues-and-resolutions",
+                      "support/docs/lambda-exceptions",
+                      "support/docs/performance-tips"
+                    ]
+                  },
+                  {
+                    "group": "Knowledge Base",
+                    "pages": [
+                      "support/docs/lambda-hooks",
+                      {
+                        "group": "Configuration",
+                        "pages": [
+                          "support/docs/using-environment-variables-for-authentication-credentials",
+                          "support/docs/testmu-grid-configuration",
+                          "support/docs/supported-browsers-and-operating-systems-for-the-web-interface",
+                          "support/docs/change-individual-test-details"
+                        ]
+                      },
+                      {
+                        "group": "Proxy Settings",
+                        "pages": [
+                          "support/docs/white-listing-proxy-with-testmu",
+                          "support/docs/selenium-tests-behind-proxy"
+                        ]
+                      },
+                      {
+                        "group": "How To Guide",
+                        "pages": [
+                          "support/docs/filter-your-selenium-tests",
+                          "support/docs/mark-as-bug-in-automation-testing",
+                          "support/docs/sharing-test-results",
+                          "support/docs/download-files-using-testmu-selenium-grid",
+                          "support/docs/live-interaction",
+                          "support/docs/group-tests-using-custom-tags",
+                          "support/docs/group-and-filter-your-test-builds-using-build-tags"
+                        ]
+                      },
+                      "support/docs/mobile-web-automation-on-real-devices",
+                      "support/docs/selenium-bidi-integration"
+                    ]
+                  },
+                  "support/docs/selenium-faq"
+                ]
+              },
+              {
+                "group": "Cypress Testing",
+                "pages": [
+                  "support/docs/getting-started-with-cypress-testing",
+                  "support/docs/authentication",
+                  "support/docs/run-your-cypress-tests-in-parallel",
+                  "support/docs/supported-browsers-and-os",
+                  "support/docs/supported-cypress-versions",
+                  "support/docs/cypress-testing-using-webkit",
+                  "support/docs/cypress-cli-commands",
+                  "support/docs/run-settings",
+                  "support/docs/screen-resolution-testing-with-cypress",
+                  "support/docs/download-artefacts-cypress",
+                  "support/docs/integrate-testmu-with-cypress",
+                  "support/docs/private-dependencies-cypress",
+                  "support/docs/applitools-integration-cypress",
+                  "support/docs/report-portal-cypress",
+                  "support/docs/cyp-multi-reporters",
+                  "support/docs/cyp-environment",
+                  "support/docs/cypress-detailed-command-logs",
+                  "support/docs/npm-via-tunnel"
+                ]
+              },
+              {
+                "group": "Playwright Testing",
+                "pages": [
+                  "support/docs/playwright-testing",
+                  "support/docs/playwright-sdk",
+                  {
+                    "group": "Languages and Frameworks",
+                    "pages": [
+                      {
+                        "group": "Java",
+                        "pages": [
+                          "support/docs/java-with-playwright",
+                          "support/docs/junit-with-playwright"
+                        ]
+                      },
+                      {
+                        "group": "JavaScript",
+                        "pages": [
+                          "support/docs/javascript-with-playwright",
+                          "support/docs/jest-with-playwright",
+                          "support/docs/typescript-with-playwright",
+                          "support/docs/playwright-sdk"
+                        ]
+                      },
+                      {
+                        "group": "C#",
+                        "pages": [
+                          "support/docs/csharp-with-playwright"
+                        ]
+                      },
+                      {
+                        "group": "Python",
+                        "pages": [
+                          "support/docs/python-with-playwright"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Test on Android Device",
+                    "pages": [
+                      "support/docs/capabilities-for-playwright-android",
+                      "support/docs/playwright-webview-test"
+                    ]
+                  },
+                  "support/docs/playwright-ios-device",
+                  "support/docs/parallel-testing-with-playwright",
+                  "support/docs/migrate-existing-playwright-tests",
+                  "support/docs/playwright-test-execution-setup",
+                  "support/docs/playwright-bundled-browser-support",
+                  "support/docs/capabilities-for-playwright",
+                  "support/docs/local-testing-using-playwright",
+                  "support/docs/playwright-test-runner",
+                  "support/docs/playwright-with-cucumberjs",
+                  "support/docs/playwright-tests-in-ci-cd",
+                  "support/docs/playwright-lighthouse-library",
+                  "support/docs/playwright-auto-healing"
+                ]
+              },
+              {
+                "group": "Puppeteer Testing",
+                "pages": [
+                  "support/docs/puppeteer-testing",
+                  "support/docs/puppeteer-test-execution-setup",
+                  "support/docs/capabilities-for-puppeteer",
+                  "support/docs/local-testing-with-puppeteer",
+                  "support/docs/puppeteer-testing-with-mocha",
+                  "support/docs/puppeteer-testing-with-jest",
+                  "support/docs/puppeteer-testing-with-pytest-pyppeteer",
+                  "support/docs/puppeteer-tests-in-ci-cd"
+                ]
+              },
+              {
+                "group": "K6 Testing",
+                "pages": [
+                  "support/docs/k6-browser-testing"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "App Automation",
+            "pages": [
+              {
+                "group": "Appium Testing",
+                "pages": [
+                  "support/docs/getting-started-with-appium-testing",
+                  {
+                    "group": "Languages and Frameworks",
+                    "pages": [
+                      "support/docs/appium-languages-and-frameworks",
+                      {
+                        "group": "Java",
+                        "pages": [
+                          "support/docs/appium-java",
+                          "support/docs/appium-java-junit",
+                          "support/docs/appium-java-jbehave",
+                          "support/docs/appium-java-cucumber",
+                          "support/docs/appium-java-testng"
+                        ]
+                      },
+                      {
+                        "group": "JavaScript",
+                        "pages": [
+                          "support/docs/appium-nodejs",
+                          "support/docs/appium-nodejs-webdriverio",
+                          "support/docs/appium-nodejs-mocha"
+                        ]
+                      },
+                      {
+                        "group": "Python",
+                        "pages": [
+                          "support/docs/appium-python",
+                          "support/docs/appium-python-behave",
+                          "support/docs/appium-python-robot",
+                          "support/docs/appium-python-gauge",
+                          "support/docs/appium-python-pytest"
+                        ]
+                      },
+                      {
+                        "group": "Ruby",
+                        "pages": [
+                          "support/docs/appium-ruby",
+                          "support/docs/appium-ruby-cucumber",
+                          "support/docs/appium-ruby-rspec"
+                        ]
+                      },
+                      {
+                        "group": "PHP",
+                        "pages": [
+                          "support/docs/appium-php",
+                          "support/docs/appium-php-behat"
+                        ]
+                      },
+                      {
+                        "group": "C#",
+                        "pages": [
+                          "support/docs/appium-csharp",
+                          "support/docs/appium-csharp-nunit"
+                        ]
+                      },
+                      "support/docs/appium-kotlin",
+                      "support/docs/testing-flutter-apps"
+                    ]
+                  },
+                  {
+                    "group": "Setup",
+                    "pages": [
+                      {
+                        "group": "Application",
+                        "pages": [
+                          "support/docs/application-setup-via-api",
+                          "support/docs/application-setup-via-gui"
+                        ]
+                      },
+                      "support/docs/desired-capabilities-in-appium",
+                      "support/docs/supported-appium-versions",
+                      "support/docs/supported-appium-plugins",
+                      "support/docs/list-of-supported-locales",
+                      "support/docs/supported-timezone",
+                      "support/docs/app-testing-apis",
+                      "support/docs/appium-testmu-hooks",
+                      "support/docs/appium-install-uninstall-testmu-hooks",
+                      "support/docs/appium-uploading-retrieving-files",
+                      "support/docs/appium-firebase-app-upload",
+                      {
+                        "group": "Flutter Integration Driver",
+                        "pages": [
+                          "support/docs/appium-flutter-integration",
+                          "support/docs/getting-started-with-flutter-dart-android-automation",
+                          "support/docs/getting-started-with-flutter-dart-ios-automation",
+                          "support/docs/flutter-supported-capabilities"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Features",
+                    "pages": [
+                      "support/docs/camera-image-injection",
+                      "support/docs/video-injection",
+                      "support/docs/biometric-authentication",
+                      "support/docs/audio-injection",
+                      "support/docs/regular-expression-appium",
+                      "support/docs/upload-media",
+                      "support/docs/network-configurations",
+                      "support/docs/app-auto-network-throttling",
+                      "support/docs/sim-support",
+                      "support/docs/appium-ip-geolocation",
+                      "support/docs/appium-app-performance-analytics",
+                      "support/docs/appium-ios-app-settings",
+                      "support/docs/ios-keychain-cleanup",
+                      "support/docs/group-folder-redirects",
+                      "support/docs/adb-commands-support",
+                      "support/docs/login-to-google-account-on-android",
+                      "support/docs/disable-screenshot-block",
+                      "support/docs/appium-custom-headers",
+                      "support/docs/basic-authentication-for-web-automation",
+                      "support/docs/live-debug-in-app-automation",
+                      "support/docs/appium-date-and-time",
+                      "support/docs/device-passcode-appautomation",
+                      "support/docs/set-device-dark-mode",
+                      "support/docs/smart-heal-appium",
+                      "support/docs/apple-pay-auto"
+                    ]
+                  },
+                  {
+                    "group": "Smart TV Automation",
+                    "pages": [
+                      "support/docs/appium-appletv",
+                      "support/docs/appium-firetv",
+                      "support/docs/appium-rokutv",
+                      "support/docs/appium-androidtv"
+                    ]
+                  },
+                  {
+                    "group": "Integrations",
+                    "pages": [
+                      "support/docs/appium-inspector-integration"
+                    ]
+                  },
+                  {
+                    "group": "Local Testing",
+                    "pages": [
+                      "support/docs/testing-locally-hosted-apps"
+                    ]
+                  },
+                  "support/docs/migrate-appium-tests-from-browserstack-and-saucelabs"
+                ]
+              },
+              {
+                "group": "Espresso Testing",
+                "pages": [
+                  "support/docs/getting-started-with-espresso-testing",
+                  {
+                    "group": "Supported Capabilities",
+                    "pages": [
+                      "support/docs/espresso-supported-capabilities",
+                      "support/docs/espresso-env-variables-settings"
+                    ]
+                  },
+                  "support/docs/regular-expression-espresso",
+                  "support/docs/supported-locales-espresso",
+                  "support/docs/debugging-espresso-tests",
+                  "support/docs/troubleshoot-espresso-tests",
+                  {
+                    "group": "Speedup Espresso Tests",
+                    "pages": [
+                      "support/docs/sharding-espresso-rd-hyperexecute",
+                      "support/docs/speedup-espresso"
+                    ]
+                  },
+                  "support/docs/espresso-junit-report"
+                ]
+              },
+              {
+                "group": "XCUI Testing",
+                "pages": [
+                  "support/docs/getting-started-with-xcuitest",
+                  "support/docs/xcui-supported-capabilities",
+                  "support/docs/regular-expression-xcui",
+                  "support/docs/supported-locales-xcui",
+                  "support/docs/ios-ipa-files-xcui",
+                  {
+                    "group": "Speedup XCUI Tests",
+                    "pages": [
+                      "support/docs/sharding-rd-hyperexec",
+                      "support/docs/speedup-xcui"
+                    ]
+                  },
+                  "support/docs/xctestplan",
+                  "support/docs/xcui-report",
+                  "support/docs/xcresult"
+                ]
+              },
+              {
+                "group": "Flutter Testing",
+                "pages": [
+                  "support/docs/appium-flutter-integration",
+                  "support/docs/getting-started-with-flutter-dart-android-automation",
+                  "support/docs/getting-started-with-flutter-dart-ios-automation",
+                  "support/docs/flutter-supported-capabilities"
+                ]
+              },
+              {
+                "group": "Virtual Devices",
+                "pages": [
+                  "support/docs/app-automation-on-emulators-simulators",
+                  "support/docs/virtual-device-flutter-apps"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "HyperExecute",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "support/docs/getting-started-with-hyperexecute",
+                  "support/docs/hyperexecute-running-your-first-job",
+                  "support/docs/hyperexecute-guided-walkthrough",
+                  "support/docs/hyperexecute-vs-traditional-test-grids"
+                ]
+              },
+              {
+                "group": "HyperExecute YAML",
+                "pages": [
+                  "support/docs/hyperexecute-yaml-parameters",
+                  "support/docs/hyperexecute-generate-sample-yaml",
+                  "support/docs/deep-dive-into-hyperexecute-yaml",
+                  "support/docs/hyperexecute-snooper",
+                  "support/docs/hyperexecute-inherit-config",
+                  "support/docs/hyperexecute-yaml-version0.2",
+                  "support/docs/hyperexecute-yaml-capability-overrides"
+                ]
+              },
+              {
+                "group": "HyperExecute CLI",
+                "pages": [
+                  "support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid",
+                  "support/docs/hyperexecute-gitignore"
+                ]
+              },
+              {
+                "group": "HyperExecute GUI App",
+                "pages": [
+                  "support/docs/hyperexecute-cli-gui",
+                  "support/docs/hyperexecute-gui-query"
+                ]
+              },
+              "support/docs/hyperexecute-mcp-server",
+              {
+                "group": "Key features of HyperExecute",
+                "pages": [
+                  "support/docs/key-features-of-hyperexecute",
+                  {
+                    "group": "Test Splitting and Multiplexing",
+                    "pages": [
+                      "support/docs/hyperexecute-test-splitting-and-multiplexing",
+                      "support/docs/hyperexecute-auto-split-strategy",
+                      "support/docs/hyperexecute-matrix-multiplexing-strategy",
+                      "support/docs/hyperexecute-hybrid-strategy"
+                    ]
+                  },
+                  {
+                    "group": "Job Artifacts and Reports",
+                    "pages": [
+                      "support/docs/hyperexecute-artifacts",
+                      "support/docs/hyperexecute-artifacts-url",
+                      "support/docs/hyperexecute-reports",
+                      "support/docs/hyperexecute-email-reports"
+                    ]
+                  },
+                  "support/docs/hyperexecute-failfast",
+                  "support/docs/hyperexecute-prioritize-tests",
+                  "support/docs/ai-powered-test-failure-analysis",
+                  "support/docs/hyperexecute-background-services",
+                  "support/docs/hyperexecute-auto-healing",
+                  "support/docs/hyperexecute-projects",
+                  "support/docs/hyperexecute-workflows",
+                  "support/docs/hyperexecute-jobs-archiving",
+                  "support/docs/hyperexecute-test-muting",
+                  "support/docs/hyperexecute-task-metrics",
+                  "support/docs/hyperexecute-rerun-failed-tests"
+                ]
+              },
+              {
+                "group": "Languages and Frameworks",
+                "pages": [
+                  "support/docs/hyperexecute-supported-languages-and-frameworks",
+                  {
+                    "group": "Selenium",
+                    "pages": [
+                      {
+                        "group": "Java",
+                        "pages": [
+                          "support/docs/testng-on-hyperexecute-grid",
+                          "support/docs/junit-on-hyperexecute-grid",
+                          "support/docs/cucumber-on-hyperexecute-grid"
+                        ]
+                      },
+                      {
+                        "group": "JavaScript",
+                        "pages": [
+                          "support/docs/webdriverio-on-hyperexecute-grid",
+                          "support/docs/protractor-on-hyperexecute-grid",
+                          "support/docs/nightwatch-on-hyperexecute-grid",
+                          "support/docs/hyperexecute-bidi-testing"
+                        ]
+                      },
+                      {
+                        "group": "C#",
+                        "pages": [
+                          "support/docs/nunit-on-hyperexecute-grid",
+                          "support/docs/specflow-on-hyperexecute-grid"
+                        ]
+                      },
+                      {
+                        "group": "Python",
+                        "pages": [
+                          "support/docs/pyunit-on-hyperexecute-grid",
+                          "support/docs/pytest-on-hyperexecute-grid",
+                          "support/docs/robot-on-hyperexecute-grid",
+                          "support/docs/behave-on-hyperexecute-grid"
+                        ]
+                      },
+                      {
+                        "group": "Ruby",
+                        "pages": [
+                          "support/docs/ruby-on-hyperexecute-grid/",
+                          "support/docs/capybara-on-hyperexecute-grid"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Puppeteer",
+                    "pages": [
+                      "support/docs/jest-on-hyperexecute",
+                      "support/docs/mocha-on-hyperexecute",
+                      "support/docs/codecept-on-hyperexecute"
+                    ]
+                  },
+                  {
+                    "group": "Playwright",
+                    "pages": [
+                      {
+                        "group": "Python",
+                        "pages": [
+                          "support/docs/pytest-on-hyperexecute",
+                          "support/docs/playwright-python-on-hyperexecute"
+                        ]
+                      },
+                      {
+                        "group": "Javascript",
+                        "pages": [
+                          "support/docs/playwright-vanillajs-on-hyperexecute",
+                          "support/docs/playwright-codeceptjs-on-hyperexecute",
+                          "support/docs/playwright-jest-on-hyperexecute"
+                        ]
+                      },
+                      "support/docs/playwright-junit-on-hyperexecute",
+                      "support/docs/playwright-dotnet-on-hyperexecute",
+                      "support/docs/playwright-real-device-on-hyperexecute"
+                    ]
+                  },
+                  {
+                    "group": "Cypress",
+                    "pages": [
+                      "support/docs/cypressv9-on-hyperexecute",
+                      "support/docs/cypressv10-on-hyperexecute"
+                    ]
+                  },
+                  {
+                    "group": "Appium",
+                    "pages": [
+                      "support/docs/hyperexecute-appium-testing",
+                      "support/docs/hyperexecute-webapp-appium-testing",
+                      "support/docs/hyperexecute-appium-virtual-device",
+                      "support/docs/hyperexecute-emu-simu-devices-list"
+                    ]
+                  },
+                  "support/docs/hyperexecute-espresso-testing",
+                  "support/docs/hyperexecute-maestro-testing",
+                  "support/docs/hyperexecute-detox-testing",
+                  "support/docs/hyperexecute-xcui-testing",
+                  "support/docs/hyperexecute-k6-testing",
+                  {
+                    "group": "Performance Testing",
+                    "pages": [
+                      "support/docs/hyperexecute-performance-testing",
+                      "support/docs/hyperexecute-run-jmeter-tests",
+                      "support/docs/hyperexecute-gattling-testing"
+                    ]
+                  },
+                  "support/docs/hyperexecute-api-testing",
+                  "support/docs/hyperexecute-karate-testing"
+                ]
+              },
+              {
+                "group": "Troubleshooting Guide",
+                "pages": [
+                  "support/docs/hyperexecute-how-to-debug-job",
+                  "support/docs/hyperexecute-cli-error",
+                  "support/docs/hyperexecute-pre-steps-error",
+                  "support/docs/hyperexecute-scenario-steps-error"
+                ]
+              },
+              {
+                "group": "Integrate with HyperExecute",
+                "pages": [
+                  "support/docs/integration-with-hyperexecute",
+                  {
+                    "group": "Integration with CI/CD tools",
+                    "pages": [
+                      "support/docs/hyperexecute-integration-with-ci-cd-tools",
+                      "support/docs/aws-codepipeline-with-hyperexecute",
+                      "support/docs/azure-with-hyperexecute",
+                      "support/docs/github-actions-with-hyperexecute",
+                      "support/docs/gitlab-integration-with-hyperexecute",
+                      "support/docs/circle-ci-with-hyperexecute",
+                      "support/docs/jenkins-with-hyperexecute",
+                      "support/docs/bitbucket-pipeline-with-hyperexecute",
+                      "support/docs/travis-ci-with-hyperexecute",
+                      "support/docs/teamcity-with-hyperexecute",
+                      "support/docs/gocd-integration-with-hyperexecute",
+                      "support/docs/bamboo-integration-with-hyperexecute",
+                      "support/docs/semaphore-integration-with-hyperexecute"
+                    ]
+                  },
+                  {
+                    "group": "Integration with Products",
+                    "pages": [
+                      "support/docs/hyperexecute-integration-with-products",
+                      "support/docs/hyperexecute-accelq-integration",
+                      "support/docs/hyperexecute-algoqa-integration",
+                      {
+                        "group": "Azure Test Plan",
+                        "pages": [
+                          "support/docs/hyperexecute-azure-test-plan",
+                          "support/docs/hyperexecute-azure-setup-test-plan",
+                          "support/docs/hyperexecute-azure-associate-test-case",
+                          "support/docs/hyperexecute-integrate-azure-test-plan"
+                        ]
+                      },
+                      "support/docs/katalon-integration-with-hyperexecute",
+                      "support/docs/hyperexecute-provar-integration",
+                      "support/docs/hyperexecute-qtest-integration",
+                      "support/docs/hyperexecute-sikuli-integration",
+                      "support/docs/hyperexecute-slack-integration",
+                      "support/docs/hyperexecute-testim-integration",
+                      "support/docs/hyperexecute-testsigma-integration",
+                      {
+                        "group": "Tosca",
+                        "pages": [
+                          "support/docs/tosca-integration-with-hyperexecute",
+                          "support/docs/tosca-integration-with-hyperexecute-using-commander",
+                          "support/docs/tosca-integration-with-hyperexecute-using-dex",
+                          "support/docs/tosca-integration-with-hyperexecute-for-sap"
+                        ]
+                      },
+                      "support/docs/hyperexecute-winapp-integration",
+                      "support/docs/hyperexecute-zephyr-scale-integration"
+                    ]
+                  },
+                  {
+                    "group": "Integration with TestMu AI Products",
+                    "pages": [
+                      "support/docs/he-integration-with-testmu-products",
+                      "support/docs/hyperexecute-smart-ui-capture-onboarding",
+                      {
+                        "group": "HyperExecute Smart UI - Hooks",
+                        "pages": [
+                          "support/docs/smart-ui-testing",
+                          "support/docs/hyperexecute-smart-ui-testing-using-selenium",
+                          "support/docs/hyperexecute-smart-ui-testing-using-cypress",
+                          "support/docs/hyperexecute-smart-ui-test-using-playwright"
+                        ]
+                      },
+                      {
+                        "group": "HyperExecute Smart UI - SDK",
+                        "pages": [
+                          {
+                            "group": "Selenium",
+                            "pages": [
+                              "support/docs/hyperexecute-smart-ui-sdk-selenium-javascript",
+                              "support/docs/hyperexecute-smart-ui-sdk-selenium-csharp"
+                            ]
+                          },
+                          "support/docs/hyperexecute-smart-ui-sdk-using-cypress",
+                          "support/docs/hyperexecute-smart-ui-sdk-maestro",
+                          "support/docs/hyperexecute-smart-ui-sdk-using-playwright",
+                          "support/docs/hyperexecute-smart-ui-sdk-using-puppeteer"
+                        ]
+                      },
+                      "support/docs/hyperexecute-integration-with-virtual-devices",
+                      "support/docs/real-devices-integration-with-hyperexecute"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "HyperExecute Private Cloud",
+                "pages": [
+                  "support/docs/hyperexecute-private-cloud-setup",
+                  "support/docs/hyperexecute-private-cloud-benefits",
+                  {
+                    "group": "Setup with Azure",
+                    "pages": [
+                      "support/docs/hyperexecute-private-cloud-setup-with-azure",
+                      "support/docs/hyperexecute-private-cloud-on-jumphost",
+                      "support/docs/hyperexecute-vnet-peering-for-private-cloud"
+                    ]
+                  },
+                  "support/docs/hyperexecute-private-cloud-setup-with-aws"
+                ]
+              },
+              {
+                "group": "Knowledge Base",
+                "pages": [
+                  "support/docs/hyperexecute-knowledge-base",
+                  "support/docs/hyperexecute-status",
+                  {
+                    "group": "How To Guide",
+                    "pages": [
+                      "support/docs/hyperexecute-how-to-guide",
+                      "support/docs/hyperexecute-how-to-get-my-username-and-access-key",
+                      "support/docs/hyperexecute-environment-variable-setup",
+                      {
+                        "group": "Secrets Management",
+                        "pages": [
+                          "support/docs/hyperexecute-how-to-save-and-manage-secrets",
+                          "support/docs/hyperexecute-how-to-manage-project-level-secrets"
+                        ]
+                      },
+                      "support/docs/hyperexecute-how-to-configure-tunnel",
+                      "support/docs/hyperexecute-how-to-configure-os-and-browser",
+                      "support/docs/hyperexecute-how-to-find-correct-concurrency",
+                      "support/docs/hyperexecute-how-to-configure-sourcePayload",
+                      "support/docs/hyperexecute-browser-list-api",
+                      "support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers",
+                      "support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery",
+                      "support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
+                      "support/docs/hyperexecute-how-to-resolve-version-conflict",
+                      "support/docs/hyperexecute-org-product-preferences"
+                    ]
+                  },
+                  {
+                    "group": "Use Cases",
+                    "pages": [
+                      "support/docs/hyperexecute-use-cases",
+                      "support/docs/hyperexecute-how-smart-caching-boosts-tests-speed",
+                      "support/docs/hyperexecute-seamless-integration-with-tools",
+                      "support/docs/hyperexecute-build-mobile-apps-using-tools",
+                      "support/docs/hyperexecute-utilizing-custom-libraries",
+                      "support/docs/hyperexecute-supported-languages-and-packages",
+                      "support/docs/hyperexecute-test-chains",
+                      "support/docs/hyperexecute-testng-use-cases",
+                      "support/docs/hyperexecute-yaml-creation-for-playwright",
+                      "support/docs/hyperexecute-python-use-cases",
+                      "support/docs/hyperexecute-csharp-use-cases"
+                    ]
+                  },
+                  {
+                    "group": "Widgets",
+                    "pages": [
+                      "support/docs/hyperexecute-widgets",
+                      "support/docs/hyperexecute-job-widgets",
+                      "support/docs/hyperexecute-stage-widgets",
+                      "support/docs/hyperexecute-task-widgets",
+                      "support/docs/hyperexecute-test-widgets",
+                      "support/docs/hyperexecute-resource-widgets"
+                    ]
+                  },
+                  {
+                    "group": "Job Reports",
+                    "pages": [
+                      "support/docs/hyperexecute-job-reports",
+                      "support/docs/extent-report",
+                      "support/docs/native-extent-report",
+                      "support/docs/hyperexecute-native-testng-report",
+                      "support/docs/allure-reports",
+                      "support/docs/cucumber-report",
+                      "support/docs/playwright-html-report",
+                      "support/docs/specflow-report",
+                      "support/docs/custom-speclow-report",
+                      "support/docs/cypress-mochaawesome-report",
+                      "support/docs/error-categorization-report",
+                      "support/docs/junit-xml-report",
+                      "support/docs/karate-report",
+                      "support/docs/robot-report",
+                      "support/docs/hyperexecute-katalon-report"
+                    ]
+                  },
+                  {
+                    "group": "Migration Guide",
+                    "pages": [
+                      "support/docs/saucelabs-to-hyperexecute-migrate"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "FAQs",
+                "pages": [
+                  "support/docs/hyperexecute-faqs",
+                  "support/docs/hyperexecute-general-faqs",
+                  "support/docs/hyperexecute-yaml-faqs",
+                  "support/docs/hyperexecute-cli-faqs",
+                  "support/docs/hyperexecute-feature-faqs",
+                  "support/docs/hyperexecute-platform-faqs",
+                  "support/docs/hyperexecute-pricing-faqs",
+                  "support/docs/hyperexecute-security-faqs",
+                  "support/docs/hyperexecute-enterprise-faqs"
+                ]
+              },
+              {
+                "group": "Release Notes",
+                "pages": [
+                  "support/docs/hyperexecute-release-notes",
+                  {
+                    "group": "CLI Releases",
+                    "pages": [
+                      {
+                        "group": "January, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-cli-release-notes-0-2-249"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "MCP Releases",
+                    "pages": [
+                      {
+                        "group": "May, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-mcp-server-release-notes-1-0-0"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "2025 Releases",
+                    "pages": [
+                      {
+                        "group": "December, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-3-1-7",
+                          "support/docs/hyperexecute-release-notes-3-1-6",
+                          "support/docs/hyperexecute-release-notes-3-1-5"
+                        ]
+                      },
+                      {
+                        "group": "November, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-3-1-4",
+                          "support/docs/hyperexecute-release-notes-3-1-2"
+                        ]
+                      },
+                      {
+                        "group": "October, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-3-1-0",
+                          "support/docs/hyperexecute-release-notes-3-0-8"
+                        ]
+                      },
+                      {
+                        "group": "September, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-3-0-6",
+                          "support/docs/hyperexecute-release-notes-3-0-5",
+                          "support/docs/hyperexecute-release-notes-3-0-4",
+                          "support/docs/hyperexecute-release-notes-3-0-3"
+                        ]
+                      },
+                      {
+                        "group": "August, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-3-0-0",
+                          "support/docs/hyperexecute-release-notes-2-9-9",
+                          "support/docs/hyperexecute-release-notes-2-9-8"
+                        ]
+                      },
+                      {
+                        "group": "July, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-9-7",
+                          "support/docs/hyperexecute-release-notes-2-9-6",
+                          "support/docs/hyperexecute-release-notes-2-9-5",
+                          "support/docs/hyperexecute-release-notes-2-9-4"
+                        ]
+                      },
+                      {
+                        "group": "June, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-9-1",
+                          "support/docs/hyperexecute-release-notes-2-9-0",
+                          "support/docs/hyperexecute-release-notes-2-8-9"
+                        ]
+                      },
+                      {
+                        "group": "May, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-8-8",
+                          "support/docs/hyperexecute-release-notes-2-8-7",
+                          "support/docs/hyperexecute-release-notes-2-8-6",
+                          "support/docs/hyperexecute-release-notes-2-8-5"
+                        ]
+                      },
+                      {
+                        "group": "April, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-8-4",
+                          "support/docs/hyperexecute-release-notes-2-8-2",
+                          "support/docs/hyperexecute-release-notes-2-8-1"
+                        ]
+                      },
+                      {
+                        "group": "March, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-7-8",
+                          "support/docs/hyperexecute-release-notes-2-7-6"
+                        ]
+                      },
+                      {
+                        "group": "February, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-7-3",
+                          "support/docs/hyperexecute-release-notes-2-7-1"
+                        ]
+                      },
+                      {
+                        "group": "January, 2025",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-7-0"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "2024 Releases",
+                    "pages": [
+                      {
+                        "group": "December, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-6-5",
+                          "support/docs/hyperexecute-release-notes-2-6-2"
+                        ]
+                      },
+                      {
+                        "group": "November, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-6-0",
+                          "support/docs/hyperexecute-release-notes-2-5-9",
+                          "support/docs/hyperexecute-release-notes-2-5-8"
+                        ]
+                      },
+                      {
+                        "group": "October, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-5-7",
+                          "support/docs/hyperexecute-release-notes-2-5-6",
+                          "support/docs/hyperexecute-release-notes-2-5-5",
+                          "support/docs/hyperexecute-release-notes-2-5-4"
+                        ]
+                      },
+                      {
+                        "group": "September, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-5-3",
+                          "support/docs/hyperexecute-release-notes-2-5-2",
+                          "support/docs/hyperexecute-release-notes-2-5-1",
+                          "support/docs/hyperexecute-release-notes-2-5-0"
+                        ]
+                      },
+                      {
+                        "group": "August, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-4-8",
+                          "support/docs/hyperexecute-release-notes-2-4-7",
+                          "support/docs/hyperexecute-release-notes-2-4-6"
+                        ]
+                      },
+                      {
+                        "group": "July, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-4-5",
+                          "support/docs/hyperexecute-release-notes-2-4-4",
+                          "support/docs/hyperexecute-release-notes-2-4-0"
+                        ]
+                      },
+                      {
+                        "group": "June, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-3-8",
+                          "support/docs/hyperexecute-release-notes-2-3-7",
+                          "support/docs/hyperexecute-release-notes-2-3-6"
+                        ]
+                      },
+                      {
+                        "group": "May, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-3-3"
+                        ]
+                      },
+                      {
+                        "group": "April, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-3-1",
+                          "support/docs/hyperexecute-release-notes-2-3-0",
+                          "support/docs/hyperexecute-release-notes-2-2-9",
+                          "support/docs/hyperexecute-release-notes-2-2-8",
+                          "support/docs/hyperexecute-release-notes-2-2-7"
+                        ]
+                      },
+                      {
+                        "group": "March, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-2-6",
+                          "support/docs/hyperexecute-release-notes-2-2-5",
+                          "support/docs/hyperexecute-release-notes-2-2-3"
+                        ]
+                      },
+                      {
+                        "group": "February, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-2-2",
+                          "support/docs/hyperexecute-release-notes-2-2-1",
+                          "support/docs/hyperexecute-release-notes-2-2-0"
+                        ]
+                      },
+                      {
+                        "group": "January, 2024",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-1-6",
+                          "support/docs/hyperexecute-release-notes-2-1-5"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "2023 Releases",
+                    "pages": [
+                      {
+                        "group": "December, 2023",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-2-1-4",
+                          "support/docs/hyperexecute-release-notes-2-1-3",
+                          "support/docs/hyperexecute-release-notes-2-1-1",
+                          "support/docs/hyperexecute-release-notes-2-1-0",
+                          "support/docs/hyperexecute-release-notes-1-139-0"
+                        ]
+                      },
+                      {
+                        "group": "November, 2023",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-1-138-0",
+                          "support/docs/hyperexecute-release-notes-1-137-0"
+                        ]
+                      },
+                      {
+                        "group": "October, 2023",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-1-136-0",
+                          "support/docs/hyperexecute-release-notes-1-135-0",
+                          "support/docs/hyperexecute-release-notes-1-134-0",
+                          "support/docs/hyperexecute-release-notes-1-133-0"
+                        ]
+                      },
+                      {
+                        "group": "September, 2023",
+                        "pages": [
+                          "support/docs/hyperexecute-release-notes-1-131-0"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Insights",
+            "pages": [
+              "support/docs/analytics-overview",
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "support/docs/analytics-dashboard-templates",
+                  "support/docs/analytics-create-dashboard"
+                ]
+              },
+              {
+                "group": "Dashboards",
+                "pages": [
+                  "support/docs/analytics-dashboard-copilot",
+                  "support/docs/analytics-dashboard-edit-layout",
+                  "support/docs/analytics-dashboard-features",
+                  "support/docs/analytics-widget-drill-down-export",
+                  "support/docs/analytics-widget-filter-by-regex",
+                  "support/docs/analytics-filter-by-custom-data",
+                  "support/docs/analytics-dashboard-settings"
+                ]
+              },
+              {
+                "group": "Widgets",
+                "pages": [
+                  "support/docs/analytics-widgets",
+                  {
+                    "group": "Overview",
+                    "pages": [
+                      "support/docs/analytics-modules-automation-test-overview",
+                      "support/docs/analytics-modules-hyperexecute",
+                      "support/docs/analytics-modules-manual-test-overview",
+                      "support/docs/analytics-modules-smartui-analytics",
+                      "support/docs/analytics-modules-accessibility-widgets",
+                      "support/docs/analytics-modules-test-manager-widgets"
+                    ]
+                  },
+                  {
+                    "group": "Custom Widgets",
+                    "pages": [
+                      "support/docs/dashboards-custom-widgets",
+                      "support/docs/analytics-heatmap-widgets",
+                      "support/docs/analytics-bar-line-widgets",
+                      "support/docs/analytics-table-widgets"
+                    ]
+                  },
+                  "support/docs/analytics-test-case-insights",
+                  "support/docs/analytics-modules-resource-utilization",
+                  "support/docs/analytics-test-time-trends",
+                  {
+                    "group": "Error Insights",
+                    "pages": [
+                      "support/docs/analytics-modules-test-intelligence-command-logs-analytics",
+                      "support/docs/analytics-modules-error-insights"
+                    ]
+                  },
+                  "support/docs/analytics-allure-api-widgets",
+                  "support/docs/analytics-modules-groups/"
+                ]
+              },
+              {
+                "group": "Test Intelligence - AI",
+                "pages": [
+                  "support/docs/analytics-test-insights",
+                  "support/docs/analytics-modules-test-intelligence-flaky-test-analytics",
+                  "support/docs/analytics-build-insights",
+                  "support/docs/analytics-build-comparison",
+                  "support/docs/analytics-smart-tags-test-intelligence",
+                  "support/docs/analytics-test-failure-classification",
+                  "support/docs/analytics-ai-root-cause-analysis",
+                  "support/docs/insights-app-profiling"
+                ]
+              },
+              {
+                "group": "Reports",
+                "pages": [
+                  "support/docs/insights-usage-report",
+                  "support/docs/analytics-project-report",
+                  "support/docs/insights-private-real-devices",
+                  "support/docs/insights-private-desktop",
+                  "support/docs/analytics-sub-organization-widgets"
+                ]
+              },
+              "support/docs/insights-best-practices",
+              "support/docs/analytics-faqs"
+            ]
+          },
+          {
+            "group": "SmartUI",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "support/docs/smart-visual-regression-testing",
+                  "support/docs/smartui-running-your-first-project",
+                  "support/docs/smartui-guided-walkthrough",
+                  "support/docs/smartui-cli-env-variables"
+                ]
+              },
+              {
+                "group": "Testing Frameworks",
+                "pages": [
+                  {
+                    "group": "SDK Integration",
+                    "pages": [
+                      {
+                      "group": "Selenium SDKs",
+                      "pages": [
+                        "support/docs/smartui-selenium-java-sdk",
+                        "support/docs/smartui-selenium-js-sdk",
+                        "support/docs/smartui-selenium-csharp-sdk",
+                        "support/docs/smartui-selenium-python-sdk",
+                        "support/docs/smartui-selenium-ruby-sdk"
+                      ]
+                      },
+                      {
+                        "group": "Playwright SDKs",
+                        "pages": [
+                          "support/docs/smartui-playwright-java-sdk",
+                          "support/docs/smartui-playwright-sdk",
+                          "support/docs/smartui-playwright-python-sdk"
+                        ]
+                      },
+                      "support/docs/smartui-cypress-sdk",
+                      "support/docs/smartui-puppeteer-sdk",
+                      "support/docs/smartui-testcafe-sdk",
+                      "support/docs/smartui-wdio-sdk",
+                      "support/docs/smartui-k6-setup",
+                      {
+                        "group": "Mobile Testing",
+                        "pages": [
+                          {
+                            "group": "Mobile SDKs",
+                            "pages": [
+                              "support/docs/smartui-appium-java-sdk"
+                            ]
+                          },
+                          "support/docs/smartui-appium-java-sdk"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Lambda Hooks",
+                    "pages": [
+                      "support/docs/selenium-visual-regression",
+                      "support/docs/playwright-visual-regression",
+                      "support/docs/smart-ui-cypress",
+                      "support/docs/puppeteer-visual-regression"
+                    ]
+                  },
+                  "support/docs/smart-ui-storybook",
+                  {
+                    "group": "Figma Integration",
+                    "pages": [
+                      "support/docs/smartui-cli-figma-web",
+                      "support/docs/smartui-cli-figma-app",
+                      "support/docs/smartui-cli-figma"
+                    ]
+                  },
+                  {
+                    "group": "PDF Testing",
+                    "pages": [
+                      "support/docs/smartui-pdf-comparison",
+                      "support/docs/smartui-pdf-api-upload",
+                      "support/docs/smartui-pdf-java-sdk",
+                      "support/docs/smartui-pdf-cli-upload"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Core Features",
+                "pages": [
+                  "support/docs/smartui-baseline-management",
+                  "support/docs/smartui-root-cause-analysis",
+                  "support/docs/smartui-visual-ai",
+                  "support/docs/smartui-multiselect-bulkops",
+                  "support/docs/smartui-smart-comments",
+                  "support/docs/smartui-draw-on-ui",
+                  "support/docs/smartui-custom-css",
+                  {
+                    "group": "Smart Comparison Options",
+                    "pages": [
+                      "support/docs/smartui-smartignore",
+                      "support/docs/smartui-layout-testing"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Upload & Capture",
+                "pages": [
+                  "support/docs/smartui-cli-upload",
+                  "support/docs/smartui-upload-api-v2",
+                  "support/docs/smartui-cli",
+                  "support/docs/smartui-cli-complete-reference"
+                ]
+              },
+              {
+                "group": "Project Configuration",
+                "pages": [
+                  "support/docs/smartui-project-settings",
+                  "support/docs/test-settings-options",
+                  "support/docs/html-dom-smartui-options",
+                  "support/docs/build-options-for-visual-regression-testing",
+                  "support/docs/smartui-multiple-projects-per-repo"
+                ]
+              },
+              {
+                "group": "Git & Branching",
+                "pages": [
+                  "support/docs/smartui-cli-git-branching-strategy",
+                  "support/docs/smartui-smart-git-strategy",
+                  "support/docs/smartui-branch-merging",
+                  "support/docs/smartui-build-merging"
+                ]
+              },
+              {
+                "group": "Stabilize Screenshots",
+                "pages": [
+                  "support/docs/smartui-handle-dynamic-data",
+                  "support/docs/smartui-freeze-animations",
+                  "support/docs/smartui-handle-videos",
+                  "support/docs/smartui-handle-lazy-loading",
+                  "support/docs/smartui-handle-sticky-elements"
+                ]
+              },
+              {
+                "group": "Advanced CLI",
+                "pages": [
+                  "support/docs/smartui-cli-exec",
+                  "support/docs/smartui-cli-build-name",
+                  "support/docs/smartui-sdk-fetch-results",
+                  "support/docs/smartui-sdk-config-options",
+                  "support/docs/smartui-sdk-caps",
+                  "support/docs/smartui-cli-responsive-dom"
+                ]
+              },
+              {
+                "group": "Technical Configuration",
+                "pages": [
+                  "support/docs/smartui-sdk-tunnel",
+                  "support/docs/smartui-shadow-dom",
+                  "support/docs/smartui-multiple-assets-hosts",
+                  "support/docs/smartui-cli-request-headers",
+                  "support/docs/smartui-basic-auth",
+                  "support/docs/smartui-mcp-server"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
+                  {
+                    "group": "CI/CD Tools",
+                    "pages": [
+                      "support/docs/smartui-with-github-actions",
+                      "support/docs/smartui-with-gitlab",
+                      "support/docs/smartui-gitlab-pr-checks-hooks",
+                      "support/docs/smartui-gitlab-pr-checks-exec",
+                      "support/docs/smartui-with-bitbucket",
+                      "support/docs/smartui-with-semaphore",
+                      "support/docs/smartui-with-azure",
+                      "support/docs/smartui-with-buildkite",
+                      "support/docs/smartui-with-travis-ci",
+                      "support/docs/smartui-with-netlify"
+                    ]
+                  },
+                  {
+                    "group": "LambdaTest Products",
+                    "pages": [
+                      "support/docs/kaneai-smartui-visual-testing",
+                      {
+                        "group": "HyperExecute Integration",
+                        "pages": [
+                          {
+                            "group": "SmartUI Hooks",
+                            "pages": [
+                              "support/docs/hyperexecute-smart-ui-testing-using-selenium",
+                              "support/docs/hyperexecute-smart-ui-testing-using-cypress",
+                              "support/docs/hyperexecute-smart-ui-test-using-playwright"
+                            ]
+                          },
+                          {
+                            "group": "SmartUI SDK",
+                            "pages": [
+                              {
+                                "group": "Selenium",
+                                "pages": [
+                                  "support/docs/hyperexecute-smart-ui-sdk-selenium-javascript",
+                                  "support/docs/hyperexecute-smart-ui-sdk-selenium-csharp"
+                                ]
+                              },
+                              "support/docs/hyperexecute-smart-ui-sdk-using-cypress",
+                              "support/docs/hyperexecute-smart-ui-sdk-maestro",
+                              "support/docs/hyperexecute-smart-ui-sdk-using-playwright",
+                              "support/docs/hyperexecute-smart-ui-sdk-using-puppeteer"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "WebScanner Integration",
+                        "pages": [
+                          "support/docs/web-scanner-visual-scan"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Third-Party Products",
+                    "pages": [
+                      "support/docs/smartui-katalon-plugin"
+                    ]
+                  },
+                  {
+                    "group": "Pull Request Testing",
+                    "pages": [
+                      "support/docs/smartui-github-app-integration",
+                      "support/docs/smartui-gitlab-pr-checks-hooks",
+                      "support/docs/smartui-gitlab-pr-checks-exec"
+                    ]
+                  },
+                  {
+                    "group": "Communication",
+                    "pages": [
+                      "support/docs/smartui-slack-integration"
+                    ]
+                  }
+                ]
+              },
+              "support/docs/smartui-troubleshooting-guide/"
+            ]
+          },
+          {
+            "group": "KaneAI",
+            "pages": [
+              "support/docs/getting-started-with-kane-ai",
+              "support/docs/why-we-need-kane-ai",
+              "support/docs/use-cases-of-kane-ai",
+              {
+                "group": "Author Your First Test",
+                "pages": [
+                  {
+                    "group": "Author Web Tests",
+                    "pages": [
+                      "support/docs/author-your-first-desktop-browser-test",
+                      "support/docs/author-your-first-mobile-browser-test"
+                    ]
+                  },
+                  {
+                    "group": "Author App Tests",
+                    "pages": [
+                      "support/docs/author-your-first-mobile-app-test"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Test Manager",
+                "pages": [
+                  "support/docs/kane-ai-test-plan",
+                  "support/docs/kaneai-hyperexecute-test-run-execution",
+                  "support/docs/kaneai-ci-cd-automation",
+                  "support/docs/test-runs-configurations",
+                  "support/docs/kaneai-scheduled-test-runs"
+                ]
+              },
+              {
+                "group": "Variables and Parameters",
+                "pages": [
+                  "support/docs/kaneai-variables-and-parameters",
+                  "support/docs/kane-ai-using-variables",
+                  "support/docs/kane-ai-secrets",
+                  "support/docs/kane-ai-smart-variables",
+                  "support/docs/kane-ai-using-parameters",
+                  "support/docs/kane-ai-using-datasets"
+                ]
+              },
+              {
+                "group": "Features",
+                "pages": [
+                  {
+                    "group": "Common",
+                    "pages": [
+                      "support/docs/kaneai-manual-interaction",
+                      "support/docs/kane-ai-javascript-execution",
+                      "support/docs/kane-ai-geolocation-tunnel-proxy",
+                      "support/docs/kaneai-auto-heal",
+                      "support/docs/kane-ai-scroll-in-feature",
+                      "support/docs/kane-ai-jira-integration",
+                      "support/docs/kane-ai-api-testing",
+                      "support/docs/kane-ai-modules",
+                      "support/docs/kaneai-modules-versions-and-enhancement",
+                      "support/docs/kaneai-bulk-module-update",
+                      "support/docs/kaneai-upload-and-download-files",
+                      "support/docs/kaneai-totp",
+                      "support/docs/kaneai-database",
+                      "support/docs/kaneai-rename-instructions"
+                    ]
+                  },
+                  {
+                    "group": "Desktop Browser",
+                    "pages": [
+                      "support/docs/kane-ai-network-assertions",
+                      "support/docs/kane-ai-drag-drop",
+                      "support/docs/kaneai-dynamic-url-replacement",
+                      "support/docs/kaneai-chrome-options",
+                      "support/docs/kaneai-custom-headers",
+                      "support/docs/kaneai-smartui-visual-testing"
+                    ]
+                  },
+                  {
+                    "group": "Mobile",
+                    "pages": [
+                      "support/docs/kane-ai-mobile-app-capabilities",
+                      "support/docs/kane-ai-deeplink-support",
+                      "support/docs/kaneai-network-throttling",
+                      "support/docs/kaneai-gps-location",
+                      "support/docs/kaneai-scroll-until-mobile",
+                      "support/docs/kaneai-mobile-app-accessibility"
+                    ]
+                  }
+                ]
+              },
+              "support/docs/github-app-integration",
+              {
+                "group": "Knowledge Base",
+                "pages": [
+                  "support/docs/kane-ai-command-guide",
+                  "support/docs/kaneai-failure-conditions",
+                  "support/docs/kane-ai-web-test-writing-guidelines",
+                  "support/docs/kane-ai-app-test-writing-guidelines",
+                  "support/docs/error-handling-kaneai",
+                  "support/docs/kane-ai-automation-code-generation"
+                ]
+              },
+              {
+                "group": "Video Tutorials",
+                "pages": [
+                  "support/docs/kaneai-test",
+                  "support/docs/kaneai-manual-interaction-video",
+                  "support/docs/kaneai-edit-test-steps"
+                ]
+              },
+              {
+                "group": "Release Notes",
+                "pages": [
+                  "support/docs/kaneai-release-notes",
+                  {
+                    "group": "September 2024",
+                    "pages": [
+                      "support/docs/kaneai-release-notes-0-0-2",
+                      "support/docs/kaneai-release-notes-0-0-1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Web Scanner",
+            "pages": [
+              "support/docs/web-scanner-overview",
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "support/docs/web-scanner-getting-started",
+                  "support/docs/web-scanner-visual-scan",
+                  "support/docs/web-scanner-accessibility-scan/",
+                  "support/docs/web-scanner-adding-urls",
+                  "support/docs/web-scanner-scheduling-options",
+                  "support/docs/web-scanner-advanced-features"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "KaneAI",
+            "pages": []
+          },
+          {
+            "group": "Agent To Agent",
+            "pages": [
+              "support/docs/getting-started-with-agent-to-agent-testing",
+              "support/docs/testing-your-first-ai-agent",
+              "support/docs/agent-to-agent-faqs"
+            ]
+          },
+          {
+            "group": "Real Time",
+            "pages": [
+              {
+                "group": "Web Browser Testing",
+                "pages": [
+                  "support/docs/getting-started-with-desktop-browser-real-time-testing",
+                  "support/docs/real-time-desktop-browser-testing-tools"
+                ]
+              },
+              {
+                "group": "Mobile Browser Testing",
+                "pages": [
+                  "support/docs/getting-started-with-mobile-browser-real-time-testing",
+                  "support/docs/real-time-mobile-browser-testing-tools"
+                ]
+              },
+              {
+                "group": "Mobile App Testing",
+                "pages": [
+                  "support/docs/getting-started-with-mobile-app-real-time-testing",
+                  "support/docs/real-time-mobile-app-testing-tools"
+                ]
+              },
+              {
+                "group": "ChromeOS Testing",
+                "pages": [
+                  "support/docs/chrome-os-testing",
+                  "support/docs/chrome-os-web-browser-testing",
+                  "support/docs/chrome-os-app-testing"
+                ]
+              },
+              {
+                "group": "Key Features",
+                "pages": [
+                  "support/docs/developer-tools",
+                  "support/docs/pre-loaded-chrome-extension",
+                  "support/docs/real-time-testing-troubleshooting",
+                  "support/docs/http-basic-authentication",
+                  "support/docs/webview-testing-in-android",
+                  "support/docs/real-time-locally-hosted-pages",
+                  "support/docs/real-time-recents-and-favourites",
+                  "support/docs/real-time-upload-and-download-files"
+                ]
+              },
+              "support/docs/troubleshooting-ios-app-testing",
+              "support/docs/ios-entitlements"
+            ]
+          },
+          {
+            "group": "Real Device",
+            "pages": [
+              {
+                "group": "App Testing",
+                "pages": [
+                  "support/docs/app-testing-on-real-devices",
+                  "support/docs/how-to-use-testing-tools-in-session",
+                  "support/docs/gesture-support-ios",
+                  {
+                    "group": "Applications",
+                    "pages": [
+                      "support/docs/upload-apps-on-real-device-cloud",
+                      "support/docs/app-settings",
+                      "support/docs/app-manager"
+                    ]
+                  },
+                  {
+                    "group": "App Source",
+                    "pages": [
+                      "support/docs/install-apps-from-play-store",
+                      "support/docs/install-apps-from-test-flight",
+                      "support/docs/install-apps-from-app-center",
+                      "support/docs/install-apps-from-app-store",
+                      "support/docs/install-apps-from-firebase"
+                    ]
+                  },
+                  {
+                    "group": "Features",
+                    "pages": [
+                      "support/docs/camera-image-injection-on-real-devices",
+                      "support/docs/ip-geolocation-on-real-devices-app",
+                      "support/docs/biometric-authentication-on-real-devices",
+                      "support/docs/network-configurations-in-real-devices",
+                      "support/docs/sim-support-realdevices",
+                      "support/docs/contacts-on-real-devices",
+                      "support/docs/real-device-adb-shell",
+                      "support/docs/ui-inspector",
+                      "support/docs/screen-reader-on-real-devices-app",
+                      "support/docs/accessibility-settings-ios",
+                      "support/docs/devtools-on-real-devices-app",
+                      "support/docs/set-date-time-hour-format-real-devices",
+                      "support/docs/device-passcode-on-realdevice",
+                      "support/docs/assistive-touch-on-real-ios-devices",
+                      "support/docs/dark-mode-on-real-devices",
+                      "support/docs/group-folder-redirect-on-real-device",
+                      "support/docs/apple-pay-manual",
+                      "support/docs/upload-files-media",
+                      "support/docs/multi-device-testing"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Browser Testing",
+                "pages": [
+                  "support/docs/browser-testing-on-real-devices",
+                  "support/docs/how-to-use-in-session-testing-tools",
+                  {
+                    "group": "Features",
+                    "pages": [
+                      "support/docs/screen-reader-on-real-devices-browser",
+                      "support/docs/ip-geolocation-on-real-devices-browser",
+                      "support/docs/assistive-touch-on-real-ios-browser",
+                      "support/docs/dark-mode-on-browser",
+                      "support/docs/browser-network-configurations",
+                      "support/docs/contacts-on-real-devices-browser",
+                      "support/docs/set-date-time-hour-format-real-devices-browser"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Private Cloud",
+                "pages": [
+                  "support/docs/public-cloud-vs-private-cloud",
+                  "support/docs/select-pre-installed-apps",
+                  "support/docs/private-device-allocation-to-teams"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Test Manager",
+            "pages": [
+              "support/docs/test-manager",
+              {
+                "group": "Projects",
+                "pages": [
+                  "support/docs/create-projects",
+                  "support/docs/system-and-custom-fields"
+                ]
+              },
+              {
+                "group": "Test Cases",
+                "pages": [
+                  {
+                    "group": "Import Test Cases",
+                    "pages": [
+                      "support/docs/csv-import",
+                      "support/docs/one-click-migration-from-testrail"
+                    ]
+                  },
+                  "support/docs/generate-test-cases-with-ai",
+                  "support/docs/manual-test-case-creation",
+                  "support/docs/test-case-versioning",
+                  "support/docs/create-modules",
+                  "support/docs/copy-and-move-support-for-test-cases",
+                  "support/docs/bulk-update-fields",
+                  "support/docs/export-test-cases",
+                  {
+                    "group": "Linking Automated Test Cases",
+                    "pages": [
+                      "support/docs/automated-test-cases-with-ai",
+                      "support/docs/automated-test-cases-linked-using-dashboard",
+                      "support/docs/automated-test-cases-linked-using-capability"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Test Runs",
+                "pages": [
+                  "support/docs/test-run-creation-and-management",
+                  "support/docs/test-instance-audit-logs"
+                ]
+              },
+              "support/docs/milestone-creation-and-management",
+              {
+                "group": "Insights & Reports",
+                "pages": [
+                  "support/docs/insights-dashboard",
+                  "support/docs/tms-reports"
+                ]
+              },
+              {
+                "group": "Issue Tracker Integration",
+                "pages": [
+                  "support/docs/link-jira-issues-with-test-manager",
+                  "support/docs/testmu-jira-app",
+                  "support/docs/link-ado-issues-with-test-manager",
+                  "support/docs/testmu-azure-devops-app"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "LambdaTest MCP Server",
+            "pages": [
+              "support/docs/testmu-mcp-server"
+            ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              {
+                "group": "Bug Tracking Tools",
+                "pages": [
+                  "support/docs/bug-tracking-tools",
+                  "support/docs/jira-integration",
+                  "support/docs/jira-self-hosted-integration",
+                  "support/docs/airtable-integration",
+                  "support/docs/notion-integration",
+                  "support/docs/linear-app-integration",
+                  "support/docs/azure-devops-integration",
+                  "support/docs/youtrack-integration",
+                  "support/docs/mantis-integration",
+                  "support/docs/pagerduty-integration",
+                  "support/docs/bugasura-integration",
+                  "support/docs/zoho-bugtracker-integration",
+                  "support/docs/goodday-integration",
+                  "support/docs/bugherd-integration",
+                  "support/docs/zipboard-integration",
+                  "support/docs/bugzilla-integration",
+                  "support/docs/bugsnag-integration",
+                  "support/docs/devrev-integration",
+                  "support/docs/fogbugz-integration",
+                  "support/docs/airbrake-integration",
+                  "support/docs/userback-integration",
+                  "support/docs/zenkit-integration",
+                  "support/docs/spirateam-integration",
+                  "support/docs/assembla-integration",
+                  "support/docs/taiga-integration",
+                  "support/docs/servicenow-integration",
+                  "support/docs/zohoproject-integration",
+                  "support/docs/rally-integration"
+                ]
+              },
+              {
+                "group": "Project Management Tools",
+                "pages": [
+                  "support/docs/integrations-with-project-management-tools",
+                  "support/docs/clickup-integration",
+                  "support/docs/github-integration",
+                  "support/docs/github-repo-based-oauth-integration",
+                  "support/docs/shortcut-integration",
+                  "support/docs/gitlab-integration",
+                  "support/docs/redmine-integration",
+                  "support/docs/asana-integration",
+                  "support/docs/monday-com-integration",
+                  "support/docs/trello-integration",
+                  "support/docs/miro-integration",
+                  "support/docs/bitbucket-integration",
+                  "support/docs/integrating-wrike-with-lambdatest",
+                  "support/docs/pivotal-tracker-integration",
+                  "support/docs/hive-integration",
+                  "support/docs/teamwork-integration",
+                  "support/docs/target-process-integration",
+                  "support/docs/paymo-integration",
+                  "support/docs/practitest-integration",
+                  "support/docs/breeze-integration-with-lambdatest",
+                  "support/docs/backlog-integration-with-lambdatest",
+                  "support/docs/favro-integration",
+                  "support/docs/zapier-integration-with-lambdatest",
+                  "support/docs/axosoft-integration",
+                  {
+                    "group": "Analytics Tools",
+                    "pages": [
+                      "support/docs/datadog-integration",
+                      "support/docs/sumo-logic-integration",
+                      "support/docs/new-relic-integration"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Team Communication Tools",
+                "pages": [
+                  "support/docs/team-communication-tools",
+                  "support/docs/slack-integration",
+                  "support/docs/microsoft-teams-integration",
+                  "support/docs/rocketchat-integration-with-lambdatest",
+                  "support/docs/integrating-mattermost-with-lambdatest",
+                  "support/docs/flock-integration",
+                  "support/docs/google-chat-integration",
+                  "support/docs/webex-teams-integration",
+                  "support/docs/zoho-cliq-integration"
+                ]
+              },
+              {
+                "group": "Integrations With CI/CD Tools",
+                "pages": [
+                  "support/docs/integrations-with-ci-cd-tools",
+                  "support/docs/bitbucket-pipelines-integration",
+                  "support/docs/aws-codepipeline-integration",
+                  "support/docs/bamboo-integration",
+                  {
+                    "group": "Jenkins Plugin",
+                    "pages": [
+                      "support/docs/jenkins-plugin",
+                      "support/docs/integrating-your-jenkins-pipeline-with-lambdatest"
+                    ]
+                  },
+                  "support/docs/semaphore-integration-with-lambdatest",
+                  "support/docs/circleci-integration",
+                  "support/docs/travis-ci-with-lambdatest",
+                  "support/docs/gitlab-ci-integration-with-lambdatest",
+                  "support/docs/codeship-integration-with-lambdatest",
+                  "support/docs/codefresh-ci-integration-with-lambdatest",
+                  "support/docs/teamcity-integration-with-lambdatest",
+                  {
+                    "group": "Integrate Azure Pipelines",
+                    "pages": [
+                      "support/docs/integrate-azure-pipelines-with-lambdatest",
+                      "support/docs/integrate-lambdatest-extension-with-azure-pipelines"
+                    ]
+                  },
+                  "support/docs/selenium-testing-with-concourse-ci-and-lambdatest",
+                  {
+                    "group": "GoCD",
+                    "pages": [
+                      "support/docs/gocd-integration-with-lambdatest",
+                      "support/docs/yaml-configuration-for-gocd-with-lambdatest"
+                    ]
+                  },
+                  "support/docs/drone-ci-integration-with-lambdatest",
+                  "support/docs/appveyor-ci-integration",
+                  "support/docs/google-cloud-ci-integration",
+                  "support/docs/bitrise-integration",
+                  "support/docs/run-espresso-tests-in-bitrise",
+                  "support/docs/bitrise-integration-xcuitest",
+                  "support/docs/buildkite-integration-with-lambdatest"
+                ]
+              },
+              {
+                "group": "Codeless Automation Tools",
+                "pages": [
+                  {
+                    "group": "Katalon",
+                    "pages": [
+                      "support/docs/katalon-integration-with-lambdatest",
+                      "support/docs/katalon-integration",
+                      "support/docs/running-groovy-script-in-katalon-with-lambdatest"
+                    ]
+                  },
+                  "support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid",
+                  "support/docs/ranorex-integration-with-lambdatest",
+                  "support/docs/run-oxygen-automation-scripts-on-lambdatest",
+                  "support/docs/leapwork-integration-with-lambdatest",
+                  "support/docs/vividus-integration",
+                  "support/docs/qmetry-integration",
+                  "support/docs/cerberus-integration",
+                  "support/docs/testingwhiz-integration",
+                  "support/docs/testsigma-integration",
+                  "support/docs/tricentis-tosca-integration-lambdatest-selenium-grid",
+                  "support/docs/ghost-inspector-integration-with-lambdatest",
+                  "support/docs/accelq-integration",
+                  "support/docs/algoqa-integration",
+                  {
+                    "group": "Accessibility Testing Tools",
+                    "pages": [
+                      "support/docs/deque-integration"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Test Reporting",
+                "pages": [
+                  "support/docs/integrate-test-reporting-test-management-tools",
+                  "support/docs/testrail-integration-with-lambdatest-selenium-grid",
+                  "support/docs/zebrunner-integration",
+                  "support/docs/zephyr-scale-integration",
+                  "support/docs/testmo-integration",
+                  {
+                    "group": "Code Coverage Tools",
+                    "pages": [
+                      "support/docs/rktracer-integration"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Plugin and Extensions",
+                "pages": [
+                  "support/docs/plugins-and-extensions",
+                  "support/docs/chrome-extension",
+                  {
+                    "group": "Jenkins Plugin",
+                    "pages": [
+                      "support/docs/jenkins-with-lambdatest",
+                      "support/docs/integrating-lambdatest-with-jenkins-freestyle-project",
+                      "support/docs/integrating-lambdatest-report-with-jenkins-pipeline"
+                    ]
+                  },
+                  "support/docs/wordpress-plugin",
+                  "support/docs/npm-plugin-for-testcafe-integration-with-lambdatest",
+                  "support/docs/fastlane-with-lambdatest",
+                  "support/docs/integrate-azure-pipelines-with-lambdatest",
+                  "support/docs/teamcity-plugin",
+                  "support/docs/vscode-extension",
+                  "support/docs/xcode-plugin-lambdamax",
+                  "support/docs/docker-tunnel-extension",
+                  "support/docs/gradle-integration-with-lambdatest"
+                ]
+              },
+              "support/docs/record-and-replay-tests",
+              "support/docs/zalenium-integration-with-lambdatest",
+              "support/docs/applitools-integration-with-lambdatest",
+              "support/docs/selenified-integration-with-lambdatest",
+              "support/docs/microsoft-teams-app",
+              "support/docs/app-center-integration",
+              "support/docs/app-automation-using-app-center",
+              "support/docs/siesta-integration",
+              "support/docs/testcomplete-integration",
+              "support/docs/testrigor-integration",
+              "support/docs/localstack-integration-with-lambdatest",
+              "support/docs/genrocket-integration",
+              "support/docs/netlify-integration-with-lambdatest",
+              "support/docs/testim-integration",
+              "support/docs/simplifyqa-integration",
+              "support/docs/uipath-integration"
+            ]
+          },
+          {
+            "group": "Accessibility Testing",
+            "pages": [
+              "support/docs/accessibility-testing",
+              {
+                "group": "Accessibility Web",
+                "pages": [
+                  {
+                    "group": "DevTools",
+                    "pages": [
+                      "support/docs/accessibility-devtools",
+                      "support/docs/accessibility-testing-install-devtools",
+                      "support/docs/accessibility-testing-run-quick-scan",
+                      {
+                        "group": "Scanning Methods",
+                        "pages": [
+                          "support/docs/accessibility-testing-workflow-scanner",
+                          "support/docs/accessibility-testing-full-page-scanner",
+                          "support/docs/accessibility-testing-partial-page-scanner",
+                          "support/docs/accessibility-testing-multi-page-scanner",
+                          "support/docs/accessibility-keyboard-scan"
+                        ]
+                      },
+                      "support/docs/accessibility-devtools-settings",
+                      "support/docs/accessibility-update-devtools-extension"
+                    ]
+                  },
+                  {
+                    "group": "Automation",
+                    "pages": [
+                      "support/docs/accessibility-automation",
+                      {
+                        "group": "Standard Grid",
+                        "pages": [
+                          "support/docs/accessibility-automation-test",
+                          {
+                            "group": "Cypress",
+                            "pages": [
+                              "support/docs/cypress-v10-accessibility-test",
+                              "support/docs/cypress-v9-accessibility-test"
+                            ]
+                          },
+                          "support/docs/playwright-accessibility-test"
+                        ]
+                      },
+                      {
+                        "group": "HyperExecute",
+                        "pages": [
+                          "support/docs/selenium-hyprerexecute-accessibility-tests",
+                          {
+                            "group": "Cypress",
+                            "pages": [
+                              "support/docs/cypress-v10-hyprerexecute-accessibility-tests",
+                              "support/docs/cypress-v9-hyprerexecute-accessibility-tests"
+                            ]
+                          }
+                        ]
+                      },
+                      "support/docs/accessibility-automation-settings"
+                    ]
+                  },
+                  {
+                    "group": "Test Scheduling",
+                    "pages": [
+                      "support/docs/accessibility-test-scheduling",
+                      "support/docs/accessibility-test-scheduling-scan",
+                      "support/docs/accessibility-test-scheduling-edit",
+                      "support/docs/accessibility-test-scheduling-crawler"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Accessibility App",
+                "pages": [
+                  "support/docs/accessibility-app-scanner",
+                  "support/docs/accessibility-native-app-automation-test",
+                  {
+                    "group": "Rule Engine",
+                    "pages": [
+                      "support/docs/accessibility-android-rules",
+                      "support/docs/accessibility-ios-rules"
+                    ]
+                  }
+                ]
+              },
+              "support/docs/screen-reader-on-accessibility",
+              {
+                "group": "Features",
+                "pages": [
+                  "support/docs/accessibility-passed-test-cases",
+                  "support/docs/accessibility-capture-screenshot",
+                  "support/docs/accessibility-fragment-identifer",
+                  "support/docs/accessibility-web-score"
+                ]
+              },
+              "support/docs/accessibility-mcp-server",
+              {
+                "group": "Navigating Dashboard",
+                "pages": [
+                  "support/docs/accessibility-testing-navigating-dashboard",
+                  "support/docs/accessibility-testing-dashboard-issue-summary",
+                  "support/docs/accessibility-testing-dashboard-all-issues",
+                  "support/docs/accessibility-report-bug"
+                ]
+              },
+              "support/docs/accessibility-faq"
+            ]
+          },
+          {
+            "group": "Testing Locally",
+            "pages": [
+              {
+                "group": "Getting started with Tunnel",
+                "pages": [
+                  "support/docs/testmu-tunnel",
+                  "support/docs/testing-locally-hosted-pages",
+                  "support/docs/local-testing-linux",
+                  "support/docs/local-testing-windows",
+                  "support/docs/local-testing-macos",
+                  "support/docs/real-time-locally-hosted-pages",
+                  "support/docs/testing-locally-hosted-apps"
+                ]
+              },
+              {
+                "group": "Configuration and Modifiers",
+                "pages": [
+                  "support/docs/lambda-tunnel-modifiers",
+                  "support/docs/advanced-tunnel-features",
+                  "support/docs/environment-variables-supported-by-lambda-tunnel"
+                ]
+              },
+              "support/docs/underpass-tunnel-application",
+              {
+                "group": "Integration and Automation",
+                "pages": [
+                  "support/docs/hyperexecute-how-to-configure-tunnel",
+                  "support/docs/smartui-sdk-tunnel",
+                  "support/docs/maven-tunnel-for-locally-hosted-web-applications",
+                  "support/docs/integrate-testmu-extension-with-azure-pipelines"
+                ]
+              },
+              {
+                "group": "Docker Integration",
+                "pages": [
+                  "support/docs/docker-tunnel",
+                  "support/docs/docker-tunnel-extension"
+                ]
+              },
+              {
+                "group": "Advanced Features",
+                "pages": [
+                  "support/docs/sharing-lambda-tunnel",
+                  "docs/load-balancing-in-lambda-tunnel",
+                  "support/docs/charles-proxy",
+                  "support/docs/dedicated-proxy",
+                  "support/docs/bypass-proxy-domains",
+                  "support/docs/socks5-proxy-support",
+                  "support/docs/http2-support"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "support/docs/troubleshooting-lambda-tunnel",
+                  "support/docs/how-to-set-the-open-file-limit-while-using-tunnel"
+                ]
+              },
+              "support/docs/tunnel-release-notes"
+            ]
+          },
+          {
+            "group": "Setting and Security",
+            "pages": [
+              {
+                "group": "Acount Management",
+                "pages": [
+                   "support/docs/account-management",
+                   "support/docs/network-whitelisting-and-tunnel-guide",
+                   "support/docs/lambdatest-public-ip",
+                   {
+                    "group": "Single Sign On",
+                    "pages": [
+                       "support/docs/single-sign-on",
+                       "support/docs/lambdatest-sso-self-serve",
+                       "support/docs/lambdatest-sso-manage-connection",
+                       "support/docs/lambdatest-sso-okta-integration",
+                       "support/docs/lambdatest-sso-onelogin-using-saml",
+                       "support/docs/lambdatest-sso-google",
+                       "support/docs/sso-azure-integration",
+                       "support/docs/lambdatest-sso-pingidentity-integration",
+                       "support/docs/lambdatest-sso-oidc"
+                    ]
+                   },
+                    {
+                      "group": "SCIM",
+                      "pages": [
+                        "support/docs/scim",
+                        "support/docs/scim-azure",
+                        "support/docs/scim-okta",
+                        "support/docs/jumpcloud-scim"
+                      ]
+                    }               
+                ]
+              },           
+              "support/docs/manage-subscriptions",
+              "support/docs/credits-management",
+              "support/docs/service-accounts",
+              "support/docs/sub-organizations",
+              "support/docs/support-access",
+              "support/docs/user-management",
+              "support/docs/team-management",
+              "support/docs/multi-factor-authentication",
+              "support/docs/delete-lambdatest-account",
+              "support/docs/group-management",
+              "support/docs/audit-logs",
+              "support/docs/password-and-access-key-expiration-policy",
+              "support/docs/tunnel-security",
+              "support/docs/kaneai-test-manager-access-management"
+            ]
+          },
+          {
+            "group": "Other Docs",
+            "pages": [
+              {
+                "group": "LT Browser",
+                "pages": [
+                  "support/docs/lt-browser",
+                  "support/docs/lt-browser-2",
+                  "support/docs/performance-report",
+                  "support/docs/network-throttling-for-responsive-testing",
+                  "support/docs/scroll-sync",
+                  "support/docs/full-page-screenshots",
+                  "support/docs/error-reports"
+                ]
+              },
+              "support/docs/test-logs",
+              {
+                "group": "Test Intelligence",
+                "pages": [
+                  "support/docs/test-intelligence-overview",
+                  "support/docs/test-intelligence-flakiness-test-detection",
+                  "support/docs/test-intelligence-command-error-logs-analytics"
+                ]
+              },
+              {
+                "group": "Screenshot Testing",
+                "pages": [
+                  "support/docs/visual-ui-testing/",
+                  {
+                    "group": "Automated Screenshot Testing",
+                    "pages": [
+                      "support/docs/automated-screenshot-testing",
+                      "support/docs/mark-as-bug-in-screenshot-testing",
+                      "support/docs/automated-screenshot-api-for-cross-browser-testing",
+                      "support/docs/taking-screenshots-of-pages-behind-login",
+                      "support/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing"
+                    ]
+                  },
+                  {
+                    "group": "Responsive Testing",
+                    "pages": [
+                      "support/docs/responsive-testing",
+                      "mark-as-bug-in-responsive-testing"
+                    ]
+                  },
+                  "support/docs/smart-visual-testing"
+                ]
+              },
+              "support/docs/concurrency-widget"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code-simple",
+        "groups": [
+          {
+            "group": "Selenium Automation API",
+            "pages": [
+              {
+                "group": "Build",
+                "pages": [
+                  "support/api-doc/build/fetch-all-builds-of-an-account",
+                  "support/api-doc/build/fetch-specified-build-details",
+                  "support/api-doc/build/delete-build",
+                  "support/api-doc/build/update-build-name-or-status",
+                  "support/api-doc/build/stop-tests-by-buildid"
+                ]
+              },
+              {
+                "group": "Session",
+                "pages": [
+                  "support/api-doc/session/fetch-list-of-all-sessions",
+                  "support/api-doc/session/session-specific-information",
+                  "support/api-doc/session/delete-test-session",
+                  "support/api-doc/session/update-test-session-details",
+                  "support/api-doc/session/stop-session-by-sessionid",
+                  "support/api-doc/session/to-fetch-all-step-by-step-screenshots",
+                  "support/api-doc/session/fetch-recorded-video-of-a-test-session-id",
+                  "support/api-doc/session/command-logs-of-a-test-session",
+                  "support/api-doc/session/selenium-log-of-a-test-session",
+                  "support/api-doc/session/network-log-of-a-test-session",
+                  "support/api-doc/session/console-log-of-a-test-session",
+                  "support/api-doc/session/network-har-log-of-a-test-session",
+                  "support/api-doc/session/full-har-log-of-a-test-session",
+                  "support/api-doc/session/upload-terminal-logs-to-our-lambda-storage",
+                  "support/api-doc/session/upload-assertion-logs-to-our-lambda-storage"
+                ]
+              },
+              {
+                "group": "Session Logs (V2)",
+                "pages": [
+                  "support/api-doc/session-logs-v2/command-logs-of-a-test-session",
+                  "support/api-doc/session-logs-v2/seleniumappium-log-of-a-test-session",
+                  "support/api-doc/session-logs-v2/network-log-of-a-test-session",
+                  "support/api-doc/session-logs-v2/consolebrowser-log-of-a-test-session",
+                  "support/api-doc/session-logs-v2/network-har-log-of-a-test-session",
+                  "support/api-doc/session-logs-v2/full-har-log-of-a-test-session"
+                ]
+              },
+              {
+                "group": "Test",
+                "pages": [
+                  "support/api-doc/test/upload-assertion-logs-to-our-lambda-storage",
+                  "support/api-doc/test/fetch-recorded-video-of-a-test-id"
+                ]
+              },
+              {
+                "group": "tunnel",
+                "pages": [
+                  "support/api-doc/tunnel/fetch-running-tunnels-of-your-account",
+                  "support/api-doc/tunnel/stop-a-running-tunnel"
+                ]
+              },
+              {
+                "group": "platforms",
+                "pages": [
+                  "support/api-doc/platforms/fetch-platforms"
+                ]
+              },
+              {
+                "group": "prerun",
+                "pages": [
+                  "support/api-doc/prerun/fetch-all-pre-run-files-uploaded-by-the-user",
+                  "support/api-doc/prerun/upload-pre-run-executable-file-to-our-lambda-storage",
+                  "support/api-doc/prerun/delete-pre-run-from-our-lambda-storage",
+                  "support/api-doc/prerun/check-if-the-file-is-approved-by-lambdatest",
+                  "support/api-doc/prerun/download-pre-run-executable-file"
+                ]
+              },
+              {
+                "group": "user-files",
+                "pages": [
+                  "support/api-doc/user-files/fetch-all-user-files-uploaded-by-the-user",
+                  "support/api-doc/user-files/upload-files-to-our-lambda-storage",
+                  "support/api-doc/user-files/delete-user-files-from-our-lambda-storage",
+                  "support/api-doc/user-files/download-user-file-from-lambda-storage"
+                ]
+              },
+              {
+                "group": "Lighthouse",
+                "pages": [
+                  "support/api-doc/lighthouse/to-fetch-the-lighthouse-performance-report-data"
+                ]
+              },
+              {
+                "group": "Organisation",
+                "pages": [
+                  "support/api-doc/organisation/get-organisation-concurrency"
+                ]
+              },
+              {
+                "group": "extensions",
+                "pages": [
+                  "support/api-doc/extensions/fetch-all-extensions-uploaded-by-the-user",
+                  "support/api-doc/extensions/upload-new-extensions-in-zip-format-to-our-lambda-storage",
+                  "support/api-doc/extensions/delete-extension-from-our-lambda-storage"
+                ]
+              },
+              {
+                "group": "Resolution",
+                "pages": [
+                  "support/api-doc/resolution/get-resolutions-of-platforms"
+                ]
+              },
+              {
+                "group": "Geolocation",
+                "pages": [
+                  "support/api-doc/geolocation/get-ips-of-geolocation"
+                ]
+              },
+              {
+                "group": "Autoheal Command Logs",
+                "pages": [
+                  "support/api-doc/autoheal-command-logs/fetch-autohealed-commands-data-for-a-test"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Automated Screenshots API",
+            "pages": [
+              {
+                "group": "Get OS-Browsers",
+                "pages": [
+                  "support/api-doc/get-os-browsers/fetch-all-available-os-browser-combinations"
+                ]
+              },
+              {
+                "group": "Get Devices",
+                "pages": [
+                  "support/api-doc/get-devices/fetch-all-available-device-combinations"
+                ]
+              },
+              {
+                "group": "Get Resolutions",
+                "pages": [
+                  "support/api-doc/get-resolutions/fetch-all-available-resolution-on-different-os"
+                ]
+              },
+              {
+                "group": "Get Screenshots",
+                "pages": [
+                  "support/api-doc/get-screenshots/fetch-specified-screenshot-details"
+                ]
+              },
+              {
+                "group": "Get Zipped Screenshots",
+                "pages": [
+                  "support/api-doc/get-zipped-screenshots/fetch-zipped-screenshots"
+                ]
+              },
+              {
+                "group": "Get Profiles",
+                "pages": [
+                  "support/api-doc/get-profiles/fetch-login-profiles"
+                ]
+              },
+              {
+                "group": "Get Locations",
+                "pages": [
+                  "support/api-doc/get-locations/fetch-locations"
+                ]
+              },
+              {
+                "group": "Start Screenshot Test",
+                "pages": [
+                  "support/api-doc/start-screenshot-test/start-screenshot-test"
+                ]
+              },
+              {
+                "group": "Stop Screenshot Test",
+                "pages": [
+                  "support/api-doc/stop-screenshot-test/stop-specified-screenshot-test"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "App Automation API (Real Devices)",
+            "openapi": "mobile_automation.yaml"
+          },
+          {
+            "group": "Smart UI",
+            "openapi": "Smart-UI.yaml"
+          },
+          
+          {
+            "group": "Cypress Automation",
+            "pages": [
+              {
+                "group": "Cypress",
+                "pages": [
+                  "support/api-doc/cypress/zipped-report-for-a-cypress-test",
+                  "support/api-doc/cypress/command-logs-of-a-cypress-test-id",
+                  "support/api-doc/cypress/console-log-of-a-cypress-test-id",
+                  "support/api-doc/cypress/network-log-of-a-cypress-test-id",
+                  "support/api-doc/cypress/enhanced-mochawesome-json-report"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "User Management",
+            "pages": [
+              {
+                "group": "Users",
+                "pages": [
+                  "support/api-doc/users/get-all-users",
+                  "support/api-doc/users/edit-details-by-admin",
+                  "support/api-doc/users/update-user-role-by-admin",
+                  "support/api-doc/users/delete-members",
+                  "support/api-doc/users/user-password-by-admin",
+                  "support/api-doc/users/get-all-member-and-invited-users"
+                ]
+              },
+              {
+                "group": "Service Account",
+                "pages": [
+                  "support/api-doc/service-account/get-all-service-accounts",
+                  "support/api-doc/service-account/create-service-account",
+                  "support/api-doc/service-account/update-service-account",
+                  "support/api-doc/service-account/delete-service-account"
+                ]
+              },
+              {
+                "group": "Invites Users",
+                "pages": [
+                  "support/api-doc/invites-users/invite-user-with-group",
+                  "support/api-doc/invites-users/get-invited-users",
+                  "support/api-doc/invites-users/resend-invite",
+                  "support/api-doc/invites-users/delete-invite-user"
+                ]
+              },
+              {
+                "group": "Token",
+                "pages": [
+                  "support/api-doc/token/generate-service-account-token",
+                  "support/api-doc/token/fetch-service-account-token",
+                  "support/api-doc/token/regen-token-by-admin",
+                  "support/api-doc/token/fetch-user-token-by-admin"
+                  
+                ]
+              },
+              {
+                "group": "User Profile",
+                "pages": [
+                  "support/api-doc/user-profile/user-password",
+                  "support/api-doc/user-profile/fetch-token-by-users",
+                  "support/api-doc/user-profile/generate-token-by-user",
+                  "support/api-doc/user-profile/edit-name-by-user",
+                  "support/api-doc/user-profile/getting-user-preference",
+                  "support/api-doc/user-profile/updating-user-preference"
+                ]
+              },
+              {
+                "group": "Support Access",
+                "pages": [
+                  "support/api-doc/support-access/get-support-access-history",
+                  "support/api-doc/support-access/grant-support-access",
+                  "support/api-doc/support-access/revoke-support-access"
+                ]
+              },
+              {
+                "group": "Groups",
+                "pages": [
+                  "support/api-doc/groups/create-group",
+                  "support/api-doc/groups/make-default-group",
+                  "support/api-doc/groups/get-all-groups",
+                  "support/api-doc/groups/update-multiple-group",
+                  "support/api-doc/groups/get-groups-by-id",
+                  "support/api-doc/groups/update-group-by-id",
+                  "support/api-doc/groups/delete-group"
+                ]
+              },
+              {
+                "group": "Sub Organization - CRUD",
+                "pages": [
+                  "support/api-doc/sub-organization--crud/get-sub-organizations",
+                  "support/api-doc/sub-organization--crud/create-sub-organization",
+                  "support/api-doc/sub-organization--crud/bulk-update-sub-org",
+                  "support/api-doc/sub-organization--crud/update-sub-organization-by-id",
+                  "support/api-doc/sub-organization--crud/delete-sub-organization-by-id",
+                  "support/api-doc/sub-organization--crud/get-sub-organization-by-id"
+                ]
+              },
+              {
+                "group": "Sub Organization - Invite Users",
+                "pages": [
+                  "support/api-doc/sub-organization--invite-users/invite-users-to-sub-organization",
+                  "support/api-doc/sub-organization--invite-users/get-pending-invites-for-sub-organization",
+                  "support/api-doc/sub-organization--invite-users/resend-invite",
+                  "support/api-doc/sub-organization--invite-users/withdraw-invite"
+                ]
+              },
+              {
+                "group": "Sub Organization - Token",
+                "pages": [
+                  "support/api-doc/sub-organization--token/get-user-token",
+                  "support/api-doc/sub-organization--token/regenerate-user-token"
+                ]
+              },
+              {
+                "group": "Sub Organization - User",
+                "pages": [
+                  "support/api-doc/sub-organization--user/update-user",
+                  "support/api-doc/sub-organization--user/delete-sub-organization-user",
+                  "support/api-doc/sub-organization--user/update-user-password-by-admin",
+                  "support/api-doc/sub-organization--user/move-user-to-sub-organization",
+                  "support/api-doc/sub-organization--user/register-user-to-sub-organization"
+                ]
+              },
+              {
+                "group": "Sub Organization - Service Account",
+                "pages": [
+                  "support/api-doc/sub-organization--service-account/get-service-account-token",
+                  "support/api-doc/sub-organization--service-account/regenerate-service-account-token",
+                  "support/api-doc/sub-organization--service-account/create-service-account",
+                  "support/api-doc/sub-organization--service-account/update-service-account",
+                  "support/api-doc/sub-organization--service-account/delete-service-account"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Test Manager",
+            "pages": [
+              {
+                "group": "Projects",
+                "pages": [
+                  "support/api-doc/projects/create-project",
+                  "support/api-doc/projects/update-project-by-id",
+                  "support/api-doc/projects/get-all-projects",
+                  "support/api-doc/projects/get-project-by-id"
+                ]
+              },
+              {
+                "group": "Folder",
+                "pages": [
+                  "support/api-doc/folder/create-folder",
+                  "support/api-doc/folder/update-folder-by-id",
+                  
+                  "support/api-doc/folder/get-all-folder-details-by-project-id",
+                  "support/api-doc/folder/get-test-cases-by-folder-id"
+                ]
+              },
+              {
+                "group": "Environment",
+                "pages": [
+                  "support/api-doc/environment/get-all-environments",
+                  "support/api-doc/environment/create-environments",
+                  "support/api-doc/environment/update-environment"
+                  
+                ]
+              },
+              {
+                "group": "Test Cases",
+                "pages": [
+                  "support/api-doc/test-cases/create-test-cases-by-project-id",
+                  "support/api-doc/test-cases/update-test-case-by-id",
+                  "support/api-doc/test-cases/get-test-cases-by-project-id",
+                  "support/api-doc/test-cases/get-test-case-by-id"
+                ]
+              },
+              {
+                "group": "Execution History",
+                "pages": [
+                  "support/api-doc/execution-history/test-execution-history-by-test-case-id",
+                  "support/api-doc/execution-history/test-execution-history-by-jira-id"
+                ]
+              },
+              {
+                "group": "Test Steps",
+                "pages": [
+                  "support/api-doc/test-steps/create-test-steps-for-testcase",
+                  "support/api-doc/test-steps/update-test-step-by-id"
+                ]
+              },
+              {
+                "group": "Test Runs",
+                "pages": [
+                  "support/api-doc/test-runs/create-test-run",
+                  "support/api-doc/test-runs/get-all-test-runs-by-project-id",
+                  "support/api-doc/test-runs/get-test-run-by-id",
+                  "support/api-doc/test-runs/delete-test-run",
+                  "support/api-doc/test-runs/update-test-run-by-id",
+                  
+                  "support/api-doc/test-runs/duplicate-test-run",
+                  "support/api-doc/test-runs/get-test-run-instances-by-test-run-id",
+                  "support/api-doc/test-runs/update-test-run-instance",
+                  "support/api-doc/test-runs/bulk-update-test-run-instances",
+                  "support/api-doc/test-runs/update-test-run-step",
+                  "support/api-doc/test-runs/get-test-run-instance-by-id",
+                  "support/api-doc/test-runs/archive-test-run-by-id"
+                ]
+              },
+              {
+                "group": "Milestone",
+                "pages": [
+                  "support/api-doc/milestone/create-a-new-milestone",
+                  "support/api-doc/milestone/get-all-milestones-by-project-id",
+                  "support/api-doc/milestone/delete-milestone",
+                  "support/api-doc/milestone/get-milestone-by-id",
+                  "support/api-doc/milestone/update-milestone"
+                  
+                ]
+              },
+              {
+                "group": "Jira Flow",
+                "pages": [
+                  "support/api-doc/jira-flow/get-all-jira-issues-by-testcaseid",
+                  "support/api-doc/jira-flow/get-test-cases-by-jira-id",
+                  "support/api-doc/jira-flow/link-jira-issue",
+                  "support/api-doc/jira-flow/remove-jira-issue"
+                ]
+              }
+
+            ]
+          },
+          {
+            "group": "HyperExecute",
+            "pages": [
+              {
+                "group": "Secrets",
+                "pages": [
+                  "support/api-doc/secrets/create-secrets-and-store-sensitive-information-in-the-vault",
+                  "support/api-doc/secrets/retrieve-all-secrets-stored-in-your-account",
+                  "support/api-doc/secrets/delete-specific-secrets-permanently-from-the-vault"
+                ]
+              },
+              {
+                "group": "Browsers",
+                "pages": [
+                  "support/api-doc/browsers/get-a-list-of-all-browsers-supported-in-hyperexecute"
+                ]
+              },
+              {
+                "group": "Jobs",
+                "pages": [
+                  "support/api-doc/jobs/check-the-status-of-a-job-and-its-associated-tasks",
+                  "support/api-doc/jobs/fetch-scenario-details-associated-with-your-job-id",
+                  "support/api-doc/jobs/fetch-session-level-details-associated-with-your-job-id",
+                  "support/api-doc/jobs/view-all-stages-executed-within-a-specific-task",
+                  "support/api-doc/jobs/get-detailed-test-results-within-a-specific-stage",
+                  "support/api-doc/jobs/get-logs-for-a-specific-stage-of-a-job",
+                  "support/api-doc/jobs/abort-an-ongoing-job-execution-immediately",
+                  "support/api-doc/jobs/list-all-the-jobs-of-your-organization"
+                ]
+              },
+              {
+                "group": "Artifacts",
+                "pages": [
+                  "support/api-doc/artifacts/retrieve-the-metadata-of-all-artifacts-generated-by-a-job",
+                  "support/api-doc/artifacts/download-artifacts-from-a-specific-job"
+                ]
+              },
+              {
+                "group": "RCA",
+                "pages": [
+                  "support/api-doc/rca/fetch-rca-of-your-task"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Accessibility Testing",
+            "openapi": "accessibility-testing.yaml"
+          },
+          {
+            "group": "Performance Testing",
+            "pages": [
+              "support/api-doc/performance-testing/retrieve-a-summary-of-performance-testing-results-for-a-specific-job",
+              "support/api-doc/performance-testing/fetch-detailed-request-statistics-for-a-performance-test-within-a-specific-job",
+              "support/api-doc/performance-testing/fetch-detailed-error-statistics-for-a-performance-test-within-a-specific-job"
+            ]
+          },
+          {
+            "group": "Audit logs",
+            "pages": [
+              "support/api-doc/audit-logs/get-audit-logs",
+              "support/api-doc/audit-logs/get-logs-by-event-id"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FAQ",
+        "icon": "circle-question",
+        "pages": [
+          "support/faq"
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Status",
+          "href": "https://status.lambdatest.io/",
+          "icon": "signal"
+        },
+        {
+          "anchor": "Community",
+          "href": "https://community.lambdatest.com/",
+          "icon": "users"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.lambdatest.com/blog/",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.lambdatest.com/"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Github",
+        "href": "https://github.com/LambdaTest",
+        "icon": "github"
+      },
+      {
+        "label": "Login",
+        "href": "https://accounts.lambdatest.com/login?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started Free",
+      "href": "https://accounts.lambdatest.com/register?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "facebook": "https://www.facebook.com/lambdatest/",
+      "x": "https://twitter.com/Lambdatesting",
+      "github": "https://github.com/LambdaTest/",
+      "linkedin": "https://www.linkedin.com/company/lambdatest/",
+      "youtube": "https://www.youtube.com/channel/UCCymWVaTozpEng_ep0mdUyw?sub_confirmation=1"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+---
+title: "Running Groovy Script In Katalon With TestMu AI Selenium Grid"
+sidebarTitle: "Running Groovy Script In Katalon With TestMu AI Selenium Grid"
+---
+﻿---
+id: running-groovy-script-in-katalon
+title: How to Run Groovy Script In Katalon With TestMu AI Selenium Grid?
+hide_title: true
+sidebar_label: Running Groovy Script In Katalon With TestMu AI Selenium Grid
+description: Run your Groovy script in Katalon with TestMu AI Selenium Grid. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+keywords:
+ [
+   "Katalon Groovy Script",
+   "Running Groovy Script",
+   "Groovy Script In Katalon",
+   "Groovy Test Automation Script",
+   "Groovy Automation",
+   "Groovy Automation Testing",
+   "Execute Groovy Script",
+   "Groovy Execute Script",
+   "Execute Groovy Script Online",
+   "Katalon using Groovy",
+   "Groovy Execute",
+   "Run Groovy Online",
+   "Groovy Test Online"
+ ]
+
+site_name: LambdaTest
+slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
+canonical: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
+---
+
+
+---
+
+As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with TestMu AI Selenium Grid.
+
+**Step 1:** Open your Katalon Studio instance & go to **Tests Explorer** from the left side-bar.
+
+**Step 2:** Right-click on the **Test Listener** folder & click on the new listener.
+
+**Step 3:** Name the new listener & paste the below code in the new listener.
+
+```javascript
+
+	/**
+	 * Executes before every test case starts.
+	 * @param testCaseContext related information of the executed test case.
+	 */
+	@BeforeTestCase
+	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+
+
+		//To set the test name at LambdaTest.
+		RunConfiguration.setDriverPreferencesProperty("Remote", "name", testCaseContext.getTestCaseId());
+		if (suiteContext != null){
+			RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
+		}
+		println testCaseContext.getTestCaseId();
+		println RunConfiguration.getDriverPreferencesProperties();
+	}
+	/**
+	 * Executes after every test case ends.
+	 * @param testCaseContext related information of the executed test case.
+	 */
+	@com.kms.katalon.core.annotation.TearDown
+	@AfterTestCase
+	def sampleAfterTestCase(TestCaseContext testCaseContext) {
+		//To set the status of test at LambdaTest.
+		String result="failed";
+		if(testCaseContext.getTestCaseStatus().equalsIgnoreCase("PASSED")){
+			result="passed"
+		}
+		try{
+			WebUI.executeJavaScript("lambda-status="+result,null)
+		}catch (Exception e)
+		{
+			println e.toString()
+		}
+		finally {
+			WebUI.closeBrowser()
+		}
+		println testCaseContext.getTestCaseId()
+		println testCaseContext.getTestCaseStatus()
+	}
+
+	/**
+	 * Executes before every test suite starts.
+	 * @param testSuiteContext: related information of the executed test suite.
+	 */
+	@BeforeTestSuite
+	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
+		suiteContext=testSuiteContext
+		//To Set the build Name at LambdaTest.
+		RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
+		println testSuiteContext.getTestSuiteId()
+	}
+
+	/**
+	 * Executes after every test suite ends.
+	 * @param testSuiteContext: related information of the executed test suite.
+	 */
+	@AfterTestSuite
+	def sampleAfterTestSuite(TestSuiteContext testSuiteContext) {
+		println testSuiteContext.getTestSuiteId()
+	}
+}
+```
+
+That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over TestMu AI cloud-based cross browser testing platform. Happy testing! 🙂

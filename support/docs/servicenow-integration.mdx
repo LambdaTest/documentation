@@ -1,0 +1,99 @@
+---
+title: "ServiceNow Integration with Lambdatest"
+sidebarTitle: "ServiceNow"
+keywords: [ "Lambdatest integrations", "push issues to servicenow", "free cross browser testing tool", "cross platform testing tools", "check browser compatibility online", "Lambdatest servicenow integration", "integrate servicenow with Lambdatest", "create issue in servicenow from Lambdatest", "servicenow integration with Lambdatest", "create servicenow issues from Lambdatest", "bug tracking tools", "project management tools" ]
+---
+ServiceNow is a cloud-based platform for IT service management and automating business processes. Integrating ServiceNow with Lambdatest enables you to log incidents directly from your testing sessions into ServiceNow, streamlining your workflow and enhancing team collaboration.
+
+<Info> ServiceNow Integration with Lambdatest is available for both freemium and premium plans.</Info>
+
+### Create an OAuth Application for Lambdatest in ServiceNow
+
+<Warning> Only an administrator of your ServiceNow instance can create the OAuth application required for integration. </Warning>
+
+To enable integration, you need to create an OAuth application in your ServiceNow instance for Lambdatest:
+
+1. **Log in to your ServiceNow instance** as an administrator.
+2. Go to **System OAuth > Application Registry** in the left navigation pane.
+   ![1](/assets/images/integrations/servicenow/1.png)
+3. Click **New** and select **Create an OAuth API endpoint for external clients**.
+4. Fill in the required fields:
+
+   - **Name:** Enter a name (e.g., Lambdatest Integration).
+   - **Client ID:** (Optional) Leave blank to auto-generate or specify your own.
+   - **Client Secret:** (Optional) Leave blank to auto-generate or specify your own.
+   - **Redirect URL:** <div className="lambdatest__codeblock"><CodeBlock>https://integrations.lambdatest.com/servicenow/auth/callback</CodeBlock></div>
+   - **Logo URL:** <CodeBlock>https://www.lambdatest.com/resources/images/logos/logo.svg</CodeBlock>
+     ![2](/assets/images/integrations/servicenow/2.png)
+
+5. Click **Submit** to create the application.
+6. After creation, copy the **Client ID** and **Client Secret**. You will need these values to complete the integration in Lambdatest.
+
+Once the OAuth application is set up, proceed with the integration steps below.
+
+## Integrate ServiceNow from your Lambdatest Account
+
+**Step 1:** Log in to your [LambdaTest](https://accounts.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
+
+**Step 2:** Navigate to `Settings` -> `Integrations` -> `Bug Tracker`.
+
+**Step 3:** Click on the **Connect** button of the ServiceNow block.
+
+**Step 4:** In the integration setup form, enter the following details:
+
+- **ServiceNow Instance URL:** The URL of your ServiceNow instance (e.g., `https://your-instance.service-now.com`).
+- **Client ID:** The Client ID from your ServiceNow OAuth application.
+- **Client Secret:** The Client Secret from your ServiceNow OAuth application.
+
+After filling in the details, click on the **Install** button to establish the integration.
+
+<video
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="/assets/videos/integration/bug-tracking/servicenow/install.mov"
+></video>
+
+## Log your First Incident
+
+**Step 1:** Ensure you have access to the appropriate ServiceNow instance and the Incident table is available.
+
+**Step 2:** While working on Lambdatest, if you encounter an incident, click on the **Mark as Bug** button available on different products.
+
+**Step 3:** In the incident logging form, provide the necessary details such as:
+
+- **User:** The user in ServiceNow to whom the incident should be assigned.
+- **Short Description:** A concise summary of the incident.
+- **Description:** Detailed information about the incident.
+- **Urgency:** Select the urgency level for the incident.
+- **Priority:** Select the priority for the incident.
+- **Due Date:** The date by which the incident should be resolved.
+
+**Step 4:** Click on the **Create Issue** button. The incident will be logged into your ServiceNow instance, and you can view it directly from your ServiceNow dashboard.
+
+![4](/assets/images/integrations/servicenow/3.png)
+
+## Resync ServiceNow Integration
+
+To ensure that the latest users from your ServiceNow system are available in Lambdatest, you can resync the integration.
+
+**Step 1:** Navigate to `Settings` -> `Integrations` in your Lambdatest account.
+
+**Step 2:** Locate the ServiceNow integration and click on the **Resync** button.
+
+- This will fetch the latest users from your ServiceNow system.
+
+- If your refresh token has expired, you will be prompted to reauthorize your ServiceNow integration.
+  ![4](/assets/images/integrations/servicenow/4.png)
+
+Once resynced, the latest data will be available for use.
+
+## Uninstall ServiceNow Integration
+
+**Step 1:** Navigate to `Settings` -> `Integrations` in your Lambdatest account.
+
+**Step 2:** Locate the ServiceNow integration and click on the **Remove** button to uninstall the integration.
+
+<Warning>
+  That was all you need to know for Lambdatest + ServiceNow Integration. Increase your productivity with our integrations. If you still have any questions for us, 
+  please feel free to let us know. Our experts are always available on<span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat** </span> to help you out with any roadblock.
+</Warning>

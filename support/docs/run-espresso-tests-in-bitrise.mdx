@@ -1,0 +1,98 @@
+---
+title: "Running Espresso Tests In Bitrise CI"
+sidebarTitle: "Bitrise - Espresso"
+---
+***
+
+Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
+
+Using Lambdatest with Bitrise, you can effortlessly perform [Espresso testing](https://www.lambdatest.com/espresso-automation-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of real Android devices.
+
+## Prerequisites
+***
+
+1. Ensure you have access to Lambdatest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+
+2. A Bitrise account.
+
+3. A GitHub / BitBucket / GitLab or other repository to connect with Bitrise.
+
+:::important Note
+If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](/support/docs/bitrise-integration/). 
+:::
+
+## Configuring The Lambdatest App Automate - Espresso Step In Bitrise
+***
+
+1. Use the search bar to find **Lambdatest App Automate - Espresso**. 
+
+![Image](/assets/images/bitrise-espresso/espresso-card.webp)
+
+2. Click **Lambdatest App Automate- Espresso** card. 
+
+![Image](/assets/images/bitrise-espresso/espresso-step.webp)
+
+3. In **Input Variables**, enter **App apk path** and **Test suite apk path**.
+
+<Warning>
+You can add a public link if your files are accessible through public link. In case, you don't an apk link handy, you can use Lambdatest’s sample application Proverbial for running your first test.
+</Warning>
+* [Proverbial APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
+* [Test Suite APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk)
+
+![Image](/assets/images/bitrise-integration/apppath.webp)
+
+* In **Lambdatest username**, click Select secret variable.
+
+![Image](/assets/images/bitrise-integration/keyuservar.webp)
+
+* Enter the key (it can be anything), your Lambdatest username and click **Add new**.
+
+![Image](/assets/images/bitrise-integration/username.webp)
+
+* In **Lambdatest access key**, click Select secret variable.
+
+![Image](/assets/images/bitrise-integration/keysecvar.webp)
+
+* Enter the key (it can be anything), your Lambdatest access key and click **Add new**.
+
+![Image](/assets/images/bitrise-integration/key.webp)
+
+4. Provide the list of device and operating system version on which you wish to run your tests.
+
+![Image](/assets/images/bitrise-espresso/lod.webp)
+
+Other options: 
+
+| Key | Value | Capability Description 
+| -------- | -----| ------------ | 
+| Device List   |  TYPE: STRING<br/> DEFAULT: Untitled<br/> `"Galaxy S10-9", "OnePlus 6T-10"`|  Add the devices here on which the test will be executed.<br/> Devices are comma separated.   | 
+|Build Name  |   TYPE: STRING<br/> DEFAULT: Untitled<br/> `Android Small Run` |  You can group your tests like a job containing multiple tests. | 
+| Queue Timeout |  TYPE: STRING<br/> DEFAULT: 600<br/> `300` | Enter the time in seconds after which you want your build to timeout from queue.  | 
+| Idle Timeout |  TYPE: STRING<br/> DEFAULT: 120<br/> `120` | Enter the time in seconds for maximum running time on a test in the build. | 
+| Tunnel |  TYPE: BOOLEAN<br/> `True`<br/>OR<br/> `False` | To test local applications with Lambdatest. | 
+| Tunnel name |  TYPE: STRING<br/> `RabbitHole` | Name of the tunnel. | 
+| Device logs |  TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False`| Enable Device Logs that will show information on the actions performed by the device. | 
+| Network logs |   TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False` | Enable Network Logs that will show the information on the data transmitted & received by the device. | 
+| Video |   TYPE: BOOLEAN<br/> DEFAULT: TRUE<br/>`True`<br/>OR<br/> `False` | Video recording of the screen. | 
+
+<Note>
+**[Espresso Testing On Lambdatest](/support/docs/getting-started-with-espresso-testing/)** <br />
+<br />
+[Automation Capabilities Generator For Selenium and Appium](https://www.lambdatest.com/capabilities-generator/)
+</Note>
+
+5. Click **⌘ + S** to save the step.
+
+![Image](/assets/images/bitrise-espresso/save_step.webp)
+
+6. Now go back to the build and click **Rebuild** to build the step.
+
+![Image](/assets/images/bitrise-espresso/rebuild.webp)
+
+7. Once the build process is complete, visit Lambdatest App Automation Dashboard to view your test results.
+
+![Image](/assets/images/bitrise-espresso/espresso_results.webp)
+
+---
+

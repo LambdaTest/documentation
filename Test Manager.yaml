@@ -1,0 +1,4217 @@
+openapi: 3.0.0
+info:
+  title: Test Manager
+  version: 1.0.0
+servers:
+  - url: https://test-manager-api.lambdatest.com/
+  - url: https://eu-test-manager-api.lambdatest.com/
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+tags:
+  - name: Projects
+  - name: Folder
+  - name: Environment
+  - name: Test Cases
+  - name: Execution History
+  - name: Test Steps
+  - name: Test Runs
+  - name: Milestone
+  - name: Jira Flow
+paths:
+  /api/v1/projects:
+    post:
+      tags:
+        - Projects
+      summary: Create Project
+      description: 'Create a New Project'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: TestProject-Demo
+                description: Project for testing project creation
+                tags:
+                  - tag1
+                  - tag2
+                  - tag3
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 06:16:51 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b6041c3eecbf377-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project created successfully
+                type: Success
+                id: 01J5Q6WPACPV0HJNVKMG0S141Z
+    put:
+      tags:
+        - Projects
+      summary: Update Project By ID
+      description: 'Update Project Details By ID'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                project_id: 'project_id'
+                name: Test Project -LambdaTest Demo
+                description: Updated Test Project Demo Description
+                tags:
+                  - tag1
+                  - tag2
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 06:28:05 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b6052380de5471f-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project updated successfully
+                type: Success
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 06:29:54 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b6054e04a8c471f-BOM
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid project ID
+    get:
+      tags:
+        - Projects
+      summary: Get All Projects
+      description: Get All Projects
+      security:
+        - basicAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '20'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          example: '10'
+        - name: sort
+          in: query
+          schema:
+            type: string
+          example: created_at
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:13:47 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a92eeaaccd9a931-MAA
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - project_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                    name: Test Project
+                    description: This for testing purpose
+                    test_case_count: 0
+                    created_by: 2048070
+                    updated_by: 2048070
+                    created_at: '2024-07-26T06:45:15Z'
+                    updated_at: '2024-07-26T06:45:15Z'
+                    tags:
+                      - tag_id: 5979
+                        name: Tag-1
+                      - tag_id: 5980
+                        name: Tag-2
+                columnMetadata:
+                  created_at:
+                    display_name: Created At
+                    default: true
+                    can_be_hidden: true
+                    sortable: true
+                  created_by:
+                    display_name: Created By
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  deleted_at:
+                    display_name: Deleted At
+                    default: true
+                    can_be_hidden: false
+                    sortable: true
+                  description:
+                    display_name: Description
+                    default: true
+                    can_be_hidden: false
+                    sortable: true
+                  name:
+                    display_name: Name
+                    default: true
+                    can_be_hidden: false
+                    sortable: true
+                  organization_id:
+                    display_name: Organization ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  updated_at:
+                    display_name: Updated At
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  updated_by:
+                    display_name: Updated By
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                filterMetadata:
+                  created_at:
+                    display_name: Created At
+                    scopes:
+                      - created_at_condition_before
+                      - created_at_condition_after
+                      - created_at_condition_on
+                      - created_at_condition_between
+                    type: time.Time
+                  created_by:
+                    display_name: Created By
+                    type: int
+                  name:
+                    display_name: Name
+                    type: string
+                  organization_id:
+                    display_name: Organization ID
+                    type: int
+                  updated_by:
+                    display_name: Updated By
+                    type: int
+                pagination:
+                  current_page: 1
+                  last_page: 1
+                  per_page: 10
+                  total: 1
+  /api/v1/projects/{project_id}:
+    get:
+      tags:
+        - Projects
+      summary: Get Project By ID
+      description: Get Project Details By ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: project_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:19:46 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a92f772cf43a931-MAA
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  project_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                  name: Test Project
+                  description: This for testing purpose
+                  test_case_count: 0
+                  created_by: 2048070
+                  updated_by: 2048070
+                  created_at: '2024-07-26T06:45:15Z'
+                  updated_at: '2024-07-26T06:45:15Z'
+                  tags:
+                    - tag_id: 5979
+                      name: Tag-1
+                    - tag_id: 5980
+                      name: Tag-2
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:20:33 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a92f89a9fcfa931-MAA
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid project ID
+  /api/v1/folder:
+    post:
+      tags:
+        - Folder
+      summary: Create Folder
+      description: Create New Folder
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                folders:
+                  - name: Test Folder - Demo
+                    description: Test Folder for creating Folder Demo
+                    parent_folder_id: 'parent_folder_id'
+                    entity_id: 'project_id'
+                    entity_type: project
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 06:35:41 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b605d5c8a7c471f-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Folders created successfully
+                type: Success
+                id: 01J5Q7Z65YF1TE22255HBRVSW7
+    put:
+      tags:
+        - Folder
+      summary: Update Folder By ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 'folder_id'
+                name: Test Folder - LambdaTest Demo
+                description: Test Folder Description Update
+                parent_folder_id: 'parent_folder_id'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 06:41:13 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b6065735a95471f-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Folder updated successfully
+                type: Success
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 07:21:02 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '78'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b609fca48493b61-BOM
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid folder ID
+  /api/v1/folder/entity/{entity_id}:
+    get:
+      tags:
+        - Folder
+      summary: Get All folder details By Project ID
+      description: Get All folder details By Project ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: entity_id
+          description : entity_id is the project_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 10:06:36 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a9393f08a957fad-MAA
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Success - 200
+                  value:
+                    data:
+                      - name: Test Folder
+                        description: Folder for testing purpose
+                        id: 01J3Q0DBFF2M74H527NZZAPR9B
+                        parent_id: null
+                        entity_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                        entity_type: project
+                        created_by: 2048070
+                        updated_by: 2048070
+                        created_at: '2024-07-26T07:52:14Z'
+                        updated_at: '2024-07-26T07:52:14Z'
+                example-1:
+                  summary: Invalid Entity ID - 200
+                  value:
+                    data: []
+  /api/v1/projects/{project_id}/folder/{folder_id}/test-cases:
+    get:
+      tags:
+        - Folder
+      summary: Get Test Cases By Folder ID
+      description: Get Test Case Details by Folder ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '20'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          example: '10'
+        - name: sort
+          in: query
+          schema:
+            type: string
+          example: '-created_at'
+        - name: project_id
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: folder_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Aug 2024 07:47:41 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - project_id: 01J43X04Q3WG0A0BVXNPT20QM9
+                    folder_id: 01J43X53GXR2T0BX63MS69HXCJ
+                    test_case_id: 01J43XFH00CXZ3HZ7AMBB32H7Q
+                    title: Test Case - 1
+                    description: Demo Test Case - 1
+                    priority: Medium
+                    type: Regression
+                    preconditions: preconditions
+                    estimated_time: 20
+                    created_by: 1000137129
+                    updated_by: 1000137129
+                    created_at: '2024-07-31T08:11:07Z'
+                    updated_at: '2024-08-01T13:17:34Z'
+                    status: Draft
+                    tags:
+                      - tag_id: 5865
+                        name: tag2
+                      - tag_id: 5866
+                        name: tag3
+                      - tag_id: 5867
+                        name: tag090909090909
+                    internal_id: TC-2
+                    automation_status: Not Automated
+                    is_auteur_generated: false
+                  - project_id: 01J43X04Q3WG0A0BVXNPT20QM9
+                    folder_id: 01J43X53GXR2T0BX63MS69HXCJ
+                    test_case_id: 01J43XFGZC1ZQ53HC54B3RDAPW
+                    title: Test case-2
+                    description: Demo Test case -2
+                    priority: Medium
+                    type: Regression
+                    preconditions: preconditions
+                    estimated_time: 20
+                    created_by: 1000137129
+                    updated_by: 1000137129
+                    created_at: '2024-07-31T08:11:07Z'
+                    updated_at: '2024-08-01T13:16:27Z'
+                    status: Draft
+                    tags:
+                      - tag_id: 5865
+                        name: tag2
+                      - tag_id: 5866
+                        name: tag3
+                      - tag_id: 5867
+                        name: tag090909090909
+                    internal_id: TC-1
+                    automation_status: Not Automated
+                    is_auteur_generated: false
+                columnMetadata:
+                  auteur_test_id:
+                    display_name: Auteur Test ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  automation_status:
+                    display_name: Automation Status
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  created_at:
+                    display_name: Created At
+                    default: true
+                    can_be_hidden: true
+                    sortable: true
+                  created_by:
+                    display_name: Created By
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  deleted_at:
+                    display_name: Deleted By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  description:
+                    display_name: Description
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  estimated_time:
+                    display_name: Estimated Time
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  external_id:
+                    display_name: external_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  folder_id:
+                    display_name: Folder ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  internal_id:
+                    display_name: internal_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  is_auteur_generated:
+                    display_name: Auteur Generated
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  organization_id:
+                    display_name: Organization ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  preconditions:
+                    display_name: Preconditions
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  priority:
+                    display_name: Priority
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  project_id:
+                    display_name: Project ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  status:
+                    display_name: Status
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  title:
+                    display_name: Title
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  type:
+                    display_name: Type
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  updated_at:
+                    display_name: Updated At
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  updated_by:
+                    display_name: Updated By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                filterMetadata:
+                  automation_status:
+                    display_name: Automation Status
+                    options:
+                      - Automated
+                      - Not Automated
+                      - To Be Automated
+                    type: select
+                  created_at:
+                    display_name: Created At
+                    scopes:
+                      - created_at_condition_before
+                      - created_at_condition_after
+                      - created_at_condition_on
+                      - created_at_condition_between
+                    type: time.Time
+                  created_by:
+                    display_name: Created By
+                    type: int
+                  organization_id:
+                    display_name: Organization ID
+                    type: int
+                  priority:
+                    display_name: Priority
+                    options:
+                      - Lowest
+                      - Low
+                      - Medium
+                      - High
+                      - Highest
+                    type: select
+                  status:
+                    display_name: Status
+                    options:
+                      - Draft
+                      - Open
+                      - Closed
+                    type: select
+                  title:
+                    display_name: Title
+                    type: string
+                  type:
+                    display_name: Type
+                    options:
+                      - Accessibility
+                      - Acceptance
+                      - Compatibility
+                      - Destructive
+                      - Performance
+                      - Integration
+                      - Functional
+                      - Regression
+                      - Smoke & Sanity
+                      - Security
+                      - User Interface
+                      - Usability
+                      - Other
+                    type: select
+                pagination:
+                  current_page: 1
+                  last_page: 1
+                  per_page: 20
+                  total: 2
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 09:16:13 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '78'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a934a1e3e287e87-MAA
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Invalid Folder ID - 422
+                  value:
+                    type: error
+                    title: Request Not Processed
+                    message: Invalid Folder ID
+                example-1:
+                  summary: Invalid Project ID - 422
+                  value:
+                    type: error
+                    title: Request Not Processed
+                    message: Invalid project ID
+  /api/v1/environments:
+    get:
+      tags:
+        - Environment
+      summary: Get All Environments
+      security:
+        - basicAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '20'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          example: '10'
+        - name: sort
+          in: query
+          schema:
+            type: string
+          example: created_at
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '420'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  organization_id: 166750
+                  environments:
+                    - environment_id: 4
+                      platform: Mobile
+                      name: Mobile iOS
+                      os: iOS
+                      os_version: '16'
+                      browser: Firefox
+                      browser_version: '121'
+                      brand: Apple
+                      device: iPhone 15
+                    - environment_id: 1
+                      platform: Desktop
+                      name: Mobile iOS
+                      os: MacOS
+                      os_version: Sonoma
+                      browser: Safari
+                      browser_version: '17'
+                      resolution: 1920x1080
+                    - environment_id: 3
+                      platform: Mobile
+                      name: Mobile iOS
+                      os: Android
+                      os_version: '14'
+                      browser: Chrome
+                      browser_version: '104'
+                      brand: Samsung
+                      device: Galaxy S22
+                    - environment_id: 2
+                      platform: Desktop
+                      name: Mobile iOS
+                      os: Windows
+                      os_version: '11'
+                      browser: Chrome
+                      browser_version: '104'
+                      resolution: 1920x1080
+                    - environment_id: 5
+                      platform: Desktop
+                      name: Mobile iOS
+                      os: Windows 11
+                      browser: Chrome
+                      resolution: 1024*766
+                    - environment_id: 6
+                      platform: Mobile
+                      name: Mobile iOS
+                      os: Android
+                      browser: Chrome
+                      brand: Samsung
+                      device: Flip 3
+                      resolution: 1024*766
+                    - environment_id: 7
+                      platform: Mobile
+                      name: Mobile iOS
+                      os: ios
+                      browser: Opera
+                      brand: Apple
+                      device: iPhone 13 Pro
+                      resolution: 1024*766
+    post:
+      tags:
+        - Environment
+      summary: Create Environments
+      description: Create configuration with environment name and variables. Note that supported variable values (Browser, OS, Device) are not publicly available currently, reach out to support if needed.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - configurations
+              properties:
+                configurations:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - name
+                      - environments
+                    properties:
+                      id:
+                        type: integer
+                        description: Configuration ID (optional)
+                      name:
+                        type: string
+                        description: Configuration name (required)
+                      platform:
+                        type: string
+                        description: Platform type (optional)
+                      is_custom:
+                        type: boolean
+                        description: Whether this is a custom configuration (optional)
+                      custom_app:
+                        type: boolean
+                        description: Whether this uses a custom app (optional)
+                      app_auto_update:
+                        type: boolean
+                        description: Whether app auto-update is enabled (optional)
+                      app_package:
+                        type: string
+                        description: App package name (optional)
+                      environments:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            os_name:
+                              type: string
+                              description: Operating system name (optional)
+                            os:
+                              type: string
+                              description: Operating system (optional)
+                            os_version:
+                              type: string
+                              description: Operating system version (optional)
+                            browser:
+                              type: string
+                              description: Browser name (optional)
+                            browser_version:
+                              type: string
+                              description: Browser version (optional)
+                            brand:
+                              type: string
+                              description: Device brand (optional)
+                            device:
+                              type: string
+                              description: Device name (optional)
+                            resolution:
+                              type: string
+                              description: Screen resolution (optional)
+                            os_version_id:
+                              type: string
+                              description: OS version ID (optional)
+                            os_id:
+                              type: string
+                              description: OS ID (optional)
+                            browser_id:
+                              type: string
+                              description: Browser ID (optional)
+                            browser_version_id:
+                              type: string
+                              description: Browser version ID (optional)
+                            resolution_id:
+                              type: string
+                              description: Resolution ID (optional)
+                            device_id:
+                              type: string
+                              description: Device ID (optional)
+                            manufacturer_id:
+                              type: string
+                              description: Manufacturer ID (optional)
+                            app_id:
+                              type: string
+                              description: App ID (optional)
+                            url:
+                              type: string
+                              description: URL (optional)
+                            private_cloud:
+                              type: boolean
+                              description: Whether private cloud is used (optional)
+                            udid:
+                              type: string
+                              description: UDID (optional)
+                            platform_type:
+                              type: string
+                              description: Platform type (optional)
+            example:
+              configurations:
+                - name: Web Desktop Chrome
+                  platform: web
+                  is_custom: false
+                  environments:
+                    - os: Windows
+                      os_version: '11'
+                      browser: Chrome
+                      browser_version: '120'
+                      resolution: 1920x1080
+                      platform_type: desktop
+                - name: Mobile iOS Safari
+                  platform: real-device-mobile
+                  is_custom: false
+                  environments:
+                    - os: ios
+                      os_version: '17.0'
+                      browser: Safari
+                      device: iPhone 15 Pro
+                      brand: Apple
+                      platform_type: mobile
+                - name: Custom Android App
+                  platform: real-device-mobile
+                  is_custom: true
+                  custom_app: true
+                  app_auto_update: false
+                  app_package: com.example.app
+                  environments:
+                    - os: android
+                      os_version: '13'
+                      device: Samsung Galaxy S23
+                      brand: Samsung
+                      platform_type: mobile
+      responses:
+        '200':
+          description: Environments created successfully
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  environment_id:
+                    type: array
+                    items:
+                      type: integer
+              example:
+                message: Environments created successfully
+                type: success
+                environment_id:
+                  - 123
+                  - 124
+                  - 125
+        '400':
+          description: Bad request - Invalid JSON, missing required fields, or query parameters present
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    oneOf:
+                      - type: string
+                      - type: array
+                        items:
+                          type: object
+                          properties:
+                            key:
+                              type: string
+                            detail:
+                              type: string
+              examples:
+                invalid_json:
+                  summary: Invalid JSON syntax
+                  value:
+                    title: Bad Request Error
+                    message:
+                        detail: Body Payload format is not correct
+                missing_field:
+                  summary: Missing required field
+                  value:
+                    title: Bad Request Error
+                    message:
+                      detail: Required params are missing
+                query_params:
+                  summary: Query parameters present (not allowed)
+                  value:
+                    title: Bad Request Error
+                    message:
+                      detail: Bad query params
+                invalid_field_type:
+                  summary: Invalid field value type
+                  value:
+                    title: Bad Request Error
+                    message:
+                      detail: 'Please give correct input value for the "name" field'
+        '401':
+          description: Unauthorized - Invalid or missing authentication token
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              example:
+                title: Unauthorized Error
+                message: Unauthenticated
+        '403':
+          description: Forbidden - User does not have access to TMS or action is not allowed
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                tms_access_revoked:
+                  summary: TMS access revoked
+                  value:
+                    title: Unauthorized Error
+                    message: Access to the product has been removed. Please contact your admin.
+                user_not_authorized:
+                  summary: User not authorized
+                  value:
+                    title: Unauthorized Error
+                    message: You are not allowed to perform this action.
+        '422':
+          description: Unprocessable Entity - Validation errors or business logic violations
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    oneOf:
+                      - type: string
+                      - type: array
+                        items:
+                          type: object
+                          properties:
+                            key:
+                              type: string
+                            detail:
+                              type: string
+              examples:
+                name_exists:
+                  summary: Environment name already exists
+                  value:
+                    title: Request Not Processed
+                    message: Configuration with this name already exists
+                validation_errors:
+                  summary: Validation errors in request body
+                  value:
+                    title: Request Not Processed
+                    message:
+                      - key: name
+                        detail: name is required
+                      - key: environments
+                        detail: environments is required
+        '500':
+          description: Internal Server Error - Server-side error occurred
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                database_error:
+                  summary: Database error
+                  value:
+                    title: Internal Server Error
+                    message: Sorry! Something went wrong
+                decode_error:
+                  summary: Failed to decode request
+                  value:
+                    title: Internal Server Error
+                    message: Sorry! Something went wrong
+    put:
+      tags:
+        - Environment
+      summary: Update Environment
+      description: Update existing configuration for a specific configuration ID. Note the configuration ID is dynamic and must be fetched from the 'get environments' API before each update.
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+                - name
+                - environments
+              properties:
+                id:
+                  type: integer
+                  description: Configuration ID (required for update)
+                name:
+                  type: string
+                  description: Configuration name (required)
+                platform:
+                  type: string
+                  description: Platform type (optional)
+                environments:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      os:
+                        type: string
+                        description: Operating system (optional)
+                      os_name:
+                        type: string
+                        description: Operating system name (optional)
+                      os_id:
+                        type: string
+                        description: OS ID (optional)
+                      os_version:
+                        type: string
+                        description: Operating system version (optional)
+                      os_version_id:
+                        type: string
+                        description: OS version ID (optional)
+                      browser:
+                        type: string
+                        description: Browser name (optional)
+                      browser_id:
+                        type: string
+                        description: Browser ID (optional)
+                      browser_version:
+                        type: string
+                        description: Browser version (optional)
+                      browser_version_id:
+                        type: string
+                        description: Browser version ID (optional)
+                      resolution:
+                        type: string
+                        description: Screen resolution (optional)
+                      resolution_id:
+                        type: string
+                        description: Resolution ID (optional)
+                      url:
+                        type: string
+                        description: URL (optional)
+                      platform_type:
+                        type: string
+                        description: Platform type (optional)
+                      brand:
+                        type: string
+                        description: Device brand (optional)
+                      device:
+                        type: string
+                        description: Device name (optional)
+                      device_id:
+                        type: string
+                        description: Device ID (optional)
+                      manufacturer_id:
+                        type: string
+                        description: Manufacturer ID (optional)
+                      app_id:
+                        type: string
+                        description: App ID (optional)
+                      private_cloud:
+                        type: boolean
+                        description: Whether private cloud is used (optional)
+                      udid:
+                        type: string
+                        description: UDID (optional)
+            example:
+              id: 44643
+              name: DesktopConfig
+              platform: desktop
+              environments:
+                - os: macOS
+                  os_name: macOS
+                  os_id: macOS
+                  os_version: macOS Tahoe
+                  os_version_id: OSV100021498719908712
+                  browser: Chrome
+                  browser_id: BRS100021498722190810
+                  browser_version: '143'
+                  browser_version_id: BRV19216818160455129266
+                  resolution: 3840x2160
+                  resolution_id: RES100021498719938809
+                  url: ''
+                  platform_type: web
+      responses:
+        '200':
+          description: Environment updated successfully
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  message:
+                    type: string
+              example:
+                type: success
+                message: Environment updated successfully
+        '400':
+          description: Bad request - Invalid JSON, missing required fields, or query parameters present
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    oneOf:
+                      - type: string
+                      - type: array
+                        items:
+                          type: object
+                          properties:
+                            key:
+                              type: string
+                            detail:
+                              type: string
+              examples:
+
+                invalid_field_type:
+                  summary: Invalid field type
+                  value:
+                    title: Bad Request Error
+                    message:
+                      'Please, give correct input value for the ''<field>'' field'
+                missing_field:
+                  summary: Missing required fields
+                  value:
+                    title: Bad Request Error
+                    message:
+                      Required params are missing
+                auth_check_failed:
+                  summary: User authentication check failed
+                  value:
+                    title: Bad Request Error
+                    message: Failed to cast userRes to UserAuthRes type
+        '403':
+          description: Forbidden - User does not have access to TMS or action is not allowed
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              example:
+                title: Unauthorized Error
+                message: You are not allowed to perform this action.
+        '404':
+          description: Not Found - Resource not found
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              example:
+                title: Resource not found
+                message: Record not found
+        '422':
+          description: Unprocessable Entity - Business logic errors
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    oneOf:
+                      - type: string
+                      - type: array
+                        items:
+                          type: string
+              examples:
+                invalid_environment_id:
+                  summary: Environment not found (during organization verification)
+                  value:
+                    title: Request Not Processed
+                    message: Invalid Environment ID
+                duplicate_name:
+                  summary: Duplicate environment name
+                  value:
+                    title: Request Not Processed
+                    message: Configuration with this name already exists
+        '500':
+          description: Internal Server Error
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 06 Dec 2023 11:28:44 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  requestId:
+                    type: string
+                  success:
+                    type: boolean
+                  code:
+                    type: integer
+                  data:
+                    type: string
+              examples:
+                generic_error:
+                  value:
+                    title: Internal Server Error
+                    message: Sorry! Something went wrong
+  /api/v1/test-cases:
+    post:
+      tags:
+        - Test Cases
+      summary: Create Test Cases By Project ID
+      description: Create New Test Cases
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                project_id: 'project_id'
+                folder_id: 'folder_id'
+                test_cases:
+                  - title: Demo Test case - 1
+                    description: Description Demo Test case - 1
+                    preconditions: preconditions
+                    tags:
+                      - tag1
+                      - tag3
+                      - tagtest1
+                  - title: Demo Test case - 2
+                    description: Description Demo Test case - 2
+                    preconditions: preconditions
+                    tags:
+                      - tag1
+                      - tag3
+                      - tagtest1
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 07:34:00 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b60b2c65fc3f45a-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test cases created successfully
+                type: Success
+                id:
+                  - 01J5QB9YQTGBCQJXRFA94C29MB
+                  - 01J5QB9YR9T8XECZX8PXZVFTNE
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 07:34:55 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b60b422b8ecf45a-BOM
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid project ID
+    put:
+      tags:
+        - Test Cases
+      summary: Update Test Case By ID
+      description: Update Test Case Details By ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              example1:
+                summary: Update Test Case By ID with Test Steps
+                value:
+                  id: 'test_case_id'
+                  project_id: 'project_id'
+                  title: TestCase -1 Demo LambdaTest
+                  description: performance of AI - 1
+                  priority: High
+                  status: Draft
+                  type: functional
+                  automation_status: To Be Automated
+                  preconditions: Connect with Sam Altman or Mira
+                  estimated_time: 20
+                  tags:
+                    - Ledger
+                  test_steps:
+                    - serial_no: 1
+                      description: enter emails and password
+                      outcome: Login error
+                    - serial_no: 2
+                      description: enter emails and password
+                      outcome: Login error
+                  dynamic_fields: []
+              example2:
+                summary: Update Test Case By ID for new BDD Scenerio
+                value:
+                  id: 'test_case_id'
+                  project_id: 'project_id'
+                  title: TestCase -1 Demo LambdaTest
+                  description: performance of AI - 1
+                  priority: High
+                  status: Draft
+                  type: functional
+                  automation_status: To Be Automated
+                  preconditions: Connect with Sam Altman or Mira
+                  estimated_time: 20
+                  bdd_scenarios:
+                    - bdd: Sample BDD
+                      status: ACCEPTED
+                  tags:
+                    - Ledger
+                  dynamic_fields: []
+              example3:
+                summary: Update Test Case By ID for existing BDD Scenerio
+                value:
+                  id: 'test_case_id'
+                  project_id: 'project_id'
+                  title: TestCase -1 Demo LambdaTest
+                  description: performance of AI - 1
+                  priority: High
+                  status: Draft
+                  type: functional
+                  automation_status: To Be Automated
+                  preconditions: Connect with Sam Altman or Mira
+                  estimated_time: 20
+                  bdd_scenarios:
+                    - bdd_scenario_id: bdd_scenerio_id
+                      bdd: Sample BDD
+                      status: ACCEPTED
+                  tags:
+                    - Ledger
+                  dynamic_fields: []
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 08:34:15 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b610b0f4e3f3dfe-BOM
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test case updated successfully
+                type: Success
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 20 Aug 2024 08:37:50 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8b611049cadd3dfe-BOM
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid test case provided
+  /api/v1/projects/{project_id}/test-cases:
+    get:
+      tags:
+        - Test Cases
+      summary: Get Test Cases By Project ID
+      description: get All Test Cases By Project ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '20'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          example: '40'
+        - name: sort
+          in: query
+          schema:
+            type: string
+          example: created_at
+        - name: project_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:38:03 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a9312372e8d7f96-MAA
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - project_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                    folder_id: 01J3Q0DBFF2M74H527NZZAPR9B
+                    test_case_id: 01J3Q2ZTG995PXPMQFQE2WYVDV
+                    title: search w3school.com in google search tab
+                    description: ''
+                    priority: Medium
+                    type: NA
+                    estimated_time: 10
+                    created_by: 2048070
+                    updated_by: 2048070
+                    created_at: '2024-07-26T08:37:16Z'
+                    updated_at: '2024-07-26T08:37:16Z'
+                    status: Draft
+                    test_steps: null
+                    internal_id: TC-2
+                    external_id: null
+                    automation_status: Not Automated
+                    bdd_scenarios: null
+                    is_auteur_generated: false
+                  - project_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                    folder_id: 01J3Q0DBFF2M74H527NZZAPR9B
+                    test_case_id: 01J3Q2ZTG8DF3B4CK66ZGZ17WY
+                    title: go to google.com
+                    description: ''
+                    priority: Medium
+                    type: NA
+                    estimated_time: 10
+                    created_by: 2048070
+                    updated_by: 2048070
+                    created_at: '2024-07-26T08:37:16Z'
+                    updated_at: '2024-07-26T08:37:16Z'
+                    status: Draft
+                    test_steps: null
+                    internal_id: TC-1
+                    external_id: null
+                    automation_status: Not Automated
+                    bdd_scenarios: null
+                    is_auteur_generated: false
+                columnMetadata:
+                  auteur_test_id:
+                    display_name: Auteur Test ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  automation_status:
+                    display_name: Automation Status
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  created_at:
+                    display_name: Created At
+                    default: true
+                    can_be_hidden: true
+                    sortable: true
+                  created_by:
+                    display_name: Created By
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  deleted_at:
+                    display_name: Deleted By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  description:
+                    display_name: Description
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  estimated_time:
+                    display_name: Estimated Time
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  external_id:
+                    display_name: external_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  folder_id:
+                    display_name: Folder ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  internal_id:
+                    display_name: internal_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  is_auteur_generated:
+                    display_name: Auteur Generated
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  organization_id:
+                    display_name: Organization ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  preconditions:
+                    display_name: Preconditions
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  priority:
+                    display_name: Priority
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  project_id:
+                    display_name: Project ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  status:
+                    display_name: Status
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  title:
+                    display_name: Title
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  type:
+                    display_name: Type
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  updated_at:
+                    display_name: Updated At
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  updated_by:
+                    display_name: Updated By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                filterMetadata:
+                  automation_status:
+                    display_name: Automation Status
+                    options:
+                      - Automated
+                      - Not Automated
+                      - To Be Automated
+                    type: select
+                  created_at:
+                    display_name: Created At
+                    scopes:
+                      - created_at_condition_before
+                      - created_at_condition_after
+                      - created_at_condition_on
+                      - created_at_condition_between
+                    type: time.Time
+                  created_by:
+                    display_name: Created By
+                    type: int
+                  organization_id:
+                    display_name: Organization ID
+                    type: int
+                  priority:
+                    display_name: Priority
+                    options:
+                      - Lowest
+                      - Low
+                      - Medium
+                      - High
+                      - Highest
+                    type: select
+                  status:
+                    display_name: Status
+                    options:
+                      - Draft
+                      - Open
+                      - Closed
+                    type: select
+                  title:
+                    display_name: Title
+                    type: string
+                  type:
+                    display_name: Type
+                    options:
+                      - Accessibility
+                      - Acceptance
+                      - Compatibility
+                      - Destructive
+                      - Performance
+                      - Integration
+                      - Functional
+                      - Regression
+                      - Smoke & Sanity
+                      - Security
+                      - User Interface
+                      - Usability
+                      - Other
+                    type: select
+                pagination:
+                  current_page: 1
+                  last_page: 1
+                  per_page: 40
+                  total: 2
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:41:18 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a9316fdbf3e7f96-MAA
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid project ID
+  /api/v1/milestone:
+    post:
+      tags:
+        - Milestone
+      summary: Create a new milestone
+      description: Endpoint to create a new milestone for a project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                project_id:
+                  type: string
+                  description: Unique identifier for the project.
+                title:
+                  type: string
+                  description: Title of the milestone.
+                description:
+                  type: string
+                  description: Detailed description of the milestone.
+                test_run_id:
+                  type: array
+                  items:
+                    type: string
+                  description: List of associated test run IDs.
+                tags:
+                  type: array
+                  items:
+                    type: string
+                  description: Tags associated with the milestone.
+                start_at:
+                  type: string
+                  format: date-time
+                  description: Start date and time of the milestone in the format YYYY-MM-DD HH:mm:ss.
+                end_at:
+                  type: string
+                  format: date-time
+                  description: End date and time of the milestone in the format YYYY-MM-DD HH:mm:ss.
+                owned_by:
+                  type: integer
+                  description: User ID of the milestone owner.
+                milestone_id:
+                  type: string
+                  description: Unique identifier for the milestone.
+              required:
+                - project_id
+                - title
+                - start_at
+                - end_at
+                - owned_by
+              example:
+                project_id: 01JEQSN8WQW76RM59X3KSBZYVH
+                title: mile mi
+                description: desc desc.
+                test_run_id:
+                  - 01JF4TH6P7A9TCP2YPZWQX7E3Z
+                tags:
+                  - t01
+                  - t02
+                start_at: 2024-01-02 15:04:05
+                end_at: 2026-01-02 15:04:05
+                owned_by: 862914
+      security:
+        - basicAuth: []
+      responses:
+        200:
+          description: Successful creation of the milestone.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Milestone created successfully
+                  type:
+                    type: string
+                    example: Success
+                  id:
+                    type: string
+                    example: 01JHN7P7PXFF4F85SPXDKTGXWG
+  /api/v1/project/{project_id}/milestones:
+    get:
+      tags:
+        - Milestone
+      summary: Get All Milestones By Project ID
+      description: Retrieve all milestones associated with a given project ID.
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - basicAuth: []
+      responses:
+        200:
+          description: Successful retrieval of milestones.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    project_id: 01JG9PVWC7MJ9YKR92TMDTVYJC
+                    name: Sample Test Runs
+                    description: ""
+                    test_case_count: 17
+                    test_run_count: 0
+                    created_by: 1000188123
+                    updated_by: 1000188123
+                    created_at: 2024-12-29T17:19:20Z
+                    updated_at: 2024-12-29T17:19:20Z
+                    tags:
+                      - tag_id: 9043
+                        name: sample
+  /api/v1/milestone/{milestone_id}:
+    delete:
+      tags:
+        - Milestone
+      summary: Delete Milestone
+      description: Delete a milestone by its ID.
+      parameters:
+        - name: milestone_id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - basicAuth: []
+      responses:
+        200:
+          description: Milestone successfully deleted.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Milestone deleted successfully
+                  type: Success
+
+    get:
+      tags:
+        - Milestone
+      summary: Get Milestone By ID
+      description: Get details of a milestone by its ID.
+      parameters:
+        - name: milestone_id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - basicAuth: []
+      responses:
+        200:
+          description: Milestone successfully retrieved.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    milestone_id: 01JHN7P7PXFF4F85SPXDKTGXWG
+                    project_id: 01JEQSN8WQW76RM59X3KSBZYVH
+                    title: mile mi
+                    description: desc desc.
+                    test_run_id:
+                      - 01JF4TH6P7A9TCP2YPZWQX7E3Z
+                    tags:
+                      - t01
+                      - t02
+                    start_at: 2024-01-02 15:04:05
+                    end_at: 2026-01-02 15:04:05
+                    owned_by: 862914
+                    created_at: 2024-12-29T17:19:20Z
+                    updated_at: 2024-12-29T17:19:20Z
+                    created_by: 1000188123
+                    updated_by: 1000188123
+    put:
+      tags:
+        - Milestone
+      summary: Update Milestone
+      description: Update details of an existing milestone.
+      parameters:
+        - name: milestone_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                title: Sanity milestone
+                description: ""
+                test_run_id:
+                  - 01JGAXH73Q0D2WRSZPXTWZVRTP
+                  - 01JGAZ48DPJS4KGB7R0KF7C0SS
+                tags: []
+                start_at: 2024-12-31
+                end_at: 2025-01-08
+                attachments: []
+                project_id: 01JG9PVWC7MJ9YKR92TMDTVYJC
+      security:
+        - basicAuth: []
+      responses:
+        200:
+          description: Milestone successfully updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Milestone updated successfully
+                  type: Success
+
+  /api/v1/test-cases/{test_case_id}:
+    get:
+      tags:
+        - Test Cases
+      summary: Get Test Case By ID
+      description: Get Test Case details by ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: test_case_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:43:14 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a9319d24eac7f96-MAA
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  project_id: 01J3PWJPQPGHBNPHBXX4DSME1H
+                  folder_id: 01J3Q0DBFF2M74H527NZZAPR9B
+                  test_case_id: 01J3Q2ZTG995PXPMQFQE2WYVDV
+                  title: search w3school.com in google search tab
+                  description: ''
+                  priority: Medium
+                  type: ''
+                  estimated_time: 10
+                  created_by: 2048070
+                  updated_by: 2048070
+                  created_at: '2024-07-26T08:37:16Z'
+                  updated_at: '2024-07-26T08:37:16Z'
+                  status: Draft
+                  test_steps: []
+                  internal_id: TC-2
+                  external_id: null
+                  automation_status: Not Automated
+                  bdd_scenarios: []
+                  is_auteur_generated: false
+                columnMetadata:
+                  auteur_test_id:
+                    display_name: Auteur Test ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  automation_status:
+                    display_name: Automation Status
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  created_at:
+                    display_name: Created At
+                    default: true
+                    can_be_hidden: true
+                    sortable: true
+                  created_by:
+                    display_name: Created By
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  deleted_at:
+                    display_name: Deleted By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  description:
+                    display_name: Description
+                    default: true
+                    can_be_hidden: true
+                    sortable: false
+                  estimated_time:
+                    display_name: Estimated Time
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  external_id:
+                    display_name: external_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  folder_id:
+                    display_name: Folder ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  internal_id:
+                    display_name: internal_id
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  is_auteur_generated:
+                    display_name: Auteur Generated
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  organization_id:
+                    display_name: Organization ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  preconditions:
+                    display_name: Preconditions
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  priority:
+                    display_name: Priority
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  project_id:
+                    display_name: Project ID
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  status:
+                    display_name: Status
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  title:
+                    display_name: Title
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  type:
+                    display_name: Type
+                    default: true
+                    can_be_hidden: false
+                    sortable: false
+                  updated_at:
+                    display_name: Updated At
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                  updated_by:
+                    display_name: Updated By
+                    default: false
+                    can_be_hidden: true
+                    sortable: false
+                filterMetadata:
+                  automation_status:
+                    display_name: Automation Status
+                    options:
+                      - Automated
+                      - Not Automated
+                      - To Be Automated
+                    type: select
+                  created_at:
+                    display_name: Created At
+                    scopes:
+                      - created_at_condition_before
+                      - created_at_condition_after
+                      - created_at_condition_on
+                      - created_at_condition_between
+                    type: time.Time
+                  created_by:
+                    display_name: Created By
+                    type: int
+                  organization_id:
+                    display_name: Organization ID
+                    type: int
+                  priority:
+                    display_name: Priority
+                    options:
+                      - Lowest
+                      - Low
+                      - Medium
+                      - High
+                      - Highest
+                    type: select
+                  status:
+                    display_name: Status
+                    options:
+                      - Draft
+                      - Open
+                      - Closed
+                    type: select
+                  title:
+                    display_name: Title
+                    type: string
+                  type:
+                    display_name: Type
+                    options:
+                      - Accessibility
+                      - Acceptance
+                      - Compatibility
+                      - Destructive
+                      - Performance
+                      - Integration
+                      - Functional
+                      - Regression
+                      - Smoke & Sanity
+                      - Security
+                      - User Interface
+                      - Usability
+                      - Other
+                    type: select
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 26 Jul 2024 08:43:50 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '87'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            CF-RAY:
+              schema:
+                type: string
+                example: 8a931ab75d437f96-MAA
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                type: error
+                title: Request Not Processed
+                message: Invalid test case provided
+  /api/v1/test-execution-history/{test_case_id}:
+    get:
+      tags:
+        - Execution History
+      summary: Test Execution History By Test Case ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: test_case_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/test-execution-history/jira/{Jira_issue_id}:
+    get:
+      tags:
+        - Execution History
+      summary: Test Execution History By Jira ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Jira_issue_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/test-steps:
+    post:
+      tags:
+        - Test Steps
+      summary: Create Test Steps For TestCase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                test_case_id: 'test_case_id'
+                test_steps:
+                  - serial_no: 1
+                    description: enter emails and password
+                    outcome: Login error
+                  - serial_no: 2
+                    description: enter emails and password
+                    outcome: Login error
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Mon, 11 Dec 2023 11:51:33 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '63'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test steps created successfully
+                type: Success
+  /api/v1/test-steps/{test_step_id}:
+    put:
+      tags:
+        - Test Steps
+      summary: Update Test Step By ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                serial_no: 1
+                description: updated description
+                outcome: 'login outcome '
+      security:
+        - basicAuth: []
+      parameters:
+        - name: test_step_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Mon, 11 Dec 2023 12:03:26 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '62'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test step updated successfully
+                type: Success
+  /api/v1/jira/{test_case_id}:
+    get:
+      tags:
+        - Jira Flow
+      summary: Get All Jira Issues By TestCaseID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: test_case_id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 28 Feb 2024 07:30:38 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '357'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - id: 'test_case_id'
+                    organization_id: 33275539
+                    created_at: '2024-02-28T07:13:52Z'
+                    updated_at: '2024-02-28T07:13:52Z'
+                    entity_id: "entity_id"
+                    entity_type: test_case
+                    project_id: "project_id"
+                    jira_id: jira_id
+                    jira_link: jira_link
+                    created_by: 862914
+                    updated_by: 862914
+                    deleted_at: null
+  /api/v1/jira/test-case/{Jira_issue_id}:
+    get:
+      tags:
+        - Jira Flow
+      summary: Get Test Cases by Jira ID
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Jira_issue_id
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '10'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          example: '10'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Tue, 30 Jan 2024 07:22:24 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '444'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: "Jira_issue_id"
+                organization_id: 33275539
+                created_at: '2024-01-15T13:19:56Z'
+                updated_at: '2024-01-29T21:32:14Z'
+                project_id: "project_id"
+                internal_id: 1
+                external_id: null
+                title: login with right creds
+                description: NA
+                priority: medium
+                type: Regression
+                preconditions: preconditions
+                status: draft
+                estimated_time: 20
+                created_by: 862914
+                updated_by: 862914
+                deleted_at: null
+                test_steps: null
+  /api/v1/jira:
+    post:
+      tags:
+        - Jira Flow
+      summary: Link Jira Issue
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                project_id: 'project_id'
+                entity_id: 'test_case_id'
+                entity_type: test_case
+                jira_id: 'org_id:jira_issue_id'
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Tue, 30 Jan 2024 03:35:58 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '63'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Jira Issue linked successfully
+                type: Success
+  /api/v1/jira/remove:
+    post:
+      tags:
+        - Jira Flow
+      summary: Remove Jira Issue
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                project_id: 'project_id'
+                entity_id: 'test_case_id'
+                entity_type: test_case
+                jira_id: jira_issue_id
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 28 Feb 2024 08:00:25 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '63'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Jira Issue unlinked successfully
+                type: Success
+
+  /api/v1/test-run:
+    post:
+      tags:
+        - Test Runs
+      summary: Create Test Run
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                title: New Test Run
+                objective: Sample Discreption
+                test_run_instances: []
+                tags:
+                  - tag1
+                  - tag2
+                  - tag3
+                project_id: 'sample project id'
+                is_auteur_generated: false
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Date:
+              schema:
+                type: string
+                example: Wed, 28 Feb 2024 08:00:25 GMT
+            Content-Length:
+              schema:
+                type: integer
+                example: '63'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Test Run created successfully
+                type: Success
+                id: 'test_run_id'
+  /api/v1/projects/{project_id}/test-runs:
+    get:
+      tags:
+          - Test Runs
+      summary: Get All Test Runs By Project ID
+      security:
+          -   basicAuth: [ ]
+      parameters:
+          -   name: project_id
+              in: path
+              schema:
+                  type: string
+              required: true
+          -   name: page
+              in: query
+              schema:
+                  type: integer
+              required: false
+          -   name: per_page
+              in: query
+              schema:
+                    type: integer
+              required: false
+      responses:
+          '200':
+              description: Successfully retrieved test runs
+              content:
+                  application/json:
+                      schema:
+                          type: object
+                          properties:
+                              data:
+                                  type: array
+                                  items:
+                                      type: object
+                                      properties:
+                                          id:
+                                              type: string
+                                          title:
+                                              type: string
+                                          project_id:
+                                              type: string
+                                          objective:
+                                              type: string
+                                          is_auteur_generated:
+                                              type: boolean
+                                          tags:
+                                              type: array
+                                              items:
+                                                  type: object
+                                                  properties:
+                                                      tag_id:
+                                                          type: integer
+                                                      name:
+                                                          type: string
+                                          status:
+                                              type: string
+                                              enum: [ Passed, Failed, Skipped, "In Progress", "Not Started" ]
+                                          type:
+                                              type: string
+                                          build_state:
+                                              type: string
+                                              enum: [ active, archived ]
+                                          created_at:
+                                              type: string
+                                              format: date-time
+                                          updated_at:
+                                              type: string
+                                              format: date-time
+                                          created_by:
+                                              type: integer
+                                          updated_by:
+                                              type: integer
+                                          run_result:
+                                              type: object
+                                              properties:
+                                                  total_test:
+                                                      type: integer
+                                                  passed:
+                                                      type: integer
+                                                  failed:
+                                                      type: integer
+                                                  skipped:
+                                                      type: integer
+                                                  not_started:
+                                                      type: integer
+                                          is_build_disabled:
+                                              type: boolean
+                                          total_test_cases:
+                                              type: integer
+                                          total_environments:
+                                              type: integer
+                                          total_run_instances:
+                                              type: integer
+                                          complete_percent:
+                                              type: number
+                                              format: float
+                              columnMetadata:
+                                  type: object
+                                  additionalProperties:
+                                      type: object
+                                      properties:
+                                          display_name:
+                                              type: string
+                                          default:
+                                              type: boolean
+                                          can_be_hidden:
+                                              type: boolean
+                                          sortable:
+                                              type: boolean
+                              filterMetadata:
+                                  type: object
+                                  additionalProperties:
+                                      type: object
+                                      properties:
+                                          display_name:
+                                              type: string
+                                          options:
+                                              type: array
+                                              items:
+                                                  type: string
+                                          type:
+                                              type: string
+                                          scopes:
+                                              type: array
+                                              items:
+                                                  type: string
+                              pagination:
+                                  type: object
+                                  properties:
+                                      current_page:
+                                          type: integer
+                                      last_page:
+                                          type: integer
+                                      per_page:
+                                          type: integer
+                                      total:
+                                          type: integer
+                      example:
+                          data:
+                              -   id: "test_run_id"
+                                  title: "Title"
+                                  project_id: "project_id"
+                                  objective: ""
+                                  is_auteur_generated: false
+                                  tags: null
+                                  status: "In Progress"
+                                  type: "Manual"
+                                  build_state: "active"
+                                  created_at: "2025-01-14T10:38:54Z"
+                                  updated_at: "2025-01-15T11:17:48Z"
+                                  created_by: user_id
+                                  updated_by: user_id
+                                  run_result:
+                                      total_test: 84
+                                      passed: 14
+                                      failed: 0
+                                      skipped: 0
+                                      not_started: 70
+                                  is_build_disabled: false
+                                  total_test_cases: 2
+                                  total_environments: 42
+                                  total_run_instances: 84
+                                  complete_percent: 16.666666666666664
+                          columnMetadata:
+                              build_state:
+                                  display_name: "Build State"
+                                  default: true
+                                  can_be_hidden: false
+                                  sortable: false
+                          filterMetadata:
+                              build_state:
+                                  display_name: "Build State"
+                                  options: [ "active", "archived" ]
+                                  type: "select"
+                          pagination:
+                              current_page: 1
+                              last_page: 2
+                              per_page: 10
+                              total: 11
+          '401':
+              description: Unauthorized
+          '403':
+              description: Forbidden
+          '404':
+              description: Project not found
+
+
+  /api/v1/test-run/{test_run_id}:
+    get:
+        tags:
+          - Test Runs
+        summary: Get Test Run By ID
+        security:
+          - basicAuth: []
+        parameters:
+          - name: test_run_id
+            in: path
+            schema:
+              type: string
+            required: true
+        responses:
+          '200':
+            description: OK
+            headers:
+              Content-Type:
+                schema:
+                  type: string
+                  example: application/json; charset=utf-8
+              Date:
+                schema:
+                  type: string
+                  example: Wed, 28 Feb 2024 08:00:25 GMT
+              Content-Length:
+                schema:
+                  type: integer
+                  example: '63'
+            content:
+              application/json:
+                schema:
+                  type: object
+                example:
+                  id: 'testrun_id'
+                  title: New Test Run
+                  objective: Sample Discription
+                  test_run_instances: []
+                  tags:
+                    - tag1
+                    - tag2
+                    - tag3
+                  project_id: 'project_id'
+                  is_auteur_generated: false
+          '422':
+            description: Unprocessable Entity
+            headers:
+              Date:
+                schema:
+                  type: string
+                  example: Wed, 28 Feb 2024 08:00:25 GMT
+              Content-Type:
+                schema:
+                  type: string
+                  example: application/json; charset=utf-8
+              Content-Length:
+                schema:
+                  type: integer
+                  example: '63'
+            content:
+              application/json:
+                schema:
+                  type: object
+                example:
+                  message: Invalid test run ID
+                  type: Error
+    delete:
+        tags:
+            - Test Runs
+        summary: Delete Test Run
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_run_id
+              in: path
+              schema:
+                  type: string
+              required: true
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run deleted successfully
+                            type: Success
+    put:
+        tags:
+            - Test Runs
+        summary: Update Test Run By ID
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_run_id
+              in: path
+              schema:
+                  type: string
+              required: true
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        example:
+                            id: 'sample_id'
+                            title: New name Test Run
+                            objective: Updated Discription
+                            tags: []
+                            is_auteur_generated: true
+                            type: Manual
+                            test_run_instances: [
+                            {
+                                test_case_id: 'test_case_id',
+                                assignee: 2144228,
+                                priority: Medium,
+                                name: Execute API with User Details,
+                                serial_no: 1,
+                                environment_id: 1793,
+                                dataset_id: 'dataset_id',
+                                dataset_version_id: 'dataset_version_id',
+                                dataset_row_id: 'dataset_row_id'
+                            }
+                            ]
+                            project_id: 'project_id'
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run updated successfully
+                            type: Success
+
+  /api/v1/test-run/duplicate/{test_run_id}:
+      post:
+          tags:
+              - Test Runs
+          summary: Duplicate Test Run
+          security:
+              -   basicAuth: [ ]
+          parameters:
+              -   name: test_run_id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+          requestBody:
+              content:
+                  application/json:
+                      schema:
+                          type: object
+                      example: { }
+          responses:
+              '200':
+                  description: OK
+                  headers:
+                      Content-Type:
+                          schema:
+                              type: string
+                              example: application/json; charset=utf-8
+                      Date:
+                          schema:
+                              type: string
+                              example: Wed, 28 Feb 2024 08:00:25
+                      Content-Length:
+                          schema:
+                              type: integer
+                              example: 63
+                  content:
+                      application/json:
+                          schema:
+                              type: object
+                          example:
+                              message: Test Run duplicated successfully
+                              type: Success
+                              id: 'new_id'
+  /api/v1/test-run/instances/{test_run_id}:
+    get:
+        tags:
+            - Test Runs
+        summary: Get Test Run Instances by Test Run ID
+        description: Retrieves test run instances with details and supports filtering
+        security:
+              -   basicAuth: [ ]
+        parameters:
+            - name: test_run_id
+              in: path
+              required: true
+              schema:
+                  type: string
+            - name: page
+              in: query
+              required: false
+              schema:
+                  type: integer
+                  default: 1
+            - name: per_page
+              in: query
+              required: false
+              schema:
+                  type: integer
+                  default: 10
+            - name: filter[status]
+              in: query
+              required: false
+              schema:
+                  type: string
+            - name: filter[assignee]
+              in: query
+              required: false
+              schema:
+                  type: integer
+        responses:
+            '200':
+                description: Successfully retrieved test run instances
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                test_run_details:
+                                    type: object
+                                    properties:
+                                        id:
+                                            type: string
+                                        title:
+                                            type: string
+                                        project_id:
+                                            type: string
+                                        objective:
+                                            type: string
+                                        is_auteur_generated:
+                                            type: boolean
+                                        tags:
+                                            type: array
+                                            items:
+                                                type: string
+                                        status:
+                                            type: string
+                                        type:
+                                            type: string
+                                        build_state:
+                                            type: string
+                                        created_at:
+                                            type: string
+                                            format: date-time
+                                        updated_at:
+                                            type: string
+                                            format: date-time
+                                        created_by:
+                                            type: integer
+                                        updated_by:
+                                            type: integer
+                                        run_result:
+                                            type: object
+                                            properties:
+                                                total_test:
+                                                    type: integer
+                                                passed:
+                                                    type: integer
+                                                failed:
+                                                    type: integer
+                                                skipped:
+                                                    type: integer
+                                                not_started:
+                                                    type: integer
+                                        is_build_disabled:
+                                            type: boolean
+                                        total_test_cases:
+                                            type: integer
+                                        total_environments:
+                                            type: integer
+                                        total_run_instances:
+                                            type: integer
+                                        complete_percent:
+                                            type: number
+                                test_run_instances:
+                                    type: object
+                                    properties:
+                                        data:
+                                            type: array
+                                            items:
+                                                type: object
+                                                properties:
+                                                    id:
+                                                        type: integer
+                                                    test_case_id:
+                                                        type: string
+                                                    title:
+                                                        type: string
+                                                    description:
+                                                        type: string
+                                                    priority:
+                                                        type: string
+                                                        enum: [Lowest, Low, Medium, High, Highest]
+                                                    type:
+                                                        type: string
+                                                    internal_id:
+                                                        type: string
+                                                    order_no:
+                                                        type: integer
+                                                    status:
+                                                        type: string
+                                                        enum: [Passed, Failed, Not Started]
+                                                    assignee:
+                                                        type: integer
+                                                    automation_status:
+                                                        type: string
+                                                        enum: [Automated, Not Automated, To Be Automated]
+                                                    remarks:
+                                                        type: string
+                                                    environment:
+                                                        type: object
+                                                        properties:
+                                                            id:
+                                                                type: integer
+                                                            name:
+                                                                type: string
+                                                            brand:
+                                                                type: string
+                                                            os_name:
+                                                                type: string
+                                                            os:
+                                                                type: string
+                                                            os_version:
+                                                                type: string
+                                                            device:
+                                                                type: string
+                                                            platform:
+                                                                type: string
+                                                            browser:
+                                                                type: string
+                                                            browser_version:
+                                                                type: string
+                                                            resolution:
+                                                                type: string
+                                                            is_complete:
+                                                                type: boolean
+                                                            order_no:
+                                                                type: integer
+                                                                nullable: true
+                                                            assignee:
+                                                                type: integer
+                                                                nullable: true
+                                                    is_build_disabled:
+                                                        type: boolean
+                                                    dataset_details:
+                                                        type: object
+                                                        nullable: true
+                                                    auteur_test_id:
+                                                        type: string
+                                                        nullable: true
+                                                    is_auteur_generated:
+                                                        type: boolean
+                                                    linked_test_url:
+                                                        type: string
+                                                        nullable: true
+                                                    source:
+                                                        type: string
+                                        columnMetadata:
+                                            type: object
+                                            additionalProperties:
+                                                type: object
+                                                properties:
+                                                    display_name:
+                                                        type: string
+                                                    default:
+                                                        type: boolean
+                                                    can_be_hidden:
+                                                        type: boolean
+                                                    sortable:
+                                                        type: boolean
+                                        filterMetadata:
+                                            type: object
+                                            additionalProperties:
+                                                type: object
+                                                properties:
+                                                    display_name:
+                                                        type: string
+                                                    options:
+                                                        type: array
+                                                        items:
+                                                            type: string
+                                                    type:
+                                                        type: string
+                                                    scopes:
+                                                        type: array
+                                                        items:
+                                                            type: string
+                                        pagination:
+                                            type: object
+                                            properties:
+                                                current_page:
+                                                    type: integer
+                                                last_page:
+                                                    type: integer
+                                                per_page:
+                                                    type: integer
+                                                total:
+                                                    type: integer
+            '400':
+                description: Bad request - Invalid parameters
+            '401':
+                description: Unauthorized
+            '404':
+                description: Test run not found
+  /api/v1/test-run/instance/{test_instance_id}:
+    put:
+        tags:
+            - Test Runs
+        summary: Update Test Run Instance
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_instance_id
+              in: path
+              schema:
+                  type: string
+              required: true
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        example:
+                            status: Passed
+                            assignee: 1000167238
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run Instance updated successfully
+                            type: Success
+            '422':
+                description: Unprocessable Entity
+                headers:
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Invalid test instance ID
+                            type: Error
+  /api/v1/test-run/{test_run_id}/bulk-update:
+    put:
+        tags:
+            - Test Runs
+        summary: Bulk Update Test Run Instances
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_run_id
+              in: path
+              required: true
+              schema:
+                  type: string
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            test_run_instances:
+                                type: array
+                                items:
+                                    type: object
+                                    properties:
+                                        id:
+                                            type: integer
+                                        status:
+                                            type: string
+                                        assignee:
+                                            type: integer
+                        example:
+                            test_run_instances:
+                                - id: 55793
+                                  status: "Passed"
+                                  assignee: 1000167238
+
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: 63
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run Instances updated successfully
+                            type: Success
+            '422':
+                description: Unprocessable Entity
+                headers:
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Invalid test run ID
+                            type: Error
+
+  /api/v1/test-run/test-run-step/{test_run_step_id}:
+    put:
+        tags:
+            - Test Runs
+        summary: Update Test Run Step
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_run_step_id
+              in: path
+              schema:
+                  type: string
+              required: true
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        example:
+                            status: "Passed"
+                            remarks: "Sample remarks"
+                            attachment_urls: ["url1","url2"]
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run Step updated successfully
+                            type: Success
+            '422':
+                description: Unprocessable Entity
+                headers:
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Invalid test instance ID
+                            type: Error
+  /api/v1/test-run/test-run-instance/{test_instance_id}:
+        get:
+            tags:
+                - Test Runs
+            summary: Get Test Run Instance By ID
+            security:
+                - basicAuth: []
+            parameters:
+                - name: test_instance_id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+            responses:
+                '200':
+                    description: OK
+                    headers:
+                        Content-Type:
+                            schema:
+                                type: string
+                                example: application/json; charset=utf-8
+                        Date:
+                            schema:
+                                type: string
+                                example: Wed, 28 Feb 2024 08:00:25
+                        Content-Length:
+                            schema:
+                                type: integer
+                                example: '63'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                            example:
+                                type: 'NA'
+                                time_taken: null
+                                test_steps_count: 0
+                                test_run_title: Sample Test Run
+                                test_run_id: 'test_run_id'
+                                test_case_id: 'test_case_id'
+                                executed_by: 'user_id'
+                                id: 'sample_id'
+                                internal_id: "id"
+                                order_no: 2
+                                priority: "Medium"
+                                project_id: "project_id"
+                                remarks: ""
+                                result: "Passed"
+                                run_testcase_disable: false
+                                source: "external"
+                                started_at: null
+                                tags: [ ]
+                                test_build_steps: [ ]
+                '422':
+                    description: Unprocessable Entity
+                    headers:
+                        Date:
+                            schema:
+                                type: string
+                                example: Wed, 28 Feb 2024 08:00:25
+                        Content-Type:
+                            schema:
+                                type: string
+                                example: application/json; charset=utf-8
+                        Content-Length:
+                            schema:
+                                type: integer
+                                example: '63'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                            example:
+                                message: Invalid test instance ID
+                                type: Error
+
+
+  /api/v1/test-run/archive/{test_run_id}:
+      put:
+        tags:
+              - Test Runs
+        summary: Archive Test Run By ID
+        security:
+                - basicAuth: []
+        parameters:
+                - name: test_run_id
+                  in: path
+                  schema:
+                      type: string
+                  required: true
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        example:
+                            build_state: "archived"
+        responses:
+                '200':
+                    description: OK
+                    headers:
+                        Content-Type:
+                            schema:
+                                type: string
+                                example: application/json; charset=utf-8
+                        Date:
+                            schema:
+                                type: string
+                                example: Wed, 28 Feb 2024 08:00:25
+                        Content-Length:
+                            schema:
+                                type: integer
+                                example: 63
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                            example:
+                                message: Test Run updated successfully
+                                type: Success
+                '422':
+                    description: Unprocessable Entity
+                    headers:
+                        Date:
+                            schema:
+                                type: string
+                                example: Wed, 28 Feb 2024 08:00:25
+                        Content-Type:
+                            schema:
+                                type: string
+                                example: application/json; charset=utf-8
+                        Content-Length:
+                            schema:
+                                type: integer
+                                example: 63
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                            example:
+                                message: Invalid test run ID
+                                type: Error

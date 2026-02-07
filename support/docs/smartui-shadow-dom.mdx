@@ -1,0 +1,32 @@
+---
+title: "Shadow DOM"
+sidebarTitle: "Shadow DOM"
+keywords:
+ [
+  "Visual Regression",
+  "Visual Regression Testing Guide",
+  "Visual Regression Test Automation",
+  "Visual Regression Automation Testing",
+  "Running Visual Regression Tests",
+  "Visual Regression Testing Online",
+  "Run Visual Regression",
+  "Visual Regression Run Specific Test",
+  "Visual Regression Testing Environment",
+  "How to Run Visual Regression Tests"
+]
+---
+
+The Shadow DOM feature in SmartUI allows for testing and capturing assets from content encapsulated within web components. Web components often use Shadow DOM to encapsulate their internal structure and styling, isolating it from the main document. As a result, traditional DOM queries and asset capturing methods might not access or interact with content inside the shadow tree.
+
+SmartUI's Shadow DOM support ensures that assets and UI components rendered within shadow roots are correctly captured and tested, making it easier to handle and test web applications built using web components that leverage the Shadow DOM.
+
+## Purpose of the Shadow DOM Feature
+In typical UI tests, SmartUI captures assets and evaluates elements directly from the DOM of the page under test. However, when content is encapsulated inside a Shadow DOM (within a web component), it becomes isolated, and the test framework might not be able to access or interact with it.
+
+SmartUI's Shadow DOM feature addresses this limitation by:
+
+- Enabling SmartUI to traverse and interact with shadow trees.
+- Allowing tests to capture assets from the shadow DOM.
+- Ensuring that resources (e.g., styles, images, scripts) inside shadow roots are included in the testing process.
+
+This feature is critical for comprehensive testing of modern web applications that make use of custom elements and web components, which are often built with Shadow DOM for encapsulation.

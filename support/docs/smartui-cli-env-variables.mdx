@@ -1,0 +1,328 @@
+---
+title: "SmartUI SDK Environment Variables"
+sidebarTitle: "Set Environment Variables"
+keywords:
+  [
+    "Visual Regression",
+    "Visual Regression Testing Guide",
+    "Visual Regression Test Automation",
+    "Visual Regression Automation Testing",
+    "Running Visual Regression Tests",
+    "Visual Regression Testing Online",
+    "Run Visual Regression",
+    "Visual Regression Run Specific Test",
+    "Visual Regression Testing Environment",
+    "How to Run Visual Regression Tests"
+  ]
+---
+
+Welcome to the world of simplified visual testing with the SmartUI SDK.
+
+This guide is designed to provide you with comprehensive information about the various environment variables options available within the SmartUI SDK. SmartUI retrieves additional details from the environment it is running in, like the branch name, baseline branch,proxies etc. You can modify certain aspects of SmartUI behavior by configuring these environment variables within your CI environment:
+
+## 1. Setting the Project Name
+
+Set the Project Name you want to add the current build run to by exporting these enviroment variables:
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export LT_USERNAME="YOUR USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
+export PROJECT_NAME="Required Project Name"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set LT_USERNAME="YOUR USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
+set PROJECT_NAME="Required Project Name"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:LT_USERNAME="YOUR USERNAME"
+$env:LT_ACCESS_KEY="YOUR ACCESS KEY"
+$env:PROJECT_NAME="Required Project Name"
+```
+
+</Tab>
+</Tabs>
+
+<Warning>
+If you specify a project name that doesn't already exist, a new project will be created by the user whose authentication is added in the environment.
+</Warning>
+
+## 2: Set your Project Token
+
+Setup your project token shown in the **SmartUI** app after creating your project.
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</Tab>
+</Tabs>
+
+<Warning>
+Setting the project token environment variable does not require any user level authentication.
+</Warning>
+
+![set up project token](/assets/images/smartui/set-project-token.webp)
+
+## 3. Setting the Baseline Branch
+
+Set the baseline branch for `CLI` projects:
+
+<Tabs className='docs__val' groupId='language'>
+<Tab title='MacOS/Linux'>
+
+```bash
+export BASELINE_BRANCH="Required branch"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set BASELINE_BRANCH="Required branch"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:BASELINE_BRANCH="Required branch"
+```
+
+</Tab>
+</Tabs>
+
+## 4. Setting the current branch
+
+Set the current branch for `CLI` projects:
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export CURRENT_BRANCH="Required branch"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set CURRENT_BRANCH="Required branch"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:CURRENT_BRANCH="Required branch"
+```
+
+</Tab>
+</Tabs>
+
+## 5. Setting proxies
+
+In case you are accessing your network using corporate proxies, set the proxies in the environment variables as follows
+
+#### HTTP_PROXY:
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
+<Tab value="Windows-4" label='Windows - CMD'>
+
+```bash
+set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
+```
+
+</Tab>
+</Tabs>
+
+#### HTTPS_PROXY:
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
+```
+
+</Tab>
+</Tabs>
+
+<Note>
+NOTE
+
+In most cases setting only HTTP_PROXY should be enough, but if you have different proxies for HTTP and HTTPS, you can set both.The format for proxy’s is `http[s]://<username>:<password>@<domain.com>:<port>/` [username and password is optional].
+</Note>
+
+## 6. Enabling Debug mode
+
+To enable SmartUI CLI Debug mode, use the following environment variable.
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export LT_SDK_DEBUG=true
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set LT_SDK_DEBUG=true
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:LT_SDK_DEBUG="true"
+```
+
+</Tab>
+
+</Tabs>
+
+## 7. Ignoring captured cookies
+
+Set the following variable to true, to stop the use of cookies captured automatically. The default is set to `false`.
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```shell
+export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```shell
+set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
+```
+
+</Tab>
+</Tabs>
+
+## 8. Setting Server Address
+
+For SDK integrations (non-Selenium), set the SmartUI server address:
+
+<Tabs>
+<Tab title='MacOS/Linux'>
+
+```bash
+export SMARTUI_SERVER_ADDRESS="http://localhost:8080"
+```
+
+</Tab>
+<Tab title='Windows - CMD'>
+
+```bash
+set SMARTUI_SERVER_ADDRESS="http://localhost:8080"
+```
+
+</Tab>
+<Tab title='PowerShell'>
+
+```powershell
+$env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
+```
+
+</Tab>
+</Tabs>
+
+## 9. Additional Environment Variables
+
+The following environment variables are also available for advanced configuration:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `FIGMA_TOKEN` | Figma API token for Figma integration | - |
+| `NO_PROXY` | Comma-separated hosts to bypass proxy | - |
+| `SMARTUI_HTTP_PROXY` | SmartUI-specific HTTP proxy | - |
+| `SMARTUI_HTTPS_PROXY` | SmartUI-specific HTTPS proxy | - |
+| `SMARTUI_API_PROXY` | API proxy configuration | - |
+| `SMARTUI_CLIENT_API_URL` | Override API URL | `https://api.lambdatest.com/visualui/1.0` |
+| `SMARTUI_UPLOAD_URL` | Override upload URL | `https://api.lambdatest.com` |
+| `SMARTUI_GIT_INFO_FILEPATH` | Custom git info file path | - |
+| `GITHUB_ACTIONS` | GitHub Actions environment flag | - |
+| `SMARTUI_API_SKIP_CERTIFICATES` | Skip SSL certificate validation | `false` |
+| `USE_REMOTE_DISCOVERY` | Use remote discovery mode | `false` |
+| `SMART_GIT` | Enable Smart Git feature | `false` |
+| `SHOW_RENDER_ERRORS` | Show render errors | `false` |
+| `SMARTUI_SSE_URL` | Server-sent events URL | `https://server-events.lambdatest.com` |
+| `LT_SDK_SKIP_EXECUTION_LOGS` | Skip execution logs | `false` |
+| `MAX_CONCURRENT_PROCESSING` | Max concurrent processing threads | `0` (auto) |
+| `DO_NOT_USE_USER_AGENT` | Disable user agent | `false` |
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [CLI Upload](/support/docs/smartui-cli-upload)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+

@@ -1,0 +1,72 @@
+---
+title: "Pass Audits Visibility"
+sidebarTitle: "Passed Test Cases"
+---
+
+Pass Audits Visibility shows accessibility checks that pass WCAG compliance alongside violations in your test results. By default, accessibility reports only show violations and incomplete checks. This feature provides complete transparency by including the accessibility requirements your application already meets.
+
+## Enable Pass Audits
+
+
+
+### Manual Testing
+---
+
+1. Navigate to **Accessibility Tool** → **Settings** → **Other Settings**
+2. Enable **Show Pass Audits**
+3. Run your accessibility scan to see passed audits in results
+
+![Accessibility Passed Test Cases](/assets/images/accessibility-testing/features/accessibility-passed-test-cases.png)
+
+
+
+### Automation Testing
+---
+
+Add the `accessibility.passedTestCases: true`  capability to your test configuration:
+
+```javascript
+'LT:Options': {
+    "accessibility": true,
+    "accessibility.wcagversion": "wcag21aa",
+    "accessibility.bestPractice": true,
+    "accessibility.needsReview": false,
+    "accessibility.captureScreenshot": false,
+    "accessibility.passedTestCases": true
+}
+```
+
+
+
+## Results and Dashboard
+---
+When enabled, passed test cases will appear in the Accessibility tab of your Automation Dashboard:
+
+![Accessibility Passed Test Cases Example](/assets/images/accessibility-testing/features/accessibility-passed-test-cases-example.png)
+
+
+
+
+## Use Cases
+---
+**Regression Testing**
+
+Verify that code changes don't break previously passing accessibility checks:
+
+```
+Before: 42 passes, 12 violations
+After: 39 passes, 15 violations
+Alert: 3 accessibility regressions detected
+```
+
+**Compliance Reporting**
+
+Generate comprehensive reports showing both compliance achievements and remaining work:
+
+- Demonstrate existing accessibility compliance to stakeholders
+- Track accessibility progress over development cycles
+- Document WCAG compliance status for audits
+
+**Development Confidence**
+
+Validate that accessibility implementations are working correctly and provide positive feedback to development teams about what they're doing right.

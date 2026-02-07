@@ -1,0 +1,196 @@
+---
+title: "Bulk Module Update"
+sidebarTitle: "Bulk Module Update"
+keywords: ['lambdatest automation', 'lambdatest kaneai', 'kaneai modules','bulk update', 'module version', 'test case management']
+---
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+Maintaining many test cases that share the same module can become slow and error-prone when a module evolves. Each time a module is updated, you would otherwise have to manually open and edit every affected test case and bump the module version one by one.
+
+The **Bulk Module Update** feature solves this by allowing you to:
+
+- Update a validated module version across multiple eligible KaneAI test cases in one action
+- Clearly see which test cases are eligible or ineligible for the update, and why
+- Safely roll the new module version into your existing tests while keeping execution verification explicit and controlled
+
+<Note>
+**Note:**
+
+Bulk Module Update is currently supported only for **KaneAI test cases**. Support for non-KaneAI test cases is coming soon.
+</Note>
+
+<Warning>
+ **LIMITED AVAILABILITY**
+
+This feature is currently being rolled out gradually and may not be available to all users. If you don't see this feature in your account, it will be enabled for you soon.
+</Warning>
+
+## How to Use Bulk Module Update
+
+### Step 1: Access Bulk Module Update
+
+You can start a bulk module update from two places:
+
+#### From the Module Detail Page
+
+1. Navigate to the module whose version you want to bulk-update
+2. Click the **Update Test Cases** button
+3. If the module version is not yet authored/validated or there are no eligible test cases, this button will be disabled
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/module-detail-cta.png' alt="module-detail-cta" />
+
+#### From the Test Case Summary Page
+
+1. Open a test case that uses the module version you want to update
+2. If there is a newer version of the same module and other test cases still use the older version, you will see an **Update Module for all Linked Test Cases** button
+3. Click this button to open the bulk update flow, pre-filtered for that module and version
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/test-case-summary-cta.png' alt="test-case-summary-cta" />
+
+
+### Step 2: Module Validation Check
+
+Before the bulk update flow starts, the system checks whether the selected module version is authored/validated and whether there are eligible test cases to update.
+
+#### When Update is Disabled
+
+The **Update Test Cases** button will be disabled if:
+
+- The module version is **not authored/validated** yet
+- There are **no eligible test cases** (e.g., all linked test cases are faulty, unverified, or non-KaneAI)
+
+You will see a message such as:
+
+<Warning>
+"This module version is not authored yet. Author it in a test to enable bulk update."
+</Warning>
+**To resolve:** Use the module in a test case and complete its authoring/validation, then ensure eligible KaneAI test cases are available.
+
+ {/*<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/disabled-cta.png' alt="disabled-cta" /> */}
+
+### Step 3: Select Test Cases
+
+After starting the flow, you will see a list of all test cases linked to the target module version.
+
+#### Ineligible Test Cases
+
+| Case | Description |
+|--------|---------|
+| **Faulty Test Cases** | Test Cases with **Faulty** status can't be updated |
+| **Non-KaneAI Test Cases** | Bulk update supports only KaneAI test cases currently |
+| **Unverified Test Cases** | Test Cases with **Unverified** status can't be updated |
+
+Ineligible test cases are greyed out, disabled for selection, and annotated with the reason.
+
+Select the eligible test cases you want to update and click **Next** to proceed.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/test-case-selection.png' alt="test-case-selection" />
+
+
+### Step 4: Review and Confirm
+
+Before running the bulk update, you will see a final summary screen showing:
+
+- The **target module version** (the version you are updating to)
+- The **count of selected eligible test cases**
+- Optionally, a **version movement summary** (e.g., from v1 → v2)
+
+<Note> 
+**COMING SOON**
+
+- **Seamless Module Validation** - Module validation will be performed automatically in future releases
+- **Bulk Code-Gen Validation** - Bulk Code-Gen validation will be available in an upcoming update
+</Note>
+
+Click **Confirm Update** to trigger the bulk job and apply the new module version to all selected test cases.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/summary-screen.png' alt="summary-screen" />
+
+After triggering the update, you will see a success banner along with a toast message as shown in the screenshot below
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/toast-notification.png' alt="toast-notification" />
+
+
+### Step 5: Post-Update Changes
+
+Once the bulk update is completed:
+
+#### Bulk Job Execution
+
+- A single bulk job is created
+- All selected eligible test cases have their module version updated
+
+#### Changes on Each Updated Test Case
+
+For each updated test case:
+
+| Change | Description |
+|--------|-------------|
+| Module Version | Updated to the new version |
+| Test Case Version | Bumped with commit message: "Module updated from vX to vY (Bulk-Update)" |
+| Code-Gen | New Code-Gen for the updated module is automatically used for future runs|
+| Code-Gen Status | Set to **Unvalidated** |
+| Execution Verified | Set to **false** until new Code-Gen is validated |
+
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/code-gen-section.png' alt="code-gen-section" />
+
+
+## Linked Test Cases Tab
+
+The module detail page includes a **Linked Test Cases** tab that lists all test cases linked to the module, grouped by module version, with key metadata. From here, you can navigate directly to individual test case summary pages.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/bulk-module-update/linked-test-cases.png' alt="linked-test-cases" />
+
+
+## Current Limitations
+
+The following limitations apply currently to the Bulk Module Update Feature:
+
+1. **No Module Validation in Bulk Flow**
+
+   - The bulk update flow **does not perform module validation**.
+   - You can only bulk‑update to module versions that have already been authored and validated in a KaneAI session.
+
+2. **No Bulk Code-Gen Validation**
+
+   - Bulk validation of Code‑Gen across test cases is **not supported yet**.
+   - `code_gen_status` will remain Unvalidated after the bulk module update until the Code-gen is successfully executed through a Test Run.
+
+## Troubleshooting
+
+### "Update Test Cases" Button Is Disabled
+
+**Symptoms:**
+- The **Update Test Cases** button on the Module Detail Page is disabled
+- You see a message: "This module version is not authored yet. Author it in a test to enable bulk update."
+
+**Solutions:**
+1. Confirm that the module version has been authored/validated at least once in a test case
+2. Ensure there are eligible KaneAI test cases linked to this module version (non-faulty, non-unverified)
+3. Refresh the Module Detail Page and try again
+
+
+### Some Test Cases Are Greyed Out in the Selection List
+
+**Symptoms:**
+- Certain test cases appear greyed out and cannot be selected
+- They display reasons such as "Cannot update - test case is faulty"
+
+**Solutions:**
+1. For **faulty** test cases: Fix the underlying issues causing the faulty status, then re-attempt
+2. For **non-KaneAI** test cases: Bulk update is not supported; update them manually if needed
+3. For **unverified** test cases: Complete verification steps, then revisit the bulk update flow
+
+
+### Tests Still Show "Code-Gen Unvalidated" After Update
+
+**Symptoms:**
+- After the bulk update, test cases show: "Code-Gen updated after module update – will be validated on next execution."
+- Code-Gen status remains **Unvalidated**
+
+**Solutions:**
+1. Run or re-run the affected test cases following your standard validation workflow
+2. Once Code-Gen is validated, the test case's code-gen status will be updated and execution verified will be set to **true**
+

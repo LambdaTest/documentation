@@ -1,0 +1,77 @@
+---
+title: "Create and Execute your Test Run for KaneAI Generated Tests on HyperExecute"
+sidebarTitle: "Execute Test Runs on HyperExecute"
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough','kane ai test runs','hyperexecute','test run','test manager' ,'generate and manage test cases']
+---
+import { BrandName } from '/snippets/BrandName.mdx';
+
+This documentation outlines the steps to create a test run for KaneAI generated tests using Test Manager. The steps include selecting test cases, setting configurations, and running tests with HyperExecute for efficient execution. Follow the instructions carefully to ensure seamless execution of the process.
+
+## Prerequisites
+- Access to Test Manager.
+- A project with KaneAI-generated test cases.
+- Credentials for <BrandName /> platform.
+
+## Step-by-Step Guide
+### Step 1: Navigate to the Projects Page
+- Log in to Test Manager. Navigate to the Projects page and select the desired project.
+- Proceed to the Test Cases section.
+
+### Step 2: Create a Test Run
+- Go to the Test Run section within the project.
+- Click on Create Test Run.
+- Provide the following details:
+    - **Name :** e.g., Demo Test Run 123.
+    - **Description :** A brief overview of the run.
+    - **Tags :** Any label to differentiate your test run.
+    - **Type :** Choose KaneAI Generated Test Cases.
+
+### Step 3: Select and Add Test Cases
+- Click Next to view available test cases.
+- Select the required test cases for the run.
+- Click Add Test Case to include them.
+
+<Check>
+**TIP**
+
+Only KaneAI test cases for which code generation has been successful will be available for selection here.
+</Check>
+
+### Step 4: Assign and Configure Test Cases
+- On the test run page, review the added test cases.
+- Assign team members in bulk.
+- Update configurations as required.
+
+#### Set Configurations
+- Choose from available desktop browser and mobile app configurations. If a new configuration is needed, click on Create Configuration button and choose from thousands of configuration options.
+
+#### Create New Configuration
+- Enter **configuration name** and the following details to create a new Desktop configuration:
+    - **OS :** e.g., macOS.
+    - **OS Version :** e.g., Monterey.
+    - **Browser :** e.g., Chrome.
+    - **Browser Version :** e.g., 131.
+    - **Resolution :** e.g., 1440x900.
+- Enter **configuration name** and the following details to create a new Real Device configuration:
+    - **OS :** e.g., android.
+    - **Manufacturer :** e.g., Samsung.
+    - **Device :** e.g., Galaxy S24.
+    - **OS Version :** e.g., 14.
+    - **App :** e.g., Proverbial.
+- Click on Create Configuration
+
+### Step 5: Run with HyperExecute
+- Initiate the run using HyperExecute by clicking **Run with HyperExecute**.
+- View all test instances in the dashboard.
+- Set the desired concurrency level, e.g., 5.
+- Click Execute to run the tests.
+
+#### Monitor Execution on HyperExecute
+- Navigate to the HyperExecute page.
+- Observe the discovery and rapid execution of test cases.
+
+
+## Video Explanation
+<video className="right-side" width="100%" controls id="vid">
+<source src='/assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/output.mp4' type="video/mp4" />
+</video>

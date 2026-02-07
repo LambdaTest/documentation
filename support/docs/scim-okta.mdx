@@ -1,0 +1,75 @@
+---
+title: "Okta Scim User Provisioning"
+sidebarTitle: "Okta"
+keywords: ['LambdaTest SCIM']
+---
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Prerequisites
+Integrate SCIM With <BrandName />:
+
+- You will need an Enterprise plan with <BrandName />.
+- SSO must be already integrated. Please complete [<BrandName /> SSO & Okta Integration](/support/docs/lambdatest-sso-okta-integration/)
+
+## Integrating SCIM with Okta
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+
+![Image](/assets/images/lambdatest-mfa/dashboard.webp)
+
+**Step 2:**  Head to **Settings** and select **Organization Settings** from the dropdown.
+
+![Image](/assets/images/lambdatest-mfa/org-settings.webp)
+
+**Step 3:**  Head to the **Authentication and SSO** tab and click and copy the **SCIM Base URL and Bearer Token** option.
+
+![Image](/assets/images/lambdatest-scim/scim-base-url.png)
+
+**Step 4:** Sign in to the [Okta](https://developer.okta.com). Select Enterprise Applications, then select Applications tab.
+![Image](/assets/images/lambdatest-scim/okta/applications-tab.png)
+
+**Step 5:** In the applications list, select application used for <BrandName /> SSO setup
+
+**Step 6:** Select the Provisioning tab.
+![Image](/assets/images/lambdatest-scim/okta/provisioning-tab.png)
+
+**Step 7:** Under the Integration section, input your <BrandName /> SCIM Base URL-`https://auth.lambdatest.com/api/scim`  and Bearer Token retrieved earlier in Step 3. 
+
+**Unique identifier field for users** field must be set to **userName**
+Click Test Connection to ensure Okta can connect to <BrandName />. If the connection fails, ensure your <BrandName /> account has Admin permissions and try again.
+![Image](/assets/images/lambdatest-scim/okta/integration-tab.png)
+
+**Step 8:** Now navigate to App tab
+![Image](/assets/images/lambdatest-scim/okta/app-tab.png)
+
+**Step 9:** Review the User Attribute mappings:
+![Image](/assets/images/lambdatest-scim/okta/mapping-tab.png)
+
+userName, Active, name.givenName, name.familyName are required attributes
+
+**Creating Custom Attributes**
+
+For creating custom attribute in Okta, go to Directory > Profile Editor > Add Attribute > [Create Custom Attribute](https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-add-custom-user-attributes.htm)
+
+**`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: 
+
+**`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`** : Applicable only if organisation has group support active)
+
+Enter Display Name as per your choice 
+Enter Variable name as **OrganizationRole**
+Enter External name as **OrganizationRole**
+Enter External namespace as **urn:ietf:params:scim:schemas:extension:<BrandName />:2.0:User**
+![okta integration](/assets/images/sso/img_18.png)
+
+Set the data type as **String**
+Select Enum as **Yes**
+Enter the values as **Admin, Guest, User**
+![okta integration](/assets/images/sso/img_19.png)
+
+Also if you want to assign this attribute at a okta group level choose AttributeType as Group
+
+![okta integration](/assets/images/sso/img_20.png)
+
+**Step 10:** To enable the Okta provisioning service for <BrandName />, set Create Users, Update User Attributes and Deactivate Users to enabled
+![Image](/assets/images/lambdatest-scim/okta/provisioning-enabled.png)
+
+<Warning> That's all you need to know about <BrandName /> SCIM Auto User Provisioning with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai). </Warning>

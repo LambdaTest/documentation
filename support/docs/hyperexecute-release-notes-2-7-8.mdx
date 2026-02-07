@@ -1,0 +1,68 @@
+---
+title: "Version 2.7.8"
+sidebarTitle: "Version 2.7.8"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Default Reporter Configuration in CypressOps
+You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
+
+```yaml
+cypressOps:
+  reporterConfigFile: "reporter_config.json"
+```
+
+Value of this JSON:
+
+```json
+{
+  "reporterEnabled": "mochawesome,mocha-junit-reporter",
+  "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": true,
+      "html": false,
+      "json": true
+  },
+  "mochaJunitReporterReporterOptions": {
+        "mochaFile": "cypress/results/my-test-output.xml",
+        "toConsole": true
+  }
+}
+```
+
+## Setup Runtime Updates
+HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
+
+```yaml
+runtime:
+  - language: dotnet
+    version: "4.7"
+```
+
+## Support for Project Capability in CypressOps
+You can now define your [Project](/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
+
+```yaml
+cypressOps:
+  ProjectName: "Cypress_Project"
+```
+
+## Consolidated Native Robot Report Generation
+The consolidated Native Robot report includes detailed information on all executed tests, i.e., which tests passed, failed, or were skipped, along with any error messages and stack traces for failed tests. It is widely supported across CI/CD tools, which makes it easy to integrate with existing workflows and with other tools or systems.
+
+Add the following configurations in your YAML file:
+
+```yaml
+testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports 
+
+report: true
+partialReports:
+  type: json
+  location: Reports
+  frameworkName: robot
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/robot-report.png' alt="Image"  className="doc_img"/>

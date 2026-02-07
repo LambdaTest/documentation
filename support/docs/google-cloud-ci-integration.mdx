@@ -1,0 +1,166 @@
+---
+title: "Run Selenium Tests With Google Cloud CI"
+sidebarTitle: "Google Cloud CI"
+keywords:
+ [
+   "ci cd google cloud",
+   "ci cd pipeline google cloud",
+   "google cloud ci selenium",
+   "google cloud ci",
+   "testmu ai integration with google cloud ci"
+ ]
+---
+***
+
+Google Cloud Platform is one of the market’s leading public cloud providers and offers a variety of management services. Google Cloud Build and Google Cloud Run are two Google Cloud services that use pipelines to automate builds and deployments.
+
+Integrate your Selenium test suites with Google Cloud CI and perform automated cross-browser testing on [online Selenium Grid](https://www.lambdatest.com/selenium-automation) over 3000+ real browser environments. With this integration, you can also perform local testing of locally or privately hosted projects and Parallel testing to cut short test execution cycles and achieve faster go-to-market delivery.
+
+## Prerequisites
+***
+
+Before integrating Google Cloud CI with Lambdatest, make sure you have the following things:
+
+1. A GitHub or a BitBucket repository. All the code samples in this documentation can be found at [Lambdatest Google Cloud CI](https://github.com/LambdaTest/Java-TestNG-Selenium) repository on GitHub .
+
+2. To integrate test suites with Google Cloud CI, you would need to set your Lambdatest username and access key in environment variables. You can get them from [Automation Dashboard](https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
+
+*   **For Windows:**
+    ```
+    set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+    set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+
+*   **For Mac/Linux:**
+    ```
+     export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+     export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
+
+## Integrating A GitHub Repository With Google Cloud CI
+***
+
+To integrate Google Cloud CI with Lambdatest, you will need to fork the above Lambdatest Google Cloud CI repository.
+
+1.  Go to the Google Cloud CI console and select **'Cloud Build'**.
+
+![Google Cloud CI Integration](/assets/images/uploads/Screenshot-133.webp)
+
+2.  Once you're in the Cloud Build, click on **'Triggers'**.
+
+![Google Cloud CI Integration](/assets/images/uploads/Screenshot-134.webp)
+
+3.  To use the trigger functionality, you will need to connect your GitHub repository to Google Cloud CI instance. Click on **'Connect Repository'**.
+
+![Google Cloud CI Integration](/assets/images/uploads/Screenshot-136.webp)
+
+Once you click on Connect Repository, you will need to complete the steps in order to connect your repository.
+
+![Google Cloud CI Integration](/assets/images/uploads/connect-repo.webp)
+
+## Running Single Test Via Google Cloud CI
+
+* * *
+
+1. After connecting to the repository, click on **'Create Trigger'**.
+
+![Google Cloud CI Integration](/assets/images/uploads/Screenshot-135.webp)
+
+* Provide a Trigger name.
+
+![Google Cloud CI Integration](/assets/images/uploads/name.webp)
+
+*   Select the repository's source and then select the branch.
+
+![Google Cloud CI Integration](/assets/images/uploads/source.webp)
+
+*   Under the **'Configuration'**, select _**Cloud Build configuration file (yaml or json)**_.
+
+![Google Cloud CI Integration](/assets/images/uploads/config.webp)
+
+*   In the **'Advanced'** category, click on **'Add Variable'**. 
+
+![Google Cloud CI Integration](/assets/images/uploads/env-var.webp)
+
+Enter your Lambdatest Username and Access Key in the provided field and then click on **'Create'**. 
+
+![Google Cloud CI Integration](/assets/images/uploads/env-var-fill.webp)
+
+2.  Your trigger project will be created on the selected Google Cloud CI GitHub repository. To run the single test through Google Cloud CI, click on **'Run'**.
+
+![Google Cloud CI Integration](/assets/images/uploads/Screenshot-139.webp)
+
+A new build can be seen in the Google Cloud CI console. The current status of this build will be ‘Running’ or ‘Successful’.
+
+![Google Cloud CI Integration](/assets/images/uploads/image-1.webp)
+
+You can also view the detailed insights of your test execution on [Lambdatest Automation dashboard](https://automation.lambdatest.com/timeline/).
+
+## Running Parallel Test Via Google Cloud CI
+
+* * *
+
+To run parallel tests on Lambdatest cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
+
+```
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
+- name: curlimages/curl
+  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
+- name: 'ubuntu'
+  args: ['sleep', '20']
+- name: 'bash'
+  args: ['ls']
+- name: 'maven'
+  entrypoint: 'mvn'
+  args: ['test', '-P', 'parallel']
+  env:
+  - 'LT_USERNAME=${_LT_USERNAME}'
+  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
+```
+
+In the above YAML code, you need to add the following command to **args**.
+
+`mvn test -P parallel`
+
+Below is the screenshot of the above-executed parallel tests. 
+
+![Google Cloud CI Integration](/assets/images/uploads/image-2.webp)
+
+## Running Local Test Via Google Cloud CI
+
+* * *
+
+To run local tests on Lambdatest cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
+
+```
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
+- name: curlimages/curl
+  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
+- name: 'ubuntu'
+  args: ['sleep', '20']
+- name: 'bash'
+  args: ['ls']
+- name: 'maven'
+  entrypoint: 'mvn'
+  args: ['test', '-P', 'local']
+  env:
+  - 'LT_USERNAME=${_LT_USERNAME}'
+  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
+```
+
+Add the below command to **args**.
+
+`mvn test -P local`
+
+Below is the screenshot of the above-executed local tests. 
+
+![Google Cloud CI Integration](/assets/images/uploads/image.webp)
+
+<Warning>
+That's all! Ship your quality product faster using Lambdatest and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!
+</Warning>
+

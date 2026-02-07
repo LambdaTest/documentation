@@ -1,0 +1,86 @@
+---
+title: "Running Your QMetry Tests On Lambdatest Selenium Grid"
+sidebarTitle: "QMetry"
+keywords: [ "Lambdatest integrations", "QMetry", "Test Automation for GUI Testing", "test automation", "QMetry integration with Lambdatest", "Lambdatest integration with QMetry" ]
+---
+* * *
+QMetry is a codeless platform tailored for DevOps and Agile testing teams. It can be used to prepare and execute test scenarios on multiple platforms very easily. Not only that, but QMetry also allows you to record test cases in almost all major languages and frameworks, including the QMetry framework.
+Lambdatest now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your Lambdatest account.
+## How To Setup Your Lambdatest Account With QMetry?
+* * *
+Once you have your project set up in the QMetry app and test suite ready, you need to specify and activate your Lambdatest account in the QMetry app to execute it over the Lambdatest's cloud-based Selenium Grid. Below is the step by step guide to help you do just that:
+1.  Once you have your test suite ready, click on the **Execute** button on the app, and select **Remote**. 
+
+![Activating Lambdatest Account QMetry app](/assets/images/uploads/QMetry.webp)
+
+2.  In the window that opens, navigate to **Lambdatest** tab. Here, you will need to enter your account details and the [desired capabilities](/support/docs/selenium-automation-capabilities/) to execute the test over your Lambdatest account. 
+
+![Manage Capabilities](/assets/images/uploads/QMetry-1.webp)
+
+3.  Now, you need to provide access of your Lambdatest account to the QMetry app. To do so, add your _username_ and _access key_ over their corresponding fields, and click on **FETCH PLATFORM LIST** button. This will verify your credentials and connect your Lambdatest account with the QMetry app successfully, based on your current plan. 
+
+![Lambdatest Configuration in Qmetry App](/assets/images/uploads/QMetry-2.webp)
+<Warning>
+To get your Username and Access Key, go to your Lambdatest automation dashboard and click on the "key" icon left to the help button, on the top right corner.
+</Warning>
+
+![Finding Username and Access Key](/assets/images/uploads/QMetry-4.webp)
+
+<Warning>
+If you are on _[Lite](https://www.lambdatest.com/pricing)_ or _[Live](https://www.lambdatest.com/pricing)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/support/docs/manage-subscriptions/).
+</Warning>
+6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [this guide](/support/docs/selenium-automation-capabilities/). 
+
+![Qmetry web capailities list](/assets/images/uploads/QMetry-3.webp)
+
+7.  Click on **Save**, once you have selected the desired capabilities. The current account info and the capabilities will be saved with a name that you provide. 
+
+![Saving Lambdatest Configuration in Qmetry App](/assets/images/uploads/QMetry-4.webp)
+
+That's it. Your QMetry app has been integrated successfully with your Lambdatest account to execute your tests on its cloud-based Selenium Grid.
+## Running Tests From Your QMetry App On Lambdatest Platform
+* * *
+For demo purpose, we have recorded a test scenario, which includes:
+
+```javascript
+- Opening [LambdaTest ToDo App](https://lambdatest.github.io/sample-todo-app/)
+- Check the first item in the list
+- Check the second item in the list
+- Add a new item in the list, with text "Yey, Let's add it to list".
+```
+
+![Lambdatest Sample App](/assets/images/uploads/QMetry-5.webp) 
+
+![qmetry Sample to do list](/assets/images/uploads/QMetry-5b.webp)
+
+For the desired capabilities, we have chosen the following details:
+
+```javascript
+platform: macOS High Sierra
+browserName: Chrome
+version: 87
+resolution: 1280x800
+network: true
+visual: true
+```
+
+![Desired Capabilities](/assets/images/uploads/QMetry-3.webp)
+
+Now just select the profile, and hit **Start**. 
+
+![Start Automated Testing Using Qmetry and Lambdatest](/assets/images/uploads/QMetry-6.webp)
+
+The test execution will then start, and you can see the same on the automation dashboard of your Lambdatest account. 
+
+![Test Automation Dashboard](/assets/images/uploads/QMetry-7.webp)
+
+Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs. 
+
+![Test Automation Logs](/assets/images/uploads/QMetry-8.webp)
+
+For each test executed overthe Lambdatest platform, you can view logs, [mark bugs](/support/docs/mark-as-bug-in-automation-testing/), and do much more.
+
+<Warning>
+Congrats! You have successfully integrated the QMetry app with your Lambdatest account and ran your test cases over the Lambdatest's cloud based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+</Warning>
+

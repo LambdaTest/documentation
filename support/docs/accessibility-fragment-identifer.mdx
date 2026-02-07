@@ -1,0 +1,73 @@
+---
+title: "Fragment Identifier for Accessibility Testing"
+sidebarTitle: "Fragment Identifier"
+keywords:
+  [
+    "LambdaTest",
+    "Accessibility",
+    "Testing",
+    "Manual",
+    "Accessibility Testing Settings",
+    "Fragment identifier",
+    "wcag",
+  ]
+---
+
+---
+
+The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers (the part after `#`) as separate entities for accessibility issue tracking and management. This advanced feature enhances the precision of accessibility audits by categorizing issues based on specific page sections or states.
+
+## Enabling Fragment Identifier
+
+---
+
+To enable the Fragment Identifier feature:
+
+1. Navigate to **Accessibility DevTools** → **Settings**
+2. Go to **Other Settings** section
+3. Locate the **Fragment Identifier** option
+4. Toggle the setting to **enabled**
+
+![Native Mobile App Testing](/assets/images/accessibility-testing/features/accessibility-fragment-identifier.png)
+
+<Warning>
+  **Note:** This feature is **disabled by default**. When disabled, URLs with different fragment identifiers are treated as the same URL for issue tracking.
+</Warning>
+
+## How Fragment Identifier Works
+
+---
+
+Fragment identifiers are the portion of a URL that comes after the `#` symbol. They typically reference specific sections, anchors, or states within a webpage.
+
+### Default Behavior (Feature Disabled)
+
+```bash
+URL: https://example.com/page#section1
+URL: https://example.com/page#section2
+URL: https://example.com/page#section3
+
+Result: All issues grouped under "https://example.com/page"
+```
+
+### Enhanced Behavior (Feature Enabled)
+
+```bash
+URL: https://example.com/page#section1
+URL: https://example.com/page#section2
+URL: https://example.com/page#section3
+
+Result: Issues categorized separately:
+- "https://example.com/page#section1"
+- "https://example.com/page#section2"
+- "https://example.com/page#section3"
+```
+
+## Benefits
+
+---
+
+1. **Granular Issue Tracking**: Track accessibility issues with precision for specific page sections
+2. **Enhanced SPA Support**: Better support for modern single-page applications using hash-based routing
+3. **Improved Workflow**: Assign and manage issues for specific page areas independently
+4. **Detailed Reporting**: Generate more comprehensive reports with section-specific insights

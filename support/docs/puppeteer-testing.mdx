@@ -1,0 +1,150 @@
+---
+title: "Getting Started With Puppeteer Testing"
+description: "Puppeteer is a Node package that automates the Chrome browser for web testing. Over the DevTools Protocol, it provides a high-level API for controlling headless Chrome or Chromium. It may also be set to run full (non-headless) Chrome or Chromium."
+sidebarTitle: "Overview"
+---
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+LambdaTest allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the LambdaTest platform.
+
+## Prerequisites
+
+<Note>
+Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<GitHubButton url="https://github.com/LambdaTest/puppeteer-sample" />
+</Note>
+
+<Steps>
+  <Step>
+  Clone the LambdaTest-Puppeteer repository on your system.
+  </Step>
+  <Step>
+  Install the npm dependencies.
+
+  ```bash lines
+  npm install
+  ```
+  </Step>
+  <Step>
+  Add browserWSEndpoint (browser end point URL) in your test script.
+
+  ```bash lines
+  `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  ```
+  </Step>
+  <Step>
+  In order to run your Puppeteer tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+  <Frame>
+  ![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
+  </Frame>
+</Step>
+</Steps>
+
+<CodeGroup>
+```bash lines Windows
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+```bash lines macOS/Linux
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</CodeGroup>
+
+## Run Your First Puppeteer Test
+
+Shown below are the steps on running Puppeteer tests on the LambdaTest platform.
+
+<Steps>
+<Step>
+Clone the [LambdaTest-Puppeteer GitHub repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
+
+```bash lines
+git clone https://github.com/LambdaTest/puppeteer-sample.gitcd puppeteer-sample
+```
+</Step>
+<Step>
+Ensure you have npm dependencies installed.
+</Step>
+<Step>
+Configure your LambdaTest authentication credentials.
+
+Once you are done with the above-mentioned steps, you can initiate your first Puppeteer test on LambdaTest.
+
+<Warning>
+**Test Scenario**: The below test script runs on Chrome browser running Windows 10. It visits the LambdaTest platform, clicks on the Pricing page, and navigates to the Automation Testing page.
+</Warning>
+
+```bash lines expandable
+'use strict';
+const { strict } = require('once');
+const puppeteer = require('puppeteer');
+const expect = require('chai').expect;
+
+(async () => {
+    const capabilities = {
+        'browserName': 'Chrome',
+        'browserVersion': 'latest',
+        'LT:Options': {
+            'platform': 'Windows 10',
+            'build': 'puppeteer-build-1',
+            'name': 'My first Puppeteer test',
+            'resolution':'1366x768',
+            'user': process.env.LT_USERNAME || "Your Username",
+            'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",,
+            'network': true
+        }
+   };
+
+    try {
+        const browser = await puppeteer.connect({
+            browserWSEndpoint:
+                `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,
+        });
+
+        const page = await browser.newPage();
+        await page.setViewport({
+            width: 1024,
+            height: 768,
+            deviceScaleFactor: 1,
+          });
+        console.log("Navigating to LambdaTest");
+        await page.goto('https://www.lambdatest.com/');
+        console.log("Navigating to Pricing");
+        await page.goto('https://www.lambdatest.com/pricing');
+        console.log("Navigating to Automation");
+        await page.goto('https://www.lambdatest.com/automation-testing');
+        console.log("Closing browser");
+        await browser.close();
+
+    } catch (e) {
+        console.log("Error - ", e);
+    }
+})();
+```
+</Step>
+<Step>
+Pass the below command to run the test.
+
+```bash lines
+node navigation.js
+```
+</Step>
+</Steps>
+
+## View your Puppeteer test results
+
+The LambdaTest Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the LambdaTest platform.
+
+The below screenshot of LambdaTest Automation Dashboard shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
+
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/dashboard-cf88dfa2cea91b6efe3752c003e0e0c7.png)
+</Frame>
+
+On clicking the session name of the respective test, you can view the details of Puppeteer test session that you just executed. For example, the below screenshot shows a test execution details of Puppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/logs-6f3ab02a4e3554626e00c06d4001808b.png)
+</Frame>

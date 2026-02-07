@@ -1,0 +1,144 @@
+---
+title: "Jenkins Plugin for Integration With Lambdatest"
+sidebarTitle: "Jenkins Plugin"
+---
+* * *
+
+Jenkins is a widely popular Continuous Integration (CI) tool. It is free to use, open-source software written in Java. Jenkins helps to boost your release agility by providing Continuous Integration services. You can trigger these services by a web application server or merely using a command line to hasten the deployment pipeline & release migration activities. Jenkins's popularity offers thousands of plugins to fast track your productivity. One such plugin to help you pace up automated cross browser testing is the Lambdatest Jenkins plugin. With Lambdatest Jenkins plugin, you will easily automate your Selenium test scripts by connecting your Jenkins CI instance to Lambdatest [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). Lambdatest Selenium grid will offer you a comprehensive library of 3000+ browsers and browser versions so you could achieve a higher test coverage while performing automation testing using the Selenium test suite.
+
+<Warning>
+Lambdatest Jenkins plugin will help you to:
+
+*   Configure your Lambdatest credentials for your Jenkins jobs.
+*   Set up and tear down the Lambda Tunnel binary file to perform automated cross browser testing even on your locally hosted web apps
+*   Embed all the test results such as video logs, network logs, and screenshots of every step performed through Lambdatest with your Jenkins job results.
+</Warning>
+
+## Prerequisites
+
+* * *
+
+*   A Lambdatest account
+*   An existing Jenkins CI server (version 2.138.2+)
+*   A Jenkins User with root access.
+
+## Installing the Jenkins Plugin
+
+* * *
+
+Download Lambdatest Jenkins plugin to run your Selenium tests with Jenkins on Lambdatest. You need to be granted administrator-level access before proceeding with Jenkins installation.
+
+Make sure to have no active build jobs in execution or queue before heading forward with the Lambdatest Jenkins plugin installation.
+
+1.  Click **Manage Jenkins**, then **Manage Plugins**.
+2.  Click the **Available** tab.
+3.  In the **Filter** box, type Lambdatest.
+4.  You will encounter a list of plugins where you need to select **Lambdatest**.
+5.  To install Lambdatest Jenkins plugin, you would have to select the checkbox in front of Lambdatest. After successful installation of the plugin, you will be able to find the Lambdatest Jenkins plugin under your installed plugins
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/1.webp)
+
+Sometimes your recently installed plugins fail to synchronize with your available plugins on Jenkins. If you don't find Lambdatest plugin under your available plugins, you can force Jenkins to refresh the list by simply clicking the **Check Now** button to fetch the latest plugins from the Jenkins update center.
+
+## How To Configure Your Lambdatest Credentials?
+
+* * *
+
+After installing the Lambdatest Jenkins plugin to perform automated cross browser testing, you would need to configure the Lambdatest credentials in your Jenkins CI server for integrating your Selenium WebDriver tests with Jenkins. You would need to work with Jenkins UI to proceed with the configuration.
+
+## To Configure Lambdatest Credentials Using Jenkins UI
+
+* * *
+
+Follow these steps to configure Lambdatest with Jenkins:
+
+1.  On the Home page of Jenkins, click **Credentials**.
+2.  Under **Credentials** click **System**. System page displays.
+3.  In the System, click **Global credentials** (Unrestricted) domain. **Global credentials** page opens.
+4.  Click **Add Credentials**. Add Credentials page opens.
+5.  Enter the relevant data in the fields and click **Verify Credentials**. After verification, click the **OK** button. Jenkins will generate the ID, which is visible on the **Credential** page.
+6.  Save your changes.
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/2.webp)
+
+Once you successfully add your credentials, then Jenkins will generate an ID. To retrieve this ID for Lambdatest Credentials, you would have to go to Jenkins home page and click on **Credentials** from the left navigation menu.
+
+From the Jenkins home page, click **Credentials** from the left menu. You can copy the ID for Lambdatest credentials.
+
+## Configuring The Build Environment Through Jenkins UI
+
+* * *
+
+To enable Lambda Tunnel to perform tests on your locally hosted web application or website: Visit the tab for **Build Environment** and mark the tick on the box left to **LAMBDATEST**.
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/3.webp)
+
+That is all you need for performing automated cross browser testing on your locally hosted web pages or web files using the Lambdatest Jenkins plugin with Lambda Tunnel. In the next section, you will learn how to enable the Lambda Tunnel.
+
+## Configure Lambdatest Tunnel
+
+* * *
+
+Here we will look at the process of enabling Lambda Tunnel to test your locally hosted web apps. Visit the tab for **Build Environment** and mark the tick on the box left to **LAMBDATEST**.
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/4.webp)
+
+1.  We would recommend keeping the Lambdatest Local Path empty; that way, the plugin will automatically download the LT binary file. However, if you wish to use a binary by downloading externally, you need to provide the file's location as the 'Lambdatest Local Path.' But if your Jenkins works on the master-slave configuration set up, then it would be best to leave the path empty for allowing the plugin to download the relevant binary file for the operating system of your local machine.
+2.  You can configure additional settings with Lambda Tunnel by using the option to Use Local Tunnel.
+
+## Environment Variable For Lambdatest Jenkins Plugin
+|Environment Variables|Description|
+|--- |--- |
+|$LT_USERNAME|Your Lambdatest username.|
+|$LT_ACCESS_KEY|Your Lambdatest Access key.|
+|$LT_GRID_URL|Your Lambdatest hub URL|
+|$LT_PLATFORM|OS you wish to test your website with.|
+|$LT_BROWSER_NAME|Name of the browser on which you wish to test.|
+|$LT_BROWSER_VERSION|Particular browser version on which you wish to test.|
+|$LT_RESOLUTION|Specify the screen resolution.|
+|$LT_BUILD_NAME|Represents a particular build name.|
+|$LT_BUILD_NUMBER|Represents a particular build number.|
+|$LT_BROWSERS|An array of combinations.|
+|$LT_TUNNEL_NAME|Name of your Lambda Tunnel for local testing.|
+
+Using the above variables you will receive an output in the below format.
+
+```javascript
+sample Output $LT_BROWSERS:
+[
+   {
+       "operatingSystem": "win10", //OS you wish to test your website with.
+       "browserName": "Chrome",    //Name of the browser on which you wish to test.
+       "browserVersion": "71.0",   //Particular browser version on which you wish to test.
+       "resolution": "1024x768"    //Specify the screen resolution.
+   },
+   {
+       "operatingSystem": "win8",   //OS you wish to test your website with.
+       "browserName": "Firefox",    //Name of the browser on which you wish to test.
+       "browserVersion": "63.0",    //Particular browser version on which you wish to test.
+       "resolution": "1024x768"     //Specify the screen resolution.
+   }
+```
+
+## Running Your First Test
+
+* * *
+
+To run your first test using Jenkins Lambdatest plugin, you need to set a test build. You can perform that easily through Jenkins UI by clicking on **Build Now**. 
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/5.webp)
+
+As you click on **Build Now**, you will find a new build generating under the build history.
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/6.webp)
+
+If you click on the build you will find the logs for console output. You will also notice Lambdatest icon on the left which will provide you in-depth details regarding your Selenium test through an i-frame.
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/7.webp)
+
+When you click on the Lambdatest Report icon from the left side, a report table with details for the Selenium test will load. 
+
+![Jenkins Plugin](/assets/images/jenkins-plugin/8.webp)
+
+Kudos! You successfully executed your Selenium test suite using Jenkins with Lambdatest plugin.
+

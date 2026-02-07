@@ -1,0 +1,46 @@
+---
+title: "Version 3.0.3"
+sidebarTitle: "Version 3.0.3"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## MITM Support in Emulators
+We’ve added Man-in-the-Middle (MITM) proxy support in HyperExecute Emulators.
+
+- You can now capture network logs directly from emulator sessions using MITM.
+- This feature is available for all emulators when configured with a flag that you can add in your `hyperexecute.yaml` file:
+
+```yaml title="hyperexecute.yaml"
+framework:
+  name: raw
+  args:
+    mitmProxy: true
+```
+
+This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
+
+
+
+## Enhancement: Retry Visibility in HyperExecute Reports
+We’ve enhanced the HyperExecute Report to give better visibility into retries at both the summary and test level.
+
+- **Total Counts Refined :** The “No. of Scenarios” and “No. of Tests” metrics will now display values excluding retries.
+- **Retry Indicators :** A retry icon and the number of retried tests/scenarios are displayed alongside the counts, similar to the Task Summary section.
+- **Test Case Details :** In the “Test Cases” view, retried tests are now clearly marked with a retry icon.
+
+This update ensures accurate reporting and makes it easier to differentiate between unique executions and retries.
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/hyp-report.png' alt="Image"  className="doc_img"/> 
+
+## Muted Test Count & Bulk Unmute Option
+We’ve enhanced the Test Muting functionality in HyperExecute with improved visibility and control:
+
+- **Total Muted Test :** The dashboard now shows the number of muted test cases in your suite.
+- **Unmute All :** You can now unmute all tests at once instead of manually unmuting them one by one.
+
+This update streamlines test management and makes it easier to re-enable muted tests when they are ready to be executed again.
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/unmute-all-test.png' alt="Image"  className="doc_img"/> 

@@ -1,0 +1,204 @@
+---
+title: "Tricentis Tosca Integration With Lambdatest’s Cloud Based Selenium Grid"
+sidebarTitle: "Tricentis Tosca"
+keywords: [ "tricentis tosca", "Lambdatest integrations", "Lambdatest integration with applitools", "tosca integration", "cross browser testing", "free cross browser testing tool" ]
+---
+Lambdatest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. Lambdatest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on Lambdatest.
+
+This topic will be focusing on:
+
+- Running a sample Tricentis Tosca testcases on Lambdatest Automation.
+
+## Prerequisites For Running Tricentis Tosca Test Cases On Selenium Grid
+***
+1. Log in to Lambdatest. If you haven’t signed up yet, [click here](https://accounts.lambdatest.com/register).
+2. Lambdatest Authentication Credentials:
+   Be aware of your Lambdatest authentication credentials i.e. your Lambdatest username, access key and HubURL.You can retrieve them from your [Lambdatest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+3. [Download Tosca](https://www.tricentis.com/software-testing-tool-trial-demo/) by logging in to the Tosca website.
+
+## Sample Test Scenario
+***
+For demonstrating Tosca-Lambdatest integration, we would be considering the following test scenario:
+
+1. Open [Lambdatest Selenium PlayGround](https://www.lambdatest.com/selenium-playground/).
+2. Click the "Simple Form Demo" link. 
+3. Enter the text "Happy Testing" in the text box.
+4. Click the "Get Checked value" button.
+5. Verify if the entered text is present under the "Your Message" section.
+   ![Image](/assets/images/tosca-integration/tosca_int_01.webp)
+
+## Integrating Tricentis Tosca With Lambdatest
+
+**Step 1:** Launch the Tosca Commander.
+
+![Image](/assets/images/tosca-integration/tosca_02.webp)
+
+**Step 2:** Click **Create new** . In **Create new workspace**, select **Type of Repository** as **None** and set workspace as **Tosca_Demo**.
+![Image](/assets/images/tosca-integration/tosca_03.webp)
+
+**Step 3:** On the successful project creation, click the **Modules** tab, right-click on the panel, then select **Scan -> Application**.
+![Image](/assets/images/tosca-integration/tosca_int_04.webp)
+
+**Step 4:** Open Chrome browser and enter [test URL](https://www.lambdatest.com/selenium-playground/).
+
+**Step 5:** On the **Select Application** screen, select the Chrome browser instance that was open in the earlier step and click **Scan**
+
+![Image](/assets/images/tosca-integration/tosca_int_05_01.webp)
+
+![Image](/assets/images/tosca-integration/tosca_int_05.webp)
+
+**Step 6:** Now you will be prompted to install Tosca Extension.
+
+![Image](/assets/images/tosca-integration/tosca_int_06.webp)
+
+![Image](/assets/images/tosca-integration/tosca_int_06_01.webp)
+
+**Step 7:** Click on **Advanced**  in Tosca XScan Window.
+
+![Image](/assets/images/tosca-integration/tosca_int_07.webp)
+
+**Step 8:** Click **Select on screen**.
+
+![Image](/assets/images/tosca-integration/tosca_int_08.webp)
+
+**Step 9:** Select the **Simple Form Demo** link and Tosca XScan will capture the highlighted element.
+
+![Image](/assets/images/tosca-integration/tosca_int_09.webp)
+
+**Step 10:** Click **Finish Screen**.
+
+**Step 11:** In the browser click the **Simple Form Demo** link, navigate to the **Simple Form Page**. ReOpen Tosca XScan ,Click **Select on screen** and  capture required elements for test case.(input text box, "Get Checked value" button and text area to validate)
+
+**Step 12:**  On completion click **Finish Screen**
+ All the captured elements are listed under Modules are below:
+
+![Image](/assets/images/tosca-integration/tosca_int_12.webp)
+
+**Step 13:**  Go to TESTCASES and create a folder named **Lambdatest_TestCase**.
+
+![Image](/assets/images/tosca-integration/tosca_int_13.webp)
+
+**Step 14:**  Drag the **Modules** created in the earlier steps to the new test case **Details** tab.
+
+![Image](/assets/images/tosca-integration/tosca_int_14.webp)
+
+**Step 15:**  To add commonly used modules in the test case, go back to the **Modules** tab. Click **HOME** in the menu bar, then click **Import Subset**.
+
+![Image](/assets/images/tosca-integration/tosca_int_15.webp)
+
+**Step 16:**  Select **standard.tsu** file from *&lt;installation_path&gt;/Tosca_Projects/ToscaCommander* folder.
+
+![Image](/assets/images/tosca-integration/tosca_int_16.webp)
+
+**Step 17:**  Navigate back to TestCases Details tab, update the test step names:
+ - **New TestCase** to  LT_PlayGroudTest_1 
+ - **New TestCase_1** to LT_PlayGroudTest_2 
+
+![Image](/assets/images/tosca-integration/tosca_int_17.webp)
+
+**Step 18:**  Select the first test case and press **CTRL + T**. This will display a list of all the common modules. Type **OpenUrl** in the search box and select the **OpenUrl** module to add to the test case.
+
+![Image](/assets/images/tosca-integration/tosca_int_18.webp)
+
+**Step 19:** Again press **CTRL + T** type **CloseBrowser** in the search box, select  **CloseBrowser** module to add to the test case.
+
+![Image](/assets/images/tosca-integration/tosca_int_19.webp)
+
+Shown below is the final test case view.
+
+![Image](/assets/images/tosca-integration/tosca_int_20.webp)
+
+**Step 20:** Enter relevant details in **Value** and **ActionMode** columns for every test step
+
+![Image](/assets/images/tosca-integration/tosca_int_21.webp)
+
+**Step 21:** For adding test configuration, navigate to the  **TestCase -> Test Configuration**, right-click and click **Create Test configuration parameter** button.
+
+![Image](/assets/images/tosca-integration/tosca_int_22.webp)
+
+**Step 22:** Add below name and values in Test Configuration:
+
+**For Web Browser Automation**
+
+![Image](/assets/images/tosca-integration/web-automate.webp)
+
+**For Mobile Browser Automation (Emulators & Simulators)**
+
+![Image](/assets/images/tosca-integration/mba-virtual.webp)
+
+**For Mobile Browser Automation (Real Device)**
+
+* Enter relevant details in **Value** and **ActionMode** columns for every test step.
+
+![Image](/assets/images/tosca-integration/toscaa.webp)
+
+* Add below name and values in Test Configuration.
+
+![Image](/assets/images/tosca-integration/mba-real.webp)
+
+*You can refer our [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator)
+ to choose different browser combination.*
+
+**Step 23:** Go to the **Details** tab then Right-click on the test case and select **Run in ScratchBook**. This will launch the test on Lambdatest Platform.
+
+Once execution is completed result window populate in Tosca
+
+![Image](/assets/images/tosca-integration/tosca_int_24.webp)
+
+Monitor and analyze your test result on the [Lambdatest Automation Dashboard](https://automation.lambdatest.com/).
+
+![Image](/assets/images/tosca-integration/tosca_int_25.webp)
+
+## How To Use Lambdatest  Custom Capabilities in Tosca
+There are few custom capabilities  like network logs,console logs in Lambdatest platform to enable Logs on execution.
+
+To use a WebDriver capability,
+
+- Prefix the capability with "WebDriver_"*, for ex: WebDriver_console. 
+- If the name of the capability contains a dot (.), replace this character with double underscore (\__). If the name of the capability contains a colon (:), replace this character with triple underscore (___).
+
+![Image](/assets/images/tosca-integration/tosca_int_26.webp)
+
+With this enabled log when you execute the test case, you can see logs in Lambdatest Plateform once execution completes.
+
+![Image](/assets/images/tosca-integration/tosca_int_26_1.webp)
+
+## Geolocation Testing in Tosca with Lambdatest
+
+Test the performance of your web-app through different geographic locations by setting LamdaTest Capability "geoLocation". Set this Capability in Tosca as "WebDriver_geoLocation"with Value of "IN"as shows below
+
+![Image](/assets/images/tosca-integration/tosca_int_27.webp)
+
+In Lambdatest Plateform , You can see check the log to validate the Web Application is launched with given GeoLocation.
+
+![Image](/assets/images/tosca-integration/tosca_int_28.webp)
+
+## Testing Locally Hosted or Privately Hosted Projects
+***
+To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, Lambdatest provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on Lambdatest. So you make sure how well your changes look, even before your customers.
+Curious to know more about Lambda Tunnel?
+
+Follow our documentation on Lambda Tunnel to know it all. OS-specific instructions to download and set up tunnel binary are at the following links.
+
+- [Documentation For Windows User](/support/docs/local-testing-windows)
+- [Documentation For Mac User](/support/docs/local-testing-macos)
+- [Documentation For Linux User](/support/docs/local-testing-linux)
+
+**Download the binary file of:**
+
+- [Lambda Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+- [Lambda Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+- [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+
+Set the Tunnel Capability in Toasca as shown below
+
+![Image](/assets/images/tosca-integration/tosca_int_29.webp)
+
+In Lambdatest logs you can validate whether Tunnel is enaled or not from Tosca as shown below.
+
+![Image](/assets/images/tosca-integration/tosca_int_30.webp)
+
+In case you face any problems during the integration, or have any other questions, reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>.
+
+Happy testing!
+

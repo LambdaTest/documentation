@@ -1,0 +1,2292 @@
+openapi: 3.0.0
+info:
+  title: LambdaTest Real Device App automation API Documentation
+  version: '2.1'
+servers:
+#- url: https://virtserver.swaggerhub.com/faisal097/ltma16mar19/1.0.1
+#  description: SwaggerHub API Auto Mocking
+#- url: '{protocol}://mobile-api.lambdatest.com/mobile-automation/api/v1/'
+- url: 'https://manual-api.lambdatest.com'
+  description: 'Server 1'
+- url: 'https://eu-manual-api.lambdatest.com'
+  description: 'Server 1 eu'
+- url: 'https://mobile-api.lambdatest.com/mobile-automation/api/v1'
+  description: 'Server 2'
+- url: 'https://eu-mobile-api.lambdatest.com/mobile-automation/api/v1'
+  description: 'Server 2 eu'
+- url: 'https://mobile-api.lambdatest.com'
+  description: 'Server 3'
+- url: 'https://eu-mobile-api.lambdatest.com'
+  description: 'Server 3 eu'
+- url: 'https://api.lambdatest.com'
+  description: 'Server 4'
+
+  variables:
+    protocol:
+      default: https
+      enum:
+      - https
+
+paths:
+  /app/uploadFramework:
+    post:
+      tags:
+        - Application (Espresso/XCUI)
+      summary: Upload a framework file for testing(Espresso/XCUI) (Server 1)
+      description: Upload a framework file for testing purposes. Supports Espresso for Android and XCUITest for iOS.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                appFile:
+                  type: string
+                  format: binary
+                  description: The application file to be uploaded.
+                type:
+                  type: string
+                  enum: [xcuit-ios, espresso-android]
+                  description: The type of the application (XCUITest for iOS, Espresso for Android).
+                name:
+                  type: string
+                  description: Name of the application.
+              required:
+                - appFile
+                - type
+      responses:
+        '200':
+          description: Successfully uploaded the framework.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  app_id:
+                    type: string
+                    example: "lt://APP1016038711693231735315475"
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  url:
+                    type: string
+        '401':
+          description: Unauthorized access. Authentication required.
+        '415':
+          description: Unsupported media type. Ensure the provided file format is valid.
+        '500':
+          description: Internal server error. Please try again later.
+
+      security:
+        - basicAuth: []
+
+
+  /app/upload/realDevice:
+    post:
+      tags:
+        - Application (Appium)
+      summary: Upload Application to a Real Device (Server 1)
+      description: Upload an application (.ipa,.apk,.aab) for testing on a real device.
+      operationId: uploadAppRealDevice
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                appFile:
+                  type: string
+                  format: binary
+                  description: Path to the application file on your local system.
+                name:
+                  type: string
+                  description: Name of the application.
+                custom_id:
+                  type: string
+                  description: Custom ID of the application.
+                visibility:
+                  type: string
+                  enum: ['individual', 'team']
+                  default: 'individual'
+                  description: Visibility scope of the uploaded application.
+              required:
+                - appFile
+                - name
+      responses:
+        '200':
+          description: Application successfully uploaded for testing.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  app_id:
+                    type: string
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  app_url:
+                    type: string
+                  url:
+                    type: string
+                  custom_id:
+                    type: string
+              example:
+                app_id: "APP10160502401693989036908244"
+                name: "Appname"
+                type: "android"
+                app_url: "lt://APPID"
+                url: "APP_URL"
+                custom_id: "Custom"
+        '401':
+          description: Unauthorized access. Authentication required.
+        '415':
+          description: Unsupported media type. Ensure the provided file format is valid.
+        '500':
+          description: Internal server error. Please try again later.
+      security:
+        - basicAuth: []
+
+  /app/data:
+    get:
+      tags:
+        - Application (Appium)
+      summary: Fetch all uploaded applications (Server 1)
+      description: Fetch all applications based on the provided type (android/iOS) and access level (user/organization).
+      operationId: fetchApplications
+      parameters:
+        - name: type
+          in: query
+          description: Application type (android/iOS)
+          required: true
+          schema:
+            type: string
+            enum: [android, ios]
+        - name: level
+          in: query
+          description: Access level (user/organization)
+          required: true
+          schema:
+            type: string
+            enum: [user, org]
+        - name: offset
+          in: query
+          description: Page offset defines the number of records to skip before fetching data. It is used along with the limit to fetch a specific page of data.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          description: To fetch specified number of records. e.g. limit=10
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successfully retrieved applications.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  metaData:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      total:
+                        type: integer
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        app_id:
+                          type: string
+                        name:
+                          type: string
+                        type:
+                          type: string
+                          description: Type of the application (android/iOS).
+                        updated_at:
+                          type: string
+                          format: date-time
+                          description: Date and time of the last update.
+                        shared:
+                          type: boolean
+                          description: Indicates if the application is shared.
+                        source:
+                          type: string
+                          description: Source of the application.
+        '401':
+          description: Unauthorized access. Authentication required.
+        '404':
+          description: Resource not found.
+      security:
+          - basicAuth: []
+
+  /app/custom_id/{customId}:
+    get:
+      tags:
+        - Application (Appium)
+      summary: Get data by Custom ID (Server 1)
+      description: Retrieve data by custom ID from LambdaTest.
+      operationId: getDataByCustomId
+      parameters:
+        - name: customId
+          in: path
+          description: The custom ID to retrieve data for
+          required: true
+          schema:
+            type: string
+        - name: metadataPresent
+          in: query
+          description: Specify if metadata is present (true or false)
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    app_id:
+                      type: string
+                    source:
+                      type: string
+                    type:
+                      type: string
+                      enum: [android, ios]
+                      description: Type of the application (android/iOS).
+                    url:
+                      type: string
+                    patched_url:
+                      type: string
+                    name:
+                      type: string
+                    custom_id:
+                      type: string
+                    md5_hash:
+                      type: string
+                    cf_url:
+                      type: string
+                    cf_ap_url:
+                      type: string
+                    cf_patched_url:
+                      type: string
+                    cf_ap_patched_url:
+                      type: string
+      security:
+        - basicAuth: []
+
+
+
+  /app/delete:
+    delete:
+      tags:
+        - Application (Appium)
+      summary: Delete your uploaded applications (Server 1)
+      description: Delete the uploaded applications based on the provided appIds.
+      operationId: deleteApplications
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                appIds:
+                  type: string
+                  description: Comma-separated string of App IDs to delete (e.g., "APP1016038711693231735315475")
+                  example: "APP1016038711693231735315475,APP2016038711693231735315476"
+
+      responses:
+        '200':
+          description: Successfully deleted the selected application(s).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "Deleted successfully."
+        '401':
+          description: Unauthorized access. Authentication required.
+        '400':
+          description: Bad request. Invalid input or missing parameters.
+        default:
+          description: An unexpected error occurred.
+      security:
+        - basicAuth: []
+
+
+  /app/{appId}:
+    delete:
+      tags:
+        - Application (Appium)
+      summary: Delete a single uploaded application (Server 1)
+      description: Deletes an uploaded application using its unique `appId`.
+      operationId: deleteApplication
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          description: The ID of the application to delete (e.g., `APP1234567890`).
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Application deleted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: "Deleted successfully."
+        '400':
+          description: Bad request. Invalid or missing appId.
+        '401':
+          description: Unauthorized access. Authentication required.
+        '404':
+          description: Application not found.
+        default:
+          description: An unexpected error occurred.
+      security:
+        - basicAuth: []
+
+
+
+  /mfs/v1.0/media/list:
+    get:
+      tags:
+        - Media
+      summary: Fetch media list for an organization (server 4)
+      description: Retrieve a list of uploaded media files (images, videos, etc.) associated with an organization.
+      parameters:
+        - name: custom_id
+          in: query
+          description: The custom ID to retrieve Media.
+          required: false
+          schema:
+            type: string
+        - name: type
+          in: query
+          description: Media type (image/video/doc/cert)
+          required: false
+          schema:
+            type: string
+            enum: ['image', 'video','doc', 'cert']
+      responses:
+        '200':
+          description: Successful response containing media list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    media_url:
+                      type: string
+                    media_id:
+                      type: string
+                    name:
+                      type: string
+                    type:
+                      type: string
+                      enum: ['image', 'video','doc', 'cert']
+                      description: Type of the Media(Image / Video / Doc / Certificate)
+                    custom_id:
+                      type: string
+              example:
+                media_url: "Media_URL"
+                media_id: "MEDIA12234567890"
+                name: "sample.png"
+                custom-id: "Sample_Image"
+                type: "image"
+        '401':
+          description: Unauthorized access. Authentication required.
+        '415':
+          description: Unsupported media type. Ensure the provided file format is valid.
+        '500':
+          description: Internal server error. Please try again later.
+
+      security:
+        - basicAuth: []
+
+
+  /mfs/v1.0/media/{media_id}:
+    delete:
+      tags:
+        - Media
+      summary: Delete a media asset (server 4)
+      description: Deletes the media files associated with the given `media_id`.
+      operationId: deleteMediaByMediaId
+      parameters:
+        - name: media_id
+          in: path
+          description: The Media Id to retrieve data for deletion.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully deleted the selected media(s).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                Status: "Deleted successfully."
+        '401':
+          description: Unauthorized access. Authentication required.
+        '400':
+          description: Bad request. Invalid input or missing parameters.
+        default:
+          description: An unexpected error occurred.
+      security:
+        - basicAuth: []
+
+  /mfs/v1.0/media/upload/:
+    post:
+      tags:
+        - Media
+      summary: Upload Media File (Image/Video/Document/Certificate) (Server 4)
+      description: Upload a media file (.jpg, .png, .mp4, .pdf, etc.) for use.
+      operationId: uploadMediaFile
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                media_file:
+                  type: string
+                  format: binary
+                  description: The media file to be uploaded.
+                type:
+                  type: string
+                  description: Type of media (e.g., image, video, document, Certificate).
+                  enum:
+                    - Image
+                    - Video
+                    - Documents
+                    - Certificate
+                custom_id:
+                  type: string
+                  description: Optional custom identifier for later retrieval.
+              required:
+                - media_file
+                - name
+
+      responses:
+        '200':
+          description: Successfully uploaded the media file.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  media_url:
+                    type: string
+                  name:
+                    type: string
+                  custom_id:
+                    type: string
+                  Status:
+                    type: string
+              example:
+                media_url: "lt://MEDIA12345"
+                name: image.png
+                custom_id: Image_1
+                Status: Successful
+        '401':
+          description: Unauthorized access. Authentication required.
+        '415':
+          description: Unsupported media type. Ensure the provided file format is valid.
+        '500':
+          description: Internal server error. Please try again later.
+
+      security:
+        - basicAuth: []
+
+
+
+  /list:
+    get:
+      tags:
+        - Devices List
+      summary: Fetch available devices for running tests (Server 2)
+      description: Retrieves the list of devices available for running tests. You can filter the devices based on the region.
+      operationId: getDevices
+      parameters:
+        - name: region
+          in: query
+          description: Region to filter available devices ( 'eu', 'us', 'ap')
+          required: true
+          schema:
+            type: string
+          example: ap
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceList'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - basicAuth: []
+
+  /org/concurrency:
+    get:
+      tags:
+        - Concurrency Details
+      summary: Get your account's concurrency details (Server 2)
+      description: Retrieve the concurrency details for your account.
+      operationId: getConcurrencyDetails
+      responses:
+        '200':
+          description: Successful operation ()
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConcurrencyDetails'
+        '401':
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+        - basicAuth: []
+
+  /mobile-automation/api/v1/fetchpatchedapkurl:
+    post:
+      tags:
+        - Application Processing (Appium)
+      summary: Fetch patched APK URL (Server 3)
+      description: |
+        This endpoint facilitates the retrieval of a patched APK URL and provides information on whether the patching process is complete or not. It is essential for Appium automation and supports testing workflows.
+      operationId: fetchpatchedapkurl
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                appId:
+                  type: string
+                  example: APP1016026831697098627787472
+                imageInjectionEnabled:
+                  type: boolean
+                  example: true
+                screenshotUnblockEnabled:
+                  type: boolean
+                  example: true
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              example:
+                data:
+                  cf_ap_patched_url: ""
+                  cf_patched_url: ""
+                  imageinjection_ready: false
+                  patched_url: ""
+                  screenshotunblock_ready: false
+                  status: "success"
+                status: "success"
+        '401':
+          description: Unauthorized access. Authentication required.
+        '404':
+          description: Resource not found.
+      security:
+          - basicAuth: []
+
+
+
+
+  /framework/v1/espresso/build:
+    post:
+      tags:
+        - Execute Test (Espresso/XCUI)
+      summary: Execute espresso test on the LambdaTest platform (Server 3)
+      description: |
+        This endpoint enables you to execute automated tests using the LambdaTest platform.
+      operationId: executeWindowsTest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app:
+                  type: string
+                  description: "The APPID of the uploaded app, usually in the format 'lt://APP_ID'."
+                  example: "lt://APPID"
+                testSuite:
+                  type: string
+                  description: "The ID of the uploaded test suite to be executed, usually in the format 'lt://TestSuite_ID'."
+                  example: "lt://APPID"
+                device:
+                  type: array
+                  items:
+                    type: string
+                  description: "List of device identifiers where the test should be executed. e.g., ['Galaxy S21 5G-12', 'iPhone 12']."
+                  example:
+                    - "Galaxy S21 5G-12"
+                queueTimeout:
+                  type: integer
+                  description: "Maximum time in seconds to wait for devices to be available in the queue. Defaults to 10800 seconds (3 hours)."
+                  example: 300
+                idleTimeout:
+                  type: integer
+                  description: "Maximum idle time in seconds before a running test is terminated. Defaults to 150 seconds."
+                  example: 120
+                deviceLog:
+                  type: boolean
+                  description: "Enable or disable device log capturing. Defaults to true."
+                  example: true
+                network:
+                  type: boolean
+                  description: "Enable or disable network log capturing. Defaults to false."
+                  example: true
+                build:
+                  type: string
+                  description: "Name of the build for identification purposes."
+                  example: "new build"
+                geoLocation:
+                  type: string
+                  description: "Geo-location setting for the test, specified as a country code. Defaults to 'US'."
+                  example: "US"
+              required:
+                - app
+                - testSuite
+                - device
+                - queueTimeout
+                - idleTimeout
+                - deviceLog
+                - network
+                - build
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: array
+                    items:
+                      type: string
+                  buildId:
+                    type: array
+                    items:
+                      type: string
+                  message:
+                    type: array
+                    items:
+                      type: string
+              examples:
+                success:
+                  value:
+                    status: ["Success"]
+                    buildId: ["1395514"]
+                    message: [""]
+                failed:
+                  value:
+                    status: ["Failed"]
+                    buildId: [""]
+                    message: ["Failed : [INVALID_APP_ID] The app_id %s specified in the ‘app’ params is invalid. Please specify a valid app_id that was returned in the response to upload app API request and try again., AppId : lt://APPID"]
+        '401':
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "error"
+                  message:
+                    type: string
+                    example: "Unauthorized"
+      security:
+        - basicAuth: []
+
+  /framework/v1/xcui/build:
+    post:
+      tags:
+        - Execute Test (Espresso/XCUI)
+      summary: Execute XCUI test on the LambdaTest platform (Server 3)
+      description: Execute the automation tests on Lambdatest platform using the provided parameters.
+      operationId: executeTest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app:
+                  type: string
+                  description: Uploaded app's APPID
+                  example: "lt://APPID"
+                testSuite:
+                  type: string
+                  description: Uploaded test suite's ID
+                  example: "lt://APPID"
+                device:
+                  type: array
+                  items:
+                    type: string
+                  description: Device(s) to execute the test on
+                  example:
+                    - "Galaxy S21 5G-12"
+                queueTimeout:
+                  type: integer
+                  description: Queue timeout value in seconds
+                  example: 300
+                idleTimeout:
+                  type: integer
+                  description: Idle timeout value in seconds
+                  example: 120
+                devicelog:
+                  type: boolean
+                  description: Enable or disable device logs
+                  example: true
+                network:
+                  type: boolean
+                  description: Enable or disable network logs
+                  example: true
+                build:
+                  type: string
+                  description: Build name
+                  example: "new build"
+              required:
+                - app
+                - testSuite
+                - device
+                - queueTimeout
+                - idleTimeout
+                - devicelog
+                - network
+                - build
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: array
+                    items:
+                      type: string
+                  buildId:
+                    type: array
+                    items:
+                      type: string
+                  message:
+                    type: array
+                    items:
+                      type: string
+              examples:
+                success:
+                  value:
+                    status: ["Success"]
+                    buildId: ["1395514"]
+                    message: [""]
+                failed:
+                  value:
+                    status: ["Failed"]
+                    buildId: [""]
+                    message: ["Failed : [INVALID_APP_ID] The app_id %s specified in the ‘app’ params is invalid. Please specify a valid app_id that was returned in the response to upload app API request and try again., AppId : lt://APPID"]
+        '401':
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "error"
+                  message:
+                    type: string
+                    example: "Unauthorized"
+      security:
+        - basicAuth: []
+
+
+  /metadata/{session_id}/details:
+    get:
+      tags:
+        - Session
+      summary: Fetch the app URL for a particular session (Server 2)
+      description: Retrieve the app URL being used for a specific session.
+      operationId: getAppUrlForSession
+      parameters:
+        - name: session_id
+          in: path
+          description: ID of the session
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppUrlResponse'
+        '401':
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+        - basicAuth: []
+
+
+
+  /builds:
+    get:
+      tags:
+      - Build
+      summary: Fetch all builds of an account. (Server 2)
+      description: Fetch all builds of an account. You can limit the number of records and apply filter on status,build date range and sort by users,start date and end date in asc and desc order. You can apply sort on multiple columns.
+      operationId: builds
+      parameters:
+      - name: offset
+        in: query
+        description: It defines the number of lists on the basis of limit parameter. e.g offset=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        description: To fetch specified number of records. e.g. limit=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: status
+        in: query
+        description: To fetch the list of builds with specific status. You can pass multiple comma seperated status e.g. running,queued,completed,timeout and error.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fromdate
+        in: query
+        description: To fetch the list of builds that executed from the specified Start Date. The Date format must be YYYY-MM-DD. e.g. "2018-03-15".
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: todate
+        in: query
+        description: To fetch the list of builds that executed till the specified End Date. If both fromdate and todate value provided then it works as range filter. The Date format must be YYYY-MM-DD. e.g. "2018-03-15".
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: sort
+        in: query
+        description: To sort the list in ascending or descending order using multiple keys. e.g. "asc.user_id"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListBuildResponse'
+        400:
+          description: Invalid session id value
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+  /builds/{build_id}:
+    get:
+      tags:
+      - Build
+      summary: Fetch specified build details (Server 2)
+      description: To fetch build details of the buildid specified by the user.
+      operationId: singlebuild
+      parameters:
+      - name: build_id
+        in: path
+        description: Build ID that details you want to fetch
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleBuildResponse'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        404:
+          description: Resource not found
+      security:
+      - basicAuth: []
+    delete:
+      tags:
+      - Build
+      summary: Delete Build (Server 2)
+      description: To delete specified Build from dashboard.
+      operationId: status_ind
+      parameters:
+      - name: build_id
+        in: path
+        description: Build ID that need to be deleted
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteBuildResponse'
+        400:
+          description: Invalid build id value
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+    patch:
+      tags:
+      - Build
+      summary: Update Build Name (Server 2)
+      description: To change build name.
+      operationId: build_id
+      parameters:
+      - name: build_id
+        in: path
+        description: build id that name need to be changed.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Updated Build Name
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditBuild'
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditBuildResponse'
+        400:
+          description: Bad Request
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+
+  /builds/{build_id}/stop:
+    put:
+      tags:
+        - Build
+      summary: Stop a running build (server 2)
+      description: Stops the execution of a running build using its `build_id`.
+      parameters:
+        - name: build_id
+          in: path
+          required: true
+          description: The ID of the build to stop.
+          schema:
+            type: integer
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Build stopped successfully.
+        '401':
+          description: Unauthorized. Invalid or missing authentication.
+        '404':
+          description: Build ID not found.
+        '409':
+          description: Stop request already in progress.
+        '500':
+          description: Internal server error.
+
+
+
+
+  /sessions:
+    get:
+      tags:
+      - Session
+      summary: Fetch list of all sessions (Server 2)
+      description: To fetch list of sessions. You can also limit the number of records, and paginate through your data using Parameters.
+      operationId: sessions
+      parameters:
+      - name: build_id
+        in: query
+        description: To filter sessions of specific build.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: username
+        in: query
+        description: To filter sessions of specific user.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: offset
+        in: query
+        description: It defines the number of lists on the basis of limit parameter. e.g offset=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        description: To fetch specified number of records. e.g. limit=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: status
+        in: query
+        description: To fetch the list of sessions with specific status. You can pass multiple comma seperated status e.g. queued,completed,passed,failed,timeout,error and lambda error.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fromdate
+        in: query
+        description: To fetch the list of sessions that executed from the specified Start Date. The Date format must be YYYY-MM-DD. e.g. "2018-03-15".
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: todate
+        in: query
+        description: To fetch the list of sessions that executed till the specified End Date. If both fromdate and todate value provided then it works as range filter. The Date format must be YYYY-MM-DD. e.g. "2018-03-15".
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: sort
+        in: query
+        description: To sort the list in ascending or descending order using multiple keys. e.g. "asc.user_id,desc.duration"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListsTestsResponse'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+      security:
+      - basicAuth: []
+  /sessions/{session_id}:
+    get:
+      tags:
+      - Session
+      summary: session specific information (Server 2)
+      description: To fetch specified session details such as name, status,os,browser,version and all generated logs endpoint.
+      parameters:
+      - name: session_id
+        in: path
+        description: SESSION ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        404:
+          description: Resource associated to session_id is not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+      security:
+      - basicAuth: []
+    delete:
+      tags:
+      - Session
+      summary: Delete test session (Server 2)
+      description: Delete a session.
+      parameters:
+      - name: session_id
+        in: path
+        description: SESSION ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionDeleteSuccess'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        403:
+          description: Forbidden! Operation not allowed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionForbidden'
+        404:
+          description: Resource associated to session_id is not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+      security:
+      - basicAuth: []
+    patch:
+      tags:
+      - Session
+      summary: Update session name and status. (Server 2)
+      description: To update the test session name and status {"passed","failed"}.
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: You can update both name and status of a session in single request.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateSessionPayload'
+        required: true
+      responses:
+        200:
+          description: successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionUpdateSuccess'
+        400:
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionBadResquest'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        403:
+          description: Forbidden! Operation not allowed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionForbidden'
+        404:
+          description: Resource associated to session_id is not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+      security:
+      - basicAuth: []
+
+
+  # /sessions/{session_id}/screenshots:
+  #   get:
+  #     tags:
+  #     - Session
+  #     summary: To fetch all step by step screenshots
+  #     description: To fetch all the step by step screenshots in zip format.
+  #     parameters:
+  #     - name: session_id
+  #       in: path
+  #       description: Session ID
+  #       required: true
+  #       style: simple
+  #       explode: false
+  #       schema:
+  #         type: string
+  #     responses:
+  #       200:
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/ScreenshotResponse'
+  #       401:
+  #         description: Access denied. Auth error.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/AccessDenied'
+  #       404:
+  #         description: session id not found
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/SessionNotFound'
+  #     security:
+  #     - basicAuth: []
+  /sessions/{session_id}/video:
+    get:
+      tags:
+      - Session
+      summary: Fetch recorded video of a test session id. (Server 2)
+      description: To fetch video of a recorded test session.
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoResponse'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+        404:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+      security:
+      - basicAuth: []
+
+  /sessions/{session_id}/log/command:
+    get:
+      tags:
+      - Session
+      summary: command logs of a test session (Server 2)
+      description: To fetch the all executed commands of a test session in plain json text.
+      operationId: session
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: pageoffset
+        in: query
+        description: Page offset defines the number of records to skip, based on the limit parameter, to fetch a specific page of data. e.g pageoffset=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        description: To fetch specified number of records. e.g. limit=10
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LogResponse'
+        400:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+
+  /sessions/{session_id}/log/appium:
+    get:
+      tags:
+      - Session
+      summary: appium log of a test session (Server 2)
+      description: To fetch appium log that contains grid requests and reponses of a test session in plain json text.
+      operationId: session1
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "2022-03-14 01:49:55:364 [Appium] Welcome to Appium v1.22.2\n2022-03-14 01:49:55:365 [Appium] Non-default server args:\n2022-03-14 01:49:55:365 [Appium]   port: 0"
+                #$ref: '#/components/schemas/SeleniumLogResponse'
+        400:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+
+  /sessions/{session_id}/log/network:
+    get:
+      tags:
+      - Session
+      summary: Network log of a test session (Server 2)
+      description: To fetch Network log that contains all the requested urls of a test session in plain json text.
+      operationId: session2
+      parameters:
+      - name: session_id
+        in: path
+        description: get logs based on session id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkLogResponse'
+        400:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+  /sessions/{session_id}/log/devicelog:
+    get:
+      tags:
+      - Session
+      summary: devicelog log of a test session (Server 2)
+      description: To fetch devicelog log that contains devicelog errors thrown by application during a test session in plain json text.
+      operationId: session3
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "--------- beginning of main\n
+03-13 18:49:57.893 12758 12758 I MDMAppMgmtLogger: RestoreInstallApplicationRestriction\n
+03-13 18:49:57.895  3101  3101 E PhoneInterfaceManager: [PhoneIntfMgr]\n getCarrierPackageNamesForIntentAndPhone: No UICC\n
+03-13 18:49:57.895  3101  3101 D CarrierSvcBindHelper: No carrier app for: 0"
+                #$ref: '#/components/schemas/SeleniumLogResponse'
+        400:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+
+  /sessions/{session_id}/log/devicelogzip:
+    get:
+      tags:
+      - Session
+      summary: devicelog custom logs of a test session in .zip file (Server 2)
+      description: To fetch devicelog in zipped format that contains all device logs including custom logs generated during a test session.
+      operationId: getDeviceLogZip
+      parameters:
+      - name: session_id
+        in: path
+        description: Session ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Zipped device logs fetched successfully.
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        400:
+          description: session id not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionNotFound'
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDenied'
+      security:
+      - basicAuth: []
+
+  /sessions/{test_id}/stop:
+    put:
+      tags:
+        - Session
+      summary: Stop a running test session (server 2)
+      description: Stops a running test session using its `test_id`
+      parameters:
+        - name: test_id
+          in: path
+          required: true
+          description: The ID of the session (test) to stop.
+          schema:
+            type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Test Session stopped successfully.
+        '401':
+          description: Unauthorized request.
+        '404':
+          description: Test Id not found.
+        '409':
+          description: Stop Already in Progress.
+        '500':
+          description: Internal Server Error
+
+
+components:
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+
+    AppUrlResponse:
+      type: object
+      properties:
+        appUrl:
+          type: string
+      required:
+        - appUrl
+    DeviceList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Device'
+    Device:
+      type: object
+      properties:
+        deviceId:
+          type: string
+          description: Unique identifier for the device
+          example: "d123"
+        deviceName:
+          type: string
+          description: Name of the device
+          example: "Pixel 4"
+        platformName:
+          type: string
+          description: Name of the platform the device runs
+          example: "Android"
+        platformVersion:
+          type: string
+          description: Version of the platform the device runs
+          example: "10.0"
+        deviceStatus:
+          type: string
+          description: Status of the device
+          example: "Available"
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+    ListBuildResponse:
+      required:
+      - Meta
+      - data
+      properties:
+        Meta:
+          $ref: '#/components/schemas/ListsTestsResponse_Meta'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ListBuildResponse_data'
+    ListsTestsResponse_Meta_attributes:
+      type: object
+      properties:
+        org_id:
+          type: number
+    ListsTestsResponse_Meta_result_set:
+      type: object
+      properties:
+        count:
+          type: number
+          example: 1
+        limit:
+          type: number
+          example: 1
+        offset:
+          type: number
+        total:
+          type: number
+          example: 100
+    ListsTestsResponse_Meta:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ListsTestsResponse_Meta_attributes'
+        result_set:
+          $ref: '#/components/schemas/ListsTestsResponse_Meta_result_set'
+    ListBuildResponse_data:
+      type: object
+      properties:
+        build_id:
+          type: number
+          example: 1782
+        name:
+          type: string
+          example: shivam-video-test
+        user_id:
+          type: number
+          example: 1212
+        username:
+          type: string
+          example: shivam
+        status_ind:
+          type: string
+          example: completed
+        create_timestamp:
+          type: string
+          example: "2019-02-05 08:24:36"
+        end_timestamp:
+          type: string
+          example: "2019-02-05 08:27:22"
+        project_id:
+          type: string
+          example: 0
+        project_name:
+          type: string
+          example: automation1
+        tags:
+          type: array
+          items:
+            type: string
+          example:  ["tag1", "tag2", "tag3"]
+    AccessDenied:
+      type: string
+      example: 'HTTP Basic: Access denied.'
+    SingleBuildResponse:
+      properties:
+        data:
+          $ref: '#/components/schemas/SingleBuildResponse_data'
+        message:
+          type: string
+          example: Retrieve build list was successful
+        status:
+          type: string
+          example: success
+    SingleBuildResponse_data:
+      type: object
+      properties:
+        build_id:
+          type: number
+          example: 1
+        name:
+          type: string
+          example: asdaskjaaa
+        user_id:
+          type: number
+          example: 1212
+        username:
+          type: string
+          example: john smith
+        status_ind:
+          type: string
+          example: completed
+        create_timestamp:
+          type: string
+          example: "2018-12-23 14:30:14"
+        end_timestamp:
+          type: string
+          example: "2018-12-25 12:46:38"
+        tags:
+          type: array
+          items:
+            type: string
+          example:  ["tag1", "tag2", "tag3"]
+    DeleteBuildResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Build deleted successfully
+        status:
+          type: string
+          example: success
+        data:
+          $ref: '#/components/schemas/EditBuildResponse_data'
+    EditBuildResponse_data:
+      type: object
+      properties:
+        result:
+          type: string
+          example: "1"
+    EditBuild:
+      type: object
+      properties:
+        name:
+          type: string
+          format: string
+    ConcurrencyDetails:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            max_concurrency:
+              type: integer
+              description: Maximum concurrency allowed
+            max_queue:
+              type: integer
+              description: Maximum queue size allowed
+            queued:
+              type: integer
+              description: Number of queued tasks
+            running:
+              type: integer
+              description: Number of tasks currently running
+          required:
+            - max_concurrency
+            - max_queue
+            - queued
+            - running
+    EditBuildResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Build updated successfully
+        status:
+          type: string
+          example: success
+        data:
+          $ref: '#/components/schemas/EditBuildResponse_data'
+    ListsTestsResponse:
+      required:
+      - Meta
+      - data
+      properties:
+        Meta:
+          $ref: '#/components/schemas/ListsTestsResponse_Meta'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ListsTestsResponse_data'
+    ListsTestsResponse_data:
+      type: object
+      properties:
+        test_id:
+          type: string
+          example: Z17EF-OPUKH-BDAE8-YEPXU
+        build_id:
+          type: integer
+          example: 1
+        build_name:
+          type: string
+          example: MACOS 10.12-CHROME-2018-12-23
+        user_id:
+          type: integer
+          example: 250563
+        username:
+          type: string
+          example: bahubali
+        status_ind:
+          type: string
+          example: passed
+        create_timestamp:
+          type: string
+          example: "2019-02-05 08:24:36"
+        start_timestamp:
+          type: string
+          example: "2019-02-05 08:24:58"
+        end_timestamp:
+          type: string
+          example: "2019-02-05 08:27:22"
+        remark:
+          type: string
+          example: completed
+        platform:
+          type: string
+          example: android
+        version:
+          type: string
+          example: "12"
+        name:
+          type: string
+          example: Google Pixel 6_12_1JNEQOQMS1
+        session_id:
+          type: string
+          example: e7f2d7jkwdkbjdsvbkc8d0569
+        device:
+          type: string
+          example: Google Pixel 6
+        duration:
+          type: string
+          example: "369"
+        tag:
+          type: array
+          items:
+            type: string
+          example:  ["tag1", "tag2", "tag3"]
+        appium_logs:
+          type: string
+          example: sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/appium
+        console_logs:
+          type: string
+          example: sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/console
+        network_logs:
+          type: string
+          example: sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/network
+        device_logs:
+          type: string
+          example: sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/devicelog
+        command_logs:
+          type: string
+          example: sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/command
+        video_url:
+          type: string
+          example: "?mobile=true&testID=AMABJDFAB9G&auth=0880eb1993ghkdjsvkbjfd"
+        screenshot_url:
+          type: string
+          example: "http://dmanfqoqano.cloudfront.net/orgId-0/AIQBFMANNB9G/screenshots.zip"
+    SessionNotFound:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Either resource not found or already deleted
+        status:
+          type: string
+          example: fail
+    Session:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/SessionData'
+        message:
+          type: string
+          example: Retrieve session was successful
+        status:
+          type: string
+          description: pet status in the store
+          enum:
+          - success
+          - failed
+    SessionDeleteSuccess:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Session deleted successfully
+        status:
+          type: string
+          example: success
+    SessionForbidden:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Forbidden! Operation not allowed.
+        status:
+          type: string
+          example: fail
+    SessionUpdateSuccess:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Session updated successfully
+        status:
+          type: string
+          example: success
+    UpdateSessionPayload:
+      type: object
+      properties:
+        name:
+          type: string
+          example: mytest
+        status_ind:
+          type: string
+          example: passed
+        custom_data:
+          type: object
+    SessionData:
+      type: object
+      properties:
+        test_id:
+          type: string
+          example: Z17EF-OPUKH-BDAE8-YEPXU
+        build_id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: mytest
+        user_id:
+          type: integer
+          example: 250563
+        username:
+          type: string
+          example: bahubali
+        duration:
+          type: integer
+          format: int
+        platform:
+          type: string
+          example: win10
+        browser:
+          type: string
+          example: chrome
+        browser_version:
+          type: string
+          example: "71.0"
+        device:
+          type: string
+        status_ind:
+          type: string
+        session_id:
+          type: string
+          example: bc02fd99593f14e37850745d66197f89
+        build_name:
+          type: string
+          example: my-build
+        create_timestamp:
+          type: string
+          example: "2019-02-05 08:24:36"
+        start_timestamp:
+          type: string
+          example: "2019-02-05 08:24:58"
+        end_timestamp:
+          type: string
+          example: "2019-02-05 08:27:22"
+        remark:
+          type: string
+          example: completed
+        console_logs_url:
+          type: string
+          example: https://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/console
+        network_logs_url:
+          type: string
+          example: https://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/network
+        command_logs_url:
+          type: string
+          example: http://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/command
+        appium_logs_url:
+          type: string
+          example: http://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/appium
+        screenshot_url:
+          type: string
+          example: https://s3.amazonaws.com/ml-screenshots/00HIR-IQNLL-SDVHV-KDTBM/video/index.m3u8
+        video_url:
+          type: string
+          example: https://d15x9hjibri3lt.cloudfront.net/00HIR-IQNLL-SDVHV-KDTBM/screenshots.zip
+        customData:
+          type: object
+    VideoResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Retrieve video url was successful
+        status:
+          type: string
+          example: success
+        url:
+          type: string
+        view_video_url:
+          type: string
+    LogResponse:
+      required:
+      - Value
+      properties:
+        Value:
+          $ref: '#/components/schemas/LogResponse_data'
+    LogResponse_data:
+      type: object
+      properties:
+        logType:
+          type: string
+          example: requestLog
+        testID:
+          type: string
+          example: 5HLCQ-HPCWH-UOE2O-2CUFA
+        status:
+          type: number
+          example: 0
+        timestamp:
+          type: number
+          example: 1551356385
+        orgID:
+          type: number
+          example: 0
+        requestId:
+          type: string
+          example: 82e3b7cd-3b04-4bc8-9d2b-567aff450fe4
+        RequestStartTime:
+          type: number
+          example: 1551356385
+        requestMethod:
+          type: string
+          example: POST
+        requestPath:
+          type: string
+          example: /wd/hub/session/2F42BCCC-BF43-426A-A72F-F58F58167496/element/node-DF5D363E-84A2-4CA4-9AC4-0F398C606082/click
+        duration:
+          type: number
+          example: 8
+        requestBody:
+          type: string
+          example: '{"sessionId": "2F42BCCC-BF43-426A-A72F-F58F58167496", "id": "node-DF5D363E-84A2-4CA4-9AC4-0F398C606082"}'
+        responseBody:
+          type: string
+          example: '{"status":0,"sessionId":"2F42BCCC-BF43-426A-A72F-F58F58167496","value":{}}'
+        responseStatus:
+          type: string
+          example: 200 OK
+        screenshotId:
+          type: string
+          example: 56bcabhakjasnac75142bc
+
+    NetworkLogResponse:
+      properties:
+        _id:
+          type: string
+          example: uigakk12kbad
+        cache:
+          type: object
+        startedDateTime:
+          type: string
+          example: "2022-03-14T08:48:33.516688738Z"
+        time:
+          type: integer
+          example: 0
+        timings:
+          type: object
+          properties:
+            receive:
+              type: integer
+              example: 0
+            send:
+              type: integer
+              example: 0
+            wait:
+              type: integer
+              example: 0
+        request:
+          $ref: '#/components/schemas/NetworkLogRequest_Value'
+        response:
+          $ref: '#/components/schemas/NetworkLogResponse_Value'
+
+
+    NetworkLogResponse_Value:
+      type: object
+      properties:
+        bodySize:
+          type: integer
+          example: 0
+        content:
+          type: object
+          properties:
+            encodeing:
+              type: string
+              example: "base64"
+            mimeType:
+              type: string
+              example: ""
+            text:
+              type: string
+              example: ""
+            size:
+              type: integer
+              example: 0
+        cookies:
+          type: array
+          items: {}
+        headers:
+          type: array
+          items: {}
+        headersSize:
+          type: integer
+          example: -1
+        httpVersion:
+          type: string
+          example: "HTTP/1.1"
+        redirectURL:
+          type: string
+          example: ""
+        status:
+          type: integer
+          example: 200
+        statusText:
+          type: string
+          example: "OK"
+
+    NetworkLogRequest_Value:
+      type: object
+      properties:
+        bodySize:
+          type: integer
+          example: 0
+        cookies:
+          type: array
+          items: {}
+        headers:
+          type: array
+          items: {}
+        headersSize:
+          type: integer
+          example: -1
+        httpVersion:
+          type: string
+          example: "HTTP/1.1"
+        method:
+          type: string
+          example: "CONNECT"
+        queryString:
+          type: array
+          items: {}
+        url:
+          type: string
+          example: "http://testing.com"
+    SessionBadResquest:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Please provide a valid payload
+        status:
+          type: string
+          example: fail
+
+    # ScreenshotResponse:
+    #   type: object
+    #   properties:
+    #     message:
+    #       type: string
+    #       example: Retrieve screenshot url was successful
+    #     status:
+    #       type: string
+    #       example: success
+    #     url:
+    #       type: string

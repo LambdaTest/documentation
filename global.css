@@ -1,0 +1,29 @@
+a {
+    text-decoration: none !important;
+}
+
+.no-link a {
+    text-decoration: none !important;
+    border: none !important;
+}
+
+.project-management-tools {
+    margin: 20px auto;
+    border: 0.8px solid rgb(94, 92, 92);
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none !important;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.plugins-and-extensions {
+    margin: 20px auto;
+    border-bottom: 0.5px solid rgb(234, 234, 234);
+    padding-bottom: 15px;
+    text-decoration: none !important;
+}
+
+/* .plugins-and-extensions a:hover {
+    text-decoration: underline;
+} */

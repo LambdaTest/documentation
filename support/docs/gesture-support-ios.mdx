@@ -1,0 +1,76 @@
+---
+title: iOS Gestures on Real Devices
+sidebarTitle: Gestures
+keywords: ['Gestures', 'iOS', 'manual testing', 'App Live', 'Custom Gestures', 'Double tap', 'Triple tap']
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+When testing iOS apps on **<BrandName /> Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
+
+To make this easier, <BrandName /> provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
+
+---
+# Supported Gestures & Shortcuts
+
+<Tabs className="docs__val">
+  <Tab value="macos" title="macOS" default>
+    <div className="lambdatest__codeblock">
+      <table>
+        <thead>
+          <tr>
+            <th>iOS Gesture</th>
+            <th>Shortcut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Two-Finger Triple-Tap</td>
+            <td>⌘ + ⇧</td>
+          </tr>
+          <tr>
+            <td>Single-Finger Double-Tap</td>
+            <td>⌘</td>
+          </tr>
+          <tr>
+            <td>Single-Finger Triple-Tap</td>
+            <td>⌥</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Tab>
+
+  <Tab value="windows" title="Windows">
+    <div className="lambdatest__codeblock">
+      <table>
+        <thead>
+          <tr>
+            <th>iOS Gesture</th>
+            <th>Shortcut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Two-Finger Triple-Tap</td>
+            <td>Ctrl + Shift</td>
+          </tr>
+          <tr>
+            <td>Single-Finger Double-Tap</td>
+            <td>Ctrl</td>
+          </tr>
+          <tr>
+            <td>Single-Finger Triple-Tap</td>
+            <td>Alt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Tab>
+</Tabs>
+---
+## Additional Links
+
+- [Manual Testing on Real Devices](/support/docs/app-testing-on-real-devices/)
+- [Apple Pay Manual Testing Guide](/support/docs/apple-pay-manual/)
+- [Assistive Touch](/support/docs/assistive-touch-on-real-ios-devices/)

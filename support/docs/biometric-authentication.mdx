@@ -1,0 +1,89 @@
+---
+title: "Biometric Authentication"
+sidebarTitle: "Biometric Authentication"
+keywords: ['biometric authentication', 'Fingerprint authentication', 'app test automation', 'Biometric security', 'Biometric Authentication Testing', 'lambdatest', 'framework on lambdatest', 'Facial recognition', 'app testing appium', 'app testing', 'real devices']
+---
+
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+
+<div>
+<RealDeviceTag value="Real Device" />
+</div> 
+Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
+
+LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
+
+<Note>
+**INFO**
+
+**OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
+</Note>
+
+## Supported Biometric Authentication APIs
+
+Below given is the list of Biometric Authentication APIs which are supported. Please ensure that your app uses these APIs only to enable Biometric Authentication.
+
+<Tabs>
+<Tab title="iOS">
+| Supported APIs |
+|----------------|
+| `LAContext`: The LAContext class is used to interact with the local authentication framework.|
+| `evaluatePolicy`: The evaluatePolicy(_:localizedReason:reply:) method of LAContext used to actually perform the biometric authentication, such as verifying a user's face or fingerprint. |
+|`canEvaluatePolicy`: The canEvaluatePolicy(_:error:) method of LAContext that checks whether a specific biometric authentication policy can be evaluated on the device.|
+
+<Warning>
+We don't support apps using IOS Keychain APIs with Biometric access control. For more details [IOS Keychain Documentation](https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id)
+</Warning>
+</Tab>
+
+<Tab title="Android >= version 11">
+| Supported APIs |
+|----------------|
+| `BiometricPrompt` class's `authenticate` method from the **AndroidX Biometric library** is used for Biometric authentication on Android devices. <br /><br />📕For details, please check [AndroidX Biometric Documentation](https://developer.android.com/jetpack/androidx/releases/biometric). |
+| **Android's Native** `BiometricPrompt` API is part of the Android platform and is used for Biometric authentication on Android devices.<br /><br />📕 For details, please check [Android Developers Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricPrompt).|
+| `BiometricManager` API<br /><br /> 📕 For more details [BiometricManager Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager) |
+| `KeyguardManager`  API <br /><br />📕 For more details [KeyguardManager Documentation](https://developer.android.com/reference/android/app/KeyguardManager) |
+</Tab>
+</Tabs>
+
+<Check>
+**TIP**
+
+The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
+</Check>
+
+## Biometric Authentication in App Automation
+
+### Using desired Capabilities 
+
+To enable biometric authentication feature in your automation script, set the capability `enableBiometricsAuthentication` to `true`.
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setcapability("enableBiometricsAuthentication",true)
+```
+
+### Using Lambda-Hook
+
+To implement `pass` or `fail` conditions for biometric authentication in your automation script, you have to use our Lambda-hook mentioned below:
+
+```python
+driver.execute_script("lambda-biometric-injection=fail")
+```
+
+| TYPE | KEY | DATA TYPE| VALUES |
+|------|-----|----------|--------|
+| capability (for both iOS & android)|enableBiometricsAuthentication|boolean| `true` <br/> OR <br/> `false` 
+| lambda-hook | lambda-biometric-injection  || `lambda-biometric-injection=fail` <br/> OR <br/> `lambda-biometric-injection=pass` |
+
+<Info>
+**NOTE**
+
+- To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
+- If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
+</Info>
+
+<Warning>
+📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices
+</Warning>

@@ -1,0 +1,237 @@
+openapi: 3.0.0
+info:
+  title: Accessibility
+  version: 1.0.0
+servers:
+  - url: 'https://api.lambdatest.com/accessibility'
+  - url: 'https://eu-api.lambdatest.com/accessibility'
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+paths:
+  /api/v1/test-issue/{testId}:
+    get:
+      tags:
+        - default
+      summary: Get Test Issue Data
+      description: >-
+        This endpoint retrieves accessibility test issues based on the provided
+        test ID with filters such as impact, best practice and needs review parameters in the query string.
+
+
+        ### Request
+
+
+        - Method: GET
+
+        - Path Parameter:
+
+            - testId (string): Test ID of the accessibility test.
+
+        - Query Parameters:
+
+            - impact (string): [minor, moderate, critical and serious].
+
+            - bestPractice (boolean)
+
+            - needsReview (boolean)
+
+      security:
+        - basicAuth: []
+      parameters:
+        - name: testId
+          in: path
+          required: true
+          schema:
+            type: string
+          example: LAT-0LO26CZII1HQOO42TCFYY
+        - name: impact
+          in: query
+          schema:
+            type: string
+          example: serious
+        - name: bestPractice
+          in: query
+          schema:
+            type: boolean
+          example: 'false'
+        - name: needsReview
+          in: query
+          schema:
+            type: boolean
+          example: 'true'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 06 Sep 2024 12:04:48 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Server:
+              schema:
+                type: string
+                example: nginx
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, PUT, OPTIONS
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Pragma,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization,username,traceparent,tracestate
+            Access-Control-Expose-Headers:
+              schema:
+                type: string
+                example: >-
+                  Pragma,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                test_info:
+                  total_issues: 18
+                  critical_issues: 4
+                  minor_issues: 1
+                  moderate_issues: 9
+                  serious_issues: 4
+                  test_id: LAT-0LO26CZII1HQOO42TCFYY
+                  scan_type: workflow
+                  org_id: 33464884
+                  status: completed
+                  user_id: 1000137129
+                  test_name: Workflow Scan | 1725000152130
+                  created_at: '2024-08-30T06:42:33Z'
+                  active: true
+                  updated_at: '2024-08-30T06:42:33Z'
+                  username: amanraj
+                  email: amanraj@lambdatest.com
+                  test_type: manual
+                scan_json:
+                  - test_id: LAT-0LO26CZII1HQOO42TCFYY
+                    url: https://www.google.com/
+                    issue_count: 8
+                    scan_id: BZLZFQLT
+                    accessibility_score: 98
+                    standard: wcag21aa
+                    startDate: '2024-08-30T06:43:14.462Z'
+                    current_timestamp: 1725000194
+                    scanType: workflow
+                    axeVersion: 4.9.1
+                    extensionVersion: 1.1.1
+                    bestPracticesEnabled: true
+                    needsReviewEnabled: true
+                    allIssues:
+                      - bestPractice: false
+                        class: ''
+                        description: >-
+                          Ensure each page has at least one mechanism for a user
+                          to bypass navigation and jump straight to the content
+                        failureSummary: |-
+                          Fix any of the following:
+                            No valid skip link found
+                            Page does not have a heading
+                            Page does not have a landmark region
+                        helpUrl: >-
+                          https://dequeuniversity.com/rules/axe/4.10/bypass?application=axeAPI
+                        html: >-
+                          PGh0bWwgaXRlbXNjb3BlPSIiIGl0ZW10eXBlPSJodHRwOi8vc2NoZW1hLm9yZy9XZWJQYWdlIiBsYW5nPSJlbi1JTiI+
+                        htmlTagName: html
+                        id: bypass
+                        impact: serious
+                        issueId: VqHh3wClrw
+                        name: Page must have means to bypass repeated blocks
+                        needsReview: true
+                        target: html
+                        url: https://www.google.com/
+                        wcagGuideline: WCAG 2.0
+                        wcagVersion:
+                          - 2.4.1
+                        xpath: /html
+                    failedRules:
+                      - count: 1
+                        mode: automated
+                        name: aria-allowed-role
+                      - count: 1
+                        mode: automated
+                        name: landmark-one-main
+                      - count: 1
+                        mode: automated
+                        name: page-has-heading-one
+                      - count: 1
+                        mode: automated
+                        name: region
+                      - count: 1
+                        mode: automated
+                        name: aria-valid-attr-value
+                      - count: 1
+                        mode: automated
+                        name: bypass
+                    issueSummary:
+                      bestPractices: 6
+                      critical: 1
+                      minor: 1
+                      moderate: 5
+                      needsReview: 2
+                      serious: 1
+                    needsReview:
+                      - count: 1
+                        mode: automated
+                        name: aria-valid-attr-value
+                      - count: 1
+                        mode: automated
+                        name: bypass
+                    source:
+                      productName: LambdaTest Accessibility DevTools
+                      productVersion: 1.1.1
+                  - test_id: LAT-0LO26CZII1HQOO42TCFYY
+                    url: https://w3school.com/
+                    issue_count: 10
+                    scan_id: IA9EKXIE
+                    accessibility_score: 99
+                    standard: wcag21aa
+                    startDate: '2024-08-30T06:43:14.462Z'
+                    current_timestamp: 1725000194
+                    scanType: workflow
+                    axeVersion: 4.9.1
+                    extensionVersion: 1.1.1
+                    bestPracticesEnabled: true
+                    needsReviewEnabled: true
+                    failedRules:
+                      - count: 1
+                        mode: automated
+                        name: image-alt
+                      - count: 1
+                        mode: automated
+                        name: landmark-one-main
+                      - count: 1
+                        mode: automated
+                        name: link-name
+                      - count: 1
+                        mode: automated
+                        name: page-has-heading-one
+                      - count: 1
+                        mode: automated
+                        name: region
+                    issueSummary:
+                      bestPractices: 4
+                      critical: 3
+                      minor: 0
+                      moderate: 4
+                      needsReview: 0
+                      serious: 3
+                    source:
+                      productName: LambdaTest Accessibility DevTools
+                      productVersion: 1.1.1

@@ -1,0 +1,32 @@
+---
+title: "Version 2.8.1"
+sidebarTitle: "Version 2.8.1"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Enhanced `failFast` at the Scenario Level
+We have made am enhancement to our test configuration: the ability to use [`failFast`](http://lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) at the scenario level!
+
+Previously, `failFast` could only be applied at the test level. Now, with this update, you can configure `failFast` to stop further scenario execution after a specified number of failed scenarios, providing more granular control over your testing process.
+
+### Key Features:
+- **Granular Control:** Apply failFast to individual scenarios instead of the entire test suite.
+- **Easy Configuration:** Simply set the level to scenario in the YAML configuration.
+- **Max Test Failures:** Control the maximum number of allowed test failures at the scenario level.
+
+Example YAML Configuration:
+
+```yaml
+failFast:
+  maxNumberOfTests: 2
+  level: scenario
+```
+
+<Note>
+**Note:** You can use `failFast` either at the test level or scenario level, but not both simultaneously.
+</Note>
+
+This enhancement brings more flexibility to your testing setup, helping you better manage the execution flow and quickly pinpoint issues.

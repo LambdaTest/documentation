@@ -1,0 +1,117 @@
+---
+title: "Sumo Logic Integration"
+sidebarTitle: "Sumo Logic"
+---
+* * *
+
+Sumo Logic is a cloud-based platform that modernizes your security operations. By analyzing security and operational issues with Sumo Logic, you can make smarter decisions and free up resources for other critical functions.
+
+Lambdatest and Sumo Logic enables you to view Lambdatest results in a custom Sumo Logic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
+
+## Prerequisites
+***
+
+1. A Lambdatest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+2. A Sumo Logic account.
+
+## Configuring A Sumo Logic Collector
+***
+
+In order to push test data from Lambdatest to Sumo Logic dashboard, you will need to create a collector in Sumo Logic.
+
+### Adding A Collector
+
+:::info note
+If you already have an existing collector, please refer to [Adding A Source](#adding-a-source) section.
+
+:::
+
+1. Login to your Sumo Logic account. From the left sidebar, navigate to **Manage Data > Collection**.
+
+![Gitpod popup](/assets/images/sumologic/dashboard-sumo.webp)<br/>
+
+2. To add a new collector, click **Add Collector** on the top-right corner.
+
+![Gitpod popup](/assets/images/sumologic/add-collector.webp)<br/>
+
+3. A *Select Collector Type* pop-up will appear. Select **Hosted Collector**.
+
+![Gitpod popup](/assets/images/sumologic/3.webp)<br/>
+
+4. In the provided fields, enter the collector details like Name, Description, Category, Fields/Metadata, Budget, and, Time Zone. Then click **Save**.
+
+![Gitpod popup](/assets/images/sumologic/collector.webp)<br/>
+
+### Adding A Source
+
+1. From Sumo Logic Home page, navigate to **Manage Data > Collection**.
+
+![Gitpod popup](/assets/images/sumologic/dashboard-sumo.webp)<br/>
+
+2. Click **Add Source**. If you create a new collector, it will directly route you here.
+
+![Gitpod popup](/assets/images/sumologic/source.webp)<br/>
+
+3. Select **HTTP Logs and Metrics**.
+
+![Gitpod popup](/assets/images/sumologic/https-logs.webp)<br/>
+
+4. Enter the Source details like **Name**, **Description**, **Source Host**, **Source Category** and click **Save**.
+
+![Gitpod popup](/assets/images/sumologic/collector-field.webp)<br/>
+
+<Warning>
+The **Source Category** field is required. Otherwise, the test data will not get reflected in your Sumo Logic dashboard.
+</Warning>
+
+5. A *HTTP Source URL* will be generated that you need to provide while configuring the Lambdatest Sumo Logic webhook. Copy the generated HTTP Source URL.
+
+![Gitpod popup](/assets/images/sumologic/url.webp)<br/>
+
+## Configuring The Sumo Logic Integration
+***
+
+1. Login to your Lambdatest account and visit **Integrations** from the left sidebar.
+
+2. From the ANALYTICS category, select **SUMO LOGIC**.
+
+![Gitpod popup](/assets/images/sumologic/select-sumologic.webp)<br/>
+
+3. In the Collector endpoint URL field, paste the copied HTTP Source URL and press **Install**.
+
+![Gitpod popup](/assets/images/sumologic/install-sl.webp)<br/>
+
+The Sumo Logic will be integrated with your Lambdatest account.
+
+## Installing the Lambdatest App in Sumo Logic
+---
+
+1. Navigate to Sumo Logic Home and select **App Catalog** from the left navigation panel.
+
+![Gitpod popup](/assets/images/sumologic/catalog.webp)<br/>
+
+2. Find and select the Lambdatest App using the search bar.
+
+3. Click **Add Integration** to install the Lambdatest app into your Sumo Logic account. It will then add the Lambdatest dashboards (Lambdatest - Test Overview and Lambdatest - Test Error Overview) to your directory.
+
+4. Click on the Lambdatest **Test Overview** dashboard to get an overall insight about your testing trends.
+
+![Gitpod popup](/assets/images/sumologic/test_overview.webp)<br/>
+
+5. Click on the Lambdatest **Test Error Overview** dashboard to understand your test error trends.
+
+![Gitpod popup](/assets/images/sumologic/error_overview.webp)<br/>
+
+## Removing The Sumo Logic Integration
+***
+
+1. Login to your Lambdatest account and visit **Integrations** from the left sidebar.
+
+2. From the MY INTEGRATIONS category, navigate to SUMO LOGIC and click **REMOVE**.
+
+![Gitpod popup](/assets/images/sumologic/remove.webp)<br/>
+
+The Sumo Logic integration will be uninstalled.
+
+---
+

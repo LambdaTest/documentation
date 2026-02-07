@@ -1,0 +1,43 @@
+---
+title: "Configure YAML For Integrating GoCD Pipelines With Lambdatest"
+sidebarTitle: "YAML"
+keywords: ["gocd", "lambdatest", "gocd integrations", "gocd pipelines", "gocd testmu ai", "gocd integration with testmu ai", "testmu ai integration with gocd pipelines", "ci/cd"]
+---
+Through our previous document, you were able to integrate GoCD pipelines with Lambdatest, and executed your first Selenium testing script through GoCD on Lambdatest. However, in our previous chapter we ran the test by copying the YAML from the cloned [repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample). This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with our online Selenium Grid.
+
+<Warning>
+**Note:** If you are just getting started with GoCD then make sure to visit our documentation to [integrate Lambdatest with GoCD](/support/docs/gocd-integration-with-lambdatest).
+</Warning>
+
+## Configuring YAML through GoCD
+
+**Step 1:** Visit your GoCD dashboard and use Pipeline as a code.
+
+![Image](/assets/images/yaml-integration/YAML.webp)
+
+**Step 2:** By default, the configuration language will be set as YAML. Under Part 1, mention the link to our [GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) and test the connection.
+
+![Image](/assets/images/yaml-integration/YAML-1.webp)
+
+**Step 3:** Now, in Part 2, make sure to label your Pipeline with a name of your choice. Here we have labelled it as Sample-GoCD-Pipeline. Similarly, in Part 3 for Stage details, provide a label for your Staging environment.
+
+![Image](/assets/images/yaml-integration/YAML-2.webp)
+
+**Step 4:** In Part 4 i.e. Job & Tasks, you need to specify a Job name as per your choice and enter the below commands.
+
+```
+npm install
+./node_modules/.bin/nightwatch -e chrome
+```
+
+![Image](/assets/images/yaml-integration/YAML-3.webp)
+
+**Step 5:** Under Advanced setting, you need to specify your Lambdatest authentication credentials as the environment variables.
+
+![Image](/assets/images/yaml-integration/YAML-4.webp)
+
+**Step 6:** You will find the YAML configuration file generated over the right side panel. In rare cases, if it doesn’t then you need to select the configuration language to first JSON, and then select YAML again. Now, if you scroll to bottom you will find a section to "Add Your Pipeline as Code Definitions to Your SCM Repository". Click on the button to "Download Config".
+
+![Image](/assets/images/yaml-integration/YAML-5.webp)
+
+Now, you just need to execute the job like we did in the previous chapter when we [integrated GoCD with Lambdatest](/support/docs/gocd-integration-with-lambdatest). That is all you need to do if you wish to configure a private YAML file before you run your Selenium testing scripts over Lambdatest Selenium Grid.

@@ -1,0 +1,161 @@
+---
+title: "Running Appium Tests In Bitrise CI"
+sidebarTitle: "Bitrise - Appium"
+keywords: ["lambdatest bitrise", "bitrise with lambdatest", "manual app testing bitrise", "appium testing with bitrise ci", "appium bitrise", "app testing with bitrise", "app automation bitrise"]
+---
+***
+
+Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
+
+Using Lambdatest with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
+
+## Prerequisites
+***
+
+1. Ensure you have access to Lambdatest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+
+2. A Bitrise account.
+
+3. A GitHub / BitBucket / GitLab or other repository to connect with Bitrise.
+
+## Configuring The App Build In Bitrise CI
+***
+
+1. Login to your Bitrise account.
+
+2. From Dashboard, click **Add New App on web UI**.
+
+![Image](/assets/images/bitrise-integration/newapp.webp)
+
+3. In the **Choose Account** section, select the privacy of your app and click **Next**.
+
+![Image](/assets/images/bitrise-integration/next.webp)
+
+4. Choose a source code provider (GitHub, BitBucket, GitLab or others). 
+
+![Image](/assets/images/bitrise-integration/vcs.webp)
+
+5. You will be now asked to authenticate your source code provider with Bitrise.
+
+![Image](/assets/images/bitrise-integration/authorize-bitrise.webp)
+
+On successful authentication, you'll receive a confirmation message. 
+
+![Image](/assets/images/bitrise-integration/cta.webp)
+
+6. Now again click **Next**.
+
+![Image](/assets/images/bitrise-integration/nextafter.webp)
+
+7. Select your repository from the version control system.
+
+![Image](/assets/images/bitrise-integration/chooserepo.webp)
+
+8. From the Setup repository access section, click **No, auto-add SSH key** to add your SSH keys.
+
+![Image](/assets/images/bitrise-integration/auto-SSH.webp)
+
+9. Enter your branch name and click **Next**. Your app will be configured and this will take few minutes.
+
+![Image](/assets/images/bitrise-integration/next2.webp)
+
+10. In **Project build configuration**:
+
+* Specify module and click **Next**.
+
+![Image](/assets/images/bitrise-integration/module.webp)
+
+* Specify variant and click **Next**.
+
+![Image](/assets/images/bitrise-integration/variant.webp)
+
+11. A build information will show up. Click **Confirm**.
+
+![Image](/assets/images/bitrise-integration/confirmandroid.webp)
+
+12. Choose and upload your App icon. Then click **Choose Image and Proceed**.
+
+![Image](/assets/images/bitrise-integration/appicon.webp)
+
+13. From the **Webhook setup**, register or skip Webhook registration. In this case, let's select **Register a Webhook for me!**
+
+![Image](/assets/images/bitrise-integration/webhook.webp)
+
+14. Now click on the message that says - *We've kicked off your first test build for you!*
+
+![Image](/assets/images/bitrise-integration/cta-2.webp)
+
+Your app build will now trigger and start running. 
+
+## Generating The App URL
+***
+
+1. Once your build process is completed, click **Edit workflow**.
+
+![Image](/assets/images/bitrise-integration/edit-workflow.webp)
+
+2. Click + icon under **Android Unit Test**.
+
+![Image](/assets/images/bitrise-integration/android-unit.webp)
+
+3. A search steps box will appear. Enter *Lambdatest Upload* and click Lambdatest Upload card.
+
+![Image](/assets/images/bitrise-integration/lt-upload.webp)
+
+4. In **Input variables** category:
+
+* Provide your App path.
+
+![Image](/assets/images/bitrise-integration/apppath.webp)
+
+* In **Lambdatest username**, click Select secret variable.
+
+![Image](/assets/images/bitrise-integration/keyuservar.webp)
+
+* Enter the key (it can be anything), your Lambdatest username and click **Add new**.
+
+![Image](/assets/images/bitrise-integration/username.webp)
+
+* In **Lambdatest access key**, click Select secret variable.
+
+![Image](/assets/images/bitrise-integration/keysecvar.webp)
+
+* Enter the key (it can be anything), your Lambdatest access key and click **Add new**.
+
+![Image](/assets/images/bitrise-integration/key.webp)
+
+* Provide an App name.
+
+![Image](/assets/images/bitrise-integration/app-name.webp)
+
+* Enter your Custom Id (optional).
+
+![Image](/assets/images/bitrise-integration/customid.webp)
+
+5. After that, click **Ctrl+S**.
+
+![Image](/assets/images/bitrise-integration/ctrls.webp)
+
+6. From the breadcrumb navigation, click on the Repo name.
+
+![Image](/assets/images/bitrise-integration/path.webp)
+
+7. A build will be shown that you just run. Click on the build.
+
+![Image](/assets/images/bitrise-integration/clickbuild.webp)
+
+You'll be taken to the build interface as shown below.
+
+![Image](/assets/images/bitrise-integration/builddashboard.webp)
+
+8. Scroll down and click on three dots adjacent to the Lambdatest icon.
+
+![Image](/assets/images/bitrise-integration/threedots.webp)
+
+9. Scroll a bit more and you'll see an App URL.
+
+![Image](/assets/images/bitrise-integration/appurl.webp)
+
+You're done! With this App URL, you can now perform Mobile App Automation. This app will also be available under **Real Time Testing > Real Time > App Testing** in the uploaded apps section.
+
+![Image](/assets/images/bitrise-integration/realtime.webp)

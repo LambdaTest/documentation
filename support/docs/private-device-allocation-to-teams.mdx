@@ -1,0 +1,85 @@
+---
+title: Private Device Allocation to Teams
+sidebarTitle: Private Device Allocation to Teams
+keywords: ['private device', 'private decive allocation to teams', 'real device', 'virtual device']
+---
+
+The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
+
+<Warning>
+To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+</Warning>
+
+## Steps to Allocate Devices to Teams
+
+<Warning>
+Only the organization's Admins have the authority to allocate or deallocate devices.
+</Warning>
+
+### Step 1:  Create or Select a Team
+- Go to the Teams section under the Organization Settings
+- Create your [Organization](/support/docs/team-management/#create-an-organization) 
+- Then, create your [Team](/support/docs/team-management/#create-your-first-team) and assign members by selecting users from your organization.
+
+### Step 2: Allocate Devices to the Team
+In the **Private Cloud Devices** tab section, distribute your devices amongst your teams for restricted access via:
+
+<Tabs className="docs__val">
+
+<Tab value="bulk" title="Bulk Distribute" default>
+    - Click on the **Bulk Distribute** button and select all the devices that you want to allocate to the teams.
+    - Click on the **Distribute** button. In the popup, choose the teams from the dropdown list.
+    - Click on the **Allocate** button.
+The devices will now appear in the selected team’s device pool, accessible only to its members.
+
+<img loading="lazy" src='/assets/images/real-device-app-testing/teams/bulk-distribute.gif' alt="Image" className="doc_img img_center"/>
+
+</Tab>
+
+<Tab value="single" title="Uni Distribute" default>
+    - Click on the **Allocate** button from the right side of your desired device.
+    - In the popup, choose the teams from the dropdown list.
+    - Click on the **Allocate** button.
+The selected device will now appear in the team’s device pool, accessible only to its members.
+
+<img loading="lazy" src='/assets/images/real-device-app-testing/teams/uni-distribute.gif' alt="Image" className="doc_img img_center"/>
+</Tab>
+
+</Tabs>
+
+<Warning>
+You can also see tags of all those teams to which those devices are allocated.
+</Warning>
+
+## Deallocate any Device from Teams
+- Click on the **Deallocate** button from the right side of your desired device.
+
+The selected device will no longer appear in all those allocated team’s device pool.
+
+<img loading="lazy" src='/assets/images/real-device-app-testing/teams/deallocate-device.gif' alt="Image" className="doc_img img_center"/>
+
+## Edit Allocation of any Device
+To edit allocation of any device, or simply if you want to add/remove any team allocation for any particular device then:
+
+- Click on the **Edit Allocation** button from the right side of your desired device.
+- Select or Deselect your required teams.
+- Click on the **Allocate** button.
+
+<img loading="lazy" src='/assets/images/real-device-app-testing/teams/edit-allocation.gif' alt="Image" className="doc_img img_center"/>
+
+
+<Note>
+**INFO**
+
+A device in a busy state will not be allocated or deallocated.
+</Note>
+
+## Filter your Devices
+In the topbar, you have plenty of options to filter your devices based on:
+
+- You can select from the drop down whether you want to see **All Devices**, **Allocated Devices**, or all the **Available Devices** in the table.
+- You can also search for a particular device based on the **device name**, or its **UDID**.
+- **OS :** Select which OS devices you want to allocate or deallocate.
+- **Teams :** Select from which team you want to filter your device and perform allocation or deallocation of devices.
+
+<img loading="lazy" src='/assets/images/real-device-app-testing/teams/filters.png' alt="Image" className="doc_img img_center"/>

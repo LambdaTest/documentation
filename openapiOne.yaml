@@ -1,0 +1,5751 @@
+openapi: 3.0.3
+info:
+  title: User Management
+  version: 1.0.0
+  description: "API documentation of User Management"
+servers:
+- url: 'https://auth.lambdatest.com/'
+- url: 'https://eu-auth.lambdatest.com/'
+paths:
+  /api/organization/users:
+    get:
+      security:
+        - basicAuth: [ ]  
+      tags:
+        - Users
+      summary: Get All users
+      description: Get All users
+      operationId: getAllUsers
+      responses:
+        '200':
+          description: Get All users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        email:
+                          type: string
+                          example: pawan17@lambdatest.com
+                        group:
+                          type: object
+                          properties:
+                            id:
+                              type: number
+                              example: 814
+                            name:
+                              type: string
+                              example: g2
+                        id:
+                          type: number
+                          example: 407868
+                        name:
+                          type: string
+                          example: pawan rai
+                        role:
+                          type: string
+                          example: Admin
+                    example:
+                      - email: pawan17@lambdatest.com
+                        group:
+                          id: 814
+                          name: g2
+                        id: 407868
+                        name: pawan rai
+                        role: Admin
+                      - email: kliosbuhek@qiott.com
+                        group:
+                          id: 817
+                          name: g7
+                        id: 407869
+                        name: Pawan
+                        role: Admin
+              examples:
+                Get All users:
+                  value:
+                    data:
+                      - email: pawan17@lambdatest.com
+                        group:
+                          id: 814
+                          name: g2
+                        id: 407868
+                        name: pawan rai
+                        role: Admin
+                      - email: kliosbuhek@qiott.com
+                        group:
+                          id: 817
+                          name: g7
+                        id: 407869
+                        name: Pawan
+                        role: Admin
+        '401':
+          description: Get All users Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Get All users Error:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/user:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Users
+      summary: Edit details by admin
+      description: Edit details by admin
+      operationId: editDetailsByAdmin
+      requestBody:
+        description: Edit details by admin
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                group_id:
+                  type: number
+                  example: 421
+                name:
+                  type: string
+                  example: Pawan
+                user_id:
+                  type: number
+                  example: 407869
+            example:
+              group_id: 421
+              name: Pawan
+              user_id: 407869
+      responses:
+        '200':
+          description: Edit name by admin Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User profile updated successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Edit name by admin Success:
+                  value:
+                    message: User profile updated successfully
+                    type: success
+        '403':
+          description: Wrong id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Wrong id:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/user/{user_id}:
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Users
+      summary: Update User Role by admin
+      description: Update User Role by admin
+      operationId: updateUserRoleByAdmin
+      parameters:
+      - name: user_id
+        in: path
+        description: user id of member
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                role:
+                  type: string
+                  example: Admin
+            example:
+              role: Admin
+      responses:
+        '200':
+          description: Update User Role
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Organization role updated Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update User Role:
+                  value:
+                    message: Organization role updated Successfully
+                    type: success
+        '422':
+          description: Update User Role with invalid email
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry, Requested Role is not valid
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Update User Role with invalid email:
+                  value:
+                    message: Sorry, Requested Role is not valid
+                    title: Bad Request Error
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Users
+      summary: Delete members
+      description: Delete members
+      operationId: deleteMembers
+      parameters:
+      - name: user_id
+        in: path
+        description: user id of member
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User deleted Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: User deleted Successfully
+                    type: success
+        '403':
+          description: Delete Member from other Org Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Delete Member from other Org Error:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/users/{user_id}/password:
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Users
+      summary: User Password by admin
+      description: User Password by admin
+      operationId: userPasswordByAdmin
+      parameters:
+      - name: user_id
+        in: path
+        description: user id of member
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                confirm_password:
+                  type: string
+                  example: password1
+                new_password:
+                  type: string
+                  example: password1
+            example:
+              confirm_password: password1
+              new_password: password1
+      responses:
+        '200':
+          description: User Password by admin Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password changed successfully, for user - Pawan
+                  type:
+                    type: string
+                    example: success
+              examples:
+                User Password by admin Success:
+                  value:
+                    message: Password changed successfully, for user - Pawan
+                    type: success
+        '422':
+          description: User Password by admin
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      password:
+                        type: string
+                        example: Please do not use last used passwords
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                User Password by admin:
+                  value:
+                    message:
+                      password: Please do not use last used passwords
+                    title: Bad Request Error
+                    type: error
+  /api/organization/users-list:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Users
+      summary: Get all member and invited users
+      description: Get all member and invited users
+      operationId: getAllMemberAndInvitedUsers
+      responses:
+        '200':
+          description: Get all member and invited users Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Email:
+                          type: string
+                          example: kliosbuhek@qiott.com
+                        Group:
+                          type: string
+                          nullable: true
+                          example: g7
+                        InvitedAt:
+                          type: string
+                          nullable: true
+                          example: '2022-12-30T17:00:51Z'
+                        InvitedBy:
+                          type: string
+                          nullable: true
+                          example: pawan rai
+                        LastLoginAt:
+                          type: string
+                          nullable: true
+                          example: '2022-12-30T17:01:20Z'
+                        Name:
+                          type: string
+                          nullable: true
+                          example: Pawan
+                        Role:
+                          type: string
+                          example: Admin
+                        Status:
+                          type: string
+                          example: Active
+                    example:
+                      - Email: kliosbuhek@qiott.com
+                        Group: g7
+                        InvitedAt: '2022-12-30T17:00:51Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: '2022-12-30T17:01:20Z'
+                        Name: Pawan
+                        Role: Admin
+                        Status: Active
+                      - Email: pawan17@lambdatest.com
+                        Group: g2
+                        InvitedAt: null
+                        InvitedBy: null
+                        LastLoginAt: '2022-12-30T16:57:59Z'
+                        Name: pawan rai
+                        Role: Admin
+                        Status: Internal
+                      - Email: pawan12@qiott.com
+                        Group: null
+                        InvitedAt: '2022-12-30T17:02:46Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: null
+                        Name: null
+                        Role: User
+                        Status: Pending
+                      - Email: 1secaml@qiott.com
+                        Group: null
+                        InvitedAt: '2022-12-30T17:02:46Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: null
+                        Name: null
+                        Role: Admin
+                        Status: Pending
+              examples:
+                Get all member and invited users Success:
+                  value:
+                    data:
+                      - Email: kliosbuhek@qiott.com
+                        Group: g7
+                        InvitedAt: '2022-12-30T17:00:51Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: '2022-12-30T17:01:20Z'
+                        Name: Pawan
+                        Role: Admin
+                        Status: Active
+                      - Email: pawan17@lambdatest.com
+                        Group: g2
+                        InvitedAt: null
+                        InvitedBy: null
+                        LastLoginAt: '2022-12-30T16:57:59Z'
+                        Name: pawan rai
+                        Role: Admin
+                        Status: Internal
+                      - Email: pawan12@qiott.com
+                        Group: null
+                        InvitedAt: '2022-12-30T17:02:46Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: null
+                        Name: null
+                        Role: User
+                        Status: Pending
+                      - Email: 1secaml@qiott.com
+                        Group: null
+                        InvitedAt: '2022-12-30T17:02:46Z'
+                        InvitedBy: pawan rai
+                        LastLoginAt: null
+                        Name: null
+                        Role: Admin
+                        Status: Pending
+        '401':
+          description: Get all member and invited users Failure
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Get all member and invited users Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/service-accounts:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Service Account
+      summary: Get All Service Accounts
+      description: Get All Service Accounts
+      operationId: getAllServiceAccounts
+      responses:
+        '200':
+          description: Get All Service Accounts Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        group:
+                          type: object
+                          properties:
+                            id:
+                              type: number
+                              example: 814
+                            name:
+                              type: string
+                              example: g2
+                          nullable: true
+                        id:
+                          type: number
+                          example: 407938
+                        name:
+                          type: string
+                          example: pawan Groupupdated
+                        created_at:
+                          type: string
+                          example: 2023-02-15T13:06:55Z
+                    example:
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407938
+                        name: pawan Groupupdated
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407939
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407943
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 412429
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 809
+                          name: g6
+                        id: 412430
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 815
+                          name: g5
+                        id: 412431
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group: null
+                        id: 412432
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 412433
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+              examples:
+                Get All Service Accounts Success:
+                  value:
+                    data:
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407938
+                        name: pawan Groupupdated
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407939
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 407943
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 412429
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 809
+                          name: g6
+                        id: 412430
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 815
+                          name: g5
+                        id: 412431
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group: null
+                        id: 412432
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 412433
+                        name: pawan rai
+                        created_at: 2023-02-15T13:06:55Z
+        '401':
+          description: Get All Service Accounts Failure
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Get All Service Accounts Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Service Account
+      summary: Create Service Account
+      description: Create Service Account
+      operationId: createServiceAccount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                group_id:
+                  type: number
+                  example: 814
+                name:
+                  type: string
+                  example: pawan rai
+            example:
+              group_id: 814
+              name: pawan rai
+      responses:
+        '200':
+          description: Create Service Accounts Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  group:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 814
+                      name:
+                        type: string
+                        example: g2
+                  message:
+                    type: string
+                    example: Service Account Created SuccessFully
+                  name:
+                    type: string
+                    example: pawan rai
+                  type:
+                    type: string
+                    example: success
+                  id:
+                    type: number
+                    example: 515639
+              examples:
+                Create Service Accounts Success:
+                  value:
+                    group:
+                      id: 814
+                      name: g2
+                    message: Service Account Created SuccessFully
+                    name: pawan rai
+                    type: success
+                    id: 515639
+        '422':
+          description: Create Service Accounts Failure
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Something went wrong! Group not found
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Create Service Accounts Failure:
+                  value:
+                    message: Something went wrong! Group not found
+                    title: Bad Request Error
+                    type: error
+  /api/organization/service-accounts/{id}:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Service Account
+      summary: Update Service Account
+      description: Update Service Account
+      operationId: updateServiceAccount
+      parameters:
+      - name: id
+        in: path
+        description: ID of Service Account
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: pawan rai
+            example:
+              name: pawan rai
+      responses:
+        '200':
+          description: Update Service Accounts Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Service Account updated successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update Service Accounts Success:
+                  value:
+                    message: Service Account updated successfully
+                    type: success
+        '401':
+          description: Update Service Accounts Failure
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Update Service Accounts Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Service Account
+      summary: Delete service account
+      description: Delete service account
+      operationId: deleteServiceAccount
+      parameters:
+      - name: id
+        in: path
+        description: ID of Service Account
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Delete service accounts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Service Account Deleted SuccessFully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Delete service accounts:
+                  value:
+                    message: Service Account Deleted SuccessFully
+                    type: success
+        '422':
+          description: Delete service accounts with invalid user id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! User not found or invalid
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Delete service accounts with invalid user id:
+                  value:
+                    message: Sorry! User not found or invalid
+                    title: Bad Request Error
+                    type: error
+  /api/organization/invites/users:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Invites Users
+      summary: Invite user with Group
+      description: Invite user with Group
+      operationId: inviteUserWithGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    example: xyz2@lambdatest.com
+                  group_id:
+                    type: number
+                    example: 803
+                  role:
+                    type: string
+                    example: User
+              example:
+                - email: xyz2@lambdatest.com
+                  group_id: 803
+                  role: User
+            example:
+              - email: xyz2@lambdatest.com
+                group_id: 803
+                role: User
+      responses:
+        '200':
+          description: Invite user with Group
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invite Sent Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Invite user with Group:
+                  value:
+                    message: Invite Sent Successfully
+                    type: success
+  /api/organization/invites:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Invites Users
+      summary: Get invited users
+      description: Get invited users
+      operationId: getInvitedUsers
+      responses:
+        '200':
+          description: Get invited users
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:09:08 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        accepted_at:
+                          type: string
+                          example: '2022-12-30T17:01:19Z'
+                        group:
+                          type: object
+                          nullable: true
+                          example: null
+                        id:
+                          type: number
+                          example: 9131
+                        recipient_email:
+                          type: string
+                          example: kliosbuhek@qiott.com
+                        role:
+                          type: string
+                          example: User
+                        sender:
+                          type: object
+                          properties:
+                            email:
+                              type: string
+                              example: pawan17@lambdatest.com
+                            id:
+                              type: number
+                              example: 407868
+                            name:
+                              type: string
+                              example: pawan rai
+                        sent_at:
+                          type: string
+                          example: '2022-12-30T17:00:51Z'
+                        status:
+                          type: string
+                          example: Accepted
+                    example:
+                      - accepted_at: '2022-12-30T17:01:19Z'
+                        group: null
+                        id: 9131
+                        recipient_email: kliosbuhek@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:00:51Z'
+                        status: Accepted
+                      - group: null
+                        id: 9132
+                        recipient_email: pawan12@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:02:46Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9133
+                        recipient_email: 1secaml@qiott.com
+                        role: Admin
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:02:46Z'
+                        status: Pending
+                      - group: null
+                        id: 9134
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:47:55Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9144
+                        recipient_email: pawan12@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:04:03Z'
+                        status: Pending
+                      - group: null
+                        id: 9145
+                        recipient_email: 1secaml@qiott.com
+                        role: Admin
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:04:03Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9146
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:07:24Z'
+                        status: Withdrawn
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 9147
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:08:45Z'
+                        status: Pending
+              examples:
+                Get invited users:
+                  value:
+                    data:
+                      - accepted_at: '2022-12-30T17:01:19Z'
+                        group: null
+                        id: 9131
+                        recipient_email: kliosbuhek@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:00:51Z'
+                        status: Accepted
+                      - group: null
+                        id: 9132
+                        recipient_email: pawan12@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:02:46Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9133
+                        recipient_email: 1secaml@qiott.com
+                        role: Admin
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:02:46Z'
+                        status: Pending
+                      - group: null
+                        id: 9134
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2022-12-30T17:47:55Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9144
+                        recipient_email: pawan12@qiott.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:04:03Z'
+                        status: Pending
+                      - group: null
+                        id: 9145
+                        recipient_email: 1secaml@qiott.com
+                        role: Admin
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:04:03Z'
+                        status: Withdrawn
+                      - group: null
+                        id: 9146
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:07:24Z'
+                        status: Withdrawn
+                      - group:
+                          id: 814
+                          name: g2
+                        id: 9147
+                        recipient_email: xyz2@lambdatest.com
+                        role: User
+                        sender:
+                          email: pawan17@lambdatest.com
+                          id: 407868
+                          name: pawan rai
+                        sent_at: '2023-01-02T08:08:45Z'
+                        status: Pending
+        '401':
+          description: Get invited users without auth
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:09:27 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Get invited users without auth:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/invite/{invite_id}:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Invites Users
+      summary: Resend Invite
+      description: Resend Invite
+      operationId: resendInvite
+      parameters:
+      - name: invite_id
+        in: path
+        description: Invitation ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Resend Invite Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 11:43:27 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Resent Invitiation Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Resend Invite Success:
+                  value:
+                    message: Resent Invitiation Successfully
+                    type: success
+        '422':
+          description: Resend Invite Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:03:17 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry, Invalid invite
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Resend Invite Failure:
+                  value:
+                    message: Sorry, Invalid invite
+                    title: Bad Request Error
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Invites Users
+      summary: Delete invite user
+      description: Delete invite user
+      operationId: deleteInviteUser
+      parameters:
+      - name: invite_id
+        in: path
+        description: Invitation ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Delete invite user Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:02:37 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invite user deleted Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Delete invite user Success:
+                  value:
+                    message: Invite user deleted Successfully
+                    type: success
+        '403':
+          description: Delete invite user for withdrawn user
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 30 Dec 2022 18:31:27 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Delete invite user for withdrawn user:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/service-accounts/{id}/token:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Token
+      summary: Generate Service Account token
+      description: Generate Service Account token
+      operationId: GenerateServiceAccountToken
+      parameters:
+      - name: id
+        in: path
+        description: Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          text/plain:
+            example: ''
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 30 Dec 2022 18:30:18 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token generated successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 421827
+                      token:
+                        type: string
+                        example: bmrt4HX52bTcOHniFl3HAA9G4ehQHnLqUkGmLPRVxfef4iIBVZ
+                      user_id:
+                        type: number
+                        example: 407938
+                      username:
+                        type: string
+                        example: 4152033k0HaL6tuC
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token generated successfully
+                    token:
+                      id: 421827
+                      token: bmrt4HX52bTcOHniFl3HAA9G4ehQHnLqUkGmLPRVxfef4iIBVZ
+                      user_id: 407938
+                      username: 4152033k0HaL6tuC
+                    type: success
+        '401':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:13:38 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Unauthenticated.
+                    title: Unauthorized Error
+                    type: error
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Token
+      summary: Fetch Service Account Token
+      description: Fetch Service Account Token
+      operationId: fetchServiceAccountToken
+      parameters:
+      - name: id
+        in: path
+        description: Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:19:59 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token retrieved successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 426314
+                      token:
+                        type: string
+                        example: EwnnWltfbiauIWQcGp5R6WlgIZgiP0FIuNszYIM8qP4NSuwveC
+                      user_id:
+                        type: number
+                        example: 407939
+                      username:
+                        type: string
+                        example: 415203LOjvQIAizR
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token retrieved successfully
+                    token:
+                      id: 426314
+                      token: EwnnWltfbiauIWQcGp5R6WlgIZgiP0FIuNszYIM8qP4NSuwveC
+                      user_id: 407939
+                      username: 415203LOjvQIAizR
+                    type: success
+        '403':
+          description: Fetch Service Account Token other org user_id
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:19:31 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Fetch Service Account Token other org user_id:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+        '422':
+          description: Fetch Service Account Token wrong user id
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:19:04 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! User not found or invalid
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Fetch Service Account Token wrong user id:
+                  value:
+                    message: Sorry! User not found or invalid
+                    title: Bad Request Error
+                    type: error
+  /api/organization/users/{user_id}/token:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Token
+      summary: Regen token by admin
+      description: Regen token by admin
+      operationId: regenTokenByAdmin
+      parameters:
+      - name: user_id
+        in: path
+        description: User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          text/plain:
+            example: ''
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:15:39 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token generated successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 426313
+                      token:
+                        type: string
+                        example: iodiOqGDsjE27MfFROUa0OZzCpJnGDmHmKiHwrogtbuEDOLqIt
+                      user_id:
+                        type: number
+                        example: 407939
+                      username:
+                        type: string
+                        example: 415203LOjvQIAizR
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token generated successfully
+                    token:
+                      id: 426313
+                      token: iodiOqGDsjE27MfFROUa0OZzCpJnGDmHmKiHwrogtbuEDOLqIt
+                      user_id: 407939
+                      username: 415203LOjvQIAizR
+                    type: success
+        '403':
+          description: Regen token by admin other org user id
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:16:09 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Regen token by admin other org user id:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Token
+      summary: Fetch user token by admin
+      description: Fetch user token by admin
+      operationId: fetchUserTokenByAdmin
+      parameters:
+      - name: user_id
+        in: path
+        description: User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:20:23 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token retrieved successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 426312
+                      token:
+                        type: string
+                        example: 6KVBcEhO9iMdGXnZbxh8Ki19tNEX8GPpYjGPP5ivKHfKMUkF9s
+                      user_id:
+                        type: number
+                        example: 407868
+                      username:
+                        type: string
+                        example: pawan17
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token retrieved successfully
+                    token:
+                      id: 426312
+                      token: 6KVBcEhO9iMdGXnZbxh8Ki19tNEX8GPpYjGPP5ivKHfKMUkF9s
+                      user_id: 407868
+                      username: pawan17
+                    type: success
+        '422':
+          description: Invalid Users
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:24:12 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! User not found or invalid
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Users:
+                  value:
+                    message: Sorry! User not found or invalid
+                    title: Bad Request Error
+                    type: error
+  /api/user/password:
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: User Password
+      description: User Password
+      operationId: userPassword
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                new_password:
+                  type: string
+                  example: password3
+                password:
+                  type: string
+                  example: password
+            example:
+              new_password: password3
+              password: password
+      responses:
+        '200':
+          description: User Password Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 07:17:42 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password changed successfully, Please login again!
+                  type:
+                    type: string
+                    example: success
+              examples:
+                User Password Success:
+                  value:
+                    message: Password changed successfully, Please login again!
+                    type: success
+        '422':
+          description: User Password Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 07:17:20 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Please do not use last used passwords
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                User Password Failure:
+                  value:
+                    message: Please do not use last used passwords
+                    title: Bad Request Error
+                    type: error
+  /api/user/token:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: Fetch token by users
+      description: Fetch token by users
+      operationId: fetchTokenByUsers
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:17:06 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token retrieved successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 426312
+                      token:
+                        type: string
+                        example: 6KVBcEhO9iMdGXnZbxh8Ki19tNEX8GPpYjGPP5ivKHfKMUkF9s
+                      user_id:
+                        type: number
+                        example: 407868
+                      username:
+                        type: string
+                        example: pawan17
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token retrieved successfully
+                    token:
+                      id: 426312
+                      token: 6KVBcEhO9iMdGXnZbxh8Ki19tNEX8GPpYjGPP5ivKHfKMUkF9s
+                      user_id: 407868
+                      username: pawan17
+                    type: success
+        '401':
+          description: Fetch token by users Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:17:59 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Fetch token by users Failure:
+                  value:
+                    message: Unauthenticated.
+                    title: Unauthorized Error
+                    type: error
+  /api/users/token:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: Generate token by user
+      description: Generate token by user
+      operationId: GenerateTokenByUser
+      requestBody:
+        content:
+          text/plain:
+            example: ''
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Fri, 30 Dec 2022 17:59:13 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token generated successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 421758
+                      token:
+                        type: string
+                        example: moZ9TJNna0e5CJ744Ab0e7SBIhXRywG5DiaZzmd9atYQk6WNBv
+                      user_id:
+                        type: number
+                        example: 407868
+                      username:
+                        type: string
+                        example: pawan17
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Access Token generated successfully
+                    token:
+                      id: 421758
+                      token: moZ9TJNna0e5CJ744Ab0e7SBIhXRywG5DiaZzmd9atYQk6WNBv
+                      user_id: 407868
+                      username: pawan17
+                    type: success
+        '401':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 08:12:21 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Unauthenticated.
+                    title: Unauthorized Error
+                    type: error
+  /api/user:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: Edit name by User
+      description: Edit name by User
+      operationId: editNameByUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: pawan rai
+            example:
+              name: pawan rai
+      responses:
+        '200':
+          description: Edit name User success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 07:12:31 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User profile updated successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Edit name User success:
+                  value:
+                    message: User profile updated successfully
+                    type: success
+        '400':
+          description: Edit name User Fail
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 07:12:57 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry, Body payload should not be empty
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Edit name User Fail:
+                  value:
+                    message: Sorry, Body payload should not be empty
+                    title: Bad Request Error
+                    type: error
+        '401':
+          description: Edit name User Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 02 Jan 2023 07:13:33 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Edit name User Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/user/preference:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: Getting User Preference
+      description: Getting User Preference
+      operationId: gettingUserPreference
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:48:09 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    description:
+                      type: string
+                      example: >-
+                        Describe email type here so that it becomes easy for
+                        user to understand
+                    label:
+                      type: string
+                      example: automation
+                    name:
+                      type: string
+                      example: Automation Daily
+                    value:
+                      type: number
+                      example: 0
+                example:
+                  - description: >-
+                      Describe email type here so that it becomes easy for user
+                      to understand
+                    label: automation
+                    name: Automation Daily
+                    value: 0
+                  - description: >-
+                      Describe email type here so that it becomes easy for user
+                      to understand
+                    label: marketing
+                    name: offers and deals
+                    value: 0
+                  - description: >-
+                      Describe email type here so that it becomes easy for user
+                      to understand
+                    label: newsletter
+                    name: Newsletters
+                    value: 0
+                  - description: Get notified when we release something new
+                    label: product
+                    name: Product Updates
+                    value: 1
+                  - description: >-
+                      Describe email type here so that it becomes easy for user
+                      to understand
+                    label: weekly
+                    name: Weekly Reports
+                    value: 1
+              examples:
+                Success:
+                  value:
+                    - description: >-
+                        Describe email type here so that it becomes easy for
+                        user to understand
+                      label: automation
+                      name: Automation Daily
+                      value: 0
+                    - description: >-
+                        Describe email type here so that it becomes easy for
+                        user to understand
+                      label: marketing
+                      name: offers and deals
+                      value: 0
+                    - description: >-
+                        Describe email type here so that it becomes easy for
+                        user to understand
+                      label: newsletter
+                      name: Newsletters
+                      value: 0
+                    - description: Get notified when we release something new
+                      label: product
+                      name: Product Updates
+                      value: 1
+                    - description: >-
+                        Describe email type here so that it becomes easy for
+                        user to understand
+                      label: weekly
+                      name: Weekly Reports
+                      value: 1
+        '401':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:48:28 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/user/preference/{product}:
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - User Profile
+      summary: Updating user preference
+      description: Updating user preference
+      operationId: updatingUserPreference
+      parameters:
+      - name: product
+        in: path
+        description: Product name
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:49:09 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Preference is Updated successfully.
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Preference is Updated successfully.
+                    type: success
+        '401':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:49:29 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/support-access:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Support Access
+      summary: Get Support Access history
+      description: Get Support Access history
+      operationId: getSupportAccessHistory
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:43:34 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_granted:
+                    type: number
+                    example: 1
+                  history:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        access_granted_at:
+                          type: string
+                          example: '2023-01-19T19:42:54Z'
+                        access_granted_by:
+                          type: string
+                          example: ''
+                        access_revoked_at:
+                          type: string
+                          example: '2023-01-19T19:43:20Z'
+                        access_revoked_by:
+                          type: string
+                          example: pawan rai
+                        status:
+                          type: string
+                          example: Revoked
+                        updated_at:
+                          type: string
+                          example: '2023-01-19T19:42:54Z'
+                    example:
+                      - access_granted_at: '2023-01-19T19:42:54Z'
+                        access_granted_by: ''
+                        access_revoked_at: '2023-01-19T19:43:20Z'
+                        access_revoked_by: pawan rai
+                        status: Revoked
+                        updated_at: '2023-01-19T19:42:54Z'
+                      - access_granted_at: '2023-01-19T19:43:28Z'
+                        access_granted_by: ''
+                        access_revoked_at: '0001-01-01T00:00:00Z'
+                        access_revoked_by: pawan rai
+                        status: Active
+                        updated_at: '2023-01-19T19:43:28Z'
+              examples:
+                Success:
+                  value:
+                    access_granted: 1
+                    history:
+                      - access_granted_at: '2023-01-19T19:42:54Z'
+                        access_granted_by: ''
+                        access_revoked_at: '2023-01-19T19:43:20Z'
+                        access_revoked_by: pawan rai
+                        status: Revoked
+                        updated_at: '2023-01-19T19:42:54Z'
+                      - access_granted_at: '2023-01-19T19:43:28Z'
+                        access_granted_by: ''
+                        access_revoked_at: '0001-01-01T00:00:00Z'
+                        access_revoked_by: pawan rai
+                        status: Active
+                        updated_at: '2023-01-19T19:43:28Z'
+        '401':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:43:59 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/support-access/grant:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Support Access
+      summary: Grant Support Access
+      description: Grant Support Access
+      operationId: grantSupportAccess
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:44:57 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Support Access Granted Successfully
+                  type:
+                    type: string
+                    example: Success
+              examples:
+                Success:
+                  value:
+                    message: Support Access Granted Successfully
+                    type: Success
+        '422':
+          description: Failure
+          headers:
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            CF-RAY:
+              schema:
+                type: string
+                example: 79199dee5ffc85a2-BOM
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '103'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:45:14 GMT
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            alt-svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Support Access already active for organization
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Support Access already active for organization
+                    title: Bad Request Error
+                    type: error
+  /api/organization/support-access/revoke:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Support Access
+      summary: Revoke Support Access
+      description: Revoke Support Access
+      operationId: revokeSupportAccess
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:46:37 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Support Access Revoked Successfully
+                  type:
+                    type: string
+                    example: Success
+              examples:
+                Success:
+                  value:
+                    message: Support Access Revoked Successfully
+                    type: Success
+        '422':
+          description: Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 10:46:13 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Support Access already Revoked for this  organization
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Failure:
+                  value:
+                    message: Support Access already Revoked for this  organization
+                    title: Bad Request Error
+                    type: error
+  /api/v1/organization/group:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Create Group
+      description: Create Group
+      operationId: createGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Group1
+                users:
+                  type: array
+                  items:
+                    type: number
+                    example: 499960
+                allocated_concurrency:
+                  type: object
+                  properties:
+                      prod_KUHg1I1YdCPH3Z:
+                        type: number
+                        example: 4
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:20:14 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Group created successfully!
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Group created successfully!
+                    type: success
+        '422':
+          description: Invalid product ID error
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:22:31 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Given Product concurrency are invalid ,
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid product ID error:
+                  value:
+                    message: Sorry! Given Product concurrency are invalid ,
+                    title: Bad Request Error
+                    type: error
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Make Default Group
+      description: Make Default Group
+      operationId: makeDefaultGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                group_id:
+                  type: number
+                  example: 1010
+            example:
+              group_id: 1010
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:29:02 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Default Group Updated Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Default Group Updated Successfully
+                    type: success
+        '422':
+          description: Invalid Group ID error
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:30:02 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Error while updating org group for users
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Group ID error:
+                  value:
+                    message: Error while updating org group for users
+                    title: Bad Request Error
+                    type: error
+  /api/v1/organization/groups:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Get all Groups
+      description: Get all Groups
+      operationId: getAllGroups
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:23:01 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      available_concurrency:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            key:
+                              type: string
+                              example: prod_KUHcM296xEk2Cy
+                            product_name:
+                              type: string
+                              example: Manual Testing - Live
+                            value:
+                              type: number
+                              example: 3
+                        example:
+                          - key: prod_KUHcM296xEk2Cy
+                            product_name: Manual Testing - Live
+                            value: 3
+                      groups:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            allocated_concurrency:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  key:
+                                    type: string
+                                    example: prod_KUHcM296xEk2Cy
+                                  product_name:
+                                    type: string
+                                    example: Manual Testing - Live
+                                  value:
+                                    type: number
+                                    example: 3
+                              example:
+                                - key: prod_KUHcM296xEk2Cy
+                                  product_name: Manual Testing - Live
+                                  value: 3
+                            id:
+                              type: number
+                              example: 1011
+                            is_default_group:
+                              type: number
+                              example: 1
+                            name:
+                              type: string
+                              example: G1
+                            service_accounts:
+                              type: number
+                              example: 3
+                            total_users:
+                              type: number
+                              example: 4
+                        example:
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 3
+                            id: 1011
+                            is_default_group: 1
+                            name: G1
+                            service_accounts: 3
+                            total_users: 4
+              examples:
+                Success:
+                  value:
+                    data:
+                      available_concurrency:
+                        - key: prod_KUHcM296xEk2Cy
+                          product_name: Manual Testing - Live
+                          value: 3
+                      groups:
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 3
+                          id: 1011
+                          is_default_group: 1
+                          name: G1
+                          service_accounts: 3
+                          total_users: 4
+        '401':
+          description: Get All Groups Failure
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:23:17 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Authentication token is missing or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Get All Groups Failure:
+                  value:
+                    message: Sorry! Authentication token is missing or invalid
+                    title: Unauthorized Error
+                    type: error
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Update multiple Group
+      description: Update multiple Group
+      operationId: updateMultipleGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groups:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      allocated_concurrency:
+                        type: object
+                        properties:
+                          prod_KUHcM296xEk2Cy:
+                            type: number
+                            example: 4
+                      id:
+                        type: number
+                        example: 1011
+                  example:
+                    - allocated_concurrency:
+                        prod_KUHcM296xEk2Cy: 4
+                      id: 1011
+            example:
+              groups:
+                - allocated_concurrency:
+                    prod_KUHcM296xEk2Cy: 4
+                  id: 1011
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:47:45 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Group updated successfully!
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Group updated successfully!
+                    type: success
+        '422':
+          description: Invalid Product ID'
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:48:42 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Given Product concurrency are invalid ,,
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Product ID':
+                  value:
+                    message: Sorry! Given Product concurrency are invalid ,,
+                    title: Bad Request Error
+                    type: error
+  /api/v1/organization/group/{group_id}:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Get Groups By ID
+      description: Get Groups By ID
+      operationId: getAllGroupsById
+      parameters:
+      - name: group_id
+        in: path
+        description: Group ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:25:09 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  allocated_concurrency:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        key:
+                          type: string
+                          example: prod_KUHcM296xEk2Cy
+                        product_name:
+                          type: string
+                          example: Manual Testing - Live
+                        value:
+                          type: number
+                          example: 3
+                    example:
+                      - key: prod_KUHcM296xEk2Cy
+                        product_name: Manual Testing - Live
+                        value: 3
+                  id:
+                    type: number
+                    example: 1011
+                  is_default_group:
+                    type: number
+                    example: 1
+                  name:
+                    type: string
+                    example: G1
+                  service_accounts:
+                    type: number
+                    example: 3
+                  total_users:
+                    type: number
+                    example: 4
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                          example: 418070
+                        username:
+                          type: string
+                          example: pawan rai
+                    example:
+                      - id: 418070
+                        username: pawan rai
+                      - id: 418073
+                        username: pawan Admin
+                      - id: 439456
+                        username: pawan rai
+                      - id: 462258
+                        username: pawan rai
+              examples:
+                Success:
+                  value:
+                    allocated_concurrency:
+                      - key: prod_KUHcM296xEk2Cy
+                        product_name: Manual Testing - Live
+                        value: 3
+                    id: 1011
+                    is_default_group: 1
+                    name: G1
+                    service_accounts: 3
+                    total_users: 4
+                    users:
+                      - id: 418070
+                        username: pawan rai
+                      - id: 418073
+                        username: pawan Admin
+                      - id: 439456
+                        username: pawan rai
+                      - id: 462258
+                        username: pawan rai
+        '422':
+          description: Invalid Group ID error
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:25:40 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Requested group Id 1012 doesn't belongs to the given
+                      organization
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Group ID error:
+                  value:
+                    message: >-
+                      Requested group Id 1012 doesn't belongs to the given
+                      organization
+                    title: Bad Request Error
+                    type: error
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Update Group By ID
+      description: Update Group By ID
+      operationId: Update Group By ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Group1
+                users:
+                  type: array
+                  items:
+                    type: number
+                    example: 499960
+                allocated_concurrency:
+                  type: object
+                  properties:
+                      prod_KUHg1I1YdCPH3Z:
+                        type: number
+                        example: 4
+      parameters:
+      - name: group_id
+        in: path
+        description: Group ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:31:47 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Group updated successfully!
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Group updated successfully!
+                    type: success
+        '422':
+          description: Invalid Product ID
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:34:13 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Sorry! Given Product concurrency are invalid ,,
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Product ID:
+                  value:
+                    message: Sorry! Given Product concurrency are invalid ,,
+                    title: Bad Request Error
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Groups
+      summary: Delete Group
+      description: Delete Group
+      operationId: deleteGroup
+      parameters:
+      - name: group_id
+        in: path
+        description: Group ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:38:53 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Group deleted successfully!
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Success:
+                  value:
+                    message: Group deleted successfully!
+                    type: success
+        '422':
+          description: Invalid Group Error
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:39:09 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Requested group Id 1012 doesn't belongs to the given
+                      organization
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Group Error:
+                  value:
+                    message: >-
+                      Requested group Id 1012 doesn't belongs to the given
+                      organization
+                    title: Bad Request Error
+                    type: error
+  /api/organization/sub-org:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - CRUD
+      summary: Get Sub Organizations
+      description: Get Sub Organizations
+      operationId: getSubOrgs
+      parameters:
+        - name: expand
+          in: query
+          description: Expand sub-organization details
+          required: false
+          schema:
+            type: boolean
+            example: true
+      responses:
+        '200':
+          description: Get Sub Orgs
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:07:32 GMT
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      root_org:
+                        type: object
+                        properties:
+                          available_concurrency:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                key:
+                                  type: string
+                                  example: prod_KUHcM296xEk2Cy
+                                product_name:
+                                  type: string
+                                  example: Manual Testing - Live
+                                value:
+                                  type: number
+                                  example: 0
+                            example:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 0
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: Manual Testing - Real Devices
+                                value: 3
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: Web Automation on Desktop
+                                value: 3
+                              - key: prod_KVAoeaYoNyEjfn_linux
+                                product_name: HyperExecute Cloud (Linux Only)
+                                value: 9
+                              - key: prod_KVAntn3WDiTl2j
+                                product_name: Native App Automation (Trial)
+                                value: 7
+                          created_at:
+                            type: string
+                            example: '2022-12-02T14:17:28Z'
+                          name:
+                            type: string
+                            example: '100'
+                          org_id:
+                            type: number
+                            example: 166750
+                      sub_orgs:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            allocated_concurrency:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  key:
+                                    type: string
+                                    example: prod_KVAoeaYoNyEjfn_linux
+                                  product_name:
+                                    type: string
+                                    example: ''
+                                  value:
+                                    type: number
+                                    example: 1
+                              example:
+                                - key: prod_KVAoeaYoNyEjfn_linux
+                                  product_name: ''
+                                  value: 1
+                                - key: prod_KVAntn3WDiTl2j
+                                  product_name: ''
+                                  value: 3
+                                - key: prod_KUHcM296xEk2Cy
+                                  product_name: Manual Testing - Live
+                                  value: 1
+                            created_at:
+                              type: string
+                              example: '2023-01-25T18:49:29Z'
+                            name:
+                              type: string
+                              example: SubOrg 1
+                            org_id:
+                              type: number
+                              example: 166849
+                            service_account_count:
+                              type: number
+                              example: 0
+                            service_accounts:
+                              type: array
+                              items: {}
+                              example: []
+                            user_count:
+                              type: number
+                              example: 0
+                            users:
+                              type: array
+                              items: {}
+                              example: []
+                        example:
+                          - allocated_concurrency:
+                              - key: prod_KVAoeaYoNyEjfn_linux
+                                product_name: ''
+                                value: 1
+                              - key: prod_KVAntn3WDiTl2j
+                                product_name: ''
+                                value: 3
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 1
+                            created_at: '2023-01-25T18:49:29Z'
+                            name: SubOrg 1
+                            org_id: 166849
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_NFR_nonrec
+                                product_name: ''
+                                value: 2
+                            created_at: '2023-01-25T18:56:33Z'
+                            name: SubOrg 1
+                            org_id: 166850
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_NFR_nonrec
+                                product_name: ''
+                                value: 2
+                            created_at: '2023-01-25T19:17:39Z'
+                            name: SubOrg 2
+                            org_id: 166851
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_NFR_nonrec
+                                product_name: ''
+                                value: 2
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: ''
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: ''
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: ''
+                                value: 1
+                            created_at: '2023-01-27T16:00:32Z'
+                            name: SubOrg 2
+                            org_id: 166852
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: ''
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: ''
+                                value: 1
+                              - key: prod_NFR_nonrec
+                                product_name: ''
+                                value: 2
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: ''
+                                value: 1
+                            created_at: '2023-01-27T16:03:34Z'
+                            name: SubOrg 2
+                            org_id: 166853
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: ''
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: ''
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: ''
+                                value: 1
+                              - key: prod_NFR_nonrec
+                                product_name: ''
+                                value: 2
+                            created_at: '2023-01-27T16:06:14Z'
+                            name: SubOrg 2
+                            org_id: 166854
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: ''
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: ''
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: ''
+                                value: 1
+                            created_at: '2023-01-27T16:09:54Z'
+                            name: SubOrg 2
+                            org_id: 166855
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: Manual Testing - Real Devices
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: Web Automation on Desktop
+                                value: 1
+                            created_at: '2023-01-27T16:11:12Z'
+                            name: SubOrg 2
+                            org_id: 166856
+                            service_account_count: 1
+                            service_accounts:
+                              - id: 78101
+                                name: rishab service
+                                role: Guest
+                                status: Active
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: Manual Testing - Real Devices
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: Web Automation on Desktop
+                                value: 1
+                            created_at: '2023-01-30T11:00:05Z'
+                            name: SubOrg 2
+                            org_id: 166857
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 1
+                              - key: prod_KVAmU3gGH3RkiD
+                                product_name: Manual Testing - Real Devices
+                                value: 1
+                              - key: prod_KUHg1I1YdCPH3Z
+                                product_name: Web Automation on Desktop
+                                value: 1
+                            created_at: '2023-01-30T11:00:10Z'
+                            name: SubOrg 2
+                            org_id: 166858
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+                          - allocated_concurrency:
+                              - key: prod_KUHcM296xEk2Cy
+                                product_name: Manual Testing - Live
+                                value: 2
+                            created_at: '2023-01-30T11:00:36Z'
+                            name: SubOrg 1
+                            org_id: 166859
+                            service_account_count: 0
+                            service_accounts: []
+                            user_count: 0
+                            users: []
+              examples:
+                Get Sub Orgs:
+                  value:
+                    data:
+                      root_org:
+                        available_concurrency:
+                          - key: prod_KUHcM296xEk2Cy
+                            product_name: Manual Testing - Live
+                            value: 0
+                          - key: prod_KVAmU3gGH3RkiD
+                            product_name: Manual Testing - Real Devices
+                            value: 3
+                          - key: prod_KUHg1I1YdCPH3Z
+                            product_name: Web Automation on Desktop
+                            value: 3
+                          - key: prod_KVAoeaYoNyEjfn_linux
+                            product_name: HyperExecute Cloud (Linux Only)
+                            value: 9
+                          - key: prod_KVAntn3WDiTl2j
+                            product_name: Native App Automation (Trial)
+                            value: 7
+                        created_at: '2022-12-02T14:17:28Z'
+                        name: '100'
+                        org_id: 166750
+                      sub_orgs:
+                        - allocated_concurrency:
+                            - key: prod_KVAoeaYoNyEjfn_linux
+                              product_name: ''
+                              value: 1
+                            - key: prod_KVAntn3WDiTl2j
+                              product_name: ''
+                              value: 3
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 1
+                          created_at: '2023-01-25T18:49:29Z'
+                          name: SubOrg 1
+                          org_id: 166849
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_NFR_nonrec
+                              product_name: ''
+                              value: 2
+                          created_at: '2023-01-25T18:56:33Z'
+                          name: SubOrg 1
+                          org_id: 166850
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_NFR_nonrec
+                              product_name: ''
+                              value: 2
+                          created_at: '2023-01-25T19:17:39Z'
+                          name: SubOrg 2
+                          org_id: 166851
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_NFR_nonrec
+                              product_name: ''
+                              value: 2
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: ''
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: ''
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: ''
+                              value: 1
+                          created_at: '2023-01-27T16:00:32Z'
+                          name: SubOrg 2
+                          org_id: 166852
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: ''
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: ''
+                              value: 1
+                            - key: prod_NFR_nonrec
+                              product_name: ''
+                              value: 2
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: ''
+                              value: 1
+                          created_at: '2023-01-27T16:03:34Z'
+                          name: SubOrg 2
+                          org_id: 166853
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: ''
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: ''
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: ''
+                              value: 1
+                            - key: prod_NFR_nonrec
+                              product_name: ''
+                              value: 2
+                          created_at: '2023-01-27T16:06:14Z'
+                          name: SubOrg 2
+                          org_id: 166854
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: ''
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: ''
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: ''
+                              value: 1
+                          created_at: '2023-01-27T16:09:54Z'
+                          name: SubOrg 2
+                          org_id: 166855
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: Manual Testing - Real Devices
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: Web Automation on Desktop
+                              value: 1
+                          created_at: '2023-01-27T16:11:12Z'
+                          name: SubOrg 2
+                          org_id: 166856
+                          service_account_count: 1
+                          service_accounts:
+                            - id: 78101
+                              name: rishab service
+                              role: Guest
+                              status: Active
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: Manual Testing - Real Devices
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: Web Automation on Desktop
+                              value: 1
+                          created_at: '2023-01-30T11:00:05Z'
+                          name: SubOrg 2
+                          org_id: 166857
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 1
+                            - key: prod_KVAmU3gGH3RkiD
+                              product_name: Manual Testing - Real Devices
+                              value: 1
+                            - key: prod_KUHg1I1YdCPH3Z
+                              product_name: Web Automation on Desktop
+                              value: 1
+                          created_at: '2023-01-30T11:00:10Z'
+                          name: SubOrg 2
+                          org_id: 166858
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+                        - allocated_concurrency:
+                            - key: prod_KUHcM296xEk2Cy
+                              product_name: Manual Testing - Live
+                              value: 2
+                          created_at: '2023-01-30T11:00:36Z'
+                          name: SubOrg 1
+                          org_id: 166859
+                          service_account_count: 0
+                          service_accounts: []
+                          user_count: 0
+                          users: []
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - CRUD
+      summary: Create Sub Organization
+      description: Create Sub Organization
+      operationId: createSubOrg
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                allocated_concurrency:
+                  type: object
+                  properties:
+                    prod_KUHcM296xEk2Cy:
+                      type: number
+                      example: 1
+                    prod_KUHg1I1YdCPH3Z:
+                      type: number
+                      example: 1
+                    prod_KVAmU3gGH3RkiD:
+                      type: number
+                      example: 1
+                    prod_KVAntn3WDiTl2j:
+                      type: number
+                      example: 0
+                    prod_KVAoeaYoNyEjfn_linux:
+                      type: number
+                      example: 0
+                    prod_NFR_nonrec:
+                      type: number
+                      example: 0
+                name:
+                  type: string
+                  example: SubOrg 2
+            example:
+              allocated_concurrency:
+                prod_KUHcM296xEk2Cy: 1
+                prod_KUHg1I1YdCPH3Z: 1
+                prod_KVAmU3gGH3RkiD: 1
+                prod_KVAntn3WDiTl2j: 0
+                prod_KVAoeaYoNyEjfn_linux: 0
+                prod_NFR_nonrec: 0
+              name: SubOrg 2
+      responses:
+        '200':
+          description: Create Sub Org
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '47'
+            Date:
+              schema:
+                type: string
+                example: Tue, 10 Jan 2023 11:57:24 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Created Sub-Organisation Successfully
+                  type:
+                    type: string
+                    example: success
+                  sub_org_id:
+                    type: integer
+                    example: 45005
+              examples:
+                Create Sub Org:
+                  value:
+                    message: Created Sub-Organisation Successfully
+                    type: success
+                    sub_org_id: 45005
+        '400':
+          description: Invalid Concurrency
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '125'
+            Date:
+              schema:
+                type: string
+                example: Thu, 12 Jan 2023 05:18:40 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Invalid Concurrency Valur for Key -
+                      prod_KUHcM296xEk2Cy
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Concurrency:
+                  value:
+                    message: >-
+                      Invalid Concurrency Valur for Key -
+                      prod_KUHcM296xEk2Cy
+                    title: Bad Request Error
+                    type: error
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - CRUD
+      summary: Bulk Update Sub Org
+      description: Bulk Update Sub Org
+      operationId: bulkUpdateSubOrg
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sub_orgs:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      allocated_concurrency:
+                        type: object
+                        properties:
+                          prod_NFR:
+                            type: number
+                            example: 3
+                      id:
+                        type: number
+                        example: 1000000011
+                      name:
+                        type: string
+                        example: Suborg 1 update m1
+                  example:
+                    - allocated_concurrency:
+                        prod_NFR: 3
+                      id: 1000000011
+                      name: Suborg 1 update m1
+                    - allocated_concurrency:
+                        prod_NFR: 4
+                      id: 1000000010
+                      name: Suborg 2 update m2
+            example:
+              sub_orgs:
+                - allocated_concurrency:
+                    prod_NFR: 3
+                  id: 1000000011
+                  name: Suborg 1 update m1
+                - allocated_concurrency:
+                    prod_NFR: 4
+                  id: 1000000010
+                  name: Suborg 2 update m2
+      responses:
+        '200':
+          description: Bulk Update Sub Org
+          headers:
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            CF-RAY:
+              schema:
+                type: string
+                example: 7b7156626e531d95-BLR
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+            Date:
+              schema:
+                type: string
+                example: Thu, 13 Apr 2023 05:34:02 GMT
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Updated Sub-Organisation Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Bulk Update Sub Org:
+                  value:
+                    message: Updated Sub-Organisation Successfully
+                    type: success
+        '403':
+          description: Logged In User Does Not Belong To Sub Org
+          headers:
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            CF-RAY:
+              schema:
+                type: string
+                example: 7bce38ea2a571d1c-BLR
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Encoding:
+              schema:
+                type: string
+                example: br
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Apr 2023 12:06:49 GMT
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Logged in user does not belong to a Sub-Organisation
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Logged In User Does Not Belong To Sub Org:
+                  value:
+                    message: Logged in user does not belong to a Sub-Organisation
+                    title: Unauthorized Error
+                    type: error
+        '422':
+          description: Invalid Concurrency
+          headers:
+            CF-Cache-Status:
+              schema:
+                type: string
+                example: DYNAMIC
+            CF-RAY:
+              schema:
+                type: string
+                example: 7bce3b62ce8326b9-BLR
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '110'
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Apr 2023 12:08:30 GMT
+            Server:
+              schema:
+                type: string
+                example: cloudflare
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Provided Concurrency Invalid for Not For Resale (NFR)
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Concurrency:
+                  value:
+                    message: Provided Concurrency Invalid for Not For Resale (NFR)
+                    title: Bad Request Error
+                    type: error
+
+  /api/organization/sub-org/{sub_org_id}:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - CRUD
+      summary: Update Sub Organization By ID
+      description: Update Sub Organization By ID
+      operationId: updateSubOrgById
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                allocated_concurrency:
+                  type: object
+                  properties:
+                    prod_KUHcM296xEk2Cy:
+                      type: number
+                      example: 2
+                    prod_KUHg1I1YdCPH3Z:
+                      type: number
+                      example: 0
+                    prod_KVAmU3gGH3RkiD:
+                      type: number
+                      example: 0
+                    prod_KVAntn3WDiTl2j:
+                      type: number
+                      example: 0
+                    prod_KVAoeaYoNyEjfn_linux:
+                      type: number
+                      example: 0
+                    prod_NFR_nonrec:
+                      type: number
+                      example: 0
+                name:
+                  type: string
+                  example: SubOrg 1
+            example:
+              allocated_concurrency:
+                prod_KUHcM296xEk2Cy: 2
+                prod_KUHg1I1YdCPH3Z: 0
+                prod_KVAmU3gGH3RkiD: 0
+                prod_KVAntn3WDiTl2j: 0
+                prod_KVAoeaYoNyEjfn_linux: 0
+                prod_NFR_nonrec: 0
+              name: SubOrg 1
+      responses:
+        '200':
+          description: Update Sub Org
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '47'
+            Date:
+              schema:
+                type: string
+                example: Thu, 12 Jan 2023 05:30:32 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Updated Sub-Organisation Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update Sub Org:
+                  value:
+                    message: Updated Sub-Organisation Successfully
+                    type: success
+        '400':
+          description: Invalid Concurrency
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '125'
+            Date:
+              schema:
+                type: string
+                example: Thu, 12 Jan 2023 05:29:08 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Invalid Concurrency Value for Key -
+                      prod_KUHcM296xEk2Cy
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Concurrency:
+                  value:
+                    message: >-
+                      Invalid Concurrency Value for Key -
+                      prod_KUHcM296xEk2Cy
+                    title: Bad Request Error
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization 
+          - CRUD
+      summary: Delete Sub Organization By ID
+      description: Delete Sub Organization By ID
+      operationId: deleteSubOrgById
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Delete Sub Org By ID
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '47'
+            Date:
+              schema:
+                type: string
+                example: Thu, 12 Jan 2023 05:35:15 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Deleted Sub-Organisation Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Delete Sub Org By ID:
+                  value:
+                    message: Deleted Sub-Organisation Successfully
+                    type: success
+        '401':
+          description: Not Found
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '84'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:15:05 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Record not found in our db
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Not Found:
+                  value:
+                    message: Record not found in our db
+                    title: Unauthorized Error
+                    type: error
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization 
+          - CRUD
+      summary: Get Sub Organization By ID
+      description: Get Sub Organization By ID
+      operationId: getSubOrgById
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Get Sub Org By ID
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '273'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:06:24 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      allocated_concurrency:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            key:
+                              type: string
+                              example: prod_KUHcM296xEk2Cy
+                            product_name:
+                              type: string
+                              example: Manual Testing - Live
+                            value:
+                              type: number
+                              example: 2
+                        example:
+                          - key: prod_KUHcM296xEk2Cy
+                            product_name: Manual Testing - Live
+                            value: 2
+                      created_at:
+                        type: string
+                        example: '2023-01-30T11:00:36Z'
+                      name:
+                        type: string
+                        example: SubOrg 1
+                      org_id:
+                        type: number
+                        example: 166859
+                      service_account_count:
+                        type: number
+                        example: 0
+                      service_accounts:
+                        type: array
+                        items: {}
+                        example: []
+                      user_count:
+                        type: number
+                        example: 0
+                      users:
+                        type: array
+                        items: {}
+                        example: []
+              examples:
+                Get Sub Org By ID:
+                  value:
+                    data:
+                      allocated_concurrency:
+                        - key: prod_KUHcM296xEk2Cy
+                          product_name: Manual Testing - Live
+                          value: 2
+                      created_at: '2023-01-30T11:00:36Z'
+                      name: SubOrg 1
+                      org_id: 166859
+                      service_account_count: 0
+                      service_accounts: []
+                      user_count: 0
+                      users: []
+        '422':
+          description: Wrong Org Details
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '133'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:08:56 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Something went wrong! getting organization details db
+                      error-%s of given user
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Wrong Org Details:
+                  value:
+                    message: >-
+                      Something went wrong! getting organization details db
+                      error-%s of given user
+                    title: Bad Request Error
+                    type: error
+  /api/organization/sub-org/{sub_org_id}/invites/users:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Invite Users
+      summary: Invite Users to Sub Organization
+      description: Invite Users to Sub Organization
+      operationId: inviteUsersToSubOrg
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    example: pawan12@qiott.com
+                  role:
+                    type: string
+                    example: Admin
+              example:
+                - email: pawan12@qiott.com
+                  role: Admin
+            example:
+              - email: pawan12@qiott.com
+                role: Admin
+      responses:
+        '200':
+          description: Invite Users to Sub Org
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '56'
+            Date:
+              schema:
+                type: string
+                example: Fri, 20 Jan 2023 12:44:34 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invite Sent Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Invite Users to Sub Org:
+                  value:
+                    message: Invite Sent Successfully
+                    type: success
+        '422':
+          description: Invalid Role
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '109'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:16:37 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        email:
+                          type: string
+                          example: pawan12@qiott.com
+                        error:
+                          type: string
+                          example: Invalid role
+                    example:
+                      - email: pawan12@qiott.com
+                        error: Invalid role
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Role:
+                  value:
+                    message:
+                      - email: pawan12@qiott.com
+                        error: Invalid role
+                    title: Bad Request Error
+                    type: error
+  /api/organization/sub-org/{sub_org_id}/invites:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Invite Users
+      summary: Get Pending Invites for Sub Organization
+      description: Get Pending Invites for Sub Organization
+      operationId: getPendingInvitesForSuborg
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Get Pending Invites for SubOrg
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '234'
+            Date:
+              schema:
+                type: string
+                example: Fri, 20 Jan 2023 16:19:57 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        group:
+                          nullable: true
+                          example: null
+                        id:
+                          type: number
+                          example: 4634
+                        recipient_email:
+                          type: string
+                          example: rishabhagrawal@lambdatest.com
+                        role:
+                          type: string
+                          example: User
+                        sender:
+                          type: object
+                          properties:
+                            email:
+                              type: string
+                              example: abhishekj@lambdatest.com
+                            id:
+                              type: number
+                              example: 99604
+                            name:
+                              type: string
+                              example: backend testing
+                        sent_at:
+                          type: string
+                          example: '2023-01-20T12:44:34Z'
+                        status:
+                          type: string
+                          example: Pending
+                    example:
+                      - group: null
+                        id: 4634
+                        recipient_email: rishabhagrawal@lambdatest.com
+                        role: User
+                        sender:
+                          email: abhishekj@lambdatest.com
+                          id: 99604
+                          name: backend testing
+                        sent_at: '2023-01-20T12:44:34Z'
+                        status: Pending
+              examples:
+                Get Pending Invites for SubOrg:
+                  value:
+                    data:
+                      - group: null
+                        id: 4634
+                        recipient_email: rishabhagrawal@lambdatest.com
+                        role: User
+                        sender:
+                          email: abhishekj@lambdatest.com
+                          id: 99604
+                          name: backend testing
+                        sent_at: '2023-01-20T12:44:34Z'
+                        status: Pending
+  /api/organization/sub-org/{sub_org_id}/invite/{invite_id}:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Invite Users
+      summary: Resend Invite
+      description: Resend Invite
+      operationId: resendInvite1
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: invite_id
+        in: path
+        description: Invitation ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Resend Invite
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '63'
+            Date:
+              schema:
+                type: string
+                example: Sat, 21 Jan 2023 04:49:27 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Resent Invitiation Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Resend Invite:
+                  value:
+                    message: Resent Invitiation Successfully
+                    type: success
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Invite Users
+      summary: Withdraw Invite
+      description: Withdraw Invite
+      operationId: withdrawInvite
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: invite_id
+        in: path
+        description: Invitation ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Withdraw Invite
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '64'
+            Date:
+              schema:
+                type: string
+                example: Sat, 21 Jan 2023 05:01:33 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invite user deleted Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Withdraw Invite:
+                  value:
+                    message: Invite user deleted Successfully
+                    type: success
+        '403':
+          description: Withdraw Expired Invite
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '147'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:18:21 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Withdraw Expired Invite:
+                  value:
+                    message: >-
+                      Please, contact administration as you don't have right
+                      privileges to permform this action
+                    title: Unauthorized Error
+                    type: error
+  /api/organization/sub-org/{sub_org_id}/users/{user_id}/token:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Token
+      summary: Get User Token
+      description: Get User Token
+      operationId: getUserToken
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: user_id
+        in: path
+        description: Sub Org User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Get User Token
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '187'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:38:36 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token retrieved successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 34317
+                      token:
+                        type: string
+                        example: gfTFHh60awsoDrWeTY21HmEUQUsi1vef1k8acKWT36mjT1qVkn
+                      user_id:
+                        type: number
+                        example: 11954
+                      username:
+                        type: string
+                        example: rishabha
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Get User Token:
+                  value:
+                    message: Access Token retrieved successfully
+                    token:
+                      id: 34317
+                      token: gfTFHh60awsoDrWeTY21HmEUQUsi1vef1k8acKWT36mjT1qVkn
+                      user_id: 11954
+                      username: rishabha
+                    type: success
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Token
+      summary: Regenerate User Token
+      description: Regenerate User Token
+      operationId: regenerateUserToken
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: user_id
+        in: path
+        description: Sub Org User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          text/plain:
+            example: ''
+      responses:
+        '200':
+          description: Regenerate User Token
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '193'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:27:31 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token generated successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 34329
+                      token:
+                        type: string
+                        example: Gk6AP0DuLwPOL6f6comvg4Oxxau7MZW3mQ5wpW9EKjOcOXeCrx
+                      user_id:
+                        type: number
+                        example: 78101
+                      username:
+                        type: string
+                        example: rishabhagrawal
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Regenerate User Token:
+                  value:
+                    message: Access Token generated successfully
+                    token:
+                      id: 34329
+                      token: Gk6AP0DuLwPOL6f6comvg4Oxxau7MZW3mQ5wpW9EKjOcOXeCrx
+                      user_id: 78101
+                      username: rishabhagrawal
+                    type: success
+  /api/organization/sub-org/{sub_org_id}/users/{user_id}:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - User
+      summary: Update User
+      description: Update User
+      operationId: updateUser
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: user_id
+        in: path
+        description: Sub Org User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                role:
+                  type: string
+                  example: Admin
+            example:
+              role: Admin
+      responses:
+        '200':
+          description: Update User SubOrg
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '65'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:29:50 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User profile updated successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update User SubOrg:
+                  value:
+                    message: User profile updated successfully
+                    type: success
+        '422':
+          description: Invalid Role
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '119'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:37:23 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: object
+                    properties:
+                      team_user_role:
+                        type: array
+                        items:
+                          type: string
+                          example: Please enter a valid user role
+                        example:
+                          - Please enter a valid user role
+                  message:
+                    type: string
+                    example: The given data was invalid.
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Role:
+                  value:
+                    errors:
+                      team_user_role:
+                        - Please enter a valid user role
+                    message: The given data was invalid.
+                    type: error
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - User
+      summary: Delete Sub Organization User
+      description: Delete Sub Organization User
+      operationId: deleteUserSuborg
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: user_id
+        in: path
+        description: Sub Org User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Delete User SubOrg
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '57'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 12:18:49 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User deleted Successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Delete User SubOrg:
+                  value:
+                    message: User deleted Successfully
+                    type: success
+  /api/organization/sub-org/{sub_org_id}/users/{user_id}/password:
+    patch:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - User
+      summary: Update User Password By Admin
+      description: Update User Password By Admin
+      operationId: updateUserPasswordByAdmin
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: user_id
+        in: path
+        description: Sub Org User ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                confirm_password:
+                  type: string
+                  example: ppoodeikj2
+                new_password:
+                  type: string
+                  example: ppoodeikj2
+            example:
+              confirm_password: ppoodeikj2
+              new_password: ppoodeikj2
+      responses:
+        '200':
+          description: Update User Password By Admin
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '61'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:40:18 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password changed successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update User Password By Admin:
+                  value:
+                    message: Password changed successfully
+                    type: success
+  /api/organization/sub-org/{sub_org_id}/service-accounts/{id}/token:
+    get:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Service Account
+      summary: Get Service Account Token
+      description: Get Service Account Token
+      operationId: getServiceAccountToken
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: id
+        in: path
+        description: Sub Org Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Get Service Account Token
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '193'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:39:16 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token retrieved successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 34329
+                      token:
+                        type: string
+                        example: Gk6AP0DuLwPOL6f6comvg4Oxxau7MZW3mQ5wpW9EKjOcOXeCrx
+                      user_id:
+                        type: number
+                        example: 78101
+                      username:
+                        type: string
+                        example: rishabhagrawal
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Get Service Account Token:
+                  value:
+                    message: Access Token retrieved successfully
+                    token:
+                      id: 34329
+                      token: Gk6AP0DuLwPOL6f6comvg4Oxxau7MZW3mQ5wpW9EKjOcOXeCrx
+                      user_id: 78101
+                      username: rishabhagrawal
+                    type: success
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Service Account
+      summary: Regenerate Service Account Token
+      description: Regenerate Service Account Token
+      operationId: regenerateServiceAccountToken
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: id
+        in: path
+        description: Sub Org Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          text/plain:
+            example: ''
+      responses:
+        '200':
+          description: Regenerate Service Account Token
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '193'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:41:26 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Access Token generated successfully
+                  token:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 34330
+                      token:
+                        type: string
+                        example: Hu8NsHTDT9gT4e1GQFchGrjZqrnHVqf3XahHnjn2wzNTgMQ0XZ
+                      user_id:
+                        type: number
+                        example: 78101
+                      username:
+                        type: string
+                        example: rishabhagrawal
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Regenerate Service Account Token:
+                  value:
+                    message: Access Token generated successfully
+                    token:
+                      id: 34330
+                      token: Hu8NsHTDT9gT4e1GQFchGrjZqrnHVqf3XahHnjn2wzNTgMQ0XZ
+                      user_id: 78101
+                      username: rishabhagrawal
+                    type: success
+  /api/organization/sub-org/{sub_org_id}/service-accounts:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Service Account
+      summary: Create Service Account
+      description: Create Service Account
+      operationId: createServiceAccounts
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Test Service Account
+            example:
+              name: Test Service Account
+      responses:
+        '200':
+          description: Create Service Account
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '98'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:21:51 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Service Account Created SuccessFully
+                  name:
+                    type: string
+                    example: Test Service Account
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Create Service Account:
+                  value:
+                    message: Service Account Created SuccessFully
+                    name: Test Service Account
+                    type: success
+        '422':
+          description: Invalid Org
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '133'
+            Date:
+              schema:
+                type: string
+                example: Mon, 30 Jan 2023 11:22:08 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Something went wrong! getting organization details db
+                      error-%s of given user
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Invalid Org:
+                  value:
+                    message: >-
+                      Something went wrong! getting organization details db
+                      error-%s of given user
+                    title: Bad Request Error
+                    type: error
+  /api/organization/sub-org/{sub_org_id}/service-accounts/{id}:
+    put:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Service Account
+      summary: Update Service Account
+      description: Update Service Account
+      operationId: updateServiceAccounts
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: id
+        in: path
+        description: Sub Org Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: rishab service 2
+            example:
+              name: rishab service 2
+      responses:
+        '200':
+          description: Update Service Account
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '68'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:42:23 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Service Account updated successfully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Update Service Account:
+                  value:
+                    message: Service Account updated successfully
+                    type: success
+    delete:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - Service Account
+      summary: Delete Service Account
+      description: Delete Service Account
+      operationId: deleteServiceAccounts
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: id
+        in: path
+        description: Sub Org Service Account ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Delete Service Account
+          headers:
+            Content-Length:
+              schema:
+                type: string
+                example: '68'
+            Date:
+              schema:
+                type: string
+                example: Sun, 22 Jan 2023 11:53:04 GMT
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Service Account Deleted SuccessFully
+                  type:
+                    type: string
+                    example: success
+              examples:
+                Delete Service Account:
+                  value:
+                    message: Service Account Deleted SuccessFully
+                    type: success                  
+  /api/organization/sub-org/{sub_org_id}/move-account:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - User
+      summary: Move user to Sub Organization 
+      description: Move user to Sub Organization 
+      operationId: moveUserToSubOrg
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        description: Move user to Sub Organization 
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: testuser@lambdatest.com
+            example:
+              email: testuser@lambdatest.com
+            
+      responses:
+        '200':
+          description: Move user to Sub Organization Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  
+                  type:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: >- 
+                      User : testuser@lambdatest.com moved to Sub-Organization ID - 12345
+              examples:
+                Move user to Sub Organization Success:
+                  value:
+                    type: success
+                    message: >-
+                        User : testuser@lambdatest.com moved to Sub-Organization ID - 12345            
+        '422':
+          description: Wrong email
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Sorry! User not found or invalid
+                  title:
+                    type: string
+                    example: Unauthorized Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Wrong email:
+                  value:
+                    type: error
+                    title: Bad Request Error
+                    message: >-
+                      Sorry! User not found or invalid
+  /api/organization/sub-org/{sub_org_id}/users:
+    post:
+      security:
+        - basicAuth: [ ]
+      tags:
+        - Sub Organization
+          - User
+      summary: Register user to Sub Organization 
+      description: Register user to Sub Organization 
+      operationId: registerUserToSubOrg
+      parameters:
+      - name: sub_org_id
+        in: path
+        description: Sub Organization ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        description: Register user to Sub Organization 
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: testUser
+                email:
+                  type: string
+                  example: testuser@lambdatest.com
+                password:
+                  type: string
+                  example: helloTest@123
+                org_role:
+                  type: string
+                  example: User
+            example:
+              name: testUser
+              email: testuser@lambdatest.com
+              password: helloTest@123
+              org_role: User
+      responses:
+        '200':
+          description: Register user to Sub Organization Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  
+                  type:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: >- 
+                      User for email: testuser@lambdatest.com created"
+              examples:
+                Register user to Sub Organization Success:
+                  value:
+                    type: success
+                    message: >-
+                      User for email: testuser@lambdatest.com created
+                    
+        '400':
+          description: Wrong org_role
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: >-
+                      Sorry, Requested Role is not valid
+                  title:
+                    type: string
+                    example: Bad Request Error
+                  type:
+                    type: string
+                    example: error
+              examples:
+                Wrong org_role:
+                  value:
+                    type: error
+                    title: Bad Request Error
+                    message: >-
+                      Sorry, Requested Role is not valid
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

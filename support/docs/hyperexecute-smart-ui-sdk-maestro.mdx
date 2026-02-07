@@ -1,0 +1,322 @@
+---
+title: "UI Testing with Maestro using HyperExecute and SmartUI SDK"
+sidebarTitle: "Maestro"
+keywords: ["smartui mobile testing", "hyperexecute android tests", "maestro visual regression", "appium alternative", "visual testing android emulator", "smartui app screenshots", "hyperexecute yaml mobile"]
+---
+
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+This document guides you on how to perform visual regression testing for your Android applications by running your Maestro tests on the HyperExecute platform and capturing screenshots with the SmartUI SDK.
+
+## Prerequisites
+
+Before you begin, ensure you have the following prerequisites in place:
+
+* Your LambdaTest Username and Access Key. You can find these on your dashboard -> left side bar -> credentials.
+* The [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) downloaded to your local machine.
+* An existing Android application file (`.apk`).
+* Node.js and npm installed on your system.
+
+## Step 1: Create a SmartUI Project
+
+First, you need to create a project in SmartUI. All your visual regression test builds for this project will be grouped here.
+
+1.  Navigate to the [SmartUI Projects page](https://smartui.lambdatest.com/).
+2.  Click on **New Project**.
+3.  Select **CLI** as the platform.
+4.  Provide a **Project Name**, select approvers, and add any relevant tags.
+5.  Click **Submit**.
+
+<Note>
+INFO
+
+Once the project is created, you will get a unique `PROJECT_TOKEN`. Copy this token as it is required in the HyperExecute YAML configuration file later.
+</Note>
+
+## Step 2: Clone The Sample Repository
+
+You can configure your own existing Maestro project or get started quickly by cloning our sample repository.
+
+```bash
+git clone https://github.com/LambdaTest/smartui-maestro-sample
+cd smartui-maestro-sample
+```
+
+<Check>
+**SAMPLE REPO**
+
+You can find the complete code for this example in the following LambdaTest GitHub repository.
+
+<GitHubButton url="https://github.com/LambdaTest/smartui-maestro-sample" />
+</Check>
+
+## Step 3: Upload Your Application
+
+To run your tests on LambdaTest real devices or emulators, you need to upload your Android app (`.apk`) and get an `appId`.
+
+Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
+
+
+```bash
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
+`}
+```
+
+From the JSON response, copy the value of `app_url`. It will be in the format `lt://...`. This is your `appId`.
+
+## Step 4: Configure Your Test Suite
+
+Now, let's set up the test suite to integrate with SmartUI.
+
+#### 4.1. Install SmartUI CLI
+
+The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory:
+
+```bash
+npm install @lambdatest/smartui-cli
+```
+
+<Info>
+NOTE
+
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+</Info>
+
+#### 4.2. Add SmartUI Screenshots to Your Maestro Flow
+
+In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeScreenshot` command wherever you want to capture a visual checkpoint. The `path` specified will be used to name the screenshot in the SmartUI dashboard.
+
+```yaml
+- launchApp
+- takeScreenshot:
+    path: ./screenshots/home-screen
+- tapOn: "Login"
+- takeScreenshot:
+    path: ./screenshots/login-page
+```
+
+#### 4.3. Set Up Environment Variables
+
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Username and Access Key Page](https://accounts.lambdatest.com/security/username-accesskey).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+
+<Tabs>
+  <Tab title="Linux / MacOS">
+
+```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+  </Tab>
+  <Tab title="Windows">
+
+```powershell
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+  </Tab>
+</Tabs>
+
+
+## Step 5: Configure the HyperExecute YAML
+
+The HyperExecute YAML file is the blueprint for your test execution. It tells HyperExecute how to set up the environment and run your tests.
+
+You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
+
+<Tabs >
+<Tab title="Android-Real Device">
+
+```yaml reference title="maestro_Real_Devices.yaml"
+# HyperExecute YAML configuration for running Maestro + SmartUI on Real Android Devices
+
+version: "0.2"
+autosplit: true
+runson: android
+concurrency: 2
+
+# Install dependencies and run setup
+pre:
+  - chmod +x maestro-test/setup-script.sh
+  - chmod +x maestro-test/runTest.sh
+  - maestro-test/setup-script.sh
+  - npm i @lambdatest/smartui-cli #Installs support for SmartUI
+
+testDiscovery:
+  command: cat ./maestro-test/discover_rd.txt
+  mode: static
+  type: raw
+
+# Command to run the tests using the testRunnerCommand
+testRunnerCommand: ./maestro-test/runTest.sh $test
+
+# Only report the status of the test framework
+frameworkStatusOnly: true
+
+# Enable dynamic allocation of resources
+dynamicAllocation: true
+
+
+
+
+
+env:
+  MAESTRO: true
+  PROJECT_TOKEN: <project token> #“Create a new project at smartui.lambdatest.com/newProject or enter your existing project token here.”
+
+framework:
+  name: raw
+  args:
+    devices: [".*"]                    # Run on any connected real device
+    video: true
+    deviceLog: true
+    appId: lt://<appId> #upload your apk file for android at applive.lambdatest.com/app and enter the App ID here
+    
+    
+    # Build name for identification on the automation dashboard
+    buildName: maestro-smartui
+    queueTimeout: 600
+    # Configuration fields specific to running raw tests
+    region: ap
+    disableReleaseDevice: true
+    isRealMobile: true
+    reservation: false
+    platformName: android
+jobLabel: ['Maestro', 'Real Device','SmartUI', 'Android']
+
+
+project:
+  name: maestro-rd-android
+
+differentialUpload:
+  enabled: true
+  ttlHours: 360
+
+runtime:
+  - language: node
+    version: "20"
+```
+</Tab>
+
+<Tab title="Android-Emulator">
+
+<Warning>
+To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
+</Warning>
+
+```yaml reference title="maestro_Emulator_HyperEx.yaml"
+# HyperExecute YAML configuration for running Maestro + SmartUI on Android Emulator
+
+version: "0.2"
+autosplit: true
+runson: android
+concurrency: 2
+
+# Setup scripts and dependencies
+pre:
+  - chmod +x maestro-test/setup-script.sh
+  - chmod +x maestro-test/runTest.sh
+  - maestro-test/setup-script.sh
+  - npm i @lambdatest/smartui-cli #Installs support for SmartUI
+
+# Test discovery configuration
+testDiscovery:
+  # Command to discover tests from the test.txt file
+  command: cat ./maestro-test/discover.txt
+  # Test discovery mode can be static/dynamic
+  mode: static
+  # Test type is raw (custom test implementation)
+  type: raw
+
+# Command to run the tests using the testRunnerCommand
+testRunnerCommand: ./maestro-test/runTest.sh $test
+
+# Only report the status of the test framework
+frameworkStatusOnly: true
+
+# Enable dynamic allocation of resources
+dynamicAllocation: true
+
+# Pre-install required dependencies using pip
+# will need java and maestro inside the container
+
+
+env:
+  MAESTRO: true
+  PROJECT_TOKEN: <your-project-token> # add your smartui cli project token
+
+framework:
+  name: raw
+  args:
+    # List of devices to run tests on (two Pixel 5 devices in this case)
+    devices: ["Galaxy S22 Ultra 5G-14", "Galaxy Note10+-11"]
+    # Enable or disable video recording support
+    video: true
+    # Enable or disable device log support
+    deviceLog: true
+    # App ID to be installed (mandatory field, using <app_id>)
+    appId: lt://<appId>
+        # Build name for identification on the automation dashboard
+    buildName: maestro-t1
+    queueTimeout: 600
+    # Configuration fields specific to running raw tests
+    isRealMobile: false
+    platformName: android
+jobLabel: ['Emulator', 'Maestro', 'HyperEx-Infra', 'Android']
+
+# SmartUI project setup and TTL
+project:
+  name: maestro-emu-android
+
+differentialUpload:
+  enabled: true
+  ttlHours: 360
+
+
+runtime:
+  - language: node
+    version: "20"
+```
+</Tab>
+
+</Tabs>
+
+
+<Note>
+INFO
+
+In the real device configuration, the `testDiscovery` and `testRunnerCommand` are handled internally by the `maestro` framework integration on HyperExecute. You just need to specify the `framework` block.
+</Note>
+
+## Step 6: Execute Your Test Suite
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE 
+```
+
+![JUnit HyperExecute Terminal Logs](/assets/images/hyperexecute/frameworks/maestro/1.png)
+
+
+## Step 7: View Your Visual Test Results on SmartUI
+
+After the HyperExecute job is finished, all screenshots captured using the `takeScreenshot` command will be available in your SmartUI project for review.
+
+![SmartUI Results](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+
+1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
+2.  Select your project and the most recent build.
+3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
+
+

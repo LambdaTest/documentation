@@ -1,0 +1,320 @@
+---
+title: "Appium Testing - Virtual Device On HyperExecute"
+sidebarTitle: "Appium - Virtual Device"
+keywords: ['appium', 'java', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'virtual devices']
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
+<Note>
+
+HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
+</Note>
+
+## Prerequisites
+
+To run the Tests on HyperExecute from your Local System, you are required:
+
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Setup the Environmental Variable
+- Ensure you have Appium’s [Java client library](https://github.com/appium/java-client) installed.
+- Access to an **Android** app (.apk or .aab file)
+
+<Check>
+**SAMPLE REPO**
+
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
+<GitHubButton url="https://github.com/LambdaTest/hyperexecute-appium-testng/tree/android-emulator" />
+</Check>
+
+<Note>
+
+If you do not have any **.apk** file, you can run your sample tests on <BrandName /> by using our sample 🔗 
+ [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
+</Note>
+
+### Download HyperExecute CLI
+
+The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+
+| Platform | HyperExecute CLI download location |
+| ---------| --------------------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+### Setup Environment Variable
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
+
+<Tabs>
+  <Tab title="Linux / MacOS">
+```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+  </Tab>
+  <Tab title="Windows">
+```powershell
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+  </Tab>
+</Tabs>
+
+## Steps to Run Your Test
+
+### Step 1: Upload your Application
+Upload your <b>_android_</b> application (.apk file) to the <BrandName /> servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication. Make sure to add the path of the <b>appFile</b> in the cURL request. Here is an example cURL request to upload your app using our REST API:
+
+<Tabs>
+  <Tab title="App file">
+    <Tabs>
+      <Tab title="Linux / MacOS">
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"<RELATIVE_PATH_OF_YOUR_APP>"'
+```
+      </Tab>
+      <Tab title="Windows">
+```powershell
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"<RELATIVE_PATH_OF_YOUR_APP>""
+```
+      </Tab>
+    </Tabs>
+  </Tab>
+  <Tab title="App URL">
+    <Tabs>
+      <Tab title="Linux / MacOS">
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
+--location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \
+--form 'name="Android_App"' \
+--form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'
+```
+      </Tab>
+      <Tab title="Windows">
+```powershell
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"
+```
+      </Tab>
+    </Tabs>
+  </Tab>
+</Tabs>
+
+<Note>
+
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
+</Note>
+
+### Step 2: Configure your Test Script
+Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below.
+
+Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
+
+```java reference title="AndroidEmulator.java"
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.appium.java_client.MobileBy;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class AndroidEmulator {
+    String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME" //Enter the Username here
+            : System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"  //Enter the Access key here
+            : System.getenv("LT_ACCESS_KEY");
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+    public String status = "passed";
+    @BeforeMethod
+    @Parameters(value = { "deviceName", "platformVersion" })
+    public void setUp(String deviceName, String platformVersion) throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("build", "HYP JUNIT Native App automation");
+        capabilities.setCapability("name", "HYP Java JUnit Android Test");
+        capabilities.setCapability("platformName", "android");
+        capabilities.setCapability("deviceName", deviceName); //Enter the name of the device here
+        capabilities.setCapability("isRealMobile", false);
+        capabilities.setCapability("platformVersion",platformVersion);
+        capabilities.setCapability("app","Proverbial_android"); //Enter the App ID here
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("network",false);
+        capabilities.setCapability("visual",true);
+        capabilities.setCapability("autoGrantPermissions", true);
+        capabilities.setCapability("appiumVersion", "1.21.0");
+        capabilities.setCapability("devicelog", true);
+        try
+        {
+            driver = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + gridURL), capabilities);
+        }
+        catch (MalformedURLException e)
+        {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test
+    public void testSimple() throws Exception
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("color"))).click();
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("geoLocation"))).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("Text"))).click();
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("notification"))).click();
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("toast"))).click();
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.id("webview"))).click();
+            Thread.sleep(10000);
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("url"))).sendKeys("https://www.lambdatest.com/");
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("find"))).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
+
+            status="passed"; 
+        }
+            catch (Exception e)
+             {
+                System.out.println(e.getMessage());
+                status="failed";
+             }
+    }
+    @AfterMethod
+    public void tearDown() throws Exception
+    {
+        if (driver != null)
+        {
+            driver.executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
+```
+
+### Step 3: Update your XML file
+Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
+
+```xml reference title="android-emulator.xml"
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="100" name="Mobile" parallel="tests">
+
+    <test name="AndroidEmulatorTest_1">
+        <parameter name="version" value="11" />
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Galaxy Note20 Ultra 5G" />
+        <classes>
+            <class name="AndroidEmulator" />
+        </classes>
+    </test>
+
+    <test name="AndroidEmulatorTest_2">
+        <parameter name="version" value="12" />
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Galaxy S22 5G" />
+        <classes>
+            <class name="AndroidEmulator" />
+        </classes>
+    </test>
+
+        <test name="AndroidEmulatorTest_3">
+        <parameter name="version" value="13" />
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Galaxy S21 Ultra 5G" />
+        <classes>
+            <class name="AndroidEmulator" />
+        </classes>
+    </test>
+
+        <test name="AndroidEmulatorTest_4">
+        <parameter name="version" value="11" />
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Galaxy S20" />
+        <classes>
+            <class name="AndroidEmulator" />
+        </classes>
+    </test>
+
+        <test name="AndroidEmulatorTest_5">
+        <parameter name="version" value="12" />
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Galaxy S21 5G" />
+        <classes>
+            <class name="AndroidEmulator" />
+        </classes>
+    </test>
+</suite>
+```
+
+### Step 4: Configure YAML and Execute your Script
+```yaml reference title="android-emulator.yaml"
+version: 0.2
+runson: linux
+
+autosplit: true
+concurrency: 3
+
+pre:
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+
+appium: true
+framework:
+  name: maven/testng
+  defaultReports: false
+  discoveryType: xmltest
+  flags: ["-Pandroid-emulator"]
+  args:
+    isRealMobile: false
+
+retryOnFailure: true
+maxRetries: 1
+
+jobLabel: ['HYP', 'Appium' 'Android-Emulator']
+```
+
+
+
+### Step 5: Execute your Test Suite
+<Note>
+**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Note>
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+```

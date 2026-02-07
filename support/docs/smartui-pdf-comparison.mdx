@@ -1,0 +1,78 @@
+---
+title: "SmartUI Visual Regression Testing for PDF Files"
+sidebar_label: "PDF Testing"
+keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+---
+
+## Prerequisites for Using SmartUI
+
+- Familiarity with HTTP APIs is essential.
+- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
+
+In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/H91z4j5_JvQ"
+  title="Visual Regression Testing for PDF Files Using SmartUI | TestMu AI"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## Getting Started with PDF Comparison
+
+<div className='storylane-iframe'>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/czorj4fbzohf?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
+## Step 1: Establishing a SmartUI Project
+
+To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
+
+1. Navigate to the [SmartUI Projects Page](https://smartui.lambdatest.com/).
+2. Tap on the `new project` button.
+3. Specify your platform type as `PDF`.
+4. Provide your `project` name, designate `approvers`, and add `tags` (optional).
+5. Confirm your entry by clicking on **Submit**.
+
+Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
+
+```bash
+projectToken = "123456#1234abcd-****-****-****-************"
+```
+
+## Upload Methods
+
+SmartUI provides three different methods to upload PDFs for visual regression testing. Choose the method that best fits your workflow:
+
+<Columns cols={2}>
+  <Card title="API Upload" href="/support/docs/smartui-pdf-api-upload/">
+    Upload PDFs using REST API for programmatic integration and automation.
+  </Card>
+  <Card title="CLI Upload" href="/support/docs/smartui-pdf-cli-upload/">
+    Upload PDFs using command-line interface for quick testing and CI/CD integration.
+  </Card>
+  <Card title="Java SDK Upload" href="/support/docs/smartui-pdf-java-sdk/">
+    Upload PDFs using Java SDK for enterprise applications and test automation frameworks.
+  </Card>
+</Columns>
+
+
+<Info>
+NOTE
+
+Only files in `.pdf` format are compatible with this feature.
+</Info>
+
+## Use Cases of Smart PDF Comparison
+
+- **Software Documentation**: Track changes and ensure consistency across document versions.
+- **Legal & Compliance**: Spot differences in contracts or regulatory documents.
+- **Design Validation**: Verify design updates and maintain visual consistency.
+- **Proofreading**: Detect edits between document versions for quick review.
+- **Quality Assurance**: Compare specs or blueprints to uphold standards.
+- **Archiving**: Confirm integrity of records over time by highlighting modifications.

@@ -1,0 +1,47 @@
+---
+title: "Getting Started with Accessibility MCP Server"
+sidebarTitle: "Accessibility MCP Server"
+keywords:
+ [
+  "accessibility mcp server",
+  "accessibility testing",
+  "wcag compliance",
+  "accessibility metrics",
+  "accessibility health"
+]
+---
+import { BrandName } from "/snippets/BrandName.mdx";
+
+<BrandName />’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
+
+Users receive actionable insights that not only helps to pinpoint and report roadblocks within web applications but also help in resolving them.
+
+The server utilizes the Model Context Protocol (MCP) to streamline the integration of AI and assistance, thereby minimizing the effort required to address accessibility concerns.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/2G_U2LYzIao"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## What is Model Context Protocol (MCP)?
+
+The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
+
+## Key Features of Accessibility MCP Server
+
+Here are the key benefits of using Accessibility MCP Server:
+
+- Conducts analysis to identify accessibility issues within the application.
+- Generates a comprehensive accessibility report that can be shared with team members.
+- Provides suggested remediations for addressing accessibility (a11y) issues in locally hosted applications.
+
+## **Available Tools**
+
+Accessibility MCP Server provides following two core tools:
+
+1. `getAccessibilityReport`: Fetches detailed accessibility report for the specified public URL. Users can view this report in their browser to analyse the issues.
+2. `buildLocalAppForAnalysis`:  Builds and serves your local react application via <BrandName /> and identifies accessibility issues in the application.
+3. `AnalyseAppViaTunnel`: Helps test local apps which are already running via <BrandName /> tunnel for accessibility failures.

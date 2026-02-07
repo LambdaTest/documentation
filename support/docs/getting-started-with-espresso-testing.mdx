@@ -1,0 +1,149 @@
+---
+title: "Espresso Testing On LambdaTest"
+sidebarTitle: "Espresso Testing"
+keywords: ['espresso', 'java', 'lambdatest java', 'framework on lambdatest', 'testng', 'app testing', 'real devices', 'espresso testing', 'android testing']
+---
+
+
+Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
+
+In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on LambdaTest, set the desired capabilities for appium testing, and other advanced features of LambdaTest.
+
+## Prerequisites
+
+- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
+
+<Check>
+**TIP**
+
+If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on LambdaTest by using our sample 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample 🔗 [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
+</Check>
+
+## Running Your First Test: A Step-by-Step Guide
+
+### Step 1: Upload Your Application
+
+To begin testing, upload your Android application (.apk file) to LambdaTest's servers. You'll use our **REST API** for this process.
+
+- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
+
+<CodeGroup>
+```bash Linux / MacOS
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'
+```
+
+```powershell Windows
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_ANDROID_APP>"" --form "type=\"espresso-android\""
+```
+</CodeGroup>
+
+<Note>
+**INFO**
+
+- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_ANDROID_APP>`
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+</Note>
+
+### Step 2: Upload Your Test Suite
+
+Upload your Espresso test suite (.apk) file to LambdaTest servers using our REST API.
+
+The following sample cURL command shows how to upload a test suite:
+
+<CodeGroup>
+```bash Linux / MacOS
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'
+```
+
+```powershell Windows
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"espresso-android\""
+```
+</CodeGroup>
+
+<Note>
+**INFO**
+
+- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+</Note>
+
+### Step 3: Executing The Test
+
+- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+
+Take note of the base64 encoded authentication which needs to be added in the next step.
+
+```powershell
+YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY
+```
+
+- Once you have uploaded your app and test suite, you can execute your test by running the following command:
+ 
+<Warning>
+Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+</Warning>
+
+<Tabs>
+  <Tab title="Linux / MacOS">
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app" : "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device" :  ["Galaxy S21 5G-12"],
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build" : "Proverbial-Espresso"
+}'
+```
+  </Tab>
+  <Tab title="Windows">
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
+--header "Authorization: Basic BASIC_AUTH_TOKEN" \
+--header "Content-Type: application/json" \
+--data-raw "{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["Pixel 6-12"],
+  "queueTimeout": 360,
+  "IdleTimeout": 150,
+  "deviceLog": true,
+  "network": false,
+  "build" : "Proverbial-Espresso",
+  "geoLocation" : "FR"
+}"
+```
+  </Tab>
+</Tabs>
+
+### Step 4: View Test Execution
+
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+
+<img loading="lazy" src="/assets/images/espresso/espresso-test.jpeg" alt="Image" width="521" height="268" className="doc_img"/>
+
+## Running Tests in Parallel
+
+You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+  "queueTimeout": 10800,
+  "IdleTimeout": 150,
+  "deviceLog": true,
+  "build" : "Proverbial-Espresso"
+}'
+```

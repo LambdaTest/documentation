@@ -1,0 +1,81 @@
+---
+title: "testRigor Integration"
+sidebarTitle: "testRigor"
+keywords: [ "Lambdatest integration with testrigor", "Lambdatest and testrigor integration", "Lambdatest testrigor" ]
+---
+testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
+
+Lambdatest integration with testRigor enables you to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+
+## Prerequisites
+---
+
+1. Create a Lambdatest account to begin testing your web application. If you do not have an account, [register for free](https://accounts.lambdatest.com/register).
+
+2. Ensure you have a testRigor account.
+
+## Creating Test Suite In testRigor
+---
+
+1. Sign in to your testRigor account.
+
+2. After you log in to testRigor, it will prompt you to create a new test suite. You need to furnish details like test suite name, type of testing (Desktop Web, Mobile Web or Native and Hybrid Mobile), test URL and so on.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/test_suite.png)
+
+3. Once you provide test suite details, click **Create Test Suite** and you will be routed to the testRigor dashboard.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/create_suite.png)
+
+## Integrating Lambdatest With testRigor
+---
+
+1. In the testRigor dashboard, select **Settings** from the left sidebar.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/settings.png)
+
+2. Navigate to the **Integrations** tab.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/integrations.png)
+
+3. Click the *Enable Lambdatest* checkbox and enter your Lambdatest Username and Access Key. You can find your credentials in the [Lambdatest Automation Dashboard](https://automation.lambdatest.com/build). 
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/enable_lt.png)
+
+<Note>
+**In case, you wish to test locally or privately hosted websites, you can select the *Enable Lambdatest Tunnel* checkbox and set your desired Tunnel Name.**
+</Note>
+
+4. Click **Save**.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/save.png)
+
+5. Next, go to the **Multiple browsers** tab.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/browsers.png)
+
+6. Choose your cloud **Provider** as Lambdatest. Select **OS**, **OS Version**, **Browser** and **Browser Version**. Click **Add Browser** and then **Save**. 
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/multi_browsers.png)
+
+## Running Tests With testRigor On The Lambdatest Platform
+---
+
+1. From the testRigor's left sidebar, click **Test Cases**.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/test_case.png)
+
+2. Open the dropdown menu of the test case you want to re-run, and click **Re-test**. 
+
+<Warning>
+The below test case demonstrates Lambdatest Selenium Automation's booking a demo functionality. First, it visits the Lambdatest <a href={`${BRAND_URL}/selenium-automation`}>Selenium Automation</a> website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
+</Warning>
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/expand_dd.png)
+
+3. Now visit the Lambdatest Automation Dashboard to view your test execution results.
+
+ ![Integrating Lambdatest With testRigor](/assets/images/testrigor-integration/results.png)
+
+---
+

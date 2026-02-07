@@ -1,0 +1,54 @@
+---
+title: "Version 2.9.6"
+sidebarTitle: "Version 2.9.6"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+---
+
+## Regex Support in `partialReports` Parameter
+You can now define dynamic or variable folder structures for report generation using **wildcard (`**`)** based regex patterns in the `location` parameter under `partialReports`. This allows HyperExecute to automatically discover and upload test reports from non-static, dynamically generated directories, eliminating the need to manually move reports to a fixed path.
+
+## Problem It Solves
+Previously, HyperExecute required a static path to locate and upload test reports for frameworks like **Cucumber**. Customers generating test data in nested or date-based folders (e.g. reports/2025-07-29/cucumber/) encountered "path not found" errors, breaking the report generation process.
+
+## New Behavior
+HyperExecute now supports regex-style directory matching (using **) to recursively search for report files in nested folders. This flexibility ensures that test reports are picked up correctly even if the folder structure changes between runs.
+
+## Supported Syntax Example
+
+```yaml
+// hyperexecute.yaml
+partialReports:
+  location: reports/**/cucumber/
+  frameworkName: cucumber
+  type: json
+```
+
+This will successfully match paths like:
+
+```yaml
+reports/2025-07-29/cucumber/
+reports/staging/run_001/cucumber/
+reports/builds/test_42/cucumber/
+```
+
+Your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+
+<Note>
+```javascript
+// Testrunner.java
+plugin = {
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+}
+```
+
+You can configure your hyperexecute.yaml as:
+
+```yaml
+// hyperexecute.yaml
+partialReports:
+  location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
+```
+</Note>

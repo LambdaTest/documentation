@@ -1,0 +1,79 @@
+---
+title: "Audio Injection on iOS Real Devices"
+sidebarTitle: "Audio Injection"
+keywords: ['audio injection', 'app test automation', 'microphone input', 'voice commands', 'audio recording', 'lambdatest audio testing', 'framework on lambdatest', 'app testing appium', 'app testing', 'real devices']
+---
+
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+
+<div>
+<RealDeviceTag value="Real Device" />
+</div> 
+Audio Injection allows you to inject microphone input on real iOS devices in the LambdaTest Real Device Cloud.  
+Use it to test audio-driven flows such as audio verification and in-app recording—without manual mic input.
+
+## Key Use Cases
+- In-app audio recording  
+- Audio-based verification/KYC flows  
+
+
+
+<Warning>
+This feature is currently in Beta. We are actively refining it based on real-world usage and feedback.
+</Warning>
+
+---
+## Supported APIs & Devices
+- **API:** [AVAudioRecorder](https://developer.apple.com/documentation/avfaudio/avaudiorecorder)  
+- **Supported Devices:** iOS **14 and above** 
+
+---
+
+## Step 1: Upload Audio File
+**Supported formats:** `.mp3`, `.wav`  
+**Max size:** 15 MB  , 100 MB respectively
+
+```bash
+curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload"   -F "media_file=@/path/to/test.wav"   -F "type=audio"   -F "custom_id=SampleAudio"
+```
+
+**Response**
+```json
+{
+  "media_url": "lt://MEDIAID",
+  "status": "success"
+}
+```
+
+---
+
+## Step 2: Enable Audio Injection via Capabilities
+
+`media` can be set here or injected later in the test.
+
+**Python**
+```python
+desired_caps = {
+  "enableAudioInjection": True,
+  "media": "lt://MEDIA123456789"  # optional
+}
+```
+
+---
+
+## Step 3: Control Audio in Test
+Inject the uploaded audio file from LambdaTest into the recorder or app when you are at the dedicated space for microphone input.
+
+**Inject File**
+```python
+driver.execute_script("lambda-audio-injection=lt://MEDIA123...")
+```
+
+<Info>
+**NOTE**
+
+The injected audio can come from a standalone audio file **or** from the audio track of a recorded video.
+</Info>
+
+---

@@ -1,0 +1,385 @@
+openapi: 3.0.0
+info:
+  title: LambdaTest API Documentation
+  version: 1.0.1
+servers:
+#  description: SwaggerHub API Auto Mocking
+- url: 'https://api.lambdatest.com/automation/api/v1/cypress'
+- url: 'https://eu-api.lambdatest.com/automation/api/v1/cypress'
+paths:
+  /report/{test_id}:
+    get:
+        tags:
+            - Cypress
+        summary: Zipped report for a cypress test
+        description: To fetch zipped report for a cypress test.
+        operationId: cypressReport
+        parameters:
+            -   name: test_id
+                in: path
+                description: get cypress report based on test id
+                required: true
+                style: simple
+                explode: false
+                schema:
+                    type: string
+        responses:
+            200:
+                description: successful operation
+                content:
+                    application/octet-stream:
+                        schema:
+                            type: string
+                            format: binary
+            400:
+                description: test id not found
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/SessionNotFound'
+            401:
+                description: Access denied. Auth error.
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/AccessDenied'
+        security:
+            -   basicAuth: [ ]	
+  /log/{test_id}/command:	
+    get:	
+      tags:	
+      - Cypress	
+      summary: Command logs of a cypress test id	
+      description: To fetch all the executed commands of a cypress test id in plain json text.	
+      operationId: cypressCommandLog	
+      parameters:	
+      - name: test_id	
+        in: path	
+        description: Test ID	
+        required: true	
+        style: simple	
+        explode: false	
+        schema:	
+          type: string	
+      responses:	
+        200:	
+          description: successful operation	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/CypressCommandLogResponse'	
+        400:	
+          description: session id not found	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/SessionNotFound'	
+        401:	
+          description: Access denied. Auth error.	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/AccessDenied'	
+      security:	
+      - basicAuth: []  	
+  /log/{test_id}/console:	
+    get:	
+      tags:	
+      - Cypress	
+      summary: Console log of a cypress test id	
+      description: To fetch cypress console log that contains console errors thrown by application during a test session in plain json text.	
+      operationId: cypressConsoleLog	
+      parameters:	
+      - name: test_id	
+        in: path	
+        description: Test ID	
+        required: true	
+        style: simple	
+        explode: false	
+        schema:	
+          type: string	
+      responses:	
+        200:	
+          description: successful operation	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/CypressConsoleLogResponse'	
+        400:	
+          description: session id not found	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/SessionNotFound'	
+        401:	
+          description: Access denied. Auth error.	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/AccessDenied'	
+      security:	
+      - basicAuth: []	
+  /log/{test_id}/network:	
+    get:	
+      tags:	
+      - Cypress	
+      summary: Network log of a Cypress test id	
+      description: To fetch Network log that contains all the requested urls of a Cypress test id in plain json text.	
+      operationId: cypressNetworkLog
+      parameters:	
+      - name: test_id	
+        in: path	
+        description: get logs based on test id	
+        required: true	
+        style: simple	
+        explode: false	
+        schema:	
+          type: string	
+      responses:	
+        200:	
+          description: successful operation	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/CypressNetworkLogResponse'	
+        400:	
+          description: session id not found	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/SessionNotFound'	
+        401:	
+          description: Access denied. Auth error.	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/AccessDenied'	
+      security:	
+      - basicAuth: []	
+  /mochawesome/enhanced/{test_id}:
+    get:	
+      tags:	
+      - Cypress	
+      summary: Enhanced Mochawesome JSON Report
+      description: To fetch mochawesome json report for a test with additional key(video url, screenshot url).	
+      operationId: cypressMochawesomeData	
+      parameters:	
+      - name: test_id	
+        in: path	
+        description: get mochawesome json report for a test id	
+        required: true	
+        style: simple	
+        explode: false	
+        schema:	
+          type: string	
+      responses:	
+        200:	
+          description: successful operation	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/CypressMochawesomeResponse'	
+        400:	
+          description: session id not found	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/SessionNotFound'	
+        401:	
+          description: Access denied. Auth error.	
+          content:	
+            application/json:	
+              schema:	
+                $ref: '#/components/schemas/AccessDenied'	
+      security:	
+      - basicAuth: []	
+
+components:
+  schemas:
+    CypressCommandLogResponse:
+      required:
+      - data
+      - message
+      - status 
+      properties:
+        data:
+          $ref: '#/components/schemas/CypressCommandLogResponse_data' 
+        message:
+          type: string
+          example: Retrieve logs list was successful
+        status:
+          type: string
+          example: success
+    CypressConsoleLogResponse:
+      required:
+      - data
+      - message
+      - status  
+      properties:
+        data:
+           type: string
+           example: "{...}"
+        message:
+          type: string
+          example: Retrieve logs list was successful
+        status:
+          type: string
+          example: success
+    CypressNetworkLogResponse:
+      required:
+      - data
+      - message
+      - status 
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/CypressNetworkLogResponse_data'
+        message:
+          type: string
+          example: Retrieve logs list was successful
+        status:
+          type: string
+          example: success
+    CypressMochawesomeResponse:
+      required:
+      - stats
+      - results
+      - meta
+      properties:
+        stats:
+          type: string
+          example: "{...}"
+          # items:
+          #   $ref: "{...}"
+        results:
+          type: array
+          example: "[{...}, {...}]"
+        meta:
+          type: string
+          example: "{...}"
+    CypressCommandLogResponse_data:
+      type: object
+      properties:
+        spec:
+          type: string
+          example: examples/actions.spec.js
+        suites:
+          type: array
+          items:
+            $ref: '#/components/schemas/CypressCommandLogResponse_suiteData'   
+    CypressCommandLogResponse_suiteData:
+      type: object
+      properties:
+        tests:
+          type: array
+          items:
+            $ref: '#/components/schemas/CypressCommandLogResponse_Value' 
+    CypressCommandLogResponse_Value:
+      type: object
+      properties:
+        code:
+          type: string
+          example: https://on.cypress.io/cy.get...
+        context:
+          type: string
+          example: Null
+        duration:
+          type: number
+          example: 1782
+        err:
+          type: object
+          example: {}
+        fail:
+          type: boolean
+          example: true
+        fullTitle:
+          type: string
+          example: Actions .blur() - blur off a DOM element.
+        isHook:
+          type: boolean
+          example: false
+        parentUUID:
+          type: string
+          example: ff9d286c-2d74-4241-8554-b5fe32a4d7e2
+        pass:
+          type: boolean
+          example: true
+        pending:
+          type: boolean
+          example: true
+        skipped:
+          type: boolean
+          example: true
+        speed:
+          type: string
+          example: medium
+        state:
+          type: string
+          example: passed
+        timedOut:
+          type: string
+          example: Null
+        title:
+          type: string
+          example: blur off a DOM element
+        uuid:
+          type: string
+          example: 0bbd4e33-d38c-44ac-acd0-702142c10594
+    CypressNetworkLogResponse_data:
+      type: object
+      properties:
+        Value:
+          type: object
+          properties:
+            _id:
+              type: string
+              example: e2ac17b1f2ef625a
+            cache:
+              type: object
+            request:
+              type: object
+            response:
+              type: object
+            startedDateTime:
+              type: string
+              example: "2022-04-04T13:47:40.853493Z"
+            time:
+              type: number
+              example: 0
+            timings:
+              type: object
+        logType:
+          type: string
+          example: network
+        order:
+          type: number
+          example: 5
+        testID:
+          type: string
+          example: 5TSTJ-LIPQM-VDVJH-CT129   
+    SessionNotFound:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Either resource not found or already deleted
+        status:
+          type: string
+          example: fail
+    SessionForbidden:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Forbidden! Operation not allowed.
+        status:
+          type: string
+          example: fail
+    AccessDenied:
+      type: string
+      example: 'HTTP Basic: Access denied.'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

@@ -1,0 +1,44 @@
+---
+title: "Ignore Unnecessary Files in your Payload"
+sidebarTitle: "Ignoring Files"
+keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
+---
+
+
+When you trigger your job, [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) creates a zip of your test scripts before sending it for execution on the HyperExecute Platform.
+
+If you want to ignore any un-necessary files during this process, you can use the `.hyperexecuteignore` file. The HyperExecuteIgnore file serves as a configuration file to specify files that should be excluded when HyperExecute prepares a zipped archive of your test scripts. This functionality is similar to the `.gitignore` file used in Git version control.
+
+## Benefits
+Excluding unnecessary files from the archive offers several advantages:
+
+- **Improved Security and Privacy :** HyperExecuteIgnore allows you to exclude sensitive information like log files, hidden files, or any other private data from the test archive. This helps maintain security and protects confidential information during test execution.
+- **Reduced Archive Size :** By omitting irrelevant files, the zipped archive containing your test scripts becomes smaller. This is beneficial for storage and transmission purposes.
+- **Faster Testing Process :** A smaller archive size can potentially lead to a faster test execution process, as less 
+data needs to be transferred and uploaded to the testing environment.
+
+## How to write `.hyperexecuteignore`  file?
+
+The HyperExecuteIgnore file follows a format similar to the .gitignore file used with Git. It allows the use of wildcards to exclude patterns of files based on specific naming conventions.
+
+```bash
+examplename
+hyperexecute.exe
+*.type
+examplename/
+```
+The above file would make sure that following are excluded while the zip is created:
+
+1. **examplename**: All files and folder with the name `examplename`.
+2. **examplename.type**: All files with the name `examplename` and format `type`.
+3. ***.type**: All files of the format `type`.
+4. **examplename/**: All files and folders under the parent folder called `examplename`.
+
+<Note>
+**INFO**
+
+- By leveraging `.hyperexecuteignore` file, you can achieve similar functionality to `.gitignore` and streamline the test execution process by keeping the archive size minimal.
+
+- If both files are present in the directory then the files listed in the `.gitignore` only are ignored. The items listed in `.gitignore` file take **precedence** over the items listed under `.hyperexecuteignore`.
+</Note>
+

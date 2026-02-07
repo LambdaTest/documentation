@@ -1,0 +1,23 @@
+---
+title: "White-listing Proxy With TestMu AI"
+sidebarTitle: "White Listing Proxy With TestMu AI"
+keywords: ['White-listing Proxy With TestMu AI']
+
+---
+
+
+* * *
+
+If you are accessing the internet through a firewall-protected network then you may face an issue in connecting with LambdaTest. You may encounter the below error messages:
+
+In such scenarios, you may need to whitelist LambdaTest domain. Whitelisting is a process which conveys your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain trusted by you. Whitelisting is a security procedure to help users access a website or web-app which is considered to be non-malicious by their network security team.
+
+You can relay the below domain to your network security team, asking them to whitelist it so you could connect with LambdaTest from your firewall protected network.
+
+| PROTOCOL | PORTS       | SOURCE                 | DESTINATION      |
+|----------|-------------|------------------------|------------------|
+| TCP      | 80, 443, 22 | All LambdaTest Clients | *.lambdatest.com |
+
+<Note>
+In case of any queries or special request related to whitelisting, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **shout**</span>.
+</Note>

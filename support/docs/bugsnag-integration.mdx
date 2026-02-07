@@ -1,0 +1,103 @@
+---
+title: "Bugsnag Integration"
+sidebarTitle: "Bugsnag"
+keywords: [ "Lambdatest integration with Bugsnag", "Lambdatest and Bugsnag Integration", "Bugsnag Integration" ]
+---
+***
+
+Bugsnag is an error-monitoring tool that allows your developers to quickly find, prioritize, and reproduce errors. Individual crashes are gathered together by underlying cause and shown as discrete errors in Bugsnag to allow for easy prioritizing; the error inbox can be sorted by event count, impacted users, error severity, or it can be limited to provide a list of errors matching a specified search parameter. 
+
+The Lambdatest and Bugsnag integration allows you to perform one-click bug logging from Lambdatest to your Bugsnag projects while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps).
+
+## Integrating Bugsnag With Lambdatest
+***
+
+1. Login to your Lambdatest account. Make sure you have admin or user level access before you begin configuring integrations.
+
+2. From the left menu, select **Integrations** then **Bugsnag**.
+
+![Image](/assets/images/bugsnag-integration/select-bugsnag.webp)
+
+3. Enter your **Bugsnag Auth Token**. 
+
+![Image](/assets/images/bugsnag-integration/enter-auth.webp)
+
+<Warning>
+*   **What is a Bugsnag Auth Token?**<br/>
+</Warning>
+The Bugsnag Auth token gives you access to information about your organization, projects, issues, and more, allowing you to create custom integrations with your Bugsnag data.
+
+### Getting the Bugsnag Token
+***
+
+1. Sign in to your Bugsnag account. Click on the Profile avatar and then **My account settings**. 
+
+![Image](/assets/images/bugsnag-integration/account-settings.webp)
+
+2. Click on **Personal auth tokens**.
+
+![Image](/assets/images/bugsnag-integration/personal-authtokens.webp)
+
+3. To generate token, click on **Generate New Token**.
+
+![Image](/assets/images/bugsnag-integration/create-auth.webp)
+
+4. Enter the Bugsnag Auth token name and press **Generate Token**.
+
+![Image](/assets/images/bugsnag-integration/generate-auth.webp)
+
+5. Copy the Bugsnag Auth API Token.
+
+![Image](/assets/images/bugsnag-integration/copy-auth.webp)
+
+6. Paste the copied Bugsnag Auth Token into the provided field and press **Install**.
+
+![Image](/assets/images/bugsnag-integration/install-bugsnag.webp)
+
+The Bugsnag will be integrated with your Lambdatest account.
+
+## One-Click Bug Logging With Bugsnag
+***
+
+1. Choose **Real Time Testing** tab from the left menu.
+
+2. Specify the test URL, then select the browser, browser versions, operating system, and click **START**.
+
+![Image](/assets/images/bugsnag-integration/configuration.webp)
+
+A cloud-based virtual machine will be launched, providing you to conduct browser testing of websites and web apps.
+
+3. If you discover an issue while testing the websites, click the Bug icon to grab a screenshot. 
+
+![Image](/assets/images/bugsnag-integration/spider-icon.webp)
+
+4. Once you have grabbed the screenshot, you can use the in-built image editor tools to annotate issues or tasks. After annotating the issues (or bugs), click on **Mark As Bug**.
+
+![Image](/assets/images/bugsnag-integration/mark-as-bug.webp)
+
+5. A Bugsnag ticket will be opened. Enter information such as Organization, Project, Release, Summary, and Description. Now, select **Create Issue**.
+
+![Image](/assets/images/bugsnag-integration/bugsnag-ticket.webp)
+
+Your bugs will be logged right away.
+
+6. Open the Bugsnag dashboard, you'll find the marked issues.
+
+![Image](/assets/images/bugsnag-integration/logged-issues.webp)
+
+7. Select the **Exceptions** tab and you will notice the data you submitted via Lambdatest would already be presented in it. Lambdatest attaches test environment data and related screenshots to tickets automatically.
+
+![Image](/assets/images/bugsnag-integration/bug-details.webp)
+
+## Uninstalling The Bugsnag Integration
+***
+
+1. Login to your Lambdatest account and visit Integrations from the left menu.
+
+2. Navigate to 'My Integrations'and click on **REMOVE** under the Bugsnag block.
+
+![Image](/assets/images/bugsnag-integration/remove-bugsnag.webp)
+
+The Bugsnag integration will be uninstalled.
+
+<Warning>For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.</Warning>

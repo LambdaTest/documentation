@@ -1,0 +1,106 @@
+---
+title: "Puppeteer Testing With Jest"
+sidebarTitle: "Integrate With Jest"
+description: "Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions."
+---
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+LambdaTest allows you to run Puppeteer tests with Jest on a browser farm of 40+ real browsers and operating system combinations.
+
+This guide will cover the basics of getting started with Puppeteer testing with Jest on the LambdaTest platform.
+
+## Prerequisites
+
+<Note>
+Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<GitHubButton url="https://github.com/LambdaTest/puppeteer-sample" />
+</Note>
+
+<Steps>
+<Step>
+Clone the LambdaTest-Puppeteer repository on your system.
+</Step>
+<Step>
+Install the npm dependencies.
+
+```bash lines
+npm install
+```
+</Step>
+<Step>
+In order to run your Puppeteer tests with Jest, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+<Frame>
+![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
+</Frame>
+</Step>
+</Steps>
+<CodeGroup>
+```bash lines Windows
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+```bash lines macOS/Linux
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+</CodeGroup>
+
+## Running Tests Using Jest
+
+<Warning>
+**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
+</Warning>
+
+<Steps>
+<Step>
+To run the Puppeteer tests using Jest on LambdaTest, you need make some tweaks to the `jest-puppeteer.config.js` file.
+
+```javascript 
+const caps_chrome = {
+	browserName    : 'Chrome',
+	browserVersion : 'latest',
+	'LT:Options'   : {
+		platform   : 'Windows 10',
+		build      : 'Sample Puppeteer-Jest',
+		name       : 'Puppeteer-jest test on Chrome',
+		resolution : '1366x768',
+		user       : process.env.LT_USERNAME,
+		accessKey  : process.env.LT_USER_KEY,
+		network    : true
+	}
+};
+
+const caps_edge = {
+	browserName    : 'MicrosoftEdge',
+	browserVersion : 'latest',
+	'LT:Options'   : {
+		platform   : 'Windows 10',
+		build      : 'Sample Puppeteer-Jest',
+		name       : 'Puppeteer-jest test on Edge',
+		resolution : '1366x768',
+		user       : process.env.LT_USERNAME,
+		accessKey  : process.env.LT_USER_KEY,
+		network    : true
+	}
+};
+
+module.exports = {
+	connect : {
+		browserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(
+			JSON.stringify(caps_chrome)
+		)}`
+	}
+};
+```
+</Step>
+<Step>
+Pass the below command to run the test.
+
+```bash lines
+npm run test
+```
+</Step>
+<Step>
+Visit the LambdaTest Automation Dashboard to see the results of your Puppeteer Jest tests.
+</Step>
+</Steps>

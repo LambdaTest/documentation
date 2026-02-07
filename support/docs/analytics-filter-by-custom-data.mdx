@@ -1,0 +1,58 @@
+---
+title: "Filter by Custom Data"
+sidebarTitle: "Filter by Custom Data"
+keywords: ['analytics', 'custom data', 'filter']
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+
+Ability to sent any custom `key` and `value` pair to <BrandName /> platform and then filter the test cases based on the custom data. This feature is available for `Web Automation` and `App Automation` coming soon.
+
+## Prerequisites For Insights:
+
+1. You should have an active <BrandName /> account.
+2. You should han active subscription plan with Web Automation.
+3. You should have executed at least one test on the <BrandName /> Web Automation platform.
+
+## Capture Custom Data Filter for Insights in Web Automation <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] ml-[0.5em] align-middle inline-block text-xs">BETA</span>
+
+### Update your existing test capabilities
+
+You can use the `customData` capability to send custom data to the <BrandName /> platform. The custom data will be displayed in the `Builds Comparison Insights` module. The custom data will be displayed in the `Custom Data` Filter. You can filter the test cases based on the custom data.
+
+```js highlight={6-7}
+{
+  "capabilities": {
+    "browserName": "chrome",
+    "version": "latest",
+    "platform": "Windows 10",
+    "customData": {
+      "key": "value"
+    }
+  }
+}
+```
+
+
+## How To Access Custom Filters?
+
+<Info>
+**NOTE**
+
+Currently, the feature is in the <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">BETA</span> phase and will be supported for Build Comparison for Web Automation.
+</Info>
+
+1. Go to the `Insights` tab on the left navigation bar and click on the `Builds Comparison`.
+2. Select the `Build` from the list to drill-down.
+3. Now, search for `Test Case` widgets in the `Web Automation, App Automation & HyperExecute` products.
+4. Add the widgets to the dashboard by clicking on the `Add Widget` button.
+
+
+## Custom Filters Use Cases
+
+1. You can send the `key` and `value` pair to the <BrandName /> platform.
+2. You can filter the test cases based on the custom data.
+
+
+

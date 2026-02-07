@@ -1,0 +1,23 @@
+---
+title: "Version 2.1.0"
+keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+
+---
+
+import { BrandName } from '/snippets/BrandName.mdx';
+
+## Clone your Private Repositories via Tunnel
+
+You can now clone the private repositories from your Git provider that are hosted on a private network or behind a firewall via tunnel.
+
+After specifying the details of your repository, you need to set the useInCodeSetUp flag to true as shown below.
+
+```bash
+tunnelOpts:
+  useInCodeSetUp: true
+## this flag is mandatory to pass to enable cloning via tunnel
+```
+
+<Note>
+Refer to the detailed documentation on [how to clone your private repositories via tunnel](/support/docs/hyperexecute-how-to-configure-tunnel/#clone-a-repository-via-tunnel)
+</Note>
