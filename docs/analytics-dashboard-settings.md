@@ -49,12 +49,15 @@ The Analytics Dashboard Settings page provides a comprehensive set of controls t
 Keep your team informed about dashboard activity and test results by configuring email notifications.
 
 - **Enable/Disable Notifications:** Use the toggle to activate or deactivate email notifications for the dashboard. When disabled, no email updates will be sent.
-- **Notification Frequency:** Choose how often you want to receive email updates. Options typically include Daily, Weekly, or Custom intervals, allowing you to match your team's workflow.
+- **Notification Frequency:** Choose how often you want to receive email updates. Options include Daily, Weekly, or Custom intervals, allowing you to match your team's workflow. For custom intervals, enter a value between 1 and 60 days.
+- **Delivery Time & Timezone:** Set a specific delivery time and timezone for your scheduled reports. This allows teams in different time zones to receive reports at a time that fits their workflow. By default, reports are delivered at 12:00 PM IST.
 - **Date Range:** Select the default date range or specify a custom number of days to include in each notification. For example, setting a custom range to 7 will include data from the last 7 days in each email.
 - **Add Recipients:** Enter one or more email addresses to receive notifications. Click **Add** after each address to include multiple recipients. This is useful for keeping stakeholders, QA leads, or team members in the loop.
 - **Update & Save Preferences:** After configuring your preferences, click **Update** to save changes. Your notification settings will take effect immediately.
 
 > **Tip:** Use custom date ranges and recipient lists to tailor notifications for different teams or reporting needs.
+
+For a detailed guide on scheduling reports with custom delivery times, see [Report Scheduling](/docs/analytics-report-scheduling/).
 
 ---
 
