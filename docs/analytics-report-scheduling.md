@@ -2,7 +2,7 @@
 id: analytics-report-scheduling
 title: Schedule Analytics Widget Reports
 sidebar_label: Report Scheduling
-description: Customize the delivery time for your analytics widget reports. Schedule reports at your preferred time and timezone for timely business insights.
+description: Customize the delivery time for your analytics widget reports. Schedule reports at your preferred time for timely business insights.
 keywords:
   - analytics
   - report scheduling
@@ -41,15 +41,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Analytics report scheduling allows you to customize the delivery time for your dashboard widget reports. Instead of receiving reports at a fixed default time, you can choose a specific time and timezone that aligns with your team's workflow.
+Analytics report scheduling allows you to customize the delivery time for your dashboard widget reports. Instead of receiving reports at a fixed default time, you can choose a specific time that aligns with your team's workflow.
 
 ## Overview
 
-By default, analytics widget reports are delivered at 12:00 PM IST. With the customizable scheduling feature, you can:
+With the customizable scheduling feature, you can:
 
-- Set a preferred delivery time for each dashboard's reports.
-- Choose a timezone that matches your business location.
-- Configure notification frequency (daily, weekly, or custom intervals).
+- Set a preferred delivery time for each dashboard's email reports.
+- Configure notification frequency (Daily, Weekly, or Monthly).
+- Choose the data range included in each report.
 - Manage email recipients for scheduled reports.
 
 ## Prerequisites
@@ -62,35 +62,36 @@ By default, analytics widget reports are delivered at 12:00 PM IST. With the cus
 
 ### Step 1: Open Dashboard Settings
 
-Navigate to your analytics dashboard and click the **Settings** gear icon in the upper-right corner.
+1. Navigate to your analytics dashboard.
+2. Click the **Settings** icon in the dashboard toolbar to open the **Dashboard Settings** panel.
 
 ### Step 2: Enable Email Notifications
 
-In the settings panel, toggle the **Email Notification** switch to enable notifications for the dashboard.
+In the **Dashboard Settings** panel, expand the **Email Notifications** section and toggle the switch to enable notifications for the dashboard.
 
 ### Step 3: Set the Delivery Schedule
 
-1. Under **Notification Frequency**, select your preferred schedule:
+1. Under **Frequency**, select your preferred schedule from the dropdown:
    - **Daily** — Receive reports every day at your chosen time.
-   - **Weekly** — Receive reports once a week on your selected day and time.
-   - **Custom** — Define a custom interval by specifying the number of days between reports. Enter a value between 1 and 60 days.
+   - **Weekly** — Receive reports once a week.
+   - **Monthly** — Receive reports once a month.
 
-2. Select your preferred **delivery time** from the time picker. This is the time at which the report will be generated and sent to the configured recipients.
+2. Under **Time**, select the hour from the dropdown (e.g., `9:00`).
 
-3. Choose the **timezone** that corresponds to your business location. The report will be delivered at the selected time in the chosen timezone.
+3. Under **Period**, select **AM** or **PM** from the dropdown.
 
 ### Step 4: Configure the Date Range
 
 Select the date range for the data included in each report:
 
 - **Default** — Uses the platform's default date range.
-- **Custom** — Specify a custom number of days. For example, setting this to 7 includes data from the last 7 days in each report.
+- **Custom** — Specify a custom number of days. For example, setting this to `7` includes data from the last 7 days in each report.
 
 ### Step 5: Add Recipients
 
-1. Enter the email addresses of the users who should receive the scheduled reports.
-2. Click **Add** after each email address to include it in the recipient list.
-3. You can add multiple recipients to ensure all stakeholders receive the report.
+1. Under **Emails**, enter the email address in the **Enter Email address** field.
+2. Click **+ Add** to include the recipient.
+3. Repeat to add multiple recipients.
 
 ### Step 6: Save Your Settings
 
@@ -103,8 +104,8 @@ Each dashboard has its own independent scheduling settings. You can configure di
 ## Update an Existing Schedule
 
 1. Navigate to the dashboard whose schedule you want to modify.
-2. Click the **Settings** gear icon.
-3. Adjust the notification frequency, delivery time, timezone, date range, or recipients as needed.
+2. Open the **Dashboard Settings** panel.
+3. Adjust the frequency, time, period, date range, or recipients as needed.
 4. Click **Update** to save your changes.
 
 :::note
@@ -115,20 +116,19 @@ When you update the delivery time for a dashboard, the new schedule applies only
 
 To stop receiving scheduled reports for a dashboard:
 
-1. Open the dashboard's **Settings**.
-2. Toggle the **Email Notification** switch to the off position.
+1. Open the **Dashboard Settings** panel.
+2. Toggle the **Email Notifications** switch to the off position.
 3. Click **Update** to confirm.
 
-The notification preferences (time, timezone, recipients) are preserved so you can re-enable them later without reconfiguring.
+The notification preferences (time, recipients) are preserved so you can re-enable them later without reconfiguring.
 
 ## Common Issues
 
 | Issue | Solution |
 |---|---|
 | Email notification toggle appears disabled | Ensure you have saved the dashboard after creation. Try refreshing the page and toggling again. |
-| Custom frequency input accepts invalid values | Only numeric values between 1 and 60 are allowed. Alphabetical characters are not accepted. |
-| Delivery time reverts after clicking Update | Verify you selected the time before clicking Update. If the issue persists, refresh the page and try again. |
-| Report not delivered at the scheduled time | Confirm the correct timezone is selected. Reports are sent at the configured time in the chosen timezone. |
+| Delivery time reverts after clicking Update | Verify you selected the time and period before clicking Update. If the issue persists, refresh the page and try again. |
+| Email toggle is not clickable when Custom date range is selected | This is a known issue. Switch to Default, enable the toggle, then switch back to Custom. |
 
 ## Related Docs
 
