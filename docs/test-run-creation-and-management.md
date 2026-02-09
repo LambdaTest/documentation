@@ -81,7 +81,7 @@ Use descriptive names to easily identify test runs later.
 ## 3. Saving and Managing Test Runs
 ### Step 6: Finalize the Test Run
 - Click Save Test Run to finalize the setup.
-- View the created test run and its associated test cases in the main dashboard.
+- View the created test run and its associated test instances in the dashboard.
 
 <img loading="lazy" src={require('../assets/images/test-run/6.png').default} alt="Real "  className="doc_img"/>
 
@@ -98,9 +98,10 @@ Use descriptive names to easily identify test runs later.
 
 <img loading="lazy" src={require('../assets/images/test-run/8.png').default} alt="Real "  className="doc_img"/>
 
-## 4. Enhancing Test Runs with Additional Context
+## 4. Enhancing Test Runs with Test Evidences
 ### Step 9: Adding Remarks and Attachments
 - Add Remarks or actual outcomes to enhance test instance execution details.
+- You can add remarks and attachments at both the individual test step level and the overall test instance level.
 
 <img loading="lazy" src={require('../assets/images/test-run/9.png').default} alt="Real "  className="doc_img"/>
 
@@ -109,26 +110,42 @@ Use descriptive names to easily identify test runs later.
 <img loading="lazy" src={require('../assets/images/test-run/10.png').default} alt="Real "  className="doc_img"/>
 
 ### Step 10: Editing Test Runs
-- Modify an existing test run by adding new test cases or removing unnecessary ones.
-- Access the test run’s options to make edits.
+- You can edit an existing test run to add new test cases or remove unnecessary ones. Click the **edit** icon to make changes.
+
+:::note
+KaneAI test runs can only be edited if they have not been executed.
+:::
 
 <img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Real "  className="doc_img"/>
 
-## 5. Executing and Archiving Test Runs
-### Step 11: Execute on <BrandName /> Cloud
-- Click the Play Icon to execute test instances on the <BrandName /> Cloud.
+## 5. Execute Test Runs on <BrandName /> Cloud
+
+Execute your manual test instances directly on <BrandName /> Cloud — no local setup or environment configuration required. This allows your team to run manual tests on real browsers and devices hosted on the cloud, making it one of the most efficient ways to validate your test cases.
+
+**To execute a test run:**
+
+1. Click the **Play** icon on any test instance to launch execution on <BrandName /> Cloud.
+
 <img loading="lazy" src={require('../assets/images/test-run/11.png').default} alt="Real "  className="doc_img"/>
 
-- During execution, manually update the status of test cases and test steps as needed.
+2. During execution, update the status of individual test cases and test steps in real time as you verify each one.
+
 <img loading="lazy" src={require('../assets/images/test-run/14.png').default} alt="Real "  className="doc_img"/>
 
-### Step 12: Duplicate or Archive Test Runs
-- Use the three-dot menu on a test run to Duplicate or Archive the run.
-- Archiving helps maintain a clean workspace by storing completed test runs separately.
+:::tip Why execute on the Cloud?
+Running test instances on <BrandName /> Cloud gives you access to a wide range of real browsers, devices, and OS combinations — without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
+:::
+
+## 6. Test Run Options
+
+You can manage your test runs using the options available in the **three-dot menu** on each test run. The following actions are available:
+
+| Action | Description |
+|---|---|
+| **Edit** | Modify the test run by adding or removing test cases. |
+| **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
+| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
+| **Delete** | Permanently remove a test run that is no longer needed. |
 
 <img loading="lazy" src={require('../assets/images/test-run/13.png').default} alt="Real "  className="doc_img"/>
 
-## Video Explanation
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/test-run/output.mp4').default} type="video/mp4" />
-</video>
