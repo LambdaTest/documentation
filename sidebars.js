@@ -1995,6 +1995,43 @@ module.exports = {
         ],
       },
       {
+        type: "category",
+        collapsed: true,
+        label: "Checklists",
+        items: [
+          {
+            type: "doc",
+            label: "Web – What We Cover",
+            id: "accessibility-web-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "Web – What We Do Not Cover",
+            id: "accessibility-web-what-we-do-not-cover",
+          },
+          {
+            type: "doc",
+            label: "iOS – What We Cover",
+            id: "accessibility-ios-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "iOS – What We Do Not Cover",
+            id: "accessibility-ios-what-we-do-not-cover",
+          },
+          {
+            type: "doc",
+            label: "Android – What We Cover",
+            id: "accessibility-android-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "Android – What We Do Not Cover",
+            id: "accessibility-android-what-we-do-not-cover",
+          },
+        ],
+      },
+      {
         type: "doc",
         label: "Screen Reader",
         id: "screen-reader-on-accessibility",
@@ -3409,6 +3446,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Audit & Activity Logs",
+            id: "smartui-audit-logs",
+          },
+          {
+            type: "doc",
             label: "Smart Comments",
             id: "smartui-smart-comments",
           },
@@ -3717,6 +3759,11 @@ module.exports = {
                     collapsed: true,
                     label: "SmartUI Hooks",
                     items: [
+                      {
+                        type: "doc",
+                        label: "SmartUI Capture Onboarding",
+                        id: "hyperexecute-smart-ui-capture-onboarding",
+                      },
                       {
                         type: "doc",
                         label: "Selenium",

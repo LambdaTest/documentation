@@ -97,7 +97,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 :::info
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`
+- Provide the path of your iOS application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 :::
 
@@ -131,13 +131,13 @@ The following sample cURL command shows how to upload a test suite:
 </Tabs>
 
 :::info
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
+- Provide the path of your iOS test suite in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 :::
 
 ### Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your XCUITest automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
