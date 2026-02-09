@@ -3883,6 +3883,7 @@ module.exports = {
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
         "analytics-dashboard-settings",
+        "analytics-report-scheduling",
       ],
     },
     {
