@@ -128,7 +128,6 @@ The notification preferences (time, recipients) are preserved so you can re-enab
 |---|---|
 | Email notification toggle appears disabled | Ensure you have saved the dashboard after creation. Try refreshing the page and toggling again. |
 | Delivery time reverts after clicking Update | Verify you selected the time and period before clicking Update. If the issue persists, refresh the page and try again. |
-| Email toggle is not clickable when Custom date range is selected | This is a known issue. Switch to Default, enable the toggle, then switch back to Custom. |
 
 ## Related Docs
 
