@@ -55,14 +55,14 @@ With the customizable scheduling feature, you can:
 ## Prerequisites
 
 - You must be logged in to your <BrandName /> account.
-- You must have at least one [analytics dashboard](/docs/analytics-create-dashboard/) created.
+- You must have at least one [Insights dashboard](/docs/analytics-create-dashboard/) created.
 - You must be the dashboard creator or an admin user to modify scheduling settings.
 
 ## Schedule a Report
 
 ### Step 1: Open Dashboard Settings
 
-1. Navigate to your analytics dashboard.
+1. Navigate to your Insights dashboard.
 2. Click the **Settings** icon in the dashboard toolbar to open the **Dashboard Settings** panel.
 
 ### Step 2: Enable Email Notifications
