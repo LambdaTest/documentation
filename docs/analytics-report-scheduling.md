@@ -55,14 +55,14 @@ With the customizable scheduling feature, you can:
 ## Prerequisites
 
 - You must be logged in to your <BrandName /> account.
-- You must have at least one [analytics dashboard](/docs/analytics-create-dashboard/) created.
+- You must have at least one [Insights dashboard](/docs/analytics-create-dashboard/) created.
 - You must be the dashboard creator or an admin user to modify scheduling settings.
 
 ## Schedule a Report
 
 ### Step 1: Open Dashboard Settings
 
-1. Navigate to your analytics dashboard.
+1. Navigate to your Insights dashboard.
 2. Click the **Settings** icon in the dashboard toolbar to open the **Dashboard Settings** panel.
 
 ### Step 2: Enable Email Notifications
@@ -128,7 +128,6 @@ The notification preferences (time, recipients) are preserved so you can re-enab
 |---|---|
 | Email notification toggle appears disabled | Ensure you have saved the dashboard after creation. Try refreshing the page and toggling again. |
 | Delivery time reverts after clicking Update | Verify you selected the time and period before clicking Update. If the issue persists, refresh the page and try again. |
-| Email toggle is not clickable when Custom date range is selected | This is a known issue. Switch to Default, enable the toggle, then switch back to Custom. |
 
 ## Related Docs
 
