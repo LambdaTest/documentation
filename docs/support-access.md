@@ -46,7 +46,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 The Support Access feature allows <BrandName /> to take access to your <BrandName /> account and log in on your behalf from the backend. By granting access to your account, our team can help you with debugging issues or do activities on your behalf. You can revoke this access anytime
 
-
+:::tip Quick Link
+You can directly navigate to the Support Access page by this [**link**](https://accounts.lambdatest.com/support).
+:::
 ## Granting Support Access
 ***
 
