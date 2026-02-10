@@ -3327,11 +3327,6 @@ module.exports = {
                       },
                     ],
                   },
-                  {
-                    type: "doc",
-                    label: "Appium Java SDK",
-                    id: "smartui-appium-java-sdk",
-                  },
                 ],
               },
             ],
