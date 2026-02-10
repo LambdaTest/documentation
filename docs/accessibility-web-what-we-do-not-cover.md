@@ -155,7 +155,7 @@ The following criteria **require manual testing** (or assistive-technology testi
 
 ### How to do manual testing
 
-For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test)** column for the exact steps. Run these tests yourself (e.g. with keyboard, screen reader, zoom, or assistive technology) to achieve full WCAG coverage. Combine with automated scans from the [What we cover](accessibility-web-what-we-cover) doc.
+For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test)** column for the exact steps. Run these tests yourself (e.g. with keyboard, screen reader, zoom, or assistive technology) to achieve full WCAG coverage. Combine with automated scans from the [What we cover](/support/docs/accessibility-web-what-we-cover/) doc.
 
 ---
 
