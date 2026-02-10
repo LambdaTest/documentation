@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium-testing`}>Appium testing</a> platform across 3000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
+You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium/`}>Appium testing</a> platform across 3000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
 ## Testing Apps Using Appium Flutter Driver
 ***
