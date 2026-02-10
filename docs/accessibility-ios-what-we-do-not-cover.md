@@ -153,7 +153,7 @@ The following criteria **require manual testing** (or assistive-technology testi
 
 ### How to do manual testing (iOS)
 
-For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test – iOS)** column for the exact steps. Run these tests on device or simulator with **VoiceOver**, **Switch Control**, **Dynamic Type**, and rotation as needed. Combine with automated scans from the [What we cover](accessibility-ios-what-we-cover) doc.
+For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test – iOS)** column for the exact steps. Run these tests on device or simulator with **VoiceOver**, **Switch Control**, **Dynamic Type**, and rotation as needed. Combine with automated scans from the [What we cover](/support/docs/accessibility-ios-what-we-cover/) doc.
 
 ---
 
