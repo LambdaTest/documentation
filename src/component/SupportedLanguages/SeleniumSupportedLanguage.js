@@ -49,7 +49,7 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-lambdatest-selenium-grid/">Laravel</a>
         </li>
         <li>
-          <a href="/support/docs/codeception-integration-with-lambdatest/">Codeception</a>
+          <a href="/support/docs/codeception-integration-with-testmu/">Codeception</a>
         </li>
         <li>
           <a href="/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/">PHPUnit</a>
