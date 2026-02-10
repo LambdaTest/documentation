@@ -3332,11 +3332,6 @@ module.exports = {
                       },
                     ],
                   },
-                  {
-                    type: "doc",
-                    label: "Appium Java SDK",
-                    id: "smartui-appium-java-sdk",
-                  },
                 ],
               },
             ],
@@ -3706,16 +3701,6 @@ module.exports = {
                 type: "doc",
                 label: "GitLab",
                 id: "smartui-with-gitlab",
-              },
-              {
-                type: "doc",
-                label: "GitLab PR Checks (Hooks)",
-                id: "smartui-gitlab-pr-checks-hooks",
-              },
-              {
-                type: "doc",
-                label: "GitLab PR Checks (Exec)",
-                id: "smartui-gitlab-pr-checks-exec",
               },
               {
                 type: "doc",
