@@ -39,12 +39,12 @@ While using pull and push features of Appium, please copy the files and retrieve
 <Tab title="Python">
   ```python
 
-  {` # Push a file
+   # Push a file
 dest_path = '/sdcard/Downloads/file.txt'
 driver.push_file(dest_path, 'Hello World'.encode("utf-8"))
 # Pull a file
 file_base64 = driver.pull_file(dest_path)
-`}
+
   
 ```
 </Tab>
@@ -52,11 +52,11 @@ file_base64 = driver.pull_file(dest_path)
 <Tab title="JavaScript">
   ```javascript
 
-  {`// Push a file
+  // Push a file
 let data = new Buffer("Hello TestMu AI").toString('base64');
 driver.pushFile('/sdcard/Downloads/sample.txt', data);
 // Pull file
-let data = driver.pullFile('/sdcard/Downloads/sample.txt');`}
+let data = driver.pullFile('/sdcard/Downloads/sample.txt');
   
 ```
 </Tab>
@@ -64,10 +64,10 @@ let data = driver.pullFile('/sdcard/Downloads/sample.txt');`}
 <Tab title="PHP">
   ```php
 
-  {`// Push a file
+  // Push a file
 $driver->pushFile('/sdcard/Downloads/sample.txt', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
-$data = $driver->pullFile('/sdcard/Downloads/sample.txt');`}
+$data = $driver->pullFile('/sdcard/Downloads/sample.txt');
   
 ```
 </Tab>
@@ -75,10 +75,10 @@ $data = $driver->pullFile('/sdcard/Downloads/sample.txt');`}
 <Tab title="Java">
   ```java
 
-  {`// Push a file
+  // Push a file
 driver.pushFile("/sdcard/Downloads/sample.jpg", new File("/Users/macuser/Desktop/sample.jpg"));
 // Pull file
-byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");`}
+byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");
   
 ```
 </Tab>
@@ -86,10 +86,10 @@ byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");`}
 <Tab title="Ruby">
   ```ruby
 
-  {`# Push a file
+  # Push a file
 driver.push_file('/sdcard/Downloads/sample.jpg', File.read('/Users/macuser/Desktop/sample.jpg'))
 # Pull file
-pull_file('/sdcard/Downloads/sample.jpg')`}
+pull_file('/sdcard/Downloads/sample.jpg')
   
 ```
 </Tab>
@@ -97,10 +97,10 @@ pull_file('/sdcard/Downloads/sample.jpg')`}
 <Tab title="C#">
   ```csharp
 
-  {`// Push a file
+  // Push a file
 driver.PushFile("/sdcard/Downloads/sample.jpg", new FileInfo("/Users/macuser/Desktop/sample.jpg"))
 // Pull file
-byte[] fileBase64 = driver.PullFile("/sdcard/Downloads/sample.jpg");`}
+byte[] fileBase64 = driver.PullFile("/sdcard/Downloads/sample.jpg");
   
 ```
 </Tab>
@@ -121,14 +121,14 @@ While using pull and push feature of Appium in iOS, please adhere to the followi
 <Tab title="Python">
   ```python
 
-  {` # Push file
+   # Push file
 driver.push_file('@com.lambdatest.proverbial :Documents/sample-image1.png', source_path='/Users/macuser/Desktop/sample-image1.png')
 # Push a text file
 dest_path = '@com.lambdatest.proverbial :Documents/file.txt'
 driver.push_file(dest_path, 'Hello TestMu AI'.encode("utf-8"))
 # Pull file
 file_base64 = driver.pull_file(dest_path)
-`}
+
   
 ```
 </Tab>
@@ -136,11 +136,11 @@ file_base64 = driver.pull_file(dest_path)
 <Tab title="JavaScript">
   ```javascript
 
-  {`// Push file
+  // Push file
 let data = new Buffer("Hello TestMu AI").toString('base64');
 driver.pushFile('@com.lambdatest.proverbial :Documents/sample.txt', data);
 // Pull file
-let data = driver.pullFile('@com.lambdatest.proverbial :Documents/sample.txt');`}
+let data = driver.pullFile('@com.lambdatest.proverbial :Documents/sample.txt');
   
 ```
 </Tab>
@@ -148,10 +148,10 @@ let data = driver.pullFile('@com.lambdatest.proverbial :Documents/sample.txt');`
 <Tab title="PHP">
   ```php
 
-  {` // Push file
+   // Push file
   $driver->pushFile('@com.lambdatest.proverbial :Documents/foo.bar', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
-$data = $driver->pullFile('@com.lambdatest.proverbial :Documents/foo.bar');`}
+$data = $driver->pullFile('@com.lambdatest.proverbial :Documents/foo.bar');
   
 ```
 </Tab>
@@ -159,10 +159,10 @@ $data = $driver->pullFile('@com.lambdatest.proverbial :Documents/foo.bar');`}
 <Tab title="Java">
   ```java
 
-  {`// Push file
+  // Push file
 driver.pushFile("@com.lambdatest.proverbial :Documents/sample-image.jpg", new File("/Users/macuser/Desktop/sample-image.jpg"));
 // Pull file
-byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial :Documents/sample-image.jpg");`}
+byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial :Documents/sample-image.jpg");
   
 ```
 </Tab>
@@ -170,10 +170,10 @@ byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial :Documents/sampl
 <Tab title="Ruby">
   ```ruby
 
-  {`# Push file
+  # Push file
 driver.push_file('@com.lambdatest.proverbial :Documents/sample-image.jpg', File.read('/Users/macuser/Desktop/sample-image.jpg'))
 # Pull file
-pull_file('@com.lambdatest.proverbial :Documents/sample-image.jpg')`}
+pull_file('@com.lambdatest.proverbial :Documents/sample-image.jpg')
   
 ```
 </Tab>
@@ -181,10 +181,10 @@ pull_file('@com.lambdatest.proverbial :Documents/sample-image.jpg')`}
 <Tab title="C#">
   ```csharp
 
-  {`// Push file
+  // Push file
 driver.PushFile("@com.lambdatest.proverbial :Documents/sample-image.jpg", new FileInfo("/Users/macuser/Desktop/sample-image.jpg"))
 // Pull file
-byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial :Documents/sample-image.jpg");`}
+byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial :Documents/sample-image.jpg");
   
 ```
 </Tab>

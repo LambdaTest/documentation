@@ -59,8 +59,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
   ```bash
 
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
   
 ```
 
@@ -70,8 +70,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
   ```powershell
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
   
 ```
 
@@ -92,10 +92,10 @@ Here is an example cURL request to upload your app using our REST API:
 
   ```bash
 
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+  curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\
 --form 'appFile=@"/Users/macuser/Downloads/proverbial.ipa"' \\
---form 'type="xcuit-ios"'`}
+--form 'type="xcuit-ios"'
   
 ```
 
@@ -105,7 +105,7 @@ Here is an example cURL request to upload your app using our REST API:
 
   ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.ipa"" -F "type="xcuit-ios""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.ipa"" -F "type="xcuit-ios""
   
 ```
 
@@ -127,10 +127,10 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 
   ```bash
 
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+  curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_ios_xcuitest.ipa"' \
---form 'type="xcuit-ios"'`}
+--form 'type="xcuit-ios"'
   
 ```
 
@@ -140,7 +140,7 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 
   ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_ios_xcuitest.ipa"" --form "type=\"xcuit-ios\""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_ios_xcuitest.ipa"" --form "type=\"xcuit-ios\""
   
 ```
 
@@ -253,7 +253,7 @@ OR use this command if you have not exported your username and access key in the
 
 ```bash
 
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report`}
+    ./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
   
 ```
 

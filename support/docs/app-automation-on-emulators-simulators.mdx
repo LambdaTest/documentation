@@ -63,11 +63,11 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 
 ```bash
 
-{`curl -u "<USERNAME>:<KEY>" \
+curl -u "<USERNAME>:<KEY>" \
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \
 --form 'name="Android_App"' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'  
-`}
+
 
 ```
 
@@ -76,11 +76,11 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 <Tab title="Windows">
 ```powershell
 
-{`curl -u "<USERNAME>:<KEY>" \
+curl -u "<USERNAME>:<KEY>" \
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \
 --form 'name="Android_App"' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
-`}
+
 
 ```
 </Tab>
@@ -94,10 +94,10 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \\
 --form 'name="Android_App"' \\
---form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
+--form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'
 
 ```
 
@@ -106,7 +106,7 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 <Tab title="Windows">
 ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"
 
 ```
 </Tab>

@@ -52,7 +52,7 @@ You can use the following curl command to upload any file `media` and `non-media
 
 ```bash
 
-{`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
+curl --user "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
 }
 
 ```
@@ -86,8 +86,8 @@ Once the files are uploaded to <BrandName />'s cloud, seamlessly integrate files
   <Tab title="Java">
     ```java
 
-        {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"));`}
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"));
       
 ```
   </Tab>
@@ -95,8 +95,8 @@ desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39
   <Tab title="JavaScript">
     ```javascript
 
-        {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);`}
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);
       
 ```
   </Tab>
@@ -104,9 +104,9 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
   <Tab title="Python">
     ```python
 
-        {`desired_capabilities = {
+        desired_capabilities = {
   "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
-}`}
+}
       
 ```
   </Tab>

@@ -84,7 +84,7 @@ void main() {
   <Tab title="Android">
     ```bash
 
-{`./gradlew app:assembleDebug -Ptarget=$(pwd)/../integration_test/appium_test.dart`}
+./gradlew app:assembleDebug -Ptarget=$(pwd)/../integration_test/appium_test.dart
     
 ```
   </Tab>
@@ -92,7 +92,7 @@ void main() {
   <Tab title="iOS Simulator">
     ```bash
 
-{`flutter build ios integration_test/appium_test.dart --simulator`}
+flutter build ios integration_test/appium_test.dart --simulator
     
 ```
   </Tab>
@@ -100,7 +100,7 @@ void main() {
   <Tab title="iOS Real Device">
     ```bash
 
-{`flutter build ipa --release integration_test/appium_test.dart`}
+flutter build ipa --release integration_test/appium_test.dart
     
 ```
   </Tab>
@@ -122,7 +122,7 @@ void main() {
   <Tab title="Android">
     ```java
 
-{`desired_caps = {
+desired_caps = {
     "deviceName":"Galaxy S20",
     "platformName":"Android",
     "platformVersion":"15",
@@ -133,7 +133,7 @@ void main() {
     "automationName": "FlutterIntegration" #Using Flutter Integration Driver
 }
 
-`}
+
     
 ```
   </Tab>
@@ -141,7 +141,7 @@ void main() {
   <Tab title="iOS">
     ```java
 
-{`desired_caps = {
+desired_caps = {
     "deviceName":"iPhone 16",
     "platformName":"ios",
     "platformVersion":"18",
@@ -152,7 +152,7 @@ void main() {
     "automationName": "FlutterIntegration" #Using Flutter Integration Driver
 }
 
-`}
+
     
 ```
   </Tab>

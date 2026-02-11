@@ -37,7 +37,7 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 ---
 ### Appium Hook Example
 
-{`driver.execute_script('lambda_executor: { 
+driver.execute_script('lambda_executor: { 
   "action": "updateDeviceSettings", 
   "arguments": { 
     "customDate": "Jun 20 2025", 
@@ -45,7 +45,7 @@ To modify the date and time settings programmatically, use the `lambda_executor`
     "twelveHourTime": "On", 
     "setAutomatically": "On" 
   } 
-}')`}
+}')
 
 ---
 ## Supported Platforms

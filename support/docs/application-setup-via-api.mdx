@@ -37,7 +37,7 @@ To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application 
 <Tab title="Real Device">
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
 
 ```
 </Tab>
@@ -45,7 +45,7 @@ To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application 
 <Tab title="Virtual Device">
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
 
 ```
 </Tab>
@@ -59,7 +59,7 @@ To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application 
 <Tab title="Real Device">
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
 
 ```
 </Tab>
@@ -67,7 +67,7 @@ To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application 
 <Tab title="Virtual Device">
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
 
 ```
 </Tab>
@@ -89,7 +89,7 @@ The upload time of your application can range from a few seconds to a minute, de
 <Tab title="Android">
   ```bash
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=android&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=android&level=user"
   
 ```
 
@@ -98,7 +98,7 @@ The upload time of your application can range from a few seconds to a minute, de
 <Tab title="iOS">
   ```powershell
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=ios&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=ios&level=user"
   
 ```
 
@@ -133,7 +133,7 @@ Shown below is the response to the above cURL request.
 <Tab title="Android">
   ```bash
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=emulator&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=emulator&level=user"
   
 ```
 
@@ -142,7 +142,7 @@ Shown below is the response to the above cURL request.
 <Tab title="iOS">
   ```powershell
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=simulator&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=simulator&level=user"
   
 ```
 
@@ -156,12 +156,12 @@ Shown below is the response to the above cURL request.
 <Tab title="Real Device">
 ```bash
 
-{`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
+curl --location --request DELETE "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/delete" \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "appIds" : "APPID1,APPID2"
 }'
-`}
+
 
 ```
 </Tab>
@@ -169,12 +169,12 @@ Shown below is the response to the above cURL request.
 <Tab title="Virtual Device">
 ```bash
 
-{`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
+curl --location --request DELETE "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/delete" \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "appIds" : "APPID1,APPID2"
 }'
-`}
+
 
 ```
 </Tab>
@@ -196,7 +196,7 @@ Shown below is the response to the above cURL request.
 <Tab title="Real Device">
 ```bash
 
-{`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
 --header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -204,7 +204,7 @@ Shown below is the response to the above cURL request.
     "networkLogsEnabled": true,
     "imageInjectionEnabled": true,
     "screenshotUnblockEnabled": true
-}'`}
+}'
 
 ```
 </Tab>
@@ -212,7 +212,7 @@ Shown below is the response to the above cURL request.
 <Tab title="Virtual Device">
 ```bash
 
-{`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
 --header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -220,7 +220,7 @@ Shown below is the response to the above cURL request.
     "networkLogsEnabled": true,
     "imageInjectionEnabled": true,
     "screenshotUnblockEnabled": true
-}'`}
+}'
 
 ```
 </Tab>

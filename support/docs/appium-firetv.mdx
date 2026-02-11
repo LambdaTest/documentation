@@ -59,8 +59,8 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
  **Using App File from System:**
  ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/fireos-sample-app.apk"" -F "name="fireos_app""
-`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/fireos-sample-app.apk"" -F "name="fireos_app""
+
 
 ```
 
@@ -68,8 +68,8 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk" -F "name=fireos-sample-apk"
-`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk" -F "name=fireos-sample-apk"
+
 
 ``` */}
 
@@ -98,8 +98,8 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tab title="Linux / MacOS">
   ```bash
 
-  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
-export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \\
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ```
 
@@ -109,8 +109,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
   ```powershell
 
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  set LT_USERNAME=YOUR_LAMBDATEST_USERNAME \`
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ```
 

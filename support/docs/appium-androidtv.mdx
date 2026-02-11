@@ -53,8 +53,8 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tab title="Linux / MacOS">
   ```bash
 
-  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
-export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \\
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ```
 
@@ -64,8 +64,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
   ```powershell
 
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  set LT_USERNAME=YOUR_LAMBDATEST_USERNAME \`
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ```
 
@@ -78,12 +78,12 @@ Upload your **Android TV** application (.ipa file) to the <BrandName /> servers 
  **Using App File from System:**
  ```bash
 
-{`curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
+curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
 -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \
 -F "appFile=@smarttube_stable.apk" \
 -F "name=androidtv_app" \
 -F "type=androidtv"
-`}
+
 
 ```
 

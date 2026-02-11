@@ -105,10 +105,10 @@ Upload your **android** application (.apk file) to the <BrandName /> servers usi
 
   ```bash
 
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+  curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-app.apk"' \
---form 'type="flutter-android"'`}
+--form 'type="flutter-android"'
   
 ```
 
@@ -118,7 +118,7 @@ Upload your **android** application (.apk file) to the <BrandName /> servers usi
 
   ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android.apk"" --form "type=\"flutter-android\""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android.apk"" --form "type=\"flutter-android\""
   
 ```
 
@@ -142,10 +142,10 @@ Upload your **test suite** (.apk file) to the TestMu AI servers using our **REST
 
   ```bash
 
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+  curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-testsuite.apk"' \
---form 'type="flutter-android"'`}
+--form 'type="flutter-android"'
   
 ```
 
@@ -155,7 +155,7 @@ Upload your **test suite** (.apk file) to the TestMu AI servers using our **REST
 
   ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android_expressotest.apk"" --form "type=\"flutter-android\""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android_expressotest.apk"" --form "type=\"flutter-android\""
   
 ```
 
@@ -178,7 +178,7 @@ Upload your **test suite** (.apk file) to the TestMu AI servers using our **REST
 
 ```powershell
 
-{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY
   
 ```
 

@@ -37,7 +37,7 @@ You can use the following curl command to upload any video of your choice to the
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""
 
 ```
 
@@ -61,10 +61,10 @@ You can use the appium capability to turn the video injection on in your applica
 <Tab title="Python">
   ```python
 
-  {`desired_capabilities = {
+  desired_capabilities = {
     "enableVideoInjection": True,
     "media": "lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", #Add media_url here (optional)
-  }`}
+  }
   
 ```
 </Tab>
@@ -72,8 +72,8 @@ You can use the appium capability to turn the video injection on in your applica
 <Tab title="JavaScript">
   ```javascript
 
-  {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.setCapability("enableVideoInjection", "true");`}
+  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability("enableVideoInjection", "true");
   
 ```
 </Tab>
@@ -88,7 +88,7 @@ Refer to the code snippets given below to upload the video with the action `Vide
 <Tab title="Python">
   ```python
 
-  {`driver.execute_script("lambda-video-injection=media_url") #Add media_url here`}
+  driver.execute_script("lambda-video-injection=media_url") #Add media_url here
   
 ```
 </Tab>
@@ -96,7 +96,7 @@ Refer to the code snippets given below to upload the video with the action `Vide
 <Tab title="JavaScript">
   ```javascript
 
-  {`driver.execute_script("lambda-video-injection=media_url") //Add media_url here`}
+  driver.execute_script("lambda-video-injection=media_url") //Add media_url here
   
 ```
 </Tab>

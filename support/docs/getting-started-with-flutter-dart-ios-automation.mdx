@@ -37,12 +37,12 @@ Upload your **iOS** test suite (.zip file) to the <BrandName /> servers using ou
 
   ```bash
 
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+  curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/flutter-ios.zip"' \
 --form 'type="flutter-ios"'
 --form 'name="Sample App"'
---form 'custom_id="Sample"'`}
+--form 'custom_id="Sample"'
   
 ```
 
@@ -52,7 +52,7 @@ Upload your **iOS** test suite (.zip file) to the <BrandName /> servers using ou
 
   ```powershell
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/flutter-ios.zip"" --form "type=\"flutter-ios\"" --form "name=\"Sample App\"" --form "custom_id=\"Sample\""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/flutter-ios.zip"" --form "type=\"flutter-ios\"" --form "name=\"Sample App\"" --form "custom_id=\"Sample\""
   
 ```
 
@@ -75,7 +75,7 @@ Upload your **iOS** test suite (.zip file) to the <BrandName /> servers using ou
 
 ```powershell
 
-{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY
   
 ```
 
