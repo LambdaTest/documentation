@@ -1,15 +1,17 @@
 ---
 title: "Jenkins Integration"
 sidebarTitle: "Jenkins"
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','ci/cd tools','continuous integration,continuous delivery','continuous integration tools','gitlab ci']
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Jenkins Integration
 * * *
 Jenkins is an open-source automation server that is easy to install and configure. It can also be used as a simple CI server or turned into a continuous delivery hub for any project.
 
 You can now integrate HyperExecute with your Jenkins project to shorten your test cycles.
-
 
 **How to Integrate HyperExecute with Jenkins**
 
@@ -17,35 +19,33 @@ To integrate HyperExecute with your Jenkins project, follow the steps listed bel
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/Jenkins" />
-</Check>
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/Jenkins" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 1. Log Into your Jenkins account. You will be directed to your Jenkins dashboard. 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j1.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
-
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j1.png' alt="Jenkins Plugin" width="966" height="419" />
 
 2. Select the project you want to integrate with HyperExecute. Or else, click on **+ New Item** on the left panel to create a new project. 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j2.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j2.png' alt="Jenkins Plugin" width="966" height="419" />
 
 3. After opening your project, click on **Configure**.
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j3.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j3.png' alt="Jenkins Plugin" width="966" height="419" />
 
 4. Click on **Build Steps**. 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j4.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
-
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j4.png' alt="Jenkins Plugin" width="966" height="419" />
 
 5. Add a new build step and select **Execute Shell** if you are running your tests on MacOS. Alternatively, select **Execute Windows** batch command if you want to run your test on Windows. 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j5.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j5.png' alt="Jenkins Plugin" width="966" height="419" />
 
 6. Copy and paste the following code snippet in the **Command** section of your Build Step. Click on **Save** to add your Build Step. 
 
@@ -65,23 +65,23 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
     **Note**: Replace the placeholder values in the code with your username and access key for HyperExecute.
 
-    <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j6.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+    <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j6.png' alt="Jenkins Plugin" width="966" height="419" />
 
 7. Build your Jenkins project by clicking on **Build Now** and wait for a few minutes.
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j7.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j7.png' alt="Jenkins Plugin" width="966" height="419" />
 
   After your build is successful, go to the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to monitor the progress of your tests.
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j8.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j8.png' alt="Jenkins Plugin" width="966" height="419" />
 
   The **HyperExecute Dashboard**: 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j9.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j9.png' alt="Jenkins Plugin" width="966" height="419" />
 
   Click on the job to find out more details about your tests. 
 
-  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j10.png' alt="Jenkins Plugin" className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/jenkins/j10.png' alt="Jenkins Plugin" width="966" height="419" />
 
 * * *
 You have successfully integrated your Jenkins project with HyperExecute. 
@@ -107,4 +107,3 @@ pipeline {
     }
 }
 ```
-

@@ -1,20 +1,19 @@
 ---
 title: "Legacy Binary For macOS"
 sidebarTitle: "Legacy Binary For macOS"
-keywords: ['proxy settings','set open file limit','open file limit testmu ai','testmu ai proxy settings','testmu ai proxy profile']
+keywords: ['proxy settings', 'set open file limit', 'open file limit testmu ai', 'testmu ai proxy settings', 'testmu ai proxy profile']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
----
+
+***
 <BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our TCP with TLS 1.2 secure connection features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 
 Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection hosted by <BrandName /> tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the production environment.
 
 <Note>
-**NOTE**
-
-From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for macOS](/support/docs/local-testing-macos/).
+**Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for macOS](/support/docs/local-testing-macos/).
 </Note>
 
 
@@ -38,8 +37,8 @@ This file is supported for the below listed macOS:
 * OS X Lion
 
 ## Configuring TCP with TLS 1.2 Secure Connection with <BrandName /> Tunnel
----
-**Step 1**: Click the button "Configure Tunnel". Download the binary zip file by clicking the "Download Link". Also, hit the 'Copy' button in the form that opens up to copy the complete string to your system's clipboard.
+* * *
+**Step 1**: Click the button "Configure Tunnel". Download the binary zip file by clicking the "Download Link". Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-1.webp' alt="Image" />
 
@@ -68,7 +67,8 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-4.webp' alt="Image" />
 
 ## Testing Locally Hosted Web Pages Using <BrandName /> tunnel
----
+
+* * *
 
 **Step 1**: Navigate to 'Real Time Testing' menu and enter the localhost URL you want to test in the text field provided to enter URL.
 
@@ -80,24 +80,24 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-6.webp' alt="Image" />
 
-**Step 4**: Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, hit 'Start' for Apache under 'Services'. If you also want to test the back-end functionality for your website then make sure you hit the 'Start' button for MySQL as well.
+**Step 4**: Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, hit ‘Start’ for Apache under ‘Services’. If you also want to test the back-end functionality for your website then make sure you hit the ‘Start’ button for MySQL as well.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/starting-xampp.webp' alt="Image" />
 
-**Step 5**: Once you are done selecting your configurations and hosting a web server. Hit the 'Start' button in Real Time Test. Your test will start and you will be navigated to your localhost URL.
+**Step 5**: Once you are done selecting your configurations and hosting a web server. Hit the ‘Start’ button in Real Time Test. Your test will start and you will be navigated to your localhost URL.
 
-<img loading="lazy" src='/assets/images/local-testing-for-macos/real-time-testing-lambdatest.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/local-testing-for-macos/real-time-testing-testmu ai.webp' alt="Image" />
 
 <Warning>
-**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn't support automatic resolution of URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to replace the string "`localhost`" with machine IP address. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://192.168.2.6/dashboard:8080`".
+**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn’t support automatic resolution of URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to replace the string "`localhost`" with machine IP address. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://192.168.2.6/dashboard:8080`".
 </Warning>
 
-## Testing Local Folder Files Using <BrandName /> tunnel
----
 
-<Note>
-**Note:** If you were already running a test session through tunnel then you will have to terminate the existing TCP with TLS 1.2 secure connection in cmd before you re-establish it for a new directory.
-</Note>
+## Testing Local Folder Files Using <BrandName /> tunnel
+
+* * *
+
+>**Note:** If you were already running a test session through tunnel then you will have to terminate the existing TCP with TLS 1.2 secure connection in cmd before you re-establish it for a new directory.
 
 **Step 1**: If you want to test the local folders and files stored in your system, pass an additional argument 'dir' with the directory/folder in double quotes name as you run the command on the terminal to establish a TCP with TLS 1.2 secure connection with <BrandName /> tunnel.
 
@@ -105,7 +105,7 @@ Sample format:
 
 `LT --user {user login email} --key {user key} --dir {"directory/folder name"}`
 
-**Example:** Let us consider your user login email to be "example@lambdatest.com" with your user key as '123asd123' and you want to test files in the 'Downloads' folder, then the command would be:
+**Example:** Let us consider your user login email to be "example@lambdatest.com" with your user key as ‘123asd123’ and you want to test files in the ‘Downloads’ folder, then the command would be:
 
 `LT --user example@lambdatest.com --key 123asd123 --dir "/home/lambda/Downloads"`
 
@@ -113,39 +113,41 @@ Sample format:
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-9.webp' alt="Image" />
 
-**Step 3**: Hit the 'Start' button. Once the VM(Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
+**Step 3**: Hit the ‘Start’ button. Once the VM(Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/localhost-test-environment.webp' alt="Image" />
 
 **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
-**For example**: If you have a file 'test.html' in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file. In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in <BrandName /> browser.
+**For example**: If you have a file ‘test.html’ in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file. In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in <BrandName /> browser.
 
 ## Terminating The Secure Connection
----
+
+* * *
 
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in following ways:
 
-**Option 1**: You can kill the process by using Ctrl+C in the terminal.
+**Option 1**: You can kill the process by using Ctrl+C in the terminal.  
 You will receive the below highlighted messages indicating the termination of the TCP with TLS 1.2 secure connection.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-11.webp' alt="Image" />
 
-**Option 2**: You can also disconnect it using the option provided in the user interface. In the top right corner of <BrandName /> interface, you will find a button that says "Tunnel active:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the secure tunnel.
+**Option 2**: You can also disconnect it using the option provided in the user interface. In the top right corner of <BrandName /> interface, you will find a button that says "Tunnel active:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an ‘x’. Hit the ‘x’ to terminate the secure tunnel.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-12.webp' alt="Image" />
 
 ## Geolocation Testing Through VPN with <BrandName /> tunnel
----
 
-Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+* * *
+
+Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-testmu ai/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 Use the following arguments in your command line.
 
 | ARGUMENTS | EXAMPLES | DESCRIPTION |
 |---------|-------|-------------|
-| –proxy-host | abc.wonderproxy.com | Full hostname for the proxy you'd like to use. |
-| –key | 123asd123 | Helps Lambdatest to map a TCP with TLS 1.2 secure connection with the right user. |
+| –proxy-host | abc.wonderproxy.com | Full hostname for the proxy you’d like to use. |
+| –key | 123asd123 | Helps <BrandName /> to map a TCP with TLS 1.2 secure connection with the right user. |
 | –proxy-port | 12345 | The port declared by you for fetching the proxy. |
 | –proxy-pass | hijklmnop | WonderProxy password of the user. |
 | –proxy-user | abcdefg | WonderProxy username of the user. |
@@ -159,7 +161,7 @@ Example of full command:
 `LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345`
 
 ### How Can Geolocation Testing Help You?
----
+***
 
 **1. SERPs** – Search Engine Result Pages: For a website that is targeting audience from different parts of globes. It is always recommended to have a constant check on SERPs to address you website according to the respective trends of different geographies. This is extremely necessary for clothing brands. Traditional wearing differs from one country to another.
 
@@ -172,16 +174,16 @@ Example of full command:
 **5. Bandwidth:** 4G may or may not be available to every one of your targeted geography and even if it is available. The available bandwidth will usually be different. Meaning some countries would provide a faster download speed in 4G as compared to others. So you need to be mindful about the content optimization according to your targeted geolocations. Testing from IPs belonging to different geolocations will help you get a realistic view for page loading speed. A faster page loading will not only help in pleasing your customers, it would also help in ranking higher in SERPs.
 
 ### How Can You Test From An IP Of A Different Geolocation?
----
+***
 
-This is where a VPN comes to rescue! VPN – Virtual Private Network – It helps in expanding a private network through a public network. Initially VPNs were introduced and used among large enterprises, defense organization, banking companies etc. to keep their data secure. A VPN created a pathway through which people working in large organizations could access the data they want, remotely, in a secured manner. The data is securely transmitted through the process of Cryptography. In Cryptography, the data is encrypted from the sender's end and then it gets decrypted with the help of a unique key on the receivers end.
+This is where a VPN comes to rescue! VPN – Virtual Private Network – It helps in expanding a private network through a public network. Initially VPNs were introduced and used among large enterprises, defense organization, banking companies etc. to keep their data secure. A VPN created a pathway through which people working in large organizations could access the data they want, remotely, in a secured manner. The data is securely transmitted through the process of Cryptography. In Cryptography, the data is encrypted from the sender’s end and then it gets decrypted with the help of a unique key on the receivers end.
 
 Time have changed and with it the popularity of VPN too! These days VPNs are so widely available that they are used by almost everyone of us. Some use it to surf the internet without worrying about the restrictions applied for their GeoIP. Some use it for the purpose of maintaining anonymity. Some use it without even realizing the meaning of a VPN.
 
 Remember though, not all VPNs will work in the same manner. Few may provide you considerably more geolocations to choose from as compared to others. Few may provide less number of geolocations but more number of dynamic GeoIPs with respect to others. There are many more parameters related to comparison.
 
 ## Command References
----
+* * *
 Following is the list of command arguments which can be used as modifiers while executing the binary file:
 
 | Command | Description |
@@ -190,13 +192,14 @@ Following is the list of command arguments which can be used as modifiers while 
 | –key | User access key for the user. |
 | –tunnelName | (optional) Name of the tunnel. |
 | –port | 	(optional) Local port to connect tunnel. |
-| –proxy-host | Full hostname for the proxy you'd like to use. |
+| –proxy-host | Full hostname for the proxy you’d like to use. |
 | –proxy-port | The port declared by you for fetching the proxy. |
 | –proxy-user | WonderProxy username of the user. |
 | –proxy-pass | WonderProxy username of the user. |
 
 ## Changing Your Access Key
----
+
+* * *
 
 **What is an Access Key?**
 
@@ -204,7 +207,7 @@ An Access Key is a unique string used for the identification of your account.
 
 As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in mapping a TCP with TLS 1.2 secure connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.
 
-If you ever misplace your Access key into the hands of someone you don't trust. You can always redefine it by clicking the button for "**Regenerate Access Key**".
+If you ever misplace your Access key into the hands of someone you don’t trust. You can always redefine it by clicking the button for "**Regenerate Access Key**".
 
 Access Key is pivotal for establishing a TCP with TLS 1.2 secure connection through <BrandName /> tunnel to test your locally hosted web-pages or web-apps.
 
@@ -216,10 +219,8 @@ For instance, if you go to Real-Time Test, you will observe a button that says "
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-14.webp' alt="Image" />
 
-You can also find your Access Key by going to 'Settings' in the left navigation menu and routing to 'Profile'.
+You can also find your Access Key by going to ‘Settings’ in the left navigation menu and routing to ‘Profile’.
 
 <img loading="lazy" src='/assets/images/local-testing-for-macos/For-mac-15.webp' alt="Image" />
 
-<Warning>
-**<BrandName /> tunnel Update:** Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
-</Warning>
+>**<BrandName /> tunnel Update:** Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.

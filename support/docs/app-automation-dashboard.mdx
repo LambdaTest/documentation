@@ -1,0 +1,67 @@
+---
+title: "Accessing Test Results From App Automation Dashboard"
+sidebarTitle: "App Automation Dashboard"
+keywords: ['desired capability for app automation', 'app automation dashboard testmu ai', 'mobile app automation testing using appium']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+You can view your App automated test results on <BrandName /> App Automation Dashboard. <BrandName /> App Automation dashboard enables you to debug failed test sessions utilizing different test logs. The capabilities for a given test session may be specified in the test script and generated using the <BrandName /> Capability Generator.
+
+## Debugging Tests
+***
+<BrandName /> allows you to debug and fix failed test cases using extensive test logs such as Appium logs, device logs, network logs, screenshots, and video logs.
+
+1. **Device Logs**
+
+Device logs allows you to capture system logs for Android and iOS apps. It allows the user to keep track of the application logs in case the application malfunctions.
+
+Use the `devicelog` capability to enable the Device logs.
+
+```java
+capabilities.setCapability("devicelog", "true")
+```
+
+2. **Network Logs**
+
+Network logs enables you to take screenshots of multiple network requests during testing and to monitor the performance of network requests and responses.
+
+Use the `network` capability to enable the Network logs.
+
+```java
+capabilities.setCapability("network", "true")
+```
+
+3. **Appium Logs**
+
+Appium logs allows you to capture the logs created by the Appium server during test execution, that include a comprehensive session log.
+
+<Note>
+**Note**: On <BrandName /> platform, Appium logs are enabled by default.
+</Note>
+
+
+4. **Visual Logs**
+
+With Visual logs, you can capture the screenshots of the entire test session.
+
+Use the `visual` capability to enable the Visual logs.
+
+```java
+capabilities.setCapability("visual", "true")
+```
+
+5. **Video Logs**
+
+Visual logs enables you to record the video of the complete test session.
+
+Use the `video` capability to enable the Video logs.
+
+```java
+capabilities.setCapability("video", "true")
+```
+
+***
+
+>In case you have any questions or need any additional information, drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.

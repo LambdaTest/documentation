@@ -1,8 +1,11 @@
 ---
 title: "Using Snooper Command on Hyperexecute"
 sidebarTitle: "Using Snooper on Hyperexecute"
-keywords: ['LambdaTest Hyperexecute', 'LambdaTest Hyperexecute help', 'LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
@@ -15,17 +18,14 @@ For example, the following command will discover the list of Feature file scenar
 snooper --featureFilePaths=features/ --frameWork=java
 ```
 
-<Note>
-**INFO**
+<Info>
+**Snooper is **not compatible** with **Alpine-based** Docker images, as Alpine uses **musl libc** instead of **glibc**, which Snooper depends on. To ensure proper functionality, use a non-Alpine base image that includes glibc.**
 
-Snooper is **not compatible** with **Alpine-based** Docker images, as Alpine uses **musl libc** instead of **glibc**, which Snooper depends on. To ensure proper functionality, use a non-Alpine base image that includes glibc.
-</Note>
+</Info>
 
 ## How to implement Snooper on HyperExecute
 
-<Note>
-`snooper` command works only with HyperExecute YAML 0.1
-</Note>
+> `snooper` command works only with HyperExecute YAML 0.1
 
 To implement the `snooper` command on HyperExecute, we simply need to update our YAML file's `testDiscovery` and `testRunnerCommand` parameters.
 
@@ -75,9 +75,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test"
 
 #### Method 2: Using `features` flag
 
-<Note>
-**Note:** This flag is applicable for cucumber version 7 and above only.
-</Note>
+> **Note:** This flag is applicable for cucumber version 7 and above only.
 
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.features="$test"
@@ -95,9 +93,7 @@ To debug the discovery of the snooper, configure the following command as per th
 .hyperexecute/snooper --targetOs=win --ignoredTags=@ignore @skipDaily --featureFilePaths=src/test/java/Features --frameWork=java | sed 's/:.*//' | uniq
 ```
 
-<Note>
-**Note:** .hyperexecute and snooper binary are created only after first execution of the yaml file.
-</Note>
+> **Note:** .hyperexecute and snooper binary are created only after first execution of the yaml file.
 
 #### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
 

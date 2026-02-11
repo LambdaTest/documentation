@@ -1,22 +1,21 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: appium-nodejs-mocha
+title: Appium With Mocha
+sidebarTitle: Mocha
+description: Now you can run your automation scripts using JavaScript Mocha on <BrandName /> online grid of 3000+ real desktop browsers and real operating systems.
+keywords: ['appium', 'javascript', 'testmu ai java', 'framework on testmu ai', 'mocha', 'app testing', 'real devices']
+url: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
+site_name: <BrandName />
+slug: appium-nodejs-mocha/
+canonical: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
 ---
-title: "Appium With Mocha"
-sidebarTitle: "Mocha"
-keywords: ['appium','javascript','lambdatest java','framework on lambdatest','mocha','app testing','real devices']
----
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
- 
 In this documentation, you will learn how to configure and run your **Mocha** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites
@@ -31,33 +30,32 @@ In this documentation, you will learn how to configure and run your **Mocha** au
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. 
-<GitHubButton url="https://github.com/lambdatest/LT-appium-nodejs-mocha" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/testmu ai/LT-appium-nodejs-mocha" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="Linux / MacOS">
+  ```bash
 
-    ```bash
-    export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-    export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
-
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 <Tab title="Windows">
-  
-    ```bash
-    set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-    set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
+  ```powershell
 
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 </Tabs>
 
@@ -66,33 +64,37 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="App File">
-    ```bash
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
 </Tab>
 
 <Tab title="App URL">
-    ```bash
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
 </Tab>
 
 </Tabs>
 
-<Check>
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step.
-</Check>
+</Tip>
 
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application available above has been provided here.
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="iOS">
 
@@ -178,30 +180,27 @@ var buildDriver = function(caps) {
     .build();
 };
 
-
 describe("Mocha Appium Test " + caps.browserName, function() {
   var driver;
   this.timeout(0);
 
-
     it ('Application is launched', function name(done) { 
         driver=buildDriver(caps);
       
-        driver.findElement(By.id('com.lambdatest.proverbial:id/color')).click().then(function(){
+        driver.findElement(By.id('com.lambdatest.proverbial :id/color')).click().then(function(){
         console.log("Successfully clicked Color");
     });
-     driver.findElement(By.id('com.lambdatest.proverbial:id/Text')).click().then(function(){
+     driver.findElement(By.id('com.lambdatest.proverbial :id/Text')).click().then(function(){
         console.log("Successfully clicked Text");
     });
-    driver.findElement(By.id('com.lambdatest.proverbial:id/notification')).click().then(function(){
+    driver.findElement(By.id('com.lambdatest.proverbial :id/notification')).click().then(function(){
         console.log("Successfully clicked Notification");
     })
-    driver.findElement(By.id('com.lambdatest.proverbial:id/toast')).click().then(function(){
+    driver.findElement(By.id('com.lambdatest.proverbial :id/toast')).click().then(function(){
         console.log("Successfully clicked Toast");
         driver.quit()
     })
 });
-
 
 });
 ```
@@ -210,11 +209,10 @@ describe("Mocha Appium Test " + caps.browserName, function() {
 
 </Tabs>
 
-<Check>
-**TIP**
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
 ### Step 5: Configure the Test Capabilities
 
@@ -222,13 +220,13 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="Android">
 
 ```javascript title="android.conf.js"
-LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your LambdaTest username here
-LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";  //Enter your LambdaTest accessKey here
+LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your <BrandName /> username here
+LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";  //Enter your <BrandName /> accessKey here
 
 exports.capabilities = {
   'build': 'Mocha-Appium-Sample', //Build name
@@ -245,17 +243,17 @@ exports.capabilities = {
   };
 ```
 
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-<Check>
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
 </Tab>
 <Tab title="iOS">
 
 ```javascript title="ios.conf.js"
-LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your LambdaTest username here
-LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";    //Enter your LambdaTest accessKey here
+LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your <BrandName /> username here
+LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";    //Enter your <BrandName /> accessKey here
 
 exports.capabilities = {
   'build': 'Mocha-iOS-Sample', //Build name
@@ -276,15 +274,13 @@ exports.capabilities = {
 
 </Tabs>
 
-<Info>
-**NOTE**
+<Note>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Info>
-
+</Note>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -300,7 +296,7 @@ npm install --save
 ```
 - The tests can be executed in the terminal using the following command:
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="Android">
 
 ```js
@@ -320,14 +316,10 @@ npm run parallel_ios    //to run parallel tests
 </Tab>
 </Tabs>
 
-<Warning>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Warning>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

@@ -4,8 +4,7 @@ sidebarTitle: "JMeter"
 keywords: ['hyperexecute performance testing', 'hyperexecute', 'testmu ai', 'jmeter', 'hyperexecute dashboard']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 ## Prerequisites
@@ -14,17 +13,15 @@ import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Note>
+> By default, HyperExecute supports **standard Thread Group** but you can use other custom thread groups as well.
 
-By default, HyperExecute supports **standard Thread Group** but you can use other custom thread groups as well.
-</Note>
-
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the JMeter Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-jmeter-sample" />
-</Check>
+
+<a href="https://github.com/<BrandName />/hyperexecute-jmeter-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ## Step 1: Setup your JMeter Project
 
@@ -33,7 +30,7 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
 - Click on the **Save** button
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="/assets/images/hyperexecute/frameworks/performance_testing/setup.mp4" type="video/mp4" />
+<source src='/assets/images/hyperexecute/frameworks/performance_testing/setup.mp4' type="video/mp4" />
 </video>
 
 ## Step 2: Execute your Test Plans
@@ -47,22 +44,21 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
   - **Job Labels :** Add meaningful labels or tags to test executions for better identification and traceability in logs and reports.
   - **Machine count :**  Specify the number of machines (or nodes) to use for parallel test execution. This parameter is essential for scaling test workloads or reducing execution time.
 
-<Note>
-**INFO**
+<Info>
+****Supported Regions :** HyperExecute supports the following regions for performance testing**
 
-**Supported Regions:** HyperExecute supports the following regions for performance testing
 - West US 2 (Moses Lake, Washington)
 - East US (Richmond, Virginia) (**default**)
 - Central India (Pune, Maharashtra)
 - Southeast Asia (Singapore)
 - Brazil South (São Paulo State, Brazil)
 - Mexico Central (Querétaro State, Mexico)
-</Note>
+</Info>
 
 - Click on the **Run Test** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="/assets/images/hyperexecute/frameworks/performance_testing/execute.mp4" type="video/mp4" />
+<source src='/assets/images/hyperexecute/frameworks/performance_testing/execute.mp4' type="video/mp4" />
 </video>
 
 ## Step 3: Analyze Your Project Performance
@@ -79,35 +75,34 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
   - **Load** and **Response Time** graph.
   - Additional details like **regions** and test duration.
   
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/summary-report.png" alt="HyperExecute" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/summary-report.png' alt="HyperExecute"  width="1920" height="868" />
 
 ### Timeline Report
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/timeline-report.png" alt="HyperExecute" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/timeline-report.png' alt="HyperExecute"  width="1920" height="868" />
 
 ### Request Stats
 
 You can analyze the number of requests sent on that particular time.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/request-stats.png" alt="HyperExecute" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/request-stats.png' alt="HyperExecute"  width="1920" height="868" />
 
 ### Errors
 - Here you can check the Error Code type, Error Count, percentage of that error, and the percent of error in all the samples.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/error-reports.png" alt="HyperExecute" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/error-reports.png' alt="HyperExecute"  width="1920" height="868" />
 
 ### Logs
 - You can check the logs of your Jobs executed.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/logs.png" alt="HyperExecute" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/logs.png' alt="HyperExecute"  width="1920" height="868" />
 
 ## Handling Special Scenarios: Overriding and Default Values
 
+<details>
+  <summary><h4>Scenario 1: Overriding Values via Projects portal</h4></summary>
 
-
-<AccordionGroup>
-  <Accordion title="Scenario 1: Overriding Values via Projects portal">
-  When executing performance tests using HyperExecute, you have the option to override default parameters directly in the Projects portal. Let's explore a sample scenario to understand how HyperExecute handles these overrides.
+  When executing performance tests using HyperExecute, you have the option to override default parameters directly in the Projects portal. Let’s explore a sample scenario to understand how HyperExecute handles these overrides.
 
   You configure the following parameters in the HyperExecute UI:
   - **Virtual Users :** (The total number of simulated users for the test): 500
@@ -131,9 +126,11 @@ You can analyze the number of requests sent on that particular time.
   - **Region-Specific Allocation :** Users are distributed proportionally based on the defined load percentages for each region.
   
   This approach ensures smooth execution of performance tests and provides precise control over resource utilization, enabling you to simulate real-world scenarios effectively.
-  </Accordion>
+</details>
 
-  <Accordion title="Scenario 2: Default Parameters">
+<details>
+  <summary><h4>Scenario 2: Default Parameters</h4></summary>
+  
   In this scenario, you proceed without overriding the default values in the HyperExecute Projects portal. The configuration parameters from your JMeter file and project setup are applied as-is.
 
   #### Scenario Details:
@@ -156,5 +153,4 @@ You can analyze the number of requests sent on that particular time.
   - **Importance of Overrides :** To distribute users proportionally across machines and regions, use the UI to override parameters such as total users, maximum users per machine, or load percentages.
 
   This behavior highlights how HyperExecute ensures flexibility in test execution while allowing for configuration control based on project requirements.
-  </Accordion>
-</AccordionGroup>
+</details>

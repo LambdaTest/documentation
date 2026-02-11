@@ -1,12 +1,12 @@
 ---
-title: iOS Entitlements
-sidebarTitle: iOS Entitlements
-keywords: ['iOS entitlements', 'entitlements for ios apps', 'mobile app testing', 'ios app testing']
+title: "iOS Entitlements"
+sidebarTitle: "iOS Entitlements"
+keywords: ['ios entitlements', 'entitlements for ios apps', 'mobile app testing', 'ios app testing']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-***
+
 We support all ipa files generated from different Certificates & Profiles.
 
 However, to install these apps on our devices, we resign your applications with our Resigning Certificate.
@@ -16,36 +16,32 @@ This is true for all Certificates & Profiles except the applications generated u
 ## Disabling Re-Signing In Manual App Testing
 ***
 
-
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 - Your application must be an Enterprise Application.
-</Note>
+
+</Info>
 
 When you upload an application that is generated through an Enterprise Account, you have the option at the beginning of your test to disable re-signing by toggling iOS Entitlements.
 
 Once you toggle the iOS Entitlements option, your application's certificates will be preserved.
 
-<img loading="lazy" src='/assets/images/entitlements/1.webp' alt="monday integration" width="626" height="439" className="doc_img"/>
-
+<img loading="lazy" src='/assets/images/entitlements/1.webp' alt="monday integration" width="626" height="439" />
 
 ## Disabling Re-Signing In App Automation
 ***
 
-
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 - Your application must be an Enterprise Application.
-</Note>
+
+</Info>
 
 You can prevent re-signing your application with the "resignApp" capability. Upload your enterprise application & specify the capability as "false" to prevent it from being re-signed.
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br/> 3. This is only for iOS-specific applications and devices |
-
-<Warning>
+| resignApp            | TYPE: BOOLEAN <br /> DEFAULT: True <br /> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br /> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br /> 3. This is only for iOS-specific applications and devices |
 If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmu.ai
-</Warning>

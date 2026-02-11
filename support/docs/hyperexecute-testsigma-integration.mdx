@@ -4,7 +4,8 @@ sidebarTitle: "Testsigma"
 keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'testsigma', 'Integrations', 'Products']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 
@@ -28,12 +29,10 @@ Testsigma can help you with:
 
 - Navigate to your Testsigma Dashboard to [Create an agent](https://testsigma.com/docs/agent/setup-on-windows-mac-linux/).
 
-<Note>
-**Note:** 
+> **Note:** 
 - This agent has an activation key. You must ensure that it is secure and accessible.
 - This activation key will allow you to start your agent from any other machine.
 - This key is associated with a single agent and can be used on only one machine at a time.
-</Note>
 
 ### Step 2: Create your HyperExecute YAML file
 
@@ -141,9 +140,7 @@ stop.bat
 
 - The script is created to start the agent, then execute the test plan and then stop the agent after the whole Job is executed.
 
-<Note>
-**NOTE:** You can use any language to create your execution script file. We have used **javascript** for the reference below.
-</Note>
+> **NOTE:** You can use any language to create your execution script file. We have used **javascript** for the reference below.
 
 ```bash
 const axios = require('axios');
@@ -190,24 +187,35 @@ Trigger your test plan on HyperExecute.
 
 - Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Note>
+<Warning>
 In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences → Security & Privacy → General tab**.
-</Note>
+</Warning>
+
 
 - Run the below command in your terminal at the root folder of the project
 
@@ -218,7 +226,9 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 OR use this command if you have not exported your username and access key.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/testsigma/2.png' alt="HyperExecute" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/testsigma/2.png' alt="HyperExecute" />

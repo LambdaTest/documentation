@@ -1,37 +1,36 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-cli
+title: Capture Static URLs via CLI
+sidebarTitle: Capture Static URLs
+description: In this documentation, learn how to perform Visual UI Testing using command line interface on the <BrandName /> Automation Cloud across 40+ browser versions.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-cli/
+slug: smartui-cli/
+canonical: https://www.testmuai.com/support/docs/smartui-cli/
+
 ---
-title: "Capture Static URLs via CLI"
-sidebarTitle: "Capture Static URLs"
-keywords:
-  [
-  "Visual Regression",
-  "Visual Regression Testing Guide",
-  "Visual Regression Test Automation",
-  "Visual Regression Automation Testing",
-  "Running Visual Regression Tests",
-  "Visual Regression Testing Online",
-  "Run Visual Regression",
-  "Visual Regression Run Specific Test",
-  "Visual Regression Testing Environment",
-  "How to Run Visual Regression Tests"
-]
 ---
 
-With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://app.storylane.io/demo/7vwai2zbxhzm?embed=inline"
-  title="demo"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<div className='storylane-iframe'>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/7vwai2zbxhzm?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI CLI.
 
 ## Create a SmartUI Web-Project
 
@@ -45,7 +44,7 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `<BrandName /> SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -58,9 +57,8 @@ npm install @lambdatest/smartui-cli
 ```
 
 <Note>
-NOTE
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 </Note>
 
 ## Step 2: Create URL file
@@ -73,7 +71,7 @@ Once, the `URLs` file will be created, you will be seeing the sample pre-filled 
 ```json title="/smartui-cli-project/urls.json"
 [
   {
-    "name": "lambdatest-home-page",
+    "name": "testmu ai-home-page",
     "url": "https://www.lambdatest.com",
     "waitForTimeout": 1000 //Optional
   },
@@ -84,35 +82,35 @@ Once, the `URLs` file will be created, you will be seeing the sample pre-filled 
 ]
 
 ```
-
 <Warning>
-Please Note
+**Please Note**
 
 The `waitForTimeout` is an optional configuration.
 
 If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
+
 </Warning>
 
 ## Step 3: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -121,7 +119,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Step 4: Create and Configure SmartUI Config
 
@@ -187,9 +185,8 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 ```
 
 <Note>
-NOTE
+**You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.**
 
-You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 </Note>
 
 ### SmartUI CLI Config Options
@@ -198,8 +195,8 @@ Please read the following table for more information about the configuration fil
 
 | Config Key     | Description                                                                                                                        | Usage     |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
-| viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
+| browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br /> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
+| viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br /> Ex: `[1920, 1080],[width, height] etc..` <br /> | Mandatory |
 
 ## **Step 5:** Execute the Tests on SmartUI Cloud using CLI
 
@@ -214,8 +211,8 @@ npx smartui capture urls.json --config .smartui.json
 You can also use the following options with the capture command:
 
 - `--scheduled <string>` - Specify schedule ID for scheduled test runs
-- `--userName <string>` - Override LambdaTest username
-- `--accessKey <string>` - Override LambdaTest access key
+- `--userName <string>` - Override <BrandName /> username
+- `--accessKey <string>` - Override <BrandName /> access key
 - `--buildName <string>` - Specify a custom build name
 - `--fetch-results [filename]` - Fetch and save results to JSON file
 
@@ -292,13 +289,10 @@ Specify a custom build name to group your screenshots in the following way:
 npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
 ```
 
-<Note>
-NOTE
-
-- If no build name is provided, a random name will be automatically assigned to the build.
-- Specifying the name of an existing build within the project will append the screenshots to that build.
-- Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
-</Note>
+> Note:
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
 
 ## Setup with Continuous Integration (CI)
 
@@ -326,7 +320,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Parallel execution of static URLs
 
@@ -340,31 +334,23 @@ npx smartui capture urls.json --config .smartui.json --parallel <number-of-paral
 - Each thread captures screenshots independently, maximizing throughput
 - Use `--force` flag to forcefully apply parallel instances even if not optimal
 
-<Warning>
-**Example:**
+>**Example:**
+>```bash
+>npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results
+>```
 
-```bash
-npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results
-```
-</Warning>
-
-<Warning>
-**Example with force flag:**
-
-```bash
-npx smartui capture urls.json --config .smartui.json --parallel 5 --force --fetch-results
-```
-</Warning>
+>**Example with force flag:**
+>```bash
+>npx smartui capture urls.json --config .smartui.json --parallel 5 --force --fetch-results
+>```
 
 ### Determining Optimal Thread Count
 The maximum number of parallel threads is calculated using the formula: log<sub>2</sub>(N) where N is the total number of URLs.
 
-<Warning>
-**For example:**
-- For 100 URLs: Maximum parallel threads = log<sub>2</sub>(100) = 6 threads
-- For 50 URLs: Maximum parallel threads = log<sub>2</sub>(50) = 5 threads
-- For 25 URLs: Maximum parallel threads = log<sub>2</sub>(25) = 4 threads
-</Warning>
+>**For example:**
+>- For 100 URLs: Maximum parallel threads = log<sub>2</sub>(100) = 6 threads
+>- For 50 URLs: Maximum parallel threads = log<sub>2</sub>(50) = 5 threads
+>- For 25 URLs: Maximum parallel threads = log<sub>2</sub>(25) = 4 threads
 
 ### Best Practices for parallel execution
 
@@ -381,4 +367,3 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
-

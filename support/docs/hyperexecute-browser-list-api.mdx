@@ -1,13 +1,13 @@
 ---
-title: "How to GET Supported Browsers in HyperExecute via API"
+title: "How to List Supported Browser in HyperExecute via API"
 sidebarTitle: "How to List Supported Browser in HyperExecute via API"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','How to List Supported Browser in HyperExecute via API']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'How to List Supported Browser in HyperExecute via API']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
-import { BrandName } from '/snippets/BrandName.mdx';
 
+# How to GET Supported Browsers in HyperExecute via API
 
 The Browser List API is a service provided by HyperExecute. It allows users to programmatically retrieve a list of all supported browsers and their versions on the HyperExecute platform. This information can be useful for compatibility checks and ensuring your web applications work across various browsers.
 
@@ -16,7 +16,13 @@ It will provide you the details like:
   - **browsers name** and **versions**
   - **resolutions**
 
+{/* <Info>
+**- **Endpoint :** https://api.hyperexecute.cloud/v2.0/browsers**
 
+- **Request Type :** GET 
+
+- **Authorization :** Basic
+</Info> */}
 
 ## API Endpoint and Authorization
 
@@ -26,7 +32,10 @@ The Endpoint for the Browser List API is:
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
 
+{/* ## Authentication
+To use the Browser List API, you will need an API key. You can obtain your API key by signing up for an account on HyperExecute and generating an API key from your account settings.
 
+Include your API key in the request headers using Basic Authentication as follows: */}
 
 ```
 Request Type : GET 
@@ -109,7 +118,10 @@ The response will be in JSON format, containing an array of objects representing
 }
 ```
 
+{/* ## Error Handling
+If there is an error with your request, the API will respond with an appropriate HTTP status code and an error message in the response body.
 
+Example Error Response: */}
 
 ## Params
 

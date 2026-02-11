@@ -4,9 +4,12 @@ sidebarTitle: "JUnit XML Reports"
 keywords: ['espresso', 'java', 'espresso junit xml reports', 'lambdatest java', 'framework on lambdatest', 'testng', 'app testing', 'real devices', 'junit reports', 'espresso reports']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ## Introduction
 
-JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the LambdaTest platform.
+JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the <BrandName /> platform.
 
 ## Objective
 ### By the end of this document, you should be able to:
@@ -48,7 +51,7 @@ curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fram
 <Info>
 **NOTE**
 
-- Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
+- Authenticate the API using your <BrandName /> username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
 - It is recommended to run the sharding test(via HyperExecute CLI) in the verbose mode i.e. with the **--verbose** flag. This allows the shard ID(task ID) and build ID(Job ID) to be displayed in the logs and then they can be used to fetch the above reports.
 - In case the report is not a valid XML format, the `encoder=true` parameter can be utilized to prevent the decoding of certain characters. Decoding is usually performed at the server's end to enhance the readability of the report.
 </Info>

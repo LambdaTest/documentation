@@ -1,20 +1,13 @@
 ---
 title: "Appium With JBehave"
 sidebarTitle: "JBehave"
-keywords: ['appium','jbehave','lambdatest java','framework on lambdatest','testng','app testing','real devices']
+keywords: ['appium', 'jbehave', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, you will learn how to trigger a automation script of **JBehave** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
@@ -29,30 +22,33 @@ In this documentation, you will learn how to trigger a automation script of **JB
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-java-jbehave" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-java-jbehave" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-    ```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
-  <Tab title="Windows">
-    ```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
+<Tabs className="docs__val">
+<Tab title="Linux / MacOS">
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
+<Tab title="Windows">
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
 </Tabs>
 
 ### Step 3: Upload your Application
@@ -60,27 +56,31 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="App File">
-    ```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
-  </Tab>
+<Tabs className="docs__val">
 
-  <Tab title="App URL">
-    ```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
-  </Tab>
+<Tab title="App File">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
+</Tab>
+
+<Tab title="App URL">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
+</Tab>
+
 </Tabs>
 
-<Check>
-**TIP**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
-</Check>
+</Tip>
 
 ### Step 4: Update your Automation Script
 
@@ -88,7 +88,7 @@ An automation script for the sample application given above has been provided he
 
 ```java
 
-package com.lambdatest;
+package com.testmu ai;
 import java.io.FileReader;
 import java.net.URL;
 import java.util.Map;
@@ -114,7 +114,6 @@ import org.junit.runners.Parameterized.Parameter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 
 @RunWith(Parameterized.class)
 public class LambdaTestJBehaveRunner {
@@ -168,11 +167,9 @@ public class LambdaTestJBehaveRunner {
             }
         }
 
-        String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");  //Replace YOUR_LT_USERNAME with your LambdaTest username
+        String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");  //Replace YOUR_LT_USERNAME with your TestMu AI username
 
-
-        String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); //Replace YOUR_LT_ACCESS_KEY with your LambdaTest accessKey
-
+        String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); //Replace YOUR_LT_ACCESS_KEY with your TestMu AI accessKey
 
         driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     }
@@ -194,11 +191,10 @@ public class LambdaTestJBehaveRunner {
 }
 ```
 
-<Check>
-**TIP**
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
 ### Step 5: Configure the Test Capabilities
 
@@ -206,8 +202,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
-<Tabs>
-  <Tab title="Single">
+<Tabs className="docs__val">
+<Tab title="Single">
 
 ```java
 //Single Tests
@@ -215,7 +211,7 @@ The capabilities object in the sample code are defined as:
   "server": "mobile-hub.lambdatest.com",
 
   "capabilities": {
-    "build": "jbehave-LambdaTest-AppAutomate-Single",
+    "build": "jbehave-TestMu AI-AppAutomate-Single",
     "name": "Single Test 1"
   },
 
@@ -229,9 +225,9 @@ The capabilities object in the sample code are defined as:
 }
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Parallel">
+<Tab title="Parallel">
 
 ```java
 //Parallel Tests
@@ -239,7 +235,7 @@ The capabilities object in the sample code are defined as:
   "server": "mobile-hub.lambdatest.com",
 
   "capabilities": {
-    "build": "jbehave-LambdaTest-AppAutomate-Parallel",
+    "build": "jbehave-TestMu AI-AppAutomate-Parallel",
     "name": "Parallel Test 1"
   },
 
@@ -263,22 +259,20 @@ The capabilities object in the sample code are defined as:
 }
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
-<Check>
-**TIP**
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
-<Note>
-**Info**
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Note>
+</Info>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -290,7 +284,7 @@ The capabilities object in the sample code are defined as:
 
 - The tests can be executed in the terminal using the following command:
 
-  <Tabs>
+  <Tabs className="docs__val">
   <Tab title="Single">
 
   ```bash
@@ -307,14 +301,10 @@ The capabilities object in the sample code are defined as:
   </Tab>
   </Tabs>
 
-<Warning>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Warning>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

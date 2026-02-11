@@ -1,64 +1,61 @@
 ---
-title: "Puppeteer Testing With Mocha"
+title: "Run Puppeteer Tests Using Mocha"
 sidebarTitle: "Integrate With Mocha"
-description: "Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases."
+keywords: ['puppeteer testing with mocha test runner', 'puppeteer testing with mocha test runner', 'puppeteer mocha test runner', 'puppeteer mocha', 'automation testing with puppeteer', 'how to use puppeteer for testing', 'test puppeteer', 'puppeteer testing tutorial', 'puppeteer testing testmu ai']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
-LambdaTest allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations.
+import { BrandName } from "/snippets/BrandName.mdx";
 
-This guide will cover the basics of getting started with Puppeteer testing with Mocha on the LambdaTest platform.
+
+# Puppeteer Testing With Mocha
+* * *
+
+Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
+
+<BrandName /> allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations. 
+
+This guide will cover the basics of getting started with Puppeteer testing with Mocha on the <BrandName /> platform.
 
 ## Prerequisites
+***
 
-<Note>
-Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/puppeteer-sample" />
-</Note>
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<a href="https://github.com/<BrandName />/puppeteer-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 
-<Steps>
-<Step>
-Clone the LambdaTest-Puppeteer repository on your system.
-</Step>
-<Step>
-Install the npm dependencies.
+1. Clone the <BrandName />-Puppeteer repository on your system.
 
-```bash lines
+2. Install the npm dependencies.
+
+```
 npm install
 ```
-</Step>
-<Step>
-In order to run your Puppeteer tests with Mocha, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<Frame>
-![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
-</Frame>
-</Step>
-</Steps>
+3. In order to run your Puppeteer tests with Mocha, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<CodeGroup>
-```bash lines Windows
+<img loading="lazy" src='/assets/images/playwright-testing/key.webp' alt="Image" width="1444" height="703" />
+
+**Windows**
+
+```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-```bash lines macOS/Linux
+**macOS/Linux**
+
+```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-</CodeGroup>
 
 ## Running Tests Using Mocha
+--- 
 
-<Warning>
-**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
-</Warning>
+>**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
 
-<Steps>
-<Step>
-To run the Puppeteer Mocha tests on LambdaTest, you need make some tweaks to the `google.spec.js` file.
+1. To run the Puppeteer Mocha tests on <BrandName />, you need make some tweaks to the `google.spec.js` file.
 
-```javascript 
+```js
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 const caps_chrome = {
@@ -137,16 +134,11 @@ describe('Search Text', () => {
 	});
 });
 ```
-</Step>
-<Step>
-Now pass the below command to run your test.
 
-```bash lines
+2. Now pass the below command to run your test.
+
+```
 npm run test
 ```
-</Step>
 
-<Step>
-Visit the LambdaTest Automation Dashboard to see the results of your Puppeteer Mocha tests.
-</Step>
-</Steps>
+3. Visit the <BrandName /> Automation Dashboard to see the results of your Puppeteer Mocha tests.

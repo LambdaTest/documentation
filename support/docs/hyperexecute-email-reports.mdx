@@ -1,10 +1,13 @@
 ---
 title: "Receive Job Reports and Artifacts via Email"
-sidebar_label: Receive Job Reports and Artifacts via Email
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
-
+sidebarTitle: "Receive Job Reports and Artifacts via Email"
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Receive Job Reports and Artifacts via Email
 
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
 
@@ -21,7 +24,7 @@ email:
 
 You can also use the `currentUser` tag to send the reports to the email ID of your choice.
 
-- **currentUser**: This tag will allow you to send the report to the email ID associated with your LambdaTest account.
+- **currentUser**: This tag will allow you to send the report to the email ID associated with your <BrandName /> account.
 
 ```yaml
 email:
@@ -35,9 +38,7 @@ Follow the below mentioned steps to receive your Artifacts via email:
 
 **Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
-<Note>
-**NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
-</Note>
+> **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
 
 ```yaml
 uploadArtifacts:
@@ -107,25 +108,29 @@ In your YAML configuration file instead of hardcoding the email address to which
 
 In this example, the `${email}` and `${email1}` variables are used to specify the email address. You can pass the value of this variable using the [`vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag as an argument when executing your test via CLI.
 
-```yaml hyperexecute.yaml highlight={6-9,15-18}
+```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
   location: target/surefire-reports/html
   type: html
   frameworkName: extent
+# highlight-start
   email:
       to:
         - "${email}"
         - "${email1}"
+# highlight-end
 
 uploadArtifacts:
   - name: Reports 1
     path:
       - ProtractorTestReport.html
+# highlight-start      
     email:
       to: 
         - "${email}"
         - "${email1}"
+# highlight-end
 ```
 
 This is how you can pass the value of your email address via CLI by running the command
@@ -134,32 +139,31 @@ This is how you can pass the value of your email address via CLI by running the 
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 
-<Info>
-**NOTE**
-If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.
+<Note>
+**If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.**
 
-```yaml hyperexecute.yaml highlight={6-8,15-17}
+```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
   location: target/surefire-reports/html
   type: html
   frameworkName: extent
+# highlight-start
   email:
       to:
         - "${email}"
+# highlight-end
 
 uploadArtifacts:
   - name: Reports 1
     path:
       - ProtractorTestReport.html
-      
+# highlight-start      
     email:
       to: 
         - "${email}"
-```
-
+# highlight-end
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com,abc@xyz.com,def@wxy.com"
 ```
-</Info>
-
+</Note>

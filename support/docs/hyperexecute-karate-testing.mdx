@@ -1,11 +1,11 @@
 ---
 title: "Karate Automation on HyperExecute"
 sidebarTitle: "Karate"
-keywords: ['Karate', 'Karate selenium', 'Karate Java Selenium', 'Karate automation testing', 'selenium webdriver Karate', 'selenium Karate testing tutorial', 'Karate Java Selenium framework', 'testmu ai Karate', 'frameworks on testmu ai', 'hyperexecute', 'hyperexecute Karate testing', 'hyperexecute automation testing', 'HyperExecute Selenium automation']
+keywords: ['Karate', 'Karate selenium', 'Karate Java Selenium', 'Karate automation testing', 'selenium webdriver Karate', 'selenium Karate testing tutorial', 'Karate Java Selenium framework', 'testmu ai Karate', 'frameworks on testmu ai', 'hyperexecute', 'hyperexecute Karate testing', 'hyperexecute Karate testing', 'hyperexecute automation testing', 'HyperExecute Selenium automation']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Karate is a popular open-source test automation framework that combines API test-automation, mocks, performance testing, and even UI testing into a single framework. It allows writing expressive tests in a simple Gherkin syntax, while leveraging Java for extensibility.
 
@@ -75,12 +75,13 @@ To run the Tests on HyperExecute from your Local System, you are required:
 ### Step 1: Download Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the Karate from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/lambdatest/hyperexecute-karate-sample/" />
-</Check>
+
+<a href="https://github.com/testmu ai/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Download the CLI in your Project
 Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
@@ -118,13 +119,12 @@ function fn() {
 }
 ```
 
-<Info>
-**NOTE**
+<Note>
+**- `lambdaHooks` sets test status based on execution outcome.**
 
-- `lambdaHooks` sets test status based on execution outcome.
 - `hub` is dynamically picked to support Selenium Grid for UI tests.
 - Supports environment-based configuration using `karate.env`.
-</Info>
+</Note>
 
 ### Step 4: Create your hyperexecute.yml file
 The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let’s break down the structure and understand each section:
@@ -163,17 +163,15 @@ testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https
 - **-Dhub=...:** Optional. Used when your Karate test needs to connect to Selenium Grid for UI tests.
 - **-Dmaven.repo.local=./.m2:** Uses a local Maven repo to avoid repeated dependency downloads on each VM.
 
-<Note>
-**INFO**
-
-This command runs one feature file per runner, as decided by autosplit. However, you can change the granularity and run:
+<Info>
+**This command runs one feature file per runner, as decided by autosplit. However, you can change the granularity and run:**
 
 - All scenarios tagged with @smoke
 - A specific step definition class
 - A subset of feature files based on folder/module
 
-`mvn test -Dkarate.options="--tags @smoke"`
-</Note>
+> mvn test -Dkarate.options="--tags @smoke"
+</Info>
 
 #### 4. Test Discovery Configuration
 Test discovery determines which test files or test cases to run, and provides those to the test runner. In HyperExecute, the `testDiscovery` block parses and lists all .feature files, which are then split and executed.
@@ -204,71 +202,27 @@ src/test/java/app/payments.feature
 
 Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
 
-```yaml hyperexecute.yaml
----
-version: 0.1
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
-runson: linux
-autosplit: true
-retryOnFailure: false
-maxRetries: 5
-concurrency: 10
-runtime:
-  language: java
-  version: 11
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - .m2
-background:
-  - mvn clean test -Dtest=LocalRunner -Dmaven.repo.local=./.m2 || true
-report: true
-partialReports:
-  frameworkName: cucumber
-  location: target/karate-reports/
-  type: json
-pre:
-  # Download and install packages in the CACHE_DIR.
-  # Skip execution of the tests in the pre step
-  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
-  #- mvn clean test -Dtest=LocalRunner
-
-uploadArtefacts:
-  - name: ExecutionSnapshots
-    path:
-      - target/
-mergeArtifacts: true
-testDiscovery:
-  type: raw
-  mode: static
-  command: snooper  --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java  | sed 's/:.*//' | uniq
-
-scenarioCommandStatusOnly: true
-post:
-  - curl http://localhost:8080/__admin/stop
-
-testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https://<LT_USERNAME>:<LT_ACCESS_KEY>@hub.lambdatest.com/wd/hub -Dmaven.repo.local=./.m2
+```yaml reference title="hyperexecute.yaml"
+https://github.com/TestMu AI/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
 ```
 
-<Note>
-
-📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
-</Note>
+> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 5: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config hyperexecute.yaml
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
+  
 ```
 
-<Note>
-**NOTE:** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/karate/karate.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/karate/karate.png' alt="automation-dashboard"  width="1920" height="868" />
 
 ## Advanced Parameters
 Optimize your test pipeline using the following advanced features:

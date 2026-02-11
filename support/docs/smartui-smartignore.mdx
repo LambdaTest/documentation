@@ -1,18 +1,20 @@
 ---
-title: "Ignoring Displacement Differences using Smart Ignore"
+title: "Smart Ignore"
 sidebarTitle: "Smart Ignore"
-keywords: ["hide displacement diffs", "ignore displacement differences", "smart ignore layout shifts", "AI based auto ignore"]
+keywords: ['hide displacement diffs', 'ignore displacement differences', 'smart ignore layout shifts', 'ai based auto ignore']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 SmartUI's `Smart Ignore` engine is specifically designed to address the challenges that arise when testing dynamic and content-rich web applications. Often, when content is added or removed from a page, it causes other elements to be displaced, leading to numerous false positives in traditional pixel-by-pixel comparisons. Smart Ignore intelligently hides these displacement differences, allowing you to concentrate on actual content changes that impact the user experience.
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://app.storylane.io/demo/pzvjh5ij6xpd?embed=inline"
-  title="demo"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<div className='storylane-iframe'>
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/pzvjh5ij6xpd?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ### Key Features of Smart Ignore
 
@@ -23,13 +25,13 @@ Smart Ignore distinguishes between content changes and mere content displacement
 
 In scenarios where large areas of the page are impacted by content displacement, traditional pixel to pixel comparison would highlight these areas in a blurred and cluttered manner making it difficult to identify the actual content changes. Smart Ignore minimizes this clutter, highlighting only those areas where content has genuinely changed. In the image below you can see confusing comparison due to the `pixel to pixel` approach, which is unable to highlight the actual reasons behind the mismatch.
 
-![cmd](/assets/images/smart-visual-testing/smart-ignore/p2p.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smart-ignore/p2p.webp' alt="cmd" width="768" height="373" />
 
 #### 3. Targeted Visual Testing:
 
 By focusing only on the significant changes, **Smart Ignore** enhances the precision of your visual testing. This feature is particularly useful when testing pages where frequent updates or dynamic content are expected, ensuring that only the most relevant differences are brought to your attention. In the image below you can see the actual changes being highlighted as Smart Ignore understands the images and yields out the best results.
 
-![cmd](/assets/images/smart-visual-testing/smart-ignore/smartignore.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smart-ignore/smartignore.webp' alt="cmd" width="768" height="375" />
 
 ## How to Use Smart Ignore?
 
@@ -38,7 +40,13 @@ By focusing only on the significant changes, **Smart Ignore** enhances the preci
 In your SmartUI dashboard, navigate to your project settings.
 Under "Comparison Options," switch on the `Smart Ignore` toggle across all visual tests in the project.This ensures Smart Ignore will be applied throughout the project with option to see other comparison modes as well on screenshot level according to the usecase.
 
-![cmd](/assets/images/smart-visual-testing/smart-ignore/Toggle.png)
+<img
+  loading="lazy"
+  src='/assets/images/smart-visual-testing/smart-ignore/Toggle.png'
+  alt="cmd"
+  width="300"
+  height="200"
+ />
 
 #### 2. Using Smart Ignore per Screenshot
 
@@ -46,8 +54,13 @@ After running your visual test, go to the comparison page.
 For each screenshot, choose the "Smart Ignore" mode from the "Diff Options" dropdown.
 This allows you to selectively apply Smart Ignore to specific screenshots, making it easier to identify true differences in content.
 
-![cmd](/assets/images/smart-visual-testing/smart-ignore/Dropdown-4.png)
-
+<img
+  loading="lazy"
+  src='/assets/images/smart-visual-testing/smart-ignore/Dropdown-4.png'
+  alt="cmd"
+  width="300"
+  height="200"
+ />
 ## Use Cases of Smart Ignore
 
 #### Content Management Systems
@@ -91,15 +104,15 @@ Smart Ignore may not be suitable for:
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Start with Project-Level Toggle' default>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Start with Project-Level Toggle">
 
 **Start with Project-Level Toggle**
 
 Enable Smart Ignore at the project level for consistent behavior across all tests. You can still switch to other comparison modes per screenshot if needed.
 
 </Tab>
-<Tab title='Combine with Other Features' >
+<Tab title="Combine with Other Features">
 
 **Combine with Other Features**
 
@@ -109,21 +122,21 @@ Smart Ignore works well with:
 - Custom CSS for test-specific styling
 
 </Tab>
-<Tab title='Review Results Regularly' >
+<Tab title="Review Results Regularly">
 
 **Review Results Regularly**
 
 While Smart Ignore reduces false positives, regularly review results to ensure it's not hiding important changes.
 
 </Tab>
-<Tab title='Use Per-Screenshot Mode for Testing' >
+<Tab title="Use Per-Screenshot Mode for Testing">
 
 **Use Per-Screenshot Mode for Testing**
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
 
 </Tab>
-<Tab title='Use Per-Screenshot Mode for Testing' >
+<Tab title="Use Per-Screenshot Mode for Testing">
 
 **Use Per-Screenshot Mode for Testing**
 
@@ -134,8 +147,8 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Smart Ignore Not Available' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Smart Ignore Not Available">
 
 **Issue: Smart Ignore Not Available**
 
@@ -147,7 +160,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 3. Contact support if the feature should be available
 
 </Tab>
-<Tab title='Too Many Differences Still Shown' >
+<Tab title="Too Many Differences Still Shown">
 
 **Issue: Too Many Differences Still Shown**
 
@@ -160,7 +173,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 4. Combine with `ignoreDOM` for specific elements
 
 </Tab>
-<Tab title='Important Changes Hidden' >
+<Tab title="Important Changes Hidden">
 
 **Issue: Important Changes Hidden**
 
@@ -173,7 +186,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 4. Consider if the change is actually a displacement vs content change
 
 </Tab>
-<Tab title='Inconsistent Results' >
+<Tab title="Inconsistent Results">
 
 **Issue: Inconsistent Results**
 
@@ -218,7 +231,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 ---
 
 <Note>
-NOTE
-
-Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](/support/docs/) for updates.
+**Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](/support/docs/) for updates.
 </Note>
+

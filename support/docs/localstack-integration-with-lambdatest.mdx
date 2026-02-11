@@ -1,36 +1,25 @@
 ---
-title: "LocalStack Integrates With Lambdatest"
+title: "LocalStack Integration With TestMu AI"
 sidebarTitle: "LocalStack"
-keywords:
-  [
-    "Lambdatest integrations",
-    "push issues to localstack",
-    "free cross browser testing tool",
-    "cross platform testing tools",
-    "check browser compatibility online",
-    "Lambdatest localstack integration",
-    "integrate localstack with Lambdatest",
-    "create issue in localstack from Lambdatest",
-    "localstack integration with Lambdatest",
-    "create localstack issues from Lambdatest",
-    "bug tracking tools",
-    "project management tools"
-  ]
+keywords: ['testmu ai integrations', 'push issues to localstack', 'free cross browser testing tool', 'cross platform testing tools', 'check browser compatibility online', 'testmu ai localstack integration', 'integrate localstack with testmu ai', 'create issue in localstack from testmu ai', 'localstack integration with testmu ai', 'create localstack issues from testmu ai', 'bug tracking tools', 'project management tools']
 ---
-***
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 
 LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine. It works on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas on your own computer without needing to connect to a remote cloud provider!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BKjPOhQE2hg?si=Tbd-qeSZvCeqLEdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-LocalStack and Lambdatest have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and Lambdatest's smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.
+LocalStack and <BrandName /> have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and <BrandName />'s smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.
 
-With this integration, teams can perform tests at an impressive speed without constant internet connectivity. By leveraging the advanced AI solutions from Lambdatest, teams can enjoy an unmatched experience when it comes to executing tests. This results in enhanced productivity and efficiency throughout the development and testing lifecycle.
+With this integration, teams can perform tests at an impressive speed without constant internet connectivity. By leveraging the advanced AI solutions from <BrandName />, teams can enjoy an unmatched experience when it comes to executing tests. This results in enhanced productivity and efficiency throughout the development and testing lifecycle.
 
 ## Prerequisites
 ***
 
-1. A Lambdatest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 2. A LocalStack account. Don’t have an account, you can create one [here](https://app.localstack.cloud/sign-in).
 
 ## Installing LocalStack CLI
@@ -47,11 +36,11 @@ In this section, we will set up out LocalStack account to generate our API keys.
 
 **Step 1:** To get generate your API key, head to **Account**. 
 
-![add](/assets/images/localstack-integration/local-three.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/local-three.webp' alt="add" width="1346" height="647" />
 
 **Step 2:** Select the **API Keys** tab.  
 
-![add](/assets/images/localstack-integration/local-four.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/local-four.webp' alt="add" width="1346" height="647" />
 
 **Step 3:** Generate and **copy your API Key**. 
 
@@ -107,7 +96,7 @@ The above command will create the **S3 buckets**, put the bucket names into the 
 
 > **Note:** You can visit **webapp.s3-website.localhost.localstack.cloud:4566** on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
 
-![add](/assets/images/localstack-integration/localstack-one.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-one.webp' alt="add" width="1346" height="647" />
 
 **Step 3:** You can fetch the function URL by running the following commands:
 
@@ -115,7 +104,7 @@ The above command will create the **S3 buckets**, put the bucket names into the 
 awslocal lambda list-function-url-configs --function-name presign 
 awslocal lambda list-function-url-configs --function-name list
 ```
-![remove](/assets/images/localstack-integration/localstack-two.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-two.webp' alt="remove" width="1347" height="644" />
 
 **Step 4:** You can now upload an image file and download the resized file from the `localstack-thumbnails-app-resized` bucket.
 
@@ -164,13 +153,13 @@ sourcePayload:
   accessToken: ${{ .secrets.PAT }}
 ```
 
-![remove](/assets/images/localstack-integration/localstack-three.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-three.webp' alt="remove" width="1347" height="644" />
 
 **Step 2:** Commit the he.yml file on your repository. Ensure that the `LOCALSTACK_API_KEY` secret has been configured in your GitHub repository as a secret. 
 
 **Step 3:** Navigate to the **Settings** page of the repository, and from the sidebar, click **Secrets and Variables**. Click **Actions** and click the **New Repository Secret** button to add the `HE. LOCALSTACK_API_KEY`. This key is added to the HyperExecute Portal.
 
-![remove](/assets/images/localstack-integration/localstack-four.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-four.webp' alt="remove" width="1347" height="644" />
 
 **Step 4:** To create the GitHub Actions pipeline `YAML` file, navigate to the repository where your code is available. In this example, you can assume that we are adding this to the previous code sample that we demonstrated. 
 
@@ -197,11 +186,10 @@ wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
 
 **Step 6:** Save the configuration in your GitHub Actions pipeline. Below is an example of how a test that is run on the GitHub Actions pipeline gets executed:
 
-![remove](/assets/images/localstack-integration/localstack-five.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-five.webp' alt="remove" width="1347" height="644" />
 
 Below is an example of a **HyperExecute** job that was triggered through the above pipeline:
 
-![remove](/assets/images/localstack-integration/localstack-six.webp)
+<img loading="lazy" src='/assets/images/localstack-integration/localstack-six.webp' alt="remove" width="1347" height="644" />
 
-> That was all you need to know for Lambdatest + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
-
+> That was all you need to know for <BrandName /> + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!

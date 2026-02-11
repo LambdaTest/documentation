@@ -1,39 +1,39 @@
 ---
 title: "HyperExecute Environment Variable Setup"
-sidebarTitle: "Environment Variable Setup"
-keywords: ['TestMu AI automation', 'TestMu AI environment variables', 'TestMu AI setup', 'Hyperexecute environment variables']
+sidebarTitle: "HyperExecute Environment Variable Setup"
+keywords: ['testmu ai automation', 'testmu ai environment variables', 'testmu ai setup', 'hyperexecute environment variables']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 To provide you with a secure [cross-browser testing](https://www.lambdatest.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
 
 ## Where to find <BrandName /> Authentication Credentials?
+***
 
 <BrandName /> Authentication Credentials consists of two fields:
 
 1. <BrandName /> Username
 2. <BrandName /> Access Key
 
-<Note>
-You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile).
-</Note>
+>You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile).
 
-**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
+#**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
 **Step 2:** Under Account Settings, go to **Password & Security**
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="/assets/videos/hyperexecute/knowledge-base/username-accesskey/method1.mp4" type="video/mp4" />
+<source src= '/assets/videos/hyperexecute/knowledge-base/username-accesskey/method1.mp4' type="video/mp4" />
 </video>
 
 **Step 3:** You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
 <Tip>
-You can directly copy your Username and Access Key using shortcut key button.
+**You can directly copy your Username and Access Key using shortcut key button.**
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="/assets/videos/hyperexecute/knowledge-base/username-accesskey/method2.mp4" type="video/mp4" />
+<source src= '/assets/videos/hyperexecute/knowledge-base/username-accesskey/method2.mp4' type="video/mp4" />
 </video>
 </Tip>
 
@@ -59,17 +59,27 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>

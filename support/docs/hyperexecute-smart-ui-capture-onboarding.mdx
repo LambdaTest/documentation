@@ -4,8 +4,8 @@ sidebarTitle: "SmartUI Capture Onboarding"
 keywords: ['smart ui capture hyperexecute', 'smartui capture onboarding', 'visual regression testing hyperexecute', 'smartui cli capture', 'hyperexecute smartui integration', 'visual ui testing automation']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This comprehensive guide will walk you through setting up and running SmartUI Capture tests on HyperExecute. SmartUI Capture allows you to perform visual regression testing by capturing screenshots of static URLs across multiple browsers and devices, all orchestrated through HyperExecute's powerful test execution platform.
 
@@ -23,11 +23,11 @@ Before you begin, ensure you have the following:
   - JSON file structure
   - Visual regression testing concepts
 
-<Info>
-**NODE.JS VERSION REQUIREMENT**
+<Note>
+**Node.js Version Requirement**
 
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
 ## Overview
 
@@ -55,11 +55,11 @@ The first step is to create a SmartUI project in the dashboard. This project wil
    - **Tags**: Optional tags for filtering and organization
 5. Click on **Submit** or **Continue**
 
-<Note>
-**PROJECT TOKEN**
+<Info>
+**Project Token**
 
 After creating the project, you will receive a `PROJECT_TOKEN`. Save this token securely as you'll need it in the next steps. The token format looks like: `123456#1234abcd-****-****-****-************`
-</Note>
+</Info>
 
 ## Step 2: Set Up Your Project Structure
 
@@ -108,17 +108,18 @@ npm install -g @lambdatest/smartui-cli@4.1.54-beta.0
 npm install @lambdatest/smartui-cli@4.1.54-beta.0
 ```
 
-<Check>
-**SAMPLE REPOSITORY**
+<Tip>
+**Sample Repository**
 
 You can also clone the sample repository to get started quickly:
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-playwright-sample
+git clone https://github.com/TestMu AI/smartui-playwright-sample
 cd smartui-playwright-sample
 ```
-<GitHubButton url="https://github.com/LambdaTest/smartui-playwright-sample" />
-</Check>
+
+<a href="https://github.com/<BrandName />/smartui-playwright-sample" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ## Step 4: Configure Environment Variables
 
@@ -128,55 +129,67 @@ Set up your environment variables for authentication and configuration.
 
 The `PROJECT_TOKEN` is required for SmartUI CLI capture commands.
 
-<Tabs>
-  <Tab title="MacOS/Linux">
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-  </Tab>
-  <Tab title="Windows - CMD">
+
+</Tab>
+<Tab title="Windows - CMD">
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-  </Tab>
-  <Tab title="PowerShell">
+
+</Tab>
+<Tab title="PowerShell">
+
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Set HyperExecute Credentials
 
-For HyperExecute, you'll need your LambdaTest username and access key.
+For HyperExecute, you'll need your <BrandName /> username and access key.
 
-<Tabs>
-  <Tab title="MacOS/Linux">
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
+
 ```bash
-export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-  </Tab>
-  <Tab title="Windows - CMD">
+
+</Tab>
+<Tab title="Windows - CMD">
+
 ```bash
-set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-  </Tab>
-  <Tab title="PowerShell">
+
+</Tab>
+<Tab title="PowerShell">
+
 ```powershell
-$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Note> 
-**GETTING YOUR CREDENTIALS**
+<Info>
+**Getting Your Credentials**
 
-- **Username and Access Key**: Available in your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- **Username and Access Key**: Available in your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
-</Note>
+</Info>
 
 ## Step 5: Create URL Configuration Files
 
@@ -224,6 +237,14 @@ Each URL object supports the following properties:
 | `url` | string | Yes | The URL to capture |
 | `waitForTimeout` | number | No | Wait time in milliseconds before capturing (useful for lazy-loaded content) |
 
+<Warning>
+**Wait Timeout Best Practices**
+
+- Use `waitForTimeout` only when necessary (e.g., for lazy-loaded components or async content)
+- Higher timeout values increase test execution time
+- Start with lower values (1000-3000ms) and increase if needed
+- Consider using `execute` options for more complex interactions
+</Warning>
 
 ### Splitting URLs for Parallel Execution
 
@@ -310,11 +331,11 @@ Create `config.json` with your desired settings:
 - **scrollDelay**: Delay between scroll steps (milliseconds)
 - **scrollStep**: Pixels to scroll per step
 
-<Note>
-**ADVANCED CONFIGURATION**
+<Info>
+**Advanced Configuration**
 
 For more configuration options, refer to the [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/) documentation.
-</Note>
+</Info>
 
 ## Step 7: Create HyperExecute YAML Configuration
 
@@ -412,11 +433,11 @@ jobLabel: ['HYP', 'SmartUI', 'Capture', 'Parallel']
 | `testSuites` | Test commands to execute | SmartUI capture commands |
 | `matrix` | Matrix for parallel execution | Multiple URL files |
 
-<Note>
-**HYPEREXECUTE YAML DOCUMENTATION**
+<Info>
+**HyperExecute YAML Documentation**
 
 For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/hyperexecute-yaml-version0.2/).
-</Note>
+</Info>
 
 ## Step 8: Execute Tests on HyperExecute
 
@@ -447,7 +468,7 @@ Execute your tests using the HyperExecute CLI:
 Or with explicit credentials:
 
 ```bash
-./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME} --key ${YOUR_LAMBDATEST_ACCESS_KEY} --config hyperexecute.yaml
+./hyperexecute --user $YOUR_LAMBDATEST_USERNAME --key $YOUR_LAMBDATEST_ACCESS_KEY --config hyperexecute.yaml
 ```
 
 ### Capture Command Options
@@ -537,7 +558,7 @@ For detailed information, see the [Fetch Results Documentation](/support/docs/sm
 
 ### 1. URL Organization
 
-<Tabs groupId="best-practices">
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Environment Separation">
 
 **Separate Test and Production URLs**
@@ -590,7 +611,7 @@ Avoid generic names like `"page1"` or `"test"`.
 
 When working with large numbers of URLs (e.g., 1000+ URLs) that can be logically divided into sections or groups (e.g., Section 1: Product Category A, Section 2: Product Category B, Section 3: Product Category C, etc.), you have two primary strategies for organizing your SmartUI projects:
 
-<Tabs groupId="grouping-strategy">
+<Tabs className='docs__val' groupId='grouping-strategy'>
 <Tab title="Strategy 1: Single Project with Branching">
 
 **Single Project with Branching Strategy**
@@ -839,7 +860,7 @@ npx smartui capture sections/category_a_staging.json --config config.json
 
 ### 2. Configuration Management
 
-<Tabs groupId="config-practices">
+<Tabs className='docs__val' groupId='config-practices'>
 <Tab title="Browser Selection">
 
 **Select Relevant Browsers**
@@ -897,7 +918,7 @@ Higher timeouts increase execution time.
 
 ### 3. HyperExecute Configuration
 
-<Tabs groupId="hyperexecute-practices">
+<Tabs className='docs__val' groupId='hyperexecute-practices'>
 <Tab title="Concurrency">
 
 **Optimize Concurrency**
@@ -965,7 +986,7 @@ Use descriptive build names that include:
 
 ### Common Issues and Solutions
 
-<Tabs groupId="troubleshooting">
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Authentication Errors">
 
 **Issue**: `PROJECT_TOKEN is not set` or authentication failures
@@ -1169,5 +1190,4 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [LambdaTest Support](https://www.lambdatest.com/support) - Get help from our support team
-
+- [<BrandName /> Support](https://www.lambdatest.com/support) - Get help from our support team

@@ -1,10 +1,10 @@
 ---
-title: "LambdaTest AI Cloud GitHub App Integration"
+title: "TestMu AI Cloud GitHub App Integration"
 sidebarTitle: "KaneAI GitHub App Integration"
 keywords: ['github app', 'testmu ai integration', 'AI test generation', 'PR automation', 'test management']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 # <BrandName /> AI Cloud GitHub App Integration
@@ -36,6 +36,8 @@ All of this happens automatically, with real-time progress updates posted direct
 - **Continuous Quality Intelligence**: AI-driven Root Cause Analysis automatically diagnoses test failures, reducing debugging time and accelerating resolution
 - **Unified Test Management**: All generated tests sync with <BrandName /> Test Manager, providing centralized visibility and control across your QA operations
 
+---
+
 ## 2. Prerequisites
 
 Before implementing the <BrandName /> AI Cloud GitHub App in your development workflow, ensure your organization has the following:
@@ -49,8 +51,9 @@ Before implementing the <BrandName /> AI Cloud GitHub App in your development wo
 ### Repository Requirements
 
 - **GitHub Repository Access**: Administrative access to the GitHub repositories where you want to install the app
- **Repository README**: A well-documented README.md file in your repository (the AI uses this for contextual understanding of your application) 
+{/* - **Repository README**: A well-documented README.md file in your repository (the AI uses this for contextual understanding of your application) */}
 
+---
 
 ## 3. Installation
 
@@ -58,10 +61,9 @@ Follow these steps to install and authorize the <BrandName /> AI Cloud GitHub Ap
 
 ### Step 1: Access GitHub Marketplace
 
-Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
+Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/testmu ai-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
 
 <img loading="lazy" src='/assets/images/kaneai-github-app/install-github-app.png' alt="Trigger KaneAI workflow" />
-
 
 ### Step 2: Configure Repository Access
 
@@ -76,11 +78,11 @@ After making your selection and clicking the **Install and Authorize** button, y
 
 <img loading="lazy" src='/assets/images/kaneai-github-app/integration-success.png' alt="Trigger KaneAI workflow" />
 
+<Tip>
+**Best Practice**
 
-<Check>
- Best Practice
 For pilot programs or initial rollouts, we recommend installing on a select subset of repositories first. Once your team is comfortable with the workflow, you can expand access organization-wide.
-</Check>
+</Tip>
 
 ### Step 3: Verify Successful Installation
 
@@ -95,12 +97,13 @@ You can also click on the app to review and modify repository access permissions
 
 <img loading="lazy" src='/assets/images/kaneai-github-app/github-app-install-success-page.png' alt="Trigger KaneAI workflow" />
 
+---
 
 ## 3.1 Uninstalling the GitHub App
 
 If you need to remove the <BrandName /> AI Cloud GitHub App from your organization:
 
-1. Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace
+1. Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/testmu ai-ai-cloud) on GitHub Marketplace
 2. Click on the **Configure** button to access the app settings
 3. Scroll down to the bottom of the page to find the **Danger Zone** section
 4. Click on the **Uninstall** button to remove the app from your organization
@@ -108,11 +111,13 @@ If you need to remove the <BrandName /> AI Cloud GitHub App from your organizati
 
 <img loading="lazy" src='/assets/images/kaneai-github-app/uninstall-github-app.png' alt="Uninstall GitHub App" />
 
-<Check>
- caution
-Uninstalling the GitHub App will stop all AI-powered test generation workflows on your pull requests. This action cannot be undone, and you'll need to reinstall the app to restore functionality.
-</Check>
+<Tip>
+**caution**
 
+Uninstalling the GitHub App will stop all AI-powered test generation workflows on your pull requests. This action cannot be undone, and you'll need to reinstall the app to restore functionality.
+</Tip>
+
+---
 
 ## 4. Repository Configuration
 
@@ -120,10 +125,10 @@ After installing the GitHub App, each repository requires a configuration file t
 
 ### Configuration File Setup
 
-Create a `.lambdatest/config.yaml` file in the root directory of your repository with the following structure:
+Create a `.testmu ai/config.yaml` file in the root directory of your repository with the following structure:
 
 ```yaml
-# LambdaTest AI Cloud Configuration
+# TestMu AI AI Cloud Configuration
 project_id: "your_project_id"
 folder_id: "your_folder_id"
 assignee: your_user_id
@@ -141,17 +146,17 @@ test_url: "https://your-deployed-app-url.com/"
 | `environment_id` | The target testing environment (browser, OS, device configurations) | Create environments in Test Manager and reference their IDs |
 | `test_url` | The base URL of your application under test | Your staging or testing environment URL where tests will be executed |
 
-<Note>
-**Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](/support/api-doc/?key=test-management).
-</Note>
-<Check>
- Maximize AI Context
+> **Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+
+<Tip>
+**Maximize AI Context**
+
 The `README.md` file in your repository is analyzed by KaneAI to understand your application's purpose, architecture, and business logic. A comprehensive README significantly improves the quality and relevance of generated test cases. Include:
 - Application overview and key features
 - User workflows and critical paths
 - Architecture and technology stack
 - Business rules and validation logic
-</Check>
+</Tip>
 
 ### Repository Structure
 
@@ -159,8 +164,8 @@ Your final repository structure should look like this:
 
 ```
 your-repo/
-├── .lambdatest/
-│   └── config.yaml          # LambdaTest configuration
+├── .testmu ai/
+│   └── config.yaml          # TestMu AI configuration
     └── agent.md             # Optional file for custom instructions to enhance responses
 ├── src/                     # Your application source code
 ├── README.md                # Detailed project documentation (used by AI)
@@ -172,8 +177,9 @@ your-repo/
 - **Environment Segregation**: Use separate `project_id` and `folder_id` values for different branches (e.g., staging vs. production) to maintain test organization
 - **Team Assignment**: Configure `assignee` to route test runs to the appropriate QA team member or use a shared team account for visibility
 - **Dynamic URLs**: For teams with ephemeral preview environments, consider parameterizing `test_url` or updating it per deployment
-- **Version Control**: Commit `.lambdatest/config.yaml` to your repository so all team members use consistent configuration
+- **Version Control**: Commit `.testmu ai/config.yaml` to your repository so all team members use consistent configuration
 
+---
 
 ## 5. Triggering Test Generation
 
@@ -187,7 +193,7 @@ The test generation workflow is triggered through a simple comment on any pull r
 2. **Add a Trigger Comment**: Post any of the following commands in the PR comments section:
 
 ```bash
-@LambdaTest Validate this PR
+@TestMu AI Validate this PR
 #OR
 @KaneAI Validate this PR
 ```
@@ -206,7 +212,6 @@ After you post the trigger comment, KaneAI immediately begins working:
 4. **Test Generation**: Intelligent test cases are created with appropriate assertions, validations, and edge case handling
 
 This entire process typically completes within minutes, depending on the complexity of your code changes.
-
 
 ## 6. Automated Workflow and Real-Time Tracking
 
@@ -282,7 +287,7 @@ This intelligent reporting dramatically reduces the time from test completion to
 
 <img loading="lazy" src='/assets/images/kaneai-github-app/6-report-generated.png' alt="Final Report Generated" />
 
- <img loading="lazy" src='/assets/images/kaneai-github-app/7-rca-for-failed-tests.png' alt="AI RCA for Failed Tests" /> 
+{/* <img loading="lazy" src='/assets/images/kaneai-github-app/7-rca-for-failed-tests.png' alt="AI RCA for Failed Tests" /> */}
 
 ### Benefits: Unified Visibility
 
@@ -292,5 +297,4 @@ The GitHub-native workflow provides critical advantages for enterprise teams:
 - **Stakeholder Transparency**: Product managers, architects, and other stakeholders can follow testing progress by simply monitoring the PR
 - **Audit Trail and Compliance**: Every test run, result, and AI recommendation is permanently documented in your PR history
 - **Deep-Dive Capability**: When detailed analysis is needed, one-click access to <BrandName /> Test Manager and HyperExecute provides comprehensive diagnostics
-- **Asynchronous Collaboration**: Team members in different time zones can review testing status and results without requiring synchronous communication  
-
+- **Asynchronous Collaboration**: Team members in different time zones can review testing status and results without requiring synchronous communication

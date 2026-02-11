@@ -1,12 +1,14 @@
 ---
 title: "GPS location mocking for Mobile App Authoring"
 sidebarTitle: "GPS Location"
-keywords: ['testmu ai automation', 'testmu ai kaneai','kaneai mobile app', 'gps location','location override', 'geolocation testing']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai mobile app', 'gps location', 'location override', 'geolocation testing']
 ---
 
-<Warning>
-This document provides detailed instructions for utilizing GPS Location Override feature in KaneAI's mobile app testing. It covers how to set GPS coordinates during session initialization to test location-based application behavior accurately.
-</Warning>
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+> This document provides detailed instructions for utilizing GPS Location Override feature in KaneAI's mobile app testing. It covers how to set GPS coordinates during session initialization to test location-based application behavior accurately.
+
 ## Overview
 
 Testing location-based application behavior (such as geo-restricted content, regional UI, compliance flows, or location-aware features) is challenging when device GPS coordinates are dynamic or tied to the physical location of the tester.
@@ -29,7 +31,6 @@ While creating a test session, go to Advanced Settings and enable GPS location m
 1. Launch the session after providing the coordinates
 2. The device GPS location is mocked at session start
 3. The configured location remains active for the entire session of the test being authored.
-
 
 ### Verify the Applied Location
 
@@ -61,7 +62,6 @@ GPS coordinates can be verified
 - Verify that latitude and longitude values are within valid ranges
 - Ensure values are passed as valid numbers or numeric strings
 
-
 ### Feature Not Working in Mobile Browser
 
 **Issue:** GPS override Currently not suported for mobile browser testing.
@@ -72,6 +72,6 @@ GPS coordinates can be verified
 **Workaround:**
 - Use Mobile App testing for GPS-dependent scenarios
 
-<Warning>
- Have any feedback or request? Reach out to us via [support@testmu.ai](mailto:support@testmu.ai) and we would be happy to hear from you.
-</Warning>
+---
+
+> Have any feedback or request? Reach out to us via [support@testmu.ai](mailto:support@testmu.ai) and we would be happy to hear from you.

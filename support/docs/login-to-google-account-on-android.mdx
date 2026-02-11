@@ -1,12 +1,16 @@
 ---
 title: "Login to Google account on Android"
 sidebarTitle: "Login To Google Account (Android)"
-keywords: ['login with google on android app automation','login to google account on android app automation','login to google account']
-
+keywords: ['login with google on android app automation', 'login to google account on android app automation', 'login to google account']
 ---
 
-This documentation will guide you to log in to your Google Account on an Android Device on LambdaTest so you can test features/services that are linked to your Google Account.
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+{/* # Login to Google Account on Android Device
+--- */}
+
+This documentation will guide you to log in to your Google Account on an Android Device on <BrandName /> so you can test features/services that are linked to your Google Account.
 
 ## Objective
 ---
@@ -16,7 +20,7 @@ To log in to Google Account on Real Devices [Android], and perform testing using
 ## Prerequisites
 ---
 
-1. LambdaTest App Automation Account.
+1. <BrandName /> App Automation Account.
 2. Automation script for testing.
 
 ## Logging into Google Account
@@ -44,7 +48,7 @@ Once the test has started, you can also verify the same by opening Google Play S
 
 A sample code showing the addition of Google Account is shown below:
 
-```java highlight={9,11}
+```java
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -53,9 +57,11 @@ import java.net.URL;
 import java.util.HashMap;
 
 public class gmailLoginCap {
-    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+  //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add TestMu AI username here
     : System.getenv("LT_USERNAME");
-    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+//highlight-next-line
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add TestMu AI accessKey here
     : System.getenv("LT_ACCESS_KEY");
 
     private static AppiumDriver driver;
@@ -99,16 +105,14 @@ public class gmailLoginCap {
 }
 ```
 
-
 **Important**:
 
 1. The account should not be using any kind of 2-factor authentication, otherwise, the test can fail.
 2. The account should not require you to allow login using a trusted device using a pop-up or OTP.
 
-<Note>
+<Info>
 **Note**
 
 Since we clean the Device after each session, ensure you are logging in to the account during each session.
 
-</Note>
-
+</Info>

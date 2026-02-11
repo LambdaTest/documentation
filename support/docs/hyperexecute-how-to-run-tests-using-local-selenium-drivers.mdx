@@ -4,8 +4,7 @@ sidebarTitle: "How to Run Tests on HyperExecute using Local Selenium Web Driver"
 keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'How to Get my Username and Access key']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
@@ -24,13 +23,13 @@ To utilize the native Selenium driver support in HyperExecute, you need to incor
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/tree/localdriver" />
-</Check>
+<a href="https://github.com/<BrandName />/testng-selenium-hyperexecute-sample/tree/localdriver" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Update YAML Configuration:
 
@@ -38,7 +37,7 @@ Download or Clone the code sample for the TestNG from the <BrandName /> GitHub r
 - Use the `platform` flag to define individual platform configurations (OS, browser/device, capabilities).
 - **(Optional)** Utilize the `config` flag to set global capabilities applicable to all platforms.
 
-```yaml highlight="49-75"
+```yaml
 ---
 version: 0.1
 globalTimeout: 150
@@ -87,6 +86,7 @@ winTestRunnerCommand: mvn test dependency:resolve
 macTestRunnerCommand: mvn test dependency:resolve
 linuxTestRunnerCommand: mvn test dependency:resolve
 
+#highlight-start
 platformConfig:
   platform:
     - os: win10
@@ -114,15 +114,14 @@ platformConfig:
     build: latest
     network: true
     console: true
-
+#highlight-end
 ```
 
-<Note>
-**NOTE**
+<Info>
+**- For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.**
 
-- For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.
 - For operating system **android** and **ios**, the **os** and **deviceName** flags are mandatory, rest are optional.
-</Note>
+</Info>
 
 In the above sample YAML file, we have passed **parallelism = 1** and **total number of platforms = 6**
 
@@ -136,9 +135,10 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/how-to-guide/local-driver-os.png' alt="Image" />
 
-<Note>
-You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
-</Note>
+<Warning>
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
+</Warning>
+
 
 ### Step 3: Run Your Tests:
 
@@ -146,7 +146,9 @@ You can also use **dev** and **beta** browser versions. To generate capabilities
 - HyperExecute automatically intercepts Selenium commands and routes them to its platform.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE 
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/how-to-guide/local-web-driver.png' alt="Image" />

@@ -1,30 +1,32 @@
 ---
-title: "JavaScript with Playwright: Running Your First Test"
+title: "Run your JavaScript automation scripts with Playwright on TestMu AI"
 sidebarTitle: "JavaScript"
 keywords: ['javascript playwright', 'javascript automation testing', 'playwright javascript', 'playwright javascript testing guide', 'javascript playwright framework']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
----
+import { BrandName } from "/snippets/BrandName.mdx";
 
-Learn how to use Playwright with JavaScript to automate web application testing across 50+ real browsers and operating systems on LambdaTest cloud platform.
 
+# JavaScript with Playwright: Running Your First Test
+* * *
+
+Learn how to use Playwright with JavaScript to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
 
 ## Prerequisites
----
+***
 
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or clone the code sample for the Playwright JavaScript from the LambdaTest GitHub repository to run the tests.
+Download or clone the code sample for the Playwright JavaScript from the <BrandName /> GitHub repository to run the tests.
 
-<GitHubButton url="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" />
-</Check>
+<a href="https://github.com/<BrandName />/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ```js
-git clone https://github.com/LambdaTest/playwright-sample.git
+git clone https://github.com/TestMu AI/playwright-sample.git
 cd playwright-sample
 cd playwright-test-js
 ```
@@ -35,20 +37,20 @@ cd playwright-test-js
 npm install
 ```
 
-3. A LambdaTest Username and Access key. You can get it from your LambdaTest Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
-<img loading="lazy" src='/assets/images/auth_lt.png' alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/auth_lt.png' alt="Image" width="1444" height="703" />
 
-4. To run Playwright tests, set your LambdaTest Username and Access key in the Environment Variables.
+4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
 
 ## Run your Playwright tests with JavaScript
 ---
 
-Navigate to the `lambdatest-setup.js` file in the `playwright-test-js` directory.
+Navigate to the `testmu ai-setup.js` file in the `playwright-test-js` directory.
 
 ```js
 /**
- * Add the file in your test suite to run tests on LambdaTest.
+ * Add the file in your test suite to run tests on TestMu AI.
  * Import `test` object from this file in the tests.
  */
 const base = require('@playwright/test')
@@ -57,7 +59,7 @@ const { chromium } = require('playwright')
 const cp = require('child_process');
 const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
 
-// LambdaTest capabilities
+// TestMu AI capabilities
 const capabilities = {
   'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
@@ -79,7 +81,7 @@ const capabilities = {
 
 // Patching the capabilities dynamically according to the project name.
 const modifyCapabilities = (configName, testName) => {
-  let config = configName.split('@lambdatest')[0]
+  let config = configName.split('@testmu ai')[0]
   let [browserName, browserVersion, platform] = config.split(':')
   capabilities.browserName = browserName ? browserName : capabilities.browserName
   capabilities.browserVersion = browserVersion ? browserVersion : capabilities.browserVersion
@@ -91,9 +93,9 @@ const getErrorMessage = (obj, keys) => keys.reduce((obj, key) => (typeof obj == 
 
 exports.test = base.test.extend({
   page: async ({ page, playwright }, use, testInfo) => {
-    // Configure LambdaTest platform for cross-browser testing
+    // Configure TestMu AI platform for cross-browser testing
     let fileName = testInfo.file.split(path.sep).pop()
-    if (testInfo.project.name.match(/lambdatest/)) {
+    if (testInfo.project.name.match(/testmu ai/)) {
       modifyCapabilities(testInfo.project.name, `${testInfo.title} - ${fileName}`)
 
       const browser = await chromium.connect({
@@ -131,5 +133,4 @@ npm run test
 ## View your test results
 ---
 
-Go to the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.
-
+Go to the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.

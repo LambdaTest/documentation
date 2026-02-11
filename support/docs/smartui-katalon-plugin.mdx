@@ -1,10 +1,13 @@
 ---
 title: "SmartUI Plugin for Katalon Studio"
 sidebarTitle: "Katalon Plugin"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests", "Katalon Studio", "Katalon SmartUI Integration"]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests', 'Katalon Studio', 'Katalon SmartUI Integration']
 ---
 
-The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [LambdaTest SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [<BrandName /> SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:
 - Capture screenshots at any point in your test flow
@@ -23,7 +26,7 @@ With this plugin, you can:
 
 ### Option 2: Manual Installation via JAR
 
-1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/LambdaTest/katalon-studio-smartui-plugin/releases).
+1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/<BrandName />/katalon-studio-smartui-plugin/releases).
 2. In Katalon Studio, go to **Project > Settings > Plugins > Import Plugin**.
 3. Select the downloaded `.jar` file and click **Import**.
 
@@ -39,9 +42,8 @@ With this plugin, you can:
 4. Enter project name, approvers, and tags (optional).
 5. Click **Submit** and copy your **Project Token** from the dashboard.
 
-<Warning>
-Your Project Token will be used to authenticate screenshot uploads to SmartUI.
-</Warning>
+> Your Project Token will be used to authenticate screenshot uploads to SmartUI.
+
 ---
 
 ### Step 2: Start your Katalon Instance from terminal
@@ -121,10 +123,8 @@ Then use it in your test:
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')
 ```
 
-<Warning>
-Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
-Use `selectBoxes` to compare only specific regions (e.g., main content area).
-</Warning>
+> Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
+> Use `selectBoxes` to compare only specific regions (e.g., main content area).
 
 ---
 
@@ -141,8 +141,7 @@ Use `selectBoxes` to compare only specific regions (e.g., main content area).
 
 ## Best Practices
 
-
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Server Management">
 
 **Server Management**
@@ -150,6 +149,7 @@ Use `selectBoxes` to compare only specific regions (e.g., main content area).
 - Always include `startServer()` before taking screenshots and `stopServer()` after.
 
 </Tab>
+
 <Tab title="Snapshot Naming">
 
 **Snapshot Naming**
@@ -157,6 +157,7 @@ Use `selectBoxes` to compare only specific regions (e.g., main content area).
 - Use descriptive snapshot names for easy identification in SmartUI.
 
 </Tab>
+
 <Tab title="CI/CD Integration">
 
 **CI/CD Integration**
@@ -164,6 +165,7 @@ Use `selectBoxes` to compare only specific regions (e.g., main content area).
 - For CI/CD pipelines, set `PROJECT_TOKEN` as an environment variable in your CI tool (Jenkins, GitHub Actions, etc.).
 
 </Tab>
+
 <Tab title="Reporting">
 
 **Reporting**
@@ -181,4 +183,4 @@ Use `selectBoxes` to compare only specific regions (e.g., main content area).
 - **No screenshots uploaded**: Verify network connectivity and that SmartUI server started successfully.
 - **Dynamic content causing false positives**: Use `ignoreBoxes` or `selectBoxes` in config to stabilize comparisons.
 
-
+---

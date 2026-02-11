@@ -1,18 +1,22 @@
 ---
-title: "WinAppDriver Integration with HyperExecute"
+title: "WinAppDriver"
 sidebarTitle: "WinAppDriver"
 keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'Integrations', 'Products', 'Microsoft Excel']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# WinAppDriver Integration with HyperExecute
 
 You can use HyperExecute run your tests that are based on Microsoft Office Suite. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.lambdatest.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 
 
 You can go through the page below to understand how you can use HyperExecute to run your test cases. 
 
 <Note>
-**Note**: This feature is only available on request. Please contact support@testmu.ai to know more. 
+**Note**: This feature is only available on request. Please contact support@testmu.ai to know more.
 </Note>
+
 
 ## Configuring the WinAppDriver 
 
@@ -23,7 +27,7 @@ Setting up the WinAppDriver is an important step in the process to run Microsoft
 2. Place a Java test file `LtWinDriver.java` that contains the two functions in the `src/main` folder. 
 A sample `LtWinDriver.java` file: 
 
-```java
+```bash
 import java.io.File;
 import java.io.IOException;
 import java.awt.Desktop;
@@ -67,7 +71,7 @@ You can use the sum formula to add these two numbers, but if you want to run it 
 
 Here is a sample java test file `Test.java` that accomplishes the function mentioned above. All of your test files should be placed in the `src/test` folder.
 
-```java
+```bash
 import java.util.concurrent.TimeUnit;
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.*;
@@ -181,5 +185,3 @@ testRunnerCommand:  mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest
 ```
 
 You can now run your Excel tests on HyperExecute. Happy testing!
-
-

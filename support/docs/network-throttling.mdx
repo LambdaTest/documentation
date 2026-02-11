@@ -1,12 +1,11 @@
 ---
 title: "Network Throttling"
 sidebarTitle: "Network Throttling"
-keywords: ['cross browser testing', 'network throttling', 'selenium capabilities generator', 'selenium desired capabilities', 'lambdatest selenium grid capabilities', 'lambdatest automation capabilities generator', 'selenium capability configuration', 'selenium automation testing', 'selenium automation grid online', 'configure selenium tests with network throttling desired capabilities', 'network throttling capabilities', 'throttling test on lambdatest']
-
+keywords: ['cross browser testing', 'network throttling', 'selenium capabilities generator', 'selenium desired capabilities', 'testmu ai selenium grid capabilities', 'testmu ai automation capabilities generator', 'selenium capability configuration', 'selenium automation testing', 'selenium automation grid online', 'configure selenium tests with network throttling desired capabilities', 'network throttling capabilities', 'throttling test on testmu ai']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
----
 
 There might be instances where you would have to check the functionality of your website on low latency networks (2G/3G/LTE) or even offline. Such networks have variable upload and download speeds which can alter how your website performs on different browsers.
 
@@ -14,16 +13,15 @@ In order to validate your website on such network profiles, you can simulate the
 
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
-| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability helps to start test suite with default network. For example, if user selects the value **Regular 4G** then the capabilities will look like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability helps to start test suite with default network. For example, if user selects the value **Regular 4G** then the capabilities will look like this: <br /> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
 
-```java
+```yaml
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
 ## List Of Network Profiles
 
 ---
-
 
 | CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
 | ------------ | --------------------------- | ------------------------- | ------------------ |
@@ -43,9 +41,7 @@ capabilities.setCapability("networkThrottling", "Regular 4G");
 
 ---
 
-The Selenium JavaScript Executor allows you to enable network simulation capabilities for tests and to generate custom log files. You can use conditional capabilities to simulate network conditions for individual test cases.
-
-`driver.executeScript("lambda-throttle-network", throttleParams);`
+The Selenium JavaScript Executor allows you to enable network simulation capabilities for tests and to generate custom log files. You can use conditional capabilities to simulate network conditions for individual test cases. driver.executeScript("lambda-throttle-network", throttleParams);
 ```java
 // Using executeScript to apply custom network throttling
 Map<String, Object> throttleParams = Map.of(
@@ -57,7 +53,7 @@ Map<String, Object> throttleParams = Map.of(
 driver.executeScript("lambda-throttle-network", throttleParams);
 
 ```
-LambdaTest now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
+<BrandName /> now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
 
 | JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS | EXAMPLE |
 | ----------------------- | ------------------------------------------ | -------------------- |
@@ -67,7 +63,7 @@ LambdaTest now allows you to select a network profile before running automation 
 
 ---
 
-To configure network throttling in automation, we have used the [LambdaTest TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
+To configure network throttling in automation, we have used the [<BrandName /> TestNG GitHub repository](https://github.com/<BrandName />/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
 
 ### Configuring Capabilities For Pre-defined Network Settings
 ```java
@@ -78,11 +74,11 @@ caps.setCapability("name", "TestNG-Todo-Script-1");
 caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to Regular 4G 
 ```
 
-The following below is the TestNG code. It will validate your LambdaTest credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
+The following below is the TestNG code. It will validate your <BrandName /> credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
 
 ### Configuring Custom Network Settings
 ```java
-package com.lambdatest;
+package com.testmu ai;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -125,13 +121,12 @@ public class TestNGTodo1 {
 	
 	}
 
-
 	@Test
 	public void basicTest() throws InterruptedException {
 		String spanText;
 		System.out.println("Loading Url");
 		Thread.sleep(100);
-		driver.get("https://4dvanceboy.github.io/lambdatest/todo.html");
+		driver.get("https://4dvanceboy.github.io/testmu ai/todo.html");
 		Thread.sleep(100);
 
 		System.out.println("Checking Box");
@@ -209,6 +204,4 @@ public class TestNGTodo1 {
 
  You can find your defined network capabilities under the section ‘Input Config’ by navigating to the ‘METADATA’ section of your automation build-logs.
 
-<Note>
-In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt">**24/7 Customer chat support**</span>. You can also drop us a mail at support@lambdatest.com. Happy testing! 🙂
-</Note>
+> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmu.ai. Happy testing! 🙂

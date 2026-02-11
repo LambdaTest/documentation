@@ -1,13 +1,21 @@
 ---
 title: "Upload PDFs via CLI"
 sidebarTitle: "CLI Upload"
-keywords: ["PDF CLI Upload", "SmartUI CLI", "Visual Regression Testing", "PDF Testing", "Command Line"]
+keywords: ['PDF CLI Upload', 'SmartUI CLI', 'Visual Regression Testing', 'PDF Testing', 'Command Line']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+<Warning>
+**This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).**
+
+</Warning>
 
 ## Prerequisites for Using SmartUI
 
 - Familiarity with command-line tools is essential.
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project
@@ -36,12 +44,12 @@ npm install -g @lambdatest/smartui-cli
 
 ## Step 2: Setup your credentials
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
-export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
@@ -49,8 +57,8 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tab title="Windows - CMD">
 
 ```bash
-set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
@@ -58,15 +66,15 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tab title="PowerShell">
 
 ```powershell
-$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Step 3: Upload PDFs Using CLI
 
@@ -140,7 +148,7 @@ Example for GitHub Actions:
 
 ## Best Practices
 
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="PDF File Management">
 
 **PDF File Management**
@@ -151,6 +159,7 @@ Example for GitHub Actions:
 - Keep PDF files in version control when appropriate
 
 </Tab>
+
 <Tab title="Project Token Management">
 
 **Project Token Management**
@@ -161,6 +170,7 @@ Example for GitHub Actions:
 - Rotate tokens regularly
 
 </Tab>
+
 <Tab title="Build Naming">
 
 **Build Naming**
@@ -175,6 +185,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 ```
 
 </Tab>
+
 <Tab title="Error Handling">
 
 **Error Handling**
@@ -185,6 +196,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 - Log errors for debugging
 
 </Tab>
+
 <Tab title="Batch Processing">
 
 **Batch Processing**
@@ -199,7 +211,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="PDF Upload Fails">
 
 **Issue: PDF Upload Fails**
@@ -227,7 +239,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 3. Verify file size is within limits
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Verify PROJECT_TOKEN is set correctly:
    ```bash
@@ -329,8 +341,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

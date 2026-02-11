@@ -1,32 +1,34 @@
 ---
 title: "Zephyr Scale Integration"
 sidebarTitle: "Zephyr Scale"
-keywords: [ "Lambdatest zephyr scale integration", "integrate Lambdatest zephyr scale", "Lambdatest integration with zephyr scale" ]
+keywords: ['testmu ai zephyr scale integration', 'integrate testmu ai zephyr scale', 'testmu ai integration with zephyr scale']
 ---
----
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams.
 
-Lambdatest offers integration with Zephyr Scale that lets you perform automated browser testing on a cloud-based grid of 3000+ real browsers, devices, and OS combinations. By integrating Zephyr Scale with Lambdatest, you can view test execution results directly from Lambdatest platform to your Zephyr Scale instance.
+<BrandName /> offers integration with Zephyr Scale that lets you perform automated browser testing on a cloud-based grid of 3000+ real browsers, devices, and OS combinations. By integrating Zephyr Scale with <BrandName />, you can view test execution results directly from <BrandName /> platform to your Zephyr Scale instance.
 
 ## Prerequisites
 ---
 
 1. Install the **Zephyr Scale - Test Management for Jira** application from the Atlassian Marketplace.
 
-2. A Lambdatest account. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+2. A <BrandName /> account. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
 3. A Jira Project key.
 
 4. A Zephyr Scale Access token.
 
-## Integrating Lambdatest with Zephyr Scale
+## Integrating <BrandName /> with Zephyr Scale
 ---
 
-1. Clone the [Lambdatest Zephyr Scale GitHub repository](https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample) and navigate to the cloned directory.
+1. Clone the [<BrandName /> Zephyr Scale GitHub repository](https://github.com/<BrandName />/junit-selenium-zephyr-scale-sample) and navigate to the cloned directory.
 
 ```js
-git clone https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample
+git clone https://github.com/TestMu AI/junit-selenium-zephyr-scale-sample
 cd junit-selenium-zephyr-scale-sample
 ```
 
@@ -42,19 +44,27 @@ public class PostTestResults {
 
     public void callApi() {
 
-        String fileName = "TEST-com.lambdatest.JUnitTodo.xml" ; //provide the file name of the test results
-        String filePath = "target/surefire-reports/TEST-com.lambdatest.JUnitTodo.xml"; //provide the file path of the test result file
+        String fileName = "TEST-com.testmu ai.JUnitTodo.xml" ; //provide the file name of the test results
+        String filePath = "target/surefire-reports/TEST-com.testmu ai.JUnitTodo.xml"; //provide the file path of the test result file
         String projectKey = "ZD"; //provide the Jira project key 
         String token = "abcdefghijklmnop123456"; // provide Zephyr Scale access token
 ```
-3. In the test script, you need to update test capabilities and add your Lambdatest Username and Access Key. You can get your Lambdatest Username and Access Key by navigating to your Lambdatest Profile section.
+3. In the test script, you need to update test capabilities and add your <BrandName /> Username and Access Key. You can get your <BrandName /> Username and Access Key by navigating to your <BrandName /> Profile section.
 
-<Warning>
-**Test Scenario**: The below JUnit Selenium script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
-</Warning>
+>**Test Scenario**: The below JUnit Selenium script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
 
 ```js title="JUnitTodo.java"
-package com.lambdatest;
+package com.testmu ai;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.By;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class JUnitTodo {
     String username = System.getenv("LT_USERNAME") == null ? "Your LT_USERNAME" : System.getenv("LT_USERNAME");
@@ -69,8 +79,8 @@ public class JUnitTodo {
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("version", "latest");
         capabilities.setCapability("platform", "Windows 10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTest-Zephyr Demo");
-        capabilities.setCapability("name", "LambdaTest-Zephyr Tests");
+        capabilities.setCapability("build", "TestMu AI-Zephyr Demo");
+        capabilities.setCapability("name", "TestMu AI-Zephyr Tests");
        
         try {
             driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
@@ -86,7 +96,7 @@ public class JUnitTodo {
     public void testSimple() throws Exception {
        try {
               //Change it to production page
-            driver.get("https://lambdatest.github.io/sample-todo-app/");
+            driver.get("https://testmu ai.github.io/sample-todo-app/");
              
               //Let's mark done first two items in the list.
               driver.findElement(By.name("li1")).click();
@@ -117,11 +127,13 @@ public class JUnitTodo {
     }
 }
 ```
-:::info Important
-You need to invoke `method.callApi()` from the PostTestResults class in the `@After` hook of `JUnitTodo.java` file.
-:::
+<Info>
+**Important**
 
-## Running your Automation tests with Lambdatest and Zephyr Scale
+You need to invoke `method.callApi()` from the PostTestResults class in the `@After` hook of `JUnitTodo.java` file.
+</Info>
+
+## Running your Automation tests with <BrandName /> and Zephyr Scale
 ---
 
 To run the test, pass the below command in the terminal.
@@ -130,24 +142,23 @@ To run the test, pass the below command in the terminal.
 mvn test -P single
 ```
 
-Go to the Lambdatest's Automation Dashboard to view the test execution results.
+Go to the <BrandName />'s Automation Dashboard to view the test execution results.
 
-![provide access to Lambdatest account](/assets/images/zephyr-integration/4.png)
+<img loading="lazy" src='/assets/images/zephyr-integration/4.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 ## Viewing the Test Results in Zephyr Scale
 ---
 
-To view test results in Zephyr Scale, head over to your Zephyr Scale project. The below screenshot shows the Test Case in Zephyr Scale that you executed on Lambdatest.
+To view test results in Zephyr Scale, head over to your Zephyr Scale project. The below screenshot shows the Test Case in Zephyr Scale that you executed on <BrandName />.
 
-![provide access to Lambdatest account](/assets/images/zephyr-integration/1.png)
+<img loading="lazy" src='/assets/images/zephyr-integration/1.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 You can also view the executed build by navigating to **Test Cycles**.
 
-![provide access to Lambdatest account](/assets/images/zephyr-integration/2.png)
+<img loading="lazy" src='/assets/images/zephyr-integration/2.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 To view the build details, click on the Zephyr project *Key* or *Name*.
 
-![provide access to Lambdatest account](/assets/images/zephyr-integration/3.png)
+<img loading="lazy" src='/assets/images/zephyr-integration/3.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 ---
-

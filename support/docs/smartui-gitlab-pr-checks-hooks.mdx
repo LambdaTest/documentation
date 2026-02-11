@@ -1,18 +1,20 @@
 ---
 title: "GitLab PR Checks with SmartUI Hooks"
 sidebarTitle: "GitLab PR Checks (Hooks)"
-keywords: ["GitLab PR checks", "SmartUI Hooks", "GitLab merge request integration", "Visual regression testing", "Selenium Playwright WebdriverIO", "Appium mobile testing", "SmartUI webhooks"]
+keywords: ['GitLab PR checks', 'SmartUI Hooks', 'GitLab merge request integration', 'Visual regression testing', 'Selenium Playwright WebdriverIO', 'Appium mobile testing', 'SmartUI webhooks']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI Hooks** approach. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
-<Note>
+<Info>
 **SmartUI Hooks vs SDK**
 
 This guide covers the **SmartUI Hooks** approach, where you pass SmartUI capabilities directly in your test configuration. This is different from the SDK approach:
 
 **SmartUI Hooks (This Guide):**
-
 - ✅ No `npx smartui exec` command needed
 - ✅ Tests run normally (e.g., `npm test`, `mvn test`, `pytest`)
 - ✅ SmartUI integration happens automatically through capabilities
@@ -21,11 +23,11 @@ This guide covers the **SmartUI Hooks** approach, where you pass SmartUI capabil
 - ✅ Works with **mobile app testing** (Appium, iOS/Android)
 
 **SmartUI SDK:**
-
 - Requires `npx smartui exec -- <your-test-command>`
 - Used for Java SDK and CLI-based projects
 - See [SmartUI Appium Java SDK](/support/docs/smartui-appium-java-sdk) for SDK approach
-</Note>
+
+</Info>
 
 ---
 
@@ -33,30 +35,31 @@ This guide covers the **SmartUI Hooks** approach, where you pass SmartUI capabil
 
 Before you begin, ensure you have:
 
-- LambdaTest account with active subscription
+- <BrandName /> account with active subscription
 - GitLab repository with CI/CD enabled
-- SmartUI project created in [LambdaTest SmartUI Dashboard](https://smartui.lambdatest.com/)
+- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://smartui.lambdatest.com/)
 - Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO)
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
-- LambdaTest credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
+- <BrandName /> credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
 
 ---
 
-## Step 1: Integrate GitLab with LambdaTest
+## Step 1: Integrate GitLab with <BrandName />
 
-1. Go to [LambdaTest Integrations page](https://integrations.lambdatest.com/)
+1. Go to [<BrandName /> Integrations page](https://integrations.lambdatest.com/)
 2. Search for **GitLab** and select the integration
 3. Click on **OAuth** as your preferred authentication method
 4. Click **Install** and authorize the integration
 5. After successful authentication, refresh the Integrations page to verify GitLab is installed
 
-![GitLab integration setup in LambdaTest](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png' alt="GitLab integration setup in <BrandName />"  />
 
-<Check>
+<Tip>
 **Integration Status**
 
 You can verify your GitLab integration is active by checking the [Integrations page](https://integrations.lambdatest.com/). The GitLab integration should show as "Installed" or "Active".
-</Check>
+
+</Tip>
 
 ---
 
@@ -64,47 +67,45 @@ You can verify your GitLab integration is active by checking the [Integrations p
 
 Configure your test suite with SmartUI capabilities. Since you're using the **Hooks approach**, you'll pass SmartUI capabilities directly in your test configuration, including the GitLab integration capability.
 
-<Tabs>
+<Tabs className='docs__val' groupId='test-type'>
 <Tab title="Web Testing (Selenium/Playwright)">
 
-<Tabs>
+<Tabs className='docs__val' groupId='web-language'>
 <Tab title="TypeScript/JavaScript">
 
 ```typescript title="Example: TypeScript Selenium Configuration with SmartUI Hooks and GitLab"
-import { Builder, Capabilities } from "selenium-webdriver";
+import { Builder, Capabilities } from 'selenium-webdriver';
 
 const capabilities = {
-  browserName: "Chrome",
-  browserVersion: "latest",
-  platformName: "Windows 10",
-  "LT:Options": {
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+  'LT:Options': {
     username: process.env.LT_USERNAME,
     accessKey: process.env.LT_ACCESS_KEY,
-    project: "Your Project Name",
+    project: 'Your Project Name',
     w3c: true,
-    name: "Web Test Session",
-    build: process.env.CI
+    name: 'Web Test Session',
+    build: process.env.CI 
       ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-      : `smartui-local-build-${new Date().toISOString().split("T")[0]}`,
-
+      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+    
     // SmartUI Hooks Configuration
     "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-    "smartUI.build": process.env.CI
+    "smartUI.build": process.env.CI 
       ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-      : `smartui-local-build-${new Date().toISOString().split("T")[0]}`,
+      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
     "smartUI.baseline": false,
-
+    
     // GitLab Integration Capability
     github: {
-      url: process.env.GIT_URL, // GitLab API URL for status updates
-    },
-  },
+      url: process.env.GIT_URL // GitLab API URL for status updates
+    }
+  }
 };
 
 const driver = await new Builder()
-  .usingServer(
-    `https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`,
-  )
+  .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
   .withCapabilities(capabilities)
   .build();
 ```
@@ -125,10 +126,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseClassWebhook {
-
+    
     public RemoteWebDriver driver;
     public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
-
+    
     @BeforeClass
     public void setup() throws MalformedURLException {
         String username = System.getenv("LT_USERNAME") == null
@@ -137,11 +138,11 @@ public class BaseClassWebhook {
         String authkey = System.getenv("LT_ACCESS_KEY") == null
             ? "Your LT AccessKey"
             : System.getenv("LT_ACCESS_KEY");
-
+        
         ChromeOptions browserOptions = new ChromeOptions();
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-
-        // LambdaTest Options
+        
+        // TestMu AI Options
         ltOptions.put("username", username);
         ltOptions.put("accessKey", authkey);
         ltOptions.put("project", "Your Project Name");
@@ -149,21 +150,21 @@ public class BaseClassWebhook {
         ltOptions.put("browserName", "Chrome");
         ltOptions.put("browserVersion", "latest");
         ltOptions.put("platformName", "Windows 10");
-
+        
         // SmartUI Hooks Configuration
         String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
             ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
             : "Your SmartUI Project Name";
         ltOptions.put("smartUI.project", projectName);
-
+        
         String buildName = System.getenv("CI") != null
             ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
             : "smartui-local-build";
         ltOptions.put("smartUI.build", buildName);
         ltOptions.put("smartUI.baseline", false);
-
+        
         browserOptions.setCapability("LT:Options", ltOptions);
-
+        
         // GitLab Integration Capability
         if (githubURL != null) {
             Map<String, String> github = new HashMap<String, String>();
@@ -171,7 +172,7 @@ public class BaseClassWebhook {
             browserOptions.setCapability("github", github);
             System.out.println("GitLab URL received successfully: " + githubURL);
         }
-
+        
         String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
         driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
     }
@@ -200,12 +201,12 @@ capabilities = {
         "w3c": True,
         "name": "Web Test Session",
         "build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
-
+        
         # SmartUI Hooks Configuration
         "smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
         "smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
         "smartUI.baseline": False,
-
+        
         # GitLab Integration Capability
         "github": {
             "url": github_url
@@ -225,13 +226,13 @@ driver = webdriver.Remote(
 </Tab>
 <Tab title="Mobile Testing (Appium/WebdriverIO)">
 
-<Tabs>
+<Tabs className='docs__val' groupId='mobile-language'>
 <Tab title="TypeScript/JavaScript">
 
 ```typescript title="Example: TypeScript/WebdriverIO Mobile Configuration with SmartUI Hooks and GitLab"
-import { remote, RemoteOptions } from "webdriverio";
+import { remote, RemoteOptions } from 'webdriverio';
 
-const capabilities: RemoteOptions["capabilities"] = {
+const capabilities: RemoteOptions['capabilities'] = {
   deviceName: "iPhone 12",
   platformName: "ios",
   platformVersion: "14",
@@ -239,31 +240,31 @@ const capabilities: RemoteOptions["capabilities"] = {
   app: "APP_URL", // Your uploaded app URL
   visual: true, // Mandatory for SmartUI
   name: "Mobile App Test Session",
-  build: process.env.CI
+  build: process.env.CI 
     ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-    : `smartui-local-build-${new Date().toISOString().split("T")[0]}`,
-
+    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+  
   // SmartUI Hooks Configuration
   "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-  "smartUI.build": process.env.CI
+  "smartUI.build": process.env.CI 
     ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-    : `smartui-local-build-${new Date().toISOString().split("T")[0]}`,
+    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
   "smartUI.baseline": false,
   "smartUI.cropStatusBar": true,
   "smartUI.cropFooter": true,
-
+  
   // GitLab Integration Capability
   github: {
-    url: process.env.GITHUB_URL, // GitLab API URL for status updates
+    url: process.env.GITHUB_URL // GitLab API URL for status updates
     // GitLab URL format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}
-  },
+  }
 };
 
 const driver = await remote({
-  hostname: "mobile-hub.lambdatest.com",
+  hostname: 'mobile-hub.lambdatest.com',
   port: 443,
-  path: "/wd/hub",
-  protocol: "https",
+  path: '/wd/hub',
+  protocol: 'https',
   user: process.env.LT_USERNAME,
   key: process.env.LT_ACCESS_KEY,
   capabilities: capabilities as any,
@@ -286,10 +287,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseClassWebhook {
-
+    
     public RemoteWebDriver driver;
     public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
-
+    
     @BeforeClass
     public void setup() throws MalformedURLException {
         String username = System.getenv("LT_USERNAME") == null
@@ -298,11 +299,11 @@ public class BaseClassWebhook {
         String authkey = System.getenv("LT_ACCESS_KEY") == null
             ? "Your LT AccessKey"
             : System.getenv("LT_ACCESS_KEY");
-
+        
         ChromeOptions browserOptions = new ChromeOptions();
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-
-        // LambdaTest Options
+        
+        // TestMu AI Options
         ltOptions.put("username", username);
         ltOptions.put("accessKey", authkey);
         ltOptions.put("project", "Your Project Name");
@@ -313,22 +314,22 @@ public class BaseClassWebhook {
         ltOptions.put("isRealMobile", true);
         ltOptions.put("app", "APP_URL");
         ltOptions.put("visual", true); // Mandatory for SmartUI
-
+        
         // SmartUI Hooks Configuration
         String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
             ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
             : "Your SmartUI Project Name";
         ltOptions.put("smartUI.project", projectName);
-
+        
         String buildName = System.getenv("CI") != null
             ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
             : "smartui-local-build";
         ltOptions.put("smartUI.build", buildName);
         ltOptions.put("smartUI.baseline", false);
         ltOptions.put("smartUI.cropStatusBar", true);
-
+        
         browserOptions.setCapability("LT:Options", ltOptions);
-
+        
         // GitLab Integration Capability
         if (githubURL != null) {
             Map<String, String> github = new HashMap<String, String>();
@@ -336,7 +337,7 @@ public class BaseClassWebhook {
             browserOptions.setCapability("github", github);
             System.out.println("GitLab URL received successfully: " + githubURL);
         }
-
+        
         String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
         driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
     }
@@ -362,13 +363,13 @@ capabilities = {
     "visual": True,  # Mandatory for SmartUI
     "name": "Mobile App Test Session",
     "build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
-
+    
     # SmartUI Hooks Configuration
     "smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
     "smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
     "smartUI.baseline": False,
     "smartUI.cropStatusBar": True,
-
+    
     # GitLab Integration Capability
     "github": {
         "url": github_url  # GitLab API URL for status updates
@@ -387,17 +388,18 @@ driver = webdriver.Remote(
 </Tab>
 </Tabs>
 
-<Note>
+<Info>
 **GitLab Capability Note**
 
 The capability is named `github` (legacy name) but works with GitLab's API endpoint. Use the `GIT_URL` environment variable to pass the GitLab API URL. This is the same capability used for GitHub integration and supports both GitHub and GitLab status APIs.
-</Note>
+
+</Info>
 
 ### Taking Screenshots with SmartUI Hooks
 
 In your test code, use the SmartUI execute command to capture screenshots:
 
-<Tabs>
+<Tabs className='docs__val' groupId='screenshot-language'>
 <Tab title="TypeScript/JavaScript">
 
 ```typescript title="Taking Screenshots with SmartUI Hooks"
@@ -406,9 +408,9 @@ await driver.execute("smartui.takeScreenshot=Homepage");
 
 // Full page screenshot (if supported)
 const config = {
-  screenshotName: "Homepage",
+  screenshotName: 'Homepage',
   fullPage: true,
-  pageCount: 15, // Minimum 1, Maximum 20
+  pageCount: 15  // Minimum 1, Maximum 20
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
@@ -487,9 +489,10 @@ var config = new Dictionary<string, object>
 </Tabs>
 
 <Warning>
-IMPORTANT
+**Important**
 
 The `visual: true` capability is **mandatory** for SmartUI visual regression testing. Without this capability, screenshots will not be captured and the build status will show as `Error`.
+
 </Warning>
 
 ---
@@ -500,7 +503,7 @@ Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you j
 
 ### Complete GitLab CI/CD Configuration
 
-<Tabs>
+<Tabs className='docs__val' groupId='ci-language'>
 <Tab title="TypeScript/JavaScript">
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
@@ -516,41 +519,41 @@ variables:
 visual_regression_tests:
   stage: test
   image: node:${NODE_VERSION}
-
+  
   before_script:
     - npm ci
-
+  
   script:
     # Get GitLab project ID and commit SHA
     - |
       PROJECT_ID=${CI_PROJECT_ID}
       COMMIT_SHA=${CI_COMMIT_SHA}
-
+      
       # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
         COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
       fi
-
+      
       # Construct GitLab API URL for status updates
       GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-
+      
       echo "GitLab Project ID: ${PROJECT_ID}"
       echo "Commit SHA: ${COMMIT_SHA}"
       echo "GitLab Status URL: ${GITHUB_URL}"
-
+      
       # Export GITHUB_URL as environment variable for use in test capabilities
       export GITHUB_URL="${GITHUB_URL}"
-
+      
       # Run your tests normally - SmartUI Hooks work automatically through capabilities
       npm test
       # Or: npx wdio run wdio.conf.ts
       # Or: npm run test:mobile
-
+      
   only:
     - merge_requests
     - main
     - develop
-
+  
   environment:
     name: visual-regression/$CI_COMMIT_REF_NAME
 ```
@@ -571,44 +574,44 @@ variables:
 visual_regression_tests:
   stage: test
   image: maven:3.8-openjdk-11
-
+  
   cache:
     paths:
       - .m2/repository/
-
+  
   before_script:
     - mvn clean install -DskipTests
-
+  
   script:
     # Get GitLab project ID and commit SHA
     - |
       PROJECT_ID=${CI_PROJECT_ID}
       COMMIT_SHA=${CI_COMMIT_SHA}
-
+      
       # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
         COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
       fi
-
+      
       # Construct GitLab API URL for status updates
       GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-
+      
       echo "GitLab Project ID: ${PROJECT_ID}"
       echo "Commit SHA: ${COMMIT_SHA}"
       echo "GitLab Status URL: ${GITHUB_URL}"
-
+      
       # Export GITHUB_URL as environment variable for use in test capabilities
       export GITHUB_URL="${GITHUB_URL}"
-
+      
       # Run your tests normally - SmartUI Hooks work automatically through capabilities
       mvn test
       # Or: ./gradlew test (for Gradle)
-
+      
   only:
     - merge_requests
     - main
     - develop
-
+  
   environment:
     name: visual-regression/$CI_COMMIT_REF_NAME
 ```
@@ -629,41 +632,41 @@ variables:
 visual_regression_tests:
   stage: test
   image: python:${PYTHON_VERSION}
-
+  
   before_script:
     - pip install -r requirements.txt
-
+  
   script:
     # Get GitLab project ID and commit SHA
     - |
       PROJECT_ID=${CI_PROJECT_ID}
       COMMIT_SHA=${CI_COMMIT_SHA}
-
+      
       # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
         COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
       fi
-
+      
       # Construct GitLab API URL for status updates
       GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-
+      
       echo "GitLab Project ID: ${PROJECT_ID}"
       echo "Commit SHA: ${COMMIT_SHA}"
       echo "GitLab Status URL: ${GITHUB_URL}"
-
+      
       # Export GITHUB_URL as environment variable for use in test capabilities
       export GITHUB_URL="${GITHUB_URL}"
-
+      
       # Run your tests normally - SmartUI Hooks work automatically through capabilities
       pytest
       # Or: python -m unittest discover
       # Or: behave
-
+      
   only:
     - merge_requests
     - main
     - develop
-
+  
   environment:
     name: visual-regression/$CI_COMMIT_REF_NAME
 ```
@@ -684,40 +687,40 @@ variables:
 visual_regression_tests:
   stage: test
   image: ruby:${RUBY_VERSION}
-
+  
   before_script:
     - bundle install
-
+  
   script:
     # Get GitLab project ID and commit SHA
     - |
       PROJECT_ID=${CI_PROJECT_ID}
       COMMIT_SHA=${CI_COMMIT_SHA}
-
+      
       # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
         COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
       fi
-
+      
       # Construct GitLab API URL for status updates
       GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-
+      
       echo "GitLab Project ID: ${PROJECT_ID}"
       echo "Commit SHA: ${COMMIT_SHA}"
       echo "GitLab Status URL: ${GITHUB_URL}"
-
+      
       # Export GITHUB_URL as environment variable for use in test capabilities
       export GITHUB_URL="${GITHUB_URL}"
-
+      
       # Run your tests normally - SmartUI Hooks work automatically through capabilities
       bundle exec rspec
       # Or: bundle exec cucumber
-
+      
   only:
     - merge_requests
     - main
     - develop
-
+  
   environment:
     name: visual-regression/$CI_COMMIT_REF_NAME
 ```
@@ -733,18 +736,16 @@ visual_regression_tests:
 4. **GitLab API URL**: Export as `GIT_URL` environment variable, which your test capabilities will use
 5. **GitLab API URL Format**: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
 
-<Note>
-INFO
-
+<Info>
 **How Hooks Work**
 
 With SmartUI Hooks:
-
 - You pass SmartUI capabilities (including `github.url` with `GIT_URL` for GitLab) in your test configuration
 - Run your tests normally (no `npx smartui exec` command)
 - SmartUI integration happens automatically through the capabilities
 - GitLab PR checks are updated automatically when tests complete
-</Note>
+
+</Info>
 
 ---
 
@@ -755,13 +756,13 @@ Configure the following variables in your GitLab project:
 1. Go to your GitLab project → **Settings** → **CI/CD** → **Variables**
 2. Add the following variables:
 
-![GitLab CI/CD Variables configuration](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/2.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/2.png' alt="GitLab CI/CD Variables configuration"  />
 
-| Variable Name          | Description                |
-| ---------------------- | -------------------------- |
-| `LT_USERNAME`          | Your LambdaTest username   |
-| `LT_ACCESS_KEY`        | Your LambdaTest access key |
-| `SMARTUI_PROJECT_NAME` | Your SmartUI project name  |
+| Variable Name | Description |
+|--------------|-------------|
+| `LT_USERNAME` | Your <BrandName /> username |
+| `LT_ACCESS_KEY` | Your <BrandName /> access key |
+| `SMARTUI_PROJECT_NAME` | Your SmartUI project name |
 
 ---
 
@@ -769,10 +770,9 @@ Configure the following variables in your GitLab project:
 
 After your pipeline runs, you can view the results in the GitLab Pipelines page:
 
-![GitLab Pipelines page showing SmartUI test results](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/pipeline_gitlabtab.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/pipeline_gitlabtab.png' alt="GitLab Pipelines page showing SmartUI test results"  />
 
 The pipeline will show:
-
 - **Pipeline status** (Success/Failed)
 - **Job status** for SmartUI tests
 - **Screenshot statistics** (Total, Approved, Changes Found) in the job tooltip
@@ -783,12 +783,11 @@ The pipeline will show:
 
 After your pipeline runs, you'll see SmartUI status checks in your GitLab merge request:
 
-![GitLab merge request showing SmartUI PR check status](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/Gitlab_pr_check_dashboard.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/Gitlab_pr_check_dashboard.png' alt="GitLab merge request showing SmartUI PR check status"  />
 
 ### Successful Status
 
 When all visual tests pass:
-
 - ✅ **Status**: Success
 - **Details**: Click "Details" to view the SmartUI build in the dashboard
 - **Screenshot**: All screenshots match baseline or are approved
@@ -796,7 +795,6 @@ When all visual tests pass:
 ### Failed Status
 
 When visual differences are detected:
-
 - ❌ **Status**: Failed
 - **Details**: Click "Details" to review differences in SmartUI dashboard
 - **Action Required**: Review and approve/reject changes in SmartUI dashboard
@@ -805,53 +803,50 @@ When visual differences are detected:
 
 ## Complete Working Examples
 
-<Tabs>
+<Tabs className='docs__val' groupId='complete-example'>
 <Tab title="Web Testing Example">
 
-<Tabs>
+<Tabs className='docs__val' groupId='web-example-lang'>
 <Tab title="TypeScript/JavaScript">
 
 ```typescript title="example.spec.ts - Complete Web Test with SmartUI Hooks and GitLab"
-import { Builder, Capabilities } from "selenium-webdriver";
+import { Builder, Capabilities } from 'selenium-webdriver';
 
-describe("Web Visual Regression Tests", () => {
+describe('Web Visual Regression Tests', () => {
   let driver;
 
   before(async () => {
     // Construct GitLab URL (in CI/CD, this would come from environment variable)
-    const gitUrl =
-      process.env.GIT_URL ||
+    const gitUrl = process.env.GIT_URL || 
       `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
     const capabilities = {
-      browserName: "Chrome",
-      browserVersion: "latest",
-      platformName: "Windows 10",
-      "LT:Options": {
+      browserName: 'Chrome',
+      browserVersion: 'latest',
+      platformName: 'Windows 10',
+      'LT:Options': {
         username: process.env.LT_USERNAME,
         accessKey: process.env.LT_ACCESS_KEY,
-        project: "Your Project Name",
+        project: 'Your Project Name',
         w3c: true,
-        name: "Web Visual Tests",
-        build: process.env.CI
-          ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-          : `local-build-${Date.now()}`,
-        "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-        "smartUI.build": process.env.CI
-          ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-          : `local-build-${Date.now()}`,
-        "smartUI.baseline": false,
-        // GitLab integration capability
-        github: {
-          url: gitUrl,
-        },
-      },
+        name: 'Web Visual Tests',
+      build: process.env.CI 
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+      "smartUI.build": process.env.CI 
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.baseline": false,
+      // GitLab integration capability
+      github: {
+          url: gitUrl
+        }
+      }
     };
 
     driver = await new Builder()
-      .usingServer(
-        `https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`,
-      )
+      .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
       .withCapabilities(capabilities)
       .build();
   });
@@ -862,13 +857,13 @@ describe("Web Visual Regression Tests", () => {
     }
   });
 
-  it("should capture homepage screenshot", async () => {
-    await driver.get("https://example.com");
+  it('should capture homepage screenshot', async () => {
+    await driver.get('https://example.com');
     await driver.executeScript("smartui.takeScreenshot=Homepage");
   });
 
-  it("should capture login page screenshot", async () => {
-    await driver.get("https://example.com/login");
+  it('should capture login page screenshot', async () => {
+    await driver.get('https://example.com/login');
     await driver.executeScript("smartui.takeScreenshot=LoginPage");
   });
 });
@@ -893,10 +888,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseClassWebhook {
-
+    
     public RemoteWebDriver driver;
     public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
-
+    
     @BeforeClass
     public void setup() throws MalformedURLException {
         String username = System.getenv("LT_USERNAME") == null
@@ -905,11 +900,11 @@ public class BaseClassWebhook {
         String authkey = System.getenv("LT_ACCESS_KEY") == null
             ? "Your LT AccessKey"
             : System.getenv("LT_ACCESS_KEY");
-
+        
         ChromeOptions browserOptions = new ChromeOptions();
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-
-        // LambdaTest Options
+        
+        // TestMu AI Options
         ltOptions.put("username", username);
         ltOptions.put("accessKey", authkey);
         ltOptions.put("project", "Your Project Name");
@@ -917,21 +912,21 @@ public class BaseClassWebhook {
         ltOptions.put("browserName", "Chrome");
         ltOptions.put("browserVersion", "latest");
         ltOptions.put("platformName", "Windows 10");
-
+        
         // SmartUI Hooks Configuration
         String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
             ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
             : "Your SmartUI Project Name";
         ltOptions.put("smartUI.project", projectName);
-
+        
         String buildName = System.getenv("CI") != null
             ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
             : "smartui-local-build";
         ltOptions.put("smartUI.build", buildName);
         ltOptions.put("smartUI.baseline", false);
-
+        
         browserOptions.setCapability("LT:Options", ltOptions);
-
+        
         // GitLab Integration Capability
         if (githubURL != null) {
             Map<String, String> github = new HashMap<String, String>();
@@ -939,23 +934,23 @@ public class BaseClassWebhook {
             browserOptions.setCapability("github", github);
             System.out.println("GitLab URL received successfully: " + githubURL);
         }
-
+        
         String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
         driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
     }
-
+    
     @Test
     public void testHomepageScreenshot() {
         driver.get("https://example.com");
         ((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
     }
-
+    
     @Test
     public void testLoginPageScreenshot() {
         driver.get("https://example.com/login");
         ((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginPage");
     }
-
+    
     @AfterClass
     public void tearDown() {
         if (driver != null) {
@@ -971,22 +966,21 @@ public class BaseClassWebhook {
 </Tab>
 <Tab title="Mobile Testing Example">
 
-<Tabs>
+<Tabs className='docs__val' groupId='mobile-example-lang'>
 <Tab title="TypeScript/JavaScript">
 
 ```typescript title="example.spec.ts - Complete Mobile App Test with SmartUI Hooks and GitLab"
-import { remote, RemoteOptions } from "webdriverio";
+import { remote, RemoteOptions } from 'webdriverio';
 
-describe("Mobile App Visual Regression Tests", () => {
+describe('Mobile App Visual Regression Tests', () => {
   let driver: WebdriverIO.Browser;
 
   before(async () => {
     // Construct GitLab URL (in CI/CD, this would come from environment variable)
-    const gitUrl =
-      process.env.GIT_URL ||
+    const gitUrl = process.env.GIT_URL || 
       `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
-    const capabilities: RemoteOptions["capabilities"] = {
+    const capabilities: RemoteOptions['capabilities'] = {
       deviceName: "iPhone 12",
       platformName: "ios",
       platformVersion: "14",
@@ -994,26 +988,26 @@ describe("Mobile App Visual Regression Tests", () => {
       app: process.env.APP_URL || "YOUR_APP_URL",
       visual: true, // Mandatory for SmartUI
       name: "Mobile App Visual Tests",
-      build: process.env.CI
+      build: process.env.CI 
         ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
         : `local-build-${Date.now()}`,
       "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-      "smartUI.build": process.env.CI
+      "smartUI.build": process.env.CI 
         ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
         : `local-build-${Date.now()}`,
       "smartUI.baseline": false,
       "smartUI.cropStatusBar": true,
       // GitLab integration capability
       github: {
-        url: gitlabUrl,
-      },
+        url: gitlabUrl
+      }
     };
 
     driver = await remote({
-      hostname: "mobile-hub.lambdatest.com",
+      hostname: 'mobile-hub.lambdatest.com',
       port: 443,
-      path: "/wd/hub",
-      protocol: "https",
+      path: '/wd/hub',
+      protocol: 'https',
       user: process.env.LT_USERNAME,
       key: process.env.LT_ACCESS_KEY,
       capabilities: capabilities as any,
@@ -1026,12 +1020,12 @@ describe("Mobile App Visual Regression Tests", () => {
     }
   });
 
-  it("should capture homepage screenshot", async () => {
+  it('should capture homepage screenshot', async () => {
     // Navigate or perform actions
     await driver.execute("smartui.takeScreenshot=Homepage");
   });
 
-  it("should capture login screen screenshot", async () => {
+  it('should capture login screen screenshot', async () => {
     // Navigate to login screen
     await driver.execute("smartui.takeScreenshot=LoginScreen");
   });
@@ -1057,10 +1051,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseClassWebhook {
-
+    
     public RemoteWebDriver driver;
     public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
-
+    
     @BeforeClass
     public void setup() throws MalformedURLException {
         String username = System.getenv("LT_USERNAME") == null
@@ -1069,11 +1063,11 @@ public class BaseClassWebhook {
         String authkey = System.getenv("LT_ACCESS_KEY") == null
             ? "Your LT AccessKey"
             : System.getenv("LT_ACCESS_KEY");
-
+        
         ChromeOptions browserOptions = new ChromeOptions();
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-
-        // LambdaTest Options
+        
+        // TestMu AI Options
         ltOptions.put("username", username);
         ltOptions.put("accessKey", authkey);
         ltOptions.put("project", "Your Project Name");
@@ -1084,22 +1078,22 @@ public class BaseClassWebhook {
         ltOptions.put("isRealMobile", true);
         ltOptions.put("app", "APP_URL");
         ltOptions.put("visual", true); // Mandatory for SmartUI
-
+        
         // SmartUI Hooks Configuration
         String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
             ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
             : "Your SmartUI Project Name";
         ltOptions.put("smartUI.project", projectName);
-
+        
         String buildName = System.getenv("CI") != null
             ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
             : "smartui-local-build";
         ltOptions.put("smartUI.build", buildName);
         ltOptions.put("smartUI.baseline", false);
         ltOptions.put("smartUI.cropStatusBar", true);
-
+        
         browserOptions.setCapability("LT:Options", ltOptions);
-
+        
         // GitLab Integration Capability
         if (githubURL != null) {
             Map<String, String> github = new HashMap<String, String>();
@@ -1107,23 +1101,23 @@ public class BaseClassWebhook {
             browserOptions.setCapability("github", github);
             System.out.println("GitLab URL received successfully: " + githubURL);
         }
-
+        
         String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
         driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
     }
-
+    
     @Test
     public void testHomepageScreenshot() {
         // Navigate or perform actions
         ((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
     }
-
+    
     @Test
     public void testLoginScreenScreenshot() {
         // Navigate to login screen
         ((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginScreen");
     }
-
+    
     @AfterClass
     public void tearDown() {
         if (driver != null) {
@@ -1143,7 +1137,7 @@ public class BaseClassWebhook {
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="PR Check Not Appearing">
 
 **Issue: PR Check Not Appearing in GitLab**
@@ -1151,8 +1145,7 @@ public class BaseClassWebhook {
 **Symptoms**: Pipeline runs but no SmartUI status check appears in merge request.
 
 **Solutions**:
-
-1. Verify GitLab integration is active in [LambdaTest Integrations](https://integrations.lambdatest.com/)
+1. Verify GitLab integration is active in [<BrandName /> Integrations](https://integrations.lambdatest.com/)
 2. Check that `github.url` capability is correctly set in your test configuration
 3. Verify `GIT_URL` environment variable is exported in CI/CD pipeline
 4. Ensure `CI_PROJECT_ID` and `CI_COMMIT_SHA` are correctly set
@@ -1168,11 +1161,10 @@ public class BaseClassWebhook {
 **Symptoms**: Pipeline completes successfully but no screenshots appear in SmartUI dashboard.
 
 **Solutions**:
-
 1. Verify `visual: true` is set in capabilities
 2. Check `smartUI.project` capability matches your SmartUI project name
 3. Ensure `LT_USERNAME` and `LT_ACCESS_KEY` are correctly set
-4. Verify you're using the correct LambdaTest grid URL:
+4. Verify you're using the correct <BrandName /> grid URL:
    - Web testing: `@hub.lambdatest.com/wd/hub`
    - Mobile testing: `@mobile-hub.lambdatest.com/wd/hub`
 5. Check test logs for SmartUI execute command errors
@@ -1187,7 +1179,6 @@ public class BaseClassWebhook {
 **Symptoms**: Tests run but GitLab PR check doesn't update.
 
 **Solutions**:
-
 1. Verify `GIT_URL` is exported in CI/CD pipeline before test execution
 2. Check that `github.url` capability is reading from `GIT_URL` environment variable
 3. Add debug logging to verify URL is set
@@ -1201,14 +1192,14 @@ public class BaseClassWebhook {
 
 ## Key Differences: Hooks vs SDK
 
-| Aspect                 | SmartUI Hooks (This Guide)                            | SmartUI SDK                                 |
-| ---------------------- | ----------------------------------------------------- | ------------------------------------------- |
-| **Command**            | Run tests normally (`npm test`, `mvn test`, `pytest`) | Use `npx smartui exec -- <command>`         |
-| **Integration**        | Automatic via capabilities                            | Requires CLI wrapper                        |
-| **Setup**              | Add capabilities to test config                       | Configure CLI and run with exec             |
-| **GitLab Integration** | Add `github.url` capability with `GIT_URL`            | Use `--gitURL` parameter with exec          |
-| **Languages**          | TypeScript/JS/Java/Python/Ruby/C#/WebdriverIO/Appium  | Java SDK, CLI projects                      |
-| **Java Support**       | ✅ Yes - Use capabilities with `github` capability    | ✅ Yes - Use `npx smartui exec -- mvn test` |
+| Aspect | SmartUI Hooks (This Guide) | SmartUI SDK |
+|--------|---------------------------|-------------|
+| **Command** | Run tests normally (`npm test`, `mvn test`, `pytest`) | Use `npx smartui exec -- <command>` |
+| **Integration** | Automatic via capabilities | Requires CLI wrapper |
+| **Setup** | Add capabilities to test config | Configure CLI and run with exec |
+| **GitLab Integration** | Add `github.url` capability with `GIT_URL` | Use `--gitURL` parameter with exec |
+| **Languages** | TypeScript/JS/Java/Python/Ruby/C#/WebdriverIO/Appium | Java SDK, CLI projects |
+| **Java Support** | ✅ Yes - Use capabilities with `github` capability | ✅ Yes - Use `npx smartui exec -- mvn test` |
 
 ---
 

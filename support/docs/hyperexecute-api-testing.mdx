@@ -1,11 +1,10 @@
 ---
-title: "Boost Your API Testing Efficiency with HyperExecute"
+title: "Boost Your API Testing Efficiency with HyperExeucte"
 sidebarTitle: "API Testing"
 keywords: ['hyperexecute api testing', 'api automation hyperexecute', 'run api tests hyperexecute', 'automate api testing with hyperexecute cloud platform', 'integrating hyperexecute with ci/cd for api testing', 'troubleshooting api tests in hyperexecute', 'api testing tools hyperexecute', 'api test scripts hyperexecute']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 An API acts as a middleman between different software applications, allowing them to communicate and exchange data. Just like any other part of a software system, APIs need to be thoroughly tested to ensure they function as intended.
@@ -57,12 +56,14 @@ given().when().get(url).then().assertThat().statusCode(200);
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the Maestro framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/LambdaTest/hyp-api-testing" />
-</Check>
+
+<a href="https://github.com/<BrandName />/hyp-api-testing" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+</Tip>
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -86,77 +87,43 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Step 3: Configure YAML in your Test Suite
 
-```yaml hyperexecute.yaml
----
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-
-runson: win
-
-autosplit: true
-
-retryOnFailure: true
-maxRetries: 1
-
-concurrency: 1
-
-env:
-  CACHE_DIR: m2_cache_dir
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - $CACHE_DIR
-
-pre:
-  - mkdir m2_cache_dir
-  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
-  # pre step api testing
-  - mvn -Dtest=apitestingsample -Dbrowser=chrome -Dversion=latest -Dplatform=win10 -DsuiteXmlFile=testing.xml
-  - curl -v ipinfo.io
-
-post:
-  - mvn -Dtest=postapi -DsuiteXmlFile=testing.xml
-
-mergeArtifacts: true
-uploadArtefacts:
-  - name: Report
-    path:
-      - target/surefire-reports/**
-
-testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep 'class name' src/test/java/testing.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-
-testRunnerCommand: mvn `-Dtest=webtest `-Dbrowser=chrome `-Dversion=latest `-Dplatform=win10 `-DsuiteXmlFile=web.xml
-
-jobLabel: ['HYP', 'API Testing']
+```yaml reference title="hyperexecute.yaml"
+https://github.com/TestMu AI/hyp-api-testing/blob/master/hyperexecute.yaml
 ```
 
 ### Step 4: Execute your Test Suite
 
-<Note>
-**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -167,7 +134,9 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ### Step 5: Monitor and Validate the Test Execution
@@ -178,12 +147,12 @@ You can validate the tested API via the pre, post, and scenrios logs in the dash
 
 #### pre
 
-<img loading="lazy" src="/assets/images/hyperexecute/integration/products/api/1.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/api/1.png' alt="automation-dashboard"  width="1920" height="868" />
 
 #### scenario
 
-<img loading="lazy" src="/assets/images/hyperexecute/integration/products/api/2.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/api/2.png' alt="automation-dashboard"  width="1920" height="868" />
 
 #### post
 
-<img loading="lazy" src="/assets/images/hyperexecute/integration/products/api/3.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/api/3.png' alt="automation-dashboard"  width="1920" height="868" />

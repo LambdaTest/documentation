@@ -1,30 +1,31 @@
 ---
 title: "Semaphore Pipeline Integration with SmartUI"
 sidebarTitle: "Semaphore"
-keywords: ["lambdatest integrations", "smart ui integration", "smart ui integrations with ci/cd tools", "ci/cd tools", "continuous integration,continuous delivery", "continuous integration tools", "semaphore ci cd"]
+keywords: ['testmu ai integrations', 'smart ui integration', 'smart ui integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'semaphore ci cd']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Semaphore is a modern CI/CD (Continuous Integration and Continuous Delivery) platform designed for developers to automate the process of building, testing, and deploying software.
 
-This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with LambdaTest SmartUI whenever changes are made to your repository.
+This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with <BrandName /> SmartUI whenever changes are made to your repository.
 
 ## Steps to Integrate Semaphore Pipeline with SmartUI
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
-
 To integrate Semaphore Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
-<GitHubButton url="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/semaphore" />
-</Check>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/semaphore" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Create your Project
 - Click on the **Create New** >> **Choose Repository**.
 - Select your desired repository from your VCS (GitHub or Bitbucket)
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/semaphore/1.gif)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/semaphore/1.gif' alt="Create New Project"  />
 
 ### Step 2: Setup your Workflow
 - Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference:
@@ -33,21 +34,20 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/semaphore/.semaphore/semaphore.yml
 ```
 
-<Check>
-TIP
+<Tip>
+**You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Semaphore project repository.**
 
-You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Semaphore project repository.
-</Check>
+</Tip>
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png' alt="Create New Project" width="" height="" />
 
 ## Best Practices
 
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Secret Management">
 
 **Secret Management**
@@ -111,11 +111,21 @@ env_vars:
 - Optimize test execution order
 
 </Tab>
+<Tab title="Resource Management">
+
+**Resource Management**
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+</Tab>
 </Tabs>
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Pipeline Fails with Secret Not Found">
 
 **Issue: Pipeline Fails with "Secret Not Found"**
@@ -300,8 +310,8 @@ If you encounter issues not covered here:
 
 - Review [Semaphore Documentation](https://docs.semaphoreci.com/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

@@ -1,49 +1,49 @@
 ---
-title: "How to integrate SimplyfyQA With Lambdatest"
+title: "How to integrate SimplyfyQA With TestMu AI"
 sidebarTitle: "SimplifyQA"
-keywords: [ "Lambdatest integration", "Lambdatest integration with simplifyqa", "simplifyqa", "simplifyex", "Lambdatest", "real device", "simplifyqa real device" ]
+keywords: ['TestMu AI integration', 'testmu ai integration with simplifyqa', 'simplifyqa', 'simplifyex', 'testmu ai', 'real device', 'simplifyqa real device']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 SimplifyQA is a test automation platform designed to leverage AI for creating, executing, and managing automated tests with ease. The platform's codeless approach democratizes test automation, allowing QA teams to achieve broader test coverage and faster release cycles without the need for extensive programming skills. SimplifyQA aims to streamline the entire QA workflow with its comprehensive suite of features supporting web, mobile, and API testing.
 
-This document will guide you step-by-step method to integrate the SimplifyQA with Lambdatest's Real Device.
+This document will guide you step-by-step method to integrate the SimplifyQA with <BrandName />'s Real Device.
 
 ## Prerequisites 
 - SimplifyQA subscription 
 - SimplifyQA agent installed in Local Machine 
-- Lambdatest Subscription 
+- <BrandName /> Subscription 
 - Required .apk or .ipa files
 
 ## Steps to integrate SimplifyQA
 
-### Step 1: Fetch your Lambdatest Credentials
-- Login to Lambdatest account and click on the profile icon. 
+### Step 1: Fetch your <BrandName /> Credentials
+- Login to <BrandName /> account and click on the profile icon. 
 - Navigate to **Account Settings** > **Password and Security**. Copy the provided **Username** and **Access Key**
 
-![Image](/assets/images/integrations/simplifyqa/username-accesskey.gif)
+<img loading="lazy" src='/assets/images/integrations/simplifyqa/username-accesskey.gif' alt="Image" />
 
 ### Step 2: Setup your SimplifyQA platform
 - Login to SimplifyQA as non-admin user. Click on the **Settings** icon > **Mobile Settings** .
-- Go to Cloud Setup and navigate to Lambdatest tab. Enter details copied from Lambdatest and save the settings:
-  - Username – Your Lambdatest Username
-  - AccessKey – Your Lambdatest Access Key
+- Go to Cloud Setup and navigate to <BrandName /> tab. Enter details copied from <BrandName /> and save the settings:
+  - Username – Your <BrandName /> Username
+  - AccessKey – Your <BrandName /> Access Key
   - Build – Reference build numbers
 
-![Image](/assets/images/integrations/simplifyqa/setup-simplifyqa.gif)
+<img loading="lazy" src='/assets/images/integrations/simplifyqa/setup-simplifyqa.gif' alt="Image" />
 
 ### Step 3: Upload your application
-- Go to Lambdatest's **Real Device** > **App Testing** and upload your desired **.apk** file.
+- Go to <BrandName />'s **Real Device** > **App Testing** and upload your desired **.apk** file.
 - After successfully uploading the APK, click on the settings icon and copy the provided **App ID**.
 
-![Image](/assets/images/integrations/simplifyqa/upload-app.gif)
+<img loading="lazy" src='/assets/images/integrations/simplifyqa/upload-app.gif' alt="Image" />
 
 ### Step 4: Trigger your tests from SimplifyQA
 - Record your test cases in SimplifyQA. Go to the Test Case module > click on **+** icon and select the **Mobile** to record your test cases.
-<Warning>
-**Note:** You should use **Cloud Start App** method instead of **Launch App** method.
-</Warning>
+> **Note:** You should use **Cloud Start App** method instead of **Launch App** method.
 - Click on test data and paste the App ID copied from Lambda Test in **APP Id** parameter.
-- In the Execute Tab, choose **Cloud Automation**. Click on Lambdatest.
+- In the Execute Tab, choose **Cloud Automation**. Click on <BrandName />.
 - Select Release, Sprint. In the Devices dropdown choose the device of your choice and click on Execute button.
-<Warning>
-To view the Lambdatest execution, navigate to [automation](https://appautomation.lambdatest.com/build) in the left panel in Lambdatest.
-</Warning>
+> To view the <BrandName /> execution, navigate to [automation](https://appautomation.lambdatest.com/build) in the left panel in <BrandName />.

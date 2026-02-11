@@ -1,17 +1,11 @@
 ---
 title: "Handle Dynamic Data in Visual Tests"
 sidebarTitle: "Dynamic Data"
-keywords:
- [
-  "lambdatest",
-  "smart ui",
-  "dynamic data",
-  "ignore elements",
-  "select elements",
-  "visual testing",
-  "false positives"
-]
+keywords: ['testmu ai', 'smart ui', 'dynamic data', 'ignore elements', 'select elements', 'visual testing', 'false positives']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## What is Dynamic Data?
 
@@ -22,11 +16,11 @@ SmartUI provides two powerful options to handle dynamic data:
 - **Ignore DOM Elements**: Exclude specific elements from visual comparison
 - **Select DOM Elements**: Include only specific elements in visual comparison
 
-<Check>
-Related Documentation
+<Tip>
+**Related Documentation**
 
 If you're experiencing high mismatch percentages or false positives, see our [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for solutions. For project-level settings, check [Project Settings](/support/docs/smartui-project-settings).
-</Check>
+</Tip>
 
 ## When to Use Dynamic Data Handling
 
@@ -43,8 +37,8 @@ You should use dynamic data handling in the following scenarios:
 
 ## Dynamic Data Handling Methods
 
-<Tabs>
-<Tab title='Ignore DOM Elements'>
+<Tabs className='docs__val' groupId='dynamic-data-methods'>
+<Tab title="Ignore DOM Elements">
 
 **Ignore DOM Elements**
 
@@ -66,8 +60,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 **Examples by Selector Type**
 
-<Tabs>
-<Tab title='By ID'>
+<Tabs className='docs__val' groupId='selector'>
+<Tab title="By ID">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -103,7 +97,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Home Page", options);
 
 **Python (Selenium)**
 ```python
-from lambdatest import smartui_snapshot
+from testmu ai import smartui_snapshot
 
 options = {
     "ignoreDOM": {
@@ -114,7 +108,7 @@ smartui_snapshot(driver, "Home Page", options)
 ```
 
 </Tab>
-<Tab title='By Class'>
+<Tab title="By Class">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -145,7 +139,7 @@ options = {
 ```
 
 </Tab>
-<Tab title='By CSS Selector'>
+<Tab title="By CSS Selector">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -186,7 +180,7 @@ options = {
 ```
 
 </Tab>
-<Tab title='By XPath'>
+<Tab title="By XPath">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -229,7 +223,7 @@ options = {
 
 </Tab>
 
-<Tab title='Select DOM Elements'>
+<Tab title="Select DOM Elements">
 
 **Select DOM Elements**
 
@@ -251,8 +245,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 **Examples by Selector Type**
 
-<Tabs>
-<Tab title='By ID'>
+<Tabs className='docs__val' groupId='selector'>
+<Tab title="By ID">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -287,7 +281,7 @@ options = {
 ```
 
 </Tab>
-<Tab title='By Class'>
+<Tab title="By Class">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -318,7 +312,7 @@ options = {
 ```
 
 </Tab>
-<Tab title='By CSS Selector'>
+<Tab title="By CSS Selector">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -357,7 +351,7 @@ options = {
 ```
 
 </Tab>
-<Tab title='By XPath'>
+<Tab title="By XPath">
 
 **JavaScript (Selenium)**
 ```javascript
@@ -400,7 +394,7 @@ options = {
 
 </Tab>
 
-<Tab title='Combining Methods'>
+<Tab title="Combining Methods">
 
 **Combining ignoreDOM and selectDOM**
 
@@ -480,7 +474,7 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 </Tab>
 
-<Tab title='Best Practices'>
+<Tab title="Best Practices">
 
 **Best Practices**
 
@@ -501,8 +495,8 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Elements Not Being Ignored' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Elements Not Being Ignored">
 
 **Issue: Elements Not Being Ignored**
 
@@ -528,7 +522,7 @@ await smartuiSnapshot(driver, 'Page', options);
 ```
 
 </Tab>
-<Tab title='selectDOM Not Working' >
+<Tab title="selectDOM Not Working">
 
 **Issue: selectDOM Not Working**
 
@@ -543,7 +537,7 @@ await smartuiSnapshot(driver, 'Page', options);
 3. Ensure elements are in the viewport
 
 </Tab>
-<Tab title='False Positives Still Occurring' >
+<Tab title="False Positives Still Occurring">
 
 **Issue: False Positives Still Occurring**
 

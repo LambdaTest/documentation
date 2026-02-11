@@ -1,19 +1,32 @@
----
-title: "Getting started with SmartUI using Cypress On LambdaTest"
-sidebarTitle: "Cypress"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smart-ui-cypress
+title: Getting started with SmartUI using Cypress On <BrandName />
+sidebarTitle: Cypress
+description: Master Visual UI Testing with Cypress on <BrandName /> Automation Cloud across 40+ browser versions through this comprehensive documentation.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smart-ui-cypress/
+slug: smart-ui-cypress/
+canonical: https://www.testmuai.com/support/docs/smart-ui-cypress/
+
 ---
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+---
+
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with Cypress
 
 - Basic understanding of Cypress is required.
 - Cypress version should be higher than 9.5.0. Click [here](https://docs.cypress.io/guides/references/changelog) to know more
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Steps to create a SmartUI Project
 
@@ -29,25 +42,25 @@ The first step is to create a project with the application in which we will comb
 
 ---
 
-**Step 1**: Install the required NPM module for `LambdaTest Cypress CLI` in your project.
+**Step 1**: Install the required NPM module for `<BrandName /> Cypress CLI` in your project.
 
 ```bash
-npm install -g lambdatest-cypress-cli
+npm install -g testmu ai-cypress-cli
 ```
 
 **Step 2:** Use `init` command to generate the sample configuration files.
 
 ```bash
-lambdatest-cypress init
+testmu ai-cypress init
 ```
 
-**Step 3:** Define SmartUI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
+**Step 3:** Define SmartUI configuration in the `testmu ai-config.json` file of your Cypress project as shown in the below code snippet.
 
-```json title="/cypress-project/lambdatest-config.json"
+```json title="/cypress-project/testmu ai-config.json"
 {
   "lambdatest_auth": {
-    "username": "<Your LambdaTest username>",
-    "access_key": "<Your LambdaTest access key>"
+    "username": "<Your <BrandName /> username>",
+    "access_key": "<Your <BrandName /> access key>"
   },
   "browsers": [
     {
@@ -101,25 +114,22 @@ describe("Cypress test with Visual Regression", () => {
 });
 ```
 
-**Step 5:** Run the test on the LambdaTest platform by executing the below-run command:
+**Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
 
 ```bash
-lambdatest-cypress run
+testmu ai-cypress run
 ```
 
 **Step 6:** You can now see the SmartUI dashboard to view the results.
 
-For additional information about Cypress framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/)
-
-
+For additional information about Cypress framework please explore the documentation [here](/support/docs/getting-started-with-cypress-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
   
 
-  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
+  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](/support/docs/test-settings-options/).
   
 
-  **HTML DOM Config and Options** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](https://www.lambdatest.com/support/docs/html-dom-smartui-options/).
+  **HTML DOM Config and Options** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/).

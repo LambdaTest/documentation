@@ -4,7 +4,7 @@ sidebarTitle: "JavaScript Execution"
 keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough', 'kane ai prompts', 'kane ai commands']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 With KaneAI’s new JavaScript Execution feature, you now have the flexibility to write or paste custom JavaScript code snippets to perform tests. This allows for more advanced and customized test scenarios alongside KaneAI’s plain English test-writing format.
@@ -73,13 +73,11 @@ return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.
 
 The returned object with the keys `First name`, `Last name`, and `email` will be stored in a variable. You can reference this variable later in your test to validate or reuse the values.
 
-<Warning>
-Variables created from return values can be used in subsequent test steps. To use the variable, simply refer to the specific property (e.g., First name) in your test steps for verification or further actions.
-</Warning>
+> Variables created from return values can be used in subsequent test steps. To use the variable, simply refer to the specific property (e.g., First name) in your test steps for verification or further actions.
 
 #### JavaScript Snippets in Generated Code
 When your test is executed, the JavaScript code snippet you provided will be added directly into the generated test code. This ensures that any custom interactions performed with JavaScript are part of the overall test logic. The inclusion of JavaScript in the generated code allows for easy tracking, debugging, and modification if needed.
 
-<video className="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= '/assets/images/kane-ai/kane-ai-js-execution.mp4' type="video/mp4" />
 </video>

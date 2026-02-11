@@ -1,11 +1,10 @@
 ---
 title: "HyperExecute Python Use Cases"
 sidebarTitle: "Python Use Cases"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','TestMu AI Projects','Python','Behave','Robot']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'TestMu AI Projects', 'Python', 'Behave', 'Robot']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 This guide covers the most common real-world scenarios and troubleshooting cases when running **Python**, **Pytest**, and **Behave** test frameworks on **<BrandName /> HyperExecute**. Each section describes a use case, its root cause, and the precise YAML translation required to configure or fix the issue within your `hyperexecute.yaml`.
@@ -33,10 +32,7 @@ runtime:
 
 ## 2. Ensuring PIP Version Compatibility
 Certain packages require a minimum version of PIP to install successfully. An outdated PIP version may cause the following error:
-
-<Note>
-**ERROR :** You must install pip 21.0 or later to install this package.
-</Note>
+> **ERROR :** You must install pip 21.0 or later to install this package.
 
 **Solution :** Upgrade PIP before installing dependencies.
 
@@ -58,10 +54,11 @@ pre:
 
 ## 3. Fixing Missing requirements.txt Errors
 If your pipeline fails with:
-
-<Note>
+<Warning>
 **ERROR:** Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
-</Note>
+</Warning>
+
+
 It means that the `requirements.txt` file might be missing or ignored in .gitignore.
 
 **Solution :** Ensure the file exists in the project root. Remove or comment out any requirements.txt entry from .gitignore. For this issue, ther are no YAML change required — this is a file management fix. However, verify that the command below correctly references the existing file name.
@@ -144,9 +141,7 @@ another-package==2.0.0
 ## 7. Configuring Database Connections
 When connecting to a database during test runs, you may encounter:
 
-<Note>
-**ConnectionRefusedError:** connect ECONNREFUSED 127.0.0.1:3306
-</Note>
+> **ConnectionRefusedError:** connect ECONNREFUSED 127.0.0.1:3306
 
 **Solution :** Expose the database service using the `--expose` flag in your YAML configuration.
 
@@ -367,18 +362,18 @@ curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions
 
 - **Installation :**
 ```bash
-npm install -g lambdatest-screenshot-pdf
+npm install -g testmu ai-screenshot-pdf
 ```
 
 - **Usage :**
 ```bash
-AUTH_HEADER="Basic your_encoded_auth_string" lambdatest-screenshot-pdf <session_id> --output <output_directory>
+AUTH_HEADER="Basic your_encoded_auth_string" testmu ai-screenshot-pdf <session_id> --output <output_directory>
 ```
 
 - **Example :**
 ```bash
 AUTH_HEADER="Basic cmF0aG9yZXYXYXYXYXXgybFlXTm5LclZPeVRRQ01RRGdyNTZjVg==" \
-lambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Desktop/screenshots
+testmu ai-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Desktop/screenshots
 ```
 
 **What Happens When You Run This Command:**

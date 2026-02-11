@@ -1,0 +1,52 @@
+---
+title: "Debug your CLI Errors"
+sidebarTitle: "CLI Errors"
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'How to Debug a Failed Job']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# How to Debug your CLI Errors
+
+This document will help you debug your failed job if you are facing any CLI issues. 
+
+<Tip>
+**If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.**
+
+</Tip>
+
+## Symbolic Link Error
+
+This error will mark your Job as a **Lambda Error**.
+
+You can encounter this error when you try to upload the **node_modules** directory along with the payload to trigger your Job in HyperExecute. This error generally occurs with your Node.js projects. You must avoid doing this, as it will not only save storage space but also avoid potential issues with version control. The node_modules folder holds all the project dependencies, and adding it to the repository can cause unnecessary file duplication and increase the repository size.
+
+To resolve this issue, either you remove that directory or you simply add node_modules to the **.gitignore** file. This ensures you have a smooth development process without unnecessary hiccups.
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/symlink.png' alt="Image" />
+
+## Snooper Failed Error
+
+It's crucial to understand a specific characteristic of Gherkin – it exclusively supports the use of **Examples** with the **Scenario Outline**. If you come across an error, it likely indicates that the **Scenario** is being employed with **Examples** instead of the intended **Scenario Outline**. To resolve this, ensure that you use the appropriate structure, employing the Scenario Outline when incorporating Examples.
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper1.png' alt="Image" />
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper.png' alt="Image" />
+
+## Authentication Error
+
+There may be cases where, when trying to connect to HyperExecute services, the CLI throws the following error:
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth.png' alt="Image" />
+
+Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud** is reachable, you have to run a `scan` command in your CLI, as shown below. If the network scan fails, then you are required to whitelist the IP address.
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth1.png' alt="Image" />
+
+#### IPs to be Whitelisted
+
+| FQDN | Protocol:Port | Reason |
+|------|---------------|--------|
+|*.hyperexecute.cloud | Https:443 |HyperExecute’s registered wildcard domain to allow access to all HyperExecute’s services|
+|*.lambdatest.com | Https:443 | <BrandName />’s registered wildcard domain to allow access to all <BrandName />’s services (like auth, plan-validation) |

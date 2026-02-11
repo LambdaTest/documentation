@@ -1,14 +1,19 @@
 ---
 title: "Environment Variables Support for Cypress Tests"
 sidebarTitle: "Environment Variables Support for Cypress Tests"
-keywords: ['cypress environment variables', 'cypress env', 'cypress configuration', 'cypress lambdatest']
+keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Testing Online', 'Run Cypress', 'Cypress Run Specific Test', 'Cypress Testing Environment', 'How to Run Cypress Tests']
 ---
 
-You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the LambdaTest Cypress CLI. However, if we set environment variables via both LambdaTest CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below.
+import { BrandName } from "/snippets/BrandName.mdx";
 
-## 1. Via the Configuration File
 
-### a. Cypress 9
+---
+
+You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the <BrandName /> Cypress CLI. However, if we set environment variables via both <BrandName /> CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below. 
+
+### 1. Via the Configuration File
+
+a. **Cypress 9**
 
 A sample `cypress.json` file:
 
@@ -24,7 +29,7 @@ A sample `cypress.json` file:
 }
 ```
 
-### b. Cypress 10
+b. **Cypress 10**
 
 A sample `cypress.config.js` file:
 
@@ -37,7 +42,7 @@ module.exports = defineConfig({
   },
 ```
 
-You can use both of these in your test specifications file. An example of a test specifications file is:
+You can use both of these in your test specifications file. An example of a test specifications file is: 
 
 ```bash
 describe('Sample test', () => {
@@ -51,8 +56,7 @@ describe('Sample test', () => {
     })
 })
 ```
-
-## 2. Via the `cypress.env.json` File
+### 2. Via the `cypress.env.json` File
 
 ```bash
 {
@@ -62,10 +66,10 @@ describe('Sample test', () => {
 }
 ```
 
-## 3. Via the LambdaTest Cypress CLI
+### 3. Via the <BrandName /> Cypress CLI
 
-You can also add your environment variables via the parameter `--envs` in the LambdaTest Cypress CLI.
+You can also add your environment variables via the parameter `--envs` in the <BrandName /> Cypress CLI. 
 
 ```bash
-lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
+testmu ai-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
 ```

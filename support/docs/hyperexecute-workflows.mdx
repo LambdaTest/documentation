@@ -1,9 +1,11 @@
 ---
 title: "Workflows in HyperExecute"
 sidebarTitle: "Workflows"
-keywords: ['LambdaTest HyperExecute','HyperExecute Workflows','schedule tests','connected workflows','test chains']
-
+keywords: ['TestMu AI HyperExecute', 'HyperExecute Workflows', 'schedule tests', 'connected workflows', 'test chains']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
 
@@ -37,19 +39,17 @@ Workflows are schedule and platform driven, not commit-driven yet. Workflows can
 
 All jobs appear under the same Project. View jobs from the Project’s **Jobs** tab or by clicking the workflow name to open **Past Jobs** view.
 
-<Info>
-**NOTE**
+<Note>
+**If you don’t see a job after clicking Run or after the scheduled time, open the workflow and check **Past Occurrences**. Runs that failed to create a job (e.g., due to YAML validation, missing file path, or branch mismatch) are listed there with error details.**
 
-If you don’t see a job after clicking Run or after the scheduled time, open the workflow and check **Past Occurrences**. Runs that failed to create a job (e.g., due to YAML validation, missing file path, or branch mismatch) are listed there with error details.
-</Info>
+</Note>
 
-<iframe 
-  src="https://app.storylane.io/demo/mm0v54k4vzmb?embed=inline" 
-  title="Workflows Demo" 
-  style={{width: '100%', height: '500px', border: 'none'}}
-  allow="fullscreen" 
-  allowFullScreen
-></iframe>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/mm0v54k4vzmb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+  </div>
 
 ## Connected Workflows (Test Chains)
 Use Workflow Linking to form test chains. For example, run a daily smoke suite first and trigger a broader regression only if smoke passes. You can link across projects you own to coordinate multi-repo testing.
@@ -66,12 +66,14 @@ Variables let you customize job runs without the need of creating multiple workf
 3. Once you have added all the keys and their values, save the workflow.
 4. You have the flexibility to edit the values for specific keys at the runtime, whenever you are running the workflow manually.
 
-<Note>
+<Warning>
 Please note that the variables added from the workflows dashboard will be automatically added to the YAML file.
-</Note>
+</Warning>
 
-<video className="right-side" width="100%" controls>
-<source src="/assets/videos/hyperexecute/workflow/workflow_vars.mp4" type="video/mp4" />
+
+<br />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/workflow/workflow_vars.mp4' style={{ height: '300px' }} type="video/mp4" />
 </video>
 
 **Maximum Limits:**

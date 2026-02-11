@@ -1,10 +1,15 @@
 ---
 title: "KaneAI - Command Guide"
 sidebarTitle: "Command Types"
-keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough', 'kane ai instructions',' kane ai commands']
-description: 'KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.'
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough', 'kane ai instructions', 'kane ai commands']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.
+
+---
 
 ## Navigation & Page Interaction
 
@@ -21,6 +26,8 @@ Use the below commands to move around the page:
 | Search       | `search for "laptop"`                          |
 | Refresh      | `refresh the page`                             |
 | Navigation   | `go back`  ,   `navigate back`  ,  `go forward`  ,  `navigate forward` |
+
+---
 
 ## Waits & Timeouts
 
@@ -51,13 +58,14 @@ Use custom wait timeout when dealing with slow page loads or dynamic content.
 - **Custom waits** are ideal for cases where you need to adjust the wait time for certain elements to load (such as dynamic content or external API calls). [RECOMMENDED]
 - **Use explicit waits** when you know an action (like a button click or form submission) will take longer than usual.
 
-<Info>
-**Note**
+<Note>
+**Custom waits apply only to element-based interactions.  **
 
-Custom waits apply only to element-based interactions.  
-</Info>
+</Note>
 
-<img loading="lazy" src="/assets/images/kane-ai/knowledge-base/commands/select_set_timeout.webp" alt="" />
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/commands/select_set_timeout.webp' alt="" />
+
+---
 
 ## Tab Management
 
@@ -75,7 +83,7 @@ To open a new tab in your browser, use the following command:
 Switching between tabs lets you interact with different pages or elements within the same session. You can switch by tab number or by the tab's name:
 
 - **Switch to 2nd tab:** This switches focus to the second tab (index starts at 1), allowing you to perform actions on that page.
-- **Switch to Lambdatest tab:** Switch to the tab named "Lambdatest", regardless of its position in the tab order.
+- **Switch to <BrandName /> tab:** Switch to the tab named "<BrandName />", regardless of its position in the tab order.
 
 Use these commands when you have multiple pages open and need to shift focus between them.
 
@@ -83,7 +91,7 @@ Use these commands when you have multiple pages open and need to shift focus bet
 
 You can close tabs either by position or by name when you're done with them:
 
-- **Close Lambdatest tab:** Closes the tab named "Lambdatest". This is useful when you’ve finished interacting with a specific page and want to clean up the session.
+- **Close <BrandName /> tab:** Closes the tab named "<BrandName />". This is useful when you’ve finished interacting with a specific page and want to clean up the session.
 - **Close 2nd tab:** Closes the second tab in the current session. This command is useful when you want to manage tab resources and focus on a single page.
 
 **Tips for Managing Tabs** 
@@ -91,6 +99,8 @@ You can close tabs either by position or by name when you're done with them:
 - When switching tabs, be sure the tab is open before using a **switch** command. If the tab doesn’t exist or has already been closed, the command will fail.
 - Tabs are indexed in the order they were opened. Keep track of the open tabs to avoid confusion, especially when switching by position.
 - Use **explicit waits** if the tab change involves loading content or dynamic changes.
+
+---
 
 ## Scrolling Commands
 
@@ -112,11 +122,12 @@ KaneAI allows you to easily control scrolling behavior on your web pages. Here�
 
 - **Scroll 3 times:** Repeats the scroll action three times, which can be helpful for interacting with infinite scroll pages or loading dynamic content.
 
-<Check>
-**TIP**
+<Tip>
+**Use `scroll until` for elements not yet visible in the viewport. Works for entire pages and scrollable subsections.  **
 
-Use `scroll until` for elements not yet visible in the viewport. Works for entire pages and scrollable subsections.  
-</Check>
+</Tip>
+
+---
 
 ## Assertions
 
@@ -130,14 +141,14 @@ Assertions are used to validate whether your expectations match the actual outco
 | **Relative Assertions** | Validate **element relationships**.<ul><li>Example: Assert login button is in same column as username</li><li>Example: Assert submit & cancel buttons are in same row</li></ul> |
 | **Mathematical Assertions** | Check **numeric calculations**.<ul><li>Example: Assert `3 + 4 = 7`</li></ul> |
 
-<Info>
+<Note>
+**Since **July 20, 2025**, all assertions fail tests immediately by default.  **
 
-**NOTE**
-
-Since **July 20, 2025**, all assertions fail tests immediately by default.  
 Older tests may still use *warn-and-continue* until edited.  
 More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)  
-</Info>
+</Note>
+
+---
 
 ## Unsupported Assertions (Coming Soon)
 
@@ -151,12 +162,16 @@ Currently, the following assertion types are not available in KaneAI. These feat
 | **Action-based** | Assert tooltip appears after hover | Assertions based on actions (e.g., hover or click) are split into multiple steps and not fully supported as a single assertion yet. |
 | **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involve multiple layers of validation within a single assertion. |
 
+---
+
 ## Query Information
 
 KaneAI allows you to retrieve specific information from your web page during tests:
 
 - **query the current URL:** Retrieves the current URL of the active page
 - **query the time mentioned in the poster:** Extracts specific text or data, such as the time listed on a poster or other page element
+
+---
 
 ## Conditional Actions
 
@@ -171,6 +186,8 @@ Example:
 **Conditional Selection**
 Example:
 **if price < 200 then click add to cart else select second product**: selects an action based on the price condition. If the price is less than $200, it adds the item to the cart. Otherwise, it selects the second product.
+
+---
 
 ## Do's and Don'ts
 
@@ -191,6 +208,8 @@ Follow these examples for better clarity and performance during test writing:
 - **Don’t mix actions with assertions:** Keep actions (like waiting for an element) separate from assertions.
 - **Avoid overly specific checks:** Instead of checking for exact visual details (like a color code), focus on functionality (e.g., "Assert divider is visible").
 - **Limit the number of assertions:** Avoid making too many assertions in a single step. Test one clear outcome per assertion.
+
+---
 
 ## Best Practices
 

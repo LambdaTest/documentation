@@ -1,22 +1,17 @@
 ---
 title: "Network Throttling for Appium tests"
 sidebarTitle: "Network Throttling"
-keywords: ['cross platform testing', 'network throttling', 'Appium capabilities generator', 'Appium desired capabilities', 'LambdaTest Appium grid capabilities', 'LambdaTest automation capabilities generator for Appium', 'Appium capability configuration', 'Appium automation testing', 'Appium automation grid online', 'configure Appium tests with network throttling desired capabilities', 'network throttling capabilities for Appium', 'throttling test on LambdaTest with Appium']
+keywords: ['cross platform testing', 'network throttling', 'Appium capabilities generator', 'Appium desired capabilities', 'TestMu AI Appium grid capabilities', 'TestMu AI automation capabilities generator for Appium', 'Appium capability configuration', 'Appium automation testing', 'Appium automation grid online', 'configure Appium tests with network throttling desired capabilities', 'network throttling capabilities for Appium', 'throttling test on TestMu AI with Appium']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
-LambdaTest simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
+<BrandName /> simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
 
 ## Workflow
 ### Initialization
@@ -29,11 +24,10 @@ LambdaTest simplifies testing by enabling simulation of diverse network conditio
     }
     ```
 
-<Info>
-**NOTE**
+<Note>
+**To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.**
 
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
-</Info>  
+</Note>  
 
 ### During Test Execution
 
@@ -54,7 +48,6 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 | 4g-lte-good              | 15 Mbps         | 7 Mbps       | 70 ms   |
 | 4g-lte-advanced-good     | 25 Mbps         | 12 Mbps      | 20 ms   |
 | default                  | NA             | NA           | NA      |
-
 
 ### Custom Profiles
 
@@ -86,12 +79,10 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
-<Info>
-**NOTE**
+<Note>
+**Currently, for iOS, we do not support any capability or LambdaHook for offline mode.**
 
-Currently, for iOS, we do not support any capability or LambdaHook for offline mode.
-</Info>
-
+</Note>
 
 ## Toggle Offline/Online Mode via API
 
@@ -104,18 +95,14 @@ Currently, for iOS, we do not support any capability or LambdaHook for offline m
     --data '{"mode": "offline"}'
     ```
 
-<Info>
-**NOTE**
-
-- **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.
+<Note>
+**- **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.**
 
 - **Wrong Capability Name or Value:** Providing an incorrect capability value results in a bad request error with a descriptive message.
 
 - **LambdaHook Error:** If you pass any wrong value in LambdaHook, you will receive an error message.
 
 - In offline mode, **live video** will not be available for the duration of the test session.
-</Info>
+</Note>
 
-<Warning>
-In case you have any questions, feel free to share them with us. Our experts are available on **24/7 Customer chat support**. You can also drop us a mail at support@lambdatest.com. Happy testing! 🙂
-</Warning>
+> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmu.ai. Happy testing! 🙂

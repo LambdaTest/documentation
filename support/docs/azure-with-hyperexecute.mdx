@@ -1,19 +1,22 @@
 ---
-title: "Azure DevOps Pipeline Integration with Hyperexecute"
+title: "Azure DevOps Integration"
 sidebarTitle: "Azure DevOps"
-
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','ci/cd tools','continuous integration,continuous delivery','continuous integration tools','gitlab ci']
-
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-# 
+# Azure DevOps Pipeline Integration with Hyperexecute
 * * *
 
 Azure DevOps offers developer services that enable teams to plan their work, collaborate on code development, and build and deploy applications. Azure DevOps fosters a collaborative culture and set of processes that bring together software developers, project managers, and contributors. It enables organizations to create and improve products at a much faster rate than traditional software development approaches allow.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0Nzrfjcqymw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div className="ytframe"> 
+<div className="youtube" data-embed="0Nzrfjcqymw">
+    <div className="play-button"></div>
+</div>
+</div>
 
 This document will show you how to integrate Azure Devops Pipeline with HyperExecute to greatly shorten your test cycles.
 
@@ -25,21 +28,20 @@ To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/azure" />
-</Check>
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/azure" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### 1. Log into your Azure DevOps account
 
 ### 2. Create a New Project
  Go to the top-right corner of your Azure Devops profile page and click the **+ New Project** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/1.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/1.png' alt="Create New Project" width="" height="" />
 
 Follow the prompts to successfully create a new project.
 
@@ -47,7 +49,7 @@ Follow the prompts to successfully create a new project.
 
 Next, you need to create a new pipeline. To create a new pipeline, click the **Pipelines** button from the left panel or from the main page.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/2.png' alt="Create New Pipeline" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/2.png' alt="Create New Pipeline" width="" height="" />
 
 ### 4. Configure the Azure Pipeline YAML to Execute Hyperexecute CLI Binary:
 
@@ -84,33 +86,30 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution. 
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps: 
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
+    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains <BrandName /> username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
-<Note>
-**Note**: Ensure that your username and access key for your LambdaTest account is visible in the script. 
-</Note>
+<Warning>
+**Note**: Ensure that your username and access key for your <BrandName /> account is visible in the script.
+</Warning>
+
 
 ***
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/3.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/3.png' alt="Create New Project" width="" height="" />
 
 ***
 
 ### 5. Run the Pipeline
 To run the new pipeline that you just created, click the **Run** or **Save and Run** button at the top-right corner of the page.
 
-
 <p></p>
 
 **An example of how a test that is run on the Azure DevOps pipeline gets executed:**
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/azure_execution.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/azure_execution.png' alt="Create New Project" width="" height="" />
 
 <p></p>
 
 **An example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/azure_execution2.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/azure/azure_execution2.png' alt="Create New Project" width="" height="" />
 
-
-<Note>
 **Run your tests at speeds never seen before. Happy testing! :)**
-</Note>

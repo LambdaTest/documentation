@@ -1,10 +1,11 @@
 ---
 title: "UI Testing with Puppeteer using HyperExecute and SmartUI SDK"
 sidebarTitle: "Puppeteer"
-keywords: ["smart ui testing in hyperexecute", "visual  ui testing,image to image comparison", "regression testing tool", "perform visual ui testing online", "compare image to image", "puppeteer pytest", "puppeteer mocha", "automation testing with puppeteer"]
+keywords: ['smart ui testing in hyperexecute', 'visual  ui testing,image to image comparison', 'regression testing tool', 'perform visual ui testing online', 'compare image to image', 'puppeteer pytest', 'puppeteer mocha', 'automation testing with puppeteer']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using **Puppeteer**
 
@@ -12,11 +13,11 @@ This documentation will guide you step-by-step to execute the SmartUI tests on t
 
 You must do the following in order to run the tests on HyperExecute from your local system:
 
-- Get your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
+- Get your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
 - Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- Use your login credentials to access [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- Use your login credentials to access [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Step 1: Create a SmartUI Project
 
@@ -28,25 +29,22 @@ With the application, create a project in which we will merge all of your builds
 4. Include the project name, the approvers of the changes that were discovered, and tags for any filters or simple navigation.
 5. Select **Submit** by clicking.
 
+<Info>
+**After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.**
 
-<Note>
-**INFO**
-
-After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
-</Note>
+</Info>
 
 ## Step 2: Setup Your Test Suite
 
 To configure and test it, you can use your own project. We are using the sample repository for demonstration purposes.
 
+<Tip>
+**Sample repo**
 
-<Check>
-**SAMPLE REPO**
+Download or Clone the code sample for the Puppeteer framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-Download or Clone the code sample for the Puppeteer framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
-
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-smartui-sdk-puppeteer" />
-</Check>
+<a href="https://github.com/<BrandName />/hyperexecute-smartui-sdk-puppeteer" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Configure Your Test Suite
 
@@ -79,28 +77,33 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+<Tabs className="docs__val">
 
-<Tabs>
-  <Tab title="Linux / MacOS">
+<Tab title="Linux / MacOS">
 
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
-  </Tab>
-  <Tab title="Windows">
+</Tab>
 
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
 ## Step 4: Configure YAML in your Test Suite
@@ -143,23 +146,22 @@ testRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-
 jobLabel: ["smart-ui-sdk", "hyperexecute", "puppeteer"]
 ```
 
-<Note>
-INFO
-
-It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
+<Info>
+**It is mandatory to mention these commands in the pre flag to download all the necessary dependencies**
 
 ```bash
 pre:
   - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
   - npx smartui config:create smartui-web.json
 ```
-</Note>
+</Info>
 
 ## Step 5: Execute your Test Suite
 
-<Note>
+<Warning>
 **NOTE:** On macOS, you can grant permission by running **`chmod u+x./hyperexecute`** if you receive a permission denied warning when using the CLI. If a security pop-up appears, click the Allow button on the **System Preferences** → **.Security and Privacy** → **.General tab**.
-</Note>
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -170,11 +172,13 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 3.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE 
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ## Step 6: Monitor the Test Execution
 
 Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the status of your job.
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png' alt="automation-dashboard"  width="1920" height="868" />

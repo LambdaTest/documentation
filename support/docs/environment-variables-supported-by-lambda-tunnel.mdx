@@ -1,24 +1,28 @@
 ---
-title: "Environment Variables Supported By LambdaTest Tunnel"
-sidebarTitle: Environment Variables Supported By LambdaTest Tunnel
-keywords: ["LambdaTest automation", "LambdaTest environment variables", "LambdaTest setup", "LambdaTest tunnel"]
+title: "Environment Variables Supported By TestMu AI Tunnel"
+sidebarTitle: "Environment Variables Supported By TestMu AI Tunnel"
+keywords: ['TestMu AI automation', 'TestMu AI environment variables', 'TestMu AI setup', 'TestMu AI tunnel']
 ---
 
-You can leverage these environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them. You can switch command-line flags through an environment variable or <b>.lt.yaml</b>==$0 file with the LambdaTest tunnel.
-To configure the <b>.lt.yaml</b>, you can refer to the section [Leverage .lt.yaml file](/support/docs/advanced-tunnel-features/#leverage-ltyaml-file) of the documentation [Advanced LambdaTest Tunnel Features](/support/docs/advanced-tunnel-features/).
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+You can leverage these environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them. You can switch command-line flags through an environment variable or <b>.lt.yaml</b>==$0 file with the <BrandName /> tunnel.
+To configure the <b>.lt.yaml</b>, you can refer to the section [Leverage .lt.yaml file](/support/docs/advanced-tunnel-features/#leverage-ltyaml-file) of the documentation [Advanced <BrandName /> Tunnel Features](/support/docs/advanced-tunnel-features/).
 
 ### What are Environment Variables?
 
+---
+
 Environment variables can be used in place of command-line flags. Each operating system has its compatibility in terms of environment variables. Command-line flags restrict environment variables from being bypassed. When available, the command-line flags always take priority.
 
-Below is the following list of environment variables used by the LambdaTest Tunnel
+Below is the following list of environment variables used by the <BrandName /> Tunnel
 
 | ENVIRONMENT VARIABLE               | DESCRIPTION                                                                                               | OPERATING SYSTEM                |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| `http_proxy`<br />`HTTP_PROXY`     | LambdaTest tunnel uses the HTTP proxy `http://hostname:port`                                              | Windows, Mac OS, Linux          |
-| `https_proxy`<br />`HTTPS_PROXY`   | LambdaTest tunnel uses the HTTPS proxy `https://hostname:port`                                            | Windows, Mac OS, Linux          |
+| `http_proxy`<br />`HTTP_PROXY`     | <BrandName /> tunnel uses the HTTP proxy `http://hostname:port`                                              | Windows, Mac OS, Linux          |
+| `https_proxy`<br />`HTTPS_PROXY`   | <BrandName /> tunnel uses the HTTPS proxy `https://hostname:port`                                            | Windows, Mac OS, Linux          |
 | `no_proxy`<br />`NO_PROXY`         | Comma separated list of hosts to bypass proxy when using tunnel. Wild cards is supported for sub-domains. | Windows, Mac OS, Linux          |
-| `LT_USERNAME`<br />`LT_ACCESS_KEY` | LambdaTest Username<br />LambdaTest Access Key                                                            | Windows, Mac OS, Linux, FreeBSD |
+| `LT_USERNAME`<br />`LT_ACCESS_KEY` | <BrandName /> Username<br /><BrandName /> Access Key                                                            | Windows, Mac OS, Linux, FreeBSD |
 
-That was all you need to know for LambdaTest tunnel proxies. In case you have any questions, feel free to share them with us. Our experts are available on <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**. Happy testing! 🙂
-
+That was all you need to know for <BrandName /> tunnel proxies. In case you have any questions, feel free to share them with us. Our experts are available on <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@testmu.ai](mailto:support@testmu.ai)**. Happy testing! 🙂

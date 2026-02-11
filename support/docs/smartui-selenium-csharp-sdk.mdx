@@ -1,7 +1,19 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-selenium-csharp-sdk
+title: Integrate SmartUI SDK with Selenium-CSharp
+sidebarTitle: C#
+description: In this documentation, learn how integrate your Selenium C# automated tests with <BrandName />'s SmartUI.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-selenium-csharp-sdk/
+slug: smartui-selenium-csharp-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-csharp-sdk/
+
 ---
-title: "Integrate SmartUI SDK with Selenium-CSharp"
-sidebarTitle: "C#"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
@@ -11,9 +23,9 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Create a SmartUI Project
 
@@ -31,11 +43,11 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `LTCloudTest.cs` file located in the `LambdaTest.Selenium.Driver.Test` folder.
+You can clone the sample repository to run `<BrandName />` automation tests with `SmartUI` and use `LTCloudTest.cs` file located in the `<BrandName />.Selenium.Driver.Test` folder.
   
 ```bash
-git clone https://github.com/LambdaTest/smartui-csharp-sample
-cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
+git clone https://github.com/<BrandName />/smartui-csharp-sample
+cd smartui-csharp-sample/<BrandName />.Selenium.Driver.Test
 ```
 
 ### **Step 2**: Update the Dependencies
@@ -44,29 +56,26 @@ cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 
 ```cs
 <ItemGroup>
-    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.4" />
+    <PackageReference Include="<BrandName />.Selenium.Driver" Version="1.0.4" />
 </ItemGroup>
 ```
 
-<Info>
-NOTE
+<Note>
+**You can check the latest version of [<BrandName />.Selenium.Driver]( https://www.nuget.org/packages/<BrandName />.Selenium.Driver) and update the latest version accordingly.**
 
-You can check the latest version of [LambdaTest.Selenium.Driver]( https://www.nuget.org/packages/LambdaTest.Selenium.Driver) and update the latest version accordingly.
-</Info>
-
+</Note>
 ### **Step 3**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `<BrandName /> SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
-<Info>
-NOTE
+<Note>
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
 ```bash
 dotnet restore
@@ -76,26 +85,31 @@ dotnet restore
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </Tab>
 <Tab title="Windows - CMD">
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </Tab>
 <Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ### **Step 5:** Create and Configure SmartUI Config
 
@@ -142,13 +156,13 @@ Once, the configuration file will be created, you will be seeing the default con
   "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
-<Note>
-ADVANCED OPTIONS IN SMARTUI CONFIGURATION
+<Info>
+**Advanced options in SmartUI configuration**
 
 - For capturing fullpage or viewport screenshots, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#12-viewports)
 - For the list of available mobile viewports, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
 - For more information about SmartUI config global options, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#3-global-options-optional).
-</Note>
+</Info>
 
 ### **Step 6:** Adding SmartUI function to take screenshot
 
@@ -159,9 +173,9 @@ using System;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using LambdaTest.Selenium.Driver;
+using <BrandName />.Selenium.Driver;
 
-namespace LambdaTest.Selenium.TestProject
+namespace <BrandName />.Selenium.TestProject
 {
         public static class LocalTest
         {
@@ -188,11 +202,10 @@ namespace LambdaTest.Selenium.TestProject
 
 You can enable synchronous snapshot status response by setting the `sync` option to `true` in the options dictionary. This allows you to wait for the snapshot status and receive the result directly in your test script.
 
-<Note>
-INFO
+<Info>
+**- The `sync` functionality is supported only in <BrandName />.Selenium.Driver version **1.0.4 and above**.**
 
-- The `sync` functionality is supported only in LambdaTest.Selenium.Driver version **1.0.4 and above**.
-</Note>
+</Info>
 
 **Set the sync value in options:**
 
@@ -213,7 +226,6 @@ INFO
 - The default value of `sync` is `false` if not specified.
 - The `timeout` option defines how long to wait for the snapshot status response (in seconds). Allowed range: 30-900, default is 600.
 - When `sync` is `true`, the `result` variable will hold the value of the snapshot status response.
-
 
 **Sample response:**
 ```json
@@ -249,11 +261,10 @@ Execute `visual regression tests` on SmartUI using the following commands
 ```bash
 npx smartui --config .smartui.json exec -- dotnet run cloud 
 ```
-<Info>
-NOTE
+<Note>
+**You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.**
 
-You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
-</Info>
+</Note>
 
 ##  View SmartUI Results
 
@@ -261,7 +272,7 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -273,12 +284,11 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
-
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-<Tabs>
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Ignore ID">
 
 ```cs title="This is a sample for your configuration for C# to ignore by ID"
@@ -286,14 +296,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "ignoreDOM", new Dictionary<string, object>
-    {
-      { "id", new[] { "ID-1", "ID-2" } }
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "id", new[] { "ID-1", "ID-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Ignore Class">
 
@@ -302,14 +313,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "ignoreDOM", new Dictionary<string, object>
-    {
-      { "class", new[] { "class-1", "class-2" } }
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "class", new[] { "class-1", "class-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Ignore XPath">
 
@@ -318,15 +330,17 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "ignoreDOM", new Dictionary<string, object>
-    {
-      { "xpath", new[] { "xpath-1", "xpath-2" } }
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "xpath-1", "xpath-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
+
 <Tab title="Ignore CSS Selector">
 
 ```cs title="This is a sample for your configuration for C# to ignore by CSS Selector"
@@ -334,18 +348,19 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "ignoreDOM", new Dictionary<string, object>
-    {
-      { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
 </Tab>
+
 </Tabs>
 
-<Tabs>
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Select ID">
 
 ```cs title="This is a sample for your configuration for C# to select by ID"
@@ -353,14 +368,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "selectDOM", new Dictionary<string, object>
-    {
-      { "id", new[] { "ID-1", "ID-2" } }
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "id", new[] { "ID-1", "ID-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Select Class">
 
@@ -369,14 +385,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "selectDOM", new Dictionary<string, object>
-    {
-      { "class", new[] { "class-1", "class-2" } }
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "class", new[] { "class-1", "class-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Select XPath">
 
@@ -385,15 +402,17 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "selectDOM", new Dictionary<string, object>
-    {
-      { "xpath", new[] { "xpath-1", "xpath-2" } }
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "xpath-1", "xpath-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
+
 <Tab title="Select CSS Selector">
 
 ```cs title="This is a sample for your configuration for C# to select by CSS Selector"
@@ -401,22 +420,23 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "selectDOM", new Dictionary<string, object>
-    {
-      { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
 </Tab>
+
 </Tabs>
 
 ## For capturing the screenshot of a specific element
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
-<Tabs>
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Capture Element by ID">
 
 ```cs title="This is a sample for your configuration for C# to capture an element by ID"
@@ -424,14 +444,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "element", new Dictionary<string, object>
-    {
-      { "id", new[] { "Required ID"} }
+    { "element", new Dictionary<string, object>
+        {
+            { "id", new[] { "Required ID"} }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Capture Element by Class">
 
@@ -440,14 +461,15 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "element", new Dictionary<string, object>
-    {
-      { "class", new[] { "Required class" } }
+    { "element", new Dictionary<string, object>
+        {
+            { "class", new[] { "Required class" } }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
 <Tab title="Capture Element by XPath">
 
@@ -456,15 +478,17 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "element", new Dictionary<string, object>
-    {
-      { "xpath", new[] { "Required xpath"} }
+    { "element", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "Required xpath"} }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
+
 </Tab>
+
 <Tab title="Element CSS Selector">
 
 ```cs title="This is a sample for your configuration for C# to capture an element by CSS Selector"
@@ -472,21 +496,22 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-  { "element", new Dictionary<string, object>
-    {
-      { "cssSelector", new[] { "Required cssSelector"} }
+    { "element", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "Required cssSelector"} }
+        }
     }
-  }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
-  </Tab>
+</Tab>
+
 </Tabs>
 
 ## Best Practices
 
-<Tabs >
-<Tab title='Screenshot Naming'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Screenshot Naming">
 
 **Screenshot Naming**
 
@@ -502,7 +527,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "ProductPage-MainContent");
 ```
 
 </Tab>
-<Tab title='Wait for Page Load'>
+<Tab title="Wait for Page Load">
 
 **Wait for Page Load**
 
@@ -522,7 +547,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 ```
 
 </Tab>
-<Tab title='Handle Dynamic Content'>
+<Tab title="Handle Dynamic Content">
 
 **Handle Dynamic Content**
 
@@ -531,7 +556,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 - Document why elements are ignored for future reference
 
 </Tab>
-<Tab title='Configuration Management'>
+<Tab title="Configuration Management">
 
 **Configuration Management**
 
@@ -540,7 +565,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 - Document custom configuration choices
 
 </Tab>
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -550,8 +575,8 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 
 **Troubleshooting**
 
-<Tabs>
-<Tab title='Screenshots Not Appearing in Dashboard'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Screenshots Not Appearing in Dashboard">
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -576,12 +601,12 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: "Project Not Found" Error**
 
@@ -599,7 +624,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -631,7 +656,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 4. Verify viewport size matches expected dimensions
 
 </Tab>
-<Tab title='Build Execution Fails'>
+<Tab title="Build Execution Fails">
 
 **Issue: Build Execution Fails**
 
@@ -653,11 +678,11 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 4. Check file permissions for configuration and project files
 
 </Tab>
-<Tab title='NuGet Dependencies Not Resolving'>
+<Tab title="NuGet Dependencies Not Resolving">
 
 **Issue: NuGet Dependencies Not Resolving**
 
-**Symptoms**: NuGet cannot find `LambdaTest.Selenium.Driver` package
+**Symptoms**: NuGet cannot find `<BrandName />.Selenium.Driver` package
 
 **Possible Causes**:
 - Incorrect package version
@@ -665,7 +690,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 - Network connectivity problems
 
 **Solutions**:
-1. Check latest version on [NuGet.org](https://www.nuget.org/packages/LambdaTest.Selenium.Driver)
+1. Check latest version on [NuGet.org](https://www.nuget.org/packages/<BrandName />.Selenium.Driver)
 2. Clear NuGet cache:
    ```bash
    dotnet nuget locals all --clear
@@ -674,7 +699,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 4. Check project file for version conflicts
 
 </Tab>
-<Tab title='Screenshot Names Not Matching Baseline'>
+<Tab title="Screenshot Names Not Matching Baseline">
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -698,11 +723,9 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
-</Tab>
-</Tabs>
 </Tab>
 </Tabs>
 
@@ -716,3 +739,5 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
+</Tab>
+</Tabs>

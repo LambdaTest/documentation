@@ -1,7 +1,20 @@
----
-title: "Getting started with SmartUI using K6"
-sidebarTitle: "K6"
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-k6-setup
+title: Getting started with SmartUI using K6
+sidebarTitle: K6
+description: In this documentation, learn how to perform Visual Regression testing with K6 on the <BrandName /> Automation Cloud across 40+ browser versions.
 keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-k6-setup/
+site_name: <BrandName />
+slug: smartui-k6-setup/
+canonical: https://www.testmuai.com/support/docs/smartui-k6-setup/
+
+---
 ---
 
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
@@ -12,22 +25,22 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 - Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-<Tabs >
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set LT_USERNAME=YOUR_USERNAME"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:LT_USERNAME=YOUR_USERNAME"
@@ -36,7 +49,7 @@ $env:LT_USERNAME=YOUR_USERNAME"
 </Tab>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -49,6 +62,8 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-1.webp' alt="cmd" width="768" height="373" /> */}
+
 ### **Step 2:** Configure your test with K6 Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
@@ -56,7 +71,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 1. Clone the sample GitHub repository:
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-k6-sample
+git clone https://github.com/<BrandName />/smartui-k6-sample
 cd smartui-k6-sample
 ```
 
@@ -68,15 +83,15 @@ npm install @lambdatest/smartui-cli @lambdatest/k6-driver
 
 3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
 
-<Tabs >
-<Tab title='MacOS' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS">
 
 ```bash
 brew install k6
 ```
 </Tab>
 
-<Tab title='Windows'>
+<Tab title="Windows">
 
 ```bash
 winget install k6
@@ -85,10 +100,10 @@ winget install k6
 </Tab>
 </Tabs>
 
-1. Set up the LambdaTest credentials by using the commands below in the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+4. Set up the <BrandName /> credentials by using the commands below in the terminal. The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
 
-<Tabs >
-<Tab title='MacOS/Linux' default>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -97,7 +112,7 @@ export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -106,7 +121,7 @@ set PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -117,7 +132,7 @@ $env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 </Tab>
 </Tabs>
 
-1. Create and configure SmartUI config file:
+5. Create and configure SmartUI config file:
 
 ```bash
 npx smartui config:create smartui-web.json
@@ -126,7 +141,6 @@ npx smartui config:create smartui-web.json
 6. Add the SmartUI snapshot function to your test file. Create or edit `test.js`:
 
 ```javascript title="test.js"
-import http from 'k6/http';
 import { smartuiSnapshot } from '@lambdatest/k6-driver';
 
 export default function () {
@@ -146,12 +160,12 @@ Execute the test using the following command:
 npx smartui exec k6 run test.js
 ```
 
-  - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+  - You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Best Practices
 
-<Tabs >
-<Tab title='Screenshot Naming' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Screenshot Naming">
 
 **Screenshot Naming**
 
@@ -170,7 +184,7 @@ smartuiSnapshot(response2, "ProductPage-MainContent");
 ```
 
 </Tab>
-<Tab title='Wait for Page Load'>
+<Tab title="Wait for Page Load">
 
 **Wait for Page Load**
 
@@ -181,7 +195,6 @@ smartuiSnapshot(response2, "ProductPage-MainContent");
 **Example:**
 ```javascript
 import { sleep, check } from 'k6';
-import http from 'k6/http';
 import { smartuiSnapshot } from '@lambdatest/k6-driver';
 
 const response = http.get('https://example.com');
@@ -193,7 +206,7 @@ smartuiSnapshot(response, "Page-Loaded");
 ```
 
 </Tab>
-<Tab title='Handle Dynamic Content'>
+<Tab title="Handle Dynamic Content">
 
 **Handle Dynamic Content**
 
@@ -202,7 +215,7 @@ smartuiSnapshot(response, "Page-Loaded");
 - Document why elements are ignored for future reference
 
 </Tab>
-<Tab title='Configuration Management'>
+<Tab title="Configuration Management">
 
 **Configuration Management**
 
@@ -211,7 +224,7 @@ smartuiSnapshot(response, "Page-Loaded");
 - Document custom configuration choices
 
 </Tab>
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -224,8 +237,8 @@ smartuiSnapshot(response, "Page-Loaded");
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='Screenshots Not Appearing in Dashboard'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Screenshots Not Appearing in Dashboard">
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -250,12 +263,12 @@ smartuiSnapshot(response, "Page-Loaded");
    npx smartui exec k6 run test.js
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: Project Not Found" Error**
 
@@ -273,7 +286,7 @@ smartuiSnapshot(response, "Page-Loaded");
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -311,7 +324,7 @@ smartuiSnapshot(response, "Page-Loaded");
 3. Verify viewport size in smartui-web.json configuration file
 
 </Tab>
-<Tab title='K6 Browser Not Enabled'>
+<Tab title="K6 Browser Not Enabled">
 
 **Issue: SmartUI CLI Not Working**
 
@@ -344,7 +357,7 @@ smartuiSnapshot(response, "Page-Loaded");
    ```
 
 </Tab>
-<Tab title='Screenshot Status Not Approved'>
+<Tab title="Screenshot Status Not Approved">
 
 **Issue: Screenshot Status Not Approved**
 
@@ -368,7 +381,7 @@ smartuiSnapshot(response, "Page-Loaded");
 4. Adjust pixel threshold if needed
 
 </Tab>
-<Tab title='Screenshot Names Not Matching Baseline'>
+<Tab title="Screenshot Names Not Matching Baseline">
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -392,9 +405,9 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/) for K6-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -407,15 +420,15 @@ If you encounter issues not covered here:
 - [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+- [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-For additional information about K6 framework please explore the documentation [here](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+For additional information about K6 framework please explore the documentation [here](/support/docs/k6-browser-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).

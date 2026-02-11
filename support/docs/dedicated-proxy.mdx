@@ -1,36 +1,44 @@
 ---
 title: "Dedicated Proxy - IP Whitelisting"
 sidebarTitle: "Dedicated Proxy for IP whitelisting"
-keywords: ["dedicated proxy", "inbound ip whitelisting", "ip whitelisting", "ip whitelsiting lambdatest"]
+keywords: ['dedicated proxy', 'inbound ip whitelisting', 'ip whitelisting', 'ip whitelsiting testmu ai']
 ---
 
-This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+This article will guide you on how does <BrandName /> cloud access network restricted resources using a dedicated proxy server.
 
 ## Prerequisites
+
 ---
+
 - Client network resources are publicly discoverable (clientapplication.private.com) but access is restricted to the dedicated proxy.
 - The **dedicated proxy IP** needs to be whitelisted by the client’s network administrators.
 
 ## IP whitelisting
+
 ---
+
 IP whitelisting can help the client to have control over who has the access to resources hosted on their network. IP whitelist is an approved list of IP addresses or IP domains that have permission to access the resource domain. Reserved for only trusted users, it is only set and updated by the client network administrators. With dedicated proxy solution, **only a single IP** needs to be whitelisted which saves the hassle of whitelisting multiple IP ranges.
 
-## Dedicated Proxy Server of LambdaTest
+## Dedicated Proxy Server of <BrandName />
+
 ---
-LambdaTest provides a dedicated proxy server solution that can be whitelisted to provide access to the client’s network-restricted resources.
+
+<BrandName /> provides a dedicated proxy server solution that can be whitelisted to provide access to the client’s network-restricted resources.
 
 ### How does it work?
----
-
-![cmd](/assets/images/uploads/ip2.webp)
 
 ---
-1. The test script from the client network machine makes a call to the LambdaTest cloud platform to start the test session.
-2. LambdaTest cloud then allocates a device to the user with the specified capabilities to run the user’s test on the LambdaTest cloud.
+
+<img loading="lazy" src='/assets/images/uploads/ip2.webp' alt="cmd" width="768" height="373" />
+
+---
+
+1. The test script from the client network machine makes a call to the <BrandName /> cloud platform to start the test session.
+2. <BrandName /> cloud then allocates a device to the user with the specified capabilities to run the user’s test on the <BrandName /> cloud.
 3. This allocated device makes all the network requests via the dedicated Proxy allocated to the client. The dedicated proxy checks whether resources can be attained through the public internet or need to be fetched from the client’s network.
 4. The dedicated proxy accesses the network restricted resources by reaching out to the client’s network via the whitelisted IP.
 
-<Warning>
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@lambdatest.com.
-</Warning>
-
+> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.

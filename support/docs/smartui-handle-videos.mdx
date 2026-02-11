@@ -1,15 +1,11 @@
 ---
 title: "Handle Pages with Videos"
 sidebarTitle: "Handle Videos"
-keywords:
- [
-  "lambdatest",
-  "smart ui",
-  "freeze animations",
-  "storybook",
-  "animation svg screenshots"
-]
+keywords: ['testmu ai', 'smart ui', 'videos', 'video testing', 'dynamic content', 'visual testing', 'false positives']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Overview
 
@@ -146,8 +142,8 @@ SmartUI handles standard HTML5 video elements:
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Allow Video Loading'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Allow Video Loading">
 
 **Allow Video Loading**
 
@@ -155,7 +151,7 @@ Use appropriate `waitForTimeout` values to ensure videos are loaded before snaps
 
 </Tab>
 
-<Tab title='Test Video Pages'>
+<Tab title="Test Video Pages">
 
 **Test Video Pages**
 
@@ -163,7 +159,7 @@ Verify that video pages work correctly with SmartUI before running full test sui
 
 </Tab>
 
-<Tab title='Combine with Other Features'>
+<Tab title="Combine with Other Features">
 
 **Combine with Other Features**
 
@@ -171,7 +167,7 @@ Use `ignoreDOM` to exclude video controls if needed.
 
 </Tab>
 
-<Tab title='Document Video Content'>
+<Tab title="Document Video Content">
 
 **Document Video Content**
 
@@ -179,7 +175,7 @@ Note which pages contain videos for better test planning.
 
 </Tab>
 
-<Tab title='Review First Frames'>
+<Tab title="Review First Frames">
 
 **Review First Frames**
 
@@ -190,8 +186,8 @@ Occasionally review captured first frames to ensure they represent the intended 
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Videos Not Captured Correctly'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Videos Not Captured Correctly">
 
 **Issue: Videos Not Captured Correctly**
 
@@ -210,7 +206,7 @@ await smartuiSnapshot(driver, 'Video Page');
 ```
 
 </Tab>
-<Tab title='False Positives from Video Areas' >
+<Tab title="False Positives from Video Areas">
 
 **Issue: False Positives from Video Areas**
 
@@ -222,7 +218,7 @@ await smartuiSnapshot(driver, 'Video Page');
 3. Consider using layout comparison mode for pages with many videos
 
 </Tab>
-<Tab title='Embedded Videos (YouTube, Vimeo)' >
+<Tab title="Embedded Videos (YouTube, Vimeo)">
 
 **Issue: Embedded Videos (YouTube, Vimeo)**
 

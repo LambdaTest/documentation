@@ -1,17 +1,11 @@
 ---
 title: "Handle Pages with Lazy Loading"
 sidebarTitle: "Handle Lazy Loading"
-keywords:
- [
-  "lambdatest",
-  "smart ui",
-  "lazy loading",
-  "scroll",
-  "waitForTimeout",
-  "visual testing",
-  "dynamic content"
-]
+keywords: ['testmu ai', 'smart ui', 'lazy loading', 'scroll', 'waitForTimeout', 'visual testing', 'dynamic content']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## What is Lazy Loading?
 
@@ -169,7 +163,7 @@ public void handleLazyLoading(WebDriver driver) throws InterruptedException {
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from lambdatest import smartui_snapshot
+from testmu ai import smartui_snapshot
 import time
 
 driver = webdriver.Chrome()
@@ -237,8 +231,8 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Choose the Right Method'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Choose the Right Method">
 
 **Choose the Right Method**
 
@@ -247,7 +241,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - **Known lazy elements**: Wait for specific elements
 
 </Tab>
-<Tab title='Optimize Wait Times' >
+<Tab title="Optimize Wait Times">
 
 **Optimize Wait Times**
 
@@ -256,7 +250,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Monitor test execution times to optimize
 
 </Tab>
-<Tab title='Scroll Incrementally' >
+<Tab title="Scroll Incrementally">
 
 **Scroll Incrementally**
 
@@ -265,7 +259,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Recalculate page height for infinite scroll scenarios
 
 </Tab>
-<Tab title='Return to Top' >
+<Tab title="Return to Top">
 
 **Return to Top**
 
@@ -274,7 +268,16 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Prevents viewport-dependent differences
 
 </Tab>
-<Tab title='Combine Methods' >
+<Tab title="Combine Methods">
+
+**Combine Methods**
+
+- Use `waitForTimeout` for initial page load
+- Add programmatic scrolling for lazy content
+- Wait for specific critical elements
+
+</Tab>
+<Tab title="Combine Methods">
 
 **Combine Methods**
 
@@ -307,8 +310,8 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Content Still Missing After Scrolling' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Content Still Missing After Scrolling">
 
 **Issue: Content Still Missing After Scrolling**
 
@@ -318,7 +321,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 3. Check if lazy loading uses intersection observer (may need different approach)
 
 </Tab>
-<Tab title='Test Takes Too Long' >
+<Tab title="Test Takes Too Long">
 
 **Issue: Test Takes Too Long**
 
@@ -328,7 +331,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 3. Use `waitForTimeout` instead of scrolling when possible
 
 </Tab>
-<Tab title='Inconsistent Results' >
+<Tab title="Inconsistent Results">
 
 **Issue: Inconsistent Results**
 

@@ -1,28 +1,22 @@
 ---
 title: "Audio Injection on iOS Real Devices"
 sidebarTitle: "Audio Injection"
-keywords: ['audio injection', 'app test automation', 'microphone input', 'voice commands', 'audio recording', 'lambdatest audio testing', 'framework on lambdatest', 'app testing appium', 'app testing', 'real devices']
+keywords: ['audio injection', 'app test automation', 'microphone input', 'voice commands', 'audio recording', 'testmu ai audio testing', 'framework on testmu ai', 'app testing appium', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div> 
-Audio Injection allows you to inject microphone input on real iOS devices in the LambdaTest Real Device Cloud.  
+
+# Audio Injection on iOS Real Devices
+<RealDeviceTag value="Real Device" /> 
+Audio Injection allows you to inject microphone input on real iOS devices in the <BrandName /> Real Device Cloud.  
 Use it to test audio-driven flows such as audio verification and in-app recording—without manual mic input.
 
 ## Key Use Cases
 - In-app audio recording  
 - Audio-based verification/KYC flows  
 
-
-
-<Warning>
-This feature is currently in Beta. We are actively refining it based on real-world usage and feedback.
-</Warning>
-
+> This feature is currently in Beta. We are actively refining it based on real-world usage and feedback.
 ---
 ## Supported APIs & Devices
 - **API:** [AVAudioRecorder](https://developer.apple.com/documentation/avfaudio/avaudiorecorder)  
@@ -63,17 +57,15 @@ desired_caps = {
 ---
 
 ## Step 3: Control Audio in Test
-Inject the uploaded audio file from LambdaTest into the recorder or app when you are at the dedicated space for microphone input.
+Inject the uploaded audio file from <BrandName /> into the recorder or app when you are at the dedicated space for microphone input.
 
 **Inject File**
 ```python
 driver.execute_script("lambda-audio-injection=lt://MEDIA123...")
 ```
 
-<Info>
-**NOTE**
+<Note>
+**The injected audio can come from a standalone audio file **or** from the audio track of a recorded video.**
 
-The injected audio can come from a standalone audio file **or** from the audio track of a recorded video.
-</Info>
-
+</Note>
 ---

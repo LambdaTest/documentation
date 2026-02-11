@@ -1,19 +1,13 @@
 ---
-title: "Bamboo CI Integration with HyperExecute"
+title: "Bamboo CI"
 sidebarTitle: "Bamboo CI"
-keywords:
-   [
-    "lambdatest integrations",
-    "lambdatest integrations with ci/cd tools",
-    "ci/cd tools",
-    "continuous integration",
-    "continuous delivery",
-    "continuous integration tools",
-    "gitlab ci"
-  ]
-
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Bamboo CI Integration with HyperExecute
 * * *
 
 Bamboo is a continuous integration (CI) and continuous delivery (CD) server from Atlassian. It helps teams automate the software development and delivery process, from code commit to production deployment. Bamboo can be used to build, test, and deploy software on a variety of platforms, including cloud, on-premises, and hybrid environments.
@@ -43,9 +37,9 @@ Below are the mentioned softwares used for this documentation:
 
 3. Before you run Bamboo for the first time, specify your Bamboo Home Directory, where your Bamboo data is stored.
     - Create your Bamboo Home Directory (without spaces in the name).
-    <Note>
-    **NOTE:** You should not create your Bamboo Home Directory inside the **ROOT_FOLDER**. They should be entirely separate locations. If you do put the Home Directory in the **ROOT_FOLDER**, it will be overwritten and lost when Bamboo is upgraded.
-    </Note>
+
+    > **NOTE:** You should not create your Bamboo Home Directory inside the **ROOT_FOLDER**. They should be entirely separate locations. If you do put the Home Directory in the **ROOT_FOLDER**, it will be overwritten and lost when Bamboo is upgraded.
+
     - Go to the following file location
 
     ```bash
@@ -71,7 +65,7 @@ cd ROOT_FOLDER
 
 - Click on **Create Project** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/1.png' alt="Image" />
 
 - Enter the required details for your project:
 
@@ -81,18 +75,18 @@ cd ROOT_FOLDER
     - You can choose whether to provide access to this project to everyone or not.
     - Click on **Save** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/2.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/2.png' alt="Image" />
 
 - Now click on **Create Plan** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/3.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/3.png' alt="Image" />
 
 - Select your required **Project**.
 - Enter a **Plan Name**
 - Enter your **Project Key** (it should be same as the one you entered in the above step).
 - Click on **Create** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/4.png' alt="Image" />
 
 ### Step 4: Configure the Source Code
 
@@ -102,25 +96,25 @@ cd ROOT_FOLDER
 - Select the **Authentication Type** of your choice. We are selecting "Username and Password"
 - Enter the **Username** and **Password**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/5.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/5.png' alt="Image" />
 
 - Enter the desired **Branch** name.
 - Click on **Test Connection** button to check whether the connection is successfully established or not.
 - Define who can access to this repository.
 - Click on **Save and Continue** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/6.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/6.png' alt="Image" />
 
 ### Step 5: Configure Job
 
 - Select the **environment** where do you want to execute this job. For the demo purpose, we are using **Agent Environment**.
 - Click on **Add Task** button
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/7.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/7.png' alt="Image" />
 
 - Select the **Script** option from the provided Task Types.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/8.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/8.png' alt="Image" />
 
 - Enter your Task Description.
 - Select the **Interpreter** as **Shell**.
@@ -133,34 +127,34 @@ chmod +x hyperexecute
 ./hyperexecute --user <username>--key <key> --config <file>
 ```
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/9.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/9.png' alt="Image" />
 
 - Add the Task and click on **Create** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/10.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/10.png' alt="Image" />
 
 - Configure the pipeline as per your need in the **Trigger** tab or leave it to *Default*
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/11.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/11.png' alt="Image" />
 
 - Click on **Actions** -> **Enable Plan** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/12.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/12.png' alt="Image" />
 
 - Click on **Run** -> **Run plan** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/13.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/13.png' alt="Image" />
 
 - Test will get triggered and start executing. You can check the activity status of your Job here.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/14.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/14.png' alt="Image" />
 
 ### Step 6: Check the Output
 
 - Logs of the Job Build
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/15.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/15.png' alt="Image" />
 
 - Result on HyperExecute Dashboard
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/16.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/bamboo/16.png' alt="Image" />

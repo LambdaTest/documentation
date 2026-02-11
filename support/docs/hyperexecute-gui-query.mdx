@@ -1,8 +1,10 @@
 ---
 title: "Search Query in GUI"
 sidebarTitle: "Search Query in GUI"
-keywords: ['LambdaTest', 'HyperExecute', 'LambdaTest HyperExecute', 'CLI', 'Search Query', 'Filter', 'HyperExecute-GUI', 'test execute', 'hyperexecute job', 'automation']
+keywords: ['TestMu AI', 'HyperExecute', 'TestMu AI HyperExecute', 'CLI', 'Search Query', 'Filter', 'HyperExecute-GUI', 'test execute', 'hyperexecute job', 'automation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 ## What is a Query?
@@ -31,11 +33,11 @@ For example: `suiteTest.name = "LoginTest"` where,
 3. Toggle to **"Query Selection"** mode
 4. You'll see a query input box with helpful dropdowns
 
-<video className="right-side" width="100%" controls>
-<source src="/assets/videos/hyperexecute/cli-gui/writing_query.mp4" type="video/mp4" />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/cli-gui/writing_query.mp4' type="video/mp4" />
 </video>
 
-
+{/* ### Step-by-Step Query Building */}
 
 <br />  <br />
 
@@ -94,6 +96,6 @@ Want to be more specific? Add logical operators to combine conditions. After you
 
 You can save your query in order to dynamically select tests whenever you come back to that specific Configuration. Queries are saved at **Configuration level** so that you can keep unique Configurations for different types of testing scenarios. For example, A configuration for smoke tests may have a saved query like `suiteTest.name ~ "Smoke"`. 
 
-<video className="right-side" width="100%" controls>
-<source src="/assets/videos/hyperexecute/cli-gui/saving_query.mp4" type="video/mp4" />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/cli-gui/saving_query.mp4' type="video/mp4" />
 </video>

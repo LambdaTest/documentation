@@ -1,19 +1,12 @@
 ---
 title: "SmartUI SDK Advanced Configuration Options"
 sidebarTitle: "Configuration Options"
-keywords:
-  [
-    "Visual Regression",
-    "Visual Regression Testing Guide",
-    "Visual Regression Test Automation",
-    "Visual Regression Automation Testing",
-    "Running Visual Regression Tests",
-    "Visual Regression Testing Online",
-    "Run Visual Regression",
-    "Visual Regression Run Specific Test",
-    "Visual Regression Testing Environment",
-    "How to Run Visual Regression Tests"
-  ]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 Welcome to the world of simplified visual testing with the SmartUI SDK.
@@ -25,6 +18,14 @@ To generate the SmartUI SDK configuration file, please execute the following com
 ```bash
 npx smartui config:create .smartui.json
 ```
+
+<Note>
+**For the latest features including advanced configurations, ensure you are using the latest version of SmartUI CLI. Install or update using:**
+
+```bash
+npm install -g @lambdatest/smartui-cli@latest
+```
+</Note>
 
 ## Configuration File Structure
 
@@ -62,8 +63,8 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 
 ## Configuration Options
 
-<Tabs>
-<Tab title='Web Configuration'>
+<Tabs className='docs__val' groupId='config-options'>
+<Tab title="Web Configuration">
 
 **browsers**
 
@@ -114,16 +115,15 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 </Tab>
 
-<Tab title='Mobile Configuration'>
+<Tab title="Mobile Configuration">
 
 **devices**
 
 An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).
 
 <Note>
-NOTE
+**Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.**
 
- Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.
  SmartUI SDK will soon be supported simulation in case of iOS devices.
 </Note>
 
@@ -137,7 +137,7 @@ Specifies the orientation of the mobile device. You can choose from `portrait` o
 
 </Tab>
 
-<Tab title='Global Options'>
+<Tab title="Global Options">
 
 **waitForPageRender**
 
@@ -157,7 +157,39 @@ The `allowedHostnames` option controls the capture of assets from specific hostn
 
 </Tab>
 
-<Tab title='Supported Devices'>
+<Tab title="Lazy Load Configuration">
+
+**lazyLoadConfiguration**
+
+The `lazyLoadConfiguration` option is used to handle lazy-loaded content on web pages. This configuration helps ensure that all content is loaded before capturing screenshots, preventing incomplete captures due to lazy loading.
+
+To use this feature, ensure you have the latest version of SmartUI CLI installed:
+
+```bash
+npm install -g @lambdatest/smartui-cli@latest
+```
+
+Add the following configuration to your `.smartui.json` file:
+
+```json
+{
+  "lazyLoadConfiguration": {
+    "enabled": true,
+    "jumpBackToTop": true,
+    "scrollDelay": 250,
+    "scrollStep": 250
+  }
+}
+```
+
+- `enabled`: Boolean to enable/disable lazy load handling (default: false)
+- `jumpBackToTop`: Boolean to scroll back to top after scrolling to bottom (default: true)
+- `scrollDelay`: Delay in milliseconds between scroll actions (default: 250)
+- `scrollStep`: Pixels to scroll in each step (default: 250)
+
+</Tab>
+
+<Tab title="Supported Devices">
 
 **List of supported Device viewports**
 
@@ -292,4 +324,3 @@ The `allowedHostnames` option controls the capture of assets from specific hostn
 
 </Tab>
 </Tabs>
-

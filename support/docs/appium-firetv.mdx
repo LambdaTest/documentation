@@ -1,101 +1,131 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: appium-firetv
+title: Fire TV With Appium
+sidebarTitle: Fire TV Stick
+description: Complete guide to running your first FireTV Appium automated test script on <BrandName /> Real Device Cloud Platform. Test on 3000+ Real Devices.
+keywords: ['python appium', 'firetv', 'python appium tutorial', 'real devices', 'testmu ai cloud platform', 'app automation', 'real time testing', 'appium automation']
+
+url: https://www.testmuai.com/support/docs/appium-firetv/
+site_name: <BrandName />
+slug: appium-firetv/
+canonical: https://www.testmuai.com/support/docs/appium-firetv/
 ---
-title: "Fire TV With Appium"
-sidebarTitle: "Fire TV Stick"
-keywords: ['python appium', 'firetv', 'python appium tutorial', 'real devices', 'lambdatest cloud platform', 'app automation', 'real time testing', 'appium automation', 'fire tv automation', 'amazon fire tv']
+
+<RealDeviceTag value="Real Device" /> 
+## Tutorial To Run Your First Test On <BrandName />
+
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
-
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-
-## Tutorial To Run Your First Test On LambdaTest
-
-In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **LambdaTest Real Device Cloud platform**.
+In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **<BrandName /> Real Device Cloud platform**.
 
 ## Objective
+
+---
 
 By the end of this topic, you will be able to:
 
 1.  Set up an environment for testing your Apps using **Fire TV** with **Appium**.
 2.  Understand and configure the core capabilities required for your Appium test suite.
-3.  Explore the advanced features of LambdaTest.
+3.  Explore the advanced features of <BrandName />.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-firetv" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/testmu ai/LT-appium-firetv" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+</Tip>
 
 ## Prerequisites
 
+---
+
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 
 ## Run your first test
 
+---
+
 ### 1. Upload your application
-Upload your **Fire TV** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **Fire TV** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-**Using App File from System:**
+ **Using App File from System:**
+ ```bash
 
-```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/fireos-sample-app.apk" -F "name=fireos_app"
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/fireos-sample-app.apk"" -F "name="fireos_app""
+`}
+
 ```
 
-<Check>
-**TIP**
+{/* **Using App URL:**
 
-- If you do not have any **.apk** file, you can run your sample tests on LambdaTest by using our sample 🔗 [FireTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk).
-- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step.
-</Check>
+```bash
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk" -F "name=fireos-sample-apk"
+`}
+
+``` */}
+
+<Tip>
+**- If you do not have any **.apk** file, you can run your sample tests on <BrandName /> by using our sample :link: [FireTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk).**
+
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
+
+</Tip>
 
 ### 2. Clone the sample project
 
-1. Clone the LambdaTest’s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
+1. Clone the <BrandName />’s [LT-appium-firetv](https://github.com/<BrandName />/LT-appium-firetv) and navigate to the code directory as shown below:
 
 ```bash
-git clone https://github.com/LambdaTest/LT-appium-firetv
+git clone https://github.com/<BrandName />/LT-appium-firetv
 cd LT-appium-firetv
 ```
 
 ### 3. Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME=YOUR_LAMBDATEST_USERNAME
-export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+  ```bash
+
+  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
+export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME=YOUR_LAMBDATEST_USERNAME
-set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### 4. Write your automation script
 
 An automation script for the sample application available above has been provided below. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
-
 ```python title="firetv.py"
 from xml.dom.expatbuilder import Rejecter
 from appium import webdriver
 from selenium.webdriver.common.by import By
 import time
-
 
 def getCaps():
     desired_cap= {
@@ -158,7 +188,6 @@ def runTest():
 
     print("time taken: ", end - start)
 
-
 if __name__ == "__main__":
     runTest()
 ```
@@ -193,12 +222,13 @@ def getCaps():
     }
 ```
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
-</Note>
+- You can generate capabilities for your test requirements with the help of our inbuilt **<a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>**.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
+
+</Info>
 
 ### 5. Execute your test case
 
@@ -214,17 +244,17 @@ pip install -r requirements.txt
 python firetv.py
 ```
 
-<Check>
-**TIP**
+<Tip>
+**If you are unable to run the automation script with the above mentioned commands try **'python3'** command except for **'python'**.**
 
-If you are unable to run the automation script with the above mentioned commands try **'python3'** command except for **'python'**.
-</Check>
+</Tip>
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Additional Links
 
+---
+
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

@@ -1,11 +1,10 @@
 ---
-title: Allure Reports on HyperExecute
-sidebarTitle: Allure
+title: "Allure Reports on HyperExecute"
+sidebarTitle: "Allure"
 keywords: ['allure reports', 'hyperexecute allure reports', 'hyperexecute testing']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Allure Framework is a versatile, lightweight, multi-language test reporting tool designed to provide a concise representation of tested functionalities in a visually appealing web report format. It facilitates easy extraction of valuable information for all stakeholders involved in the development process.
@@ -31,15 +30,13 @@ export const config = {
 
 - The `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` parameters allow customization of reporting options.
 
-<Check>
-**TIP**
-
-Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory.
+<Tip>
+**Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. **
 
 ```yaml title="allure.properties"
 allure.results.directory=reports/allure-results
 ```
-</Check>
+</Tip>
 
 **Step 2:** Add the following report parameters in your HyperExecute YAML file
 
@@ -51,14 +48,10 @@ partialReports:
   frameworkName: allure
 ```
 
-<Note>
-**NOTE:** The above example is only for the WDIO framework and the baseline concept remains the same across all the frameworks that the allure-results should be saved in a parent folder and that location of the parent folder is to be provided in the location parameters of reports in the HyperExecute YAML file.
-</Note> 
+> **NOTE:** The above example is only for the WDIO framework and the baseline concept remains the same across all the frameworks that the allure-results should be saved in a parent folder and that location of the parent folder is to be provided in the location parameters of reports in the HyperExecute YAML file. 
 
-<Note>
-**INFO**
-
-To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.
+<Info>
+**To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.**
 
 To achieve this, you can use `configPath` flag within HyperExecute YAML. This specifies the location of the configuration file containing the custom plugin settings, allowing Allure to generate reports with the desired level of detail and this will be passed as `allure --config <CONFIG_PATH>`
 
@@ -66,19 +59,18 @@ To achieve this, you can use `configPath` flag within HyperExecute YAML. This sp
 report: true
 partialReports:
   location: reports
+  # highlight-next-line
   configPath: allure-config.yml
   type: html
   frameworkName: allure
 ```
-</Note>
+</Info>
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/allure.png' alt="Image" />
 
 ## Allure Test Insights
 
 This helps you to get an overview of the test execution results using the Allure reports. This widget provides insights into the test execution results, test status, and test duration.
 
-<Note>
-**NOTE :** Refer to the [Allure API Test Insights with HyperExecute documentation](/support/docs/analytics-allure-api-widgets/) for a comprehensive explanation
-</Note>
+> **NOTE :** Refer to the [Allure API Test Insights with HyperExecute documentation](/support/docs/analytics-allure-api-widgets/) for a comprehensive explanation
 
-<img loading="lazy" src='/assets/images/analytics/api-test-report.webp' alt="cmd" />
+<img loading="lazy" src='/assets/images/analytics/api-test-report.webp' alt="cmd" width="800" height="400"  />

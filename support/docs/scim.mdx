@@ -1,12 +1,14 @@
 ---
 title: "Getting Started With Scim User Provisioning"
 sidebarTitle: "SCIM"
-keywords: [ "LambdaTest SCIM" ]
+keywords: ['TestMu AI SCIM']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your <BrandName /> workspace
-<Warning> SSO must be integrated before enabling SCIM. Please see [Getting Started With Single Sign On (SSO)](/support/docs/single-sign-on/) or [support@testmu.ai](mailto:support@testmu.ai) for questions. </Warning>
+> SSO must be integrated before enabling SCIM. Please see [Getting Started With Single Sign On (SSO)](/support/docs/single-sign-on/) or [support@testmu.ai](mailto:support@testmu.ai) for questions.
 
 ## Benefits Of SCIM
 Here are the following benefits of integrating SCIM with <BrandName />:
@@ -15,9 +17,7 @@ Here are the following benefits of integrating SCIM with <BrandName />:
 - **Consistency:**: SCIM ensures that user data is consistent across different systems and services. When a user's attributes (like role) are updated in the identity provider, SCIM can be used to propagate those changes to all connected service providers, maintaining accurate and up-to-date information.
 - **Security and Access Control:**:  By centralizing identity management through SCIM, organizations can better enforce access control policies and ensure that users have appropriate access rights to the resources they need. This can help mitigate security risks associated with improper access permissions.
 - **Assigning Groups to Users (If Groups Are Activated in Your Organization) :** If your organization has group functionality enabled, you can assign existing <BrandName /> groups to users provisioned through an Identity Provider (IdP) such as Microsoft Azure AD, Okta, and others using SCIM. 
-
-<Warning> Connect with our [24/7 customer support](mailto:support@testmu.ai) team to get the **Group** feature enabled for your organization. </Warning>
-
+> Connect with our [24/7 customer support](mailto:support@testmu.ai) team to get the **Group** feature enabled for your organization.
 
 ## Feature Of SCIM
 <BrandName /> provides the support for the below SCIM features.
@@ -28,22 +28,22 @@ Here are the following benefits of integrating SCIM with <BrandName />:
 ## Copy SCIM Base URL and Bearer Token (Auth Header Required by IdP)
 **Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
-![Image](/assets/images/lambdatest-mfa/dashboard.webp)
+<img loading="lazy" src='/assets/images/testmu ai-mfa/dashboard.webp' alt="Image" width="404" height="206"  className="doc_img img_center" /><br />
 
 **Step 2:**  Head to **Settings** and select **Organization Settings** from the dropdown.
 
-![Image](/assets/images/lambdatest-mfa/org-settings.webp)
+<img loading="lazy" src='/assets/images/testmu ai-mfa/org-settings.webp' alt="Image" width="404" height="206"  className="doc_img img_center" /><br />
 
 **Step 3:**  Head to the **Security** tab and click and copy the **SCIM Base URL and Bearer Token** option.
 
-![Image](/assets/images/lambdatest-scim/scim-base-url.png)
+<img loading="lazy" src='/assets/images/testmu ai-scim/scim-base-url.png' alt="Image" width="404" height="206"  className="doc_img img_center" /><br />
 
 ## SCIM User Attributes
 ```javascript
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
     ],
     "userName": "tester@test.com",
     "active": true,
@@ -52,7 +52,7 @@ Here are the following benefits of integrating SCIM with <BrandName />:
         "familyName": "familyName",
         "givenName": "givenName"
     },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -78,7 +78,6 @@ If the user you want to add does not have a <BrandName /> account, user will be 
 ## Updating User Attributes
 Only Organization Role can be updated for users, userName(email) can't be updated once user is created and Name can only be updated from <BrandName /> Account Settings page
 
-
 ## Deleting or Deactivating users 
 User accounts can only be deactivated (active:false) via PUT/PATCH or DELETE User requests, For permanently deleting account users need to request account deletion from <BrandName /> Account Settings page
 
@@ -93,7 +92,7 @@ POST `https://auth.lambdatest.com/api/scim/Users`
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "userName": "tester@test.com",
   "active": true,
@@ -102,7 +101,7 @@ POST `https://auth.lambdatest.com/api/scim/Users`
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -116,7 +115,7 @@ HTTP/1.1 201 Created
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "id": "23123",
   "userName": "tester@test.com",
@@ -126,7 +125,7 @@ HTTP/1.1 201 Created
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -149,7 +148,7 @@ HTTP/1.1 200 OK
     "Resources": [{
       "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
       ],
       "id": "23123",
       "userName": "tester@test.com",
@@ -159,7 +158,7 @@ HTTP/1.1 200 OK
         "familyName": "familyName",
         "givenName": "givenName"
       },
-      "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+      "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
         "OrganizationRole" : "User"
       }
     }],
@@ -198,7 +197,7 @@ GET `https://auth.lambdatest.com/api/scim/Users?filter=userName` eq "tester@test
     "Resources": [{
       "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
       ],
       "id": "23123",
       "userName": "tester@test.com",
@@ -208,7 +207,7 @@ GET `https://auth.lambdatest.com/api/scim/Users?filter=userName` eq "tester@test
         "familyName": "familyName",
         "givenName": "givenName"
       },
-      "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+      "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
         "OrganizationRole" : "User"
       }
     }],
@@ -231,7 +230,6 @@ HTTP/1.1 200 OK
 ### Response User is part of a different org
 HTTP/1.1 400 Bad Request
 
-
 ## GET User by id
 
 ### Request
@@ -244,7 +242,7 @@ HTTP/1.1 200 OK
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "id": "23123",
   "userName": "tester@test.com",
@@ -254,7 +252,7 @@ HTTP/1.1 200 OK
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -266,7 +264,6 @@ HTTP/1.1 404 Not Found
 ### Response User is part of a different org
 HTTP/1.1 400 Bad Request
 
-
 ## Update a specific User (PUT)
 
 Only  OrganizationRole or Active Fields can be updated
@@ -277,7 +274,7 @@ PUT `https://auth.lambdatest.com/api/scim/Users/id` HTTP/1.1
 ```json
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   },
   "active": true
@@ -290,7 +287,7 @@ HTTP/1.1 200 OK
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "id": "23123",
   "userName": "tester@test.com",
@@ -300,7 +297,7 @@ HTTP/1.1 200 OK
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -331,7 +328,7 @@ PATCH `https://auth.lambdatest.com/api/scim/Users/id` HTTP/1.1
     },
     {
       "op": "Replace",
-      "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole",
+      "path": "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User:OrganizationRole",
       "value": "User"
     }
   ]
@@ -344,7 +341,7 @@ HTTP/1.1 200 OK
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "id": "23123",
   "userName": "tester@test.com",
@@ -354,7 +351,7 @@ HTTP/1.1 200 OK
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -393,7 +390,7 @@ HTTP/1.1 200 OK
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
-    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+    "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User"
   ],
   "id": "23123",
   "userName": "tester@test.com",
@@ -403,7 +400,7 @@ HTTP/1.1 200 OK
     "familyName": "familyName",
     "givenName": "givenName"
   },
-  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+  "urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User": {
     "OrganizationRole" : "User"
   }
 }
@@ -422,7 +419,6 @@ Note: Delete User Request only sets user account to inactive
 
 DELETE `https://auth.lambdatest.com/api/scim/Users/id` HTTP/1.1
 
-
 ### Response
 HTTP/1.1 204 No Content
 
@@ -432,7 +428,6 @@ HTTP/1.1 404 Not Found
 ### Response User is part of a different org
 HTTP/1.1 400 Bad Request
 
-
 ## See Limitations
 
 The following is the list of <BrandName /> SCIM limitations
@@ -440,5 +435,4 @@ The following is the list of <BrandName /> SCIM limitations
 * Users existing in another organizations won't be auto provisioned
 * Delete User Request only sets user account to inactive
 
-
-<Warning> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai). </Warning>
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).

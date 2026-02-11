@@ -1,24 +1,30 @@
 ---
 title: "SmartUI Visual Regression Testing for PDF Files"
-sidebar_label: "PDF Testing"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+sidebarTitle: "PDF Testing"
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+<Warning>
+**This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).**
+
+</Warning>
 
 ## Prerequisites for Using SmartUI
 
 - Familiarity with HTTP APIs is essential.
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
-In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
+In the following section, we will walk you through the process of conducting your first Visual Regression test using <BrandName />'s SmartUI platform.
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/H91z4j5_JvQ"
-  title="Visual Regression Testing for PDF Files Using SmartUI | TestMu AI"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<div className='ytframe'>
+<div className='youtube' data-embed="H91z4j5_JvQ">
+    <div className='play-button'></div>
+</div>
+</div>
 
 ## Getting Started with PDF Comparison
 
@@ -49,24 +55,31 @@ projectToken = "123456#1234abcd-****-****-****-************"
 
 SmartUI provides three different methods to upload PDFs for visual regression testing. Choose the method that best fits your workflow:
 
-<Columns cols={2}>
-  <Card title="API Upload" href="/support/docs/smartui-pdf-api-upload/">
-    Upload PDFs using REST API for programmatic integration and automation.
-  </Card>
-  <Card title="CLI Upload" href="/support/docs/smartui-pdf-cli-upload/">
-    Upload PDFs using command-line interface for quick testing and CI/CD integration.
-  </Card>
-  <Card title="Java SDK Upload" href="/support/docs/smartui-pdf-java-sdk/">
-    Upload PDFs using Java SDK for enterprise applications and test automation frameworks.
-  </Card>
-</Columns>
+<div className='support_main'>
+  <a href="/support/docs/smartui-pdf-api-upload/">
+    <div className='support_inners'>
+      <h3>API Upload</h3>
+      <p>Upload PDFs using REST API for programmatic integration and automation.</p>
+    </div>
+  </a>
+  <a href="/support/docs/smartui-pdf-cli-upload/">
+    <div className='support_inners'>
+      <h3>CLI Upload</h3>
+      <p>Upload PDFs using command-line interface for quick testing and CI/CD integration.</p>
+    </div>
+  </a>
+  <a href="/support/docs/smartui-pdf-java-sdk/">
+    <div className='support_inners'>
+      <h3>Java SDK Upload</h3>
+      <p>Upload PDFs using Java SDK for enterprise applications and test automation frameworks.</p>
+    </div>
+  </a>
+</div>
 
+<Note>
+**Only files in `.pdf` format are compatible with this feature.**
 
-<Info>
-NOTE
-
-Only files in `.pdf` format are compatible with this feature.
-</Info>
+</Note>
 
 ## Use Cases of Smart PDF Comparison
 

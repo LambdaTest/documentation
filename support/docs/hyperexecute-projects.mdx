@@ -1,8 +1,10 @@
 ---
 title: "HyperExecute Projects"
 sidebarTitle: "Projects"
-keywords: ['LambdaTest Hyperexecute', 'LambdaTest Hyperexecute help', 'LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
@@ -26,8 +28,8 @@ The copied project detail which you need to add to the YAML will look like this:
     id: '1abc2345-56de-7890-f1cg-h2ij34k56789' #project id
 ```
 
-<video className="right-side" width="100%" controls>
-<source src="/assets/videos/hyperexecute/projects/copy-project.mp4" type="video/mp4" />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/projects/copy-project.mp4' type="video/mp4" />
 </video>
 
 ### Method 2: Create a New Project Automatically
@@ -44,11 +46,10 @@ Want to start fresh or organize jobs under a new project? You can create one dir
 
 3. All jobs using this YAML will automatically appear in your new project.
 
-<Info>
-**NOTE**
+<Note>
+**If a project with your chosen name already exists, HyperExecute will link your jobs to the existing project instead of creating new.**
 
-If a project with your chosen name already exists, HyperExecute will link your jobs to the existing project instead of creating new.
-</Info>
+</Note>
 
 ## Setup Custom Project
 **Step 1:** Go to the **Projects** section in HyperExecute. Click on the **New Project** to create your projects on HyperExecute.
@@ -57,48 +58,56 @@ If a project with your chosen name already exists, HyperExecute will link your j
 
 **Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** / **Azure Repo URL** and the **[Access Token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
-<Note>
-**IMPORTANT** 
+<Info>
+**important**
 
 Currently, only **GitHub**, **Bitbucket** and **Azure** repositories are supported.
-</Note>
+</Info>
 
 Click on **Save** button to finish the setup of your project.
 
-
-
-<iframe 
-  src="https://app.storylane.io/demo/nghrqs7qgczc?embed=inline" 
-  title="Projects Demo" 
-  style={{width: '100%', height: '500px', border: 'none'}}
-  allow="fullscreen" 
-  allowFullScreen
-></iframe>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/nghrqs7qgczc?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 
 
-<Note>
-To learn more about Workflows in HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows)
-</Note>
+> To learn more about Workflows in HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows)
 
 ## Setting Up Specialized Projects
 In addition to custom projects, HyperExecute supports integration with specialized testing tools such as Tosca, Tosca DEX, and Performance testing with JMeter. For detailed instructions on setting up these specific projects, please refer to their dedicated documentation pages:
 
-<CardGroup cols={2}>
-  <Card title="Tosca using Commander" href="/support/docs/tosca-integration-with-hyperexecute-using-commander/">
-    Optimize and accelerate end-to-end testing for your entire digital landscape using Tosca.
-  </Card>
+<div className="support_main">
 
-  <Card title="Tosca using DEX" href="/support/docs/tosca-integration-with-hyperexecute-using-dex/">
-    Perform end-to-end testing using Tosca DEX with HyperExecute.
-  </Card>
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-commander/">
+  <div className="support_inners">
+    <h3>Tosca using Commander</h3>
+    <p>Optimize and accelerate end-to-end testing for your entire digital landscape using Tosca.</p>
+  </div>
+  </a>
 
-  <Card title="Tosca for SAP" href="/support/docs/tosca-integration-with-hyperexecute-for-sap/">
-    Use Tosca for SAP to integrate with HyperExecute.
-  </Card>
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-dex/">
+  <div className="support_inners">
+    <h3>Tosca using DEX</h3>
+    <p>Perform end-to-end testing using Tosca DEX with HyperExecute.</p>
+  </div>
+  </a>
 
-  <Card title="JMeter" href="/support/docs/hyperexecute-run-jmeter-tests/">
-    Experience the JMeter Performance Testing with HyperExecute.
-  </Card>
-</CardGroup>
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-for-sap/">
+  <div className="support_inners">
+    <h3>Tosca for SAP</h3>
+    <p>Use Tosca for SAP to integrate with HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-run-jmeter-tests/">
+  <div className="support_inners">
+    <h3>JMeter</h3>
+    <p>Experience the JMeter Performance Testing with HyperExecute.</p>
+  </div>
+  </a>
+</div>

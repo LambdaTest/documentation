@@ -1,31 +1,15 @@
 ---
-title: "Setting up timezone"
+title: "Supported Timezones on TestMu AI"
 sidebarTitle: "Supported Timezones"
-keywords:   
- - appium
- - appium languages
- - appium framework 
- - configuration
- - supported platforms
- - automation testing framework
- - test automation frameworks
- - app testing
- - timezone
-
+keywords: ['appium', 'appium languages', 'appium framework', 'configuration', 'supported platforms', 'automation testing framework', 'test automation frameworks', 'app testing', 'timezone']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-<div>
+# Setting up timezone 
 <RealDeviceTag value="Real Device" /> 
-</div>
-<div>
 <VirtualDeviceTag value="Virtual Device" />
-</div>
-
 In automated testing with Appium on <BrandName />, configuring the timezone accurately is crucial for precise testing scenarios. <BrandName /> provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
 By default, the timezone for Appium testing on <BrandName /> is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.
@@ -42,14 +26,13 @@ Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:** 
 ```java
-// Java code example for configuring timezone in Appium tests on LambdaTest
+// Java code example for configuring timezone in Appium tests on TestMu AI
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("timezone", "Tonga");
 capabilities.setCapability("platformName", "android");
 // Add other capabilities as needed                       |
 ```
-
 
 ## Supported Timezones
 ----
@@ -87,7 +70,3 @@ Below is the list of supported **timezones** supported along with their correspo
 | Honolulu    | Honolulu      | UTC-10:00 |
 | Niue        | Niue          | UTC-11:00 |
 | Belgium     | Brussels      | UTC+1:00  |
-
-
-
-

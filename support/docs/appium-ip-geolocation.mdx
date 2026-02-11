@@ -1,28 +1,27 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: appium-ip-geolocation
+title: IP Geolocation 
+hide_title: true
+sidebarTitle: IP Geolocation 
+description: This document provides information about configuring IP Geolocation for tests on the <BrandName /> platform and also provides a list of supported geolocations on Real Devices.
+keywords: ['IP Geolocation', 'geolocation testing', 'testing tools', '<BrandName />', 'IP geolocation support']
+
+url: https://www.testmuai.com/support/docs/appium-ip-geolocation/
+site_name: <BrandName />
+slug: appium-ip-geolocation/
+canonical: https://www.testmuai.com/support/docs/appium-ip-geolocation/
 ---
-title: "IP Geolocation" 
-sidebarTitle: "IP Geolocation" 
-keywords:
- - IP Geolocation
- - geolocation testing
- - testing tools
- - LambdaTest 
- - IP geolocation support
 
----
+# IP Geolocation 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+<BrandName />'s IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
-
-Lambdatest's IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
-
-By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on Lambdatest.
+By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on <BrandName />.
 
 ## Support for Automation on Real Devices
 
@@ -30,7 +29,7 @@ To harness the **IP Geolocation** feature in your automated tests, employ the `g
 
 **Java Example:** 
 ```java
-// Java code for configuring IP Geolcation in tests on LambdaTest
+// Java code for configuring IP Geolcation in tests on <BrandName />
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("geoLocation", "FR");
 // Add other capabilities as needed
@@ -222,5 +221,3 @@ Below is the list of supported countries along with their respective country cod
 | Washington (Herndon), Virginia    | US/WAV   |
 | Wilmington, DE                    | U4       |
 | Wilmington, Delaware (US)         | US/WILM  |
-
-

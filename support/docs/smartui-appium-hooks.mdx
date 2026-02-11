@@ -1,11 +1,13 @@
 ---
-id: smartui-appium-hooks
 title: "Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)"
 sidebarTitle: "Appium Hooks"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 <div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -17,27 +19,27 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 ## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 - Access your Hub for your appium **remote connection** instance at `@mobile-hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
 Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
-  </Tab>
+</Tab>
 <Tab title="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
-  </Tab>
+</Tab>
 <Tab title="PowerShell">
 
 ```powershell
@@ -47,7 +49,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </Tab>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Step 1: Create a SmartUI Project
 
@@ -60,60 +62,65 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-1.webp' alt="cmd" width="768" height="373" /> */}
+
 ## Step 2: Upload your application
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="App File">
 
 ```bash
-curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
+curl -u "$LT_USERNAME:$LT_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/proverbial_android.apk" -F "name=proverbial_app"
 ```
 
 </Tab>
 <Tab title="App URL">
 
 ```bash
-curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
+curl -u "$LT_USERNAME:$LT_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
 ```
 
 </Tab>
 </Tabs>
 
-<Check>
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ```lt://APP123456789123456789``` and will be used in the next step.
-</Check>
+
+</Tip>
 
 ## Step 3: Clone the sample project
 
-Clone the LambdaTest’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
+Clone the <BrandName />’s :link: [LT-appium-nodejs](https://github.com/<BrandName />/LT-appium-nodejs) repository and navigate to the code directory as shown below:
 
 ```bash
-git clone https://github.com/LambdaTest/LT-appium-nodejs
+git clone https://github.com/TestMu AI/LT-appium-nodejs
 cd LT-appium-nodejs
 ```
 
 ## Step 4: Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
-<Tabs>
+<Tabs className='docs__val'>
 
 <Tab title="Linux / MacOS">
-  
-  ```bash
-  export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
-export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}
+
+```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
 </Tab>
 
 <Tab title="Windows">
 
-```bash
-set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}
+```powershell
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 </Tab>
@@ -121,11 +128,12 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}
 
 ## Step 5: Configure your test with Appium Desired Capabilities
 
-<Check>
-EXPLORE MORE CAPABILITIES
+<Tip>
+**Explore more capabilities**
 
 To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.lambdatest.com/capabilities-generator/
-</Check>
+
+</Tip>
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Edit the required capabilities for your test suite as shown in the below sample code snippet:
 
@@ -149,7 +157,7 @@ let capabilities = {
   //highlight-end
 };
 
-// Connecting to the LambdaTest appium Cloud Grid with SmartUI
+// Connecting to the TestMu AI appium Cloud Grid with SmartUI
 let gridUrl =
   "https://" +
   "<Your Username>" +
@@ -163,6 +171,12 @@ let driver = await new webdriver.Builder()
   .withCapabilities(capabilities)
   .build();
 ```
+<Warning>
+**Important**
+
+It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`.
+
+</Warning>
 
 - Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.
 
@@ -170,13 +184,18 @@ let driver = await new webdriver.Builder()
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
+<Warning>
+**Appium with SmartUI is currently only supports the viewport based screenshot comparisons.**
+
+</Warning>
+
 - Execute your test suite as per the execution command depending on your framework or language.
 
 ```bash title="For Example if your are using with NodeJS"
 npm i && node your_test_script.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Smart Crop With SmartUI
 
@@ -186,11 +205,11 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ### Original Screenshot:
 
-![Profile](/assets/images/smart-visual-testing/screenshot.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/screenshot.webp' alt="Profile" width="1360" height="603" />
 
 ### Cropped Screenshot
 
-![Profile](/assets/images/smart-visual-testing/cropped_ss.jpg)
+<img loading="lazy" src='/assets/images/smart-visual-testing/cropped_ss.jpg' alt="Profile" width="1360" height="603" />
 
 ## Region-Based Ignore/Select for Dynamic Content (Advanced)
 
@@ -218,8 +237,6 @@ let config = {
 };
 
 await driver.execute("smartui.takeScreenshot", config);
-```
-
 ```javascript title="Example: Selecting Only Critical Regions in Node.js"
 let config = {
   screenshotName: 'Checkout Form',
@@ -236,8 +253,8 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ### Cross-Framework Examples
 
-<Tabs>
-<Tab title='Node.js'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="Node.js">
 
 ```javascript
 let config = {
@@ -251,7 +268,7 @@ await driver.execute("smartui.takeScreenshot", config);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 config = {
@@ -263,7 +280,7 @@ driver.execute_script("smartui.takeScreenshot", config)
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 Map<String, Object> configIgnore = new HashMap<>();
@@ -280,7 +297,7 @@ configIgnore.put("ignoreBoxes", ignoreBoxes);
 ```
 </Tab>
 
-<Tab title='C#'>
+<Tab title="C#">
 
 ```csharp
 var config = new Dictionary<string, object> {
@@ -292,7 +309,7 @@ driver.ExecuteScript("smartui.takeScreenshot", config);
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 config = {
@@ -312,15 +329,15 @@ driver.execute_script("smartui.takeScreenshot", config)
 | `ignoreBoxes` | JSON String | Defines regions to ignore during visual comparison. Accepts XPath locators. | No |
 | `selectBoxes` | JSON String | Defines regions to include in visual comparison. Accepts XPath locators. | No |
 
-<Info>
-BEST PRACTICES
+<Note>
+**Best Practices**
 
 - Use `ignoreBoxes` for elements that change frequently (e.g., ads, timestamps, user avatars).
 - Use `selectBoxes` when you want to focus comparison only on critical UI sections.
 - Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
 - Ensure XPath expressions are unique and stable across test runs.
 - Test your XPath locators using Appium Inspector or similar tools before integrating.
-</Info>
+</Note>
 
 ## Running Tests on Other Languages and Frameworks
 
@@ -334,36 +351,35 @@ In a similar way, we can run visual tests for other languages and frameworks usi
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
-<Tabs >
-<Tab title='NodeJS'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="NodeJS">
 
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
-</Tab>
-<Tab title='Python' >
+</Tab><Tab title="Python">
 
 ```python
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title='Ruby' >
+<Tab title="Ruby">
 
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title='C#'>
+<Tab title="C#">
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </Tab>
-<Tab title='Java' >
+<Tab title="Java">
 
 ```java
 ((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
@@ -372,15 +388,14 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 </Tab>
 </Tabs>
 
-### For capturing full page screenshot in Native Apps <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
-
+### For capturing full page screenshot in Native Apps <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
-<Tabs >
-<Tab title='NodeJS' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="NodeJS">
 
 ```javascript
 let config = {
@@ -391,7 +406,7 @@ let config = {
 await driver.execute("smartui.takeScreenshot", config);
 ```
 </Tab>
-<Tab title='Python' >
+<Tab title="Python">
 
 ```python
 config = {
@@ -400,10 +415,7 @@ config = {
   'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute("smartui.takeScreenshot", config)
-```
-</Tab>
-
-<Tab title='Ruby' >
+<Tab title="Ruby">
 
 ```ruby
 config = {
@@ -415,7 +427,7 @@ driver.execute("smartui.takeScreenshot", config)
 ```
 
 </Tab>
-<Tab title='C#' default>
+<Tab title="C#">
 
 ```csharp
 var config = new Dictionary<string, string> {
@@ -427,7 +439,7 @@ driver.Execute("smartui.takeScreenshot", config);
 ```
 
 </Tab>
-<Tab title='Java' default>
+<Tab title="Java">
 
 ```java
 Map<String, Object> config = new HashMap<>();
@@ -440,16 +452,15 @@ config.put("pageCount", 15); // Enter the number of pages for the Full Page scre
 </Tab>
 </Tabs>
 
-<Info>
-NOTE
+<Note>
+**Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.**
 
-Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
-</Info>
+</Note>
 
 ## Best Practices
 
 <Tabs className='docs__val' groupId='best-practices'>
-<Tab title='Screenshot Naming' >
+<Tab title="Screenshot Naming">
 
 **Screenshot Naming**
 
@@ -465,7 +476,7 @@ await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
 </Tab>
-<Tab title='Wait for Screen Load'>
+<Tab title="Wait for Screen Load">
 
 **Wait for Screen Load**
 
@@ -481,7 +492,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
 </Tab>
-<Tab title='Handle Dynamic Content'>
+<Tab title="Handle Dynamic Content">
 
 **Handle Dynamic Content**
 
@@ -490,7 +501,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </Tab>
-<Tab title='Smart Crop Configuration'>
+<Tab title="Smart Crop Configuration">
 
 **Smart Crop Configuration**
 
@@ -499,7 +510,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test cropped screenshots to ensure important content isn't removed
 
 </Tab>
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -507,8 +518,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Use meaningful build names
 - Run tests on consistent device configurations
 
-</Tab >
-<Tab title='Test Organization'>
+</Tab>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -521,8 +532,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title ='Screenshots Not Captured' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Screenshots Not Captured">
 
 **Issue: Screenshots Not Captured**
 
@@ -554,10 +565,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
    echo $LT_ACCESS_KEY
    ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: "Project Not Found" Error**
 
@@ -575,7 +586,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 4. Ensure project name is in capabilities, not just in dashboard
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -603,7 +614,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 4. Verify app is in correct state before screenshot
 
 </Tab>
-<Tab title='Full Page Screenshot Issues'>
+<Tab title="Full Page Screenshot Issues">
 
 **Issue: Full Page Screenshot Issues**
 
@@ -629,7 +640,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 3. Test with different `pageCount` values to find optimal setting
 
 </Tab>
-<Tab title='ignoreBoxes/selectBoxes Not Working'>
+<Tab title="ignoreBoxes/selectBoxes Not Working">
 
 **Issue: ignoreBoxes/selectBoxes Not Working**
 
@@ -659,8 +670,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -672,7 +683,6 @@ If you encounter issues not covered here:
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [Appium Documentation](https://www.lambdatest.com/support/docs/appium-nodejs/)
+- [Appium Documentation](/support/docs/appium-nodejs/)
 
-For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/appium-nodejs/)
-
+For additional information about appium framework please explore the documentation [here](/support/docs/appium-nodejs/)

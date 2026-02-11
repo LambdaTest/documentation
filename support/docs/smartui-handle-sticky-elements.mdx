@@ -1,17 +1,11 @@
 ---
 title: "Handle Pages with Sticky Elements"
 sidebarTitle: "Handle Sticky Elements"
-keywords:
- [
-  "lambdatest",
-  "smart ui",
-  "sticky-elements",
-  "sticky header",
-  "sticky footer",
-  "visual testing",
-  "false positives"
-]
+keywords: ['testmu ai', 'smart ui', 'sticky-elements', 'sticky header', 'sticky footer', 'visual testing', 'false positives']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## What are Sticky Elements?
 
@@ -142,36 +136,36 @@ await smartuiSnapshot(driver, 'Content Only', options);
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Trust Automatic Handling'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Trust Automatic Handling">
 
 **Trust Automatic Handling**
 
 SmartUI's automatic handling works for most cases. Only use manual configuration if you encounter specific issues.
 
 </Tab>
-<Tab title='Test Sticky Element Pages' >
+<Tab title="Test Sticky Element Pages">
 
 **Test Sticky Element Pages**
 
 Verify that pages with sticky elements work correctly with SmartUI before running full test suites.
 
 </Tab>
-<Tab title='Review Snapshots' >
+<Tab title="Review Snapshots">
 
 **Review Snapshots**
 
 Occasionally review captured snapshots to ensure sticky elements are handled correctly.
 
 </Tab>
-<Tab title='Combine with Other Features' >
+<Tab title="Combine with Other Features">
 
 **Combine with Other Features**
 
 You can combine sticky element handling with other SmartUI features like dynamic data handling.
 
 </Tab>
-<Tab title='Combine with Other Features' >
+<Tab title="Combine with Other Features">
 
 **Combine with Other Features**
 
@@ -182,8 +176,8 @@ You can combine sticky element handling with other SmartUI features like dynamic
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Sticky Elements Still Causing False Positives'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Sticky Elements Still Causing False Positives">
 
 **Issue: Sticky Elements Still Causing False Positives**
 
@@ -205,7 +199,7 @@ await smartuiSnapshot(driver, 'Page', options);
 ```
 
 </Tab>
-<Tab title='Sticky Elements Not Visible in Snapshots' >
+<Tab title="Sticky Elements Not Visible in Snapshots">
 
 **Issue: Sticky Elements Not Visible in Snapshots**
 
@@ -223,7 +217,7 @@ await smartuiSnapshot(driver, 'Page');
 ```
 
 </Tab>
-<Tab title='Sticky Elements Overlapping Content' >
+<Tab title="Sticky Elements Overlapping Content">
 
 **Issue: Sticky Elements Overlapping Content**
 

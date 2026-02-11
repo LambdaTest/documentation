@@ -1,18 +1,16 @@
 ---
-title: "Run Automation Tests Using Cypress v9"
+title: "Run automation tests on HyperExecute using Cypress v9"
 sidebarTitle: "Cypress v9"
 keywords: ['end to end test', 'unit testing', 'unit testing tutorial', 'cypress testing', 'cypress automation testing', 'cypress v10 testing tutorial', 'cypress v9 testing tutorial', 'python selenium framework', 'selenium', 'selenium automation testing', 'selenium testing tool', 'selenium testing tutorial', 'hyperexecute', 'hyperexecute cypress testing', 'hyperexecute automation testing', 'hyperexecute cypressv10 testing', 'hyperexecute cypress testing']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-
+# Run Automation Tests Using Cypress v9
 * * *
 
-<Note>
-**NOTE :** This documentation is applicable for **Cypress v9** and **previous versions**.
-</Note>
+> **NOTE :** This documentation is applicable for **Cypress v9** and **previous versions**.
 
 HyperExecute is a smart test orchestration platform that allows you to run end-to-end Cypress tests as quickly as possible by providing a test infrastructure with optimal speed, test orchestration, and detailed execution logs.
 
@@ -35,16 +33,14 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - Setup the Environmental Variable
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-You can either download or clone the code samples of Cypress v9 from the **LambdaTest's GitHub Repository** to quickly run your tests. 
-
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-cypress-v9-sample" />
-</Check>
+You can either download or clone the code samples of Cypress v9 from the **<BrandName />'s GitHub Repository** to quickly run your tests. <a href="https://github.com/<BrandName />/hyperexecute-cypress-v9-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 #### Download HyperExecute CLI
 
@@ -57,22 +53,32 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Execution Methods:
@@ -85,9 +91,7 @@ Cypress Tests can be executed on HyperExecute using 2 methods:
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
-<Note>
-To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/hyperexecute-auto-split-strategy/)
-</Note>
+> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/hyperexecute-auto-split-strategy/)
 
 #### Core
 
@@ -182,24 +186,32 @@ testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser
 #### Test Execution
 
 Run the following command on the terminal to trigger the tests as per your machine.
-<Tabs>
+<Tabs className="docs__val">
   <Tab title="Windows">
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
   </Tab>
+
   <Tab title="Mac">
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
   </Tab>
+
   <Tab title="Linux">
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+    
   </Tab>
-</Tabs>
 
+</Tabs>
 
 Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
@@ -245,9 +257,7 @@ jobLabel: [cypress-v9, win, autosplit]
 
 Matrix-based test execution is used for running the same tests across different test (or input) combinations. The Matrix directive in HyperExecute YAML file is a *key:value* pair where value is an array of strings. Also, the *key:value* pairs are opaque strings for HyperExecute.
 
-<Note>
-To learn more about Auto-Split, refer to the [Matrix Getting Started Guide](/support/docs/hyperexecute-matrix-multiplexing-strategy/)
-</Note>
+> To learn more about Auto-Split, refer to the [Matrix Getting Started Guide](/support/docs/hyperexecute-matrix-multiplexing-strategy/)
 
 #### Core
 
@@ -302,22 +312,31 @@ post:
 #### Test Execution
 
 Run the following command on the terminal to trigger the tests as per your machine.
-<Tabs>
+<Tabs className="docs__val">
   <Tab title="Windows">
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
   </Tab>
+
   <Tab title="Mac">
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
   </Tab>
+
   <Tab title="Linux">
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+    
   </Tab>
+
 </Tabs>
 
 Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
@@ -354,7 +373,6 @@ cypressOps:
 post:
   - cat ./yaml/win/.hyperexecute_autosplit.yaml
 
-
 jobLabel: [cypress-v9, win, matrix]
 ```
 
@@ -365,21 +383,20 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 1:** Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
 
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Cypress&framework=Cypress-v9)
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png"  />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Cypress&framework=Cypress-v9)
 
-**Step 2:** Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
+**Step 2:** Login with <BrandName /> credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/gitpod_popup.png" alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/gitpod_popup.png' alt="Gitpod popup" width="1919" height="878" />
 
-**Step 3:** You will need to login into your Gitpod account, or create a new one. <br/>
+**Step 3:** You will need to login into your Gitpod account, or create a new one. <br />
   (If you are creating a new account, choose your preferred editor. We recommend VS Code)
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/gitpod2.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/gitpod2.png' alt="Image" />
 
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
 **Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
-
 
 ## Additional Details
 
@@ -409,16 +426,13 @@ cypressOps:
   FullHar: true
 ```
 
-<Check>
-**TIP**
+<Tip>
+**You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).**
 
-You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
-</Check>
+</Tip>
 
 ### Detailed Cypress Command Logs
-<Note>
-To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-</Note>
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
 
@@ -429,9 +443,7 @@ pre:
   - npm install cypress-terminal-report --save-dev
 ```
 
-<Check>
-**TIP**
+<Tip>
+**For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v9-and-previous-versions) documentation.**
 
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v9-and-previous-versions) documentation.
-</Check>
-
+</Tip>

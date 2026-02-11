@@ -1,9 +1,13 @@
 ---
-title: "LambdaTest SSO & OneLogin Using SAML"
+title: "TestMu AI SSO & OneLogin Using SAML"
 sidebarTitle: "OneLogin"
-keywords: [ "sso", "lambdatest sso", "onelogin", "saml", "lambdatest onelogin integration", "lambdatest onelogin sso"]
+keywords: ['sso', 'testmu ai sso', 'onelogin', 'saml', 'testmu ai onelogin integration', 'testmu ai onelogin sso']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# <BrandName /> SSO & OneLogin Using SAML
 
 * * *
 
@@ -24,62 +28,49 @@ To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 * * *
 
 1. Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
-   
-   ![setup sso button](/assets/images/sso-self-serve/setup-sso.png)
+   <img loading="lazy" src='/assets/images/sso-self-serve/setup-sso.png' alt="setup sso button" width="944" height="409" />
 
 2. Enter Connection Name and Click on  **Add New Connection**.
-
-   ![connection name button](/assets/images/sso-self-serve/connection-name.png)
+   <img loading="lazy" src='/assets/images/sso-self-serve/connection-name.png' alt="connection name button" width="944" height="409" />
 
 3. Select **OneLogin** as your identity provider.
-
-   ![select identity provider](/assets/images/sso-self-serve/select-idp.png)
+   <img loading="lazy" src='/assets/images/sso-self-serve/select-idp.png' alt="select identity provider" width="944" height="407" />
 
 4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
    Once configured, click on continue
-
-   ![okta integration](/assets/images/sso/img_10.png)
-
+   <img loading="lazy" src='/assets/images/sso/img_10.png' alt="okta integration" width="944" height="487" />
 5. Now Configure the Attributes and Claims in your **Identity Provider**.
    Once configured, click on continue
-
-   ![okta integration](/assets/images/sso/img_11.png)
+   <img loading="lazy" src='/assets/images/sso/img_11.png' alt="okta integration" width="944" height="487" />
 
 6. Log in to the [OneLogin Dashboard](https://app.onelogin.com/login). 
 
-![lambdatest onlogin integration](/assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp)
-
+<img loading="lazy" src='/assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp' alt="testmu ai onlogin integration" width="943" height="494" />
 7. Go to Applications 
 
-![lambdatest onlogin integration](/assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp)
-
+<img loading="lazy" src='/assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp' alt="testmu ai onlogin integration" width="943" height="460" />
 8. Add a new Application, by clicking on Add App. 
 
-![lambdatest onlogin integration](/assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp)
-
+<img loading="lazy" src='/assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp' alt="testmu ai onlogin integration" width="943" height="492" />
 9. Search for SAML Test Connector and select **Add SAML Test Connector (Advanced)** 
 
-![lambdatest onlogin integration](/assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp)
-
+<img loading="lazy" src='/assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp' alt="testmu ai onlogin integration" width="942" height="488" />
 10. In the window that appears, choose a suitable name for your app, and **save**. 
 
-![lambdatest onlogin integration](/assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp)
+<img loading="lazy" src='/assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp' alt="testmu ai onlogin integration" width="943" height="493" />
 
 11. Click on configurations tab in the sidebar and fill the details as per the details copied from <BrandName /> in step 4.
-    ![okta integration](/assets/images/sso/img_12.png)
-
+    <img loading="lazy" src='/assets/images/sso/img_12.png' alt="okta integration" width="944" height="487" />
 
 12. Click on the parameters tab and fill the details as per the details copied from <BrandName /> in step 5.
-    ![okta integration](/assets/images/sso/img_13.png)
-
+    <img loading="lazy" src='/assets/images/sso/img_13.png' alt="okta integration" width="944" height="487" />
 
 13. Now go to the SSO tab set the SAML Signature Algorithm to SHA-256
-    ![okta integration](/assets/images/sso/img_16.png)
-
+    <img loading="lazy" src='/assets/images/sso/img_16.png' alt="okta integration" width="944" height="487" />
 
 14. Copy the Issuer URL 
 
-![okta integration](/assets/images/sso/img_17.png)
+<img loading="lazy" src='/assets/images/sso/img_17.png' alt="okta integration" width="944" height="487" />
 
 15. Go back to <BrandName /> and paste the copied Issuer URL in the **Metadata URL** field. Fill the required fields  and click on **Create Connection**:
 
@@ -87,6 +78,6 @@ To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 * Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
 * Metadata URL (Enter the metadata URL of your Identity Provider.)
 
-![sso-self serve](/assets/images/sso-self-serve/finalize-sso-metadata.png)
+<img loading="lazy" src='/assets/images/sso-self-serve/finalize-sso-metadata.png' alt="sso-self serve" width="945" height="542" />
 
-<Warning> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing! </Warning>
+> That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!

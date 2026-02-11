@@ -1,9 +1,11 @@
 ---
 title: "Automating Test Runs Execution with CI/CD on KaneAI"
 sidebarTitle: "Test Automation with CI/CD"
-keywords: [ 'testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough',' kane ai test run','hyperexecute','test run','test manager','ci/cd','jenkins','github actions','api','postman']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai guided walkthrough', 'kane ai test run', 'hyperexecute', 'test run', 'test manager', 'ci/cd', 'jenkins', 'github actions', 'api', 'postman']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This guide provides a detailed walkthrough for automating the execution of test runs using CI/CD tools such as GitHub Actions or Jenkins on the KaneAI platform. By following these steps, you can effortlessly integrate test run executions with your pipelines.
 
@@ -24,12 +26,10 @@ Inside your selected project, navigate to the Test Runs section. Select the desi
 
 Open the test run to view its URL. Copy the Test Run ID from the URL. This ID will be used in the API call for integration.
 
-<Check>
-**TIP**
+<Tip>
+**A list of test instances with various configurations will be displayed for each test run.**
 
-A list of test instances with various configurations will be displayed for each test run.
-</Check>
-
+</Tip>
 
 ### Step 3: Configure the API Call
 Replace `<TestRunID>` with the actual ID from the URL and set additional optional parameters:
@@ -42,7 +42,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
 - **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](/support/docs/selenium-geolocation-capabilities/).
 - **environment_id**: Define the environment on which you want to run the test run if required.
-- **retry_on_failure**: Define whether to retry if the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails. If "retry_on_failure" is false, the default max retries will still be 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
+- **retry_on_failure**: Define whether to retry if the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails. If "retry_on_failure" is false, the default max retries will still be 1. You can find more details [here]( https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
 - **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries). 
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](/support/docs/appium-app-performance-analytics/).
@@ -114,7 +114,6 @@ The API response contains the job ID for both jobs created for desktop web tests
 }
 ```
 
-
 ### Step 4: Authenticate and Trigger the Job
 - Provide your <BrandName /> username and access key for Basic Authentication.
 - Submit the API call to trigger the job. The process will start within seconds.
@@ -122,6 +121,8 @@ The API response contains the job ID for both jobs created for desktop web tests
 <Warning>
 **Important :** Keep your credentials secure to maintain platform integrity.
 </Warning>
+
+
 ### Step 5: Monitor Test Executions
 - Follow the link provided in the API response to view the HyperExecute Job.
 - Monitor running executions in real time through the dashboard.
@@ -135,10 +136,10 @@ Here is a sample that you can use on how to integrate the API with GithubActions
 In your Git repository, navigate to .github/workflows/ and create a file named sanity-test.yml.
 
 **Step 2: Sample for yml file**
-In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](/support/api-doc/?key=hyperexecute) and update the API in the `.yml` file based on your needs.
+In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.lambdatest.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
 
 ```yml
-name: Run Sanity Tests on LambdaTest
+name: Run Sanity Tests on TestMu AI
 
 on:
   push:
@@ -153,10 +154,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Sanity Test on LambdaTest
+      - name: Trigger Sanity Test on TestMu AI
         id: trigger-test
         run: |
-          echo "Triggering sanity tests on LambdaTest"
+          echo "Triggering sanity tests on TestMu AI"
           response=$(curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
             --header 'accept: application/json' \
             --header 'Content-Type: application/json' \
@@ -192,15 +193,13 @@ jobs:
 **Step 3: Define Workflow Triggers**
 Set the workflow to trigger on push and pull_request events (you can modify the trigger based on your needs) under "on" section of the yaml above.
 
-
 ## Video Explanation
 
-<Check>
-**TIP**
+<Tip>
+**The video consists of old configuration with Test Plans and Builds instead of Test Runs. Please keep this in mind while going through the video. The video will be updated soon.**
 
-The video consists of old configuration with Test Plans and Builds instead of Test Runs. Please keep this in mind while going through the video. The video will be updated soon.
-</Check>
+</Tip>
 
-<video className="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= '/assets/images/kane-ai/test-manager/test-plan-ci-cd/output.mp4' type="video/mp4" />
 </video>

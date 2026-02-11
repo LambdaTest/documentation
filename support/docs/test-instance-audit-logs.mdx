@@ -1,8 +1,10 @@
 ---
-title: Test Instance Audit Logs
-sidebarTitle: Test Instance Audit Logs
+title: "Test Instance Audit Logs"
+sidebarTitle: "Test Instance Audit Logs"
 keywords: ['audit log', 'test instance logs', 'execution history']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Test Manager now provides Audit Logs for test instance execution. Audit Logs bring visibility into the **who, what, and when** for every test execution. This is critical for teams working in regulated environments, or those needing high accountability in their QA processes. 
@@ -17,24 +19,20 @@ With Audit logs you can store the execution history of your tests and even run p
 
 You can view the Audit Logs by clicking on the `View Execution Log`. 
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/view_execution_logs.png' alt="Real "  className="doc_img"/>
+<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/view_execution_logs.png' alt="Real " />
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/audit_logs.png' alt="Real "  className="doc_img"/> 
+<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/audit_logs.png' alt="Real " /> 
 
 For the Steps level execution logs, you can preview the step with respect to which the log was created. 
 
-
 <Note>
-**NOTE**
+**As step level Audit logs are with respect to that specific steps in case the step changes the old logs will still show the preview of the older step. **
 
-As step level Audit logs are with respect to that specific steps in case the step changes the old logs will still show the preview of the older step.
 </Note>
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/audit_logs_step_preview.png' alt="Real "  className="doc_img"/>
-
+<img loading="lazy" src='/assets/images/mobile-app-testing/test-runs/audit_logs_step_preview.png' alt="Real " />
 
 <Note>
-**NOTE**
+**When you delete a configuration or a test case, all associated audit logs are removed. This is because the action deletes the entire instance. If you then add the same test case and configuration again, it creates a brand new instance with no prior audit history.**
 
-When you delete a configuration or a test case, all associated audit logs are removed. This is because the action deletes the entire instance. If you then add the same test case and configuration again, it creates a brand new instance with no prior audit history.
 </Note>

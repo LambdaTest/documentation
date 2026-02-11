@@ -1,8 +1,13 @@
 ---
-title: "How to Debug your Scenario Steps Errors"
+title: "Debug your Scenario Steps Errors"
 sidebarTitle: "Scenario Errors"
 keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'How to Debug a Failed Job']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# How to Debug your Scenario Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 
@@ -21,7 +26,7 @@ To resolve this issue, you have to visit our [Automation Capability Generator](h
 
 When you initiate a test execution and encounter the issue that your session is not getting started,
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/session.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/session.png' alt="Image" />
 
 This is possible due to the following reasons:
 
@@ -35,7 +40,7 @@ To address this challenge, our recommended solution is to visit the [Automation 
 
 If you put the wrong HUB Endpoint in your test file, you will receive the following error:
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/hub_error.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/hub_error.png' alt="Image" />
 
 To rectify this issue, you need to cross-check your HUB URL. You can also visit [this](https://automation.lambdatest.com/build) website and click on **Access Key** button to get your correct HUB URL.
 
@@ -68,7 +73,7 @@ When you encounter a situation where the stage appears to be stuck or unresponsi
 
 As you can see below, stage is taking a lot of time to allocate Virtual Machines to the tests.
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/stage_stuck.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/stage_stuck.png' alt="Image" />
 
 - **Identify the Task:** Begin by identifying the specific task or workflow where the machine appears to be stuck. This involves determining the action or process that triggered the unresponsive stage.
 
@@ -92,7 +97,7 @@ After identifying the issue, follow these steps to resolve the situation:
 
 When a particular test is taking longer than expected to complete, follow these measures to diagnose the issue:
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/test_stuck.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/test_stuck.png' alt="Image" />
 
 - **Identify the Stuck Test:** Begin by identifying the specific test that is hanging or exceeding the average execution time. This can be done by reviewing test execution reports or monitoring tools.
 
@@ -116,12 +121,10 @@ After identifying the issue, follow these steps to resolve the situation:
 
 When the test encounters an idle timeout, it indicates that commands are not being executed for an extended period of time. Additionally, the quit() command fails to execute, causing the test to get stuck.
 
-
 You can see the test has been being executed for a very long time, which is not ideal behavior.
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/idle_timeout.png" alt="Image" className="doc_img"/> <br /> 
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/idle_timeout.png' alt="Image" /> <br /> 
 And when you click on the View Test button, you can see that the status of your test is Idle_Timeout.
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/idle_timeout2.png" alt="Image" className="doc_img"/>
-
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/idle_timeout2.png' alt="Image" />
 
 Measures to Take:
 
@@ -149,7 +152,7 @@ Remedy:
 
 When the test encounters an API timeout, indicating that the API call did not receive a response within the specified timeout period, follow these measures to diagnose and address the issue.
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/socket_error.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/socket_error.png' alt="Image" />
 
 - **Identify Task and Test:** Determine the specific task and test associated with the API timeout. This information can be obtained from test execution reports or monitoring tools.
 
@@ -203,7 +206,7 @@ Make sure to include the necessary dependencies in your project. If you are usin
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
-        <version>4.5.0</version> <!-- Use the latest version available -->
+        <version>4.5.0</version> {/* Use the latest version available */}
         <scope>test</scope>
     </dependency>
 </dependencies>

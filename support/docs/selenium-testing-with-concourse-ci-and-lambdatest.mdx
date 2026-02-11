@@ -1,15 +1,18 @@
 ---
-title: "Selenium Testing With Concourse CI And Lambdatest"
+title: "Selenium Testing With Concourse CI And TestMu AI"
 sidebarTitle: "Concourse CI"
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 * * *
 Concourse CI is an open-source CI/CD tool which is triggered over Docker containers. It offers a scalable and straightforward solution to your CI/CD pipelines with an intuitive UI that allows you to analyze the dashboard and validate your build execution. Offering a container-centric approach, Concourse CI offers a sturdy pipeline as each task in every job is handled in its container, controlling its dependencies.
 
-Concourse CI can be integrated with Lambdatest to perform automation testing with a cloud Selenium Grid of 3000+ real browsers for mobile and desktop. This document will help you understand how you can integrate your Concourse CI instance with Lambdatest Selenium Grid for continuous testing.
+Concourse CI can be integrated with <BrandName /> to perform automation testing with a cloud Selenium Grid of 3000+ real browsers for mobile and desktop. This document will help you understand how you can integrate your Concourse CI instance with <BrandName /> Selenium Grid for continuous testing.
 
 ## Prerequisites
 * * *
-1. A Lambdatest account. It is free to get started. [Sign up now](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. It is free to get started. [Sign up now](https://accounts.lambdatest.com/register).
 
 2. Install NPM(Node Package Manager). If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
 
@@ -17,7 +20,7 @@ Concourse CI can be integrated with Lambdatest to perform automation testing wit
 npm install npm@latest -g
 ```
 
-3. Lambdatest Authentication Credentials i.e. your Lambdatest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [Lambdatest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+3. <BrandName /> Authentication Credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -68,7 +71,7 @@ resources:
       url: https://github.com/sushobhit-lt/nodejs-selenium-sample.git
 
 jobs:
-  - name: 'Run over Lambdatest Hub'
+  - name: 'Run over TestMu AI Hub'
     public: true
     plan:
       - get: nodejs-selenium-sample
@@ -99,13 +102,13 @@ After you specify the right configuration in the `pipeline-config.yml`, you now 
 $ fly -t ci set-pipeline -p nodejs-lambda-sample -c pipeline-config.yml
 ```
 
-Now, you will find the nodejs-selenium-sample pipeline in the Concourse Web UI. You can run the pipeline over Lambdatest Selenium Grid from the UI itself.
+Now, you will find the nodejs-selenium-sample pipeline in the Concourse Web UI. You can run the pipeline over TestMu AI Selenium Grid from the UI itself.
 
 ![find the nodejs-selenium-sample pipeline in the Concourse Web UI](/assets/images/concource-ci/nodejs-lambda-sample-pipeline.webp)
  
-After you trigger the test, you will notice the different stages of test execution. The Concourse CI will get the nodejs-selenium-sample and execute it on Lambdatest after installing the right dependencies.
+After you trigger the test, you will notice the different stages of test execution. The Concourse CI will get the nodejs-selenium-sample and execute it on TestMu AI after installing the right dependencies.
 
 ![notice the different stages of test execution](/assets/images/concource-ci/nodejs-lambda-sample-execute.webp)
 
-Deploy your code in a reliable manner at scale using Concourse CI integration with Lambdatest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Deploy your code in a reliable manner at scale using Concourse CI integration with TestMu AI, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 

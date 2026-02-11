@@ -1,11 +1,11 @@
 ---
 title: "Version 3.0.3"
 sidebarTitle: "Version 3.0.3"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'FAQs']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## MITM Support in Emulators
 We’ve added Man-in-the-Middle (MITM) proxy support in HyperExecute Emulators.
@@ -22,7 +22,14 @@ framework:
 
 This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
 
+{/* ## Enhancement: Error Messages on JMeter Dashboard
+We’ve improved the JMeter Dashboard experience for better visibility into failed or incomplete jobs.
+- If a JMeter job ends in a non-Completed status, a mini error message bar will now be displayed.
+- The bar shows the job remark, consistent with how other HyperExecute job types surface error messages.
 
+This update ensures quicker debugging and a more consistent user experience across dashboards.
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/jmeter-error.png' alt="Image" /> */}
 
 ## Enhancement: Retry Visibility in HyperExecute Reports
 We’ve enhanced the HyperExecute Report to give better visibility into retries at both the summary and test level.
@@ -33,7 +40,7 @@ We’ve enhanced the HyperExecute Report to give better visibility into retries 
 
 This update ensures accurate reporting and makes it easier to differentiate between unique executions and retries.
 
-<img loading="lazy" src='/assets/images/hyperexecute/release-notes/hyp-report.png' alt="Image"  className="doc_img"/> 
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/hyp-report.png' alt="Image" /> 
 
 ## Muted Test Count & Bulk Unmute Option
 We’ve enhanced the Test Muting functionality in HyperExecute with improved visibility and control:
@@ -43,4 +50,4 @@ We’ve enhanced the Test Muting functionality in HyperExecute with improved vis
 
 This update streamlines test management and makes it easier to re-enable muted tests when they are ready to be executed again.
 
-<img loading="lazy" src='/assets/images/hyperexecute/release-notes/unmute-all-test.png' alt="Image"  className="doc_img"/> 
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/unmute-all-test.png' alt="Image" />

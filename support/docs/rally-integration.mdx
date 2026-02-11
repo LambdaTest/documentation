@@ -1,17 +1,21 @@
 ---
-title: "Rally Integration with Lambdatest"
+title: "Rally Integration with TestMu AI"
 sidebarTitle: "Rally"
-keywords: [ "Lambdatest integrations", "Push issues to Rally", "Lambdatest Rally integration", "bug tracking tools", "project management tools", "integrate rally with Lambdatest", "create issue in rally from Lambdatest" ]
+keywords: ['TestMu AI integrations', 'Push issues to Rally', 'TestMu AI Rally integration', 'bug tracking tools', 'project management tools', 'integrate rally with testmu ai', 'create issue in rally from testmu ai']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 Rally is a powerful cloud-based project management solution that streamlines project tracking, bug management, and team collaboration through its robust customization and automation capabilities.
 
-The Lambdatest integration enables you to capture and log bugs directly from your test sessions to Rally, complete with screenshots and test environment details, making your testing workflow more efficient.
+The <BrandName /> integration enables you to capture and log bugs directly from your test sessions to Rally, complete with screenshots and test environment details, making your testing workflow more efficient.
 
-<Info> Rally Integration with Lambdatest is available for both freemium and premium plans.</Info>
+> Rally Integration with <BrandName /> is available for both freemium and premium plans.
 
-## Integrate Rally With Lambdatest
+## Integrate Rally With <BrandName />
 
-**Step 1:** Login to your Lambdatest account. You should have administrator or user level access.
+**Step 1:** Login to your <BrandName /> account. You should have administrator or user level access.
 
 **Step 2:** Navigate to `Settings` -> `Integrations` -> `Bug Tracker`.
 
@@ -29,22 +33,22 @@ The Lambdatest integration enables you to capture and log bugs directly from you
 - Set permissions to "Full Access"
 - Copy the generated API key
 
-<Note> **Note**: By default, we use `https://rally1.rallydev.com` as host.</Note>
+<Note>
+**Note**: By default, we use `https://rally1.rallydev.com` as host.
+</Note>
 
 
-**Step 5:** Click **Install**. Lambdatest will now be integrated with Rally.
+**Step 5:** Click **Install**. <BrandName /> will now be integrated with Rally.
 
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/assets/videos/integration/bug-tracking/rally/install.mov"
-></video>
+<video class="right-side" width="100%" controls id="vid">
+<source src='/assets/videos/integration/bug-tracking/rally/install.mov' type="video/mp4" />
+</video>
 
 ## Log your First Bug
 
 **Step 1:** Ensure you have access to the appropriate Rally workspace and project.
 
-**Step 2:** While testing on Lambdatest, if you encounter a bug, click on the **Mark as Bug** button available in the test session toolbar.
+**Step 2:** While testing on <BrandName />, if you encounter a bug, click on the **Mark as Bug** button available in the test session toolbar.
 
 **Step 3:** In the bug logging form, provide the necessary details. The available fields are defined by the defect attributes in your Rally workspace:
 
@@ -55,15 +59,15 @@ The Lambdatest integration enables you to capture and log bugs directly from you
 
 - any other required fields defined in your rally attribute for defects
 
-![Create Rally Issue](/assets/images/integrations/rally/create-issue.png)
+<img loading="lazy" src='/assets/images/integrations/rally/create-issue.png' alt="Create Rally Issue" width="1347" height="616" />
 
-**Step 4:** Click on the **Create Issue** button. The bug will be logged into your Rally, and you can view it directly from your Rally dashboard or the Lambdatest Issue Tracker.
+**Step 4:** Click on the **Create Issue** button. The bug will be logged into your Rally, and you can view it directly from your Rally dashboard or the <BrandName /> Issue Tracker.
 
 ## Resync Rally Integration
 
 To ensure that your Rally integration stays up-to-date with the latest workspaces and users:
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your Lambdatest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the Rally integration and click on the **Resync** button.
 
@@ -73,14 +77,12 @@ This will:
 
 If your API key has expired, you will be prompted to update your Rally integration credentials.
 
-![Resync Rally Integration](/assets/images/integrations/rally/api-expired.png)
+<img loading="lazy" src='/assets/images/integrations/rally/api-expired.png'  alt="Resync Rally Integration" width="1347" height="616" />
 
 ## Uninstall Rally Integration
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your Lambdatest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the Rally integration and click on the **Remove** button to uninstall the integration.
 
-<Warning>
-That was all you need to know for Lambdatest + Rally Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.
-</Warning>
+> That was all you need to know for <BrandName /> + Rally Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.

@@ -1,10 +1,11 @@
 ---
 title: "Variables in KaneAI"
 sidebarTitle: "Variables"
-keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai scroll elements',' kaneai sidebar scroll']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai scroll elements', 'kaneai sidebar scroll']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Variables are placeholders that store values, which can be reused across different parts of a test case. In automation, using variables helps make the tests more flexible, reusable, and maintainable. Instead of hardcoding values in test steps, you can define variables, assign them values, and reference them throughout your tests. This reduces redundancy and makes the tests easier to modify, especially when dealing with frequently changing parameters like URLs, credentials, or device configurations. Variables can be accessed directly from https://kaneai.lambdatest.com/variables.
 
@@ -36,7 +37,7 @@ Variables can be created using the following three methods:
 You can define variables directly by using the `/` command in the step input and select "Add a variable" option. You are allowed to create _global_ and _environment_ variables using this approach and define their values. 
 The value of variables can be edited by clicking on the variables listing icon on the top right.
 
-<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/environment.png' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/environment.png' alt="Image" className="doc_img img_center" />
 
 ### Using Natural Language in authoring session
 KaneAI allows you to create variables using natural language. For instance, you can write:
@@ -46,7 +47,6 @@ Set username as John
 ```
 This will automatically create a _local_ variable `{{username}}` with the value "John".
 For such _local_ variables, only the scope of the variable can be changed to a global with an option to enable the persist check which ensures that the value when updated in one session or test execution gets persistes across sessions and test executions.
-
 
 ### Via UI from Variables page
 By visiting the [variables page](https://kaneai.lambdatest.com/variables), you can click on "Create new" option and add relevant details and scope. You can list of all global and environment variables on this page.
@@ -58,7 +58,7 @@ Variables can be used to enhance your test cases, making them more dynamic.
 ### Syntax for Assertions
 Variable usage can be done using the `{{` prefix to list all existing variables in the KaneAI session input box. When making assertions in your test case, you can use variables for inputing a value or as part of the assertion logic.
 
-<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/syntax.png' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/syntax.png' alt="Image" className="doc_img img_center" />
 
 #### String variables example:
 
@@ -79,7 +79,7 @@ JSON variables are generated from the response of an API used via the slash comm
 assert {{api_variable.response.email}} is 'john.doe@example.com'
 ```
 Here is a video to further explain the JSON variables usage:
-<video classNmae="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= '/assets/images/kane-ai/knowledge-base/variables/json-variable.mp4' type="video/mp4" />
 </video>
 
@@ -87,20 +87,19 @@ Here is a video to further explain the JSON variables usage:
 
 Persist value check is a mechanism used to ensure that variables retain their values across multiple test executions. This is important for situations where a variable’s value should be preserved between test cases and test executions to ensure consistency. For example, if you fetch a value from the AUT in a test while authoring, you may want to persist it for the other test cases even during test executions.
 
-<Check>
-**TIP**
+<Tip>
+**The persist check option becomes available only when you change a variable's scope from local to global.**
 
-The persist check option becomes available only when you change a variable's scope from local to global.
-</Check>
+</Tip>
 
-<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.png' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.png' alt="Image" className="doc_img img_center" />
 
 ## Environments
 
 ### What are Environments?
 Environments in KaneAI refer to the different configurations under which the tests are executed. Environments typically represent different stages of deployment (e.g., development, staging, production). Each environment can have its own set of variables tailored to the respective deployment scenario.
 
-<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/persist-value.png' alt="Image"/>
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/persist-value.png' alt="Image" className="doc_img img_center" />
 
 ### How to Use Environments During Test Runs
 Once a test case is authored using environment variables, it can then be executed in any environment as long as the variables used in the test case, exist in the requested environment.
@@ -108,7 +107,7 @@ Once a test case is authored using environment variables, it can then be execute
 #### Leveraging UI
 While executing a test run or scheduling one, you can choose which environment they want to execute a test run on. All the test cases inside a test run can be executed on a single environment only at a point of time.
 
-<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/test-run-environment.png'alt="Image"/>
+<img loading="lazy" src='/assets/images/kane-ai/knowledge-base/variables/test-run-environment.png' alt="Image" className="doc_img img_center" />
 
 #### Leveraging API
 You can pass environment name programmatically when initiating test runs via the API. This allows you to automate the execution of tests in different environments without manual intervention. For instance,
@@ -125,7 +124,4 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 
 This will run the test case in the "staging" environment.
 
-<Warning>
 If you have any feedback or suggestions, feel free to reach out at support@testmu.ai with your comments.
-</Warning>
-

@@ -1,12 +1,15 @@
 ---
-title: "Auto Healing"
+title: "Auto Healing in HyperExecute"
 sidebarTitle: "Auto Healing"
-keywords: ['hyperexecute auto healing','auto healing','recover flaky tests']
+keywords: ['hyperexecute auto healing', 'auto healing', 'recover flaky tests']
 ---
 
-<Note>
-This is currently in the **Beta** version.
-</Note>
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Auto Healing
+
+> This is currently in the **Beta** version.
 
 HyperExecute's Auto Healing feature helps you enhance the robustness of the test suites by automatically overcoming certain types of unexpected failures during the execution of your test scripts.
 
@@ -14,26 +17,29 @@ HyperExecute's Auto Healing feature helps you enhance the robustness of the test
 
 **Step 1:** ​To еnablе thе Auto Hеaling fеaturе, you nееd to pass thе **`autoHеal: truе`** as a capability in your WеbDrivеr configuration.
 
-```yaml highlight={5}
+```yaml
 const capability = {
     "browserName": "Chrome",
     "LT:Options": {
         "platformName": "Windows 10",
+        # highlight-next-line
         "autoHeal": true
     }
 }
 ```
 **Step 2:** Now, trigger your test on HyperExecute using the mentioned command. Please replace the placeholder values with your details.
 
-```
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE 
+  ```bash
+
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+    
 ```
 
 **Step 3:** Now visit the HyperExecute Dashboard to check your triggered test. Click on the **View Test Detail** button.
 
 **Step 4:** Click on the **band-aid** icon as shown below to check what part of your test case is healed.
 
-<img loading="lazy" src="/assets/images/hyperexecute/features/auto-heal/autoheal.gif" alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/auto-heal/autoheal.gif' alt="automation-dashboard"  width="1920" height="868" />
 
 ## How Auto Healing Works
 
@@ -52,10 +58,7 @@ By using these hooks, you can:
 
 This provides precise control over when element healing should be applied, improving reliability and reducing flakiness without impacting unrelated steps.  
 
-<Note>
-To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/autoheal-with-hooks/)
-</Note>
-
+> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/autoheal-with-hooks/)
 
 ## Benefits of Auto Healing
 Here are some of the benefits of using HyperExecute's Auto Healing feature:
@@ -79,4 +82,3 @@ By following these best practices, you can use auto healing to improve the relia
 - Configure auto healing to retry tests a limited number of times. This will help to prevent infinite loops and resource exhaustion.
 - Log all Auto Healing activity. This will help you understand why tests are failing and to troubleshoot any problems that occur.
 - Monitor the effectiveness of Auto Healing. Track the number of tests that are healed and the number of false positives. This will help you to determine whether or not auto healing is providing a net benefit.
-

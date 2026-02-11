@@ -1,17 +1,23 @@
 ---
 title: "Mobile App Accessibility Testing"
 sidebarTitle: "Mobile App Accessibility"
-keywords: ['lambdatest automation', 'lambdatest kaneai', 'kaneai mobile app', 'accessibility testing', 'mobile accessibility', 'accessibility scan']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai mobile app', 'accessibility testing', 'mobile accessibility', 'accessibility scan']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Mobile App Accessibility Testing
 
 Mobile app accessibility testing enables automated accessibility scanning for native mobile applications in KaneAI. This feature performs accessibility checks during test execution, helping identify accessibility issues and ensure compliance with accessibility standards.
 
- {/*<Info> 
- Prerequisite
+{/* <Info>
+**Prerequisite**
+
 The **Native App Accessibility** add-on must be enabled for your account to use this feature.
 </Info> */}
 
+---
 
 ### Platform Support
 
@@ -20,6 +26,7 @@ The **Native App Accessibility** add-on must be enabled for your account to use 
 | **iOS** | 17.0 and above | Versions below 17.0 will pass tests but won't generate accessibility reports |
 | **Android** | All versions | Full support for accessibility scanning |
 
+---
 
 ## How It Works
 
@@ -32,7 +39,7 @@ During test authoring, add the accessibility scan instruction:
 3. The instruction is recorded as part of the test flow
 4. The current screen is marked for accessibility scanning
 
-<img loading="lazy" src='/assets/images/kane-ai/features/mobile-app-accessibility/add-accessibility-instruction.png' alt="add-accessibility-instruction" />
+<img loading="lazy" src='/assets/images/kane-ai/features/mobile-accessibility/add-accessibility-instruction.png' alt="add-accessibility-instruction" />
 
 ### Step 2: Instruction Recording
 
@@ -42,7 +49,7 @@ When the accessibility scan instruction is added:
 - The current screen is marked to be scanned using the app scanner hook for accessibility
 - The scan hook is triggered during test execution at the corresponding screen
 
-<img loading="lazy" src='/assets/images/kane-ai/features/mobile-app-accessibility/accessibility-instruction.png' alt="accessibility-instruction-authored" />
+<img loading="lazy" src='/assets/images/kane-ai/features/mobile-accessibility/accessibility-instruction-authored.png' alt="accessibility-instruction-authored" />
 
 ### Step 3: Test Case Creation
 
@@ -52,11 +59,11 @@ Once the test is saved:
 - The accessibility scan instruction is visible in the test case summary
 - Use this tag to filter and identify tests that include accessibility scanning
 
-<img loading="lazy" src='/assets/images/kane-ai/features/mobile-app-accessibility/test-case-summary.png' alt="test-case-summary" />
+<img loading="lazy" src='/assets/images/kane-ai/features/mobile-accessibility/test-case-summary.png' alt="test-case-summary" />
 
 To view the screenshot of the screen where the accessibility scan was performed, click the (•••) icon.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/mobile-app-accessibility/accessibility-screenshot.png' alt="accessibility-screenshot" />
+<img loading="lazy" src='/assets/images/kane-ai/features/mobile-accessibility/accessibility-screenshot.png' alt="accessibility-screenshot" />
 
 ### Step 4: Execution and Reporting
 
@@ -66,6 +73,7 @@ During automated test execution:
 - Accessibility issues are detected and categorized
 - The accessibility report is available in the test execution results on Automation dashboard
 
+---
 
 ## Key Features
 
@@ -77,6 +85,7 @@ During automated test execution:
 | **Automated Reporting** | Accessibility reports are generated during test execution |
 | **Cross-Platform Support** | Works on iOS 17+ and all Android versions |
 
+---
 
 ## Troubleshooting
 
@@ -95,4 +104,3 @@ During automated test execution:
 1. Verify the instruction was added correctly during authoring
 2. Ensure the test is saved after adding the accessibility instruction
 3. Check the test case summary for accessibility instruction visibility
-

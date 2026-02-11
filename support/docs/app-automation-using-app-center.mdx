@@ -1,9 +1,11 @@
 ---
-title: "App Test Automation Using App Center"
+title: "How to automate apps using App Center on TestMu AI"
 sidebarTitle: "App Center For Automation"
-keywords: [ "App Center", "Microsoft App Center", "VS App Center", "Configuring App Center on Lambdatest", "Auto upload apps on Lambdatest", "Lambdatest Cloud Platform" ]
+keywords: ['App Center', 'Microsoft App Center', 'VS App Center', 'Configuring App Center on TestMu AI', 'Auto upload apps on TestMu AI', 'TestMu AI Cloud Platform']
 ---
-***
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Visual Studio App Center is an integrated solution for mobile app development on iOS, Android, Windows, and macOS. It combines a number of mobile development services, such as build, test, distribute, monitoring, diagnostics, etc., into a single integrated cloud platform. By automating the upload process, Visual Studio App Center can ease the manual effort of uploading an app.
 
@@ -14,7 +16,7 @@ In this documentation, learn how to install apps from App Center for automated a
 
 Getting started with the setup requires access to the following:
 
-1. Access to Lambdatest Real Devices.
+1. Access to <BrandName /> Real Devices.
 2. Access to App Center and permissions to generate API tokens on App Center.
 
 ## Step 1 - Generating API Token On App Center
@@ -24,23 +26,24 @@ Below are the steps to generate the API Token on App Center -
 
 1. Launch App Center. Navigate to your Profile avatar and click **Account Settings**.
 
-![cmd](/assets/images/app-center-integration/app-center01.webp)
+<img loading="lazy" src='/assets/images/app-center-integration/app-center01.webp' alt="cmd" />
 
 2. Click on **User API tokens** to generate a token.
 
-![cmd](/assets/images/app-center-integration/app-center02.webp)
+<img loading="lazy" src='/assets/images/app-center-integration/app-center02.webp' alt="cmd" />
 
 3. Click on **Add new API token** to add the new token.
 
-![cmd](/assets/images/app-center-integration/app-center03.webp)
+<img loading="lazy" src='/assets/images/app-center-integration/app-center03.webp' alt="cmd" />
 
 <Warning>
 **Important**: It’s recommended to provide **Read Only** access.
 </Warning>
 
+
 4. Once you get the API token, click on the Copy icon to copy the generated token. This token will be used in Step 2.
 
-![cmd](/assets/images/app-center-integration/app-center04.webp)
+<img loading="lazy" src='/assets/images/app-center-integration/app-center04.webp' alt="cmd" />
 
 ## Step 2: Listing All The Apps For The API Token
 ***
@@ -75,7 +78,7 @@ Shown below is the response of the above API call.
          "avatar_url":null,
          "display_name":"Gaurav Raj",
          "email":"gauravraj@lambdatest.com",
-         "name":"gauravraj-lambdatest",
+         "name":"gauravraj-testmu ai",
          "type":"user"
       },
       "azure_subscription":null,
@@ -101,7 +104,7 @@ Shown below is the response of the above API call.
          "avatar_url":null,
          "display_name":"Gaurav Raj",
          "email":"gauravraj@lambdatest.com",
-         "name":"gauravraj-lambdatest",
+         "name":"gauravraj-testmu ai",
          "type":"user"
       },
       "azure_subscription":null,
@@ -233,12 +236,12 @@ Shown below is the response of the above API call.
 }
 ```
 
-The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipedia_v2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r`) from the above API response will be used to upload your App Release on Lambdatest.
+The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipedia_v2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r`) from the above API response will be used to upload your App Release on <BrandName />.
 
-## Step 5: Upload the Release Version Of An App On Lambdatest
+## Step 5: Upload the Release Version Of An App On <BrandName />
 ***
 
-You can upload the release version of your app on Lambdatest by using the following API call -
+You can upload the release version of your app on <BrandName /> by using the following API call -
 
 ```js
 curl -u "<username>:<access_key>" \ 
@@ -257,16 +260,13 @@ Below is the response of the above cURL request.
 } 
 ```
 
-Using the `app_url` obtained in the response, you can execute your Appium tests on Lambdatest.
+Using the `app_url` obtained in the response, you can execute your Appium tests on <BrandName />.
 
 ## Step - 6 Executing Your Tests
 ***
 
-Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on Lambdatest.
+Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on <BrandName />.
 
 ***
 
-<Warning>
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24X7 Chat Support</span> or mail us directly at support@testmu.ai.
-</Warning>
-
+> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24X7 Chat Support</span> or mail us directly at support@testmu.ai.

@@ -1,18 +1,19 @@
 ---
 title: "Job Reports"
 sidebarTitle: "HyperExecute Job Reports"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
 
-<Check>
-**NOTE**
+<Tip>
+**note**
 
 Refer to this detailed [Job Reports](/support/docs/hyperexecute-job-reports/) page to learn more about the types of reports being offered and how to configure them.
-</Check>
+</Tip>
 
 ## Steps to Generate and Download Reports
 
@@ -32,19 +33,20 @@ partialReports:
   location: target/surefire-reports/html
   type: html
 ```
-<Note>
+<Warning>
 **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
-</Note>
+</Warning>
+
 
 **Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
 **Step 4:** Click on the **Open** button of the **Reports**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/reports.gif' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/reports.gif' alt="Image" />
 
 Here is the sample report generated.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/report4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/report4.png' alt="Image" />
 
 ## Generate Multiple Reports
 If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:

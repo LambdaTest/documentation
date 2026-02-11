@@ -1,16 +1,19 @@
 ---
-title: "LambdaTest SSO Integration Using OIDC"
+title: "TestMu AI SSO Integration Using OIDC"
 sidebarTitle: "OIDC Integration"
-keywords: [ "sso", "lambdatest sso", "oidc", "openid connect", "identity provider", "managed sso", "azure ad", "google workspace", "okta" ]
+keywords: ['sso', 'testmu ai sso', 'oidc', 'openid connect', 'identity provider', 'managed sso', 'azure ad', 'google workspace', 'okta']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# <BrandName /> SSO Integration Using OIDC
 
 * * *
 
 <BrandName /> provides seamless Single Sign-On (SSO) integration with various identity providers using OpenID Connect (OIDC), enabling your team to access <BrandName /> using their existing organizational credentials. This managed SSO solution streamlines user management and enhances security by centralizing authentication through your identity provider.
 
 This comprehensive guide will walk you through configuring OIDC-based SSO between your <BrandName /> organization and your identity provider, using Azure AD as the example throughout the documentation.
-
 
 ## What is OIDC (OpenID Connect)?
 
@@ -36,7 +39,11 @@ To enable <BrandName /> SSO through OIDC integration, you will need:
 - **Administrative Access**: Admin-level access to your <BrandName /> organization
 - **SSO Request**: Contact <BrandName /> support to enable SSO for your organization
 
-<Note> **Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@testmu.ai](mailto:support@testmu.ai) </Note>
+<Warning>
+**Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@testmu.ai](mailto:support@testmu.ai)
+</Warning>
+
+.
 
 ## Step-by-Step Integration Guide
 
@@ -51,7 +58,7 @@ The exact steps vary by identity provider, but the general process involves crea
 
 3. **Create New Registration**: Click **New registration** to create a new application registration.
 
-![Azure App Registration](/assets/images/lambdatest-sso-oidc/app-registration.png)
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-registration.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
 
 4. **Configure Application Details**:
    - **Name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> OIDC Integration"
@@ -59,8 +66,7 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Redirect URI**: Leave this blank for now (we'll configure it later)
    - Click **Register** to create the application
 
-![Azure App Registration](/assets/images/lambdatest-sso-oidc/app-registration-2.png)
-
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-registration-2.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
 
 ### Step 2: Configure Application Settings
 
@@ -84,15 +90,18 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Expires**: Select your preferred expiration period (recommended: 24 months)
    - Click **Add**
 
-![Azure App Client Register](/assets/images/lambdatest-sso-oidc/app-client-secret-create.png)
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-client-secret-create.png' alt="Azure App Client Register" width="944" height="487" style={{border: '1px solid #000'}} />
 
 3. **Copy Secret Value**: 
    - **Important**: Copy the secret value immediately - it won't be shown again
    - Store this securely as you'll need it for <BrandName /> configuration
 
-![Azure Client Secret](/assets/images/lambdatest-sso-oidc/app-client-secret.png)
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-client-secret.png' alt="Azure Client Secret" width="944" height="487" style={{border: '1px solid #000'}} />
 
-<Warning> **Important**: Store the client secret securely as you'll need it for <BrandName /> configuration. Most providers only show the secret once. </Warning>
+<Warning>
+**Important**: Store the client secret securely as you'll need it for <BrandName /> configuration. Most providers only show the secret once.
+</Warning>
+
 
 ### Step 4: Configure Redirect URI
 
@@ -101,10 +110,10 @@ The exact steps vary by identity provider, but the general process involves crea
 2. **Add Redirect URI**:
    - Click **Add a platform**
    - Select **Web**
-   - **Redirect URI**: Enter the redirect URI provided by <BrandName /> (typically: `https://lambdatest.auth0.com/login/callback`)
+   - **Redirect URI**: Enter the redirect URI provided by <BrandName /> (typically: `https://testmu ai.auth0.com/login/callback`)
    - Click **Save**
 
-![Azure Redirect URI](/assets/images/lambdatest-sso-oidc/app-redirect.png)
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-redirect.png' alt="Azure Redirect URI" width="944" height="487" style={{border: '1px solid #000'}} />
 
 ### Step 5: Collect OpenID Connect Metadata
 
@@ -122,9 +131,9 @@ The exact steps vary by identity provider, but the general process involves crea
 
 2. **Verify Well-Known URL**: You can test the URL in your browser to ensure it returns valid JSON configuration.
 
-![Azure Metadata URL](/assets/images/lambdatest-sso-oidc/app-oidc-metadata.png)
+<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-oidc-metadata.png' alt="Azure Metadata URL" width="944" height="487" style={{border: '1px solid #000'}} />
 
-<Warning> **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration. </Warning>
+> **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
 
 ### Step 6: Contact <BrandName /> Support for OIDC Configuration
 
@@ -140,7 +149,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
    - **Email**: [support@testmu.ai](mailto:support@testmu.ai)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
-   ```bash
+   ```
    Identity Provider: Azure AD
    Client ID: [Your Application (client) ID]
    Client Secret: [Your Client Secret]
@@ -161,7 +170,6 @@ Since OIDC integration requires server-side configuration, you cannot create the
 
 3. **Configure App Roles** (if needed): You can define custom app roles for different access levels within <BrandName />.
 
-
 ## Testing Your OIDC Integration
 
 * * *
@@ -177,7 +185,6 @@ Since OIDC integration requires server-side configuration, you cannot create the
 4. **Complete Authentication**: You'll be redirected to Microsoft's login page. Enter your Azure AD credentials.
 
 5. **Verify Success**: After successful authentication, you should be redirected to your <BrandName /> organization.
-
 
 ### Method 2: Direct OIDC Login (For Testing)
 

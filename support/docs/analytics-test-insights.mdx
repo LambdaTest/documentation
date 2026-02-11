@@ -1,11 +1,13 @@
 ---
 title: "Test Insights - Advanced insights for analyzing test runs"
 sidebarTitle: "Tests Insights"
-keywords: ['analytics','test insights','test observability','test analytics','test performance',test failure classification']
+keywords: ['analytics', 'test insights', 'test observability', 'test analytics', 'test performance', 'test failure classification']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+---
 
 ## About Test Insights
 <BrandName /> Analytics provides Test Insights, a powerful feature designed to help you analyze your test runs and gain valuable insights into your testing processes. With Test Insights, you can visualize your test runs, track progress, and improve the quality of your tests with actionable analytics.
@@ -46,11 +48,20 @@ The grouping is scoped to individual build IDs, meaning each build's metrics ref
 
 This feature is especially useful when your test pipeline uses automatic retries, as it shows the true pass/fail state of each test-environment combination rather than inflating counts with intermediate failures.
 
-<Info>
-**PROCESSING TIME**
+**Your Settings Are Remembered:**
+Your Show Unique Instances preference is automatically saved, so you don't need to re-enable it each time you visit. Test Insights and Build Insights remember their settings independently, allowing you to configure each page to suit your workflow.
+
+<Note>
+**Processing Time**
 
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished running tests, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
-</Info>
+</Note>
+
+<Tip>
+**Learn More**
+
+Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
+</Tip>
 
 ## Use Cases for Test Insights
 
@@ -58,5 +69,3 @@ Retry run consolidation requires a small amount of processing time after test ex
 - **Quality Assurance**: Monitor the quality of your tests by analyzing pass/fail rates and identifying areas for improvement.
 - **Regression Detection**: Quickly detect regressions in your code by comparing current test runs with historical data.
 - **Team Collaboration**: Share insights with your team to foster collaboration and improve the overall testing process.
-
-

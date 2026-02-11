@@ -1,21 +1,15 @@
 ---
 title: "Lambda Hooks For Appium Automation"
 sidebarTitle: "Lambda Hooks For Appium" 
-keywords:
-  - appium
-  - lambdatest hooks
-  - custom status
-  - custom remark
-  - app automation
-  - mobile test
-  - app testing
-  - real devices
+keywords: ['appium', 'lambdatest hooks', 'custom status', 'custom remark', 'app automation', 'mobile test', 'app testing', 'real devices']
 
 ---
 
 
 import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <div>
 <RealDeviceTag value="Real Device" /> 
@@ -25,7 +19,7 @@ import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 </div>
 
 
-This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **LambdaTest Cloud**.
+This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **<BrandName /> Cloud**.
 
 ## Adding custom status & remark
 
@@ -35,8 +29,7 @@ To add custom status & remark, just add the code snippet using the ```Javascript
 
 Arguments | Example
 ------------- | -----------------------------------------------------------------------------------------
-```status``` | ```failed``` OR ```passed```
-```remark``` | Any remark can be added here limited to 255 characters.
+```status``` | ```failed``` OR ```passed```remark``` | Any remark can be added here limited to 255 characters.
 
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a sample remark for failed test \"}} ");
@@ -70,7 +63,7 @@ public class vanilla_android {
             //Enter your Username & Accesskey here:            
             driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities); 
 
-            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
+            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/color"));
             color.click();
 
             //Javascript Executor for marking the status and custom remark.
@@ -82,7 +75,7 @@ public class vanilla_android {
 }
 ```
 
-Once you have added the code snippet, the status and remark will be visible on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build) as shown below:
+Once you have added the code snippet, the status and remark will be visible on the [TestMu AI App Automation Dashboard](https://appautomation.lambdatest.com/build) as shown below:
 
 
 ![Build Page Remark](/assets/images/appium-lambdaHooks/01.webp)
@@ -103,7 +96,7 @@ Arguments | Example
 ## Differentiating Test Cases in Single Session
 ---
 
-LambdaTest has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
+TestMu AI has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
 ### Adding LambdaHooks
 
@@ -141,7 +134,7 @@ You can also filter the command logs based on these labels.A screenshot has been
 
 ## Command Annotations 
 
-Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **LambdaTest Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
+Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **TestMu AI Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
 
 ![Command Annotation](/assets/images/real-device-app-testing/command-annotation.png)
 

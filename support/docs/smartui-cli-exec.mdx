@@ -1,20 +1,11 @@
 ---
 title: "SmartUI CLI Exec Command"
 sidebarTitle: "Exec Command"
-keywords:
- [
-  "Visual Regression",
-  "Visual Regression Testing Guide",
-  "Visual Regression Test Automation",
-  "Visual Regression Automation Testing",
-  "Running Visual Regression Tests",
-  "Visual Regression Testing Online",
-  "Run Visual Regression",
-  "Visual Regression Run Specific Test",
-  "Visual Regression Testing Environment",
-  "How to Run Visual Regression Tests"
-]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
@@ -51,8 +42,8 @@ npx smartui exec [options] -- <command>
 | `--buildName <string>` | Specify a custom build name for the test run |
 | `--scheduled <string>` | Specify the schedule ID for scheduled test runs |
 | `--show-render-errors` | Show render errors from SmartUI build |
-| `--userName <string>` | Override LambdaTest username (overrides environment variable) |
-| `--accessKey <string>` | Override LambdaTest access key (overrides environment variable) |
+| `--userName <string>` | Override <BrandName /> username (overrides environment variable) |
+| `--accessKey <string>` | Override <BrandName /> access key (overrides environment variable) |
 | `--config <file>` | Specify a configuration file to use |
 | `-h, --help` | Display help information |
 
@@ -115,11 +106,11 @@ To properly stop the SmartUI snapshot server:
 ```bash
 npx smartui exec:stop
 ```
+
 <Warning>
-**Important:** 
- 
-It's recommended to use the `exec:stop` command rather than using Ctrl+C to terminate the server. Using Ctrl+C will cause the build to stop after 12 minutes of running.
+**Important:** It's recommended to use the `exec:stop` command rather than using Ctrl+C to terminate the server. Using Ctrl+C will cause the build to stop after 12 minutes of running.
 </Warning>
+
 
 ## Checking Server Status
 
@@ -143,22 +134,22 @@ Both commands check if the server is running at the address specified in `SMARTU
 
 For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
@@ -190,8 +181,8 @@ When running tests from IDEs like IntelliJ:
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Server Termination' default>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Server Termination">
 
 **Server Termination**
 
@@ -199,7 +190,7 @@ Always use `exec:stop` to properly terminate the server.
 
 </Tab>
 
-<Tab title='Timeouts'>
+<Tab title="Timeouts">
 
 **Timeouts**
 
@@ -207,7 +198,7 @@ Set appropriate timeouts for your tests.
 
 </Tab>
 
-<Tab title='Snapshot Naming'>
+<Tab title="Snapshot Naming">
 
 **Snapshot Naming**
 
@@ -215,7 +206,7 @@ Use meaningful names for your snapshots.
 
 </Tab>
 
-<Tab title='Environment Variables'>
+<Tab title="Environment Variables">
 
 **Environment Variables**
 
@@ -223,7 +214,7 @@ Configure environment variables before starting your IDE.
 
 </Tab>
 
-<Tab title='Configuration Files'>
+<Tab title="Configuration Files">
 
 **Configuration Files**
 
@@ -234,8 +225,8 @@ Consider using configuration files for complex setups.
 
 ## Troubleshooting
 
-<Tabs>
-<Tab Title='Server Status'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Server Status">
 
 **Server Status**
 
@@ -243,7 +234,7 @@ Verify the server is running using `exec:ping`.
 
 </Tab>
 
-<Tab title='Server Address'>
+<Tab title="Server Address">
 
 **Server Address**
 
@@ -251,7 +242,7 @@ Check if the server address is correctly configured.
 
 </Tab>
 
-<Tab title='Port Conflicts'>
+<Tab title="Port Conflicts">
 
 **Port Conflicts**
 
@@ -259,7 +250,7 @@ Ensure no other process is using the default port.
 
 </Tab>
 
-<Tab title='Server Logs'>
+<Tab title="Server Logs">
 
 **Server Logs**
 
@@ -273,8 +264,8 @@ Review the server logs for error messages.
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 ## Additional Resources
 

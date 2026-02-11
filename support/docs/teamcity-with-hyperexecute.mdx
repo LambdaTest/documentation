@@ -1,9 +1,13 @@
 ---
-title: "TeamCity Integration With HyperExecute"
+title: "How to integrate TeamCity with HyperExecute"
 sidebarTitle: "TeamCity"
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','hyperexecute integrations','hyperexecute integrations with ci/cd tools','continuous integration','aws codepipeline','continuous integration tools']
-  
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'hyperexecute integrations', 'hyperexecute integrations with ci/cd tools', 'continuous integration', 'aws codepipeline', 'continuous integration tools']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# TeamCity Integration With HyperExecute
 
 TeamCity is a build management and continuous integration server developed by JetBrains. It is used to automate the process of building, testing, and deploying software. It supports a wide range of programming languages and technologies, including Java, .NET, Ruby, and Python.
 
@@ -25,7 +29,7 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Now type ``http://localhost:8111/`` in your browser to open the TeamCity GUI.
 - Click on Create Project button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step1.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step1.webp' alt="Image" />
 
 ### Step 2: Create the Project
 
@@ -34,7 +38,7 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 -  Click on **Proceed** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step2.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step2.webp' alt="Image" />
 
 ### Step 3: Connect your Version Control System.
 
@@ -45,17 +49,17 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - If you want that besides your default branch, TeamCity should monitor other branches too, define it in the **Branch specification** section.
 - Click on **Proceed** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step3.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step3.webp' alt="Image" />
 
 ### Step 4: Start the build process
 
 - Configure your build setup either **automatically** (fetched by your VCS) or **manually**. For the demo purpose, we will configure the build process manually.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step4.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step4.webp' alt="Image" />
 
 - Select the **Command Line** for the build setup
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step5.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step5.webp' alt="Image" />
 
 - Enter the **Step name** (optional).
 - Select the **Custom Script** in the **Run** field.
@@ -72,14 +76,14 @@ chmod +x hyperexecute
   - **Linux** -> linux <br />
   - **Windows**-> windows
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step6.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step6.webp' alt="Image" />
 
 ### Step 5: Build process is complete
 
 - Now your build process is completed. This will take a couple of minutes to completely execute all the stages.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step7.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step7.webp' alt="Image" />
 
-- After the build is successful, go to your LambdaTest Dashboard and check the output of the triggered Job.
+- After the build is successful, go to your TestMu AI Dashboard and check the output of the triggered Job.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step8.webp' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/teamcity/Step8.webp' alt="Image" />

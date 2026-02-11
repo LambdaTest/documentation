@@ -1,85 +1,97 @@
 ---
-title: "XCUI Testing on LambdaTest"
+title: "XCUI Testing on TestMu AI"
 sidebarTitle: "XCUI Testing"
-keywords: ['xcuitest', 'app test automation', 'lambdatest xcuitest', 'framework on lambdatest', 'app testing xcuitest', 'app testing', 'real devices', 'ios testing', 'xcui automation']
+keywords: ['xcuitest', 'app test automation', 'testmu ai xcuitest', 'framework on testmu ai', 'app testing xcuitest', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" /> 
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
-Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
 
 ## Prerequisites
 
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **XCUI Test** app (.ipa file).
 
-<Check>
-**TIP**
+<Tip>
+**If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on <BrandName /> by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample :link: [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).**
 
-If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on LambdaTest by using our sample 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample 🔗 [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).
-</Check>
+</Tip>
 
 ## Running Your First Test: A Step-by-Step Guide
 
 ### Step 1: Upload Your Application
 
-To begin testing, upload your iOS application (.ipa file) to LambdaTest's servers. You'll use our **REST API** for this process.
+To begin testing, upload your iOS application (.ipa file) to <BrandName />'s servers. You'll use our **REST API** for this process.
 
-- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Authentication :** You'll need your <BrandName /> Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_iOS_APP>"' --form 'type="xcuit-ios"'
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_iOS_APP>"' --form 'type="xcuit-ios"'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"<PATH_OF_YOUR_iOS_APP>"" -F "type="xcuit-ios""
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"<PATH_OF_YOUR_iOS_APP>"" -F "type="xcuit-ios""`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Note>
-**INFO**
+<Info>
+**- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`**
 
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
-</Note>
+</Info>
 
 ### Step 2: Upload Your Test Suite
 
-Upload your iOS test suite (.ipa) file to LambdaTest servers using our REST API.
+Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST API.
 
 The following sample cURL command shows how to upload a test suite:
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"xcuit-ios\""
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"xcuit-ios\""`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Note>
-**INFO**
+<Info>
+**- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`**
 
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
-</Note>
+</Info>
 
 ### Step 3: Executing The Test
 
@@ -88,17 +100,19 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --reque
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
 ```powershell
-YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY
+
+{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  
 ```
 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
-<Warning>
-Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
-</Warning>
+> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
@@ -115,32 +129,36 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
   "build" : "Proverbial-XCUITest"
 }'
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
+
+</Tab>
+
+<Tab title="Windows">
+
+```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
 --header "Content-Type: application/json" \
 --data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14"],
-  "video" : true,
-  "queueTimeout": 10800,
-  "idleTimeout": 150,
-  "devicelog": true,
-  "network": false,
-  "build" : "Proverbial-XCUITest"
+  \"app\" : \"APP_ID\",
+  \"testSuite\": \"TEST_SUITE_ID\",
+  \"device\" :  [\"iPhone 11-14\"],
+  \"video\" : true,
+  \"queueTimeout\": 10800,
+  \"idleTimeout\": 150,
+  \"devicelog\": true,
+  \"network\": false,
+  \"build\" : \"Proverbial-XCUITest\"
 }"
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
 
-<img loading="lazy" src="/assets/images/xcui/xcui-test.jpeg" alt="Image" width="521" height="268" className="doc_img"/>
+<img loading="lazy" src='/assets/images/xcui/xcui-test.jpeg' alt="Image" width="521" height="268" />
 
 ## Running Tests in Parallel
 
@@ -161,10 +179,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 }'
 ```
 
-<Note>
-**INFO**
+<Info>
+**- For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.**
 
-- For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.
 - We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
-</Note>
-
+</Info>

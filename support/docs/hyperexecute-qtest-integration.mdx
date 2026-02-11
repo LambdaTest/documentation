@@ -1,11 +1,11 @@
 ---
 title: "Integrate qTest with HyperExecute"
 sidebarTitle: "qTest"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','qtest','Integrations','Products','Test case management','Automated testing','Cloud-based testing']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'qtest', 'Integrations', 'Products', 'Test case management', 'Automated testing', 'Cloud-based testing']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders.
 
@@ -17,8 +17,8 @@ This document details the seamless integration between HyperExecute and qTest, e
 - [Download](https://support-hub.tricentis.com/open?sys_kb_id=194a54eedb4f5c181ea7bb13f3961950&id=kb_article_view&number=KB0015571) and extract the **agentctl-[version]-mac-x64-full.tgz** file to a desired installation directory.
 - Login to qTest Manager as an administrator and access the Resources page.
 - Expand the **APIs and SDK** sections.
-
-<img loading="lazy" src='/assets/images/qtest-integration/qtest1.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+   
+<img loading="lazy" src='/assets/images/qtest-integration/qtest1.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 - Navigate to the **agentctl** directory and start the host by running the following command:
 
@@ -33,30 +33,30 @@ This document details the seamless integration between HyperExecute and qTest, e
     - **qTest Token :** Enter the Token you have copied in the above step.
     - **Full Name :** Mention your name here.
 
-<img loading="lazy" src='/assets/images/qtest-integration/qtest_img_2.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/qtest-integration/qtest_img_2.png' alt="provide access to TestMu AI account" width="1280" height="684" />
 
 ## Step 1: Setup your Shell Agent
 
 - This repository is used to pull tests from GitHub, run an Apache Maven build of JUnit tests, parse the results, and automatically upload the test results to qTest Manager.
 
-<Check>
-**AUTOMATE JUNIT**
+<Tip>
+**Automate JUnit**
 
-Download or Clone the code for the Shell Script Automation Host Feature from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code for the Shell Script Automation Host Feature from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-xcui-sample" />
-</Check>
+<a href="https://github.com/TestMu AI/hyperexecute-xcui-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 - You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample for the JUnit framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the JUnit framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/junit-selenium-hyperexecute-sample" />
+<a href="https://github.com/TestMu AI/junit-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 
-</Check>
+</Tip>
 
 ### Download the HyperExecute CLI
 
@@ -70,9 +70,10 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-<Note>
-**NOTE:** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 ## Step 2: Update the Configuration Files
 
@@ -95,18 +96,18 @@ You can download the CLI for your desired platform from the below mentioned link
 - If you are macOS user, go to the `run.sh` file or if you are a windows user go to the `run.bat` file and instead of `mvn` command, you need to pass the below mentioned command:
 
 ```bash
-./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
-<Note>
-Refer the documentation to understand how to get your [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
-</Note>
+> Refer the documentation to understand how to get your [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ## Step 3: Setup the Automation
 
 - Navigate to your Automation Host ``http://localhost:6789/home`` and click on the **Add** button to add a new agent.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/1.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/1.png' alt="provide access to TestMu AI account" width="1280" height="684" />
 
 - A popup will appear to create an agent, fillup the following details:
 
@@ -117,21 +118,21 @@ Refer the documentation to understand how to get your [Username and Access key](
     - **Allocated Execution Time :** Amount of time you expect the script to take to execute in minutes
     - **Kick-off scripts :** The file path to your shell script. This shell scripts takes in two inputs, one for using git and the second for updating your current test cycle.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/2.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/2.png' alt="provide access to TestMu AI account" width="1280" height="684" />
 
 ## Step 4: Execute the Shell Script
 
 - Click on the **Actions** button > **Kick-off shell scripts now** button to start the shell script. This will upload all of the tests cases to qTest.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/3.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/3.png' alt="provide access to TestMu AI account" width="1280" height="684" />
 
 ## Step 5: Monitor Your Tests
 
 - Login into qTest Manager, go to the Test Execution tab, and there should be a test cycle under your project called **Junit Automated Tests**
 - Click on the test cycle and it should show all of the tests that were run through the maven build and their statuses.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/4.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/4.png' alt="provide access to TestMu AI account" width="1280" height="684" />
 
-- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
+- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/5.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/qtest/5.png' alt="provide access to TestMu AI account" width="1280" height="684" />

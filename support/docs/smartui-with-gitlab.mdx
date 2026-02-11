@@ -1,48 +1,36 @@
 ---
 title: "GitLab Pipeline Integration with SmartUI"
 sidebarTitle: "GitLab"
-keywords:
-  [
-    "lambdatest integrations",
-    "smart ui integration",
-    "smart ui integrations with ci/cd tools",
-    "ci/cd tools",
-    "continuous integration",
-    "continuous delivery",
-    "continuous integration tools",
-    "gitlab ci cd",
-  ]
+keywords: ['testmu ai integrations', 'smart ui integration', 'smart ui integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci cd']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 A GitLab Pipeline automates building, testing, and deploying code changes. It's essential for rapid development, improved code quality, and faster delivery by catching errors early and reducing manual work.
 
 This document will show you how to integrate GitLab Pipeline with SmartUI to shorten your test cycles.
 
 ## Steps to Integrate GitLab Pipeline with SmartUI
-
 To integrate GitLab Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
-<GitHubButton url="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/gitlab" />
-</Check>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/gitlab" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Setup your Projects in GitLab
-
 - Click on the **New Project** > **Run CI/CD for external repository**.
-  ![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png' alt="Create New Project" width="" height="" />
 
 - Enter your repository URL and click on Create Project.
 
 ### Step 2: Create a New Workflow
-
-- Navigate to the **Build** section > **Pipelines**.
-  ![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/2.png)
+-  Navigate to the **Build** section > **Pipelines**.
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/2.png' alt="Create New Project" width="" height="" />
 
 - Select your required template for CI/CD workflow file. For the demo we are using the Test template.
 - Now, write your workflow YAML file. Here is the sample file for your reference.
@@ -52,21 +40,20 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/gitlab/.gitlab-ci.yml
 ```
 
-<Check>
-TIP
+<Tip>
+**You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your GitLab project repository.**
 
-You can also store your _LT_USERNAME_, _LT_ACCESS_KEY_ and _PROJECT_TOKEN_ as secrets in your GitLab project repository.
-</Check>
+</Tip>
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png' alt="Create New Project" width="" height="" />
 
 ## Best Practices
 
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Secret Management">
 
 **Secret Management**
@@ -87,7 +74,6 @@ You can also store your _LT_USERNAME_, _LT_ACCESS_KEY_ and _PROJECT_TOKEN_ as se
 - Set up pipeline conditions to avoid unnecessary runs
 
 **Example:**
-
 ```yaml
 only:
   - main
@@ -95,8 +81,8 @@ only:
   - merge_requests
 ```
 
-  </Tab>
-  <Tab title="Build Naming">
+</Tab>
+<Tab title="Build Naming">
 
 **Build Naming**
 
@@ -105,7 +91,6 @@ only:
 - Use consistent naming conventions
 
 **Example:**
-
 ```yaml
 variables:
   BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
@@ -132,11 +117,21 @@ variables:
 - Optimize test execution order
 
 </Tab>
+<Tab title="Resource Management">
+
+**Resource Management**
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+</Tab>
 </Tabs>
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Pipeline Fails with Variable Not Found">
 
 **Issue: Pipeline Fails with "Variable Not Found"**
@@ -144,13 +139,11 @@ variables:
 **Symptoms**: Pipeline fails with error about missing CI/CD variables
 
 **Possible Causes**:
-
 - Variables not created in GitLab project
 - Variable names don't match
 - Variables not accessible to pipeline
 
 **Solutions**:
-
 1. Verify variables exist in project settings:
    - Go to Settings → CI/CD → Variables
    - Check `LT_USERNAME`, `LT_ACCESS_KEY`, and `PROJECT_TOKEN` exist
@@ -169,17 +162,14 @@ variables:
 **Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
 
 **Possible Causes**:
-
 - PROJECT_TOKEN not set as CI/CD variable
 - Variable not passed to job
 - Variable masked or protected incorrectly
 
 **Solutions**:
-
 1. Add PROJECT_TOKEN as GitLab CI/CD Variable
 
 2. Pass variable to job:
-
    ```yaml
    variables:
      PROJECT_TOKEN: $PROJECT_TOKEN
@@ -197,20 +187,17 @@ variables:
 **Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
 
 **Possible Causes**:
-
 - Incorrect PROJECT_TOKEN
 - Project name mismatch
 - Network issues
 - Pipeline job failure
 
 **Solutions**:
-
 1. Verify PROJECT_TOKEN is correct:
    - Check token in SmartUI Project Settings
    - Ensure token includes project ID prefix
 
 2. Check pipeline logs for errors:
-
    ```yaml
    after_script:
      - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi
@@ -228,23 +215,19 @@ variables:
 **Symptoms**: Pipeline execution exceeds time limit
 
 **Possible Causes**:
-
 - Too many tests running
 - Slow test execution
 - Network latency
 - Resource constraints
 
 **Solutions**:
-
 1. Increase pipeline timeout:
-
    ```yaml
    default:
      timeout: 1h
    ```
 
 2. Run tests in parallel using parallel jobs:
-
    ```yaml
    parallel:
      matrix:
@@ -262,22 +245,18 @@ variables:
 **Symptoms**: npm install or dependency installation fails
 
 **Possible Causes**:
-
 - Network issues
 - Package registry problems
 - Version conflicts
 - Node version mismatch
 
 **Solutions**:
-
 1. Use specific Node version:
-
    ```yaml
    image: node:18
    ```
 
 2. Clear npm cache:
-
    ```yaml
    before_script:
      - npm cache clean --force
@@ -295,21 +274,17 @@ variables:
 **Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
-
 - Node.js not available in image
 - npm not available
 - PATH issues
 
 **Solutions**:
-
 1. Ensure Node.js is available:
-
    ```yaml
    image: node:18
    ```
 
 2. Verify npm is available:
-
    ```yaml
    before_script:
      - npm --version
@@ -327,8 +302,8 @@ If you encounter issues not covered here:
 
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

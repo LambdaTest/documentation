@@ -1,11 +1,10 @@
 ---
 title: "HyperExecute YAML Creation for Playwright"
 sidebarTitle: "YAML Creation for Playwright"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','TestMu AI Projects','YAML Creation','Playwright']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'TestMu AI Projects', 'YAML Creation', 'Playwright']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 This guide outlines common use cases and solutions for configuring Playwright test executions on **<BrandName /> HyperExecute**. It covers dependency management, environment setup, caching, reporting, and troubleshooting common issues.
@@ -187,9 +186,8 @@ This occurs due to a version mismatch between the Playwright client and server. 
 pre:
   - npx playwright@1.41.0 install
 ```
-<Note>
-Replace `1.41.0` with the version specified in the project’s package.json.
-</Note>
+> Replace `1.41.0` with the version specified in the project’s package.json.
+
 ## Q: Why are tests retried multiple times within a single scenario?
 Multiple retries occur when retry logic is configured both at the Playwright framework level and in HyperExecute YAML. This can cause duplicate scenarios, incorrect reporting, and multiple executions of the same test. Disabling framework-level retries and using only HyperExecute-level retries avoids this problem.
 
@@ -205,8 +203,6 @@ Certain frameworks or projects require specific environment variables, such as c
 env:
   BASE_URL: https://example.com
   API_KEY: your_api_key_here
-```
-
 ```bash title=".env"
 BASE_URL=https://example.com
 API_KEY=your_api_key_here

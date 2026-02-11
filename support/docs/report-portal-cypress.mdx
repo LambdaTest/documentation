@@ -1,15 +1,24 @@
----
-title: "ReportPortal.io Integration With LambdaTest For Cypress"
-sidebarTitle: "Report Portal IO Integration For Cypress"
-keywords: ['lambdatest integrations','report portal io','reportportal for cypress','lambdatest cypress with report portal io','cypress automation','lambdatest integration with report portal','cross browser testing','free cross browser testing tool']
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: report-portal-cypress
+title: ReportPortal.io Integration With <BrandName /> For Cypress
+sidebarTitle: Report Portal IO Integration For Cypress
+description: This article will guide you on how to integrate the LambdatTest platform with Report Portal platform for running your Cypress automation tests.
+keywords: ['testmu ai integrations', 'report portal io', 'reportportal for cypress', 'testmu ai cypress with report portal io', 'cypress automation', 'testmu ai integration with report portal', 'cross browser testing', 'free cross browser testing tool']
+url: https://www.testmuai.com/support/docs/applitools-integration-with-testmu/
+site_name: <BrandName />
+slug: report-portal-cypress/
+canonical: https://www.testmuai.com/support/docs/report-portal-cypress/
 ---
 
 ---
 
-This article will guide you on how to integrate the **LambdaTest** platform with **ReportPortal.io** platform for running your **Cypress** automation tests. Before you can get started, make sure you have an account on [ReportPortal.io](http://reportportal.io/).
-<Warning>
-By default, the LambdaTest **Cypress-Multi-Reporter** mechanism generates **mochaawesome**. To override it with some other reporting options (report portal in this case), you have to create a different file to define the reporting configuration.
-</Warning>
+This article will guide you on how to integrate the **<BrandName />** platform with **ReportPortal.io** platform for running your **Cypress** automation tests. Before you can get started, make sure you have an account on [ReportPortal.io](http://reportportal.io/).
+
+> By default, the <BrandName /> **Cypress-Multi-Reporter** mechanism generates **mochaawesome**. To override it with some other reporting options (report portal in this case), you have to create a different file to define the reporting configuration.
 
 ## Steps To Integrate
 
@@ -17,43 +26,40 @@ By default, the LambdaTest **Cypress-Multi-Reporter** mechanism generates **moch
 
 - Navigate to [ReportPortal.io](http://reportportal.io/) and login into your account. Then open your **Report Portal IO Profile**.
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report1.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report1.webp' alt="Image" width="1353" height="622" />
 
   ***
 
 - Copy the Report Portal Credentials
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report2.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report2.webp' alt="Image" width="1353" height="622" />
 
   ***
 
 - Open your Cypress project and create a new file for defining report portal configuration/credentials
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report3.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report3.webp' alt="Image" width="1353" height="622" />
 
   ***
 
-- Define the file name in the "`reporter_config_file`" capability of `lambdatest-config.json` file as mentioned in the below screenshot
+- Define the file name in the "`reporter_config_file`" capability of `testmu ai-config.json` file as mentioned in the below screenshot
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report4.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report4.webp' alt="Image" width="1353" height="622" />
 
   ***
 
-- Define the **reportportal.io** dependency (`@reportportal/agent-js-cypress`) in your **lambdatest-config.json** or **package.json** file
+- Define the **reportportal.io** dependency (`@reportportal/agent-js-cypress`) in your **testmu ai-config.json** or **package.json** file
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report5.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report5.webp' alt="Image" width="1353" height="622" />
 
   ***
 
 - Integration is now done, open the Dashboard to see the results.
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report6.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report6.webp' alt="Image" width="1353" height="622" />
 
   ***
 
-  <img loading="lazy" src="/assets/images/report-portal-cypress/report7.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/report-portal-cypress/report7.webp' alt="Image" width="1353" height="622" />
 
-<Warning>
-That’s all! you have successfully integrated **ReportPortal.io** and **LambdaTest** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
-</Warning>
-
+> That’s all! you have successfully integrated **ReportPortal.io** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.

@@ -1,57 +1,60 @@
 ---
 title: "Integrate SmartUI with Appium Tests"
 sidebarTitle: "Appium"
-keywords:
-  [
-    "Visual Regression",
-    "Visual Regression Testing Guide",
-    "Visual Regression Test Automation",
-    "Visual Regression Automation Testing",
-    "Running Visual Regression Tests",
-    "Visual Regression Testing Online",
-    "Run Visual Regression",
-    "Visual Regression Run Specific Test",
-    "Visual Regression Testing Environment",
-    "How to Run Visual Regression Tests",
-  ]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Appium is an open-source tool for automating mobile application testing. It allows developers and testers to write tests for native, hybrid, and mobile web applications across multiple platforms, such as iOS and Android, using a single codebase.
 
-LambdaTest SmartUI supports Appium automation tests for mobile applications through two integration methods:
+<BrandName /> SmartUI supports Appium automation tests for mobile applications through two integration methods:
 
 - **SDK Integration**: Available for Java
 - **Hooks Integration**: Available for JavaScript, Python, Ruby, and C#
 
 Below is the list of supported languages and their integration methods:
 
-<div className="border border-[#ddd] rounded-[4px]">
-<div className="flex">
-      <div className="p-[20px] block w-full">
-        <img src="../../assets/images/getting-started/java-icon.webp" width="35" height="35" className="mt-0 mb-2"/>
-        <a>Java</a> 
-      </div>
-      <div className="p-[20px] leading-[2.1] block w-full">
-        <img src="../../assets/images/getting-started/color-js.webp" width="35" height="35" className="m-0 mb-2"/>
-        <a>JavaScript</a> 
-      </div>
-      <div className="p-[20px] leading-[2.1] block w-full">
-        <img src="../../assets/images/getting-started/c-sharp-icon.webp" width="35" height="35" className="m-0 mb-2"/>
-        <a>C#</a> 
-      </div>
-      <div className="p-[20px] leading-[2.1] block w-full">
-        <img src="../../assets/images/getting-started/python-icon.webp" width="35" height="35" className="m-0 mb-2"/>
-        <a>Python</a> 
-      </div>
-      <div className="p-[20px] leading-[2.1] block w-full">
-        <img src="../../assets/images/getting-started/ruby-icon.webp" width="35" height="35" className="m-0 mb-2"/>
-        <a>Ruby</a> 
-      </div>
-    </div>
+<div className='lt_row lt_framework_list_row'>
+  <div className='lt_col lt_framework_wrapper'>
+    <img loading="lazy" src='/assets/images/getting-started/java-icon.webp' alt="Java" width="200" height="200" className='language-icon no-zoom' />
+    <ul className='lt_framework_list'>
+      <li><a href="/support/docs/smartui-appium-java-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}} >Java SDK</a></li>
+    </ul>
+  </div>
 
-<div className='bg-[#f2f2f2] border border-[#ddd] rounded-b-[4px] border-t-0'>
-  <p className="text-[14px] font-normal leading-[1.5] m-0 p-[21px] text-center">We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.<br/>Don't worry, you can still run the test. <span className='' onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.</p>
+  <div className='lt_col lt_framework_wrapper'>
+    <img loading="lazy" src='/assets/images/getting-started/color-js.webp' alt="Javascript" width="181" height="200" className='language-icon no-zoom' />
+    <ul className='lt_framework_list'>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>JavaScript Hooks</a></li>
+    </ul>
+  </div>
+
+  <div className='lt_col lt_framework_wrapper'>
+    <img loading="lazy" src='/assets/images/getting-started/python-icon.webp' alt="Python" width="200" height="200" className='language-icon no-zoom' />
+    <ul className='lt_framework_list'>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Python Hooks</a></li>
+    </ul>
+  </div>
+
+  <div className='lt_col lt_framework_wrapper'>
+     <img loading="lazy" src='/assets/images/getting-started/ruby-icon.webp' alt="Ruby" width="200" height="200" className='language-icon no-zoom' />
+      <ul className='lt_framework_list'>
+        <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Ruby Hooks</a></li>
+    </ul>
+  </div>
+
+  <div className='lt_col lt_framework_wrapper'>
+    <img loading="lazy" src='/assets/images/getting-started/c-sharp-icon.webp' alt="C#" width="200" height="200" className='language-icon no-zoom' />
+    <ul className='lt_framework_list'>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>C# Hooks</a></li>
+    </ul>
+  </div>
 </div>
+
+<div className='lt-framework-list-footer'>
+  <p>We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.<br />Don't worry, you can still run the test. <span className='doc__lt' onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.</p>
 </div>
 
 ## Integration Methods
@@ -79,38 +82,37 @@ For languages other than Java, SmartUI uses Hooks integration, which leverages A
 #### Quick Start with Hooks
 
 **Prerequisites:**
-
 - Appium driver instance initialized
 - SmartUI project created with Project Token
-- LambdaTest credentials configured
+- <BrandName /> credentials configured
 
 **Taking Viewport Screenshots:**
 
 Add the following code snippet in your test where you want to capture a screenshot:
 
-<Tabs >
-<Tab title='JavaScript' default>
+<Tabs className='docs__val' groupId='hooks-language'>
+<Tab title="JavaScript">
 
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
 </Tab>
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title='C#'>
+<Tab title="C#">
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
@@ -123,20 +125,20 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 
 For apps with scrolling functionality, you can capture full-page screenshots:
 
-<Tabs >
-<Tab title='JavaScript' default>
+<Tabs className='docs__val' groupId='hooks-fullpage'>
+<Tab title="JavaScript">
 
 ```javascript
 let config = {
-  screenshotName: "<Name of your screenshot>",
+  screenshotName: '<Name of your screenshot>',
   fullPage: true,
-  pageCount: 15, // Minimum 1, Maximum 20
+  pageCount: 15   // Minimum 1, Maximum 20
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
 </Tab>
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 config = {
@@ -148,7 +150,7 @@ driver.execute("smartui.takeScreenshot", config)
 ```
 
 </Tab>
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 config = {
@@ -160,7 +162,7 @@ driver.execute("smartui.takeScreenshot", config)
 ```
 
 </Tab>
-<Tab title='C#'>
+<Tab title="C#">
 
 ```csharp
 var config = new Dictionary<string, object> {
@@ -178,22 +180,22 @@ driver.Execute("smartui.takeScreenshot", config);
 
 Set your Project Token as an environment variable before running tests:
 
-<Tabs >
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='hooks-config'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="your_project_token"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN=your_project_token
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="your_project_token"

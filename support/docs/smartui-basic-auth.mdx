@@ -1,14 +1,12 @@
 ---
 title: "Basic Authentication in SmartUI CLI"
 sidebarTitle: "Capturing assets protected with authentication"
-keywords:
-  [
-    "Visual Regression",
-    "SmartUI SDK",
-    "Basic Authentication",
-    "Protected Assets",
-    "Authentication Headers"
-  ]
+keywords: ['Visual Regression', 'SmartUI SDK', 'Basic Authentication', 'Protected Assets', 'Authentication Headers']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 When capturing screenshots of applications or websites that are protected with authentication, you need to configure SmartUI to pass the necessary authentication headers. This ensures that SmartUI can access and properly render all assets on the page.
@@ -74,22 +72,22 @@ For better security, you can use environment variables for your authentication c
 
 Then set your environment variables:
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export AUTH_USERNAME="your-username"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set AUTH_USERNAME="your-username"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:AUTH_USERNAME="your-username"
@@ -106,14 +104,13 @@ $env:AUTH_USERNAME="your-username"
 
 2. **Authentication Failures**
    - Ensure credentials are correct and active
-   - Verify that the authentication endpoint is accessible from LambdaTest's infrastructure
+   - Verify that the authentication endpoint is accessible from <BrandName />'s infrastructure
 
-<Check>
-TIP
+<Tip>
+**When using basic authentication:**
 
-When using basic authentication:
 1. Test your credentials manually before running SmartUI tests
 2. Ensure all required assets are accessible with the provided credentials
 3. Use secure methods to manage your authentication credentials
 4. Consider implementing a test user specifically for visual testing
-</Check>
+</Tip>

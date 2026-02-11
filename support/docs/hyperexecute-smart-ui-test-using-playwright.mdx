@@ -1,40 +1,38 @@
 ---
 title: "SmartUI Testing in HyperExecute using Playwright"
 sidebarTitle: "Playwright"
-keywords: ["smart ui testing in lambdatest", "smart ui testing in hyperexecute", "visual  ui testing,image to image comparison", "free cross browser testing tool", "regression testing tool", "perform visual ui testing online", "compare image to image", "internet explorer 9 browser test", "test on samsung a7 online", "test on mac 10.11 el capitan online", "apple mac el capitan virtual machine"]
+keywords: ['smart ui testing in testmu ai', 'smart ui testing in hyperexecute', 'visual  ui testing,image to image comparison', 'free cross browser testing tool', 'regression testing tool', 'perform visual ui testing online', 'compare image to image', 'internet explorer 9 browser test', 'test on samsung a7 online', 'test on mac 10.11 el capitan online', 'apple mac el capitan virtual machine']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Playwright.
 
 ## Prerequisites
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environment Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - To run SmartUI tests, you need to have a **Baseline Image** and a **Comparison Image**. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
+<Info>
+**After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.**
 
-<Note>
-INFO
-
-After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
-</Note>
+</Info>
 
 ## Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
+<Tip>
+**Sample repo**
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+Download or Clone the code sample for the Playwright JavaScript from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<Check>
-**SAMPLE REPO**
-
-Download or Clone the code sample for the Playwright JavaScript from the LambdaTest GitHub repository to run the tests on the HyperExecute.
-
-<GitHubButton url="https://github.com/LambdaTest/HyperExecute-Playwright-Vanilla-JavaScript/tree/smart-ui" />
-</Check>
+<a href="https://github.com/<BrandName />/HyperExecute-Playwright-Vanilla-JavaScript/tree/smart-ui" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 If you are using your own project, make sure you update the **CDP endpoint** in your tests file.
 
@@ -66,9 +64,9 @@ const capabilities = {
 ```
 
 <Warning>
-
-You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
 </Warning>
+
 
 ## Step 2: Setup the CLI in your Test Suite
 
@@ -88,29 +86,33 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+<Tabs className="docs__val">
 
+<Tab title="Linux / MacOS">
 
-<Tabs>
-  <Tab title="Linux / MacOS">
+  ```bash
 
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
-  </Tab>
-  <Tab title="Windows">
+</Tab>
 
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
 ## Step 3: Configure YAML in your Test Suite
@@ -162,10 +164,10 @@ jobLabel: ['HYP', 'Playwright' 'SmartUI']
 
 ## Step 4: Execute your Test Suite
 
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
 
-<Note>
-**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -176,31 +178,33 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 3.
 
 ```bash
-./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ## Step 5: Monitor the Test Execution
 
 - Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. Click on the **Approved** button. 
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/1.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/1.png' alt="automation-dashboard"  width="1920" height="868" />
 
 - This will redirect you the SmartUI dashboard where you can see all the images you have pushed for the testing.
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/2.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/2.png' alt="automation-dashboard"  width="1920" height="868" />
 
 - Now you can make the changes in the UI as per your requirement and trigger the Job once again.
 
 - Again click on the **Apprved** button again.
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/3.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/3.png' alt="automation-dashboard"  width="1920" height="868" />
 
 - Now, you will find two builds in your dashboard. One will be the **Baseline Build** and the other one will be the **Non Baseline Build**
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/4.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/4.png' alt="automation-dashboard"  width="1920" height="868" />
 
 - Open any screenshot from the **Non Baseline Build**, and you can see the comparison between the two screenshots, i.e. the Baseline Image and the Non Baseline Image.
 
 - You can now approve or reject the changes directly from the dashboard as well.
 
-![automation-dashboard](/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/5.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/5.png' alt="automation-dashboard"  width="1920" height="868" />

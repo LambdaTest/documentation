@@ -1,28 +1,19 @@
 ---
 title: "Running Your First Project on SmartUI"
 sidebarTitle: "Running Your First Test"
-keywords:
-  [
-  "smart visual testing in lambdatest",
-  "visual ui testing,image to image comparison",
-  "free cross browser testing tool",
-  "regression testing tool",
-  "perform visual ui testing online",
-  "compare image to image",
-  "internet explorer 9 browser test",
-  "test on samsung a7 online",
-  "test on mac 10.11 el capitan online",
-  "apple mac el capitan virtual machine"
-]
+keywords: ['smart visual testing in testmu ai', 'visual  ui testing,image to image comparison', 'free cross browser testing tool', 'regression testing tool', 'perform visual ui testing online', 'compare image to image', 'internet explorer 9 browser test', 'test on samsung a7 online', 'test on mac 10.11 el capitan online', 'apple mac el capitan virtual machine']
 ---
 
-This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of LambdaTest that ensures your web applications look flawless across all browsers and devices.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of <BrandName /> that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Step 1: Create a SmartUI Project
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
@@ -38,34 +29,27 @@ Now select your desired framework and click on the **Configure** button. For the
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-Sample repo
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample code repository from the LambdaTest GitHub repository to run the project on the SmartUI.
+Download or Clone the code sample code repository from the <BrandName /> GitHub repository to run the project on the SmartUI.
 
-<Card
-  title="View on GitHub"
-  icon="github"
-  href="https://github.com/LambdaTest/smartui-java-testng-sample"
-  horizontal
->
-</Card>
-</Check>
+<a href="https://github.com/<BrandName />/smartui-java-testng-sample" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 - Add the following dependency in your `pom.xml` file
 
 ```xml title="pom.xml"
 <dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-java-sdk</artifactId>
+    <groupId>io.github.testmu ai</groupId>
+    <artifactId>testmu ai-java-sdk</artifactId>
     <version>1.0.2</version>
 </dependency>
 ```
 
 <Note>
-NOTE
+**You can check the latest version of [testmu ai-java-sdk]( https://mvnrepository.com/artifact/io.github.testmu ai/testmu ai-java-sdk) and update the latest version accordingly.**
 
-You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.
 </Note>
 
 - Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:
@@ -76,7 +60,8 @@ mvn clean compile
 ```
 
 <Note>
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
+
 </Note>
 
 ## Step 3: Setup your Project Token and Environment Variables
@@ -85,22 +70,22 @@ Setup your project token and credentials shown in the **SmartUI** app after crea
 
 ### Setting Project Token
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -109,43 +94,42 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-### Setting LambdaTest Credentials (for Hooks)
+### Setting <BrandName /> Credentials (for Hooks)
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
-export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
-set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
-$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 </Tab>
 </Tabs>
 
 <Info>
-INFO
+**- For CLI projects, use `PROJECT_TOKEN` (no username/access key needed)**
 
-- For CLI projects, use `PROJECT_TOKEN` (no username/access key needed)
 - For Hooks (Selenium, Playwright, etc.), use `LT_USERNAME` and `LT_ACCESS_KEY`
 </Info>
 
-![Set up your credentials](/assets/images/smartui/setup-your-credentials.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/running-first-test/1.png' alt="cmd" width="768" height="373" />
 
 ## Step 4: Create and Configure SmartUI Config
 You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command:
@@ -191,7 +175,7 @@ Once, the configuration file will be created, you will be seeing the default con
 }
 ```
 <Info>
-Advanced options in SmartUI configuration
+**Advanced options in SmartUI configuration**
 
 - For capturing fullpage or viewport screenshots, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#12-viewports)
 - For the list of available mobile viewports, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
@@ -202,7 +186,7 @@ Advanced options in SmartUI configuration
 You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```java
- //Importing the lambdatest-java SDK
+ //Importing the testmu ai-java SDK
 //Rest of your code here
 
 @Test
@@ -224,14 +208,13 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
 ```
 <Note>
-NOTE
+**You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.**
 
-You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 </Note>
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![SmartUI dashboard](/assets/images/smartui/smartui-sdk-results.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Next Steps
 

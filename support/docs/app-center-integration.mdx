@@ -1,11 +1,13 @@
 ---
-title: "Configuring App Center on Lambdatest"
+title: "Configuring App Center on TestMu AI"
 sidebarTitle: "Configuring App Center"
-keywords: [ "App Center", "Microsoft App Center", "VS App Center", "Configuring App Center on Lambdatest", "Auto upload apps on Lambdatest", "Lambdatest Cloud Platform" ]
----
+keywords: ['App Center', 'Microsoft App Center', 'VS App Center', 'Configuring App Center on TestMu AI', 'Auto upload apps on TestMu AI', 'TestMu AI Cloud Platform']
 ---
 
-This article will guide you on how to configure App Center on Lambdatest & manage your applications.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+This article will guide you on how to configure App Center on <BrandName /> & manage your applications.
 
 ## Objective
 
@@ -13,8 +15,8 @@ This article will guide you on how to configure App Center on Lambdatest & manag
 
 By the end of this article, you will be able to :
 
-- Install apps from App Center by configuring them on Lambdatest.
-- Manage synced apps on Lambdatest.
+- Install apps from App Center by configuring them on <BrandName />.
+- Manage synced apps on <BrandName />.
 
 ## What is App Center?
 
@@ -30,7 +32,7 @@ It can be used to decrease the manual effort of uploading the app & **automate**
 
 Before getting started with the setup, you would need access to the following:
 
-1. Access to Lambdatest [Real Devices](https://www.lambdatest.com/pricing).
+1. Access to <BrandName /> [Real Devices](https://www.lambdatest.com/pricing).
 2. Access to App Center & permissions to be able to generate API Token on App Center.
 
 ## Generating API Token on App Center
@@ -39,69 +41,67 @@ Before getting started with the setup, you would need access to the following:
 
 1. Click on your Profile icon > Account Settings
 
-  ![cmd](/assets/images/app-center-integration/app-center01.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center01.webp' alt="cmd" />
 
   ***
 
 2. Click on the "User API Tokens" to generate a token.
 
-  ![cmd](/assets/images/app-center-integration/app-center02.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center02.webp' alt="cmd" />
 
   ***
 
 3. Click on "Add new API token" to add the new token.
 
-  ![cmd](/assets/images/app-center-integration/app-center03.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center03.webp' alt="cmd" />
 
   ***
 
-4. Now, you’ll get the API token, click on the Copy Button & we’ll use it in Step 2 in Lambdatest Steps.
+4. Now, you’ll get the API token, click on the Copy Button & we’ll use it in Step 2 in <BrandName /> Steps.
 
-  ![cmd](/assets/images/app-center-integration/app-center04.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center04.webp' alt="cmd" />
 
-## Lambdatest Real-Time App Testing
+## <BrandName /> Real-Time App Testing
 
 ---
 
 1. Click on the "Configure" Button
 
-  ![cmd](/assets/images/app-center-integration/app-center05.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center05.webp' alt="cmd" />
 
   ***
 
 2. Paste the API Token we copied 'App Center' & click 'Validate'.
 
-  ![cmd](/assets/images/app-center-integration/app-center06.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center06.webp' alt="cmd" />
 
   ***
 
 3. Now Select your Builds on App Center by clicking on "Select Builds" to Select the "Builds" from App Center.
 
-  ![cmd](/assets/images/app-center-integration/app-center07.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center07.webp' alt="cmd" />
 
   ***
 
-4. Click on Sync to sync the Builds with Lambdatest.
-<Warning>
-**Note:** Only the Builds synced will appear on Lambdatest. In case you missed something, Click on 'Configure' to select other Builds later.
-</Warning>
+4. Click on Sync to sync the Builds with <BrandName />.
+> **Note:** Only the Builds synced will appear on <BrandName />. In case you missed something, Click on 'Configure' to select other Builds later.
 
-  ![cmd](/assets/images/app-center-integration/app-center08.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center08.webp' alt="cmd" />
 
-App Center is now configured to be used with Lambdatest.
+App Center is now configured to be used with <BrandName />.
   ***
 
-5. Selected Builds from App Center will now appear on Lambdatest. Click on them to toggle them & select the Version from the Build that you’d like to run the test on.
+5. Selected Builds from App Center will now appear on <BrandName />. Click on them to toggle them & select the Version from the Build that you’d like to run the test on.
 
-  ![cmd](/assets/images/app-center-integration/app-center09.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center09.webp' alt="cmd" />
 
   ***
 
 6. Click on the sync icon & start the test using the selected application.
 
-  ![cmd](/assets/images/app-center-integration/app-center10.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center10.webp' alt="cmd" />
 
-## Managing App Center Builds on Lambdatest
+## Managing App Center Builds on <BrandName />
 
 ---
 
@@ -109,25 +109,23 @@ App Center is now configured to be used with Lambdatest.
 If an app is not synced, the test will not start. Make sure to sync the app before starting the test.
 </Warning>
 
+
 1. The app is not Synced.
 
-  ![cmd](/assets/images/app-center-integration/app-center11.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center11.webp' alt="cmd" />
 
   ***
 
 2. The app is ready for Testing
 
-  ![cmd](/assets/images/app-center-integration/app-center12.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center12.webp' alt="cmd" />
 
   ***
 
 3. Delete the app by hovering over the Ready for Testing Apps.
 
-  ![cmd](/assets/images/app-center-integration/app-center13.webp)
+  <img loading="lazy" src='/assets/images/app-center-integration/app-center13.webp' alt="cmd" />
 
   ***
 
-<Warning>
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
-</Warning>
-
+> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.

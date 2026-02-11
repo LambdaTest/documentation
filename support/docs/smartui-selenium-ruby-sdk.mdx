@@ -1,7 +1,19 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-selenium-ruby-sdk
+title: Integrate SmartUI SDK with Selenium-Ruby
+sidebarTitle: Ruby
+description: In this documentation, learn how integrate your Selenium Ruby automated tests with <BrandName />'s SmartUI.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-selenium-ruby-sdk/
+slug: smartui-selenium-ruby-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-ruby-sdk/
+
 ---
-title: "Integrate SmartUI SDK with Selenium-Ruby"
-sidebarTitle: "Ruby"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
 Welcome to the world of simplified visual testing with the SmartUI SDK.
@@ -11,9 +23,9 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Create a SmartUI Project
 
@@ -31,35 +43,34 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdkCloud.rb` file present in the `sdk` folder.
+You can clone the sample repository to run `<BrandName />` automation tests with `SmartUI` and use the `sdkCloud.rb` file present in the `sdk` folder.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-ruby-selenium-sample
+git clone https://github.com/<BrandName />/smartui-ruby-selenium-sample
 cd smartui-ruby-selenium-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `<BrandName /> SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
-<Info>
-NOTE
+<Note>
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
 ```
-gem install lambdatest-selenium-driver selenium-webdriver
+gem install testmu ai-selenium-driver selenium-webdriver
 ```
 
 ### **Step 3:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -83,7 +94,7 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -130,13 +141,13 @@ Once, the configuration file will be created, you will be seeing the default con
   "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
-<Note>
-INFO
+<Info>
+**Advanced options in SmartUI configuration**
 
 - For capturing fullpage or viewport screenshots, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#12-viewports)
 - For the list of available mobile viewports, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
 - For more information about SmartUI config global options, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#3-global-options-optional).
-</Note>
+</Info>
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
@@ -144,13 +155,13 @@ INFO
 
 ```ruby
 require "selenium-webdriver"
-require "lambdatest/selenium/driver"
+require "testmu ai/selenium/driver"
 
 driver = Selenium::WebDriver.for :chrome
 driver.navigate.to "https://www.pinterest.com/pin/16958936087791895/"
 
 # Take a snapshot
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
 
 driver.quit
 ```
@@ -163,11 +174,10 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui exec ruby sdkCloud.rb --config .smartui.json
 ```
 
-<Info>
-NOTE
+<Note>
+**You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.**
 
-You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
-</Info>
+</Note>
 
 ##  View SmartUI Results
 
@@ -175,7 +185,7 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -187,12 +197,12 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-<Tabs >
-<Tab title='Ignore ID'>
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Ignore ID">
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by" ID"
 options = {
@@ -201,11 +211,11 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Ignore Class'>
+<Tab title="Ignore Class">
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by" Class"
 options = {
@@ -214,11 +224,11 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Ignore XPath'>
+<Tab title="Ignore XPath">
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by" XPath"
 options = {
@@ -227,7 +237,7 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
@@ -241,14 +251,14 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 </Tab>
 
 </Tabs>
 
-<Tabs >
-<Tab title='Select ID'>
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Select ID">
 
 ```rb title="This is a sample for your configuration for Ruby to select by" ID."
 options = {
@@ -257,11 +267,11 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Select Class'>
+<Tab title="Select Class">
 
 ```rb title="This is a sample for your configuration for Ruby to select by" Class"
 options = {
@@ -270,11 +280,11 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Select XPath'>
+<Tab title="Select XPath">
 
 ```rb title="This is a sample for your configuration for Ruby to select by" XPath"
 options = {
@@ -283,7 +293,7 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
@@ -297,7 +307,7 @@ options = {
             }
         }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 </Tab>
 
@@ -307,8 +317,8 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
-<Tabs >
-<Tab title='Capture Element by ID'>
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Capture Element by ID">
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by" ID."
 options = {
@@ -317,11 +327,11 @@ options = {
       }
   }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Capture Element by Class'>
+<Tab title="Capture Element by Class">
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by" Class"
 options = {
@@ -330,11 +340,11 @@ options = {
       }
   }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
-<Tab title='Capture Element by XPath'>
+<Tab title="Capture Element by XPath">
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by" XPath"
 options = {
@@ -343,7 +353,7 @@ options = {
       }
   }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </Tab>
@@ -357,7 +367,7 @@ options = {
       }
   }
 driver.navigate.to 'Required URL'
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 </Tab>
 
@@ -369,7 +379,7 @@ If you encounter difficulties loading interactive elements that appear on scroll
 
 ```rb Example for scrolling to bottom for lazy elements
 require 'selenium-webdriver'
-require 'lambdatest/selenium/driver'
+require 'testmu ai/selenium/driver'
 
 def quick_scroll_to_bottom(driver, last_page_wait)
   height = driver.execute_script("return document.body.scrollHeight")
@@ -398,7 +408,7 @@ driver = Selenium::WebDriver.for :chrome
 begin
   driver.get("Required URL")
   quick_scroll_to_bottom(driver, 100) # Use wait time accordingly
-  LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
+  <BrandName />::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
 ensure
   driver.quit
 end
@@ -407,7 +417,7 @@ end
 
 ## Best Practices
 
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Screenshot Naming">
 
 **Screenshot Naming**
@@ -419,12 +429,12 @@ end
 
 **Example:**
 ```ruby
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, HomePage-Header")
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, HomePage-Header")
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
 ```
 
 </Tab>
-<Tab title='Wait for Page Load'>
+<Tab title="Wait for Page Load">
 
 **Wait for Page Load**
 
@@ -439,11 +449,11 @@ require 'selenium-webdriver'
 driver.navigate.to 'https://example.com'
 wait = Selenium::WebDriver::Wait.new(timeout: 10)
 wait.until { driver.find_element(id: 'main-content') }
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
+<BrandName />::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 ```
 
 </Tab>
-<Tab title='Handle Dynamic Content'>
+<Tab title="Handle Dynamic Content">
 
 **Handle Dynamic Content**
 
@@ -452,7 +462,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 - Document why elements are ignored for future reference
 
 </Tab>
-<Tab title='Configuration Management'>
+<Tab title="Configuration Management">
 
 **Configuration Management**
 
@@ -461,7 +471,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 - Document custom configuration choices
 
 </Tab>
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -471,7 +481,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 
 **Troubleshooting**
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Screenshots Not Appearing in Dashboard">
 
 **Issue: Screenshots Not Appearing in Dashboard**
@@ -497,12 +507,12 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: Project Not Found" Error**
 
@@ -520,7 +530,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -552,7 +562,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 4. Verify viewport size matches expected dimensions
 
 </Tab>
-<Tab title='Build Execution Fails'>
+<Tab title="Build Execution Fails">
 
 **Issue: Build Execution Fails**
 
@@ -574,11 +584,11 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 4. Check file permissions for configuration and project files
 
 </Tab>
-<Tab title='Gem Dependencies Not Resolving'>
+<Tab title="Gem Dependencies Not Resolving">
 
 **Issue: Gem Dependencies Not Resolving**
 
-**Symptoms**: Bundler cannot find `lambdatest-selenium-driver` gem
+**Symptoms**: Bundler cannot find `testmu ai-selenium-driver` gem
 
 **Possible Causes**:
 - Incorrect gem version
@@ -587,7 +597,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 - Ruby version mismatch
 
 **Solutions**:
-1. Check latest version on [RubyGems.org](https://rubygems.org/gems/lambdatest-selenium-driver)
+1. Check latest version on [RubyGems.org](https://rubygems.org/gems/testmu ai-selenium-driver)
 2. Clear gem cache:
    ```bash
    gem cleanup
@@ -599,11 +609,11 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
    ```
 5. Update Gemfile with specific version:
    ```ruby
-   gem 'lambdatest-selenium-driver', '~"> 1.0'
+   gem 'testmu ai-selenium-driver', '~"> 1.0'
    ```
 
 </Tab>
-<Tab title='Screenshot Names Not Matching Baseline'>
+<Tab title="Screenshot Names Not Matching Baseline">
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -627,11 +637,9 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
-</Tab>
-</Tabs>
 </Tab>
 </Tabs>
 
@@ -645,4 +653,5 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
+</Tab>
+</Tabs>

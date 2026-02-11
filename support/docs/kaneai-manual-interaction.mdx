@@ -1,8 +1,11 @@
 ---
 title: "KaneAI Manual Interaction Mode"
 sidebarTitle: "Manual Interaction"
-keywords: ['testmu ai automation','testmu ai kaneai','kaneai manual interaction']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai manual interaction']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Overview
 Manual Interaction in KaneAI lets you take direct control of the application during test authoring or while working in a playground session. Instead of relying only on natural language instructions, you can interact with the app in real time and let the agent record everything you do as structured test steps.
@@ -11,12 +14,10 @@ This is especially useful when you need to reach a very specific UI state, handl
 
 Manual Interaction works for Web and Mobile app testing, making it easier to capture realistic user behavior across platforms. 
 
+{/* <Note>
+**Manual interaction is now supported for both Web Browser Test Authoring on desktop and Mobile App Test Authoring on Android and iOS.  **
 
-{/* ... 
- <Note>
-Manual interaction is now supported for both Web Browser Test Authoring on desktop and Mobile App Test Authoring on Android and iOS.  
-</Note>
-*/} 
+</Note> */}
 ### Supported platforms
 Manual Interaction is available for
 
@@ -102,7 +103,6 @@ Manual Interaction records all characters you attempt to type as part of the ins
 
 For example, if an input field allows only numeric values and you try typing alphabets, those characters will still appear in the recorded instruction, even though they do not appear in the input field.
 
-
 ## Common use cases
 ### Use Case 1: Recording a complete workflow manually and converting it into a test
 This is useful when you already know the exact flow and want KaneAI to capture it as an automated test.
@@ -111,7 +111,7 @@ This is useful when you already know the exact flow and want KaneAI to capture i
 
 1. Open KaneAI and start a new test in Authoring mode.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/kaneai-and-start-a-new-test-in-authoring-mode.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/kaneai-and-start-a-new-test-in-authoring-mode.webp' alt="Image" className="doc_img img_center" />
 
 2. Launch the application under test in the browser or mobile device.
 
@@ -119,12 +119,12 @@ This is useful when you already know the exact flow and want KaneAI to capture i
 
 4. As you interact with the app, KaneAI records each action automatically as test steps.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/kaneai-records-each-action-automatically-as-test-steps.webp' alt="Image"/>
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/kaneai-records-each-action-automatically-as-test-steps.webp' alt="Image" className="doc_img img_center" />
 
 5. Once the workflow is complete, click Turn off Manual Interaction.
 
 6. Review the generated steps and add assertions using natural language where needed by pausing the test.
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertions-using-natural-language.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertions-using-natural-language.webp' alt="Image" className="doc_img img_center" />
 
 7. Save the test.
 
@@ -137,14 +137,14 @@ Ideal for infinite scroll lists or carousels that load items on demand.
 
 2. Scroll through the list or carousel until the desired element becomes visible.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/scroll-infinite-kane-ai.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/scroll-infinite-kane-ai.webp' alt="Image" className="doc_img img_center" />
 
 3. Click or interact with the loaded element.
 
 4. Turn off Manual Interaction after the interaction is captured.
 
 5. Add assertions to verify the correct item or state using natural language.
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertions-to-verify-the-correct-item-or-state-using-natural-language.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertions-to-verify-the-correct-item-or-state-using-natural-language.webp' alt="Image" className="doc_img img_center" />
 
 ### Use Case 3: Combining Manual Interaction with natural language instructions
 
@@ -154,19 +154,18 @@ This approach gives you the best of both worlds.
 
 1. Start writing your test using natural language instructions.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/start-writing-your-test-using-natural-language-instructions.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/start-writing-your-test-using-natural-language-instructions.webp' alt="Image" className="doc_img img_center" />
 
 2. When you reach a step that is easier to perform manually, enable Manual Interaction.
 
 3. Perform the required actions directly on the app.
 
 4. Disable Manual Interaction once done.
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/disable-manual-interaction.webp' alt="Image" />
-
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/disable-manual-interaction.webp' alt="Image" className="doc_img img_center" />
 
 5. Continue the test with natural language instructions.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/natural-language-instructions.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/natural-language-instructions.webp' alt="Image" className="doc_img img_center" />
 
 6. Add assertions at appropriate steps to validate outcomes.
 ### Use Case 4: Click and drag to adjust UI elements
@@ -180,7 +179,7 @@ This use case applies when you need to move or adjust an element using a click a
 
 3. Click on the element and drag it to the required position.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/element-and-drag-it-to-the-required-position.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/element-and-drag-it-to-the-required-position.webp' alt="Image" className="doc_img img_center" />
 
 4. Release the mouse once the desired state is reached.
 
@@ -190,7 +189,7 @@ This use case applies when you need to move or adjust an element using a click a
 
 7. Add an assertion in natural language to verify the final state. 
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-state.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-state.webp' alt="Image" className="doc_img img_center" />
 
 ### Use Case 5: Adjusting values using sliders (Only works on web)
 
@@ -208,7 +207,7 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 
 4. Release the slider once the desired value is set.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/release-the-slider-once-the-desired-value-is-set.webp' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/release-the-slider-once-the-desired-value-is-set.webp' alt="Image" className="doc_img img_center" />
 
 5. KaneAI records the slider movement as a test step.
 
@@ -216,14 +215,12 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 
 7. Add an assertion in natural language to verify the final value or state. For example, verify that the selected range or value is displayed correctly.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-value.webp' alt="Image" />
-
+<img loading="lazy" src='/assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-value.webp' alt="Image" className="doc_img img_center" />
 
 **Notes specific to sliders**
 - Slider interactions are recorded as click and drag actions.
 - Exact pixel-level precision may vary depending on the UI implementation.
 - Always validate the outcome using an assertion rather than relying only on the recorded movement.
-
 
 ## Best practices
  
@@ -250,8 +247,6 @@ System level popups are not supported through Manual Interaction. These flows ne
 
 ### Application state does not look correct after switching modes
 After turning off Manual Interaction, give the application a moment to stabilize before adding new steps or assertions. This helps avoid inconsistencies in recorded steps.
-
-
 
 ## Video Tutorial
 

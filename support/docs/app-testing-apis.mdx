@@ -10,15 +10,10 @@ keywords:
 
 import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-<div>
-<RealDeviceTag value="Real Device" /> 
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, we look at some APIs that will help you optimize your mobile app testing workflow. If you are performing live or automated app testing, you can use these APIs in your scripts to perform various actions.
 
@@ -35,7 +30,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X GET "https://mo
 | `region` | `region=us` <br/> OR <br/> `region=ap` <br/> OR <br/> `region=eu`  | We can add a region parameter which will provide us the devices available in the relevant real device cloud. <br/> `us` - USA <br/> `ap` - Asia Pacific <br/> `eu` - Europe |
 
 ## Uploading your Application
-
 
 | PARAMETER | EXAMPLE | DESCRIPTION |
 |-----------------|-------------|------------|
@@ -56,7 +50,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
 ```
-
 
 <Check>
 **TIP**
@@ -151,7 +144,6 @@ The payload allows you to check the processing status for specific features. If 
 }
 ```
 
-
 ## Fetching the concurrency details
 
 To get your concurrency details, run the below cURL command. 
@@ -189,7 +181,6 @@ To generate public **shareable build link**, run the below cURL command.
 ```bash
 curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' -H 'Content-Type: application/json' -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --data-raw '{"entityIds":["buildID"],"entityType":"App Automation Build","expiresAt":7}'
 ```
-
 
 To generate public **shareable test link**, run the below cURL command. 
 

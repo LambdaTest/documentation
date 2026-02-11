@@ -4,18 +4,18 @@ sidebarTitle: "Smart Variables"
 keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai smart variables', 'kaneai parameters']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 KaneAI's Smart Variables feature enhances test automation by providing predefined, dynamic variables that can be used across test steps, modules, and test cases. These variables enable dynamic adaptation to various environments and conditions, improving test reliability, reusability, and efficiency. 
 
 They cover categories such as date & time, system information, location, connectivity, randomization, and device-specific details, allowing users to create flexible and robust test scenarios that adapt to real-time conditions without manual input.
 
-<Info>
-**NOTE**
+<Note>
+**Smart variables are predefined and cannot be created or deleted by users. They are accessible in test steps, modules, and test cases.**
 
- Smart variables are predefined and cannot be created or deleted by users. They are accessible in test steps, modules, and test cases.
  When typing `{{` in the Web/App Agent, an overlay displays all available variables, including regular, secret, and smart variables, with smart variables labeled as "Smart" and accompanied by descriptions.
-</Info>
+</Note>
 
 Smart Variables are listed under the variables section within an authoring session.
 
@@ -90,6 +90,6 @@ Below is a comprehensive list of supported smart variables, organized by categor
 |                       | `app_version`         | `{{smart.app_version}}`       | Version of the app under test                                               |
 |                       | `app_package_name`    | `{{smart.app_package_name}}`  | Package name of the app under test                                          |
 
-<video className="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= '/assets/images/kane-ai/features/smart-variables/smart-variables-guide.mp4' type="video/mp4" />
 </video>

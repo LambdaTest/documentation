@@ -1,35 +1,35 @@
 ---
 title: "Bitbucket Pipeline Integration with SmartUI"
 sidebarTitle: "Bitbucket"
-keywords: ["lambdatest integrations", "smart ui integration", "smart ui integrations with ci/cd tools", "ci/cd tools", "continuous integration,continuous delivery", "continuous integration tools", "bitbucket ci cd"]
+keywords: ['testmu ai integrations', 'smart ui integration', 'smart ui integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'bitbucket ci cd']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Bitbucket is a web-based version control repository hosting service owned by Atlassian. It is primarily designed for development teams to manage their code, collaborate on projects, and streamline their workflows.
 
 This document will show you how to integrate Bitbucket Pipeline with SmartUI to shorten your test cycles.
 
 ## Steps to Integrate Bitbucket Pipeline with SmartUI
-
 To integrate Bitbucket Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
-<GitHubButton url="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/bitbucket" />
-</Check>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/bitbucket" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Setup your Projects and Repository in Bitbucket
 - Click on the **Create** >> **Project**.
 - Enter your Project details and click on **Create Project**.
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/bitbucket/1.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/bitbucket/1.png' alt="Create New Project"  />
 
 - Now click on the **Create Repository** button. You can either create a new repository or import your existing repository.
 
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/bitbucket/2.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/bitbucket/2.png' alt="Create New Project"  />
 
 ### Step 2: Create a New Workflow
 - Navigate to the **Deployment** section. Select your required template for CI/CD workflow file. For the demo we are using the Test template.
@@ -40,21 +40,20 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
 ```
 
-<Check>
-TIP
+<Tip>
+**You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Bitbucket project repository.**
 
-You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Bitbucket project repository.
-</Check>
+</Tip>
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png' alt="Create New Project" width="" height="" />
 
 ## Best Practices
 
-<Tabs>
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Secret Management">
 
 **Secret Management**
@@ -118,11 +117,21 @@ variables:
 - Optimize test execution order
 
 </Tab>
+<Tab title="Resource Management">
+
+**Resource Management**
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+</Tab>
 </Tabs>
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Pipeline Fails with Variable Not Found">
 
 **Issue: Pipeline Fails with "Variable Not Found"**
@@ -292,8 +301,8 @@ If you encounter issues not covered here:
 
 - Review [Bitbucket Pipelines Documentation](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

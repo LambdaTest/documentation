@@ -1,32 +1,28 @@
 ---
 title: "Configure Multiple Projects per repo"
 sidebarTitle: "Multiple Projects per repo"
-keywords:
-  [
-    "lambdatest",
-    "smart ui",
-    "videos",
-    "storybook"
-  ]
+keywords: ['testmu ai', 'smart ui', 'videos', 'storybook']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 SmartUI allows you to manage and test UI components effectively within a single repository. By organizing multiple projects in a single repository, you can centralize your workflows and streamline collaboration. This guide will walk you through setting up multiple projects in a repository for SmartUI and how you can trigger the same via GitHub Actions pipeline.
 
 ## Setting Up Multiple Projects in a Repository
 
 ### Prerequisites
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Your SmartUI Project Token
 
 ### Step 1: Organize Your Repository
 Create a repository where you can organize your projects into various directories. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 <Tip>
-Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+**Sample repo**
 
-<GitHubButton url="https://github.com/LambdaTest/smartui-monorepo-sample/"/>
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
+<a href="https://github.com/<BrandName />/smartui-monorepo-sample/" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 </Tip>
 
 ### Step 2: Create your Secrets
@@ -40,7 +36,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 - In the left sidebar, click the **New workflow** button.
 
 ```yaml reference
-https://github.com/LambdaTest/smartui-monorepo-sample/blob/main/.github/workflows/main.yml
+https://github.com/TestMu AI/smartui-monorepo-sample/blob/main/.github/workflows/main.yml
 ```
 
 ### Step 4: Execute your projects

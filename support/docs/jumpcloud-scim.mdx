@@ -1,9 +1,11 @@
 ---
 title: "JumpCloud User Provisioning"
-sidebarTitle: "JumpCloud" 
-keywords: [ "TestMu AI SCIM", "JumpCloud" ]
+sidebarTitle: "JumpCloud"
+keywords: ['TestMu AI SCIM', 'JumpCloud']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 JumpCloud is a cloud-based directory-as-a-service (DaaS) platform that provides comprehensive identity and access management (IAM) capabilities for organizations. It offers a centralized platform to manage and secure user identities, devices, and applications across a variety of environments, including cloud, on-premises, and hybrid infrastructures.
 
@@ -11,39 +13,39 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
 
 ## Prerequisites​
 - You will need an Enterprise plan with <BrandName />.
-- The SSO connection must be already established with <BrandName />. Learn how to [create a SSO Connection with <BrandName />](/support/docs/lambdatest-sso-self-serve).
+- The SSO connection must be already established with <BrandName />. Learn how to [create a SSO Connection with <BrandName />](/support/docs/testmu-sso-self-serve/).
 
 ## Steps to Integrate SCIM with JumpCloud
 
 - **Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/1.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/1.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 2:** Head to **Settings** > **Organization Settings** from the dropdown.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/2.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/2.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 3:** Go to <BrandName /> [Authentication & SSO settings](https://accounts.lambdatest.com/auth/sso) and click on Setup SSO. Head to the **Authentication and SSO** tab and click and copy the **SCIM Base URL and Bearer Token** option.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/3.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/3.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 4:** Log in to JumpCloud. Go to [JumpCloud Admin Console](https://console.jumpcloud.com/login/admin). Log in with your admin credentials. Sign in to the Jump-cloud. Select SSO Applications, then select Get Started.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/4.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/4.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 5:** Search for SCIM and then click on "**Create Custom Integration**" and then click next.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/5.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/6.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/5.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/6.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 6:** Check the box for "**Manage Single Sign-On (SSO)"** and then click "**Start**."
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/7.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/7.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 7:** Enter the name for **Display Label**, then click the **Save Application** and click  **configure Application**.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/8.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/9.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/8.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/9.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 8:** Go to <BrandName /> [**Authentication & SSO**](https://accounts.lambdatest.com/auth/sso) settings and click on **Setup SSO**.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/10.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/10.png' alt="jira-self-hosted-integration" /> 
 
 - Enter the **Connection Name** and Click on Add New Connection. and Select your **Identity Provider**.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/11.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/12.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/11.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/12.png' alt="jira-self-hosted-integration" />
 
 - **Step 9:** Copy the required SSO details from <BrandName />, including:
   - IdP Entity ID
@@ -51,7 +53,7 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
   - ACS URL
   - Subject Name
   - Login URL
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/13.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/13.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 10:** Configure <BrandName /> SSO Integration Using SAML.
 - Go to <BrandName /> Dashboard > **Authentication & SSO Settings**.
@@ -65,9 +67,9 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
   - Login URL
 - Click **Add Attribute** in jumpcloud, enter the necessary details, and save the configuration. (IdP)
 - Copy the **Metadata URL** from JumpCloud.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/14.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/15.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/16.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/14.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/15.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/16.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 11:** Finalize the Integration
 - Copy the **Metadata URL** from JumpCloud.
@@ -76,11 +78,11 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
 - Assign users to the SSO connection in JumpCloud and **Save** the configuration.
 
 - **Step 12:** Go to <BrandName /> Dashboard and go **SSO connection**. Copy **Bearer Token** and **SCIM Base URL**.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/17.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/17.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 13:**  Go **Identity Management** and paste **SCIM Base URL** and **Bearer Token**. and then click Save button.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/18.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/18.png' alt="jira-self-hosted-integration" /> 
 
 - **Step 14:** Enter email that does not exist on <BrandName /> platform and provide test email details, and click **Test Connection** and activate button.
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/19.png)
-  ![jira-self-hosted-integration](/assets/images/lambdatest-scim/jumpcloud-scim/20.png)
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/19.png' alt="jira-self-hosted-integration" /> 
+  <img loading="lazy" src='/assets/images/testmu ai-scim/jumpcloud-scim/20.png' alt="jira-self-hosted-integration" />

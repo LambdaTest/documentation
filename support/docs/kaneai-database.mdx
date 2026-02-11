@@ -1,27 +1,26 @@
 ---
 title: "Database Connection in KaneAI"
 sidebarTitle: "Database"
-keywords: ['database', 'sql',' nosql', 'gcp spanner']
+keywords: ['database', 'sql', 'nosql', 'gcp spanner']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+# Database Connection in KaneAI
 
 Managing test data in isolation or manually updating it across different test cases can lead to inconsistencies, increased maintenance efforts, and slower test execution. Integrating database connections within KaneAI allows teams to access and manipulate real-time data directly during test creation and execution. This capability ensures that tests are always aligned with the latest data, reducing manual data management, improving test accuracy, and enabling more efficient and scalable test automation workflows.
 
-<Info>
+<Note>
+**This document provides a step-by-step process to connect databases within the KaneAI platform. It covers the creation of a new connection, selecting database types, entering necessary details, and performing operations like queries and assertions. The guide ensures a smooth setup and usage experience for users looking to integrate their databases seamlessly with KaneAI.**
 
-**NOTE**
-
-This document provides a step-by-step process to connect databases within the KaneAI platform. It covers the creation of a new connection, selecting database types, entering necessary details, and performing operations like queries and assertions. The guide ensures a smooth setup and usage experience for users looking to integrate their databases seamlessly with KaneAI.
-</Info>
+</Note>
 
 ## Creating a database connection
 
 To begin, you need to access the [database connections](https://kaneai.lambdatest.com/databases "database connections") page within KaneAI and initiate the creation of a new connection by clicking on **Create New Connection**.
 
 <img loading="lazy" src='/assets/images/kane-ai/features/create_database.png' alt="create-database" />
-
 
 ### Add connection details
 
@@ -39,11 +38,10 @@ Unlike traditional databases, GCP Spanner does not use standard hostnames, ports
 
 <img loading="lazy" src='/assets/images/kane-ai/features/create_database_gcp_spanner.png' alt="create-database-list" />
 
-<Check>
-**TIP**
+<Tip>
+**KaneAI supports SQL, NoSQL, and Cloud-native (GCP Spanner) database connections.**
 
-KaneAI supports SQL, NoSQL, and Cloud-native (GCP Spanner) database connections.
-</Check>
+</Tip>
 
 ### Connecting local databases
 
@@ -54,45 +52,38 @@ For local or private databases, select a tunnel if your tunnel is active. The tu
 Following flag will be additionally required for database connections: `--expose database_type:host:port`. 
 
 So, your command will look like:
-
 ```bash
-{`./LT --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --expose mysql:0.0.0.0:3306 --verbose --env ht-prod`}
-```
 
+{`./LT --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --expose mysql:0.0.0.0:3306 --verbose --env ht-prod`}
+
+```
 
 ## Using Database queries within KaneAI session
 
 Navigate within your KaneAI session. Use the slash command to add a database query. All connected databases will be visible, allowing you to view the schema or directly enter a query. For instances like GCP Spanner, the schema discovery will automatically show all user-created tables and column data types for the configured database.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/database-slash-command.jpg' alt="create-database"/>
+<img loading="lazy" src='/assets/images/kane-ai/features/database-slash-command.jpg' alt="create-database" />
 
 To perform a query, you can select any connected database and input your query to execute. You can leverage variables or parameters as well within the query to make your tests even more robust.
 
-<Check> 
-**SAFE QUERIES ONLY**
+<Tip>
+**Safe Queries Only**
 
 For safety and data integrity, KaneAI only allows `SELECT`, `INSERT`, and `UPDATE` operations. Altering or destructive queries such as `ALTER`, `CREATE`, `DELETE`, or `DROP` commands are not supported and will return an error.
-</Check>
+</Tip>
 
 <img loading="lazy" src='/assets/images/kane-ai/features/database-modal.jpg' alt="create-database" />
 
-<Note>
-**SPANNER ROW LIMIT**
+<Info>
+**Spanner Row Limit**
 
 For **GCP Spanner** queries, a **100-row limit** is enforced on all `SELECT` queries to ensure fast performance and prevent excessive data transfer. It is recommended to use `WHERE` clauses to filter your data.
-</Note>
+</Info>
 
 Once you Run or Add query, your query will be recorded as a test step within KaneAI, and a JSON variable containing the table response will be generated if the query is successful. This JSON variable can be used to perform various assertions on the data. You can continue adding multiple database queries and validate responses easily.
 
 ## Video explanation
 
-<iframe 
-src="https://app.trupeer.ai/embed?slug=sMHMyK6dl" 
-width="640" height="360" frameborder="0" allowfullscreen="true">
-</iframe>
-
-
-
-
+<iframe src="https://app.trupeer.ai/embed?slug=sMHMyK6dl" width="640" height="360" frameborder="0" allowfullscreen="true"></iframe>
 
 Have any feedback or request? Reach out to us via [support@testmu.ai](mailto:support@testmu.ai) and we would be happy to hear from you.

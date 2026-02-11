@@ -1,13 +1,15 @@
 ---
-title: "Deque axe Integration"
+title: "How to perform Accessibility testing using Deque's axe"
 sidebarTitle: "Deque axe"
-keywords: [ "accessibility testing with axe", "Lambdatest deque integration", "Lambdatest deque", "Lambdatest axe", "Lambdatest axe integration", "web accessibility testing with axe" ]
+keywords: ['accessibility testing with axe', 'testmu ai deque integration', 'testmu ai deque', 'testmu ai axe', 'testmu ai axe integration', 'web accessibility testing with axe']
 ---
-***
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Deque's axe is a world-class digital accessibility toolkit that allows you to integrate functionality into your tests to scan content and generate an a11y score.
 
-Learn how to automate your Web Accessibility tests with Lambdatest and Deque using Webdriver IO framework.
+Learn how to automate your Web Accessibility tests with <BrandName /> and Deque using Webdriver IO framework.
 
 1. Ensure you have the below dependency for running accessibility tests.
 
@@ -16,16 +18,16 @@ Learn how to automate your Web Accessibility tests with Lambdatest and Deque usi
 //**or the latest version
 ```
 
-2. The Lambdatest Service, which you probably have in your project.
+2. The <BrandName /> Service, which you probably have in your project.
 
 ```js
-"@wdio/lambdatest-service"
+"@wdio/testmu ai-service"
 ```
 
-3. The next step will be to ensure that our Lambdatest configuration file contains the desired browser configurations and Lambdatest Username and Access Key.
+3. The next step will be to ensure that our <BrandName /> configuration file contains the desired browser configurations and <BrandName /> Username and Access Key.
 
 ```js
-// Specify LambdaTest Username and Access Key.
+// Specify TestMu AI Username and Access Key.
 user: process.env.LT_USERNAME,
 key: process.env.LT_ACCESS_KEY,
 ```
@@ -63,4 +65,3 @@ before: function (capabilities, specs, browser) {
 ```
 
 ---
-

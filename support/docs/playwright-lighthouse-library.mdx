@@ -5,11 +5,13 @@ keywords: ['playwright lighthouse', 'lighthouse reports playwright', 'playwright
 ---
 
 import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 
 A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
 
-LambdaTest lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
+<BrandName /> lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
 
 <Warning>
 Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium** browsers.
@@ -18,7 +20,7 @@ Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium**
 <Check>
 **SAMPLE REPOSITORY**
 
-The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **LambdaTest's GitHub Repository**. You can either download or clone the repository to quickly run your tests.
+The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests.
 
 <GitHubButton url="https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js" />
 </Check>
@@ -84,7 +86,7 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 
 ### Sample Test Script
 
-This following script performs web automation testing using the Playwright and Lighthouse libraries on the LambdaTest platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
+This following script performs web automation testing using the Playwright and Lighthouse libraries on the <BrandName /> platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
 
 ```javascript reference title="playwright-lighthouse-report.js"
 require('dotenv').config();
@@ -114,14 +116,14 @@ const {expect} = require("expect");
     }
   }
 
-  console.log('Connecting to LambdaTest...');
+  console.log('Connecting to TestMu AI...');
   console.log('Username:', process.env.LT_USERNAME);
 
   const browser = await chromium.connect({
     wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
   })
 
-  console.log('Connected to LambdaTest successfully!');
+  console.log('Connected to TestMu AI successfully!');
   console.log('Creating new page...');
 
   const page = await browser.newPage()
@@ -139,8 +141,8 @@ const {expect} = require("expect");
   console.log('Clicking search box...');
   await element.click()
   
-  console.log('Typing "LambdaTest"...');
-  await element.type('LambdaTest')
+  console.log('Typing "TestMu AI"...');
+  await element.type('TestMu AI')
   await page.waitForTimeout(1000)
   
   console.log('Pressing Enter...');
@@ -158,22 +160,22 @@ const {expect} = require("expect");
 
   try {
     console.log('Verifying search results title...');
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI - Search')
     console.log('Lighthouse Test PASSED! Title matched successfully');
     
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
-    console.log('Marked test as PASSED in LambdaTest dashboard');
+    console.log('Marked test as PASSED in TestMu AI dashboard');
     
     await teardown(page, browser)
   } catch (e) {
     console.log('Lighthouse Test FAILED!');
     console.log('Error:', e.message);
-    console.log('Expected title: "LambdaTest - Search"');
+    console.log('Expected title: "TestMu AI - Search"');
     console.log('Actual title:', title);
     
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: e.stack } })}`)
-    console.log('Marked test as FAILED in LambdaTest dashboard');
+    console.log('Marked test as FAILED in TestMu AI dashboard');
     
     await teardown(page, browser)
     throw e.stack
@@ -192,10 +194,10 @@ async function teardown(page, browser) {
 }
 ```
 
-## Trigger your Test on LambdaTest
+## Trigger your Test on <BrandName />
 ### Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs>
 <Tab title="Linux / MacOS">
@@ -220,9 +222,9 @@ node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ```
 
 ### View Your Test Results
-To view your test runs that uses Playwright Lighthouse Library, go to the LambdaTest [Web Automation Dashboard](https://automation.lambdatest.com/).
+To view your test runs that uses Playwright Lighthouse Library, go to the <BrandName /> [Web Automation Dashboard](https://automation.lambdatest.com/).
 
-<img loading="lazy" src='/assets/images/playwright-testing/lighthouse-report.png' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/playwright-testing/lighthouse-report.png' alt="Image"/>
 
 
 

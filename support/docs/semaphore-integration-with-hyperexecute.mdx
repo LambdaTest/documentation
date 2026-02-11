@@ -1,12 +1,13 @@
 ---
-title: "Semaphore Integration with HyperExecute"
+title: "Semaphore CI Integration With HyperExecute"
 sidebarTitle: "Semaphore"
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','ci/cd tools','continuous integration','continuous delivery','continuous integration tools','semaphore ci']
-
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration', 'continuous delivery', 'continuous integration tools', 'semaphore ci']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+# Semaphore Integration with HyperExecute
 
 Semaphore CI/CD is a cloud-based platform that helps engineering teams of all sizes build, test, and deploy their software faster and more reliably. It provides a powerful and flexible way to automate your entire CI/CD pipeline, from code builds to unit tests to production deployments. It is easy to get started with and use, even if you're new to CI/CD. It offers a wide range of features and integrations, so you can customize your pipelines to meet the specific needs of your team and project.
 
@@ -18,32 +19,32 @@ To integrate Semaphore Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/semaphore" />
-</Check>
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/semaphore" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 **Step 1:** Go to the [Semaphore CI/CD](https://semaphoreci.com/) website and login to the site using GitHub or Bitbucket.
 
 **Step 2:** Click on **Choose Repository** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/1.png' alt="Image" />
 
 **Step 3:** Select the desired repository and click on **Next** button.
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/2.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/2.png' alt="Image" />
 
 **Step 4:** Click on **Continue to workflow setup** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/3.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/3.png' alt="Image" />
 
 **Step 5:** Select the  **Customize** button for custom setting in the workflow.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/4.png' alt="Image" />
 
-**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your LambdaTest [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your <BrandName /> [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
@@ -53,15 +54,15 @@ chmod +x hyperexecute
 
 Click on **Run the workflow** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/5.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/5.png' alt="Image" />
 
 - Logs of the Pipeline executed.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/6.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/6.png' alt="Image" />
 
 - Output in the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) Dashboard
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/7.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/semaphore/7.png' alt="Image" />
 
 ## Sample Workflow File
 

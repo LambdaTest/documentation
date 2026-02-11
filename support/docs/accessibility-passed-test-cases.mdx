@@ -1,13 +1,17 @@
 ---
-title: "Pass Audits Visibility"
+title: "Accessibility Passed Test Cases"
 sidebarTitle: "Passed Test Cases"
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Manual', 'Accessibility Testing Settings', 'Fragment identifier', 'wcag']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Pass Audits Visibility
 
 Pass Audits Visibility shows accessibility checks that pass WCAG compliance alongside violations in your test results. By default, accessibility reports only show violations and incomplete checks. This feature provides complete transparency by including the accessibility requirements your application already meets.
 
 ## Enable Pass Audits
-
-
 
 ### Manual Testing
 ---
@@ -16,9 +20,7 @@ Pass Audits Visibility shows accessibility checks that pass WCAG compliance alon
 2. Enable **Show Pass Audits**
 3. Run your accessibility scan to see passed audits in results
 
-![Accessibility Passed Test Cases](/assets/images/accessibility-testing/features/accessibility-passed-test-cases.png)
-
-
+<img loading="lazy" src='/assets/images/accessibility-testing/features/accessibility-passed-test-cases.png' alt="Accessibility Passed Test Cases" style={{ width: "650px", height: "auto"}} />
 
 ### Automation Testing
 ---
@@ -36,16 +38,11 @@ Add the `accessibility.passedTestCases: true`  capability to your test configura
 }
 ```
 
-
-
 ## Results and Dashboard
 ---
 When enabled, passed test cases will appear in the Accessibility tab of your Automation Dashboard:
 
-![Accessibility Passed Test Cases Example](/assets/images/accessibility-testing/features/accessibility-passed-test-cases-example.png)
-
-
-
+<img loading="lazy" src='/assets/images/accessibility-testing/features/accessibility-passed-test-cases-example.png' alt="Accessibility Passed Test Cases Example"  />
 
 ## Use Cases
 ---

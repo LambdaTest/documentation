@@ -1,21 +1,22 @@
 ---
-title: "Run Selenium Tests With NemoJS"
+title: "Run Selenium Tests With NemoJS | TestMu AI"
 sidebarTitle: "NemoJS"
 keywords: ['nemo selenium', 'nemojs selenium', 'nemojs automation testing', 'nemojs automation framework']
 ---
 
----
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Run Selenium Tests With NemoJS
+* * *
 
 NemoJS is an open-source NodeJS automation framework developed by PayPal. Nemo makes it easy to integrate Selenium automation into your NodeJS web projects.
 
-This document will help you run Selenium automated tests with NemoJS on LambdaTest cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can run NemoJS automated test cases across 3000+ different browsers and operating systems.
+This document will help you run Selenium automated tests with NemoJS on <BrandName /> cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can run NemoJS automated test cases across 3000+ different browsers and operating systems.
 
 ## Prerequisites
----
-
-<Warning>
-All the code samples in this documentation can be found in the [NemoJS LambdaTest Repository on <span style={{display: 'inline-block', verticalAlign: 'middle'}}><img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25" style={{display: 'inline', verticalAlign: 'middle'}} /></span> GitHub](https://github.com/LambdaTest/Nemo-Lambdatest-sample). You can either download or clone the repository to quickly run your tests.
-</Warning>
+* * *
+All the code samples in this documentation can be found in the [NemoJS <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/<BrandName />/Nemo-<BrandName />-sample). You can either download or clone the repository to quickly run your tests.
 
 Before starting running your Selenium tests with NemoJS, ensure you have the following things configured.
 
@@ -37,7 +38,7 @@ $ npm init
 $ npm install --save-dev nemo
 ```
 
-4. To run your Selenium tests with NemoJS, you would need to set your LambdaTest username and access key in the environment variables. To get it, visit [Automation Dashboard](https://automation.lambdatest.com/) and click on the Key button from the top-right.
+4. To run your Selenium tests with NemoJS, you would need to set your <BrandName /> username and access key in the environment variables. To get it, visit [Automation Dashboard](https://automation.lambdatest.com/) and click on the Key button from the top-right.
 
 **For Windows:**
 
@@ -59,12 +60,12 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 npm install
 ```
 
-6. Set the environment variables in `nemo.config.js` file with your LambdaTest Username and Access Key.
+6. Set the environment variables in `nemo.config.js` file with your <BrandName /> Username and Access Key.
 
 ## Running The Single Test Case With NemoJS
----
+* * *
 
-To run your single test case with NemoJS on LambdaTest, let’s understand our test case scenario, the below Nemo.js automation script will test a sample to-do list app. The code marks two list items as done, adds a list item, and then outputs the total number of pending items.
+To run your single test case with NemoJS on <BrandName />, let’s understand our test case scenario, the below Nemo.js automation script will test a sample to-do list app. The code marks two list items as done, adds a list item, and then outputs the total number of pending items.
 
 ``` js
 //nemo.test.js file
@@ -80,7 +81,7 @@ describe('@firstTest@', function () {
   it('should load a website', async function () {
     this.nemo.driver.manage().timeouts().implicitlyWait(5000);
     await this.nemo.driver.get(this.nemo.data.baseUrl);
-    await this.nemo.driver.get("https://lambdatest.github.io/sample-todo-app/");
+    await this.nemo.driver.get("https://testmu ai.github.io/sample-todo-app/");
     await this.nemo.view._waitVisible('name:li1', 5000);
     this.nemo.view._find('name:li1').click();
     this.nemo.view._find('name:li2').click();
@@ -105,9 +106,9 @@ npx nemo -P chrome
 ```
 
 ## Running The Parallel Tests With NemoJS
----
+* * *
 
-LambdaTest Selenium Grid allows you to perform parallel testing across 3000+ browsers and OS to automate your several test cases simultaneously. You can execute a single test case across various browsers, or you can run multiple test case scenarios across the same browser but with different browser versions.
+<BrandName /> Selenium Grid allows you to perform parallel testing across 3000+ browsers and OS to automate your several test cases simultaneously. You can execute a single test case across various browsers, or you can run multiple test case scenarios across the same browser but with different browser versions.
 
 Below is the code sample for the Parallel tests. In this code, we will test our Sample to-do app in three browser versions and operating systems.
 
@@ -235,5 +236,4 @@ Now run the below command to run the parallel tests.
 npx nemo -P chrome,chrome_2,firefox
 ```
 
-
-That’s all! You have successfully performed your Selenium tests with Nemo.js. In case you come across any doubts, feel free to reach out through our **24/7 chat support** or you can also drop a mail to [support@lambdatest.com](mailto:support@lambdatest.com). <br/>Happy testing!
+That’s all! You have successfully performed your Selenium tests with Nemo.js. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can also drop a mail to [support@testmu.ai](mailto:support@testmu.ai). <br />Happy testing!

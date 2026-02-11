@@ -1,8 +1,11 @@
 ---
 title: "How to Bypass Proxy Domains"
 sidebarTitle: "Bypass Proxy Domains"
-keywords: ["custom headers lambdatest", "bypass firewalls restrictions", "custom headers bypass firewalls"]
+keywords: ['custom headers testmu ai', 'bypass firewalls restrictions', 'custom headers bypass firewalls']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 When running tests with Dedicated Proxy (DP) enabled, all outgoing requests are routed through the proxy. While this provides secure and controlled network access, it can sometimes cause issues when your tests need to access services running locally, such as localhost endpoints or specific internal domains.
 
@@ -17,10 +20,7 @@ With `bypassProxyDomains`, you can configure specific domains (like localhost) t
 | `dedicatedProxy`     | `boolean` | Yes      | Must be set to `true` for `bypassProxyDomains` to take effect.                 |
 | `bypassProxyDomains` | `array`   | Optional | List of domains (hostnames) to bypass the dedicated proxy and resolve locally. |
 
-<Warning>
-
-`dedicatedProxy: true` is mandatory for bypassProxyDomains to take effect.
-</Warning>
+> `dedicatedProxy: true` is mandatory for bypassProxyDomains to take effect.
 
 ## Example Usage
 
@@ -31,8 +31,5 @@ String bypassProxyDomains[] = { "127.0.0.1", "localhost", "todomvc" };
 capabilities.setCapability("dedicatedProxy", true);
 capabilities.setCapability("bypassProxyDomains", bypassProxyDomains);
 ```
-<Note>
-NOTE
 
-**Note :** Cypress currently does not support bypassing the domains `127.0.0.1` and `localhost` when using the `bypassProxyDomains` capability
-</Note>
+> **Note :** Cypress currently does not support bypassing the domains `127.0.0.1` and `localhost` when using the `bypassProxyDomains` capability

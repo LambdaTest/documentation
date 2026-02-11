@@ -1,30 +1,32 @@
 ---
-title: "TestMo Integration With Lambdatest Grid"
+title: "How to integrate TestMo With TestMu AI"
 sidebarTitle: "TestMo"
-keywords: [ "Lambdatest integration", "Lambdatest integration with testmo", "Lambdatest selenium grid integration to testmo" ]
+keywords: ['TestMu AI integration', 'testmu ai integration with testmo', 'testmu ai selenium grid integration to testmo']
 ---
-***
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 TestMo is a unified test management software that helps teams manage and track all their testing activity and efforts in one place. It combines manual testing, exploratory & ad-hoc testing and test automation in one platform, so teams can work smarter and more productively.
 
-TestMo also offers integration with Lambdatest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **Lambdatest integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
+TestMo also offers integration with <BrandName /> to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **<BrandName /> integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
 
 ## Steps to Integrate your Project
 ***
 
 ### Pre-requisite
 
-- Create your account in [LambdaTest](https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
+- Create your account in [<BrandName />](https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
 
 ### Step 1: Build the Test Suite
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages
 
-<Check>
-**TIP**<br/>
-**You can take the reference from [here](/support/docs/getting-started-with-lambdatest-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by Lambdatest online Selenium Grid.**
-</Check>
+<Tip>
+**You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by <BrandName /> online Selenium Grid.**
 
-![provide access to Lambdatest account](/assets/images/testmo-integration/dashboard.webp)
+</Tip>
+
+<img loading="lazy" src='/assets/images/testmo-integration/dashboard.webp' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 ### Step 2: Generate your Testing Result XML Files
 To submit and report your test results to Testmo, execute your automated tests and generate a JUnit-style XML report file. This file format has become a standard format to exchange test results between tools and is supported by practically any testing tool. Testmo also directly supports this format so it's very easy to report your test automation results.
@@ -50,16 +52,16 @@ testmo -h
 ```
 - Generate the **API Token** in TestMo and run the below command:
 
-```
-export TESTMO_TOKEN=<YOUR_API_TOKEN>
+```bash
+export TESTMO_TOKEN=YOUR_API_TOKEN
 ```
 
-```
-testmo automation:run:submit --instance <https://<your_testmo_address>.testmo.net
- --project-id 1 --name "lambdatest" --source "frontend" --results 
- <your_test_result_file_path>.xml
+```bash
+testmo automation:run:submit --instance https://your_testmo_address.testmo.net \
+  --project-id 1 --name "testmu ai" --source "frontend" --results \
+  your_test_result_file_path.xml
 ```
 
 - Output in the Dashboard
 
-![provide access to Lambdatest account](/assets/images/testmo-integration/testmo-result.webp)
+<img loading="lazy" src='/assets/images/testmo-integration/testmo-result.webp' alt="provide access to <BrandName /> account" width="1280" height="684" />

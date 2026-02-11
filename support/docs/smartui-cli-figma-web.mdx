@@ -1,10 +1,22 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-cli-figma-web
+title: Getting started with <BrandName />'s SmartUI Figma-Web CLI
+sidebarTitle: Figma-Web CLI
+description: In this documentation, learn how to compare your figma designs to live production websites and web applications.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-cli/
+slug: smartui-cli-figma-web/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-figma-web/
+
 ---
-title: "Getting started with LambdaTest's SmartUI Figma-Web CLI"
-sidebarTitle: "Figma-Web CLI"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
-Welcome to the LambdaTest SmartUI Figma Web CLI documentation!
+Welcome to the <BrandName /> SmartUI Figma Web CLI documentation!
 
 With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying discrepancies between your designs and live websites. This guide will walk you through the process of running successful Figma-Web Visual tests using SmartUI CLI.
 
@@ -12,16 +24,15 @@ With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 
-<Info>
-NOTE
+<Note>
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
-The following steps will guide you in running your visual tests for Figma files on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your visual tests for Figma files on <BrandName /> platform using SmartUI CLI.
 
 ## Understanding Figma Tokens
 
@@ -31,12 +42,11 @@ The following steps will guide you in running your visual tests for Figma files 
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-<Warning>
-Example Figma URL:
-`https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
-- `figma_file_token`: `abc12345`
-- `figma_ids`: `2417-58969`
-</Warning>
+> Example Figma URL:
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+> - `figma_file_token`: `abc12345`
+> - `figma_ids`: `2417-58969`
+
 ---
 
 ## Create a SmartUI CLI Project
@@ -53,7 +63,7 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `<BrandName /> SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -70,6 +80,7 @@ npm install @lambdatest/smartui-cli
 ```
 smartui config:create-figma-web designs.json
 ```
+Once, the `designs` file will be created, you will be seeing the sample pre-filled configuration in the `designs.json` file:
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
@@ -110,17 +121,13 @@ smartui config:create-figma-web designs.json
   }
 }
 ```
-<Note>
-NOTE
-
-Note:  Unlike vanilla Figma CLI, designs.json includes browser parameters and auto-fetches viewports of Figma frames for efficient comparison.
-</Note>
+>Note:  Unlike vanilla Figma CLI, designs.json includes browser parameters and auto-fetches viewports of Figma frames for efficient comparison.
 
 ### **Step 3:** Configure your Project Token and Figma Token
 
 1. Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -146,7 +153,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 2. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -170,9 +177,9 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-### **Step 4:** Configure your LambdaTest Credentials
+### **Step 4:** Configure your <BrandName /> Credentials
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -196,7 +203,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 #### SmartUI CLI Design Config Options
 
@@ -218,11 +225,12 @@ npx smartui upload-figma-web designs.json
 
 ### Working example with actual web comparisons
 
-1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/smartui-figma-web-cli-sample`).
+1. Please clone the following sample GitHub repo (`https://github.com/<BrandName />/smartui-figma-web-cli-sample`).
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample
+git clone https://github.com/<BrandName />/smartui-figma-web-cli-sample
 ```
+2. Install the node modules using the command:
 
 ```bash
 npm i
@@ -230,7 +238,8 @@ npm i
 3. Configure your project token and Figma token
 
 - Setup your project token shown in the **SmartUI** app after creating your project.
-<Tabs>
+
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -250,12 +259,13 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </Tab>
 </Tabs>
 
 - Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -270,7 +280,7 @@ set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -279,25 +289,23 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-1. Create your figma baseline
+4. Create your figma baseline
 ```bash
 npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2
 ```
-1. Execute your functional test script (Selenium Nodejs in this sample)
+5. Execute your functional test script (Selenium Nodejs in this sample)
 ```
 npx smartui --config web-config.json exec --buildName=web-build -- node figma-web-local.js
 ```
 
-<Warning>
-**Points to Consider**
-- The browsers listed in the Figma configuration are used solely to enable comparisons between your designs and their corresponding live webpages.
-- Websites may exhibit browser-specific behaviors. To account for these variations, it is recommended to create distinct designs tailored for each browser, if necessary.
-</Warning>
+>**Points to Consider**
+> - The browsers listed in the Figma configuration are used solely to enable comparisons between your designs and their corresponding live webpages.
+> - Websites may exhibit browser-specific behaviors. To account for these variations, it is recommended to create distinct designs tailored for each browser, if necessary.
 
 ## Best Practices
 
-<Tabs >
-<Tab title='Build Names'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Build Names">
 
 **Build Names**
 
@@ -306,7 +314,7 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
    ```
 
 </Tab>
-<Tab title='Screenshot Names' >
+<Tab title="Screenshot Names">
 
 **Screenshot Names**
 
@@ -315,7 +323,7 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
    - Ensure `screenshot_names` in your config match the order of `figma_ids`
 
 </Tab>
-<Tab title='Branch Names' >
+<Tab title="Branch Names">
 
 **Branch Names**
 
@@ -336,8 +344,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs >
-<Tab title='Selenium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Selenium">
 
 ```java
 // Java
@@ -345,7 +353,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Playwright'>
+<Tab title="Playwright">
 
 ```javascript
 // JavaScript
@@ -353,7 +361,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Cypress'>
+<Tab title="Cypress">
 
 ```javascript
 // JavaScript
@@ -399,8 +407,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs>
-<Tab title='Selenium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Selenium">
 
 ```java
 // Java
@@ -408,7 +416,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Playwright'>
+<Tab title="Playwright">
 
 ```javascript
 // JavaScript
@@ -416,7 +424,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Cypress'>
+<Tab title="Cypress">
 
 ```javascript
 // JavaScript
@@ -448,7 +456,7 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <Tab title="Verify Figma Token">
 
 Verify Figma Token
@@ -537,8 +545,8 @@ Check Project Type
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -556,6 +564,4 @@ If you encounter issues not covered here:
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
-
-
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />

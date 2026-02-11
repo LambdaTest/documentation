@@ -1,16 +1,22 @@
 ---
-title: "Getting Started with LambdaTest's SmartUI Figma-App CLI"
+title: "Getting Started with TestMu AI's SmartUI Figma-App CLI"
 sidebarTitle: "Figma-App CLI"
-keywords: ["Visual Regression", "Mobile App Visual Testing", "Figma to App Comparison", "SmartUI CLI", "LambdaTest Mobile", "Design to Production Validation"]
+keywords: ['Visual Regression', 'Mobile App Visual Testing', 'Figma to App Comparison', 'SmartUI CLI', 'TestMu AI Mobile', 'Design to Production Validation']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real devices** with your **Figma design frames** to detect visual mismatches and ensure accurate implementation of mobile UI.
+
 ---
 
 ## Prerequisites
 
 - Node.js and npm installed
-- LambdaTest SmartUI account with App Automation plan
+- <BrandName /> SmartUI account with App Automation plan
 - Real device screenshots captured via Appium, SDK, or SmartUI platform
 - Figma Personal Access Token ([how to get one](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens))
 
@@ -24,13 +30,11 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-<Warning>
+> Example Figma URL:
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+> - `figma_file_token`: `abc12345`
+> - `figma_ids`: `2417-58969`
 
-Example Figma URL:
-`https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
-- `figma_file_token`: `abc12345`
-- `figma_ids`: `2417-58969`
-</Warning>
 ---
 
 ## Step-by-Step Guide
@@ -53,6 +57,7 @@ Example Figma URL:
 ```bash
 npm install @lambdatest/smartui-cli
 ````
+
 ---
 
 ### 3. Generate and Edit Configuration
@@ -94,6 +99,7 @@ npx smartui config:create-figma-app designs.json
 export PROJECT_TOKEN="your_smartui_project_token"
 export FIGMA_TOKEN="your_figma_personal_token"
 ```
+
 ---
 
 ### 5. Run the Comparison
@@ -121,12 +127,12 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Best Practices
 
-<Tabs >
-<Tab  title='Build Names'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Build Names">
 
 **Build Names**
 
@@ -135,7 +141,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
    ```
 
 </Tab>
-<Tab title='Screenshot Names' >
+<Tab title="Screenshot Names">
 
 **Screenshot Names**
 
@@ -144,7 +150,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
    - Ensure `screenshot_names` in your config match the order of `figma_ids`
 
 </Tab>
-<Tab title='Device Names' >
+<Tab title="Device Names">
 
 **Device Names**
 
@@ -165,8 +171,8 @@ driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 
 **Example for different frameworks:**
 
-<Tabs >
-<Tab title='Appium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Appium">
 
 ```javascript
 // JavaScript
@@ -174,7 +180,7 @@ await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 ```
 
 </Tab>
-<Tab title='Appium Java'>
+<Tab title="Appium Java">
 
 ```java
 // Java
@@ -187,7 +193,7 @@ driver.execute("smartui.takeScreenshot", Map.of("name", "homepage.png"));
 This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots (e.g., `homepage.png`) in the same build.
 
 </Tab>
-<Tab title='Device Names' >
+<Tab title="Device Names">
 
 **Device Names**
 
@@ -208,8 +214,8 @@ driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 
 **Example for different frameworks:**
 
-<Tabs >
-<Tab title='Appium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Appium">
 
 ```javascript
 // JavaScript
@@ -217,7 +223,7 @@ await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 ```
 
 </Tab>
-<Tab title='Appium Java'>
+<Tab title="Appium Java">
 
 ```java
 // Java
@@ -234,8 +240,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='Verify Figma Token' >
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Verify Figma Token">
 
 Verify Figma Token
 
@@ -245,7 +251,7 @@ Verify Figma Token
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 </Tab>
-<Tab title='Check File Token' >
+<Tab title="Check File Token">
 
 Check File Token
 
@@ -253,7 +259,7 @@ Check File Token
    - Ensure you have access to the Figma file
 
 </Tab>
-<Tab title='Validate Node IDs' >
+<Tab title="Validate Node IDs">
 
 Validate Node IDs
 
@@ -265,7 +271,7 @@ Validate Node IDs
 **Solutions**:
 
 </Tab>
-<Tab title='Check Screenshot Names' >
+<Tab title="Check Screenshot Names">
 
 Check Screenshot Names
 
@@ -274,7 +280,7 @@ Check Screenshot Names
    - Ensure `screenshot_names` array matches the order of `figma_ids`
 
 </Tab>
-<Tab title='Verify Device Sizes' >
+<Tab title="Verify Device Sizes">
 
 Verify Device Sizes
 
@@ -283,7 +289,7 @@ Verify Device Sizes
    - Verify orientation (portrait/landscape) matches between Figma and device
 
 </Tab>
-<Tab title='Check Build Names' >
+<Tab title="Check Build Names">
 
 Check Build Names
 
@@ -291,7 +297,7 @@ Check Build Names
    - Verify builds are in the same project
 
 </Tab>
-<Tab title='Project Type' >
+<Tab title="Project Type">
 
 Project Type
 
@@ -303,7 +309,7 @@ Project Type
 **Solutions**:
 
 </Tab>
-<Tab title='Verify Project Token' >
+<Tab title="Verify Project Token">
 
 Verify Project Token
 
@@ -313,7 +319,7 @@ Verify Project Token
    Ensure the token is set correctly and matches your SmartUI project.
 
 </Tab>
-<Tab title='Check Project Type' >
+<Tab title="Check Project Type">
 
 Check Project Type
 
@@ -323,8 +329,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [TestMu AI Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -339,8 +345,8 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 - [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-- [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
-- [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
+- [SmartUI CLI Docs](/support/docs/smartui-cli/)
+- [Appium + SmartUI Node Sample](https://github.com/TestMu AI/smartui-appium-nodejs)
 
 ---
 

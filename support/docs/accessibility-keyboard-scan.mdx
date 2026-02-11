@@ -1,7 +1,11 @@
 ---
 title: "Keyboard Accessibility Scan (Beta)"
 sidebarTitle: "Keyboard Scan"
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'DevTools', 'run quick scan', 'test issues', 'Keyboard Scan', 'Tab Order']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Overview
 
@@ -24,7 +28,7 @@ Choose how much of the page you want to test:
   - After selecting this option, click and drag to highlight the area you want to test
   - Or click on a container element to test that specific section
 
-<Warning> **Tip**: For complex pages, start with partial page tests on individual components before running a full page test.</Warning>
+> **Tip**: For complex pages, start with partial page tests on individual components before running a full page test.
 
 **Step 3: Review Tab Simulation Results**
 
@@ -63,23 +67,22 @@ While you're performing the manual check, the tool runs our accessibility automa
 - Scrollable regions without keyboard access
 - Focus indicators missing or unclear
 
-<br/>
+<br />
 
 ## Frequently Asked Questions
 
-<Accordion title="Q: Can this tool test keyboard navigation within iframes?">
-  A: The tool attempts to test iframe content when possible, but cross-origin iframes may have limitations due to security restrictions.
-</Accordion>
+**Q: Can this tool test keyboard navigation within iframes?**
 
-<Accordion title="Q: Why didn't the tool detect my custom dropdown menu?">
-  A: Complex widgets with dynamic content may require manual identification. Use the "Yes" option in Step 4 to mark these elements.
-</Accordion>
+A: The tool attempts to test iframe content when possible, but cross-origin iframes may have limitations due to security restrictions.
 
-<Accordion title="Q: How is this different from a regular axe-core scan?">
-  A: This test combines axe-core's automated checks with guided manual testing to catch issues that automated tools alone might miss, particularly custom interactive elements.
-</Accordion>
+**Q: Why didn't the tool detect my custom dropdown menu?**
 
-<Accordion title="Q: Can I save and share test results?">
+A: Complex widgets with dynamic content may require manual identification. Use the "Yes" option in Step 4 to mark these elements.
+
+**Q: How is this different from a regular axe-core scan?**
+
+A: This test combines axe-core's automated checks with guided manual testing to catch issues that automated tools alone might miss, particularly custom interactive elements.
+
+**Q: Can I save and share test results?**
 
 A: Yes, test results can be exported and shared with your team. Look for the export options in the report view.
-</Accordion>

@@ -1,19 +1,20 @@
 ---
-title: App Manager on Real Devices
-sidebarTitle: App Manager
-keywords: ['lambdaTest', 'testmu ai app manager', 'mobile app version control', 'manage mobile app builds', 'Accessibility Testing Settings', 'TestMu AI app storage', 'test .apk .aab .ipa files']
+title: "App Manager on Real Devices"
+sidebarTitle: "App Manager"
+keywords: ['testmu ai', 'testmu ai app manager', 'mobile app version control', 'manage mobile app builds', 'accessibility testing settings', 'testmu ai app storage', 'test .apk .aab .ipa files']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 The <BrandName /> App Manager is a tool within the Real Device App Testing section. It lets you easily upload, manage, and test different versions of your mobile apps. This guide explains how to access the App Manager, upload apps, search and filter them, and run any version on Real Devices.
 
-
-<Note>
-**CURRENTLY IN BETA**
+<Info>
+**Currently in BETA**
 
 To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
-</Note>
+
+</Info>
 
 ---
 
@@ -22,25 +23,22 @@ To access the App Manager in <BrandName />:
 
 **Step 1:** Navigate to **Real Device** under **App Testing** in the <BrandName /> dashboard.
 
-
 **Step 2:** Click on the **App Manager** CTA.
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_CTA.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_CTA.png' />
 
 **Step 3:** This will open the **App Manager** in a new tab. 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_MAIN_SCREEN.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_MAIN_SCREEN.png' />
 
 ## Uploading Apps on App Manager
 
 In the **App Manager** window, users can **upload mobile app** files Either by click **“Click to upload”**  or **drag and drop your file** into the upload box.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_FILE_UPLOAD.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_FILE_UPLOAD.png' />
 
 ---
-
 <Note>
-**NOTE**
+****Supported formats :****
 
-**Supported formats :**
 | Platform | Supported Format |
 |----------|---------------------------|
 | Android  | .apk, .aab        | 
@@ -74,7 +72,7 @@ Once your apps are uploaded, you can easily search and filter them using the too
 
     - Both **Android** and **iOS** apps together
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_FILTER_SEARCH_BAR.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_FILTER_SEARCH_BAR.png' />
 
 ---
 ## Version Control
@@ -83,32 +81,30 @@ Once your apps are uploaded, you can easily search and filter them using the too
 - When you click on an app name in the file bundle section, a **App Card** opens.
 - This **App Card** displays all versions of the selected app that have been uploaded.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_APP_CARD.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_APP_CARD.png' />
 - The **most recent version** appears at the top, with older versions listed below.
 - Users can:
   -  **Search** through the uploaded App versions.
   -  Run any version by clicking the **Green Run** button or recent version by clicking on **Run App**.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_VERSION_CONTROL.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_VERSION_CONTROL.png' />
 ---
 
 ### Release Notes for Versions
 For each app version, you can add multiline release notes to help differentiate between multiple builds.
 - To add release notes, open the three dots menu on the desired version in the App Card and click Version Details.
-<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r1.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r1.png' />
 - Inside Version Details, you’ll see an option to enter release notes.
-<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r2.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r2.png' />
 - Once added, a notes icon appears on the version. On hover, the release note is shown directly from the App Card. 
-<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r3.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/App_Manager_r3.png' />
 
+<Info>
+**- Maximum release notes length is upto 500 characters.**
 
-<Note>
-**INFO**
-
-- Maximum release notes length is upto 500 characters.
 - On hover, only the first 100 characters are displayed, followed by ... if the text is longer.
 - Only the owner of the version has permission to add or edit release notes, Other users can only view them.
-</Note>
+</Info>
 
 ---
 
@@ -118,7 +114,7 @@ Once a specific version is selected:
  **Step 1:** Click the **Run App** button beside the version you want to test.
 
  **Step 2** This action redirects you to the **Real Device App Testing** screen 
-<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_RUN_TEST.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/APP_MANAGER_RUN_TEST.png' />
 
  **Step 3** A list of available Real devices is displayed. Click on the device you want to use for testing.
 

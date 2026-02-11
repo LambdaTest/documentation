@@ -1,16 +1,15 @@
 ---
 title: "Version 3.0.5"
 sidebarTitle: "Version 3.0.5"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'FAQs']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Feature: syncStart
 HyperExecute now supports the `syncStart` directive in the job YAML. When enabled, all VMs in `autosplit` or `matrix` mode start their tasks simultaneously after allocation—ideal for benchmarking or comparative test runs.
 
 If some VMs are not ready within 15 minutes, the job starts with the available ones.
-<Note>
-**NOTE :** For detailed usage and examples, refer to the detailed [HyperExecute documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#syncstart).
-</Note>
+
+> **NOTE :** For detailed usage and examples, refer to the detailed [HyperExecute documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#syncstart).

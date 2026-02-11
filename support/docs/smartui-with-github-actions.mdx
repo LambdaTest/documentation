@@ -1,18 +1,11 @@
 ---
-title: GitHub Actions Pipeline Integration with SmartUI
-sidebarTitle: GitHub Actions
-keywords:
-  [
-    "lambdatest integrations",
-    "smart ui integration",
-    "smart ui integrations with ci/cd tools",
-    "ci/cd tools",
-    "continuous integration,continuous delivery",
-    "continuous integration tools",
-    "github ci cd"
-]
+title: "GitHub Actions Pipeline Integration with SmartUI"
+sidebarTitle: "GitHub Actions"
+keywords: ['testmu ai integrations', 'smart ui integration', 'smart ui integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'github ci cd']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 GitHub Actions is a powerful automation and continuous integration/continuous delivery (CI/CD) platform built into GitHub. It allows you to create custom automated YAML workflows directly within your GitHub repositories. This helps you to build and test every pull request to your repository, or deploy merged pull requests to production.
 
@@ -21,13 +14,13 @@ This document will show you how to integrate GitHub Actions Pipeline with SmartU
 ## Steps to Integrate GitHub Actions Pipeline with SmartUI
 To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. 
-<GitHubButton url="https://github.com/amanchopra1905/smartui-ci-cd-integrations" />
-</Check>
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Create your Secrets
 - Click on the **Settings** of your repository.
@@ -49,16 +42,14 @@ https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/main/.github/w
 ### Step 4: Run the Workflow
 To run the new pipeline that you just created, click the **Run workflow** button on the workflow page. A prompt will ask you to enter your **PROJECT_TOKEN**. You can get your project token from the dashboard after creating your SmartUI project.
 
-![Create New Project](/assets/images/smart-visual-testing/ci-cd-integration/github-actions/github-actions.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/ci-cd-integration/github-actions/github-actions.png' alt="Create New Project" width="" height="" />
 
-<Warning>
-Check your output in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
-</Warning>
+> Check your output in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
 ## Best Practices
 
-<Tabs >
-<Tab title='Secret Management'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Secret Management">
 
 **Secret Management**
 
@@ -68,7 +59,7 @@ Check your output in the [SmartUI Dashboard](https://smartui.lambdatest.com/proj
 - Use different secrets for different environments
 
 </Tab>
-<Tab title='Workflow Optimization'>
+<Tab title="Workflow Optimization">
 
 **Workflow Optimization**
 
@@ -87,7 +78,7 @@ on:
 ```
 
 </Tab>
-<Tab title='Build Naming'>
+<Tab title="Build Naming">
 
 **Build Naming**
 
@@ -104,7 +95,7 @@ on:
 ```
 
 </Tab>
-<Tab title='Error Handling'>
+<Tab title="Error Handling">
 
 **Error Handling**
 
@@ -114,7 +105,7 @@ on:
 - Add retry logic for flaky tests
 
 </Tab>
-<Tab title='Resource Management'>
+<Tab title="Resource Management">
 
 **Resource Management**
 
@@ -124,7 +115,7 @@ on:
 - Optimize test execution order
 
 </Tab>
-<Tab title='Resource Management'>
+<Tab title="Resource Management">
 
 **Resource Management**
 
@@ -138,8 +129,8 @@ on:
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='Workflow Fails with Secret Not Found'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Workflow Fails with Secret Not Found">
 
 **Issue: Workflow Fails with "Secret Not Found"**
 
@@ -162,7 +153,7 @@ on:
 4. Verify secrets are set for the correct repository/environment
 
 </Tab>
-<Tab title='PROJECT_TOKEN Prompt Appears'>
+<Tab title="PROJECT_TOKEN Prompt Appears">
 
 **Issue: PROJECT_TOKEN Prompt Appears**
 
@@ -193,7 +184,7 @@ on:
    ```
 
 </Tab>
-<Tab title='Tests Run But No Results in Dashboard'>
+<Tab title="Tests Run But No Results in Dashboard">
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -223,7 +214,7 @@ on:
 4. Check if SmartUI CLI step completed successfully
 
 </Tab>
-<Tab title='Workflow Times Out'>
+<Tab title="Workflow Times Out">
 
 **Issue: Workflow Times Out**
 
@@ -252,7 +243,7 @@ on:
 4. Split tests across multiple workflows
 
 </Tab>
-<Tab title='Dependencies Installation Fails'>
+<Tab title="Dependencies Installation Fails">
 
 **Issue: Dependencies Installation Fails**
 
@@ -282,7 +273,7 @@ on:
 4. Check for version conflicts in package.json
 
 </Tab>
-<Tab title='SmartUI CLI Not Found'>
+<Tab title="SmartUI CLI Not Found">
 
 **Issue: SmartUI CLI Not Found**
 
@@ -317,8 +308,8 @@ If you encounter issues not covered here:
 
 - Review [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

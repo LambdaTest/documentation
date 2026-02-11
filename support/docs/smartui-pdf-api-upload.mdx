@@ -1,13 +1,21 @@
 ---
 title: "Upload PDFs via API"
 sidebarTitle: "API Upload"
-keywords: ["PDF API Upload", "SmartUI API", "Visual Regression Testing", "PDF Testing", "REST API"]
+keywords: ['PDF API Upload', 'SmartUI API', 'Visual Regression Testing', 'PDF Testing', 'REST API']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+<Warning>
+**This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).**
+
+</Warning>
 
 ## Prerequisites for Using SmartUI
 
 - Familiarity with HTTP APIs is essential.
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project
@@ -38,15 +46,14 @@ Here's how you can upload your PDFs:
 
 | Variable     | Type   | Description                                                                                                                                      | Required? |
 | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| projectToken | string | This token is required to upload PDF files and validate your project. <br/> Example: `projectToken:123456#1234abcd-****-****-****-************` | Yes       |
-| pathToFiles  | array  | Add the path to the PDFs that will be uploaded. <br/> Example: `pathToFiles : [ "path/to/pdf-1", "path/to/pdf-2"]`                                | Yes       |
-| buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br/> Example: `buildName : #<Build_Name>`                                | No        |
+| projectToken | string | This token is required to upload PDF files and validate your project. <br /> Example: `projectToken:123456#1234abcd-****-****-****-************` | Yes       |
+| pathToFiles  | array  | Add the path to the PDFs that will be uploaded. <br /> Example: `pathToFiles : [ "path/to/pdf-1", "path/to/pdf-2"]`                                | Yes       |
+| buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br /> Example: `buildName : #<Build_Name>`                                | No        |
 
-<Info>
-NOTE
+<Note>
+**Only files in `.pdf` format are compatible with this feature.**
 
-Only files in `.pdf` format are compatible with this feature.
-</Info>
+</Note>
 
 ## API Request Example
 
@@ -79,8 +86,8 @@ The API will return a JSON response containing:
 
 ## Best Practices
 
-<Tabs >
-<Tab title='PDF File Management' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="PDF File Management">
 
 **PDF File Management**
 
@@ -91,7 +98,7 @@ The API will return a JSON response containing:
 
 </Tab>
 
-<Tab title='Project Token Management'>
+<Tab title="Project Token Management">
 
 **Project Token Management**
 
@@ -102,7 +109,7 @@ The API will return a JSON response containing:
 
 </Tab>
 
-<Tab title='Build Naming'>
+<Tab title="Build Naming">
 
 **Build Naming**
 
@@ -117,7 +124,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 </Tab>
 
-<Tab title='Error Handling'>
+<Tab title="Error Handling">
 
 **Error Handling**
 
@@ -128,7 +135,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 </Tab>
 
-<Tab title='Batch Processing'>
+<Tab title="Batch Processing">
 
 **Batch Processing**
 
@@ -142,8 +149,8 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='PDF Upload Fails' >
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="PDF Upload Fails">
 
 **Issue: PDF Upload Fails**
 
@@ -161,12 +168,12 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 1. Verify PDF file is valid and not corrupted
 2. Check file path is correct and accessible
 3. Verify file size is within limits
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 5. Verify PROJECT_TOKEN is set correctly
 6. Confirm API endpoint URL is correct
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: "Project Not Found" Error**
 
@@ -184,7 +191,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Upload Returns Error Response'>
+<Tab title="Upload Returns Error Response">
 
 **Issue: Upload Returns Error Response**
 
@@ -204,7 +211,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 5. Retry upload if transient error
 
 </Tab>
-<Tab title='PDFs Not Appearing in Dashboard'>
+<Tab title="PDFs Not Appearing in Dashboard">
 
 **Issue: PDFs Not Appearing in Dashboard**
 
@@ -230,8 +237,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF CLI Upload](/support/docs/smartui-pdf-cli-upload) for alternative upload methods
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

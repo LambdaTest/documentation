@@ -6,11 +6,13 @@ keywords: ['files upload', 'app test automation', 'media upload', 'upload automa
 
 import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <div>
 <RealDeviceTag value="Real Device" />
 </div>
-LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
+<BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -33,7 +35,7 @@ By the end of this topic, you will be able to:
 
 ### Supported File Types
 
-LambdaTest supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
+<BrandName /> supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
 - **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
@@ -46,11 +48,11 @@ This section provides a comprehensive guide on leveraging this feature within au
 - Uploading the files and obtaining the `media_url`.
 - Using `media_url` into your tests using `uploadMedia` capability.
 
-### Step 1 : Uploading the files on Lambdatest Cloud
+### Step 1 : Uploading the files on <BrandName /> Cloud
 
 #### Using REST API
 
-You can use the following curl command to upload any file `media` and `non-media` from your system to the LambdaTest cloud.
+You can use the following curl command to upload any file `media` and `non-media` from your system to the <BrandName /> cloud.
 
 ```bash
 curl --user "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"
@@ -73,25 +75,21 @@ Below is a sample response demonstrating the return of the `media_url` parameter
 ```
 #### Using App Automation Interface
 
-You can also utilize LambdaTest's user-friendly UI to upload the files on Lambdatest cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
+You can also utilize <BrandName />'s user-friendly UI to upload the files on <BrandName /> cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
 
 ----
 
 ### Step 2 : Setting Capability in Your Test Script
 
-Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
+Once the files are uploaded to <BrandName />'s cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
 
 <CodeGroup>
 ```java Java
 DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"));
-```
-
 ```javascript JavaScript
 DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);
-```
-
 ```python Python
 desired_capabilities = {
   "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]

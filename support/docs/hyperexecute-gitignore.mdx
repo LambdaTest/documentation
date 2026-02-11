@@ -1,8 +1,10 @@
 ---
 title: "Ignore Unnecessary Files in your Payload"
 sidebarTitle: "Ignoring Files"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 When you trigger your job, [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) creates a zip of your test scripts before sending it for execution on the HyperExecute Platform.
@@ -34,11 +36,8 @@ The above file would make sure that following are excluded while the zip is crea
 3. ***.type**: All files of the format `type`.
 4. **examplename/**: All files and folders under the parent folder called `examplename`.
 
-<Note>
-**INFO**
-
-- By leveraging `.hyperexecuteignore` file, you can achieve similar functionality to `.gitignore` and streamline the test execution process by keeping the archive size minimal.
+<Info>
+**- By leveraging `.hyperexecuteignore` file, you can achieve similar functionality to `.gitignore` and streamline the test execution process by keeping the archive size minimal.**
 
 - If both files are present in the directory then the files listed in the `.gitignore` only are ignored. The items listed in `.gitignore` file take **precedence** over the items listed under `.hyperexecuteignore`.
-</Note>
-
+</Info>

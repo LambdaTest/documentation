@@ -1,21 +1,12 @@
 ---
 title: "SmartUI App SDK Integration Guide"
 sidebarTitle: "Appium Java SDK"
-keywords:
-  [
-    "Visual Regression",
-    "Visual Regression Testing Guide",
-    "Visual Regression Test Automation",
-    "Visual Regression Automation Testing",
-    "Running Visual Regression Tests",
-    "Visual Regression Testing Online",
-    "Run Visual Regression",
-    "Visual Regression Run Specific Test",
-    "Visual Regression Testing Environment",
-    "How to Run Visual Regression Tests",
-    "Mobile App Testing",
-    "App Visual Testing"
-  ]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests', 'Mobile App Testing', 'App Visual Testing']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 SmartUI App SDK enables you to perform visual regression testing on your mobile applications using any cloud testing provider. This guide will help you integrate SmartUI App SDK with your existing mobile app testing framework.
@@ -23,7 +14,7 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 ## Prerequisites
 
 - Basic understanding of mobile app testing and Appium
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials
 - An active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit
 
 ## Create a SmartUI Project
@@ -44,8 +35,8 @@ Add the following dependency to your `pom.xml` file:
 
 ```xml
 <dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-java-sdk</artifactId>
+    <groupId>io.github.testmu ai</groupId>
+    <artifactId>testmu ai-java-sdk</artifactId>
     <version>1.0.8</version>
 </dependency>
 ```
@@ -56,22 +47,22 @@ You can configure your project token in one of two ways:
 
 1. **Using Environment Variables**:
 
-<Tabs >
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
@@ -80,7 +71,7 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-1. **Directly in the Configuration**:
+2. **Directly in the Configuration**:
 You can pass the project token directly in your test configuration as shown in Step 3.
 
 ### Step 3: Integrate SmartUI in Your Test Script
@@ -170,7 +161,7 @@ ssConfig.put("platform", "iOS");
 Example configurations for different cloud providers:
 
 ```java
-// For an iOS test on LambdaTest
+// For an iOS test on TestMu AI
 ssConfig.put("deviceName", "iPhone 12");
 ssConfig.put("platform", "iOS");
 
@@ -183,11 +174,10 @@ ssConfig.put("deviceName", "Custom Device Name"); // Use the same name consisten
 ssConfig.put("platform", "iOS/Android"); // Use the actual platform
 ```
 
-<Info>
-NOTE
+<Note>
+**The device name and platform you specify here are used only for screenshot organization and comparison. The actual device selection is handled by your cloud provider's capabilities configuration.**
 
-The device name and platform you specify here are used only for screenshot organization and comparison. The actual device selection is handled by your cloud provider's capabilities configuration.
-</Info>
+</Note>
 
 ## Region-Based Ignore/Select Functionality for Dynamic Content
 
@@ -255,14 +245,14 @@ config.put("selectBoxes", gson.toJson(selectBoxesMap));
 | `ignoreBoxes` | JSON String | Defines regions to ignore during visual comparison. Accepts XPath locators. | No |
 | `selectBoxes` | JSON String | Defines regions to include in visual comparison. Accepts XPath locators. | No |
 
-<Info>
-BEST PRACTICES
+<Note>
+**Best Practices**
 
 - Use `ignoreBoxes` for elements that change frequently (e.g., ads, timestamps, user avatars).
 - Use `selectBoxes` when you want to focus comparison only on critical UI sections.
 - Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
 - Ensure XPath expressions are unique and stable across test runs.
-</Info>
+</Note>
 
 ## View SmartUI Results
 
@@ -274,12 +264,12 @@ After test execution, visit your SmartUI project dashboard to:
 4. Approve or reject changes
 5. Manage baseline images
 
-![SmartUI Results](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="SmartUI Results" width="768" height="373" />
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Screenshot Naming'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Screenshot Naming">
 
 **Screenshot Naming**
 
@@ -294,8 +284,8 @@ SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
-</Tab >
-<Tab title='Wait for Screen Load'>
+</Tab>
+<Tab title="Wait for Screen Load">
 
 **Wait for Screen Load**
 
@@ -311,7 +301,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
 </Tab>
-<Tab title='Handle Dynamic Content'>
+<Tab title="Handle Dynamic Content">
 
 **Handle Dynamic Content**
 
@@ -320,7 +310,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </Tab>
-<Tab title='Device Configuration'>
+<Tab title="Device Configuration">
 
 **Device Configuration**
 
@@ -329,7 +319,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test on devices that match your user base
 
 </Tab>
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -339,8 +329,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 **Troubleshooting**
 
-<Tabs >
-<Tab title='Screenshots Not Captured' >
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Screenshots Not Captured">
 
 **Issue: Screenshots Not Captured**
 
@@ -363,18 +353,18 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Verify SDK dependency is added to pom.xml:
    ```xml
    <dependency>
-       <groupId>io.github.lambdatest</groupId>
-       <artifactId>lambdatest-java-sdk</artifactId>
+       <groupId>io.github.testmu ai</groupId>
+       <artifactId>testmu ai-java-sdk</artifactId>
        <version>1.0.2</version>
    </dependency>
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: Project Not Found" Error**
 
@@ -393,7 +383,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Check credentials match the account with the project
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -422,7 +412,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Verify app is in correct state before screenshot
 
 </Tab>
-<Tab title='ignoreBoxes/selectBoxes Not Working'>
+<Tab title="ignoreBoxes/selectBoxes Not Working">
 
 **Issue: ignoreBoxes/selectBoxes Not Working**
 
@@ -445,11 +435,11 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Test XPath locators in isolation before using in config
 
 </Tab>
-<Tab title='Maven Dependencies Not Resolving'>
+<Tab title="Maven Dependencies Not Resolving">
 
 **Issue: Maven Dependencies Not Resolving**
 
-**Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
+**Symptoms**: Maven cannot find `testmu ai-java-sdk` or dependencies fail
 
 **Possible Causes**:
 - Incorrect dependency version
@@ -457,7 +447,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Network connectivity problems
 
 **Solutions**:
-1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
+1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.testmu ai/testmu ai-java-sdk)
 2. Clear Maven cache:
    ```bash
    mvn clean
@@ -466,7 +456,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Check pom.xml for version conflicts
 
 </Tab>
-<Tab title='Screenshot Names Not Matching Baseline'>
+<Tab title="Screenshot Names Not Matching Baseline">
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -490,11 +480,9 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
-</Tab>
-</Tabs>
 </Tab>
 </Tabs>
 
@@ -508,4 +496,5 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
+</Tab>
+</Tabs>

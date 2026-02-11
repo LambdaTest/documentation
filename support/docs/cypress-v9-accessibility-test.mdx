@@ -1,14 +1,23 @@
----
-title: "Automation Tests with Accessibility Tool using Cypress v9"
-sidebarTitle: "Cypress v9"
----
-
 import { BrandName } from "/snippets/BrandName.mdx";
-import { GitHubButton } from "/snippets/GitHubButton.mdx";
+
+
+
+﻿---
+id: cypress-v9-accessibility-test
+title: Automation Tests with Accessibility Tool using Cypress v9
+hide_title: false
+sidebarTitle:  Cypress v9 
+description: Use <BrandName /> Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 9 and above
+keywords: ['<BrandName />', 'Accessibility', 'Testing', 'Cypress', 'Cypress version 9', 'Automation', 'Accessibility Testing Settings']
+url: https://www.testmuai.com/support/docs/cypress-v9-accessibility-test/
+site_name: <BrandName />
+slug: cypress-v9-accessibility-test/
+canonical: https://www.testmuai.com/support/docs/cypress-v9-accessibility-test/
+---
 
 This document walks you through the step by step guide for executing the automation tests of your website with <BrandName />'s Accessibility Tool using Cypress v9 and below.
 
-<Warning> **NOTE:** This documentation is applicable for **Cypress v9** and **previous versions**.</Warning>
+> **NOTE:** This documentation is applicable for **Cypress v9** and **previous versions**.
 
 ## Prerequisites
 
@@ -21,17 +30,18 @@ This document walks you through the step by step guide for executing the automat
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check> 
-**SAMPLE REPO** <br />
+<Tip>
+**sample repo**
+
 Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<GitHubButton url="https://github.com/lambdatest/<BrandName />-accessibility-cypress-v9"/>
-</Check>
+<a href="https://github.com/testmu ai/<BrandName />-accessibility-cypress-v9" target="_blank" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```yaml reference title="lambdatest-config.json"
-https://github.com/LambdaTest/lambdatest-accessibility-cypress-v9/blob/main/lambdatest-config.json
+```yaml reference title="testmu ai-config.json"
+  https://github.com/<BrandName />/testmu ai-accessibility-cypress-v9/blob/main/testmu ai-config.json
 ```
 
 ### Step 2: Establish User Authentication
@@ -40,24 +50,28 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="Linux / MacOS">
-<div className="lambdatest__codeblock">
+
   ```bash
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  ```
-</div>
+  
+```
+
 </Tab>
 
-<Tab title="Windows" default>
-  <div className="lambdatest__codeblock">
-    ```powershell
-    {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-    set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-    ```
-  </div>
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
 </Tab>
 </Tabs>
 
@@ -72,18 +86,18 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 "devDependencies": {
   "@cypress/eslint-plugin-dev": "5.0.0",
   // highlight-next-line
-  "lambdatest-cypress-cli": "^3.0.30"
+  "testmu ai-cypress-cli": "^3.0.30"
 },
 ```
 
 - If you are using **<BrandName />-config.json** to pass the dependency, then pass the given line there:
 
-```javascript title="lambdatest-config.json"
+```javascript title="testmu ai-config.json"
 "run_settings": {
   //...
   "npm_dependencies": {
      "cypress": "10.0.0",
-     "lambdatest-cypress-cli": "^3.0.30"
+     "testmu ai-cypress-cli": "^3.0.30"
   },
   //...
 }
@@ -92,7 +106,7 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 - if you are not passing npm dependency in **<BrandName />-config.json** you can run
 
 ```bash
-npm i lambdatest-cypress-cli
+npm i testmu ai-cypress-cli   
 ```
 
 #### 2. In the `support/index.js` file
@@ -100,7 +114,7 @@ npm i lambdatest-cypress-cli
 Add this import statement in your `index.js` file to import the acceessibility scanner dependency
 
 ```javascript
-import "lambdatest-cypress-cli/accessibility/support";
+import 'testmu ai-cypress-cli/accessibility/scanner'
 ```
 
 #### 3. In the `cypress/plugins/index.js` file
@@ -108,23 +122,23 @@ import "lambdatest-cypress-cli/accessibility/support";
 Add this template in your `index.js` file.
 
 ```javascript title="index.js"
-const lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');
+const lambdatestAccessibility = require('testmu ai-cypress-cli/accessibility/plugin');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-
+  
   lambdatestAccessibility(on, config);
   return config;
 }
 
 ```
 
-#### 4. Add the capabilities in the `lambdatest-config.json` file
+#### 4. Add the capabilities in the `testmu ai-config.json` file
 
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
-```javascript title="lambdatest-config.json"
+```javascript title="testmu ai-config.json"
 "accessibility" : true,                 // Enable accessibility testing
 "accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
 "accessibility.bestPractice": false,    // Exclude best practice issues from results
@@ -135,4 +149,4 @@ To enable the accessibility testing within your automated test suite, set the `a
 
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
-![automation-dashboard](/assets/images/accessibility-testing/cypress/cypressv9.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/cypress/cypressv9.png' alt="automation-dashboard" />

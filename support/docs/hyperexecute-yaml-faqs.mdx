@@ -1,13 +1,11 @@
 ---
-title: "HyperExecute YAML FAQs"
+title: "YAML FAQs"
 sidebarTitle: "YAML FAQs"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','FAQs']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'FAQs']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-
-***
 
 #### 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
 
@@ -45,9 +43,9 @@ Pre and post steps open doors to large amounts of flexibility. You can add certi
 
 ***
 
-#### 3. How can I install private artifactory dependencies that can only be accessed on my organization's internal network on HyperExecute Machines?
+#### 3. How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?
 
-You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by setting the tunnel flag to true in HyperExecute's YAML file.
+You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by setting the tunnel flag to true in HyperExecute’s YAML file. 
 
 ```bash
 tunnel: true
@@ -55,14 +53,14 @@ tunnel: true
 
 Moreover, add one of the following parameters in the `preDirectives` field depending on the tech stack that your organization is using.
 
--   For Maven projects:
+-   For Maven projects:  
     `-DproxyHost=${LT_PROXY_HOST}`<br />
     `-DproxyPort=${LT_PROXY_PORT}`
-
--   For Node:
+    
+-   For Node:  
     `npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`<br />
     `npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
-
+    
 
 Therefore, if you want to use a tunnel for connecting HyperExecute with your organization (that is working with a maven project), you should configure your YAML file like this:
 
@@ -81,10 +79,9 @@ preDirectives:
 ```
 
 <Note>
-**Note**
-
-The variables 'LT_PROXY_HOST' and 'LT_PROXY_PORT' are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML.
+**Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML.
 </Note>
+
 
 ***
 
@@ -94,7 +91,7 @@ You can do this by adding the following command in the preDirectives section of 
 
 ```bash
 preDirectives:
-  commands:
+  commands: 
     - npm config set registry <artifactory_URL>
 ```
 
@@ -139,7 +136,7 @@ This command will install a package called **my_package.json** from the path tha
 
 #### 8. How can I use the Jenkins job choice parameters in the YAML file?
 
-You can do this by directly calling the parameter keys in the HyperExecute YAML file and use the Jenkins choice parameters.
+You can do this by directly calling the parameter keys in the HyperExecute YAML file and use the Jenkins choice parameters.  
 A sample testRunnerCommand to accomplish this is:
 
 ```bash
@@ -147,10 +144,10 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 ```
 In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as &#36;&lbrace;browser&rbrace; and &#36;&lbrace;version&rbrace; in the testRunnerCommand or testDiscovery command.
 
-<img loading="lazy" src='/assets/images/hyperexecute/faq/hyperexecute-yaml-faqs.png' alt="Image" />
+<img loading="lazy" src='/assets/images/hyperexecute/faq/hyperexecute-yaml-faqs.png' alt="Image" style={{width: '1000px',}} />
 
 ```bash
-testDiscovery:
+testDiscovery: 
     type: raw
     mode: dynamic
     command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
@@ -162,7 +159,7 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 
 #### 9. I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?
 
-You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times.
+You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. 
 
 ```bash
 base:
@@ -172,7 +169,6 @@ base:
 ```
 
 To learn more about how to use this feature, go through [this page](/support/docs/hyperexecute-inherit-config/).
-
 
 ***
 
@@ -192,17 +188,17 @@ sourcePayload:
 
 #### 11. I am running a non-hub based test on HyperExecute. How can I capture a video of it?
 
-You can use HyperExecute's video recording feature even while running non-hub based tests (Selenium, Cypress, CDP are all hub-based). All you need to do is, set the `captureScreenRecordingForScenarios` flag to `true` in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file to capture the video of your test scenarios.
+You can use HyperExecute’s video recording feature even while running non-hub based tests (Selenium, Cypress, CDP are all hub-based). All you need to do is, set the `captureScreenRecordingForScenarios` flag to `true` in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file to capture the video of your test scenarios.
 
 `captureScreenRecordingForScenarios: true`
 
 <img loading="lazy" src='/assets/images/hyperexecute/faq/yaml-10.png' alt="Image" />
 
-You can access the recorded video on the Tasks page by clicking on the **Watch Video** button on the right-hand side of your test.
+You can access the recorded video on the Tasks page by clicking on the **Watch Video** button on the right-hand side of your test. 
 
 <img loading="lazy" src='/assets/images/hyperexecute/faq/yaml-video.png' alt="Image" />
 
-You can use this feature if you want to trigger a command and want to record it. This will also be useful when you want to record any applications that were triggered on your desktop during the test execution process.
+You can use this feature if you want to trigger a command and want to record it. This will also be useful when you want to record any applications that were triggered on your desktop during the test execution process. 
 
 ***
 
@@ -230,6 +226,4 @@ No, your XML configurations are not overwritten by YAML parameters.
 
 For more information on the HyperExecute YAML file, visit this [page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
-<Note>
-If you have more questions, then just give us a shout and we will answer them for you.
-</Note>
+>If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.

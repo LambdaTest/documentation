@@ -1,0 +1,144 @@
+---
+title: "OpsGenie Integration"
+sidebarTitle: "OpsGenie"
+keywords: ['TestMu AI integration with OpsGenie', 'TestMu AI and OpsGenie Integration', 'OpsGenie Integration']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+OpsGenie is a modern incident management platform by Atlassian that ensures critical alerts are never missed. It offers intelligent alerting, on-call scheduling, and escalation policies to help teams respond to incidents faster. OpsGenie aggregates alerts from monitoring tools and custom applications, routing them to the right people through multiple notification channels.
+
+With <BrandName /> and OpsGenie integration, you can log incidents directly while performing [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the <BrandName /> platform to OpsGenie.
+
+## Integrating OpsGenie With <BrandName />
+***
+
+1. Login to your <BrandName /> account. To setup integrations, make sure you have admin or user level access.
+
+2. From the left menu, click **Integrations** then search for **OpsGenie** under Communication section and click on **Connect**.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/setup-opsgenie.png' alt="Setup OpsGenie Integration" width="1353" height="622" />
+
+3. Select your **Region** (US or EU) based on your OpsGenie account location and enter your **OpsGenie API Key**.
+
+*   **What is an OpsGenie API Key?**<br />
+The OpsGenie API Key is used to authenticate API requests to OpsGenie. API keys can be created from the OpsGenie Settings page. The API key grants access to create alerts, manage incidents, and interact with OpsGenie programmatically.
+
+<Warning>
+**Important:** The API key must have **Create and update** alert permissions enabled to allow <BrandName /> to send alerts to OpsGenie.
+</Warning>
+
+
+### Getting the OpsGenie API Key
+***
+
+1. Sign in to your OpsGenie account and navigate to **Settings** from the top navigation bar.
+
+2. Click on **API key management** under the Settings section.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/api-key-management.png' alt="OpsGenie API Key Management" width="1353" height="622" />
+
+3. Click on **Add new API key** button.
+
+4. Provide a name for your API key (e.g., "<BrandName />") and configure the access rights:
+   - Enable **Read** access
+   - Enable **Create and update** access
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/add-api-key.png' alt="Add New OpsGenie API Key" width="1353" height="622" />
+
+5. Click **Add API key** and copy the generated API Key.
+
+6. Paste the generated OpsGenie API Key in the provided field on <BrandName /> and click **Install**.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/updating-opsgenie.png' alt="Updating OpsGenie Integration" width="1353" height="622" />
+
+The OpsGenie integration will be successfully connected with your <BrandName /> account.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/integration-connected.png' alt="OpsGenie Integration Connected" width="1353" height="622" />
+
+### Editing the OpsGenie API Key
+***
+
+If you need to update your API key, click on the **Edit** button in the Setup OpsGenie dialog.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/edit-api-key.png' alt="Edit OpsGenie API Key" width="1353" height="622" />
+
+## Configuring OpsGenie Integration
+***
+
+After connecting OpsGenie, you can configure notification preferences to customize which alerts are sent.
+
+1. Click on the three-dot menu next to the OpsGenie integration and select **Settings**.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/opsgenie-menu.png' alt="OpsGenie Integration Menu" width="1353" height="622" />
+
+2. In the Configure OpsGenie panel, you can set up the following notification preferences:
+   - **Screenshot Test Completion Messages** - Get notified when screenshot tests complete
+   - **Build completion messages** - Receive alerts when builds finish
+   - **Test Fail messages** - Get alerted on test failures
+   - **Test Pass messages** - Get notified on test passes
+   - **Notification Time** - Set the notification timing
+   - **Linked Service Accounts** - Link specific service accounts for routing alerts
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/configure-settings.png' alt="Configure OpsGenie Settings" width="1353" height="622" />
+
+3. To link service accounts, click on **Linked Service Accounts** and select the accounts you want to associate with OpsGenie alerts.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/link-service-accounts.png' alt="Link Service Accounts" width="1353" height="622" />
+
+4. Click **Confirm** to save your service account links.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/service-accounts-updated.png' alt="Service Accounts Updated" width="1353" height="622" />
+
+## Sharing OpsGenie Integration
+***
+
+You can share the OpsGenie integration with other team members in your organization.
+
+> **Note:** You must have **Admin** access to your organization to share integrations.
+
+1. Click on the three-dot menu next to OpsGenie and select **Share**.
+
+2. Once shared, other team members will see the OpsGenie integration under **Shared Integrations**.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/shared-successfully.png' alt="OpsGenie Shared Successfully" width="1353" height="622" />
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/shared-integrations.png' alt="Shared Integrations View" width="1353" height="622" />
+
+## Viewing Alerts in OpsGenie
+***
+
+Once the integration is set up, alerts from <BrandName /> will automatically appear in your OpsGenie dashboard.
+
+1. Navigate to the **Alerts** section in your OpsGenie account to view all incoming alerts.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/opsgenie-alerts.png' alt="OpsGenie Alerts Dashboard" width="1353" height="622" />
+
+2. Click on any alert to view detailed information including:
+   - Source IP and Integration details
+   - Responders and Owner Team
+   - Description with ticket information
+   - Priority level
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/alert-details.png' alt="OpsGenie Alert Details" width="1353" height="622" />
+
+3. For test-related alerts, you'll find comprehensive test execution details including:
+   - Test ID and Test name
+   - Status (passed/failed)
+   - OS, Browser, and Version information
+   - Resolution details
+   - Direct link to view the test on <BrandName />
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/alert-test-details.png' alt="OpsGenie Alert Test Details" width="1353" height="622" />
+
+## Uninstalling The OpsGenie Integration
+***
+
+1. Login to your <BrandName /> account and visit **Integrations** from the left menu.
+
+2. Find the OpsGenie integration, click on the three-dot menu and select **Remove**.
+
+<img loading="lazy" src='/assets/images/opsgenie-integration/integration-disconnected.png' alt="OpsGenie Integration Disconnected" width="1353" height="622" />
+
+For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.

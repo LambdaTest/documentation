@@ -4,7 +4,8 @@ sidebarTitle: "Testim"
 keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'testim', 'Integrations', 'Products']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Testim is a AI Native test authoring platform designed to automate software testing, particularly web and mobile applications. It focuses on creating stable and reliable automated tests. It allows creating tests without writing code or by incorporating custom JavaScript for more intricate scenarios. You can manage and scale the test automation process efficiently, which is particularly valuable for Agile development teams.
 
@@ -25,8 +26,8 @@ This document details the seamless integration between HyperExecute and Testim, 
     - Update your Host and Port number.
     - Enter your <BrandName /> Username and Access Key >> click on **Add** button.
 
-<video className="right-side" width="100%" controls id="vid">
-<source src="/assets/videos/hyperexecute/integration/products/testim/grid-setup.mp4" type="video/mp4" />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/integration/products/testim/grid-setup.mp4' type="video/mp4" />
 </video>
 
 ## Step 2: Record your Tests
@@ -35,8 +36,8 @@ This document details the seamless integration between HyperExecute and Testim, 
 - Enter your app URL >> click on **Create Test**.
 - It will start recording the tests. After your testing is completed, stop the recording and save your test.
 
-<video className="right-side" width="100%" controls id="vid">
-<source src="/assets/videos/hyperexecute/integration/products/testim/test-record.mp4" type="video/mp4" />
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/integration/products/testim/test-record.mp4' type="video/mp4" />
 </video>
 
 ## Step 3: Configure your Test to execute from CLI
@@ -101,26 +102,37 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ## Step 6: Execute your Test
 
-<Note>
-**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -131,5 +143,7 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```

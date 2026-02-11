@@ -1,20 +1,11 @@
 ---
 title: "Capturing Multiple Assets Hosts"
 sidebarTitle: "Capturing multiple asset hosts"
-keywords:
- [
-    "Visual Regression",
-    "Visual Regression Testing Guide",
-    "Visual Regression Test Automation",
-    "Visual Regression Automation Testing",
-    "Running Visual Regression Tests",
-    "Visual Regression Testing Online",
-    "Run Visual Regression",
-    "Visual Regression Run Specific Test",
-    "Visual Regression Testing Environment",
-    "How to Run Visual Regression Tests"
-  ]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 In the SmartUI SDK, the `allowedHostnames` option is used to configure the capture of assets from specific hostnames during UI testing. By default, SmartUI captures only assets that are hosted on the same domain as the snapshot location. For example, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured unless explicitly specified. The `allowedHostnames` configuration allows you to define multiple hostnames, ensuring assets from those sources are included during test execution.
 

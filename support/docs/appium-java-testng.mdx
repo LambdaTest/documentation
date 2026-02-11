@@ -1,20 +1,13 @@
 ---
 title: "Appium With TestNG"
 sidebarTitle: "TestNG"
-keywords: ['appium','java','lambdatest java','framework on lambdatest','testng','app testing','real devices']
+keywords: ['appium', 'java', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, you will learn how to trigger a automation script of **TestNG** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
@@ -29,30 +22,33 @@ In this documentation, you will learn how to trigger a automation script of **Te
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-java-testng" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-java-testng" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-    ```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
-  <Tab title="Windows">
-    ```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
+<Tabs className="docs__val">
+<Tab title="Linux / MacOS">
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
+<Tab title="Windows">
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
 </Tabs>
 
 ### Step 3: Upload your Application
@@ -60,36 +56,41 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="App File">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
-  </Tab>
+<Tabs className="docs__val">
 
-  <Tab title="App URL">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
-  </Tab>
+<Tab title="App File">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
+</Tab>
+
+<Tab title="App URL">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
+</Tab>
+
 </Tabs>
 
-<Check>
-**TIP**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
-</Check>
+
+</Tip>
 
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
-<Tabs>
-  <Tab title="Android">
+<Tabs className="docs__val">
+<Tab title="Android">
 
-```java AndroidApp.java highlight={35}
+```java title="AndroidApp.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -124,6 +125,7 @@ public class AndroidApp {
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
+            // highlight-next-line
             capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
@@ -134,28 +136,28 @@ public class AndroidApp {
             String hub = "https://" + userName + ":" + accessKey + gridURL;
             driver = new AppiumDriver(new URL(hub), capabilities);
 
-            MobileElement color = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/color");
+            MobileElement color = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/color");
             //Changes color to pink
             color.click();
             Thread.sleep(1000);
             //Back to original color
             color.click();
 
-            MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/Text");
+            MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/Text");
             //Changes the text to "Proverbial"
             text.click();
 
             //toast will be visible
-            MobileElement toast = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/toast");
+            MobileElement toast = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/toast");
             toast.click();
 
             //notification will be visible
-            MobileElement notification = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/notification");
+            MobileElement notification = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/notification");
             notification.click();
             Thread.sleep(2000);
 
             //Opens the geolocation page
-            MobileElement geo = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/geoLocation");
+            MobileElement geo = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/geoLocation");
             geo.click();
             Thread.sleep(5000);
 
@@ -164,7 +166,7 @@ public class AndroidApp {
             home.click();
 
             //Takes to speed test page
-            MobileElement speedtest = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/speedTest");
+            MobileElement speedtest = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/speedTest");
             speedtest.click();
             Thread.sleep(5000);
 
@@ -175,10 +177,10 @@ public class AndroidApp {
             MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
             browser.click();
 
-            MobileElement url = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/url");
+            MobileElement url = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/url");
             url.sendKeys("https://www.lambdatest.com");
 
-            MobileElement find = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/find");
+            MobileElement find = (MobileElement) driver.findElementById("com.lambdatest.proverbial :id/find");
             find.click();
 
             driver.quit();
@@ -195,11 +197,11 @@ public class AndroidApp {
 }
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="iOS">
+<Tab title="iOS">
 
-```java iOSApp.java highlight={36}
+```java title="iOSApp.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -235,6 +237,7 @@ public class iOSApp {
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
+            // highlight-next-line
             capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
@@ -299,19 +302,16 @@ public class iOSApp {
             }
         }
 
-
     }
 }
 ```
 
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-<Check>
-**TIP**
+</Tip>
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
-
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -321,10 +321,10 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
-<Tabs>
-  <Tab title="Android">
+<Tabs className="docs__val">
+<Tab title="Android">
 
-```java highlight={8}
+```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("build","Java TestNG Android");
             capabilities.setCapability("name",platform+" "+device+" "+version);
@@ -332,6 +332,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
+            // highlight-next-line
             capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
@@ -340,11 +341,11 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("devicelog", true);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="iOS">
+<Tab title="iOS">
 
-```java highlight={8}
+```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("build","Java TestNG iOS");
             capabilities.setCapability("name",platform+" "+device+" "+version);
@@ -352,6 +353,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
+            // highlight-next-line
             capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
@@ -360,23 +362,20 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("devicelog", true);
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
-<Check>
-**TIP**
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-<Note>
-**INFO**
-
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Note>
+</Info>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -388,7 +387,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 - The tests can be executed in the terminal using the following command:
 
-  <Tabs>
+  <Tabs className="docs__val">
   <Tab title="Android">
 
   ```bash
@@ -405,14 +404,10 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
   </Tab>
   </Tabs>
 
-<Warning>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Warning>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

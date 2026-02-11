@@ -1,17 +1,12 @@
 ---
 title: "Custom CSS Injection in SmartUI"
 sidebarTitle: "Custom CSS"
-keywords:
- [
-  "custom css",
-  "visual regression testing",
-  "css injection",
-  "smartui cli",
-  "visual testing",
-  "test-only css",
-  "css configuration",
-  "visual stability"
-]
+keywords: ['custom css', 'visual regression testing', 'css injection', 'smartui cli', 'visual testing', 'test-only css', 'css configuration', 'visual stability']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information—all while keeping your visual testing logic centralized and maintainable.
@@ -151,7 +146,7 @@ The Custom CSS feature has the following limitations:
 The custom CSS feature is particularly valuable in the following scenarios:
 
 <Tabs>
-  <Tab title='Stabilize Dynamic UI'>
+  <Tab title="Stabilize Dynamic UI">
 
 ```css
 /* Hide elements that change between runs */
@@ -163,7 +158,7 @@ The custom CSS feature is particularly valuable in the following scenarios:
 ```
 
   </Tab>
-  <Tab title='Normalize Typography/Theme'>
+  <Tab title="Normalize Typography/Theme">
 
 ```css
 /* Force consistent light theme */
@@ -176,7 +171,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </Tab>
-  <Tab title='Layout Harmonization'>
+  <Tab title="Layout Harmonization">
 
 ```css
 /* Center content and unify spacing (use carefully) */
@@ -185,7 +180,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </Tab>
-  <Tab title='Mask PII/Identifiers'>
+  <Tab title="Mask PII/Identifiers">
 
 ```css
 /* Hide IPs, locations, or IDs */
@@ -195,7 +190,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </Tab>
-  <Tab title='Visual Stress Testing'>
+  <Tab title="Visual Stress Testing">
 
 ```css
 /* Deliberately apply a very different theme */
@@ -209,7 +204,7 @@ body {
 ```
 
   </Tab>
-  <Tab title='Reduce Flakiness'>
+  <Tab title="Reduce Flakiness">
 
 ```css
 /* Disable transitions/animations */
@@ -217,7 +212,7 @@ body {
 ```
 
   </Tab>
-  <Tab title='Mask Brand Cues'>
+  <Tab title="Mask Brand Cues">
 
 ```css
 /* Override brand cues (colors, shadows, shapes) */
@@ -266,5 +261,3 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 - [Layout Comparison Documentation](/support/docs/smartui-layout-testing/)
 
 ---
-
-

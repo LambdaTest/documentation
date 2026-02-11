@@ -1,22 +1,17 @@
 ---
 title: "Audit Logs"
 sidebarTitle: "Audit Logs"
-keywords:
-  [
-    "testmu ai automation",
-    "testmu ai hyperexecute",
-    "hyperexecute automation grid",
-    "hyperexecute online",
-    "online hyperexecute",
-    "hyperexecute automation grid online",
-    "hyperexecute getting started",
-  ]
+keywords: ['testmu ai automation', 'testmu ai hyperexecute', 'hyperexecute automation grid', 'hyperexecute online', 'online hyperexecute', 'hyperexecute automation grid online', 'hyperexecute getting started']
 ---
+
 import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Audit Logs
 
 Audit logs serve as a record of every **User** and **Organization** Level activities in a <BrandName /> account.
 
-<Warning> **Note:** Only organization administrators are able to view and manage the audit logs. </Warning>
+> **Note:** Only organization administrators are able to view and manage the audit logs.
 
 ## Why are Audit Logs important?
 
@@ -29,11 +24,11 @@ Audit logs can be used to:
 
 ## How to Access Audit Logs?
 
-**Step 1:** Go to the [LambdaTest](https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [<BrandName />](https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on Settings -> **Organization Settings** and navigate to the **Audit Logs** tab.
 
-![Image](/assets/images/audit-logs/1.png)
+<img loading="lazy" src='/assets/images/audit-logs/1.png' alt="Image" />
 
 ### Audit Logs details
 
@@ -80,15 +75,13 @@ The following table contains the list of activities and their definition:
 |35    |org.payment-method.deleted                |Organization - Payment Method Deleted              |Payment method deleted                        |
 |36    |org.payment-method.default-updated        |Organization - Default Payment Method Updated      |Default payment method updated                |
 
-
-![Image](/assets/images/audit-logs/7.png)
+<img loading="lazy" src='/assets/images/audit-logs/7.png' alt="Image" />
 
 As highlighted in the above screenshot, this section contains details that include the event ID, the email address of the **user who performed the action**, the time of the change/action, the IP address of the user and the user agent used.
 
-![Image](/assets/images/audit-logs/8.png)
+<img loading="lazy" src='/assets/images/audit-logs/8.png' alt="Image" />
 
 As highlighted in the above screenshot, details of the user affected by the change/action are shown. This includes an identifier - email address, and additional details such as the original value and the changed value if present.
-
 
 ### Filter your Audit Logs
 
@@ -98,40 +91,39 @@ You can filter the logs based on Action Performed either on User or Organization
 
 You can select the type of event for which you want to check the logs. You can also filter it by what level you want to check the audit logs at, i.e., User level or Organization level.
 
- {/* Below mentioned are the following events you can check on the respective levels. */}
+{/* Below mentioned are the following events you can check on the respective levels. */}
 
 - **User Level ->** Logged In, Access Key Regenerated, Password Reset, Profile Update, Password Changed.
 
 - **Organization Level ->**Invitation Sent, Invitation Accepted, User Role Updated, User Profile Updated, User Removed from the Organization.
 
-![Image](/assets/images/audit-logs/2.png)
-
+<img loading="lazy" src='/assets/images/audit-logs/2.png' alt="Image" />
 
 #### Filter By Date
 
 You can view the logs of the users for a particular date range as well. Select the start date and end dates from the date filter.
 
-<Warning> You can view Audit Logs for a maximum of 60 days. Please contact support for higher retention period (Supported in Enterprise Plan).</Warning>
+> You can view Audit Logs for a maximum of 60 days. Please contact support for higher retention period (Supported in Enterprise Plan).
 
-![Image](/assets/images/audit-logs/4.png)
+<img loading="lazy" src='/assets/images/audit-logs/4.png' alt="Image" />
 
 #### Filter By User
 
 Based on the given date range, you can review the logs for each individual user in your company as well as for all users at once.
 
-![Image](/assets/images/audit-logs/3.png)
+<img loading="lazy" src='/assets/images/audit-logs/3.png' alt="Image" />
 
 ### Download your Audit Logs
 
 Click on the **Export Button** displayed in the screenshot below, and your logs will be downloaded in **.csv** format.
 
-![Image](/assets/images/audit-logs/5.png)
+<img loading="lazy" src='/assets/images/audit-logs/5.png' alt="Image" />
 
 ## FAQs
 
-<Accordion title="Q: Is comprehensive audit logging for all system and user activities supported?">
+**Q: Is comprehensive audit logging for all system and user activities supported?**
+ 
  Yes, it provides comprehensive audit logging of all activities, ensuring full traceability across conversations, workflows, operations, test executions, and database actions. It maintains detailed audit trails with timestamps, metadata, and historical records, supporting compliance, security, and validation of AI agent capabilities.
-</Accordion>
 
 **Key capabilities include:**
 

@@ -1,8 +1,10 @@
 ---
 title: "HyperExecute vs Traditional Test Grids"
 sidebarTitle: "HyperExecute vs Traditional Test Grids"
-keywords: ['lambdatest automation','lambdatest hyperexecute','lambdatest hypterest tutorial','hyperexecute getting started','lambdatest hyperexecute getting started','hyperexecute automation testing','hyperexecute vs traditional grids']
+keywords: ['testmu ai automation', 'testmu ai hyperexecute', 'testmu ai hypterest tutorial', 'hyperexecute getting started', 'testmu ai hyperexecute getting started', 'hyperexecute automation testing', 'hyperexecute vs traditional grids']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Traditional automation testing solutions are slow since the triggered test scenarios are first sent to the Hub, which in turn are scheduled to run on the best-suited Node. This results in unnecessary lag as a number of components are involved in the entire process. Over & above, multiple network hops with the network separated components results in increased test flakiness, a factor that can be a huge hindrance to time-to-market.
@@ -12,17 +14,17 @@ Traditional tests refers to the conventional approach of executing software test
 
 Here is a diagrammatic representation of how tests are run using traditional solutions:
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/hyperexecute_1.png' alt="Image"  className="doc_img doc_img_dimension" width="1234" height="564"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/hyperexecute_1.png' alt="Image"  className="doc_img doc_img_dimension" width="1234" height="564" />
 
 ### Limitations of Traditional Tests Grids
 
-- **Slower Execution:** Traditional tests often suffer from slower execution times due to the sequential nature of test case execution.
+- <b>Slower Execution:</b> Traditional tests often suffer from slower execution times due to the sequential nature of test case execution.
 
-- **Test Flakiness:** The separation of network components introduces instability and unreliable test results.
+- <b>Test Flakiness:</b> The separation of network components introduces instability and unreliable test results.
 
-- **Limited Scalability:** Traditional test automation environments may face challenges when it comes to scaling. Adding more nodes or expanding the infrastructure requires additional hardware or virtual resources, which can be costly and time-consuming.
+- <b>Limited Scalability:</b> Traditional test automation environments may face challenges when it comes to scaling. Adding more nodes or expanding the infrastructure requires additional hardware or virtual resources, which can be costly and time-consuming.
 
-- **Limited Test Parallelism:** Traditional test automation methods often lack efficient parallel execution capabilities as in sequential execution, tests are unable to take full advantage of available computing resources.
+- <b>Limited Test Parallelism:</b> Traditional test automation methods often lack efficient parallel execution capabilities as in sequential execution, tests are unable to take full advantage of available computing resources.
 
 ## HyperExecute
 
@@ -30,7 +32,7 @@ HyperExecute integrates all test automation components into a single environment
 
 Here is the diagrammatic representation of how tests are run on the HyperExecute infrastructure:
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/hyperexecute_2.png' alt="Image"  className="doc_img doc_img_dimension" width="1266" height="848"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/hyperexecute_2.png' alt="Image"  className="doc_img doc_img_dimension" width="1266" height="848" />
 
 As seen above, tests are securely run on dedicated machines on the Azure cloud. The cloud (for execution) is chosen based on the location from where concierge (i.e. HyperExecute CLI) is triggered.
 
@@ -42,8 +44,8 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 - [**Smart Caching**](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/) : Optimizes regression testing by intelligently caching test artifacts, speeding up the subsequent test runs.
 
-- **Auto Purging of Environments:** Automates the cleanup of test environments after build completion, maintaining a clean and optimized testing setup.
+- <b>Auto Purging of Environments:</b> Automates the cleanup of test environments after build completion, maintaining a clean and optimized testing setup.
 
-- **Fine-Grained Concurrency Control:** Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
+- <b>Fine-Grained Concurrency Control:</b> Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
 
-<Note>For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/key-features-of-hyperexecute/)</Note>
+> For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/key-features-of-hyperexecute/)

@@ -4,12 +4,19 @@ sidebarTitle: "Configurations"
 keywords: ['testmu ai automation', 'kaneai', 'test manager', 'configurations', 'test runs', 'environment setup']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Configurations in KaneAI & Test Manager
+
 Configurations in Test Manager allow you to define reusable environment setups for your test runs. You can specify platform, browser, OS, and device combinations once and apply them across multiple test runs.
 
 **Key Benefits:**
 - **Centralized Management** - Create, edit, and delete configurations from a single dashboard
 - **Reusability** - Apply the same configuration across multiple test runs
 - **Multi-Platform Support** - Configure Desktop, Virtual Mobile, and Real Device environments
+
+---
 
 ## Accessing Configurations
 
@@ -20,12 +27,13 @@ Navigate to configurations using either method:
 | **Sidebar** | Click **Configurations** under Test Manager in the left menu |
 | **Test Runs** | Click **Manage Configurations** link within any test run |
 
-<img loading="lazy" src='/assets/images/kane-ai/app-test/configurations-sidebar.png' alt="configurations-sidebar"/>
+<img loading="lazy" src='/assets/images/kane-ai/app-test/configurations-sidebar.png' alt="configurations-sidebar" />
+
+---
 
 ## Configurations Dashboard
 
 The central dashboard displays all your configurations with the following features:
-
 
 | Feature | Description |
 |---------|-------------|
@@ -37,6 +45,7 @@ The central dashboard displays all your configurations with the following featur
 
 <img loading="lazy" src='/assets/images/kane-ai/app-test/configurations-dashboard.png' alt="configurations-dashboard" />
 
+---
 
 ## Creating a Configuration
 
@@ -61,6 +70,7 @@ The KaneAI toggle determines which platforms and options are available:
 | **ON** | Desktop, Real Device | KaneAI test cases |
 | **OFF** | Desktop, Virtual Mobile, Real Device | Non-KaneAI test cases |
 
+---
 
 ### Platform Options
 
@@ -85,17 +95,19 @@ Configure browser-based testing on desktop environments.
 
 <img loading="lazy" src='/assets/images/kane-ai/app-test/DesktopConfig.png' alt="desktop-configuration" />
 
+---
+
 ### Real Device
 
 Configure testing on physical mobile devices. Supports both **Native App** and **Mobile Browser** testing.
 
 #### Native Application
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 Native app testing on Real Devices is available only for KaneAI-generated test runs.
-</Note>
+</Info>
 
 **Environment Variables:**
 | Field | Description |
@@ -116,7 +128,7 @@ The following options are available only for KaneAI-generated test runs:
 **Device Type: Private Cloud vs Public Cloud**
 
 For organizations with a private cloud real device plan, you can choose between:
-- **Public Cloud** - Shared pool of devices available to all LambdaTest users
+- **Public Cloud** - Shared pool of devices available to all <BrandName /> users
 - **Private Cloud** - Dedicated device pool exclusive to your organization
 
 **Multi-Select Support**
@@ -139,11 +151,11 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 
 #### Mobile Browser
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 Mobile browser testing on Real Devices is available for non-KaneAI test runs only.
-</Note>
+</Info>
 
 **Environment Variables:**
 | Field | Description |
@@ -156,13 +168,15 @@ Mobile browser testing on Real Devices is available for non-KaneAI test runs onl
 
 <img loading="lazy" src='/assets/images/kane-ai/app-test/RDWebBrowser.png' alt="real-device-browser-configuration" />
 
+---
+
 ### Virtual Mobile
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 Virtual Mobile configurations are available for non-KaneAI test runs only.
-</Note>
+</Info>
 
 Configure testing on emulators and simulators for both Native App and Mobile Browser testing.
 
@@ -193,6 +207,8 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 
 <img loading="lazy" src='/assets/images/kane-ai/app-test/VirtualApp.png' alt="virtual-device-browser-configuration" />
 
+---
+
 ## Managing Configurations
 
 ### Edit a Configuration
@@ -208,16 +224,16 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 <img loading="lazy" src='/assets/images/kane-ai/app-test/edit-configuration-modal.png' alt="edit-delete-configuration" />
 
 <Warning>
-**IMPORTANT**
+**Important**
 
 Any updates to the configuration will affect the new and planned test runs. Executed test runs will not be impacted.
 </Warning>
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 Edit functionality is only available on the Configurations page, not within the test run modal.
-</Note>
+</Info>
 
 ### Delete a Configuration
 
@@ -227,10 +243,12 @@ Edit functionality is only available on the Configurations page, not within the 
 4. Confirm the deletion
 
 <Warning>
- **IMPORTANT**
+**Important**
 
 Deleting a configuration is only allowed if it's not associated with any Test Instance.
 </Warning>
+
+---
 
 ## Using Configurations in Test Runs
 
@@ -247,12 +265,11 @@ Apply configurations to test cases when creating or editing test runs.
    - Optionally, create a new configuration
    - Click **Manage Configurations** to open the central dashboard in a new tab
 
-{/* ... <img loading="lazy" src='/assets/images/kane-ai/app-test/add-configuration-modal.png' alt="add-configuration-modal" /> --> */}
+{/* <img loading="lazy" src='/assets/images/kane-ai/app-test/add-configuration-modal.png' alt="add-configuration-modal" /> */}
 
 <Warning>
-**WARNING**
+**Adding configurations **appends** to existing ones. It does not replace previously assigned configurations.**
 
-Adding configurations **appends** to existing ones. It does not replace previously assigned configurations.
 </Warning>
 
 ### Bulk Selection
@@ -260,6 +277,7 @@ Adding configurations **appends** to existing ones. It does not replace previous
 - Use the **Select All** toggle to select all configurations matching current filters
 - This is useful for applying multiple configurations to test instances at once
 
+---
 
 ## Best Practices
 

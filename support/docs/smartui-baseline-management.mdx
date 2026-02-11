@@ -1,14 +1,13 @@
 ---
-title: Baseline Management
-sidebarTitle: Baseline Management
-keywords:
-  - SmartUI Baseline
-  - Visual Regression Baseline
-  - Baseline Management
-  - LambdaTest SmartUI
-  - Visual Testing
-  - Automatic Baseline
+title: "Baseline Management in SmartUI"
+sidebarTitle: "Baseline Management"
+keywords: ['SmartUI Baseline', 'Visual Regression Baseline', 'Baseline Management', 'TestMu AI SmartUI', 'Visual Testing', 'Automatic Baseline']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Baseline Management
 
 In SmartUI, a **Baseline** is the reference image used for comparison against future test runs. Effective baseline management is crucial for accurate visual regression testing. This guide explains how baselines are created, updated, and maintained.
 
@@ -16,6 +15,11 @@ In SmartUI, a **Baseline** is the reference image used for comparison against fu
 A baseline represents the "expected" state of your application's UI. When you run a SmartUI test, the new screenshots are compared against this baseline to detect unauthorized visual changes.
 
 A baseline in SmartUI represents the reference point for visual regression testing. It's the set of screenshots against which all future builds are compared.
+
+<Info>
+**For detailed guidance on approval, reject, move, and merge functions, see our comprehensive [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).**
+
+</Info>
 
 ### Types of Baselines
 
@@ -94,8 +98,8 @@ npx smartui --markBaseline capture urls.json
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Baseline Selection'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Baseline Selection">
 
 **Baseline Selection**
 
@@ -105,7 +109,7 @@ npx smartui --markBaseline capture urls.json
 
 </Tab>
 
-<Tab title='Branch Management'>
+<Tab title="Branch Management">
 
 **Branch Management**
 
@@ -115,7 +119,7 @@ npx smartui --markBaseline capture urls.json
 
 </Tab>
 
-<Tab title='Build Management'>
+<Tab title="Build Management">
 
 **Build Management**
 
@@ -125,7 +129,7 @@ npx smartui --markBaseline capture urls.json
 
 </Tab>
 
-<Tab title='Approval Process'>
+<Tab title="Approval Process">
 
 **Approval Process**
 
@@ -138,8 +142,8 @@ npx smartui --markBaseline capture urls.json
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Common Issues' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Common Issues">
 
 **Common Issues**
 
@@ -160,7 +164,7 @@ npx smartui --markBaseline capture urls.json
 
 </Tab>
 
-<Tab title='Baseline Not Found'>
+<Tab title="Baseline Not Found">
 
 **Baseline Not Found**
 
@@ -178,7 +182,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 </Tab>
 
-<Tab title='Permission Denied'>
+<Tab title="Permission Denied">
 
 **Permission Denied**
 
@@ -191,7 +195,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 </Tab>
 
-<Tab title='Baseline Mismatch'>
+<Tab title="Baseline Mismatch">
 
 **Baseline Mismatch**
 
@@ -311,8 +315,13 @@ Best practices for updating baselines:
 1. Update after major releases
 2. Update after UI framework changes
 3. Update after design system updates
-4. Document baseline update reasons
+4. Document baseline update reason
+
+<Info>
+**For detailed guidance on approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).**
+
+</Info>
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmu.ai or use the [24/7 Chat Support](https://www.lambdatest.com/support).

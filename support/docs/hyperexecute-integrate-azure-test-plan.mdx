@@ -1,20 +1,15 @@
 ---
-title: "Step 3: Integrate the Test Plan with HyperExecute"
+title: "Integrate Test Cases"
 sidebarTitle: "Integrate the Test Cases"
-keywords:
-  - hyperexecute integrations
-  - hyperexecute integrations with products
-  - products
-  - azure test plan
-  - azure integration
-  - test cases
-  - azure binaries
-  - azure test plan integration
+keywords: ['hyperexecute integrations', 'hyperexecute integrations with products', 'products', 'azure test plan', 'azure integration', 'test cases', 'azure binaries', 'azure test plan integration']
 ---
 
-<Note>
-Test Distribution of the suite is recommended to be at **test level** such that each HyperExecute stage has one test.
-</Note>
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Step 3: Integrate the Test Plan with HyperExecute
+
+> Test Distribution of the suite is recommended to be at **test level** such that each HyperExecute stage has one test.
 
 To execute the Test Plan with HyperExecute, you will have to follow the below mentioned steps:
 
@@ -41,7 +36,7 @@ testDiscovery:
 dynamicAllocation: true
 ```
 
-**Step 4:** Now, you need to pass the following command in your YAML file.
+**Step 4:** Now, you need to pass the following command in your YAML file. 
 
 ```yaml
 testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; ./testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; ./test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
@@ -59,21 +54,35 @@ testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filt
 
 - Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<CodeGroup>
-```bash Linux / MacOS
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
-```powershell Windows
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-```
-</CodeGroup>
+</Tab>
 
-<Note>
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
+</Tabs>
+
+<Warning>
 In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences → Security & Privacy → General tab**.
-</Note>
+</Warning>
+
 
 - Run the below command in your terminal at the root folder of the project
 
@@ -84,5 +93,5 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 OR use this command if you have not exported your username and access key.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```

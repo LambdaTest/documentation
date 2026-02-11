@@ -4,9 +4,7 @@ sidebarTitle: "XCUI"
 keywords: ['xcui', 'iOS', 'testmu ai', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
-
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
@@ -24,12 +22,14 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the XCUI framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-xcui-sample" />
-</Check>
+
+<a href="https://github.com/<BrandName />/hyperexecute-xcui-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+</Tip>
 
 ## Step 2: Setup the CLI in your Test Suite
 
@@ -53,19 +53,29 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ## Step 3: Upload your Application and Test Suite
@@ -76,59 +86,77 @@ Upload your **iOS** application (.ipa file) to the <BrandName /> servers using o
 
 Here is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
---location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
---form 'appFile=@"/Users/macuser/Downloads/proverbial.ipa"' \
---form 'type="xcuit-ios"'
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+--location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\
+--form 'appFile=@"/Users/macuser/Downloads/proverbial.ipa"' \\
+--form 'type="xcuit-ios"'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.ipa"" -F "type="xcuit-ios""
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.ipa"" -F "type="xcuit-ios""`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Info>
-**NOTE**
+<Note>
+**Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the last step as `appId`.**
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the last step as `appId`.
-</Info>
+</Note>
 
 ### Upload your Test Suite
 
 Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_ios_xcuitest.ipa"' \
---form 'type="xcuit-ios"'
+--form 'type="xcuit-ios"'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_ios_xcuitest.ipa"" --form "type=\"xcuit-ios\""
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_ios_xcuitest.ipa"" --form "type=\"xcuit-ios\""`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
-<Info>
-**NOTE**
+<Note>
+**Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the next step as ``testSuiteAppId``**
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the next step as `testSuiteAppId`
-</Info>
+</Note>
 
 ## Step 4: Configure YAML in your Test Suite
 
 Enter your `<RELATIVE_APP_PATH>` and `<RELATIVE_TEST_SUITE_PATH>` in the YAML file
 
-```yaml highlight={16,17}
+```yaml
 ---
 version: "0.2"
 
@@ -144,7 +172,9 @@ maxRetries: 2
 framework:
   name: "ios/xcui"
   args:
+  # highlight-next-line
     appPath: <RELATIVE_APP_PATH>
+    # highlight-next-line
     testSuitePath: <RELATIVE_TEST_SUITE_PATH>
     video: true
     filters:
@@ -169,17 +199,27 @@ framework:
 jobLabel: ['HyperExecute', 'XCUI', 'Real Device']
 ```
 
-<Check>
-**WHEN SHARDS ARE ADDED**
+<Tip>
+**When shards are added**
 
-If you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>
+If you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br />
 **For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).
 
-If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br />
 **For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).
-</Check>
 
+</Tip>
 
+<Warning>
+**When shards aren't added**
+
+If you are using the `deviceSelectionStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br />
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.
+
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br />
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.
+
+</Warning>
 
 ## Step 5: Generate Reports and Artifacts
 To generate artifacts for your XCUI tests, add the `artifacts: true` and `report: true` flag in your YAML file:
@@ -198,9 +238,10 @@ To download these artifacts in your local machine, you can pass the `--download-
 
 ## Step 6: Execute your Test Suite
 
-<Note>
-**NOTE:** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -211,11 +252,13 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report`}
+  
 ```
 
 ## Step 7: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/xcui/1.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/xcui/1.png' alt="automation-dashboard"  width="1920" height="868" />

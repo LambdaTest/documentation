@@ -1,22 +1,25 @@
----
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: devtools-on-real-devices-app
 title: DevTools On Real Devices
 sidebarTitle: DevTools
+description: Inspect and debug embedded web views in real mobile devices using <BrandName />'s DevTools.
 
-keywords: ['webview debugging on real device', 'inspect hybrid app webview', 'TestMu AI webview tools', 'real device DevTools', 'simulate GPS location iOS', 'mobile web view inspection', 'webview console logs', 'DOM inspection mobile', 'app testing', 'real devices', 'chrome devtools mobile', 'safari devtools mobile', 'app testing webview']
+keywords: ['webview debugging on real device', 'inspect hybrid app webview', '<BrandName /> webview tools', 'real device DevTools', 'simulate GPS location iOS', 'mobile web view inspection', 'webview console logs', 'DOM inspection mobile', 'app testing', 'real devices', 'chrome devtools mobile', 'safari devtools mobile', 'app testing webview']
+url: https://www.testmuai.com/support/docs/devtools-on-real-devices-app/
+site_name: <BrandName />
+slug: devtools-on-real-devices-app/
+canonical: https://www.testmuai.com/support/docs/devtools-on-real-devices-app/
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-
-
-<Warning>
-To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
-</Warning>
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 Testing hybrid apps or mobile websites that rely on embedded web views often requires advanced debugging capabilities. With <BrandName />, you can inspect and debug these web views directly on **real Android and iOS devices** using familiar tools like [**Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Safari Web Inspector**](https://developer.apple.com/safari/tools/#current).
 
 This enables seamless inspection of DOM elements, console logs, network activity, and JavaScript execution—giving developers the same debugging power they enjoy on desktop browsers.
-
-
 
 ## Access DevTools on <BrandName /> Real Devices
 
@@ -28,16 +31,15 @@ This enables seamless inspection of DOM elements, console logs, network activity
 
 **Step 4:** In the session toolbar, click on the **Chrome DevTools** button.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/Real_device_chrome_devtools.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/Real_device_chrome_devtools.png' />
 
 **Step 5:** A debugging window will open:
 - On **Android**, this launches Chrome DevTools.
 - On **iOS**, you can choose between Safari Web Inspector or Chrome DevTools.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/real_device_safari_devtools.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/real_device_safari_devtools.png' />
 
 Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor network requests, and view console logs in real time.
-
 
 ---
 ## Supported Platforms
@@ -47,15 +49,12 @@ Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor 
 | Android  | Chrome DevTools           | Android 9 and above    |
 | iOS      | Safari Web Inspector, Chrome DevTools | iOS 13 and above    |
 
-
 <Note>
-**NOTE**
-
-With Hybrid application, release builds must enable the ability to inspect web views in your application.
+**With Hybrid application, release builds must enable the ability to inspect web views in your application.**
 
 - On Android 4.4*, call WebView.setWebContentsDebuggingEnabled.
 - On iOS 16.4+, set isinspectable to true on on the Webkit/WKWebView instance.
-</Note>
+</Note> 
 ---
 
 ## Use Cases 

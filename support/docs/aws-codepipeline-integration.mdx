@@ -1,72 +1,68 @@
 ---
-title: "AWS CodePipeline Integration With Lambdatest"
+title: "How to integrate AWS CodePipeline with TestMu AI"
 sidebarTitle: "AWS CodePipeline"
-keywords:
-  [
-    "lambdatest integrations",
-    "lambdatest integrations with ci/cd tools",
-    "continuous integration",
-    "aws codepipeline",
-    "continuous integration tools"
-  ]
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'continuous integration', 'aws codepipeline', 'continuous integration tools']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ***
 
+# AWS CodePipeline Integration With <BrandName />
+
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
 
-Lambdatest integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using Lambdatest, a cloud-based cross browser testing tool.
+<BrandName /> integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using <BrandName />, a cloud-based cross browser testing tool.
 
 ## Prerequisite
 ***
 
 * Login details in [AWS CodePipeline CI](https://aws.amazon.com/codepipeline/).
-* A GitHub repository. Here is our sample GitHub repository for [AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample.git).
-* **Lambdatest Authentication Credentials**   
-   Be aware of your Lambdatest authentication credentials, i.e., your Lambdatest username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [Lambdatest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+* A GitHub repository. Here is our sample GitHub repository for [AWS CodePipeline](https://github.com/<BrandName />/protractor-selenium-awscodepipeline-sample.git).
+* **<BrandName /> Authentication Credentials**   
+   Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
     ```
-    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+    $ export LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+    $ export LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
     ```
    - For Windows:
 
      ```
-     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+     $ set LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+     $ set LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
      ```
 
-## Integrating Your Lambdatest Account With AWS CodePipeline
+## Integrating Your <BrandName /> Account With AWS CodePipeline
 ***
 
 **Step 1:** Login to your AWS CodePipeline instance. Visit the Pipelines page and create a new pipeline.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline1.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline1.webp' alt="AWS CodePipeline" width="1316" height="419" />
 
 **Step 2:** Set your pipeline settings for a **new service role**.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline2.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline2.webp' alt="AWS CodePipeline" width="1247" height="461" />
 
 **Step 3:** Now, provide your git details in the next step to **Add Source Stage**.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline3.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline3.webp' alt="AWS CodePipeline" width="1209" height="460" />
 
 **Step 4:** Follow the steps in AWS CodePipeline & fill the form page on the next step to **Add build stage**.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline4.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline4.webp' alt="AWS CodePipeline" width="1223" height="425" />
 
 **Step 5:** Create a new build project while adding a **Build Stage**.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline5.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline5.webp' alt="AWS CodePipeline" width="1025" height="410" />
 
 **Step 6:**  Choose a **Deploy Provider** on **deploy stage** screen and click on **Next**.
 
-![AWS CodePipeline](/assets/images/aws-codePipeline-integration/aws-codepipeline6.webp)
+<img loading="lazy" src='/assets/images/aws-codePipeline-integration/aws-codepipeline6.webp' alt="AWS CodePipeline" width="1160" height="393" />
 
-<Warning>
-**Note:** Find the sample code from our [GitHub repository for AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample).
-</Warning>
+>**Note:** Find the sample code from our [GitHub repository for AWS CodePipeline](https://github.com/<BrandName />/protractor-selenium-awscodepipeline-sample).
 
 **Step 7:** Start a build and pull the codes from Git. Read the below `buildspec.yml` from your project’s root directory.
 
@@ -97,7 +93,7 @@ artifacts:
 discard-paths: yes
 ```
 
-**Step 8:** Monitor your test being triggered on the Lambdatest platform. You will observe the below output generated.
+**Step 8:** Monitor your test being triggered on the <BrandName /> platform. You will observe the below output generated.
 
 ```
 [Container] 2019/07/09 05:43:39 Running command echo Build started on `date` 
@@ -114,5 +110,4 @@ Finished in 15.406 seconds
 [05:44:04] I/launcher - chrome67.0 #01 passed 
 ```
 
-Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies by executing automated cross browser testing using Lambdatest Selenium Grid. Happy Testing! 🙂
-
+Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies by executing automated cross browser testing using <BrandName /> Selenium Grid. Happy Testing! 🙂
