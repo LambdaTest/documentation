@@ -1,12 +1,11 @@
 ---
-title: "GoCD Integration With HyperExecute"
+title: "How to integrate GoCD With HyperExecute"
 sidebarTitle: "GoCD"
-keywords: ['gocd','lambdatest','gocd integrations','gocd pipelines','gocd lambdatest','gocd integration with hyperexecute','hyperexecute integration with gocd pipelines','ci/cd']
-
+keywords: ['gocd', 'testmu ai', 'gocd integrations', 'gocd pipelines', 'gocd testmu ai', 'gocd integration with hyperexecute', 'hyperexecute integration with gocd pipelines', 'ci/cd']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
-***
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 GoCD, short for "Go Continuous Delivery," is an open-source continuous integration and continuous delivery (CI/CD) server that helps automate and streamline the software development and release process. It is designed to facilitate the efficient and reliable delivery of software from development to production.
 
@@ -20,12 +19,13 @@ This document will show you how to integrate GoCD with HyperExecute to greatly s
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/gocd" />
-</Check>
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/gocd" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Start the GoCD Server
 
@@ -44,7 +44,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 - Click on the New Pipeline Button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/1.png' alt="Image" />
 
 ### Step 2: Configure the GoCD Pipeline
 
@@ -58,7 +58,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 - Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/2.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/2.png' alt="Image" />
 
 #### Part 2: Pipeline Name
 
@@ -70,7 +70,7 @@ A Stage is a group of Jobs and a Job is a work which needs to be executed.
 
 - Enter your **Stage Details**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/3.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/3.png' alt="Image" />
 
 #### Part 4: Job and Tasks
 
@@ -91,27 +91,27 @@ chmod +x hyperexecute
 
 - Click on **Save + Run This Pipeline** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/4.png' alt="Image" />
 
 ### Job Running
 
 Now the Job is executed and running. You can check the status of Job in the:
 
 - #### GoCD GUI
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/6.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/6.png' alt="Image" />
 
 - #### GoCD Console
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/7.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/7.png' alt="Image" />
 
 - #### HyperExecute Dashboard
 
 After the build is successful, go to your HyperExecute Dashboard and check the output of the triggered Job.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/8.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/8.png' alt="Image" />
 
 - #### Job Status Passed
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/9.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/gocd/9.png' alt="Image" />
 
 ## Sample Workflow File
 

@@ -1,9 +1,13 @@
 ---
-title: "AWS CodePipeline Integration With HyperExecute"
+title: "How to integrate AWS CodePipeline with HyperExecute"
 sidebarTitle: "AWS CodePipeline"
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','hyperexecute integrations','hyperexecute integrations with ci/cd tools','continuous integration','aws codepipeline','continuous integration tools']
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'hyperexecute integrations', 'hyperexecute integrations with ci/cd tools', 'continuous integration', 'aws codepipeline', 'continuous integration tools']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# AWS CodePipeline Integration With HyperExecute
 
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
 
@@ -17,21 +21,20 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**TIP**
+<Tip>
+**Sample repo**
 
-Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/aws-codebuild" />
-</Check>
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/aws-codebuild" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 1: Create a new AWS CodePipeline pipeline.
 
 - Enter the Pipeline Name.
 - Under Service role, select **New service role.** Click Next.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP1.webp' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP1.webp' alt="Image" />
 
 ### Step 2: Add a Source Provider
 
@@ -40,7 +43,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 - Select the desired Repository.
 - Select the specified branch name, for which you want to establish the pipeline.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP2.webp' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP2.webp' alt="Image" />
 
 ### Step 3: Select the Build Provider
 
@@ -48,7 +51,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 - Click on **Create a Project** button.
 - For the demo we are selecting OS as Amazon Linux 2, Runtime as standard, Image - amazonlinux2-x86_64_standard:4.0, and Runtime Environment as Linux.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP3.webp' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP3.webp' alt="Image" />
 
 ### Step 4: Create a `buildspec.yml` file
 
@@ -81,7 +84,7 @@ phases:
 
 - You can "**Skip deploy stage"** and finally click **"Create Pipeline"** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP4.webp' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP4.webp' alt="Image" />
 
 ### Save the pipeline.
 
@@ -89,4 +92,4 @@ Once the pipeline is created, it will start automatically. The first time the pi
 
 **Output**
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP5.webp' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/aws/STEP5.webp' alt="Image" />

@@ -1,15 +1,19 @@
 ---
 title: "Getting started with SmartUI using Playwright"
 sidebarTitle: "Playwright"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
 - Basic understanding of Playwright is required.
 - Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -33,7 +37,7 @@ $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 </Tab>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### Step 1: Create a SmartUI Project
 
@@ -46,6 +50,8 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-1.webp' alt="cmd" width="768" height="373" /> */}
+
 ### Step 2: Configure your test with Playwright Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
@@ -53,7 +59,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 1. Please clone the following sample Github repo 
 
 ```bash 
-git clone https://github.com/LambdaTest/playwright-sample
+git clone https://github.com/TestMu AI/playwright-sample
 ```
 
 2. Install the node modules using the command
@@ -62,7 +68,7 @@ git clone https://github.com/LambdaTest/playwright-sample
 npm i
 ```
 
-3. Set up the LambdaTest credentials by using the commands below in the terminal.The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
    
 For macOS:
 ```bash
@@ -116,12 +122,12 @@ const { expect } = require('@playwright/test');
 
   const element = await page.$('[aria-label="Enter your search term"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI - Search')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -138,16 +144,14 @@ const { expect } = require('@playwright/test');
 node playwright-smartui.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
-## Fetching Screenshot Status and Results using WebHook <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
-
+## Fetching Screenshot Status and Results using WebHook <NewTag value='New' color='#000' bgColor='#ffec02' />
 
 To retrieve the status and results of a captured screenshot, you can utilize the provided webhook. Follow the steps below to fetch this information:
 
 ```javascript
  // Add this code snippet within your script to fetch the screenshot status during runtime
-
 
 response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName: "" }})}`)
 
@@ -188,17 +192,12 @@ The following are the description of the parameters:
 | `buildId`            | ID of the build in which the screenshot was captured.         |
 | `projectName`        | Name of the project in which the screenshot was captured.     |
 
-
-
-
 By including the above code, you will be able to obtain the status of the captured screenshot. If you specify a particular `Screenshot Name`, the response will contain the result for that specific screenshot.
 
-<Info>
-NOTE
+<Note>
+**Please note that the screenshot name should be provided within the screenshotName argument.**
 
-Please note that the screenshot name should be provided within the screenshotName argument.
-</Info>
-
+</Note>
 ## GitHub App Integration With Playwright
 ***
 
@@ -216,23 +215,22 @@ const capabilities: {
   ...
 }
 ```
-<Check>
+<Tip>
+**For step by step guide for  `Github Integration` click [here](/support/docs/smartui-github-app-integration/)**
 
-For step by step guide for  `Github Integration` click [here](https://www.lambdatest.com/support/docs/smartui-github-app-integration/)
-</Check>
+</Tip>
 
-For additional information about Playwright framework please explore the documentation [here](https://www.lambdatest.com/support/docs/playwright-testing/)
+For additional information about Playwright framework please explore the documentation [here](/support/docs/playwright-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
 
-<Tabs>
+<Tabs className="docs__val" groupId="best-practices">
 <Tab title="Capability Configuration">
 
 ### Capability Configuration
@@ -316,7 +314,7 @@ await page.waitForLoadState('networkidle');
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className="docs__val" groupId="troubleshooting">
 <Tab title="Screenshots Not Captured">
 
 ### Issue: Screenshots Not Captured
@@ -349,7 +347,7 @@ await page.waitForLoadState('networkidle');
    echo $LT_ACCESS_KEY
    ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </Tab>
 <Tab title="Project Not Found Error">
@@ -454,9 +452,9 @@ await page.waitForLoadState('networkidle');
 If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -464,6 +462,8 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)
+
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-2.webp' alt="cmd" width="768" height="373" /> */}

@@ -1,21 +1,13 @@
 ---
-title:  "Appium with NUnit"
+title: "Appium with NUnit"
 sidebarTitle: "NUnit"
-keywords: ['appium','csharp','c#','framework on testmu ai','NUNit','app testing','real devices']
+keywords: ['appium', 'csharp', 'c#', 'testmu ai java', 'framework on testmu ai', 'NUNit', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, you will learn how to trigger a automation script of **NUnit** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
@@ -42,37 +34,34 @@ nmake clean build
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-csharp-nunit" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-csharp-nunit" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
-<Warning>
-Open the Android/iOS project using the file with a .sln extension.
-</Warning>
+> Open the Android/iOS project using the file with a .sln extension.
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="Linux / MacOS">
-  <div className="lambdatest__codeblock">
   ```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
-</div>
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 <Tab title="Windows">
-  <div className="lambdatest__codeblock">
   ```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
-</div>
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 </Tabs>
 
@@ -81,40 +70,38 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="App File">
-  <div className="lambdatest__codeblock">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
-  </div>
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
 </Tab>
 
 <Tab title="App URL">
-  <div className="lambdatest__codeblock">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
-  </div>
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
 </Tab>
 
 </Tabs>
 
-<Check>
-**TIP**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
-</Check>
+</Tip>
 
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
-```csharp title="NUnitAppiumTests.cs" highlight={16,17,50,51}
+```csharp title="NUnitAppiumTests.cs"
 using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
@@ -130,7 +117,9 @@ using OpenQA.Selenium.Support.UI;
 namespace NUnitSelenium
 {
     //-------------------Running two parallel test cases----------------------------
+    //highlight-next-line
     [TestFixture("OnePlus 6", "8", "Android", "APP_URL")]    // Android Testing 
+    //highlight-next-line
     [TestFixture("iPhone 11", "14", "iOS", "APP_URL")]      // iOS testing
     [Parallelizable(ParallelScope.Fixtures)]
     public class NUnitSeleniumSample
@@ -164,8 +153,10 @@ namespace NUnitSelenium
         {
             //-----------------------------------Create instance for passing capabilities-----------------------------------------------------------------
             AppiumOptions capabilities = new AppiumOptions();
-            capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add LambdaTest username here 
-            capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add LambdaTest accessKey here
+            //highlight-next-line
+            capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add TestMu AI username here
+            //highlight-next-line
+            capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add TestMu AI accessKey here
             capabilities.AddAdditionalCapability("app",app);
             capabilities.AddAdditionalCapability("deviceName", deviceName);
             capabilities.AddAdditionalCapability("platformVersion", platformVersion);
@@ -260,7 +251,6 @@ namespace NUnitSelenium
                 driver.PressKeyCode(AndroidKeyCode.Back);
                 System.Threading.Thread.Sleep(1000);
 
-
                 //----------------------Browser Button---------------------------------
                 //   Console.WriteLine("Browser Button Clicked");
 
@@ -271,7 +261,6 @@ namespace NUnitSelenium
                   
               );
                 BROWSER.Click();
-
 
                 AndroidElement url = (AndroidElement)new WebDriverWait(
                 driver, TimeSpan.FromSeconds(10)).Until(
@@ -314,10 +303,10 @@ namespace NUnitSelenium
 }
 
 ```
-<Check>
-**TIP**
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
+
+</Tip>
 
 ### Step 5: Configure the Test Capabilities
 
@@ -327,8 +316,8 @@ The capabilities object in the sample code are defined as:
 
 ```csharp
 AppiumOptions capabilities = new AppiumOptions();
-capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add LambdaTest username here 
-capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add LambdaTest accessKey here
+capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add TestMu AI username here
+capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add TestMu AI accessKey here
 capabilities.AddAdditionalCapability("app",app);
 capabilities.AddAdditionalCapability("deviceName", deviceName);
 capabilities.AddAdditionalCapability("platformVersion", platformVersion);
@@ -338,19 +327,18 @@ capabilities.AddAdditionalCapability("name", "NUnit Test");
 capabilities.AddAdditionalCapability("isRealMobile", true);
 ```
 
-<Check>
-**TIP**
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-<Note>
-**INFO**
+</Tip>
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
+
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Note>
+</Info>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -370,14 +358,10 @@ Go to **Build menu** in Visual Studio Code menu bar and click on **Build Solutio
 Make sure that **DotNetSeleniumExtras.WaitHelpers** in the NuGet packages which you can check from **Project Menu -> Manage NuGet Packages**.
 </Warning>
 
-<Warning>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Warning>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

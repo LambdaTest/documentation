@@ -1,10 +1,10 @@
 ---
 title: "KaneAI - Jira Integration"
 sidebarTitle: "Jira Integration"
-keywords: ['testmu ai automation','testmu ai kaneai','kaneai scroll elements','kaneai sidebar scroll']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai scroll elements', 'kaneai sidebar scroll']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 The "Jira integration" feature allows you to generate test cases from your Jira tickets automatically. This feature leverages AI to analyze the content of Jira tickets and transform written test case descriptions into executable test cases on the <BrandName /> platform. This documentation provides a detailed guide to help you understand and utilize this feature effectively.
@@ -18,11 +18,10 @@ The "Jira integration" feature allows you to generate test cases from your Jira 
 ### Step 1: Install <BrandName /> Application for Jira
 Visit the Atlassian Marketplace, locate the **<BrandName /> AI Cloud** application for Jira and install app on your Jira instance.
 
-<Info>
-**NOTE**
+<Note>
+**Currently in the **Beta**. Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the KaneAI for your organization.**
 
-Currently in the **Beta**. Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the KaneAI for your organization.
-</Info>
+</Note>
 
 <img loading="lazy" src='/assets/images/kane-ai/features/jira-integration/marketplace.png' alt="kenai-jira integration" />
 
@@ -34,16 +33,14 @@ Currently in the **Beta**. Please reach out to our <span className="doc__lt" onC
 To trigger Kane AI, add the comment to your Jira ticket calling <BrandName /> application, for example:
 
 ```bash
-@LambdaTest create test case based on the details of this Jira
+@TestMu AI create test case based on the details of this Jira
 ```
 
-<Warning>
- **Note :** This comment signals Kane AI to analyze the Jira ticket content and automatically create test cases.
-</Warning>
+> **Note :** This comment signals Kane AI to analyze the Jira ticket content and automatically create test cases.
 
 After you post the comment, Kane AI will process the request and respond with a confirmation message. The response includes a link to <BrandName /> where you can review, modify, and schedule the generated test case.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/jira-integration/jira-test-case.webp' alt="kenai-jira integration"/>
+<img loading="lazy" src='/assets/images/kane-ai/features/jira-integration/jira-test-case.webp' alt="kenai-jira integration" />
 
 ### Step 4: Review and Schedule the Test Case on <BrandName />
 - **Access the Test Case :** Click on the link provided by Kane AI in the Jira comment. This will create a [Test Plan](/support/docs/kane-ai-test-plan/#step-2-define-your-state-outcomes-error-messages-constraints-and-user-inputs) for you to review and execute via KaneAI.

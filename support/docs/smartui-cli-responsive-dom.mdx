@@ -1,19 +1,12 @@
 ---
 title: "Capturing Responsive DOM with SmartUI SDK"
 sidebarTitle: "Capture Responsive DOM"
-keywords:
-    [
-    "Visual Regression",
-    "Visual Regression Testing Guide",
-    "Visual Regression Test Automation",
-    "Visual Regression Automation Testing",
-    "Running Visual Regression Tests",
-    "Visual Regression Testing Online",
-    "Run Visual Regression",
-    "Visual Regression Run Specific Test",
-    "Visual Regression Testing Environment",
-    "How to Run Visual Regression Tests"
-  ]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](/support/docs/smartui-sdk-config-options/).
@@ -27,9 +20,8 @@ Therefore, if your application adjusts DOM elements between different screen siz
 3. **Recommended Frameworks:** For optimal performance, use either Playwright or Selenium frameworks.
 
 <Note>
-NOTE
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 </Note>
 
 ## Steps to Use
@@ -82,11 +74,7 @@ Resize your viewport according to your framework and take the screenshot. For ex
     await smartuiSnapshot(driver, 'Screenshot Name', mobileOptions);
 ```
 
-<Note>
-NOTE
-
-Any existing screenshots with same screenshot name,browser and resolution will get over-written.
-</Note>
+>Note :: Any existing screenshots with same screenshot name,browser and resolution will get over-written.
 
 ## Things to keep in mind:
 

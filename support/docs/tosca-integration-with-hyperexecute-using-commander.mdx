@@ -1,10 +1,21 @@
----
-title: "Tosca Integration using Commander"
-sidebarTitle: "Tosca Integration using Commander"
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: tosca-integration-with-hyperexecute-using-commander
+title: Tosca Integration using Commander
+hide_title: true
+sidebarTitle: Tosca Integration using Commander
+description: This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute 
 keywords: ['hyperexecute integrations', 'hyperexecute integrations with products', 'products', 'tosca', 'tricentis']
+url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
+site_name: <BrandName />
+slug: tosca-integration-with-hyperexecute-using-commander/
+canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+# Tosca Integration using Commander
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute.
 
@@ -20,34 +31,32 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 **Step 2:** Click on the **Setup a New Project** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step2.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step2.webp' alt="Image" width="1365" height="650" />
 
 **Step 3:** Enter your **Project Name**. Click on Continue.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step3.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step3.webp' alt="Image" width="1365" height="650" />
 
 **Step 4:** Enter the **License Details**, i.e. Username and Password with which you want to execute your tests.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step4.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step4.webp' alt="Image" width="1365" height="650" />
 
 **Step 5:** Now select your **Database Type**. For the demo purpose, we are using Oracle. Choose how you want to establish the connection, i.e, **via Connection Data** or **via Connection String**, to access the common repository associated with your workspace. For demo purposes, we are selecting the **Connection String**. Enter the connection string for your database.
 
 Enter the **Workspace Details**, i.e., Username (mandatory) and Password (optional), that you want to use for this project. Click on the **Save** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step5.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step5.webp' alt="Image" width="1365" height="650" />
 
 **Step 6:** Please wait for the discovered execution list to get populated. Now, select the desired tests that you want to execute, and then click on the **Run** button.
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step6.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step6.webp' alt="Image" width="1365" height="650" />
 
 **Step 7:** Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute and click on the **Run** button.
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step7.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step7.webp' alt="Image" width="1365" height="650" />
 
 **Step 8:** Now go to the [**Jobs**](https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp' alt="Image" width="1365" height="650" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp' alt="Image" width="1365" height="650" />
 
-<Note>
-Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
-</Note>
+> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
 
 ***
 ## Integrate Tosca with HyperExecute using YAML
@@ -56,7 +65,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [<BrandName />’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/).
+-  Ensure that you have integrated Tosca with [<BrandName />’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 
@@ -64,13 +73,13 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
     
 - You can drag and drop test cases from the **Test Cases** tab to the execution list. In the example given below, the execution list is called LT.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca1.png' alt="Image" />
 
 **Step 2:** Create a **TC-Shell Script**:
 
 - A TC-Shell script file usually has the extension _.tcs_, and it contains a sequence of [TC-Shell commands](https://support-hub.tricentis.com/open?id=kb_article_view&table=kb_knowledge&number=KB0035628&searchTerm=shell%20commands) in plain text to configure the steps to execute a Tosca test via command line. This script file is kept in the same folder where you have the actual Tosca project saved.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca2.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca2.png' alt="Image" />
 
 - **Sample TC-Shell Script:**
 
@@ -91,11 +100,11 @@ save
 
 - Click the arrow on the right side of the **Execution** tab to retrieve the node path used in **jumptonode** command.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca3.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca3.png' alt="Image" />
 
 - The node path is highlighted in the image below. 
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca4.png' alt="Image" />
 
 - Use the following command to execute this test via command line. 
 
@@ -117,8 +126,9 @@ save
 
 <Warning>
 The binary for Mac is unsigned. You might get a permission denied warning while executing on mac and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`. <br />
-Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
 </Warning>
+
+Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
 
   **Sample Hyperexecute YAML file for TOSCA**:
   ```yaml
@@ -146,16 +156,15 @@ uploadArtefacts:
       - Demo_Sample/**
 
 ```
-<Warning>
-Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.
-</Warning>
+> Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.
 
 - After configuring the YAML, execute it via terminal using the following command:
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
-```
 
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
+```
 
 You have successfully integrated your Tricentis Tosca project with HyperExecute.
 

@@ -1,17 +1,12 @@
 ---
-title: "Error Messages During Test Execution"
-hide_title: true
+title: "Common Error Messages That May Happen During Test Execution"
 sidebarTitle: "Error Messages During Test Execution"
-keywords: ['supported browsers','test cancellation','max duration exceeded an error','firefox','authentication error','common error messages','exceeded queue limit error']
-
+keywords: ['supported browsers', 'test cancellation', 'max duration exceeded an error', 'firefox', 'authentication error', 'common error messages', 'exceeded queue limit error']
 ---
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-
-
-***
 Below is a list of various error messages that may happen during test execution.
 
 ## Authentication Error At The Time of Test Execution
@@ -22,7 +17,7 @@ This happens due to Username or Access Key passed by you is missing or invalid.
 
 ### How To Resolve?
 
-1. Go to LambdaTest Automation Dashboard.
+1. Go to <BrandName /> Automation Dashboard.
 2. Click on the key icon at the right top of the dashboard.
 3. Copy username and access key.
 
@@ -55,7 +50,7 @@ When a test is placed under a queue but gets cancelled before execution.
 
 This might occur due to various reasons:
 
-* The connection between the local machine of the user and LambdaTest cloud server is aborted.
+* The connection between the local machine of the user and <BrandName /> cloud server is aborted.
 * High latency may also lead your test script to test cancellation.
 * User cancels the test manually after placing it in queue.
 
@@ -63,7 +58,7 @@ This might occur due to various reasons:
 
 * * *
 
-Your test runner started a new test on LambdaTest, but then closed the connection before we could make a new test session available.
+Your test runner started a new test on <BrandName />, but then closed the connection before we could make a new test session available.
 
 ### Possible Cause:
 
@@ -75,7 +70,7 @@ This might occur due to several things:
 ### Possible Solutions:
 
 * Increase the connection timeout setting in your test runner/framework. For example, for WebdriverIO, you can set connectionRetryTimeout: 210000.
-* Make sure you're not exceeding the total allowed concurrent test limit as per LambdaTest Automation plan you're subscribed to.
+* Make sure you're not exceeding the total allowed concurrent test limit as per <BrandName /> Automation plan you're subscribed to.
 
 ## Lambda Error
 
@@ -83,9 +78,8 @@ This might occur due to several things:
 
 There are times when you may encounter Lambda Error stating the below message.
 
-<Warning>
-**Lambda Error:** Uh Oh! Looks like our Grid failed to recognize your test input.
-</Warning>
+> **Lambda Error:** Uh Oh! Looks like our Grid failed to recognize your test input.
+
 ### Possible Cause:
 
 There could be numerous reasons behind this error messages. The most common ones are listed below:
@@ -100,22 +94,20 @@ There could be numerous reasons behind this error messages. The most common ones
 
 The Element Click command could not be completed because the element receiving the events is obscuring the element that was requested clicked.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
 * It usually occurs when the target element that you want to click is overlaid by some other element in the web page.
 
-
 ### Possible Solutions:
 
 * There are multiple ways to solve the given issue - check <a href="https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted">StackOverFlow for more information </a>
-
 
 ## Element not interactable - 400
 
@@ -129,28 +121,23 @@ A command could not be completed because the element is not pointer- or keyboard
 
 2. Element has rendered but it is not in the visible part of the screen
 
-
 ### Possible Solutions:
 
 For 1. -> Use implicit /explicit wait:
-  - Implicit wait :
-    <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-    {`driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);`}
-    </CodeBlock>
-    </div>
+  - Implicit wait:
+    ```java
+    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    ```
       
 
   - Explicit wait :
-    <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
+    ```bash
+
     {`WebDriverWait wait=new WebDriverWait(driver, 20); element1 = wait.until(ExpectedConditions.elementToBeClickable(By.className("fa-stack-1x")));`}
-    </CodeBlock>
-    </div>
+    
+```
 
 For 2. -> Solution is just to scroll till the element. Based on the version of Selenium it can be handled in different ways. For more information, refer this <a href= "https://stackoverflow.com/questions/45183797/element-not-interactable-exception-in-selenium-web-automation">link.</a>
-
-
 
 ## Insecure certificate - 400
 
@@ -164,13 +151,11 @@ Navigation caused the user agent to hit a certificate warning, which is usually 
 * When a secure connection is not established between the server and client due to the certificate, following SSL certificate error will be manifested.
 * Suppose you provide some https request in the browser and get a prompt such as "This connection is untrusted" or the "The site’s security certificate is not trusted" (which varies as per the browser being used). Then such an error is subject to SSL certificate error.
 
-
 ### Possible Solutions:
 
 We can essentially adjust our script such that the SSL exception is handled by itself, using Selenium Webdriver.
 
 * For understanding and handling SSL errors - check <a href="https://www.toolsqa.com/selenium-webdriver/ssl-certificate-in-selenium/">this site</a> for more information 
-
 
 ## Invalid Argument - 400
 
@@ -181,34 +166,32 @@ Example:
 
 It is for example not possible to set a window size to a negative value:
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`from selenium import webdriver from selenium.common import exceptions session = webdriver.Firefox()
   try: 
     session.set_window_size(-10, 0)
   except 
     exceptions.InvalidArgumentException as e: print(e.message) `}
-</CodeBlock>
-</div>
+
+```
 
 Output:
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`InvalidArgumentException: Expected -10 to be >= 0`}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
 * The invalid argument error is a WebDriver error that occurs when the arguments passed to a command are either invalid or malformed.
 * Invalid argument errors can be likened to TypeErrors in JavaScript, in that they can occur for a great many APIs when the input value is not of the expected type or malformed in some way.
 
-
 ### Possible Solutions:
 
 * Check the values in your input and ensure they are actually valid.
-
 
 ## Invalid cookie domain - 400
 
@@ -216,12 +199,12 @@ Output:
 
 An illegal attempt was made to set a cookie under a different domain than the current page.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -229,8 +212,8 @@ An illegal attempt was made to set a cookie under a different domain than the cu
 Example:
 If the current domain were to be 'example.com', it would not be possible to add a cookie for the domain 'example.org':
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`from selenium import webdriver
   from selenium.common import exceptions
   session = webdriver.Firefox()
@@ -242,16 +225,16 @@ If the current domain were to be 'example.com', it would not be possible to add 
     session.add_cookie(cookie)
   except exceptions.InvalidCookieDomainException as e: print(e.message)
 `}
-</CodeBlock>
-</div>
+
+```
 
 Output: 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`InvalidCookieDomainException: https://example.org/
 `}
-</CodeBlock>
-</div>
+
+```
 
 ## Invalid element state - 400
 
@@ -259,14 +242,12 @@ Output:
 
 A command could not be completed because the element is in an invalid state, e.g. attempting to clear an element that isn't both editable and resettable.
 
-
 ### Possible Cause:
 
 * When we try to perform some operation which is not applicable then it will throw InvalidElementStateException.
 * Let’s assume if the textbox is disabled and if you try to perform type operation then it will throw an exception.
 * If radio button,checkbox or any other web element is disabled and if you try to perform click event then it will throw an exception.
 * If any element supports only click events and if you try to perform type events then again it will throw an exception
-
 
 ### Possible Solutions:
 
@@ -282,12 +263,12 @@ For more, refer this <a href = "https://learn-automation.com/invalidelementstate
 
 Argument was an invalid selector.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.InvalidSelectorException: invalid selector
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -300,7 +281,6 @@ Argument was an invalid selector.
 * Do check the punctuation's such as @, ', and [].
 * Make sure that there is only one field name with that path; else, use the contains() method
 
-
 ## The case where session not generated - invalid session id 404, session not created 500
 
 * * *
@@ -309,12 +289,12 @@ Argument was an invalid selector.
 
 Occurs if the given session id is not in the list of active sessions, meaning the session either does not exist or that it's not active.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`ERROR webdriver: Request failed with status 404 due to invalid session id: invalid session
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -326,12 +306,12 @@ Occurs if the given session id is not in the list of active sessions, meaning th
 
 A new session could not be created.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.SessionNotCreatedException: Message:  Could not start a new session. Response code 500. Message: session not created
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -341,7 +321,6 @@ A new session could not be created.
 
 * Can be primarily solved by ensuring Chrome version being used and the JDK, driver versions are compatible. Refer this link - <a href = "https://stackoverflow.com/questions/71571616/org-openqa-selenium-sessionnotcreatedexception-message-could-not-start-a-new-s"> stackoverflow</a>
 
-
 ## JavaScript error - 500
 
 * * *
@@ -350,8 +329,8 @@ The Javascript error is a WebDriver error that occurs when a script the supplied
 
 Example: 
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`from selenium import webdriver
   from selenium.common import exceptions
   session = webdriver.Firefox()
@@ -360,16 +339,16 @@ Example:
   except exceptions.JavascriptException as e:
     print(e.message)
 `}
-</CodeBlock>
-</div>
+
+```
 
 Output:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`JavascriptException: ReferenceError: foo is not defined
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -385,12 +364,12 @@ Output:
 
 Argument was an invalid selector.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.InvalidSelectorException: invalid selector
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -403,7 +382,6 @@ Argument was an invalid selector.
 * Do check the punctuation's such as @, ', and [].
 * Make sure that there is only one field name with that path; else, use the contains() method
 
-
 ## Move target out of bounds - 500
 
 * * *
@@ -411,12 +389,12 @@ Argument was an invalid selector.
 The target for mouse interaction is not in the browser’s viewport and cannot be brought into that viewport.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`MoveTargetOutOfBoundsException: Element cannot be scrolled into view
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -426,26 +404,24 @@ Example:
 
 * For a concise explanation regarding this error - <a href = "https://sqa.stackexchange.com/questions/45719/selenium-throws-movetargetoutofboundsexception-while-using-negative-value-in-the">refer here. </a>
 
-
 ## No such alert - 404
 
 * * *
 
 An attempt was made to operate on a modal dialog when one was not open.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`Exception in thread "main" org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: You need to use IE 6.0 for viewing this application. Else some features may not work): You need to use IE 6.0 for viewing this application. Else some features may not work
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause/explanation:
 
 Refer these links for one of the possible explanations:
 * <a href= "https://stackoverflow.com/questions/7722940/no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error"> no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error </a>
 * <a href= "https://stackoverflow.com/questions/30771067/selenium-webdriver-unexpected-modal-dialog-alert"> selenium-webdriver-unexpected-modal-dialog-alert </a>
-
 
 ## No such cookie - 404
 
@@ -454,12 +430,12 @@ Refer these links for one of the possible explanations:
 No cookie matching the given path name was found amongst the associated cookies of the current browsing context's active document.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -469,8 +445,6 @@ Example:
 
 * For a concise explanation regarding this error - <a href = "https://stackoverflow.com/questions/45842709/unable-to-set-cookies-in-selenium-webdriver">refer here. </a>
 
-
-
 ## No such element - 404
 
 * * *
@@ -478,12 +452,12 @@ Example:
 An element could not be located on the page using the given search parameters.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -506,12 +480,12 @@ There are different possibilities for this error to occur. Check the link below 
 A command to switch to a frame could not be satisfied because the frame could not be found.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`selenium.common.exceptions.NoSuchFrameException: Message: no such frame
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -530,12 +504,12 @@ Implement suitable edits to either css selector or XPATH
 A command to switch to a window could not be satisfied because the window could not be found.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`webdriver: Request failed with status 404 due to no such window: Currently focused window has been closed.
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Solution:
 
@@ -546,13 +520,11 @@ There are multiple approaches to this problem:
 
 For more, refer <a href="https://stackoverflow.com/questions/47388733/selenium-org-openqa-selenium-nosuchwindowexception-currently-focused-window-ha">Stack Overflow</a>
 
-
 ## No such shadow root - 404
 
 * * *
 
 The element does not have a shadow root.
-
 
 ### Explanation:
 
@@ -560,19 +532,18 @@ For `GET` request of Element Shadow Root - with URI template `/session/{session 
 
 For explanation regarding locator strategy, refer this <a href= "https://stackoverflow.com/questions/65044870/how-to-extract-info-within-a-shadow-root-open-using-selenium-python/65055114#65055114">link</a>
 
-
 ## Stale element reference - 404
 
 * * *
 
 A command failed because the referenced element is no longer attached to the DOM.
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -590,8 +561,8 @@ Some common solutions include:
  driver.findElement(By.xpath("xpath here")).click();`
 
 * Using 'try-catch' block within 'for loop' -
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`for(int i=0; i<=2;i++){
   try{
      driver.findElement(By.xpath("xpath here")).click();
@@ -601,8 +572,8 @@ Some common solutions include:
      Sysout(e.getMessage());
   }
 }`}
-</CodeBlock>
-</div>
+
+```
 
 * Using ExpectedConditions.refreshed
 
@@ -617,7 +588,6 @@ For a detailed explanation regarding the approach to solve this error -
 * <a href= "http://darrellgrainger.blogspot.com/2012/06/staleelementexception.html"> Link 1 </a>
 * <a href = "https://www.softwaretestingmaterial.com/stale-element-reference-exception-selenium-webdriver/">Link 2</a>
 
-
 ## Unsupported operation - 500
 
 * * *
@@ -625,8 +595,8 @@ For a detailed explanation regarding the approach to solve this error -
 Indicates that a command that should have executed properly cannot be supported for some reason.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`import java.util.Arrays;
 import java.util.List;
 public class UnsupportedOperationExceptionExample {
@@ -637,8 +607,8 @@ public class UnsupportedOperationExceptionExample {
     }
 }
 `}
-</CodeBlock>
-</div>
+
+```
 
 (for java)
 
@@ -658,7 +628,6 @@ Trying to add, remove or set elements using `ListIterator`.
 
 Refer this explanation from Rollbar for more info - <a href="https://rollbar.com/blog/fixing-unsupportedoperationexception-errors-in-java/"> Link </a>
 
-
 ## unknown method - 405
 
 * * *
@@ -666,12 +635,12 @@ Refer this explanation from Rollbar for more info - <a href="https://rollbar.com
 The requested command matched a known URL but did not match any method for that URL.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Possible Cause:
 
@@ -698,8 +667,8 @@ The unknown command error is a WebDriver error that occurs when the driver does 
 Example:
 The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and will return an unknown command error with a 404 Not Found HTTP status code
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`% curl -i -d '{}' http://localhost:4444/session/foo
 HTTP/1.1 404 Not Found
 Connection: close
@@ -709,8 +678,8 @@ Content-Length: 113
 Date: Fri, 30 Mar 2018 15:30:51 GMT
 {"value":{"error":"unknown command","message":"POST /session/asd did not match a known command","stacktrace":""}}
 `}
-</CodeBlock>
-</div>
+
+```
 
 ## Script timeout - 500
 
@@ -725,8 +694,8 @@ The script timeout duration is a configurable capability, which means you can ch
 If the session script timeout duration is set to indefinite by using a `null` value, you are at risk of putting the session into a non-recoverable state. Be aware that this should be used with caution.
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`from selenium import webdriver
 from selenium.common import exceptions
 session = webdriver.Firefox()
@@ -738,19 +707,17 @@ try:
 except exceptions.ScriptTimeoutException as e:
     print(e.message)
 `}
-</CodeBlock>
-</div>
+
+```
 
 Output:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
 
 {`ScriptTimeoutException: Timed out after 35000 ms`}
-</CodeBlock>
-</div>
+
+```
 
 * A workaround would be to use capabilities to extend the session's default script timeout.
-
 
 ## unable to set cookies - 500
 
@@ -761,8 +728,8 @@ A command to set a cookie's value could not be satisfied.
 `org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)`
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`System.setProperty("webdriver.edge.driver","C:\\Program Files\\Latest Webdriver\\MicrosoftWebDrive.exe" );
 EdgeDriver = new EdgeDriver();
 Thread.sleep(2000);
@@ -770,8 +737,8 @@ Cookie cookie = new Cookie("Testing", "11111");
 EdgeDriver.manage().addCookie(cookie);
 EdgeDriver.get("https://www.google.ca/?gws_rd=ssl"); // The link is an example
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Explanation:
 
@@ -789,7 +756,6 @@ A screen capture was made impossible.
 
 Possible explanations - <a href="https://stackoverflow.com/questions/71526066/appium-unable-to-take-screenshot-on-xcode-13-3-and-ios-15-4"> (For Appium) </a>
 
-
 ## unexpected alert open - 500
 
 * * *
@@ -799,8 +765,8 @@ A command could not be executed because the remote end is not aware of it.
 `org.openqa.selenium.UnhandledAlertException: unexpected alert open`
 
 Example:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+```bash
+
 {`org.openqa.selenium.UnhandledAlertException: unexpected alert open
  (Session info: chrome=38.0.2125.111)
  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.1 x86) (WARNING: The server did not  provide any stacktrace information)
@@ -809,8 +775,8 @@ Example:
  System info: host: 'Casper-PC', ip: '10.0.0.4', os.name: 'Windows 7', os.arch: 'x86', os.version:  '6.1', java.version: '1.8.0_25'
  Driver info: org.openqa.selenium.chrome.ChromeDriver
 `}
-</CodeBlock>
-</div>
+
+```
 
 ### Explanation:
 
@@ -819,6 +785,5 @@ This is happening because of the default behaviour of the driver when it encount
 The solution is to modify the default behaviour of the driver to ("IGNORE"), so that it doesn't close the alert but just ignores it.
 
 Thereafter you could use try-catch to catch the errors if any.
-
 
 * * *

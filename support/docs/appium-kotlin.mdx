@@ -1,21 +1,13 @@
 ---
-title: Appium With Kotlin
+title: "Appium With Kotlin"
 sidebarTitle: "Kotlin"
-keywords: ['appium','Kotlin','testmu ai kotlin','framework on testmu ai','java','app testing','real devices']
+keywords: ['appium', 'Kotlin', 'testmu ai kotlin', 'framework on testmu ai', 'java', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, you will learn how to configure and run your **Kotlin** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
@@ -31,33 +23,32 @@ In this documentation, you will learn how to configure and run your **Kotlin** a
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-kotlin" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-kotlin" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="Linux / MacOS">
-  <div className="lambdatest__codeblock">
   ```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
-</div>
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 <Tab title="Windows">
-  <div className="lambdatest__codeblock">
   ```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
-</div>
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 </Tab>
 </Tabs>
 
@@ -66,43 +57,40 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="App File">
-  <div className="lambdatest__codeblock">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
-  </div>
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
 </Tab>
 
 <Tab title="App URL">
-  <div className="lambdatest__codeblock">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
-  </div>
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
 </Tab>
 
 </Tabs>
 
-<Check>
-**TIP**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step.
-
-</Check>
+</Tip>
 
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests.
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="Android">
 
-```java title="android.kt" highlight={13,14,26}
+```java title="android.kt"
 import io.appium.java_client.MobileBy
 import io.appium.java_client.MobileElement
 import io.appium.java_client.android.AndroidDriver
@@ -115,10 +103,13 @@ class android {
 
     @Test
     fun `sample test`() {
-        val username = "LT_USERNAME"   //Add your LambdaTest username here
-        val accessKey = "LT_ACCESS_KEY"    //Add your LambdaTest accessKey here
+        //highlight-next-line
+        val username = "LT_USERNAME"   //Add your TestMu AI username here
+        //highlight-next-line
+        val accessKey = "LT_ACCESS_KEY"    //Add your TestMu AI accessKey here
 
         var driver: AndroidDriver<MobileElement>? = null
+
         val hub = URL("https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub")
 
         val caps = DesiredCapabilities()
@@ -128,6 +119,7 @@ class android {
         caps.setCapability("platformVersion", "11")
         caps.setCapability("platformName", "Android")
         caps.setCapability("isRealMobile", true)
+        //highlight-next-line
         caps.setCapability("app", "APP_URL") //Add the app (.apk) url here
         caps.setCapability("deviceOrientation", "PORTRAIT")
         caps.setCapability("build", "Kotlin Vanilla - Android")
@@ -137,29 +129,28 @@ class android {
         caps.setCapability("visual", true)
         caps.setCapability("device log", true)
 
-
         val app = AndroidDriver<AndroidElement>(hub, caps)
 
         Thread.sleep(4000)
 
         val color: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/color")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/color")) as MobileElement
             color.click()
 
         val text: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/Text")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/Text")) as MobileElement
             text.click()
 
         val toast: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/toast")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/toast")) as MobileElement
             toast.click()
 
         val notification: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/notification")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/notification")) as MobileElement
             notification.click()
 
         val geo: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/geoLocation")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/geoLocation")) as MobileElement
             geo.click()
         Thread.sleep(5000)
 
@@ -170,12 +161,11 @@ class android {
         Thread.sleep(2000)
 
         val speedtest: MobileElement =
-            app.findElement(MobileBy.id("com.lambdatest.proverbial:id/speedTest")) as MobileElement
+            app.findElement(MobileBy.id("com.lambdatest.proverbial :id/speedTest")) as MobileElement
             speedtest.click()
         Thread.sleep(5000)
 
         app.navigate().back()
-
 
         if (app != null) {
             app.quit()
@@ -188,7 +178,7 @@ class android {
 
 <Tab title="iOS">
 
-```java title="iOS.kt" highlight={16,17,28}
+```java title="iOS.kt"
 import io.appium.java_client.MobileBy
 import io.appium.java_client.MobileElement
 import io.appium.java_client.remote.AppiumCommandExecutor
@@ -204,8 +194,10 @@ class iOS {
 
     @Test
     fun `sample test`() {
-        val username = "LT_USERNAME"  //Add your LambdaTest username here
-        val accessKey = "LT_ACCESS_KEY"  //Add your LambdaTest accessKey here
+        //highlight-next-line
+        val username = "LT_USERNAME"  //Add your TestMu AI username here
+        //highlight-next-line
+        val accessKey = "LT_ACCESS_KEY"  //Add your TestMu AI accessKey here
 
         var driver: IOSDriver<IOSElement>? = null
 
@@ -216,6 +208,7 @@ class iOS {
         caps.setCapability("deviceName", "iPhone 12")
         caps.setCapability("platformVersion", "14")
         caps.setCapability("isRealMobile", true)
+        //highlight-next-line
         caps.setCapability("app", "APP_URL") //Add the app (.ipa) url here
         caps.setCapability("deviceOrientation", "PORTRAIT")
         caps.setCapability("build", "Kotlin Vanilla - iOS")
@@ -224,7 +217,6 @@ class iOS {
         caps.setCapability("network", false)
         caps.setCapability("visual", true)
         caps.setCapability("device log", true)
-
 
         val app = IOSDriver<IOSElement>(hub, caps)
 
@@ -254,7 +246,6 @@ class iOS {
 
         app.navigate().back()
 
-
         if (app != null) {
             app.quit()
         };
@@ -262,11 +253,15 @@ class iOS {
     }
 }
 ```
-<Check>
-**TIP**
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
+</Tip>
+
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
+
+</Tip>
 </Tab>
 </Tabs>
 
@@ -275,15 +270,16 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
-<Tabs>
+<Tabs className="docs__val">
 <Tab title="iOS">
 
-```java highlight={6}
+```java
 val caps = DesiredCapabilities()
 caps.setCapability("platformName", "ios")
 caps.setCapability("deviceName", "iPhone 12")
 caps.setCapability("platformVersion", "14")
 caps.setCapability("isRealMobile", true)
+//highlight-next-line
 caps.setCapability("app", "APP_URL") //Add the app (.ipa) url here
 caps.setCapability("deviceOrientation", "PORTRAIT")
 caps.setCapability("build", "Kotlin Vanilla - iOS")
@@ -298,7 +294,7 @@ caps.setCapability("device log", true)
 
 <Tab title="Android">
 
-```java highlight={8}
+```java
 val caps = DesiredCapabilities()
 caps.setCapability("autoAcceptAlerts", true)
 caps.setCapability("platformName", "Android")
@@ -306,6 +302,7 @@ caps.setCapability("deviceName", "Galaxy S20")
 caps.setCapability("platformVersion", "11")
 caps.setCapability("platformName", "Android")
 caps.setCapability("isRealMobile", true)
+//highlight-next-line
 caps.setCapability("app", "APP_URL") //Add the app (.apk) url here
 caps.setCapability("deviceOrientation", "PORTRAIT")
 caps.setCapability("build", "Kotlin Vanilla - Android")
@@ -318,19 +315,17 @@ caps.setCapability("device log", true)
 
 </Tab>
 </Tabs>
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-<Check>
-**TIP**
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
-<Note>
-**INFO**
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Note>
+</Info>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -342,14 +337,10 @@ mvn clean install
 2. Now, you have to successfully **build** the test in your IDE.
 3. Then run the current file by using **Run** button in the IDE.
 
-<Warning>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Warning>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

@@ -1,10 +1,15 @@
 ---
-title: "Understanding Your LambdaTest Concurrency"
+title: "Understanding Your TestMu AI Concurrency"
 sidebarTitle: "Concurrency Widget"
-keywords: ["lambdatest concurrency", "parallel tests", "concurrency widget", "test plans", "license pool"]
+keywords: ['testmu ai concurrency', 'parallel tests', 'concurrency widget', 'test plans', 'license pool']
 ---
 
-Your LambdaTest subscription is designed to be flexible, allowing you and your team to run different types of tests. This guide explains how your concurrency (the number of tests you can run in parallel) is managed.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Understanding Your <BrandName /> Concurrency
+
+Your <BrandName /> subscription is designed to be flexible, allowing you and your team to run different types of tests. This guide explains how your concurrency (the number of tests you can run in parallel) is managed.
 
 ---
 
@@ -40,10 +45,9 @@ The widget gives you a real-time view of your license pool usage. Let's break it
 
 At a glance, you see a list of test types (Intents) and their usage, like:
 
-
 This means that for the license pool this test belongs to, 1 parallel is currently being used out of a total of 10.
 
-![Image](/assets/images/concurrency-widget/1.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/1.png' alt="Image" />
 
 ---
 
@@ -62,7 +66,7 @@ In this case we are running a Web Automation Desktop Browser.
 
 **Available:** This is the final count of parallels left in the pool for you to use.
 
-![Image](/assets/images/concurrency-widget/2.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/2.png' alt="Image" />
 
 ---
 
@@ -93,11 +97,11 @@ When you look at the widget, both sections will reflect this usage:
 
 Web Automation Desktop Testing Widget		
 
-![Image](/assets/images/concurrency-widget/3.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/3.png' alt="Image" />
 
 Mobile Browser Automation Testing Widget
 
-![Image](/assets/images/concurrency-widget/4.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/4.png' alt="Image" />
 
 ---
 
@@ -111,7 +115,7 @@ Mobile Browser Automation Testing Widget
 - The Real-time Testing section on your page will show 2 tests as Consumed By Other.  
 - It will display that only 8/10 parallels are available, even though you haven't run any real-time tests yourself. The widget accurately reflects the total usage of the shared pool.  
 
-![Image](/assets/images/concurrency-widget/5.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/5.png' alt="Image" />
 
 ---
 
@@ -133,26 +137,23 @@ This is where the system's flexibility shines.
   Example: Running 12 tests out of 15 total.  
   Shows 3 available slots left, regardless of the type of test you choose next.  
 
-![Image](/assets/images/concurrency-widget/6.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/6.png' alt="Image" />
 
 - **Real Mobile Automation (unique to Web & Mobile Automation on Real Devices plan)**  
   Available only in the Web & Mobile Automation on Real Devices plan.  
   Even if 12 Web Automation tests are running, the system still shows 3 available slots (15 – 12).  
 
-![Image](/assets/images/concurrency-widget/7.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/7.png' alt="Image" />
 
 - **HyperExecute (Linux) (unique to Hyperexecute Linux plan)**  
   Available only in the HyperExecute (Linux Only) plan.  
   The system again shows 3 available slots, since concurrency dynamically balances across plans.  
 
-![Image](/assets/images/concurrency-widget/8.png)
+<img loading="lazy" src='/assets/images/concurrency-widget/8.png' alt="Image" />
 
 Now the system will intelligently decide your available concurrency based on the type of test that you want to run.  
 However, your total number of parallel tests is capped at 3 (regardless of type of test you want to run).  
 
 **Why?** The system pools your licenses for any overlapping test types, giving you maximum capacity. However, using these pooled licenses will consume slots from each contributing plan, affecting the availability of other, non-overlapping tests in those plans.
 
-
-
-
-
+---

@@ -1,8 +1,10 @@
 ---
 title: "AutoSplit Strategy"
 sidebarTitle: "Auto Split Strategy"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 
@@ -14,11 +16,9 @@ The Smart **Auto Split Strategy** enables you to distribute tests across multipl
 - Maximization of concurrency for faster results.
 - [Automatic reordering of test cases](/support/docs/hyperexecute-auto-split-strategy/#automatic-reordering-of-test-cases), prioritizing failed ones for faster feedback in subsequent executions.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/autosplit/autosplit.png' alt="Image"  className="doc_img" />
+<img loading="lazy" src='/assets/images/hyperexecute/features/autosplit/autosplit.png' alt="Image"  />
 
-<Note>
-HyperExecute provides flexibility to distribute tests at file level, scenario level, module level, and practically anything, provided you have a way to list down all the possible values of the entity that has to be distributed.
-</Note>
+> HyperExecute provides flexibility to distribute tests at file level, scenario level, module level, and practically anything, provided you have a way to list down all the possible values of the entity that has to be distributed.
 
 ## Enabling Auto-Test Splitting
 
@@ -54,8 +54,6 @@ testDiscovery:
   type: raw
   mode: dynamic
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
-```
-
 ```yaml
 testDiscovery:
   type: raw
@@ -84,8 +82,10 @@ After the initial run is complete, HyperExecute takes note of the failing tests.
 
 On subsequent runs, HyperExecute might prioritize the failing tests from the previous run for faster feedback.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/autosplit/auto-reorder.png' alt="Image"  className="doc_img" />
+<img loading="lazy" src='/assets/images/hyperexecute/features/autosplit/auto-reorder.png' alt="Image"  />
 
+<Info>
+**info**
 
-
-
+Automatic reordering is a behind-the-scenes feature that optimizes test execution. You don't need to specifically configure it; it might happen automatically as part of the autosplit process. It's like a hidden perk that can significantly improve your testing experience.
+</Info>

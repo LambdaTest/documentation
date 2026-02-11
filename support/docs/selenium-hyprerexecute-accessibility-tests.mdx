@@ -1,28 +1,18 @@
 ---
 title: "Automation Tests with Accessibility Tool using Selenium"
 sidebarTitle: "Selenium"
-keywords:
-  [
-    "LambdaTest",
-    "Accessibility",
-    "Testing",
-    "selenium",
-    "Automation",
-    "Accessibility Testing Settings",
-  ]
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'selenium', 'Automation', 'Accessibility Testing Settings']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-import { GitHubButton } from "/snippets/GitHubButton.mdx";
+
 
 This document provides a detailed, step-by-step way to execute your accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute.
-
-<Info>
-NOTE <br />
-This documentation is applicable for all [supported languages](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium framework.
+<Note>
+**This documentation is applicable for all [supported languages](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium framework.**
 
 Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the Accessibility feature for your organization.
-</Info>
+</Note>
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
@@ -37,12 +27,13 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 You can use your own Selenium project to configure and test it. For demo purposes, we are using the TestNG sample repository.
 
-<Check>
-**SAMPLE REPO**<br />
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url ="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample"/>
-</Check>
+
+<a href="https://github.com/<BrandName />/testng-selenium-hyperexecute-sample" target="_blank" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
@@ -57,7 +48,10 @@ capabilities.setCapability("build", "LambdaTestSampleApp");
 capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
-<Warning> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`https:lambdatest.com/capabilities-generator/`}>Capabilities Generator Tool</a>.</Warning>
+<Warning>
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
+</Warning>
+
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -81,26 +75,29 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="Linux / MacOS">
-  <div className="lambdatest__codeblock">
-    ```bash
-    export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-    export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-   ```
-</div>
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
 </Tab>
 
 <Tab title="Windows">
-  <div className="lambdatest__codeblock">
-   ```powershell
-    set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-    set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-    ```
-  </div>
-</Tab>
 
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
 </Tabs>
 
 ### Step 3: Add the Capabilities to enable the Accessibility 
@@ -124,12 +121,15 @@ Configure your YAML file as per your use cases using **key value** pairs. In thi
 - and other necessary YAML Parameters
 
 ```yaml reference title="HyperExecute AutoSplit YAML"
-https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
+https://github.com/TestMu AI/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
 
 ### Step 5: Execute your Test Suite
 
-<Warning> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.</Warning>
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -138,13 +138,15 @@ Run the below command in your terminal at the root folder of the project:
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
- 
- ```bash
-  ./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+```bash
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-![automation-dashboard](/assets/images/accessibility-testing/hyp-selenium.gif)
+<img loading="lazy" src='/assets/images/accessibility-testing/hyp-selenium.gif' alt="automation-dashboard" />

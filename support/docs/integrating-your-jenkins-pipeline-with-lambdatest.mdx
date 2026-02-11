@@ -1,58 +1,55 @@
 ---
-title: "Integrating Your Jenkins Pipeline With Lambdatest"
-sidebarTitle: "Integrating Your Jenkins Pipeline With Lambdatest"
-keywords:
-    [
-     "lambdatest integrations",
-    "lambdatest integrations with ci/cd tools",
-    "ci/cd tools",
-    "continuous integration",
-    "continuous delivery",
-    "continuous integration tools",
-    "jenkins pipeline" 
-    ]
+title: "Integrating Your Jenkins Pipeline With TestMu AI"
+sidebarTitle: "Integrating Your Jenkins Pipeline With TestMu AI"
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration', 'continuous delivery', 'continuous integration tools', 'jenkins pipeline']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Integrating Your Jenkins Pipeline With <BrandName /> 
+
 * * *
 
 Jenkins Pipeline is also referred to as "Pipeline" offers a suite of plugins to help integrate your continuous delivery pipeline into Jenkins. Jenkins Pipeline does so with the help of Pipeline DSL(Domain Specific Language) syntax that facilitates easy modelling of even the most complex delivery pipeline.
 
-## Prerequisites For Configuring Jenkins Pipeline With Lambdatest
+## Prerequisites For Configuring Jenkins Pipeline With <BrandName />
 
 * * *
 
 1.  Jenkins 2.X or greater version.
 2.  A Jenkins User with root access.
 3.  Ensure you have the Pipeline plugin, although, it is displayed under the "suggested plugins" during the post-installation setup of Jenkins.
-4.  **Lambdatest Authentication Credentials**
+4.  **<BrandName /> Authentication Credentials**
 
-Be aware of your Lambdatest authentication credentials i.e. your Lambdatest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[Lambdatest automation dashboard](https://automation.lambdatest.com)** by clicking on the key icon near the help button.
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://automation.lambdatest.com)** by clicking on the key icon near the help button.
 
 *   For Linux/Mac:
 
     ```javascript
-    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+    $ export LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+    $ export LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
     ```
 
 *   For Windows:
 
     ```javascript
-    $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-    $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+    $ set LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+    $ set LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
     ```
 
 ## Setting Up Jenkins Pipeline
 
 * * *
 
-You can find the Jenkins file for the Pipeline [here](https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
+You can find the Jenkins file for the Pipeline [here](https://github.com/<BrandName />/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
 
 ```javascript
 #!/usr/bin/env groovy
 
 node {
-    withEnv(["LT_USERNAME=Your LambdaTest UserName",
-    "LT_ACCESS_KEY=Your LambdaTest Access Key",
+    withEnv(["LT_USERNAME=Your TestMu AI UserName",
+    "LT_ACCESS_KEY=Your TestMu AI Access Key",
     "LT_TUNNEL=true"]){
 
     echo env.LT_USERNAME
@@ -62,7 +59,7 @@ node {
 
       // Get some code from a GitHub repository
     try{
-      git 'https://github.com/LambdaTest/nightwatch-selenium-sample.git'
+      git 'https://github.com/TestMu AI/nightwatch-selenium-sample.git'
 
       //Download Tunnel Binary
       sh "wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip"
@@ -100,13 +97,17 @@ node {
 }
 ```
 
-Refer to our [Github sample repository](https://github.com/LambdaTest/nightwatch-selenium-sample). Now, follow the below steps for the setup. 
+Refer to our [Github sample repository](https://github.com/<BrandName />/nightwatch-selenium-sample). Now, follow the below steps for the setup. 
 
-**Step 1:** Create a new project for Pipeline by going to Jenkins --> New Item. ![Jenkins](/assets/images/uploads/jenkins-pipeline-1.webp)
+**Step 1:** Create a new project for Pipeline by going to Jenkins --> New Item. <img loading="lazy" src='/assets/images/uploads/jenkins-pipeline-1.webp' alt="Jenkins" width="1896" height="216" />
 
  **Step 2:** Select the Pipeline.
-  ![jenkins pipeline](/assets/images/uploads/jenkins-pipeline-2.webp) 
+  <img loading="lazy" src='/assets/images/uploads/jenkins-pipeline-2.webp' alt="jenkins pipeline" width="1902" height="904" /> 
   
-  **Step 3:** Scroll down to Advanced Project Options. Paste the Code in the code pane or fetch it via SCM & hit the **Save** button. ![Jenkins save button](/assets/images/uploads/jenkins-pipeline-3.webp)
+  **Step 3:** Scroll down to Advanced Project Options. Paste the Code in the code pane or fetch it via SCM & hit the **Save** button. <img loading="lazy" src='/assets/images/uploads/jenkins-pipeline-3.webp' alt="Jenkins save button" width="1919" height="906" />
    **Note:** To run on the tunnel, Either you can use LT_TUNNEL Environment variable to set the tunnelling capability or you can pass in the code. Instructions on the tunnel are written in Repo Readme file.
 
+## Additional Links
+
+- [Integrate <BrandName /> With Jenkins Freestyle Project](/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
+- [Integrating <BrandName /> Report With Jenkins Pipeline](/support/docs/integrating-testmu-report-with-jenkins-pipeline/)

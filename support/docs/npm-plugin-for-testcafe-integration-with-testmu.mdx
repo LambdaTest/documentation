@@ -1,5 +1,5 @@
 ---
-title: "npm Plugin For TestCafe Integration With Lambdatest"
+title: "npm Plugin For TestCafe Integration With TestMu AI"
 sidebarTitle: "npm Plugin For TestCafe"
 keywords:
   [
@@ -11,15 +11,21 @@ keywords:
     "npm package"
   ]
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ***
 TestCafe offers a comprehensive and extensive platform to perform end-to-end tests for node.js applications. It supports both JavaScript and Typescript so that you can write tests in either one of the two. With TestCafe, you can create stable tests that are easy to integrate with your continuous integration process. You can also execute multiple test cases in parallel.
 
-Lambdatest, a cloud-based, cross browser testing platform, is out with an npm plugin that would allow you to integrate TestCafe with your Lambdatest account. That way, you can expand your test coverage using Lambdatest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on 3000+ real browsers and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, Lambdatest Selenium Grid also allows you to perform parallel testing.
+<BrandName />, a cloud-based, cross browser testing platform, is out with an npm plugin that would allow you to integrate TestCafe with your <BrandName /> account. That way, you can expand your test coverage using <BrandName /> [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on 3000+ real browsers and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, <BrandName /> Selenium Grid also allows you to perform parallel testing.
 
 ## Prerequisites
 ***
 
->**Important:** Visit Lambdatest [npm package for TestCafe](https://www.npmjs.com/package/testcafe-browser-provider-lambdatest).
+<Warning>
+**Important:** Visit <BrandName /> [npm package for TestCafe](https://www.npmjs.com/package/testcafe-browser-provider-lambdatest).
+</Warning>
+
 
 * Add the dependency `"testcafe": "<testcafe_version>"` in the package.json file.
 
@@ -38,17 +44,17 @@ Lambdatest, a cloud-based, cross browser testing platform, is out with an npm pl
         $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
         ```
 
-## Install Lambdatest npm Plugin For TestCafe
+## Install <BrandName /> npm Plugin For TestCafe
 -----------------------------------------------------------------------------------------------------------------------------
-Use the below command for installing the npm plugin to integrate Lambdatest with TestCafe.
+Use the below command for installing the npm plugin to integrate <BrandName /> with TestCafe.
 
 ``` js
 npm install testcafe-browser-provider-lambdatest
 ```
 
-## How To Use npm Plugin For Lambdatest & TestCafe Integration?
+## How To Use npm Plugin For <BrandName /> & TestCafe Integration?
 -----------------------------------------------------------------------------------------------------------------------------
-To acknowledge all available browsers aliases offered by Lambdatest Selenium Grid, type the below command:
+To acknowledge all available browsers aliases offered by <BrandName /> Selenium Grid, type the below command:
 
 ``` js
 testcafe -b lambdatest
@@ -78,14 +84,17 @@ testCafe
 
 ## Additional Configuration Parameters
 -----------------------------------------------------------------------------------------------------------------------------
->**Note**: TestCafe integration with Lambdatest does not support Geolocation testing.
+<Note>
+**Note**: TestCafe integration with <BrandName /> does not support Geolocation testing.
+</Note>
+
 
 In case you wish to make some additional configurations to your automation test scripts, then you can incorporate the below variables:
 
 | VARIABLE            | DESCRIPTION                                                                                                                                                                                                                                                                          |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LT_TEST_NAME        | To specify a name to your test on Lambdatest Selenium Grid.                                                                                                                                                                                                                          |
-| LT_BUILD            | To specify a name to your build on Lambdatest Selenium Grid.                                                                                                                                                                                                                         |
+| LT_TEST_NAME        | To specify a name to your test on <BrandName /> Selenium Grid.                                                                                                                                                                                                                          |
+| LT_BUILD            | To specify a name to your build on <BrandName /> Selenium Grid.                                                                                                                                                                                                                         |
 | LT_CAPABILITY_PATH  | To specify the path of a JSON file that declares additional Desired Capabilities. <br/> `     "Chrome@63.0:Windows 8.1" : {`             <br/>`"network" : true,`         <br/>`"visual" : true,`         <br/>`"timezone" : "UTC+11:00"`     <br/>`}`  <br/>Here, ``Chrome@63.0:Windows 8.1`` represents browser alias. | 
 | LT_RESOLUTION       | To perform cross browser testing on a specific screen resolution in the &#36;&lbrace;width&rbrace;x&#36;&lbrace;height&rbrace; format.                                                                                                                                                                                   |
 | LT_LOGFILE          | Presents detailed logs of your automation script execution. Provide a specific path to this file. If you won’t provide a path, then the logs would be saved in your present working directory by the filename: tunnel.log.                                                            |

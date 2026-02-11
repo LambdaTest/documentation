@@ -1,20 +1,23 @@
 ---
 title: "Filters for Espresso Tests"
 sidebarTitle: "Filters for Espresso Tests"
-keywords: ['espresso test filters', 'app test automation', 'espresso', 'filter', 'lambdatest', 'framework on lambdatest', 'testing in espresso', 'espresso testing', 'real devices']
+keywords: ['espresso test filters', 'app test automation', 'espresso', 'filter', 'testmu ai', 'framework on testmu ai', 'testing in espresso', 'espresso testing', 'real devices']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+---
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 
-To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s [REST API](/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by LambdaTest.
+To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s [REST API](/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by <BrandName />.
 
 Given below is the REST API endpoint:
 
 ```bash
 POST   /framework/v1/espresso/build
 ```
-
 
 | Parameters                  | Description                  | Values                                                                                                                                                                   | Datatype                                                                                                                                                                                                                                                                                                                                                        |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -26,24 +29,21 @@ POST   /framework/v1/espresso/build
 | `skipAnnotation`               | Allows the user to run all annotations except the ones defined               | Only a single annotation can be passed. E.g. `"com.example.proverbial.annotation"`                                                                                                                                                             | String                                                                                                                                                                                                                                                                                                                                                             |
 | `size`               | Allows the user to run only tests that are annotated with the matching size value `@SmallTest, @MediumTest or @LargeTest`               | You may specify only one value for this property from the three valid values i.e. `"small", "medium", "large"`                                                                                                                                                             | String                                                                                                                                                                                                                                                                                                                                                            |
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
-You can not use the following filters simultaneously.
-
+You can not use the following filters simultaneously. 
 - `class` and `package`
 - `class` and `skipClass`
 - `package` and `skipPackage`
-</Note>
+</Info>
 
-<Note>
-**NOTE**
+<Info>
+**Note**
 
 You can use the following filters simultaneously.
-
 - `annotation` and `skipAnnotation`
-</Note>
-
+</Info>
 
 ## Some Examples
 
@@ -51,92 +51,117 @@ Please refer to the example `cURL` requests given below for your reference.
 
 ### 1. To run specifically defined packages
 
-<Tabs>
-  <Tab title="MacOS/Linux">
-```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
-    --header 'Authorization: Basic <Enter_Basic_Auth>' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{
-        "app" : "lt://APP_ID",
-        "testSuite": "lt://TestSuite_ID",
-        "device" :  ["Pixel 6-12"],
-        "queueTimeout": 360,
-        "IdleTimeout": 150,
-        "deviceLog": true,
-        "build" : "Proverbial-Espresso"
-        "package" : ["com.example.proverbial.packagename1","com.example.proverbial.packagename2"]
-        }'
+<Tabs className="docs__val">
+
+<Tab title="MacOS/Linux">
+  ```bash
+
+    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+        --header 'Authorization: Basic <Enter_Basic_Auth>' \\
+        --header 'Content-Type: application/json' \\
+        --data-raw '{
+            "app" : "lt://APP_ID",
+            "testSuite": "lt://TestSuite_ID",
+            "device" :  ["Pixel 6-12"],
+            "queueTimeout": 360,
+            "IdleTimeout": 150,
+            "deviceLog": true,
+            "build" : "Proverbial-Espresso"
+            "package" : ["com.example.proverbial.packagename1","com.example.proverbial.packagename2"] 
+            }'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"package\" : [\"com.example.proverbial.packagename1\", \"com.example.proverbial.packagename2\"]}"
+</Tab>
+
+<Tab title="Windows">
+  ```powershell
+
+  ```
+  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"package\" : [\"com.example.proverbial.packagename1\", \"com.example.proverbial.packagename2\"]}"`}
+  ```
+
+  
 ```
-  </Tab>
+</Tab>
 </Tabs>
 
 ### 2. To run specifically defined classes
 
-<Tabs>
-  <Tab title="MacOS/Linux">
-```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
-    --header 'Authorization: Basic <Enter_Basic_Auth>' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{
-        "app" : "lt://APP_ID",
-        "testSuite": "lt://TestSuite_ID",
-        "device" :  ["Pixel 6-12"],
-        "queueTimeout": 360,
-        "IdleTimeout": 150,
-        "deviceLog": true,
-        "build" : "Proverbial-Espresso"
-        "class" : ["com.example.proverbial.packagename.classname1","com.example.proverbial.packagename.classname2"]
-        }'
+<Tabs className="docs__val">
+
+<Tab title="MacOS/Linux">
+  ```bash
+
+    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+        --header 'Authorization: Basic <Enter_Basic_Auth>' \\
+        --header 'Content-Type: application/json' \\
+        --data-raw '{
+            "app" : "lt://APP_ID",
+            "testSuite": "lt://TestSuite_ID",
+            "device" :  ["Pixel 6-12"],
+            "queueTimeout": 360,
+            "IdleTimeout": 150,
+            "deviceLog": true,
+            "build" : "Proverbial-Espresso"
+            "class" : ["com.example.proverbial.packagename.classname1","com.example.proverbial.packagename.classname2"] 
+            }'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"class\" : [\"com.example.proverbial.packagename.classname1\",\"com.example.proverbial.packagename.classname2\"]}"
+</Tab>
+
+<Tab title="Windows">
+  ```powershell
+
+  ```
+  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"class\" : [\"com.example.proverbial.packagename.classname1\",\"com.example.proverbial.packagename.classname2\"]}"`}
+  ```
+
+  
 ```
-  </Tab>
+</Tab>
 </Tabs>
 
 ### 3. To run specifically defined annotations
 
-<Tabs>
-  <Tab title="MacOS/Linux">
-```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
-  --header 'Authorization: Basic <Enter_Basic_Auth>' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
-      "app": "lt://APP_ID",
-      "testSuite": "lt://TestSuite_ID",
-      "device": ["Pixel 6-12"],
-      "queueTimeout": 360,
-      "IdleTimeout": 150,
-      "deviceLog": true,
-      "build": "Proverbial-Espresso",
-      "filters": {
-          "annotation": [
-              "com.lambdatest.proverbial.demo1","com.lambdatest.proverbial.demo2"
-          ]
-      }
-  }'
+<Tabs className="docs__val">
+
+<Tab title="MacOS/Linux">
+  ```bash
+
+    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+      --header 'Authorization: Basic <Enter_Basic_Auth>' \\
+      --header 'Content-Type: application/json' \\
+      --data-raw '{
+          "app": "lt://APP_ID",
+          "testSuite": "lt://TestSuite_ID",
+          "device": ["Pixel 6-12"],
+          "queueTimeout": 360,
+          "IdleTimeout": 150,
+          "deviceLog": true,
+          "build": "Proverbial-Espresso",
+          "filters": {
+              "annotation": [
+                  "com.lambdatest.proverbial .demo1","com.lambdatest.proverbial .demo2"
+              ]
+          }
+      }'`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Authorization: Basic <Enter the Auth here>" --header "Content-Type: application/json" --data-raw "{\"app\": \"lt://APP_ID\", \"testSuite\": \"lt://APP_ID\", \"device\": [\"Pixel 6-12\"], \"queueTimeout\": 360, \"IdleTimeout\": 150, \"deviceLog\": true, \"network\": false, \"build\": \"Proverbial-Espresso\", \"geoLocation\": \"FR\", \"filters\": {\"annotation\": [\"com.lambdatest.proverbial.demo1\", \"com.lambdatest.proverbial.demo2\"]}}"
+</Tab>
+
+<Tab title="Windows">
+  ```powershell
+
+  ```
+  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Authorization: Basic <Enter the Auth here>" --header "Content-Type: application/json" --data-raw "{\"app\": \"lt://APP_ID\", \"testSuite\": \"lt://APP_ID\", \"device\": [\"Pixel 6-12\"], \"queueTimeout\": 360, \"IdleTimeout\": 150, \"deviceLog\": true, \"network\": false, \"build\": \"Proverbial-Espresso\", \"geoLocation\": \"FR\", \"filters\": {\"annotation\": [\"com.lambdatest.proverbial .demo1\", \"com.lambdatest.proverbial .demo2\"]}}"`}
+  ```
+
+  
 ```
-  </Tab>
+</Tab>
 </Tabs>
 
-<Note>
-**INFO**
+<Info>
+**This configuration will run tests annotated with multiple annotations, i.e., only the intersection of all mentioned annotations will be considered.**
 
-This configuration will run tests annotated with multiple annotations, i.e., only the intersection of all mentioned annotations will be considered.
-</Note>
-
+</Info>

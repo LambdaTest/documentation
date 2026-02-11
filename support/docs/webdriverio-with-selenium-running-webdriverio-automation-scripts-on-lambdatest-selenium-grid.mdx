@@ -1,28 +1,31 @@
 ---
-title: "WebDriverIO with Selenium: Tutorial to Run Your First Test on LambdaTest"
+title: "WebDriverIO with Selenium: Tutorial to Run Your First Test on TestMu AI"
 sidebarTitle: "WebDriverIO"
 keywords: ['webdriverio selenium grid', 'selenium webdriver tutorial', 'webdriverio', 'webdriverio tutorial', 'javascript selenium', 'javascript automation testing', 'selenium webdriver javascript', 'selenium javascript testing tutorial', 'javascript selenium framework']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 
 
 ---
-In this topic, you will learn how to automate your website testing using Selenium with WebDriverIO Automation on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to automate your website testing using Selenium with WebDriverIO Automation on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 ---
 By the end of this topic, you will be able to:
 
-1. Run a sample Selenium Webdriver test using JavaScript on LambdaTest Automation.
+1. Run a sample Selenium Webdriver test using JavaScript on <BrandName /> Automation.
 2. Comprehend and configure Selenium test suite with respect to your capabilities.
 3. Select the specific browsers to run your test on.
-4. Explore the advanced features of LambdaTest.
+4. Explore the advanced features of <BrandName />.
 5. Run your test cases in parallel to reduce build times.
 
 
 ## Prerequisites For Running WebDriverIO Selenium Tests
 ---
-Before getting started with Automated Scripts using WebDriverIO Selenium on LambdaTest Automation, you need to:
+Before getting started with Automated Scripts using WebDriverIO Selenium on <BrandName /> Automation, you need to:
 
 * The first step is to download and install node.js and node package manager or npm. You should be having nodejs v6 or newer. Download it from [official NodeJS website](https://nodejs.org/en/).
 * Make sure to use the latest version of JavaScript.
@@ -31,7 +34,7 @@ Before getting started with Automated Scripts using WebDriverIO Selenium on Lamb
 
 ### Installing Selenium Dependencies and Tutorial Repo
 
-**Step 1:** Clone our repo to see the sample test case to run the first test on Lambdatest.
+**Step 1:** Clone our repo to see the sample test case to run the first test on <BrandName />.
 ```bash
 git clone https://github.com/LambdaTest/webdriverio-selenium.git
 ```
@@ -49,20 +52,20 @@ npm i
 //single_test.js
 var assert = require('assert');
 
-describe('Lambdatest Demo Test', function() {
-  it('Lambdatest Demo TestCase', function () {
+describe('TestMu AI Demo Test', function() {
+  it('TestMu AI Demo TestCase', function () {
     browser
       .url('https://lambdatest.github.io/sample-todo-app/')
       .click('*[name="li1"]')
       .click('*[name="li2"]')
-      .setValue('*[id="sampletodotext"]','Lambdatest\n');
+      .setValue('*[id="sampletodotext"]','TestMu AI\n');
     
     assert(browser.getTitle().match(/Sample page - lambdatest.com/i));
   });
 });
 ```
 ### Configuration of Your Test Capabilities
-You can use **[LambdaTest Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
+You can use **[<BrandName /> Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
 
 **Step 4:** Go to your `conf/single.conf.js` file where you can set your test capabilities.
 ```
@@ -172,10 +175,10 @@ for (var i in config.capabilities) {
 ```
 //package.json
 {
-  "name": "webdriverio-Lambdatest",
+  "name": "webdriverio-TestMu AI",
   "version": "0.1.0",
-  "readme": "WendriverIO Integration with [Lambdatest](https://www.Lambdatest.com)",
-  "description": "Selenium examples for WebdriverIO and Lambdatest Automate",
+  "readme": "WendriverIO Integration with [TestMu AI](https://www.TestMu AI.com)",
+  "description": "Selenium examples for WebdriverIO and TestMu AI Automate",
   "scripts": {
     "test": "npm run single && npm run local && npm run parallel",
     "single": "./node_modules/.bin/wdio conf/single.conf.js",
@@ -185,16 +188,16 @@ for (var i in config.capabilities) {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lambdatest/webdriverio-Lambdatest.git"
+    "url": "git+https://github.com/TestMu AI/webdriverio-TestMu AI.git"
   },
   "keywords": [
     "webdriverio",
-    "Lambdatest",
+    "TestMu AI",
     "selenium",
     "tests"
   ],
   "bugs": {},
-  "homepage": "https://github.com/Lambdatest/webdriverio-Lambdatest#readme",
+  "homepage": "https://github.com/TestMu AI/webdriverio-TestMu AI#readme",
   "dependencies": {
     "webdriverio": "^4.14.2"
   },
@@ -279,4 +282,4 @@ npm run parallel
 ---
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

@@ -1,34 +1,36 @@
 ---
 title: "Testim Integration"
 sidebarTitle: "Testim"
-keywords: [ "Lambdatest integrations", "Lambdatest integrations with testim", "testim integration", "testim integration with Lambdatest", "Lambdatest integration with testim", "testim Lambdatest" ]
+keywords: ['testmu ai integrations', 'testmu ai integrations with testim', 'testim integration', 'testim integration with testmu ai', 'testmu ai integration with testim', 'testim testmu ai']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 Testim provides an automated testing platform to create stable tests using AI Native capabilities, along with tools that facilitate scaling quality across your software development process.
 
-Integrating Lambdatest with Testim lets you run Testim automated tests on Lambdatest cloud-based grid across 3000+ real browsers and OS.
+Integrating <BrandName /> with Testim lets you run Testim automated tests on <BrandName /> cloud-based grid across 3000+ real browsers and OS.
 
 ## Prerequisites
 - Create an account on Testim.
-- Create a Lambdatest account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
-- Get your Lambdatest Username and Access Key.
+- Create a <BrandName /> account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
+- Get your <BrandName /> Username and Access Key.
 
 ## Setting Up the Grid
 Shown below are the steps to set up your Grid on Testim.
 
 1. Click on your profile icon > **Grids** button.
 
-2. Click on **Add New Grid**. Then, select **Lambdatest** as your Grid Type and click on **Next** button.
+2. Click on **Add New Grid**. Then, select **<BrandName />** as your Grid Type and click on **Next** button.
 
 3. To configure the Grid:
     - Enter the Grid name.
     - Update your Host and Port number.
-    - Enter your Lambdatest Username and Access Key and click on **Add** button.
+    - Enter your <BrandName /> Username and Access Key and click on **Add** button.
 
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/assets/videos/hyperexecute/integration/products/testim/grid-setup.mp4"
-></video>
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/integration/products/testim/grid-setup.mp4' type="video/mp4" />
+</video>
 
 ## Recording the Tests
 Shown below are the steps to record your tests on Testim.
@@ -39,11 +41,9 @@ Shown below are the steps to record your tests on Testim.
 
 3. It will start recording the tests. Once your testing is completed, stop the recording and save your tests.
 
-<video
-  controls
-  className="w-full aspect-video rounded-xl"
-  src="/assets/videos/hyperexecute/integration/products/testim/test-record.mp4"
-></video>
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/integration/products/testim/test-record.mp4' type="video/mp4" />
+</video>
 
 ## Configuring the Capabilities
 Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
@@ -56,7 +56,7 @@ Include the capabilities you wish to use in a `.json` file and ensure this file 
 }
 ```
 
-## Running the Testim Tests on Lambdatest
+## Running the Testim Tests on <BrandName />
 To execute the tests, check:
 
 * If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard. 
@@ -74,10 +74,11 @@ npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd"
 testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
 ```
 
-To view your test results, navigate to the Lambdatest Web Automation Dashboard.
+To view your test results, navigate to the <BrandName /> Web Automation Dashboard.
 
-![Web Automation Dashboard](/assets/images/tr-testim.png)
+<img loading="lazy" src='/assets/images/tr-testim.png' alt="Web Automation Dashboard" width="1920" height="1080" />
 
-<Warning>
+<Note>
 **Note**: To explore additional configuration options, you can execute `testim --help` in PowerShell or bash, which will display further customizations available for writing and executing your test cases.
-</Warning>
+</Note>
+

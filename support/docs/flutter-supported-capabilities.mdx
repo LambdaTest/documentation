@@ -1,12 +1,13 @@
 ---
 title: "Flutter Supported Capabilities"
 sidebarTitle: "Supported Capabilities"
-keywords: ['flutter','java','lambdatest java','framework on lambdatest','testng','app testing','real devices']
-
+keywords: ['flutter', 'java', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
-This document provide details about the features and capabilities supported for Espresso Framework on LambdaTest.
+
+This document provide details about the features and capabilities supported for Espresso Framework on <BrandName />.
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
@@ -24,9 +25,7 @@ This document provide details about the features and capabilities supported for 
 | gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`|
 | enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
 
+<Note>
+**Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."**
 
-<Info>
-**NOTE**
-
-Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
-</Info>
+</Note>

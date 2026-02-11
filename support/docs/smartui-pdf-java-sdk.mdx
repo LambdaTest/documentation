@@ -1,15 +1,23 @@
 ---
 title: "Upload PDFs via Java SDK"
 sidebarTitle: "Java SDK Upload"
-keywords: ["PDF Java SDK", "SmartUI Java SDK", "Visual Regression Testing", "PDF Testing", "Java Development"]
+keywords: ['PDF Java SDK', 'SmartUI Java SDK', 'Visual Regression Testing', 'PDF Testing', 'Java Development']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+<Warning>
+**This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).**
+
+</Warning>
 
 ## Prerequisites for Using SmartUI
 
 - Java 8 or higher installed on your system
 - Maven or Gradle build tool
 - Familiarity with Java development
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project
@@ -33,7 +41,7 @@ projectToken = "123456#1234abcd-****-****-****-************"
 First, clone the sample project to get started:
 
 ```bash
-git clone https://github.com/LambdaTest/junit-selenium-sample.git
+git clone https://github.com/TestMu AI/junit-selenium-sample.git
 cd junit-selenium-sample
 ```
 
@@ -43,8 +51,8 @@ Add the SmartUI Java SDK to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-java-sdk</artifactId>
+    <groupId>io.github.testmu ai</groupId>
+    <artifactId>testmu ai-java-sdk</artifactId>
     <version>1.0.18</version>
 </dependency>
 ```
@@ -57,30 +65,30 @@ mvn clean compile
 
 ## Step 3: Set up your credentials
 
-<Tabs>
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
-export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
-set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
-$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:LT_USERNAME="$YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
@@ -91,13 +99,13 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can upload PDFs in two modes:
 
-<Tabs >
+<Tabs className='docs__val'>
 
-<Tab title='Local Mode' >
+<Tab title="Local Mode">
 
 Upload pre-existing PDFs from your local machine:
 
-"> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
+"> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/<BrandName />/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
 
 ```java
 
@@ -122,11 +130,11 @@ public class SmartuiPdfLocalTest {
 
 </Tab>
 
-<Tab title='Cloud Mode'>
+<Tab title="Cloud Mode">
 
-Upload PDFs downloaded during LambdaTest cloud test execution:
+Upload PDFs downloaded during <BrandName /> cloud test execution:
 
-"> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
+"> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/<BrandName />/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
 
 ```java
 
@@ -136,7 +144,7 @@ public class SmartuiPdfCloudTest {
 
         // Download PDF from cloud session
         String base64Content = (String) ((JavaScriptExecutor) driver)
-            .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
+            .executeAsyncScript("lambda-file-content=TestMu AI.pdf");
 
         // Convert base64 to PDF file
         byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
@@ -240,8 +248,8 @@ public class SmartuiPdfErrorHandling {
 
 ## Best Practices
 
-<Tabs >
-<Tab title='PDF File Management' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="PDF File Management">
 
 **PDF File Management**
 
@@ -259,7 +267,7 @@ String[] pdfPaths = {
 ```
 
 </Tab>
-<Tab title='Project Token Management'>
+<Tab title="Project Token Management">
 
 **Project Token Management**
 
@@ -269,7 +277,7 @@ String[] pdfPaths = {
 - Rotate tokens regularly
 
 </Tab>
-<Tab title='Build Naming'>
+<Tab title="Build Naming">
 
 **Build Naming**
 
@@ -283,7 +291,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 </Tab>
-<Tab title='Error Handling'>
+<Tab title="Error Handling">
 
 **Error Handling**
 
@@ -293,7 +301,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 - Implement retry logic for transient failures
 
 </Tab>
-<Tab title='Batch Processing'>
+<Tab title="Batch Processing">
 
 **Batch Processing**
 
@@ -303,7 +311,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 - Use appropriate batch sizes
 
 </Tab>
-<Tab title='Batch Processing'>
+<Tab title="Batch Processing">
 
 **Batch Processing**
 
@@ -317,8 +325,8 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='PDF Upload Fails' >
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="PDF Upload Fails">
 
 **Issue: PDF Upload Fails**
 
@@ -347,7 +355,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 
 3. Verify file size is within limits
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Verify PROJECT_TOKEN is set correctly:
    ```bash
@@ -355,7 +363,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
    ```
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: Project Not Found" Error**
 
@@ -373,7 +381,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Upload Returns Null or Empty Result'>
+<Tab title="Upload Returns Null or Empty Result">
 
 **Issue: Upload Returns Null or Empty Result**
 
@@ -403,11 +411,11 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 4. Retry upload if transient error
 
 </Tab>
-<Tab title='Maven Dependencies Not Resolving'>
+<Tab title="Maven Dependencies Not Resolving">
 
 **Issue: Maven Dependencies Not Resolving**
 
-**Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
+**Symptoms**: Maven cannot find `testmu ai-java-sdk` or dependencies fail
 
 **Possible Causes**:
 - Incorrect dependency version
@@ -415,7 +423,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 - Network connectivity problems
 
 **Solutions**:
-1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
+1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.testmu ai/testmu ai-java-sdk)
 2. Clear Maven cache:
    ```bash
    mvn clean
@@ -424,7 +432,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check pom.xml for version conflicts
 
 </Tab>
-<Tab title='Batch Upload Partially Fails'>
+<Tab title="Batch Upload Partially Fails">
 
 **Issue: Batch Upload Partially Fails**
 
@@ -454,7 +462,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 4. Implement retry logic for failed uploads
 
 </Tab>
-<Tab title='PDFs Not Appearing in Dashboard'>
+<Tab title="PDFs Not Appearing in Dashboard">
 
 **Issue: PDFs Not Appearing in Dashboard**
 
@@ -480,8 +488,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

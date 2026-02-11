@@ -1,12 +1,10 @@
 ---
 title: "HyperExecute CLI - Run test on HyperExecute"
 sidebarTitle: "HyperExecute CLI - Run test on HyperExecute"
-description: Explains about HyperExecute CLI
-keywords: ['testmu ai automation','testmu ai hyperexecute','hyperexecute automation grid','hyperexecute online','online hyperexecute','hyperexecute automation grid online','testmu ai hypterest tutorial','hyperexecute getting started','testmu ai hyperexecute getting started','hyperexecute automation testing','hyperexecute matrix execution','hyperexecute autosplit execution','hyperexecute auto-split execution']
+keywords: ['testmu ai automation', 'testmu ai hyperexecute', 'hyperexecute automation grid', 'hyperexecute online', 'online hyperexecute', 'hyperexecute automation grid online', 'testmu ai hypterest tutorial', 'hyperexecute getting started', 'testmu ai hyperexecute getting started', 'hyperexecute automation testing', 'hyperexecute matrix execution', 'hyperexecute autosplit execution', 'hyperexecute auto-split execution']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
@@ -14,6 +12,7 @@ import { BrandName } from '/snippets/BrandName.mdx';
 <Warning>
 HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the <BrandName />-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. <BrandName /> assumes no liability for any losses arising from failure to comply.
 </Warning>
+
 
 ## Download the HyperExecute CLI
 
@@ -28,38 +27,43 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 ## Verifying the Authenticity of the CLI
 To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. <BrandName /> signs all official HyperExecute CLI releases for security and integrity assurance.
 
-<Tabs>
-  <Tab title="Linux">
-    You can verify the code signature of the binary using the `openssh` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
+<Tabs className="docs__val">
 
-    ```bash
-    openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>
-    ```
+<Tab title="Linux">
+You can verify the code signature of the binary using the `openssh` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
 
-    <img loading="lazy" src='/assets/images/hyperexecute/cli/linux-verification.png' alt="Image" />
-  </Tab>
+```bash
+openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>
+```
 
-  <Tab title="macOS">
-    You can verify the code signature of the binary using the `codesign` command. In your terminal run the following command:
+<img loading="lazy" src='/assets/images/hyperexecute/cli/linux-verification.png' alt="Image" />
 
-    ```bash
-    codesign -dvvv <PATH_TO_CLI>
-    ```
+</Tab>
 
-    <img loading="lazy" src='/assets/images/hyperexecute/cli/mac-verification.png' alt="Image" />
-  </Tab>
+<Tab title="macOS">
+You can verify the code signature of the binary using the `codesign` command. In your terminal run the following command:
 
-  <Tab title="Windows">
-    **Step 1:** Locate the downloaded CLI binary (e.g., hyperexecute.exe). <br />
-    **Step 2:** Right-click on the file and select Properties. <br />
-    **Step 3:** Go to the Digital Signatures tab. <br />
-    **Step 4:** Select the listed signature and click Details. <br />
-    **Step 5:** Click View Certificate → Details to inspect the certificate information. <br />
+```bash
+codesign -dvvv <PATH_TO_CLI>
+```
 
-    This certificate should display <BrandName />, Inc. as the verified publisher.
+<img loading="lazy" src='/assets/images/hyperexecute/cli/mac-verification.png' alt="Image" />
 
-    <img loading="lazy" src='/assets/images/hyperexecute/cli/windows-verification.png' alt="Image" />
-  </Tab>
+</Tab>
+
+<Tab title="Windows">
+
+**Step 1:** Locate the downloaded CLI binary (e.g., hyperexecute.exe). <br />
+**Step 2:** Right-click on the file and select Properties. <br />
+**Step 3:** Go to the Digital Signatures tab. <br />
+**Step 4:** Select the listed signature and click Details. <br />
+**Step 5:** Click View Certificate → Details to inspect the certificate information. <br />
+
+This certificate should display <BrandName />, Inc. as the verified publisher.
+
+<img loading="lazy" src='/assets/images/hyperexecute/cli/windows-verification.png' alt="Image" />
+
+</Tab>
 </Tabs>
 
 ## HyperExecute CLI Supported Flags 
@@ -190,14 +194,15 @@ This flag allows you to disable the auto updation of your HyperExecute binary.
 This flag allows you to download all the test related results that are generated by your testing framework. You can use this key if you want to download the artifacts.
 
 ```bash
-./hyperexecute --user <YOUR_LAMBDATEST_USERNAME> --key <YOUR_LAMBDATEST_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts`}
+  
 ```
 
-<Info>
-**NOTE**
+<Note>
+**- For Espresso with private devices HyperExecute can download user generated artefacts.**
 
-For Espresso with private devices HyperExecute can download user generated artefacts.
-</Info>
+</Note>
 
 ***
 
@@ -205,7 +210,9 @@ For Espresso with private devices HyperExecute can download user generated artef
 In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
 
 ```bash
-./hyperexecute --user <YOUR_LAMBDATEST_USERNAME> --key <YOUR_LAMBDATEST_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-path "PATH_OF_YOUR_SPECIFIED_DIRECTORY"
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-path "PATH_OF_YOUR_SPECIFIED_DIRECTORY"`}
+  
 ```
 
 ***
@@ -214,7 +221,9 @@ In case you want the artifacts to be downloaded to a specific directory, please 
 If you want to download the zip file of the artifacts for a job.
 
 ```bash
-./hyperexecute --user <YOUR_LAMBDATEST_USERNAME> --key <YOUR_LAMBDATEST_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-zip
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-zip`}
+  
 ```
 
 ***
@@ -260,10 +269,8 @@ secret1=value1
 secret2=value2
 ```
 
-<Note>
-**INFO**
-
-The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
+<Info>
+**The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:**
 
 **Store Outside the Repository (Recommended)**
 
@@ -272,7 +279,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 **Exclude from Version Control**
 
 - Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
-</Note>
+</Info>
 
 ***
 
@@ -280,7 +287,9 @@ The secrets file contains highly sensitive information and must be strictly excl
 The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
 
 ```bash
---key <YOUR_LAMBDATEST_ACCESS_KEY>
+
+    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  
 ```
 
 ***
@@ -331,7 +340,7 @@ This flag runs the network logs in your local machine console .
 --scan
 ```
 
-<img loading="lazy" src='/assets/images/hyperexecute/cli/scan.png' alt="project-hyperexecute" />
+<img loading="lazy" src='/assets/images/hyperexecute/cli/scan.png' alt="project-hyperexecute" className="doc_img " />
 
 ***
 
@@ -345,7 +354,7 @@ The `--server-port` flag is used to specify the port number that the HyperExecut
 ***
 
 ### `-t, --target-directory`
-
+{/* You can choose the directory where the test scripts have to be uploaded by using this flag. */}
 
 The `targetDirectory` option in the HyperExecute CLI specifies the directory where the output of the executed command will be stored. If this option is not specified, the output will be stored in the current working directory.
 
@@ -355,7 +364,7 @@ The `targetDirectory` option in the HyperExecute CLI specifies the directory whe
 ***
 
 ### `--target-path`
-
+{/* You can choose the files and folders that will be uploaded as a payload by using this flag. */}
 
 The `target-path` flag allows you to selectively upload specific files and folders as part of the suite payload. This can be used for streamlining the uploading process and ensuring that only relevant files are included in the payload.
 It can also be useful if a user wants to run tests in a monorepo for multiple services.
@@ -391,7 +400,9 @@ In another scenario, suppose you first created a folder. Inside that folder, you
 The username of your <BrandName /> account. 
 
 ```bash
---user <YOUR_LAMBDATEST_USERNAME>
+
+    {`--user ${ YOUR_LAMBDATEST_USERNAME()}`}
+  
 ```
 
 ***
@@ -401,7 +412,7 @@ This method allows you to name your variables. It helps you optimize the content
 
 You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
 ```bash
---vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
+--vars "org=TestMu AI" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 ***
 
@@ -409,7 +420,9 @@ You can specify the email address for sharing [reports](/support/docs/hyperexecu
 The new `--validate` flag in the HyperExecute CLI allows you to quickly check the syntax and structure of your YAML file without running any tests. Simply pass the `--validate` flag with your YAML file, and the CLI will validate its structure and syntax. It will then return a success or error message, helping you identify if the file is correctly formatted or if there are any issues that need attention.
 
 ```bash
-./hyperexecute --user <YOUR_LAMBDATEST_USERNAME> --key <YOUR_LAMBDATEST_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --validate
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE  --validate`}
+  
 ```
 
 ***
@@ -432,31 +445,30 @@ This flag indicates the version of HyperExecute CLI binary that you are running 
 
 In order to trigger your job on HyperExecute, execute the following command in your terminal. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command.
 
-```bash
-./hyperexecute --user <YOUR_LAMBDATEST_USERNAME> --key <YOUR_LAMBDATEST_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+  ```bash
+
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+    
 ```
 
-<Check>
-**TIP**
+<Tip>
+**In case of macOS, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General** tab.**
 
-In case of macOS, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
-</Check>
+</Tip>
 
-<Info>
-**NOTE**
+<Note>
+**If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work. **
 
-If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work.
 (An example with our sample repo has been given below):
-
-```bash
-apk add libc6-compat git bash
-git clone https://github.com/LambdaTest/behave-selenium-hyperexecute-sample.git
-cd behave-selenium-hyperexecute-sample/
-wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
-chmod +x hyperexecute
-./hyperexecute --user <lt_user> --key <lt_access_key> --config yaml/win/behave_hyperexecute_autosplit_sample.yaml
-```
-</Info>
+  ``` bash
+  apk add libc6-compat git bash
+  git clone https://github.com/TestMu AI/behave-selenium-hyperexecute-sample.git
+  cd behave-selenium-hyperexecute-sample/
+  wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+  chmod +x hyperexecute
+  ./hyperexecute --user <lt_user> --key <lt_access_key> --config yaml/win/behave_hyperexecute_autosplit_sample.yaml
+  ```
+</Note>
 
 ## Running HyperExecute CLI in Quiet Mode
 
@@ -466,28 +478,24 @@ Hyperexecute provides a **"Quiet mode"** as a solution to this issue and to give
 
 To enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.
 
-<Tabs>
-  <Tab title="Linux / macOS">
-    ```bash
-    env | grep CI # Used to check if the CI variable is set to true or not
-    export CI=true # If it's not set to true, then use this command to set as true
-    ```
-  </Tab>
+<Tabs className="docs__val">
+<Tab title="Linux / macOS">
+  ```yaml
+  env | grep CI # Used to check if the CI variable is set to true or not
+  export CI=true # If it's not set to true, then use this command to set as true
+  ```
+</Tab>
 
-  <Tab title="Windows">
-    ```bash
-    env | grep CI # Used to check if the CI variable is set to true or not
-    set CI=true # If it's not set to true, then use this command to set as true
-    ```
-  </Tab>
+<Tab title="Windows">
+  ```yaml
+  env | grep CI # Used to check if the CI variable is set to true or not
+  set CI=true # If it's not set to true, then use this command to set as true
+  ```
+</Tab>
 </Tabs>
 
 #### Output
 
 <img loading="lazy" src='/assets/images/hyperexecute/cli/cli-execute.png' alt="Image" width="1350" height="619" />
-
-<Note>
-
-📕  Use the HyperExecute CLI's [Frequently Asked Questions](/support/docs/hyperexecute-cli-faqs/) to gain more knowledge about it.
-</Note>
-
+<br /><br />
+> 📕 Use the HyperExecute CLI's [Frequently Asked Questions](/support/docs/hyperexecute-cli-faqs/) to gain more knowledge about it.

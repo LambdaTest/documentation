@@ -1,45 +1,45 @@
 ---
 title: "Maven Tunnel For Locally Hosted Web Applications"
 sidebarTitle: "Maven Tunnel For Locally Hosted Web Apps"
-keywords: ["local app testing", "lambdatest local testing", "lambdatest local tunnel", "LambdaTest Tunnel", "local app testing for maven", "maven tunnel for lambdatest"]
+keywords: ['local app testing', 'testmu ai local testing', 'testmu ai local tunnel', 'TestMu AI Tunnel', 'local app testing for maven', 'maven tunnel for testmu ai']
 ---
 
-Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. LambdaTest offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through LambdaTest Selenium Grid.
+import { BrandName } from "/snippets/BrandName.mdx";
 
-This document will help you configure a secure LambdaTest Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
-<Warning>
-LambdaTest Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
-</Warning>
+Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. <BrandName /> offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through <BrandName /> Selenium Grid.
+
+This document will help you configure a secure <BrandName /> Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
+
+> <BrandName /> Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.testmu ai/testmu ai-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
 
 ## Prerequisites
 
-**LambdaTest Authentication Credentials:**
-Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your LambdaTest automation dashboard by clicking on the key icon near the help button.
+**<BrandName /> Authentication Credentials:**
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button.
 
 **For Linux/Mac:**
 
 ```javascript
-$ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-$ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+$ export LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+$ export LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 **For Windows:**
 ```javascript
-$ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-$ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+$ set LT_USERNAME= YOUR_LAMBDATEST_USERNAME
+$ set LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 * Make sure you have [Maven installed](https://maven.apache.org/install.html).
 * Install [Java 8](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html).
 
 ## Set Up Maven Sample Project & Dependencies
+* * *
+<Warning>
+Note: Make sure you clone our [GitHub repository for Maven tunnel](https://github.com/<BrandName />/maven-tunnel-sample).
+</Warning>
 
-<Note>
-NOTE
-
-Note: Make sure you clone our [GitHub repository for Maven tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
-</Note>
 
 Navigate to the cloned directory & compile maven dependencies using the command:
 
@@ -49,18 +49,19 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 
 ```js
 <dependency>
-	<groupId>com.github.lambdatest</groupId>
-	<artifactId>lambdatest-tunnel-binary</artifactId>
+	<groupId>com.github.testmu ai</groupId>
+	<artifactId>testmu ai-tunnel-binary</artifactId>
 	<version>4.0.2</version>
 </dependency>
 ```
 
 ## Running Maven Tunnel
+* * *
 
-Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
+Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/<BrandName />/maven-tunnel-sample).
 
-```javascript
-package com.lambdatest.tunnel;
+```js
+package com.testmu ai.tunnel;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -71,7 +72,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import com.lambdatest.tunnel.Tunnel;
+import com.testmu ai.tunnel.Tunnel;
 
 public class MavenSingle {
     Tunnel t;
@@ -81,7 +82,6 @@ public class MavenSingle {
 
     String username = System.getenv("LT_USERNAME");
     String access_key = System.getenv("LT_ACCESS_KEY");
-
 
     @BeforeTest
     public void setUp() throws Exception {
@@ -128,7 +128,7 @@ public class MavenSingle {
 ```
 
 ## Parallel Testing With Maven Tunnel
-
+* * *
 In order to trigger parallel test execution you will need to specify the parameters inside an XML file, in our GitHub repository you will find the XML file named as `MavenParallel.xml` file.
 
 ```js
@@ -137,7 +137,7 @@ In order to trigger parallel test execution you will need to specify the paramet
 <suite thread-count="40" name="LambaTestSuite" parallel="tests">
 
 	<listeners>
-		<listener class-name="com.lambdatest.tunnel.MavenParallel"/>
+		<listener class-name="com.testmu ai.tunnel.MavenParallel"/>
 	</listeners>
 	
    <test name="1 Chrome 12">
@@ -146,7 +146,7 @@ In order to trigger parallel test execution you will need to specify the paramet
         <parameter name="platform" value="Windows 10"/>
         <parameter name="resolution" value="1600x1200"/>
         <classes>
-            <class name="com.lambdatest.tunnel.MavenParallel"/>
+            <class name="com.testmu ai.tunnel.MavenParallel"/>
         </classes>
     </test> 
     
@@ -156,7 +156,7 @@ In order to trigger parallel test execution you will need to specify the paramet
         <parameter name="platform" value="Windows 8.1"/>
         <parameter name="resolution" value="1920x1080"/>
         <classes>
-            <class name="com.lambdatest.tunnel.MavenParallel"/>
+            <class name="com.testmu ai.tunnel.MavenParallel"/>
         </classes>
     </test> 
     
@@ -166,7 +166,7 @@ In order to trigger parallel test execution you will need to specify the paramet
         <parameter name="platform" value="Windows 8"/>
         <parameter name="resolution" value="2048x1536"/>
         <classes>
-            <class name="com.lambdatest.tunnel.MavenParallel"/>
+            <class name="com.testmu ai.tunnel.MavenParallel"/>
         </classes>
     </test> 
     
@@ -176,7 +176,7 @@ In order to trigger parallel test execution you will need to specify the paramet
         <parameter name="platform" value="Windows 7"/>
         <parameter name="resolution" value="2560x1440"/>
         <classes>
-            <class name="com.lambdatest.tunnel.MavenParallel"/>
+            <class name="com.testmu ai.tunnel.MavenParallel"/>
         </classes>
     </test> 
     </suite>
@@ -185,7 +185,7 @@ In order to trigger parallel test execution you will need to specify the paramet
 Here is the final code to execute parallel testing with Maven tunnel.
 
 ```js
-package com.lambdatest.tunnel;
+package com.testmu ai.tunnel;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -197,8 +197,7 @@ import org.testng.IExecutionListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import com.lambdatest.tunnel.Tunnel;
-
+import com.testmu ai.tunnel.Tunnel;
 
 public class MavenParallel implements IExecutionListener{
 
@@ -272,13 +271,13 @@ public class MavenParallel implements IExecutionListener{
 }
 ```
 ## Enable Parallel Testing With Maven Tunnel using Serentiy BDD
-
-In order to trigger parallel test execution with Maven Tunnel using Serenity BDD, you will need to specify the dependency of `lambdatest-tunnel-binary` with the exclusion of TestNG dependency in `MavenParallel.xml` file.
+* * *
+In order to trigger parallel test execution with Maven Tunnel using Serenity BDD, you will need to specify the dependency of `testmu ai-tunnel-binary` with the exclusion of TestNG dependency in `MavenParallel.xml` file.
 
 ```js
 <dependency>
-   <groupId>com.github.lambdatest</groupId>
-   <artifactId>lambdatest-tunnel-binary</artifactId>
+   <groupId>com.github.testmu ai</groupId>
+   <artifactId>testmu ai-tunnel-binary</artifactId>
    <version>4.0.2</version>
    <exclusions>
       <exclusion>
@@ -289,11 +288,11 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 </dependency>
 ```
 
-## Optional Arguments For LambdaTest Tunnel
-
+## Optional Arguments For <BrandName /> Tunnel
+* * *
 | ARGUMENT | SYNTAX | DESCRIPTION |
 |---|---|---|
-| tunnelName | `tunnelArgs.put("tunnelName","YourName");` | To change the name of the LambdaTest Tunnel. |
+| tunnelName | `tunnelArgs.put("tunnelName","YourName");` | To change the name of the <BrandName /> Tunnel. |
 | pidFile | `tunnelArgs.put("pidFile","Your/pid/path");` | To change the PID path. |
 | dir | `tunnelArgs.put("dir","give/lambda/directory/path");` | To change the directory path. |
 | logFile | `tunnelArgs.put("logFile","give/tunnel/log/directory/path");` | To change the path for Tunnel logs. |
@@ -302,7 +301,4 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 | basicAuth | `tunnelArgs.put("basicAuth", "<YOUR BASIC AUTH>")` | Basic Auth. |
 | mitm | `tunnelArgs.put("mitm", "true")` | MITM only if basicAuth is provided. |
 
-<Warning>
-
-For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
-</Warning>
+> For more arguments, refer to our document of [<BrandName /> Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).

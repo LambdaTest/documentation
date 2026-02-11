@@ -1,19 +1,12 @@
 ---
 title: "Comparison Settings for SmartUI - Pixel to Pixel Comparison"
 sidebarTitle: "Advanced Comparison Settings"
-keywords:
- [
-  "Visual Regression",
-  "Visual Regression Testing Guide",
-  "Visual Regression Test Automation",
-  "Visual Regression Automation Testing",
-  "Running Visual Regression Tests",
-  "Visual Regression Testing Online",
-  "Run Visual Regression",
-  "Visual Regression Run Specific Test",
-  "Visual Regression Testing Environment",
-  "How to Run Visual Regression Tests"
-]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 ## Our Pixel to Pixel (P2P) Comparison Options
@@ -40,7 +33,7 @@ The image threshold settings helps you in analyzing the granularity of the pixel
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
 <Tab title="Selenium">
 
@@ -61,7 +54,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Add the following in your /project/lambdatest-config.json"
+```json title="Add the following in your /project/testmu ai-config.json"
 "smart_ui": {
       "project": "<Your Project Name>" // Add your SmartUI Project Name here
       "options": {
@@ -74,7 +67,7 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/image-threshold-sample.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/image-threshold-sample.png' alt="Image" />
 
 ---
 
@@ -89,7 +82,7 @@ The following are the supported options for the pixel comparison feature:
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
 <Tab title="Selenium">
 
@@ -110,7 +103,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui": {
       "project": "<Your Project Name>" // Add your SmartUI Project Name here
       "options": {
@@ -124,7 +117,7 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/Error-Type-Sample.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/Error-Type-Sample.png' alt="Image" />
 
 ---
 
@@ -141,7 +134,7 @@ The following are the supported options for the pixel comparison feature:
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
 <Tab title="Selenium">
 
@@ -162,7 +155,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui": {
       "project": "<Your Project Name>" // Add your SmartUI Project Name here
       "options": {
@@ -176,7 +169,7 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/Ignore-Differences-sample.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/Ignore-Differences-sample.png' alt="Image" />
 
 ---
 
@@ -186,9 +179,9 @@ An advanced configuration to set the comparison view image to be displayed as a 
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
-<Tab table="Selenium">
+<Tab title="Selenium">
 
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
@@ -207,7 +200,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui": {
       "project": "<Your Project Name>" // Add your SmartUI Project Name here
       "options": {
@@ -231,7 +224,7 @@ This specific case is used to compare only a specific area of the screenshot fro
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
 <Tab title="Selenium">
 
@@ -266,7 +259,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui":{
    "project":"<Your Project Name>",
    "boundingBoxes":[
@@ -290,7 +283,7 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/Bounding-Box-Sample.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/Bounding-Box-Sample.png' alt="Image" />
 
 ---
 
@@ -302,7 +295,7 @@ This specific case is used to ignore only a specific area of the screenshot from
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
 <Tab title="Selenium">
 
@@ -337,7 +330,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui":{
    "project":"<Your Project Name>",
    "ignoredBoxes":[
@@ -361,7 +354,7 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/Ignored-Box-Sample.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/Ignored-Box-Sample.png' alt="Image" />
 
 ---
 
@@ -371,9 +364,9 @@ You can exclude the pixels that match the specified color on a **baseline** imag
 
 You can specify the following `capability` in the following format:
 
-<Tabs>
+<Tabs className="docs__val" groupId="frameworks">
 
-<Tab title="Selenium" >
+<Tab title="Selenium">
 
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
@@ -399,7 +392,7 @@ let capabilities = {
 
 <Tab title="Cypress">
 
-```json title="Make changes in your /project/lambdatest-config.json"
+```json title="Make changes in your /project/testmu ai-config.json"
 "smart_ui":{
    "project":"<Your Project Name>",
    "ignoreAreasColoredWith": {
@@ -415,6 +408,4 @@ let capabilities = {
 </Tab>
 </Tabs>
 
-![Image](/assets/images/smart-visual-testing/Ignore-Colors-Sample.png)
-
-
+<img loading="lazy" src='/assets/images/smart-visual-testing/Ignore-Colors-Sample.png' alt="Image" />

@@ -1,12 +1,13 @@
 ---
-title: "GitHub Actions Pipeline Integration with Hyperexecute"
+title: "GitHub Actions Integration"
 sidebarTitle: "GitHub Actions"
-
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','ci/cd tools','continuous integration,continuous delivery','continuous integration tools','gitlab ci']
-
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# GitHub Actions Pipeline Integration with Hyperexecute
 * * *
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
@@ -21,13 +22,13 @@ To integrate GitHub Actions Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/main" />
-</Check>
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/main" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### 1. Log into your GitHub account
 -  Navigate to the main page of the repository.
@@ -36,7 +37,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 ### 2. Create a New Workflow
 In the left sidebar, click the **New workflow** button. 
  
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/github_new_workflow.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/github_new_workflow.png' alt="Create New Project" width="" height="" />
 
 ### 3. Create the GitHub Actions work-flow YAML file:
 
@@ -85,26 +86,22 @@ jobs:
 In the steps section, you should declare the execution commands.  
   - The first step in the above sample YAML changes the path of the root directory.
   - In the second step it downloads the HyperExecute CLI binary. 
-  - The third step is the execution command which executes The Hyperexecute CLI binary. This contains LambdaTest username, access key, and path of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
+  - The third step is the execution command which executes The Hyperexecute CLI binary. This contains <BrandName /> username, access key, and path of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
-
-
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/github_action_yaml.png' alt="Create New Pipeline" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/github_action_yaml.png' alt="Create New Pipeline" width="" height="" />
 
 ### 4. Run the Workflow
 To run the new pipeline that you just created, click the **Run workflow** button on the workflow page.
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/run_workflow.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/run_workflow.png' alt="Create New Project" width="" height="" />
 
 <p></p>
 
 **Below is an example of how a test that is run on the GitHub Actions pipeline gets executed:**
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/githubactions_example.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/githubactions_example.png' alt="Create New Project" width="" height="" />
 
 <p></p>
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/githubactions_execution.png' alt="Create New Project" width="" height=""/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/github/githubactions_execution.png' alt="Create New Project" width="" height="" />
 
-<Note>
 **Run your tests at speeds never seen before. Happy testing! :)**
-</Note>

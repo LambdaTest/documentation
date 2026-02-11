@@ -1,24 +1,21 @@
 ---
 title: "iOS App Settings"
 sidebarTitle: "iOS App Settings"
-keywords: ['appium', 'ios', 'app settings', 'lambdatest ios', 'automation on lambdatest', 'ios app settings', 'app automation', 'real devices']
+keywords: ['appium', 'ios', 'app settings', 'testmu ai ios', 'automation on testmu ai', 'ios app settings', 'app automation', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div> 
-**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of LambdaTest due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
+
+<RealDeviceTag value="Real Device" /> 
+**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of <BrandName /> due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
 This document will guide you on how to access and use iOS settings for **App Automation session.**
 
-<Info>
-**NOTE**
+<Note>
+**This feature is supported only on iOS 14 and above devices.**
 
-This feature is supported only on iOS 14 and above devices.
-</Info>
+</Note>
 
 ## How to use iOS app settings in App Automation
 
@@ -34,7 +31,6 @@ driver.execute_script("lambda-ios-settings", params)
 ```
 
 If you look at the code snippet above you can see `params` which contains the **JSON object** for manipulating the iOS app settings. This JSON object contains **Permission settings**. Let’s learn more about that.
-
 
 ## iOS app settings Supported by Lambda Hook
 
@@ -63,15 +59,14 @@ One important thing to remember while handling Permission Settings is that, we h
 
 Let's say we pass Camera: "On" in the lambda hook’s preferences even before handling Camera’s permission popup from the app, the Camera key would be missing on the app settings page which would result in failure. So we have to be sure that we have handled the permission pop ups before calling lambda hook.
 
-<Note>
-**NOTE**
-
-Note that we have separate key for Precise Location. We do not pass it inside Location object as shown:
+<Info>
+**Note that we have separate key for Precise Location. We do not pass it inside Location object as shown:**
 
 ```bash
 params = {"Permission Settings":{"Location":"While using the app", "Precise Location": "On"}}
 ```
-</Note>
+
+</Info>
 
 ### Custom App Settings 
 
@@ -109,13 +104,10 @@ If any key is not present, we should get an error saying one of the keys is miss
 
 The title of the keys displayed on your iOS app settings page must be unique.
 
-
 ## Additional Links
 
 ---
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

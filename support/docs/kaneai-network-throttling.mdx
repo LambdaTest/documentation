@@ -4,7 +4,7 @@ sidebarTitle: "Network Throttling"
 keywords: ['network throttling', 'network bandwidth', 'network setting']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 The Network Throttling feature in Kane AI enables users to simulate various network conditions during mobile app testing. 
@@ -40,19 +40,17 @@ If you want to honor the Network settings in the Authoring session too:
 
 This will apply network setting in the Authoring session too, allowing you to experience how your Application works under that particular Network setting.
 
-<Check>
-**TIP**
+<Tip>
+**Recommended to use this setting only if its absolutely necessary, as this will hamper Authoring experience in low Network Bandwidth settings.**
 
- Recommended to use this setting only if its absolutely necessary, as this will hamper Authoring experience in low Network Bandwidth settings.
-</Check>
+</Tip>
 
 <img loading="lazy" src='/assets/images/kane-ai/honor_throttling.jpeg' alt="honor-throttling" />
 
-<Info>
-**NOTE**
+<Note>
+**Network setting will always be Honored while executing the Test Case & code generation, the Honoring option is applicable for Authoring mode only.**
 
- Network setting will always be Honored while executing the Test Case & code generation, the Honoring option is applicable for Authoring mode only.
-</Info>
+</Note>
 
 ## Changing Network Throttling setting mid session :
 To change Network Throttling setting in between the Authoring session:
@@ -77,13 +75,12 @@ You can edit the Network Throttling setting at that particular step too. To do t
 ## Changing network throttling in Edit Test Steps mode
 Before you begin editing a test case , you can set up network throttling. This Edit mode specific setting will overwrite the network configuration previously established during the app session's initialization in Authoring mode.
 
-<Info>
-**NOTE**
+<Note>
+**The network throttling for your Editing session is determined by what you set when you start that session. If you don't specify any network settings for the Edit mode, no throttling will be applied. The network settings mentioned while initializing the Authoring session will not be applicable in the Edit session, as saving changes in the Edit mode creates a new test case version.**
 
-The network throttling for your Editing session is determined by what you set when you start that session. If you don't specify any network settings for the Edit mode, no throttling will be applied. The network settings mentioned while initializing the Authoring session will not be applicable in the Edit session, as saving changes in the Edit mode creates a new test case version.
  
-And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
-</Info>
+ And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
+</Note>
 
 <img loading="lazy" src='/assets/images/kane-ai/throttling_pre_playground.jpeg' alt="playground-throttling-setting" />
 
@@ -102,8 +99,7 @@ While executing your Test Cases every Network Throttle step will be honoered. In
 
 <img loading="lazy" src='/assets/images/kane-ai/throttling_command_script.jpeg' alt="throttling-command-script" />
 
-<Info>
-**NOTE**
+<Note>
+**Offline Mode is not supported yet but it will be added in future release.**
 
- Offline Mode is not supported yet but it will be added in future release.
-</Info>
+</Note>

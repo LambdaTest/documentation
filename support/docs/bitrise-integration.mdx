@@ -1,18 +1,20 @@
 ---
-title: "Running Appium Tests In Bitrise CI"
+title: "How to integrate your Appium tests with Bitrise"
 sidebarTitle: "Bitrise - Appium"
-keywords: ["lambdatest bitrise", "bitrise with lambdatest", "manual app testing bitrise", "appium testing with bitrise ci", "appium bitrise", "app testing with bitrise", "app automation bitrise"]
+keywords: ['testmu ai bitrise', 'bitrise with testmu ai', 'manual app testing bitrise', 'appium testing with bitrise ci', 'appium bitrise', 'app testing with bitrise', 'app automation bitrise']
 ---
-***
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using Lambdatest with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
+Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
 
 ## Prerequisites
 ***
 
-1. Ensure you have access to Lambdatest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
 
 2. A Bitrise account.
 
@@ -25,65 +27,65 @@ Using Lambdatest with Bitrise, you can effortlessly perform [Appium testing](htt
 
 2. From Dashboard, click **Add New App on web UI**.
 
-![Image](/assets/images/bitrise-integration/newapp.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/newapp.webp' alt="Image" width="1444" height="703" />
 
 3. In the **Choose Account** section, select the privacy of your app and click **Next**.
 
-![Image](/assets/images/bitrise-integration/next.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/next.webp' alt="Image" width="1444" height="703" />
 
 4. Choose a source code provider (GitHub, BitBucket, GitLab or others). 
 
-![Image](/assets/images/bitrise-integration/vcs.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/vcs.webp' alt="Image" width="1444" height="703" />
 
 5. You will be now asked to authenticate your source code provider with Bitrise.
 
-![Image](/assets/images/bitrise-integration/authorize-bitrise.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/authorize-bitrise.webp' alt="Image" width="1444" height="703" />
 
 On successful authentication, you'll receive a confirmation message. 
 
-![Image](/assets/images/bitrise-integration/cta.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/cta.webp' alt="Image" width="1444" height="703" />
 
 6. Now again click **Next**.
 
-![Image](/assets/images/bitrise-integration/nextafter.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/nextafter.webp' alt="Image" width="1444" height="703" />
 
 7. Select your repository from the version control system.
 
-![Image](/assets/images/bitrise-integration/chooserepo.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/chooserepo.webp' alt="Image" width="1444" height="703" />
 
 8. From the Setup repository access section, click **No, auto-add SSH key** to add your SSH keys.
 
-![Image](/assets/images/bitrise-integration/auto-SSH.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/auto-SSH.webp' alt="Image" width="1444" height="703" />
 
 9. Enter your branch name and click **Next**. Your app will be configured and this will take few minutes.
 
-![Image](/assets/images/bitrise-integration/next2.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/next2.webp' alt="Image" width="1444" height="703" />
 
 10. In **Project build configuration**:
 
 * Specify module and click **Next**.
 
-![Image](/assets/images/bitrise-integration/module.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/module.webp' alt="Image" width="1444" height="703" />
 
 * Specify variant and click **Next**.
 
-![Image](/assets/images/bitrise-integration/variant.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/variant.webp' alt="Image" width="1444" height="703" />
 
 11. A build information will show up. Click **Confirm**.
 
-![Image](/assets/images/bitrise-integration/confirmandroid.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/confirmandroid.webp' alt="Image" width="1444" height="703" />
 
 12. Choose and upload your App icon. Then click **Choose Image and Proceed**.
 
-![Image](/assets/images/bitrise-integration/appicon.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/appicon.webp' alt="Image" width="1444" height="703" />
 
 13. From the **Webhook setup**, register or skip Webhook registration. In this case, let's select **Register a Webhook for me!**
 
-![Image](/assets/images/bitrise-integration/webhook.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/webhook.webp' alt="Image" width="1444" height="703" />
 
 14. Now click on the message that says - *We've kicked off your first test build for you!*
 
-![Image](/assets/images/bitrise-integration/cta-2.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/cta-2.webp' alt="Image" width="1444" height="703" />
 
 Your app build will now trigger and start running. 
 
@@ -92,70 +94,70 @@ Your app build will now trigger and start running.
 
 1. Once your build process is completed, click **Edit workflow**.
 
-![Image](/assets/images/bitrise-integration/edit-workflow.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/edit-workflow.webp' alt="Image" width="1444" height="703" />
 
 2. Click + icon under **Android Unit Test**.
 
-![Image](/assets/images/bitrise-integration/android-unit.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/android-unit.webp' alt="Image" width="1444" height="703" />
 
-3. A search steps box will appear. Enter *Lambdatest Upload* and click Lambdatest Upload card.
+3. A search steps box will appear. Enter *<BrandName /> Upload* and click <BrandName /> Upload card.
 
-![Image](/assets/images/bitrise-integration/lt-upload.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/lt-upload.webp' alt="Image" width="1444" height="703" />
 
 4. In **Input variables** category:
 
 * Provide your App path.
 
-![Image](/assets/images/bitrise-integration/apppath.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/apppath.webp' alt="Image" width="1444" height="703" />
 
-* In **Lambdatest username**, click Select secret variable.
+* In **<BrandName /> username**, click Select secret variable.
 
-![Image](/assets/images/bitrise-integration/keyuservar.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/keyuservar.webp' alt="Image" width="1444" height="703" />
 
-* Enter the key (it can be anything), your Lambdatest username and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> username and click **Add new**.
 
-![Image](/assets/images/bitrise-integration/username.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/username.webp' alt="Image" width="1444" height="703" />
 
-* In **Lambdatest access key**, click Select secret variable.
+* In **<BrandName /> access key**, click Select secret variable.
 
-![Image](/assets/images/bitrise-integration/keysecvar.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/keysecvar.webp' alt="Image" width="1444" height="703" />
 
-* Enter the key (it can be anything), your Lambdatest access key and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> access key and click **Add new**.
 
-![Image](/assets/images/bitrise-integration/key.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/key.webp' alt="Image" width="1444" height="703" />
 
 * Provide an App name.
 
-![Image](/assets/images/bitrise-integration/app-name.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/app-name.webp' alt="Image" width="1444" height="703" />
 
 * Enter your Custom Id (optional).
 
-![Image](/assets/images/bitrise-integration/customid.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/customid.webp' alt="Image" width="1444" height="703" />
 
 5. After that, click **Ctrl+S**.
 
-![Image](/assets/images/bitrise-integration/ctrls.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/ctrls.webp' alt="Image" width="1444" height="703" />
 
 6. From the breadcrumb navigation, click on the Repo name.
 
-![Image](/assets/images/bitrise-integration/path.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/path.webp' alt="Image" width="1444" height="703" />
 
 7. A build will be shown that you just run. Click on the build.
 
-![Image](/assets/images/bitrise-integration/clickbuild.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/clickbuild.webp' alt="Image" width="1444" height="703" />
 
 You'll be taken to the build interface as shown below.
 
-![Image](/assets/images/bitrise-integration/builddashboard.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/builddashboard.webp' alt="Image" width="1444" height="703" />
 
-8. Scroll down and click on three dots adjacent to the Lambdatest icon.
+8. Scroll down and click on three dots adjacent to the <BrandName /> icon.
 
-![Image](/assets/images/bitrise-integration/threedots.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/threedots.webp' alt="Image" width="1444" height="703" />
 
 9. Scroll a bit more and you'll see an App URL.
 
-![Image](/assets/images/bitrise-integration/appurl.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/appurl.webp' alt="Image" width="1444" height="703" />
 
 You're done! With this App URL, you can now perform Mobile App Automation. This app will also be available under **Real Time Testing > Real Time > App Testing** in the uploaded apps section.
 
-![Image](/assets/images/bitrise-integration/realtime.webp)
+<img loading="lazy" src='/assets/images/bitrise-integration/realtime.webp' alt="Image" width="521" height="431" />

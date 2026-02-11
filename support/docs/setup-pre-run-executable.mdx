@@ -1,10 +1,15 @@
 ---
 title: "Install Custom Certificates on the VM Through Pre-run-executables"
 sidebarTitle: "Setup Pre-run Executable"
-keywords: ['local app testing', 'lambdatest local testing', 'lambdatest local tunnel', 'LambdaTest tunnel', 'local app testing for linux', 'TCP with TLS 1.2 secure connection', 'TCP with TLS 1.2 secure connection tunnel', 'shared TCP with TLS 1.2 secure connection']
+keywords: ['local app testing', 'testmu ai local testing', 'testmu ai local tunnel', 'TestMu AI tunnel', 'local app testing for linux', 'TCP with TLS 1.2 secure connection', 'TCP with TLS 1.2 secure connection tunnel', 'shared TCP with TLS 1.2 secure connection']
 ---
 
----
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Install Custom Certificates on the VM Through Pre-run-executables
+
+* * *
 Pre-run-executables allow you to run your custom scripts before the Selenium test is started. We can use this feature to install user custom certificates that are mandatory for test cases to execute successfully.
 
 To use certificates for Selenium tests, we require 3 things:
@@ -15,7 +20,7 @@ To use certificates for Selenium tests, we require 3 things:
 
 ## Instructions
 
----
+* * *
 Upload your certificate file, installation, and uninstallation script using the below instructions.
 
 1. Upload your certificate using the below command.
@@ -65,10 +70,7 @@ curl --request POST \
     },
 ```
 
-
-<Note>
-**Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate value. 
-</Note> 
+> **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate value. 
 
 6. After uploading your pre-run script, reach out to us either via chat support or email to get the scripts approved.
 
@@ -79,26 +81,22 @@ curl --request POST \
     "url": "{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}",
  },
 ```
-<Note>
-**Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
-</Note>
+> **Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
 
 ## Leverage the use of APIs to Pre-run Tests
----
+***
 Here are the `prerun` APIs:
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to our lambda storage.
 * **DELETE/`files`/`delete`:** Delete pre run from our lambda storage.
-* **POST/`files`/`validate`:** Check if the file is approved by LambdaTest.
+* **POST/`files`/`validate`:** Check if the file is approved by <BrandName />.
 * **PUT/`files`/`download`:** Download pre run executable file. 
 
-<Note>
-**Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/). 
-</Note> 
+> **Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/). 
 
 ## Sample Certificate Installation and Uninstallation File (macOS)
----
+***
 * In `install_certificate.sh` replace `{CERTIFICATE-FILE-NAME}` with the certificate file name.
 * In `delete_certificate.sh` replace `{CERTIFICATE-NAME}` with the certificate name (You can use the **Keychain Access** to find the certificate name.)
 
@@ -115,7 +113,7 @@ sudo security delete-certificate -c "Local Certificate"
 ```
 
 ## Sample Certificate Installation and Uninstallation File (Windows)
----
+***
 * In `install_certificate.ps1` replace `{CERTIFICATE-FILE-NAME}` with the certificate file name.
 * In `delete_certificate.ps1` replace `{CERTIFICATE-NAME}` with the certificate name.
 
@@ -130,7 +128,5 @@ Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE
 Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item
 ```
 
-<Warning>
-Got any questions?
-Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@lambdatest.com.
-</Warning>
+>Got any questions?<br />
+Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@testmu.ai.

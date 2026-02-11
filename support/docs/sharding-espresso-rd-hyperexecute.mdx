@@ -4,6 +4,9 @@ sidebarTitle: "Sharding for Espresso"
 keywords: ['sharding', 'Espresso', 'appium', 'real devices', 'lambdatest cloud platform', 'app automation', 'real time testing', 'appium automation', 'espresso sharding', 'hyperexecute']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
@@ -21,13 +24,13 @@ You can learn more about the HyperExecute portal and UI by going through our [Gu
 By the end of this topic, you will be able to:
 1. Speed up your Espresso tests with sharding
 2. Learn more about HyperExecute
-3. Explore advanced features of LambdaTest
+3. Explore advanced features of <BrandName />
 
 ## Prerequisites
 
 Before you start performing your App automation testing with Espresso, please make sure:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation Cloud plans on your account.
 
 
@@ -35,7 +38,7 @@ Before you start performing your App automation testing with Espresso, please ma
 
 ### Step 1: Upload Your Application
 
-Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
+Upload your **android** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
 
 Here is an example cURL request to upload your app using our REST API:
 
@@ -66,7 +69,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 ### Step 2: Uploading Test Suite
 
-Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **test suite** (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -142,19 +145,19 @@ framework:
       mappings:
      - name: shard1
         strategy: "class"
-        values: ["com.lambdatest.proverbial.BrowserTest"]
+        values: ["com.lambdatest.proverbial .BrowserTest"]
     # The strategy for this shard is based on "class".
-    # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+    # This shard will run all tests from the class com.lambdatest.proverbial .BrowserTest.
      - name: shard2
        strategy: "package"
-       values: ["com.lambdatest.proverbial"]
+       values: ["com.lambdatest.proverbial "]
     # The strategy for this shard is based on "package". 
-    # This shard will run all tests that belong to the package com.lambdatest.proverbial.l.
+    # This shard will run all tests that belong to the package com.lambdatest.proverbial .l.
      - name: shard3
        strategy: "skipClass"
-       values: ["com.lambdatest.proverbial.BrowserTest"]
+       values: ["com.lambdatest.proverbial .BrowserTest"]
     # The strategy for this shard is to skip a specific class. 
-    # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+    # This shard will avoid running tests from the class com.lambdatest.proverbial .BrowserTest.
 ```
 
 
@@ -233,14 +236,14 @@ You can refer to this example and screenshot below:
 ```
 ./hyperexecute --user my_user_name --key xyx123abc --verbose -i hyperexecute.yaml
 ```
-<img loading="lazy" src="/assets/images/app-automation/example-folder.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src="/assets/images/app-automation/example-folder.webp" alt="cmd" width="768" height="373"/>
 
 
 5. After the test is started you can follow the test on the below links.
-- [LambdaTest Automation](https://appautomation.lambdatest.com/build)
-<img loading="lazy" src="/assets/images/app-automation/espresso_sharding.png" alt="cmd" width="768" height="373" className="doc_img"/>
-- [LambdaTest HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
-<img loading="lazy" src="/assets/images/app-automation/espresso_cli.png" alt="cmd" width="768" height="373" className="doc_img"/>
+- [<BrandName /> Automation](https://appautomation.lambdatest.com/build)
+<img loading="lazy" src="/assets/images/app-automation/espresso_sharding.png" alt="cmd" width="768" height="373"/>
+- [<BrandName /> HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
+<img loading="lazy" src="/assets/images/app-automation/espresso_cli.png" alt="cmd" width="768" height="373"/>
 
 <Info>
 **NOTE**
@@ -256,9 +259,9 @@ You can filter the Classes / Tests that you'd like to execute using filters. Her
 filters:
       attributes:
       - type: class
-        values: ["com.lambdatest.proverbial.BrowserTest","com.lambdatest.proverbial.MainActivityTest"]
+        values: ["com.lambdatest.proverbial .BrowserTest","com.lambdatest.proverbial .MainActivityTest"]
       - type: package
-        values: ["com.lambdatest.proverbial"]
+        values: ["com.lambdatest.proverbial "]
 ```
 
 
@@ -272,7 +275,7 @@ You can also filter your Espresso tests based on annotations while using shardin
 filters:
       attributes:
       - type: annotation
-        values: ["com.lambdatest.proverbial.demo1", "com.lambdatest.proverbial.demo2"]
+        values: ["com.lambdatest.proverbial .demo1", "com.lambdatest.proverbial .demo2"]
 ```
 
 <Note>
@@ -303,5 +306,5 @@ Learn more about it in the [HyperExecute Espresso Documentation](/support/docs/h
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 

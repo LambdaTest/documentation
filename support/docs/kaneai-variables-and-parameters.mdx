@@ -1,33 +1,55 @@
 ---
 title: "Variables & Parameters in KaneAI"
-sidebarTitle: "Overview"
-keywords: ['kaneai','variables','parameters','secrets','smart variables','environments']
+sidebarTitle: "Variables & Parameters"
+keywords: ['kaneai', 'variables', 'parameters', 'secrets', 'smart variables', 'environments']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 In KaneAI, one of the core principles of effective test automation is the ability to manage dynamic data efficiently. Testing often requires input that changes frequently or is context-dependent, such as URLs, credentials, or specific device configurations. KaneAI offers a set of powerful tools—variables, secrets, smart variables, parameters and datasets—to simplify the process of managing and using dynamic data in your test cases. Each of these options offers unique functionality that helps you keep your tests flexible, secure, and scalable.
 
-<Check>
-**TIP**
+<Tip>
+**All variables and parameters in KaneAI can be accessed from https://kaneai.lambdatest.com/variables**
 
-All variables and parameters in KaneAI can be accessed from https://kaneai.lambdatest.com/variables
-</Check>
+</Tip>
     
-<Columns cols={2}>
-<Card title="Variables" href="./kane-ai-using-variables/">
-Placeholders that store dynamic values, enabling reuse and reducing redundancy in test cases.
-</Card>
-<Card title="Secrets" href="./kane-ai-secrets/">
-Securely stored sensitive data (e.g., passwords) that are used in tests without exposing them in the code.
-</Card>
-<Card title="Smart Variables" href="./hyperexecute-artifacts-url/">
-Context-aware variables that automatically pull data in real-time during test execution.
-</Card>
-<Card title="Parameters" href="./kane-ai-using-parameters/">
-Values passed into test cases at runtime to customize test execution for different configurations or environments.
-</Card>
-<Card title="Datasets" href="./kane-ai-using-datasets/">
-Collections of test data used in a test, allowing for data-driven testing by running the same test with different inputs.
-</Card>
-</Columns>
+{/* ### Core Features */}
+<div className="support_main">
+  
+  <a href = "/support/docs/kane-ai-using-variables/">
+  <div className="support_inners">
+    <h3>Variables</h3>
+    <p>Placeholders that store dynamic values, enabling reuse and reducing redundancy in test cases.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/kane-ai-secrets/">
+  <div className="support_inners">
+    <h3>Secrets</h3>
+    <p>Securely stored sensitive data (e.g., passwords) that are used in tests without exposing them in the code.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/hyperexecute-artifacts-url/">
+  <div className="support_inners">
+    <h3>Smart Variables</h3>
+    <p>Context-aware variables that automatically pull data in real-time during test execution.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/kane-ai-using-parameters/">
+  <div className="support_inners">
+    <h3>Parameters</h3>
+    <p>Values passed into test cases at runtime to customize test execution for different configurations or environments.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/kane-ai-using-datasets/">
+  <div className="support_inners">
+    <h3>Datasets</h3>
+    <p>Collections of test data used in a test, allowing for data-driven testing by running the same test with different inputs.</p>
+  </div>
+  </a>
+  
+</div>

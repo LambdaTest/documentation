@@ -1,61 +1,61 @@
 ---
-title: "Puppeteer Testing With Jest"
+title: "Run Puppeteer Tests With Jest"
 sidebarTitle: "Integrate With Jest"
-description: "Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions."
+keywords: ['puppeteer testing with jest', 'automation testing with puppeteer', 'how to use puppeteer for testing', 'test puppeteer', 'puppeteer testing tutorial', 'puppeteer testing testmu ai']
 ---
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
-LambdaTest allows you to run Puppeteer tests with Jest on a browser farm of 40+ real browsers and operating system combinations.
+import { BrandName } from "/snippets/BrandName.mdx";
 
-This guide will cover the basics of getting started with Puppeteer testing with Jest on the LambdaTest platform.
+
+# Puppeteer Testing With Jest
+* * *
+
+Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions.
+
+<BrandName /> allows you to run Puppeteer tests with Jest on a browser farm of 40+ real browsers and operating system combinations. 
+
+This guide will cover the basics of getting started with Puppeteer testing with Jest on the <BrandName /> platform.
 
 ## Prerequisites
+***
 
-<Note>
-Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/puppeteer-sample" />
-</Note>
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<a href="https://github.com/<BrandName />/puppeteer-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 
-<Steps>
-<Step>
-Clone the LambdaTest-Puppeteer repository on your system.
-</Step>
-<Step>
-Install the npm dependencies.
+1. Clone the <BrandName />-Puppeteer repository on your system.
 
-```bash lines
+2. Install the npm dependencies.
+
+```
 npm install
 ```
-</Step>
-<Step>
-In order to run your Puppeteer tests with Jest, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
-<Frame>
-![Image](https://www.lambdatest.com/support/assets/images/key-e349e7aa2ae3877897095458e8470e91.webp)
-</Frame>
-</Step>
-</Steps>
-<CodeGroup>
-```bash lines Windows
+
+3. In order to run your Puppeteer tests with Jest, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+<img loading="lazy" src='/assets/images/playwright-testing/key.webp' alt="Image" width="1444" height="703" />
+
+**Windows**
+
+```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-```bash lines macOS/Linux
+
+**macOS/Linux**
+
+```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-</CodeGroup>
 
 ## Running Tests Using Jest
+---
 
-<Warning>
-**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
-</Warning>
+>**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
 
-<Steps>
-<Step>
-To run the Puppeteer tests using Jest on LambdaTest, you need make some tweaks to the `jest-puppeteer.config.js` file.
+1. To run the Puppeteer tests using Jest on <BrandName />, you need make some tweaks to the `jest-puppeteer.config.js` file.
 
-```javascript 
+```js
 const caps_chrome = {
 	browserName    : 'Chrome',
 	browserVersion : 'latest',
@@ -91,16 +91,13 @@ module.exports = {
 		)}`
 	}
 };
-```
-</Step>
-<Step>
-Pass the below command to run the test.
 
-```bash lines
+```
+
+2. Pass the below command to run the test.
+
+```
 npm run test
 ```
-</Step>
-<Step>
-Visit the LambdaTest Automation Dashboard to see the results of your Puppeteer Jest tests.
-</Step>
-</Steps>
+
+3. Visit the <BrandName /> Automation Dashboard to see the results of your Puppeteer Jest tests.

@@ -1,16 +1,27 @@
----
-title: "Supported Browsers and Operating Systems"
-sidebarTitle: "Specify Browsers and OS"
-keywords: ['cypress browsers', 'cypress operating systems', 'cypress browser support', 'cypress lambdatest']
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: supported-browsers-and-os
+title: Supported Browsers and Operating Systems
+sidebarTitle: Specify Browsers and OS
+description: Check out the list of supported browsers and operating systems for Cypress testing on the <BrandName /> platform.
+keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Testing Online', 'Run Cypress', 'Cypress Run Specific Test', 'Cypress Testing Environment', 'How to Run Cypress Tests']
+
+url: https://www.testmuai.com/support/docs/supported-browsers-and-os/
+site_name: <BrandName />
+slug: supported-browsers-and-os/
+canonical: https://www.testmuai.com/support/docs/supported-browsers-and-os/
 ---
 
-LambdaTest supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
+<BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
 
 ```json
 {
    "lambdatest_auth": {
-      "username": "<Your LambdaTest username>",
-      "access_key": "<Your LambdaTest access key>"
+      "username": "<Your <BrandName /> username>",
+      "access_key": "<Your <BrandName /> access key>"
    },
    "browsers": [
       {
@@ -37,22 +48,23 @@ LambdaTest supports the below listed browsers, browser versions and Operating Sy
 | Windows 7        | 66 and above (Except 82) | 60 and above | 80 and above (Except 82) |
 
 <Note>
-**Note**: LambdaTest Automation also supports Cypress testing on Electron browser and in WebKit.
+**Note**: <BrandName /> Automation also supports Cypress testing on Electron browser and in WebKit.
 </Note>
+
 * **Electron**: Supported on all OS.
 * **WebKit**: Supported on - macOS Big Sur and macOS Monterey.
 
 You can run Cypress tests across multiple browsers and OS combinations using the following ways.
 
-1. Configuring the browser and platform keys in `lambdatest-config.json`
+1. Configuring the browser and platform keys in `testmu ai-config.json`
 2. Using the **--browsers** flag 
 
+## Configuring The Browser And Platform Keys In testmu ai-config.json
+---
 
-## Configuring The Browser And Platform Keys In lambdatest-config.json
+To run Cypress tests on multiple browser and OS configurations, add the *browsers* object in the `testmu ai-config.json` file to define a list of browsers, browser versions and platforms.
 
-To run Cypress tests on multiple browser and OS configurations, add the *browsers* object in the `lambdatest-config.json` file to define a list of browsers, browser versions and platforms.
-
-Below is the syntax for configuring the browser and platform keys in the `lambdatest-config.json` file.
+Below is the syntax for configuring the browser and platform keys in the `testmu ai-config.json` file.
 
 ```js
    "browsers": [
@@ -67,25 +79,16 @@ Below is the syntax for configuring the browser and platform keys in the `lambda
 ```
 
 ## Using The Cypress CLI Command
+---
 
 You can also run Cypress tests on multiple configurations by specifying the browser and platform using our Cypress CLI command. 
 
 | Flag | Purpose | Type |
 |------|---------|------|
-| **--brs, --browsers**  | Test will be run on the specified browsers<br/> in the format: `platform:browser:version` |String |
+| **--brs, --browsers**  | Test will be run on the specified browsers<br /> in the format: `platform:browser:version` |String |
 
 Below is the command for specifying the browser and platform using **--brs, --browsers** flag.
 
 ```js
-lambdatest-cypress run --browsers "platform:browser:version"
+testmu ai-cypress run --browsers "platform:browser:version"
 ```
-
-
-
-
-
-
-
-
-
-

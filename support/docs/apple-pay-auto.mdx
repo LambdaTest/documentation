@@ -1,24 +1,21 @@
 ---
 title: "Apple Pay Automation on Real Devices"
 sidebarTitle: "Apple Pay"
-keywords: ['Apple Pay', 'iOS', 'automation', 'testing', 'payment', 'apple pay automation', 'ios payment testing']
+keywords: ['Apple Pay', 'iOS', 'automation', 'testing', 'payment']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div> 
+
+# Apple Pay Automation on Real Devices
+<RealDeviceTag value="Real Device" /> 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
 For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely—without relying on production cards.
 
-With LambdaTest, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, LambdaTest provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
+With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 
-<Warning>
-To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.
-</Warning>
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 ---
 ## Use Cases
@@ -40,9 +37,7 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | iPhone 14    | 16      |
 | iPhone 13    | 15      |
 
-<Warning>
-We are actively working on expanding coverage to **all supported iOS devices** on LambdaTest Real Device Cloud.
-</Warning>
+> We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 ---
 ## Capabilities
 
@@ -55,7 +50,7 @@ We are actively working on expanding coverage to **all supported iOS devices** o
 
 ## Apple Pay Workflow in Automation Test
 
-### Step 1: Upload Your App to LambdaTest
+### Step 1: Upload Your App to <BrandName />
 
 1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
@@ -66,9 +61,12 @@ We are actively working on expanding coverage to **all supported iOS devices** o
 
 To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities:
 
+<Tabs>
 
-```python IOS highlight={9-10}
-desired_caps = {
+  <Tab title="iOS">
+    ```java
+
+{`desired_caps = {
     "deviceName": "iPhone 16",
     "platformName": "iOS",
     "platformVersion": "18",
@@ -76,25 +74,29 @@ desired_caps = {
     "app": "YOUR_APP_ID",
     "build": "Sample Build",
     "name": "Sample Test",
+    // highlight-next-line
     "applePay": true,
+    // highlight-next-line
     "applePayCardType": ["visa", "master"],
-}
+}`}
+    
 ```
+  </Tab>
+</Tabs>
 
-<Note>
-**INFO**
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-</Note>
+
+</Info>
 
 ---
 
 ### Step 3: Confirm Apple Pay Payment
 
 - To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment.
-- This can be done using LambdaTest hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
-
+- This can be done using <BrandName /> hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
 
 ```python
 driver.execute_script(
@@ -113,8 +115,7 @@ driver.execute_script(
 driver.find_element(By.XPATH,"//*[@name=\"Passcode field\"]").send_keys("123456")
 ```
 
-<Note>
-**INFO**
+<Info>
+**The default passcode is `123456` unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.**
 
-The default passcode is `123456` unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.
-</Note>
+ </Info>

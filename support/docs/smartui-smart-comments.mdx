@@ -1,14 +1,10 @@
 ---
 title: "SmartUI Smart Comments"
-sidebarTitle: "Smart Comments"
-keywords:
-  - "SmartUI comments"
-  - "Smart Comments"
-  - "Visual testing collaboration"
-  - "Screenshot comments"
-  - "Team collaboration"
-  - "Comment threads"
+keywords: ['SmartUI comments', 'Smart Comments', 'Visual testing collaboration', 'Screenshot comments', 'Team collaboration', 'Comment threads']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions—all without leaving the SmartUI dashboard.
 
@@ -20,10 +16,8 @@ Smart Comments enables real-time collaboration on SmartUI visual test results. A
 - **Draft Comments**: Auto-saved drafts persist across the session
 - **Comment History**: All comments are retained and searchable
 
-<Warning>
+> Need help with other SmartUI features? Jump to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/).
 
-Need help with other SmartUI features? Jump to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/).
-</Warning>
 ---
 
 ## Where Comments Appear
@@ -34,25 +28,26 @@ Comments can be added and viewed in multiple locations within SmartUI:
 
 Comments appear on individual screenshots with a comment icon indicator showing the total number of comments.
 
-![Comment icon on screenshot](/assets/images/smart-visual-testing/smart-comments/comment_icon.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/comment_icon.png' alt="Comment icon on screenshot"  />
 
 **Comment indicators:**
 - Comment icon with count in the screenshot header
 - Comment count badge showing total comments for that screenshot
 
-![Comment tag in screenshot header](/assets/images/smart-visual-testing/smart-comments/commenttag_screenshotheader.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/commenttag_screenshotheader.png' alt="Comment tag in screenshot header"  />
 
 ### 2. Build Level
 
 Comments can be viewed at the build level, showing the total count of comments across all screenshots in the build.
 
-![Comment tag at build level](/assets/images/smart-visual-testing/smart-comments/commenttag_build.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/commenttag_build.png' alt="Comment tag at build level"  />
 
 ### 3. Comment Drawer
 
 Access all comments via the **Comment** button in the Actions tab. The comment drawer displays all comments for the current build or screenshot.
 
-![Comment drawer with all comments](/assets/images/smart-visual-testing/smart-comments/comment_drawer.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/comment_drawer.png' alt="Comment drawer with all comments"  />
+
 ---
 
 ## How to Add Comments
@@ -63,7 +58,7 @@ You can add comments from multiple locations in SmartUI:
 
 Add comments directly on a screenshot using the comment textbox in the screenshot drawer.
 
-![Comment textbox in screenshot drawer](/assets/images/smart-visual-testing/smart-comments/firstcomment_textbox.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/firstcomment_textbox.png' alt="Comment textbox in screenshot drawer"  />
 
 **Steps:**
 1. Open a screenshot from the build view
@@ -71,7 +66,7 @@ Add comments directly on a screenshot using the comment textbox in the screensho
 3. Type your comment (max 500 characters)
 4. Click **Post** to publish your comment
 
-![Comment posted successfully](/assets/images/smart-visual-testing/smart-comments/firstcomment_posted.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/firstcomment_posted.png' alt="Comment posted successfully"  />
 
 ### 2. Accept/Reject Modals
 
@@ -81,7 +76,7 @@ Add optional comments when approving or rejecting screenshots.
 
 When accepting a screenshot, you can add an optional comment:
 
-![Optional comment in Accept modal](/assets/images/smart-visual-testing/smart-comments/optionalcomment_accept.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/optionalcomment_accept.png' alt="Optional comment in Accept modal"  />
 
 **Modal options:**
 - **Accept**: Approve only that specific viewport and browser
@@ -91,13 +86,13 @@ When accepting a screenshot, you can add an optional comment:
 
 Add comments when accepting all variants:
 
-![Optional comment in Accept All modal](/assets/images/smart-visual-testing/smart-comments/optionalcomment_acceptall.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/optionalcomment_acceptall.png' alt="Optional comment in Accept All modal"  />
 
 #### Reject Modal
 
 Add comments when rejecting screenshots:
 
-![Optional comment in Reject modal](/assets/images/smart-visual-testing/smart-comments/optionalcomment_reject.png')
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/optionalcomment_reject.png' alt="Optional comment in Reject modal"  />
 
 **Modal options:**
 - **Reject**: Reject only that specific viewport and browser
@@ -115,7 +110,7 @@ Add comments when moving screenshots to baseline:
 
 Add comments when performing bulk operations (multiselect):
 
-![Comment box in bulk operations](/assets/images/smart-visual-testing/smart-comments/optionalcomment_customselection.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/optionalcomment_customselection.png' alt="Comment box in bulk operations"  />
 
 **Steps:**
 1. Select multiple screenshots using [multiselect](/support/docs/smartui-multiselect-bulkops/)
@@ -139,31 +134,28 @@ Smart Comments automatically saves your comment drafts for the active session. I
 **Example scenarios:**
 
 **1. Draft in Accept Modal:**
-![Auto-saved draft in textbox](/assets/images/smart-visual-testing/smart-comments/autosaveddraft_textbox.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/autosaveddraft_textbox.png' alt="Auto-saved draft in textbox"  />
 
 If you write a comment in the Accept modal but close it, the draft is saved.
 
 **2. Draft in Reject Modal:**
-![Auto-saved draft in Reject modal](/assets/images/smart-visual-testing/smart-comments/autoasveddraft_reject.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/autoasveddraft_reject.png' alt="Auto-saved draft in Reject modal"  />
 
 **3. Draft in Multiselect:**
-![Auto-saved draft in multiselect](/assets/images/smart-visual-testing/smart-comments/autosaveddraft_multiselect.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/autosaveddraft_multiselect.png' alt="Auto-saved draft in multiselect"  />
 
 You can then post the saved draft from:
 - The comment textbox in the screenshot drawer
 - Any modal (Accept, Reject, Move)
 - The bulk operations comment box
 
-<Note>
-NOTE
-Drafts are session-based and will be cleared when you refresh the page or start a new session.
-</Note>
+> **Note:** Drafts are session-based and will be cleared when you refresh the page or start a new session.
 
 ### Mentions (@mentions)
 
 Mention teammates in your comments to notify them and bring them into the discussion.
 
-![Using @mention in comments](/assets/images/smart-visual-testing/smart-comments/at_mention.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/at_mention.png' alt="Using @mention in comments"  />
 
 **How to mention:**
 1. Type `@` in the comment box
@@ -171,12 +163,11 @@ Mention teammates in your comments to notify them and bring them into the discus
 3. Select from the dropdown list
 4. The mentioned user will be highlighted in the comment
 
-
 ### Threaded Comments
 
 Reply to existing comments to create threaded discussions.
 
-![Threaded comment reply](/assets/images/smart-visual-testing/smart-comments/firstthreadcomment_textbox_posted.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/firstthreadcomment_textbox_posted.png' alt="Threaded comment reply"  />
 
 **How to reply:**
 1. Click **Reply** on any existing comment
@@ -193,7 +184,7 @@ Comments can be in two states:
 
 Unresolved comments are active and visible in the main comments list.
 
-![Unresolved comments state](/assets/images/smart-visual-testing/smart-comments/unresolved_state.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/unresolved_state.png' alt="Unresolved comments state"  />
 
 **Characteristics:**
 - Visible in the main comments view
@@ -204,7 +195,7 @@ Unresolved comments are active and visible in the main comments list.
 
 Resolved comments are archived and moved to a separate column.
 
-![Resolved comments state](/assets/images/smart-visual-testing/smart-comments/resolved_state.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/resolved_state.png' alt="Resolved comments state"  />
 
 **Characteristics:**
 - Moved to the "Resolved" column
@@ -233,7 +224,8 @@ Resolved comments are archived and moved to a separate column.
 
 View comments directly in the screenshot drawer:
 
-![Comments in screenshot drawer](/assets/images/smart-visual-testing/smart-comments/commenttag_screenshotdrawer.png)
+<img loading="lazy" width="1300" height="776" src='/assets/images/smart-visual-testing/smart-comments/commenttag_screenshotdrawer.png' alt="Comments in screenshot drawer"  />
+
 #### Comment Drawer (Actions Tab)
 
 Access all comments via the **Comment** button in the Actions tab:
@@ -274,9 +266,9 @@ All comments are retained and searchable:
 When a screenshot is deleted, **all associated comments are also deleted**.
 
 <Warning>
-
 **Important:** Deletion is permanent. Make sure to export or save important comment discussions before deleting screenshots.
 </Warning>
+
 
 ### Move to Baseline / Overwrite
 
@@ -285,11 +277,10 @@ When screenshots are moved to baseline or overwritten:
 - Comments remain with the original screenshot ID
 - If the original screenshot is replaced, comments are deleted
 
-<Note>
-NOTE
+<Warning>
+**Note:** Comments are mapped to Screenshot IDs. When a screenshot is overwritten, the new screenshot has a different ID, so comments don't carry over.
+</Warning>
 
-Comments are mapped to Screenshot IDs. When a screenshot is overwritten, the new screenshot has a different ID, so comments don't carry over.
-</Note>
 
 ### Screenshot Variants
 
@@ -302,8 +293,8 @@ Comments are specific to each screenshot variant (viewport + browser combination
 
 ## Best Practices
 
-<Tabs>
-<Tab ttitle='Use Mentions Strategically'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Use Mentions Strategically">
 
 **Use Mentions Strategically**
 
@@ -313,7 +304,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Combine mentions with clear action items in your comments
 
 </Tab>
-<Tab title='Organize with Threads'>
+<Tab title="Organize with Threads">
 
 **Organize with Threads**
 
@@ -323,7 +314,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Keep threads focused on one issue or question
 
 </Tab>
-<Tab title='Resolve When Complete'>
+<Tab title="Resolve When Complete">
 
 **Resolve When Complete**
 
@@ -333,7 +324,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Use resolved comments as a reference for similar issues
 
 </Tab>
-<Tab title='Add Context in Comments'>
+<Tab title="Add Context in Comments">
 
 **Add Context in Comments**
 
@@ -343,7 +334,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Link to related tickets or documentation when relevant
 
 </Tab>
-<Tab title='Use Bulk Operation Comments'>
+<Tab title="Use Bulk Operation Comments">
 
 **Use Bulk Operation Comments**
 
@@ -353,7 +344,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Combine with [multiselect](/support/docs/smartui-multiselect-bulkops/) for efficient workflows
 
 </Tab>
-<Tab title='Manage Drafts'>
+<Tab title="Manage Drafts">
 
 **Manage Drafts**
 
@@ -369,8 +360,8 @@ Comments are specific to each screenshot variant (viewport + browser combination
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Comment Not Appearing'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Comment Not Appearing">
 
 **Issue: Comment Not Appearing**
 
@@ -384,7 +375,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Check the comment drawer in the Actions tab
 
 </Tab>
-<Tab title='Draft Not Saving'>
+<Tab title="Draft Not Saving">
 
 **Issue: Draft Not Saving**
 
@@ -397,7 +388,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Check browser console for any JavaScript errors
 
 </Tab>
-<Tab title='Mention Not Working'>
+<Tab title="Mention Not Working">
 
 **Issue: @Mention Not Working**
 
@@ -411,7 +402,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Verify you have permission to mention users
 
 </Tab>
-<Tab title='Comment Character Limit'>
+<Tab title="Comment Character Limit">
 
 **Issue: Comment Too Long**
 
@@ -424,7 +415,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Check the character counter in the comment box
 
 </Tab>
-<Tab title='Comments Deleted Unexpectedly'>
+<Tab title="Comments Deleted Unexpectedly">
 
 **Issue: Comments Deleted Unexpectedly**
 
@@ -438,7 +429,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Verify you're viewing the correct build or screenshot
 
 </Tab>
-<Tab title='Resolve/Unresolve Not Working'>
+<Tab title="Resolve/Unresolve Not Working">
 
 **Issue: Can't Resolve or Unresolve Comments**
 
@@ -458,8 +449,8 @@ Comments are specific to each screenshot variant (viewport + browser combination
 
 ## Comment Workflow Examples
 
-<Tabs>
-<Tab title='Review Workflow'>
+<Tabs className='docs__val' groupId='workflow'>
+<Tab title="Review Workflow">
 
 **Scenario:** Reviewing visual changes and adding comments for the team.
 
@@ -472,7 +463,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 7. Mark comment as resolved once confirmed
 
 </Tab>
-<Tab title='Bulk Approval with Comment'>
+<Tab title="Bulk Approval with Comment">
 
 **Scenario:** Approving multiple screenshots with a bulk comment.
 
@@ -483,7 +474,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Comment appears in all selected screenshots' comment lists
 
 </Tab>
-<Tab title='Reject with Explanation'>
+<Tab title="Reject with Explanation">
 
 **Scenario:** Rejecting a screenshot and explaining why.
 
@@ -495,7 +486,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 6. Comment is saved and visible in the comment drawer
 
 </Tab>
-<Tab title='Threaded Discussion'>
+<Tab title="Threaded Discussion">
 
 **Scenario:** Having a discussion about a visual change.
 
@@ -506,7 +497,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. All participants can see the full discussion thread
 
 </Tab>
-<Tab title='Draft Recovery'>
+<Tab title="Draft Recovery">
 
 **Scenario:** Starting a comment in one place and finishing it elsewhere.
 
@@ -537,4 +528,3 @@ The following features are planned for future releases:
 
 - Learn about [SmartUI Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) to combine comments with bulk actions
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
-

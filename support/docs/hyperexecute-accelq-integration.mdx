@@ -1,11 +1,13 @@
 ---
 title: "Accelq Integration with HyperExecute"
 sidebarTitle: "Accelq Integration"
-keywords: ['accelq studio','integraion','automation easy','no code automation','no code mobile automation','gui based mobile automation','real devices']
-
+keywords: ['accelq studio', 'integraion', 'automation easy', 'no code automation', 'no code mobile automation', 'gui based mobile automation', 'real devices']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Accelq Integration with HyperExecute
 
 ACCELQ is a cloud-based, continuous testing platform for functional and API testing needs. It is a codeless test automation tool that allows users to create and execute tests without writing any code. ACCELQ uses a natural language abstraction to generate Java code, which makes it easy to learn and use.
 
@@ -20,11 +22,14 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
 - Agent.properties file for you configured agent with <BrandName />
 
-
 ### Steps to Integrate
 ---
 
 **Step 1:** Copy your local `agent.properties` file from `<directory path>` to root folder of your HyperExecute project.
+
+{/* **Step 2:** Download Accelq Node runner in root folder of your HyperExecute project and unzip the file.
+
+> You can download the Node Runner from [here](https://accelq.s3.amazonaws.com/releases/plugins/6.0/accelq_ci_cd.tar.gz) */}
 
 **Step 2:** Update your YAML file with your account credentials.
 
@@ -34,29 +39,28 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ./hyperexecute --config hyperdemo.yaml -u <lambdausername> -k <lambda accesskey>
 ```
 
-
 ## Additional Details
 ### Where to Find the Parameters?
 
 #### AccelQ - URL, User-ID, API key, Tenant Code
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-1.webp' alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-1.webp' alt="accelq-dashboard"  width="1920" height="868" />
 
 #### How to create a Job ID?
 
 **Step 1:** Create an LT profile with with the below configuration and save it
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-2.webp' alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-2.webp' alt="accelq-dashboard"  width="1920" height="868" />
 
 **Step 2:** Create a [CI job](https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool#:~:text=Step%201%3A%20On%20the%20ACCELQ,Click%20on%20%22Create%20Job%22) with the same profile and agent which has <BrandName /> configured with it.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-3.webp' alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-3.webp' alt="accelq-dashboard"  width="1920" height="868" />
 
 **Step 3:** Copy the Job ID
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-4.webp' alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/accelq/accelq-4.webp' alt="accelq-dashboard"  width="1920" height="868" />
 
 ### Agent.properties file
 Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the <BrandName />.
 
-- You can configure your [<BrandName /> from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [<BrandName /> from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-testmu ai-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File
@@ -95,8 +99,8 @@ agent_type = User
 # Refer to documentation for applicable properties for different providers
 web_provider_type = LAMBDATEST
 # web_provider_type=LOCALHOST
-web_provider_username = <LambdaTest Username>
-web_provider_password = <LambdaTest AccessKey>
+web_provider_username = <TestMu AI Username>
+web_provider_password = <TestMu AI AccessKey>
 # web_provider_cloud_name=
 # web_provider_security_token=
 # web_provider_serverUrl=
@@ -180,8 +184,8 @@ sharing_type = 0
 
 # Extra Flags
 provider_type = LAMBDATEST
-provider_password = <LambdaTest AccessKey>
-provider_username = <LambdaTest Username>
+provider_password = <TestMu AI AccessKey>
+provider_username = <TestMu AI Username>
 ```
 
 ### Sample YAML Files
@@ -190,8 +194,8 @@ provider_username = <LambdaTest Username>
 
 ```bash
 version: 0.1
-user: <Lambdatest Username>
-key: <Lambdatest AccessKey>
+user: <TestMu AI Username>
+key: <TestMu AI AccessKey>
 globalTimeout: 150
 testSuiteTimeout: 150
 testSuiteStep: 150
@@ -235,7 +239,6 @@ exclusionMatrix:
 pre:
   - move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
   - acc start # start accelq agent on hyperexecute machines
-
 
 testSuites: 
   - node $env:ACCELQ --url "" --userID "" --apiKey "" --tenantCode "poc" --jobID $jobID;

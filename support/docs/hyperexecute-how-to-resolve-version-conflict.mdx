@@ -1,11 +1,11 @@
 ---
-title: How to Resolve Version Conflict Issues
-sidebar_label: How to Resolve Version Conflict Issues
-keywords: ['hyperexecute yaml','resolve version conflicts']
+title: "How to Resolve Version Conflict Issues"
+sidebarTitle: "How to Resolve Version Conflict Issues"
+keywords: ['hyperexecute yaml', 'resolve version conflicts']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
-import { BrandName } from '/snippets/BrandName.mdx';
 
 Maintaining consistent versions across testing frameworks in your project setup is crucial to avoid runtime errors, compatibility issues, and unexpected behaviors. This guide focuses on specifying framework versions in YAML configuration files and aligning them with the version details in project-specific files like `package.json`, `pom.xml`, `.csproj`, and system environment variables for frameworks like Selenium, Playwright, Puppeteer, Cypress, Maestro, and Appium.
 
@@ -32,9 +32,8 @@ For Java projects using Selenium, TestNG and Cucumber dependencies should match 
     <scope>test</scope>
 </dependency>
 ```
-<Note>
-Always verify compatibility between Java and TestNG versions as specified in TestNG's documentation to avoid compatibility conflicts.
-</Note>
+
+> Always verify compatibility between Java and TestNG versions as specified in TestNG's documentation to avoid compatibility conflicts.
 
 ### Selenium/Playwright/Puppeteer/Cypress - JavaScript
 For JavaScript frameworks like Selenium, Playwright, Puppeteer, and Cypress, the framework versions specified in the YAML configuration should align with `package.json`:

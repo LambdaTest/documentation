@@ -1,24 +1,17 @@
 ---
 title: "Layout Comparison in SmartUI SDK"
 sidebarTitle: "Layout Testing"
-keywords:
-  [
-  "layout comparison",
-  "visual regression testing",
-  "ignore layout differences",
-  "smartui sdk",
-  "visual testing",
-  "layout structure",
-  "element positions",
-  "layout testing"
-]
+keywords: ['layout comparison', 'visual regression testing', 'ignore layout differences', 'smartui sdk', 'visual testing', 'layout structure', 'element positions', 'layout testing']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.
 
-![cmd](/assets/images/smart-visual-testing/layout/localisation-netflix.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/layout/localisation-netflix.webp' alt="cmd" width="768" height="373" />
 
 ### Why Layout Testing Matters
 
@@ -49,12 +42,12 @@ Understanding the difference between content and layout is crucial for effective
 - **Visual Diffs** refer to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message.
 In the example below, you can see the visual differences between the baseline and comparison screenshot using  Smart Ignore Diff Option.
 
-![cmd](/assets/images/smart-visual-testing/layout/smartignore-amazon.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/layout/smartignore-amazon.webp' alt="cmd" width="768" height="373" />
 
 - **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized.
 In the example below, you can see the layout differences between the baseline and comparison screenshot using  Layout Diff Option.
 
-![cmd](/assets/images/smart-visual-testing/layout/layout-amazon.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/layout/layout-amazon.webp' alt="cmd" width="768" height="373" />
 
 SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
@@ -66,14 +59,14 @@ Before using the Layout Comparison feature, ensure you meet the following requir
 
 - SmartUI CLI version `4.1.8` or above is installed
 - The feature is only supported when using the `smartui exec` (smartUISnapshot) command
-- The feature must be enabled by contacting support@lambdatest.com
+- The feature must be enabled by contacting support@testmu.ai
 
 ## How to Use Layout Comparison with SmartUI
 
 To use the layout comparison feature, you need to set the `ignoreType` option to `"layout"` when taking a screenshot:
 
 <Tabs>
-  <Tab title='JavaScript'>
+  <Tab title="JavaScript">
     ```javascript
     // Set options to focus only on layout structure
     let options = {
@@ -84,7 +77,7 @@ To use the layout comparison feature, you need to set the `ignoreType` option to
     await smartuiSnapshot(driver, "ScreenshotName", options);
     ```
   </Tab>
-  <Tab title='Java'>
+  <Tab title="Java">
     ```java
     // Set options to focus only on layout structure
     Map<String, Object> options = new HashMap<>();
@@ -94,7 +87,7 @@ To use the layout comparison feature, you need to set the `ignoreType` option to
     smartuiSnapshot(driver, "ScreenshotName", options);
     ```
   </Tab>
-  <Tab title='Python'>
+  <Tab title="Python">
     ```python
     # Set options to focus only on layout structure
     options = {
@@ -105,7 +98,7 @@ To use the layout comparison feature, you need to set the `ignoreType` option to
     smartui_snapshot(driver, "ScreenshotName", options)
     ```
   </Tab>
-  <Tab title='C#'>
+  <Tab title="C#">
     ```csharp
     // Set options to focus only on layout structure
     var options = new Dictionary<string, object>
@@ -117,7 +110,7 @@ To use the layout comparison feature, you need to set the `ignoreType` option to
     await SmartUI.Snapshot(driver, "ScreenshotName", options);
     ```
   </Tab>
-  <Tab title='Ruby'>
+  <Tab title="Ruby">
     ```ruby
     # Set options to focus only on layout structure
     options = {

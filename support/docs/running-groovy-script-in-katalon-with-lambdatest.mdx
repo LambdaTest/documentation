@@ -2,12 +2,15 @@
 title: "Running Groovy Script In Katalon With TestMu AI Selenium Grid"
 sidebarTitle: "Running Groovy Script In Katalon With TestMu AI Selenium Grid"
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ﻿---
 id: running-groovy-script-in-katalon
-title: How to Run Groovy Script In Katalon With TestMu AI Selenium Grid?
+title: How to Run Groovy Script In Katalon With <BrandName /> Selenium Grid?
 hide_title: true
-sidebar_label: Running Groovy Script In Katalon With TestMu AI Selenium Grid
-description: Run your Groovy script in Katalon with TestMu AI Selenium Grid. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+sidebarTitle: Running Groovy Script In Katalon With <BrandName /> Selenium Grid
+description: Run your Groovy script in Katalon with <BrandName /> Selenium Grid. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
  [
    "Katalon Groovy Script",
@@ -25,7 +28,7 @@ keywords:
    "Groovy Test Online"
  ]
 
-site_name: LambdaTest
+site_name: <BrandName />
 slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
 canonical: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 ---
@@ -33,7 +36,7 @@ canonical: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-w
 
 ---
 
-As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with TestMu AI Selenium Grid.
+As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with <BrandName /> Selenium Grid.
 
 **Step 1:** Open your Katalon Studio instance & go to **Tests Explorer** from the left side-bar.
 
@@ -51,7 +54,7 @@ As you perform testing with Katalon Studio, you can write or edit test automatio
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 
 
-		//To set the test name at LambdaTest.
+		//To set the test name at TestMu AI.
 		RunConfiguration.setDriverPreferencesProperty("Remote", "name", testCaseContext.getTestCaseId());
 		if (suiteContext != null){
 			RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
@@ -66,7 +69,7 @@ As you perform testing with Katalon Studio, you can write or edit test automatio
 	@com.kms.katalon.core.annotation.TearDown
 	@AfterTestCase
 	def sampleAfterTestCase(TestCaseContext testCaseContext) {
-		//To set the status of test at LambdaTest.
+		//To set the status of test at TestMu AI.
 		String result="failed";
 		if(testCaseContext.getTestCaseStatus().equalsIgnoreCase("PASSED")){
 			result="passed"
@@ -91,7 +94,7 @@ As you perform testing with Katalon Studio, you can write or edit test automatio
 	@BeforeTestSuite
 	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
 		suiteContext=testSuiteContext
-		//To Set the build Name at LambdaTest.
+		//To Set the build Name at TestMu AI.
 		RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
 		println testSuiteContext.getTestSuiteId()
 	}
@@ -107,4 +110,4 @@ As you perform testing with Katalon Studio, you can write or edit test automatio
 }
 ```
 
-That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over TestMu AI cloud-based cross browser testing platform. Happy testing! 🙂
+That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over <BrandName /> cloud-based cross browser testing platform. Happy testing! 🙂

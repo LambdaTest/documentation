@@ -1,10 +1,11 @@
 ---
 title: "Tunnel Configuration in HyperExecute"
 sidebarTitle: "How to Configure Tunnel with HyperExecute"
-keywords: ['TestMu AI Hyperexecute','TestMu AI Hyperexecute help','TestMu AI Hyperexecute documentation','How to Configure Tunnel with HyperExecute']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'How to Configure Tunnel with HyperExecute']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 You can configure a secure tunnel in HyperExecute to test applications that are:
 
@@ -21,23 +22,19 @@ There are 3 main ways to use a tunnel in HyperExecute:
 ### 1. Simple `tunnel` Connection
 Enable tunnel directly by setting the `tunnel` flag to `true` in your HyperExecute YAML file. The HyperExecute CLI will launch a tunnel as sub process for accessing your applications which are locally hosted or behind a firewall. 
 
-```yaml hyperexecute.yaml
+```yaml title="hyperexecute.yaml"
 tunnel: true
 ```
-<Note>
-Recommended if you want to quickly enable tunnel access for locally hosted apps.
-</Note>
+> Recommended if you want to quickly enable tunnel access for locally hosted apps.
 
 ### 2. Using Existing `tunnel`
 If you already have a running tunnel, you can reuse it by specifying its name to access your applications which are locally hosted or behind a firewall.
 
-```yaml hyperexecute.yaml
+```yaml title="hyperexecute.yaml"
 tunnelNames: ["lambdatest_tunnel"]
 ```
 
-<Note>
-Useful when running multiple jobs and you don’t want to spawn new tunnels each time.
-</Note>
+> Useful when running multiple jobs and you don’t want to spawn new tunnels each time.
 
 ### 3. Advanced `tunnel` Configurations
 These are the parameters you can use to configure your [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel) settings when running it.
@@ -51,18 +48,16 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
 
-<Note>
-HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
-</Note>
+> HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
 
-```yaml hyperexecute.yaml
+```yaml title="hyperexecute.yaml"
 tunnel: true
 
 tunnelOpts:
   global: true
 ```
 
-<img loading="lazy" src="/assets/images/hyperexecute/knowledge-base/secrets/12.png" alt="Image"  style={{width: '500px',}} className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/secrets/12.png' alt="Image"  style={{width: '500px',}} />
 
 ## Clone a Repository via Tunnel
 
@@ -74,7 +69,7 @@ You can now clone all your **public** and **private** repositories from your Git
 
 After specifying the details of your repository, you need to set the `useInCodeSetUp` flag to `true` as shown below.
 
-```yaml highlight={8-9}
+```bash
 sourcePayload:
   platform: git
   link: https://--------
@@ -82,7 +77,9 @@ sourcePayload:
   accessToken: <your_personal_access_token>
   commit: <optional>
 
+# highlight-next-line
 tunnelOpts:
+# highlight-next-line
   useInCodeSetUp: true
 ## this flag is mandatory to pass to enable cloning via tunnel
 ```
@@ -94,7 +91,7 @@ If you are unable to access a particular website via the Actions environment eve
 ```bash
 response=$(curl -o /dev/null -s -w "%{http_code}" https://www.lambdatest.com)
 
-## You need to enter your website URL in place of LambdaTest URL
+## You need to enter your website URL in place of TestMu AI URL
 ```
 
 Now you need to check the response of the website by passing the command:
@@ -105,6 +102,4 @@ echo $response
 
 The ideal expected response in **200**. 
 
-<Note>
-If you have more questions, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Chat</span> with us.
-</Note>
+>If you have more questions, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Chat</span> with us.

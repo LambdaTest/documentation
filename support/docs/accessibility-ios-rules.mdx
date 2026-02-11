@@ -1,10 +1,11 @@
 ---
 title: "iOS Accessibility Rules - Quick Reference"
 sidebarTitle: "iOS"
-keywords:
-    ["LambdaTest", "Accessibility", "Testing", "Manual", "Accessibility Testing Settings"]
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Manual', 'Accessibility Testing Settings']
 ---
-import { NewTag } from "/snippets/NewTag.mdx"
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 | Rule Name                          | WCAG   | Level | Impact  | Description |  
 |-------------------------------------|--------|-------|---------|-------------|  
@@ -24,6 +25,7 @@ import { NewTag } from "/snippets/NewTag.mdx"
 | Missing Switch Element Label  <NewTag  value="New" /> | 1.3.1  | A     | Critical | Switch controls (UISwitch) in an app must have both their name and value available to screen readers. Add `accessibilityLabel` to switch controls to describe what setting or feature is being toggled on or off (e.g., "Enable notifications", "Dark mode"). The switch state (On/Off) is automatically announced by VoiceOver, so focus the label on describing the setting being controlled. |  
 | Duplicate Accessibility Label  <NewTag  value="New" /> | 4.1.2  | A     | Critical | Multiple UI elements on the same screen share the same accessibility label, causing confusion for screen reader users who cannot distinguish between different controls. Ensure each interactive element has a unique `accessibilityLabel` to prevent confusion. For similar elements (like multiple "Delete" buttons), add context such as "Delete photo 1", "Delete photo 2" or reference the item being acted upon. |  
 
+<Warning>
+We are continuously expanding our App Accessibility guidelines. Visit this page for the latest updates and new requirements.
+</Warning>
 
-
-<Warning> We are continuously expanding our App Accessibility guidelines. Visit this page for the latest updates and new requirements.</Warning>

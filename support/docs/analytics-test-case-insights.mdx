@@ -1,11 +1,10 @@
 ---
 title: "Test Case Insights"
 sidebarTitle: "Test Case Insights"
-keywords: ["analytics"]
+keywords: ['analytics']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Analyzing the test case level insights of your test automation execution on <BrandName /> is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
@@ -22,6 +21,8 @@ Analyzing the test case level insights of your test automation execution on <Bra
 2. Select the `Custom Dashboard` option from the menu.
 3. Now, search for `Test Case` widgets in the `Web Automation, App Automation & HyperExecute` products.
 4. Add the widgets to the dashboard by clicking on the `Add Widget` button.
+
+{/* <img loading="lazy" src='/assets/images/analytics/test-case-widgets-dashboard.webp' alt="cmd" width="800" height="400" /> */}
 
 ## Capture Test Case Insights for Web Automation
 
@@ -95,13 +96,13 @@ driver.executeScript(`lambda-testCase-end=${Name of test case}`)
 
 You can capture the test case insights by using the `reporter` configuration in your `YAML` file for capturing and seeing the test cases in our test case widgets on dashboard. 
 
-Here is a link to documentation for setting up the reporter for `PlaywrightJS`: [Click here](/support/docs/playwright-html-report#step-1:-update-your-playwright-configuration)
+Here is a link to documentation for setting up the reporter for `PlaywrightJS`: [Click here](/support/docs/playwright-html-report/#step-1-update-your-playwright-configuration)
 
-#### Step 2 - Add the code to lambdatest-setup file
+#### Step 2 - Add the code to testmu ai-setup file
 
-Once, you have setup the `reporter` then the following code snippet should be added to your `lambdatest-setup.js` config. 
+Once, you have setup the `reporter` then the following code snippet should be added to your `testmu ai-setup.js` config. 
 
-```js title=lambdatest-
+```js title=testmu ai-
 try {
         const response = JSON.parse(await ltPage.evaluate(
           (_, data) => {
@@ -115,10 +116,10 @@ try {
             type: 'lt_test_id',
             description: response.data.test_id,
           })
-          console.log('LambdaTest Test ID:', response.data.test_id)
+          console.log('TestMu AI Test ID:', response.data.test_id)
         }
       } catch (err) {
-        console.warn('Could not fetch LambdaTest test details:', err.message)
+        console.warn('Could not fetch TestMu AI test details:', err.message)
       }
 ```
 
@@ -128,14 +129,15 @@ You can now, execute the tests on our `HyperExecute` platform and you can see th
 
 ## Capture by NPM Package for WebdriverIO
 
-You can capture the test case insights by using the NPM Package. You need to add the following `NPM Package` in your test script. Here is the link to the NPM package: [wdio-lambdatest-test-case-analytics-service](https://www.npmjs.com/package/wdio-lambdatest-test-case-analytics-service)
+You can capture the test case insights by using the NPM Package. You need to add the following `NPM Package` in your test script. Here is the link to the NPM package: [wdio-testmu ai-test-case-analytics-service](https://www.npmjs.com/package/wdio-testmu ai-test-case-analytics-service)
 
-:::caution
-The package currently only supports for `WebdriverIO` framework. We will be adding support for other frameworks soon.
-:::
+<Warning>
+**The package currently only supports for `WebdriverIO` framework. We will be adding support for other frameworks soon.**
+
+</Warning>
 
 ```bash
-npm i wdio-lambdatest-test-case-analytics-service
+npm i wdio-testmu ai-test-case-analytics-service
 ```
 
 Now, once the package has been installed, you need to add the following code in your `wdio.conf.js` file.
@@ -144,7 +146,7 @@ Now, once the package has been installed, you need to add the following code in 
 exports.config = {
   // ...
   services: [
-    ["lambdatest-test-case-analytics", {}], // Add the service
+    ["testmu ai-test-case-analytics", {}], // Add the service
     // ... other services
   ],
   // ...
@@ -159,13 +161,13 @@ Once, you have completed the configuration and start executing your tests on the
 
 You can analyze the health of your test cases by using the `Test Case Health Snapshot` widget. The widget will display the total number of test cases success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
-<img loading="lazy" src='/assets/images/analytics/test-case-health-snapshot.webp' alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src='/assets/images/analytics/test-case-health-snapshot.webp' alt="cmd" width="800" height="400" />
 
 ### Test Case Group View
 
 You can analyze the test cases by their group by using the `Test Case Group View` widget. The widget will display the total number of test cases in each group. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
-<img loading="lazy" src='/assets/images/analytics/test-cases-view.webp' alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src='/assets/images/analytics/test-cases-view.webp' alt="cmd" width="800" height="400" />
 
 ## Test Case Use Cases
 

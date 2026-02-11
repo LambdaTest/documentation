@@ -1,10 +1,10 @@
 ---
-title: Media Injection on Real Devices
-sidebarTitle: Media Injection
+title: "Media Injection on Real Devices"
+sidebarTitle: "Media Injection"
 keywords: ['image injection', 'app test automation', 'camera image', 'QR code scanning', 'Barcode scanning', 'testmu ai capture code', 'framework on testmu ai', 'app testing appium', 'app testing', 'real devices']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 <BrandName />'s Media Injection empowers you to test various camera-related functionalities (Image Injection and Video Injection) of your app across a vast array of real mobile devices. This innovative feature supports image capture testing, QR code scanning verification and Barcode scanning assessment.
@@ -27,7 +27,8 @@ The Image and Video Injection processes leverages **Sensor Instrumentation** tec
 - Effortless integration with existing test environments
 
 <Warning>
-**NOTE**
+**note**
+
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
 </Warning>
 
@@ -37,27 +38,23 @@ Below given is the list of Camera APIs which are supported by <BrandName /> Imag
 
 <Tabs className="docs__val">
 
-<Tab value="bash" title="iOS >= version 13" default>
+<Tab title="iOS >= version 13">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `didFinishPickingMediaWithInfo` API of `UIImagePickerController` iOS SDK class for capturing an image. <br /><br /> 📕 For details, please check [Apple documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)|
     | `AVCapturePhoto` iOS SDK class for receiving captured photos from `AVCapturePhotoOutput` API. <br /><br />📕 For details, please check [Apple Documentation](https://developer.apple.com/documentation/avfoundation/avcapturephoto).  |
-  </div>
 
 </Tab>
 
-<Tab value="powershell" title="Android >= version 9" default>
+<Tab title="Android >= version 9">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `CameraX` API is used. <br />📕 For details, please check [CameraX documentation](https://developer.android.com/training/camerax) |
     | `Camera` API is used. <br />📕 For details, please check [Camera documentation] (https://developer.android.com/training/camera-deprecated)|
     | `Camera2` API is used. <br />📕 For details, please check [Camera2 documentation](https://developer.android.com/training/camera2)|
     | `ACTION_IMAGE_CAPTURE` is standard Intent action that can be sent to have the camera application capture an image and return it. <br /><br />📕 For details, please check [MediaStore documentation](https://developer.android.com/reference/android/provider/MediaStore)|
-  </div>
 
 </Tab>
 </Tabs>
@@ -68,24 +65,19 @@ Below given is the list of Camera APIs which are supported by <BrandName /> Vide
 
 <Tabs className="docs__val">
 
-<Tab value="bash" title="iOS >= version 13" default>
+<Tab title="iOS >= version 13">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `captureOutput(_:didOutput:from:)` method of `AVCaptureVideoDataOutputSampleBufferDelegate` protocol. <br /><br />📕 For details, please check [Apple Documentation](https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutputsamplebufferdelegate) |
 
-  </div>
-
 </Tab>
 
-<Tab value="powershell" title="Android >= version 13" default>
+<Tab title="Android >= version 13">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `ImageReader` class for accessing video frames from the camera output. <br /><br />📕 For details, please check [ImageReader documentation](https://developer.android.com/reference/android/media/ImageReader) |
-  </div>
 
 </Tab>
 </Tabs>
@@ -100,25 +92,23 @@ This feature helps you inject any video or image which you want your app to clic
 
 **Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Image Injection** and **Video Injection** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Step3.png' alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Step3.png' alt="Native Mobile App Testing" width="1366" height="629" />
 
 **Step 4:** You can see the video and image preview in the Media Injection section. You can
 **delete**, **reupload** and **inject** the image or video from here.
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Stepfinal.png' alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Stepfinal.png' alt="Native Mobile App Testing" width="1366" height="629" />
 
 **Step 5:** After the above config, click on the **Start** button to start the session. Now, go to **Device Controls** in the toolbar as shown below. Select Media Injection and click **Inject** to upload the desired video or image from your computer to the app.
 
-<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Stepfinalx.png' alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src='/assets/images/mobile-app-testing/media-injection/Stepfinalx.png' alt="Native Mobile App Testing" width="1366" height="629" />
  
 
 **Step 6:** Now go to camera feature in your app, the camera pops up. When you click the image from your app, you will see a black image. Please proceed with the same by clicking on **Use Photo**. 
 
 **Step 7:** The black image is now replaced with an injected image or video.
 
+<Info>
+**The clicked image is black because the **Cameras** of <BrandName /> Real Devices are taped for security reasons. Thus we inject image through **Sensor Instrumentation**.**
 
-<Note>
-**INFO**
-
-The clicked image is black because the **Cameras** of <BrandName /> Real Devices are taped for security reasons. Thus we inject image through **Sensor Instrumentation**.
-</Note>
+</Info>

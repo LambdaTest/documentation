@@ -1,20 +1,13 @@
 ---
 title: "Appium with Java"
 sidebarTitle: "Java"
-keywords: ['appium','java','lambdatest java','framework on lambdatest','testng','app testing','real devices']
+keywords: ['appium', 'java', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 In this documentation, you will learn how to trigger a automation script of **Java** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
@@ -29,68 +22,75 @@ In this documentation, you will learn how to trigger a automation script of **Ja
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/LT-appium-java" />
-</Check>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-java" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-    ```bash
-    export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
-  <Tab title="Windows">
-    ```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
-</Tabs>
+<Tabs className="docs__val">
+<Tab title="Linux / MacOS">
+  ```bash
 
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
+<Tab title="Windows">
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+</Tab>
+</Tabs>
 
 ### Step 3: Upload your Application
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="App File">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-    ```
-  </Tab>
+<Tabs className="docs__val">
 
-  <Tab title="App URL">
-    ```bash
-    curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-    ```
-  </Tab>
+<Tab title="App File">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    
+```
+</Tab>
+
+<Tab title="App URL">
+  ```bash
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    
+```
+</Tab>
+
 </Tabs>
 
-<Check>
-**TIP**
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+<Tip>
+**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
-</Check>
+
+</Tip>
 
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
-<Tabs>
-  <Tab title="Android">
+<Tabs className="docs__val">
+<Tab title="Android">
 
-```java vanilla_android.java highlight={12,14,27}
+```java title="vanilla_android.java"
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -102,9 +102,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class vanilla_android {
-    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+    //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add TestMu AI username here
             : System.getenv("LT_USERNAME");
-    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+    //highlight-next-line
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add TestMu AI accessKey here
             : System.getenv("LT_ACCESS_KEY");
 
     private static AppiumDriver driver;
@@ -117,6 +119,7 @@ public class vanilla_android {
             capabilities.setCapability("platformVersion", "11");
             capabilities.setCapability("platformName", "Android");
             capabilities.setCapability("isRealMobile", true);
+            //highlight-next-line
             capabilities.setCapability("app", "APP_URL");     //Enter your app url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("build", "Java Vanilla - Android");
@@ -128,23 +131,23 @@ public class vanilla_android {
 
             driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
 
-            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
+            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/color"));
             color.click();
 
-            MobileElement text = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/Text"));
+            MobileElement text = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/Text"));
             //Changes the text to proverbial
             text.click();
 
             //toast is visible
-            MobileElement toast = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/toast"));
+            MobileElement toast = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/toast"));
             toast.click();
 
             //notification is visible
-            MobileElement notification = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/notification"));
+            MobileElement notification = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/notification"));
             notification.click();
 
             //Open the geolocation page
-            MobileElement geo = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/geoLocation"));
+            MobileElement geo = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/geoLocation"));
             geo.click();
             Thread.sleep(5000);
 
@@ -155,7 +158,7 @@ public class vanilla_android {
             Thread.sleep(2000);
 
             //Takes to speed test page
-            MobileElement speedtest = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/speedTest"));
+            MobileElement speedtest = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/speedTest"));
             speedtest.click();
             Thread.sleep(5000);
 
@@ -165,9 +168,9 @@ public class vanilla_android {
             MobileElement browser = (MobileElement) driver.findElement(MobileBy.AccessibilityId("Browser"));
             browser.click();
 
-            MobileElement url = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/url"));
+            MobileElement url = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/url"));
             url.sendKeys("https://www.lambdatest.com");
-            MobileElement find = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/find"));
+            MobileElement find = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial :id/find"));
             find.click();
 
         } catch (AssertionError a) {
@@ -180,11 +183,11 @@ public class vanilla_android {
     }
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="iOS">
+<Tab title="iOS">
 
-```java vanilla_ios.java highlight={13,15,28}
+```java title="vanilla_ios.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -197,9 +200,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.URL;
 
 public class vanilla_ios {
-    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+    //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add TestMu AI username here
             : System.getenv("LT_USERNAME");
-    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+    //highlight-next-line
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add TestMu AI accessKey here
             : System.getenv("LT_ACCESS_KEY");
 
     public static final String URL = "https://" + userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub";
@@ -212,6 +217,7 @@ public class vanilla_ios {
             caps.setCapability("platformVersion", "15");
             caps.setCapability("deviceName", "iPhone 12");
             caps.setCapability("isRealMobile", true);
+            //highlight-next-line
             caps.setCapability("app", "APP_URL"); //Enter your app url
             caps.setCapability("platformName", "iOS");
             caps.setCapability("build", "Java Vanilla - iOS");
@@ -219,9 +225,7 @@ public class vanilla_ios {
             caps.setCapability("devicelog", true);
             caps.setCapability("network", false);
 
-
         driver = new IOSDriver(new URL("https://" + userName + ":" + accessKey + "@beta-hub.lambdatest.com/wd/hub"), caps);
-
 
             Thread.sleep(2000);
 
@@ -273,7 +277,7 @@ public class vanilla_ios {
             MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId("find");
             el.until(ExpectedConditions.elementToBeClickable(el4));
             el4.click();
-            el4.sendKeys("Lambdatest");
+            el4.sendKeys("TestMu AI");
 
             //((JavascriptExecutor) driver).executeScript("lambda-status=passed");
             driver.quit();
@@ -287,16 +291,14 @@ public class vanilla_ios {
 }
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-<Check>
-**TIP**
-
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
 ### Step 5: Configure the Test Capabilities
 
@@ -304,8 +306,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
-<Tabs>
-  <Tab title="Android">
+<Tabs className="docs__val">
+<Tab title="Android">
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -324,15 +326,14 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("devicelog", true);
 ```
 
-<Check>
-**TIP**
+<Tip>
+**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
 
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-</Check>
+</Tip>
 
-  </Tab>
+</Tab>
 
-  <Tab title="iOS">
+<Tab title="iOS">
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -348,17 +349,16 @@ DesiredCapabilities caps = new DesiredCapabilities();
             caps.setCapability("network", false);
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
-<Info>
-**Note**
+<Note>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `false` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-</Info>
+</Note>
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -370,7 +370,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
 
 - The tests can be executed in the terminal using the following command:
 
-  <Tabs>
+  <Tabs className="docs__val">
   <Tab title="Android">
 
   ```bash
@@ -387,14 +387,10 @@ DesiredCapabilities caps = new DesiredCapabilities();
   </Tab>
   </Tabs>
 
-<Note>
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
-</Note>
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-
-

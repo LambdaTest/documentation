@@ -5,6 +5,8 @@ keywords: ['sharding', 'XCUIT', 'appium', 'real devices', 'lambdatest cloud plat
 ---
 
 import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <div>
 <RealDeviceTag value="Real Device" />
@@ -24,20 +26,20 @@ You can learn more about the HyperExecute portal and UI by going through our [Gu
 By the end of this topic, you will be able to:
 1. Speed up your XCUI tests with sharding
 2. Learn more about HyperExecute
-3. Explore advanced features of LambdaTest
+3. Explore advanced features of <BrandName />
 
 ## Prerequisites
 
 Before you start performing your App automation testing with XCUI, please make sure:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation and HyperExecute Cloud plans on your account.
 
 ## Uploading your App & Test suite
 
 ### Step 1: Upload Your Application
 
-Upload your **iOS** application (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
+Upload your **iOS** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
 
 Here is an example cURL request to upload your app using our REST API:
 
@@ -68,7 +70,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 ### Step 2: Uploading Test Suite
 
-Upload your **test suite** (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -170,14 +172,14 @@ You can refer to this example and screenshot below:
 ```
 ./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
 ```
-<img loading="lazy" src="/assets/images/app-automation/example-folder.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src="/assets/images/app-automation/example-folder.webp" alt="cmd" width="768" height="373"/>
 
 
 5. After the test is started you can follow the test on the below links.
-- [LambdaTest Automation](https://appautomation.lambdatest.com/build)
-<img loading="lazy" src="/assets/images/app-automation/sharding-appauto.webp" alt="cmd" width="768" height="373" className="doc_img"/>
-- [LambdaTest HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
-<img loading="lazy" src="/assets/images/app-automation/sharding-he.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+- [<BrandName /> Automation](https://appautomation.lambdatest.com/build)
+<img loading="lazy" src="/assets/images/app-automation/sharding-appauto.webp" alt="cmd" width="768" height="373"/>
+- [<BrandName /> HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
+<img loading="lazy" src="/assets/images/app-automation/sharding-he.webp" alt="cmd" width="768" height="373"/>
 
 <Info>
 **NOTE**
@@ -218,4 +220,4 @@ Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/x
 ## Additional Links
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

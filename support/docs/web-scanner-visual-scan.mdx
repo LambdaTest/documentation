@@ -1,8 +1,11 @@
 ---
 title: "Starting a Visual UI Scan with Web Scanner"
 sidebarTitle: "Starting a Visual UI Scan"
-keywords: ["lambdatest", "web scanner", "visual ui scan", "smartui config"]
+keywords: ['testmu ai', 'web scanner', 'visual ui scan', 'smartui config']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Purpose of Visual UI Scan
 
@@ -14,7 +17,7 @@ Scans run across combinations of:
 
 Results are redirected to the SmartUI Dashboard for detailed comparison.
 
-![Visual Scan Purpose](/assets/images/web-scanner/visual-scan-config-purpose.png)
+<img loading="lazy" src='/assets/images/web-scanner/visual-scan-config-purpose.png' alt="Visual Scan Purpose" />
 
 ## Step 2 (If Visual Scan is Selected)
 
@@ -27,7 +30,7 @@ Once **Visual UI** is selected in Step 1 of the scheduling wizard, the following
 * **Full Page Mode “ON“:** Captures the full length of your website regardless of viewport height limitations.
 * **Delay “5 Seconds“:** To wait for animations or content to stabilize.
 
-![Visual Scan Default Settings](/assets/images/web-scanner/visual-scan-default-settings.png)
+<img loading="lazy" src='/assets/images/web-scanner/visual-scan-default-settings.png' alt="Visual Scan Default Settings" />
 
 ### Advanced Options (Visual UI)
 
@@ -40,11 +43,10 @@ You can create your own `.smartui.json` file for full control over:
 * Delay setting
 * The integrated JSON validator checks your configuration.
 
-![Visual Scan Advanced Options](/assets/images/web-scanner/visual-scan-advanced-options.png)
+<img loading="lazy" src='/assets/images/web-scanner/visual-scan-advanced-options.png' alt="Visual Scan Advanced Options" />
 
 #### Default SmartUI Config
 
-<CodeBlock language="json">
 {`
   "web": {
     "browsers": [
@@ -79,33 +81,28 @@ You can create your own `.smartui.json` file for full control over:
   "ignoreHTTPSErrors": false,
   "useGlobalCache": false
 `}
-</CodeBlock>
 
-<Warning>
-**Note:**
-
- Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
-</Warning>
-
+> **Note:** Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
 
 #### Navigating Results for your Visual Scan
 
-
 ## Dashboard Overview
 
-After running your tests, the **Visual Build** becomes available in the dashboard.
+After running your tests, the **Visual Build** becomes available in the dashboard.  
 
-![Visual Build](/assets/images/web-scanner/visual-build.png)
+<img loading="lazy" src='/assets/images/web-scanner/visual-build.png' alt="Visual Build" />
 
 ### Build Status
 Easily track the state of each screenshot — **Approved**, **Changes Found**, **New**, **Under Review**, and more.
 
-![Build Status View](/assets/images/web-scanner/threedot-visual.png)
+<p align="center">
+  <img loading="lazy" src='/assets/images/web-scanner/threedot-visual.png' alt="Build Status View" />
+</p>
 
 ### Three-Dot Menu Options
 Access additional functions for your build:
 
-![Three Dot Menu](/assets/images/web-scanner/history-page.png)
+<img loading="lazy" src='/assets/images/web-scanner/history-page.png' alt="Three Dot Menu" />
 
 1. **View History**  
    Browse older builds with complete stats for quick comparison.
@@ -113,9 +110,9 @@ Access additional functions for your build:
 2. **Edit Scan Config**  
    Modify scan settings such as **schedule** and **viewports**.  
 
-   ![Edit Scan Config](/assets/images/web-scanner/editscan-visual.png)
+   <img loading="lazy" src='/assets/images/web-scanner/editscan-visual.png' alt="Edit Scan Config" />
 
-   ![Edit Scan Schedule](/assets/images/web-scanner/editscan-schedule.png)
+   <img loading="lazy" src='/assets/images/web-scanner/editscan-schedule.png' alt="Edit Scan Schedule" />
 
 3. **Run Scan Now**  
    Run a new scan on demand and create a new build for comparison. 
@@ -126,8 +123,7 @@ Access additional functions for your build:
 5. **Stop Recurring Scan**  
    Halt any scheduled recurring scans instantly.
 
-
 **Access your SmartUI Dashboard**:
 SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
 
-![smartui dashboard](/assets/images/kane-ai/smartui/smartui_dashboard.png)
+<img loading="lazy" src='/assets/images/kane-ai/smartui/smartui_dashboard.png' alt="smartui dashboard" />

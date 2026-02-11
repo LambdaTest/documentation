@@ -1,14 +1,17 @@
 ---
 title: "Rerun Failed Tests on HyperExecute"
 sidebarTitle: "Rerun Failed Tests"
-keywords: ['LambdaTest Hyperexecute', 'LambdaTest Hyperexecute help', 'LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
 
-<Note>
-**BETA:** 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+<Info>
+**BETA**
 
 The feature is currently in **BETA**.
-</Note>
+</Info>
 
 Debugging test failures often involves **identifying the root cause, fixing the issue, and rerunning tests to validate the fix**. However, in large test suites with hundreds or thousands of tests, rerunning the entire job consumes significant time and resources.
 
@@ -20,17 +23,14 @@ To rerun a job, the following requirements must be fulfilled.
 - Your test suite should be available on **Git** (Github, Azure Repos and Bitbucket are supported) and linked to a [Project](/support/docs/hyperexecute-projects). This is required because each time a job is rerun, HyperExecute needs access to your test suite.
 - Make sure you are using **YAML version 0.1** with auto-split mode and discovery mode as local only. 
 
+> Support for YAML version 0.2 and other modes will be added soon.
+
 <Note>
-Support for YAML version 0.2 and other modes will be added soon.
-</Note>
+**You can use the rerun feature for jobs started from your **local machine as long as Git info is available** (i.e., you’re running tests from a cloned Git repo).**
 
-<Info>
-**NOTE**
-
-You can use the rerun feature for jobs started from your **local machine as long as Git info is available** (i.e., you’re running tests from a cloned Git repo).
  - Make sure the project details are set in your job’s YAML, and the project is linked to the same Git repo you’re running from.
  - If your local repo has uncommitted changes (a “dirty” working tree), rerun will not work. Commit or stash your changes before running the job.
-</Info>
+</Note>
 
 ## Why Use Rerun Feature?
 Consider a scenario where you’ve executed 1000 tests in a single HyperExecute job, and 50 tests failed due to a bug, either in your test code, infrastructure, or application under test. Previously, you were bound to run the complete job again which would have taken a lot more time (as you would have run the passed tests too) to check if the previously failed tests are passing or not. With **Rerun Job Feature**, your whole process is streamlined as given below:
@@ -47,15 +47,13 @@ HyperExecute provides you flexibility to select different parameters while rerun
 - **Using Same or Latest Commit:** You can reuse the same commit as the original job or the latest commit from your repository. This lets you rerun after fixing your test suite or application under test.
 - **Adjusting Concurrency:** The **YAML remains the same** for the rerun and the original job to maintain the same environment, but you can change the concurrency on which the rerun job will run.
 
-<Note> 
-If there are multiple test cases under a failed scenario, all those test cases will be rerun if the scenario is marked as failed.
-</Note>
+> If there are multiple test cases under a failed scenario, all those test cases will be rerun if the scenario is marked as failed.
 
 ## How to Rerun a Job
 **Step 1 :** Go to the **Jobs** section in the HyperExecute dashboard. <br />
 **Step 2 :** Open the job you want to rerun and click the **Rerun** button in the top bar. <br />
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/rerun/1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/rerun/1.png' alt="Image" />
 <br /><br />
 
 **Step 3 :** In the Rerun dialog:
@@ -63,9 +61,9 @@ If there are multiple test cases under a failed scenario, all those test cases w
 - Optionally adjust the **concurrency** for the rerun.
 Then click **Rerun** to start the new job.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/rerun/2.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/rerun/2.png' alt="Image" />
 
+<Warning>
+If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmu.ai](mailto:support@testmu.ai). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
+</Warning>
 
-<Note>
-If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
-</Note>

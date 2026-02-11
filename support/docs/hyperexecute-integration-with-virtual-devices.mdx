@@ -1,18 +1,21 @@
 ---
-title: "Virtual Device Integration with HyperExecute"
+title: "Virtual Devices"
 sidebarTitle: "HyperExecute Virtual Devices Testing"
 keywords: ['hyperexecute integrations', 'hyperexecute integrations with products', 'products', 'virtual devices', 'mobile testing', 'mobile testing on HyperExecute', 'mobile testing on testmu ai', 'fast mobile testing']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Virtual Device Integration with HyperExecute
 
 This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
-<Note>
+<Info>
 **Note**
 
 Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.lambdatest.com/contact-us).
-</Note>
+</Info>
 
 ## Prerequisites
 
@@ -25,20 +28,25 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - You have an access to an **Android** app (*.apk* or *.aab* file) or an **iOS** *zip* file (containing *.app* file).
 
-<Check>
-**TIP**
+<Tip>
+**Run your samplе tеsts on HyperExecute using our samplе Android and iOS applications:**
 
-Run your samplе tеsts on HyperExecute using our samplе Android and iOS applications:
 * [Samplе Android App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
 * [Samplе iOS App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/firefox.zip) 
-</Check>
-
+</Tip>
 
 ## Step 1: Setup Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
+{/* <Tip>
+**Sample repo**
 
+Download or Clone the code sample for the Virtual Devices from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/<BrandName />/hyp-virtual-device-appium" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+</Tip> */}
 
 ## Step 2: Setup the CLI in your Test Suite
 
@@ -62,47 +70,83 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ## Step 3: Upload your Application
 
 Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-<Tabs>
-  <Tab title="App File">
-    <CodeGroup>
-      ```bash Linux/macOS
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'  
-      ```
+<Tabs className="docs__val">
+  <Tab title="App file">
 
-      ```powershell Windows
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
-      ```
-    </CodeGroup>
+<Tabs className="docs__val">
+<Tab title="Linux/macOS">
+
+```bash
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'  
+`}
+
+```
+
+</Tab>
+
+<Tab title="Windows">
+```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
+`}
+
+```
+</Tab>
+</Tabs>
+
   </Tab>
   <Tab title="App URL">
-    <CodeGroup>
-      ```bash Linux/macOS
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'
-      ```
 
-      ```powershell Windows
-      curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"
-      ```
-    </CodeGroup>
+<Tabs className="docs__val">
+<Tab title="Linux macOS">
+
+```bash
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
+
+```
+
+</Tab>
+
+<Tab title="Windows">
+```powershell
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
+
+```
+</Tab>
+</Tabs>
+
   </Tab>
 </Tabs>
 
@@ -112,14 +156,16 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 
 Here is a sample automation script in Java for the sample app downloaded above. In the below test script, ensure to update the `app_url`, or `app_id`
 
-<Note>
-**SET THE CAPABILITY**
+<Info>
+**Set the Capability**
 
 To run the test on Emulator/Simulator, set the `isRealMobile` capability to `false`.
-</Note>
+</Info>
 
-<CodeGroup>
-```java Android highlight={12,14}
+<Tabs className="docs__val">
+  <Tab title="Android">
+
+```java
 @Test
 @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
 public void AndroidApp1(String device, String version, String platform) {
@@ -131,8 +177,10 @@ public void AndroidApp1(String device, String version, String platform) {
         capabilities.setCapability("deviceName", device);
         capabilities.setCapability("platformVersion",version);
         capabilities.setCapability("platformName", platform);
+        // highlight-next-line
         capabilities.setCapability("isRealMobile", false);
 
+        // highlight-next-line
         capabilities.setCapability("app", "lt://APP1123456789"); //Enter your app url
         capabilities.setCapability("deviceOrientation", "PORTRAIT");
         capabilities.setCapability("console", true);
@@ -142,7 +190,10 @@ public void AndroidApp1(String device, String version, String platform) {
         //capabilities.setCapability("geoLocation", "HK");
 ```
 
-```java iOS highlight={11,13}
+</Tab>
+<Tab title="iOS">
+
+```java
 @Test
 @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
 public void iOSApp1(String device, String version, String platform) {
@@ -153,8 +204,10 @@ public void iOSApp1(String device, String version, String platform) {
         capabilities.setCapability("deviceName", device);
         capabilities.setCapability("platformVersion",version);
         capabilities.setCapability("platformName", platform);
+        // highlight-next-line
         capabilities.setCapability("isRealMobile", false);
 
+        // highlight-next-line
         capabilities.setCapability("app", "lt://APP123456789"); //Enter your app url
         capabilities.setCapability("deviceOrientation", "PORTRAIT");
         capabilities.setCapability("console", true);
@@ -163,16 +216,19 @@ public void iOSApp1(String device, String version, String platform) {
         capabilities.setCapability("devicelog", true);
         //capabilities.setCapability("geoLocation", "HK");
 ```
-</CodeGroup>
+
+</Tab>
+</Tabs>
 
 2. Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
-<CodeGroup>
-```xml Android
+<Tabs className="docs__val">
+  <Tab title="Android">
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
-
 
     <test name="AppTest 1">
         <parameter name="version" value="11"/>
@@ -194,11 +250,14 @@ public void iOSApp1(String device, String version, String platform) {
 </suite>
 ```
 
-```xml iOS
+</Tab>
+
+<Tab title="iOS">
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
-
 
     <test name="iOSApp 1">
         <parameter name="version" value="14"/>
@@ -219,7 +278,9 @@ public void iOSApp1(String device, String version, String platform) {
     </test>
 </suite>
 ```
-</CodeGroup>
+
+</Tab>
+</Tabs>
 
 ## Step 5: Configure YAML in your Test Suite
 
@@ -251,9 +312,10 @@ jobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']
 
 ## Step 6: Execute your Test Suite
 
-<Note>
+<Warning>
 **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -264,7 +326,9 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status 🚀

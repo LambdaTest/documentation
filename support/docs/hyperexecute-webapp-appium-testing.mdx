@@ -4,26 +4,23 @@ sidebarTitle: "Appium - WebApp"
 keywords: ['appium', 'java', 'testmu ai java', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 This page outlines how to execute your Appium tests on HyperExecute for WebApps using TestNG with YAML 0.2
-<Note>
-
-HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
-</Note>
+> HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 
 ## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the Environmental Variable
 - Ensure you have Appium’s [Java client library](https://github.com/appium/java-client) installed.
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 
-
+{/* > If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa). */}
 
 ### Download HyperExecute CLI
 
@@ -39,19 +36,29 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Steps to Run Your Test
@@ -59,11 +66,11 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Here is a sample automation script in Java. Ensure to update the `username` and `accesskey` in the below code.
 
-<Tabs>
+<Tabs className="docs__val">
   <Tab title="Android Web App">
 
 ```java
-package com.lambdatest;
+package com.testmu ai;
 
 import io.appium.java_client.MobileBy;
 import org.junit.After;
@@ -121,7 +128,7 @@ public class androidWeb {
     {
         try
         {
-            driver.get("https://lambdatest.github.io/sample-todo-app/");
+            driver.get("https://testmu ai.github.io/sample-todo-app/");
             driver.findElement(By.name("li1")).click();
 
         System.out.println("Checking Another Box");
@@ -169,11 +176,11 @@ public class androidWeb {
 }
 ```
 
-  </Tab>
-  <Tab title="iOS Web App">
+</Tab>
+<Tab title="iOS Web App">
 
 ```java
-package com.lambdatest;
+package com.testmu ai;
 
 import io.appium.java_client.MobileBy;
 import org.junit.After;
@@ -232,7 +239,7 @@ public class iosWeb {
         try
         {
             driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
-           driver.get("https://lambdatest.github.io/sample-todo-app/");
+           driver.get("https://testmu ai.github.io/sample-todo-app/");
             driver.findElement(By.name("li1")).click();
 
         System.out.println("Checking Another Box");
@@ -279,7 +286,7 @@ public class iosWeb {
 }
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
 **Step 2:** Execute Your Test Case. Debug and run your code.
@@ -307,19 +314,16 @@ framework:
     name: appium
 ```
 
-<Note>
-
-The `region` parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:
+> The ```region``` parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:
 - ap (Asia-Pacific)
 - us (United States)
 - eu (European Union)
-</Note>
 
 ## More About Desired Capabilities
 Sample Capabilities for both android and iOS web app mentioned below -
 
-<Tabs>
-  <Tab title="Android">
+<Tabs className="docs__val">
+<Tab title="Android">
 
 ```java
 {
@@ -334,8 +338,8 @@ Sample Capabilities for both android and iOS web app mentioned below -
 }
 ```
 
-  </Tab>
-  <Tab title="iOS">
+</Tab>
+<Tab title="iOS">
 
 ```java
 {
@@ -350,13 +354,10 @@ Sample Capabilities for both android and iOS web app mentioned below -
 }
 ```
 
-  </Tab>
+</Tab>
 </Tabs>
 
-<Note>
-
-Refer to the [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to understand more about it.
-</Note>
+> Refer to the [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to understand more about it.
 
 ## Navigation in Automation Dashboard
 
@@ -364,9 +365,7 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/appium/hyperexecute-webapp-appium.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/appium/hyperexecute-webapp-appium.png' alt="automation-dashboard"  width="1920" height="868" />
 
 ## Conclusion
 By following the instructions in this documentation, you can seamlessly execute the Appium tests on HyperExecute for WebApps, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
-
-

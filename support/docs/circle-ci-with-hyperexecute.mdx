@@ -1,10 +1,11 @@
 ---
 title: "CircleCI Integration with Hyperexecute"
 sidebarTitle: "CircleCI"
-keywords: ['lambdatest integrations','lambdatest integrations with ci/cd tools','ci/cd tools','continuous integration,continuous delivery','continuous integration tools','gitlab ci']
+keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 'ci/cd tools', 'continuous integration,continuous delivery', 'continuous integration tools', 'gitlab ci']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 CircleCI allows you to build fully automated pipelines from testing to deployment, freeing up your time to focus on the real work of innovation. Using CircleCI, you can automate your entire testing suite for new commits, reducing the possibility of human error, while also automating deploys with orbs.
 
@@ -18,16 +19,15 @@ To integrate CircleCI Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/circleci-project-setup" />
-</Check>
+<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/circleci-project-setup" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### 1. Log into your CircleCI account
-
 
 ### 2. Create a New Project
 
@@ -37,7 +37,7 @@ Follow these steps to create a new project in CircleCI:
 
 - Find your project and click the blue **Set Up Project** button next to it.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-new.png' alt="Create New Project"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-new.png' alt="Create New Project" width="" height="" />
 
 If you cannot see your project, check that you have selected the correct organization in the top left-hand corner of CircleCI.
  
@@ -86,24 +86,19 @@ CircleCI then uses the specified config.yml file to run your pipeline. You can s
 
 To make changes to your pipeline, either edit the .circleci/config.yml file in your repo, or click the ellipsis next your project in the Dashboard and choose **Configuration File**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-config.png' alt="Create New Project"/>
-
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-config.png' alt="Create New Project" width="" height="" />
 
 ### 4. Run Your Job
 - Once your changes are made and your configuration is valid, you may commit and re-run the pipeline by clicking the **Save and Run** button. 
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-run.png' alt="Create New Project"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-run.png' alt="Create New Project" width="" height="" />
 
 - A modal will pop up, and you will see the option to commit on the branch you are working from, or you can choose to create a new branch for the commit.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-commit.png' alt="Create New Project"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-commit.png' alt="Create New Project" width="" height="" />
 <p></p>
 
-
-
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/successful_gitlab.png' alt="Create New Project"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/ci-cd/circle-ci/successful_gitlab.png' alt="Create New Project" width="" height="" />
 
-<Note>
 **Run your tests at speeds never seen before. Happy testing! :)**
-</Note>

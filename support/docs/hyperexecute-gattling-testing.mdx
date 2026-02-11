@@ -1,11 +1,10 @@
 ---
 title: "Gattling Automation on HyperExecute"
 sidebarTitle: "Gattling"
-keywords: ['Gattling', 'Gattling selenium', 'Gattling Java Selenium', 'Gattling automation testing', 'selenium webdriver Gattling', 'selenium Gattling testing tutorial', 'Gattling Java Selenium framework', 'testmu ai Gattling', 'frameworks on testmu ai', 'hyperexecute', 'hyperexecute Gattling testing', 'hyperexecute automation testing', 'HyperExecute Selenium automation']
+keywords: ['Gattling', 'Gattling selenium', 'Gattling Java Selenium', 'Gattling automation testing', 'selenium webdriver Gattling', 'selenium Gattling testing tutorial', 'Gattling Java Selenium framework', 'testmu ai Gattling', 'frameworks on testmu ai', 'hyperexecute', 'hyperexecute Gattling testing', 'hyperexecute Gattling testing', 'hyperexecute automation testing', 'HyperExecute Selenium automation']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Gatling is an open-source load and performance testing framework designed for testing web applications. It uses a powerful Scala-based DSL to define test scenarios and is capable of simulating thousands of concurrent users, making it ideal for stress and performance testing.
@@ -43,12 +42,13 @@ To run the Tests on HyperExecute from your Local System, you are required:
 ### Step 1: Download Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
 Download or Clone the code sample for the Gattling Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<GitHubButton url="https://github.com/prateekLambda/Gatling-performance-hyperexecute" />
-</Check>
+
+<a href="https://github.com/prateekLambda/Gatling-performance-hyperexecute" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Download the CLI in your Project
 Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
@@ -131,60 +131,27 @@ maxRetries: 1
 
 Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
 
-```yaml hyperexecute.yaml
----
-version: 0.1
-runson: linux
-
-autosplit: true
-concurrency: 1
-scenarioCommandStatusOnly: true
-background:
-  - mvn spring-boot:run -Dspring-boot.run.main-class=dev.simonverhoeven.gatlingdemo.GatlingDemoApplication || true
-runtime:
-  - language: java
-    version: "17"
-uploadArtefacts:
-
-  - name: TestReport
-    path:
-    - target/gatling/**
-
-pre:
-  - mvn dependency:resolve
-
-testDiscovery:
-  type: raw
-  mode: static
-  command: echo "Test"
-
-testRunnerCommand: mvn gatling:test
-
-retryOnFailure: true
-maxRetries: 1
-
-jobLabel: [Performance, Gatlling]
-
-
+```yaml reference title="hyperexecute.yaml"
+https://github.com/prateekLambda/Gatling-performance-hyperexecute/blob/main/HYE.yaml
 ```
 
-<Note>
-
-📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
-</Note>
+> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 4: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config hyperexecute.yaml
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
+  
 ```
 
-<Note>
-**NOTE:** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/performance_testing/gattling.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/performance_testing/gattling.png' alt="automation-dashboard"  width="1920" height="868" />
 
 ## Advanced Parameters
 Optimize your test pipeline using the following advanced features:

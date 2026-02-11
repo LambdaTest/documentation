@@ -4,9 +4,10 @@ sidebarTitle: "Heatmap Widgets"
 keywords: ['analytics', 'dashboards', 'heatmap widgets', 'data visualization', 'custom widgets', 'test insights', 'browser analysis', 'resolution analysis']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-Heatmap widgets in LambdaTest Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
+Heatmap widgets in <BrandName /> Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
 
 ## What is a Heatmap Widget?
 
@@ -15,15 +16,15 @@ A heatmap widget displays data as a grid where each cell's **size** and **color*
 - **Box Size**: Represents the **total test count** for that combination. Larger boxes indicate more tests executed for that browser-resolution or OS-browser combination.
 - **Color/Shade**: Represents the **pass rate** percentage, using a color gradient from red (low pass rates) to green (high pass rates).
 
-<Info>
-**CURRENT LIMITATIONS**
+<Note>
+**Current Limitations**
 
 Currently, heatmap widgets use fixed metrics:
 - **Box Size**: Always based on **total test count** (not configurable)
 - **Box Color**: Always based on **pass rate** (not configurable)
 
-Custom metric selection for box size and color <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">COMING SOON</span>, allowing you to choose different metrics for visualization.
-</Info>
+Custom metric selection for box size and color <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />, allowing you to choose different metrics for visualization.
+</Note>
 
 This dual-encoding visualization is particularly effective for:
 
@@ -39,11 +40,11 @@ Before creating a heatmap widget, ensure you have completed the [common prerequi
 
 ## Step-by-Step Guide to Creating a Heatmap Widget
 
-<Note>
-**COMMON STEPS**
+<Info>
+**Common Steps**
 
 For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/support/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
-</Note>
+</Info>
 
 ### Step 6: Choose Heatmap Visualization
 
@@ -65,21 +66,18 @@ This is the most critical step for creating meaningful heatmaps:
    - `project_name` - Group by project name (all products)
    - Custom data keys you've defined
 
-   <Check>
-   **TIP**
-
-   For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/support/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
-   </Check>
+<Tip>
+**For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/support/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.**
+</Tip>
 
 2. **Then By** (Optional): Select a secondary dimension for nested grouping. This creates a two-dimensional heatmap showing relationships between the two dimensions.
 
    **Example**: Group by `browser` first, then by `resolution` to see which browser-resolution combinations have the most test activity.
 
-<Info>
-**NOTE**
+<Note>
+**The combination of Group By and Then By creates the axes of your heatmap.**
 
-The combination of Group By and Then By creates the axes of your heatmap.
-</Info>
+</Note>
 
 ### Step 8: Name Your Widget
 
@@ -110,11 +108,10 @@ The **size of each box** in the heatmap represents the **total number of tests**
 - **Smaller boxes** = Fewer tests executed for that combination
 - **No box** = No tests executed for that combination
 
-<Info>
-**NOTE**
+<Note>
+**Currently, box size is always determined by the total test count. This metric is not configurable at the moment, but custom metric selection for box size <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />.**
 
-Currently, box size is always determined by the total test count. This metric is not configurable at the moment, but custom metric selection for box size <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">COMING SOON</span>.
-</Info>
+</Note>
 
 This helps you quickly identify:
 - Which combinations have the most test coverage
@@ -134,11 +131,10 @@ The **color of each box** represents the **pass rate percentage** for that combi
 | 60-80% | Medium Green | Good performance - solid pass rate |
 | 80-100% | Dark Green | Excellent performance - high pass rate, well-tested |
 
-<Info>
-**NOTE**
+<Note>
+**Currently, box color is always determined by the pass rate percentage. This metric is not configurable at the moment, but custom metric selection for box color <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />.**
 
-Currently, box color is always determined by the pass rate percentage. This metric is not configurable at the moment, but custom metric selection for box color <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">COMING SOON</span>.
-</Info>
+</Note>
 
 ### Combining Size and Color
 
@@ -236,7 +232,7 @@ Heatmaps use size and color to encode information. Refer to the [How Heatmaps Wo
 - Then By: `os`
 - Source: Auto Heal
 
-**Insight**: Identify which combinations benefit most from Auto Heal and where improvements are needed. Note: Custom metrics like Auto Heal Success Rate <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">COMING SOON</span> for box color selection.
+**Insight**: Identify which combinations benefit most from Auto Heal and where improvements are needed. Note: Custom metrics like Auto Heal Success Rate <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" /> for box color selection.
 
 ### 6. Test Coverage Visualization
 
@@ -253,15 +249,14 @@ Heatmaps use size and color to encode information. Refer to the [How Heatmaps Wo
 
 For a complete list of available keys that can be used in the **Group By** and **Then By** fields when configuring your heatmap, see the [Available Keys for Custom Widgets](/support/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
-<Info>
-**NOTE**
+<Note>
+**For heatmaps, choose keys that represent categorical dimensions (like browser, OS, project name) rather than numeric or date values for best visualization results.**
 
-For heatmaps, choose keys that represent categorical dimensions (like browser, OS, project name) rather than numeric or date values for best visualization results.
-</Info>
+</Note>
 
 ### Common Metrics for Heatmaps
 
-Currently, heatmap widgets use fixed metrics (see [How Heatmaps Work](#how-heatmaps-work) section above). Custom metric selection for box size and color <span className="border-2 border-[#bf3989] text-[#bf3989] rounded-full px-2 py-0 font-bold text-[0.8em] mx-[0.2em] align-middle inline-block text-xs">COMING SOON</span>, allowing you to choose different metrics like failure rate, total passed/failed tests, average duration, and Auto Heal success rate.
+Currently, heatmap widgets use fixed metrics (see [How Heatmaps Work](#how-heatmaps-work) section above). Custom metric selection for box size and color <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />, allowing you to choose different metrics like failure rate, total passed/failed tests, average duration, and Auto Heal success rate.
 
 ## Best Practices for Heatmap Widgets
 

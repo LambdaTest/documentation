@@ -1,15 +1,13 @@
 ---
 title: "Playwright Bundled Browser Support"
 sidebarTitle: "Bundled Browser Support List"
-keywords: ['playwright bundled browsers', 'playwright browser support', 'playwright lambdatest', 'playwright browsers']
+keywords: ['testmu ai', 'playwright', 'support', 'browsers', 'bundled browser', 'playwright bundled', 'playwright browsers']
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
-
-When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then LambdaTest will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
+When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
 
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}

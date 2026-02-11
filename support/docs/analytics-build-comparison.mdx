@@ -4,7 +4,10 @@ sidebarTitle: "Build Comparison"
 keywords: ['analytics', 'build comparison', 'build compare', 'regression detection', 'test stability', 'build diff', 'test observability']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+---
 
 ## Overview
 
@@ -46,11 +49,10 @@ Each build in the list displays:
 
 Select a build and click **Compare Builds** to run the comparison. The selected build becomes the **Compare** build, while the current build you navigated from becomes the **Base** build.
 
-<Check>
-**TIP**
+<Tip>
+**For release validation, select your last stable production build as **Base** and the release candidate as **Compare**.**
 
-For release validation, select your last stable production build as **Base** and the release candidate as **Compare**.
-</Check>
+</Tip>
 
 ---
 
@@ -58,11 +60,11 @@ For release validation, select your last stable production build as **Base** and
 
 <img loading="lazy" src='/assets/images/analytics/build-comparison-summary.webp' alt="Build Comparison - Key Metrics Summary" />
 
-<Note>
-**UNDERSTANDING FAILED STATUSES**
+<Info>
+**Understanding Failed Statuses**
 
 The following statuses are considered **failed statuses**: **Failed**, **Error**, **Lambda Error**, **Idle Timeout**, and **Queue Timeout**. Change detection is based on whether a test transitions to or from these statuses.
-</Note>
+</Info>
 
 | Metric | Description | When to Act |
 |--------|-------------|-------------|
@@ -131,11 +133,10 @@ The donut chart categorizes tests by how their status changed:
 | **Browser** | Filter by browser type |
 | **Test Tags** | Filter by custom tags |
 
-<Check>
-**TIP**
+<Tip>
+**Use filters to isolate platform-specific issues. If failures only occur on a specific browser or OS, it helps prioritize the fix.**
 
-Use filters to isolate platform-specific issues. If failures only occur on a specific browser or OS, it helps prioritize the fix.
-</Check>
+</Tip>
 
 ---
 

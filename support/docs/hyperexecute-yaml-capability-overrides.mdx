@@ -1,8 +1,11 @@
 ---
 title: "YAML-Based Capability Overrides for Selenium Tests on HyperExecute"
 sidebarTitle: "Override Capabilities in YAML"
-keywords: ['LambdaTest Hyperexecute', 'LambdaTest Hyperexecute help', 'LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
 
@@ -19,9 +22,7 @@ Previously, these capabilities were typically defined within the test script. Wi
 - Define a new `ltOptions` section inside your HyperExecute YAML file.
 - Specify any desired capabilities as key-value pairs under `ltOptions`.
 - During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-<Note>
-All the capabilities defined under the `ltOptions` section are fully aligned with LambdaTest's standard capability structure. You can use any capability listed in our [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
-</Note>
+> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ## 🔑 Key Behavior Rules
 
@@ -31,53 +32,12 @@ All the capabilities defined under the `ltOptions` section are fully aligned wit
 | Capability present in **YAML but not in script**    | It is **automatically added** to the session capabilities. |
 | Capability only in script                           | Used as-is unless overridden in YAML.                      |
 
-<Note>
-**📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
-</Note>
+> **📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
 
 ## Sample YAML with Capability Overrides
 
-```yaml
----
-version: 0.1
-runson: linux
-
-autosplit: true
-concurrency: 2
-
-runtime:
-  language: java
-  version: 11
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - .m2
-
-pre:
-  - mvn dependency:resolve
-
-testDiscovery:
-  type: raw
-  mode: remote
-  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-
-testRunnerCommand: mvn test -Dplatname=linux -DselectedTests=$test
-
-retryOnFailure: true
-maxRetries: 1
-
-ltOptions:
-  browserName: firefox
-  build: 'testng_build_yaml_ltOptions'
-  console: true
-  name: 'testng_test_yaml_ltOptions'
-  network: true
-  selenium_version: 4.20.0
-  tunnel: false
-  version: latest
-  video: false
-
-jobLabel: [selenium-testng, linux, ltOptionsYamlDirective]
+```yaml reference title="hyperexecute.yaml"
+https://github.com/TestMu AI/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v1/testng_hyperexecute_linux_ltoptions.yaml
 ```
 
 ## 💡 Common Use Cases

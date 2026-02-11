@@ -2,8 +2,10 @@
 title: "Background Services"
 sidebarTitle: "Background Services"
 keywords: ['hyperexecute background services']
-
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Background Services is a feature of HyperExecute which is generally used to run the long running **Application Servers**. You can trigger the background services by using either the `background` or `backgroundDirectives` property in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#background) file.
 
@@ -40,13 +42,11 @@ background:
   - npx static-server
   - mysql-server
 ```
-
+{/* If background command fails, then the whole task will be marked as a fail */}
 
 ## Background Service Logs
 
 To check the background service logs, follow the below mentioned steps:
-
-
 
 **Step 1:** After executing your job, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) to check the status of the job.
 
@@ -54,30 +54,23 @@ To check the background service logs, follow the below mentioned steps:
 
 **Step 3:** Click on the desired **background service** you have triggered to check its logs.
 
-<iframe 
-  src="https://app.storylane.io/demo/jxrlvsdcnfte?embed=inline" 
-  title="Background Service Demo" 
-  style={{width: '100%', height: '500px', border: 'none'}}
-  allow="fullscreen" 
-  allowFullScreen
-></iframe>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/jxrlvsdcnfte?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Frequently Asked Questions
 
-<AccordionGroup>
-  <Accordion title="Is the service intended to operate within the same Virtual Machine or externally?">
-    Yes, the service will run within the same Virtual Machine.
-  </Accordion>
+<details><summary>Is the service intended to operate within the same Virtual Machine or externally?</summary> Yes, the service will run within the same Virtual Machine. </details>
 
-  <Accordion title="What is the service's commencement and cessation schedule?">
-    It initiates the execution of all background commands concurrently with the pre-stage and continues until the completion of post-run command execution.
-  </Accordion>
+<details><summary>What is the service's commencement and cessation schedule?</summary> It initiates the execution of all background commands concurrently with the pre-stage and continues until the completion of post-run command execution. </details>
 
-  <Accordion title="Will the Database, for example, run on a single VM and be accessible for testing on other VMs?">
-    No, the background service can only be accessed from within the same VM.
-  </Accordion>
+<details><summary>Will the Database, for example, run on a single VM and be accessible for testing on other VMs?</summary> No, the background service can only be accessed from within the same VM.</details>
 
-  <Accordion title="Will the identical set of background services be initiated within every VM?">
-    Yes, if the same set of background services, such as **`npm run server`**, are establishing HTTP servers on the same port, it is likely that one of the commands will encounter a binding issue and fail.
-  </Accordion>
-</AccordionGroup>
+<details><summary>Will the identical set of background services be initiated within every VM?</summary> Yes, if the same set of background services, such as **`npm run server`**, are establishing HTTP servers on the same port, it is likely that one of the commands will encounter a binding issue and fail. </details>
+
+{/* <details><summary>Will the identical set of background services be initiated within every VM?</summary>
+
+Yes, if the same set of background services, such as npm run server, are establishing HTTP servers on the same port, it is likely that one of the commands will encounter a binding issue and fail.</details> */}

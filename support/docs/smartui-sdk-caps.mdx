@@ -1,22 +1,20 @@
 ---
 title: "SmartUI SDK Capabilities"
 sidebarTitle: "SmartUI SDK Capabilities"
-keywords:
-  [
-    "Visual Regression",
-    "SmartUI SDK",
-    "Capabilities",
-    "Configuration",
-    "Visual Testing"
-  ]
+keywords: ['Visual Regression', 'SmartUI SDK', 'Capabilities', 'Configuration', 'Visual Testing']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# SmartUI SDK Capabilities
 
 SmartUI SDK provides several capabilities that allow you to configure your visual regression tests. These capabilities can be added to your test configuration to control various aspects of the testing process.
 
 <Warning>
-Important
+**Important**
 
-These capabilities only work when running tests on the LambdaTest Automation Grid. For local test executions, please refer to the standard authentication methods using project token or project name in the [Running your first project](/support/docs/smartui-running-your-first-project/) documentation.
+These capabilities only work when running tests on the <BrandName /> Automation Grid. For local test executions, please refer to the standard authentication methods using project token or project name in the [Running your first project](/support/docs/smartui-running-your-first-project/) documentation.
 </Warning>
 
 ## Prerequisites
@@ -88,8 +86,8 @@ This capability allows you to group your screenshots into specific builds. This 
 ### smartUI.baseline
 This boolean capability determines whether the current build should be set as the baseline for future comparisons. When set to `true`, the build will be automatically approved and set as the baseline build. This capability works in conjunction with the [Git branching strategy](/support/docs/smartui-cli-git-branching-strategy/), meaning it will also update the baseline branch accordingly.
 
-<Note> 
-NOTE
+<Info>
+**Note**
 
-If you need capabilities' support for SDKs other than Selenium Java and JavaScript, please contact support@lambdatest.com. Our team will be happy to assist you with integrating SmartUI capabilities into your preferred testing framework.
-</Note>
+If you need capabilities' support for SDKs other than Selenium Java and JavaScript, please contact support@testmu.ai. Our team will be happy to assist you with integrating SmartUI capabilities into your preferred testing framework.
+</Info>

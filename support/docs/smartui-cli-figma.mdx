@@ -1,10 +1,22 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-cli-figma
+title: Getting started with <BrandName />'s SmartUI Figma CLI
+sidebarTitle: Figma CLI
+description: In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-cli/
+slug: smartui-cli-figma/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-figma/
+
 ---
-title: "Getting started with LambdaTest's SmartUI Figma CLI"
-sidebarTitle: "Figma CLI"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
-Welcome to the LambdaTest SmartUI Figma CLI documentation!
+Welcome to the <BrandName /> SmartUI Figma CLI documentation!
 
 With SmartUI Figma CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Figma Visual tests using SmartUI CLI.
 
@@ -12,9 +24,9 @@ With SmartUI Figma CLI, you can seamlessly perform visual regression testing of 
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your visual tests for Figma files on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your visual tests for Figma files on <BrandName /> platform using SmartUI CLI.
 
 ## Understanding Figma Tokens
 
@@ -24,13 +36,11 @@ The following steps will guide you in running your visual tests for Figma files 
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-<Warning>
+> Example Figma URL:
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+> - `figma_file_token`: `abc12345`
+> - `figma_ids`: `2417-58969`
 
-Example Figma URL:
-`https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
-- `figma_file_token`: `abc12345`
-- `figma_ids`: `2417-58969`
-</Warning>
 ---
 
 ## Create a SmartUI CLI Project
@@ -47,7 +57,7 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `<BrandName /> SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -59,11 +69,10 @@ npm install -g @lambdatest/smartui-cli
 npm install @lambdatest/smartui-cli
 ```
 
-<Info>
-NOTE
+<Note>
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
 ### **Step 2:** Create the design info file
 
@@ -96,22 +105,22 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 1. Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs >
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -120,24 +129,24 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-1. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
+2. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
-<Tabs >
-<Tab title='MacOS/Linux' >
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -146,24 +155,24 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tab>
 </Tabs>
 
-### **Step 4:** Configure your LambdaTest Credentials
+### **Step 4:** Configure your <BrandName /> Credentials
 
-<Tabs >
-<Tab title='MacOS/Linux' default>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
 </Tab>
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -172,7 +181,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 #### SmartUI CLI Design Config Options
 
@@ -211,18 +220,16 @@ npx smartui upload-figma designs.json --buildName "<Build_Name>"
 npx smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
 ```
 
-<Info>
-NOTE
-
-If `buildName` is not specified, a random build name is generated for every run.
+<Note>
+**If `buildName` is not specified, a random build name is generated for every run.**
 
 You can add more screenshots in a build by specifying the particular build name in the runner command
-</Info>
+</Note>
 
 ## Best Practices
 
-<Tabs >
-<Tab title='Build Names' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Build Names">
 
 **Build Names**
 
@@ -231,7 +238,7 @@ You can add more screenshots in a build by specifying the particular build name 
    ```
 
 </Tab>
-<Tab title='Screenshot Names' >
+<Tab title="Screenshot Names">
 
 **Screenshot Names**
 
@@ -241,8 +248,8 @@ You can add more screenshots in a build by specifying the particular build name 
 </Tab>
 </Tabs>
 
-<Tabs >
-<Tab title='Branch Names' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Branch Names">
 
 **Branch Names**
 
@@ -263,8 +270,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs >
-<Tab title='Selenium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Selenium">
 
 ```java
 // Java
@@ -272,7 +279,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Playwright'>
+<Tab title="Playwright">
 
 ```javascript
 // JavaScript
@@ -280,7 +287,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Cypress'>
+<Tab title="Cypress">
 
 ```javascript
 // JavaScript
@@ -312,10 +319,10 @@ steps:
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
-<Tabs >
-<Tab title='Branch Names' >
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Branch Names">
 
 **Branch Names**
 
@@ -336,8 +343,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs title='framework'>
-<Tab title='Selenium' >
+<Tabs className='docs__val' groupId='framework'>
+<Tab title="Selenium">
 
 ```java
 // Java
@@ -345,7 +352,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Playwright'>
+<Tab title="Playwright">
 
 ```javascript
 // JavaScript
@@ -353,7 +360,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </Tab>
-<Tab title='Cypress'>
+<Tab title="Cypress">
 
 ```javascript
 // JavaScript
@@ -382,14 +389,15 @@ steps:
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
+
 </Tab>
 </Tabs>
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='Verify Figma Token' >
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Verify Figma Token">
 
 Verify Figma Token
 
@@ -399,7 +407,7 @@ Verify Figma Token
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 </Tab>
-<Tab title='Check File Token' >
+<Tab title="Check File Token">
 
 Check File Token
 
@@ -407,7 +415,7 @@ Check File Token
    - Ensure you have access to the Figma file
 
 </Tab>
-<Tab title='Validate Node IDs' >
+<Tab title="Validate Node IDs">
 
 Validate Node IDs
 
@@ -419,7 +427,7 @@ Validate Node IDs
 **Solutions**:
 
 </Tab>
-<Tab title='Check Screenshot Names' >
+<Tab title="Check Screenshot Names">
 
 Check Screenshot Names
 
@@ -427,7 +435,7 @@ Check Screenshot Names
    - Verify screenshot names match exactly between Figma and SDK
 
 </Tab>
-<Tab title='Verify Frame Sizes' >
+<Tab title="Verify Frame Sizes">
 
 Verify Frame Sizes
 
@@ -435,7 +443,7 @@ Verify Frame Sizes
    - Check that viewport sizes match between Figma frames and SDK captures
 
 </Tab>
-<Tab title='Check Build Names' >
+<Tab title="Check Build Names">
 
 Check Build Names
 
@@ -447,7 +455,7 @@ Check Build Names
 **Solutions**:
 
 </Tab>
-<Tab title='Verify Project Token' >
+<Tab title="Verify Project Token">
 
 Verify Project Token
 
@@ -457,7 +465,7 @@ Verify Project Token
    Ensure the token is set correctly and matches your SmartUI project.
 
 </Tab>
-<Tab title='Check Project Type' >
+<Tab title="Check Project Type">
 
 Check Project Type
 
@@ -466,8 +474,8 @@ Check Project Type
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -480,4 +488,3 @@ If you encounter issues not covered here:
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
-

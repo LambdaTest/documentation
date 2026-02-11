@@ -1,30 +1,32 @@
 ---
 title: "XCResult"
 sidebarTitle: "XCResult"
-keywords: ['xcuitest', 'xcui result bundle', 'xcuitest report', 'xcuitest logs', 'lambdatest xcuitest', 'xcui xcresult', 'app testing', 'real devices', 'xcresult', 'xcui results', 'ios test results']
+keywords: ['xcuitest', 'xcui result bundle', 'xcuitest report', 'xcuitest logs', 'testmu ai xcuitest', 'xcui xcresult', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
+
+# XCResult on <BrandName />
 <RealDeviceTag value="Real Device" />
-</div>
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.  
 
-On LambdaTest, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
+On <BrandName />, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
 
 ---
 ## Prerequisites
 
-- Your LambdaTest [Username and Access Key](https://accounts.lambdatest.com/security).  
+- Your <BrandName /> [Username and Access Key](https://accounts.lambdatest.com/security).  
 - Access to an **iOS app (.ipa)** and an **XCUI Test app (.ipa)**.  
-- Xcode installed locally to view `.xcresult` bundles.
+- Xcode installed locally to view `.xcresult` bundles.  
+
+---
 
 ## Flow for Adding XCUI Result Bundles
 
 ### Step 1: Upload Your Application and Test Suite
 
-To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to LambdaTest. These files are required before executing tests.
+To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to <BrandName />. These files are required before executing tests.
 
 Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
 
@@ -44,8 +46,10 @@ This endpoint initiates your test run and enables generation of the result bundl
 
 Below is an example cURL command to execute your test with result bundles enabled:
 
-<Tabs>
-  <Tab title="Linux / MacOS">
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
@@ -63,38 +67,41 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
   "enableResultBundle": true
 }'
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
+
+</Tab>
+
+<Tab title="Windows">
+
+```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
 --header "Content-Type: application/json" \
 --data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14"],
-  "video" : true,
-  "queueTimeout": 10800,
-  "idleTimeout": 150,
-  "devicelog": true,
-  "network": false,
-  "build" : "Proverbial-XCUITest",
-  "enableResultBundle": true
+  \"app\" : \"APP_ID\",
+  \"testSuite\": \"TEST_SUITE_ID\",
+  \"device\" :  [\"iPhone 11-14\"],
+  \"video\" : true,
+  \"queueTimeout\": 10800,
+  \"idleTimeout\": 150,
+  \"devicelog\": true,
+  \"network\": false,
+  \"build\" : \"Proverbial-XCUITest\",
+  \"enableResultBundle\": true
 }"
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Step 3: Retrieve the Result Bundle
 
 Result bundles are generated at the Build level. To download the `.xcresult` bundle for a specific session, use the following GET endpoint:
 
-<Info>
-**NOTE**
+<Note>
+**- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).**
 
-- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
-</Info>
+</Note>
 
 ```
 GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult
@@ -105,19 +112,19 @@ Replace `{build-id}` with the actual build ID.
 Example cURL command to download the result bundle:
 
 ```bash
-curl --location --request GET \
-'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult' \
---header 'Authorization: Basic BASIC_AUTH_TOKEN' \
---output xcui-result-bundle.zip
+
+{`curl --location --request GET \\
+'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult' \\
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\
+--output xcui-result-bundle.zip`}
+  
 ```
 
-<Check>
-**TIP**
+<Tip>
+**You will need your **BASIC_AUTH_TOKEN** (Base64 encoded `username:accesskey`) in the request header.  **
 
-You will need your **BASIC_AUTH_TOKEN** (Base64 encoded `username:accesskey`) in the request header.
-
-If you're unsure how to generate it, follow the instructions here: [Executing the Test](/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
-</Check>
+If you’re unsure how to generate it, follow the instructions here: [Executing the Test](/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
+</Tip>
 
 The response is a binary ZIP file containing the `.xcresult` bundle, which you can unzip and open directly in Xcode for detailed analysis.
 
@@ -131,7 +138,6 @@ The `.xcresult` bundle contains a comprehensive report of your XCUI test executi
 - **Device & Configuration Matrix**: Displays which tests passed/failed on specific device configurations.
 - **Individual Test Details**: Each test case shows its status (pass/fail), failure reason, logs, and any assertion errors.
 
-
 You can open the `.xcresult` bundle directly in Xcode to explore these details visually, enabling efficient debugging and analysis of your test runs.
 
-<img loading="lazy" src="/assets/images/real-device-app-testing/XCUI_image.png" alt="xcui-result-bundles" width="768" height="373" className="doc_img"/>
+![xcui-result-bundles](/assets/images/real-device-app-testing/XCUI_image.png)

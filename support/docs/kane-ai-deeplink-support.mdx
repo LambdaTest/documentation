@@ -4,7 +4,8 @@ sidebarTitle: "Deeplinks"
 keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai deeplink', 'mobile app testing', 'deeplink navigation', 'android deeplink', 'ios deeplink']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## What are Deeplinks?
 
@@ -20,7 +21,6 @@ When you use deeplinks in KaneAI during mobile app test authoring, the system:
 4. Navigates directly to the specified screen or performs the defined action
 
 KaneAI automatically pre-fills the application package or bundle ID based on the app currently installed in your test session, making the process seamless and intuitive.
-
 
 ## Adding Deeplinks in KaneAI
 
@@ -49,7 +49,6 @@ Once the deeplink modal appears, provide the following information:
 
 Click the **Add in steps** button to include the deeplink instruction in your test case. KaneAI will execute this step during test runs, invoking the specified deeplink within your target application.
 
-
 ## Best Practices
 
 1. **Verify Deeplink Support:** Ensure your mobile application has proper deeplink handling implemented before using this feature in tests.
@@ -59,7 +58,6 @@ Click the **Add in steps** button to include the deeplink instruction in your te
 3. **Handle Edge Cases:** Consider scenarios where deeplinks might fail (e.g., user not logged in, invalid parameters) and add appropriate assertions.
 
 4. **Combine with Assertions:** After invoking a deeplink, add assertion steps to verify the correct screen was loaded and displays expected content.
-
 
 ## Troubleshooting
 
@@ -82,6 +80,6 @@ Click the **Add in steps** button to include the deeplink instruction in your te
 - Check if required data or permissions are available
 - Review app logs for specific error messages
 
-<Warning>
- **Need Help?** If you have questions about deeplink implementation or encounter issues, contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> for assistance.
-</Warning>
+---
+
+> **Need Help?** If you have questions about deeplink implementation or encounter issues, contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> for assistance.

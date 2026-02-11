@@ -1,13 +1,10 @@
 ---
 title: "Supported Locales And Languages - XCUI"
 sidebarTitle: "Supported Locales And Languages"
-
-keywords:
-  - Supported locales
-  - Locales
-  - Appium supported locales
-
+keywords: ['Supported locales', 'Locales', 'Appium supported locales']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Use the given below list of supported locale and language codes for app testing.
@@ -15,12 +12,10 @@ Use the given below list of supported locale and language codes for app testing.
 ##  iOS Locales and Language Codes
 
 To test localised strings in your iOS app, configure Appium's language capability with language code. 
+<Info>
+**Language to be passed in the capability - language:'fr' where fr is language code for french**
 
-<Note>
-**INFO**
-
-Language to be passed in the capability - language:'fr' where fr is language code for french
-</Note>
+</Info>
 
 ### iOS Language and Language Codes
 
@@ -58,11 +53,10 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
-<Note>
-**INFO**
+<Info>
+**Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France**
 
-Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France
-</Note>
+</Info>
 
 ### iOS Locale and Locale Codes
 
@@ -115,14 +109,13 @@ Locale to be passed in the capability - locale: 'fr_FR' where fr is language cod
 | Mexico                 | es-MX                      |
 | South Africa           | en-ZA                      |
 
-
 ## How to Setup Locale and Language
 
 You can also configure both locale and language during XCUI test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
 
 ### Language
 
-To test a localized version of your app on LambdaTest, use the `language` parameter in the XCUI test execution API request. This allows you to change the language of the application under test.
+To test a localized version of your app on <BrandName />, use the `language` parameter in the XCUI test execution API request. This allows you to change the language of the application under test.
 
 | Parameter | Description                            | Values     |
 |-----------|----------------------------------------|------------|
@@ -130,7 +123,7 @@ To test a localized version of your app on LambdaTest, use the `language` parame
 
 ### Locale
 
-To test a localized version of your app on LambdaTest, use the `locale` parameter in the XCUI test execution API request. This allows you to set the locale for the application under test.
+To test a localized version of your app on <BrandName />, use the `locale` parameter in the XCUI test execution API request. This allows you to set the locale for the application under test.
 
 | Parameter | Description                       | Values     |
 |-----------|-----------------------------------|------------|
@@ -157,9 +150,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 }'
 ```
 
-<Info>
-**NOTE**
-- When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
+<Note>
+**- When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.**
+
  ```swift
     let app = XCUIApplication()
     app.launchArguments += ProcessInfo().arguments
@@ -168,4 +161,4 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 -	The language and locale settings are applied at the app level.
 -	To ensure your application under test displays the correct localized strings, dates, times, and calendar formats, include both language and locale in your desired capabilities.
 - For XCUI sharding tests, you have to mention this in the  `.yaml` file.
-</Info>
+</Note>

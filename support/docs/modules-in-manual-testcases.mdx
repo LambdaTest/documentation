@@ -1,0 +1,32 @@
+---
+title: "Modules in Manual Testcases"
+sidebarTitle: "Importing Modules into Test Cases"
+keywords: ['module creation', 'import module', 'test step management', 'test case', 'test steps']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+To incorporate existing modules into your test steps, simply click on the Modules Icon. 
+
+<img loading="lazy" src='/assets/images/mobile-app-testing/module_button.png' alt="import-module" />
+
+From there, you'll be able to select and import the specific module you need.
+
+<Note>
+**Keep in mind that only modules already linked with your project will be available for import.**
+
+</Note>
+
+<img loading="lazy" src='/assets/images/mobile-app-testing/import_module_in_manual_testcases.png' alt="import-module" />
+
+Notice that imported modules will appear visually distinct from other individual steps within your test case, making them easy to identify. 
+
+You also have the flexibility to edit or delete these modules directly from this view. However, be aware that making changes will create a new version of that module.
+
+<Note>
+**Please note that when a module is updated to a new version, its existing occurrences within your test cases will not be affected. They will remain linked to the previous version. To utilize the latest version of a module, you'll need to manually sync it by clicking the `Sync to latest` button. This allows you to review and confirm changes before they impact your test cases.**
+
+</Note>
+
+<img loading="lazy" src='/assets/images/mobile-app-testing/sync_module_version.png' alt="sync-module" />

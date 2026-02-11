@@ -1,21 +1,22 @@
 ---
 title: "Add your test metadata using customData capability"
 sidebarTitle: "Adding Test Metadata"
-keywords: ['lambdatest automation', 'selenium automation grid', 'metadata', 'custom data', 'traceability', 'debugging', 'reporting']
+keywords: ['testmu ai automation', 'selenium automation grid', 'metadata', 'custom data', 'traceability', 'debugging', 'reporting']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 The `customData` capability allows you to associate additional metadata with test runs, enabling better traceability, debugging, and reporting. This metadata can include information like issue tracker links, test case IDs, and other critical test context. By embedding this metadata in test configurations, your team can easily integrate with their existing tools and workflows, such as GitHub, Jira, or any test management system.
 
-## How to add custom metadata for running automation tests on LambdaTest
+## How to add custom metadata for running automation tests on <BrandName />
 To add custom metadata in your automation tests, simply add the capability `customData` in your test script with all the metadata information that we support to add:
 
-<Tabs>
+<Tabs className="docs__val">
 
 <Tab title="Java">
 
-```java Test.java
+```java title="Test.java"
 ltOptions.put("customData", new HashMap<String, Object>() {{
     put("jiraTicket", "JIRA-12345");
     put("githubPR", "https://github.com/organization/repo/pull/678");
@@ -27,7 +28,7 @@ ltOptions.put("customData", new HashMap<String, Object>() {{
 
 <Tab title="Node.js">
 
-```javascript Test.js
+```javascript title="Test.js"
 "LT:Options": {
   "customData": {
     "jiraTicket": "JIRA-12345",
@@ -40,7 +41,7 @@ ltOptions.put("customData", new HashMap<String, Object>() {{
 
 <Tab title="TypeScript">
 
-```typescript Test.ts
+```typescript title="Test.ts"
 "LT:Options": {
   customData: {
     jiraTicket: "JIRA-12345",
@@ -53,7 +54,7 @@ ltOptions.put("customData", new HashMap<String, Object>() {{
 
 <Tab title="PHP">
 
-```php Test.php
+```php title="Test.php"
 "LT:Options" => [
   "customData" => [
     "jiraTicket" => "JIRA-12345",
@@ -66,7 +67,7 @@ ltOptions.put("customData", new HashMap<String, Object>() {{
 
 <Tab title="Python">
 
-```python Test.py
+```python title="Test.py"
 "LT:Options": {
   "customData": {
     "jiraTicket": "JIRA-12345",
@@ -79,7 +80,7 @@ ltOptions.put("customData", new HashMap<String, Object>() {{
 
 <Tab title="C#">
 
-```csharp Test.cs
+```csharp title="Test.cs"
 ltOptions.Add("customData", new Dictionary<string, object>{
   { "jiraTicket", "JIRA-12345" },
   { "githubPR", "https://github.com/organization/repo/pull/678" },
@@ -90,7 +91,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 
 <Tab title="Ruby">
 
-```ruby Test.rb
+```ruby title="Test.rb"
 "LT:Options" => {
   customData: {
     jiraTicket: "JIRA-12345",
@@ -108,7 +109,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 1. Enhanced Reporting with GitHub and Jira Links
 **Scenario :** A QA team wants to include direct links to GitHub pull requests or Jira issues related to a test. This helps developers and testers quickly access related code changes or tasks when a test fails. 
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "jiraTicket": "JIRA-12345",
   "githubPR": "https://github.com/organization/repo/pull/678",
@@ -123,7 +124,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 2. Linking Test Management Systems
 **Scenario :** The team uses a test management tool (e.g., TestRail, Zephyr) to manage test cases. Adding the test case ID ensures results can be linked back to the test plan.
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "testCaseID": "TC-56789",
   "testSuite": "Regression Suite",
@@ -140,7 +141,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 3. Debugging with Environment Metadata
 **Scenario :** When debugging test failures, it’s helpful to include information about the environment or build being tested.
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "buildNumber": "1234",
   "environment": "Staging",
@@ -157,7 +158,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 4. Capturing User Story or Feature Metadata
 **Scenario :** A product manager wants test results linked to specific user stories or features for tracking progress on new functionality.
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "featureID": "FEAT-9876",
   "userStory": "As a user, I want to reset my password securely.",
@@ -172,7 +173,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 5. Tracking Third-Party Dependencies
 **Scenario :** A test depends on third-party APIs or integrations, and it’s crucial to track the versions or configurations of these dependencies.
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "thirdPartyAPI": "Stripe",
   "apiVersion": "2023-01-15",
@@ -187,7 +188,7 @@ ltOptions.Add("customData", new Dictionary<string, object>{
 ### 6. Integrating Test Runs with CI/CD Pipelines
 **Scenario :** A DevOps team wants to include pipeline-specific metadata in the test report to track CI/CD execution details.
 
-```javascript Test.js
+```javascript title="Test.js"
 'customData': { 	
   "pipelineID": "Pipeline-001",
   "jobID": "Job-456",

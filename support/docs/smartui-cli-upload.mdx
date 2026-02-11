@@ -1,17 +1,22 @@
 ---
 title: "Upload your Screenshots via CLI"
 sidebarTitle: "Upload through CLI"
-keywords: ["Visual Regression","Visual Regression Testing Guide","Visual Regression Test Automation","Visual Regression Automation Testing","Running Visual Regression Tests","Visual Regression Testing Online","Run Visual Regression","Visual Regression Run Specific Test","Visual Regression Testing Environment","How to Run Visual Regression Tests"]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
 
-With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+---
+
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI CLI.
 
 ## Create a SmartUI Web-Project
 
@@ -25,7 +30,7 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
+Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
 ```bash
@@ -38,43 +43,39 @@ npm install @lambdatest/smartui-cli
 ```
 
 <Note>
-NOTE
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
+
 </Note>
 
 ## Step 2: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
-
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-
-<Tab title='Windows - CMD'>
+<Tab title="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
-
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Step 3: Upload the required directory of images
 
@@ -103,13 +104,13 @@ Please read the following table for more information about the options available
 | -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
 |    | --fetch-results [filename] | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results [custom-results.json]`|
 |    | --buildName &lt;string&gt; | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
-|    | --userName &lt;string&gt; | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
-|    | --accessKey &lt;string&gt; | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
+|    | --userName &lt;string&gt; | Override <BrandName /> username | `npx smartui upload <directoryName> --userName "user"`|
+|    | --accessKey &lt;string&gt; | Override <BrandName /> access key | `npx smartui upload <directoryName> --accessKey "key"`|
 |    | --config &lt;filepath&gt; | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
 
 <Note>
-NOTE
-You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
+**You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.**
+
 </Note>
 
 ## Setup with Continuous Integration (CI)
@@ -155,7 +156,6 @@ Specify a custom filename for your results:
 ```bash
 npx smartui upload <directoryName> --fetch-results custom-results.json
 ```
-
 ## Adding a custom build name
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
 
@@ -165,14 +165,12 @@ Specify a custom build name to group your screenshots in the following way:
 npx smartui upload <directoryName>  --buildName "Sample Build Name"
 ```
 
-<Note>
-NOTE
-- If no build name is provided, a random name will be automatically assigned to the build.
-- Specifying the name of an existing build within the project will append the screenshots to that build.
-- Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
-</Note> 
+> Note:
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Additional Resources
 
@@ -183,6 +181,3 @@ NOTE
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
-
-
-

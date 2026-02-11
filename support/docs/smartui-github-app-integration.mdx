@@ -1,8 +1,11 @@
 ---
 title: "GitHub App Integration with SmartUI"
 sidebarTitle: "GitHub App"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 
@@ -12,27 +15,27 @@ This is the guide to setup your GitHub Repos with SmartUI projects and run your 
 - Basic understanding of Continuous Integration tools (CI) is required.
 - Should have setup the SmartUI suite, else please read [this](/support/docs/selenium-visual-regression/)
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest SmartUI platform using GitHub App-
+The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform using GitHub App-
 
-## Step 1: Integrate the your LambdaTest Account with GitHub App
+## Step 1: Integrate the your <BrandName /> Account with GitHub App
 
 The following are the steps to integrate your account with GitHub App:
 
 1. Go to [Integrations page](https://integrations.lambdatest.com/)
 2. Search for GitHub App and select the integration.
 
-![cmd](/assets/images/smart-visual-testing/github-app-landing.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/github-app-landing.png' alt="cmd" width="768" height="373" />
 
 3. Click on the `OAuth` as your preferred authentication.
 4. Click on **Install**.
 
-![cmd](/assets/images/smart-visual-testing/smartui-github-integration.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-github-integration.png' alt="cmd" width="768" height="373" />
 
 5. You will be redirected to the GitHub Authentication page to confirm the permissions required for the application to be installed.
 6. Click on **Confirm** button to all the authentication requirements from your GitHub Account.
 7. After successful authentication, you can refresh the [Integrations page](https://integrations.lambdatest.com/) to view the GitHub App installed.
 
-![cmd](/assets/images/smart-visual-testing/github-app-installed.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/github-app-installed.png' alt="cmd" width="768" height="373" />
 
 Now, after the successful installation of the GitHub Integration, please follow the below steps to configure to your project repo:
 
@@ -40,11 +43,12 @@ Now, after the successful installation of the GitHub Integration, please follow 
 
 Go to your GitHub repository where you want to configure your SmartUI project.
 
-<Note>
-INFO
+<Info>
+**GitHub Sample**
 
-Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-sample
-</Note>
+Please check out GitHub sample here: https://github.com/<BrandName />/smartui-node-sample
+
+</Info>
 
 ## Step 3: Configure your test suite
 
@@ -105,38 +109,39 @@ Go to `.github/workflows/<your_ci_file>.yml`
         echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
 ```
 
-<Note>
-NOTE
+<Info>
+**Note**
 
 We also support other Continuous Integrations (CI) tools to execute the similar process as well.
-</Note>
+
+</Info>
 
 ## Step 5: Execute your test suite with CI
 
 After the setup is completed, you can now execute your test suite with the Continuous Integration (CI) pipeline with any tool of your choice.
 
-<Check>
-GitHub Actions - Example
+<Tip>
+**GitHub Actions - Example**
 
 If your current pipeline is set to `GitHub Actions` then you can configure your `workflow` to trigger the test suite by committing the changes to the `GitHub Repo` or on raising a `Pull Request` to merge any changes to the branch as per your branch rules.
-</Check>
 
-![cmd](/assets/images/smart-visual-testing/github-app-sample.png)
+</Tip>
+
+<img loading="lazy" src='/assets/images/smart-visual-testing/github-app-sample.png' alt="cmd" width="768" height="373" />
 
 ## GitHub App Feedback State
 
 Here is an example of **Successful** feedback app state:
-![cmd](/assets/images/smart-visual-testing/approved-state-1.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/approved-state-1.png' alt="cmd" width="768" height="373" />
 
 Here is an example of **Failed** feedback app state:
-![cmd](/assets/images/smart-visual-testing/failed-state-1.png)
+<img loading="lazy" src='/assets/images/smart-visual-testing/failed-state-1.png' alt="cmd" width="768" height="373" />
 
-
-<Check>
-**NOTE**
+<Tip>
+**Note**
 
 You can click on `Details` link which will redirect the user to the build of the SmartUI test to view the results
-</Check>
+
+</Tip>
 
 To understand more about the GitHub Actions, setup please read this article : https://docs.github.com/en/actions/quickstart
-

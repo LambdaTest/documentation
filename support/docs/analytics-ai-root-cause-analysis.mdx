@@ -4,7 +4,8 @@ sidebarTitle: "AI Root Cause Analysis"
 keywords: ['analytics', 'AI RCA', 'root cause analysis', 'test intelligence', 'test failure analysis', 'debugging', 'AI insights']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powered LLM technology to automatically analyze failed tests and identify their root causes. Instead of manually sifting through logs and error messages, AI RCA provides:
 
@@ -31,12 +32,12 @@ AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powe
 
 - **Manual RCA**: Generate RCA on-demand for any failed test by clicking the **Generate RCA** button. Useful for investigating specific failures without setting up targeting rules.
 
-<Check>
-**WHEN TO USE EACH METHOD**
+<Tip>
+**When to Use Each Method**
 
 - Use **Automatic RCA** for continuous monitoring of critical test suites where you want immediate analysis of every failure.
 - Use **Manual RCA** for ad-hoc debugging when you need to investigate a specific test failure without setting up automated rules.
-</Check>
+</Tip>
 
 | Feature | Automatic RCA | Manual RCA |
 |---------|---------------|------------|
@@ -46,11 +47,11 @@ AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powe
 | **Special Instructions** | ✓ Applied | ✓ Applied |
 | **Best For** | Continuous monitoring | Ad-hoc debugging |
 
-<Info>
-**SHARED CONFIGURATION**
+<Note>
+**Shared Configuration**
 
 **Custom RCA Categories** and **Special Instructions** configured in Organization Settings apply to both Automatic and Manual RCA generation. This ensures consistent categorization and analysis context across all RCA results.
-</Info>
+</Note>
 
 ## Generate RCA Manually
 
@@ -138,7 +139,6 @@ Help improve RCA accuracy using the feedback options at the bottom:
   - Provide a custom root cause if the AI classification was incorrect
   - Add additional context or feedback
 
-
 ## Configure Automatic RCA
 
 Set up Automatic RCA to continuously analyze test failures based on your targeting rules.
@@ -195,10 +195,9 @@ The intelligent targeting system applies rules using the following logic:
 {/* #### Example Configuration */}
 #### Example Configuration for Production Test Analysis
 
-<Check>
-**TIP**
+<Tip>
+****Test Name:****
 
-**Test Name:**
 - **Include**: `.*prod.*` - Only analyze tests with name containing "prod"
 - **Exclude**: `.*non-critical.*` - Skip tests with name containing "non-critical"
 
@@ -214,7 +213,7 @@ The intelligent targeting system applies rules using the following logic:
 - **Exclude**: `.*staging.*` - Skip tests from staging projects
 
 **Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. The analysis will target ecommerce and payment projects, excluding staging projects. This configuration helps narrow down analysis to the most critical test scenarios.
-</Check>
+</Tip>
 
 ### Step 5: Manage Custom RCA Categories (Optional)
 
@@ -237,14 +236,13 @@ Custom RCA Categories allow you to define intelligent classification categories 
 
 **Best Practices:**
 
-<Check>
-**TIP**
+<Tip>
+**- **Be Specific**: Create distinct categories (e.g., "Database Connection Timeouts" vs "Database Issues")**
 
-- **Be Specific**: Create distinct categories (e.g., "Database Connection Timeouts" vs "Database Issues")
 - **Use Clear Names**: Choose names your team understands immediately
 - **Start Small**: Begin with 5-10 active categories for your most common failure types
 - **Review Regularly**: Periodically refine categories based on your failure patterns
-</Check>
+</Tip>
 
 **Example Custom RCA Categories:**
 
@@ -266,10 +264,9 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 **Example Instructions:**
 
-<Check>
-**TIP**
+<Tip>
+****Environment-Specific Context:****
 
-**Environment-Specific Context:**
 - Running on Staging environment with test data
 - Database may have lag issues during peak hours (9 AM - 5 PM EST)
 - Test environment has limited resources compared to production (2GB RAM vs 8GB)
@@ -307,7 +304,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 - Minor UI layout shifts that don't break functionality (< 5px)
 - Expected 404s for optional resources (favicon, tracking pixels)
 - Third-party script loading delays that don't impact core functionality
-</Check>
+</Tip>
 
 ### Step 7: Save Configuration
 
@@ -325,7 +322,8 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 ## Troubleshooting Common Issues
 
-<Accordion title="RCA Not Generating">
+<details>
+<summary><strong>RCA Not Generating</strong></summary>
 
 - **Check prerequisites**: Ensure you have the required subscription plan
 - **Verify credits availability**: AI RCA processing requires credits to be available in your account. Check your [Credits Management](/support/docs/credits-management/) page to ensure sufficient credits
@@ -333,9 +331,10 @@ Provide context or specific guidance for the AI to consider during analysis:
 - **Review configuration**: Confirm AI RCA is enabled in organization settings
 - **Check permissions**: Ensure you have access to Analytics and Test Intelligence features
 
-</Accordion>
+</details>
 
-<Accordion title="Inaccurate RCA Results">
+<details>
+<summary><strong>Inaccurate RCA Results</strong></summary>
 
 - **Refine special instructions**: Provide more specific context about your application
 - **Update intelligent targeting**: Exclude irrelevant tests that might confuse the analysis
@@ -343,16 +342,17 @@ Provide context or specific guidance for the AI to consider during analysis:
 - **Refine custom RCA categories**: Update category descriptions to better match your failure patterns
 - **Provide feedback**: Use any available feedback mechanisms to improve accuracy
 
-</Accordion>
+</details>
 
-<Accordion title="Missing RCA Data">
+<details>
+<summary><strong>Missing RCA Data</strong></summary>
 
 - **Check time range**: Ensure you're looking at the correct time period
 - **Verify test execution**: Confirm tests actually failed during the specified period
 - **Review dashboard filters**: Check if any filters are excluding relevant data
 - **Contact support**: Reach out if RCA data appears to be missing
 
-</Accordion>
+</details>
 
 ## Support
 

@@ -1,10 +1,10 @@
 ---
 title: "KaneAI - Geolocation, Tunnel and Proxy Support"
 sidebarTitle: "Geolocation, Tunnel, and Proxy"
-keywords: ['testmu ai automation', 'testmu ai kaneai',' kaneai geolocation support kaneai', 'tunnel support' ,'kaneai proxy support']
+keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai geolocation support', 'kaneai tunnel support', 'kaneai proxy support']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Now you can start your web tests on Kane AI using advanced configurations like geolocation, tunnel, and dedicated proxy support.
@@ -22,7 +22,7 @@ With KaneAI's geolocation feature, you can simulate user interactions from diffe
 **Step 3 :** Once the test is saved, the generated code will include geolocation details automatically, making it easier to 
 replicate the test across different regions.
 
-<img loading="lazy" src='/assets/images/kane-ai/geolocation.png' alt="Image"/>
+<img loading="lazy" src='/assets/images/kane-ai/geolocation.png' alt="Image" width="1200" height="550" />
 
 ## Tunnel Support
 
@@ -30,10 +30,12 @@ KaneAI also supports tunneling to allow you to test websites hosted locally or b
 
 ### Steps to Use Tunnel
 
-**Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
+**Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#testmu ai-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
 
 ```bash
+
 {`./LT --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()}  --env ht-prod -v -n TUNNEL_NAME`}
+
 ```
 
 **Step 2 :** Select the tunnel from the **Advanced Settings** on KaneAI and choose the tunnel that you have spun up.
@@ -54,4 +56,4 @@ KaneAI offers support for dedicated proxy usage, exclusively available for enter
 
 **Step 3 :** Once the test is saved, the generated code will include proxy details automatically, allowing seamless future executions.
 
-<img loading="lazy" src='/assets/images/kane-ai/dedicated-proxy.png' alt="Image" />
+<img loading="lazy" src='/assets/images/kane-ai/dedicated-proxy.png' alt="Image" width="1200" height="550" />

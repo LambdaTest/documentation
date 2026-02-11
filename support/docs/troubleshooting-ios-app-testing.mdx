@@ -1,12 +1,11 @@
 ---
-title: Troubleshooting iOS App Testing
-sidebarTitle: Troubleshooting iOS App Testing
+title: "How to build .app file for iOS App testing on Simulators"
+sidebarTitle: "Troubleshooting iOS App Testing"
 keywords: ['how to upload .app files on ios simulators', 'how to upload .app files on simulators', 'how to upload .app files for ios simulator testing']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-***
 
 While uploading .app files on Simulators, you may come across an error on the <BrandName /> platform - *No .app found inside zip*. In such cases, you may need to re-evaluate how you're building your iOS applications. To upload and test `. apps` files on Simulators, your iOS app need to be build for Simulators. 
 
@@ -16,22 +15,23 @@ Shown below are the steps for converting your `.app` file to a `.zip` file.
 
 2. Open your testing project in Xcode.
 
- <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/project-file.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/project-file.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" />
 
 3. Head to **File** and click **Show in Finder** option to open the .app file once your build runs successfully.
 
- <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/show-in-finder.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/show-in-finder.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" />
 
 4. Compress the `.app` file into a `.zip` file.
 
- <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/zip-file.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/zip-file.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" />
 
 Your `.zip` file is now ready for upload on <BrandName /> servers.
 
 <Note>
 **Note**: If you are unable to install the iOS zip file on the <BrandName /> platform, you need to remove the arm64 architecture from both your project and the pod project.<br /> <br />
-To do so, go to the **Build Settings** of your project. From **Excluded Architecture** dropdown, add any iOS Simulator SDK with value arm64 .<br /><br />
-<img loading="lazy" src='/assets/images/troubleshoot-ios-testing/6.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 </Note>
+
+To do so, go to the **Build Settings** of your project. From **Excluded Architecture** dropdown, add any iOS Simulator SDK with value arm64 .<br /><br />
+<img loading="lazy" src='/assets/images/troubleshoot-ios-testing/6.webp' alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" />
 
 That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.

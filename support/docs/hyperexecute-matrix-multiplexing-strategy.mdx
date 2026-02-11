@@ -1,15 +1,17 @@
 ---
-title: Matrix Multiplexing Strategy
+title: "Matrix Multiplexing Strategy"
 sidebarTitle: "Matrix Multiplexing Strategy"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
-
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 HyperExecute's Matrix Multiplexing Strategy allows you to execute test cases across a variety of combinations efficiently. This strategy is especially useful when dealing with browser and OS combinations or other parameters like files, tags, and more.
 
 By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing process and achieve faster results. HyperExecute generates permutations and combinations using key-value pairs, launching virtual machines for each combination and running tests in parallel.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/matrix/hyp_matrix.png' alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/matrix/hyp_matrix.png' alt="Image" width="1232" height="534" style={{ width:'700px', height:'auto'}} />
 
 ## Configuration and Execution
 
@@ -58,9 +60,8 @@ matrix:
 
 A combination of test scenarios is generated using the following formula:
 
-<Note>
-**Total Test Scenarios** = *[Entries in os  List] x [Entries in browser version  List] x [Entries in browser  List] x [Entries in Files List]*
-</Note>
+> **Total Test Scenarios** = *[Entries in os  List] x [Entries in browser version  List] x [Entries in browser  List] x [Entries in Files List]*
+
 Let’s take a case where the test scenarios are implemented in Java. Files File1.java and File2. java contains one test method each. In such a scenario, the total number of test combinations would be  (1 x 1 x 2 x 2)  →  4. Here is the list of the  total test scenarios that would be run on HyperExecute (based on the YAML file shown earlier):
 
 | Test Number | FileName | OS | Browser | Browser Version |
@@ -92,5 +93,3 @@ exclusionMatrix:
     browser: ["Safari"]
     files: ["@File2","@File3"]
 ```
-
-

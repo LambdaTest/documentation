@@ -1,16 +1,17 @@
 ---
 title: "SmartUI Tests in HyperExecute using Selenium"
 sidebarTitle: "Selenium"
-keywords: ["smart ui testing in lambdatest", "smart ui testing in hyperexecute", "visual  ui testing,image to image comparison", "free cross browser testing tool", "regression testing tool", "perform visual ui testing online", "compare image to image", "internet explorer 9 browser test", "test on samsung a7 online", "test on mac 10.11 el capitan online", "apple mac el capitan virtual machine"]
+keywords: ['smart ui testing in testmu ai', 'smart ui testing in hyperexecute', 'visual  ui testing,image to image comparison', 'free cross browser testing tool', 'regression testing tool', 'perform visual ui testing online', 'compare image to image', 'internet explorer 9 browser test', 'test on samsung a7 online', 'test on mac 10.11 el capitan online', 'apple mac el capitan virtual machine']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environment Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
@@ -20,13 +21,13 @@ This documentation will guide you step-by-step to execute the SmartUI tests on t
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/cucumber-testNG-smartui-hyperexecute-sample" />
-</Check>
+<a href="https://github.com/<BrandName />/cucumber-testNG-smartui-hyperexecute-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 If you are using your own project, make sure you update the **HUB endpoint** in your tests file.
 
@@ -53,9 +54,9 @@ capability.setCapability("visual", true);
 capability.setCapability("smartUI.project", "HyperExecute-smartUI-project");
 ```
 <Warning>
-
-You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
 </Warning>
+
 
 ## Step 2: Setup the CLI in your Test Suite
 
@@ -75,25 +76,30 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+<Tabs className="docs__val">
 
-<Tabs>
 <Tab title="Linux / MacOS">
 
-```bash
-export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
 </Tab>
+
 <Tab title="Windows">
 
-```powershell
-set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
 
 </Tab>
@@ -163,9 +169,10 @@ jobLabel: [ 'HYP', 'Selenium', 'smartUI']
 
 ## Step 4: Execute your Test Suite
 
-<Note>
+<Warning>
 **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -176,20 +183,22 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE 
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ## Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-![automation-dashboard](/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png)
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png' alt="automation-dashboard"  width="1920" height="868" />
 
-![cmd](/assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-3.webp)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-3.webp' alt="cmd" width="768" height="373" />
 
 Here you can see the difference.
 
-![cmd](/assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-4.webp)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-4.webp' alt="cmd" width="768" height="373" />
 
 ## Handling Dynamic Data with DOM Configuration
 
@@ -200,7 +209,7 @@ Here you can see the difference.
 | `ignoreDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison. |
 | `selectDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison. |
 
-<Tabs>
+<Tabs className="docs__val" groupId="framework">
 <Tab title="Ignore ID">
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
@@ -257,10 +266,10 @@ let config = {
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 </Tab>
+
 </Tabs>
 
-
-<Tabs>
+<Tabs className="docs__val" groupId="framework">
 <Tab title="Select ID">
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
@@ -320,6 +329,4 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 </Tabs>
 
-<Note>
-**NOTE :** Please contact [Customer Support](mailto:support@lambdatest.com) team to enable the **ignoreDOM** feature.
-</Note>
+> **NOTE :** Please contact [Customer Support](mailto:support@testmu.ai) team to enable the **ignoreDOM** feature.

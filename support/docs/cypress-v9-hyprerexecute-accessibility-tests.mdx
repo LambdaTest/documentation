@@ -1,23 +1,20 @@
 ---
-title: "Automation Tests with Accessibility Tool using Cypress v9 on HyperExecute"
+title: "Accessibility Testing on HyperExecute using Cypress v9"
 sidebarTitle: "Cypress v9"
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Cypress', 'Cypress version 9', 'Automation', 'Accessibility Testing Settings']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-import { GitHubButton } from "/snippets/GitHubButton.mdx";
+
 
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute using Cypress v9 and below.
+<Note>
+**This documentation is applicable for **Cypress v9** and **previous versions**.**
 
-<Info>
-NOTE <br />
-This documentation is applicable for **Cypress v9** and **previous versions**.
-
-Please reach out to our <span>support team</span> to enable the Accessibility feature for your organization.
-
-</Info>
+Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the Accessibility feature for your organization.
+</Note>
 
 ## Prerequisites
-
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
@@ -29,65 +26,65 @@ Please reach out to our <span>support team</span> to enable the Accessibility fe
 
 To configure and test the system, you may use your existing project. For demonstration purposes, this guide utilizes a sample repository.
 
-<Check> 
- **SAMPLE REPO** <br />
+<Tip>
+**sample repo**
 
 Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-cypress-v9-sample"/>
-</Check>
+<a href="https://github.com/<BrandName />/hyperexecute-cypress-v10-sample" target="_blank" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 #### Download HyperExecute CLI
 
-The _HyperExecute CLI_ is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
-| Platform | HyperExecute CLI download location                                     |
-| -------- | ---------------------------------------------------------------------- |
-| Windows  | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| macOS    | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute      |
-| Linux    | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute       |
+| Platform | HyperExecute CLI download location |
+| ---------| --------------------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
+Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
- Export your environment variables _LT_USERNAME_ and _LT_ACCESS_KEY_ that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-  Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+<Tabs className="docs__val">
 
-<Tabs>
 <Tab title="Linux / MacOS">
-  <div className="lambdatest__codeblock">
-   ```bash
-      export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-      export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-   ```
-  </div>
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
 </Tab>
 
 <Tab title="Windows">
 
-<div className="lambdatest__codeblock">
   ```powershell
-     set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-     set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-    ```
-</div>
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
 
 </Tab>
-
 </Tabs>
 
 ### Step 2: Update the Necessary Capabilities and Configurations in your project
 
 #### 1. Install the Cypress CLI
-
-You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the <BrandName /> Cypress CLI which will be used to execute your Cypress tests.
+You will have to pass the `npm i testmu ai-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the <BrandName /> Cypress CLI which will be used to execute your Cypress tests.
 
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm install
   - npm install cypress@9.6.1 --save-dev
-
-  - npm i lambdatest-cypress-cli
+#   highlight-next-line
+  - npm i testmu ai-cypress-cli
 ```
 
 #### 2. Add the capabilities in the YAML file
@@ -96,10 +93,10 @@ To enable the accessibility testing within your automated test suite, set the `a
 
 ```yaml title="hyperexecute.yaml"
 cypressOps:
-  accessibility: true #Enable accessibility testing
+  accessibility: true                 #Enable accessibility testing
   accessibilityWcagVersion: "wcag21a" #Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibilityBestPractice: false #Exclude best practice issues from results
-  accessibilityNeedsReview: true #Include issues that need review
+  accessibilityBestPractice: false    #Exclude best practice issues from results
+  accessibilityNeedsReview: true      #Include issues that need review
 ```
 
 #### 3. In the `support/index.js` file
@@ -107,7 +104,7 @@ cypressOps:
 Add this import statement in your `support/index.js` file to import the acceessibility scanner dependency
 
 ```javascript title="cypress/support/index.js"
-import 'lambdatest-cypress-cli/accessibility/scanner'
+import 'testmu ai-cypress-cli/accessibility/scanner'
 ```
 
 #### 4. In the `plugins/index.js` file
@@ -115,7 +112,7 @@ import 'lambdatest-cypress-cli/accessibility/scanner'
 Add this code snippet in your `cypress/plugins/index.jss` file.
 
 ```javascript title="cypress/plugins/index.js"
-const lambdatestAccessibility = require("lambdatest-cypress-cli/accessibility/plugin");
+const lambdatestAccessibility = require('testmu ai-cypress-cli/accessibility/plugin');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
@@ -129,9 +126,10 @@ module.exports = (on, config) => {
 
 Run the below command in your terminal at the root folder of the project:
 
-<Warning> 
-  **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+<Warning>
+**NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 </Warning>
+
 
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
@@ -140,9 +138,11 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 1.
 
 ```bash
-./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 Now visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) and click on the Accessibility tab to check the report generated.
 
-![automation-dashboard](/assets/images/accessibility-testing/cypress/hyp-cyp9.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/cypress/hyp-cyp9.png' alt="automation-dashboard" />

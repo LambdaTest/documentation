@@ -1,14 +1,19 @@
 ---
-title: "SmartUI Tests in HyperExecute using Cypress"
+title: "SmartUI Testing Using HyperExecute"
 sidebarTitle: "Cypress"
-keywords: ["smart ui testing in lambdatest", "smart ui testing in hyperexecute", "visual  ui testing,image to image comparison", "free cross browser testing tool", "regression testing tool", "perform visual ui testing online", "compare image to image", "internet explorer 9 browser test", "test on samsung a7 online", "test on mac 10.11 el capitan online", "apple mac el capitan virtual machine"]
+keywords: ['smart ui testing in testmu ai', 'smart ui testing in hyperexecute', 'visual  ui testing,image to image comparison', 'free cross browser testing tool', 'regression testing tool', 'perform visual ui testing online', 'compare image to image', 'internet explorer 9 browser test', 'test on samsung a7 online', 'test on mac 10.11 el capitan online', 'apple mac el capitan virtual machine']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# SmartUI Tests in HyperExecute using Cypress
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress
 
 ## Prerequisites
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your testmu ai [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the Environment Variable
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
@@ -28,7 +33,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 
 ### Setup Environment Variable
 
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 For macOS / Linux:
@@ -56,11 +61,7 @@ cy.screenshot('my-image')
 ```
 
 Here **'my-image'** is the name of the image which will be rendered on the Dashboard.
-
-<Warning>
-
-Refer to the [Cypress Documentation](https://docs.cypress.io/api/commands/screenshot) to understand the different methods for taking screenshots.
-</Warning>
+> Refer to the [Cypress Documentation](https://docs.cypress.io/api/commands/screenshot) to understand the different methods for taking screenshots.
 
 3. Paste the below mentioned code in your YAML file.
 
@@ -99,8 +100,8 @@ To execute the project run the below command in your terminal at the root folder
 
 - Click on the **SmartUI Tests** button.
 
-![cmd](/assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/1.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/1.png' alt="cmd" width="768" height="373" />
 
 - Click on **Compare** button to compare the changes made.
 
-![cmd](/assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/2.png)
+<img loading="lazy" src='/assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/2.png' alt="cmd" width="768" height="373" />

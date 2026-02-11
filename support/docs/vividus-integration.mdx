@@ -1,56 +1,61 @@
 ---
-title: "Vividus Tests On Lambdatest"
+title: "How to Perform Vividus Automation Tests Using TestMu AI?"
 sidebarTitle: "Vividus"
-keywords: [ "Lambdatest integrations", "vividus", "test automation for gui testing", "test automation", "vividus integration with Lambdatest", "Lambdatest integration with vividus" ]
+keywords: ['testmu ai integrations', 'vividus', 'test automation for gui testing', 'test automation', 'vividus integration with testmu ai', 'testmu ai integration with vividus']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Vividus Tests On <BrandName />
 * * *
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.
 
-Lambdatest now integrates with the Vividus tool to help you execute automation tests on its cloud-based Selenium Grid. This Lambdatest-Vividus integration will help you perform cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on Lambdatest platform. This document is a comprehensive guide to help you understand how to integrate Vividus with your Lambdatest account.
+<BrandName /> now integrates with the Vividus tool to help you execute automation tests on its cloud-based Selenium Grid. This <BrandName />-Vividus integration will help you perform cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on <BrandName /> platform. This document is a comprehensive guide to help you understand how to integrate Vividus with your <BrandName /> account.
 
-## How To Setup Your Lambdatest Account With Vividus?
+## How To Setup Your <BrandName /> Account With Vividus?
 
 * * * 
 
-Once you have your project set up using the Vividus tool, here's a step by step guide to help you setup your Lambdatest account with Vividus tool:
+Once you have your project set up using the Vividus tool, here's a step by step guide to help you setup your <BrandName /> account with Vividus tool:
 
-1. Once you have your test scenario ready, you need to add the Lambdatest plugin in the build.gradle -> dependencies, using the below command.
-
-```javascript
-implementation(group: 'org.vividus', name: 'vividus-plugin-lambdatest', version: vividusVersion)
-```
-
-2. Next you need to add the Lambdatest cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
+1. Once you have your test scenario ready, you need to add the <BrandName /> plugin in the build.gradle -> dependencies, using the below command.
 
 ```javascript
-Next you need to add the Lambdatest cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
+implementation(group: 'org.vividus', name: 'vividus-plugin-testmu ai', version: vividusVersion)
 ```
 
-3. Now you need to specify you Lambdatest username and access key in the same configuration.properties file, using below syntax:
+2. Next you need to add the <BrandName /> cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
+
+```javascript
+Next you need to add the TestMu AI cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
+```
+
+3. Now you need to specify you <BrandName /> username and access key in the same configuration.properties file, using below syntax:
 
 ```javascript
 selenium.grid.username=<LT_USERNAME>
 selenium.grid.password=<LT_ACCESS_KEY>
 ```
 
-This will verify your credentials and connect your Lambdatest account with the Vividus tool successfully, based on your current plan.
+This will verify your credentials and connect your <BrandName /> account with the Vividus tool successfully, based on your current plan.
 
-To get your Username and Access Key, go to your [Lambdatest automation dashboard](https://automation.lambdatest.com/timeline/) and click on the "key" icon left to the help button, on the top right corner.
+To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://automation.lambdatest.com/timeline/) and click on the "key" icon left to the help button, on the top right corner.
 
-![Finding Username and Access Key to Perform Automation Testing](/assets/images/vividus-integration/lt-credentials.webp)
+<img loading="lazy" src='/assets/images/vividus-integration/lt-credentials.webp' alt="Finding Username and Access Key to Perform Automation Testing" width="1281" height="721" />
 
 Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to our [Capabilities Generator Guide](/support/docs/selenium-automation-capabilities/).
 
-That's it. Vividus tool has been integrated successfully with your Lambdatest account. Now you can execute your automated tests on Lambdatest's cloud-based Selenium Grid.
+That's it. Vividus tool has been integrated successfully with your <BrandName /> account. Now you can execute your automated tests on <BrandName />'s cloud-based Selenium Grid.
 
-## Running Tests From Your Vividus App On Lambdatest Platform
+## Running Tests From Your Vividus App On <BrandName /> Platform
 
 * * *
 
 For demo purpose, we have recorded a test scenario, which includes:
 
 ```javascript
-- Opening <a href="https://lambdatest.github.io/sample-todo-app/" rel="noopener" target="_blank">LambdaTest ToDo App</a>
+- Opening <a href="https://testmu ai.github.io/sample-todo-app/" rel="noopener" target="_blank">TestMu AI ToDo App</a>
 - Check the first item in the list
 - Check the second item in the list
 - Add a new item in the list, with text "Yey, Let's add it to list".
@@ -73,24 +78,22 @@ selenium.grid.capabilities.version=13.0
 selenium.grid.capabilities.platform=MacOS Big Sur
 ```
 
-<Warning>
-Note: If no browser version or OS capability is passed, it will take the latest version of the browser available on Lambdatest platform, along with latest Windows OS version.
-</Warning>
+> Note: If no browser version or OS capability is passed, it will take the latest version of the browser available on <BrandName /> platform, along with latest Windows OS version.
 
 * Now you need to select the desired browser, on which you want to run your tests. To do so, open the configuration.properties file, and change the name of the browser to the desired one, from Chrome.
 
 Syntax:
 
 ```javascript
-configuration.profiles=lambdatest/web,web/desktop/<browser name>
+configuration.profiles=testmu ai/web,web/desktop/<browser name>
 ```
 
 For example, let’s change the browser to Safari:
 
 ```javascript
-configuration.profiles=lambdatest/web,web/desktop/safari
+configuration.profiles=testmu ai/web,web/desktop/safari
 
-// Previously it was configuration.profiles=lambdatest/web,web/desktop/chrome
+// Previously it was configuration.profiles=testmu ai/web,web/desktop/chrome
 ```
 
 * To run your test, using the below command:
@@ -99,27 +102,24 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 ./gradlew runStories
 ```
 
-![Run Tests Using Lambdatest Vividus Integration](/assets/images/vividus-integration/vividus.webp)
+<img loading="lazy" src='/assets/images/vividus-integration/vividus.webp' alt="Run Tests Using <BrandName /> Vividus Integration" width="1242" height="473" />
 
-* The test execution will then start, and you can see the same on the automation dashboard of your Lambdatest account.
+* The test execution will then start, and you can see the same on the automation dashboard of your <BrandName /> account.
 
-![Lambdatest automation dashboard](/assets/images/vividus-integration/vividus-1.webp)
+<img loading="lazy" src='/assets/images/vividus-integration/vividus-1.webp' alt="<BrandName /> automation dashboard" width="1281" height="721" />
 
 * Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs.
 
-![Test Automation Logs](/assets/images/vividus-integration/vividus-2.webp)
+<img loading="lazy" src='/assets/images/vividus-integration/vividus-2.webp' alt="Test Automation Logs" width="1281" height="721" />
 
-For each test executed overthe Lambdatest platform, you can view logs, [mark bugs](/support/docs/mark-as-bug-in-automation-testing/), and do much more.
+For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/support/docs/mark-as-bug-in-automation-testing/), and do much more.
 
-## Running Tests From Vividus In Parallel On Lambdatest Platform
+## Running Tests From Vividus In Parallel On <BrandName /> Platform
 
 * * *
 
 Parallel execution is available out of the box and limited only with machine resources and cloud concurrency. In Vividus, concurrency is available at the story level, i.e., each story will use a new session. To configure how many threads you would like to use you need to change the value threads value in the suite.properties file, as shown below:
 
-![Test Suite Properties](/assets/images/vividus-integration/vividus-parallel.webp)
+<img loading="lazy" src='/assets/images/vividus-integration/vividus-parallel.webp' alt="Test Suite Properties" width="1676" height="781" />
 
-<Warning>
-Congrats! You have successfully integrated the Vividus tool with your Lambdatest account. Now run your test cases over the Lambdatest's cloud-based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at support@testmu.ai. Happy testing! 🙂
-</Warning>
-
+> Congrats! You have successfully integrated the Vividus tool with your <BrandName /> account. Now run your test cases over the <BrandName />'s cloud-based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at support@testmu.ai. Happy testing! 🙂

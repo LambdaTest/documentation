@@ -4,6 +4,9 @@ sidebarTitle: "Puppeteer"
 keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 This documentation will act as your step-by-step guide in to perform Puppteer test with SmartUI.
 
 ### Prerequisites for running SmartUI with Puppeteer
@@ -36,7 +39,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </Tab>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -65,7 +68,7 @@ git clone https://github.com/LambdaTest/puppeteer-sample.git
 npm i
 ```
 
-3. Set up the LambdaTest credentials by following the instructions mentioned in the `README.md` file.
+3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
@@ -105,10 +108,10 @@ const expect = require("chai").expect;
       height: 768,
       deviceScaleFactor: 1,
     });
-    console.log("Navigating to LambdaTest");
+    console.log("Navigating to TestMu AI");
     await page.goto("https://www.lambdatest.com/");
     await page.evaluate((_) => {},
-    `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to LambdaTest" } })}`);
+    `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to TestMu AI" } })}`);
     console.log("Navigating to Pricing");
     await page.goto("https://www.lambdatest.com/pricing");
     await page.evaluate((_) => {},
@@ -134,7 +137,7 @@ Execute the test using the following command to run the test suite using `puppet
 node navigation.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 For additional information about Puppteer framework please explore the documentation [here](/support/docs/puppeteer-testing/)
 

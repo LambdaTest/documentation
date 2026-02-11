@@ -1,63 +1,78 @@
 ---
-title: "Integrating Lambdatest Report With Jenkins Pipeline"
-sidebarTitle: "Integrate Lambdatest Report"
-keywords: [ "jenkins", "freestyle project", "Lambdatest", "jenkins integration", "Lambdatest integration with jenkins", "jenkins freestlye" ]
----
+title: "Integrate TestMu AI Report With Jenkins Pipeline"
+sidebarTitle: "Integrate TestMu AI Report"
+keywords: ['jenkins', 'freestyle project', 'testmu ai', 'jenkins integration', 'testmu ai integration with jenkins', 'jenkins freestlye']
 ---
 
-This documentation provides a comprehensive guide on how to integrate Lambdatest Report with your Jenkins Pipeline for web and app test automation.
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+This documentation provides a comprehensive guide on how to integrate <BrandName /> Report with your Jenkins Pipeline for web and app test automation.
 
 <Warning>
-**Note**: Before you proceed, make sure to integrate [Lambdatest Plugin for Jenkins](/support/docs/jenkins-with-lambdatest).
+**Note**: Before you proceed, make sure to integrate [<BrandName /> Plugin for Jenkins](/support/docs/jenkins-with-testmu/).
 </Warning>
+
 
 1. Login to your Jenkins account. From the left menu, navigate to **New Item**.
 
-![Image](/assets/images/lambdatestreport-jenkins/new_item.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/new_item.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 2. Enter the Item name, select **Pipeline** and click **OK**. 
 
-![Image](/assets/images/lambdatestreport-jenkins/ok.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/ok.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 It will route you to a Configuration dashboard. 
 
 4. From the left menu, click **Pipeline**.
 
-![Image](/assets/images/lambdatestreport-jenkins/pipeline.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/pipeline.png' alt="Image" width="1024" height="483" className="doc_img img_center" /> <br />
 
 5. In the **Script** field, enter your Jenkins pipeline script and click **Pipeline Syntax**.
 
-![Image](/assets/images/lambdatestreport-jenkins/enter_script.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/enter_script.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
-6. From the *Sample Step* dropdown, select `lambdaTestReportPublisher:LambdaTest Pipeline Report`.
+<Tip>
+**Best Practices**
 
-![Image](/assets/images/lambdatestreport-jenkins/reportdrop.png) <br/>
+**Build naming**
+
+Define `LT_BUILD_NAME` in your Jenkins pipeline using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures each <BrandName /> run is correctly mapped to its corresponding Jenkins build.
+
+**Report publishing**
+
+Add a  `post { always { ... } }` block to your pipeline so that the report is generated after every run, regardless of the status.
+
+</Tip>
+
+6. From the *Sample Step* dropdown, select `lambdaTestReportPublisher:TestMu AI Pipeline Report`.
+
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/reportdrop.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 7. Select either of the options: *Automation* or *App Automation* from the **Select Product** dropdown.
 
-![Image](/assets/images/lambdatestreport-jenkins/automation.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/automation.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 8. After selecting the product, click **Generate Pipeline Script** and copy the generated pipeline syntax.
 
-![Image](/assets/images/lambdatestreport-jenkins/generatedsyntax.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/generatedsyntax.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
-9. To initiate the steps for Lambdatest Report creation, copy and paste the pipeline syntax in the Stage section of your Jenkins pipeline script. After that, click **Save** or **Apply**.
+9. To initiate the steps for <BrandName /> Report creation, copy and paste the pipeline syntax in the Stage section of your Jenkins pipeline script. After that, click **Save** or **Apply**.
 
-![Image](/assets/images/lambdatestreport-jenkins/save.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/save.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 10. To initiate the build process, navigate to the left menu and select **Build Now**. This will start the build process. 
 
-![Image](/assets/images/lambdatestreport-jenkins/buildnow.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/buildnow.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 11. Upon successful completion of the build process, click on the corresponding build. 
 
-![Image](/assets/images/lambdatestreport-jenkins/build.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/build.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
-12. To view the test report, click on the **Lambdatest Pipeline Report**.
+12. To view the test report, click on the **<BrandName /> Pipeline Report**.
 
-![Image](/assets/images/lambdatestreport-jenkins/pipelinereport.png) <br/>
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/pipelinereport.png' alt="Image" width="1919" height="900" className="doc_img img_center" /> <br />
 
 The test report will show up, containing build details such as **Name**, **Status**, **Browser/Device**, **OS**, and **Duration**. 
 
-![Image](/assets/images/lambdatestreport-jenkins/generatedreport.png) 
-
+<img loading="lazy" src='/assets/images/lambdatestreport-jenkins/generatedreport.png' alt="Image" width="1919" height="900" className="doc_img img_center" />

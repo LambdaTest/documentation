@@ -1,14 +1,17 @@
 ---
 title: "Configure Accessibility DevTools"
 sidebarTitle: "Configure Accessibility DevTools"
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'DevTools', 'Accessibility Testing Settings']
 ---
+
 import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <BrandName /> Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
 
-<Warning> Click on your **profile icon** >> **Settings** button.</Warning>
+> Click on your **profile icon** >> **Settings** button.
 
-![automation-dashboard](/assets/images/accessibility-testing/settings/1.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/settings/1.png' alt="automation-dashboard" />
 
 ## Scan Settings
 
@@ -33,7 +36,7 @@ capabilities: [{
 accessibility.wcagVersion: 'wcag21a'
 ```
 
-![automation-dashboard](/assets/images/accessibility-testing/settings/4.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/settings/4.png' alt="automation-dashboard" />
 
 ### Review Issues
 
@@ -45,14 +48,14 @@ To enable the needs review checks in your automated tests, set the capability `n
 needsReview: true
 ```
 
-![automation-dashboard](/assets/images/accessibility-testing/settings/5.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/settings/5.png' alt="automation-dashboard" width="1346" height="647" />
 
 - This will open the list of issues that needs to be reviewed.
 - Click on the particular issue >> select that particular element that you want to confirm it as an issue.
 - Click on **Yes** option to confirm it as an issue.
 - You can also **Undo** that particular issue. This means if you will visit that issue again, you can see an **undo** option which will unlist it again from the list of **confirmed issues**.
 
-![automation-dashboard](/assets/images/accessibility-testing/settings/6.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/settings/6.png' alt="automation-dashboard" />
 
 ### Best Practices
 
@@ -68,9 +71,9 @@ bestPractice: true
 
 ### Autosave Reports
 
-<Warning>**Note :** By default, this option is activated.</Warning>
+>**Note :** By default, this option is activated.
 
 - Toggle to activate / deactivate the option.
 - This option ensures that your tests are consistently saved on the dashboard.
 
-![automation-dashboard](/assets/images/accessibility-testing/settings/3.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/settings/3.png' alt="automation-dashboard" />

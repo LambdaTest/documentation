@@ -1,21 +1,17 @@
 ---
 title: "Branch-Level Merging in SmartUI"
 sidebarTitle: "Merging Branches"
-keywords:
-  [
-  "Branch Merging",
-  "SmartUI Git",
-  "Visual Regression Testing",
-  "Git Integration",
-  "Merge Strategy",
-  "Branch Management"
-]
+keywords: ['Branch Merging', 'SmartUI Git', 'Visual Regression Testing', 'Git Integration', 'Merge Strategy', 'Branch Management']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 <Info>
-INFO
+**This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.**
 
-This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.
 </Info>
 
 ## Branch-Level Merging
@@ -100,8 +96,8 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Merge Planning'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Merge Planning">
 
 **Merge Planning**
 
@@ -110,7 +106,7 @@ npx smartui merge branch --source release/v1.0.0 --target main
    - Establish approval processes
 
 </Tab>
-<Tab title='Branch Management' >
+<Tab title="Branch Management">
 
 **Branch Management**
 
@@ -119,7 +115,7 @@ npx smartui merge branch --source release/v1.0.0 --target main
    - Maintain clear branch naming
 
 </Tab>
-<Tab title='Approval Process' >
+<Tab title="Approval Process">
 
 **Approval Process**
 
@@ -132,8 +128,8 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Merge Conflicts'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Merge Conflicts">
 
 Merge Conflicts
 
@@ -142,14 +138,14 @@ Merge Conflicts
    - Review merge history
 
 </Tab>
-<Tab title='Status Issues' >
+<Tab title="Status Issues">
 
 Status Issues
 
 - Verify build status
    - Check permissions
    - Review approval history
-If you encounter any issues with branch merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmu.ai.
 
 </Tab>
 </Tabs>
@@ -267,7 +263,6 @@ jobs:
    - Check merge naming in SmartUI dashboard
 
 <Note>
-NOTE
+**The branch merging process works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.**
 
-The branch merging process works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
 </Note>

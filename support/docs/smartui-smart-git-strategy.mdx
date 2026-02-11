@@ -1,21 +1,17 @@
 ---
 title: "Smart Git Strategy in SmartUI"
 sidebarTitle: "Smart Git Strategy"
-keywords:
- [
-  "Smart Git",
-  "Dynamic Branch Comparison",
-  "SmartUI Git Strategy",
-  "Visual Regression Testing",
-  "Git Integration",
-  "Branch Comparison"
-]
+keywords: ['Smart Git', 'Dynamic Branch Comparison', 'SmartUI Git Strategy', 'Visual Regression Testing', 'Git Integration', 'Branch Comparison']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 <Info>
-INFO
+**Smart Git is an advanced feature in SmartUI that provides intelligent branch comparison and management capabilities. This guide explains how to use Smart Git effectively in your visual regression testing workflow.**
 
-Smart Git is an advanced feature in SmartUI that provides intelligent branch comparison and management capabilities. This guide explains how to use Smart Git effectively in your visual regression testing workflow.
 </Info>
 
 ## What is Smart Git?
@@ -33,22 +29,22 @@ Smart Git is a feature that enhances the default Git branching strategy in Smart
 
 Smart Git can be enabled using an environment variable:
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='language'>
+<Tab title="MacOS/Linux">
 
 ```bash
 export SMART_GIT=true
 ```
 
 </Tab>
-<Tab title='Windows'>
+<Tab title="Windows">
 
 ```bash
 set SMART_GIT=true
 ```
 
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 
 ```powershell
 $env:SMART_GIT="true"
@@ -151,9 +147,8 @@ npx smartui --config .smartui.json exec -- <Your execution command>
 ```
 
 <Note>
-NOTE
+**The Smart Git management works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.**
 
-The Smart Git management works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
 </Note>
 
 **Result**:
@@ -163,8 +158,8 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Branch Naming'>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Branch Naming">
 
 **Branch Naming**
 
@@ -172,7 +167,7 @@ Use clear, consistent branch naming conventions.
 
 </Tab>
 
-<Tab title='Regular Updates'>
+<Tab title="Regular Updates">
 
 **Regular Updates**
 
@@ -180,7 +175,7 @@ Keep branches up to date with their parent branches.
 
 </Tab>
 
-<Tab title='Approval Process'>
+<Tab title="Approval Process">
 
 **Approval Process**
 
@@ -188,7 +183,7 @@ Establish clear approval criteria for each branch.
 
 </Tab>
 
-<Tab title='Documentation'>
+<Tab title="Documentation">
 
 **Documentation**
 
@@ -196,7 +191,7 @@ Document branch-specific visual changes.
 
 </Tab>
 
-<Tab title='Cleanup'>
+<Tab title="Cleanup">
 
 **Cleanup**
 
@@ -207,8 +202,8 @@ Regularly clean up old branches and their builds.
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Comparison Issues'>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Comparison Issues">
 
 **Comparison Issues**
 
@@ -219,7 +214,7 @@ Regularly clean up old branches and their builds.
 
 </Tab>
 
-<Tab title='Approval Issues'>
+<Tab title="Approval Issues">
 
 **Approval Issues**
 
@@ -233,4 +228,4 @@ Regularly clean up old branches and their builds.
 
 ### Getting Help
 
-If you encounter any issues with Smart Git, please contact our support team at support@lambdatest.com.
+If you encounter any issues with Smart Git, please contact our support team at support@testmu.ai.

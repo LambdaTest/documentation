@@ -1,21 +1,34 @@
----
-title: "CustomHeaders support for automation "
-sidebarTitle: "CustomHeaders"
-keywords: ['custom headers lambdatest','bypass firewalls restrictions','custom headers bypass firewalls']
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+
+﻿---
+id: appium-custom-header
+title: How to Use CustomHeaders Capability
+hide_title: true
+sidebarTitle: CustomHeaders
+description: Learn how to use <BrandName /> CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
+keywords:
+- custom headers testmu ai
+- bypass firewalls restrictions
+- custom headers bypass firewalls
+url: https://www.testmuai.com/support/docs/appium-custom-headers/
+site_name: <BrandName />
+slug: appium-custom-headers/
+canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
 ---
 
+#  CustomHeaders support for automation 
 
 Custom hеadеrs providе you thе ability to kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt. You can modify thе paramеtеrs of thе HTTP rеquеsts dеlivеrеd by your tеsts by manipulating with thеsе hеadеrs, thеrеby around firеwall rеstrictions. 
 
 In this documеntation, wе will look at LambdaTеst CustomHеadеrs, a `capability` that allows you to add custom hеadеrs to your tеsts and bypass firеwall rеstrictions whilе pеrforming automatеd browser tеsting. 
 
-
-## How to use CustomHeaders Capability on LambdaTest?
+## How to use CustomHeaders Capability on <BrandName />?
 
 ----
 
-To add custom headers using LambdaTest's CustomHeader capability, you need to use LambdaTest's Desired Capabilities class. 
+To add custom headers using <BrandName />'s CustomHeader capability, you need to use <BrandName />'s Desired Capabilities class. 
 
 1. Create an instance of the Desired Capabilities class.
 
@@ -34,7 +47,6 @@ In the above code snippet, you need to replace **headerName** and **headerValue*
 ---
 
 Custom headers serves different purposes for development and network communications. Here are some of its key use cases:
-
 
 1. **User Identification and Session Management**: Used to send tokens, session IDs to authenticate and identify users. This helps in managing user sessions, implement stateless authentication mechanisms, track user behavior.
 
@@ -117,4 +129,3 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
-

@@ -1,13 +1,13 @@
 ---
-title: "Getting Started with LambdaTest MCP Server"
-sidebarTitle: "Setting up LambdaTest MCP Server"
+title: "Getting Started with TestMu AI MCP Server"
+sidebarTitle: "Setting up TestMu AI MCP Server"
 keywords: ['hyperexecute performance testing', 'hyperexecute', 'testmu ai', 'MCP', 'MCP server']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <BrandName /> MCP Server is all-in-one MCP server that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
-
 
 ## What is Model Context Protocol (MCP)?
 
@@ -36,12 +36,11 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 2:** Click on the Extensions icon in the Activity Bar on the side of the window (or press `Ctrl+Shift+X`).<br />
 **Step 3:** Search for **Cline** in the Extensions Marketplace.
 
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/installing-cline.webp' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/installing-cline.webp' alt="automation-dashboard"  width="1920" height="868"/>
 
 **Step 4:** Click **Install** on the Cline – The Collaborative AI Coder extension.<br />
 **Step 5:** Once installed, you'll see the Cline icon in your VS Code sidebar.<br />
 **Step 6:** Click on the Cline icon to open the Cline panel.<br />
-
 
 ### Connecting Cline to <BrandName /> MCP Server
 
@@ -49,19 +48,18 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 
 **Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
 **Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/vs-code-config.webp' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/vs-code-config.webp' alt="automation-dashboard"  width="1920" height="868"/>
 
 **Step 3:** Add Server Name as **MCP-<BrandName />**.<br />
 **Step 4:** Enter the following server configuration and save it: `https://mcp.lambdatest.com/mcp` <br />
 **Step 5:** Click on Authenticate and you will be redirected to lambdatest.com for authentication. 
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-mcp-auth.png' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-mcp-auth.png' alt="automation-dashboard"  width="1920" height="868"/>
 **Step 6:** Provide valid credentials and authorise client to use <BrandName /> MCP server. 
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-auth-credentials.png' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-auth-credentials.png' alt="automation-dashboard"  width="1920" height="868"/>
 **Step 7:** Post authorisation, launch your IDE. 
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-ide-auth.png' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-**Step 8:** MCP Lambdatest should be connected successfully.
-<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-mcp-success.png' alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-ide-auth.png' alt="automation-dashboard"  width="1920" height="868"/>
+**Step 8:** MCP <BrandName /> should be connected successfully.
+<img loading="lazy" src='/assets/images/hyperexecute-mcp/lt-mcp-success.png' alt="automation-dashboard"  width="1920" height="868"/>
 
 ### Interacting with <BrandName /> MCP Server
 
@@ -69,7 +67,7 @@ Once connected, you can start using Cline to interact with the <BrandName /> MCP
 
 **Step 1:** Open your project in VS Code.<br />
 **Step 2:** Open the Cline panel.<br />
-**Step 3:** Type the following prompt: `Analyze the project and create a LambdaTest YAML file using MCP LambdaTest server.`<br />
+**Step 3:** Type the following prompt: `Analyze the project and create a TestMu AI YAML file using MCP TestMu AI server.`<br />
 **Step 4:** Cline will:
 - analyze your project structure.
 - Identify your testing framework and test files.

@@ -1,28 +1,26 @@
 ---
-title: Biometric Authentication on Real Devices
-sidebarTitle: Biometric Authentication
+title: "Biometric Authentication on Real Devices"
+sidebarTitle: "Biometric Authentication"
 keywords: ['biometric authentication', 'Fingerprint authentication', 'app test automation', 'Biometric security', 'Biometric Authentication Testing', 'Barcode scanning', 'testmu ai capture code', 'framework on testmu ai', 'Facial recognition', 'app testing appium', 'app testing', 'real devices']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Biometric Authentication is a security mechanism that utilizes unique biological traits to verify user identities. This feature is commonly implemented in native applications to enhance security while providing a frictionless user experience.
 
 <BrandName /> has extended its testing capabilities to include Biometric Authentication support for both iOS and Android real devices. This enhancement enables developers and QA teams to thoroughly evaluate their application's biometric authentication functionality across diverse device ecosystems.
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/32e7bBHiYKg"
-  title="YouTube video player"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<div className="ytframe"> 
+<div className="youtube" data-embed="32e7bBHiYKg">
+    <div className="play-button"></div>
+</div>
+</div>
 
-<Note>
-**INFO**
+<Info>
+****OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.**
 
-**OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
-</Note>
+</Info>
 
 ## Supported Biometric Authentication APIs
 
@@ -30,32 +28,28 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 
 <Tabs className="docs__val">
 
-<Tab value="bash" title="iOS" default>
+<Tab title="iOS">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `LAContext`: The LAContext class is used to interact with the local authentication framework.|
     | `evaluatePolicy`: The evaluatePolicy(_:localizedReason:reply:) method of LAContext used to actually perform the biometric authentication, such as verifying a user's face or fingerprint. |
     |`canEvaluatePolicy`: The canEvaluatePolicy(_:error:) method of LAContext that checks whether a specific biometric authentication policy can be evaluated on the device.|
-  </div>
 
 </Tab>
 
-<Tab value="powershell" title="Android >= version 11" default>
+<Tab title="Android >= version 11">
 
-  <div className="lambdatest__codeblock">
-    | Supported APIs |
+  | Supported APIs |
     |----------------|
     | `BiometricPrompt` class's `authenticate` method from the **AndroidX Biometric library** is used for Biometric authentication on Android devices. <br /><br />📕For details, please check [AndroidX Biometric Documentation](https://developer.android.com/jetpack/androidx/releases/biometric). |
     | **Android's Native** `BiometricPrompt` API is part of the Android platform and is used for Biometric authentication on Android devices.<br /><br />📕 For details, please check [Android Developers Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricPrompt).|
-  </div>
 
 </Tab>
 </Tabs>
 
-<Warning> 
-**NOTE**
+<Warning>
+**note**
 
 The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
 </Warning>
@@ -70,14 +64,13 @@ This feature allows you to simulate successful or failed biometric authenticatio
 
 **Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Biometric Authentication** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
 
-<Note>
-**INFO**
+<Info>
+**After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.**
 
-After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.
-</Note>
+</Info>
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/biometric-authentication/biometric-authentication.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/biometric-authentication/biometric-authentication.png' />
 
-**Step 4:** Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
+**Step 4:** Once your session starts and biometric authentication is enabled for the app, use <BrandName />'s **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
 
-<img loading="lazy" src='/assets/images/real-device-app-testing/biometric-authentication/biometric-ss.png' className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-device-app-testing/biometric-authentication/biometric-ss.png' />

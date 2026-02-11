@@ -1,27 +1,27 @@
 ---
-title: "Getting Started With Playwright Testing"
+title: "How To Run Playwright Tests On TestMu AI Platform"
 sidebarTitle: "Playwright Testing"
-keywords: ['playwright testing', 'playwright automation', 'playwright lambdatest', 'playwright cloud testing']
----
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
-
+keywords: ['playwright testing', 'playwright e2e testing', 'playwright mobile testing', 'playwright testing tool', 'playwright testing on testmu ai', 'playwright testing testmu ai']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Getting Started With Playwright Testing
+* * *
 Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient [automated browser testing](https://www.lambdatest.com/automated-browser-testing). Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
-LambdaTest allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the LambdaTest platform.
-
+<BrandName /> allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
 
 *You can run tests using Playwright versions **v1.15.0** to the latest.*
 
 ## Prerequisites
----
-<Note>
-Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<GitHubButton url="https://github.com/LambdaTest/playwright-sample/" />
-</Note>
+***
 
-1. Clone the LambdaTest-Playwright repository on your system.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+<a href="https://github.com/<BrandName />/playwright-sample/" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+1. Clone the <BrandName />-Playwright repository on your system.
 
 2. Install the npm dependencies.
 
@@ -35,10 +35,9 @@ npm install
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-4. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+4. In order to run your Playwright tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<img loading="lazy" src='/assets/images/playwright-testing/key.webp' alt="Image" width="1444" height="703"  className="doc_img"/>
-
+<img loading="lazy" src='/assets/images/playwright-testing/key.webp' alt="Image" width="1444" height="703" />
 
 **Windows**
 
@@ -81,9 +80,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
   })
   ```
 
-Once you are done with the above-mentioned steps, you can initiate your first Playwright test on LambdaTest. 
+Once you are done with the above-mentioned steps, you can initiate your first Playwright test on <BrandName />. 
 
-The below test script searches the term 'LambdaTest' on Bing.
+The below test script searches the term '<BrandName />' on Bing.
 
 ```js
 const { chromium } = require('playwright')
@@ -115,12 +114,12 @@ const { expect } = require('@playwright/test');
 
   const element = await page.$('[aria-label="Enter your search term"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI - Search')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -139,16 +138,14 @@ node playwright-single.js
 ```
 
 ## View your Playwright test results
----
+***
 
-The LambdaTest Automation Dashboard is where you can see the results of your Playwright tests after running them on the LambdaTest platform. 
+The <BrandName /> Automation Dashboard is where you can see the results of your Playwright tests after running them on the <BrandName /> platform. 
 
-The below screenshot of LambdaTest Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-<img loading="lazy" src='/assets/images/playwright-testing/dashboard.webp' alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/playwright-testing/dashboard.webp' alt="Image" width="1444" height="703" />
 
 On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
 
-<img loading="lazy" src='/assets/images/playwright-testing/pw-build.webp' alt="Image" width="1347" height="616"  className="doc_img"/>
-
-
+<img loading="lazy" src='/assets/images/playwright-testing/pw-build.webp' alt="Image" width="1347" height="616" />

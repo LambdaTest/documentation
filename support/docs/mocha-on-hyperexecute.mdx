@@ -1,12 +1,13 @@
 ---
-title: "Running Mocha Framework Tests on HyperExecute"
+title: "Run automation tests on HyperExecute using Puppeteer Mocha"
 sidebarTitle: "Mocha"
 keywords: ['unittest', 'unittest selenium', 'python selenium', 'unit testing', 'unit testing tutorial', 'python unit testing', 'python automation testing', 'selenium webdriver python', 'selenium python testing tutorial', 'python selenium framework', 'selenium', 'selenium automation testing', 'selenium testing tool', 'selenium testing tutorial', 'hyperexecute', 'hyperexecute pyunit testing', 'hyperexecute automation testing', 'hyperexecute pyunit testing', 'hyperexecute python testing']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
+# Running Mocha Framework Tests on HyperExecute
 Mocha is a versatile JavaScript testing framework often used in conjunction with Puppeteer for testing web applications. With support for asynchronous testing and various reporting options, Mocha enables the creation of robust test suites. When combined with Puppeteer, Mocha facilitates end-to-end testing of web pages by allowing developers to control browser interactions.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
@@ -24,25 +25,25 @@ Follow the step-by-step guide to execute your test on HyperExecute.
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
 ### Step 1: Download the Sample Repository
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**Sample repo**
 
-Download or Clone the code sample for the Mocha from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the JUnit from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-puppeteer-mocha-sample.git" />
-</Check>
+<a href="https://github.com/<BrandName />/hyperexecute-puppeteer-mocha-sample.git" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+
+</Tip>
 
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
 
 By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
-
 
 Configure the desired capabilities based on your test requirements. For example:
 
@@ -60,9 +61,10 @@ exports.capabilities = {
 	}
 };
 ```
-<Note>
-You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
-</Note>
+<Warning>
+You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
+</Warning>
+
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -82,23 +84,33 @@ You can download the CLI for your desired platform from the below mentioned link
 
 #### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ### Step 3: Configure YAML in your Test Suite
@@ -150,9 +162,10 @@ jobLabel: [puppeteer-Mocha, linux, autosplit]
 
 ### Step 4: Execute your Test Suite
 
-<Note>
-**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -163,24 +176,26 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png" alt="JUnit HyperExecute Terminal Logs" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png' alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" />
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png" alt="JUnit HyperExecute Terminal Logs" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png' alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" />
 
 ### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png' alt="automation-dashboard"  width="1920" height="868" />
 
 ### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png' alt="automation-dashboard"  width="1920" height="868" />
 
 ## 2. Testing Using Gitpod
 
@@ -190,27 +205,26 @@ Follow the below steps to run Test using Gitpod:
 
 **Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
 
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Puppeteer&framework=Mocha)
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png"  />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Puppeteer&framework=Mocha)
 
-**Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
+**Step 2:** Login with <BrandName /> credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/gitpod_popup.png" alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/gitpod_popup.png' alt="Gitpod popup" width="1919" height="878" />
 
 **Step 3:** Choose your preferred editor (we recommend VS Code Editor)
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/gitpod_config.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/gitpod_config.png' alt="Image" />
 
 **Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/gitpod2.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/gitpod2.png' alt="Image" />
 
 **Step 5:**  Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
-<Check>
-**TIP:**
+<Tip>
+**You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.**
 
-You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
-</Check>
+</Tip>
 
 ## Navigation in Automation Dashboard
 
@@ -218,14 +232,11 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 
 You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png' alt="automation-dashboard"  width="1920" height="868" />
 
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png" alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png' alt="automation-dashboard"  width="1920" height="868" />
 
-<Note>
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 Happy testing!
-</Note>
-

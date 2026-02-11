@@ -1,19 +1,11 @@
 ---
-title: "Fragment Identifier for Accessibility Testing"
+title: "Accessibility Fragment Identifier"
 sidebarTitle: "Fragment Identifier"
-keywords:
-  [
-    "LambdaTest",
-    "Accessibility",
-    "Testing",
-    "Manual",
-    "Accessibility Testing Settings",
-    "Fragment identifier",
-    "wcag",
-  ]
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Manual', 'Accessibility Testing Settings', 'Fragment identifier', 'wcag']
 ---
 
----
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers (the part after `#`) as separate entities for accessibility issue tracking and management. This advanced feature enhances the precision of accessibility audits by categorizing issues based on specific page sections or states.
 
@@ -28,11 +20,9 @@ To enable the Fragment Identifier feature:
 3. Locate the **Fragment Identifier** option
 4. Toggle the setting to **enabled**
 
-![Native Mobile App Testing](/assets/images/accessibility-testing/features/accessibility-fragment-identifier.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/features/accessibility-fragment-identifier.png' alt="Native Mobile App Testing" style={{ width: "650px", height: "auto"}} />
 
-<Warning>
-  **Note:** This feature is **disabled by default**. When disabled, URLs with different fragment identifiers are treated as the same URL for issue tracking.
-</Warning>
+> **Note:** This feature is **disabled by default**. When disabled, URLs with different fragment identifiers are treated as the same URL for issue tracking.
 
 ## How Fragment Identifier Works
 
@@ -42,7 +32,7 @@ Fragment identifiers are the portion of a URL that comes after the `#` symbol. T
 
 ### Default Behavior (Feature Disabled)
 
-```bash
+```
 URL: https://example.com/page#section1
 URL: https://example.com/page#section2
 URL: https://example.com/page#section3
@@ -52,7 +42,7 @@ Result: All issues grouped under "https://example.com/page"
 
 ### Enhanced Behavior (Feature Enabled)
 
-```bash
+```
 URL: https://example.com/page#section1
 URL: https://example.com/page#section2
 URL: https://example.com/page#section3

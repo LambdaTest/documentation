@@ -1,9 +1,11 @@
 ---
 title: "TOTP Authentication in KaneAI"
 sidebarTitle: "TOTP Authentication"
-keywords: ['authenticator', 'totp','MFA', '2FA', 'authentication']
+keywords: ['authenticator', 'totp', 'MFA', '2FA', 'authentication']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Introduction
 
@@ -15,7 +17,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 2. At runtime KaneAI calculates the correct Time-based OTP code every 30 seconds.
 3. You can reference the TOPT code as a smart variable inside any test step, assertion, or API call.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/SlashTOTP.jpg' alt="Add TOTP secret key" />
+<img loading="lazy" src='/assets/images/kane-ai/features/SlashTOTP.jpg' alt="Add TOTP secret key" className="doc\_img" />
 
 ## Prerequisites
 
@@ -32,7 +34,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 4. Click **Save**.
 5. A **smart variable** gets generated which provides the 6-digit code based on above secret key when invoked.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/TOTPKey.jpg' alt="Add TOTP secret modal" />
+<img loading="lazy" src='/assets/images/kane-ai/features/TOTPKey.jpg' alt="Add TOTP secret modal" className="doc\_img" />
 
 ### Insert the TOTP into your test
 
@@ -40,7 +42,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 2. Use the smart variable generated to add your instruction such as "Enter `{{totp}}` in verify field"
 3. KaneAI fetches and inserts the 6-digit code.
 
-<img loading="lazy" src='/assets/images/kane-ai/features/InsertTOTP.jpg' alt="Insert OTP variable" />
+<img loading="lazy" src='/assets/images/kane-ai/features/InsertTOTP.jpg' alt="Insert OTP variable" className="doc\_img" />
 
 ## Video Explanation
 

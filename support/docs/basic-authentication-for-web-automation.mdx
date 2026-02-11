@@ -1,10 +1,10 @@
 ---
 title: "Basic Authentication for Safari Web Automation"
 sidebarTitle: "Basic Authentication for Safari Web Automation"
-keywords: ['basic authentication','safari web automation','web automation','basic authentication for web automation','app testing','real devices']
-
+keywords: ['basic authentication', 'safari web automation', 'web automation', 'basic authentication for web automation', 'app testing', 'real devices']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 ## Introduction
@@ -13,13 +13,11 @@ Basic Authentication is a method for an HTTP user agent to provide a user name a
 
 To provide support for Basic Authentication in Safari during Web Automation, we have introduced a new lambda hook in our `iOS` Real Device (RD) web sessions.
 
+<Info>
+**1. This hook is not compatible with any app-based sessions.**
 
-<Note>
-**INFO**
-
-1. This hook is not compatible with any app-based sessions.
 2. The capability `autoAcceptAlerts` must be set to `false`.
-</Note>
+</Info>
 
 ## How to Use
 ---
@@ -34,14 +32,11 @@ data = {
 driver.execute_script("lambda-ios-set-basic-auth", data)
 ```
 
-<Note>
-**INFO**
+<Info>
+**It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.**
 
-It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.
-</Note>
+</Info>
 
 ## Limitations
 ---
 Please note, this hook is designed to be used exclusively with Safari on iOS Real Device (RD) web sessions and is not compatible with Android sessions or any app-based sessions.
-
-

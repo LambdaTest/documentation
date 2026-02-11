@@ -1,22 +1,25 @@
 ---
-title: "Applitools Integration With LambdaTest For Cypress"
+title: "Applitools Integration With TestMu AI For Cypress"
 sidebarTitle: "Applitools Integration For Cypress"
 keywords: ['lambdatest integrations','applitools for cypress','lambdatest cypress','cypress automation','lambdatest integration with applitools','applitools integration','cross browser testing','free cross browser testing tool']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
-**Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **LambdaTest**.
+**Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **<BrandName />**.
 
 <Warning>
-Before getting started, make sure you have made accounts in **LambdaTest** and **Applitools** platforms.
+Before getting started, make sure you have made accounts in **<BrandName />** and **Applitools** platforms.
 </Warning>
 
 ## Setting Up Applitools Dependencies And Packages
 
 ---
 
-You can download or clone the sample GitHub project from the following repo - [Cypress-LambdaTest-Applitools-Integration](https://github.com/gaurav8760/Cypress-LambdaTest-Applitools-Integration). Navigate to your project directory and follow these steps:
+You can download or clone the sample GitHub project from the following repo - [Cypress-<BrandName />-Applitools-Integration](https://github.com/gaurav8760/Cypress-<BrandName />-Applitools-Integration). Navigate to your project directory and follow these steps:
 
 - Install the **NPM dependencies** using the below command:
 
@@ -34,7 +37,7 @@ You can download or clone the sample GitHub project from the following repo - [C
 
   ***
 
-  <img loading="lazy" src='/assets/images/applitools-cypress/applitools1.webp' alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/applitools-cypress/applitools1.webp' alt="Image" width="1353" height="622"/>
 
 <Warning>
 Set the **testConcurrency** and **browser configuration** as per the requirement.
@@ -48,11 +51,11 @@ Set the **testConcurrency** and **browser configuration** as per the requirement
 <Warning>
 It will create Applitools Eyes to an Existing Node.js Cypress Project.
 </Warning>
-## Setting up LambdaTest CLI and Dependencies
+## Setting up <BrandName /> CLI and Dependencies
 
 ---
 
-- Install the LambdaTest CLI using below command:
+- Install the <BrandName /> CLI using below command:
 
   ```bash
   npm install -g lambdatest-cypress-cli
@@ -66,11 +69,11 @@ It will create Applitools Eyes to an Existing Node.js Cypress Project.
 <Warning>
 It will create a **lambdatest-config.json** file in the root directory of your project.
 </Warning>
-- Add spec file path in the `run_setting` and your **LambdaTest credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
+- Add spec file path in the `run_setting` and your **<BrandName /> credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
 
   ***
 
-  <img loading="lazy" src='/assets/images/applitools-cypress/applitools2.webp' alt="Image" width="1353" height="622" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/applitools-cypress/applitools2.webp' alt="Image" width="1353" height="622"/>
 
 ## Running The Sample Project
 
@@ -82,26 +85,26 @@ Execute your first test case using the below command:
 lambdatest-cypress run
 ```
 
-<img loading="lazy" src="/assets/images/applitools-cypress/applitools3.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src="/assets/images/applitools-cypress/applitools3.webp" alt="Image" width="1353" height="622"/>
 
 ---
 <Warning>
 The first test case that you execute will be considered as the base image by default by Applitools.
 </Warning>
-<img loading="lazy" src='/assets/images/applitools-cypress/applitools4.webp' alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src='/assets/images/applitools-cypress/applitools4.webp' alt="Image" width="1353" height="622"/>
 
 ---
 
 Edit the URL in the `applitoolsIntegration.spec.js` file and run your second test by using the same run command.
 
-<img loading="lazy" src="/assets/images/applitools-cypress/applitools5.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src="/assets/images/applitools-cypress/applitools5.webp" alt="Image" width="1353" height="622"/>
 
 ---
 
 Applitools will compare the base image with this test and highlight the difference.
 
-<img loading="lazy" src="/assets/images/applitools-cypress/applitools6.webp" alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src="/assets/images/applitools-cypress/applitools6.webp" alt="Image" width="1353" height="622"/>
 <Warning>
-That’s all! you have successfully integrated **Applitools** and **LambdaTest** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+That’s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
 </Warning>
 

@@ -1,8 +1,11 @@
 ---
-title: Upload and Download Files
-sidebarTitle: Upload and Download Files
+title: "Upload and Download Files"
+sidebarTitle: "Upload and Download Files"
 keywords: ['real time testing in testmu ai', 'testmu ai real time testing feature', 'online real time testing', 'free cross browser testing tool', 'cross browser compatibility testing tool', 'online real time website testing', 'test website in different screen sizes', 'ie browser compatibility testing tool', 'test on gionee elfie e7 online', 'test on mac 10.11 el capitan online', 'apple mac el capitan virtual machine']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 The Upload and Download Files feature allows you to manage files directly within remote testing environments. This functionality enhances the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 
@@ -16,7 +19,7 @@ The Upload and Download Files feature allows you to manage files directly within
 ## Steps to Upload or Download the Files
 
 <Tabs className="docs__val">
-<Tab value="web-browser" title="Web Browser" default>
+<Tab title="Web Browser">
 
 **Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
 
@@ -26,11 +29,11 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-web-browser.png' alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-web-browser.png' alt="zebrunner integration" width="1281" height="722" />
 
 </Tab>
 
-<Tab value="mobile-browser" title="Mobile Browser" default>
+<Tab title="Mobile Browser">
 
 **Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
 
@@ -40,11 +43,11 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-mobile-browser.png' alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-mobile-browser.png' alt="zebrunner integration" width="1281" height="722" />
 
 </Tab>
 
-<Tab value="mobile-app" title="Mobile App" default>
+<Tab title="Mobile App">
 
 **Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
 
@@ -54,7 +57,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-app.png' alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
+<img loading="lazy" src='/assets/images/real-time-testing/key-features/upload-download-app.png' alt="zebrunner integration" width="1281" height="722" />
 
 </Tab>
 </Tabs>
@@ -62,7 +65,7 @@ The Upload and Download Files feature allows you to manage files directly within
 ## Supported Platform Compatibility
 
 <Tabs className="docs__val">
-<Tab value="android" title="Android" default>
+<Tab title="Android">
 
 - **Supported Versions :** Android 7 and above.
 
@@ -72,7 +75,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 </Tab>
 
-<Tab value="ios" item="iOS" default>
+<Tab title="iOS">
 
 - **Supported Versions :** iOS 13 and above.
 - **Upcoming Support :** iOS 18 support is planned for a future release.
@@ -85,7 +88,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 </Tab>
 
-<Tab value="windows" title="Windows" default>
+<Tab title="Windows">
 
 - **Supported Versions :** Windows versions newer than XP and Windows 7 with Internet Explorer 8, 9, or 10.
 - **Download Location :** Files are stored in the C:/ or E:/Downloads folder.
@@ -93,7 +96,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 </Tab>
 
-<Tab value="macos" title="macOS" default>
+<Tab title="macOS">
 
 - **Supported Versions :** macOS Sierra (version 10.12) and above.
 - **Download Location :** Downloaded files are accessible under "Downloads" in Finder.
@@ -105,7 +108,7 @@ The Upload and Download Files feature allows you to manage files directly within
 ## File Types and Sizes
 
 <Tabs className="docs__val">
-<Tab value="upload" title="Uploading Files" default>
+<Tab title="Uploading Files">
 
 | File Type | Supported Formats | Maximum File Size |
 |-----------|-------------------|-------------------|
@@ -114,7 +117,7 @@ The Upload and Download Files feature allows you to manage files directly within
 | Non-media | XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, PPT, Contacts | 15 MB |
 
 </Tab>
-<Tab value="download" title="Downloading Files" default>
+<Tab title="Downloading Files">
 
 | File Type | Supported Formats |
 |-----------|-------------------|
@@ -123,12 +126,10 @@ The Upload and Download Files feature allows you to manage files directly within
 </Tab>
 </Tabs>
 
-<Note>
-**INFO**
+<Info>
+**- **Number of File Uploads per Session :** You can upload 5 files max per testing session.**
 
-- **Number of File Uploads per Session :** You can upload 5 files max per testing session.
-
-- **File Storage Duration :** All files uploaded to TestMu AI servers, whether media or non-media, will be retained for a period of 30 days. After this period, the files will be automatically purged from the servers.
+- **File Storage Duration :** All files uploaded to <BrandName /> servers, whether media or non-media, will be retained for a period of 30 days. After this period, the files will be automatically purged from the servers.
 
 {/* - **Non-Media File Considerations for iOS :** For non-media files on iOS, it is imperative to ensure that the iOS app has the `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` keys set to `true` in the `Info.plist` file. */}
-</Note>
+</Info>

@@ -1,24 +1,29 @@
 ---
-title: "Katalon Integration with HyperExecute"
+title: "Katalon"
 sidebarTitle: "Katalon"
-keywords: ['hyperexecute integrations','hyperexecute integrations with products','products','katalon','katalon studio']
-
+keywords: ['hyperexecute integrations', 'hyperexecute integrations with products', 'products', 'katalon', 'katalon studio']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Katalon Integration with HyperExecute
 
 [Katalon Studio](https://www.katalon.com) is an automation tool for testing web, API, mobile, and desktop applications. It offers a flexible automation platform that fits teams and projects of all sizes and purposes. It also helps uses create tests, execute them and integrate them with the CI/CD ecosystem.
 
-<iframe width="100%" height="400px" src="https://www.youtube.com/embed/WWLAeftaj-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div className="ytframe"> 
+<div className="youtube" data-embed="WWLAeftaj-4">
+    <div className="play-button"></div>
+</div>
+</div>
 
-<Note>
-Katalon Studio Integration with HyperExecute enables cross-platform testing, from web automation on Windows, macOS, and Linux to mobile automation on Android and iOS.
-</Note>
+> Katalon Studio Integration with HyperExecute enables cross-platform testing, from web automation on Windows, macOS, and Linux to mobile automation on Android and iOS.
 
 It also comes with a built-in interface for codeless automation testing and validating the UI elements of your web application.
 
 ## Prerequisites
 
--   Ensure that you have integrated Katalon Studio with <BrandName />. Follow the steps on this [page](/support/docs/katalon-integration-with-lambdatest) to do so.
+-   Ensure that you have integrated Katalon Studio with <BrandName />. Follow the steps on this [page](/support/docs/katalon-integration-with-testmu/) to do so.
     
 -   Ensure that you have the necessary licenses required to use Katalon Studio. You need the Katalon Runtime License to integrate Katalon with HyperExecute.
 
@@ -28,13 +33,13 @@ It also comes with a built-in interface for codeless automation testing and vali
 
    a. Generate a command for Console mode through the Katalon UI. Click on the **Command Builder** button on the top of the screen. 
 
-   <img loading="lazy" src='/assets/images/hyperexecute/integration/products/katalon/katalon1.png' alt="Image"  className="doc_img"/>
+   <img loading="lazy" src='/assets/images/hyperexecute/integration/products/katalon/katalon1.png' alt="Image" />
 
    b. Select the test suite that you want to use and click on **Generate Command**.
 
    c. Click on the **Copy to Clipboard** button to copy the command.
 
-   <img loading="lazy" src='/assets/images/hyperexecute/integration/products/katalon/katalon2.png' alt="Image"  className="doc_img"/>
+   <img loading="lazy" src='/assets/images/hyperexecute/integration/products/katalon/katalon2.png' alt="Image" />
 
 2. Clear the contents of the .gitignore file in the root directory of your Katalon project. 
 
@@ -79,6 +84,4 @@ Paste the command that you generated from the Katalon UI to fill the **testRunne
 
 5. Run the Hyperexecute CLI commands from the same path as your Katalon project. 
 
-
-You have successfully integrated your Katalon Studio project with HyperExecute. 
-
+You have successfully integrated your Katalon Studio project with HyperExecute.

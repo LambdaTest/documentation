@@ -1,82 +1,111 @@
 ---
 title: "Authentication"
 sidebarTitle: "Authentication"
-keywords: ['cypress authentication', 'cypress automation', 'cypress testing', 'cypress lambdatest']
+keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Testing Online', 'Run Cypress', 'Cypress Run Specific Test', 'Cypress Testing Environment', 'How to Run Cypress Tests']
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
 
 Authenticate your Cypress test runs in the following ways -
 
 1. Set up the **environment variables**. (or)
 2. Utilizing the **CLI params**. (or)
-3. Mention your **username** and **access key** in the **lambdatest-config.json**.
+3. Mention your **username** and **access key** in the **testmu ai-config.json**.
 
+<Info>
+**Note**
 
-## Utilizing CLI Params
+We use the following order of precedence to determine which auth credentials to use if you use more than one option to pass your auth credentials:
+CLI arguments > Options set in testmu ai-config.json > Environment variables
+</Info>
+
+## Utilizing CLI Params:
+
+---
 
 The following args can be used while running tests using the run command.
 
 | Arg        | Shorthand | Accepted values            |
 | ---------- | --------- | -------------------------- |
-| --username | --user        | Your LambdaTest username   |
-| --access_key      | --ak        | Your LambdaTest access key |
+| --username | --user        | Your <BrandName /> username   |
+| --access_key      | --ak        | Your <BrandName /> access key |
 
 For example -
 
 ```bash
-lambdatest-cypress run --username=YOUR_LAMBDATEST_USERNAME --ak=YOUR_LAMBDATEST_ACCESS_KEY
+
+  {`testmu ai-cypress run --username=${ YOUR_LAMBDATEST_USERNAME()} --ak=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+  
 ```
 
-## Using lambdatest-config.json
+## Using testmu ai-config.json:
 
-The auth option will help you in specifying your username and access key. You can find your username and access key in the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
+---
 
-<img loading="lazy" src='/assets/images/cypress/cypress3.png' alt="cmd" width="768" height="373" className="doc_img"/>
+The auth option will help you in specifying your username and access key. You can find your username and access key in the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the testmu ai-config.json file will get overridden.
+
+<img loading="lazy" src='/assets/images/cypress/cypress3.png' alt="cmd" width="768" height="373" />
 
 The options supported in the auth are as follows:
 
 | Arg            | Accepted values            |
 | -------------- | -------------------------- |
-| **username**   | Your LambdaTest username   |
-| **access_key** | Your LambdaTest access key |
+| **username**   | Your <BrandName /> username   |
+| **access_key** | Your <BrandName /> access key |
 
 For example -
 
-```json title="lambdatest-config.json"
+```json title="testmu ai-config.json"
 "lambdatest_auth": {
       "username": "<your username>",
       "access_key": "<your access key>"
    },
 ```
 
+## Setup the Environment Variables:
 
-## Setup the Environment Variables
+---
 
 While utilizing the CLI params, you can set up the following environment variables.
 
 | Env variable      | Accepted values            |
 | ----------------- | -------------------------- |
-| **LT_USERNAME**   | Your LambdaTest username   |
-| **LT_ACCESS_KEY** | Your LambdaTest access key |
+| **LT_USERNAME**   | Your <BrandName /> username   |
+| **LT_ACCESS_KEY** | Your <BrandName /> access key |
 
 Or you can also set environment variables using following commands:
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-    ```bash
-    export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-    export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
-  <Tab title="Windows">
-    ```powershell
-    set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-    set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-    ```
-  </Tab>
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \\
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \`
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
 </Tabs>
 
-<Check>
-**NOTE**
+<Tip>
+**Note**
 
-By doing so, the auth credentials you use in your **lambdatest-config.json** file will get overridden only if these options are not provided in **lambdatest-config.json** file.
-</Check>
+By doing so, the auth credentials you use in your **testmu ai-config.json** file will get overridden only if these options are not provided in **testmu ai-config.json** file.
+</Tip>

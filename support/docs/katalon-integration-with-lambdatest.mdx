@@ -1,15 +1,17 @@
 ---
-title: "Katalon Integration With Lambdatest"
+title: "Step By Step Guide to Integrate TestMu AI With Katalon"
 sidebarTitle: "Katalon"
-keywords: [ "Lambdatest integrations", "katalon", "katalon studio", "katalon vs selenium", "katalon studio tutorial", "katalon selenium" ]
+keywords: ['testmu ai integrations', 'katalon', 'katalon studio', 'katalon vs selenium', 'katalon studio tutorial', 'katalon selenium']
 ---
----
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 [Katalon Studio](https://www.katalon.com) is an automation tool for web, API, mobile, and desktop applications testing. Katalon Studio offers a flexible automation platform that fits teams and projects of any size, for any purpose. It supports users from creating tests, execution, reports to seamless integration with the CI/CD ecosystem.
 
 Katalon Studio offers cross-platform testing — from Windows, macOS, and Linux for web automation, to Android and iOS for mobile automation. It also comes with a built-in intuitive interface for codeless automation testing and validating the UI elements of your web application.
 
-This integration between Lambdatest and Katalon Studio enables you to automate the cross browser testing process through the Selenium Grid of more than 2,000 browsers.
+This integration between <BrandName /> and Katalon Studio enables you to automate the cross browser testing process through the Selenium Grid of more than 2,000 browsers.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="8rGM6H8uZZ0">
@@ -19,17 +21,17 @@ This integration between Lambdatest and Katalon Studio enables you to automate t
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
-## How To Integrate Lambdatest With Katalon?
+## How To Integrate <BrandName /> With Katalon?
 -----------------------------------------------------------------------------------------------------------------------------
-For integrating Lambdatest with Katalon, make sure to run your test scripts through the ‘Remote’ desired capability. You can select all your desired capabilities from [Lambdatest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+For integrating <BrandName /> with Katalon, make sure to run your test scripts through the ‘Remote’ desired capability. You can select all your desired capabilities from [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
-**Step 1:** Login to Lambdatest. If you haven’t signed up yet, click [here](https://accounts.lambdatest.com/register).
+**Step 1:** Login to <BrandName />. If you haven’t signed up yet, click [here](https://accounts.lambdatest.com/register).
 
-**Step 2:** Visit your Profile on Lambdatest to fetch your Username and Access Key value.
+**Step 2:** Visit your Profile on <BrandName /> to fetch your Username and Access Key value.
 
-![katalon integration](/assets/images/katalon/Katalon-1.webp)
+<img loading="lazy" src='/assets/images/katalon/Katalon-1.webp' alt="katalon integration" width="1365" height="652" />
 
-**Step 3:** You would require these values for generating a secure remote connection with Katalon through Lambdatest remote URL.
+**Step 3:** You would require these values for generating a secure remote connection with Katalon through <BrandName /> remote URL.
 
 ```json
 Remote URL = "http://username:accessKey@hub.lambdatest.com/wd/hub" 
@@ -39,21 +41,20 @@ Remote URL = "http://username:accessKey@hub.lambdatest.com/wd/hub"
 Example remote URL = "http://harshitp:ABCD1234PQRS@hub.lambdatest.com/wd/hub"
 ```
 
-**Step 4:** Visit Lambdatest Capabilities Generator for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
+**Step 4:** Visit <BrandName /> Capabilities Generator for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
 
-![declaring desired capabilities](/assets/images/katalon/Katalon-2.webp)
+<img loading="lazy" src='/assets/images/katalon/Katalon-2.webp' alt="declaring desired capabilities" width="1346" height="652" />
 
 The below execution is set up on Katalon version 5.10.1.
 
-![Steup Katalon version 5.10.1](/assets/images/katalon/3.webp)
+<img loading="lazy" src='/assets/images/katalon/3.webp' alt="Steup Katalon version 5.10.1" width="894" height="596" />
 
-**Step 5:** In Katalon Studio, open ‘Remote’ settings for passing Lambdatest settings. Go to Project → Settings → Desired Capabilities → Remote.
+**Step 5:** In Katalon Studio, open ‘Remote’ settings for passing <BrandName /> settings. Go to Project → Settings → Desired Capabilities → Remote.
 
-![Lambdatest settings](/assets/images/katalon/4.webp)
+<img loading="lazy" src='/assets/images/katalon/4.webp' alt="<BrandName /> settings" width="894" height="596"  />
 
 Once you select ‘Remote’ and provide the basic parameters then you only need to execute your automation tests. You can do that by going to Action → Run → Remote.
 
-![executing automation tests](/assets/images/katalon/5-1.webp)
+<img loading="lazy" src='/assets/images/katalon/5-1.webp' alt="executing automation tests" width="894" height="596" />
 
 If you have any questions, feel free to reach out to us through our **24×7 chat support**. Happy testing!
-

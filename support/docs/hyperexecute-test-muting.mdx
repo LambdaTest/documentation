@@ -1,28 +1,29 @@
 ---
-title: Test Muting
-sidebar_label: Test Muting
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation','Test Muting','Mute test cases']
-
+title: "Test Muting"
+sidebarTitle: "Test Muting"
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'Test Muting', 'Mute test cases']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Test Muting
 
 Imagine you are a software tester, and you have a test suite with hundreds of tests. Some of these tests are known to fail consistently, but there is no way to disable them. This means that every time you run the test suite, these failing tests cause the suite to fail. This can be frustrating and time-consuming, especially if you are trying to identify and resolve real problems with the application under test.
 
 **Test Muting** is a feature that allows you to temporarily disable a test case from being executed. This can be useful for skipping failing or irrelevant tests, which can improve the efficiency and effectiveness of your test runs and help you focus on the most important results.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/4.png' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/4.png' alt="Image" />
 
 ## How do you Enable Test Muting for your Organization?
 
 As you can see, we have triggered a Job in HyperExecute, and we've encountered a recurring issue with a specific test consistently failing. To address this, we will implement Test Muting functionality, enabling automatic muting of a test that fails a predefined consecutive number of times.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/8.png' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/8.png' alt="Image" />
 
 Now, to enable the Test Muting, follow the below mentioned steps:
 
-
-
-**Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
 
@@ -47,8 +48,6 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 ## How do you Manually Mute specific Tests?
 
-
-
 **Step 1:** Execute your job on HyperExecute.
 
 - Click on the **3 dots** of the desired test you want to **Mute**.
@@ -56,7 +55,7 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 2:** Trigger the same job again, and you will notice that particular test won't be executed.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/6.png' alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/test-muting/6.png' alt="Image" style={{width: '700px',}} />
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -67,14 +66,15 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 ## How do you UnMute Tests?
 
-
-
 **Step 1:** Click on the **3 dots** of the muted test.
 
 **Step 2:** Click on the **Unmute scenario** button. 
 
-<iframe loading="lazy" className="storylane-iframe" src="https://app.storylane.io/demo/m48g5owz95jz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/m48g5owz95jz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
-<Note>
-The test will remain in-active until manually unmuted.
-</Note>
+> The test will remain in-active until manually unmuted.

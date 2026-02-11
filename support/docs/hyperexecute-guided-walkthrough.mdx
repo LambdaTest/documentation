@@ -1,8 +1,11 @@
 ---
 title: "Guided Walkthrough of HyperExecute"
 sidebarTitle: "Guided Walkthrough"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation','FAQs']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation', 'FAQs']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
 
@@ -12,13 +15,13 @@ All the tests on HyperExecute get executed as a Job. All the Jobs can be found o
 
 On this page you have other things such as filters, help center, docs, [secrets management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) and much more. You can also filter through all of the jobs on the basis of the date, status, type etc.
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/1.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/1.png' alt="Image" />
 
-<Note>Learn more about [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/), getting [User Name and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from our [Knowledge Base](/support/docs/hyperexecute-knowledge-base/)</Note>
+> Learn more about [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/), getting [User Name and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from our [Knowledge Base](/support/docs/hyperexecute-knowledge-base/)
 
 ### Top Panel
     
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/3.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/3.png' alt="Image" />
 
 The top panel contains multiple items:
 
@@ -27,9 +30,9 @@ The top panel contains multiple items:
 - **Configure Tunnel**: Tunnel is used to ensure the security of your data for private websites. 
 - **Announcements**: The latest announcements and updates can be found here.
 - **Settings**: Manage all of your account and organisation details in this section.
-- **Upgrade**: You can upgrade your LambdaTest subscription from here.
+- **Upgrade**: You can upgrade your <BrandName /> subscription from here.
       
---- 
+*** 
 
 ## Job Details Page
 
@@ -49,17 +52,17 @@ You can click on a particular Job to navigate to the Job Details Page.
 - The left side shows all the Tasks (Just-in-time testing environments) that were a part of the Job.
 - Each Task has 3 types of Stages : [Pre stages, Scenario stages, Post stages](/support/docs/hyperexecute-status/#3-stage-level-status).
 
+{/* > **Note** - You can learn about Job, Tasks and Stages [here](/support/docs/hyperexecute-concepts/). */}
 
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/4.png' alt="Image" />
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/4.png' alt="Image"  className="doc_img"/>
-
---- 
+*** 
 
 ## Test Details
   
 You can access a much more detailed section for your test cases on the Automation dashboard by clicking on the **Test** button.
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/5.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/5.png' alt="Image" />
 
 It provides you with all the necessary data points that you need for your test. 
 
@@ -89,9 +92,12 @@ You can access the commands involved in the test, and the logs on the right hand
 -   **Network**: Access the network logs while your tests were getting executed on the **Network** tab.
 -   **Logs**: View all kinds of logs at one place. You can toggle between the **Console Logs**, **Terminal Logs** and the **Test Framework Logs**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/6.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/6.png' alt="Image" />
 
-<Note>**Note**: You can download the logs by clicking on the Download button on the top right-hand corner of the logs tab. </Note>
+<Note>
+**Note**: You can download the logs by clicking on the Download button on the top right-hand corner of the logs tab.
+</Note>
+
 
 ## Test Summary Hyperlink
 
@@ -99,18 +105,19 @@ This introduces clickable links within your **test summary**. When you click on 
 
 Additionally, upon redirection, the automation dashboard opens the relevant tab that aligns with the selected test status, streamlining your experience.
 
-  <img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/16.png' alt="Image"  className="doc_img"/> 
+  <img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/16.png' alt="Image" /> 
 
 ### How to Activate Test Summary Hyperlinks
 
 - #### Update your Org Configuration :
 
-<video controls className="w-full aspect-video rounded-xl" src="/assets/videos/hyperexecute/getting-started/guided-walkthrough/test-summary.mp4">
+<video class="right-side" width="100%" controls id="vid">
+<source src= '/assets/videos/hyperexecute/getting-started/guided-walkthrough/test-summary.mp4' type="video/mp4" />
 </video>
 
 - #### Frontend Configuration :
 
-  <Note> For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.</Note><br />
+  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
 
 - #### Backend Configuration :
 

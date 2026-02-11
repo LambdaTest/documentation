@@ -1,8 +1,10 @@
 ---
 title: "Deep Dive into HyperExecute YAML"
 sidebarTitle: "Deep Dive into HyperExecute YAML"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
@@ -19,9 +21,7 @@ version: 0.1
 
 ### `runson`
 In this flag, you will define your required Operating System on which you want to run your tests.
-<Note>
-Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
-</Note>
+> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
 
 ```yaml
 runson: linux # mac, mac13, win, win11
@@ -46,30 +46,26 @@ pre:
   - mvn install 
 ```
 
-<Note>
-📘 Refer to [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) command to perform a common global setup for all your tasks, such as installing dependencies or configuring environments.
-</Note>
+>📘 Refer to [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) command to perform a common global setup for all your tasks, such as installing dependencies or configuring environments.
 
 ***
 ## AutoSplit Mode Parameters
 
-
+{/* AUTOSPLIT MODE STARTED */}
 
 ### `autosplit` 
 Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-status/#3-stage-level-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-status/#2-task-level-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
 
 For instance, if you have a concurrency of 10 and you want to run 50 tests in total, AutoSplit mode will distribute these 50 tests on 10 VMs in the most efficient manner possible to reduce your overall job execution time.
 
-<Note>
-**Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
-</Note>
+> **Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
 
 ```yaml
 autosplit: true   
 ```
-<Note>
-📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
-</Note>
+
+> 📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
+
 ***
 
 ### `concurrency`
@@ -82,6 +78,7 @@ concurrency: 10
 ```
 <Tip>
 **Pro Tip**
+
 - After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
 - You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
 </Tip>
@@ -133,23 +130,30 @@ mode: local  #or
 # test discovery happens in designated HyperExecute VMs
 mode: remote
 ```
-
+{/* #test discovery happens on HyperExecute VMs
+mode: dynamic #or */}
 **`mode: local`**
 
 - **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
 - **Use Case:** Ideal for small projects or when tests need to be discovered locally.
 - **Limitations:** Requires dependencies installed locally and doesn’t support matrix-based distributions. Debugging logs are generated locally, limiting visibility.
 
+{/* **`mode: dynamic`**
 
-**`mode: remote`** <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
+- **Purpose:** Test discovery occurs on HyperExecute’s VMs during runtime, depending on the concurrency and OS settings.
+- **Use Case:** Suitable for scenarios where distributed test discovery is required across different VMs.
+- **Limitations:** Increases test execution time due to VM-level discovery. It also lacks efficient test distribution across VMs, and is incompatible with YAML 0.2 test discovery runners. */}
+
+**`mode: remote`** <NewTag value="NEW" bgColor="#ffec02" color="#000" />
 
 The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines. 
 
 This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
 
-<Note>
+<Warning>
 **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
-</Note>
+</Warning>
+
 
 #### Key Features:
 - **Centralized Discovery Tasks:** Tests are discovered remotely in a Virtual Machines designed for this purpose. Discovery tasks focus solely on identifying the tests without executing them, optimizing the discovery process.
@@ -169,9 +173,8 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 <Tip>
-**TIP**
+**- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.**
 
-- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 </Tip>
 
@@ -233,9 +236,8 @@ exclusionMatrix:
 In matrix mode, the [concurrency](/support/docs/deep-dive-into-hyperexecute-yaml/#concurrency) flag is not recognized. Therefore, in order to use the limited concurrencies that come with your license for a matrix-mode job, you need to set `combineTasksInMatrixMode` to `true`. This will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency, as opposed to using one machine per matrix combination.
 
 For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
-<Note>
-**Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
-</Note>
+
+> **Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
 
 ```yaml
 concurrency: 2
@@ -258,7 +260,7 @@ testSuites: - mvn test -Dtest=$files
 
 ## Hybrid Mode Parameters
 
-
+{/* HYBRID MODE STARTED */}
 
 ### `parallelism`
 `parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
@@ -338,9 +340,7 @@ cacheKey: '{{ checksum "pom.xml" }}'
 ```
 
 <Tip>
-**TIP**
-
-If you also use Windows, you can use **forward slashes** to specify the cache file's path if your file is inside one of the directories, as demonstrated below:
+**If you also use Windows, you can use **forward slashes** to specify the cache file's path if your file is inside one of the directories, as demonstrated below:**
 
 ```yaml
 cacheKey: {{ checksum "dir1/dir2/package-lock.json" }}
@@ -355,13 +355,11 @@ cacheDirectories:
   - .m2
 ```
 
-<Note>
-**INFO**
-
-In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+<Info>
+**In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />**
 
 If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then the default caching gets disabled and preference is given your specified cache.
-</Note>
+</Info>
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
@@ -387,15 +385,12 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-<Note>
-**INFO**
+<Info>
+**Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python****
 
-Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python**
-</Note>
+</Info>
 
-<Note>
-📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
-</Note>
+> 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
 
 ```yaml
 runtime:
@@ -450,9 +445,7 @@ retryOnFailure: true
 This feature helps avoid re-running the entire job to determine if a test failure is due to a genuine issue or a transient problem (e.g., flaky tests, network hiccups). By enabling `retryOnFailure`, only the failing command is retried, allowing for quicker feedback and more efficient test execution.
 
 <Tip>
-**TIP**
-
-If you are using Maven, ensure that the `testFailureIgnore` flag in your `pom.xml` is set to `false`. When `testFailureIgnore` is set to `true`, Maven treats test failures as ignored, causing HyperExecute’s retry mechanism to not trigger, even if `retryOnFailure` is enabled.
+**If you are using Maven, ensure that the `testFailureIgnore` flag in your `pom.xml` is set to `false`. When `testFailureIgnore` is set to `true`, Maven treats test failures as ignored, causing HyperExecute’s retry mechanism to not trigger, even if `retryOnFailure` is enabled.**
 
 ```java
 <testFailureIgnore>false</testFailureIgnore>
@@ -466,9 +459,8 @@ The `maxRetries` key defines the number of retries allowed for a failed test sce
 
 With `maxRetries` and `retryOnFailure`, you don't need to rerun the entire job to retry failed test scenarios. Instead, your tests are automatically retried immediately after a failure, allowing you to determine if they pass in subsequent attempts.
 
-<Note>
-You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
-</Note>
+> You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
+
 ```yaml
 retryOnFailure: true
 maxRetries: 2
@@ -485,9 +477,7 @@ post:
   - curl https://www.example.com
 ```
 
-<Note>
-📘 Refer to [globalPost](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) command to perform a common global setup for all your tasks, such as clean up tasks and or killing the environments.
-</Note>
+>📘 Refer to [globalPost](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) command to perform a common global setup for all your tasks, such as clean up tasks and or killing the environments.
 
 ***
 
@@ -504,10 +494,8 @@ partialReports:
 
 It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
-<Note>
-**INFO**
-
-If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/):
+<Info>
+**If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/):**
 
 ```yaml
 partialReports:
@@ -519,18 +507,17 @@ partialReports:
     type: html
     frameworkName: testng
 ```
-</Note>
+</Info>
 
-<Info>
-**NOTE**
+<Note>
+**Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.**
 
-Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 ```yaml
 framework:
   name: maven/testng
   defaultReports: false
 ```
-</Info>
+</Note>
 
 #### Regex Support for Dynamic Report Paths
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
@@ -554,9 +541,8 @@ plugin = {
 ```
 
 <Tip>
-**TIP**
+**- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)**
 
-- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
 - Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
 - How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
 </Tip>
@@ -583,9 +569,8 @@ The `errorCategorizedReport` flag is used to export a RCA report that has been g
 errorCategorizedReport:
   enabled: true
 ```
-<Note>
-Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
-</Note>
+
+> Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
 
 ***
 
@@ -631,11 +616,13 @@ uploadArtefacts:
      - target/surefire-reports/**
 ```
 
-<Note>
-You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
-</Note>
+> You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
 
+<Warning>
+**note**
 
+The uploadArtefact flag is not currently supported for tests running with the **Espresso** or **XCUI** frameworks. Please be aware of this limitation when configuring your tests.
+</Warning>
 
 ***
 
@@ -661,7 +648,18 @@ globalPre:
   runson: win
   cache: true
 ```
+{/* <Info>
+**You can also use `beforeAll` as an alias for the `globalPre` command:**
 
+```yaml
+beforeAll:
+  commands:
+    - "apt-get update && apt-get install -y curl"
+  mode: remote
+  runson: win
+  cache: true
+```
+</Info> */}
 
 #### Parameters
 | Parameter | Type | Description |
@@ -703,7 +701,17 @@ globalPost:
   runson: linux
 ```
 
+{/* <Info>
+**You can also use `afterAll` as an alias for the `globalPost` command:**
 
+```yaml
+afterAll:
+  commands:
+    - "curl -X POST https://api.example.com/cleanup"
+  mode: local
+  runson: linux
+```
+</Info> */}
 
 #### Parameters
 | Parameter | Type | Description |
@@ -730,7 +738,7 @@ captureScreenRecordingForScenarios: true
 ```
 
 <Warning>
-**INFO**
+**info**
 
 To avoid test failures, ensure the `video` capability is `false` before enabling the `captureScreenRecordingForScenarios` flag in your YAML file. If both `video` capability and `captureScreenRecordingForScenarios` flag is set to `true` simultaneously, the tests will fail. To prevent this conflict, always pass the capability `video: false` in your tests.
 </Warning>
@@ -767,22 +775,20 @@ failFast:
 ```
 In case retryOnFailure flag is enabled in yaml, then there will be multiple retries for a failed test. In that case, only the failure of last retry will be considered to increment the test failure count.
 
-<Note>
-**INFO**
-
-To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.
+<Info>
+**To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.**
 
 ```yaml
 failFast:
   maxNumberOfTests: 2
   level: scenario
 ```
-</Note>
+</Info>
 
-
-<Note>
+<Warning>
 **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.
-</Note>
+</Warning>
+
 
 ***
 
@@ -924,24 +930,19 @@ alwaysRunPostSteps: true
 
 This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place. To know more about Projects [click here](/support/docs/hyperexecute-projects).
 
-```yaml
-project:
-  name: 'demo-project' #project name
-```
+<Info>
+**note**
 
-<Note>
-**NOTE**
-
-Once you have created a project, you can either pass in your `project ID` or `project name` to trigger your job on the same project.
-
+- Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
+- If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
+</Info>
 ```yaml
 project:
   name: 'demo-project' #project name
   id: '1abc2345-56de-7890-f1cg-h2ij34k56789' #project id
 ```
-</Note>
 
-<img loading="lazy" src='/assets/images/hyperexecute/yaml/project.png' alt="project-hyperexecute" className="doc_img "/><br/><br/>
+<img loading="lazy" src='/assets/images/hyperexecute/yaml/project.png' alt="project-hyperexecute" />
 
 ***
 
@@ -959,9 +960,7 @@ This flag optimizes codebase uploads by **fetching** only the parts of the codeb
 
 When you pass the `differentialUpload` flag, it ensures that whenever you upload the **same codebase a second time with less than 75% changes, only the modified or new parts are fetched**. The rest is mapped to the previously uploaded version of the codebase. This approach is beneficial in scenarios where network issues or a large codebase contribute to slow upload times.
 
-<Note>
-**NOTE:** The default value for **ttlHours** is 60 hours
-</Note>
+> **NOTE:** The default value for **ttlHours** is 60 hours
 
 ```yaml
 project:
@@ -971,20 +970,18 @@ differentialUpload:
   ttlHours: #int value, with possible range of values [1 hour to 360 hours]
 ```
 
-<Note>
-**INFO**
+<Info>
+**If the project flag is not passed then the name for the project will be set to **"Default Project"**.**
 
-If the project flag is not passed then the name for the project will be set to **"Default Project"**.
-</Note>
+</Info>
 
 By activating this feature, you can experience a significant reduction in upload times, enhancing the efficiency of running and debugging multiple jobs on HyperExecute.
 
 ### `linkValidity`
 
 The **`linkValidity`** flag is used to customize the duration of validity for report and artifact URLs generated after job completion. Currently URLs are inherently valid for 48 hours post-generation but you can tailor the validity period to align with the specific requirements, ensuring you can access the associated resources within the defined timeframe. 
-<Note>
-**Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
-</Note>
+
+> **Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
 
 ```yaml
 report: true
@@ -997,8 +994,6 @@ partialReports:
     to:
       - johndoe@example.com
     linkValidity: 5
-```
-
 ```yaml
 uploadArtefacts:
   - name: ExecutionSnapshots
@@ -1071,6 +1066,7 @@ As this is dependent on the previous run of a job, any change in the browser cap
 **Note** : Currently this is available for Windows - edge, firefox, chrome - recent 5 versions. Linux and MAC are not supported currently.
 </Note>
 
+
 ***
 
 ### `scenarioCommandStatusOnly`
@@ -1084,7 +1080,7 @@ There are two scenarios associated with it:
 
 **Solution :** When `scenarioCommandStatusOnly` is set `true` in YAML, it will mark the task as passed even though no test is associated to it. In the given screenshot **task 8** is passed even though no test is associated to it.
 
-<img loading="lazy" src='/assets/images/hyperexecute/yaml/scenario-1.png' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/yaml/scenario-1.png' alt="Image" />
 
 #### Scenario 2: When test cases are run n no of times:
 - Some times a user might runs some test cases n no of times inherently due to framework retries etc.  Those test cases are considered as separate entries for us, and if one fails, scenario is marked as failed and hence the task and job is marked as fail. Need a way to update status of the task as if a test case first fails and then passes, it should be shown as passing and with green tick. Currently it shows as failed.
@@ -1101,7 +1097,7 @@ There are two scenarios associated with it:
 
 As seen in the screenshot, when one of the tests is marked as failed while the other tests are marked as passed, the overall scenario is marked as passed.
 
-<img loading="lazy" src='/assets/images/hyperexecute/yaml/scenario-2.jpeg' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/yaml/scenario-2.jpeg' alt="Image" />
 
 ### `cypress`
 This option signifies that the test suite is a cypress test suite and should be pass as true in case of cypress suite.
@@ -1181,9 +1177,7 @@ You can use the env variables to access the defined parameters as:
 ```yaml
 STATIC_DATA_1_<ParameterName>
 ```
-<Note>
-**NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
-</Note>
+> **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
 For instance, to access data from **file1.json**, the syntax would be:
 ```
@@ -1362,11 +1356,10 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
     index: username
   ```
 
-<Info>
-**INFO**
+<Note>
+**You can access the data on the machines using environment variables: `${STATIC_DATA_1_username}` - for the **username** key**
 
-You can access the data on the machines using environment variables: `${STATIC_DATA_1_username}` - for the **username** key
-</Info>
+</Note>
 
 ***
 
@@ -1389,12 +1382,13 @@ if your test loads jquery static library multiple times and for some reason it i
 <Note>
 **Note**: These cached resources are not yet shared across VMs. So, each VM has its own copy of cache.
 </Note>
+
+
 ***
 
 ### `afterAll`
-<Warning>
-This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
-</Warning>
+> This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
+
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
 ```yaml
 afterAll:
@@ -1450,14 +1444,12 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
     buildName : "name=${name}"
   ```
 
+  > The value for `${name}` in the above command can be passed through the vars command either by the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) as mentioned below or through [YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
 
-<Note>
-The value for `${name}` in the above command can be passed through the vars command either by the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) as mentioned below or through [YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
-</Note>
-  <img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/17.png' alt="Image" className="doc_img"/>
+  <img loading="lazy" src='/assets/images/hyperexecute/getting_started/guided-walkthrough/17.png' alt="Image" />
 
-<Note>
-**DYNAMIC BUILD NAMING VIA CLI**
+<Info>
+**Dynamic Build Naming via CLI**
 
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
@@ -1473,7 +1465,7 @@ To set `buildName`:
 ```
 
 These commands utilize `--labels` to specify the parameter being configured and `--vars "name=xyz"` to define the value to be replaced for `${name}`.
-</Note>
+</Info>
 
 #### Key Pointers
 
@@ -1545,6 +1537,7 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 **Note**: t1 will denote the time taken by each selenium command between start and end.
 </Note>
 
+
 ***
 
 ### `matrixEnvPrefix`
@@ -1554,7 +1547,7 @@ When we run a job in matrix mode, we set the keys with their resolved value as e
 
 ### `dynamicAllocation`
 When we set dynamicAllocation true, the test cases are distributed among parallels at the runtime. This is valid in case of local test discovery. In this case, the parallels are utilised in the most optimised manner. 
-
+{/* **(Currently in BETA)** */}
 
 ```yaml
 dynamicAllocation: true
@@ -1604,9 +1597,7 @@ background:
   - mysql-server
 ```
 
-<Note>
-To learn more about it, refer to the [Background Service](/support/docs/hyperexecute-background-services/) page.
-</Note>
+> To learn more about it, refer to the [Background Service](/support/docs/hyperexecute-background-services/) page.
 
 ***
 
@@ -1625,9 +1616,7 @@ preDirectives:
   - echo ${framework}
 ```
 
-<Note>
-You can also use the vars method using the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
-</Note>
+> You can also use the vars method using the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
 
 ***
 
@@ -1657,8 +1646,6 @@ tunnel: true
 tunnelOpts: 
 	args:
 	 - "--verbose"
-```
-
 ```yaml
 tunnel: true
 tunnelOpts: 
@@ -1669,8 +1656,6 @@ tunnelOpts:
 	global: true
   #------OR------
 	systemProxy: true
-```
-
 ```yaml
 pre:
   - echo %LT_PROXY_PORT%
@@ -1698,7 +1683,7 @@ tunnelNames: ["lambdatest_tunnel"]
 ### `testRunnerExecutor`
 When utilizing the `testRunnerCommand` to execute a job on a Windows Virtual Machine, the default behavior is to run the command in PowerShell. However, in situations where test names include special characters, you may encounter an error like below.
 
-<img loading="lazy" src='/assets/images/hyperexecute/yaml/testRunnerExecutor.png' alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/yaml/testRunnerExecutor.png' alt="Image" />
 
 To address this, it is necessary to include this specific flag to switch the test execution from powershell to the command line as intended.
 
@@ -1709,7 +1694,7 @@ testRunnerExecutor: bat
 ***
 
 ### `workingDirectory`
-
+{/* Specifies the working directory where all discovery and execution commands will be executed. */}
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
 
@@ -1737,6 +1722,6 @@ execution:
   - If all VMs are allocated within this window → tasks start together.
   - If some VMs are still pending after 15 minutes → the job proceeds with the allocated VMs.
 
-<Note>
-This feature is supported only in [`autosplit`](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) and [`matrix`](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) mode and not in hybrid mode
-</Note>
+> This feature is supported only in [`autosplit`](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) and [`matrix`](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) mode and not in hybrid mode
+
+{/* GENERAL ENDED */}

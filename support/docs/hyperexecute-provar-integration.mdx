@@ -2,10 +2,10 @@
 title: "Integrate Provar with HyperExecute"
 sidebarTitle: "Provar"
 keywords: ['TestMu AI HyperExecute', 'TestMu AI HyperExecute help', 'TestMu AI HyperExecute documentation', 'provar', 'Integrations', 'Products', 'Test case management', 'Automated testing', 'Cloud-based testing']
-
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Provar is a low-code/no-code testing tool specifically designed for Salesforce applications, enabling efficient creation and execution of UI and API tests.
 
@@ -20,11 +20,11 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
 - Update the Desktop Settings to **HyperExecuteGrid: ANY Chrome**.
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/1.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/1.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
-- Click on **Test Settings** >> **Browser Providers** section. Click on the **+** symbol to add a new Browser Provider.
+- Click on **Test Settings** >> **Browser Providers** section. Click on the **+** symbol to add a new Browser Provider. 
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/2.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/2.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 - You will receive a pop-up to enter your configurations:
 
@@ -36,7 +36,7 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
 - Click on **Test Connection** >> **OK**
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/3.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/3.png' alt="provide access to <BrandName /> account" width="1280" height="684" />
 
 ## Step 2: Generate and Update the build.xml file
 
@@ -63,7 +63,7 @@ You have to generate the `build.xml` file using the Provar GUI. You can follow t
 
 ## Step 3: Set the Provar License as Secret
 
-You will have to [create a new secret](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) in HyperExecute.
+You will have to [create a new secret](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) in HyperExecute. 
 
 - Set **Key Name** as `provarLicense`
 - Set the **Value** as the contents of the license file.
@@ -90,24 +90,34 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+<Tabs className="docs__val">
+
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
-  <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
-  </Tab>
+
+</Tab>
 </Tabs>
 
 ## Step 5: Configure YAML in your Test Suite
 
-Replace the `pre` command with your own command that discovers the desired **.testcase** files.
+Replace the `pre` command with your own command that discovers the desired **.testcase** files. 
 
 ```yaml
 ---
@@ -145,11 +155,10 @@ framework:
 
 ## Step 6: Execute your Test Suite
 
-<Note>
-**NOTE**
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
 
-In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -160,11 +169,13 @@ Run the below command in your terminal at the root folder of the project:
 OR use this command if you have not exported your username and access key in the step 2.
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  
 ```
 
 ## Step 5: Monitor Your Tests
 
-- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
+- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/4.png' alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img" />
+<img loading="lazy" src='/assets/images/hyperexecute/integration/products/provar/4.png' alt="provide access to <BrandName /> account" width="1280" height="684"  />

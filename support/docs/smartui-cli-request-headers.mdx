@@ -1,16 +1,11 @@
 ---
 title: "Adding Custom Request Headers in SmartUI CLI"
 sidebarTitle: "Custom Request Headers"
-keywords:
-  [
-    "smartui cli",
-    "custom request headers",
-    "http headers",
-    "visual testing configuration",
-    "smartui.json",
-    "protected assets"
-  ]
+keywords: ['smartui cli', 'custom request headers', 'http headers', 'visual testing configuration', 'smartui.json', 'protected assets']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 The SmartUI CLI includes a `requestHeaders` configuration option, allowing you to specify custom HTTP headers for fetching web assets during your visual testing workflow. This feature is essential for scenarios where resources like images, CSS, or scripts are located behind a protected environment that requires authentication via custom headers (e.g., a staging environment).
 
@@ -59,9 +54,8 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
       * **Value**: The corresponding value for the header (e.g., `Bearer your-access-token`, `custom-value-1`).
 
 <Note>
-NOTE
+*** You can define multiple headers by adding more objects to the `requestHeaders` array.**
 
-  * You can define multiple headers by adding more objects to the `requestHeaders` array.
   * The headers defined in this configuration will be sent with every page load and asset request made by the SmartUI CLI during the test.
   * This feature is particularly useful for testing web applications in staging or development environments that are protected from public access.
 </Note>

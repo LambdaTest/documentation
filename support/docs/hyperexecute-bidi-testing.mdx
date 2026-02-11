@@ -1,10 +1,10 @@
 ---
 title: "Execute BiDi Framework Tests on HyperExecute"
 sidebarTitle: "BiDi"
-keywords: ['BiDi', 'WebDriver BiDi', 'lambdatest', 'framework on lambdatest', 'HyperExecute', 'automation testing']
+keywords: ['xcui', 'iOS', 'testmu ai', 'framework on testmu ai', 'testng', 'app testing', 'real devices']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 **BiDi (Bi-Directional)** refers to the **WebDriver BiDi protocol**, a new standard from the W3C (World Wide Web Consortium). Unlike the traditional WebDriver protocol (which works in a request → response model), **WebDriver BiDi enables two-way communication between your test script and the browser in real time**.
@@ -27,13 +27,13 @@ This guide details how to execute your **BiDi** tests on **HyperExecute** using 
 ## Run a Sample Project
 ### Step 1: Clone Sample Repository
 
-<Check>
-**BIDI REPO**
+<Tip>
+**BiDi repo**
 
-Download or Clone the BiDi sample from LambdaTest's GitHub Repository
+Download or Clone the BiDi sample from <BrandName />’s GitHub Repository
 
-<GitHubButton url="https://github.com/LambdaTest/hyperexecute-bidi-sample" />
-</Check>
+<a href="https://github.com/<BrandName />/hyperexecute-bidi-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 ### Step 2: Download the CLI in your Project
 Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
@@ -46,15 +46,14 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 
 ### Step 3: Add the required Capabilities
 
-<Note>
-The `webSocketUrl` capability is set to `true` to enable BiDi support.
-</Note>
+> The `webSocketUrl` capability is set to `true` to enable BiDi support.
 
-```javascript wdio.lambdatest.config.js highlight={5}
+```javascript title="wdio.testmu ai.config.js"
 
 capabilities: [{
     "LT:Options": {
       browserName: "chrome",
+      // highlight-next-line
       webSocketUrl: true,
       version: "latest",
       platform: process.env.HYPEREXECUTE_PLATFORM || 'windows 10',
@@ -69,46 +68,28 @@ capabilities: [{
 ### Step 4: Configure YAML in your Test Suite
 
 ```yaml reference title="hyperexecute.yaml"
----
-version: 0.1
-autosplit: true
-
-concurrency: 2
-runson: linux
-
-runtime:
-  language: node
-  version: 18
-
-pre:
-  - npm install
-
-testDiscovery:
-  mode: local
-  type: raw
-  command: echo "test/specs/BrowsingContext.spec.js"
-
-testRunnerCommand: npx wdio wdio.lambdatest.conf.js --spec=test/specs/BrowsingContext.spec.js
-
-jobLabel: [HYP, BiDi, Linux]
+https://github.com/TestMu AI/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
 ```
 
 ### Step 5: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
 
-<Note>
-**NOTE:** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-</Note>
+<Warning>
+**NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+</Warning>
+
 
 ```bash
-./hyperexecute --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --config yaml/hyperexecute-linux.yaml
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config yaml/hyperexecute-linux.yaml`}
+  
 ```
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src="/assets/images/hyperexecute/frameworks/selenium/bidi/bidi.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/frameworks/selenium//bidi/bidi.png' alt="Image" />
 
 ## Advanced Parameters
 Optimize your test pipeline using the following advanced features:
@@ -118,6 +99,4 @@ Optimize your test pipeline using the following advanced features:
 - 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
 - 🔄 [Auto-Healing](/support/docs/hyperexecute-auto-healing/) – Automatically recover from certain failures
 
-<Note>
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.
-</Note>
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />

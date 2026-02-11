@@ -1,24 +1,36 @@
----
-title: "Getting Started With Visual Regression Testing Using Selenium On SmartUI"
-sidebarTitle: "Selenium"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: selenium-visual-regression
+title: Getting Started With Visual Regression Testing Using Selenium On SmartUI
+sidebarTitle: Selenium
+description: Master Selenium Visual Regression testing with <BrandName />. Detect visual deviations early in your web applications to ensure a seamless user experience.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/selenium-visual-regression/
+site_name: <BrandName />
+slug: selenium-visual-regression/
+canonical: https://www.testmuai.com/support/docs/selenium-visual-regression/
 ---
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+---
+
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 - Basic understanding of Selenium and WebDriver is required.
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`<BrandName /> SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 - Access your Hub for your selenium **remote connection** instance at `hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="MacOS/Linux">
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME" 
 export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-
 </Tab>
 <Tab title="Windows-CMD">
 
@@ -26,7 +38,6 @@ export LT_ACCESS_KEY="YOUR ACCESS KEY"
 set LT_USERNAME="YOUR_USERNAME" 
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-
 </Tab>
 <Tab title="PowerShell">
 
@@ -34,11 +45,11 @@ set LT_ACCESS_KEY="YOUR ACCESS KEY"
 $env:LT_USERNAME="YOUR_USERNAME"
 $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-
 </Tab>
+
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### Step 1: Create a SmartUI Project
 
@@ -51,21 +62,23 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-1.webp' alt="cmd" width="768" height="373" /> */}
+
 ### Step 2: Configure your test with Selenium Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
-1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-node-sample`).
+1. Please clone the following sample Github repo (`https://github.com/<BrandName />/smartui-node-sample`).
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-node-sample
+git clone https://github.com/<BrandName />/smartui-node-sample
 ```
 
-2. Set up the LambdaTest credentials by following the instructions mentioned in the `README.md` file.
+2. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 3. Edit the required capabilities for your test suite.
 
-<Tabs>
-  <Tab title="NodeJS">
+<Tabs className="docs__val" groupId="language">
+<Tab title="NodeJS">
 
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 let capabilities = {
@@ -82,7 +95,7 @@ let capabilities = {
   //highlight-end
 };
 
-// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
+// Connecting to the <BrandName /> Selenium Cloud Grid with SmartUI
 let gridUrl =
   "https://" +
   "<Your Username>" +
@@ -97,9 +110,9 @@ let driver = await new webdriver.Builder()
   .build();
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Python">
+<Tab title="Python">
 
 ```python title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 options = ChromeOptions()
@@ -116,16 +129,15 @@ lt_options["w3c"] = True;
 lt_options["plugin"] = "python-python";
 options.set_capability('LT:Options', lt_options);
 
-
 options.set_capability('LT:Options', lt_options);
 
-#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
+#Connecting to the <BrandName /> Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
 command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
 ```
 
-  </Tab>
-  <Tab title="Ruby">
+</Tab>
+<Tab title="Ruby">
 
 ```ruby title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 options = Selenium::WebDriver::Options.chrome
@@ -144,13 +156,13 @@ lt_options[:'smartUI.project']="SmartUI_Project_Name"
 
 options.set_capability('LT:Options', lt_options);
 
-#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
+#Connecting to the <BrandName /> Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
 command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
 ```
 
-  </Tab>
-  <Tab title="C#">
+</Tab>
+<Tab title="C#">
 
 ```csharp title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 String LT_USERNAME = GetEnvironmentVariable("LT_USERNAME");
@@ -172,12 +184,12 @@ ltOptions.Add("w3c", true);
 ltOptions.Add("plugin", "c#-c#");
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 
-// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
+// Connecting to the <BrandName /> Selenium Cloud Grid with SmartUI
 driver = new RemoteWebDriver(new Uri("https://hub.lambdatest.com/wd/hub/"), capabilities);
 ```
 
-  </Tab>
-  <Tab title="Java">
+</Tab>
+<Tab title="Java">
 
 ```java title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 ChromeOptions browserOptions = new ChromeOptions();
@@ -194,53 +206,53 @@ ltOptions.put("w3c", true);
 ltOptions.put("plugin", "java-java");
 browserOptions.setCapability("LT:Options", ltOptions);
 
-// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
+// Connecting to the <BrandName /> Selenium Cloud Grid with SmartUI
 driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
 ```
 
-  </Tab>
-  </Tabs>
+</Tab>
+</Tabs>
 
 - Installing dependency and for executing the test.
 
-<Tabs>
-  <Tab title="NodeJS">
+<Tabs className="docs__val" groupId="language">
+<Tab title="NodeJS">
 
 ```
 npm i && node <file_name>
 ```
-  </Tab>
+</Tab>
 
-  <Tab title="Python">
+<Tab title="Python">
 
 ```
 pip install -r requirements.txt && python3 <file_name>
 ```
-  </Tab>
-  <Tab title="Ruby">
+</Tab>
+<Tab title="Ruby">
 
 ```
 sudo gem install selenium-webdriver && ruby <file_name>
 ```
-  </Tab>
+</Tab>
 
-  <Tab title="C#">
+<Tab title="C#">
 
 ```
 cd Packages nuget.exe install ..NUnitSeleniumpackages.config nmake clean build make <file_name>
 ```
 
-  </Tab>
-  <Tab title="Java">
+</Tab>
+<Tab title="Java">
 
 ```
 mvn clean install && mvn test -P <file_name>
 ```
 
-  </Tab>
-  </Tabs>
+</Tab>
+</Tabs>
 
-
+{/* <img loading="lazy" src='/assets/images/uploads/smart-ui-2.webp' alt="cmd" width="768" height="373" /> */}
 
 Here you can explore multiple features and execute more such builds.
 
@@ -250,7 +262,7 @@ Here you can explore multiple features and execute more such builds.
 ### For taking viewport screenshot
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="NodeJS">
 
 ```javascript
@@ -307,8 +319,7 @@ You can capture the full page screenshot for all different websites which have a
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
-
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="NodeJS">
 
 ```javascript
@@ -348,18 +359,14 @@ driver.ExecuteScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>");
 </Tabs>
 
 <Warning>
-CAUTION
+**The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions only. Please ensure that the `<BrandName /> Capabilities` are updated in your project for executing full page screenshot(s). **
 
-The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions only. Please ensure that the `Lambdatest Capabilities` are updated in your project for executing full page screenshot(s). 
 </Warning>
 
-
-#### SmartScroll (For browsers other than Chrome) <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
-
+#### SmartScroll (For browsers other than Chrome) <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Page Screenshot` fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script.
 
-
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="NodeJS">
 
 ```javascript
@@ -402,7 +409,7 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 Add the following **Webhook** to your test cases where you need to capture the screenshot of a particular element on your UI.
 
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="NodeJS">
 
 ```javascript
@@ -470,9 +477,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 ## Fetching Screenshot Status and Results using WebHook
 
-
 You can fetch the status of the screenshot captured and the results of the screenshot captured using the following webhook.
-<Tabs>
+<Tabs className="docs__val" groupId="language">
 <Tab title="NodeJS">
 
 ```javascript
@@ -513,9 +519,8 @@ driver.ExecuteScript("smartui.fetchScreenshotStatus");
 
 For fetching results specific to a screenshot, you can use the following webhook by adding the `Screenshot Name` to the WebHook.
 
-
-<Tabs >
-<Tab title="NodeJS" >
+<Tabs className="docs__val" groupId="language">
+<Tab title="NodeJS">
 
 ```javascript
 driver.executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
@@ -523,28 +528,28 @@ driver.executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 
 </Tab>
 
-<Tab title="Python" >
+<Tab title="Python">
 
 ```python
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title="Ruby" >
+<Tab title="Ruby">
 
 ```ruby
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
 
 </Tab>
-<Tab title="C#" >
+<Tab title="C#">
 
 ```csharp
 driver.ExecuteScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
 ```
 
 </Tab>
-<Tab title="Java" >
+<Tab title="Java">
 
 ```java
 ((JavascriptExecutor)driver).executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
@@ -590,17 +595,14 @@ The following are the description of the parameters:
 | `buildName`          | Name of the build in which the screenshot was captured.       |
 | `projectName`        | Name of the project in which the screenshot was captured.     |
 
-
 <Warning>
-Please Note
+**Please Note**
 
 The webhook will return the result of the screenshot captured only if the screenshot is processed and the result is available.
 
 This may take a few seconds to process the screenshot. Please ensure that you have added a delay before fetching the result of the screenshot.
 </Warning>
-
 ## Advanced Options for Screenshot Comparison
-
 
   **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
   
@@ -612,7 +614,7 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 
 ## Best Practices
 
-<Tabs>
+<Tabs className="docs__val" groupId="best-practices">
 <Tab title="Capability Configuration">
 
 ### Capability Configuration
@@ -682,7 +684,7 @@ let capabilities = {
 
 ## Troubleshooting
 
-<Tabs>
+<Tabs className="docs__val" groupId="troubleshooting">
 <Tab title="Screenshots Not Captured">
 
 ### Issue: Screenshots Not Captured
@@ -715,7 +717,7 @@ let capabilities = {
    echo $LT_ACCESS_KEY
    ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </Tab>
 <Tab title="Project Not Found Error">
@@ -844,9 +846,9 @@ let capabilities = {
 If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>
@@ -854,7 +856,6 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)
-

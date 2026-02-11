@@ -4,25 +4,28 @@ sidebarTitle: "WebDriverIO 5.6.2"
 keywords: ['webdriverio selenium grid', 'selenium webdriver tutorial', 'webdriverio', 'webdriverio tutorial', 'javascript selenium', 'javascript automation testing', 'selenium webdriver javascript', 'selenium javascript testing tutorial', 'javascript selenium framework']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 ---
-TestMu AI Selenium Automation Grid is a cloud-based scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your JavaScript Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
+<BrandName /> Selenium Automation Grid is a cloud-based scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your JavaScript Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
 
-This guide will help you in getting started with configuring and running your JavaScript based automation test scripts on LambdaTest Selenium cloud platform using WebDriverIO 5.6.2 framework. This doc will help you to:
+This guide will help you in getting started with configuring and running your JavaScript based automation test scripts on <BrandName /> Selenium cloud platform using WebDriverIO 5.6.2 framework. This doc will help you to:
 
-* Run a sample Selenium Webdriver test using JavaScript on LambdaTest Automation.
+* Run a sample Selenium Webdriver test using JavaScript on <BrandName /> Automation.
 * Comprehend and configure Selenium test suite with respect to your capabilities
 * Select the specific browsers to run your test on.
-* Explore the advanced features of LambdaTest.
+* Explore the advanced features of <BrandName />.
 * Run your test cases in parallel to reduce build times.
 * Test your locally hosted pages.
 
 ## Prerequisites For Running WebDriverIO & Selenium
 ---
 <Warning>
-All the code samples in this documentation can be found in the [WebDriverIO 5.6.2 LambdaTest Repository on <span style={{display: 'inline-block', verticalAlign: 'middle'}}><img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25" style={{display: 'inline', verticalAlign: 'middle'}} /></span> GitHub](https://github.com/LambdaTest/webdriverio-selenium). You can either download or clone the repository to quickly run your tests.
+All the code samples in this documentation can be found in the [WebDriverIO 5.6.2 <BrandName /> Repository on <span style={{display: 'inline-block', verticalAlign: 'middle'}}><img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25" style={{display: 'inline', verticalAlign: 'middle'}} /></span> GitHub](https://github.com/LambdaTest/webdriverio-selenium). You can either download or clone the repository to quickly run your tests.
 </Warning>
 
-Before getting started with Automated Scripts using Selenium with WebDriverIO 5.6.2 on LambdaTest Automation, you need to:
+Before getting started with Automated Scripts using Selenium with WebDriverIO 5.6.2 on <BrandName /> Automation, you need to:
 
 * The first step is to download and install node.js and node package manager or npm. You should be having nodejs v6 or newer. Click [here](https://nodejs.org/en/) to download.
 * Make sure to use the latest version of JavaScript.
@@ -39,10 +42,10 @@ Next step is to install Selenium dependencies for Node.js using npm. Here's the 
 
 `npm i selenium-webdriver`
 
-* Download LambdaTest tunnel binary file if you wish to test your locally hosted or privately hosted projects.
+* Download <BrandName /> tunnel binary file if you wish to test your locally hosted or privately hosted projects.
 
 <Note>
-Follow our documentation on LambdaTest tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
+Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
 
 - [Documentation For Windows User](/support/docs/local-testing-windows/)
 - [Documentation For Mac User](/support/docs/local-testing-macos/)
@@ -52,28 +55,28 @@ Follow our documentation on LambdaTest tunnel to know it all. OS specific instru
 <Note>
 Download the binary file of:
 
-- [LambdaTest tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [LambdaTest tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [LambdaTest tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+- [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+- [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+- [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 </Note>
 
-## Getting Started With WebDriverIO 5.6.2 Framework & LambdaTest
+## Getting Started With WebDriverIO 5.6.2 Framework & <BrandName />
 ---
-Running WebDriverIO 5.6.2 test scripts on LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) is as easy as changing a few lines of code. To start with, you would have to invoke Selenium remote webdriver instead of local browser webdriver. In addition, since we are using remote webdriver, we have to define which browser environment we want to run the test. We do that by passing browser environment details to LambdaTest Selenium Grid via desired capabilities class. You can use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to select & pass those browser environment specifications.
+Running WebDriverIO 5.6.2 test scripts on <BrandName /> [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) is as easy as changing a few lines of code. To start with, you would have to invoke Selenium remote webdriver instead of local browser webdriver. In addition, since we are using remote webdriver, we have to define which browser environment we want to run the test. We do that by passing browser environment details to <BrandName /> Selenium Grid via desired capabilities class. You can use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to select & pass those browser environment specifications.
 
-Let's check out sample WebDriverIO 5.6.2 framework code running LambdaTest Selenium Grid. This is a simple WebDriverIO 5.6.2 automation script that test a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
+Let's check out sample WebDriverIO 5.6.2 framework code running <BrandName /> Selenium Grid. This is a simple WebDriverIO 5.6.2 automation script that test a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
 
 You can also find this code at our [GitHub repository for WebDriverIO](https://github.com/LambdaTest/webdriverio-selenium) 5.6.2.
 ``` js
 var assert = require('assert');
 
-describe('Lambdatest Demo Test', function() {
-  it('Lambdatest Demo TestCase', function () {
+describe('TestMu AI Demo Test', function() {
+  it('TestMu AI Demo TestCase', function () {
     browser
       .url('https://lambdatest.github.io/sample-todo-app/')
       .click('*[name="li1"]')
       .click('*[name="li2"]')
-      .setValue('*[id="sampletodotext"]','Lambdatest\n');
+      .setValue('*[id="sampletodotext"]','TestMu AI\n');
 
     assert(browser.getTitle().match(/Sample page - lambdatest.com/i));
   });
@@ -121,7 +124,7 @@ exports.config = {
 }
 ```
 
-The Selenium WebDriver test would open a URL, mark the first two items in the list as done, add an item in the list, and return the total number of pending item. Your results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [TestMu AI dashboard](https://accounts.lambdatest.com/dashboard). LambdaTest dashboard will help you view all your text logs, screenshots and video recording for your entire Selenium tests.
+The Selenium WebDriver test would open a URL, mark the first two items in the list as done, add an item in the list, and return the total number of pending item. Your results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> dashboard](https://accounts.lambdatest.com/dashboard). <BrandName /> dashboard will help you view all your text logs, screenshots and video recording for your entire Selenium tests.
 
 ## Execute The Test
 ---

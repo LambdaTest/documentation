@@ -1,18 +1,25 @@
----
-title: "Appium Plugins"
-sidebarTitle: "Supported Appium Plugins"
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: supported-appium-plugins
+title: Supported Appium Plugins
+hide_title: true
+sidebarTitle: Supported Appium Plugins
+description: This document provides information about configuring Appium plugins for tests on the <BrandName /> platform and also provides a list of supported plugins.
+
 keywords: ['appium', 'appium languages', 'appium framework', 'configuration', 'plugins', 'images plugin', 'test automation frameworks', 'app testing', 'testmu ai']
+
+url: https://www.testmuai.com/support/docs/supported-appium-plugins/
+site_name: <BrandName />
+slug: supported-appium-plugins/
+canonical: https://www.testmuai.com/support/docs/supported-appium-plugins/
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
-import { BrandName } from '/snippets/BrandName.mdx';
-
-
-<div>
 <RealDeviceTag value="Real Device" /> 
-</div>
 
+# Appium Plugins 
 
 Enhance your testing experience on <BrandName /> by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
 By using these plugins, you can tailor your testing environment to better suit your project's specific needs, leading to more efficient and effective test automation.
@@ -38,9 +45,9 @@ capabilities = {
 }
 ```
 
-<Info>
-**NOTE**
+<Note>
+**- Appium plugins are only supported with version 2.0.0 and above appium versions. Please ensure that the `appiumVersion` capability is set correctly to utilize these plugins.**
 
-- Appium plugins are only supported with version 2.0.0 and above appium versions. Please ensure that the `appiumVersion` capability is set correctly to utilize these plugins.
+</Note>
 
-</Info>
+---

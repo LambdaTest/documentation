@@ -1,7 +1,19 @@
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+﻿---
+id: smartui-selenium-java-sdk
+title: Integrate SmartUI SDK with Selenium-Java
+sidebarTitle: Java
+description: In this documentation, learn how integrate your Selenium Java automated tests with <BrandName />'s SmartUI.
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
+
+url: https://www.testmuai.com/support/docs/smartui-selenium-java-sdk/
+slug: smartui-selenium-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-java-sdk/
+
 ---
-title: "Integrate SmartUI SDK with Selenium-Java"
-sidebarTitle: "Java"
-keywords: ["Visual Regression", "Visual Regression Testing Guide", "Visual Regression Test Automation", "Visual Regression Automation Testing", "Running Visual Regression Tests", "Visual Regression Testing Online", "Run Visual Regression", "Visual Regression Run Specific Test", "Visual Regression Testing Environment", "How to Run Visual Regression Tests"]
 ---
 
 Welcome to the world of simplified visual testing with the SmartUI SDK.
@@ -11,9 +23,9 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Create a SmartUI Project
 
@@ -31,10 +43,10 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
+You can clone the sample repository to run `<BrandName />` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/testmu ai/sdk` directory.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-java-testng-sample
+git clone https://github.com/<BrandName />/smartui-java-testng-sample
 ```
 
 ### **Step 2**: Update the Dependencies
@@ -43,31 +55,28 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 
 ```xml
 <dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-java-sdk</artifactId>
+    <groupId>io.github.testmu ai</groupId>
+    <artifactId>testmu ai-java-sdk</artifactId>
     <version>1.0.7</version>
 </dependency>
 ```
 
-<Info>
-NOTE
+<Note>
+**You can check the latest version of [testmu ai-java-sdk]( https://mvnrepository.com/artifact/io.github.testmu ai/testmu ai-java-sdk) and update the latest version accordingly.**
 
-You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.
-</Info>
-
+</Note>
 ### **Step 3**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `<BrandName /> SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
-<Info>
-NOTE
+<Note>
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-</Info>
+</Note>
 
 ```bash
 mvn clean compile
@@ -77,7 +86,7 @@ mvn clean compile
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs>
+<Tabs className='docs__val' groupId='language'>
 <Tab title="MacOS/Linux">
 
 ```bash
@@ -95,13 +104,13 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tab title="PowerShell">
 
 ```powershell
-"$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </Tab>
 </Tabs>
 
-![cmd](/assets/images/smart-visual-testing/project-token-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/project-token-primer.webp' alt="cmd" width="768" height="373" />
 
 ### **Step 5:** Create and Configure SmartUI Config
 
@@ -148,20 +157,20 @@ Once, the configuration file will be created, you will be seeing the default con
   "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
-<Note>
-Advanced options in SmartUI configuration
+<Info>
+**Advanced options in SmartUI configuration**
 
 - For capturing fullpage or viewport screenshots, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#12-viewports)
 - For the list of available mobile viewports, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
 - For more information about SmartUI config global options, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#3-global-options-optional).
-</Note>
+</Info>
 
 ### **Step 6:** Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```java
- //Importing the lambdatest-java SDK
+ //Importing the testmu ai-java SDK
 
 //Rest of your code here
 
@@ -189,11 +198,10 @@ Execute `visual regression tests` on SmartUI using the following commands
 ```bash
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
 ```
-<Info>
-NOTE
+<Note>
+**You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.**
 
-You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
-</Info>
+</Note>
 
 ##  View SmartUI Results
 
@@ -201,7 +209,7 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-![cmd](/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp)
+<img loading="lazy" src='/assets/images/smart-visual-testing/smartui-sdk-results-primer.webp' alt="cmd" width="768" height="373" />
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -213,12 +221,11 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK <span style={{border: '1px solid #bf3989', color: '#bf3989', borderRadius: '1em', padding: '0.1em 0.5em', fontWeight: 'bold', fontSize: '0.8em', marginLeft: '0.5em', verticalAlign: 'middle', display: 'inline-block'}}>NEW</span>
-
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-<Tabs >
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Ignore ID">
 
 ```java title="This is a sample for your configuration for Java to ignore by" ID"
@@ -231,7 +238,6 @@ options.put("ignoreDOM", ignore);
 driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
-
 
 </Tab>
 <Tab title="Ignore Class">
@@ -262,6 +268,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </Tab>
+
 <Tab title="Ignore CSS Selector">
 
 ```java title="This is a sample for your configuration for Java to ignore by CSS" Selector"
@@ -274,11 +281,11 @@ options.put("ignoreDOM", ignore);
 driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
-
 </Tab>
+
 </Tabs>
 
-<Tabs >
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Select ID">
 
 ```java title="This is a sample for your configuration for Java to select by" ID."
@@ -322,7 +329,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </Tab>
 
-
 <Tab title="Select CSS Selector">
 
 ```java title="This is a sample for your webhook configuration for Java to select by CSS" Selector"
@@ -335,15 +341,15 @@ options.put("selectDOM", select);
 driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
-
 </Tab>
+
 </Tabs>
 
 ## For capturing the screenshot of a specific element
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
-<Tabs >
+<Tabs className='docs__val' groupId='framework'>
 <Tab title="Capture Element by ID">
 
 ```java title="This is a sample for your configuration for Javas to capture an element by" ID."
@@ -440,7 +446,7 @@ public void tearDown() {
 
 ## Best Practices
 
-<Tabs >
+<Tabs className='docs__val' groupId='best-practices'>
 <Tab title="Screenshot Naming">
 
 **Screenshot Naming**
@@ -452,7 +458,7 @@ public void tearDown() {
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
+SmartUISnapshot.smartuiSnapshot(driver, HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 ```
 
@@ -486,7 +492,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </Tab>
 
-<Tab title='Configuration Management'>
+<Tab title="Configuration Management">
 
 **Configuration Management**
 
@@ -496,7 +502,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </Tab>
 
-<Tab title='Test Organization'>
+<Tab title="Test Organization">
 
 **Test Organization**
 
@@ -509,8 +515,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 ## Troubleshooting
 
-<Tabs >
-<Tab title='Screenshots Not Appearing in Dashboard' default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Screenshots Not Appearing in Dashboard">
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -535,12 +541,12 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </Tab>
-<Tab title='Project Not Found Error'>
+<Tab title="Project Not Found Error">
 
 **Issue: Project Not Found" Error**
 
@@ -558,7 +564,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Check for extra spaces or quotes in token
 
 </Tab>
-<Tab title='Screenshots Show Blank or Incorrect Content'>
+<Tab title="Screenshots Show Blank or Incorrect Content">
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -589,7 +595,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify viewport size matches expected dimensions
 
 </Tab>
-<Tab title='Build Execution Fails '>
+<Tab title="Build Execution Fails ">
 
 **Issue: Build Execution Fails**
 
@@ -611,11 +617,11 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Check file permissions for configuration and project files
 
 </Tab>
-<Tab title='Maven Dependencies Not Resolving'>
+<Tab title="Maven Dependencies Not Resolving">
 
 **Issue: Maven Dependencies Not Resolving**
 
-**Symptoms**: Maven cannot find `lambdatest-java-sdk` dependency
+**Symptoms**: Maven cannot find `testmu ai-java-sdk` dependency
 
 **Possible Causes**:
 - Incorrect dependency version
@@ -623,7 +629,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 - Network connectivity problems
 
 **Solutions**:
-1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
+1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.testmu ai/testmu ai-java-sdk)
 2. Update `pom.xml` with correct version
 3. Clear Maven cache:
    ```bash
@@ -632,7 +638,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify internet connectivity for Maven repository access
 
 </Tab>
-<Tab title='Screenshot Names Not Matching Baseline'>
+<Tab title="Screenshot Names Not Matching Baseline">
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -656,8 +662,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

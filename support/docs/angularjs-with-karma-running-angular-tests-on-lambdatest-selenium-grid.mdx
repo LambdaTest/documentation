@@ -1,19 +1,22 @@
 ---
-title: "AngularJS with Selenium: Tutorial to Run Your First Test on LambdaTest"
+title: "AngularJS with Selenium: Tutorial to Run Your First Test on TestMu AI"
 sidebarTitle: "AngularJS with Karma"
 keywords: ['angularjs selenium testing', 'angularjs automated testing', 'angularjs test automation']
 ---
 
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
 
 * * *
-In this topic, you will learn how to perform AngularJS Automated Testing using [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to perform AngularJS Automated Testing using [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 ***
 By the end of this topic, you will be able to:
 
-1. Perform AngularJS automated testing on Lambdatest Selenium grid with **Karma** test runner.
-2. Leverage LambdaTest’s Advanced capabilities for AngularJS test automation.
+1. Perform AngularJS automated testing on <BrandName /> Selenium grid with **Karma** test runner.
+2. Leverage <BrandName />’s Advanced capabilities for AngularJS test automation.
 3. Test your locally hosted pages using AngularJS test automation.
 4. Run your test cases in parallel using AngularJS test automation to reduce build times.
 
@@ -30,7 +33,7 @@ $ brew install node
 
 ## Sample Test Case 
 ***
-All the code samples in this documentation can be found in the [AngularJS LambdaTest Repository on GitHub](https://github.com/LambdaTest/angular-karma-sample). You can either download or clone the repository to quickly run your tests.
+All the code samples in this documentation can be found in the [AngularJS <BrandName /> Repository on GitHub](https://github.com/LambdaTest/angular-karma-sample). You can either download or clone the repository to quickly run your tests.
 
 ### Installing Dependencies
 You need to install the following dependencies:
@@ -46,7 +49,7 @@ $ npm install -g @angular/cli
 
 ### Setting up Your Authentication
 
-**Step 3:** Set LambdaTest username and access key in environment variables. It can be obtained from [LambdaTest Automation Dashboard](https://automation.lambdatest.com/).
+**Step 3:** Set <BrandName /> username and access key in environment variables. It can be obtained from [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
  * For Linux/macOS:
  `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
  * For Windows:
@@ -54,7 +57,7 @@ $ npm install -g @angular/cli
 
 ### Setting up the Test Environment
 
-**Step 4:** Clone the LambdaTest’s [angular-karma-sample repository](https://github.com/LambdaTest/angular-karma-sample) and navigate to the code directory as shown below:
+**Step 4:** Clone the <BrandName />’s [angular-karma-sample repository](https://github.com/LambdaTest/angular-karma-sample) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
@@ -66,7 +69,7 @@ $ npm install
 
 ### Setting up the Test Config
 
-**Step 6:** If you look at `karma.conf.js` file you will find that we are passing browser, browser version, and operating system information, along with LambdaTest Selenium Grid capabilities via capabilities object. The capabilities object in the above code is defined as:
+**Step 6:** If you look at `karma.conf.js` file you will find that we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium Grid capabilities via capabilities object. The capabilities object in the above code is defined as:
 ```
 customLaunchers: {
         chrome: {
@@ -125,18 +128,18 @@ or you could also run the test using:
 npm test
 ```
 ### Testing Locally Hosted or Privatley Hosted Projects
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
 <Note>
-Refer our [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 </Note>
-Here’s how you can establish LambdaTest Tunnel.
+Here’s how you can establish <BrandName /> Tunnel.
 
 <Note>
 Download the binary file of:
-* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 </Note>
 Open command prompt and navigate to the binary folder.
 
@@ -148,7 +151,7 @@ So if your user name is lambdatest@example.com and key is 123456, the command wo
 ```bash
 LT -user lambdatest@example.com -key 123456
 ```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
 
 **Tunnel Capability**
 ```bash
@@ -167,5 +170,5 @@ ng test
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 

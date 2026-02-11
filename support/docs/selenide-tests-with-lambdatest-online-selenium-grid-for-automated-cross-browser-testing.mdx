@@ -4,13 +4,15 @@ sidebarTitle: "Selenide"
 keywords: ['Selenide', 'Selenium', 'Selenium automation testing', 'Selenium Testing tool', 'Selenium testing tutorial', 'selenium python', 'Selenium Grid', 'Selenium Automation']
 ---
 import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 
 
 
 ---
 
-In this topic, you will learn how to configure and run tests using **Selenide** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to configure and run tests using **Selenide** on <BrandName />'s [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 
@@ -21,13 +23,13 @@ By the end of this topic, you will be able to:
 1. Set up an environment for testing your hosted web pages using **Selenide** automation framework.
 2. Understand and configure the core capabilities required for your Selenium test suite.
 3. Run test cases in parallel using **Selenide** framework to reduce build times.
-4. Test your locally hosted pages on LambdaTest platform.
-5. Explore advanced features of LambdaTest.
+4. Test your locally hosted pages on <BrandName /> platform.
+5. Explore advanced features of <BrandName />.
 
 <Check>
 **SAMPLE REPO**
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests.
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests.
 
 <GitHubButton url="https://github.com/LambdaTest/selenide-testng-sample" />
 </Check>
@@ -40,13 +42,13 @@ Before you can start performing Java automation testing with Selenium, you would
 
 - Install the latest **Java development environment**. We recommend to use **Java 11** version.
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on LambdaTest Selenium cloud grid.
+- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on <BrandName /> Selenium cloud grid.
 
 - Install **Maven**. It can be downloaded and installed following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
 
 ### Cloning Repo and Installing Dependencies
 
-**Step 1:** Clone the LambdaTest’s [selenide-testng-sample](https://github.com/LambdaTest/selenide-testng-sample) repository and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [selenide-testng-sample](https://github.com/LambdaTest/selenide-testng-sample) repository and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/selenide-testng-sample
@@ -61,9 +63,9 @@ mvn versions:display-dependency-updates
 
 ### Setting up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
 
-**Step 2:** Set LambdaTest `Username` and `Access Key` in environment variables.
+**Step 2:** Set <BrandName /> `Username` and `Access Key` in environment variables.
 
 <Tabs>
   <Tab title="Linux / MacOS">
@@ -83,7 +85,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 <Note>
 **NOTE**
 
-You can also mention your LambdaTest credentials in each of the config files located at `selenide-testng-sample/src/test/resources/conf/`.
+You can also mention your <BrandName /> credentials in each of the config files located at `selenide-testng-sample/src/test/resources/conf/`.
 </Note>
 
 ## Run Your First Test
@@ -92,7 +94,7 @@ You can also mention your LambdaTest credentials in each of the config files loc
 
 ### Sample Test with Selenide
 
-Let’s checkout sample Selenide code running LambdaTest Selenium grid. This is a simple Selenide automation script similar to the script we have used in our [Github repo](https://github.com/LambdaTest/selenide-testng-sample).
+Let’s checkout sample Selenide code running <BrandName /> Selenium grid. This is a simple Selenide automation script similar to the script we have used in our [Github repo](https://github.com/LambdaTest/selenide-testng-sample).
 
 ```java Selenide To Do
 package com.lambdatest;
@@ -182,11 +184,11 @@ public class LambdaTestSetup {
 
         open("http://www.google.co.uk");
 
-        $(By.name("q")).setValue("LambdaTest").pressEnter();
+        $(By.name("q")).setValue("TestMu AI").pressEnter();
 
         sleep(2000);
 
-        Assert.assertEquals(title(), "LambdaTest - Google Search");
+        Assert.assertEquals(title(), "TestMu AI - Google Search");
 
         status = "passed";
     }
@@ -202,7 +204,7 @@ public class LambdaTestSetup {
 
 ### Configuring your Test Capabilities
 
-**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
+**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -237,7 +239,7 @@ mvn compile
 mvn test -P single
 ```
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 ## Run Parallel Tests using Selenide
 
@@ -275,8 +277,6 @@ Here is an example of `parallel.testng.xml` file which would help you to run a s
     </classes>
 	</test>
 </suite>
-```
-
 ```json parallel.config.json
 {
   "server": "hub.lambdatest.com",
@@ -318,27 +318,27 @@ mvn test -P parallel
 <Note>
 **INFO**
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build).
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [TestMu AI automation dashboard](https://automation.lambdatest.com/build).
 </Note>
 
 ## Testing Locally Hosted or Privately Hosted Projects
 
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with [TestMu AI Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using TestMu AI Tunnel app. All you would have to do is set up an SSH tunnel using TestMu AI Tunnel app and pass toggle `tunnel = True` via desired capabilities. TestMu AI Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
 <Check>
 **TUNNEL HELP**
 
-Refer our 🔗 [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+Refer our 🔗 [TestMu AI Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 </Check>
 
-Here’s how you can establish LambdaTest Tunnel.
+Here’s how you can establish TestMu AI Tunnel.
 
 <Note>
 **DOWNLOAD THE BINARY FILE**
 
-- [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+- [TestMu AI Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+- [TestMu AI Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+- [TestMu AI Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 </Note>
 
 Open command prompt and navigate to the binary folder.
@@ -355,7 +355,7 @@ So if your user name is **lambdatest@example.com**, the command would be:
 ./LT -user lambdatest@example.com -key YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
+Once you are able to connect **TestMu AI Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
 
 ```java Tunnel Capability
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -368,6 +368,6 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 - [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 

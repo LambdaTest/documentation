@@ -7,6 +7,8 @@ keywords: ['xcui','java','xcui junit xml reports','lambdatest java','framework o
 
 import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <div>
 <RealDeviceTag value="Real Device" />
@@ -15,7 +17,7 @@ import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 <VirtualDeviceTag value="Virtual Device" />
 </div>
 
-XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the LambdaTest platform.
+XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the <BrandName /> platform.
 
 ## Objective
 ---
@@ -64,7 +66,7 @@ To fetch the XML reports for `all shards` in a shard build, use:
 <Info>
 **NOTE**
 
-- Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
+- Authenticate the API using your <BrandName /> username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
 - It is recommended to run the sharding test(via HyperExecute CLI) in the verbose mode i.e. with the **--verbose** flag. This allows the shard ID(task ID) and build ID(Job ID) to be displayed in the logs and then they can be used to fetch the above reports.
 - In case the report is not a valid XML format, the `encoder=true` parameter can be utilized to prevent the decoding of certain characters. Decoding is usually performed at the server's end to enhance the readability of the report. 
 </Info>

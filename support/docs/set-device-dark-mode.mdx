@@ -4,16 +4,11 @@ sidebarTitle: "Set Dark Mode"
 keywords: ['mobile app testing', 'realtime mobile testing on real devices', 'how to test mobile apps manually', 'manual mobile app testing tools', 'appium desktop', 'dark mode', 'virtual devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
-LambdaTest now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+<BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
 ---
 
@@ -33,11 +28,10 @@ LambdaTest now allows you to **enable or disable dark mode** for automation test
 - Check browser-level dark mode support
 - Review responsiveness across both themes
 
-<Note>
-**INFO**
+<Info>
+**This feature works for both Virtual and Real Devices.**
 
-This feature works for both Virtual and Real Devices.
-</Note>
+</Info>
 
 ## Supported Platforms
 
@@ -46,41 +40,49 @@ This feature works for both Virtual and Real Devices.
 | iOS      | 13 and above   |
 | Android  | 11 and above   |
 
-
 ### Enabling Dark Mode via Capabilities 
 
 You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
 
-<CodeGroup>
-```json iOS highlight={7}
+<Tabs>
+<Tab title="iOS">
+
+```json
 {
     "deviceName":"iPhone 16",
     "platformName":"ios",
     "platformVersion":"18",
     "isRealMobile":True,
     "app":"YOUR_APP_URL",
+    #highlight-next-line
     "darkMode": true
 }
 ```
 
-```json Android highlight={7}
+</Tab>
+<Tab title="Android">
+
+```json
 {
     "deviceName":"Galaxy S20",
     "platformName":"Android",
     "platformVersion":"10",
     "isRealMobile":True,
     "app":"YOUR_APP_URL",
+    #highlight-next-line
     "darkMode": true
 }
 ```
-</CodeGroup>
 
-<Note>
-**INFO**
+</Tab>
+</Tabs>
 
-- You must add the generated **APP_URL** to the `app` capability in the config file.
+<Info>
+**- You must add the generated **APP_URL** to the `app` capability in the config file.**
+
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-</Note>
+
+</Info>
 
 ---
 
@@ -88,8 +90,10 @@ You can enable the dark mode setting through `darkMode` capability before the se
 
 To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
 
-<CodeGroup>
-```python Real Devices
+<Tabs>
+<Tab title="Real Devices">
+
+```python
 driver.execute_script('lambda_executor: { 
       "action": "updateDeviceSettings", 
       "arguments": { 
@@ -98,7 +102,10 @@ driver.execute_script('lambda_executor: {
 }')
 ```
 
-```python Virtual Devices
+</Tab>
+<Tab title="Virtual Devices">
+
+```python
 driver.execute_script('lambdatest_executor: {
       "action": "updateDeviceSettings",
       "arguments": {
@@ -106,14 +113,13 @@ driver.execute_script('lambdatest_executor: {
        }
 }')
 ```
-</CodeGroup>
 
+</Tab>
+</Tabs>
 
-<Check>
-**TIP**
+<Tip>
+**- Dark mode changes are applied at the system level and may require app restarts for full effect**
 
-- Dark mode changes are applied at the system level and may require app restarts for full effect
 - Some legacy applications may not fully support dark mode theming
 - Web applications must implement their own dark mode CSS for the setting to take effect beyond browser UI
-</Check>
-
+</Tip>

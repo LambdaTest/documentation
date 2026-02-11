@@ -1,8 +1,11 @@
 ---
 title: "Job Artifacts"
 sidebarTitle: "HyperExecute Job Artifacts"
-keywords: ['LambdaTest Hyperexecute','LambdaTest Hyperexecute help','LambdaTest Hyperexecute documentation']
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
 
@@ -24,10 +27,8 @@ uploadArtifacts:
       path:
         - src/collect/info.html
 ```
-<Info>
-**NOTE**
-
-- If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
+<Note>
+**- If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.**
 
 - You can replace the Artifacts folder name value with any of the Matrix parameters value.
 
@@ -44,14 +45,14 @@ uploadArtefacts:
 ```
 
 As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
-</Info>
+</Note>
 
 **Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
 **Step 4:** Click on any of the artifacts generated. You can also download the artifacts from the dashboard
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifacts.gif' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifacts.gif' alt="Image" />
 
 Here is the sample artifact generated.
 
-<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifact4.png' alt="Image"  className="doc_img"/>
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifact4.png' alt="Image" />

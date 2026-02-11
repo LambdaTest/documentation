@@ -1,55 +1,53 @@
 ---
-title: "Netlify Integration with Lambdatest"
+title: "Netlify Integration With TestMu AI"
 sidebarTitle: "Netlify"
-keywords:
-  [
-    "Lambdatest integrations",
-    "Lambdatest netlify integration",
-    "integrate netlify with Lambdatest",
-    "netlify integration with Lambdatest",
-    "bug tracking tools",
-    "project management tools"
-  ]
+keywords: ['testmu ai integrations', 'testmu ai netlify integration', 'integrate netlify with testmu ai', 'netlify integration with testmu ai', 'bug tracking tools', 'project management tools']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+# Netlify Integration with <BrandName />
+
 Netlify is a cloud computing company that offers hosting and serverless backend services for web applications and static websites. It allows developers to deploy their websites and applications quickly and easily, with features such as continuous deployment, serverless functions, and global CDN.
 
 ## Prerequisite
 
-1. A Lambdatest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
+1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
 
 2. You need to have a site deployed in your Netlify account.
 
 ## Steps to Setup the Netlify Plugin
 
-### Step 1: Configure your Lambdatest Integration on Netlify Dashboard
+### Step 1: Configure your <BrandName /> Integration on Netlify Dashboard
 
 - Go to your Netlify Dashboard.
 
-- Click on the Integrations tab, search for **Lambdatest** and click on the **Enable** button.
+- Click on the Integrations tab, search for **<BrandName />** and click on the **Enable** button.
 
-![Image](/assets/images/netlify-integration/n1.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n1.png' alt="Image" />
 
 - You need to provide your configuration details
 
-    - Enter your **Username** and **Access Key** from the **Lambdatest Dashboard**.
+    - Enter your **Username** and **Access Key** from the **<BrandName /> Dashboard**.
 
     - Enter your **Smart-UI Project Name**
 
-:::info
-For the Smart-UI Project Name, you can enter any project name. Even if you have not set up any projects in the Smart UI Dashboard.
+<Info>
+**For the Smart-UI Project Name, you can enter any project name. Even if you have not set up any projects in the Smart UI Dashboard.**
 
 You can also enter your already-existing smart-UI project name.
-:::
+</Info>
 
 - Click on the **Save** button
 
-![Image](/assets/images/netlify-integration/n2.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n2.png' alt="Image" />
 
 ### Step 2: Deploy the Site for which you want to compare the results
 
 - Go to the **Deploys** section, click on **Deploy site** button and deploy your project. 
 
-![Image](/assets/images/netlify-integration/n3.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n3.png' alt="Image" />
 
 - This deployment is before any changes you have made and will be your **Baseline** image.
 
@@ -59,14 +57,14 @@ You can also enter your already-existing smart-UI project name.
 
 Your changes will be triggered and deployed.
 
-![Image](/assets/images/netlify-integration/n4.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n4.png' alt="Image" />
 
 ### Step 4: Compare the Changes Smart-UI Dashboard
 
 - Go to your Smart-UI Dashbard. You will notice there is already a project with the same name you entered while configuring in **Step 1**
 
-![Image](/assets/images/netlify-integration/n5.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n5.png' alt="Image" />
 
 - Go on that project. Click on the latest build. You can now compare the changes done to your project with-respect-to the provious build.
 
-![Image](/assets/images/netlify-integration/n6.png)
+<img loading="lazy" src='/assets/images/netlify-integration/n6.png' alt="Image" />

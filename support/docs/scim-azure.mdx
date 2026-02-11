@@ -1,9 +1,10 @@
 ---
 title: "Azure AD Scim User Provisioning"
 sidebarTitle: "Azure AD"
-keywords: ["LambdaTest SCIM"]
+keywords: ["TestMu AI SCIM"]
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 ## Prerequisites
 Integrate SCIM With <BrandName />:
@@ -46,9 +47,9 @@ Integrate SCIM With <BrandName />:
 
 ![Image](/assets/images/lambdatest-scim/azure-ad/userName.png)
  
-- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: Custom attribute used to set <BrandName /> Organization Role for Users, If this attribute is not mapped User role would be set by default. Allowed values are (Admin/Guest/User)
+- **`urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User:OrganizationRole`**: Custom attribute used to set <BrandName /> Organization Role for Users, If this attribute is not mapped User role would be set by default. Allowed values are (Admin/Guest/User)
 
-- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`**: Used to assign an existing group in TestMu AI to a new user created in TestMu AI through SCIM. (Applicable only if organisation has group support active)
+- **`urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User:LambdatestGroup`**: Used to assign an existing group in <BrandName /> to a new user created in <BrandName /> through SCIM. (Applicable only if organisation has group support active)
 
 For filtering only **userName** attribute is supported and must be selected for filtering, click edit on userPrincipalName and make sure **Apply this mapping** is set to **Always**
 
@@ -60,11 +61,9 @@ For filtering only **userName** attribute is supported and must be selected for 
 
 ![Image](/assets/images/lambdatest-scim/azure-ad/dynamic_2.png)
 
-
 Now there are three types Mapping type in AzureAD, “Direct”, “Constant” and “Expression”.
 
-
-For example we can set Constant association “Guest” for `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`
+For example we can set Constant association “Guest” for `urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User:OrganizationRole`
 
 ![Image](/assets/images/lambdatest-scim/azure-ad/dynamic_3.png)
 
@@ -88,7 +87,6 @@ After custom attribute creation, we have to map them using “Add new mapping”
 This operation starts the initial synchronization cycle of all users in Scope in the Settings section. The initial cycle takes longer to perform than subsequent cycles, which occur approximately every 40 minutes as long as the Azure AD provisioning service is running.
 
 ![Image](/assets/images/lambdatest-scim/azure-ad/save.png)
-
 
 <Warning> That's all you need to know about <BrandName /> SCIM Auto User Provisioning with Azure AD.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai). </Warning>
 

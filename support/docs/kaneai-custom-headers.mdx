@@ -1,11 +1,13 @@
 ---
-title: "Custom Headers in KaneAI Web Test Authoring"
+title: "Custom Headers in KaneAI"
 sidebarTitle: "Custom Headers"
 keywords: ['Custom Headers', 'Headers']
 ---
 
-import { BrandName } from '/snippets/BrandName.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
+
+# Custom Headers in KaneAI Web Test Authoring
 
 Custom hеadеrs providе you thе ability to kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt. You can modify thе paramеtеrs of thе HTTP rеquеsts dеlivеrеd in your tеsts by manipulating thеsе hеadеrs. 
 
@@ -24,12 +26,10 @@ Enable the **Custom Headers** toggle to add custom HTTP headers for the test ses
 
 You can add new header rows by clicking the **+** button. Each row will have two fields: **Header Name** and **Header Value**.
 
+<Note>
+**You can add up to 10 custom headers.**
 
-<Info>
-**NOTE**
-
-You can add up to 10 custom headers.
-</Info>
+</Note>
 
 <img loading="lazy" src='/assets/images/kane-ai/features/custom_headers/add_custom_headers.png' alt="objective-page" />
 
@@ -42,11 +42,12 @@ Example: The Custom header `X-Session-ID`is used to track user sessions.
 X-Session-ID: 1234567890 
 ```
 
-<Info>
-**NOTE**
+<Note>
+**If you provide a Default Header in the Custom Header section your Default header will get overridden. **
 
-If you provide a Default Header in the Custom Header section your Default header will get overridden. 
-</Info>
+</Note> 
+
+***
 
 ### Authoring with Custom Headers
 After configuring the custom headers, initiate the Web Authoring session. The headers you added will be applied during the test session, allowing you to test under the configured conditions.
@@ -63,6 +64,7 @@ You will see the list of applied Custom Headers.
 
 <img loading="lazy" src='/assets/images/kane-ai/features/custom_headers/custom_headers_modal.png' alt="objective-page" />
 
+***
 
 ### View the Custom Headers in the Summary Page
 Once the session completes, the custom headers used during the session will be displayed on the summary page, similar to how Chrome options are shown.

@@ -1,8 +1,11 @@
 ---
 title: "Advanced Features in Web Scanner"
 sidebarTitle: "Advanced Features"
-keywords: ["lambdatest", "web scanner", "advanced features", "authentication", "basic auth", "form selectors", "dedicated proxy", "geolocation", "tunnel", "local testing"]
+keywords: ['testmu ai', 'web scanner', 'advanced features', 'authentication', 'basic auth', 'form selectors', 'dedicated proxy', 'geolocation', 'tunnel', 'local testing']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 ## Overview
 
@@ -15,7 +18,7 @@ The advanced features are accessible from the **Advanced Configurations** sectio
 - **Geolocation**: Simulate scans from different geographic locations
 - **Tunnel**: Scan locally hosted web pages and applications
 
-![Advanced Configurations for Visual Scan](/assets/images/web-scanner/visual-scan-advanced-settings.png)
+<img loading="lazy" src='/assets/images/web-scanner/visual-scan-advanced-settings.png' alt="Advanced Configurations for Visual Scan" />
 
 ---
 
@@ -45,9 +48,7 @@ Basic Authentication is an HTTP authentication method where credentials are sent
    - Enter your **Password**
 5. Click **Add & save configuration**
 
-<Warning>
-**Note:** It is recommended to use credentials of a dummy/test account for scanning purposes. Never use production credentials.
-</Warning>
+> **Note:** It is recommended to use credentials of a dummy/test account for scanning purposes. Never use production credentials.
 
 ### Form Authentication
 
@@ -75,7 +76,7 @@ Form Authentication allows you to authenticate using login forms on your website
    - Enter the CSS selector for the password field (e.g., `#password`, `.login-password`, `input[type="password"]`)
 6. Click **Add & save configuration**
 
-![Login Configurations Modal](/assets/images/web-scanner/accessibility-scan-advanced-options.png)
+<img loading="lazy" src='/assets/images/web-scanner/accessibility-scan-advanced-options.png' alt="Login Configurations Modal" />
 
 #### Finding CSS Selectors
 
@@ -118,7 +119,7 @@ For detailed information about dedicated proxy configuration and IP whitelisting
 
 ### How Dedicated Proxy Works
 
-1. LambdaTest allocates a dedicated proxy server with a static IP address
+1. <BrandName /> allocates a dedicated proxy server with a static IP address
 2. Your network administrator whitelists this IP address
 3. Web Scanner routes all scan requests through the dedicated proxy
 4. The proxy accesses your network-restricted resources using the whitelisted IP
@@ -130,9 +131,7 @@ For detailed information about dedicated proxy configuration and IP whitelisting
 3. Select your dedicated proxy region from the dropdown
 4. The proxy will be active for your scan session
 
-<Warning>
-**Note:** Dedicated Proxy is an enterprise feature. Contact your LambdaTest account manager to enable this feature for your organization.
-</Warning>
+> **Note:** Dedicated Proxy is an enterprise feature. Contact your <BrandName /> account manager to enable this feature for your organization.
 
 ### Benefits of Dedicated Proxy
 
@@ -216,10 +215,10 @@ For comprehensive tunnel setup instructions, configuration options, and troubles
 
 ### How Tunnel Works
 
-LambdaTest Tunnel creates a secure, encrypted connection between your local machine and the LambdaTest cloud infrastructure:
+<BrandName /> Tunnel creates a secure, encrypted connection between your local machine and the <BrandName /> cloud infrastructure:
 
-1. You download and run the LambdaTest Tunnel binary on your local machine
-2. The tunnel establishes a secure connection to LambdaTest's cloud
+1. You download and run the <BrandName /> Tunnel binary on your local machine
+2. The tunnel establishes a secure connection to <BrandName />'s cloud
 3. Web Scanner routes requests through the tunnel to access your local resources
 4. All communication is encrypted and secure
 
@@ -227,9 +226,9 @@ LambdaTest Tunnel creates a secure, encrypted connection between your local mach
 
 #### Step 1: Download Tunnel Binary
 
-Download the LambdaTest Tunnel binary for your platform:
+Download the <BrandName /> Tunnel binary for your platform:
 
-<Tabs>
+<Tabs className="docs__val" groupId="platform">
 <Tab title="Windows">
 
 **Windows (64-bit)**
@@ -273,7 +272,7 @@ https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT
 
 #### Step 2: Start the Tunnel
 
-<Tabs>
+<Tabs className="docs__val" groupId="platform">
 <Tab title="Windows">
 
 ```bash
@@ -292,8 +291,8 @@ chmod +x LT
 </Tabs>
 
 Replace:
-- `YOUR_LAMBDATEST_USERNAME`: Your LambdaTest username
-- `YOUR_LAMBDATEST_ACCESS_KEY`: Your LambdaTest access key
+- `YOUR_LAMBDATEST_USERNAME`: Your <BrandName /> username
+- `YOUR_LAMBDATEST_ACCESS_KEY`: Your <BrandName /> access key
 - `YOUR_TUNNEL_NAME`: A unique name for your tunnel (e.g., "web-scanner-tunnel")
 
 #### Step 3: Configure Tunnel in Web Scanner
@@ -336,9 +335,8 @@ You can combine multiple advanced features in a single scan:
 - **Geolocation + Dedicated Proxy**: Test region-specific content through a dedicated proxy
 - **Authentication + Geolocation**: Test authenticated pages from specific geographic locations
 
-<Warning>
-**Note:** Some feature combinations may have limitations. For example, Tunnel and Geolocation cannot be used simultaneously in a single scan. Use parallel scans if you need both features.
-</Warning>
+> **Note:** Some feature combinations may have limitations. For example, Tunnel and Geolocation cannot be used simultaneously in a single scan. Use parallel scans if you need both features.
+
 ---
 
 ## Additional Resources
@@ -348,4 +346,3 @@ You can combine multiple advanced features in a single scan:
 - [Testing Locally Hosted Pages](/support/docs/testing-locally-hosted-pages)
 - [Dedicated Proxy Documentation](/support/docs/dedicated-proxy)
 - [HTTP Basic Authentication](/support/docs/http-basic-authentication)
-

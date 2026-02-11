@@ -1,20 +1,23 @@
 ---
-title: "GoCD Integration With Lambdatest"
+title: "GoCD Integration With TestMu AI"
 sidebarTitle: "GoCD"
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ***
 
 GoCD offers a free and open-source platform to help you configure robust CI/CD pipelines with ease. The intuitive UI offers an end-to-end view wherein you can visualize the entire migration path to production in a collective view. That way, you can easily pinpoint the inefficient areas to optimize the CI/CD process. By leveraging GoCD, you can achieve faster feedback loops through its modelling constructs which makes your complex CI/CD pipeline looks a lot simpler. You also get features like dependency management & parallel execution to help you deliver better products quicker.
 
-Lambdatest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your Lambdatest automation dashboard.
+<BrandName /> integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your <BrandName /> automation dashboard.
 
 ## Prerequisites
 ***
 
 1. Copy the YAML configuration file from our [GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample/blob/master/nightwatch-gocd-sample.gocd.yaml).
 
-2. **Lambdatest Authentication Credentials**
-    Be aware of your Lambdatest authentication credentials i.e. your Lambdatest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [Lambdatest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+2. **<BrandName /> Authentication Credentials**
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -36,7 +39,7 @@ Lambdatest integration with GoCD will help your perform Selenium test automation
 
 3. Make sure to install GoCD in your system.
 
-## Configuring GoCD Pipeline For Lambdatest Selenium Grid
+## Configuring GoCD Pipeline For <BrandName /> Selenium Grid
 ***
 
 **Step 1:** Visit your GoCD Dashboard and create a new pipeline by selecting the option to "Use Pipeline as Code".
@@ -47,7 +50,7 @@ Lambdatest integration with GoCD will help your perform Selenium test automation
 
 ![GoCD Integration](/assets/images/gocd-integration/gocd-1-1.webp)
 
-**Step 3:** Provide the [Lambdatest GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) as the repository URL. Test you connection and provide a label for this repository. In our case, we have provided the label as Sample-Pipeline, you may keep something else for your instance.
+**Step 3:** Provide the [<BrandName /> GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) as the repository URL. Test you connection and provide a label for this repository. In our case, we have provided the label as Sample-Pipeline, you may keep something else for your instance.
 
 ![GoCD Integration](/assets/images/gocd-integration/gocd-1-2.webp)
 
@@ -71,5 +74,5 @@ Lambdatest integration with GoCD will help your perform Selenium test automation
 
 ![GoCD Integration](/assets/images/gocd-integration/gocd-1-7.webp)
 
-Great work! You have successfully integrated your GoCD instance with your Lambdatest account. Follow our another documentation, if you wish to configure a private YAML and then integrate your GoCD pipeline with Lambdatest.
+Great work! You have successfully integrated your GoCD instance with your <BrandName /> account. Follow our another documentation, if you wish to configure a private YAML and then integrate your GoCD pipeline with <BrandName />.
 

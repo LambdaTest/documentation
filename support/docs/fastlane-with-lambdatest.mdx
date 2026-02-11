@@ -1,54 +1,52 @@
 ---
 title: "Integration With fastlane Plugin"
 sidebarTitle: "fastlane Plugin"
-keywords: [ "fastlane plugin", "lambdatest integrations with ci/cd tools", "continuous integration", "lambdatest fastlane plugin", ]
+keywords: ['fastlane plugin', 'testmu ai integrations with ci/cd tools', 'continuous integration', 'testmu ai fastlane plugin']
 ---
+
 import { BrandName } from "/snippets/BrandName.mdx";
 
----
 
 fastlane is a CI/CD tool to automate beta deployments and releases for Android and iOS apps. It is an open-source platform for Android and iOS app deployment. It will take care of all the tasks like testing, generating screenshots, dealing with code signing, and releasing your application. Provides integration support with all the major CI systems. Adding the <BrandName /> fastlane plugin in Fastfile will help you upload the app to the server and run tests on <BrandName /> real devices.
 
 ## Prerequisites
 
-<Check>
-** Github Sample** <br/>
+<Tip>
+**Github Sample**
 
-To get started, please try our **[fastlane Sample](https://github.com/LambdaTest/fastlane-android-sample)** GitHub repository..
+To get started, please try our **[fastlane Sample](https://github.com/<BrandName />/fastlane-android-sample)** GitHub repository..
 
 ```bash
-git clone https://github.com/LambdaTest/fastlane-android-sample
+git clone https://github.com/TestMu AI/fastlane-android-sample
 ```
-</Check>
 
----
+</Tip>
 
+***
 To upload an app to <BrandName /> for app testing, you would need the following things :
 
-- Make sure you have fastlane installed on the machine. Please refer fastlane docs for installation.
+* Make sure you have fastlane installed on the machine. Please refer fastlane docs for installation.
 
-- <BrandName /> Credentials
-  - Please ensure that you have your <BrandName /> credentials handy, including your <BrandName /> username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your <BrandName /> automation [dashboard](https://automation.lambdatest.com/build).
+* <BrandName /> Credentials
 
-![add](/assets/images/fastlane/lambdatest_creds.png)
+    * Please ensure that you have your <BrandName /> credentials handy, including your <BrandName /> username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your <BrandName /> automation [dashboard](https://automation.lambdatest.com/build).
 
-  ```bash
-  LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-  LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-  ```
+    <img loading="lazy" src='/assets/images/fastlane/lambdatest_creds.png' alt="add" width="100" height="100" />
+
+    ``` bash
+    LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+    LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+    ```
 
 ## Installing <BrandName /> fastlane Plugin
+***
 
----
-
-**Step 1:** Add <BrandName /> [fastlane](https://rubygems.org/gems/fastlane-plugin-lambdatest) plugin by running.
-
+**Step 1:** Add <BrandName /> [fastlane](https://rubygems.org/gems/fastlane-plugin-testmu ai) plugin by running.
 ```
-fastlane add_plugin lambdatest
+fastlane add_plugin testmu ai
 ```
 
-**Step 2:** Add the below action in fastfile in desired lane to upload the app to <BrandName />.
-
+**Step 2:** Add the below action in fastfile in desired lane to upload the app to <BrandName />.   
 ```
 upload_to_lambdatest(
     lt_username: ENV["LT_USERNAME"],
@@ -56,7 +54,6 @@ upload_to_lambdatest(
     file_path: "app_file_path"
 )
 ```
-
 or if you want to used custom_id.
 
 ```
@@ -67,8 +64,7 @@ upload_to_lambdatest(
     custom_id: "<custom_id>
 )
 ```
-
-**_NOTE:_** custom_id is an optional field.
+**_NOTE:_**  custom_id is an optional field.
 
 **Step 3:** Once the app is uploaded to <BrandName />, this action will set an identifier to the uploaded app as APP_URL in the environment variable and can be accessed in the test.
 
@@ -77,7 +73,7 @@ String app = System.getenv("APP_URL");
 capabilities.setCapability("app", app);
 ```
 
-**Step 4:** Execute the below command to upload app and run tests.
+**Step 4:**  Execute the below command to upload app and run tests.
 
 ```
 fastlane <lane>

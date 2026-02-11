@@ -1,24 +1,21 @@
 ---
-title: "SIM Support On Public Real Devices"
+title: "SIM & eSIM Automation on Real Devices"
 sidebarTitle: "Enable SIM"
-keywords: ['SIM', 'eSIM', 'iOS', 'Android', 'automation', 'testing', 'OTP', 'SMS', 'lambdatest']
+keywords: ['SIM', 'eSIM', 'iOS', 'Android', 'automation', 'testing']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div> 
+
+# SIM Support On Public Real Devices
+<RealDeviceTag value="Real Device" /> 
 SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.
 
 **SMS-based authentication** is one of the most widely used security and identity verification methods. Automating these flows ensures consistent validation, reduces manual effort, and helps uncover edge cases early in the testing cycle.
 
-With **LambdaTest**, you can automate SIM and eSIM scenarios on **Real Devices**. From requesting SIM-enabled devices to retrieving phone numbers and polling incoming SMS for OTP validation, LambdaTest provides an end-to-end setup for testing SMS-driven features in your automation suite.
+With **<BrandName />**, you can automate SIM and eSIM scenarios on **Real Devices**. From requesting SIM-enabled devices to retrieving phone numbers and polling incoming SMS for OTP validation, <BrandName /> provides an end-to-end setup for testing SMS-driven features in your automation suite.
 
-<Warning>
-To enable this for your organization, contact us via **24×7 chat support** or email **support@lambdatest.com**.
-</Warning>
+> To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@testmu.ai**.<br />
 
 ---
 
@@ -31,9 +28,8 @@ To enable this for your organization, contact us via **24×7 chat support** or e
 
 ---
 
-
 ## Supported Countries & SIM Availability
-LambdaTest provides SIM and eSIM-enabled devices across **specific countries**, allowing you to test SMS-driven workflows under real carrier conditions. The **availability** of physical SIMs or eSIMs varies by region and carrier, ensuring your automation scripts can validate authentication flows, messaging, and phone number handling in environments that closely resemble real-world usage.
+<BrandName /> provides SIM and eSIM-enabled devices across **specific countries**, allowing you to test SMS-driven workflows under real carrier conditions. The **availability** of physical SIMs or eSIMs varies by region and carrier, ensuring your automation scripts can validate authentication flows, messaging, and phone number handling in environments that closely resemble real-world usage.
 
 | Country | Carriers               | SIM Type Availability        |
 |---------|-----------------------|-----------------------------|
@@ -51,7 +47,6 @@ When automating SIM or eSIM scenarios on real devices, you can **customize** you
 | **enableSim** | Boolean | false   | Provision a SIM-enabled device. Must be set to `True` to request SIM support. |
 | **simOptions**| Object  | None    | Define SIM preferences such as region, carrier, or eSIM request. These parameters are nested inside `simOptions`. |
 
-
 ### simOptions Configurations
 
 | Configuration | Type       | Example                  | Description |
@@ -60,23 +55,24 @@ When automating SIM or eSIM scenarios on real devices, you can **customize** you
 | carrier   | String  | ["airtel"] or ["jio","vodafone"] | Select preferred carrier(s). |
 | esim      | Boolean    | true                     | Request an eSIM-enabled device (iOS only). |
 
-<Note>
-**INFO**
+<Info>
+**Region and carrier values are case-sensitive. Make sure to enter them exactly as shown in the example above.**
+</Info>
 
-Region and carrier values are case-sensitive. Make sure to enter them exactly as shown in the example above.
-</Note>
 ---
 
 ## SIM support Workflow in Automation Test
-
 
 ### Step 1: Add SIM Capabilities
 
 To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:
 
-<CodeGroup>
-```python iOS
-desired_caps = {
+<Tabs className="docs__val">
+
+<Tab title="iOS">
+
+```python title="iOS(.ipa)"
+ desired_caps = {
     'platformName': 'iOS',
     'platformVersion': '16.0',
     'deviceName': 'iPhone 14',
@@ -90,7 +86,10 @@ desired_caps = {
 }
 ```
 
-```python Android
+</Tab>
+<Tab title="Android">
+
+```python title="Android(.apk)"
 desired_caps = {
     'platformName': 'Android',
     'platformVersion': '16',
@@ -103,8 +102,10 @@ desired_caps = {
     }
 }
 ```
-</CodeGroup>
 
+</Tab>
+
+</Tabs>
 
 ### Step 2: Retrieve SIM Properties at Runtime
 

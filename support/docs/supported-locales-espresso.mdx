@@ -1,8 +1,10 @@
 ---
 title: "Supported Locales And Languages - Espresso"
 sidebarTitle: "Supported Locales And Languages"
-keywords: ['','Supported locales','Locales','Appium supported locales']
+keywords: ['Supported locales', 'Locales', 'Appium supported locales']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 
 Use the given below list of supported locale and language codes for app testing.
@@ -10,11 +12,10 @@ Use the given below list of supported locale and language codes for app testing.
 ## Android Locales and Language Codes
 
 To test localised strings in your android app, configure Appium's language capability with language code. 
-<Note>
-**INFO**
+<Info>
+**Language to be passed in the capability - language:'fr' where fr is language code for french**
 
-Language to be passed in the capability - language:'fr' where fr is language code for french
-</Note>
+</Info>
 
 ### Android Language and Language Codes
 
@@ -62,11 +63,10 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
-<Note>
-**INFO**
+<Info>
+**Locale to be passed in the capability - locale:'FR' where FR is the locale code for France**
 
-Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
-</Note>
+</Info>
 
 | Locale                 | Locale Code                |
 | -----------------------| ---------------------------|
@@ -123,14 +123,13 @@ Locale to be passed in the capability - locale:'FR' where FR is the locale code 
 | Vietnam                |  VN                        | 
 | Zimbabwe               |  ZA                        | 
 
-
 ## How to Setup Locale and Language
 
 You can also configure both locale and language during Espresso test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
 
 ### Language
 
-To test a localized version of your app on LambdaTest, use the `language` parameter in the Espresso test execution API request. This allows you to change the language of the application under test.
+To test a localized version of your app on <BrandName />, use the `language` parameter in the Espresso test execution API request. This allows you to change the language of the application under test.
 
 | Parameter | Description                            | Values     |
 |-----------|----------------------------------------|------------|
@@ -138,7 +137,7 @@ To test a localized version of your app on LambdaTest, use the `language` parame
 
 ### Locale
 
-To test a localized version of your app on LambdaTest, use the `locale` parameter in the Espresso test execution API request. This allows you to set the locale for the application under test.
+To test a localized version of your app on <BrandName />, use the `locale` parameter in the Espresso test execution API request. This allows you to set the locale for the application under test.
 
 | Parameter | Description                       | Values     |
 |-----------|-----------------------------------|------------|
@@ -163,10 +162,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 }'
 ```
 
-<Info>
-**INFO**
+<Note>
+**- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.**
 
-- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
 - App should support the language and locale mentioned in the API request to work.
 - For espresso sharding tests, you have to mention this in the `.yaml` file.
-</Info>
+</Note>

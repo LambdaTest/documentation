@@ -1,9 +1,11 @@
 ---
-title: "Create SSO Connection With LambdaTest"
+title: "Create SSO Connection With TestMu AI"
 sidebarTitle: "Create SSO Connection"
-keywords: ["sso", "LambdaTest SSO", "Create SSO", "SSO Self Serve"]
+keywords: ['sso', 'TestMu AI SSO', 'Create SSO', 'SSO Self Serve']
 ---
-import { BrandName } from '/snippets/BrandName.mdx';
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 <BrandName /> allows you to integrate an external user directory with your <BrandName /> Organization through an IDP so your team could leverage the Single Sign-on setup using SAML.
 
@@ -23,21 +25,21 @@ Create SSO Connection With <BrandName />:
 ## Configuring <BrandName /> SSO Integration Using SAML
 ---
 1. Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">SSO Section</a> in the **Security** tab of **Organization Settings** and click on **Setup SSO**.
-![setup sso button](/assets/images/lambdatest-mfa/sso-setup.webp)
+<img loading="lazy" src='/assets/images/testmu ai-mfa/sso-setup.webp' alt="setup sso button" width="944" height="409" /> 
 
 2. Enter Connection Name and Click on  **Add New Connection**.
-![connection name button](/assets/images/lambdatest-mfa/sso-firs-step.webp)
+<img loading="lazy" src='/assets/images/testmu ai-mfa/sso-firs-step.webp' alt="connection name button" width="944" height="409" /> 
 
 3. Select your **Identity Provider**.
-![select identity provider](/assets/images/sso-self-serve/select-idp.png)
+<img loading="lazy" src='/assets/images/sso-self-serve/select-idp.png' alt="select identity provider" width="944" height="407" />
 
 4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
 Once configured, click on continue
-![configure IDP details](/assets/images/sso-self-serve/copy-info.png)
+<img loading="lazy" src='/assets/images/sso-self-serve/copy-info.png' alt="configure IDP details" width="945" height="542" />
 
 5. Now Configure the Attributes and Claims in your **Identity Provider**.
 Once configured, click on continue
-![configure attributes](/assets/images/sso-self-serve/attributes.png)
+<img loading="lazy" src='/assets/images/sso-self-serve/attributes.png' alt="configure attributes" width="945" height="542" />
 
 6. Fill the required fields  and click on **Create Connection**:
 
@@ -48,14 +50,11 @@ Once configured, click on continue
 * X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 
 <h4>Create Connection with Metadata URL </h4>
-![sso-self serve](/assets/images/sso-self-serve/finalize-sso-metadata.png)
-
+<img loading="lazy" src='/assets/images/sso-self-serve/finalize-sso-metadata.png' alt="sso-self serve" width="945" height="542" />
 <h4>Create Connection without Metadata URL </h4>
+<img loading="lazy" src='/assets/images/sso-self-serve/finalize-without-metadata.png' alt="sso-self serve" width="945" height="542" />
 
-![sso-self serve without metadata](/assets/images/sso-self-serve/finalize-without-metadata.png)
-
-7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/lambdatest-sso-manage-connection">Manage SSO Connection</a>.
-   ![sso-self serve](/assets/images/sso-self-serve/edit-connection.png)
-
+7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection">Manage SSO Connection</a>.
+   <img loading="lazy" src='/assets/images/sso-self-serve/edit-connection.png' alt="sso-self serve" width="945" height="542" />
 
 That's all you need to know for Configuring <BrandName /> SSO Integration Using SAML. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).

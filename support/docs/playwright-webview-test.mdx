@@ -1,10 +1,11 @@
 ---
 title: "Playwright Webview Testing"
 sidebarTitle: "Webview Testing"
-keywords: ['playwright webview testing', 'playwright mobile testing', 'playwright android', 'playwright lambdatest']
+keywords: ['playwright testing', 'playwright mobile testing', 'playwright testing tool', 'playwright testing on testmu ai', 'playwright testing testmu ai', 'playwright android']
 ---
 
-import { GitHubButton } from '/snippets/GitHubButton.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
@@ -14,15 +15,15 @@ WebView testing is an essential process for ensuring the functionality and relia
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check>
-**SAMPLE REPO**
+<Tip>
+**sample repo**
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<GitHubButton url="https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js" />
-</Check>
+<a href="https://github.com/<BrandName />/playwright-sample/blob/main/playwrightwebview.js" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
-- If you are using your own project, configure the `browserWSEndpoint` (browser end point URL) in your test script to run the test on LambdaTest
+- If you are using your own project, configure the `browserWSEndpoint` (browser end point URL) in your test script to run the test on <BrandName />
 
 ```javascript
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
@@ -31,7 +32,7 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 - Here is the sample test script for your reference:
 
 ```javascript reference title="playwrightwebview.js"
-https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
+https://github.com/TestMu AI/playwright-sample/blob/main/playwrightwebview.js
 ```
 
 ### Step 2: Update the dependencies
@@ -54,42 +55,47 @@ const capabilities = {
   },
 ```
 
-<Check>
-**TIP**
+<Tip>
+**Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.**
 
-Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
-</Check>
+</Tip>
 
-### Step 4: Setup your LambdaTest credentials
+### Step 4: Setup your <BrandName /> credentials
 
-In your terminal (as per your respective Operating System), run these command to setup your LambdaTest credentials.
-<Note>
-You can see your credentials below if you have logged into our platform.
-</Note>
+In your terminal (as per your respective Operating System), run these command to setup your <BrandName /> credentials.
+> You can see your credentials below if you have logged into our platform.
 
-<Tabs>
+<Tabs className="docs__val">
+
 <Tab title="Linux / MacOS">
-```bash
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
+
 </Tab>
 
 <Tab title="Windows">
-```powershell
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
 ```
+
 </Tab>
 </Tabs>
 
 ### Step 5: Execute your test
-Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on LambdaTest:
+Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on <BrandName />:
 
 ```bash
 node playwrightwebview.js
 ```
 
-Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
-<img loading="lazy" src='/assets/images/playwright-testing/webview-test.png' alt="Image"  className="doc_img"/>
-
+Visit the [<BrandName /> Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+<img loading="lazy" src='/assets/images/playwright-testing/webview-test.png' alt="Image" />

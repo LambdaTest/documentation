@@ -1,14 +1,15 @@
 ---
 title: "Automation Tests with Accessibility Tool using Playwright"
 sidebarTitle: "Playwright"
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Automation', 'Accessibility Testing Settings']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-import { GitHubButton } from "/snippets/GitHubButton.mdx";
+
 
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
-<Warning> **Note :** Accessibility Testing for Playwright is currently only supported on the Chrome browser (not Chromium-based browsers).</Warning>
+> **Note :** Accessibility Testing for Playwright is currently only supported on the Chrome browser (not Chromium-based browsers).
 
 ## Prerequisites
 
@@ -18,16 +19,15 @@ This document walks you through the process of evaluating the accessibility of y
 ## Step-by-Step Guide to Trigger Your Test
 
 ### Step 1: Setup Your Test Suite
-
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-<Check> 
-**SAMPLE REPO** <br />
+<Tip>
+**sample repo**
 
 Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<GitHubButton url="https://github.com/LambdaTest/lambdatest-accessibility-playwright" />
-</Check>
+<a href="https://github.com/<BrandName />/testmu ai-accessibility-playwright" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+</Tip>
 
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
@@ -43,54 +43,66 @@ Configure the desired capabilities based on your test requirements. For example:
       'name': 'Playwright Accessibility',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
-```   
-<Warning> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`https://www.lambdatest.com/capabilities-generator/`}>Capabilities Generator Tool</a>.</Warning>
+      ..//
+    }
+  }
+```
+
+<Warning>
+You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>.
+</Warning>
+
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables _LT_USERNAME_ and _LT_ACCESS_KEY_ that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs>
-  <Tab title="Linux / MacOS">
-      ```bash 
-         export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}" 
-         export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
-      ```
-  </Tab>
+<Tabs className="docs__val">
 
-  <Tab title="Windows">
-      ```powershell 
-        set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}" 
-        set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
-      ```
-  </Tab>
+<Tab title="Linux / MacOS">
+
+  ```bash
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
+
+<Tab title="Windows">
+
+  ```powershell
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  
+```
+
+</Tab>
 </Tabs>
 
 ### Step 3: Configure the Necessary Capabilities
-
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```javascript
 const capabilities = {
-  accessibility: true,
+  "accessibility": true,
   "accessibility.wcagVersion": "wcag21a",
   "accessibility.bestPractice": false,
-  "accessibility.needsReview": true,
+  "accessibility.needsReview": true
 };
 ```
 
 ### Step 4: Add the following add-on Script
-
-<BrandName /> uses an internal Chrome extension that powers accessibility scans
-and generates accessibility reports. In your `lambdatest-setup.js` file add
-these three lines after your page creation command as shown below:
+<BrandName /> uses an internal Chrome extension that powers accessibility scans and generates accessibility reports. In your `testmu ai-setup.js` file add these three lines after your page creation command as shown below:
 
 ```javascript
 // Load the extension for report generation of the accessibility tests
 await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
-const secondToggleButton = ltPage.locator("#crToggle").nth(0);
+const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
 await secondToggleButton.click();
 ```
 
@@ -102,10 +114,8 @@ Now execute your tests and visit the [Automation Dashboard](https://accounts.lam
 npx playwright test --config=./playwright.config.js
 ```
 
-![automation-dashboard](/assets/images/accessibility-testing/playwright/playwright-accessibility-1.png)
-
-<br />
+<img loading="lazy" src='/assets/images/accessibility-testing/playwright/playwright-accessibility-1.png' alt="automation-dashboard" /> <br />
 
 You can access the detailed accessibility report from the [Accessibility Automation Reports Dashboard](https://accessibility.lambdatest.com/automation)
 
-![automation-dashboard](/assets/images/accessibility-testing/playwright/playwright-accessibility.png)
+<img loading="lazy" src='/assets/images/accessibility-testing/playwright/playwright-accessibility.png' alt="automation-dashboard" />

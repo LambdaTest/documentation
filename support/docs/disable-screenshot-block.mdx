@@ -1,19 +1,13 @@
 ---
 title: "Disable Screenshot Block for Android"
 sidebarTitle: "Disable Screenshot Block"
-keywords: ['disable screenshot block', 'screenshot unblock', 'app test automation', 'Biometric security', 'lambdatest capture code', 'framework on lambdatest', 'screenshot disable', 'app testing appium', 'app testing', 'real devices']
-
+keywords: ['screenshot unblock', 'disable screenshot block', 'app test automation', 'Biometric security', 'testmu ai capture code', 'framework on testmu ai', 'screenshot disable', 'app testing appium', 'app testing', 'real devices']
 ---
 
-import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
-import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+import { BrandName } from "/snippets/BrandName.mdx";
 
-<div>
-<RealDeviceTag value="Real Device" />
-</div>
-<div>
-<VirtualDeviceTag value="Virtual Device" />
-</div>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 ## Introduction
 ---
@@ -21,30 +15,26 @@ import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this tool. You can test your apps with this tool in our app-live tests and app automation tests.
 This document details all you need to know about the tool.
 
-LambdaTest now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
+<BrandName /> now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
 
-<Note>
-**INFO**
+<Info>
+****OS Version:** Android Disable Screenshot Unblock is supported for all os versions.**
 
-**OS Version:** Android Disable Screenshot Unblock is supported for all os versions.
+This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).
 
-This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
-
-</Note>
+</Info>
 
 ## Disable Screenshot Block in Real Time App Testing
 
 ----
 For manual testing, **disable screenshot block** toggle will be seen as soon as the user uploads any app.
 
-<img loading="lazy" src="/assets/images/disable-screenshot-block/disable-toggle.png" alt="Image" className="doc_img"/>
+<img loading="lazy" src='/assets/images/disable-screenshot-block/disable-toggle.png' alt="Image" width="100" height="100" />
 
-<Check>
-**TIP**
+<Tip>
+**After uploading your application, please wait for 3-5 minutes(depends of app file size) for the application file patching process to complete.**
 
-After uploading your application, please wait for 3-5 minutes(depends of app file size) for the application file patching process to complete.
-</Check>
-
+</Tip>
 
 ## Disable Screenshot Block in App Automation
 
@@ -73,12 +63,9 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
     capabilities.setCapability("enableScreenshotUnblock",true); // for screenshot unblock
   ```
 
-
 ## Important Notes
 
 **Disable Screenshot Block** will only work for applications that were uploaded after 28th June 2023.
 
-<Warning>
-Got any questions?<br/>
-Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
-</Warning>
+> Got any questions?<br />
+> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).

@@ -1,17 +1,11 @@
 ---
 title: "SmartUI CLI Complete Reference Guide"
 sidebarTitle: "CLI Complete Reference"
-keywords:
- [
-  "smartui cli",
-  "cli commands",
-  "cli options",
-  "advanced options",
-  "storybook cli",
-  "command line interface",
-  "visual regression testing"
-]
+keywords: ['smartui cli', 'cli commands', 'cli options', 'advanced options', 'storybook cli', 'command line interface', 'visual regression testing']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 
 This comprehensive reference guide covers all SmartUI CLI and Storybook CLI commands, options, advanced features, and end-to-end workflows for visual regression testing.
 
@@ -19,26 +13,25 @@ This comprehensive reference guide covers all SmartUI CLI and Storybook CLI comm
 
 - Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
 - npm or yarn package manager
-- LambdaTest account credentials
+- <BrandName /> account credentials
 - SmartUI project created
 
 <Note>
-NOTE
+**If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.**
 
-If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 </Note>
 
 ## Installation
 
-<Tabs>
-<Tab title='SmartUI CLI'>
+<Tabs className='docs__val' groupId='cli-install'>
+<Tab title="SmartUI CLI">
 ```bash
 npm install -g @lambdatest/smartui-cli@latest
 ```
 **Current Version**: v4.1.43+
 
 </Tab>
-<Tab title='Storybook CLI'>
+<Tab title="Storybook CLI">
 ```bash
 npm install -g @lambdatest/smartui-storybook@latest
 ```
@@ -53,8 +46,8 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 ### Main Commands Overview
 
-<Tabs>
-<Tab title='Core Commands'>
+<Tabs className='docs__val' groupId='command-category'>
+<Tab title="Core Commands">
 | Command | Description | Usage |
 |---------|------------|-------|
 | `exec` | Execute test commands with SmartUI server | `smartui exec [options] -- <command>` |
@@ -64,7 +57,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </Tab>
 
-<Tab title='Server Management'>
+<Tab title="Server Management">
 | Command | Description | Usage |
 |---------|------------|-------|
 | `exec:start` | Start SmartUI snapshot server | `smartui exec:start [options]` |
@@ -74,7 +67,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </Tab>
 
-<Tab title='Configuration'>
+<Tab title="Configuration">
 | Command | Description | Usage |
 |---------|------------|-------|
 | `config:create` | Create SmartUI config file | `smartui config:create [filepath]` |
@@ -85,7 +78,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </Tab>
 
-<Tab title='Figma Integration'>
+<Tab title="Figma Integration">
 | Command | Description | Usage |
 |---------|------------|-------|
 | `upload-figma` | Capture Figma screenshots | `smartui upload-figma [options] <file>` |
@@ -94,7 +87,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </Tab>
 
-<Tab title='Branch & Build Management'>
+<Tab title="Branch & Build Management">
 | Command | Description | Usage |
 |---------|------------|-------|
 | `merge branch` | Merge source branch into target | `smartui merge branch [options]` |
@@ -108,8 +101,8 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 ## Command Details
 
-<Tabs>
-<Tab title='exec'>
+<Tabs className='docs__val' groupId='command-details'>
+<Tab title="exec">
 **Execute Tests**
 
 Execute test commands with SmartUI server running.
@@ -132,8 +125,8 @@ smartui exec [options] -- <command>
 | `--fetch-results [filename]` | | Fetch results and save to JSON file | `results.json` |
 | `--buildName <string>` | | Custom build name for test run | Random |
 | `--scheduled <string>` | | Specify schedule ID | - |
-| `--userName <string>` | | LambdaTest username (overrides env) | - |
-| `--accessKey <string>` | | LambdaTest access key (overrides env) | - |
+| `--userName <string>` | | <BrandName /> username (overrides env) | - |
+| `--accessKey <string>` | | <BrandName /> access key (overrides env) | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -155,7 +148,7 @@ smartui exec --userName "user" --accessKey "key" -- npm test
 ```
 </Tab>
 
-<Tab title='capture'>
+<Tab title="capture">
 **Capture Static URLs**
 
 Capture screenshots of static URLs from a configuration file.
@@ -179,8 +172,8 @@ smartui capture [options] <file>
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
 | `--scheduled <string>` | | Schedule ID | - |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -203,7 +196,7 @@ smartui capture urls.json --buildName "Daily-Run" --fetch-results daily-results.
 
 </Tab>
 
-<Tab title='upload'>
+<Tab title="upload">
 **Upload Screenshots**
 
 Upload screenshots from a directory for comparison.
@@ -228,8 +221,8 @@ smartui upload [options] <directory>
 | `--ignoreDir <patterns>` | `-i` | Comma-separated directories to ignore | - |
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 
 **Examples:**
 ```bash
@@ -253,7 +246,7 @@ smartui upload ./screenshots -R -E --buildName "Test-Run"
 ```
 </Tab>
 
-<Tab title='upload-pdf'>
+<Tab title="upload-pdf">
 **Upload PDFs**
 
 Upload PDF files for visual comparison.
@@ -293,7 +286,7 @@ smartui upload-pdf ./pdfs --fetch-results pdf-results.json
 ```
 </Tab>
 
-<Tab title='exec:start'>
+<Tab title="exec:start">
 **Start Server**
 
 Start the SmartUI snapshot server.
@@ -341,7 +334,7 @@ smartui exec:start --buildName "Server-Build"
    ```
 </Tab>
 
-<Tab title='exec:stop'>
+<Tab title="exec:stop">
 **Stop Server**
 
 Stop the SmartUI snapshot server.
@@ -354,7 +347,7 @@ smartui exec:stop
 
 </Tab>
 
-<Tab title='exec:ping / exec:pingTest'>
+<Tab title="exec:ping / exec:pingTest">
 **Check Server Status**
 
 Check if the SmartUI server is running.
@@ -374,7 +367,7 @@ smartui exec:pingTest
 
 </Tab>
 
-<Tab title='merge'>
+<Tab title="merge">
 **Merge Branches/Builds**
 
 Merge source branch or build into target.
@@ -411,11 +404,11 @@ smartui merge build --source "Build-123" --target "Baseline-Build"
 ```
 </Tab>
 
-<Tab value='figma-1' label='Figma Commands'>
+<Tab title="Figma Commands">
 **Figma Integration Commands**
 
-<Tabs>
-<Tab title='upload-figma'>
+<Tabs className='docs__val' groupId='figma-commands'>
+<Tab title="upload-figma">
 Upload Figma designs for visual comparison.
 
 **Syntax:**
@@ -437,7 +430,7 @@ smartui upload-figma [options] <file>
 
 </Tab>
 
-<Tab value='upload-figma-web' label='upload-figma-web'>
+<Tab title="upload-figma-web">
 Capture Figma screenshots into CLI build.
 
 **Syntax:**
@@ -460,7 +453,7 @@ smartui upload-figma-web [options] <file>
 
 </Tab>
 
-<Tab title='upload-figma-app'>
+<Tab title="upload-figma-app">
 Capture Figma screenshots into App build.
 
 **Syntax:**
@@ -508,8 +501,8 @@ These options can be used with most commands:
 
 ## Storybook CLI Commands
 
-<Tabs>
-<Tab title='storybook Command'>
+<Tabs className='docs__val' groupId='storybook-cli'>
+<Tab title="storybook Command">
 **Main Command**
 
 **Syntax:**
@@ -550,7 +543,7 @@ smartui storybook http://localhost:6006 --env stage
 ```
 </Tab>
 
-<Tab title='config Command'>
+<Tab title="config Command">
 **Config Command**
 
 **Syntax:**
@@ -586,8 +579,8 @@ These options are available but may not be prominently documented:
 | Option | Commands | Description | Example |
 |--------|----------|-------------|---------|
 | `--scheduled <string>` | `capture`, `exec` | Specify schedule ID for scheduled test runs | `smartui capture urls.json --scheduled "schedule-123"` |
-| `--userName <string>` | `capture`, `exec`, `upload` | Override LambdaTest username (overrides env) | `smartui capture urls.json --userName "user"` |
-| `--accessKey <string>` | `capture`, `exec`, `upload` | Override LambdaTest access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
+| `--userName <string>` | `capture`, `exec`, `upload` | Override <BrandName /> username (overrides env) | `smartui capture urls.json --userName "user"` |
+| `--accessKey <string>` | `capture`, `exec`, `upload` | Override <BrandName /> access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
 | `--env <prod\|stage>` | `storybook` | Switch between production and staging environments | `smartui storybook http://localhost:6006 --env stage` |
 | `--force` | `capture` | Forcefully apply parallel instances even if not optimal | `smartui capture urls.json --parallel 10 --force` |
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
@@ -616,17 +609,17 @@ smartui storybook ./storybook-static --force-rebuild
 
 ## Environment Variables
 
-<Tabs>
-<Tab title='Authentication'>
+<Tabs className='docs__val' groupId='env-vars'>
+<Tab title="Authentication">
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PROJECT_TOKEN` | SmartUI project token | Yes (for CLI projects) |
-| `LT_USERNAME` | LambdaTest username | Yes (for Hooks) |
-| `LT_ACCESS_KEY` | LambdaTest access key | Yes (for Hooks) |
+| `LT_USERNAME` | <BrandName /> username | Yes (for Hooks) |
+| `LT_ACCESS_KEY` | <BrandName /> access key | Yes (for Hooks) |
 
 </Tab>
 
-<Tab title='Project Configuration'>
+<Tab title="Project Configuration">
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `PROJECT_NAME` | Project name (creates if doesn't exist) | - |
@@ -635,7 +628,7 @@ smartui storybook ./storybook-static --force-rebuild
 
 </Tab>
 
-<Tab title='Proxy Configuration'>
+<Tab title="Proxy Configuration">
 | Variable | Description | Format |
 |----------|-------------|--------|
 | `HTTP_PROXY` | HTTP proxy URL | `http://[user:pass@]host:port/` |
@@ -644,14 +637,14 @@ smartui storybook ./storybook-static --force-rebuild
 
 </Tab>
 
-<Tab title='Server Configuration'>
+<Tab title="Server Configuration">
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `SMARTUI_SERVER_ADDRESS` | Server address for SDKs | `http://localhost:49152` |
 
 </Tab>
 
-<Tab title='Debug & Advanced'>
+<Tab title="Debug & Advanced">
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `LT_SDK_DEBUG` | Enable debug mode | `false` |
@@ -662,8 +655,8 @@ smartui storybook ./storybook-static --force-rebuild
 
 **Setting Environment Variables:**
 
-<Tabs>
-<Tab title='MacOS/Linux'>
+<Tabs className='docs__val' groupId='platform'>
+<Tab title="MacOS/Linux">
 ```bash
 export PROJECT_TOKEN="123456#token"
 export LT_USERNAME="username"
@@ -672,7 +665,7 @@ export HTTP_PROXY="http://proxy:8080"
 export LT_SDK_DEBUG=true
 ```
 </Tab>
-<Tab title='Windows CMD'>
+<Tab title="Windows CMD">
 ```bash
 set PROJECT_TOKEN="123456#token"
 set LT_USERNAME="username"
@@ -681,7 +674,7 @@ set HTTP_PROXY="http://proxy:8080"
 set LT_SDK_DEBUG=true
 ```
 </Tab>
-<Tab title='PowerShell'>
+<Tab title="PowerShell">
 ```powershell
 $env:PROJECT_TOKEN="123456#token"
 $env:LT_USERNAME="username"
@@ -696,9 +689,8 @@ $env:LT_SDK_DEBUG="true"
 
 ## End-to-End Workflows
 
-<Tabs>
-<Tab title='Static URL Capture'>
-
+<Tabs className='docs__val' groupId='workflows'>
+<Tab title="Static URL Capture">
 **Basic Static URL Capture**
 ```bash
 # 1. Install CLI
@@ -719,8 +711,7 @@ npx smartui capture urls.json --fetch-results results.json
 ```
 </Tab>
 
-<Tab title='SDK Test Execution'>
-
+<Tab title="SDK Test Execution">
 **SDK Test Execution**
 ```bash
 # 1. Set project token
@@ -740,8 +731,7 @@ npx smartui exec:stop
 ```
 </Tab>
 
-<Tab title='Upload Screenshots'>
-
+<Tab title="Upload Screenshots">
 **Upload Existing Screenshots**
 ```bash
 # 1. Set project token
@@ -758,8 +748,7 @@ npx smartui upload ./screenshots \
   --fetch-results results.json
 ```
 </Tab>
-<Tab title='Storybook Testing'>
-
+<Tab title="Storybook Testing">
 **Storybook Testing**
 ```bash
 # 1. Install Storybook CLI
@@ -780,8 +769,7 @@ smartui storybook ./storybook-static --config .smartui.json
 ```
 </Tab>
 
-<Tab title='PDF Testing'>
-
+<Tab title="PDF Testing">
 **PDF Testing**
 ```bash
 # 1. Set project token
@@ -795,7 +783,7 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 ```
 </Tab>
 
-<Tab title='CI/CD Integration'>
+<Tab title="CI/CD Integration">
 **CI/CD Integration**
 
 **GitHub Actions Example:**
@@ -823,8 +811,8 @@ test:
 
 ## Best Practices
 
-<Tabs>
-<Tab title='Build Naming' default>
+<Tabs className='docs__val' groupId='best-practices'>
+<Tab title="Build Naming">
 **Build Naming**
 
 - Use meaningful, consistent names
@@ -843,7 +831,7 @@ test:
 ```
 
 </Tab>
-<Tab title='Configuration Management'>
+<Tab title="Configuration Management">
 **Configuration Management**
 
 - Keep config files in version control
@@ -853,7 +841,7 @@ test:
 
 </Tab>
 
-<Tab value='parallel' label='Parallel Execution'>
+<Tab title="Parallel Execution">
 **Parallel Execution**
 
 - Start with lower thread counts
@@ -862,7 +850,7 @@ test:
 - Calculate optimal threads: `log₂(N)`
 
 </Tab>
-<Tab title='Server Management'>
+<Tab title="Server Management">
 **Server Management**
 
 - Always use `exec:stop` to terminate server
@@ -872,7 +860,7 @@ test:
 
 </Tab>
 
-<Tab title='Error Handling'>
+<Tab title="Error Handling">
 **Error Handling**
 
 - Always use `--fetch-results` for CI/CD
@@ -881,15 +869,78 @@ test:
 - Log errors for debugging
 
 </Tab>
+
+<Tab title="Results Reporting">
+**Results Reporting**
+
+Use the [SmartUI Reporter](https://smartui-reporter.netlify.app/) to visualize and analyze test results:
+
+1. **Export Results**: Use `--fetch-results` flag to generate JSON
+   ```bash
+   npx smartui capture urls.json --config config.json --fetch-results results.json
+   ```
+
+2. **Upload to Reporter**: Visit [SmartUI Reporter](https://smartui-reporter.netlify.app/) and upload `results.json`
+
+3. **View & Export**: Access tabular view with statistics, screenshot links, and export to PDF/CSV
+
+**Alternative**: Fetch results via [SmartUI API](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots)
+
+For detailed steps, see [Fetch Results Documentation](/support/docs/smartui-sdk-fetch-results/#using-smartui-reporter-tool).
+
+</Tab>
+
+<Tab title="URL Grouping for Large Test Suites">
+**URL Grouping for Large Test Suites**
+
+When working with large numbers of URLs (1000+) that can be divided into sections/groups, you have two strategies:
+
+**Strategy 1: Single Project with Branching**
+- Use one SmartUI project with Smart Git branching
+- All sections in a single project dashboard
+- Each section can have its own branch
+- Unified tracking and reporting
+
+```bash
+# Enable Smart Git
+export SMART_GIT=true
+
+# Run different sections in different branches
+git checkout -b section1-bathroom
+npx smartui capture sections/section1.json --config config.json --buildName "Section1-Bathroom"
+```
+
+**Strategy 2: Separate Projects**
+- Create individual projects for each section
+- Complete isolation between sections
+- Independent baselines and approvals
+- Minimal projects with single branch
+
+```bash
+# Section 1 - Bathroom Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_BATHROOM}"
+npx smartui capture bathroom/urls.json --config config.json
+
+# Section 2 - Kitchens Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_KITCHENS}"
+npx smartui capture kitchens/urls.json --config config.json
+```
+
+**When to Use Each:**
+- **Single Project**: Unified dashboard, cross-section analysis, shared configs
+- **Separate Projects**: Complete isolation, independent workflows, different configs
+
+For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/support/docs/hyperexecute-smart-ui-capture-onboarding/#11-url-grouping-strategies-for-large-test-suites).
+
+</Tab>
 </Tabs>
 
 ---
 
 ## Troubleshooting
 
-<Tabs>
-<Tab title='Server Not Running'>
-
+<Tabs className='docs__val' groupId='troubleshooting'>
+<Tab title="Server Not Running">
 **Server Not Running**
 ```bash
 # Check status
@@ -903,7 +954,7 @@ echo $SMARTUI_SERVER_ADDRESS
 ```
 </Tab>
 
-<Tab value='port' label='Port Conflicts'>
+<Tab title="Port Conflicts">
 **Port Conflicts**
 ```bash
 # Use custom port
@@ -912,8 +963,7 @@ npx smartui exec -P 5000 -- npm test
 ```
 </Tab>
 
-<Tab title='Authentication Issues'>
-
+<Tab title="Authentication Issues">
 **Authentication Issues**
 ```bash
 # Verify credentials
@@ -925,8 +975,7 @@ echo $LT_ACCESS_KEY
 npx smartui capture urls.json --userName "user" --accessKey "key"
 ```
 </Tab>
-<Tab title='Configuration Errors'>
-
+<Tab title="Configuration Errors">
 **Configuration Errors**
 ```bash
 # Validate JSON
