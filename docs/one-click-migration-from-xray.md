@@ -172,7 +172,7 @@ The following entities and data are transferred from X-Ray to Test Manager durin
 | **Attachments** | Both test case-level and test step-level attachments are downloaded and re-uploaded to Test Manager. |
 | **Rich Text Fields** | Rich text content — including embedded screenshots, tables, lists, and other supported formatting — is preserved. |
 | **Custom Fields** | Custom fields are automatically detected in X-Ray and created in Test Manager with matching names. |
-| **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](#jira-integration-in-brandname-) to be configured. |
+| **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) to be configured. |
 | **X-Ray Test Key** | The original X-Ray test key is imported within tags, enabling quick reference and filtering in Test Manager. |
 
 :::note
