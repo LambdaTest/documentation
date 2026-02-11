@@ -185,7 +185,7 @@ Test Data from X-Ray steps is migrated as a single textarea custom field at the 
 
 ## What Does Not Get Migrated
 
-The migration focuses exclusively on your **test library** — definitions, structure, and metadata. The following execution-layer entities are not included:
+The migration focuses exclusively on your **test library** — definitions, structure, and metadata. The following entities are not included:
 
 | Entity | Reason |
 |---|---|
