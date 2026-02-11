@@ -72,7 +72,7 @@ You can use the following curl command to upload any image of your choice to the
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type="image"" -F "custom_id="SampleImage""`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type="image"" -F "custom_id="SampleImage""
 
 ```
 
@@ -96,10 +96,10 @@ You can use the appium capability to turn the image injection on in your applica
 <Tab title="Python">
   ```python
 
-  {`desired_capabilities = {
+  desired_capabilities = {
     "enableImageInjection": True,
     "media": "lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", #Add media_url here (optional)
-  }`}
+  }
   
 ```
 </Tab>
@@ -107,8 +107,8 @@ You can use the appium capability to turn the image injection on in your applica
 <Tab title="JavaScript">
   ```javascript
 
-  {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.setCapability("enableImageInjection", "true");`}
+  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability("enableImageInjection", "true");
   
 ```
 </Tab>
@@ -123,7 +123,7 @@ Refer to the code snippets given below to upload the image with the action `Imag
 <Tab title="Python">
   ```python
 
-  {`driver.execute_script("lambda-image-injection=media_url") #Add media_url here`}
+  driver.execute_script("lambda-image-injection=media_url") #Add media_url here
   
 ```
 </Tab>
@@ -131,7 +131,7 @@ Refer to the code snippets given below to upload the image with the action `Imag
 <Tab title="JavaScript">
   ```javascript
 
-  {`driver.execute_script("lambda-image-injection=media_url") //Add media_url here`}
+  driver.execute_script("lambda-image-injection=media_url") //Add media_url here
   
 ```
 </Tab>

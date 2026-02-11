@@ -96,8 +96,8 @@ The Element Click command could not be completed because the element receiving t
 
 ```bash
 
-{`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
-`}
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
+
 
 ```
 
@@ -133,7 +133,7 @@ For 1. -> Use implicit /explicit wait:
   - Explicit wait :
     ```bash
 
-    {`WebDriverWait wait=new WebDriverWait(driver, 20); element1 = wait.until(ExpectedConditions.elementToBeClickable(By.className("fa-stack-1x")));`}
+    WebDriverWait wait=new WebDriverWait(driver, 20); element1 = wait.until(ExpectedConditions.elementToBeClickable(By.className("fa-stack-1x")));
     
 ```
 
@@ -168,11 +168,11 @@ It is for example not possible to set a window size to a negative value:
 
 ```bash
 
-{`from selenium import webdriver from selenium.common import exceptions session = webdriver.Firefox()
+from selenium import webdriver from selenium.common import exceptions session = webdriver.Firefox()
   try: 
     session.set_window_size(-10, 0)
   except 
-    exceptions.InvalidArgumentException as e: print(e.message) `}
+    exceptions.InvalidArgumentException as e: print(e.message) 
 
 ```
 
@@ -180,7 +180,7 @@ Output:
 
 ```bash
 
-{`InvalidArgumentException: Expected -10 to be >= 0`}
+InvalidArgumentException: Expected -10 to be >= 0
 
 ```
 
@@ -201,8 +201,8 @@ An illegal attempt was made to set a cookie under a different domain than the cu
 
 ```bash
 
-{`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
-`}
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
+
 
 ```
 
@@ -214,7 +214,7 @@ If the current domain were to be 'example.com', it would not be possible to add 
 
 ```bash
 
-{`from selenium import webdriver
+from selenium import webdriver
   from selenium.common import exceptions
   session = webdriver.Firefox()
   session.get("https://example.com/")
@@ -224,15 +224,15 @@ If the current domain were to be 'example.com', it would not be possible to add 
               "domain": "example.org"}
     session.add_cookie(cookie)
   except exceptions.InvalidCookieDomainException as e: print(e.message)
-`}
+
 
 ```
 
 Output: 
 ```bash
 
-{`InvalidCookieDomainException: https://example.org/
-`}
+InvalidCookieDomainException: https://example.org/
+
 
 ```
 
@@ -265,8 +265,8 @@ Argument was an invalid selector.
 
 ```bash
 
-{`org.openqa.selenium.InvalidSelectorException: invalid selector
-`}
+org.openqa.selenium.InvalidSelectorException: invalid selector
+
 
 ```
 
@@ -291,8 +291,8 @@ Occurs if the given session id is not in the list of active sessions, meaning th
 
 ```bash
 
-{`ERROR webdriver: Request failed with status 404 due to invalid session id: invalid session
-`}
+ERROR webdriver: Request failed with status 404 due to invalid session id: invalid session
+
 
 ```
 
@@ -308,8 +308,8 @@ A new session could not be created.
 
 ```bash
 
-{`org.openqa.selenium.SessionNotCreatedException: Message:  Could not start a new session. Response code 500. Message: session not created
-`}
+org.openqa.selenium.SessionNotCreatedException: Message:  Could not start a new session. Response code 500. Message: session not created
+
 
 ```
 
@@ -331,22 +331,22 @@ Example:
 
 ```bash
 
-{`from selenium import webdriver
+from selenium import webdriver
   from selenium.common import exceptions
   session = webdriver.Firefox()
   try:
     session.execute_script("return foo")
   except exceptions.JavascriptException as e:
     print(e.message)
-`}
+
 
 ```
 
 Output:
 ```bash
 
-{`JavascriptException: ReferenceError: foo is not defined
-`}
+JavascriptException: ReferenceError: foo is not defined
+
 
 ```
 
@@ -366,8 +366,8 @@ Argument was an invalid selector.
 
 ```bash
 
-{`org.openqa.selenium.InvalidSelectorException: invalid selector
-`}
+org.openqa.selenium.InvalidSelectorException: invalid selector
+
 
 ```
 
@@ -391,8 +391,8 @@ The target for mouse interaction is not in the browser’s viewport and cannot b
 Example:
 ```bash
 
-{`MoveTargetOutOfBoundsException: Element cannot be scrolled into view
-`}
+MoveTargetOutOfBoundsException: Element cannot be scrolled into view
+
 
 ```
 
@@ -412,8 +412,8 @@ An attempt was made to operate on a modal dialog when one was not open.
 
 ```bash
 
-{`Exception in thread "main" org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: You need to use IE 6.0 for viewing this application. Else some features may not work): You need to use IE 6.0 for viewing this application. Else some features may not work
-`}
+Exception in thread "main" org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: You need to use IE 6.0 for viewing this application. Else some features may not work): You need to use IE 6.0 for viewing this application. Else some features may not work
+
 
 ```
 
@@ -432,8 +432,8 @@ No cookie matching the given path name was found amongst the associated cookies 
 Example:
 ```bash
 
-{`org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)
-`}
+org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)
+
 
 ```
 
@@ -454,8 +454,8 @@ An element could not be located on the page using the given search parameters.
 Example:
 ```bash
 
-{`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
-`}
+exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
+
 
 ```
 
@@ -482,8 +482,8 @@ A command to switch to a frame could not be satisfied because the frame could no
 Example:
 ```bash
 
-{`selenium.common.exceptions.NoSuchFrameException: Message: no such frame
-`}
+selenium.common.exceptions.NoSuchFrameException: Message: no such frame
+
 
 ```
 
@@ -506,8 +506,8 @@ A command to switch to a window could not be satisfied because the window could 
 Example:
 ```bash
 
-{`webdriver: Request failed with status 404 due to no such window: Currently focused window has been closed.
-`}
+webdriver: Request failed with status 404 due to no such window: Currently focused window has been closed.
+
 
 ```
 
@@ -540,8 +540,8 @@ A command failed because the referenced element is no longer attached to the DOM
 Example:
 ```bash
 
-{`StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-`}
+StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
 
 ```
 
@@ -563,7 +563,7 @@ Some common solutions include:
 * Using 'try-catch' block within 'for loop' -
 ```bash
 
-{`for(int i=0; i<=2;i++){
+for(int i=0; i<=2;i++){
   try{
      driver.findElement(By.xpath("xpath here")).click();
      break;
@@ -571,7 +571,7 @@ Some common solutions include:
   catch(Exception e){
      Sysout(e.getMessage());
   }
-}`}
+}
 
 ```
 
@@ -597,7 +597,7 @@ Indicates that a command that should have executed properly cannot be supported 
 Example:
 ```bash
 
-{`import java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
 public class UnsupportedOperationExceptionExample {
     public static void main(String[] args) {
@@ -606,7 +606,7 @@ public class UnsupportedOperationExceptionExample {
         list.add("d");
     }
 }
-`}
+
 
 ```
 
@@ -637,8 +637,8 @@ The requested command matched a known URL but did not match any method for that 
 Example:
 ```bash
 
-{`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
-`}
+exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
+
 
 ```
 
@@ -669,7 +669,7 @@ The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and will re
 
 ```bash
 
-{`% curl -i -d '{}' http://localhost:4444/session/foo
+% curl -i -d '{}' http://localhost:4444/session/foo
 HTTP/1.1 404 Not Found
 Connection: close
 Content-Type: application/json; charset=utf-8
@@ -677,7 +677,7 @@ Cache-Control: no-cache
 Content-Length: 113
 Date: Fri, 30 Mar 2018 15:30:51 GMT
 {"value":{"error":"unknown command","message":"POST /session/asd did not match a known command","stacktrace":""}}
-`}
+
 
 ```
 
@@ -696,7 +696,7 @@ If the session script timeout duration is set to indefinite by using a `null` va
 Example:
 ```bash
 
-{`from selenium import webdriver
+from selenium import webdriver
 from selenium.common import exceptions
 session = webdriver.Firefox()
 try:
@@ -706,14 +706,14 @@ try:
         """)
 except exceptions.ScriptTimeoutException as e:
     print(e.message)
-`}
+
 
 ```
 
 Output:
 ```bash
 
-{`ScriptTimeoutException: Timed out after 35000 ms`}
+ScriptTimeoutException: Timed out after 35000 ms
 
 ```
 
@@ -730,13 +730,13 @@ A command to set a cookie's value could not be satisfied.
 Example:
 ```bash
 
-{`System.setProperty("webdriver.edge.driver","C:\\Program Files\\Latest Webdriver\\MicrosoftWebDrive.exe" );
+System.setProperty("webdriver.edge.driver","C:\\Program Files\\Latest Webdriver\\MicrosoftWebDrive.exe" );
 EdgeDriver = new EdgeDriver();
 Thread.sleep(2000);
 Cookie cookie = new Cookie("Testing", "11111");
 EdgeDriver.manage().addCookie(cookie);
 EdgeDriver.get("https://www.google.ca/?gws_rd=ssl"); // The link is an example
-`}
+
 
 ```
 
@@ -767,14 +767,14 @@ A command could not be executed because the remote end is not aware of it.
 Example:
 ```bash
 
-{`org.openqa.selenium.UnhandledAlertException: unexpected alert open
+org.openqa.selenium.UnhandledAlertException: unexpected alert open
  (Session info: chrome=38.0.2125.111)
  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.1 x86) (WARNING: The server did not  provide any stacktrace information)
  Command duration or timeout: 16 milliseconds: null
  Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:30'
  System info: host: 'Casper-PC', ip: '10.0.0.4', os.name: 'Windows 7', os.arch: 'x86', os.version:  '6.1', java.version: '1.8.0_25'
  Driver info: org.openqa.selenium.chrome.ChromeDriver
-`}
+
 
 ```
 

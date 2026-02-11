@@ -16,8 +16,8 @@ To fetch the Devices that are available for running Tests.
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/list?region=us"
-`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/list?region=us"
+
 
 ```
 
@@ -40,8 +40,8 @@ To fetch the Devices that are available for running Tests.
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
-`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
+
 
 ```
 
@@ -49,7 +49,7 @@ To fetch the Devices that are available for running Tests.
 
 ```bash
 
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
 
 ```
 
@@ -67,7 +67,7 @@ To fetch the Devices that are available for running Tests.
 <Tab title="Android">
   ```bash
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=android&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=android&level=user"
   
 ```
 
@@ -76,7 +76,7 @@ To fetch the Devices that are available for running Tests.
 <Tab title="iOS">
   ```powershell
 
-  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=ios&level=user"`}
+  curl --location --request GET "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/data?type=ios&level=user"
   
 ```
 
@@ -87,7 +87,7 @@ Shown below is the response to the above cURL request.
 
 ```bash
 
-{`{
+{
   "metaData": {
     "type": "ios",
     "total": 1
@@ -102,7 +102,7 @@ Shown below is the response to the above cURL request.
       "source": "web-client"
     }
   ]
-}`}
+}
 
 ```
 
@@ -113,12 +113,12 @@ To delete your uploaded apps, run the below cURL command.
 
 ```bash
 
-{`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
+curl --location --request DELETE "https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@manual-api.lambdatest.com/app/delete" \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "appIds" : "APPID1,APPID2"
 }'
-`}
+
 
 ```
 
@@ -126,9 +126,9 @@ Shown below is the response to the above cURL request.
 
 ```bash
 
-{`{
+{
   "message": "Deleted successfully."
-}`}
+}
 
 ```
 
@@ -139,14 +139,14 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 
 ```bash
 
-{`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
 --header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
 --header 'Content-Type: application/json' \y
 --data-raw '{
     "appId": "APP10160161171698993659206876",
     "imageInjectionEnabled": true,
     "screenshotUnblockEnabled": true
-}'`}
+}'
 
 ```
 
@@ -154,7 +154,7 @@ The payload allows you to check the processing status for specific features. If 
 
 ```bash
 
-{`{
+{
     "data": {
         "imageinjection_ready": false, //current processing status
         "patched_url": "",
@@ -162,7 +162,7 @@ The payload allows you to check the processing status for specific features. If 
         "status": "success"
     },
     "status": "success"
-}`}
+}
 
 ```
 
@@ -173,7 +173,7 @@ To get your concurrency details, run the below cURL command.
 
 ```bash
 
-{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/org/concurrency"`}
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/org/concurrency"
 
 ```
 
@@ -181,7 +181,7 @@ Shown below is the response to the above cURL request.
 
 ```bash
 
-{`{
+{
    "data":{
       "created":0,
       "max_concurrency":10,
@@ -191,7 +191,7 @@ Shown below is the response to the above cURL request.
       "running":0
    },
    "status":"success"
-}`}
+}
 
 ```
 
@@ -202,10 +202,10 @@ To generate public **shareable build link**, run the below cURL command.
 
 ```bash
 
-{`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
+curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
   -H 'Content-Type: application/json' \
-  -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \
-  --data-raw '{"entityIds":["buildID"],"entityType":"App Automation Build","expiresAt":7}'`}
+  -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
+  --data-raw '{"entityIds":["buildID"],"entityType":"App Automation Build","expiresAt":7}'
 
 ```
 
@@ -213,11 +213,11 @@ To generate public **shareable test link**, run the below cURL command.
 
 ```bash
 
-{`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
+curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
   -H 'Content-Type: application/json' \
-  -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \
+  -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \
   --data-raw '{"entityIds":["testID"],"entityType":"App Automation Test","expiresAt":7}'
-`}
+
 
 ``` 
 

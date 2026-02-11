@@ -37,8 +37,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 
 
 ```bash
-{`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
---header 'Authorization: Basic <Base64 Authentication>'`}
+curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
+--header 'Authorization: Basic <Base64 Authentication>'
 ```
 
 
@@ -47,8 +47,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 To fetch the XML report for a `single shard` in a shard build,use:
 
 ```bash
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
---header 'Authorization: Basic <Base64 Authentication>'`}
+curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
+--header 'Authorization: Basic <Base64 Authentication>'
 ```
 
 
@@ -57,8 +57,8 @@ To fetch the XML report for a `single shard` in a shard build,use:
 To fetch the XML reports for `all shards` in a shard build, use:
 
 ```bash
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?encoder=false' \
---header 'Authorization: Basic <Base64 Authentication>'`}
+curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?encoder=false' \
+--header 'Authorization: Basic <Base64 Authentication>'
 ```
 
 

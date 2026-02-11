@@ -56,7 +56,7 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tab title="MacOS/Linux">
   ```bash
 
-    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+    curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
         --header 'Authorization: Basic <Enter_Basic_Auth>' \\
         --header 'Content-Type: application/json' \\
         --data-raw '{
@@ -68,7 +68,7 @@ Please refer to the example `cURL` requests given below for your reference.
             "deviceLog": true,
             "build" : "Proverbial-Espresso"
             "package" : ["com.example.proverbial.packagename1","com.example.proverbial.packagename2"] 
-            }'`}
+            }'
   
 ```
 </Tab>
@@ -77,7 +77,7 @@ Please refer to the example `cURL` requests given below for your reference.
   ```powershell
 
   ```
-  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"package\" : [\"com.example.proverbial.packagename1\", \"com.example.proverbial.packagename2\"]}"`}
+  curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"package\" : [\"com.example.proverbial.packagename1\", \"com.example.proverbial.packagename2\"]}"
   ```
 
   
@@ -92,7 +92,7 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tab title="MacOS/Linux">
   ```bash
 
-    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+    curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
         --header 'Authorization: Basic <Enter_Basic_Auth>' \\
         --header 'Content-Type: application/json' \\
         --data-raw '{
@@ -104,7 +104,7 @@ Please refer to the example `cURL` requests given below for your reference.
             "deviceLog": true,
             "build" : "Proverbial-Espresso"
             "class" : ["com.example.proverbial.packagename.classname1","com.example.proverbial.packagename.classname2"] 
-            }'`}
+            }'
   
 ```
 </Tab>
@@ -113,7 +113,7 @@ Please refer to the example `cURL` requests given below for your reference.
   ```powershell
 
   ```
-  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"class\" : [\"com.example.proverbial.packagename.classname1\",\"com.example.proverbial.packagename.classname2\"]}"`}
+  curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"class\" : [\"com.example.proverbial.packagename.classname1\",\"com.example.proverbial.packagename.classname2\"]}"
   ```
 
   
@@ -128,7 +128,7 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tab title="MacOS/Linux">
   ```bash
 
-    {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
+    curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
       --header 'Authorization: Basic <Enter_Basic_Auth>' \\
       --header 'Content-Type: application/json' \\
       --data-raw '{
@@ -144,7 +144,7 @@ Please refer to the example `cURL` requests given below for your reference.
                   "com.lambdatest.proverbial .demo1","com.lambdatest.proverbial .demo2"
               ]
           }
-      }'`}
+      }'
   
 ```
 </Tab>
@@ -153,7 +153,7 @@ Please refer to the example `cURL` requests given below for your reference.
   ```powershell
 
   ```
-  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Authorization: Basic <Enter the Auth here>" --header "Content-Type: application/json" --data-raw "{\"app\": \"lt://APP_ID\", \"testSuite\": \"lt://APP_ID\", \"device\": [\"Pixel 6-12\"], \"queueTimeout\": 360, \"IdleTimeout\": 150, \"deviceLog\": true, \"network\": false, \"build\": \"Proverbial-Espresso\", \"geoLocation\": \"FR\", \"filters\": {\"annotation\": [\"com.lambdatest.proverbial .demo1\", \"com.lambdatest.proverbial .demo2\"]}}"`}
+  curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Authorization: Basic <Enter the Auth here>" --header "Content-Type: application/json" --data-raw "{\"app\": \"lt://APP_ID\", \"testSuite\": \"lt://APP_ID\", \"device\": [\"Pixel 6-12\"], \"queueTimeout\": 360, \"IdleTimeout\": 150, \"deviceLog\": true, \"network\": false, \"build\": \"Proverbial-Espresso\", \"geoLocation\": \"FR\", \"filters\": {\"annotation\": [\"com.lambdatest.proverbial .demo1\", \"com.lambdatest.proverbial .demo2\"]}}"
   ```
 
   
