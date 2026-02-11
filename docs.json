@@ -11,6 +11,11 @@
   "appearance": {
     "default": "light"
   },
+  "seo": {
+    "metatags": {
+      "robots": "noindex, nofollow"
+    }
+  },
   "fonts": {
     "heading": {
       "family": "SF Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
