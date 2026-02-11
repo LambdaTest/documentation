@@ -91,36 +91,57 @@ lambdatest-cypress run
 
 Given below are the additional flags available with the `run` command.
 
-| Flag                                      | Purpose                                                | Type |
-| ----------------------------------------- | ------------------------------------------------------ | -----|
-| `--version`                               | Show version number <br /> e.g. `lambdatest-cypress run -–version` |NA|
-| `--help`                                  | Show help <br /> e.g. `lambdatest-cypress run -–help` |NA|
-| `--ccf, --cypress-config-file`            | Path of the config file <br /> e.g. `lambdatest-cypress run --ccf="base_reporter_config.json"` |String |
-| `--lcf, –lambdatest-config-file`          | Path of the <BrandName /> config file <br /> e.g. `lambdatest-cypress run --lcf="lambdatest-config.json"` |String |
-| `-s, --specs`                             | Path of the spec file or directory or pattern <br /> e.g. `lambdatest-cypress run --s=”path_from_content_root"` |String |
-| `--bn, --build-name`                      | Build name                                             |String |
-| `-t, --tags`                              | Test tags                                              |String |
-| `-p, --parallels`                         | No of parallel sessions                                |String |
-| `--envs, --env-variables` (Cypress 9)     | Set environment variables to configure before your test runs |String |
-| `--envs, --environment` (Cypress 10)      | Set environment variables to configure before your test runs |String |
-| `--tun, --tunnel`                         | Configure <BrandName /> tunnel <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
-| `--tname, --tunnel_name`                  | Set the name of <BrandName /> tunnel name <br /> e.g. `lambdatest-cypress run --tun="true" –tname="v3"` |String |
-| `--brs, --browsers`                       | Test will be run on the specified browsers <br/> in the format: `platform:browser:version` <br /><br /> e.g. `--brs="MacOS Catalina:chrome:latest"`  <br /><br /> `--brs="MacOS Catalina:chrome:112.0,MacOS mojave:firefox:111.0"` |String |
-| `--bi, --build-identifier`                | Build identifier or build counter                      |String |
-| `--if, --ignore_files`                    | Files to ignore in the zip project <br /> e.g. `lambdatest-cypress run --if="cypress/e2e/1-getting-started/actions.cy.js"` |String |
-| `--sync, --sync-mode`                     | Wait on terminal to get the status of the tests <br /> e.g. `lambdatest-cypress run --sync=true` |String |
-| `--autostart, --tat`                      | <BrandName /> Tunnel auto Start <br /> e.g. `lambdatest-cypress run --autostart=true` |String |
-| `--headless, --headless-mode`             | Run in Headless mode <br /> e.g. `lambdatest-cypress run --headless=true` |Boolean |
-| `--net, --network`                        | To capture Network logs <br /> e.g. `lambdatest-cypress run --net="true"` |String |
-| `--eof, --exit-on-failure`                | Exit with Code 1 on failure <br /> e.g. `lambdatest-cypress run ---exit-on-failure=”true”` |String |
-| `--cy, --cypress_settings`                | Pass Cypress settings  <br /> e.g. `lambdatest-cypress run --cy=viewportWidth=1000;viewportHeight=660;` |String |
-| `--geo, --geo_location`                   | Pass Geo country code <br /> e.g. `lambdatest-cypress run ---geo_location=AU` <br /> Check all the available Geolocations. |String |
-| `--sof, --stop_on_failure`                | Stop other tests if any test in session gets errored out <br /> e.g. `lambdatest-cypress run  --stop_on_failure=true` |String |
-| `--ra, --reject_unauthorized`             | Default rejects self signed certificates in external requests <br /> e.g. `lambdatest-cypress run  --reject_unauthorized=true` |String |
-| `--bt, --build-tags`                      | Build tags <br /> e.g. `lambdatest-cypress run --build-tags=tag1` | String |
-| `--sys-envs, --sys-env-variables`         | To set system variables during test run time <br /> e.g. `lambdatest-cypress run --sys-envs="BASE_URL=https://lambdatest.com;"` |String |
-| `--npm-lpd=true, --legacy-peer-deps=true` | Ignore peer dependencies and proceed with the NPM installation  | String |
-| `--npm-f=true, --npm-force=true`          | Fetch remote resources even if a local copy already exists <br /> e.g. `lambdatest-cypress run  --npm-force=true` |String |
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--version` | Show version number | Boolean |
+| `--help` | Show help | Boolean |
+| `--ccf, --cypress-config-file` | Path of the config file | String |
+| `--user, --username` | LambdaTest username | String |
+| `--ak, --access_key` | LambdaTest access key | String |
+| `--lcf, --lambdatest-config-file` | Path of the LambdaTest config file | String |
+| `-s, --specs` | Path of the spec file, directory, or pattern | String |
+| `--env, --environment` | Specify environment name | String |
+| `--bn, --build-name` | Set build name | String |
+| `-t, --tags` | Run tests with specific tags | String |
+| `-p, --parallels` | Number of parallel sessions | String |
+| `--envs, --env-variables` | Set environment variables before test execution | String |
+| `--tun, --tunnel` | Enable LambdaTest tunnel | String |
+| `--tname, --tunnel_name` | Set LambdaTest tunnel name | String |
+| `--brs, --browsers` | Run tests on specified browsers in format `platform:browser:version` | String |
+| `--bi, --build-identifier` | Set build identifier or build counter | String |
+| `--if, --ignore_files` | Files to ignore in project zip | String |
+| `--sync, --sync-mode` | Enable sync mode to wait for test completion | String |
+| `--autostart, --tat` | Enable tunnel auto start | String |
+| `--headless, --headless-mode` | Run tests in headless mode | Boolean |
+| `--net, --network` | Capture network logs | String |
+| `--eof, --exit-on-failure` | Exit with code 1 on failure | String |
+| `--cy, --cypress_settings` | Pass Cypress settings | String |
+| `--geo, --geo_location` | Pass geo country code | String |
+| `--sof, --stop_on_failure` | Stop other tests if any test in session fails | Boolean |
+| `--ra, --reject_unauthorized` | Reject self-signed certificates in external requests | Boolean |
+| `--bt, --build-tags` | Set build tags | String |
+| `--sys-envs, --sys-env-variables` | Set system environment variables during test run | String |
+| `--envfl, --env-file` | Path of `.env` file | String |
+| `--npm-f, --npm-force` | Force npm install | Boolean |
+| `--npm-lpd, --legacy-peer-deps` | Use legacy peer dependencies during npm install | Boolean |
+| `--vip, --vi-project` | Set Visual UI project name | String |
+| `--vib, --vi-build` | Set Visual UI build name | String |
+| `--vibase, --vi-base` | Set Visual UI baseline build | Boolean |
+| `--res, --resolution` | Set machine resolution | String |
+| `--dp, --dedicated_proxy` | Enable dedicated proxy | Boolean |
+| `--npm_tun, --npm_via_tunnel` | Install npm packages behind private VPN (increases build duration) | Boolean |
+| `--md, --max_duration` | Stop test if running longer than specified minutes | String |
+| `--cmd_log, --command_log` | Show command logs on dashboard | String |
+| `--ret_fail, --retry_failed` | Retry failed tests in a new build | Boolean |
+| `--net_http2, --network_http2` | Capture HTTP2 network logs | Boolean |
+| `--net_ws, --network_ws` | Bypass WebSocket calls for network logs | Boolean |
+| `--node18, --useNode18` | Use Node.js v18 for Cypress runtime | Boolean |
+| `--nodeV, --useNodeVersion` | Specify Node.js version for Cypress runtime | String |
+| `--net_sse, --network_sse` | Bypass SSE events for network logs | Boolean |
+| `--cypress_accessibility, --accessibility` | Enable accessibility testing for Cypress | Boolean |
+| `--tz, --timezone` | Set custom timezone in machine | String |
+| `--reg, --region` | Set data center region (e.g., us, eu, ap) | String |
+| `--pC, --privateCloud` | Set custom private cloud | String |
 
 ## `build-info` command
 You can use the `build-info` command to get information on the build.
