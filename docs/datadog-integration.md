@@ -9,7 +9,7 @@ keywords:
   - TestMu AI and Datadog Integration
   - Datadog Integration
 url: https://www.testmuai.com/support/docs/datadog-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: datadog-integration/
 canonical: https://www.testmuai.com/support/docs/datadog-integration/
 ---

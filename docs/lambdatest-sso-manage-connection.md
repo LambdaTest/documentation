@@ -13,7 +13,7 @@ keywords:
 - SSO Self Serve
 - Exempt SSO Login
 url: https://www.testmuai.com/support/docs/testmu-sso-manage-connection/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-manage-connection/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-manage-connection/
 ---

@@ -10,7 +10,7 @@ keywords:
   - testmu ai
   - k6
 url: https://www.testmuai.com/support/docs/hyperexecute-k6-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-k6-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-k6-testing/
 ---

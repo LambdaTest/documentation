@@ -9,7 +9,7 @@ keywords:
 - generate lighthouse reports with playwright lighthouse library
 - lighthouse reports testmu ai
 url: https://www.testmuai.com/support/docs/playwright-lighthouse-library/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-lighthouse-library/
 canonical: https://www.testmuai.com/support/docs/playwright-lighthouse-library/
 ---

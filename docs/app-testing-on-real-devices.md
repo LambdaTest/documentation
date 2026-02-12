@@ -8,7 +8,7 @@ keywords:
 - real device app testing 
 - testmu ai real device app testing 
 url: https://www.testmuai.com/support/docs/app-testing-on-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-testing-on-real-devices/
 canonical: https://www.testmuai.com/support/docs/app-testing-on-real-devices/
 ---

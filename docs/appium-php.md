@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-php
 title:  Appium with PHP
 sidebar_label: PHP
@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-php/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-php/
 canonical: https://www.testmuai.com/support/docs/appium-php/
 ---

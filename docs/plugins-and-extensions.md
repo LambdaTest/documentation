@@ -17,7 +17,7 @@ keywords:
   - chrome extensions for testers
   - plugins for testers 
 url: https://www.testmuai.com/support/docs/plugins-and-extensions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: plugins-and-extensions/
 canonical: https://www.testmuai.com/support/docs/plugins-and-extensions/
 ---

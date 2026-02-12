@@ -9,7 +9,7 @@ keywords:
   - automated test cases with ai 
   - test cases
 url: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: automated-test-cases-linked-using-dashboard/
 canonical: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-dashboard/
 ---

@@ -6,7 +6,7 @@ description: Analytics - Dashboard Features for managing your data and setting u
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-dashboard-features/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-dashboard-features/
 canonical: https://www.testmuai.com/support/docs/analytics-dashboard-features/
 ---

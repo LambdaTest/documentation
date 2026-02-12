@@ -12,7 +12,7 @@ keywords:
   - Products
   - Microsoft Excel
 url: https://www.testmuai.com/support/docs/hyperexecute-winapp-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-winapp-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-winapp-integration/
 ---

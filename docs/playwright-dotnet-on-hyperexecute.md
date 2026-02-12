@@ -25,7 +25,7 @@ keywords:
   - hyperexecute pyunit testing
   - hyperexecute python testing
 url: https://www.testmuai.com/support/docs/playwright-dotnet-on-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-dotnet-on-hyperexecute/
 ---
 

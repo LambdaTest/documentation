@@ -12,7 +12,7 @@ keywords:
     - Android Accessibility 
     - iOS Accessibility
 url: https://www.testmuai.com/support/docs/accessibility-android-automation-test/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-native-app-automation-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/
 ---

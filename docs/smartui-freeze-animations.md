@@ -10,7 +10,7 @@ keywords:
   - storybook
   - animation svg screenshots
 url: https://www.testmuai.com/support/docs/smartui-freeze-animations/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-freeze-animations/
 canonical: https://www.testmuai.com/support/docs/smartui-freeze-animations/
 

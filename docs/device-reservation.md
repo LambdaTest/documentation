@@ -9,7 +9,7 @@ keywords:
 - testmu ai devices
 - test scheduling
 url: https://www.testmuai.com/support/docs/device-reservation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: Device-reservation/
 canonical: https://www.testmuai.com/support/docs/Device-reservation/
 ---

@@ -12,7 +12,7 @@ keywords:
   - junit playwright framework
 
 url: https://www.testmuai.com/support/docs/junit-with-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: junit-with-playwright/
 canonical: https://www.testmuai.com/support/docs/junit-with-playwright/
 ---

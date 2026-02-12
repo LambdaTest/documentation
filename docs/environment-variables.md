@@ -9,7 +9,7 @@ keywords:
 - TestMu AI environment variables
 - TestMu AI setup
 url: https://www.testmuai.com/support/docs/using-environment-variables-for-authentication-credentials/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: using-environment-variables-for-authentication-credentials/
 canonical: https://www.testmuai.com/support/docs/using-environment-variables-for-authentication-credentials/
 ---

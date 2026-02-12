@@ -1,4 +1,4 @@
-﻿---
+---
 id: smart-visual-testing
 title: Smart Visual Regression Testing Using TestMu AI
 hide_title: true
@@ -16,7 +16,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/smart-visual-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smart-visual-testing/
 canonical: https://www.testmuai.com/support/docs/smart-visual-testing/
 ---

@@ -16,7 +16,7 @@ keywords:
  - testmu ai 
  - appium version selection
 url: https://www.testmuai.com/support/docs/supported-appium-versions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-appium-versions/
 canonical: https://www.testmuai.com/support/docs/supported-appium-versions/
 ---

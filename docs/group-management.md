@@ -8,7 +8,7 @@ keywords:
 - group-management-control
 - testmu ai
 url: https://www.testmuai.com/support/docs/group-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-management/
 canonical: https://www.testmuai.com/support/docs/group-management/
 ---

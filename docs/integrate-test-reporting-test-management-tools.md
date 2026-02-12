@@ -9,7 +9,7 @@ keywords:
   - testmu ai integration with test management tools
   - testmu ai selenium grid integration
 url: https://www.testmuai.com/support/docs/integrate-test-reporting-test-management-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrate-test-reporting-test-management-tools/
 canonical: https://www.testmuai.com/support/docs/integrate-test-reporting-test-management-tools/
 ---

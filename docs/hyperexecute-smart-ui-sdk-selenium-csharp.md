@@ -13,7 +13,7 @@ keywords:
   - csharp
   - hyperexecute integrations with csharp sdk
 url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-smart-ui-sdk-selenium-csharp/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/
 

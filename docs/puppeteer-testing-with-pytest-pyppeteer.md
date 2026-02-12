@@ -18,7 +18,7 @@ keywords:
   - puppeteer testing testmu ai
 
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: puppeteer-testing-with-pytest-pyppeteer/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 ---

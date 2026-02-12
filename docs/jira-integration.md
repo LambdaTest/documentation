@@ -9,7 +9,7 @@ keywords:
   - Push issues to Jira
   - TestMu AI Jira integration
 url: https://www.testmuai.com/support/docs/jira-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: jira-integration/
 canonical: https://www.testmuai.com/support/docs/jira-integration/
 ---

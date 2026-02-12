@@ -20,7 +20,7 @@ keywords:
   - hyperexecute automation testing
   - HyperExecute Selenium automation
 url: https://www.testmuai.com/support/docs/webdriverio-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: webdriverio-on-hyperexecute-grid/
 canonical: https://www.testmuai.com/support/docs/webdriverio-on-hyperexecute-grid/
 ---

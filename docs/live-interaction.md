@@ -10,7 +10,7 @@ keywords:
   - selenium automation
   - debug tests
 url: https://www.testmuai.com/support/docs/live-interaction/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: live-interaction/
 canonical: https://www.testmuai.com/support/docs/live-interaction/
 ---

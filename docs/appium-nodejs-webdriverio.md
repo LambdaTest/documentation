@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-nodejs-webdriverio/
 canonical: https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/
 ---

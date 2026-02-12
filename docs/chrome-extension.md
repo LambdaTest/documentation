@@ -13,7 +13,7 @@ keywords:
   - best chrome extensions for developers 
   - best chrome extensions for testers
 url: https://www.testmuai.com/support/docs/chrome-extension/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: chrome-extension/
 canonical: https://www.testmuai.com/support/docs/chrome-extension/
 ---

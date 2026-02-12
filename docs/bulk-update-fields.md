@@ -9,7 +9,7 @@ keywords:
   - bulk update
   - bulk update fields
 url: https://www.testmuai.com/support/docs/bulk-update-fields/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bulk-update-fields/
 canonical: https://www.testmuai.com/support/docs/bulk-update-fields/
 ---

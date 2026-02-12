@@ -11,7 +11,7 @@ keywords:
   - kaneai guidelines
   - instructions writings
 url: https://www.testmuai.com/support/docs/kane-ai-web-test-writing-guidelines/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-web-test-writing-guidelines/
 canonical: https://www.testmuai.com/support/docs/kane-ai-web-test-writing-guidelines/
 ---

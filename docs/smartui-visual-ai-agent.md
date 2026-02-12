@@ -10,7 +10,7 @@ keywords:
   - TestMu AI SmartUI
   - Visual Regression AI
 url: https://www.testmuai.com/support/docs/smartui-visual-ai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-visual-ai/
 canonical: https://www.testmuai.com/support/docs/smartui-visual-ai/
 ---

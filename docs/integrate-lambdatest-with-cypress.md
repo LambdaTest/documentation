@@ -1,4 +1,4 @@
-﻿---
+---
 id: integrate-lambdatest-with-cypress
 title: Integrate TestMu AI with Cypress Dashboard
 sidebar_label: Integrate TestMu AI with Cypress Dashboard
@@ -16,7 +16,7 @@ keywords:
   - TestMu AI Cloud Platform
 
 url: https://www.testmuai.com/support/docs/integrate-testmu-with-cypress/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrate-testmu-with-cypress/
 canonical: https://www.testmuai.com/support/docs/integrate-testmu-with-cypress/
 ---
@@ -104,7 +104,7 @@ The integration is now done, just open the **<BrandName /> Dashboard** and **Cyp
 
 ---
 
-> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+> That�s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

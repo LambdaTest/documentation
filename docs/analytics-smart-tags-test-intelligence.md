@@ -7,7 +7,7 @@ keywords:
   - analytics
   - smart tags
 url: https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-smart-tags-test-intelligence/
 canonical: https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/
 ---

@@ -17,7 +17,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/getting-started-with-mobile-app-real-time-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-mobile-app-real-time-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-mobile-app-real-time-testing/
 ---

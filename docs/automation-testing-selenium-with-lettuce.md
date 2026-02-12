@@ -15,7 +15,7 @@ keywords:
   - testmu ai python
   - framework on testmu ai
 url: https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: automation-testing-selenium-with-lettuce/
 canonical: https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/
 ---

@@ -9,7 +9,7 @@ keywords:
  - agentic testing
  - ai agent testing
 url: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-agent-to-agent-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 id: run-your-cypress-tests-in-parallel
 title: Run Your Cypress Tests In Parallel On TestMu AI Platform
 hide_title: true
@@ -17,7 +17,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
 ---

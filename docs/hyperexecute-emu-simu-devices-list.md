@@ -12,7 +12,7 @@ keywords:
   - simulator
   - hyperexecute dashboard
 url: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-emu-simu-devices-list/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
 ---

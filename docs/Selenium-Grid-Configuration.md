@@ -10,7 +10,7 @@ keywords:
   - selenium grid online
   - selenium versions  
 url: https://www.testmuai.com/support/docs/testmu-grid-configuration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-grid-configuration/
 canonical: https://www.testmuai.com/support/docs/testmu-grid-configuration/
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 id: custom-chrome
 title: How to Upload Custom Chrome Profile on TestMu AI
 hide_title: true
@@ -10,7 +10,7 @@ keywords:
 - create custom chrome profile
 - custom chrome profile testmu ai
 url: https://www.testmuai.com/support/docs/upload-custom-chrome-profile/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: upload-custom-chrome-profile/
 canonical: https://www.testmuai.com/support/docs/upload-custom-chrome-profile/
 ---

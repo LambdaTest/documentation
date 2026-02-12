@@ -6,7 +6,7 @@ description: Analytics - Dashboard CoPilot to analyze your data and get insights
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-dashboard-copilot/
 canonical: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
 ---

@@ -8,7 +8,7 @@ keywords:
   - project management
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/integrations-with-project-management-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrations-with-project-management-tools/
 canonical: https://www.testmuai.com/support/docs/integrations-with-project-management-tools/
 ---

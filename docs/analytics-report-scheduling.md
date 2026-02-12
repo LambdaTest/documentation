@@ -10,7 +10,7 @@ keywords:
   - scheduled reports
   - analytics notifications
 url: https://www.testmuai.com/support/docs/analytics-report-scheduling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-report-scheduling/
 canonical: https://www.testmuai.com/support/docs/analytics-report-scheduling/
 ---

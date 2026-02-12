@@ -12,7 +12,7 @@ keywords:
   - local app testing for maven
   - maven tunnel for testmu ai
 url: https://www.testmuai.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: maven-tunnel-for-locally-hosted-web-applications/
 canonical: https://www.testmuai.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 ---

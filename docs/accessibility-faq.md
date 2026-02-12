@@ -13,7 +13,7 @@ keywords:
     - Accessibility Testing Settings
     - Accessibility FAQa
 url: https://www.testmuai.com/support/docs/accessibility-faq/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-faq/
 canonical: https://www.testmuai.com/support/docs/accessibility-faq/
 ---

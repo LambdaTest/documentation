@@ -10,7 +10,7 @@ keywords:
   - testmu ai cypress cli flags
   - testmu ai cypress cli arguments
 url: https://www.testmuai.com/support/docs/cypress-cli-commands/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-cli-commands/
 canonical: https://www.testmuai.com/support/docs/cypress-cli-commands/
 ---

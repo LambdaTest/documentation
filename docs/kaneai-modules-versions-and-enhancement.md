@@ -9,7 +9,7 @@ keywords:
 - enhancements
 - modules
 url: https://www.testmuai.com/support/docs/kaneai-modules-versions-and-enhancement/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-modules-versions-and-enhancement/
 canonical: https://www.testmuai.com/support/docs/kaneai-modules-versions-and-enhancement/
 ---

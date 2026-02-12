@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
 url: https://www.testmuai.com/support/docs/hyperexecute-job-reports/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-job-reports/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-job-reports/
 ---

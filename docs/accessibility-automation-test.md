@@ -10,7 +10,7 @@ keywords:
     - Automation
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/accessibility-automation-test/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-automation-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-automation-test/
 ---

@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: download-artefacts-cypress
 title: Downloading Artefacts For A Cypress Project
 sidebar_label: Download Artefacts For Cypress Project
@@ -15,7 +15,7 @@ keywords:
   - Cypress Project
 
 url: https://www.testmuai.com/support/docs/download-artefacts-cypress/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: download-artefacts-cypress/
 canonical: https://www.testmuai.com/support/docs/download-artefacts-cypress/
 ---
@@ -66,7 +66,7 @@ Add **"downloads"** capability in the `lambdatest-config.json` file and define t
 
 ---
 
-Append `â€“-sync` flag in the run command as mentioned below and run your test on the <BrandName /> platform. 
+Append `–-sync` flag in the run command as mentioned below and run your test on the <BrandName /> platform. 
 
 ```bash
 lambdatest-cypress run --sync=true
@@ -106,7 +106,7 @@ lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23
   <img loading="lazy" src={require('../assets/images/cypress/cypress7.png').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
 :::tip Support
-Thatâ€™s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
 :::
 
 <nav aria-label="breadcrumbs">

@@ -9,7 +9,7 @@ keywords:
   - test cases
   - manual test case creation
 url: https://www.testmuai.com/support/docs/manual-test-case-creation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: manual-test-case-creation/
 canonical: https://www.testmuai.com/support/docs/manual-test-case-creation/
 ---

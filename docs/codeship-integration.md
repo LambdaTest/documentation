@@ -11,7 +11,7 @@ keywords:
   - codeship integration
   - testmu ai codeship integration
 url: https://www.testmuai.com/support/docs/codeship-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: codeship-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/codeship-integration-with-testmu/
 ---

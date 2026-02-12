@@ -11,7 +11,7 @@ keywords:
   - browserstack testmu ai migration guide
   - how to migrate from browserstack to testmu ai
 url: https://www.testmuai.com/support/docs/browserstack-to-testmu-migration-guide/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: browserstack-to-testmu-migration-guide/
 canonical: https://www.testmuai.com/support/docs/browserstack-to-testmu-migration-guide/
 ---

@@ -10,7 +10,7 @@ keywords:
   - compare your website side-by-side
   - scroll sync mirrored interactions
 url: https://www.testmuai.com/support/docs/scroll-sync/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: scroll-sync/
 canonical: https://www.testmuai.com/support/docs/scroll-sync/
 ---

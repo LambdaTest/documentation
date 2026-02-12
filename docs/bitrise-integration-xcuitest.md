@@ -13,7 +13,7 @@ keywords:
 - app testing with bitrise 
 - app automation bitrise
 url: https://www.testmuai.com/support/docs/bitrise-integration-xcuitest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bitrise-integration-xcuitest/
 canonical: https://www.testmuai.com/support/docs/bitrise-integration-xcuitest/
 ---

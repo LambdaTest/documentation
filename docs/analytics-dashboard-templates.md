@@ -6,7 +6,7 @@ description: Discover Dashboard Templates for streamlined test analysis. Save ti
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-dashboard-templates/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-dashboard-templates/
 canonical: https://www.testmuai.com/support/docs/analytics-dashboard-templates/
 ---

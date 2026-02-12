@@ -15,7 +15,7 @@ keywords:
   - google workspace
   - okta
 url: https://www.testmuai.com/support/docs/testmu-sso-oidc/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-oidc/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-oidc/
 ---

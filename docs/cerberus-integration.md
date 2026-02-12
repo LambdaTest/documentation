@@ -12,7 +12,7 @@ keywords:
  - Cerberus integration with Lambdatest
  - testmu ai integration with Cerberus
 url: https://www.testmuai.com/support/docs/cerberus-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cerberus-integration/
 canonical: https://www.testmuai.com/support/docs/cerberus-integration/
 ---

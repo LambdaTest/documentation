@@ -11,7 +11,7 @@ keywords:
   - local app testing
   - bypass network restrictions
 url: https://www.testmuai.com/support/docs/socks5-proxy-support/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: socks5-proxy-support/
 canonical: https://www.testmuai.com/support/docs/socks5-proxy-support/
 ---

@@ -10,7 +10,7 @@ keywords:
   - bug reporting
   - team communication
 url: https://www.testmuai.com/support/docs/microsoft-teams-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: microsoft-teams-integration/
 canonical: https://www.testmuai.com/support/docs/microsoft-teams-integration/
 ---

@@ -12,7 +12,7 @@ keywords:
   - domain filtering
   - network configurations
 url: https://www.testmuai.com/support/docs/network-configurations-in-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: browser-network-configurations/
 canonical: https://www.testmuai.com/support/docs/browser-network-configurations/
 

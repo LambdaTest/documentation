@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How to Find the Correct Concurrency 
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-os-and-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-configure-os-and-browser/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-os-and-browser/
 ---

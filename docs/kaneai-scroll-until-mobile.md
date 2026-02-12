@@ -12,7 +12,7 @@ keywords:
   - natural language commands
   - mobile scrolling
 url: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-scroll-until-mobile/
 canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
 ---

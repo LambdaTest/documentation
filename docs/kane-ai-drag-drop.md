@@ -11,7 +11,7 @@ keywords:
   - drag and drop testing
   - click and drag
 url: https://www.testmuai.com/support/docs/kane-ai-drag-drop/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-drag-drop/
 canonical: https://www.testmuai.com/support/docs/kane-ai-drag-drop/
 ---

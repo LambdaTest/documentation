@@ -10,7 +10,7 @@ keywords:
   - nosql
   - gcp spanner
 url: https://www.testmuai.com/support/docs/kaneai-database/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-database/
 canonical: https://www.testmuai.com/support/docs/kaneai-database/
 ---

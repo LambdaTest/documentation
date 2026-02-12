@@ -10,7 +10,7 @@ keywords:
     - Manual
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/accessibility-app-scanner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-app-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 ---

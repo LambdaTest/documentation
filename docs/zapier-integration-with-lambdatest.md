@@ -10,7 +10,7 @@ keywords:
   - zapier dashboard
   - automation on zapier 
 url: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zapier-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
 ---

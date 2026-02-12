@@ -6,7 +6,7 @@ description: Flaky Test Detection helps you to identify the flaky tests in your 
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-intelligence-flakiness-test-detection/
 canonical: https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/
 ---

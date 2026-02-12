@@ -13,7 +13,7 @@ keywords:
     - continuous integration tools
     - jenkins pipeline 
 url: https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrating-your-jenkins-pipeline-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/
 ---

@@ -9,7 +9,7 @@ keywords:
 - how to upload .app files on simulators
 - how to upload .app files for ios simulator testing
 url: https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: troubleshooting-ios-app-testing/
 canonical: https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/
 ---

@@ -9,7 +9,7 @@ keywords:
   - testmu ai and devrev integration 
   - devrev integration
 url: https://www.testmuai.com/support/docs/devrev-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: devrev-integration/
 canonical: https://www.testmuai.com/support/docs/devrev-integration/
 ---

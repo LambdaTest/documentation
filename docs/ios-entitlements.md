@@ -10,7 +10,7 @@ keywords:
 - mobile app testing
 - ios app testing
 url: https://www.testmuai.com/support/docs/ios-entitlements/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ios-entitlements/
 canonical: https://www.testmuai.com/support/docs/ios-entitlements/
 ---

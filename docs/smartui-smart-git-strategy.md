@@ -11,7 +11,7 @@ keywords:
   - Git Integration
   - Branch Comparison
 url: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-smart-git-strategy/
 canonical: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
 

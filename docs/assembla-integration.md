@@ -18,7 +18,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/assembla-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: assembla-integration/
 canonical: https://www.testmuai.com/support/docs/assembla-integration/
 ---

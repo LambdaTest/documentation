@@ -16,7 +16,7 @@ keywords:
   - tunnel
   - local testing
 url: https://www.testmuai.com/support/docs/web-scanner-advanced-features/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: web-scanner-advanced-features/
 canonical: https://www.testmuai.com/support/docs/web-scanner-advanced-features/
 ---

@@ -17,7 +17,7 @@ keywords:
   - Test on Mac 10.9 Mavericks online
   - Apple Mac Mavericks Virtual Machine
 url: https://www.testmuai.com/support/docs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: /
 canonical: https://www.testmuai.com/support/docs///
 ---

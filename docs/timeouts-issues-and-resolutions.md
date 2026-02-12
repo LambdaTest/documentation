@@ -12,7 +12,7 @@ keywords:
   - developer tools
   - debugging tools
 url: https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: timeouts-issues-and-resolutions/
 canonical: https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/
 ---

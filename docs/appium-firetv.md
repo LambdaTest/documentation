@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-firetv
 title: Fire TV With Appium
 sidebar_label: Fire TV Stick
@@ -14,7 +14,7 @@ keywords:
   - appium automation
 
 url: https://www.testmuai.com/support/docs/appium-firetv/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-firetv/
 canonical: https://www.testmuai.com/support/docs/appium-firetv/
 ---
@@ -116,7 +116,7 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 ### 2. Clone the sample project
 
-1. Clone the <BrandName />’s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
+1. Clone the <BrandName />�s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-firetv

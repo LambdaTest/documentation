@@ -8,7 +8,7 @@ keywords:
   - link jira issues
   - link jira issues with test manager
 url: https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: link-jira-issues-with-test-manager/
 canonical: https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/
 ---

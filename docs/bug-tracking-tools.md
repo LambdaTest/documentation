@@ -11,7 +11,7 @@ keywords:
   - debugging
 
 url: https://www.testmuai.com/support/docs/bug-tracking-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bug-tracking-tools/
 canonical: https://www.testmuai.com/support/docs/bug-tracking-tools/
 ---

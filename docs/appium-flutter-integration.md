@@ -11,7 +11,7 @@ keywords:
   - flutter automation
   - mobile test automation
 url: https://www.testmuai.com/support/docs/appium-flutter-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-flutter-integration/
 canonical: https://www.testmuai.com/support/docs/appium-flutter-integration/
 ---

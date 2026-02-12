@@ -8,7 +8,7 @@ keywords:
 - users management testmu ai
 - manage user
 url: https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-scheduled-test-runs/
 canonical: https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/
 ---

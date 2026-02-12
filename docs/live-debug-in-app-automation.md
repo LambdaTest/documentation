@@ -9,7 +9,7 @@ keywords:
   - xpath
   - app automation debugging
 url: https://www.testmuai.com/support/docs/live-debug-in-app-automation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: live-debug-in-app-automation/
 canonical: https://www.testmuai.com/support/docs/live-debug-in-app-automation/
 ---

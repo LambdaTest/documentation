@@ -10,7 +10,7 @@ keywords:
   - Create SSO
   - SSO Self Serve
 url: https://www.testmuai.com/support/docs/testmu-sso-self-serve/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-self-serve/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-self-serve/
 ---

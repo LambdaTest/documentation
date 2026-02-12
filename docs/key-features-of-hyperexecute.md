@@ -13,7 +13,7 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute key features
 url: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
-site_name: LambdaTest Key features of Hyperexecute
+site_name: TestMu AI Key features of Hyperexecute
 slug: key-features-of-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
 ---

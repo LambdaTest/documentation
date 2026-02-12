@@ -13,7 +13,7 @@ keywords:
   - cross browser testing
   - browser compatibility testing
 url: https://www.testmuai.com/support/docs/target-process-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: target-process-integration/
 canonical: https://www.testmuai.com/support/docs/target-process-integration/
 ---

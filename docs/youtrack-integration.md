@@ -10,7 +10,7 @@ keywords:
   - YouTrack integration
   
 url: https://www.testmuai.com/support/docs/youtrack-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: youtrack-integration/
 canonical: https://www.testmuai.com/support/docs/youtrack-integration/
 ---

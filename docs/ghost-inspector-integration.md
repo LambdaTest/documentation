@@ -13,7 +13,7 @@ keywords:
   - ghost inspector
   - ghost inspector integration
 url: https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ghost-inspector-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/
 ---

@@ -8,7 +8,7 @@ keywords:
 - teams management testmu ai
 - manage teams
 url: https://www.testmuai.com/support/docs/team-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: team-management/
 canonical: https://www.testmuai.com/support/docs/team-management/
 ---

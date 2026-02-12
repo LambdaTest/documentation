@@ -9,7 +9,7 @@ keywords:
 - download files
 - kane ai
 url: https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-upload-and-download-files/
 canonical: https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/
 ---

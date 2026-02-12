@@ -8,7 +8,7 @@ keywords:
   - test run
   - test run creation 
 url: https://www.testmuai.com/support/docs/test-run-creation-and-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-run-creation-and-management/
 canonical: https://www.testmuai.com/support/docs/test-run-creation-and-management/
 ---

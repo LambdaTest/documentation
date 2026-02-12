@@ -9,7 +9,7 @@ keywords:
   - error testing testmu ai 
   
 url: https://www.testmuai.com/support/docs/error-categorization-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: error-categorization-report/
 canonical: https://www.testmuai.com/support/docs/error-categorization-report/
 ---

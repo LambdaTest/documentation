@@ -10,7 +10,7 @@ keywords:
   - localhost not reachable
   - connection refused
 url: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: troubleshooting-lambda-tunnel/
 canonical: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
 ---

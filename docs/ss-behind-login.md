@@ -13,7 +13,7 @@ keywords:
 
 
 url: https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: taking-screenshots-of-pages-behind-login/
 canonical: https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/
 ---

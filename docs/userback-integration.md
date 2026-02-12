@@ -18,7 +18,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/userback-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: userback-integration/
 canonical: https://www.testmuai.com/support/docs/userback-integration/
 ---

@@ -14,7 +14,7 @@ keywords:
   - lt browser javascript
  
 url: https://www.testmuai.com/support/docs/error-reports/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: error-reports/
 canonical: https://www.testmuai.com/support/docs/error-reports/
 ---

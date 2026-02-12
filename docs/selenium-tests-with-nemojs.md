@@ -10,7 +10,7 @@ keywords:
 - nemojs automation testing
 - nemojs automation framework
 url: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-tests-with-nemojs/
 canonical: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
 ---

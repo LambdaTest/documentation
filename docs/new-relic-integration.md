@@ -9,7 +9,7 @@ keywords:
   - testmu ai integration with new relic
   - new relic integration 
 url: https://www.testmuai.com/support/docs/new-relic-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: new-relic-integration/
 canonical: https://www.testmuai.com/support/docs/new-relic-integration/
 ---

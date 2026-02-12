@@ -13,7 +13,7 @@ keywords:
   - Triple tap
 slug: gesture-support-ios/
 canonical: https://www.testmuai.com/support/docs/gesture-support-ios/
-site_name: LambdaTest
+site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/gesture-support-ios/
 ---
 import CodeBlock from '@theme/CodeBlock';

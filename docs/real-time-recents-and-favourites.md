@@ -17,7 +17,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/real-time-recents-and-favourites/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: real-time-recents-and-favourites/
 canonical: https://www.testmuai.com/support/docs/real-time-recents-and-favourites/
 ---

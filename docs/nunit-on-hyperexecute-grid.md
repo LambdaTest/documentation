@@ -19,7 +19,7 @@ keywords:
   - hyperexecute NUnit testing
   - hyperexecute automation testing
 url: https://www.testmuai.com/support/docs/nunit-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: nunit-on-hyperexecute-grid/
 canonical: https://www.testmuai.com/support/docs/nunit-on-hyperexecute-grid/
 ---

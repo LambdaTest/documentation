@@ -12,7 +12,7 @@ keywords:
   - typescript playwright framework
 
 url: https://www.testmuai.com/support/docs/typescript-with-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: typescript-with-playwright/
 canonical: https://www.testmuai.com/support/docs/typescript-with-playwright/
 ---

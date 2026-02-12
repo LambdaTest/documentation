@@ -11,7 +11,7 @@ keywords:
   - kaneai tunnel support
   - kaneai proxy support
 url: https://www.testmuai.com/support/docs/kane-ai-modules/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-modules/
 canonical: https://www.testmuai.com/support/docs/kane-ai-modules/
 ---

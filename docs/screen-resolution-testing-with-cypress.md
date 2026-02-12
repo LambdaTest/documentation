@@ -9,7 +9,7 @@ keywords:
   - test on different screen resolution cypress
   - testmu ai cypress
 url: https://www.testmuai.com/support/docs/screen-resolution-testing-with-cypress/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: screen-resolution-testing-with-cypress/
 canonical: https://www.testmuai.com/support/docs/screen-resolution-testing-with-cypress/
 ---

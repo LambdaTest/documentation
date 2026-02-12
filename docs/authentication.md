@@ -16,7 +16,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/authentication/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: authentication/
 canonical: https://www.testmuai.com/support/docs/authentication/
 ---

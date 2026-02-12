@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-cypress-testing
 title: Getting Started With Cypress Testing On TestMu AI Platform
 sidebar_label: Cypress Testing
@@ -17,7 +17,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-cypress-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/
 ---
@@ -38,7 +38,7 @@ Cypress is a modern web front-end testing tool built with JavaScript Mocha. It o
 
 Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
 
-In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress’ kitchen sink sample app to execute our tests. 
+In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress� kitchen sink sample app to execute our tests. 
 
 
 
