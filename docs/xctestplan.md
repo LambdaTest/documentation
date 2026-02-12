@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: xctestplan
 title: XCTestPlan
 sidebar_label: XCTestPlan
@@ -14,7 +14,7 @@ keywords:
   - XCUI testing
   - real devices
 url: https://www.testmuai.com/support/docs/xctestplan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: xctestplan/
 canonical: https://www.testmuai.com/support/docs/xctestplan/
 ---
@@ -180,9 +180,9 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 ## Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey`Â in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
-Take note of theÂ base64Â encoded authentication which needs to be added in the next step.
+Take note of the base64 encoded authentication which needs to be added in the next step.
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">

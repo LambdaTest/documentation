@@ -13,7 +13,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/xcresult/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: xcresult/
 canonical: https://www.testmuai.com/support/docs/xcresult/
 ---

@@ -12,7 +12,7 @@ keywords:
 
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 ---

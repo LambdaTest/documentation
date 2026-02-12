@@ -15,7 +15,7 @@ keywords:
   - testmu ai getting started
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-testmu-automation/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/
 ---

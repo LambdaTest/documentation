@@ -12,7 +12,7 @@ keywords:
   - HyperExecute Widgets
   - HyperExecute Test
 url: https://www.testmuai.com/support/docs/hyperexecute-test-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-test-widgets/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-test-widgets/
 ---

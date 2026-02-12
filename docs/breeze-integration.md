@@ -14,7 +14,7 @@ keywords:
   - one click bug marking
   - testmu ai 3rd party integration
 url: https://www.testmuai.com/support/docs/breeze-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: breeze-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/breeze-integration-with-testmu/
 ---

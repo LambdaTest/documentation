@@ -12,7 +12,7 @@ keywords:
   - NUnit
   - Specflow
 url: https://www.testmuai.com/support/docs/hyperexecute-csharp-use-cases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-csharp-use-cases/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-csharp-use-cases/
 ---

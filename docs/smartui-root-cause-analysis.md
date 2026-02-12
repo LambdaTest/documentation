@@ -10,7 +10,7 @@ keywords:
   - TestMu AI SmartUI
   - Visual Testing Troubleshooting
 url: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-root-cause-analysis/
 canonical: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
 ---

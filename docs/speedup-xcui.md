@@ -14,7 +14,7 @@ keywords:
   - XCUI testing
   - real devices
 url: https://www.testmuai.com/support/docs/speedup-xcui/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: speedup-xcui/
 canonical: https://www.testmuai.com/support/docs/speedup-xcui/
 ---

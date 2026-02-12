@@ -11,7 +11,7 @@ keywords:
 - app testing
 - real devices
 url: https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-install-uninstall-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/
 ---

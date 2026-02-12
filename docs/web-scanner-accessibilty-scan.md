@@ -11,7 +11,7 @@ keywords:
   - wcag
   - ada compliance
 url: https://www.testmuai.com/support/docs/web-scanner-accessibility-scan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: web-scanner-accessibility-scan/
 canonical: https://www.testmuai.com/support/docs/web-scanner-accessibility-scan/
 ---

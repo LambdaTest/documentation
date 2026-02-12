@@ -16,7 +16,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/audio-injection/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: audio-injection/
 canonical: https://www.testmuai.com/support/docs/audio-injection/
 ---

@@ -14,7 +14,7 @@ keywords:
   - puppeteer mocha
   - automation testing with puppeteer
 url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-smart-ui-sdk-using-puppeteer/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/
 

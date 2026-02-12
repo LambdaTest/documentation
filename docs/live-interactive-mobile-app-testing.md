@@ -10,7 +10,7 @@ keywords:
 - live-interactive mobile app testing testmu ai
 - geolocation app testing
 url: https://www.testmuai.com/support/docs/live-interactive-mobile-app-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: live-interactive-mobile-app-testing/
 canonical: https://www.testmuai.com/support/docs/live-interactive-mobile-app-testing/
 ---

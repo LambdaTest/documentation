@@ -16,7 +16,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/cyp-multi-reporters/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cyp-multi-reporters/
 canonical: https://www.testmuai.com/support/docs/cyp-multi-reporters/
 ---

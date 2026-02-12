@@ -12,7 +12,7 @@ keywords:
   - automation testing
   - mobile test automation
 url: https://www.testmuai.com/support/docs/uipath-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: uipath-integration/
 canonical: https://www.testmuai.com/support/docs/uipath-integration/
 ---

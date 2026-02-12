@@ -13,7 +13,7 @@ keywords:
   - testmu ai google integration
   - testmu ai google sso
 url: https://www.testmuai.com/support/docs/testmu-sso-google/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-google/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-google/
 ---

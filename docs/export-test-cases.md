@@ -8,7 +8,7 @@ keywords:
   - export-test-cases
   - test cases
 url: https://www.testmuai.com/support/docs/export-test-cases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: export-test-cases/
 canonical: https://www.testmuai.com/support/docs/export-test-cases/
 ---

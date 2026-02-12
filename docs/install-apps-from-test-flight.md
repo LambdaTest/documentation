@@ -8,7 +8,7 @@ keywords:
 - install apps from test flight
 - test flight
 url: https://www.testmuai.com/support/docs/install-apps-from-test-flight/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: install-apps-from-test-flight/
 canonical: https://www.testmuai.com/support/docs/install-apps-from-test-flight/
 ---

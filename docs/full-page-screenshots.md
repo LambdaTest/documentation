@@ -10,7 +10,7 @@ keywords:
   - capture full page screenshots in lt browser
   - capture full page screenshots
 url: https://www.testmuai.com/support/docs/full-page-screenshots/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: full-page-screenshots/
 canonical: https://www.testmuai.com/support/docs/full-page-screenshots/
 ---

@@ -13,7 +13,7 @@ keywords:
 - log bugs from testmu ai to github
 - github repository integration testmu ai
 url: https://www.testmuai.com/support/docs/github-repo-based-oauth-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: github-repo-based-oauth-integration/
 canonical: https://www.testmuai.com/support/docs/github-repo-based-oauth-integration/
 ---

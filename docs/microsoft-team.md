@@ -10,7 +10,7 @@ keywords:
 - run realtime and screenshot tests with ms team app
 - how to integrate microsoft teams app with testmu ai
 url: https://www.testmuai.com/support/docs/microsoft-teams-app/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: microsoft-teams-app/
 canonical: https://www.testmuai.com/support/docs/microsoft-teams-app/
 ---

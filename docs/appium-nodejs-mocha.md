@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-nodejs-mocha
 title: Appium With Mocha
 sidebar_label: Mocha
@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-nodejs-mocha/
 canonical: https://www.testmuai.com/support/docs/appium-nodejs-mocha/
 ---

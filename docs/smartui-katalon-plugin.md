@@ -18,7 +18,7 @@ keywords:
   - Katalon SmartUI Integration
 
 url: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-katalon-plugin/
 canonical: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
 

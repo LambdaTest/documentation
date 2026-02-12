@@ -19,7 +19,7 @@ keywords:
     - filter test builds
     - group test builds
 url: https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-and-filter-your-test-builds-using-build-tags/
 canonical: https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
 ---

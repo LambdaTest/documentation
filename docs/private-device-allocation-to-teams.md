@@ -1,4 +1,4 @@
-﻿---
+---
 id: private-device-allocation-to-teams
 title: Private Device Allocation to Teams
 hide_title: false
@@ -10,7 +10,7 @@ keywords:
 - real device
 - virtual device
 url: https://www.testmuai.com/support/docs/private-device-allocation-to-teams/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: private-device-allocation-to-teams/
 canonical: https://www.testmuai.com/support/docs/private-device-allocation-to-teams/
 ---
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24�7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
 ## Steps to Allocate Devices to Teams
 
@@ -64,7 +64,7 @@ In the **Private Cloud Devices** tab section, distribute your devices amongst yo
     - Click on the **Bulk Distribute** button and select all the devices that you want to allocate to the teams.
     - Click on the **Distribute** button. In the popup, choose the teams from the dropdown list.
     - Click on the **Allocate** button.
-The devices will now appear in the selected team’s device pool, accessible only to its members.
+The devices will now appear in the selected team�s device pool, accessible only to its members.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/bulk-distribute.gif').default} alt="Image" className="doc_img img_center"/>
 
@@ -74,7 +74,7 @@ The devices will now appear in the selected team’s device pool, accessible onl
     - Click on the **Allocate** button from the right side of your desired device.
     - In the popup, choose the teams from the dropdown list.
     - Click on the **Allocate** button.
-The selected device will now appear in the team’s device pool, accessible only to its members.
+The selected device will now appear in the team�s device pool, accessible only to its members.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/uni-distribute.gif').default} alt="Image" className="doc_img img_center"/>
 </TabItem>
@@ -86,7 +86,7 @@ The selected device will now appear in the team’s device pool, accessible only
 ## Deallocate any Device from Teams
 - Click on the **Deallocate** button from the right side of your desired device.
 
-The selected device will no longer appear in all those allocated team’s device pool.
+The selected device will no longer appear in all those allocated team�s device pool.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/deallocate-device.gif').default} alt="Image" className="doc_img img_center"/>
 

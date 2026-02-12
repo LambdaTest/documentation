@@ -16,7 +16,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-running-your-first-project/
 canonical: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
 

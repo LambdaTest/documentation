@@ -6,7 +6,7 @@ description: Gain insights into test case execution and performance with TestMu 
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-test-case-insights/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-test-case-insights/
 canonical: https://www.testmuai.com/support/docs/analytics-test-case-insights/
 ---

@@ -14,7 +14,7 @@ keywords:
   - Jenkins 
   - jenkins tutorial 
 url: https://www.testmuai.com/support/docs/jenkins-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: jenkins-with-testmu/
 canonical: https://www.testmuai.com/support/docs/jenkins-with-testmu/
 ---

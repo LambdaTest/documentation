@@ -14,7 +14,7 @@ keywords:
   - testmu ai integration with gocd pipelines
   - ci/cd
 url: https://www.testmuai.com/support/docs/gocd-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: gocd-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/gocd-integration-with-testmu/
 ---

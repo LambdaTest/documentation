@@ -16,7 +16,7 @@ keywords:
   - flock integration with testmu ai
   - communication tools
 url: https://www.testmuai.com/support/docs/flock-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: flock-integration/
 canonical: https://www.testmuai.com/support/docs/flock-integration/
 ---

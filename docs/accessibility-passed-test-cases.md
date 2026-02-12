@@ -12,7 +12,7 @@ keywords:
   - Fragment identifier
   - wcag
 url: https://www.testmuai.com/support/docs/accessibility-passed-test-cases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-passed-test-cases/
 canonical: https://www.testmuai.com/support/docs/accessibility-passed-test-cases/
 ---

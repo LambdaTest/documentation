@@ -12,7 +12,7 @@ keywords:
     - katalon studio
 
 url: https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: katalon-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/
 ---

@@ -9,7 +9,7 @@ keywords:
   - csv import
   - test case
 url: https://www.testmuai.com/support/docs/csv-import/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: csv-import/
 canonical: https://www.testmuai.com/support/docs/csv-import/
 ---

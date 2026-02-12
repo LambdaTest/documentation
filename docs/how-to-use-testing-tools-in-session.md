@@ -10,7 +10,7 @@ keywords:
   - mobile app testing
   - app automation
 url: https://www.testmuai.com/support/docs/how-to-use-testing-tools-in-session/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: how-to-use-testing-tools-in-session/
 canonical: https://www.testmuai.com/support/docs/how-to-use-testing-tools-in-session/
 ---

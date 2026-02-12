@@ -9,7 +9,7 @@ keywords:
   - test cases
   - version
 url: https://www.testmuai.com/support/docs/test-case-versioning/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-case-versioning/
 canonical: https://www.testmuai.com/support/docs/test-case-versioning/
 ---

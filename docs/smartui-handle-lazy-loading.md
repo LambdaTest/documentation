@@ -12,7 +12,7 @@ keywords:
   - visual testing
   - dynamic content
 url: https://www.testmuai.com/support/docs/smartui-handle-lazy-loading/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-handle-lazy-loading/
 canonical: https://www.testmuai.com/support/docs/smartui-handle-lazy-loading/
 

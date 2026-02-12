@@ -13,7 +13,7 @@ keywords:
   - appium automation
 
 url: https://www.testmuai.com/support/docs/appium-ruby-cucumber/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-ruby-cucumber/
 canonical: https://www.testmuai.com/support/docs/appium-ruby-cucumber/
 ---

@@ -14,7 +14,7 @@ keywords:
   - Automated testing alerts
   - DevOps communication
 url: https://www.testmuai.com/support/docs/hyperexecute-slack-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-slack-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-slack-integration/
 ---

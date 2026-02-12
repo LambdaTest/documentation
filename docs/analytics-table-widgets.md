@@ -13,10 +13,10 @@ keywords:
   - tabular data
   - data tables
 
-url: https://www.lambdatest.com/support/docs/analytics-table-widgets/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-table-widgets/
+site_name: TestMu AI
 slug: analytics-table-widgets/
-canonical: https://www.testmuai.com/support/docs/analytics-table-widgets//
+canonical: https://www.testmuai.com/support/docs/analytics-table-widgets/
 ---
 
 import NewTag from '../src/component/newTag';
@@ -39,7 +39,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Table Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-table-widgets/"
+          "item": "https://www.testmuai.com/support/docs/analytics-table-widgets/"
         }]
       })
     }}

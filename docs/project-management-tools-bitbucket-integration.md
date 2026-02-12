@@ -9,7 +9,7 @@ keywords:
   - push issues to bitbucket
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/bitbucket-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bitbucket-integration/
 canonical: https://www.testmuai.com/support/docs/bitbucket-integration/
 

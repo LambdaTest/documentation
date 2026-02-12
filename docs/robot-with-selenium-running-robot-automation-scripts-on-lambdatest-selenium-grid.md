@@ -16,7 +16,7 @@ keywords:
   - framework on testmu ai
 
 url: https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
 ---

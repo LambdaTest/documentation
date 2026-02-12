@@ -13,7 +13,7 @@ keywords:
   - playwright android testing testmu ai
 
 url: https://www.testmuai.com/support/docs/capabilities-for-playwright-android/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: capabilities-for-playwright-android/
 canonical: https://www.testmuai.com/support/docs/capabilities-for-playwright-android/
 ---

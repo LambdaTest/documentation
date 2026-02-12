@@ -9,7 +9,7 @@ keywords:
   - push issues to paymo
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/paymo-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: paymo-integration/
 canonical: https://www.testmuai.com/support/docs/paymo-integration/
 

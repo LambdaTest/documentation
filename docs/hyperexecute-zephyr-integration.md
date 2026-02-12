@@ -11,7 +11,7 @@ keywords:
   - Integrations
   - Products
 url: https://www.testmuai.com/support/docs/hyperexecute-zephyr-scale-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-zephyr-scale-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-zephyr-scale-integration/
 ---

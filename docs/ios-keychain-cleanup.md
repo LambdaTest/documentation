@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ios-keychain-cleanup/
 canonical: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
 ---

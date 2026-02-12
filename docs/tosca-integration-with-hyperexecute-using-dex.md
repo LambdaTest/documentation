@@ -11,7 +11,7 @@ keywords:
     - tosca
     - tricentis
 url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tosca-integration-with-hyperexecute-using-dex/
 canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/
 ---

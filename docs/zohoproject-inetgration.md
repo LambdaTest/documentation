@@ -13,7 +13,7 @@ keywords:
   - integrate zoho project with testmu ai
   - create issue in zoho project from testmu ai
 url: https://www.testmuai.com/support/docs/zohoproject-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zohoproject-integration/
 canonical: https://www.testmuai.com/support/docs/zohoproject-integration/
 ---

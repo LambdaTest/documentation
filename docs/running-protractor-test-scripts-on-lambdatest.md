@@ -14,7 +14,7 @@ keywords:
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/
 ---

@@ -11,7 +11,7 @@ keywords:
   - visual regression
   - automation
 url: https://www.testmuai.com/support/docs/kaneai-smartui-visual-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-smartui-visual-testing/
 canonical: https://www.testmuai.com/support/docs/kaneai-smartui-visual-testing/
 

@@ -9,7 +9,7 @@ keywords:
   - report junit xml testmu ai 
   
 url: https://www.testmuai.com/support/docs/junit-xml-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: junit-xml-report/
 canonical: https://www.testmuai.com/support/docs/junit-xml-report/
 ---

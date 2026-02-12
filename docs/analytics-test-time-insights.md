@@ -6,7 +6,7 @@ description: Monitor and optimize test environment setup times with TestMu AI's 
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-test-time-trends/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-test-time-trends/
 canonical: https://www.testmuai.com/support/docs/analytics-test-time-trends/
 ---

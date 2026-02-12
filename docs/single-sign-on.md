@@ -1,4 +1,4 @@
-﻿---
+---
 id: single-sign-on
 title: Getting Started With Single Sign On (SSO)
 hide_title: true
@@ -9,7 +9,7 @@ keywords:
     - TestMu AI single sign-on
     - TestMu AI SSO
 url: https://www.testmuai.com/support/docs/single-sign-on/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: single-sign-on/
 canonical: https://www.testmuai.com/support/docs/single-sign-on/
 ---
@@ -91,7 +91,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 You can contact the **Support Team**, who will help you enable the SSO feature for your <BrandName /> account. 
 
 
-> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

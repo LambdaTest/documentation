@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-cli-release-notes-0-2-249/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-cli-release-notes-0-2-249/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-release-notes-0-2-249/
 ---

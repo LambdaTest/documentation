@@ -12,7 +12,7 @@ keywords:
 - vividus integration with testmu ai
 - testmu ai integration with vividus
 url: https://www.testmuai.com/support/docs/vividus-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: vividus-integration/
 canonical: https://www.testmuai.com/support/docs/vividus-integration/
 ---

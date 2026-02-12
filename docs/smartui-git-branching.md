@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-git-branching-strategy
 title: Git Branching Strategy in SmartUI Storybook Integration
 sidebar_label: Storybook Git Baseline Branching
@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 url: https://www.testmuai.com/support/docs/smartui-github-app-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-git-branching-strategy/
 canonical: https://www.testmuai.com/support/docs/smartui-git-branching-strategy/
 

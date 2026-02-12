@@ -11,7 +11,7 @@ keywords:
   - MCP
   - MCP server
 url: https://www.testmuai.com/support/docs/testmu-mcp-server/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-mcp-server/
 canonical: https://www.testmuai.com/support/docs/testmu-mcp-server/
 ---

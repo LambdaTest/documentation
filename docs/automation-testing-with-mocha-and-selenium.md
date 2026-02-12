@@ -15,7 +15,7 @@ keywords:
   - selenium testing
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/automation-testing-with-mocha-and-selenium/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: /automation-testing-with-mocha-and-selenium/
 canonical: https://www.testmuai.com/support/docs//automation-testing-with-mocha-and-selenium/
 ---

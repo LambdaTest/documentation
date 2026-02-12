@@ -8,7 +8,7 @@ keywords:
   - cucumber testing reports
   - robot report testmu ai 
 url: https://www.testmuai.com/support/docs/robot-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: robot-report/
 canonical: https://www.testmuai.com/support/docs/robot-report/
 ---

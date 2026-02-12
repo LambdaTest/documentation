@@ -17,7 +17,7 @@ keywords:
   - hyperexecute automation testing
   - HyperExecute React Native automation
 url: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-detox-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
 ---
@@ -116,4 +116,4 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 
 You can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You’ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.
 
-> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />

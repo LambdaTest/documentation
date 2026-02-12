@@ -13,7 +13,7 @@ keywords:
   - continuous integration tools
   - azure pipelines
 url: https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrate-azure-pipelines-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/
 ---

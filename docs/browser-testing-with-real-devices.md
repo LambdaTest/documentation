@@ -8,7 +8,7 @@ keywords:
 - real device browser testing 
 - testmu ai real device browser testing 
 url: https://www.testmuai.com/support/docs/browser-testing-on-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: browser-testing-on-real-devices/
 canonical: https://www.testmuai.com/support/docs/browser-testing-on-real-devices/
 ---

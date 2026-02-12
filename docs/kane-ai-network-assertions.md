@@ -10,7 +10,7 @@ keywords:
   - assertion
   - testmu ai kaneai
 url: https://www.testmuai.com/support/docs/kane-ai-network-assertions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-network-assertions/
 canonical: https://www.testmuai.com/support/docs/kane-ai-network-assertions/
 ---

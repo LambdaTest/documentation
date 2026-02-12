@@ -11,7 +11,7 @@ keywords:
   - payment
 slug: apple-pay-manual/
 canonical: https://www.testmuai.com/support/docs/apple-pay-manual/
-site_name: LambdaTest
+site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/apple-pay-manual/
 ---
 import CodeBlock from '@theme/CodeBlock';

@@ -10,7 +10,7 @@ keywords:
   - Automation Testing
   - testmu ai Dashboard
 url: https://www.testmuai.com/support/docs/inside-testmu-platform/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: inside-testmu-platform/
 canonical: https://www.testmuai.com/support/docs/inside-testmu-platform/
 ---

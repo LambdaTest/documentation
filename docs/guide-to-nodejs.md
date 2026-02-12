@@ -16,7 +16,7 @@ keywords:
   - node.js selenium scripts
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/
 ---

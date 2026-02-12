@@ -11,7 +11,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
 url: https://www.testmuai.com/support/docs/getting-started-with-kane-ai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-kane-ai/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-kane-ai/
 ---

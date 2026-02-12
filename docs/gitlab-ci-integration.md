@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - gitlab ci
 url: https://www.testmuai.com/support/docs/gitlab-ci-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: gitlab-ci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/gitlab-ci-integration-with-testmu/
 ---

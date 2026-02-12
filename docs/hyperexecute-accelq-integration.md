@@ -13,7 +13,7 @@ keywords:
   - gui based mobile automation
   - real devices
 url: https://www.testmuai.com/support/docs/hyperexecute-accelq-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-accelq-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-accelq-integration/
 ---

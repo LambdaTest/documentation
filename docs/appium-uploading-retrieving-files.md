@@ -15,7 +15,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-uploading-retrieving-files/
 canonical: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
 ---

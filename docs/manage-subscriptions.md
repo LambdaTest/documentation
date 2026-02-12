@@ -15,7 +15,7 @@ keywords:
   - Selenium getting started
   - Switch plan testmu ai
 url: https://www.testmuai.com/support/docs/manage-subscriptions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: manage-subscriptions/
 canonical: https://www.testmuai.com/support/docs/manage-subscriptions/
 ---

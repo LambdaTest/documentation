@@ -15,7 +15,7 @@ keywords:
   - Automated testing
   - Cloud-based testing
 url: https://www.testmuai.com/support/docs/hyperexecute-algoqa-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-algoqa-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-algoqa-integration/
 ---

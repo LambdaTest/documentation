@@ -11,7 +11,7 @@ keywords:
   - kane ai prompts
   - kane ai commands
 url: https://www.testmuai.com/support/docs/kane-ai-javascript-execution/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-javascript-execution/
 canonical: https://www.testmuai.com/support/docs/kane-ai-javascript-execution/
 ---

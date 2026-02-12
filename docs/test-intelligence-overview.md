@@ -6,7 +6,7 @@ description: Test Intelligence is an AI Native analytics module that helps you t
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/test-intelligence-overview/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-intelligence-overview/
 canonical: https://www.testmuai.com/support/docs/test-intelligence-overview/
 ---

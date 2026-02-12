@@ -15,7 +15,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/screen-reader-on-real-devices-app/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: screen-reader-on-real-devices-app/
 canonical: https://www.testmuai.com/support/docs/screen-reader-on-real-devices-app/
 ---

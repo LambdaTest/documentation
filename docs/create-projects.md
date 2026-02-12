@@ -9,7 +9,7 @@ keywords:
   - create projects
   - create project
 url: https://www.testmuai.com/support/docs/create-projects/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: create-projects/
 canonical: https://www.testmuai.com/support/docs/create-projects/
 ---

@@ -12,7 +12,7 @@ keywords:
   - appium automation
   - appium testing
 url: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-languages-and-frameworks/
 canonical: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
 ---

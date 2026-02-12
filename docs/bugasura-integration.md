@@ -9,7 +9,7 @@ keywords:
   - testmu ai and bugasura integration 
   - bugasura integration
 url: https://www.testmuai.com/support/docs/bugasura-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bugasura-integration/
 canonical: https://www.testmuai.com/support/docs/bugasura-integration/
 ---

@@ -11,7 +11,7 @@ keywords:
   - Build Management
   - Build Promotion
 url: https://www.testmuai.com/support/docs/smartui-build-merging/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-build-merging/
 canonical: https://www.testmuai.com/support/docs/smartui-build-merging/
 
@@ -159,4 +159,4 @@ If you encounter any issues with build merging in SmartUI, please contact our su
 
 ### Getting Help
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmu.ai.
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmuai.com.

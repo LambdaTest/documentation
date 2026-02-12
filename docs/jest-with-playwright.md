@@ -12,7 +12,7 @@ keywords:
   - jest playwright framework
 
 url: https://www.testmuai.com/support/docs/jest-with-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: jest-with-playwright/
 canonical: https://www.testmuai.com/support/docs/jest-with-playwright/
 ---

@@ -14,7 +14,7 @@ keywords:
   - chrome developer tools
   - google developer tools
 url: https://www.testmuai.com/support/docs/developer-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: developer-tools/
 canonical: https://www.testmuai.com/support/docs/developer-tools/
 ---

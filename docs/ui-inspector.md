@@ -7,7 +7,7 @@ description: Inspect and interact with mobile app elements using TestMu AI UI In
 keywords:
 - ui inspector 
 url: https://www.testmuai.com/support/docs/ui-inspector/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ui-inspector/
 canonical: https://www.testmuai.com/support/docs/ui-inspector/
 ---

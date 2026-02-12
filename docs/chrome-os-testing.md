@@ -15,7 +15,7 @@ keywords:
     - application
     - Webapp
 url: https://www.testmuai.com/support/docs/chrome-os-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: chrome-os-testing/
 canonical: https://www.testmuai.com/support/docs/chrome-os-testing/
 ---

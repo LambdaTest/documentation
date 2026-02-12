@@ -6,7 +6,7 @@ description: Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widge
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-overview/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-dashboard-edit-layout/
 canonical: https://www.testmuai.com/support/docs/analytics-dashboard-edit-layout/
 ---

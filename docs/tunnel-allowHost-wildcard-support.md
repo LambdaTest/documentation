@@ -16,7 +16,7 @@ keywords:
   - docker compose TCP with TLS 1.2 secure connection tunnel
   - docker vpn tunnel
 url: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tunnel-allowHost-wildcard-support/
 canonical: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
 ---

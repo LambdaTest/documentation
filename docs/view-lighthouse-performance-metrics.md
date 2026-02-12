@@ -30,8 +30,8 @@ keywords:
     - selenium tutorial
     - Selenium getting started
     - testmu ai getting started
-url: https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/view-lighthouse-performance-metrics/
+site_name: TestMu AI
 slug: view-lighthouse-performance-metrics/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -7,7 +7,7 @@ description: This documentation will help you learn how you can white list TestM
 keywords:
  - White-listing Proxy With TestMu AI
 url: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: white-listing-proxy-with-testmu/
 canonical: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
 ---

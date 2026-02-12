@@ -11,7 +11,7 @@ keywords:
   - clickup
   - clickup integrations
 url: https://www.testmuai.com/support/docs/clickup-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: clickup-integration/
 canonical: https://www.testmuai.com/support/docs/clickup-integration/
 ---

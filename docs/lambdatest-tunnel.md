@@ -17,7 +17,7 @@ keywords:
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
 url: https://www.testmuai.com/support/docs/testmu-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-tunnel/
 canonical: https://www.testmuai.com/support/docs/testmu-tunnel/
 ---

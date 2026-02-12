@@ -8,7 +8,7 @@ keywords:
   - cucumber testing reports
   - cucumber testing testmu ai 
 url: https://www.testmuai.com/support/docs/cucumber-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cucumber-report/
 canonical: https://www.testmuai.com/support/docs/cucumber-report/
 ---
