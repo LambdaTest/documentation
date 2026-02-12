@@ -24,7 +24,7 @@ keywords:
     - android webview test online
     - webview browser tester android
     - android system webview test
-url: https://www.lambdatest.com/support/docs/webview-testing-in-android/
+url: https://www.testmuai.com/support/docs/webview-testing-in-android/
 site_name: LambdaTest
 slug: webview-testing-in-android/
 ---

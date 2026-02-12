@@ -11,7 +11,7 @@ keywords:
   - bulk update
   - module version
   - test case management
-url: https://www.lambdatest.com/support/docs/kaneai-bulk-module-update/
+url: https://www.testmuai.com/support/docs/kaneai-bulk-module-update/
 site_name: LambdaTest
 slug: kaneai-bulk-module-update/
 ---
@@ -34,7 +34,7 @@ slug: kaneai-bulk-module-update/
           "@type": "ListItem",
           "position": 3,
           "name": "Bulk Module Update",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-bulk-module-update"
+          "item": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/"
         }]
       })
     }}

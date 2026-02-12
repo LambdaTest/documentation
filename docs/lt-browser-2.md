@@ -43,7 +43,7 @@ keywords:
     - how to check responsive website in chrome
     - how to check responsive website offline
     - online device testing
-url: https://www.lambdatest.com/support/docs/lt-browser-2/
+url: https://www.testmuai.com/support/docs/lt-browser-2/
 site_name: LambdaTest
 slug: lt-browser-2/
 ---

@@ -11,10 +11,10 @@ keywords:
   - gps location
   - location override
   - geolocation testing
-url: https://www.lambdatest.com/support/docs/kaneai-gps-location/
+url: https://www.testmuai.com/support/docs/kaneai-gps-location/
 site_name: LambdaTest
 slug: kaneai-gps-location/
-canonical: https://www.testmuai.com/support/docs/kaneai-gps-location//
+canonical: https://www.testmuai.com/support/docs/kaneai-gps-location/
 ---
 
 <script type="application/ld+json"
@@ -35,7 +35,7 @@ canonical: https://www.testmuai.com/support/docs/kaneai-gps-location//
           "@type": "ListItem",
           "position": 3,
           "name": "GPS location",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-gps-location/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-gps-location/"
         }]
       })
     }}

@@ -14,10 +14,10 @@ keywords:
   - trend analysis
   - time series analysis
 
-url: https://www.lambdatest.com/support/docs/analytics-bar-line-widgets/
+url: https://www.testmuai.com/support/docs/analytics-bar-line-widgets/
 site_name: LambdaTest
 slug: analytics-bar-line-widgets/
-canonical: https://www.testmuai.com/support/docs/analytics-bar-line-widgets//
+canonical: https://www.testmuai.com/support/docs/analytics-bar-line-widgets/
 ---
 
 import NewTag from '../src/component/newTag';
@@ -40,7 +40,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Bar and Line Chart Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-bar-line-widgets/"
+          "item": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/"
         }]
       })
     }}

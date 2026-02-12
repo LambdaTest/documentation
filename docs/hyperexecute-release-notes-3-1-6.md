@@ -9,10 +9,10 @@ keywords:
   - testmu ai Hyperexecute help
   - testmu ai Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-6/
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/
 site_name: LambdaTest
 slug: hyperexecute-release-notes-3-1-6/
-canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6//
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -35,7 +35,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-6/"
+          "item": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/"
         }]
       })
     }}
