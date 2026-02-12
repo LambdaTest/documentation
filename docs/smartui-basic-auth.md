@@ -9,7 +9,7 @@ keywords:
   - Basic Authentication
   - Protected Assets
   - Authentication Headers
-url: https://www.testmuai.com/support/docs/smartui-basic-auth/
+url: https://www.testmuai.com/support/docs/smartui-cli-basic-auth/
 slug: smartui-cli-basic-auth/
 canonical: https://www.testmuai.com/support/docs/smartui-cli-basic-auth/
 
@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": `${BRAND_URL}/support/docs/smartui-basic-auth/`
+          "item": `${BRAND_URL}/support/docs/smartui-cli-basic-auth/`
         }]
       })
     }}

@@ -5,7 +5,7 @@ sidebar_label: Command Errors
 description: A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
 keywords:
   - analytics
-url: https://www.testmuai.com/support/docs/analytics-modules-command-logs/
+url: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
 site_name: TestMu AI
 slug: analytics-modules-test-intelligence-command-logs-analytics/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
+          "item": `${BRAND_URL}/support/docs/analytics-modules-test-intelligence-command-logs-analytics/`
         }]
       })
     }}

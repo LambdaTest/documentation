@@ -1,5 +1,5 @@
 ---
-id: default-list-of-browsers-for-screesnshot-testing
+id: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing
 title: Default List Of Browsers For Screenshot Testing
 hide_title: true
 sidebar_label: Default List Of Browsers For Automated Screenshot Testing
@@ -21,7 +21,7 @@ keywords:
 - Safari Screenshot Testing
 - Opera Screenshot Testing
 
-url: https://www.testmuai.com/support/docs/default-list-of-browsers-for-screesnshot-testing/
+url: https://www.testmuai.com/support/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 site_name: TestMu AI
 slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 ---

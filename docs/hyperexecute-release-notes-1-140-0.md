@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-1-140.0/
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-1-140-0/
 site_name: TestMu AI
 slug: hyperexecute-release-notes-1-140-0/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-1-140-0/

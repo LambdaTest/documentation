@@ -8,7 +8,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai app test
-url: https://www.testmuai.com/support/docs/kane-ai-app-agent/
+url: https://www.testmuai.com/support/docs/kane-ai-app-test/
 site_name: TestMu AI
 slug: kane-ai-app-test/
 canonical: https://www.testmuai.com/support/docs/kane-ai-app-test/
@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Web Test",
-          "item": `${BRAND_URL}/support/docs/kane-ai-app-test`
+          "item": `${BRAND_URL}/support/docs/kane-ai-app-test/`
         }]
       })
     }}
