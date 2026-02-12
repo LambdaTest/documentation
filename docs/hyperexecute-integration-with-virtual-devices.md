@@ -15,7 +15,7 @@ keywords:
     - fast mobile testing
 
 url: https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-integration-with-virtual-devices/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/
 ---

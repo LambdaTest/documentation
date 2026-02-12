@@ -12,7 +12,7 @@ keywords:
     - continuous delivery
     - continuous integration tools
 url: https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-integration-with-ci-cd-tools/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
 ---

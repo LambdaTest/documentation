@@ -20,7 +20,7 @@ keywords:
   - hyperexecute automation testing
   - HyperExecute Selenium automation
 url: https://www.testmuai.com/support/docs/testng-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testng-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/testng-on-hyperexecute-grid/
 ---

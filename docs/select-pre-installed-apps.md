@@ -8,7 +8,7 @@ keywords:
 - select pre installed apps
 - select pre installed apps in session
 url: https://www.testmuai.com/support/docs/select-pre-installed-apps/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: select-pre-installed-apps/
 canonical: https://www.testmu.ai/support/docs/select-pre-installed-apps/
 ---

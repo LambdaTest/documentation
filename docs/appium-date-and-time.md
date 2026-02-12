@@ -13,7 +13,7 @@ keywords:
  - 24-hour format
 
 url: https://www.testmuai.com/support/docs/appium-date-and-time/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-date-and-time/
 canonical: https://www.testmuai.com/support/docs/appium-date-and-time/
 ---

@@ -13,7 +13,7 @@ keywords:
   - debugging options appium testing
 
 url: https://www.testmuai.com/support/docs/debugging-options/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: debugging-options/
 canonical: https://www.testmuai.com/support/docs/debugging-options/
 ---

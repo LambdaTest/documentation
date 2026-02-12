@@ -1,4 +1,4 @@
-﻿---
+---
 id: video-injection
 title: Video Injection
 sidebar_label: Video Injection
@@ -15,7 +15,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/video-injection/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: video-injection/
 canonical: https://www.testmu.ai/support/docs/video-injection/
 ---
@@ -151,7 +151,7 @@ Refer to the code snippets given below to upload the video with the action `Vide
 
 You need to first add a logic to inject the uploaded video in the script. Thereafter add the logic to click the camera button in the mobile app. This will show you the last injected video on your mobile app screen.
 
-> 📕 Check the [documentation for Media Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
+> ?? Check the [documentation for Media Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
 
 
 <nav aria-label="breadcrumbs">

@@ -10,7 +10,7 @@ keywords:
   - PDF Testing
   - REST API
 url: https://www.testmuai.com/support/docs/smartui-pdf-api-upload/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-pdf-api-upload/
 canonical: https://www.testmu.ai/support/docs/smartui-pdf-api-upload/
 

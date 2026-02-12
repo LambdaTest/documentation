@@ -9,7 +9,7 @@ keywords:
 - hyperexecute private cloud
 - hyperexecute private cloud aws
 url: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-private-cloud-setup-with-aws/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
 ---

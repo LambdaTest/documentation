@@ -10,7 +10,7 @@ keywords:
   - visual ui scan
   - smartui config
 url: https://www.testmuai.com/support/docs/web-scanner-visual-scan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: web-scanner-visual-scan/
 canonical: https://www.testmu.ai/support/docs/web-scanner-visual-scan/
 ---

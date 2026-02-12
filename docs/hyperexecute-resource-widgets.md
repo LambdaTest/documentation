@@ -11,7 +11,7 @@ keywords:
   - HyperExecute
   - HyperExecute Widgets
 url: https://www.testmuai.com/support/docs/hyperexecute-resource-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-resource-widgets/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-resource-widgets/
 ---

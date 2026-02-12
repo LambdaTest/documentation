@@ -8,7 +8,7 @@ keywords:
 - hyperexecute error classification
 - hyperexecute root cause analysis
 url: https://www.testmuai.com/support/docs/ai-powered-test-failure-analysis/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ai-powered-test-failure-analysis/
 canonical: https://www.testmuai.com/support/docs/ai-powered-test-failure-analysis/
 ---

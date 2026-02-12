@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-cypress-versions
 title: Supported Cypress Versions
 sidebar_label: Supported Cypress Versions
@@ -16,7 +16,7 @@ keywords:
 - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/supported-cypress-versions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-cypress-versions/
 canonical: https://www.testmu.ai/support/docs/supported-cypress-versions/
 ---

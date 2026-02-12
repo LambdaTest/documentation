@@ -14,7 +14,7 @@ keywords:
   - testmu ai ios
   - real devices
 url: https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: assistive-touch-on-real-ios-devices/
 canonical: https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-devices/
 ---

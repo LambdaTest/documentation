@@ -12,7 +12,7 @@ keywords:
   - image injection
   - video injection
 url: https://www.testmuai.com/support/docs/kane-ai-mobile-app-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-mobile-app-capabilities/
 canonical: https://www.testmuai.com/support/docs/kane-ai-mobile-app-capabilities/
 ---

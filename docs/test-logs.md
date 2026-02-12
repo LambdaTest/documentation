@@ -11,7 +11,7 @@ keywords:
   - test library
 
 url: https://www.testmuai.com/support/docs/test-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-logs/
 canonical: https://www.testmu.ai/support/docs/test-logs/
 ---

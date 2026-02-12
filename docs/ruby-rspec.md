@@ -11,7 +11,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 
 url: https://www.testmuai.com/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/
 ---

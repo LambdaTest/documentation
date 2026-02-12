@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: how-to-use-in-session-testing-tools
 title: How to use in-session testing tools?
 hide_title: true
@@ -10,7 +10,7 @@ keywords:
   - mobile app testing
   - app automation
 url: https://www.testmuai.com/support/docs/how-to-use-in-session-testing-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: how-to-use-in-session-testing-tools/
 canonical: https://www.testmuai.com/support/docs/how-to-use-in-session-testing-tools/
 ---
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # How to Use In-Session Testing Tools ?
-With <BrandName />â€™s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, <BrandName />'s Real Device browser testing offers it all.
+With <BrandName />’s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, <BrandName />'s Real Device browser testing offers it all.
 
 Let us get an overview of all the features in our real device instance:
 
@@ -102,7 +102,7 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 ### Network Throttling
 
-With <BrandName />â€™s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
+With <BrandName />’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
@@ -170,7 +170,7 @@ With the zoom in-out slider, you can zoom in and out in your real device as per 
 
 ### Chrome DevTools
 
-<BrandName />â€™s real device browser testing offers in-built developer tools to help QA debug their websites and web applications. 
+<BrandName />’s real device browser testing offers in-built developer tools to help QA debug their websites and web applications. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/chrome-devtools-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -178,7 +178,7 @@ With the zoom in-out slider, you can zoom in and out in your real device as per 
 
 ### Safari Web Inspector
 
-<BrandName />â€™s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
+<BrandName />’s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/safari-web-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

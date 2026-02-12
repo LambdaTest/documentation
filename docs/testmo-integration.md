@@ -9,7 +9,7 @@ keywords:
   - testmu ai integration with testmo
   - testmu ai selenium grid integration to testmo
 url: https://www.testmuai.com/support/docs/testmo-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmo-integration/
 canonical: https://www.testmu.ai/support/docs/testmo-integration/
 ---

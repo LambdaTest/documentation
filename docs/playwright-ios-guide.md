@@ -13,7 +13,7 @@ keywords:
   - playwright real devices
 
 url: https://www.testmuai.com/support/docs/playwright-ios-device/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-ios-device/
 canonical: https://www.testmu.ai/support/docs/playwright-ios-device/
 ---

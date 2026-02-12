@@ -18,7 +18,7 @@ keywords:
   - selenium testing tutorial
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/codeception-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: codeception-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/codeception-integration-with-testmu/
 ---

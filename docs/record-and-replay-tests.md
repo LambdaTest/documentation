@@ -11,7 +11,7 @@ keywords:
   - lt debug 2
 
 url: https://www.testmuai.com/support/docs/record-and-replay-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: record-and-replay-tests/
 canonical: https://www.testmu.ai/support/docs/record-and-replay-tests/
 ---

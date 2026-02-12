@@ -13,7 +13,7 @@ keywords:
  - continuous integration tools
  - appveyor ci
 url: https://www.testmuai.com/support/docs/appveyor-ci-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appveyor-ci-integration/
 canonical: https://www.testmuai.com/support/docs/appveyor-ci-integration/
 ---

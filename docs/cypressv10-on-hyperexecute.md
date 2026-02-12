@@ -23,8 +23,8 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute cypressv10 testing
   - hyperexecute cypress testing
-url: https://www.lambdatest.com/support/docs/cypressv10-on-hyperexecute/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/cypressv10-on-hyperexecute/
+site_name: TestMu AI
 slug: cypressv10-on-hyperexecute/
 ---
 

@@ -8,7 +8,7 @@ keywords:
   - insights
   - insights dashboard
 url: https://www.testmuai.com/support/docs/insights-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-dashboard/
 canonical: https://www.testmuai.com/support/docs/insights-dashboard/
 ---

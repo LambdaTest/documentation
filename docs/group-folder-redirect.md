@@ -10,7 +10,7 @@ keywords:
   - appium ios file system testing
   - private app container automation
 url: https://www.testmuai.com/support/docs/group-folder-redirects/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-folder-redirects/
 canonical: https://www.testmuai.com/support/docs/group-folder-redirects/
 ---

@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Trello integration
   - Push issues to Trello
 url: https://www.testmuai.com/support/docs/trello-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: trello-integration/
 canonical: https://www.testmu.ai/support/docs/trello-integration/
 ---

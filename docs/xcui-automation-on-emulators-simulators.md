@@ -8,7 +8,7 @@ keywords:
   - app automation emulators 
   - app automation simulators
 url: https://www.testmuai.com/support/docs/xcui-automation-on-emulators-simulators/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: xcui-automation-on-emulators-simulators/
 canonicalUrl: https://www.testmu.ai/support/docs/xcui-automation-on-emulators-simulators/
 ---

@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - github ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-github-actions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-github-actions/
 canonical: https://www.testmu.ai/support/docs/smartui-with-github-actions/
 

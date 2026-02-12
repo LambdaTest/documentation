@@ -6,7 +6,7 @@ description: A Explore TestMu AI's powerful Analytics Modules for comprehensive 
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-modules-command-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-test-intelligence-command-logs-analytics/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
 ---

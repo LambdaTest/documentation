@@ -1,4 +1,4 @@
-﻿---
+---
 id: puppeteer-visual-regression
 title: Getting started with SmartUI using Puppeteer
 sidebar_label: Puppeteer
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmuai.com/support/docs/puppteer-visual-regression/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: puppeteer-visual-regression/
 canonical: https://www.testmu.ai/support/docs/puppeteer-visual-regression/
 

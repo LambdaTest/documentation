@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-visual-regression
 title: Getting Started With Visual Regression Testing Using Selenium On SmartUI
 sidebar_label: Selenium
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmuai.com/support/docs/selenium-visual-regression/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-visual-regression/
 canonical: https://www.testmu.ai/support/docs/selenium-visual-regression/
 ---

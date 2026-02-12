@@ -10,7 +10,7 @@ keywords:
   - continuous integration
   
 url: https://www.testmuai.com/support/docs/circleci-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: circleci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/circleci-integration-with-testmu/
 ---

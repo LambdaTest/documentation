@@ -11,7 +11,7 @@ keywords:
   - Integrations
   - Products
 url: https://www.testmuai.com/support/docs/he-integration-with-testmu-products/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: he-integration-with-testmu-products/
 canonical: https://www.testmuai.com/support/docs/he-integration-with-testmu-products/
 ---

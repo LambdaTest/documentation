@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - buildkite ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-buildkite/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-buildkite/
 canonical: https://www.testmu.ai/support/docs/smartui-with-buildkite/
 

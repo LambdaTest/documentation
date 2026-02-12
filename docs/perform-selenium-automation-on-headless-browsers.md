@@ -17,7 +17,7 @@ keywords:
 - Headless Testing
 
 url: https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: perform-selenium-automation-on-headless-browsers/
 canonical: https://www.testmu.ai/support/docs/perform-selenium-automation-on-headless-browsers/
 ---

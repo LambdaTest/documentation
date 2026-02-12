@@ -9,7 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai manual interaction
 url: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-manual-interaction/
 canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
 ---

@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
 url: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-private-cloud-setup/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup/
 ---

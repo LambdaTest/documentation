@@ -13,7 +13,7 @@ keywords:
   - continuous integration tools
   - TeamCity Integration 
 url: https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: teamcity-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu/
 ---

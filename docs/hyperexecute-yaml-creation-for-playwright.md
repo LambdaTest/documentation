@@ -11,7 +11,7 @@ keywords:
   - YAML Creation
   - Playwright
 url: https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-yaml-creation-for-playwright/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/
 ---

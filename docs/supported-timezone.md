@@ -15,7 +15,7 @@ keywords:
  - app testing
  - timezone
 url: https://www.testmuai.com/support/docs/supported-timezone/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-timezone/
 canonical: https://www.testmu.ai/support/docs/supported-timezone/
 ---

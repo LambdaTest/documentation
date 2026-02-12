@@ -11,7 +11,7 @@ keywords:
   - Integrations
   - Products
 url: https://www.testmuai.com/support/docs/hyperexecute-integration-with-products/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-integration-with-products/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-integration-with-products/
 ---

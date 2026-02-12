@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - gitlab ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-gitlab/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-gitlab/
 canonical: https://www.testmu.ai/support/docs/smartui-with-gitlab/
 

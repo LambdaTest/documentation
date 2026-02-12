@@ -11,7 +11,7 @@ keywords:
 - one click bug logging
 - one click bug logging in testmu ai
 url: https://www.testmuai.com/support/docs/mark-as-bug-in-screenshot-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: mark-as-bug-in-screenshot-testing/
 canonical: https://www.testmuai.com/support/docs/mark-as-bug-in-screenshot-testing/
 ---

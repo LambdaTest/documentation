@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - Travis CI ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-travis-ci/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-travis-ci/
 canonical: https://www.testmu.ai/support/docs/smartui-with-travis-ci/
 

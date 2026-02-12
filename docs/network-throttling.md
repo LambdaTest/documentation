@@ -18,7 +18,7 @@ keywords:
   - network throttling capabilities
   - throttling test on testmu ai
 url: https://www.testmuai.com/support/docs/network-throttling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: network-throttling/
 canonical: https://www.testmu.ai/support/docs/network-throttling/
 ---

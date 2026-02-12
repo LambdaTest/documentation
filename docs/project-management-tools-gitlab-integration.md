@@ -9,7 +9,7 @@ keywords:
   - push issues to gitlab
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/gitlab-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: gitlab-integration/
 canonical: https://www.testmu.ai/support/docs/gitlab-integration/
 ---

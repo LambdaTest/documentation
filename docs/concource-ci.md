@@ -18,7 +18,7 @@ keywords:
   - integrations with ci/cd tools
   - ci/cd integrations
 url: https://www.testmuai.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-testing-with-concourse-ci-and-testmu/
 canonical: https://www.testmuai.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/
 ---

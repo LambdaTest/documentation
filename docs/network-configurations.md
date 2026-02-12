@@ -12,7 +12,7 @@ keywords:
   - http traffic capture
   - domain filtering automation
 url: https://www.testmuai.com/support/docs/network-configurations/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: network-configurations/
 canonical: https://www.testmu.ai/support/docs/network-configurations/
 ---

@@ -10,7 +10,7 @@ keywords:
   - kane ai instructions
   - kane ai commands
 url: https://www.testmuai.com/support/docs/kane-ai-command-guide/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-command-guide/
 canonical: https://www.testmuai.com/support/docs/kane-ai-command-guide/
 ---

@@ -12,7 +12,7 @@ keywords:
   - Fragment identifier
   - wcag
 url: https://www.testmuai.com/support/docs/accessibility-fragment-identifier/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-fragment-identifier/
 canonical: https://www.testmuai.com/support/docs/accessibility-fragment-identifier/
 ---

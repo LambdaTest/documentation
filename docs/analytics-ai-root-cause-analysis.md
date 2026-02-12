@@ -12,7 +12,7 @@ keywords:
   - debugging
   - AI insights
 url: https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-ai-root-cause-analysis/
 canonical: https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/
 ---

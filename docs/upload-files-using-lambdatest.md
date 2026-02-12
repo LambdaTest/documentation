@@ -11,7 +11,7 @@ keywords:
   - testmu ai upload files
   - upload files selenium
 url: https://www.testmuai.com/support/docs/upload-files-using-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: upload-files-using-testmu/
 canonical: https://www.testmu.ai/support/docs/upload-files-using-testmu/
 ---

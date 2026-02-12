@@ -10,7 +10,7 @@ keywords:
   - issue tracking
   - testmu ai redmine integration
 url: https://www.testmuai.com/support/docs/redmine-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: redmine-integration/
 canonical: https://www.testmu.ai/support/docs/redmine-integration/
 ---

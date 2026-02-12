@@ -10,7 +10,7 @@ keywords:
   - ios file system testing
   - private app container testing
 url: https://www.testmuai.com/support/docs/group-folder-redirect-on-real-device/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-folder-redirect-on-real-device/
 canonical: https://www.testmuai.com/support/docs/group-folder-redirect-on-real-device/
 ---

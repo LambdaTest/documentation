@@ -1,4 +1,4 @@
-﻿---
+---
 id: tosca-integration-with-hyperexecute-using-commander
 title: Tosca Integration using Commander
 hide_title: true
@@ -11,7 +11,7 @@ keywords:
     - tosca
     - tricentis
 url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tosca-integration-with-hyperexecute-using-commander/
 canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-using-commander/
 ---
@@ -94,7 +94,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [<BrandName />’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
+-  Ensure that you have integrated Tosca with [<BrandName />�s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 
@@ -154,7 +154,7 @@ save
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 > The binary for Mac is unsigned. You might get a permission denied warning while executing on mac and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`. <br />
-Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
+Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** ? **Security & Privacy** ? **General** tab.
 
   **Sample Hyperexecute YAML file for TOSCA**:
   ```yaml

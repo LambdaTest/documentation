@@ -16,7 +16,7 @@ keywords:
   - Cypress Project
 
 url: https://www.testmuai.com/support/docs/npm-via-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: npm-via-tunnel/
 canonical: https://www.testmu.ai/support/docs/npm-via-tunnel/
 ---

@@ -14,7 +14,7 @@ keywords:
   - parallel testing with playwright
   
 url: https://www.testmuai.com/support/docs/playwright-tests-in-ci-cd/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-tests-in-ci-cd/
 canonical: https://www.testmu.ai/support/docs/playwright-tests-in-ci-cd/
 ---

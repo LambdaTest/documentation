@@ -8,7 +8,7 @@ keywords:
     - hyperexecute yaml
     - resolve version conflicts
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-resolve-version-conflict/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-resolve-version-conflict/
 ---

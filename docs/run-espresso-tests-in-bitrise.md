@@ -13,7 +13,7 @@ keywords:
 - app testing with bitrise 
 - app automation bitrise
 url: https://www.testmuai.com/support/docs/run-espresso-tests-in-bitrise/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-espresso-tests-in-bitrise/
 canonical: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise/
 ---

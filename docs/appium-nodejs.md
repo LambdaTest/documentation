@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-nodejs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-nodejs/
 canonical: https://www.testmuai.com/support/docs/appium-nodejs/
 ---

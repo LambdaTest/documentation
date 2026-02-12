@@ -12,7 +12,7 @@ keywords:
   - visual testing
   - false positives
 url: https://www.testmuai.com/support/docs/smartui-handle-videos/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-handle-videos/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-videos/
 

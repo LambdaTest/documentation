@@ -11,7 +11,7 @@ keywords:
   - apis
   - setup application
 url: https://www.testmuai.com/support/docs/application-setup-via-gui/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: application-setup-via-gui/
 canonical: https://www.testmuai.com/support/docs/application-setup-via-gui/
 ---

@@ -13,10 +13,10 @@ keywords:
   - browser analysis
   - resolution analysis
 
-url: https://www.lambdatest.com/support/docs/analytics-heatmap-widgets/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-heatmap-widgets/
+site_name: TestMu AI
 slug: analytics-heatmap-widgets/
-canonical: https://www.testmuai.com/support/docs/analytics-heatmap-widgets//
+canonical: https://www.testmuai.com/support/docs/analytics-heatmap-widgets/
 ---
 
 import NewTag from '../src/component/newTag';
@@ -39,7 +39,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Heatmap Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-heatmap-widgets/"
+          "item": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/"
         }]
       })
     }}

@@ -6,7 +6,7 @@ description: Export detailed testing analytics from TestMu AI's Drill-Down widge
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-widget-drill-down-export/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-widget-drill-down-export/
 canonical: https://www.testmuai.com/support/docs/analytics-widget-drill-down-export/
 ---

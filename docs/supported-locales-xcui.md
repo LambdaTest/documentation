@@ -9,7 +9,7 @@ keywords:
   - Locales
   - Appium supported locales
 url: https://www.testmuai.com/support/docs/supported-locales-xcui/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-locales-xcui/
 canonical: https://www.testmu.ai/support/docs/supported-locales-xcui/
 ---

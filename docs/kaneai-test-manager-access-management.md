@@ -8,7 +8,7 @@ keywords:
 - users management testmu ai
 - manage user
 url: https://www.testmuai.com/support/docs/kaneai-test-manager-access-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-test-manager-access-management/
 canonical: https://www.testmuai.com/support/docs/kaneai-test-manager-access-management/
 ---

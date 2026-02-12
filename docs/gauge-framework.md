@@ -15,7 +15,7 @@ keywords:
   - cross browser testing with gauge
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: running-gauge-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/
 ---

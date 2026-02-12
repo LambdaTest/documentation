@@ -10,7 +10,7 @@ keywords:
   - test cases
   - generate test cases
 url: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: generate-test-cases-with-ai/
 canonical: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 ---

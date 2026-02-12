@@ -10,7 +10,7 @@ keywords:
   - TestMu AI setup
   - TestMu AI tunnel
 url: https://www.testmuai.com/support/docs/environment-variables-supported-by-lambda-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: environment-variables-supported-by-lambda-tunnel/
 canonical: https://www.testmuai.com/support/docs/environment-variables-supported-by-lambda-tunnel/
 ---

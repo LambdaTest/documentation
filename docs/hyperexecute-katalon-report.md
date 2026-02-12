@@ -9,7 +9,7 @@ keywords:
     - hyperexecute Katalon reports
     - hyperexecute testing
 url: https://www.testmuai.com/support/docs/hyperexecute-katalon-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-katalon-report/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-katalon-report/
 ---

@@ -11,7 +11,7 @@ keywords:
   - parallel tests
   - insights widget
 url: https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-resource-utilization/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/
 ---

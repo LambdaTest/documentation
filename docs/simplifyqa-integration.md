@@ -13,7 +13,7 @@ keywords:
   - real device
   - simplifyqa real device
 url: https://www.testmuai.com/support/docs/simplifyqa-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: simplifyqa-integration/
 canonical: https://www.testmu.ai/support/docs/simplifyqa-integration/
 ---

@@ -9,7 +9,7 @@ keywords:
 - generate lighthouse reports with lambda hooks
 - lighthouse reports testmu ai
 url: https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: generate-multiple-lighthouse-reports/
 canonical: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports/
 ---

@@ -10,7 +10,7 @@ keywords:
   - TestMu AI kaneai documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/kaneai-release-notes-0-0-2/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-release-notes-0-0-2/
 canonical: https://www.testmuai.com/support/docs/kaneai-release-notes-0-0-2/
 ---

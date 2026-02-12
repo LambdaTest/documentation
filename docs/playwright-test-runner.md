@@ -14,7 +14,7 @@ keywords:
   - parallel testing with playwright
   
 url: https://www.testmuai.com/support/docs/playwright-test-runner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-test-runner/
 canonical: https://www.testmu.ai/support/docs/playwright-test-runner/
 ---

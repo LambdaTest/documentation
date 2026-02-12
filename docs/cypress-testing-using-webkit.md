@@ -10,7 +10,7 @@ keywords:
   - cypress testing webkit testmu ai
 
 url: https://www.testmuai.com/support/docs/cypress-testing-using-webkit/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-testing-using-webkit/
 canonical: https://www.testmuai.com/support/docs/cypress-testing-using-webkit/
 ---

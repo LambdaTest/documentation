@@ -18,7 +18,7 @@ keywords:
   - build history
   - real time testing using test manager
 url: https://www.testmuai.com/support/docs/test-manager/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-manager/
 canonical: https://www.testmu.ai/support/docs/test-manager/
 ---

@@ -9,7 +9,7 @@ keywords:
 - how to upload .app files on simulators
 - how to upload .app files for ios simulator testing
 url: https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: troubleshooting-ios-app-testing/
 canonical: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing/
 ---
@@ -67,4 +67,4 @@ Your `.zip` file is now ready for upload on <BrandName /> servers.
 To do so, go to the **Build Settings** of your project. From **Excluded Architecture** dropdown, add any iOS Simulator SDK with value arm64 .<br /><br />
 <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/6.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
 
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.

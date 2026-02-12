@@ -7,7 +7,7 @@ description: Integrating TestMu AI SCIM with Azure AD
 keywords:
     - TestMu AI SCIM
 url: https://www.testmuai.com/support/docs/scim/azure/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: scim/azure/
 canonical: https://www.testmuai.com/support/docs/scim/azure/
 ---

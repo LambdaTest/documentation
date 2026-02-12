@@ -11,7 +11,7 @@ keywords:
   - testmu ai pingidentity integration
   - testmu ai pingidentity sso
 url: https://www.testmuai.com/support/docs/testmu-sso-pingidentity-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-pingidentity-integration/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-pingidentity-integration/
 ---

@@ -14,7 +14,7 @@ keywords:
   - selenium c# testing tutorial
   - c# selenium framework
 url: https://www.testmuai.com/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/
 ---

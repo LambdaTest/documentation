@@ -13,7 +13,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-python-robot/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-python-robot/
 canonical: https://www.testmuai.com/support/docs/appium-python-robot/
 ---

@@ -15,7 +15,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/zipboard-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zipboard-integration/
 canonical: https://www.testmu.ai/support/docs/zipboard-integration/
 ---

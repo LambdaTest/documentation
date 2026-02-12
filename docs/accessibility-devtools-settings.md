@@ -11,7 +11,7 @@ keywords:
     - DevTools
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/accessibility-devtools-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-devtools-settings/
 canonical: https://www.testmuai.com/support/docs/accessibility-devtools-settings/
 ---

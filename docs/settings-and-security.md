@@ -11,7 +11,7 @@ keywords:
   - Settings
   - Security
 url: https://www.testmuai.com/support/docs/settings-and-security/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: settings-and-security/
 canonical: https://www.testmu.ai/support/docs/settings-and-security/
 ---

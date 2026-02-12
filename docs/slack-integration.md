@@ -10,7 +10,7 @@ keywords:
   - bug reporting
   - team communication
 url: https://www.testmuai.com/support/docs/slack-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: slack-integration/
 canonical: https://www.testmu.ai/support/docs/slack-integration/
 ---

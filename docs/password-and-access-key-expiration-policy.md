@@ -13,7 +13,7 @@ keywords:
   - hyperexecute automation grid online
   - hyperexecute getting started
 url: https://www.testmuai.com/support/docs/password-and-access-key-expiration-policy/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: password-and-access-key-expiration-policy/
 canonical: https://www.testmu.ai/support/docs/password-and-access-key-expiration-policy/
 ---

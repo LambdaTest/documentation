@@ -11,7 +11,7 @@ keywords:
   - push issues to clubhouse
   - local cross browser testing
 url: https://www.testmuai.com/support/docs/local-testing-windows/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-windows/
 canonical: https://www.testmuai.com/support/docs/local-testing-windows/
 ---

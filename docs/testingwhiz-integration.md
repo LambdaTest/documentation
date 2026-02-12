@@ -11,7 +11,7 @@ keywords:
  - integration with Lambdatest
  - testmu ai integration with testingwhiz
 url: https://www.testmuai.com/support/docs/testingwhiz-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testingwhiz-integration/
 canonical: https://www.testmu.ai/support/docs/testingwhiz-integration/
 ---

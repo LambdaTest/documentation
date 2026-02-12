@@ -11,10 +11,10 @@ keywords:
   - scroll until element
   - natural language commands
   - mobile scrolling
-url: https://www.lambdatest.com/support/docs/kaneai-scroll-until-mobile/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
+site_name: TestMu AI
 slug: kaneai-scroll-until-mobile/
-canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile//
+canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
 ---
 
 <script type="application/ld+json"
@@ -35,7 +35,7 @@ canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile//
           "@type": "ListItem",
           "position": 3,
           "name": "Scroll Until Element",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-scroll-until-mobile/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/"
         }]
       })
     }}

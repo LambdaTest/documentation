@@ -13,7 +13,7 @@ keywords:
   - playwright testing testmu ai
 
 url: https://www.testmuai.com/support/docs/playwright-test-execution-setup/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-test-execution-setup/
 canonical: https://www.testmu.ai/support/docs/playwright-test-execution-setup/
 ---

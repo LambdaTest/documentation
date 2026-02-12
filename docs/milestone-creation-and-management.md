@@ -7,7 +7,7 @@ description: Check the milestones - datasets, test run and
 keywords:
   - milestone creation 
 url: https://www.testmuai.com/support/docs/milestone-creation-and-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: milestone-creation-and-management/
 canonical: https://www.testmu.ai/support/docs/milestone-creation-and-management/
 ---

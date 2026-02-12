@@ -10,7 +10,7 @@ keywords:
   - PDF Testing
   - Java Development
 url: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-pdf-java-sdk/
 canonical: https://www.testmu.ai/support/docs/smartui-pdf-java-sdk/
 

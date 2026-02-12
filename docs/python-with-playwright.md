@@ -12,7 +12,7 @@ keywords:
   - python playwright framework
 
 url: https://www.testmuai.com/support/docs/python-with-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: python-with-playwright/
 canonical: https://www.testmu.ai/support/docs/python-with-playwright/
 ---

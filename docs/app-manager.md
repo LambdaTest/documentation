@@ -14,7 +14,7 @@ keywords:
     - TestMu AI app storage
     - test .apk .aab .ipa files
 url: https://www.testmuai.com/support/docs/app-manager/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-manager/
 canonical: https://www.testmuai.com/support/docs/app-manager/
 ---

@@ -13,7 +13,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/espresso-env-variables-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: espresso-env-variables-settings/
 canonical: https://www.testmuai.com/support/docs/espresso-env-variables-settings/
 ---

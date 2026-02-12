@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/getting-started-with-xcuitest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-xcuitest/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-xcuitest/
 ---

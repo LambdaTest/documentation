@@ -18,7 +18,7 @@ keywords:
   - selenium testing tutorial
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/
 ---

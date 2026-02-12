@@ -13,7 +13,7 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 url: https://www.testmuai.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
 ---

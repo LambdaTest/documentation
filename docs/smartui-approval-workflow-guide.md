@@ -13,7 +13,7 @@ keywords:
   - CLI vs Hooks Workflow
   - Explicit Baseline Updates
 url: https://www.testmuai.com/support/docs/smartui-approval-workflow-guide/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-approval-workflow-guide/
 canonical: https://www.testmu.ai/support/docs/smartui-approval-workflow-guide/
 ---

@@ -10,7 +10,7 @@ keywords:
   - hard assertion
   - kane ai instructions
 url: https://www.testmuai.com/support/docs/kane-ai-failure-conditions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-failure-conditions/
 canonical: https://www.testmuai.com/support/docs/kaneai-failure-conditions/
 ---

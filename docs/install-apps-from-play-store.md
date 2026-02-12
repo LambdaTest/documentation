@@ -8,7 +8,7 @@ keywords:
 - install apps from play store
 - play store
 url: https://www.testmuai.com/support/docs/install-apps-from-play-store/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: install-apps-from-play-store/
 canonical: https://www.testmuai.com/support/docs/install-apps-from-play-store/
 ---

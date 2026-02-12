@@ -11,7 +11,7 @@ keywords:
   - http authorization header
   - browser support for http authentication
 url: https://www.testmuai.com/support/docs/http-basic-authentication/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: http-basic-authentication/
 canonical: https://www.testmuai.com/support/docs/http-basic-authentication/
 ---

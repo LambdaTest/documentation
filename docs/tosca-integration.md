@@ -11,7 +11,7 @@ keywords:
   - cross browser testing
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tricentis-tosca-integration-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
 ---

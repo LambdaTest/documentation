@@ -12,7 +12,7 @@ keywords:
   - visual testing
   - false positives
 url: https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-handle-dynamic-data/
 canonical: https://www.testmu.ai/support/docs/smartui-handle-dynamic-data/
 

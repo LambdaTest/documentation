@@ -13,7 +13,7 @@ keywords:
   - hyperexecute automation grid online
   - hyperexecute getting started
 url: https://www.testmuai.com/support/docs/tunnel-security/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tunnel-security/
 canonical: https://www.testmu.ai/support/docs/tunnel-security/
 ---

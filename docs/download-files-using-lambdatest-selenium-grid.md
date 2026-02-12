@@ -14,7 +14,7 @@ keywords:
   - base64 encryption
   - base64 decryption
 url: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: download-files-using-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
 ---

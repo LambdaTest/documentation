@@ -13,7 +13,7 @@ keywords:
   - Connected Workflows
   - Chained tests
 url: https://www.testmuai.com/support/docs/hyperexecute-test-chains/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-test-chains/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-test-chains/
 ---

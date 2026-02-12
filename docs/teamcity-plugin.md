@@ -14,7 +14,7 @@ keywords:
 - Selenium Testing with TeamCity
 
 url: https://www.testmuai.com/support/docs/teamcity-plugin/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: teamcity-plugin/
 canonical: https://www.testmu.ai/support/docs/teamcity-plugin/
 ---

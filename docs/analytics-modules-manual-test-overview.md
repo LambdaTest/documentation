@@ -12,7 +12,7 @@ keywords:
  - test OS
  - test device coverage
 url: https://www.testmuai.com/support/docs/analytics-modules-manual-test-overview/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-manual-test-overview/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-manual-test-overview/
 ---

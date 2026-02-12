@@ -13,7 +13,7 @@ keywords:
   - css configuration
   - visual stability
 url: https://www.testmuai.com/support/docs/smartui-custom-css/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-custom-css/
 canonical: https://www.testmu.ai/support/docs/smartui-custom-css/
 
