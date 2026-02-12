@@ -223,7 +223,7 @@ For BDD-type test cases in X-Ray, the full **Gherkin scenario** text (Given/When
 
 **Can I migrate multiple Jira projects?**
 
-Yes. Run the migration once per Jira project. Each migration imports test cases from one X-Ray project into one TMS project. Repeat the process for additional projects.
+Yes. Run the migration once per Jira project. Each migration imports test cases from one X-Ray project into one Test Manager project. Repeat the process for additional projects.
 
 **Will migration affect my X-Ray data?**
 
@@ -236,7 +236,7 @@ Yes. You can re-run the migration for the same project(s). Review the results af
 
 **Are Gherkin/BDD scenarios preserved exactly as written?**
 
-Yes. The full Gherkin text (Feature, Scenario, Given/When/Then blocks) is extracted and stored in the TMS test case with formatting and step structure preserved.
+Yes. The full Gherkin text (Feature, Scenario, Given/When/Then blocks) is extracted and stored in the Test Manager test case with formatting and step structure preserved.
 
 **What if I have test cases with no steps?**
 
