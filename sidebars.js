@@ -4431,7 +4431,7 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Getting Started with Scim",
+        label: "SCIM Provisioning",
         id: "scim",
       },
       {
