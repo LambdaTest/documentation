@@ -21,7 +21,7 @@ keywords:
   - drone ci setup
   - drone ci trigger
 url: https://www.testmuai.com/support/docs/drone-ci-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: drone-ci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/drone-ci-integration-with-testmu/
 ---

@@ -9,7 +9,7 @@ keywords:
   - usage trends
 
 url: https://www.testmuai.com/support/docs/insights-usage-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-usage-report/
 canonical: https://www.testmuai.com/support/docs/insights-usage-report/
 ---

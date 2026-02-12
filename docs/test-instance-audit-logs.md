@@ -9,7 +9,7 @@ keywords:
   - test instance logs
   - execution history
 url: https://www.testmuai.com/support/docs/test-instance-audit-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-instance-audit-logs/
 canonical: https://www.testmu.ai/support/docs/test-instance-audit-logs/
 ---

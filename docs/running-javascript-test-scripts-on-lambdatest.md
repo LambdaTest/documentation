@@ -12,7 +12,7 @@ keywords:
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 ---

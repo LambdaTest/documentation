@@ -10,7 +10,7 @@ keywords:
   - PDF Testing
   - Command Line
 url: https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-pdf-cli-upload/
 canonical: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload/
 

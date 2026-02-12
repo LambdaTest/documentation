@@ -13,7 +13,7 @@ keywords:
 - automated screenshot testing
 - automated screenshot generation
 url: https://www.testmuai.com/support/docs/visual-ui-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: visual-ui-testing/
 canonical: https://www.testmu.ai/support/docs/visual-ui-testing/
 ---

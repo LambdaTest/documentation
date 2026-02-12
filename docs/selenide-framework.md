@@ -16,7 +16,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 
 url: https://www.testmuai.com/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
 canonical: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
 ---

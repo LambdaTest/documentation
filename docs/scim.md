@@ -7,7 +7,7 @@ description: The SCIM specification is designed to make managing user identities
 keywords:
     - TestMu AI SCIM
 url: https://www.testmuai.com/support/docs/scim/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: scim/
 canonical: https://www.testmu.ai/support/docs/scim/
 ---

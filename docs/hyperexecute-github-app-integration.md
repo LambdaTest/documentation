@@ -14,7 +14,7 @@ keywords:
   - Automated testing alerts
   - DevOps communication
 url: https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-github-app-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/
 ---

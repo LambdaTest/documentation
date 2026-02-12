@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - azure ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-azure/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-azure/
 canonical: https://www.testmu.ai/support/docs/smartui-with-azure/
 

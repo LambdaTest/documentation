@@ -11,7 +11,7 @@ keywords:
   - Outbound Whitelisting
   - Dedicated Proxy
 url: https://www.testmuai.com/support/docs/network-whitelisting-and-tunnel-guide/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: network-whitelisting-and-tunnel-guide/
 canonical: https://www.testmu.ai/support/docs/network-whitelisting-and-tunnel-guide/
 ---

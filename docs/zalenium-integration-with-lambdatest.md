@@ -10,7 +10,7 @@ keywords:
   - zelenium dashboard
   - automation on zelenium 
 url: https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zalenium-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu/
 ---

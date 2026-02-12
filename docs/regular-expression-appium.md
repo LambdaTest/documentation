@@ -8,7 +8,7 @@ keywords:
 - regular expression testmu ai
 - regular expression app automation
 url: https://www.testmuai.com/support/docs/regular-expression-appium/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: regular-expression-appium/
 canonical: https://www.testmu.ai/support/docs/regular-expression-appium/
 ---

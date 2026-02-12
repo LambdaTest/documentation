@@ -10,7 +10,7 @@ keywords:
   - angularjs test automation
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 ---

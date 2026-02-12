@@ -11,10 +11,10 @@ keywords:
   - rename instructions
   - test step management
   - slash commands
-url: https://www.lambdatest.com/support/docs/kaneai-rename-instructions/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
+site_name: TestMu AI
 slug: kaneai-rename-instructions/
-canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions//
+canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
 ---
 
 <script type="application/ld+json"
@@ -35,7 +35,7 @@ canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions//
           "@type": "ListItem",
           "position": 3,
           "name": "GPS location",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-rename-instructions/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-rename-instructions/"
         }]
       })
     }}

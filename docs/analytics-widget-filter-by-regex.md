@@ -9,7 +9,7 @@ keywords:
   - test intelligence
   - test analytics
 url: https://www.testmuai.com/support/docs/analytics-widget-filter-by-regex/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-widget-filter-by-regex/
 canonical: https://www.testmuai.com/support/docs/analytics-widget-filter-by-regex/
 ---

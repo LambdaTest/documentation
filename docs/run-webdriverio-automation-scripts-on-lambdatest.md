@@ -16,7 +16,7 @@ keywords:
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
 ---

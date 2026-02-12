@@ -13,7 +13,7 @@ keywords:
   - continuous integration tools
   - semaphore ci
 url: https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: semaphore-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/
 ---

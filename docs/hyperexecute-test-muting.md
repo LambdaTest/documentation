@@ -11,7 +11,7 @@ keywords:
   - Test Muting
   - Mute test cases
 url: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-test-muting/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
 ---

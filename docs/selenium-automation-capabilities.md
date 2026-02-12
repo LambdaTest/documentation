@@ -17,7 +17,7 @@ keywords:
 - selenium webdriver capabilities for running tests on testmu ai
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-automation-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-automation-capabilities/
 canonical: https://www.testmu.ai/support/docs/selenium-automation-capabilities/
 ---

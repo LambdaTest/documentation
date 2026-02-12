@@ -16,7 +16,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/contacts-on-real-devices-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: contacts-on-real-devices-browser/
 canonical: https://www.testmuai.com/support/docs/contacts-on-real-devices-browser/
 ---

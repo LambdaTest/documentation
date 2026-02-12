@@ -14,7 +14,7 @@ keywords:
   - continuous integration tools
   
 url: https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: teamcity-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute/
 ---

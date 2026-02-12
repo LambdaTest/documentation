@@ -11,7 +11,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
 url: https://www.testmuai.com/support/docs/why-we-need-kane-ai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: why-we-need-kane-ai/
 canonical: https://www.testmu.ai/support/docs/why-we-need-kane-ai/
 ---

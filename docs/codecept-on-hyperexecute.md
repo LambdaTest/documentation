@@ -24,8 +24,8 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute pyunit testing
   - hyperexecute python testing
-url: https://www.lambdatest.com/support/docs/codecept-on-hyperexecute/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/codecept-on-hyperexecute/
+site_name: TestMu AI
 slug: codecept-on-hyperexecute/
 ---
 

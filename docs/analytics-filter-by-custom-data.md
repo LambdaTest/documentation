@@ -6,7 +6,7 @@ description: Learn how to filter analytics data by custom attributes on TestMu A
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-filter-by-custom-data/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-filter-by-custom-data/
 canonical: https://www.testmuai.com/support/docs/analytics-filter-by-custom-data/
 ---

@@ -12,7 +12,7 @@ keywords:
   - test runs
   - environment setup
 url: https://www.testmuai.com/support/docs/test-runs-configurations/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-runs-configurations/
 canonical: https://www.testmu.ai/support/docs/test-runs-configurations/
 ---

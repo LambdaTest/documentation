@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-k6-setup
 title: Getting started with SmartUI using K6
 sidebar_label: K6
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmuai.com/support/docs/smartui-k6-setup/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-k6-setup/
 canonical: https://www.testmu.ai/support/docs/smartui-k6-setup/
 

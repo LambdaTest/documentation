@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - semaphore ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-semaphore/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-semaphore/
 canonical: https://www.testmu.ai/support/docs/smartui-with-semaphore/
 

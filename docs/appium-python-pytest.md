@@ -14,7 +14,7 @@ keywords:
   - appium automation
 
 url: https://www.testmuai.com/support/docs/appium-python-pytest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-python-pytest/
 canonical: https://www.testmuai.com/support/docs/appium-python-pytest/
 ---

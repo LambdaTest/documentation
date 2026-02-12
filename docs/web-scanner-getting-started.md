@@ -10,7 +10,7 @@ keywords:
   - getting started
   - schedule scan
 url: https://www.testmuai.com/support/docs/web-scanner-getting-started/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: web-scanner-getting-started/
 canonical: https://www.testmu.ai/support/docs/web-scanner-getting-started/
 ---

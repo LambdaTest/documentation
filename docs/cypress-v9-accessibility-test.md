@@ -1,4 +1,4 @@
-﻿---
+---
 id: cypress-v9-accessibility-test
 title: Automation Tests with Accessibility Tool using Cypress v9
 hide_title: false
@@ -13,7 +13,7 @@ keywords:
     - Automation
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/cypress-v9-accessibility-test/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-v9-accessibility-test/
 canonical: https://www.testmuai.com/support/docs/cypress-v9-accessibility-test/
 ---

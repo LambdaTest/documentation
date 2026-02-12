@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: accessibility-web-score
 title: Accessibility Web Score
 hide_title: false
@@ -11,7 +11,7 @@ keywords:
 - accessibility metrics
 - accessibility health
 url: https://www.testmuai.com/support/docs/accessibility-web-score/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-web-score/
 canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 ---
@@ -58,7 +58,7 @@ We assign each severity level a multiplier:
 
 **Calculate the weighted severity (z):**
 ```
-z = (% critical Ã— 1.0) + (% serious Ã— 0.75) + (% moderate Ã— 0.50) + (% minor Ã— 0.25)
+z = (% critical × 1.0) + (% serious × 0.75) + (% moderate × 0.50) + (% minor × 0.25)
 ```
 
 This gives us a single number representing the severity distribution across all issues found.
@@ -78,7 +78,7 @@ This ratio shows how widespread accessibility problems are across your page stru
 
 We combine severity weighting and issue density to determine how much they should reduce your score from a perfect 100:
 ```
-Accessibility Score = 100 - (y Ã— 100 Ã— z)
+Accessibility Score = 100 - (y × 100 × z)
 ```
 
 The score scales from 0 to 100, where:

@@ -8,7 +8,7 @@ keywords:
   - TestMu AI integration
   - testmu ai integration with qTest
 url: https://www.testmuai.com/support/docs/qtest-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: qtest-integration/
 canonical: https://www.testmu.ai/support/docs/qtest-integration/
 ---

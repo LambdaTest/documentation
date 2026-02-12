@@ -10,7 +10,7 @@ keywords:
 - custom headers bypass firewalls
 - masking of sensitive data
 url: https://www.testmuai.com/support/docs/network-data-masking/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: network-data-masking/
 canonical: https://www.testmu.ai/support/docs/network-data-masking/
 ---

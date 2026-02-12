@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: flutter-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 ---

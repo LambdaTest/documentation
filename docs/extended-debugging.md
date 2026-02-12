@@ -12,7 +12,7 @@ keywords:
 - throttle network selenium
 - har file download
 url: https://www.testmuai.com/support/docs/extended-debugging-options/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: extended-debugging-options/
 canonical: https://www.testmuai.com/support/docs/extended-debugging-options/
 ---

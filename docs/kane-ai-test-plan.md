@@ -10,7 +10,7 @@ keywords:
   - kaneai guided walkthrough
   - kane ai test plan
 url: https://www.testmuai.com/support/docs/kane-ai-test-plan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-test-plan/
 canonical: https://www.testmuai.com/support/docs/kane-ai-test-plan/
 ---

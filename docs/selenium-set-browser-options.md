@@ -12,7 +12,7 @@ keywords:
   - firefox
   - edge
 url: https://www.testmuai.com/support/docs/selenium-set-browser-options/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-set-browser-options/
 canonical: https://www.testmu.ai/support/docs/selenium-set-browser-options/
 ---

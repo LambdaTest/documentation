@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - Prioritize Your Tests 
 url: https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-prioritize-tests/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/
 ---

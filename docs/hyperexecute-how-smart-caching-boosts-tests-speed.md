@@ -10,7 +10,7 @@ keywords:
   - TestMu AI HyperExecute documentation
   - How Smart Caching turbo boost your tests execution with HyperExecute
 url: https://www.testmuai.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-smart-caching-boosts-tests-speed/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
 --- 

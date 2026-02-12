@@ -14,7 +14,7 @@ keywords:
   - testmu ai ios
   - real devices
 url: https://www.testmuai.com/support/docs/device-passcode-on-realdevice/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: device-passcode-on-realdevice/
 canonical: https://www.testmuai.com/support/docs/device-passcode-on-realdevice/
 

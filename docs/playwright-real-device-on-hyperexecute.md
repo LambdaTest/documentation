@@ -14,7 +14,7 @@ keywords:
     - real device playwright
     - real device test
 url: https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-real-device-on-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/playwright-real-device-on-hyperexecute/
 ---

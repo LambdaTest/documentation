@@ -10,7 +10,7 @@ keywords:
   - continuous integration
   - testmu ai fastlane plugin
 url: https://www.testmuai.com/support/docs/fastlane-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: fastlane-with-testmu/
 canonical: https://www.testmuai.com/support/docs/fastlane-with-testmu/
 ---

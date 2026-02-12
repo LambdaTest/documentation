@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Tunnel documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/tunnel-release-notes/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tunnel-release-notes/
 canonical: https://www.testmu.ai/support/docs/tunnel-release-notes/
 ---

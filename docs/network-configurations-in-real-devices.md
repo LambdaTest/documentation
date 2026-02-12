@@ -11,7 +11,7 @@ keywords:
   - domain filtering
   - network configurations
 url: https://www.testmuai.com/support/docs/network-configurations-in-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: network-configurations-in-real-devices/
 canonical: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/
 ---

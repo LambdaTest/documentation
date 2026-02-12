@@ -12,7 +12,7 @@ keywords:
 - testmu ai integration with testim
 - testim testmu ai
 url: https://www.testmuai.com/support/docs/testim-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testim-integration/
 canonical: https://www.testmu.ai/support/docs/testim-integration/
 ---

@@ -15,7 +15,7 @@ keywords:
   - Automated testing
   - Cloud-based testing
 url: https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-qtest-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/
 ---

@@ -8,7 +8,7 @@ keywords:
     - hyperexecute yaml
     - How to Perform Group-Based Test Discovery in TestNG
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 ---

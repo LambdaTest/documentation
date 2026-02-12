@@ -10,7 +10,7 @@ keywords:
   - selenium geoloction
   - timezone
 url: https://www.testmuai.com/support/docs/selenium-geolocation-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-geolocation-capabilities/
 canonical: https://www.testmu.ai/support/docs/selenium-geolocation-capabilities/
 ---

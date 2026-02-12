@@ -12,7 +12,7 @@ keywords:
   - mobile apps
   - tools
 url: https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-using-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-build-mobile-apps-using-tools/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-using-tools/
 --- 

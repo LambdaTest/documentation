@@ -13,7 +13,7 @@ keywords:
   - app automation
   - real devices
 url: https://www.testmuai.com/support/docs/appium-ios-app-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-ios-app-settings/
 canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 ---

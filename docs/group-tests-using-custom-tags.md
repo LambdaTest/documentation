@@ -18,7 +18,7 @@ keywords:
     - custom tags
     - group tests
 url: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-tests-using-custom-tags/
 canonical: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
 ---

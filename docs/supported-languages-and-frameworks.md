@@ -16,7 +16,7 @@ keywords:
  - selenium frameworks
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/supported-languages-and-frameworks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-languages-and-frameworks/
 canonical: https://www.testmu.ai/support/docs/supported-languages-and-frameworks/
 ---

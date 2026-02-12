@@ -16,7 +16,7 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 url: https://www.testmuai.com/support/docs/run-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-settings/
 canonical: https://www.testmu.ai/support/docs/run-settings/
 ---

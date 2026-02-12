@@ -6,7 +6,7 @@ description: Analytics Modules - Error Insights
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-modules-error-insights/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-error-insights/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-error-insights/
 ---

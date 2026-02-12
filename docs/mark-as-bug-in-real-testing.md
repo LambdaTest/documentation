@@ -16,7 +16,7 @@ keywords:
   - screenshot testing
 
 url: https://www.testmuai.com/support/docs/mark-as-bug/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: mark-as-bug/
 canonical: https://www.testmuai.com/support/docs/mark-as-bug/
 ---

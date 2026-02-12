@@ -11,7 +11,7 @@ keywords:
   - custom fields
   - projects
 url: https://www.testmuai.com/support/docs/system-and-custom-fields/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: system-and-custom-fields/
 canonical: https://www.testmu.ai/support/docs/system-and-custom-fields/
 ---

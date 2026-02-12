@@ -10,7 +10,7 @@ keywords:
     - Testing
     - DevTools
 url: https://www.testmuai.com/support/docs/accessibility-settings-ios/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-settings-ios/
 canonical: https://www.testmuai.com/support/docs/accessibility-settings-ios/
 ---

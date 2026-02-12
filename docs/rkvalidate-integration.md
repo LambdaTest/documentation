@@ -10,7 +10,7 @@ keywords:
 - rktracer integration with testmu ai
 
 url: https://www.testmuai.com/support/docs/rktracer-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: rktracer-integration/
 canonical: https://www.testmu.ai/support/docs/rktracer-integration/
 ---

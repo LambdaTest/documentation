@@ -43,8 +43,8 @@ keywords:
     - how to check responsive website in chrome
     - how to check responsive website offline
     - online device testing
-url: https://www.lambdatest.com/support/docs/lt-browser/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/lt-browser/
+site_name: TestMu AI
 slug: lt-browser/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

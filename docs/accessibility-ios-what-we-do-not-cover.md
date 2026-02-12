@@ -11,7 +11,7 @@ keywords:
   - Manual testing
   - Checklist
 url: https://www.testmuai.com/support/docs/accessibility-ios-what-we-do-not-cover/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-ios-what-we-do-not-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-ios-what-we-do-not-cover/
 ---

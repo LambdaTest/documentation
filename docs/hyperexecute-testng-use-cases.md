@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Projects
   - TestNG Use Cases
 url: https://www.testmuai.com/support/docs/hyperexecute-testng-use-cases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-testng-use-cases/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-testng-use-cases/
 ---

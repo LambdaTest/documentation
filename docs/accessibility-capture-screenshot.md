@@ -12,7 +12,7 @@ keywords:
   - Fragment identifier
   - wcag
 url: https://www.testmuai.com/support/docs/accessibility-capture-screenshot/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-capture-screenshot/
 canonical: https://www.testmuai.com/support/docs/accessibility-capture-screenshot/
 ---

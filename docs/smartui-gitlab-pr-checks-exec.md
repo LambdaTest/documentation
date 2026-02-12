@@ -14,7 +14,7 @@ keywords:
   - Selenium Playwright Appium
   - npx smartui exec
 url: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/
-site_name: LambdaTest
+site_name: TestMu AI
 ---
 
 import Tabs from '@theme/Tabs';

@@ -12,7 +12,7 @@ keywords:
   - Desktop status ratio
 
 url: https://www.testmuai.com/support/docs/insights-app-profiling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-app-profiling/
 canonical: https://www.testmuai.com/support/docs/insights-app-profiling/
 ---

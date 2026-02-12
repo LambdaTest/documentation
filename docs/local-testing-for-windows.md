@@ -10,7 +10,7 @@ keywords:
   - testmu ai Tunnel
   - local app testing for windows
 url: https://www.testmuai.com/support/docs/local-testing-for-windows/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-for-windows/
 canonical: https://www.testmuai.com/support/docs/local-testing-for-windows/
 ---

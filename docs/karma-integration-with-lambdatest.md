@@ -11,7 +11,7 @@ keywords:
   - testacular
   - testmu ai app marketplace
 url: https://www.testmuai.com/support/docs/karma-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: karma-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/karma-integration-with-testmu/
 ---

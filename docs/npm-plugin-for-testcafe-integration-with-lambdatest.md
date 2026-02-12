@@ -12,7 +12,7 @@ keywords:
   - developer tools
   - npm package
 url: https://www.testmuai.com/support/docs/npm-plugin-for-testcafe-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: npm-plugin-for-testcafe-integration-with-testmu/
 canonical: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu/
 ---

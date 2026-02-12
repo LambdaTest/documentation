@@ -9,7 +9,7 @@ keywords:
 - how can I delete my testmu ai account
 
 url: https://www.testmuai.com/support/docs/delete-testmu-account/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: delete-testmu-account/
 canonical: https://www.testmuai.com/support/docs/delete-testmu-account/
 ---

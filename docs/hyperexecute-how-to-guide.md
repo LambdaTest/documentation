@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How To guide?
 url: https://www.testmuai.com/support/docs/hyperexecute-knowledge-base/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-guide/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-guide/
 ---

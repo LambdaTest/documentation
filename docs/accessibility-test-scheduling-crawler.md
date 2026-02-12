@@ -10,7 +10,7 @@ keywords:
     - Testing
     - URL Extraction
 url: https://www.testmuai.com/support/docs/accessibility-test-crawler/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-test-crawler/
 canonical: https://www.testmuai.com/support/docs/accessibility-test-crawler/
 ---

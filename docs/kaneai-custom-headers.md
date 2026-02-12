@@ -8,7 +8,7 @@ keywords:
   - Custom Headers
   - Headers
 url: https://www.testmuai.com/support/docs/kaneai-custom-headers/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-custom-headers/
 canonical: https://www.testmuai.com/support/docs/kaneai-custom-headers/
 ---

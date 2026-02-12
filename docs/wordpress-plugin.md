@@ -13,7 +13,7 @@ keywords:
   - best wordpress plugin for developers
   - best wordpress plugin for testers
 url: https://www.testmuai.com/support/docs/wordpress-plugin/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: wordpress-plugin/
 canonical: https://www.testmu.ai/support/docs/wordpress-plugin/
 ---

@@ -19,7 +19,7 @@ keywords:
   - hyperexecute python testing
   - hyperexecute automation testing
 url: https://www.testmuai.com/support/docs/pytest-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: pytest-on-hyperexecute-grid/
 canonical: https://www.testmu.ai/support/docs/pytest-on-hyperexecute-grid/
 ---

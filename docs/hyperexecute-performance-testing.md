@@ -15,7 +15,7 @@ keywords:
   - http
   - test plan
 url: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-performance-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
 ---

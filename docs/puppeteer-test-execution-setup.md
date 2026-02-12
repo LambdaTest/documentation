@@ -14,7 +14,7 @@ keywords:
 
 
 url: https://www.testmuai.com/support/docs/puppeteer-test-execution-setup/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: puppeteer-test-execution-setup/
 canonical: https://www.testmu.ai/support/docs/puppeteer-test-execution-setup/
 ---

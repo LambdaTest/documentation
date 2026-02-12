@@ -11,7 +11,7 @@ keywords:
 - test flutter apps on iphone
 - flutter test app
 url: https://www.testmuai.com/support/docs/testing-flutter-apps/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testing-flutter-apps/
 canonical: https://www.testmu.ai/support/docs/testing-flutter-apps/
 ---

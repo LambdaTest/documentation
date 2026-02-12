@@ -13,7 +13,7 @@ keywords:
     - test issues
     - Dashboard
 url: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-navigating-dashboard/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
 ---

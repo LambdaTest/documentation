@@ -8,7 +8,7 @@ keywords:
 - install apps from app center
 - app center
 url: https://www.testmuai.com/support/docs/install-apps-from-app-center/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: install-apps-from-app-center/
 canonical: https://www.testmuai.com/support/docs/install-apps-from-app-center/
 ---

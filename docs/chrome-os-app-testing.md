@@ -14,7 +14,7 @@ keywords:
     - real time
     - application
 url: https://www.testmuai.com/support/docs/chrome-os-app-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: chrome-os-app-testing/
 canonical: https://www.testmuai.com/support/docs/chrome-os-app-testing/
 ---

@@ -12,7 +12,7 @@ keywords:
   - katalon studio tutorial
   - katalon selenium
 url: https://www.testmuai.com/support/docs/katalon-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: katalon-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/katalon-integration-with-testmu/
 ---

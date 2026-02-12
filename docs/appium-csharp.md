@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-csharp/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-csharp/
 canonical: https://www.testmuai.com/support/docs/appium-csharp/
 ---

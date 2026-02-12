@@ -14,7 +14,7 @@ keywords:
   - Excel
   - Accelq
 url: https://www.testmuai.com/support/docs/hyperexecute-seamless-integration-with-tools/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-seamless-integration-with-tools/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-seamless-integration-with-tools/
 --- 

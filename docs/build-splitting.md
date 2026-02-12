@@ -11,7 +11,7 @@ keywords:
   - build inactivity time
 
 url: https://www.testmuai.com/support/docs/build-inactivity-time/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: build-inactivity-time/
 canonical: https://www.testmuai.com/support/docs/build-inactivity-time/
 ---

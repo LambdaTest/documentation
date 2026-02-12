@@ -10,7 +10,7 @@ keywords:
     - Manual
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/error-handling-kaneai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: error-handling-kaneai/
 canonical: https://www.testmuai.com/support/docs/error-handling-kaneai/
 ---

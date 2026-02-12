@@ -11,7 +11,7 @@ keywords:
     - cypress integration
     - cypress integration with hyperexecute
 url: https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/
 ---

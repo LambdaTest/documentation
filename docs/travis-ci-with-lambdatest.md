@@ -14,7 +14,7 @@ keywords:
     - Travis CI integration
     - Travis CI integration with testmu ai
 url: https://www.testmuai.com/support/docs/travis-ci-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: travis-ci-with-testmu/
 canonical: https://www.testmu.ai/support/docs/travis-ci-with-testmu/
 ---

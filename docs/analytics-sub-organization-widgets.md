@@ -12,7 +12,7 @@ keywords:
  - test OS
  - test device coverage
 url: https://www.testmuai.com/support/docs/analytics-sub-organization-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-sub-organization-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-sub-organization-widgets/
 ---

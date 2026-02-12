@@ -21,7 +21,7 @@ keywords:
   - selenium testing tool
   - selenium testing tutorial
 url: https://www.testmuai.com/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: running-unit-testing-in-python-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/
 ---

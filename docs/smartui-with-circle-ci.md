@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - circle-ci ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-circle-ci/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-circle-ci/
 canonical: https://www.testmu.ai/support/docs/smartui-with-circle-ci/
 

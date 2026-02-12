@@ -11,7 +11,7 @@ keywords:
   - TestMu AI tunnel
   - local app testing for Linux
 url: https://www.testmuai.com/support/docs/local-testing-linux/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-linux/
 canonical: https://www.testmuai.com/support/docs/local-testing-linux/
 ---

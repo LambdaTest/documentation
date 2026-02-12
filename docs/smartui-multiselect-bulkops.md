@@ -10,7 +10,7 @@ keywords:
   - Batch Approval
   - TestMu AI SmartUI
 url: https://www.testmuai.com/support/docs/smartui-multiselect-bulkops/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-multiselect-bulkops/
 canonical: https://www.testmu.ai/support/docs/smartui-multiselect-bulkops/
 ---

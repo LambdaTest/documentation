@@ -16,7 +16,7 @@ keywords:
 - how to test mobile web app on real devices
 - how to test mobile web apps
 url: https://www.testmuai.com/support/docs/web-testing-on-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: web-testing-on-real-devices/
 canonical: https://www.testmu.ai/support/docs/web-testing-on-real-devices/
 ---

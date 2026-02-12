@@ -13,7 +13,7 @@ keywords:
     - test issues
     - Partial Page Scanner
 url: https://www.testmuai.com/support/docs/accessibility-testing-partial-page-scanner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-partial-page-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-partial-page-scanner/
 ---

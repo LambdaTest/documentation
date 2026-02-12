@@ -12,7 +12,7 @@ keywords:
   - real devices status ratio
 
 url: https://www.testmuai.com/support/docs/insights-private-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-private-real-devices/
 canonical: https://www.testmuai.com/support/docs/insights-private-real-devices/
 ---

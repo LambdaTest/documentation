@@ -9,7 +9,7 @@ keywords:
   - selenium capabilities
   - selenium version >=4
 url: https://www.testmuai.com/support/docs/selenium-four-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-four-capabilities/
 canonical: https://www.testmu.ai/support/docs/selenium-four-capabilities/
 ---

@@ -12,7 +12,7 @@ keywords:
   - intelligent reporting
   - test consolidation
 url: https://www.testmuai.com/support/docs/analytics-unique-instances-retry-detection/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-unique-instances-retry-detection/
 canonical: https://www.testmu.ai/support/docs/analytics-unique-instances-retry-detection/
 ---

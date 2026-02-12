@@ -10,7 +10,7 @@ keywords:
   - Appium supported locales
   
 url: https://www.testmuai.com/support/docs/supported-locales-espresso/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-locales-espresso/
 canonical: https://www.testmu.ai/support/docs/supported-locales-espresso/
 ---

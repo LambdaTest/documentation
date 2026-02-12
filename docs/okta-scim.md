@@ -7,7 +7,7 @@ description: Integrating TestMu AI SCIM with Okta
 keywords:
     - TestMu AI SCIM
 url: https://www.testmuai.com/support/docs/scim/okta/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: scim/okta/
 canonical: https://www.testmu.ai/support/docs/scim/okta/
 ---

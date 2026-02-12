@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmuai.com/support/docs/test-settings-options/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-settings-options/
 canonical: https://www.testmu.ai/support/docs/test-settings-options/
 ---

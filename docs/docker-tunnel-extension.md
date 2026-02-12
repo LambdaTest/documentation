@@ -11,7 +11,7 @@ keywords:
   - best docker extensions for developers
   - best docker extensions for testers
 url: https://www.testmuai.com/support/docs/docker-tunnel-extension/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: docker-tunnel-extension/
 canonical: https://www.testmuai.com/support/docs/docker-tunnel-extension/
 ---

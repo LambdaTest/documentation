@@ -13,7 +13,7 @@ keywords:
     - hyperexecute cypress testing
   
 url: https://www.testmuai.com/support/docs/cypress-detailed-command-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-detailed-command-logs/
 canonical: https://www.testmuai.com/support/docs/cypress-detailed-command-logs/
 ---

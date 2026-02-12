@@ -8,7 +8,7 @@ keywords:
   - credits
   - AI
 url: https://www.testmuai.com/support/docs/credits-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: credits-management/
 canonical: https://www.testmuai.com/support/docs/credits-management/
 ---

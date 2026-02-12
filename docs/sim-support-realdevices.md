@@ -11,8 +11,8 @@ keywords:
   - Real Devices
   - testing
 slug: sim-support-realdevices/
-canonical: https://www.testmu.ai/support/docs/sim-support-realdevices/
-site_name: LambdaTest
+canonical: https://www.testmuai.com/support/docs/sim-support-realdevices/
+site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/sim-support-realdevices/
 ---
 import CodeBlock from '@theme/CodeBlock';

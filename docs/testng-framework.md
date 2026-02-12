@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: testng-framework
 title: Execute Selenium Tests With TestNG
 sidebar_label: TestNG
@@ -15,7 +15,7 @@ keywords:
   - java selenium testing
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 ---
@@ -89,7 +89,7 @@ Before you can start performing Java automation testing with Selenium, you would
 
 ### Cloning Repo and Installing Dependencies
 
-**Step 1:** Clone the <BrandName />â€™s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/Java-TestNG-Selenium
@@ -214,7 +214,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("build", "<BrandName />SampleApp");
         capabilities.setCapability("name", "<BrandName />JavaSample");
 ```
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt ðŸ”— <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt ?? <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Executing the Test
 
@@ -318,7 +318,7 @@ Open command prompt and navigate to the binary folder.
 Run the following command:
 
 ```bash
-./LT -user {userâ€™s login email} -key {userâ€™s access key}
+./LT -user {user’s login email} -key {user’s access key}
 ```
 
 So if your user name is **lambdatest@example.com**, the command would be:

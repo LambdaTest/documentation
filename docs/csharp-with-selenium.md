@@ -10,7 +10,7 @@ keywords:
   - c# selenium webdriver
   - c# selenium testing
 url: https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 ---

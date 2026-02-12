@@ -10,7 +10,7 @@ keywords:
   - testmu ai proxy settings
   - testmu ai proxy profile
 url: https://www.testmuai.com/support/docs/local-testing-for-macos/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-for-macos/
 canonical: https://www.testmuai.com/support/docs/local-testing-for-macos/
 ---

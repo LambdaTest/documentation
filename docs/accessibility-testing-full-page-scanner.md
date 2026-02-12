@@ -13,7 +13,7 @@ keywords:
     - test issues
     - Full Page Scanner
 url: https://www.testmuai.com/support/docs/accessibility-testing-full-page-scanner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-full-page-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-full-page-scanner/
 ---

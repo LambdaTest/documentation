@@ -18,7 +18,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/webex-teams-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: webex-teams-integration/
 canonical: https://www.testmu.ai/support/docs/webex-teams-integration/
 ---

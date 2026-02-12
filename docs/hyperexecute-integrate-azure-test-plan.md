@@ -14,7 +14,7 @@ keywords:
     - azure binaries
     - azure test plan integration
 url: https://www.testmuai.com/support/docs/hyperexecute-integrate-azure-test-plan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-integrate-azure-test-plan/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-integrate-azure-test-plan/
 ---

@@ -14,7 +14,7 @@ keywords:
   - espresso testing
   - real devices
 url: https://www.testmuai.com/support/docs/speedup-espresso/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: speedup-espresso/
 canonical: https://www.testmu.ai/support/docs/speedup-espresso/
 ---

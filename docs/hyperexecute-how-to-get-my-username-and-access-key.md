@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How to Get my Username and Access key
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-get-my-username-and-access-key/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/
 ---

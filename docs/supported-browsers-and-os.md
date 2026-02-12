@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-browsers-and-os
 title: Supported Browsers and Operating Systems
 sidebar_label: Specify Browsers and OS
@@ -16,7 +16,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/supported-browsers-and-os/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-browsers-and-os/
 canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 ---

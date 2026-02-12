@@ -1,4 +1,4 @@
-﻿---
+---
 id: testcomplete-integration
 title: TestComplete
 hide_title: false
@@ -12,7 +12,7 @@ keywords:
 - testmu ai integration with testcomplete
 - testcomplete testmu ai
 url: https://www.testmuai.com/support/docs/testcomplete-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testcomplete-integration/
 canonical: https://www.testmu.ai/support/docs/testcomplete-integration/
 ---
@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
+TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks�build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
 <BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
 
@@ -175,7 +175,7 @@ Click on the run button to check your script.
 Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://appautomation.lambdatest.com/build).
 
 
-> In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmu.ai**](mailto:support@testmu.ai). <br />
+> In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

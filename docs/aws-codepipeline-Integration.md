@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   
 url: https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: aws-codepipeline-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/
 ---

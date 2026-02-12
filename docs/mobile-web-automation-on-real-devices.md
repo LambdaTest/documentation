@@ -12,7 +12,7 @@ keywords:
 - mobile web automation real device
 - how to perform mobile web automation
 url: https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: mobile-web-automation-on-real-devices/
 canonical: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices/
 ---

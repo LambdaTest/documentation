@@ -14,7 +14,7 @@ keywords:
   - javascript selenium framework
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 ---

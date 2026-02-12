@@ -11,7 +11,7 @@ keywords:
   - PR automation
   - test management
 url: https://www.testmuai.com/support/docs/github-app-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: github-app-integration/
 canonical: https://www.testmuai.com/support/docs/github-app-integration/
 ---

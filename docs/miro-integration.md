@@ -10,7 +10,7 @@ keywords:
   - free cross browser testing tool
   - miro integration
 url: https://www.testmuai.com/support/docs/miro-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: miro-integration/
 canonical: https://www.testmu.ai/support/docs/miro-integration/
 ---

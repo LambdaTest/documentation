@@ -10,7 +10,7 @@ keywords:
 - Selenium 4 Documentation
 
 url: https://www.testmuai.com/support/docs/getting-started-with-selenium-4/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-selenium-4/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-selenium-4/
 ---

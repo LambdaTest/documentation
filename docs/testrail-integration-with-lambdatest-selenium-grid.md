@@ -9,7 +9,7 @@ keywords:
   - testmu ai integration with testrail
   - testmu ai selenium grid integration to testrail
 url: https://www.testmuai.com/support/docs/testrail-integration-with-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testrail-integration-with-testmu-selenium-grid/
 canonical: https://www.testmu.ai/support/docs/testrail-integration-with-testmu-selenium-grid/
 ---

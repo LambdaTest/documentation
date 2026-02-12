@@ -13,7 +13,7 @@ keywords:
   - sequential tests
   - automation tests
 url: https://www.testmuai.com/support/docs/performance-tips/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: performance-tips/
 canonical: https://www.testmu.ai/support/docs/performance-tips/
 ---

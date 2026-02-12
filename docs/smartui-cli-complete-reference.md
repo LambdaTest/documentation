@@ -12,7 +12,7 @@ keywords:
   - command line interface
   - visual regression testing
 url: https://www.testmuai.com/support/docs/smartui-cli-complete-reference/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-cli-complete-reference/
 canonical: https://www.testmu.ai/support/docs/smartui-cli-complete-reference/
 

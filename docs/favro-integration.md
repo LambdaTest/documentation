@@ -11,7 +11,7 @@ keywords:
   - kanban
   - bug reporting
 url: https://www.testmuai.com/support/docs/favro-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: favro-integration/
 canonical: https://www.testmuai.com/support/docs/favro-integration/
 ---

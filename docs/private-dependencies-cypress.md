@@ -1,4 +1,4 @@
-﻿---
+---
 id: private-dependencies-cypress
 title: Execute Cypress Tests Including Private Dependencies
 sidebar_label: Execute Including Private Dependencies
@@ -16,7 +16,7 @@ keywords:
   - TestMu AI Cloud Platform
 
 url: https://www.testmuai.com/support/docs/private-dependencies-cypress/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: private-dependencies-cypress/
 canonical: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 ---
@@ -57,7 +57,7 @@ lambdatest-cypress --version
 
 You can either add private dependency in the `package.json` file or in the `lambdatest-config.json` file. Refer to the below steps for both approaches.
 
-- **If passing private dependency in package.json file –**
+- **If passing private dependency in package.json file �**
 
   Add the private dependency and create `.npmrc` file in the root directory of your project as highlighted below and define the same in `.npmrc` file as well.
 
@@ -95,7 +95,7 @@ After doing this setup, run your tests on the **<BrandName /> platform** and now
 
 ---
 
-> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
+> That�s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

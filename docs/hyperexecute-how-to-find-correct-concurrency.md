@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How to Find the Correct Concurrency 
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-find-correct-concurrency/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-find-correct-concurrency/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-find-correct-concurrency/
 ---

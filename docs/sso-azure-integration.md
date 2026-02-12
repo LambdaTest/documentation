@@ -9,7 +9,7 @@ keywords:
     - TestMu AI SSO
     - TestMu AI Azure AD Integration
 url: https://www.testmuai.com/support/docs/sso-azure-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: sso-azure-integration/
 canonical: https://www.testmu.ai/support/docs/sso-azure-integration/
 ---

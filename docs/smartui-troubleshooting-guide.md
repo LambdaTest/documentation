@@ -11,7 +11,7 @@ keywords:
   - debugging smartui
   - common errors
 url: https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-troubleshooting-guide/
 canonical: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide/
 

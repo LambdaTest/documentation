@@ -9,7 +9,7 @@ keywords:
   - TestMu AI and OpsGenie Integration
   - OpsGenie Integration
 url: https://www.testmuai.com/support/docs/opsgenie-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: opsgenie-integration/
 canonical: https://www.testmu.ai/support/docs/opsgenie-integration/
 ---

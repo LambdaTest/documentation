@@ -19,7 +19,7 @@ keywords:
 - Leapwork Automation Platform
 
 url: https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: leapwork-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/
 ---
