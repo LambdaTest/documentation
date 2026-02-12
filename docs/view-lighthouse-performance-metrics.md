@@ -30,7 +30,7 @@ keywords:
     - selenium tutorial
     - Selenium getting started
     - testmu ai getting started
-url: https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/
+url: https://www.testmuai.com/support/docs/view-lighthouse-performance-metrics/
 site_name: LambdaTest
 slug: view-lighthouse-performance-metrics/
 ---

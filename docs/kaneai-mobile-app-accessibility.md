@@ -11,7 +11,7 @@ keywords:
   - accessibility testing
   - mobile accessibility
   - accessibility scan
-url: https://www.lambdatest.com/support/docs/kaneai-mobile-app-accessibility/
+url: https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/
 site_name: LambdaTest
 slug: kaneai-mobile-app-accessibility/
 ---
@@ -34,7 +34,7 @@ slug: kaneai-mobile-app-accessibility/
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile App Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-mobile-app-accessibility"
+          "item": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/"
         }]
       })
     }}
