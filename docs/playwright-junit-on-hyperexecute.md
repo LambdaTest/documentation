@@ -24,7 +24,7 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute pyunit testing
   - hyperexecute python testing
-url: https://www.lambdatest.com/support/docs/playwright-junit-on-hyperexecute/
+url: https://www.testmuai.com/support/docs/playwright-junit-on-hyperexecute/
 site_name: LambdaTest
 slug: playwright-junit-on-hyperexecute/
 ---

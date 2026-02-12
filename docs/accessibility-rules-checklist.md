@@ -12,10 +12,10 @@ keywords:
   - Web
   - Android
   - iOS
-url: https://www.testmu.ai/support/docs/accessibility-rules-checklist/
+url: https://www.testmuai.com/support/docs/accessibility-rules-checklist/
 site_name: LambdaTest
 slug: accessibility-rules-checklist/
-canonical: https://www.testmu.ai/support/docs/accessibility-rules-checklist/
+canonical: https://www.testmuai.com/support/docs/accessibility-rules-checklist/
 ---
 
 import Tabs from '@theme/Tabs';
