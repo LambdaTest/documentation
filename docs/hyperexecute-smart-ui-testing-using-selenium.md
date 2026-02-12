@@ -17,7 +17,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-smart-ui-testing-using-selenium/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/
 

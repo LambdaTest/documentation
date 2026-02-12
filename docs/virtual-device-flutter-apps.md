@@ -11,7 +11,7 @@ keywords:
 - test flutter apps on iphone
 - flutter test app
 url: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: virtual-device-flutter-apps/
 canonical: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
 ---

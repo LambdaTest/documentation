@@ -16,7 +16,7 @@ keywords:
  - selenium side runner
  - selenium ide side runner
 url: https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
 canonical: https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/
 ---

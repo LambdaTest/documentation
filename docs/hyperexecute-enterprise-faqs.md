@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-enterprise-faqs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-enterprise-faqs/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-enterprise-faqs/
 ---

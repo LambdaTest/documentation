@@ -9,7 +9,7 @@ keywords:
   - network bandwidth
   - network setting
 url: https://www.testmuai.com/support/docs/kaneai-network-throttling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-network-throttling/
 canonical: https://www.testmuai.com/support/docs/kaneai-network-throttling/
 ---

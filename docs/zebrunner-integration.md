@@ -12,7 +12,7 @@ keywords:
 - testmu ai integration with zebrunner
 - zebrunner testmu ai
 url: https://www.testmuai.com/support/docs/zebrunner-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zebrunner-integration/
 canonical: https://www.testmuai.com/support/docs/zebrunner-integration/
 ---

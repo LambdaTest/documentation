@@ -8,7 +8,7 @@ keywords:
 - install apps from app store
 - app store
 url: https://www.testmuai.com/support/docs/install-apps-from-app-store/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: install-apps-from-app-store/
 canonical: https://www.testmuai.com/support/docs/install-apps-from-app-store/
 ---

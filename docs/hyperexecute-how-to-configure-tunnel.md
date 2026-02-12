@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How to Configure Tunnel with HyperExecute
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-configure-tunnel/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/
 ---

@@ -14,7 +14,7 @@ keywords:
     - realtime
     - web browser
 url: https://www.testmuai.com/support/docs/chrome-os-web-browser-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: chrome-os-web-browser-testing/
 canonical: https://www.testmuai.com/support/docs/chrome-os-web-browser-testing/
 ---

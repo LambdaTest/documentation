@@ -13,7 +13,7 @@ keywords:
   - Android
   - iOS
 url: https://www.testmuai.com/support/docs/accessibility-rules-checklist/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-rules-checklist/
 canonical: https://www.testmuai.com/support/docs/accessibility-rules-checklist/
 ---

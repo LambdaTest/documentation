@@ -15,7 +15,7 @@ keywords:
   - testmu ai python
   - framework on testmu ai
 url: https://www.testmuai.com/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/
 ---

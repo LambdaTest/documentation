@@ -16,7 +16,7 @@ keywords:
   - simulate date time
   - iOS automation hooks
 url: https://www.testmuai.com/support/docs/set-date-time-hour-format-real-devices-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: set-date-time-hour-format-real-devices-browser/
 canonical: https://www.testmuai.com/support/docs/set-date-time-hour-format-real-devices-browser/
 ---

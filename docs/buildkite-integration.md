@@ -11,7 +11,7 @@ keywords:
   - buildkite integration
   - testmu ai buildkite integration
 url: https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: buildkite-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/
 ---

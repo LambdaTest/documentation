@@ -12,7 +12,7 @@ keywords:
   - build diff
   - test observability
 url: https://www.testmuai.com/support/docs/analytics-build-comparison/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-build-comparison/
 canonical: https://www.testmuai.com/support/docs/analytics-build-comparison/
 ---

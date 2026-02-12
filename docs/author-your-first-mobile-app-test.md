@@ -11,7 +11,7 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
 url: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: author-your-first-mobile-app-test/
 canonical: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
 ---

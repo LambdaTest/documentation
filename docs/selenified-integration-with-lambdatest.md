@@ -10,7 +10,7 @@ keywords:
   - selenium integration
   - Selenium Grid
 url: https://www.testmuai.com/support/docs/selenified-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenified-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/selenified-integration-with-testmu/
 --- 

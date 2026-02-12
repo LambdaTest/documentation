@@ -9,7 +9,7 @@ keywords:
     - testmu ai custom dns map
 
 url: https://www.testmuai.com/support/docs/custom-dns-map/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: custom-dns-map/
 canonical: https://www.testmuai.com/support/docs/custom-dns-map/
 ---

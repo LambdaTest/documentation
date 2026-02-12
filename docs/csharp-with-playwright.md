@@ -12,7 +12,7 @@ keywords:
   - csharp playwright framework
 
 url: https://www.testmuai.com/support/docs/csharp-with-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: csharp-with-playwright/
 canonical: https://www.testmuai.com/support/docs/csharp-with-playwright/
 ---

@@ -11,7 +11,7 @@ keywords:
   - testmu ai integration with zephyr scale
 
 url: https://www.testmuai.com/support/docs/zephyr-scale-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: zephyr-scale-integration/
 canonical: https://www.testmuai.com/support/docs/zephyr-scale-integration/
 ---

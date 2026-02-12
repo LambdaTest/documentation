@@ -11,7 +11,7 @@ keywords:
   - lambda hooks automation testing
   - selenium lambda hooks
 url: https://www.testmuai.com/support/docs/lambda-hooks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: lambda-hooks/
 canonical: https://www.testmuai.com/support/docs/lambda-hooks/
 ---

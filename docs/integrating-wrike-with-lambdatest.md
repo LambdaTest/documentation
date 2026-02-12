@@ -17,7 +17,7 @@ keywords:
  - TestMu AI apps
  - TestMu AI integrations
 url: https://www.testmuai.com/support/docs/integrating-wrike-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrating-wrike-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrating-wrike-with-testmu/
 ---

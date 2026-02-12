@@ -18,7 +18,7 @@ keywords:
   - api
   - postman
 url: https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-ci-cd-automation/
 canonical: https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/
 ---

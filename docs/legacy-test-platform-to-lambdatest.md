@@ -12,7 +12,7 @@ keywords:
 - moving from old testing platform to testmu ai
 - upgrade your testing with testmu ai from legacy system
 url: https://www.testmuai.com/support/docs/migrate-from-legacy-platform-to-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: migrate-from-legacy-platform-to-testmu/
 canonical: https://www.testmuai.com/support/docs/migrate-from-legacy-platform-to-testmu/
 ---

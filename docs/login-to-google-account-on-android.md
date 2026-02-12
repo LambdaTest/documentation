@@ -9,7 +9,7 @@ keywords:
   - login to google account on android app automation
   - login to google account
 url: https://www.testmuai.com/support/docs/login-to-google-account-on-android/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: login-to-google-account-on-android/
 canonical: https://www.testmuai.com/support/docs/login-to-google-account-on-android/
 ---

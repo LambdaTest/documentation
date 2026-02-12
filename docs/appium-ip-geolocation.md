@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-ip-geolocation
 title: IP Geolocation 
 hide_title: true
@@ -12,7 +12,7 @@ keywords:
  - IP geolocation support
 
 url: https://www.testmuai.com/support/docs/appium-ip-geolocation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-ip-geolocation/
 canonical: https://www.testmuai.com/support/docs/appium-ip-geolocation/
 ---

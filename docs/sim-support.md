@@ -12,7 +12,7 @@ keywords:
   - testing
 slug: sim-support/
 canonical: https://www.testmuai.com/support/docs/sim-support/
-site_name: LambdaTest
+site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/sim-support/
 ---
 import CodeBlock from '@theme/CodeBlock';

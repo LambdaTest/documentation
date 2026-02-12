@@ -10,7 +10,7 @@ keywords:
   - WCAG
   - Checklist
 url: https://www.testmuai.com/support/docs/accessibility-android-what-we-cover/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-android-what-we-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-android-what-we-cover/
 ---

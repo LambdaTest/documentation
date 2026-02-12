@@ -9,7 +9,7 @@ keywords:
   - TestMu AI and Notion Integration
   - Notion Integration
 url: https://www.testmuai.com/support/docs/notion-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: notion-integration/
 canonical: https://www.testmuai.com/support/docs/notion-integration/
 ---

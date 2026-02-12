@@ -12,7 +12,7 @@ keywords:
   - module version
   - test case management
 url: https://www.testmuai.com/support/docs/kaneai-bulk-module-update/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-bulk-module-update/
 ---
 

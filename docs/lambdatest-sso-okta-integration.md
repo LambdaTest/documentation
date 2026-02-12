@@ -11,7 +11,7 @@ keywords:
   - testmu ai okta integration
   - testmu ai okta sso
 url: https://www.testmuai.com/support/docs/testmu-sso-okta-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-sso-okta-integration/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-okta-integration/
 ---

@@ -12,7 +12,7 @@ keywords:
   - Desktop status ratio
 
 url: https://www.testmuai.com/support/docs/insights-private-desktop/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-private-desktop/
 canonical: https://www.testmuai.com/support/docs/insights-private-desktop/
 ---

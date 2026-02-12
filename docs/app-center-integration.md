@@ -12,7 +12,7 @@ keywords:
   - Auto upload apps on TestMu AI
   - TestMu AI Cloud Platform
 url: https://www.testmuai.com/support/docs/app-center/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-center/
 canonical: https://www.testmuai.com/support/docs/app-center/
 ---

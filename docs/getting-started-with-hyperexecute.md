@@ -20,7 +20,7 @@ keywords:
   - hyperexecute auto-split execution
 image: /assets/images/og-images/hyperexecute-og.png
 url: https://www.testmuai.com/support/docs/getting-started-with-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-hyperexecute/
 ---

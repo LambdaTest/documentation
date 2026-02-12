@@ -11,7 +11,7 @@ keywords:
     - DevTools
     - all issues
 url: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-issue-summary/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-dashboard-all-issues/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-all-issues/
 ---

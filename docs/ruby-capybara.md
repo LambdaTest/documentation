@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: ruby-capybara
 title: Running Automation Scripts on Selenium Grid Cloud Using Capybara Ruby
 hide_title: true
@@ -11,7 +11,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 
 url: https://www.testmuai.com/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/
 ---
@@ -79,7 +79,7 @@ Before you can start performing Ruby automation testing with Selenium, you would
 
 ### Installing Selenium Dependencies and Tutorial Repo
 
-**Step 1:** Clone the <BrandName />â€™s [Capybara-Ruby repository](https://github.com/lambdatest/Capybara-Cucumber-Ruby) and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [Capybara-Ruby repository](https://github.com/lambdatest/Capybara-Cucumber-Ruby) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/Capybara-Cucumber-Ruby.git
 cd Capybara-Cucumber-Ruby
@@ -208,7 +208,7 @@ You can test your locally hosted or privately hosted projects with [<BrandName /
 
 >Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
-Hereâ€™s how you can establish <BrandName /> Tunnel.
+Here’s how you can establish <BrandName /> Tunnel.
 
 >Download the binary file of:
 >* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
@@ -219,7 +219,7 @@ Open command prompt and navigate to the binary folder.
 
 Run the following command:
 ```bash
-LT -user {userâ€™s login email} -key {userâ€™s access key}
+LT -user {user’s login email} -key {user’s access key}
 ```
 So if your user name is <BrandName />@example.com and key is 123456, the command would be:
 ```bash

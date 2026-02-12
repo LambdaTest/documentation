@@ -12,7 +12,7 @@ keywords:
   - testmu ai integration with jenkins 
   - jenkins freestlye
 url: https://www.testmuai.com/support/docs/integrating-testmu-report-with-jenkins-pipeline/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: integrating-testmu-report-with-jenkins-pipeline/
 canonical: https://www.testmuai.com/support/docs/integrating-testmu-report-with-jenkins-pipeline/
 ---

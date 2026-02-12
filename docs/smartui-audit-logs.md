@@ -13,7 +13,7 @@ keywords:
   - Build History
   - Screenshot History
 url: https://www.testmuai.com/support/docs/smartui-audit-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-audit-logs/
 canonical: https://www.testmuai.com/support/docs/smartui-audit-logs/
 ---

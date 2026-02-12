@@ -13,7 +13,7 @@ keywords:
   - appium automation
 
 url: https://www.testmuai.com/support/docs/appium-python/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-python/
 canonical: https://www.testmuai.com/support/docs/appium-python/
 ---

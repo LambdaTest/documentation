@@ -14,7 +14,7 @@ keywords:
   - testmu ai real browsers
   - light mode testing
 url: https://www.testmuai.com/support/docs/dark-mode-on-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: dark-mode-on-browser/
 canonical: https://www.testmuai.com/support/docs/dark-mode-on-browser/
 ---

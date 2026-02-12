@@ -11,7 +11,7 @@ keywords:
     - Bug Reporting
     - Reports
 url: https://www.testmuai.com/support/docs/accessibility-report-bug/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-report-bug/
 canonical: https://www.testmuai.com/support/docs/accessibility-report-bug/
 ---

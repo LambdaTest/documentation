@@ -9,7 +9,7 @@ keywords:
   - TestMu AI and Bugsnag Integration
   - Bugsnag Integration
 url: https://www.testmuai.com/support/docs/bugsnag-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bugsnag-integration/
 canonical: https://www.testmuai.com/support/docs/bugsnag-integration/
 ---

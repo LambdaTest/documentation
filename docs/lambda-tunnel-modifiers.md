@@ -12,7 +12,7 @@ keywords:
   - testmu ai tunnel guide
   - testmu ai tunnel guide
 url: https://www.testmuai.com/support/docs/lambda-tunnel-modifiers/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: lambda-tunnel-modifiers/
 canonical: https://www.testmuai.com/support/docs/lambda-tunnel-modifiers/
 ---

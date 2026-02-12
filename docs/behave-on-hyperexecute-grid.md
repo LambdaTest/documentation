@@ -20,7 +20,7 @@ keywords:
   - hyperexecute automation testing
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/behave-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: behave-on-hyperexecute-grid/
 canonical: https://www.testmuai.com/support/docs/behave-on-hyperexecute-grid/
 ---

@@ -22,7 +22,7 @@ keywords:
 - Opera Screenshot Testing
 
 url: https://www.testmuai.com/support/docs/default-list-of-browsers-for-screesnshot-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 ---
 

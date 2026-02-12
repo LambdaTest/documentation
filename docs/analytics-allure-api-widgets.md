@@ -6,7 +6,7 @@ description: Test Insights by executing test cases using the Allure report with 
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-allure-api-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-allure-api-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-allure-api-widgets/
 ---

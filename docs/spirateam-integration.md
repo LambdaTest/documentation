@@ -9,7 +9,7 @@ keywords:
   - Push issues to SpiraTeam
   - TestMu AI SpiraTeam integration
 url: https://www.testmuai.com/support/docs/spirateam-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: spirateam-integration/
 canonical: https://www.testmuai.com/support/docs/spirateam-integration/
 ---

@@ -14,7 +14,7 @@ keywords:
   - appium automation
 
 url: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: sharding-rd-hyperexec/
 canonical: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
 ---

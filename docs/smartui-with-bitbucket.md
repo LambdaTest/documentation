@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - bitbucket ci cd
 url: https://www.testmuai.com/support/docs/smartui-with-bitbucket/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-bitbucket/
 canonical: https://www.testmuai.com/support/docs/smartui-with-bitbucket/
 

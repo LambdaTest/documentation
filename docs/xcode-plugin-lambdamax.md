@@ -8,7 +8,7 @@ keywords:
   - lambdamax
   - automation testing 
 url: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: xcode-plugin-testmu/
 canonical: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
 ---

@@ -11,7 +11,7 @@ keywords:
   - check browser compatibility online
 
 url: https://www.testmuai.com/support/docs/support-access/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: support-access/
 canonical: https://www.testmuai.com/support/docs/support-access/
 ---

@@ -10,7 +10,7 @@ keywords:
   - test insights
   - executive reporting
 url: https://www.testmuai.com/support/docs/analytics-project-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-project-report/
 canonical: https://www.testmuai.com/support/docs/analytics-project-report/
 ---

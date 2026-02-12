@@ -13,7 +13,7 @@ keywords:
   - jest selenium
 image: /assets/images/og-images/selenium-testing-og.png  
 url: https://www.testmuai.com/support/docs/automation-testing-with-selenium-and-jest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: automation-testing-with-selenium-and-jest/
 canonical: https://www.testmuai.com/support/docs/automation-testing-with-selenium-and-jest/
 ---

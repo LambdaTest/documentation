@@ -18,7 +18,7 @@ keywords:
     - network throttling capabilities for Appium
     - throttling test on TestMu AI with Appium
 url: https://www.testmuai.com/support/docs/app-auto-network-throttling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-auto-network-throttling/
 canonical: https://www.testmuai.com/support/docs/app-auto-network-throttling/
 ---

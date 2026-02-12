@@ -14,7 +14,7 @@ keywords:
 - load balanced tunnel
 - testmu ai load balancing
 url: https://www.testmuai.com/support/docs/load-balancing-in-lambda-tunnel/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: load-balancing-in-lambda-tunnel/
 canonical: https://www.testmuai.com/support/docs/load-balancing-in-lambda-tunnel/
 ---

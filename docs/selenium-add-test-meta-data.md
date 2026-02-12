@@ -13,7 +13,7 @@ keywords:
   - debugging
   - reporting
 url: https://www.testmuai.com/support/docs/selenium-add-test-meta-data/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-add-test-meta-data/
 canonical: https://www.testmuai.com/support/docs/selenium-add-test-meta-data/
 ---

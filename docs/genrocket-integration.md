@@ -9,7 +9,7 @@ keywords:
   - testmu ai and genrocket integration 
   - testmu ai genrocket
 url: https://www.testmuai.com/support/docs/genrocket-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: genrocket-integration/
 canonical: https://www.testmuai.com/support/docs/genrocket-integration/
 ---

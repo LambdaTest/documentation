@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Azure DevOps App
   - Azure DevOps marketplace
 url: https://www.testmuai.com/support/docs/testmu-azure-devops-app/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-azure-devops-app/
 canonical: https://www.testmuai.com/support/docs/testmu-azure-devops-app/
 ---

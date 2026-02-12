@@ -12,7 +12,7 @@ keywords:
   - location override
   - geolocation testing
 url: https://www.testmuai.com/support/docs/kaneai-gps-location/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-gps-location/
 canonical: https://www.testmuai.com/support/docs/kaneai-gps-location/
 ---

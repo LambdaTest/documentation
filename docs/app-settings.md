@@ -7,7 +7,7 @@ description: Explore App Settings in TestMu AI's Real Device Cloud to enhance te
 keywords:
 - app settings 
 url: https://www.testmuai.com/support/docs/app-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-settings/
 canonical: https://www.testmuai.com/support/docs/app-settings/
 ---

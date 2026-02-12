@@ -8,7 +8,7 @@ keywords:
     - hyperexecute yaml
     - How to Perform Dependent Test Case Discovery
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-how-to-perform-dependent-test-based-discovery/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/
 ---

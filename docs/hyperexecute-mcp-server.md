@@ -11,7 +11,7 @@ keywords:
   - MCP
   - MCP server
 url: https://www.testmuai.com/support/docs/hyperexecute-mcp-server/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-mcp-server/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-mcp-server/
 ---

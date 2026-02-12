@@ -9,7 +9,7 @@ keywords:
   - testmu ai pre loaded extension for chrome 
   - testmu ai pre loaded extension
 url: https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: pre-loaded-chrome-extension/
 canonical: https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/
 ---

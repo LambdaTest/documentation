@@ -13,7 +13,7 @@ keywords:
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.png
 url: https://www.testmuai.com/support/docs/appium-php-behat/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-php-behat/
 canonical: https://www.testmuai.com/support/docs/appium-php-behat/
 ---

@@ -12,7 +12,7 @@ keywords:
   - license pool
 
 url: https://www.testmuai.com/support/docs/concurrency-widget/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: concurrency-widget/
 canonical: https://www.testmuai.com/support/docs/concurrency-widget/
 ---

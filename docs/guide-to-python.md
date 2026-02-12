@@ -10,7 +10,7 @@ keywords:
   - python documentation TestMu AI
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-python-tests-on-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/
 ---

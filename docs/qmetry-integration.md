@@ -12,7 +12,7 @@ keywords:
  - QMetry integration with TestMu AI
  - testmu ai integration with QMetry
 url: https://www.testmuai.com/support/docs/qmetry-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: qmetry-integration/
 canonical: https://www.testmuai.com/support/docs/qmetry-integration/
 ---

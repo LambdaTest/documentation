@@ -17,7 +17,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/backlog-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: backlog-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/backlog-integration-with-testmu/
 ---

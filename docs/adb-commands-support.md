@@ -13,7 +13,7 @@ keywords:
   - real devices
   - adb commands
 url: https://www.testmuai.com/support/docs/adb-commands-support/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: adb-commands-support/
 canonical: https://www.testmuai.com/support/docs/adb-commands-support/
 ---

@@ -6,7 +6,7 @@ description: Analytics - Overview
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-create-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-create-dashboard/
 canonical: https://www.testmuai.com/support/docs/analytics-create-dashboard/
 ---

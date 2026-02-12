@@ -12,7 +12,7 @@ keywords:
   - continuous integration tools
   - gitlab ci
 url: https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bamboo-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/
 ---

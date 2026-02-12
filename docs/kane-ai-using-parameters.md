@@ -10,7 +10,7 @@ keywords:
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.testmuai.com/support/docs/kane-ai-using-parameters/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-using-parameters/
 canonical: https://www.testmuai.com/support/docs/kane-ai-using-parameters/
 ---

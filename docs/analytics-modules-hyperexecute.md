@@ -6,7 +6,7 @@ description: Analytics Modules - HyperExecute
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-modules-hyperexecute/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-hyperexecute/
 ---

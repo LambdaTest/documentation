@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
 url: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-rerun-failed-tests/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
 ---

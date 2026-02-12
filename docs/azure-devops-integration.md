@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Azure DevOps integration
   - Push issues to Azure DevOps
 url: https://www.testmuai.com/support/docs/vsts-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: vsts-integration/
 canonical: https://www.testmuai.com/support/docs/vsts-integration/
 ---

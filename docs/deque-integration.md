@@ -13,7 +13,7 @@ keywords:
   - web accessibility testing with axe
 
 url: https://www.testmuai.com/support/docs/deque-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: deque-integration/
 canonical: https://www.testmuai.com/support/docs/deque-integration/
 ---

@@ -12,7 +12,7 @@ keywords:
   - machine learning
   - test automation
 url: https://www.testmuai.com/support/docs/analytics-test-failure-classification/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-test-failure-classification/
 canonical: https://www.testmuai.com/support/docs/analytics-test-failure-classification/
 ---

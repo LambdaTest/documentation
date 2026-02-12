@@ -9,7 +9,7 @@ keywords:
 - app automation dashboard testmu ai
 - mobile app automation testing using appium
 url: https://www.testmuai.com/support/docs/app-automation-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-automation-dashboard/
 canonical: https://www.testmuai.com/support/docs/app-automation-dashboard/
 ---

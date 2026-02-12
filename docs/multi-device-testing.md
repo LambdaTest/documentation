@@ -10,7 +10,7 @@ keywords:
   - Parallel Testing
 slug: multi-device-testing/
 canonical: https://www.testmuai.com/support/docs/multi-device-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/multi-device-testing/
 ---
 import CodeBlock from '@theme/CodeBlock';

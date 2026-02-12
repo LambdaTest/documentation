@@ -12,7 +12,7 @@ keywords:
   - best vs code extensions for developers
   - best vs code extensions for testers
 url: https://www.testmuai.com/support/docs/vs-code-extension/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: vs-code-extension/
 canonical: https://www.testmuai.com/support/docs/vs-code-extension/
 ---

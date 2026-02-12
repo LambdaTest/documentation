@@ -9,7 +9,7 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
 url: https://www.testmuai.com/support/docs/hyperexecute-auto-split-strategy/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-auto-split-strategy/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-auto-split-strategy/
 ---

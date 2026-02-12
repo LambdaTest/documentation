@@ -1,4 +1,4 @@
-﻿---
+---
 id: running-groovy-script-in-katalon
 title: How to Run Groovy Script In Katalon With TestMu AI Selenium Grid?
 hide_title: true
@@ -20,7 +20,7 @@ keywords:
 - Groovy Test Online
 
 url: https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: running-groovy-script-in-katalon-with-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 ---
@@ -156,7 +156,7 @@ class LambdaListener {
 }
 ```
 
-That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over <BrandName /> cloud-based cross browser testing platform. Happy testing! 🙂
+That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over <BrandName /> cloud-based cross browser testing platform. Happy testing! ??
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

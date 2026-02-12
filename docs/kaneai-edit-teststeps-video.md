@@ -9,7 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai edit test steps
 url: https://www.testmuai.com/support/docs/kaneai-edit-test-steps/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-edit-test-steps/
 canonical: https://www.testmuai.com/support/docs/kaneai-edit-test-steps/
 ---

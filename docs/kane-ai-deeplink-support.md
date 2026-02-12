@@ -13,7 +13,7 @@ keywords:
   - android deeplink
   - ios deeplink
 url: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-deeplink-support/
 canonical: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 ---

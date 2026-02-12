@@ -8,7 +8,7 @@ keywords:
     - TestMu AI SCIM
     - JumpCloud
 url: https://www.testmuai.com/support/docs/jumpcloud-scim/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: jumpcloud-scim/
 canonical: https://www.testmuai.com/support/docs/jumpcloud-scim/
 ---

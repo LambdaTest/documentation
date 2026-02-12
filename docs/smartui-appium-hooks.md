@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.testmuai.com/support/docs/smartui-appium-hooks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-appium-hooks/
 canonical: https://www.testmuai.com/support/docs/smartui-appium-hooks/
 ---

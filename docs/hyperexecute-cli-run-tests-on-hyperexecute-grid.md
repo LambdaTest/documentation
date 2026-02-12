@@ -19,7 +19,7 @@ keywords:
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
 url: https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
 ---

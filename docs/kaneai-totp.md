@@ -11,7 +11,7 @@ keywords:
   - 2FA
   - authentication
 url: https://www.testmuai.com/support/docs/kaneai-totp/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-totp/
 canonical: https://www.testmuai.com/support/docs/kaneai-totp/
 ---

@@ -1,4 +1,4 @@
-ï»¿---
+---
 id: report-portal-cypress
 title: ReportPortal.io Integration With TestMu AI For Cypress
 sidebar_label: Report Portal IO Integration For Cypress
@@ -13,7 +13,7 @@ keywords:
   - cross browser testing
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/applitools-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: report-portal-cypress/
 canonical: https://www.testmuai.com/support/docs/report-portal-cypress/
 ---
@@ -72,7 +72,7 @@ This article will guide you on how to integrate the **<BrandName />** platform w
 
   <img loading="lazy" src={require('../assets/images/report-portal-cypress/report7.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
 
-> Thatâ€™s all! you have successfully integrated **ReportPortal.io** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt"Â onClick={()Â =>Â window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+> That’s all! you have successfully integrated **ReportPortal.io** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

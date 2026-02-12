@@ -13,7 +13,7 @@ keywords:
   - puppeteer testing testmu ai
 
 url: https://www.testmuai.com/support/docs/capabilities-for-puppeteer/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: capabilities-for-puppeteer/
 canonical: https://www.testmuai.com/support/docs/capabilities-for-puppeteer/
 ---

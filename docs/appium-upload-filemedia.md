@@ -14,7 +14,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/uploadMedia/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: upload-media/
 canonical: https://www.testmuai.com/support/docs/upload-media/
 ---

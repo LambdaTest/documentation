@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Tunnel
   - local app testing for macos
 url: https://www.testmuai.com/support/docs/advanced-tunnel-features/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: advanced-tunnel-features/
 canonical: https://www.testmuai.com/support/docs/advanced-tunnel-features/
 ---

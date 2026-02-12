@@ -15,7 +15,7 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 url: https://www.testmuai.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/
 ---

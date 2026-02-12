@@ -14,7 +14,7 @@ keywords:
   - resolution analysis
 
 url: https://www.testmuai.com/support/docs/analytics-heatmap-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-heatmap-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-heatmap-widgets/
 ---

@@ -9,7 +9,7 @@ keywords:
 - mfa
 - password and security
 url: https://www.testmuai.com/support/docs/multi-factor-authentication/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: multi-factor-authentication/
 canonical: https://www.testmuai.com/support/docs/multi-factor-authentication/
 ---

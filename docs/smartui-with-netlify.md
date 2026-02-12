@@ -12,7 +12,7 @@ keywords:
   - bug tracking tools
   - project management tools
 url: https://www.testmuai.com/support/docs/smartui-with-netlify/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-with-netlify/
 canonical: https://www.testmuai.com/support/docs/smartui-with-netlify/
 

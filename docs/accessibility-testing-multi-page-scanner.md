@@ -13,7 +13,7 @@ keywords:
     - test issues
     - Multi Page Scanner
 url: https://www.testmuai.com/support/docs/accessibility-testing-multi-page-scanner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-multi-page-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-multi-page-scanner/
 ---

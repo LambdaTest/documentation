@@ -9,7 +9,7 @@ keywords:
   - execution 
   - traciability
 url: https://www.testmuai.com/support/docs/tms-reports/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: tms-reports/
 canonical: https://www.testmuai.com/support/docs/tms-reports/
 ---
