@@ -12,7 +12,7 @@ keywords:
   - layout structure
   - element positions
   - layout testing
-url: https://www.testmuai.com/support/docs/smartui-layout-comparison/
+url: https://www.testmuai.com/support/docs/smartui-layout-testing/
 site_name: TestMu AI
 slug: smartui-layout-testing/
 canonical: https://www.testmuai.com/support/docs/smartui-layout-testing/

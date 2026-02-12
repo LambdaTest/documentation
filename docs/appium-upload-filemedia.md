@@ -13,7 +13,7 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.testmuai.com/support/docs/uploadMedia/
+url: https://www.testmuai.com/support/docs/upload-media/
 site_name: TestMu AI
 slug: upload-media/
 canonical: https://www.testmuai.com/support/docs/upload-media/
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Camera Image Injection",
-          "item": `${BRAND_URL}/support/docs/uploadFileMedia/`
+          "item": `${BRAND_URL}/support/docs/upload-media/`
         }]
       })
     }}

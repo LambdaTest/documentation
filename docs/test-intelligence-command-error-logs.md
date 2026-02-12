@@ -5,7 +5,7 @@ sidebar_label: Error Logs Analytics
 description: Analyze your failed tests with Test Intelligence and get insights on the errors that are causing your test runs to fail.
 keywords:
   - analytics
-url: https://www.testmuai.com/support/docs/test-intelligence-command-logs/
+url: https://www.testmuai.com/support/docs/test-intelligence-command-error-logs-analytics/
 site_name: TestMu AI
 slug: test-intelligence-command-error-logs-analytics/
 canonical: https://www.testmuai.com/support/docs/test-intelligence-command-error-logs-analytics/
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
+          "item": `${BRAND_URL}/support/docs/test-intelligence-command-error-logs-analytics/`
         }]
       })
     }}

@@ -10,7 +10,7 @@ keywords:
   - test cases
   - automation
   - hyperexecute
-url: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capabilityr/
+url: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability/
 site_name: TestMu AI
 slug: automated-test-cases-linked-using-capability/
 canonical: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability/

@@ -20,7 +20,7 @@ keywords:
   - Floating Regions
   - Ignore Colors
 
-url: https://www.testmuai.com/support/docs/smartui-ignore-regions/
+url: https://www.testmuai.com/support/docs/smartui-draw-on-ui/
 slug: smartui-draw-on-ui/
 canonical: https://www.testmuai.com/support/docs/smartui-draw-on-ui/
 

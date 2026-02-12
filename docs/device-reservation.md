@@ -8,7 +8,7 @@ keywords:
 - device booking
 - testmu ai devices
 - test scheduling
-url: https://www.testmuai.com/support/docs/device-reservation/
+url: https://www.testmuai.com/support/docs/Device-reservation/
 site_name: TestMu AI
 slug: Device-reservation/
 canonical: https://www.testmuai.com/support/docs/Device-reservation/
@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Python With Appium",
-          "item": `${BRAND_URL}/support/docs/appium-python/`
+          "item": `${BRAND_URL}/support/docs/Device-reservation/`
         }]
       })
     }}

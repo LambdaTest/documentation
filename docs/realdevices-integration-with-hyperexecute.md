@@ -15,7 +15,7 @@ keywords:
     - fast mobile testing
     - mobile automation
 
-url: https://www.testmuai.com/support/docs/realdevices-integration-with-hyperexecute/
+url: https://www.testmuai.com/support/docs/real-devices-integration-with-hyperexecute/
 site_name: TestMu AI
 slug: real-devices-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/real-devices-integration-with-hyperexecute/
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Katalon Integration with HyperExecute",
-          "item": `${BRAND_URL}/support/docs/katalon-integration-with-hyperexecute/`
+          "item": `${BRAND_URL}/support/docs/real-devices-integration-with-hyperexecute/`
         }]
       })
     }}

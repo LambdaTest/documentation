@@ -11,7 +11,7 @@ keywords:
     - Accessibility Testing Settings
     - Android Accessibility 
     - iOS Accessibility
-url: https://www.testmuai.com/support/docs/accessibility-android-automation-test/
+url: https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/
 site_name: TestMu AI
 slug: accessibility-native-app-automation-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Test",
-          "item": `${BRAND_URL}/support/docs/accessibility-android-automation-test/`
+          "item": `${BRAND_URL}/support/docs/accessibility-native-app-automation-test/`
         }]
       })
     }}
