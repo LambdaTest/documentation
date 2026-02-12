@@ -175,7 +175,7 @@ Click on the run button to check your script.
 Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://appautomation.lambdatest.com/build).
 
 
-> In case you have any questions, feel free to share them with us through our <span className="doc__lt"�onClick={()�=>�window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com). <br />
+> In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

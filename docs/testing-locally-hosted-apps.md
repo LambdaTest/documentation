@@ -86,7 +86,7 @@ After configuring the connection with <BrandName /> tunnel, you will need to set
 
 You can also add the `tunnel` capability using <BrandName /> Capability Generator.
 
-> In case you have any questions or need any additional information, drop them at our <span className="doc\_\_lt"�onClick={()�=>�window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+> In case you have any questions or need any additional information, drop them at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
