@@ -11,7 +11,7 @@ keywords:
   - test case
   - test steps
 url: https://www.testmuai.com/support/docs/modules-in-manual-testcases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: modules-in-manual-testcases/
 canonical: https://www.testmuai.com/support/docs/modules-in-manual-testcases/
 ---

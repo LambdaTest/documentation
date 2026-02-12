@@ -11,7 +11,7 @@ keywords:
   - bitbucket pipelines for continuous delivery
   
 url: https://www.testmuai.com/support/docs/bitbucket-pipelines-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: bitbucket-pipelines-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/bitbucket-pipelines-integration-with-testmu/
 ---

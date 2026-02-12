@@ -14,7 +14,7 @@ keywords:
   - selenium c# testing tutorial
   - c# selenium framework
 url: https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/
 ---

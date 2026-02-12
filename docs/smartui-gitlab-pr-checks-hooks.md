@@ -14,7 +14,7 @@ keywords:
   - Appium mobile testing
   - SmartUI webhooks
 url: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/
-site_name: LambdaTest
+site_name: TestMu AI
 ---
 
 import Tabs from '@theme/Tabs';

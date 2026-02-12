@@ -6,7 +6,7 @@ description: Analyze your failed tests with Test Intelligence and get insights o
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/test-intelligence-command-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: test-intelligence-command-error-logs-analytics/
 canonical: https://www.testmuai.com/support/docs/test-intelligence-command-error-logs-analytics/
 ---

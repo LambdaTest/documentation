@@ -14,7 +14,7 @@ keywords:
   - migrate playwright tests on testmu ai
 
 url: https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: migrate-existing-playwright-tests/
 canonical: https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/
 ---

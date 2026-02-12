@@ -12,7 +12,7 @@ keywords:
   - test data
 
 url: https://www.testmuai.com/support/docs/dashboards-custom-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: dashboards-custom-widgets/
 canonical: https://www.testmuai.com/support/docs/dashboards-custom-widgets/
 ---

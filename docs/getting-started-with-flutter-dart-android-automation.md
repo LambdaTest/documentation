@@ -10,7 +10,7 @@ keywords:
 - app testing
 - real devices
 url: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-flutter-dart-android-automation/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation//
 ---

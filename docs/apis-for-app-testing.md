@@ -9,7 +9,7 @@ keywords:
 - api sfor app automation
 - mobile app testing apis
 url: https://www.testmuai.com/support/docs/app-testing-apis/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: app-testing-apis/
 canonical: https://www.testmuai.com/support/docs/app-testing-apis/
 ---

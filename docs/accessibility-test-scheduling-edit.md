@@ -11,7 +11,7 @@ keywords:
     - DevTools
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/accessibility-test-scheduling-edit/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-test-scheduling-edit/
 canonical: https://www.testmuai.com/support/docs/accessibility-test-scheduling-edit/
 ---

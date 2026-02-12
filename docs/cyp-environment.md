@@ -16,7 +16,7 @@ keywords:
   - How to Run Cypress Tests
 
 url: https://www.testmuai.com/support/docs/cyp-environment/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cyp-environment/
 canonical: https://www.testmuai.com/support/docs/cyp-environment/
 ---

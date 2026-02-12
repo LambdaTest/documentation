@@ -7,7 +7,7 @@ description: Learn how to test apps installed from the firebase on TestMu AI for
 keywords:
 - install apps from firebase
 url: https://www.testmuai.com/support/docs/install-apps-from-firebase/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: install-apps-from-firebase/
 canonical: https://www.testmuai.com/support/docs/install-apps-from-firebase/
 ---

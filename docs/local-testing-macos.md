@@ -11,7 +11,7 @@ keywords:
   - testmu ai tunnel
   - local app testing for MacOS
 url: https://www.testmuai.com/support/docs/local-testing-macos/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-macos/
 canonical: https://www.testmuai.com/support/docs/local-testing-macos/
 ---

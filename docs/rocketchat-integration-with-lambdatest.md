@@ -11,7 +11,7 @@ keywords:
   - team communication
 
 url: https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: rocketchat-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/
 ---

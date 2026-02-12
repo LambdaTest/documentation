@@ -1,4 +1,4 @@
-﻿---
+---
 id: testing-apps-locally
 title: Testing Locally Hosted Apps For App Automation
 sidebar_label: Testing Locally Hosted Apps
@@ -10,7 +10,7 @@ keywords:
   - local mobile app automation
   - local mobile app testing
 url: https://www.testmuai.com/support/docs/testing-locally-hosted-apps/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testing-locally-hosted-apps/
 canonical: https://www.testmuai.com/support/docs/testing-locally-hosted-apps/
 ---
@@ -86,7 +86,7 @@ After configuring the connection with <BrandName /> tunnel, you will need to set
 
 You can also add the `tunnel` capability using <BrandName /> Capability Generator.
 
-> In case you have any questions or need any additional information, drop them at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+> In case you have any questions or need any additional information, drop them at our <span className="doc\_\_lt"�onClick={()�=>�window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

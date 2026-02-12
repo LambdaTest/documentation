@@ -10,7 +10,7 @@ keywords:
 - modules
 - dynamic url
 url: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-dynamic-url-replacement/
 canonical: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
 ---

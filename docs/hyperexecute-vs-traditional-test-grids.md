@@ -13,7 +13,7 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute vs traditional grids
 url: https://www.testmuai.com/support/docs/hyperexecute-vs-traditional-test-grids/
-site_name: LambdaTest hyperexecute vs traditional grids
+site_name: TestMu AI hyperexecute vs traditional grids
 slug: hyperexecute-vs-traditional-test-grids/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-vs-traditional-test-grids/
 ---

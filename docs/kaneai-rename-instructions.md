@@ -12,7 +12,7 @@ keywords:
   - test step management
   - slash commands
 url: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-rename-instructions/
 canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
 ---

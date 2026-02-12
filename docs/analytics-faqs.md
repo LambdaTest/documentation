@@ -6,7 +6,7 @@ description: Analytics - FAQs
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-faqs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-faqs/
 canonical: https://www.testmuai.com/support/docs/analytics-faqs/
 ---

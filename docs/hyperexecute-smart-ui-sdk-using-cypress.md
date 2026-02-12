@@ -13,7 +13,7 @@ keywords:
   - cypress
   - hyperexecute integrations with cypress sdk
 url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-smart-ui-sdk-using-cypress/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/
 

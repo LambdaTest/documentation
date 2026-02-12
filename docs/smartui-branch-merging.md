@@ -11,7 +11,7 @@ keywords:
   - Merge Strategy
   - Branch Management
 url: https://www.testmuai.com/support/docs/smartui-branch-merging/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-branch-merging/
 canonical: https://www.testmuai.com/support/docs/smartui-branch-merging/
 

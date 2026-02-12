@@ -12,7 +12,7 @@ keywords:
   - mobile accessibility
   - accessibility scan
 url: https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-mobile-app-accessibility/
 ---
 

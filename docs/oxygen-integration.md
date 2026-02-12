@@ -13,7 +13,7 @@ keywords:
   - record and playback
   - cross browser testing
 url: https://www.testmuai.com/support/docs/run-oxygen-automation-scripts-on-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: run-oxygen-automation-scripts-on-testmu/
 canonical: https://www.testmuai.com/support/docs/run-oxygen-automation-scripts-on-testmu/
 ---

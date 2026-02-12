@@ -7,7 +7,7 @@ description: To ensure fair usage and best practices, TestMu AI enforces a daily
 keywords:
   - over-exploitation
 url: https://www.testmuai.com/support/docs/shared-cloud-usage/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: shared-cloud-usage/
 canonical: https://www.testmuai.com/support/docs/shared-cloud-usage/
 ---

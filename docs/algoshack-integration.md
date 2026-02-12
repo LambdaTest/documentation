@@ -9,7 +9,7 @@ keywords:
   - testmu ai and algoqa integration 
   - algoqA integration
 url: https://www.testmuai.com/support/docs/algoqa-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: algoqa-integration/
 canonical: https://www.testmuai.com/support/docs/algoqa-integration/
 ---

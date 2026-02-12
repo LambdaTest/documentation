@@ -12,7 +12,7 @@ keywords:
   - local testing playwright
   
 url: https://www.testmuai.com/support/docs/local-testing-using-playwright/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-using-playwright/
 canonical: https://www.testmuai.com/support/docs/local-testing-using-playwright/
 ---

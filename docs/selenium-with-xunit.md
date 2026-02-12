@@ -10,7 +10,7 @@ keywords:
 - selenium with xunit on testmu ai
 - xunit testmu ai
 url: https://www.testmuai.com/support/docs/selenium-with-xunit/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-with-xunit/
 canonical: https://www.testmuai.com/support/docs/selenium-with-xunit/
 ---

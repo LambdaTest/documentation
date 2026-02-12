@@ -13,7 +13,7 @@ keywords:
   - web protocol
   - automatic proxy
 url: https://www.testmuai.com/support/docs/http2-support/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: http2-support/
 canonical: https://www.testmuai.com/support/docs/http2-support/
 ---

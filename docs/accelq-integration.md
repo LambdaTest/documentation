@@ -9,7 +9,7 @@ keywords:
   - testmu ai and accelq integration 
   - accelq integration
 url: https://www.testmuai.com/support/docs/accelq-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accelq-integration/
 canonical: https://www.testmuai.com/support/docs/accelq-integration/
 ---

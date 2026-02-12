@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-appium-plugins
 title: Supported Appium Plugins
 hide_title: true
@@ -17,7 +17,7 @@ keywords:
  - testmu ai 
 
 url: https://www.testmuai.com/support/docs/supported-appium-plugins/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: supported-appium-plugins/
 canonical: https://www.testmuai.com/support/docs/supported-appium-plugins/
 ---

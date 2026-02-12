@@ -10,7 +10,7 @@ keywords:
   - usage
   - test intelligence
 url: https://www.testmuai.com/support/docs/analytics-modules-groups/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-groups/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-groups/
 ---

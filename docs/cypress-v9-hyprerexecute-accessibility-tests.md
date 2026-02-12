@@ -13,7 +13,7 @@ keywords:
     - Automation
     - Accessibility Testing Settings
 url: https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-v9-hyprerexecute-accessibility-tests/
 canonical: https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/
 ---

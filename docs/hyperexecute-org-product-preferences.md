@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - How to access and change org product preferences for hyperexecute
 url: https://www.testmuai.com/support/docs/hyperexecute-org-product-preferences/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-org-product-preferences/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-org-product-preferences/
 ---

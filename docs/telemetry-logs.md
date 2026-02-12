@@ -10,7 +10,7 @@ keywords:
   - selenium telemetry logs
 
 url: https://www.testmuai.com/support/docs/selenium-telemetry-logs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: selenium-telemetry-logs/
 canonical: https://www.testmuai.com/support/docs/selenium-telemetry-logs/
 ---

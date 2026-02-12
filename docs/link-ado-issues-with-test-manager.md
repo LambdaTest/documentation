@@ -10,7 +10,7 @@ keywords:
   - link ADO issues
   - link ADO issues with test manager
 url: https://www.testmuai.com/support/docs/link-ado-issues-with-test-manager/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: link-ado-issues-with-test-manager/
 canonical: https://www.testmuai.com/support/docs/link-ado-issues-with-test-manager/
 ---

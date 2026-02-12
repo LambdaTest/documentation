@@ -10,7 +10,7 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - Run your first job on HyperExecute
 url: https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-running-your-first-job/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/
 ---

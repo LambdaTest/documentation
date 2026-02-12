@@ -10,7 +10,7 @@ keywords:
   - ip whitelisting
   - ip whitelsiting testmu ai
 url: https://www.testmuai.com/support/docs/dedicated-proxy/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: dedicated-proxy/
 canonical: https://www.testmuai.com/support/docs/dedicated-proxy/
 ---

@@ -15,7 +15,7 @@ keywords:
   - time series analysis
 
 url: https://www.testmuai.com/support/docs/analytics-bar-line-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-bar-line-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-bar-line-widgets/
 ---

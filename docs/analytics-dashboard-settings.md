@@ -6,7 +6,7 @@ description: Customize your Analytics Dashboard settings for optimal test analys
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-dashboard-settings/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-dashboard-settings/
 canonical: https://www.testmuai.com/support/docs/analytics-dashboard-settings/
 ---

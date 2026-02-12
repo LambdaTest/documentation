@@ -14,7 +14,7 @@ keywords:
 
   
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: puppeteer-testing-with-jest/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/
 ---

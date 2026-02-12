@@ -12,7 +12,7 @@ keywords:
   - app testing
   - virtual devices
 url: https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-appium-virtual-device/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/
 ---

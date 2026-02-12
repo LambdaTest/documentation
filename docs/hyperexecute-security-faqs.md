@@ -10,7 +10,7 @@ keywords:
   - TestMu AI HyperExecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-security-faqs/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-security-faqs/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-security-faqs/
 ---

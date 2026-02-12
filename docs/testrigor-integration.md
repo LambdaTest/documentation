@@ -9,7 +9,7 @@ keywords:
   - testmu ai and testrigor integration 
   - testmu ai testrigor
 url: https://www.testmuai.com/support/docs/testrigor-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testrigor-integration/
 canonical: https://www.testmuai.com/support/docs/testrigor-integration/
 ---

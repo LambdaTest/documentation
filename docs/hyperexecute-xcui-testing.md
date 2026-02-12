@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-xcui-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/
 ---

@@ -6,7 +6,7 @@ description: Unlock valuable insights with TestMu AI Analytics Overview, providi
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-widgets/
 ---

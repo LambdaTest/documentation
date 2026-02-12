@@ -1,4 +1,4 @@
-﻿---
+---
 id: applitools-integration-cypress
 title: Applitools Integration With TestMu AI For Cypress
 sidebar_label: Applitools Integration For Cypress
@@ -13,7 +13,7 @@ keywords:
   - cross browser testing
   - free cross browser testing tool
 url: https://www.testmuai.com/support/docs/applitools-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: applitools-integration-cypress/
 canonical: https://www.testmuai.com/support/docs/applitools-integration-cypress/
 ---
@@ -118,7 +118,7 @@ Applitools will compare the base image with this test and highlight the differen
 
 <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools6.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
 
-> That’s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+> That�s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt"�onClick={()�=>�window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

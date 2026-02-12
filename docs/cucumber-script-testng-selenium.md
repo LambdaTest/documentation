@@ -12,7 +12,7 @@ keywords:
   - cucumber testng runner
   - cucmber testing tool
 url: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: running-cucumber-scripts-with-testng-and-selenium/
 canonical: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
 ---

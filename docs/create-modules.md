@@ -11,7 +11,7 @@ keywords:
   - test case
   - test steps
 url: https://www.testmuai.com/support/docs/create-modules/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: create-modules/
 canonical: https://www.testmuai.com/support/docs/create-modules/
 ---

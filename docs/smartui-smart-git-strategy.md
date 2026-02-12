@@ -11,7 +11,7 @@ keywords:
   - Git Integration
   - Branch Comparison
 url: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-smart-git-strategy/
 canonical: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
 
@@ -266,4 +266,4 @@ Regularly clean up old branches and their builds.
 
 ### Getting Help
 
-If you encounter any issues with Smart Git, please contact our support team at support@testmu.ai.
+If you encounter any issues with Smart Git, please contact our support team at support@testmuai.com.

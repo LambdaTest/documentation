@@ -12,7 +12,7 @@ keywords:
   - session report
 
 url: https://www.testmuai.com/support/docs/sharing-test-results/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: sharing-test-results/
 canonical: https://www.testmuai.com/support/docs/sharing-test-results/
 ---

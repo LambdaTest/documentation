@@ -9,7 +9,7 @@ keywords:
   - automated test cases with ai 
   - test cases
 url: https://www.testmuai.com/support/docs/automated-test-cases-with-ai/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: automated-test-cases-with-ai/
 canonical: https://www.testmuai.com/support/docs/automated-test-cases-with-ai/
 ---

@@ -13,7 +13,7 @@ keywords:
     - hyperexecute cypress testing
   
 url: https://www.testmuai.com/support/docs/cypress-mochaawesome-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: cypress-mochaawesome-report/
 canonical: https://www.testmuai.com/support/docs/cypress-mochaawesome-report/
 ---

@@ -19,7 +19,7 @@ keywords:
 image: /assets/images/og-images/selenium-testing-og.png
 
 url: https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/
 ---

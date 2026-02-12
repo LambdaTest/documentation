@@ -14,7 +14,7 @@ keywords:
   - real devices
 
 url: https://www.testmuai.com/support/docs/xcui-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: xcui-report/
 canonical: https://www.testmuai.com/support/docs/xcui-report/
 ---

@@ -23,7 +23,7 @@ keywords:
   - simulate GPS location Opera
   - simulate GPS location Yandex
 url: https://www.testmuai.com/support/docs/ip-geolocation-on-real-devices-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ip-geolocation-on-real-devices-browser/
 ---
 

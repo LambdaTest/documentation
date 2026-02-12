@@ -8,7 +8,7 @@ keywords:
   - cucumber testing reports
   - karate report testmu ai 
 url: https://www.testmuai.com/support/docs/karate-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: karate-report/
 canonical: https://www.testmuai.com/support/docs/karate-report/
 ---

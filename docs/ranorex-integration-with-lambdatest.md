@@ -17,7 +17,7 @@ keywords:
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
 url: https://www.testmuai.com/support/docs/ranorex-integration-with-testmu/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ranorex-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/ranorex-integration-with-testmu/
 ---

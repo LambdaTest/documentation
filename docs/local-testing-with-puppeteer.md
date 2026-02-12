@@ -12,7 +12,7 @@ keywords:
   - local testing puppeteer
   
 url: https://www.testmuai.com/support/docs/local-testing-with-puppeteer/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: local-testing-with-puppeteer/
 canonical: https://www.testmuai.com/support/docs/local-testing-with-puppeteer/
 ---

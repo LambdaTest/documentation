@@ -9,7 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai app test
 url: https://www.testmuai.com/support/docs/kane-ai-app-agent/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-app-test/
 canonical: https://www.testmuai.com/support/docs/kane-ai-app-test/
 ---

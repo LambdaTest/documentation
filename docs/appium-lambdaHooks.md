@@ -13,7 +13,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/appium-testmu-hooks/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: appium-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 ---

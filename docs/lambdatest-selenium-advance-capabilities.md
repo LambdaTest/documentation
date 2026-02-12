@@ -9,7 +9,7 @@ keywords:
   - selenium automation grid
   - selenium advance testmu ai capbilities
 url: https://www.testmuai.com/support/docs/testmu-selenium-advance-capabilities/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-selenium-advance-capabilities/
 canonical: https://www.testmuai.com/support/docs/testmu-selenium-advance-capabilities/
 ---

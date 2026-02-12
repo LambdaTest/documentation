@@ -44,7 +44,7 @@ keywords:
     - how to check responsive website offline
     - online device testing
 url: https://www.testmuai.com/support/docs/lt-browser/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: lt-browser/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

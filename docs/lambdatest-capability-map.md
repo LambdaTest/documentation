@@ -13,7 +13,7 @@ keywords:
   - how to migrate desired capabilities from browserstack to testmu ai
 
 url: https://www.testmuai.com/support/docs/testmu-capability-map/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: testmu-capability-map/
 canonical: https://www.testmuai.com/support/docs/testmu-capability-map/
 ---

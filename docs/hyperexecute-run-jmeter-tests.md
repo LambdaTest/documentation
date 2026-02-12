@@ -11,7 +11,7 @@ keywords:
   - jmeter
   - hyperexecute dashboard
 url: https://www.testmuai.com/support/docs/hyperexecute-run-jmeter-tests/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-run-jmeter-tests/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-run-jmeter-tests/
 ---

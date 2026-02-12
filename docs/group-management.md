@@ -8,7 +8,7 @@ keywords:
 - group-management-control
 - testmu ai
 url: https://www.testmuai.com/support/docs/group-management/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: group-management/
 canonical: https://www.testmuai.com/support/docs/group-management/
 ---
@@ -111,4 +111,4 @@ The <BrandName /> Group Management will help you in creating the different Group
 
 <br />
 
-> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@testmu.ai.
+> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@testmuai.com.

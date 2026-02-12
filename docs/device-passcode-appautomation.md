@@ -14,7 +14,7 @@ keywords:
   - testmu ai ios
   - real devices
 url: https://www.testmuai.com/support/docs/device-passcode-appautomation/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: device-passcode-appautomation/
 canonical: https://www.testmuai.com/support/docs/device-passcode-appautomation/
 ---

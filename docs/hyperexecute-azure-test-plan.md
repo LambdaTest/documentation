@@ -11,7 +11,7 @@ keywords:
     - azure test plan
     - azure integration
 url: https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-azure-test-plan/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/
 ---

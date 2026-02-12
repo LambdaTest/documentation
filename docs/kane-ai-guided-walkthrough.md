@@ -9,7 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai guided walkthrough
 url: https://www.testmuai.com/support/docs/kane-ai-guided-walkthrough/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kane-ai-guided-walkthrough/
 canonical: https://www.testmuai.com/support/docs/kane-ai-guided-walkthrough/
 ---

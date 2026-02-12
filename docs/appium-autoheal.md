@@ -11,7 +11,7 @@ keywords:
   - mobile automation
   - testmu ai automation
 url: https://www.testmuai.com/support/docs/smart-heal-appium/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smart-heal-appium/
 canonical: https://www.testmuai.com/support/docs/smart-heal-appium/
 ---

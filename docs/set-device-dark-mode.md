@@ -13,7 +13,7 @@ keywords:
   - virtual devices
 
 url: https://www.testmuai.com/support/docs/set-device-dark-mode/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: set-device-dark-mode/
 canonical: https://www.testmuai.com/support/docs/set-device-dark-mode/
 ---

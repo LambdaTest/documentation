@@ -11,7 +11,7 @@ keywords:
   - free cross browser testing tool
   - Airtable integration
 url: https://www.testmuai.com/support/docs/airtable-integration/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: airtable-integration/
 canonical: https://www.testmuai.com/support/docs/airtable-integration/
 ---

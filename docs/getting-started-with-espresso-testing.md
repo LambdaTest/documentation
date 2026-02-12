@@ -12,7 +12,7 @@ keywords:
   - app testing
   - real devices
 url: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: getting-started-with-espresso-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
 ---

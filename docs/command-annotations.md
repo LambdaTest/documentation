@@ -8,7 +8,7 @@ keywords:
 - command annotations testmu ai
 - command annotations
 url: https://www.testmuai.com/support/docs/command-annotations/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: command-annotations/
 canonical: https://www.testmuai.com/support/docs/command-annotations/
 ---

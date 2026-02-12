@@ -14,7 +14,7 @@ keywords:
   - real devices
 
 url: https://www.testmuai.com/support/docs/espresso-junit-report/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: espresso-junit-report/
 canonical: https://www.testmuai.com/support/docs/espresso-junit-report/
 ---

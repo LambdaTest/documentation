@@ -26,7 +26,7 @@ keywords:
   - hyperexecute pyunit testing
   - hyperexecute python testing
 url: https://www.testmuai.com/support/docs/pyunit-on-hyperexecute-grid/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: pyunit-on-hyperexecute-grid/
 ---
 

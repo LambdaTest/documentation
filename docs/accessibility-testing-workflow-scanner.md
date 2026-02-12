@@ -13,7 +13,7 @@ keywords:
     - test issues
     - Workflow Scanner
 url: https://www.testmuai.com/support/docs/accessibility-testing-workflow-scanner/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: accessibility-testing-workflow-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-workflow-scanner/
 ---

@@ -12,7 +12,7 @@ keywords:
   - playwright testing testmu ai
   - playwright android
 url: https://www.testmuai.com/support/docs/playwright-webview-test/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: playwright-webview-test/
 canonical: https://www.testmuai.com/support/docs/playwright-webview-test/
 ---

@@ -14,7 +14,7 @@ keywords:
   - test manager
   - generate and manage test cases
 url: https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: kaneai-hyperexecute-test-run-execution/
 canonical: https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/
 ---

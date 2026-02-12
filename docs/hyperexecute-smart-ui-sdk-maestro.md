@@ -13,7 +13,7 @@ keywords:
     - smartui app screenshots
     - hyperexecute yaml mobile
 url: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: hyperexecute-smart-ui-sdk-maestro/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/
 

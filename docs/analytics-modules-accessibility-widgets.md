@@ -11,7 +11,7 @@ keywords:
  - accessibility trends
  - accessibility status ratio
 url: https://www.testmuai.com/support/docs/analytics-modules-accessibility-widgets/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: analytics-modules-accessibility-widgets/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-accessibility-widgets/
 ---

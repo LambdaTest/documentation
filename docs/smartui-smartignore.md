@@ -10,7 +10,7 @@ keywords:
 - smart ignore layout shifts
 - AI based auto ignore
 url: https://www.testmuai.com/support/docs/smartui-smartignore/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-smartignore/
 canonical: https://www.testmuai.com/support/docs/smartui-smartignore/
 
