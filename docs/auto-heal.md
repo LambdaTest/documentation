@@ -265,7 +265,7 @@ Th? Auto H?aling f?atur? is a functionality to ?nhanc? th? robustn?ss of your t?
 ?
 ---
 
-> That was all you need to know for the Auto-Healing feature. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for the Auto-Healing feature. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
