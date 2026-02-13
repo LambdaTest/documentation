@@ -55,11 +55,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24�7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
 Testing hybrid apps or mobile websites that rely on embedded web views often requires advanced debugging capabilities. With <BrandName />, you can inspect and debug these web views directly on **real Android and iOS devices** using familiar tools like [**Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Safari Web Inspector**](https://developer.apple.com/safari/tools/#current).
 
-This enables seamless inspection of DOM elements, console logs, network activity, and JavaScript execution�giving developers the same debugging power they enjoy on desktop browsers.
+This enables seamless inspection of DOM elements, console logs, network activity, and JavaScript execution giving developers the same debugging power they enjoy on desktop browsers.
 
 
 
