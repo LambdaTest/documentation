@@ -107,7 +107,7 @@ Full walkthrough: [Azure AD SCIM Guide](/support/docs/scim/azure/)
 </TabItem>
 <TabItem value="jumpcloud" label="JumpCloud">
 
-Full walkthrough: [JumpCloud SCIM Guide](/support/docs/scim/jumpcloud/)
+Full walkthrough: [JumpCloud SCIM Guide](/support/docs/jumpcloud-scim/)
 
 1. **SSO Applications** > your <BrandName /> app > **Identity Management** tab
 2. Enable **SCIM Provisioning**, paste credentials
