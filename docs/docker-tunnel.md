@@ -59,7 +59,7 @@ With Docker Tunnel, you will also be able to create multiple instances of <Brand
 * * *
 
 1. Download and set up Docker Desktop from [official Docker website](https://www.docker.com/products/docker-desktop).
-2. You also need your <BrandName /> Username and Access Key. You can get these from your [<BrandName />�s profile](https://accounts.lambdatest.com/detail/profile).
+2. You also need your <BrandName /> Username and Access Key. You can get these from your [<BrandName />'s profile](https://accounts.lambdatest.com/detail/profile).
 
 ## How To Use Docker With <BrandName /> Tunnel
 
@@ -153,7 +153,7 @@ By default <BrandName /> tunnel can no longer access web apps running on host ma
 
 **For Linux Machines:**
 
-On Linux, containers can run in a special network mode called host. This network mode makes the container use host�s network stack and doesn�t create an isolated one for the containers. Running the following command makes the tunnel containers run with host networking and can access the host�s network. The test scripts can access services running on the host machine using the localhost.
+On Linux, containers can run in a special network mode called host. This network mode makes the container use host's network stack and doesn't create an isolated one for the containers. Running the following command makes the tunnel containers run with host networking and can access the host's network. The test scripts can access services running on the host machine using the localhost.
 
 `docker run -it  --network host lambdatest/tunnel --user johndoe --key XXXXXXXXXXXX`
 
@@ -167,7 +167,7 @@ The test scripts need to use this special hostname to access the web services ru
 
 ## Conclusion
 * * *
-Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don�t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmuai.com](mailto:support@testmuai.com).
+Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmuai.com](mailto:support@testmuai.com).
 
 Happy testing! ??
 
