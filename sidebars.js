@@ -4107,6 +4107,7 @@ module.exports = {
           "mark-as-bug",
           "automated-ss-api",
           "ss-behind-login",
+          "default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing"
         ],
       },
       {
