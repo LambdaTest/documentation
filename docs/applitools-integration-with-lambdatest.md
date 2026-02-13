@@ -224,4 +224,4 @@ Some Safari & IE browsers don’t support automatic resolution of the URL string *
 
 
 **Got Questions?**   
-Feel free to give us a shout on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 in-app customer chat support</span>. You can even mail to support@testmuai.com. Happy Testing! ??
+Feel free to give us a shout on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 in-app customer chat support</span>. You can even mail to support@testmuai.com. Happy Testing! ??
