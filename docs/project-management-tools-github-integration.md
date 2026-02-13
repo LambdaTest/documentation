@@ -185,7 +185,7 @@ You can work with one integration at a time. So if you would want to integrate t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-111.webp').default} alt="github-integration" width="1366" height="564" className="doc_img"/>
 
-That was all you need to know for <BrandName /> + GitHub Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. **Happy testing!**
+That was all you need to know for <BrandName /> + GitHub Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. **Happy testing!**
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

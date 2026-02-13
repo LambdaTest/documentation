@@ -91,7 +91,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 You can contact the **Support Team**, who will help you enable the SSO feature for your <BrandName /> account. 
 
 
-> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

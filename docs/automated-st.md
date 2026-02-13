@@ -159,7 +159,7 @@ In case you want to take a screenshot of a page behind the login, you can refer 
 
 >Similarly, you can perform Mobile Screenshot testing on Android emulators and iOS simulators by navigating to the mobile tab . Check [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices).
 
-That was all you need to know for performing automated screenshot testing on <BrandName />. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for performing automated screenshot testing on <BrandName />. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

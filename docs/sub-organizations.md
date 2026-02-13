@@ -93,7 +93,7 @@ To create a new **Service Account**, head to the **Service Account** tab in your
 
 Your new **Service Account** will be created. 
 
-> That's all you need to know about Sub-Organization feature. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
+> That's all you need to know about Sub-Organization feature. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
