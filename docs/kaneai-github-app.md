@@ -42,13 +42,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# <BrandName /> AI Cloud GitHub App Integration
+# <BrandName /> Cloud GitHub App Integration
 
 ## 1. Overview
 
-### What is the <BrandName /> AI Cloud GitHub App?
+### What is the <BrandName /> Cloud GitHub App?
 
-The <BrandName /> AI Cloud GitHub App leverages KaneAI, our advanced AI testing agent, to transform how your team approaches quality assurance. Instead of manually writing test cases for every code change, the app intelligently analyzes your pull requests, understands the business logic and technical implementation, and automatically generates relevant end-to-end test scenarios.
+The <BrandName /> Cloud GitHub App leverages KaneAI, our advanced AI testing agent, to transform how your team approaches quality assurance. Instead of manually writing test cases for every code change, the app intelligently analyzes your pull requests, understands the business logic and technical implementation, and automatically generates relevant end-to-end test scenarios.
 
 ### How It Works
 
@@ -75,7 +75,7 @@ All of this happens automatically, with real-time progress updates posted direct
 
 ## 2. Prerequisites
 
-Before implementing the <BrandName /> AI Cloud GitHub App in your development workflow, ensure your organization has the following:
+Before implementing the <BrandName /> Cloud GitHub App in your development workflow, ensure your organization has the following:
 
 ### Account Requirements
 
@@ -93,11 +93,11 @@ Before implementing the <BrandName /> AI Cloud GitHub App in your development wo
 
 ## 3. Installation
 
-Follow these steps to install and authorize the <BrandName /> AI Cloud GitHub App for your organization.
+Follow these steps to install and authorize the <BrandName /> Cloud GitHub App for your organization.
 
 ### Step 1: Access GitHub Marketplace
 
-Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
+Navigate to the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/install-github-app.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
@@ -127,7 +127,7 @@ Confirm the installation was successful by:
 1. Navigating to your GitHub organization's **Settings** page
 2. In left side menu under **Integrations**, click **Applications**.
 3. Selecting **Installed GitHub Apps** from the left sidebar
-4. Verifying that **<BrandName /> AI Cloud** appears in the list of installed applications
+4. Verifying that **<BrandName /> Cloud** appears in the list of installed applications
 
 You can also click on the app to review and modify repository access permissions at any time.
 
@@ -137,9 +137,9 @@ You can also click on the app to review and modify repository access permissions
 
 ## 3.1 Uninstalling the GitHub App
 
-If you need to remove the <BrandName /> AI Cloud GitHub App from your organization:
+If you need to remove the <BrandName /> Cloud GitHub App from your organization:
 
-1. Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace
+1. Navigate to the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace
 2. Click on the **Configure** button to access the app settings
 3. Scroll down to the bottom of the page to find the **Danger Zone** section
 4. Click on the **Uninstall** button to remove the app from your organization
@@ -248,7 +248,7 @@ This entire process typically completes within minutes, depending on the complex
 
 ## 6. Automated Workflow and Real-Time Tracking
 
-The <BrandName /> AI Cloud GitHub App provides complete transparency throughout the testing lifecycle. From the moment you trigger the workflow, you'll receive real-time updates directly in your pull request—keeping your entire team informed without requiring context switching or dashboard checking.
+The <BrandName /> Cloud GitHub App provides complete transparency throughout the testing lifecycle. From the moment you trigger the workflow, you'll receive real-time updates directly in your pull request—keeping your entire team informed without requiring context switching or dashboard checking.
 
 ### Unified Progress Tracking
 

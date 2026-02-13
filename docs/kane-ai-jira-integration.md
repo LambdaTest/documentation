@@ -54,7 +54,7 @@ The "Jira integration" feature allows you to generate test cases from your Jira 
 
 ## Step-by-Step Guide
 ### Step 1: Install <BrandName /> Application for Jira
-Visit the Atlassian Marketplace, locate the **<BrandName /> AI Cloud** application for Jira and install app on your Jira instance.
+Visit the Atlassian Marketplace, locate the **<BrandName /> Cloud** application for Jira and install app on your Jira instance.
 
 :::note
 Currently in the **Beta**. Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the KaneAI for your organization.
