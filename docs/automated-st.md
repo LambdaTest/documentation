@@ -80,7 +80,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 ## How To View Recent Screenshot Testing Sessions?
 ***
 
-**Step 1:** Click the ‘Screenshot’ submenu under the Visual UI Testing menu in the menu box. On the screenshot page, you will find the recent view button on the page. Click that button.
+**Step 1:** Click the Screenshot submenu under the Visual UI Testing menu in the menu box. On the screenshot page, you will find the recent view button on the page. Click that button.
 
 <img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-5.webp').default} alt="Image" width="1918" height="910" className="doc_img"/>
 
@@ -104,7 +104,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 - Mobile Layout: If you are taking screenshots on mobile devices, you can choose mobile layout as portrait or in landscape mode.
 
-- Defer Time: If your page takes time to load completely, you can set a defer time so that there’s ample time for each element to load
+- Defer Time: If your page takes time to load completely, you can set a defer time so that there is ample time for each element to load
 
 - Smart Scroll: You can ignore all the iframes on your page by choosing the smart scroll
 
@@ -145,7 +145,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 ## How To Use Basic Authentication For Password Protected Websites
 ***
-If the website you want to take screenshots on requires basic authentication, you can click on the basic authentication button and enter your login details. After that, click on ‘Save,’ the basic authentication would be enabled, and you can take screenshots easily.
+If the website you want to take screenshots on requires basic authentication, you can click on the basic authentication button and enter your login details. After that, click on Save, the basic authentication would be enabled, and you can take screenshots easily.
 
 <img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-15.webp').default} alt="Image" width="1920" height="912" className="doc_img"/>
 
@@ -159,7 +159,7 @@ In case you want to take a screenshot of a page behind the login, you can refer 
 
 >Similarly, you can perform Mobile Screenshot testing on Android emulators and iOS simulators by navigating to the mobile tab . Check [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices).
 
-That was all you need to know for performing automated screenshot testing on <BrandName />. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for performing automated screenshot testing on <BrandName />. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

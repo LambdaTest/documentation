@@ -70,7 +70,7 @@ An account can exceed the authorized queuing limit seven times per month. For ex
 * After (n+150)*6 request rejections due to exceeding the authorized queuing threshold in a month, the admin will get an email alert for service exploitation with last warning message.
 * After (n+150)*7 request rejections due to exceeding the allowable queuing threshold in a month, Admin will receive an email notifying account suspension with a help link for account re-activation.
 
-> That's all about queuing your Appium tests. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. 
+> That's all about queuing your Appium tests. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

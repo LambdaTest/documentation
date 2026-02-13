@@ -167,7 +167,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/airbrake-integration/uninstall-airbrake.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for <BrandName /> + Airbrake Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Airbrake Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
