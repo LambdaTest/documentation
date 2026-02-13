@@ -2154,7 +2154,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Import Test Cases",
-            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray"],
+            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale"],
           },
           "generate-test-cases-with-ai",
           // "create-manage-test-cases",
