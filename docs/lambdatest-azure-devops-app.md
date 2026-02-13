@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Installation and Setup
 
-1. Head over to the [<BrandName /> AI Test Manager](https://marketplace.visualstudio.com/items?itemName=Lambdatest.lambdatest-ai-tms-app) Azure DevOps App on the Azure DevOps Marketplace. Select **Get it free** as shown in the below image.
+1. Head over to the [<BrandName /> Test Manager](https://marketplace.visualstudio.com/items?itemName=Lambdatest.lambdatest-ai-tms-app) Azure DevOps App on the Azure DevOps Marketplace. Select **Get it free** as shown in the below image.
 
 <img loading="lazy" src={require('../assets/images/test-manager-ado-app/1-search-app-ado-marketplace.png').default} alt="Search <BrandName /> App in Azure DevOps Marketplace" className="doc_img" width="1366" height="629"/>
 
@@ -60,7 +60,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <img loading="lazy" src={require('../assets/images/test-manager-ado-app/4-final-screen.png').default} alt="Installation Complete Screen" className="doc_img" width="1366" height="629"/>
 
-3. In the Organization Settings, navigate to **Extensions** and look for **<BrandName /> AI Test Manager**, click on it to configure the app. Enter the required credentials, **Username** and **Access Key** of your <BrandName /> account. Then, click on **Authenticate** to proceed.
+3. In the Organization Settings, navigate to **Extensions** and look for **<BrandName /> Test Manager**, click on it to configure the app. Enter the required credentials, **Username** and **Access Key** of your <BrandName /> account. Then, click on **Authenticate** to proceed.
 
 > **Note:** The <BrandName /> account credentials used to configure the App must also install and integrate Azure DevOps in their <BrandName /> account through integrations.
 
