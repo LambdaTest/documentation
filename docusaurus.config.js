@@ -19,7 +19,7 @@ module.exports = {
       defer: true,
     },
     {
-      src: 'https://assets.testmuai.com/resources/js/lambda_gtm.js',
+      src: 'https://assets.testmuai.com/resources/js/testmu_gtm.js',
       defer: true,
     },
     {
