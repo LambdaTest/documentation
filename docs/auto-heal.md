@@ -22,14 +22,14 @@ import TabItem from '@theme/TabItem';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-Th? <BrandName />'s Auto H?aling f?atur? for Selenium testing allows you to automatically r?cov?r from c?rtain typ?s of failur?s during th? ?x?cution of your t?st scripts. Wh?n ?nabl?d,  it can significantly ?nhanc? th? robustn?ss of your t?st suit? by handling un?xp?ct?d situations and ?rrors,  th?r?by r?ducing t?st flakin?ss and improving t?st r?liability of your test suites. 
+The <BrandName />'s Auto Healing feature for Selenium testing allows you to automatically recover from certain types of failures during the execution of your test scripts. When enabled,  it can significantly enhance the robustness of your test suite by handling unexpected situations and errors,  thereby reducing test flakiness and improving test reliability of your test suites.
 
 
-## Enabling Auto H?aling
+## Enabling Auto Healing
 ***
-?
-To ?nabl? th? Auto H?aling f?atur?,  you n??d to pass th? `autoH?al: tru?` as a capability in your W?bDriv?r configuration. For exampl?:
-?
+
+To enable the Auto Healing feature,  you need to pass the `autoHeal: true` as a capability in your WebDriver configuration. For example:
+
 ```js
 const capability = {
     "browserName": "Chrome",
@@ -172,23 +172,23 @@ When an element is successfully located on the page, its DOM path is recorded fo
 <img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 
-## Auto D?t?ction of N?w Locator
+## Auto Detection of New Locator
 ***
-?
-In som? sc?narios,  w?b ?l?m?nts might chang? th?ir locators du? to updat?s in th? w?b application. However, th? Auto H?aling f?atur? can automatically d?t?ct th? n?w locator and continu? th? t?st ?x?cution.  
-?
-H?r? is an ?xampl? t?st cas? d?monstrating this:
-?
-?
+
+In some scenarios,  web elements might change their locators due to updates in the web application. However, the Auto Healing feature can automatically detect the new locator and continue the test execution.
+
+Here is an example test case demonstrating this:
+
+
 ```js
 import assert from 'assert';
 import { Builder, By, until, Capabilities } from 'selenium-webdriver';
-?
+
 describe('Amazon Search Box Test', function () {
     this.timeout(30000);
     let driver;
     let vars;
-?
+
     const capability = {
         "browserName": "Chrome",
         "browserVersion": "114.0",
@@ -200,7 +200,7 @@ describe('Amazon Search Box Test', function () {
             "autoHeal": true
         }
     }
-?
+
     beforeEach(async function () {
         driver = await new Builder()
             .usingServer('LambdaTest_Hub_Url') 
@@ -208,11 +208,11 @@ describe('Amazon Search Box Test', function () {
             .build();
         vars = {};
     });
-?
+
     afterEach(async function () {
         await driver.quit();
     });
-?
+
     it('should change id of search box and find element', async function () {
         await driver.get('https://www.amazon.com');
         const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));
@@ -222,13 +222,13 @@ describe('Amazon Search Box Test', function () {
         assert(searchBoxHeal, 'Element not found');
     });
 });
-?
+
 ```
-?
-In the above t?st cas?, w? ar? changing th? *id* of th? s?arch box on Amazon's hom?pag? and th?n trying to find th? ?l?m?nt using th? old *id*. Th? Auto H?aling f?atur? will automatically d?t?ct th? n?w *id* and find th? ?l?m?nt. 
-?
+
+In the above test case, we are changing the *id* of the search box on Amazon's homepage and then trying to find the element using the old *id*. The Auto Healing feature will automatically detect the new *id* and find the element.
+
 To run the test, execute the below command:
-?
+
 ```bash
 ./node_modules/.bin/mocha autohealingTest.js 
 ```
@@ -252,17 +252,17 @@ Continuous Integration (CI) pipelines require reliable and consistent test resul
 
 ## Limitations of Auto Healing
 ***
-?
-Whil? th? Auto H?aling f?atur? is d?sign?d to handl? a wid? rang? of issu?s, th?r? ar? c?rtain limitations to b? awar? of:
-?
-* **Non-r?cov?rabl? errors**: Auto H?aling cannot r?cov?r from c?rtain typ?s of ?rrors, such as W?bDriv?r initialization ?rrors or syst?m-l?v?l failur?s. 
-?
-* **T?st accuracy**: Whil? Auto H?aling can r?duc? t?st flakin?ss, it may also mask r?al issu?s in your web application or t?st scripts. It's important to r?vi?w th? logs and und?rstand why a t?st n??d?d h?aling. 
-?
-* **P?rformanc? impact**: Whil? typically minimal, ?nabling Auto H?aling can hav? a slight impact on t?st ?x?cution tim? du? to th? additional ch?cks and r?cov?ry m?chanisms. 
-?
-Th? Auto H?aling f?atur? is a functionality to ?nhanc? th? robustn?ss of your t?st suit?,  but it do?s not r?plac? good t?st d?sign and ?rror handling practic?s. Always ?nsur? your t?sts ar? w?ll-d?sign?d, hav? prop?r ?rror handling in plac?, and ar? r?vi?w?d r?gularly for issu?s that may b? mask?d by th? Auto H?aling f?atur?.  
-?
+
+While the Auto Healing feature is designed to handle a wide range of issues, there are certain limitations to be aware of:
+
+* **Non-recoverable errors**: Auto Healing cannot recover from certain types of errors, such as WebDriver initialization errors or system-level failures.
+
+* **Test accuracy**: While Auto Healing can reduce test flakiness, it may also mask real issues in your web application or test scripts. It's important to review the logs and understand why a test needed healing.
+
+* **Performance impact**: While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to the additional checks and recovery mechanisms.
+
+The Auto Healing feature is a functionality to enhance the robustness of your test suite,  but it does not replace good test design and error handling practices. Always ensure your tests are well-designed, have proper error handling in place, and are reviewed regularly for issues that may be masked by the Auto Healing feature.
+
 ---
 
 > That was all you need to know for the Auto-Healing feature. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
