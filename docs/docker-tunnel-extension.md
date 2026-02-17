@@ -16,6 +16,7 @@ slug: docker-tunnel-extension/
 canonical: https://www.testmuai.com/support/docs/docker-tunnel-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -60,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 1. [Install the Docker Desktop](https://www.docker.com/products/docker-desktop) based on your operating system.
 
-2. A <BrandName /> account. Don't have an account, [sign up on LambdaTest](https://accounts.lambdatest.com/register). 
+2. A <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up on LambdaTest</a>. 
 
 ## Setting up the <BrandName /> Docker Tunnel Extension
 ---

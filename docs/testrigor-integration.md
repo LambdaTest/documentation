@@ -14,6 +14,7 @@ slug: testrigor-integration/
 canonical: https://www.testmuai.com/support/docs/testrigor-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -48,7 +49,7 @@ testRigor is a Generative AI-based codeless test automation tool that helps comp
 ## Prerequisites
 ---
 
-1. Create a <BrandName /> account to begin testing your web application. If you do not have an account, [register for free](https://accounts.lambdatest.com/register).
+1. Create a <BrandName /> account to begin testing your web application. If you do not have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 2. Ensure you have a testRigor account.
 

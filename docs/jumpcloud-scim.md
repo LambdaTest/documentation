@@ -13,6 +13,7 @@ slug: jumpcloud-scim/
 canonical: https://www.testmuai.com/support/docs/jumpcloud-scim/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -48,7 +49,7 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
 
 ## Steps to Integrate SCIM with JumpCloud
 
-- **Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+- **Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/1.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
 
 - **Step 2:** Head to **Settings** > **Organization Settings** from the dropdown.
