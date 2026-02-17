@@ -121,11 +121,16 @@ export const setInitialReferrer = () => {
   writeLocalCookie('initial_referrer', window.location.href, 30);
 };
 export default function CookieTrackingLogin(e) {
-    window.sendAnalytics('all pages _login', {
-      'event': 'all pages _login',
-      'eventAction': 'success',
-      'eventLabel': window.location.href,
-    }), window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Website header" });
+    if (typeof window.sendAnalytics === 'function') {
+      window.sendAnalytics('all pages _login', {
+        'event': 'all pages _login',
+        'eventAction': 'success',
+        'eventLabel': window.location.href,
+      });
+    }
+    if (typeof window.logAmplitude === 'function') {
+      window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Website header" });
+    }
 
     // Get the current href from the anchor element (which may already have GA parameters)
     const anchorElement = e.currentTarget;
@@ -141,13 +146,17 @@ export default function CookieTrackingLogin(e) {
   };
 
   export const CookieTrackingSignup = (e) => {
-    window.sendAnalytics('signup_button_clicked', {
-      'event': 'signup_button_clicked',
-      'eventCategory': 'Click',
-      'eventAction': 'header',
-      'eventLabel': window.location.href,
-    }),
+    if (typeof window.sendAnalytics === 'function') {
+      window.sendAnalytics('signup_button_clicked', {
+        'event': 'signup_button_clicked',
+        'eventCategory': 'Click',
+        'eventAction': 'header',
+        'eventLabel': window.location.href,
+      });
+    }
+    if (typeof window.logAmplitude === 'function') {
       window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+    }
 
     // Get the current href from the anchor element (which may already have GA parameters)
     const anchorElement = e.currentTarget;
