@@ -243,7 +243,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 ## Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 > **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
 

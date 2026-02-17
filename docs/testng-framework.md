@@ -105,7 +105,7 @@ mvn versions:display-dependency-updates
 
 ### Setting up your Authentication
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
 
 **Step 2:** Set <BrandName /> **Username** and **Access Key** in environment variables.
 
@@ -227,7 +227,7 @@ mvn test -D suite=single.xml
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>. <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>. <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 :::
 
@@ -288,7 +288,7 @@ To run parallel tests using **TestNG**, we would have to execute the below comma
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>.
 
 :::
 

@@ -53,7 +53,7 @@ You can directly navigate to the Support Access page by this [**link**](https://
 ## Granting Support Access
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/support-access/lambdatest-dashboard.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

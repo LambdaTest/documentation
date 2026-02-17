@@ -81,7 +81,7 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
-- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials in the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials in the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 ---

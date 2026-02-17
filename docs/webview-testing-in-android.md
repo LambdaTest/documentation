@@ -70,9 +70,9 @@ WebView, in Android, is the feature which allows any app to display a webpage as
 
 * * *
 
-**Step 1:** You will need an account on <BrandName />. If you already have an account on <BrandName />, you can directly skip to the next step. If you don't have an account yet, you can <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** You will need an account on <BrandName />. If you already have an account on <BrandName />, you can directly skip to the next step. If you don't have an account yet, you can <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
-**Step 2:** Login to your <BrandName /> account using <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>this link</a>.
+**Step 2:** Login to your <BrandName /> account using <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>this link</a>.
 
 
 **Step 3:** Navigate to "Real Time Testing" from the left navigation menu. <img loading="lazy" src={require('../assets/images/uploads/1-1.webp').default} alt="real time testing" width="1922" height="870" className="doc_img"/>

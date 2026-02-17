@@ -51,7 +51,7 @@ Sumo Logic is a cloud-based platform that modernizes your security operations. B
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. If you don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. A <BrandName /> account. If you don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 2. A Sumo Logic account.
 
 ## Configuring A Sumo Logic Collector

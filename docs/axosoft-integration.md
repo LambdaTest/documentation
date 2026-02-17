@@ -69,7 +69,7 @@ Axosoft Integration with <BrandName />, like all of the integrations to 3rd part
 ## Integrate Axosoft With Your <BrandName /> Account
 ***
 
-**Step 1:** Log in to your <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}><BrandName /> account</a>. You need to have Admin or User level access to see and install 3rd party integrations.
+**Step 1:** Log in to your <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> account</a>. You need to have Admin or User level access to see and install 3rd party integrations.
 
 **Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under "Settings". This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your <BrandName /> account.
 

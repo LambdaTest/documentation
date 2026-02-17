@@ -333,7 +333,7 @@ public class iosWeb {
 
 **Step 2:** Execute Your Test Case. Debug and run your code.
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 ## Sample YAML 0.2
 

@@ -51,7 +51,7 @@ Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. 
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. In case, you don't have an <BrandName /> account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. A <BrandName /> account. In case, you don't have an <BrandName /> account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. Download Siesta from official Bryntum website.
 

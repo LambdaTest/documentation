@@ -49,7 +49,7 @@ testRigor is a Generative AI-based codeless test automation tool that helps comp
 ## Prerequisites
 ---
 
-1. Create a <BrandName /> account to begin testing your web application. If you do not have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+1. Create a <BrandName /> account to begin testing your web application. If you do not have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 2. Ensure you have a testRigor account.
 

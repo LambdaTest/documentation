@@ -55,7 +55,7 @@ Using <BrandName /> and Bugasura integration, you can file bugs while performing
 Before enabling integrations, ensure you have administrator or user level access.
 :::
 
-1. Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+1. Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 2. Select **Integrations** from the left sidebar and then **Bugasura**.
 

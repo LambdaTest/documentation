@@ -76,7 +76,7 @@ By the end of this topic, you will be able to:
 
 Before you start performing your App automation testing with Espresso, please make sure:
 
-- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation Cloud plans on your account.
 
 
