@@ -13,6 +13,7 @@ canonical: https://www.testmuai.com/support/docs/analytics-create-dashboard/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTracking from '@site/src/component/CookieTracking'
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,7 +49,7 @@ Add widgets of multiple products and various insights to your dashboard. You can
 
 The following are requirements:
 
-- Should be logged in to the [TestMu AI application](https://accounts.lambdatest.com/login) using your credentials. If account is not created, please create an new account [here](https://accounts.lambdatest.com/register).
+- Should be logged in to the  <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTracking}>TestMu AI application</a> using your credentials. If account is not created, please create an new account [here](https://accounts.lambdatest.com/register).
 - Have executed any tests on the TestMu AI Cloud Platform. _(Optional)_
 
 ### Step 1: Navigate to TestMu AI Insights
