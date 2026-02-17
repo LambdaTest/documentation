@@ -14,6 +14,7 @@ slug: accelq-integration/
 canonical: https://www.testmuai.com/support/docs/accelq-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -50,7 +51,7 @@ By integrating <BrandName /> with ACCELQ, you can perform web and mobile app aut
 ## Prerequisites
 ---
 
-1. Make sure you have a <BrandName /> account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. To integrate <BrandName /> with ACCELQ, you will need a <BrandName /> username and access key.
 

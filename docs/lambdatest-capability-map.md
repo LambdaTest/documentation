@@ -18,6 +18,7 @@ slug: testmu-capability-map/
 canonical: https://www.testmuai.com/support/docs/testmu-capability-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -62,7 +63,7 @@ Switching automation platforms can seem challenging, but a clear capability comp
 To migrate your automation tests from BrowserStack or Sauce Labs to <BrandName />, you must add <BrandName /> authentication credentials and configure the execution hub endpoint.
 
 ### Add Authentication Credentials
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the [<BrandName /> signup page](https://accounts.lambdatest.com/register) and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> signup page</a> and create a new account.
 
 
 

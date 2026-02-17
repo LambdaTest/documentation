@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-gui/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -66,7 +67,7 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 
 :::
 
-**1. HyperExecute Access** : You need a <BrandName /> account to use the HyperExecute GUI. If you don’t have one, [sign up](https://accounts.lambdatest.com/register?) now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
+**1. HyperExecute Access** : You need a <BrandName /> account to use the HyperExecute GUI. If you don’t have one, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up</a> now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
 
 **2. UnderPass App Download** : Before getting started, download the <BrandName /> UnderPass installer from your dashboard and install it on your system. Run the installer by following the on-screen instructions and launch the application.
 

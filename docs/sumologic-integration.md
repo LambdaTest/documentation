@@ -14,6 +14,7 @@ slug: sumo-logic-integration/
 canonical: https://www.testmuai.com/support/docs/sumo-logic-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -50,7 +51,7 @@ Sumo Logic is a cloud-based platform that modernizes your security operations. B
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. If you don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 2. A Sumo Logic account.
 
 ## Configuring A Sumo Logic Collector

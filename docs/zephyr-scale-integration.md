@@ -16,6 +16,7 @@ slug: zephyr-scale-integration/
 canonical: https://www.testmuai.com/support/docs/zephyr-scale-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -54,7 +55,7 @@ Zephyr Scale is a test management platform that helps you plan, manage, and meas
 
 1. Install the **Zephyr Scale - Test Management for Jira** application from the Atlassian Marketplace.
 
-2. A <BrandName /> account. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+2. A <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 3. A Jira Project key.
 

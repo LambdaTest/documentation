@@ -15,6 +15,7 @@ slug: slack-app/
 canonical: https://www.testmuai.com/support/docs/slack-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -53,7 +54,7 @@ By integrating <BrandName /> with Slack App,
 * Run Screenshot testing to capture bulk screenshots of websites and web apps from the saved list. 
 * Reuse the generated test cards and relaunch the test with the same configuration.
 
-*To perform the Real-time testing and Screenshot testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the [<BrandName /> register page](https://accounts.lambdatest.com/register).*
+*To perform the Real-time testing and Screenshot testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a>.*
 
 
 ## Integrating Slack With Your <BrandName /> Account

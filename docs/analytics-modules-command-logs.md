@@ -13,6 +13,7 @@ canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intellig
 
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 
@@ -48,7 +49,7 @@ TestMu AI Analytics help you intelligently analyze your test execution steps on 
 
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
-1. You should have a <BrandName /> account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
+1. You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
 2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.lambdatest.com/test-intelligence).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.

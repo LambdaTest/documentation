@@ -14,6 +14,7 @@ slug: genrocket-integration/
 canonical: https://www.testmuai.com/support/docs/genrocket-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -50,7 +51,7 @@ This collaboration delivers substantial advantages to customers using both platf
 ## Prerequisites
 ---
 
-1. Ensure you have a <BrandName /> account. If you do not have an account, [register for free](https://accounts.lambdatest.com/register).
+1. Ensure you have a <BrandName /> account. If you do not have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 2. Ensure you have a GenRocket account.
 
@@ -95,7 +96,7 @@ The following code snippet shows how to use the GenRocket API to generate the da
 
 Till now you have learnt how to set up your generators on GenRocket. Now, in order to run those tests on Hyperexecute, please follow the steps given below:
 
-**Step 1:** You can login or create your free <BrandName /> account [here](https://accounts.lambdatest.com/login).
+**Step 1:** You can login or create your free <BrandName /> account <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>here</a>.
 
 **Step 2:** Once logged in, click on **HyperExecute** on the Left Menu Bar.
 

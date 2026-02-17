@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -209,7 +210,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 <img loading="lazy" src={require('../assets/images/xcui/xcui-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 

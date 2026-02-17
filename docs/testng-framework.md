@@ -23,6 +23,7 @@ canonical: https://www.testmuai.com/support/docs/testng-with-selenium-running-ja
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -89,7 +90,7 @@ Before you can start performing Java automation testing with Selenium, you would
 
 ### Cloning Repo and Installing Dependencies
 
-**Step 1:** Clone the <BrandName />’s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />ï¿½s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/Java-TestNG-Selenium
@@ -104,7 +105,7 @@ mvn versions:display-dependency-updates
 
 ### Setting up your Authentication
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
 
 **Step 2:** Set <BrandName /> **Username** and **Access Key** in environment variables.
 
@@ -226,7 +227,7 @@ mvn test -D suite=single.xml
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://accounts.lambdatest.com/login). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>. <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 :::
 
@@ -287,7 +288,7 @@ To run parallel tests using **TestNG**, we would have to execute the below comma
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://accounts.lambdatest.com/login).
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> automation dashboard</a>.
 
 :::
 
@@ -318,7 +319,7 @@ Open command prompt and navigate to the binary folder.
 Run the following command:
 
 ```bash
-./LT -user {user’s login email} -key {user’s access key}
+./LT -user {userï¿½s login email} -key {userï¿½s access key}
 ```
 
 So if your user name is **lambdatest@example.com**, the command would be:

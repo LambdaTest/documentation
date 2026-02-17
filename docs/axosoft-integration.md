@@ -23,6 +23,7 @@ slug: axosoft-integration/
 canonical: https://www.testmuai.com/support/docs/axosoft-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -68,7 +69,7 @@ Axosoft Integration with <BrandName />, like all of the integrations to 3rd part
 ## Integrate Axosoft With Your <BrandName /> Account
 ***
 
-**Step 1:** Log in to your [<BrandName /> account](https://accounts.lambdatest.com/register). You need to have Admin or User level access to see and install 3rd party integrations.
+**Step 1:** Log in to your <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> account</a>. You need to have Admin or User level access to see and install 3rd party integrations.
 
 **Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under "Settings". This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your <BrandName /> account.
 

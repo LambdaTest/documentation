@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/sub-organizations/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 Sub-Organization helps you segregate test data between 2 different business units. Also, you can distribute concurrency you have purchased to different sub-organizations for them to act as independent organizations with their own administrators.
 
@@ -27,7 +28,7 @@ This feature is currently in private release and can be enabled on request.
 ## Create Your Sub-Organization
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

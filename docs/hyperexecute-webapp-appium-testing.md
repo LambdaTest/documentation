@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-webapp-appium-test
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -332,7 +333,7 @@ public class iosWeb {
 
 **Step 2:** Execute Your Test Case. Debug and run your code.
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 ## Sample YAML 0.2
 

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/dashboards-custom-widgets/
 
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -62,7 +63,7 @@ The following steps are common to all custom widget types. After completing thes
 
 ### Step 1: Navigate to Insights
 
-1. Log in to your [LambdaTest account](https://accounts.lambdatest.com/login).
+1. Log in to your <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>LambdaTest account</a>.
 2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
 3. Click on the **Dashboards** tab.
 

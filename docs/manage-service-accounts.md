@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/service-accounts/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 # Creating and Managing Service Accounts
 ---
@@ -43,7 +44,7 @@ Service accounts can only be created by Admins.
 To create a service account on <BrandName />, you can follow these steps:
 
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

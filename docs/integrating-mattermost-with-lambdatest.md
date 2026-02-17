@@ -16,6 +16,7 @@ slug: integrating-mattermost-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrating-mattermost-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -55,7 +56,7 @@ The <BrandName /> Mattermost Integration allows you to share or push a bug to yo
 
 * * *
 
-**Step 1:** Login to your [<BrandName /> account](https://accounts.lambdatest.com/login). Make sure you have an Admin or User level access to see and install 3rd party integrations.
+**Step 1:** Login to your <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> account</a>. Make sure you have an Admin or User level access to see and install 3rd party integrations.
 
 **Step 2:** Select **'Integrations'** tab from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your <BrandName /> account.  
 <img loading="lazy" src={require('../assets/images/integrating-mattermost-with-lambdatest/go-to-integrations.webp').default} alt="Select 'Integrations' " width="1923" height="863"  className="doc_img"/>

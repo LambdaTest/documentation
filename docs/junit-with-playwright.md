@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/junit-with-playwright/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -75,7 +76,7 @@ cd playwright-java-junit
 npm install
 ```
 
-3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 

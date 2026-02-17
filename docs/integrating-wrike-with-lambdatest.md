@@ -22,6 +22,7 @@ slug: integrating-wrike-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrating-wrike-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -61,7 +62,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-**Step 1:** Login to your [<BrandName /> account](https://accounts.lambdatest.com/login). You need to have an Admin or User level access to see and install 3rd party integrations.
+**Step 1:** Login to your <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> account</a>. You need to have an Admin or User level access to see and install 3rd party integrations.
 
 **Step 2:** Select **‘Integrations’** tab from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your <BrandName /> account. <img loading="lazy" src={require('../assets/images/uploads/select-wrike-integration.webp').default} alt="select wrike"  className="doc_img" width="1923" height="864"/>
 
