@@ -120,7 +120,7 @@ export const setInitialReferrer = () => {
 
   writeLocalCookie('initial_referrer', window.location.href, 30);
 };
-export default function CookieTracking(e) {
+export default function CookieTrackingLogin(e) {
     window.sendAnalytics('all pages _login', {
       'event': 'all pages _login',
       'eventAction': 'success',
@@ -130,6 +130,28 @@ export default function CookieTracking(e) {
     // Get the current href from the anchor element (which may already have GA parameters)
     const anchorElement = e.currentTarget;
     const currentHref = anchorElement?.href || `https://stage-accounts.lambdatestinternal.com/login`;
+
+    // Append cookies to the current URL (preserving any existing query params like GA)
+    const urlWithCookies = getLoginUrlWithCookies(currentHref);
+
+    // Update the href before navigation
+    if (anchorElement) {
+      anchorElement.href = urlWithCookies;
+    }
+  };
+
+  export const CookieTrackingSignup = (e) => {
+    window.sendAnalytics('signup_button_clicked', {
+      'event': 'signup_button_clicked',
+      'eventCategory': 'Click',
+      'eventAction': 'header',
+      'eventLabel': window.location.href,
+    }),
+      window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+
+    // Get the current href from the anchor element (which may already have GA parameters)
+    const anchorElement = e.currentTarget;
+    const currentHref = anchorElement?.href || `https://stage-accounts.lambdatestinternal.com/register`;
 
     // Append cookies to the current URL (preserving any existing query params like GA)
     const urlWithCookies = getLoginUrlWithCookies(currentHref);
