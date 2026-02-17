@@ -77,7 +77,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 ## Enable <BrandName /> SSO
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/new-dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

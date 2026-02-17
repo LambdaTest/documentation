@@ -63,7 +63,7 @@ The following steps are common to all custom widget types. After completing thes
 
 ### Step 1: Navigate to Insights
 
-1. Log in to your <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>LambdaTest account</a>.
+1. Log in to your <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>LambdaTest account</a>.
 2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
 3. Click on the **Dashboards** tab.
 

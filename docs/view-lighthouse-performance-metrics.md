@@ -81,12 +81,12 @@ metrics with the help of <BrandName />. <BrandName /> also allows you to perform
 
 * * *
 
-You will need a <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> account</a> to run your tests on its cloud based online Selenium Grid. Use your:
+You will need a <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> account</a> to run your tests on its cloud based online Selenium Grid. Use your:
 
 *   <BrandName /> Username
 *   <BrandName /> Access Key
 
-to run your tests on <BrandName /> and view the **Lighthouse performance metrics**. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
+to run your tests on <BrandName /> and view the **Lighthouse performance metrics**. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
 
 ## How To Include Lighthouse Performance Metrics In Selenium Automation?
 

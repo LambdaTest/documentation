@@ -34,7 +34,7 @@ With LT Debug 2.0, you now have the ability to record user interactions through 
 ---
 
 1. Install the [LT Debug Chrome Extension](https://chrome.google.com/webstore/detail/lt-debug/kofahhnmgobkidipanhejacffiigppcd).
-2. Login to your <BrandName /> Account via LT Debug Dashboard. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+2. Login to your <BrandName /> Account via LT Debug Dashboard. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 <img loading="lazy" src={require('../assets/images/record-replay/login.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 

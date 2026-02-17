@@ -49,7 +49,7 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
 
 ## Steps to Integrate SCIM with JumpCloud
 
-- **Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+- **Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/1.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
 
 - **Step 2:** Head to **Settings** > **Organization Settings** from the dropdown.

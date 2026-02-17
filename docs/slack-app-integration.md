@@ -54,7 +54,7 @@ By integrating <BrandName /> with Slack App,
 * Run Screenshot testing to capture bulk screenshots of websites and web apps from the saved list. 
 * Reuse the generated test cards and relaunch the test with the same configuration.
 
-*To perform the Real-time testing and Screenshot testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a>.*
+*To perform the Real-time testing and Screenshot testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a>.*
 
 
 ## Integrating Slack With Your <BrandName /> Account

@@ -55,7 +55,7 @@ Zephyr Scale is a test management platform that helps you plan, manage, and meas
 
 1. Install the **Zephyr Scale - Test Management for Jira** application from the Atlassian Marketplace.
 
-2. A <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+2. A <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 3. A Jira Project key.
 

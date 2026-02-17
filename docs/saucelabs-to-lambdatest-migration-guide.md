@@ -66,7 +66,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 ***
 ## Authentication
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}><BrandName /> signup page</a> and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> signup page</a> and create a new account.
 
 
 When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the following updates are required in your existing code:

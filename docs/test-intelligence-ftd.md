@@ -59,7 +59,7 @@ To read more about the Flaky Tests Analytics, you can refer the documentation at
 
 There are following Prerequisites to use Flaky Test Detection:
 
-- You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>here</a>.
+- You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
 - You should have a test suite with same test name run on the platform at least 10 times.
 
 ## How does the Flaky Test Detection work?

@@ -46,7 +46,7 @@ Integrate SCIM With <BrandName />:
 - SSO must be already integrated. Please complete [<BrandName /> SSO & Okta Integration](/support/docs/testmu-sso-okta-integration/)
 
 ## Integrating SCIM with Okta
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

@@ -51,7 +51,7 @@ By integrating <BrandName /> with algoQA, you can perform automated browser test
 ## Prerequisites
 ---
 
-1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. To run automated tests, you will need <BrandName /> Username and Access Key. You can get them from the <BrandName /> Automation Dashboard under **Access Key**.
 

@@ -58,7 +58,7 @@ Concourse CI can be integrated with <BrandName /> to perform automation testing 
 
 ## Prerequisites
 * * *
-1. A <BrandName /> account. It is free to get started. <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>Sign up now</a>.
+1. A <BrandName /> account. It is free to get started. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up now</a>.
 
 2. Install NPM(Node Package Manager). If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
 

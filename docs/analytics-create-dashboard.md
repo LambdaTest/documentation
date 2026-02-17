@@ -49,7 +49,7 @@ Add widgets of multiple products and various insights to your dashboard. You can
 
 The following are requirements:
 
-- Should be logged in to the  <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>TestMu AI application</a> using your credentials. If account is not created, please create an new account <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>here</a>.
+- Should be logged in to the  <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>TestMu AI application</a> using your credentials. If account is not created, please create an new account <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
 - Have executed any tests on the TestMu AI Cloud Platform. _(Optional)_
 
 ### Step 1: Navigate to TestMu AI Insights

@@ -42,7 +42,7 @@ Build Splitting logic requires you to set Build Inactivity Time. For instance, i
 
 To use the Build Splitting functionality, follow the below steps:
 
-1. Log in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. Log in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 
 2. From the top-right corner, click on the Profile avatar, and navigate to **Profile > Product Preferences**.
