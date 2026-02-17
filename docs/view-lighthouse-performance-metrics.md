@@ -35,6 +35,7 @@ site_name: TestMu AI
 slug: view-lighthouse-performance-metrics/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -80,12 +81,12 @@ metrics with the help of <BrandName />. <BrandName /> also allows you to perform
 
 * * *
 
-You will need a [<BrandName /> account](https://accounts.lambdatest.com/login) to run your tests on its cloud based online Selenium Grid. Use your:
+You will need a <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> account</a> to run your tests on its cloud based online Selenium Grid. Use your:
 
 *   <BrandName /> Username
 *   <BrandName /> Access Key
 
-to run your tests on <BrandName /> and view the **Lighthouse performance metrics**. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
+to run your tests on <BrandName /> and view the **Lighthouse performance metrics**. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
 
 ## How To Include Lighthouse Performance Metrics In Selenium Automation?
 

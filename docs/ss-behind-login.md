@@ -18,6 +18,7 @@ slug: taking-screenshots-of-pages-behind-login/
 canonical: https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -116,11 +117,11 @@ Select the **locator** as per your respective fields in the Login form.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-4.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
-For the demonstration, let us capture the details for [<BrandName /> Login](https://accounts.lambdatest.com/login).
+For the demonstration, let us capture the details for <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}><BrandName /> Login</a>.
 >
 **Note:** If you are already logged in to [LambdaTest](https://www.lambdatest.com), make sure to perform this drill in **incognito mode**.
 
-**Step 1:** Go to [https://accounts.lambdatest.com/login](https://accounts.lambdatest.com/login). Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
+**Step 1:** Go to <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>https://stage-accounts.lambdatestinternal.com/login</a>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-5.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 

@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 
@@ -141,7 +142,7 @@ To migrate your existing local script to <BrandName />, you only need to update 
 
 
 ### Authentication
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the [<BrandName /> signup page](https://accounts.lambdatest.com/register) and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}><BrandName /> signup page</a> and create a new account.
 
 
 When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the following updates are required in your existing code:

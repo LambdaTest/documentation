@@ -23,6 +23,7 @@ slug: selenium-testing-with-concourse-ci-and-testmu/
 canonical: https://www.testmuai.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -57,7 +58,7 @@ Concourse CI can be integrated with <BrandName /> to perform automation testing 
 
 ## Prerequisites
 * * *
-1. A <BrandName /> account. It is free to get started. [Sign up now](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. It is free to get started. <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>Sign up now</a>.
 
 2. Install NPM(Node Package Manager). If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
 

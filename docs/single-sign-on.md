@@ -14,6 +14,7 @@ slug: single-sign-on/
 canonical: https://www.testmuai.com/support/docs/single-sign-on/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -76,7 +77,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 ## Enable <BrandName /> SSO
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/new-dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

@@ -23,6 +23,7 @@ slug: userback-integration/
 canonical: https://www.testmuai.com/support/docs/userback-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -61,7 +62,7 @@ Userback is a platform that makes it easy for website and app teams to gather us
 ## Integrating Userback With <BrandName />
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 **Step 2:** Select **Integrations** from the left sidebar and head to **Userback**.
 

@@ -14,6 +14,7 @@ slug: bugasura-integration/
 canonical: https://www.testmuai.com/support/docs/bugasura-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -54,7 +55,7 @@ Using <BrandName /> and Bugasura integration, you can file bugs while performing
 Before enabling integrations, ensure you have administrator or user level access.
 :::
 
-1. Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+1. Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 2. Select **Integrations** from the left sidebar and then **Bugasura**.
 
