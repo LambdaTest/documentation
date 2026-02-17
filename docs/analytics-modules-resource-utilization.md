@@ -125,7 +125,7 @@ Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows
 
 ### How to Create a Dashboard with Custom Concurrency Trends
 
-**Step 1:** Log in to your <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>LambdaTest account</a> and navigate to **Insights** from the left sidebar.
+**Step 1:** Log in to your <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>LambdaTest account</a> and navigate to **Insights** from the left sidebar.
 
 **Step 2:** Click on the **+ Create New** button and select **Pre-built Widgets**.
 

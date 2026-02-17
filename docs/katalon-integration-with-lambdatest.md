@@ -65,7 +65,7 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 -----------------------------------------------------------------------------------------------------------------------------
 For integrating <BrandName /> with Katalon, make sure to run your test scripts through the ‘Remote’ desired capability. You can select all your desired capabilities from [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
-**Step 1:** Login to <BrandName />. If you haven’t signed up yet, click <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>here</a>.
+**Step 1:** Login to <BrandName />. If you haven’t signed up yet, click <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
 
 **Step 2:** Visit your Profile on <BrandName /> to fetch your Username and Access Key value.
 

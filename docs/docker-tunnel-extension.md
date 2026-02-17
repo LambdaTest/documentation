@@ -61,7 +61,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 1. [Install the Docker Desktop](https://www.docker.com/products/docker-desktop) based on your operating system.
 
-2. A <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up on LambdaTest</a>. 
+2. A <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up on LambdaTest</a>. 
 
 ## Setting up the <BrandName /> Docker Tunnel Extension
 ---

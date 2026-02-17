@@ -57,7 +57,7 @@ To move from the local grid to the cloud-based Appium grid, you need to make som
 ## Authentication
 ***
 
-To run tests on <BrandName />, you will need <BrandName /> authentication credentials: <BrandName /> Username and a <BrandName /> Access Key. If you do not have a <BrandName /> account, visit the <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a> and create one.
+To run tests on <BrandName />, you will need <BrandName /> authentication credentials: <BrandName /> Username and a <BrandName /> Access Key. If you do not have a <BrandName /> account, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a> and create one.
 
 You can get the <BrandName /> Username and <BrandName /> Access Key from your <BrandName /> Profile.
 

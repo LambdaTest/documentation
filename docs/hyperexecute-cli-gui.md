@@ -67,7 +67,7 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 
 :::
 
-**1. HyperExecute Access** : You need a <BrandName /> account to use the HyperExecute GUI. If you don’t have one, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up</a> now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
+**1. HyperExecute Access** : You need a <BrandName /> account to use the HyperExecute GUI. If you don’t have one, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up</a> now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
 
 **2. UnderPass App Download** : Before getting started, download the <BrandName /> UnderPass installer from your dashboard and install it on your system. Run the installer by following the on-screen instructions and launch the application.
 

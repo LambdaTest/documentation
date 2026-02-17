@@ -51,7 +51,7 @@ By integrating <BrandName /> with ACCELQ, you can perform web and mobile app aut
 ## Prerequisites
 ---
 
-1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. To integrate <BrandName /> with ACCELQ, you will need a <BrandName /> username and access key.
 

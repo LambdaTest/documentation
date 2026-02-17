@@ -1,4 +1,4 @@
-function getLoginUrlWithCookies(baseUrl = `https://stage-accounts.lambdatestinternal.com/login`) {
+function getLoginUrlWithCookies(baseUrl = `https://accounts.lambdatest.com/login`) {
   if (typeof document === 'undefined' || typeof window === 'undefined') {
     return baseUrl;
   }
@@ -134,7 +134,7 @@ export default function CookieTrackingLogin(e) {
 
     // Get the current href from the anchor element (which may already have GA parameters)
     const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://stage-accounts.lambdatestinternal.com/login`;
+    const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/login`;
 
     // Append cookies to the current URL (preserving any existing query params like GA)
     const urlWithCookies = getLoginUrlWithCookies(currentHref);
@@ -160,7 +160,7 @@ export default function CookieTrackingLogin(e) {
 
     // Get the current href from the anchor element (which may already have GA parameters)
     const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://stage-accounts.lambdatestinternal.com/register`;
+    const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/register`;
 
     // Append cookies to the current URL (preserving any existing query params like GA)
     const urlWithCookies = getLoginUrlWithCookies(currentHref);

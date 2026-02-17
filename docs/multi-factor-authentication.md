@@ -26,7 +26,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 ## Enable User MFA
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -56,7 +56,7 @@ You have now successfully enabled User MFA on your <BrandName /> account.
 ## Disable User MFA
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -82,7 +82,7 @@ You will be redirected to the login page to disable the MFA on your account.
 ## Enforce <BrandName /> MFA For Your Organization
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -126,7 +126,7 @@ You will be redirected to the login page to disable the MFA on your account.
 ## Disable Enforce <BrandName /> MFA For Your Organization
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -141,7 +141,7 @@ You will be redirected to the login page to disable the MFA on your account.
 ## Disable <BrandName /> MFA For A User
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
