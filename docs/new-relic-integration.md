@@ -14,6 +14,7 @@ slug: new-relic-integration/
 canonical: https://www.testmuai.com/support/docs/new-relic-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -56,7 +57,7 @@ New Relic is a comprehensive observability platform that helps you monitor, trou
 ## Prerequisites
 ***
 
-- A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+- A <BrandName /> account. If you don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 - A New Relic account, If you don't have an account, [sign up for free](https://newrelic.com/signup)
 
 ## Integrating New Relic with <BrandName />

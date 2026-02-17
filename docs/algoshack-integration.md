@@ -14,6 +14,7 @@ slug: algoqa-integration/
 canonical: https://www.testmuai.com/support/docs/algoqa-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -50,7 +51,7 @@ By integrating <BrandName /> with algoQA, you can perform automated browser test
 ## Prerequisites
 ---
 
-1. Make sure you have a <BrandName /> account.  If you don't have an account yet, [sign up for free](https://accounts.lambdatest.com/register).
+1. Make sure you have a <BrandName /> account.  If you don't have an account yet, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. To run automated tests, you will need <BrandName /> Username and Access Key. You can get them from the <BrandName /> Automation Dashboard under **Access Key**.
 

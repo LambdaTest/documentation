@@ -14,6 +14,7 @@ slug: siesta-integration/
 canonical: https://www.testmuai.com/support/docs/siesta-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -50,7 +51,7 @@ Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. 
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. In case, you don't have an <BrandName /> account, [sign up for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. In case, you don't have an <BrandName /> account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. Download Siesta from official Bryntum website.
 

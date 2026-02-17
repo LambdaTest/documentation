@@ -25,6 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -75,7 +76,7 @@ By the end of this topic, you will be able to:
 
 Before you start performing your App automation testing with XCUI, please make sure:
 
-- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation and HyperExecute Cloud plans on your account.
 
 ## Uploading your App & Test suite

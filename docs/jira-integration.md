@@ -14,6 +14,7 @@ slug: jira-integration/
 canonical: https://www.testmuai.com/support/docs/jira-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -52,7 +53,7 @@ The <BrandName /> Jira integration helps you create issues in Jira directly from
 
 ## How to Establish Integration with Jira from Your <BrandName /> Account?
 
-**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 **Step 2:** Select 'Integration' from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 

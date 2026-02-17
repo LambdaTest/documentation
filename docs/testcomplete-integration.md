@@ -22,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
+TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicksï¿½build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
 <BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
 
@@ -54,7 +55,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 
 ## Prerequisites
 
-- <BrandName /> account. You can [sign up for free.](https://accounts.lambdatest.com/login)
+- <BrandName /> account. You can <a href="https://stage-accounts.lambdatestinternal.com/login" onClick={CookieTrackingLogin}>sign up for free.</a>
 - <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - Download TestComplete from its official website and complete the signup process.
 - Generate your App Id by uploading it to the <BrandName /> Server.

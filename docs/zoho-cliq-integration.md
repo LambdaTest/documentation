@@ -23,6 +23,7 @@ slug: zoho-cliq-integration/
 canonical: https://www.testmuai.com/support/docs/zoho-cliq-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -70,7 +71,7 @@ Integrating <BrandName /> with Zoho Cliq, users can create detailed test cards i
 ## Integrating Zoho Cliq With <BrandName />
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://stage-accounts.lambdatestinternal.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 **Step 2:** Select **Integrations** from the left sidebar and then click on **Zoho Cliq**.
 

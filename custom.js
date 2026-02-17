@@ -120,8 +120,75 @@
         })
     }
 
+    const getLoginUrlWithCookies = (baseUrl) => {
+      const currentHost = window.location.hostname;
+      const allowedDomains = ['testmuai.com', 'testmuaiinternal.com', 'testmuinternal.ai'];
+      const isAllowedDomain = allowedDomains.some(domain =>
+        currentHost === domain || currentHost.endsWith('.' + domain)
+      );
+      if (!isAllowedDomain) return baseUrl;
+
+      const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked'];
+      const cookies = document.cookie;
+      if (!cookies || cookies.trim() === '') return baseUrl;
+
+      try {
+        const cookieArray = cookies.split(';').map(c => c.trim()).filter(Boolean).map(c => {
+          const [name, ...valueParts] = c.split('=');
+          return { key: name.trim(), value: valueParts.join('=') };
+        }).filter(c => allowedCookies.includes(c.key));
+
+        if (cookieArray.length === 0) return baseUrl;
+
+        const encodedCookies = btoa(JSON.stringify(cookieArray));
+        try {
+          const urlObj = new URL(baseUrl.startsWith('http') ? baseUrl : baseUrl, window.location.origin);
+          try {
+            const amplitudeInstance = window.amplitude?.getInstance?.() || window.amplitude;
+            let deviceId = amplitudeInstance?.options?.deviceId || amplitudeInstance?.getDeviceId?.();
+            if (!deviceId) { amplitudeInstance?.regenerateDeviceId?.(); deviceId = amplitudeInstance?.options?.deviceId; }
+            if (deviceId) urlObj.searchParams.set('deviceId', deviceId);
+          } catch (e) { /* ignore */ }
+          urlObj.searchParams.set('cookies', encodedCookies);
+          return baseUrl.startsWith('http') ? urlObj.toString() : urlObj.pathname + urlObj.search;
+        } catch (error) {
+          const urlWithoutCookies = baseUrl.replace(/[&?]cookies=[^&]*/g, '');
+          const separator = urlWithoutCookies.includes('?') ? '&' : '?';
+          return urlWithoutCookies + separator + 'cookies=' + encodedCookies;
+        }
+      } catch (error) {
+        return baseUrl;
+      }
+    };
+
     window.addEventListener('DOMContentLoaded', (event) => {
       getUsernameToken('dom');
+
+      // Attach CookieTrackingSignup handler to the navbar "Get Started" button
+      const signBtn = document.getElementById('signbtn');
+      if (signBtn) {
+        signBtn.addEventListener('click', function (e) {
+          if (typeof window.sendAnalytics === 'function') {
+            window.sendAnalytics('signup_button_clicked', {
+              'event': 'signup_button_clicked',
+              'eventCategory': 'Click',
+              'eventAction': 'header',
+              'eventLabel': window.location.href,
+            });
+          }
+          if (typeof window.logAmplitude === 'function') {
+            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+          }
+
+          // Append cookies to the URL before navigation
+          const anchorElement = e.currentTarget;
+          const currentHref = anchorElement?.href || 'https://stage-accounts.lambdatestinternal.com/register';
+          const urlWithCookies = getLoginUrlWithCookies(currentHref);
+          if (anchorElement) {
+            anchorElement.href = urlWithCookies;
+          }
+        });
+      }
     });
 
     function selectText(htmlelement) {
