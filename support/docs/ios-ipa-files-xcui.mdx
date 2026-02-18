@@ -24,7 +24,9 @@ You can directly create .ipa files using various export methods (**Ad Hoc, Enter
 **Step 3:** Choose your app from the list and click **Distribute App.**
 
 **Step 4:** Select an export method and configure the Distribution options as follows:
-  >   - **App Thinning:** None
+<Note>
+>   - **App Thinning:** None
+</Note>
    - Unselect the option **Rebuild from Bitcode.**
    - **Strip swift symbols** is optional.
    - Unselect the option **Include manifest for over-the-air installation.**
@@ -44,14 +46,14 @@ You can use the generated .ipa file for testing on the **<BrandName />** Platfor
 **Step 3:** Go to the **Product** menu -> **Clean** to ensure a clean build. Again, click on **Product** menu -> **Build.**
 
 <Info>
-**note**
-
 The **.app file** is generated in your Xcode project's **Products Directory**.
 </Info>
 
 **Step 4:** After generating the **.app** bundle, proceed with building an **.ipa** file:
 
-> - Firstly, create an empty directory with the name `Payload`.
+<Note>
+- Firstly, create an empty directory with the name `Payload`.
+</Note>
 - Move the .app file to the `Payload` directory.
 - Make an archive (.zip file) by compressing the `Payload` directory.
 - Rename this archive and append `.ipa` at the end. This creates an **.ipa file**.
@@ -71,7 +73,9 @@ Follow the below mentioned steps to create your Test package:
 
 **Step 5:** Now, create **.ipa** from the **.app** bundle. After generating the **.app** bundle, proceed with building an **.ipa** file:
 
-> - Firstly, create an empty directory with the name `Payload`.
+<Note>
+- Firstly, create an empty directory with the name `Payload`.
+</Note>
 - Move the .app files to the `Payload` directory.
 - Make an archive (.zip file) by compressing the `Payload` directory.
 - Rename this archive and append `.ipa` at the end. This creates an **.ipa file**.
@@ -93,7 +97,5 @@ To match the version in your Xcode Target.
 - Go to the **Build Settings**, set the **iOS Deployment Target** to the iOS version you want to use in your test.
 
 <Warning>
-**Warning**
-
 This process will overwrite the **Build settings** at the Project Level to the given iOS version. While using this method, take note that the Targets can be out of sync with each other and the project settings, which will cause the tests to break. You would need to re-build the Project if you change the iOS version for one target output in order to keep all your targets in sync.
 </Warning>

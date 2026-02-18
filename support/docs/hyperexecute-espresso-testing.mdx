@@ -6,6 +6,8 @@ keywords: ['espresso', 'java', 'testmu ai java', 'framework on testmu ai', 'test
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
@@ -28,7 +30,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the Espresso framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/<BrandName />/hyp-real-device-espresso" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/hyp-real-device-espresso" />
 
 </Tip>
 
@@ -95,7 +97,9 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 
 ```
 
-> Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
+<Note>
+Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
+</Note>
 
 ## Step 4: Upload your Test Suite
 
@@ -224,8 +228,6 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 </Tabs>
 
 <Info>
-**info**
-
 - The **uploadArtefact** flag is currently not available for Espresso framework tests.
 - To run **adb commands** in the **pre** and **post-steps**, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.
 
@@ -271,7 +273,9 @@ OR use this command if you have not exported your username and access key in the
   
 ```
 
-> Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+<Note>
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
+</Note>
 
 <Tip>
 **Troubleshoot Guide**
@@ -294,7 +298,7 @@ This feature enables users to manually specify shards along with their definitio
 The system intelligently determines the distribution of tests across devices, employing specific criteria to optimize the testing process.
 
 <Tip>
-**- **When Shards are added :****
+- **When Shards are added :****
 
    - If you are using the `deviceSelectionStrategy: all`,then in that case all the specified shards will be executed on every device available.<br />
 

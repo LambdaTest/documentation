@@ -19,7 +19,9 @@ Before getting started, ensure the following:
 - App uploaded to <BrandName /> App Storage (lt://APP_ID).
 - Access to a valid Android or iOS device on <BrandName />.
 
-> Native app accessibility automation supports both Android and iOS applications.
+<Note>
+Native app accessibility automation supports both Android and iOS applications.
+</Note>
 
 ## Step 1: Setup the Environment Variables
 
@@ -70,7 +72,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </Tabs>
 
 <Tip>
-**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
@@ -92,7 +94,7 @@ driver.execute_script("lambda-accessibility-scan")
 You may call `lambda-accessibility-scan` multiple times to scan different app screens or flows.
 
 <Info>
-**- You must add the generated **APP_URL** to the `app` capability in the config file.**
+- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
@@ -150,7 +152,9 @@ driver.execute_script("lambda-accessibility-scan")
 driver.quit()
 ```
 
-> App Accessibility automation is available for iOS 16.5 and later versions.
+<Note>
+App Accessibility automation is available for iOS 16.5 and later versions.
+</Note>
 
 ## Step 4: Execute and Monitor your Tests
 Run the following command in the directory where your project has been saved to execute your build.

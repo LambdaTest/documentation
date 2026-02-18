@@ -6,9 +6,6 @@ keywords: ['upload files', 'upload files inside selenium scripts', 'upload files
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Upload Files Using <BrandName /> Selenium Grid
-
 In Selenium automation testing, you might have come across the need to test the upload functionality on a web app or a website. <BrandName /> now allows you to work with upload file functionality on the cloud-based Selenium Grid and test the upload feature on 3000+ browser and OS combinations.
 
 In this document, you will see how you can upload a file on the <BrandName /> platform and access it via an automation test script.
@@ -23,7 +20,9 @@ You can upload the files on the <BrandName /> cloud based Selenium Grid, using o
 *   Click on the Lock icon to authorize your account. <img loading="lazy" src='/assets/images/uploads/upload-files-1.webp' alt="lock icon" width="1281" height="721" />]
 *   Enter your <BrandName /> username and access key, in the box that appears, to validate your credentials. Once done, click on the "Authorise button to verify the credentials, and click on Close to close the window. <img loading="lazy" src='/assets/images/uploads/upload-files-2.webp' alt="authorize button" width="1281" height="722" />
 
-> To get your <BrandName /> Username and Access Key, visite your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
+<Note>
+To get your <BrandName /> Username and Access Key, visite your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
+</Note>
 <img loading="lazy" src='/assets/images/uploads/access-key.webp' alt="automation key" width="1281" height="721" />
 
 *   Then click on the "Try it out" button. <img loading="lazy" src='/assets/images/uploads/upload-files-3.webp' alt="choose file" width="1281" height="721" />
@@ -31,7 +30,7 @@ You can upload the files on the <BrandName /> cloud based Selenium Grid, using o
    
 
 <Note>
-**Note**: You can upload multiple files to our lambda storage. A maximum of 150 files can be uploaded per organization. We have limit of 20 MB files size per API. So if you are total file sizes reach the limit, please upload your files in multiple API calls.
+: You can upload multiple files to our lambda storage. A maximum of 150 files can be uploaded per organization. We have limit of 20 MB files size per API. So if you are total file sizes reach the limit, please upload your files in multiple API calls.
 </Note>
 
 
@@ -160,4 +159,4 @@ driver.executeScript("lambda-files-download=file_name")
 
 * * *
 
-That's it! You can now successfully upload files and use them with Selenium Automation testing on <BrandName />'s cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@testmu.ai](mailto:support@testmu.ai) <br />Happy Testing!
+That's it! You can now successfully upload files and use them with Selenium Automation testing on <BrandName />'s cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@testmuai.com](mailto:support@testmuai.com) <br />Happy Testing!

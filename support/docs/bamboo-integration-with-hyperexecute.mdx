@@ -6,8 +6,6 @@ keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Bamboo CI Integration with HyperExecute
 * * *
 
 Bamboo is a continuous integration (CI) and continuous delivery (CD) server from Atlassian. It helps teams automate the software development and delivery process, from code commit to production deployment. Bamboo can be used to build, test, and deploy software on a variety of platforms, including cloud, on-premises, and hybrid environments.
@@ -38,7 +36,9 @@ Below are the mentioned softwares used for this documentation:
 3. Before you run Bamboo for the first time, specify your Bamboo Home Directory, where your Bamboo data is stored.
     - Create your Bamboo Home Directory (without spaces in the name).
 
-    > **NOTE:** You should not create your Bamboo Home Directory inside the **ROOT_FOLDER**. They should be entirely separate locations. If you do put the Home Directory in the **ROOT_FOLDER**, it will be overwritten and lost when Bamboo is upgraded.
+<Note>
+> **NOTE:** You should not create your Bamboo Home Directory inside the **ROOT_FOLDER**. They should be entirely separate locations. If you do put the Home Directory in the **ROOT_FOLDER**, it will be overwritten and lost when Bamboo is upgraded.
+</Note>
 
     - Go to the following file location
 
@@ -59,7 +59,9 @@ cd ROOT_FOLDER
 
 - Now type ``http://localhost:8085/`` in your browser to open the Bamboo GUI.
 
-> **NOTE:** If you are running Bamboo for the very first time, then you need to configure the Setup Wizard as well. Follow the instructions [here](https://confluence.atlassian.com/bamboo/running-the-setup-wizard-289276851.html) to configure it.
+<Note>
+**NOTE:** If you are running Bamboo for the very first time, then you need to configure the Setup Wizard as well. Follow the instructions [here](https://confluence.atlassian.com/bamboo/running-the-setup-wizard-289276851.html) to configure it.
+</Note>
 
 ### Step 3: Create a Project and a Plan
 

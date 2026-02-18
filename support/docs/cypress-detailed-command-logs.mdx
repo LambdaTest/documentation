@@ -6,8 +6,6 @@ keywords: ['cypress testing', 'cypress automation testing', 'hyperexecute cypres
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Detailed Command Logs for Cypress
 The **Detailed Command Logs** feature provides a comprehensive record of all Cypress commands and their results, both in the console and in a file. This functionality is ideal for debugging and troubleshooting, enabling you to pinpoint specific logs quickly and effectively.
 
 The logs are presented in an easy-to-read, human-readable format using the [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) plugin. Below are the steps to implement this feature for Cypress versions below and above 10.
@@ -30,7 +28,9 @@ In your `package.json` or `testmu ai-config.json` file, add the appropriate vers
 ```
 
 - In the `testmu ai-config.json`, enable detailed command logs by adding the following setting:
-> **NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in testmu ai-config.json
+<Note>
+**NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in testmu ai-config.json
+</Note>
 
 ```javascript
 "run_settings": {

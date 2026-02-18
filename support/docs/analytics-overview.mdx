@@ -5,6 +5,7 @@ keywords: ['analytics']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { NewTag } from "/snippets/NewTag.mdx";
 
 
 ---
@@ -24,11 +25,15 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/support/do
 
 Insights in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="AFQWaAkLg6o" data-loading-attribute="eager">
-    <div className="play-button"></div>
-</div>
-</div>
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/AFQWaAkLg6o" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
 
 ## Why is Insights needed?
 
@@ -38,68 +43,29 @@ Insights effectively allows these managers to track and improve the tests at one
 
 ## Insights Modules
 
-<div className="support_main">  
-<a href="/support/docs/analytics-dashboard-templates/">
-    <div className="support_inners">
-      <h3>Dashboards</h3>
-      <p>Explore various dashboards that provide a comprehensive view of your testing activities, enabling you to monitor performance, identify issues, and make data-driven decisions.</p>     
-    </div>
-  </a>
-<a href="/support/docs/analytics-modules-resource-utilization/">
-    <div className="support_inners">
-      <h3>Concurrency Usage</h3>
-      <p>Learn how to to get an overview of the <BrandName /> resources being utilized by your teams.</p>
-    </div>
-  </a>
-  <a href="/support/docs/analytics-modules-automation-test-overview/">
-    <div className="support_inners">
-      <h3>Overview</h3>
-      <p>Learn how to get an overview of the tests running on the <BrandName />.</p>
-    </div>
-  </a>
-  <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/">
-    <div className="support_inners">
-      <h3>Error Insights</h3>
-      <p>Learn how to get all the insights into the test errors on the <BrandName />.</p>
-    </div>
-  </a>
-  <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/">
-    <div className="support_inners">
-      <h3>Flaky Tests AI</h3>
-      <p>Monitor all the Flaky tests run on the platform and review the quality of the feature on your SMOKE and Regression Jobs.</p>
-    </div>
-  </a>
-  <a href="/support/docs/analytics-test-case-insights/">
-    <div className="support_inners">
-      <h3>Test Case Insights</h3>
-      <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
-    </div>
-  </a>
-    <a href="/support/docs/analytics-allure-api-widgets/">
-    <div className="support_inners">
-      <h3>API Test Insights</h3>
-      <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>
-    </div>
-  </a>
-  <a href="/support/docs/analytics-sub-organization-widgets/">
-    <div className="support_inners">
-      <h3>Sub Organization Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-      <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
-    </div>
-  </a>
-    <a href="/support/docs/insights-private-real-devices/">
-    <div className="support_inners">
-      <h3>Private Real Device Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-      <p>Gain detailed insights for ensuring optimal performance and resource utilization for your dedicated devices.</p>
-    </div>
-  </a>
-  <a href="/support/docs/insights-private-real-devices/">
-    <div className="support_inners">
-      <h3>Usage Report &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-      <p>Get detailed insights into your product usage and optimize your testing efforts.</p>
-    </div>
-  </a>
-</div>
+<Columns cols={2}>
+  <Card title="Dashboards" href="/support/docs/analytics-dashboard-templates/">
+    Explore various dashboards that provide a comprehensive view of your testing activities, enabling you to monitor performance, identify issues, and make data-driven decisions.
+  </Card>
+  <Card title="Concurrency Usage" href="/support/docs/analytics-modules-resource-utilization/">
+    Learn how to to get an overview of the <BrandName /> resources being utilized by your teams.
+  </Card>
+  <Card title="Overview" href="/support/docs/analytics-modules-automation-test-overview/">
+    Learn how to get an overview of the tests running on the <BrandName />.
+  </Card>
+  <Card title="Error Insights" href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/">
+    Learn how to get all the insights into the test errors on the <BrandName />.
+  </Card>
+  <Card title="Flaky Tests AI" href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/">
+    Monitor all the Flaky tests run on the platform and review the quality of the feature on your SMOKE and Regression Jobs.
+  </Card>
+  <Card title="Test Case Insights" href="/support/docs/analytics-test-case-insights/">
+    Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.
+  </Card>
+  <Card title="API Test Insights" href="/support/docs/analytics-allure-api-widgets/">
+    Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.
+  </Card>
+</Columns>
 
 ## Product Specific Widgets
 
@@ -163,6 +129,6 @@ Insights effectively allows these managers to track and improve the tests at one
 </div>
 
 <Info>
-**The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmu.ai).**
+**The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmuai.com).**
 
 </Info>

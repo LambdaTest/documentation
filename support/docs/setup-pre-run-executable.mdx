@@ -6,9 +6,6 @@ keywords: ['local app testing', 'testmu ai local testing', 'testmu ai local tunn
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Install Custom Certificates on the VM Through Pre-run-executables
-
 * * *
 Pre-run-executables allow you to run your custom scripts before the Selenium test is started. We can use this feature to install user custom certificates that are mandatory for test cases to execute successfully.
 
@@ -70,7 +67,9 @@ curl --request POST \
     },
 ```
 
-> **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate value. 
+<Note>
+**Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate value.
+</Note>
 
 6. After uploading your pre-run script, reach out to us either via chat support or email to get the scripts approved.
 
@@ -81,7 +80,9 @@ curl --request POST \
     "url": "{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}",
  },
 ```
-> **Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
+<Note>
+**Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
+</Note>
 
 ## Leverage the use of APIs to Pre-run Tests
 ***
@@ -93,7 +94,9 @@ Here are the `prerun` APIs:
 * **POST/`files`/`validate`:** Check if the file is approved by <BrandName />.
 * **PUT/`files`/`download`:** Download pre run executable file. 
 
-> **Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/). 
+<Note>
+**Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/).
+</Note>
 
 ## Sample Certificate Installation and Uninstallation File (macOS)
 ***
@@ -129,4 +132,4 @@ Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-It
 ```
 
 >Got any questions?<br />
-Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@testmu.ai.
+Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@testmuai.com.

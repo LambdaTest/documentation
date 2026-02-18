@@ -11,7 +11,9 @@ Maven is a renowned build automation tool for orchestrating project builds by au
 
 This document will help you configure a secure <BrandName /> Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
-> <BrandName /> Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.testmu ai/testmu ai-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
+<Note>
+<BrandName /> Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.testmu ai/testmu ai-tunnel-binary/4.0.2)**, with various enhancements and optimizations.
+</Note>
 
 ## Prerequisites
 
@@ -37,7 +39,7 @@ $ set LT_ACCESS_KEY= YOUR_LAMBDATEST_ACCESS_KEY
 ## Set Up Maven Sample Project & Dependencies
 * * *
 <Warning>
-Note: Make sure you clone our [GitHub repository for Maven tunnel](https://github.com/<BrandName />/maven-tunnel-sample).
+Note: Make sure you clone our [GitHub repository for Maven tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
 </Warning>
 
 
@@ -58,7 +60,7 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 ## Running Maven Tunnel
 * * *
 
-Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/<BrandName />/maven-tunnel-sample).
+Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
 
 ```js
 package com.testmu ai.tunnel;
@@ -301,4 +303,6 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 | basicAuth | `tunnelArgs.put("basicAuth", "<YOUR BASIC AUTH>")` | Basic Auth. |
 | mitm | `tunnelArgs.put("mitm", "true")` | MITM only if basicAuth is provided. |
 
-> For more arguments, refer to our document of [<BrandName /> Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
+<Note>
+For more arguments, refer to our document of [<BrandName /> Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
+</Note>

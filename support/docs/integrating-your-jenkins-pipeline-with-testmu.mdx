@@ -6,9 +6,6 @@ keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Integrating Your Jenkins Pipeline With <BrandName /> 
-
 * * *
 
 Jenkins Pipeline is also referred to as "Pipeline" offers a suite of plugins to help integrate your continuous delivery pipeline into Jenkins. Jenkins Pipeline does so with the help of Pipeline DSL(Domain Specific Language) syntax that facilitates easy modelling of even the most complex delivery pipeline.
@@ -42,7 +39,7 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
 * * *
 
-You can find the Jenkins file for the Pipeline [here](https://github.com/<BrandName />/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
+You can find the Jenkins file for the Pipeline [here](https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
 
 ```javascript
 #!/usr/bin/env groovy
@@ -59,7 +56,7 @@ node {
 
       // Get some code from a GitHub repository
     try{
-      git 'https://github.com/TestMu AI/nightwatch-selenium-sample.git'
+      git 'https://github.com/LambdaTest/nightwatch-selenium-sample.git'
 
       //Download Tunnel Binary
       sh "wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip"
@@ -97,7 +94,7 @@ node {
 }
 ```
 
-Refer to our [Github sample repository](https://github.com/<BrandName />/nightwatch-selenium-sample). Now, follow the below steps for the setup. 
+Refer to our [Github sample repository](https://github.com/LambdaTest/nightwatch-selenium-sample). Now, follow the below steps for the setup. 
 
 **Step 1:** Create a new project for Pipeline by going to Jenkins --> New Item. <img loading="lazy" src='/assets/images/uploads/jenkins-pipeline-1.webp' alt="Jenkins" width="1896" height="216" />
 

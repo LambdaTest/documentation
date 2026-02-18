@@ -6,6 +6,8 @@ keywords: ['playwright testing', 'playwright mobile testing', 'playwright testin
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
@@ -20,7 +22,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<a href="https://github.com/<BrandName />/playwright-sample/blob/main/playwrightwebview.js" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js" />
 </Tip>
 
 - If you are using your own project, configure the `browserWSEndpoint` (browser end point URL) in your test script to run the test on <BrandName />
@@ -32,7 +34,7 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 - Here is the sample test script for your reference:
 
 ```javascript reference title="playwrightwebview.js"
-https://github.com/TestMu AI/playwright-sample/blob/main/playwrightwebview.js
+https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
 ```
 
 ### Step 2: Update the dependencies
@@ -63,7 +65,9 @@ const capabilities = {
 ### Step 4: Setup your <BrandName /> credentials
 
 In your terminal (as per your respective Operating System), run these command to setup your <BrandName /> credentials.
-> You can see your credentials below if you have logged into our platform.
+<Note>
+You can see your credentials below if you have logged into our platform.
+</Note>
 
 <Tabs className="docs__val">
 

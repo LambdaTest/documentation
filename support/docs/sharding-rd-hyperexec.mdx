@@ -16,8 +16,6 @@ Generally the XCUI tests are run in sequence which is a time taking process. Thi
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
 
 <Check>
-**NOTE**
-
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimise your testing process with HyperExecute.
 </Check>
 
@@ -63,8 +61,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 </Tabs>
 
 <Info>
-**NOTE**
-
 Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the last step as `appId`.
 </Info>
 
@@ -91,8 +87,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --reque
 </Tabs>
 
 <Info>
-**NOTE**
-
 Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the next step as `testSuiteAppId`
 </Info>
 ## How to use Sharding
@@ -182,8 +176,6 @@ You can refer to this example and screenshot below:
 <img loading="lazy" src="/assets/images/app-automation/sharding-he.webp" alt="cmd" width="768" height="373"/>
 
 <Info>
-**NOTE**
-
 **globalTimeout** ​ The globalTimeout value determines the maximum duration (in minutes) of a Job . It can be set between 5 and 180 minutes, and has a default value of 10 minutes.
 </Info>
 

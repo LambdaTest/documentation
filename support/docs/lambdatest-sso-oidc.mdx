@@ -6,9 +6,6 @@ keywords: ['sso', 'testmu ai sso', 'oidc', 'openid connect', 'identity provider'
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# <BrandName /> SSO Integration Using OIDC
-
 * * *
 
 <BrandName /> provides seamless Single Sign-On (SSO) integration with various identity providers using OpenID Connect (OIDC), enabling your team to access <BrandName /> using their existing organizational credentials. This managed SSO solution streamlines user management and enhances security by centralizing authentication through your identity provider.
@@ -40,7 +37,7 @@ To enable <BrandName /> SSO through OIDC integration, you will need:
 - **SSO Request**: Contact <BrandName /> support to enable SSO for your organization
 
 <Warning>
-**Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@testmu.ai](mailto:support@testmu.ai)
+: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@testmuai.com](mailto:support@testmuai.com)
 </Warning>
 
 .
@@ -58,7 +55,7 @@ The exact steps vary by identity provider, but the general process involves crea
 
 3. **Create New Registration**: Click **New registration** to create a new application registration.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-registration.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-registration.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
 
 4. **Configure Application Details**:
    - **Name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> OIDC Integration"
@@ -66,7 +63,7 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Redirect URI**: Leave this blank for now (we'll configure it later)
    - Click **Register** to create the application
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-registration-2.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-registration-2.png' alt="Azure App Registration" width="944" height="487" style={{border: '1px solid #000'}} />
 
 ### Step 2: Configure Application Settings
 
@@ -90,13 +87,13 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Expires**: Select your preferred expiration period (recommended: 24 months)
    - Click **Add**
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-client-secret-create.png' alt="Azure App Client Register" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-client-secret-create.png' alt="Azure App Client Register" width="944" height="487" style={{border: '1px solid #000'}} />
 
 3. **Copy Secret Value**: 
    - **Important**: Copy the secret value immediately - it won't be shown again
    - Store this securely as you'll need it for <BrandName /> configuration
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-client-secret.png' alt="Azure Client Secret" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-client-secret.png' alt="Azure Client Secret" width="944" height="487" style={{border: '1px solid #000'}} />
 
 <Warning>
 **Important**: Store the client secret securely as you'll need it for <BrandName /> configuration. Most providers only show the secret once.
@@ -113,7 +110,7 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Redirect URI**: Enter the redirect URI provided by <BrandName /> (typically: `https://testmu ai.auth0.com/login/callback`)
    - Click **Save**
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-redirect.png' alt="Azure Redirect URI" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-redirect.png' alt="Azure Redirect URI" width="944" height="487" style={{border: '1px solid #000'}} />
 
 ### Step 5: Collect OpenID Connect Metadata
 
@@ -131,9 +128,11 @@ The exact steps vary by identity provider, but the general process involves crea
 
 2. **Verify Well-Known URL**: You can test the URL in your browser to ensure it returns valid JSON configuration.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-oidc/app-oidc-metadata.png' alt="Azure Metadata URL" width="944" height="487" style={{border: '1px solid #000'}} />
+<img loading="lazy" src='/assets/images/lambdatest-sso-oidc/app-oidc-metadata.png' alt="Azure Metadata URL" width="944" height="487" style={{border: '1px solid #000'}} />
 
-> **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
+<Note>
+**Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
+</Note>
 
 ### Step 6: Contact <BrandName /> Support for OIDC Configuration
 
@@ -146,7 +145,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
    - **Connection Name**: A descriptive name like "Company OIDC" or "<BrandName /> SSO"
 
 2. **Contact <BrandName /> Support**: Reach out to our support team with the configuration details:
-   - **Email**: [support@testmu.ai](mailto:support@testmu.ai)
+   - **Email**: [support@testmuai.com](mailto:support@testmuai.com)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
    ```

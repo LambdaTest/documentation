@@ -6,6 +6,8 @@ keywords: ['hyperexecute performance testing', 'hyperexecute', 'testmu ai', 'k6'
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 [k6](https://grafana.com/docs/k6/latest/) is an open-source tool designed to make load testing easy and accessible for developers and QA engineers. It's specifically built for testing the performance of APIs, microservices, and websites.
 
@@ -31,7 +33,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the k6 from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/<BrandName />/HYP-K6-browser-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/HYP-K6-browser-sample" />
 </Tip>
 
 ### Step 2: Setup the CLI in your Test Suite
@@ -102,7 +104,7 @@ env:
   K6_BROWSER_HEADLESS: false #Determines if the browser should run in headless mode
   HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/<BrandName />/HYP-K6-browser-sample/blob/main/hyperexecute.yaml
+https://github.com/LambdaTest/HYP-K6-browser-sample/blob/main/hyperexecute.yaml
 ```
 
 ### Step 4: Execute your Test Suite

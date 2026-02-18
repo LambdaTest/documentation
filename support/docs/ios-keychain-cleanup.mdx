@@ -5,6 +5,7 @@ keywords: ['appium', 'manual testing', 'keychain', 'access group', 'cleanup', 'a
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -47,7 +48,7 @@ Enabling `ios_keychain_enabled=true` will
 - Preserve Keychain access across resigning.
 
 <Note>
-**- Supported on **iOS 13 and above** only. Apps targeting earlier iOS versions are not compatible.**
+- Supported on **iOS 13 and above** only. Apps targeting earlier iOS versions are not compatible.**
 
 - Requires app resigning (`resignApp=true`). Apps signed with **Enterprise certificates** are not supported. LT framework needs to be injected in this case.
 

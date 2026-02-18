@@ -32,7 +32,9 @@ runtime:
 
 ## 2. Ensuring PIP Version Compatibility
 Certain packages require a minimum version of PIP to install successfully. An outdated PIP version may cause the following error:
-> **ERROR :** You must install pip 21.0 or later to install this package.
+<Note>
+**ERROR :** You must install pip 21.0 or later to install this package.
+</Note>
 
 **Solution :** Upgrade PIP before installing dependencies.
 
@@ -141,7 +143,9 @@ another-package==2.0.0
 ## 7. Configuring Database Connections
 When connecting to a database during test runs, you may encounter:
 
-> **ConnectionRefusedError:** connect ECONNREFUSED 127.0.0.1:3306
+<Note>
+**ConnectionRefusedError:** connect ECONNREFUSED 127.0.0.1:3306
+</Note>
 
 **Solution :** Expose the database service using the `--expose` flag in your YAML configuration.
 

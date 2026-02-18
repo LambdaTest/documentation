@@ -186,7 +186,9 @@ This occurs due to a version mismatch between the Playwright client and server. 
 pre:
   - npx playwright@1.41.0 install
 ```
-> Replace `1.41.0` with the version specified in the project’s package.json.
+<Note>
+Replace `1.41.0` with the version specified in the project’s package.json.
+</Note>
 
 ## Q: Why are tests retried multiple times within a single scenario?
 Multiple retries occur when retry logic is configured both at the Playwright framework level and in HyperExecute YAML. This can cause duplicate scenarios, incorrect reporting, and multiple executions of the same test. Disabling framework-level retries and using only HyperExecute-level retries avoids this problem.

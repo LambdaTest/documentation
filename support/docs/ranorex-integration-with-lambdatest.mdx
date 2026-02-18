@@ -19,43 +19,43 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 ***
 **Step 1:**  Open Ranorex & click on **"New solution via wizard"**  from the left menu.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/1.webp' alt="Ranorax New solution via wizard" width="1024" height="545" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/1.webp' alt="Ranorax New solution via wizard" width="1024" height="545" />
 
 **Step 2:**  Select the method for **Web testing**  over different browsers. Then hit on the button that says **"Click here"**.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/2.webp' alt="Website Testing Using Ranorax and <BrandName />" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/2.webp' alt="Website Testing Using Ranorax and <BrandName />" width="1365" height="730" />
 
 **Step 3:**  Provide the **Solution name**  & **Location**  where you wish to store the new solution & hit continue.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/3.webp' alt="Creating New Solution in Ranorex" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/3.webp' alt="Creating New Solution in Ranorex" width="1365" height="730" />
 
 **Step 4:**  Specify the test URL and browsers on which you wish to perform cross browser testing.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/4.webp' alt="Setup Website Testing" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/4.webp' alt="Setup Website Testing" width="1365" height="728" />
 
 **Step 5:**  Select your recording behaviour as **"Do not use whitelisting"**.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/5.webp' alt="Select recording behaviour" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/5.webp' alt="Select recording behaviour" width="1365" height="728" />
 
 **Step 6:**  And you are done creating your new test automation solution. Now, you can finish the wizard.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/6.webp' alt="test automation solution" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/6.webp' alt="test automation solution" width="1365" height="728" />
 
 ## Setting Up WebDriver Endpoint For <BrandName /> Selenium Grid
 ***
 **Step 1:**  After successfully creating a solution, you will notice that a default test suite would be configured in Ranorex.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/7.webp' alt="<BrandName /> Ranorex test suite" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/7.webp' alt="<BrandName /> Ranorex test suite" width="1365" height="730" />
 
 **Step 2:**  Add the **end point** to run the test suite on Selenium Grid offered by <BrandName />. You can do so by going to the tab for **"Endpoint"**   Select **WebDriver**   Provide an **Endpoint name**  & **Address(Hub URL)**. Click on **Add endpoint**.
 
 >**Note:**  You can check your connection by clicking on **Test connection**.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/10.webp' alt="Adding end point to run test suite" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/10.webp' alt="Adding end point to run test suite" width="1365" height="730" />
 
 **Step 3:**  You have successfully setup a WebDriver endpoint for <BrandName /> Selenium Grid Hub URL.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/12.webp' alt="setup WebDriver endpoint" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/12.webp' alt="setup WebDriver endpoint" width="1365" height="730" />
 
 >**Note:** You need to select this WebDriver endpoint to perform automated cross browser testing on 3000+ real browsers & browser versions using the <BrandName /> Selenium Grid.
 
@@ -63,7 +63,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 ***
 **Step 1:**  After successful addition of <BrandName /> Selenium Grid Hub-URL, comes the time to perform cross browser testing. For browser compatibility testing, you would need to open you test suite and select the particular browser you wish to run your test on.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/13.webp' alt="Open Test Suite" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/13.webp' alt="Open Test Suite" width="1365" height="730" />
 
 >**Note:**  In order to run your test on a browser which is not present in the drop-down, you would need to add a new variable for that browser. For example, if you wish to perform cross browser testing on Safari browser then you can implement it with the help of below variables:
 >Variable name- Mac
@@ -71,42 +71,42 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 **Step 2:**  Now, under the tab **"Endpoint"**, you need to add a **new configuration**  to set up the DesiredCapabilities for <BrandName /> Selenium Grid.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/14.webp' alt="set up Desired Capabilities" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/14.webp' alt="set up Desired Capabilities" width="1365" height="730" />
 
 **Step 3:**  Fetch your DesiredCapabilities from <BrandName /> [Selenium Capability Generator](https://www.lambdatest.com/capabilities-generator/).
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/15.webp' alt="Selenium Capability Generator." width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/15.webp' alt="Selenium Capability Generator." width="1365" height="728" />
 
 **Step 4:**  Copy the DesiredCapabilities & add them in Endpoint configurations by placing them in **"Capabilities JSON"**. Don’t forget to provide a name as well.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/16.webp' alt="Capabilities JSON" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/16.webp' alt="Capabilities JSON" width="1365" height="730" />
 
 **Step 5:**  Now, from the drop-down for **Active configuration**, select the latest configuration you added.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/17.webp' alt="Selecting Active configuration" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/17.webp' alt="Selecting Active configuration" width="1365" height="728" />
 
 **Step 6:**  Now, go to recording tab & **add new actions**  after clicking the **Record**  button.
 
 >Keep in mind, to choose the Endpoint as **Admin localhost**  while recording the test cases.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/19-1.webp' alt="Adding New Actions" width="1365" height="730" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/19-1.webp' alt="Adding New Actions" width="1365" height="730" />
 
 **Step 7:**  You will find your actions being recorded in the Ranorex interface.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/20.webp' alt="View Recording in Ranorex interface" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/20.webp' alt="View Recording in Ranorex interface" width="1365" height="728" />
 
 <Warning>
 **Important:**  Once you are finished recording you actions, <BrandName /> recommends you to choose the repository item in the same instance where you recording is halted. This would help you to avoid any time out issue.   
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/22.webp' alt="Ranorax <BrandName /> integration" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/22.webp' alt="Ranorax <BrandName /> integration" width="1365" height="728" />
 </Warning>
 
 
 **Step 8:**  After you are done configuring the open browser, recording, & close browser file, come back to your test-suite & ensure that you have **WebDriver** set as an Endpoint to run the test on <BrandName />.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/21.webp' alt="run automation tests using Ranorex <BrandName /> Integration" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/21.webp' alt="run automation tests using Ranorex <BrandName /> Integration" width="1365" height="728" />
 
 **Step 9:**  Hit the **run button**. You will notice two output screens. One on the right side, is displaying the running test case. And on the left side, you can see that the test ran on the specific configuration that you chose under **Active configuration**  drop-down, along with all the the steps you recorded.
 
-<img loading="lazy" src='/assets/images/ranorex-integration-with-testmu ai/23.webp' alt="running test case" width="1365" height="728" />
+<img loading="lazy" src='/assets/images/ranorex-integration-with-lambdatest/23.webp' alt="running test case" width="1365" height="728" />
 
 **Step 10:**  Kudos! You have successfully performed automated cross browser testing on <BrandName /> Selenium Grid from your Ranorex instance. You can confirm the text execution on your <BrandName /> account. You could also find all the test details such as metadata, network logs, command logs, Selenium logs, command-by-command screenshot, and more on the <BrandName /> dashboard. You can also extract these details using our <BrandName /> [Selenium Automation API](/api-doc/). Happy testing!

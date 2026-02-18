@@ -6,9 +6,6 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Receive Job Reports and Artifacts via Email
-
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
 
 ## YAML Configuration
@@ -38,7 +35,9 @@ Follow the below mentioned steps to receive your Artifacts via email:
 
 **Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
-> **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
+<Note>
+**NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
+</Note>
 
 ```yaml
 uploadArtifacts:

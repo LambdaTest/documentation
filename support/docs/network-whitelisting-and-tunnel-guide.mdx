@@ -9,7 +9,9 @@ import { BrandName } from "/snippets/BrandName.mdx";
 
 When testing private or restricted environments on <BrandName />, your team may need to configure network access controls. Depending on how your applications are hosted and secured, <BrandName /> supports multiple approaches **Inbound Whitelisting, Dedicated Proxy, Outbound Whitelisting, STUN/TURN Whitelisting, and Tunnel configurations (including Site-to-Site tunnels)**.
 
-> These are Inbound and Outbound with respect to user's network.
+<Note>
+These are Inbound and Outbound with respect to user's network.
+</Note>
 
 This guide helps you decide which option to use for your infrastructure setup. 
 
@@ -25,7 +27,9 @@ Inbound IP whitelisting allows <BrandName /> cloud browsers and devices to direc
 - A staging environment at staging.company.com is accessible only from a set of static IPs.
 - By whitelisting <BrandName />’s shared public IPs, your QA team can test directly on the cloud grid.
 
-> Refer to [<BrandName /> Public IP](/support/docs/testmu-public-ip/) for list for the IP addresses.
+<Note>
+Refer to [<BrandName /> Public IP](/support/docs/testmu-public-ip/) for list for the IP addresses.
+</Note>
 
 ## 2. When Dedicated Proxy Whitelisting Has to Be Done
 Dedicated Proxy Whitelisting provides an extra layer of security by assigning a unique static IP exclusively for your organization.

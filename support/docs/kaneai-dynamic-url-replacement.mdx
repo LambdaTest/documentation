@@ -9,7 +9,9 @@ import { BrandName } from "/snippets/BrandName.mdx";
 
 As a QA Engineer, you may need to run test cases on different environments (e.g., staging, production) without altering your test scripts. With Dynamic URL Replacement you can execute the same test cases across multiple environments without modifying the test scripts, ensuring seamless execution across different environments.
 
-> This feature is applicable only for Web Tests
+<Note>
+This feature is applicable only for Web Tests
+</Note>
 
 ## Prerequisites
 You must have [created a test run for KaneAI Generated Tests](/support/docs/kaneai-hyperexecute-test-run-execution/).
@@ -28,7 +30,9 @@ You must have [created a test run for KaneAI Generated Tests](/support/docs/kane
 - In the Run on HyperExecute side drawer, locate the new field labeled **Replace Test Execution URL**.
 - Enter the **Pattern URL** (your original URL used in the tests) and **Replacement URL** (URL of different environment you want to test) in the text field.
 
-> You can add multiple URLs for all web tests in the run to execute in different environments
+<Tip>
+You can add multiple URLs for all web tests in the run to execute in different environments
+</Tip>
 
 ### Step 3: Execute the Test Run
 - If the **Replace Test Execution URL** field is filled, the entered URL will override the default (Pattern) URL during execution.

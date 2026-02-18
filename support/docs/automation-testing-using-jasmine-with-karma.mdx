@@ -6,8 +6,6 @@ keywords: ['jasmine selenium', 'karma selenium', 'javascript selenium', 'javascr
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Jasmine Test Runner: Run Jasmine Testing on <BrandName /> Selenium Grid
 * * *
 
 <BrandName /> Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
@@ -29,7 +27,7 @@ Developed by AngularJS team, Karma is a Javascript test runner that helps to eva
 
 ## Prerequisites For Running Karma With <BrandName /> Selenium Grid
 * * *
->All the code samples in this documentation can be found in the [Jasmine <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/<BrandName />/karma-jasmine-sample). You can either download or clone the repository to quickly run your tests.
+>All the code samples in this documentation can be found in the [Jasmine <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/LambdaTest/karma-jasmine-sample). You can either download or clone the repository to quickly run your tests.
 
 In order to perform your karma tests with <BrandName />, you would need the below things to be already set up:
 
@@ -64,7 +62,7 @@ $ set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ## Setting Up The Environment For Jasmine Testing Using Selenium
 * * *
-You need to clone our [GitHub repository](https://github.com/<BrandName />/protractor-selenium-sample) which demonstrates a [sample of Karma-Jasmine](https://github.com/<BrandName />/karma-jasmine-sample).
+You need to clone our [GitHub repository](https://github.com/LambdaTest/protractor-selenium-sample) which demonstrates a [sample of Karma-Jasmine](https://github.com/LambdaTest/karma-jasmine-sample).
 
 After cloning, you need to navigate to the cloned directory and install project dependencies using the below command:
 
@@ -98,7 +96,7 @@ describe('updateAppState', function () {
 ```
 ## Running Jasmine Tests Using Karma
 * * *
-Navigate to the directory where you cloned the [sample of Karma-Jasmine](https://github.com/<BrandName />/karma-jasmine-sample) and run the following command.
+Navigate to the directory where you cloned the [sample of Karma-Jasmine](https://github.com/LambdaTest/karma-jasmine-sample) and run the following command.
 
 `$ karma start karma.conf.js`
 
@@ -132,15 +130,17 @@ The most important capabilities to understand here are ‘browserName’, ‘ver
 * * *
 To help you perform cross browser testing of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name <BrandName /> tunnel. With <BrandName /> tunnel, you can run your Jasmine tests using Karma to perform automated cross browser testing on browsers offered by online Selenium Grid at <BrandName />. So you make sure how well your changes look, even before your customers. Curious to know more about <BrandName /> tunnel?
 
-> Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
-> * [Documentation For Windows User](/support/docs/local-testing-for-windows/)
-> * [Documentation For Mac User](/support/docs/local-testing-for-macos/)
-> * [Documentation For Linux User](/support/docs/local-testing-for-linux/)
+<Note>
+Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
+* [Documentation For Windows User](/support/docs/local-testing-for-windows/)
+* [Documentation For Mac User](/support/docs/local-testing-for-macos/)
+* [Documentation For Linux User](/support/docs/local-testing-for-linux/)
 
-> Download the binary file of:
-> * [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-> * [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-> * [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+Download the binary file of:
+* [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+</Note>
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
@@ -167,7 +167,7 @@ customLaunchers: { chrome: {
 ```
 
 <Warning>
-**Note**: psuedoActivityInternal is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
+: psuedoActivityInternal is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
 </Warning>
 
 

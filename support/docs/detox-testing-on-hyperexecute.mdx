@@ -6,6 +6,8 @@ keywords: ['Detox', 'Detox automation', 'Detox testing', 'detox testing react na
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on <BrandName /> HyperExecute using your local system setup.
 
@@ -17,7 +19,7 @@ Detox is a popular end-to-end testing framework for React Native applications. T
 
 Download or Clone the Detox sample from <BrandName />’s GitHub Repository
 
-<a href="https://github.com/<BrandName />/LT-detox" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/LT-detox" />
 </Tip>
 
 ### Step 2: Download the CLI in your Project
@@ -64,10 +66,12 @@ Download the HyperExecute CLI and copy it into the root folder.
 Use the sample YAML below to configure your execution:
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/LT-detox/blob/main/yaml/hyperexecute.yaml
+https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
 
-> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
+<Note>
+📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
+</Note>
 
 ### Step 3: Monitor the Test Execution
 
@@ -77,4 +81,6 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 
 You can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You’ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.
 
-> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+<Note>
+For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+</Note>

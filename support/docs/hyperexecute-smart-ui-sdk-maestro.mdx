@@ -6,6 +6,8 @@ keywords: ['smartui mobile testing', 'hyperexecute android tests', 'maestro visu
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 This document guides you on how to perform visual regression testing for your Android applications by running your Maestro tests on the HyperExecute platform and capturing screenshots with the SmartUI SDK.
 
@@ -38,7 +40,7 @@ First, you need to create a project in SmartUI. All your visual regression test 
 You can configure your own existing Maestro project or get started quickly by cloning our sample repository.
 
 ```bash
-git clone https://github.com/TestMu AI/smartui-maestro-sample
+git clone https://github.com/LambdaTest/smartui-maestro-sample
 cd smartui-maestro-sample
 ```
 
@@ -47,7 +49,7 @@ cd smartui-maestro-sample
 
 You can find the complete code for this example in the following <BrandName /> GitHub repository.
 
-<a href="https://github.com/<BrandName />/smartui-maestro-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/smartui-maestro-sample" />
 
 </Tip>
 
@@ -136,16 +138,18 @@ You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3
 <Tab title="Android-Real Device">
 
 ```yaml reference title="maestro_Real_Devices.yaml"
-https://github.com/TestMu AI/smartui-maestro-sample/blob/main/yaml/maestro_Real_Devices.yaml
+https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real_Devices.yaml
 ```
 </Tab>
 
 <Tab title="Android-Emulator">
 
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
+<Note>
+To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
+</Note>
 
 ```yaml reference title="maestro_Emulator_HyperEx.yaml"
-https://github.com/TestMu AI/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml
+https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml
 ```
 </Tab>
 

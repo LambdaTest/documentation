@@ -47,8 +47,6 @@ On running the above command, it will generate `base_reporter_config.json`,`cust
 ## `run` command
 
 <Info>
-**Note**
-
 For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](/support/docs/run-settings/).
 </Info>
 
@@ -62,18 +60,18 @@ Given below are the additional flags available with the `run` command.
 
 | Flag                                      | Purpose                                                | Type |
 | ----------------------------------------- | ------------------------------------------------------ | -----|
-| `--version`                               | Show version number <br /> e.g. `testmu ai-cypress run -–version` |NA|
-| `--help`                                  | Show help <br /> e.g. `testmu ai-cypress run -–help` |NA|
+| `--version`                               | Show version number <br /> e.g. `testmu ai-cypress run ---version` |NA|
+| `--help`                                  | Show help <br /> e.g. `testmu ai-cypress run ---help` |NA|
 | `--ccf, --cypress-config-file`            | Path of the config file <br /> e.g. `testmu ai-cypress run --ccf="base_reporter_config.json"` |String |
-| `--lcf, –testmu ai-config-file`          | Path of the <BrandName /> config file <br /> e.g. `testmu ai-cypress run --lcf="testmu ai-config.json"` |String |
+| `--lcf, --testmu ai-config-file`          | Path of the <BrandName /> config file <br /> e.g. `testmu ai-cypress run --lcf="testmu ai-config.json"` |String |
 | `-s, --specs`                             | Path of the spec file or directory or pattern <br /> e.g. `testmu ai-cypress run --s=”path_from_content_root"` |String |
 | `--bn, --build-name`                      | Build name                                             |String |
 | `-t, --tags`                              | Test tags                                              |String |
 | `-p, --parallels`                         | No of parallel sessions                                |String |
 | `--envs, --env-variables` (Cypress 9)     | Set environment variables to configure before your test runs |String |
 | `--envs, --environment` (Cypress 10)      | Set environment variables to configure before your test runs |String |
-| `--tun, --tunnel`                         | Configure <BrandName /> tunnel <br /> e.g. `testmu ai-cypress run --tun="true" –tname="v3"` |String |
-| `--tname, --tunnel_name`                  | Set the name of <BrandName /> tunnel name <br /> e.g. `testmu ai-cypress run --tun="true" –tname="v3"` |String |
+| `--tun, --tunnel`                         | Configure <BrandName /> tunnel <br /> e.g. `testmu ai-cypress run --tun="true" --tname="v3"` |String |
+| `--tname, --tunnel_name`                  | Set the name of <BrandName /> tunnel name <br /> e.g. `testmu ai-cypress run --tun="true" --tname="v3"` |String |
 | `--brs, --browsers`                       | Test will be run on the specified browsers <br /> in the format: `platform:browser:version` <br /><br /> e.g. `--brs="MacOS Catalina:chrome:latest"`  <br /><br /> `--brs="MacOS Catalina:chrome:112.0,MacOS mojave:firefox:111.0"` |String |
 | `--bi, --build-identifier`                | Build identifier or build counter                      |String |
 | `--if, --ignore_files`                    | Files to ignore in the zip project <br /> e.g. `testmu ai-cypress run --if="cypress/e2e/1-getting-started/actions.cy.js"` |String |

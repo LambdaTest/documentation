@@ -6,14 +6,14 @@ keywords: ['hyperexecute integrations', 'hyperexecute integrations with products
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 # Virtual Device Integration with HyperExecute
 
 This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 <Info>
-**Note**
-
 Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.lambdatest.com/contact-us).
 </Info>
 
@@ -44,7 +44,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the Virtual Devices from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/<BrandName />/hyp-virtual-device-appium" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/hyp-virtual-device-appium" />
 
 </Tip> */}
 
@@ -150,7 +150,9 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" --location --reque
   </Tab>
 </Tabs>
 
-> Response of above cURL will be a **JSON** object containing the `App URL` of the format `lt://APP123456789123456789`
+<Note>
+Response of above cURL will be a **JSON** object containing the `App URL` of the format `lt://APP123456789123456789`
+</Note>
 
 ## Step 4: Update Your Automation Script
 

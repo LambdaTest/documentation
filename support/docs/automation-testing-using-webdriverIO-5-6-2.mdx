@@ -6,8 +6,6 @@ keywords: ['webdriverio selenium grid', 'selenium webdriver tutorial', 'webdrive
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Run Automation Scripts on Cloud Selenium Grid using WebDriverIO 5.6.2 Framework
 * * *
 <BrandName /> Selenium Automation Grid is a cloud-based scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your JavaScript Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
 
@@ -22,7 +20,7 @@ This guide will help you in getting started with configuring and running your Ja
 
 ## Prerequisites For Running WebDriverIO & Selenium
 * * *
->All the code samples in this documentation can be found in the [WebDriverIO 5.6.2 <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/<BrandName />/webdriverio-selenium). You can either download or clone the repository to quickly run your tests.
+>All the code samples in this documentation can be found in the [WebDriverIO 5.6.2 <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/LambdaTest/webdriverio-selenium). You can either download or clone the repository to quickly run your tests.
 
 Before getting started with Automated Scripts using Selenium with WebDriverIO 5.6.2 on <BrandName /> Automation, you need to:
 
@@ -43,15 +41,17 @@ Next step is to install Selenium dependencies for Node.js using npm. Here’s th
 
 * Download <BrandName /> tunnel binary file if you wish to test your locally hosted or privately hosted projects.
 
-> Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
-> * [Documentation For Windows User](/support/docs/local-testing-for-windows/)
-> * [Documentation For Mac User](/support/docs/local-testing-for-macos/)
-> * [Documentation For Linux User](/support/docs/local-testing-for-linux/)
+<Note>
+Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
+* [Documentation For Windows User](/support/docs/local-testing-for-windows/)
+* [Documentation For Mac User](/support/docs/local-testing-for-macos/)
+* [Documentation For Linux User](/support/docs/local-testing-for-linux/)
 
-> Download the binary file of:
-> * [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-> * [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-> * [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+Download the binary file of:
+* [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+</Note>
 
 ## Getting Started With WebDriverIO 5.6.2 Framework & <BrandName />
 * * *
@@ -59,7 +59,7 @@ Running WebDriverIO 5.6.2 test scripts on <BrandName /> [Selenium Grid](https://
 
 Let’s check out sample WebDriverIO 5.6.2 framework code running <BrandName /> Selenium Grid. This is a simple WebDriverIO 5.6.2 automation script that test a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
 
-You can also find this code at our [GitHub repository for WebDriverIO](https://github.com/<BrandName />/webdriverio-selenium) 5.6.2.
+You can also find this code at our [GitHub repository for WebDriverIO](https://github.com/LambdaTest/webdriverio-selenium) 5.6.2.
 ``` js
 var assert = require('assert');
  

@@ -67,7 +67,9 @@ Key: 123456789abcdefghijklmnopqrstuv
 TunnelName: TestMu AI
 ```
 
-> **Note:** You will need to replace this file with your credentials and it has to be named exactly "`.lt.yaml`". Once you specify the proxy information as environment variable, it gets auto detected.
+<Note>
+**Note:** You will need to replace this file with your credentials and it has to be named exactly "`.lt.yaml`". Once you specify the proxy information as environment variable, it gets auto detected.
+</Note>
 
 Similarly, you can go ahead and pass any other variables by just specifying them in the YAML file. For example, if you wish to have verbose variable passed on for detailed logs while the binary is being configured. You will add the verbose flag in your YAML file:
 
@@ -140,9 +142,9 @@ With the latest tunnel binary release we have introduced the capability to provi
 **Usage:**
 
 ```bash
-–allowHosts <comma_separated_domains>
+--allowHosts <comma_separated_domains>
 ```bash title="Example"
-LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazon.com
+LT  --user <username> --key <accessKey> --allowHosts google.com,apple.com,amazon.com
 ```
 
 **Explanation:**
@@ -159,4 +161,4 @@ LT --help
 
 > **Note:** For all modifiers/arguments, refer to the list of [<BrandName /> Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
 
-That was all you need to know for configuring a client connection through <BrandName /> Tunnel. In case you have any questions, feel free to share them with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+That was all you need to know for configuring a client connection through <BrandName /> Tunnel. In case you have any questions, feel free to share them with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂

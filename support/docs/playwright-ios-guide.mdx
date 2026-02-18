@@ -6,24 +6,27 @@ keywords: ['playwright testing', 'playwright ios', 'playwright mobile testing', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
-# Getting Started With Playwright Testing on iOS Real Devices
+
 * * *
 Playwright test automation on real iOS devices is now supported on <BrandName />. Test on latest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
-> Testing with Playwright on real iOS and Android devices is currently supported with Playwright **v1.53.2**
+<Note>
+Testing with Playwright on real iOS and Android devices is currently supported with Playwright **v1.53.2**
+</Note>
 
 ## Prerequisites
 ***
 
 >Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/<BrandName />/playwright-sample/" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/playwright-sample/" />
 
 1. Clone the <BrandName />-Playwright repository on your system using the following command.
 ```
-git clone https://github.com/TestMu AI/playwright-sample/
+git clone https://github.com/LambdaTest/playwright-sample/
 ```
 
 2. Install the npm dependencies.
@@ -210,7 +213,7 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 <img loading="lazy" src='/assets/images/playwright-testing/playwright-ios-real-device.webp' alt="Image" width="1444" height="703" />
 
 <Note>
-**- Only Safari and Node.js integrations are currently supported; we plan to extend compatibility to additional browsers and languages soon.**
+- Only Safari and Node.js integrations are currently supported; we plan to extend compatibility to additional browsers and languages soon.**
 
 - Playwright testing on real iOS devices is currently supported on latest iOS versions—iOS 17, iOS 18, and iOS 26—across both iPhones and iPads. Extension of device coverage is currently in progress.
 

@@ -5,6 +5,7 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { NewTag } from "/snippets/NewTag.mdx";
 
 
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
@@ -21,7 +22,9 @@ version: 0.1
 
 ### `runson`
 In this flag, you will define your required Operating System on which you want to run your tests.
-> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
+<Note>
+Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11).
+</Note>
 
 ```yaml
 runson: linux # mac, mac13, win, win11
@@ -58,20 +61,26 @@ Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecu
 
 For instance, if you have a concurrency of 10 and you want to run 50 tests in total, AutoSplit mode will distribute these 50 tests on 10 VMs in the most efficient manner possible to reduce your overall job execution time.
 
-> **Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
+<Note>
+**Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
+</Note>
 
 ```yaml
 autosplit: true   
 ```
 
-> 📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
+<Note>
+📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
+</Note>
 
 ***
 
 ### `concurrency`
 This indicates the total number of concurrent sessions that can run in parallel for processing your test-cases. Your job will have as many virtual machines [(`tasks`)](/support/docs/hyperexecute-status/#2-task-level-status) as you have defined for this flag.
 
-> if you are using the [AutoSplit strategy](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) then it is mandatory for you to define the concurrency.
+<Note>
+if you are using the [AutoSplit strategy](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) then it is mandatory for you to define the concurrency.
+</Note>
 
 ```yaml
 concurrency: 10   
@@ -127,7 +136,6 @@ This attribute defines where the test discovery occurs and how it is executed. H
 #test discovery happens on machine where CLI is running
 mode: local  #or
 
-# test discovery happens in designated HyperExecute VMs
 mode: remote
 ```
 {/* #test discovery happens on HyperExecute VMs
@@ -173,7 +181,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 <Tip>
-**- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.**
+- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.**
 
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 </Tip>
@@ -237,7 +245,9 @@ In matrix mode, the [concurrency](/support/docs/deep-dive-into-hyperexecute-yaml
 
 For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
 
-> **Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
+<Note>
+**Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
+</Note>
 
 ```yaml
 concurrency: 2
@@ -390,7 +400,9 @@ The `runtime` flag is used to:
 
 </Info>
 
-> 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
+<Note>
+📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
+</Note>
 
 ```yaml
 runtime:
@@ -459,7 +471,9 @@ The `maxRetries` key defines the number of retries allowed for a failed test sce
 
 With `maxRetries` and `retryOnFailure`, you don't need to rerun the entire job to retry failed test scenarios. Instead, your tests are automatically retried immediately after a failure, allowing you to determine if they pass in subsequent attempts.
 
-> You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
+<Note>
+You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
+</Note>
 
 ```yaml
 retryOnFailure: true
@@ -492,7 +506,7 @@ partialReports:
  frameworkName: extent
 ```
 
-It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
+It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`---download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
 <Info>
 **If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/):**
@@ -541,7 +555,7 @@ plugin = {
 ```
 
 <Tip>
-**- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)**
+- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)**
 
 - Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
 - How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
@@ -570,7 +584,9 @@ errorCategorizedReport:
   enabled: true
 ```
 
-> Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
+<Note>
+Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
+</Note>
 
 ***
 
@@ -616,11 +632,11 @@ uploadArtefacts:
      - target/surefire-reports/**
 ```
 
-> You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
+<Note>
+You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
+</Note>
 
 <Warning>
-**note**
-
 The uploadArtefact flag is not currently supported for tests running with the **Espresso** or **XCUI** frameworks. Please be aware of this limitation when configuring your tests.
 </Warning>
 
@@ -738,8 +754,6 @@ captureScreenRecordingForScenarios: true
 ```
 
 <Warning>
-**info**
-
 To avoid test failures, ensure the `video` capability is `false` before enabling the `captureScreenRecordingForScenarios` flag in your YAML file. If both `video` capability and `captureScreenRecordingForScenarios` flag is set to `true` simultaneously, the tests will fail. To prevent this conflict, always pass the capability `video: false` in your tests.
 </Warning>
 
@@ -931,8 +945,6 @@ alwaysRunPostSteps: true
 This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place. To know more about Projects [click here](/support/docs/hyperexecute-projects).
 
 <Info>
-**note**
-
 - Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
 - If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
 </Info>
@@ -960,7 +972,9 @@ This flag optimizes codebase uploads by **fetching** only the parts of the codeb
 
 When you pass the `differentialUpload` flag, it ensures that whenever you upload the **same codebase a second time with less than 75% changes, only the modified or new parts are fetched**. The rest is mapped to the previously uploaded version of the codebase. This approach is beneficial in scenarios where network issues or a large codebase contribute to slow upload times.
 
-> **NOTE:** The default value for **ttlHours** is 60 hours
+<Note>
+**NOTE:** The default value for **ttlHours** is 60 hours
+</Note>
 
 ```yaml
 project:
@@ -981,7 +995,9 @@ By activating this feature, you can experience a significant reduction in upload
 
 The **`linkValidity`** flag is used to customize the duration of validity for report and artifact URLs generated after job completion. Currently URLs are inherently valid for 48 hours post-generation but you can tailor the validity period to align with the specific requirements, ensuring you can access the associated resources within the defined timeframe. 
 
-> **Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
+<Note>
+**Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
+</Note>
 
 ```yaml
 report: true
@@ -1063,7 +1079,7 @@ This would work only for `version 0.1` and local discovery mode.
 As this is dependent on the previous run of a job, any change in the browser capability or test name or test order might render the cache invalid. And browser setup time reduction might not be visible in this run, rather, it would appear in the next run.
 
 <Note>
-**Note** : Currently this is available for Windows - edge, firefox, chrome - recent 5 versions. Linux and MAC are not supported currently.
+: Currently this is available for Windows - edge, firefox, chrome - recent 5 versions. Linux and MAC are not supported currently.
 </Note>
 
 
@@ -1380,7 +1396,7 @@ For instance,
 if your test loads jquery static library multiple times and for some reason it is getting downloaded each time. Enable `cacheTestURL` to cache it. It will decrease file load time from the second time onwards.
 
 <Note>
-**Note**: These cached resources are not yet shared across VMs. So, each VM has its own copy of cache.
+: These cached resources are not yet shared across VMs. So, each VM has its own copy of cache.
 </Note>
 
 
@@ -1534,7 +1550,7 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 ```
 
 <Note>
-**Note**: t1 will denote the time taken by each selenium command between start and end.
+: t1 will denote the time taken by each selenium command between start and end.
 </Note>
 
 

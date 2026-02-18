@@ -6,8 +6,6 @@ keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# GitLab CI Integration
 * * *
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.
 
@@ -33,13 +31,13 @@ $ brew install node
 * Upgrade npm to latest version using the below command.
 
 ```
-npm install npm@latest –g
+npm install npm@latest --g
 ```
 
 * Install protractor using npm with the below command.
 
 ```
-npm install –g protractor
+npm install --g protractor
 ```
 
 2. **<BrandName /> Authentication Credential**
@@ -64,7 +62,7 @@ $ set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 * * *
 To integrate GitLab CI with <BrandName /> you need to make minor tweaks in the .gitlab-ci.yml which is the configuration file for your GitLab CI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on.
 
-Below is a sample config file for integrating GitLab CI with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our [GitHub repository](https://github.com/<BrandName />/protractor-selenium-sample-gitlab).
+Below is a sample config file for integrating GitLab CI with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our [GitHub repository](https://github.com/LambdaTest/protractor-selenium-sample-gitlab).
 
 ```
 //Sample Configuration For GitLab CI
@@ -115,7 +113,9 @@ var capabilities = {
 }
 ```
 
-> For more information, refer to our documentation on Selenium Automation Capabilities.
+<Note>
+For more information, refer to our documentation on Selenium Automation Capabilities.
+</Note>
 
 ## Testing Locally Hosted or Privately Hosted Projects
 * * *

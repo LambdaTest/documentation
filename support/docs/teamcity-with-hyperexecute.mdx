@@ -6,9 +6,6 @@ keywords: ['testmu ai integrations', 'testmu ai integrations with ci/cd tools', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# TeamCity Integration With HyperExecute
-
 TeamCity is a build management and continuous integration server developed by JetBrains. It is used to automate the process of building, testing, and deploying software. It supports a wide range of programming languages and technologies, including Java, .NET, Ruby, and Python.
 
 This document will show you how to integrate TeamCity with HyperExecute to greatly shorten your test cycles.
@@ -71,7 +68,9 @@ chmod +x hyperexecute
 ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>
 ```
 
-> Since my default agent is mac I am using darwin CLI in the **cURL** command. Kindly change it according to your system default agent. <br /> 
+<Note>
+Since my default agent is mac I am using darwin CLI in the **cURL** command. Kindly change it according to your system default agent. <br />
+</Note>
   - **Mac** -> darwin <br />
   - **Linux** -> linux <br />
   - **Windows**-> windows

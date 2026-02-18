@@ -6,8 +6,6 @@ keywords: ['lambda hooks for selenium automation', 'lambda hooks', 'lambda hooks
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Lambda Hooks For Selenium Automation
 * * *
 <BrandName /> Selenium Grid offers a set of hooks also known as Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your automation scripts. 
 
@@ -39,5 +37,5 @@ Below is the representation of the available Lambda Hooks along with the functio
 | *lambda-test-tags* | Dynamically update your test tags for a test session which can be used to organize and filter your test results. <br /> **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");` <br /> <br /> **Limitations :** <br /> **1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.  <br /> **2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
 
 <Note>
-**Note**: These hooks will only work if you're connected to your [LambdaTest Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
+: These hooks will only work if you're connected to your [LambdaTest Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
 </Note>

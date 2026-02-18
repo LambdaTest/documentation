@@ -5,9 +5,8 @@ keywords: ['xcuitest', 'xcui result bundle', 'xcuitest report', 'xcuitest logs',
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
-
-# XCResult on <BrandName />
 <RealDeviceTag value="Real Device" />
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.  
 
@@ -98,7 +97,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 Result bundles are generated at the Build level. To download the `.xcresult` bundle for a specific session, use the following GET endpoint:
 
 <Note>
-**- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).**
+- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).**
 
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 </Note>

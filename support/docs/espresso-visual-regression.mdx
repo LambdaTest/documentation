@@ -18,7 +18,7 @@ In this documentation, you will learn step-by-step how to perform regression tes
 - Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
 <Tip>
-**If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android-app.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android_espressotest-app.apk).**
+**If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android-app.apk) and a sample 🔗 [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android_espressotest-app.apk).**
 
 </Tip>
 
@@ -68,7 +68,9 @@ set LT_ACCESS_KEY="$YOUR_LAMBDATEST_ACCESS_KEY"
 
 ## Step 3: Update your App Configurations
 
-> It should be in your app configurations then only you can perform the Espresso integration.
+<Note>
+It should be in your app configurations then only you can perform the Espresso integration.
+</Note>
 
 - In your `build.gradle` file, add the [testmu ai-espresso](https://central.sonatype.com/artifact/io.github.testmu ai/testmu ai-espresso) dependency:
 
@@ -124,7 +126,7 @@ curl -u "$YOUR_LAMBDATEST_USERNAME:$YOUR_LAMBDATEST_ACCESS_KEY" --location --req
 </Tabs>
 
 <Info>
-**- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_ANDROID_APP>`**
+- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_ANDROID_APP>`**
 
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 </Info>
@@ -159,7 +161,7 @@ curl -u "$YOUR_LAMBDATEST_USERNAME:$YOUR_LAMBDATEST_ACCESS_KEY" --location --req
 </Tabs>
 
 <Info>
-**- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`**
+- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`**
 
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 </Info>
@@ -178,7 +180,9 @@ $YOUR_LAMBDATEST_USERNAME:$YOUR_LAMBDATEST_ACCESS_KEY
 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
-> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+<Note>
+Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+</Note>
 
 ```javascript
 curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
@@ -204,7 +208,9 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' 
 }'
 ```
 
-> You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+<Note>
+You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+</Note>
 
 ## Types of Sharding
 Sharding can be categorized into two types:
@@ -528,7 +534,7 @@ If you encounter issues not covered here:
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

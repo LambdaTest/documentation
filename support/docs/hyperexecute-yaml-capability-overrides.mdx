@@ -22,7 +22,9 @@ Previously, these capabilities were typically defined within the test script. Wi
 - Define a new `ltOptions` section inside your HyperExecute YAML file.
 - Specify any desired capabilities as key-value pairs under `ltOptions`.
 - During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+<Note>
+All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+</Note>
 
 ## 🔑 Key Behavior Rules
 
@@ -32,12 +34,14 @@ Previously, these capabilities were typically defined within the test script. Wi
 | Capability present in **YAML but not in script**    | It is **automatically added** to the session capabilities. |
 | Capability only in script                           | Used as-is unless overridden in YAML.                      |
 
-> **📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
+<Note>
+**📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
+</Note>
 
 ## Sample YAML with Capability Overrides
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v1/testng_hyperexecute_linux_ltoptions.yaml
+https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v1/testng_hyperexecute_linux_ltoptions.yaml
 ```
 
 ## 💡 Common Use Cases

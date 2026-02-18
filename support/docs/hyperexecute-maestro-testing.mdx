@@ -6,6 +6,8 @@ keywords: ['maestro', 'raw', 'java', 'testmu ai java', 'framework on testmu ai',
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
@@ -24,7 +26,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 
 Download or Clone the code sample for the Maestro framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<a href="https://github.com/<BrandName />/hyperexecute-maestro-sample-test" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/hyperexecute-maestro-sample-test" />
 </Tip>
 
 ## Step 2: Setup the CLI in your Test Suite
@@ -56,7 +58,9 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 
 ```
 
-> Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
+<Note>
+Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
+</Note>
 
 ## Step 4: Configure YAML in your Test Suite
 Enter your `APP_ID` in the YAML file that you have fetched in the above step.
@@ -65,38 +69,46 @@ Enter your `APP_ID` in the YAML file that you have fetched in the above step.
 <Tab title="Android-Real Device">
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/android-realdevice.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-realdevice.yaml
 ```
 </Tab>
 
 <Tab title="iOS-Real Device">
-> To enable execution on iOS real devices, install the following [JAR-file](https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar)
+<Note>
+To enable execution on iOS real devices, install the following [JAR-file](https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar)
+</Note>
  and include it in your payload. This JAR acts as a wrapper to facilitate compatibility with Maestro when running on iOS real devices.
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/ios-realdevice.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-realdevice.yaml
 ```
 </Tab>
 
 <Tab title="Android-Emulator">
 
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
+<Note>
+To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
+</Note>
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/android-emulator.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-emulator.yaml
 ```
 </Tab>
 
 <Tab title="iOS-Simulator">
-> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai).
+<Note>
+To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
+</Note>
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/ios-simulator.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-simulator.yaml
 ```
 </Tab>
 
 </Tabs>
 
-> HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
+<Note>
+HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
+</Note>
 
 ## Step 5: Generate JUnit XML Report
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
@@ -108,12 +120,12 @@ https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/ios-simu
 The above command will generate a `report.xml` file in the root directory after each test execution. Here is the complete reference of the `runTest.sh` file:
 
 ```yaml reference
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
 ```
 When running on iOS real devices, you need to use a dedicated script since the execution flow differs slightly from iOS simulators and Android.
 
 ```yaml reference
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest_ios_realdevice.sh
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest_ios_realdevice.sh
 ```
 
 2. Update your HyperExecute YAML file to enable the native reporting in HyperExecute using the generated JUnit XML files.
@@ -185,7 +197,7 @@ framework:
 and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.
 
 ```yaml reference title="android-launch.yaml"
-https://github.com/TestMu AI/hyperexecute-maestro-sample-test/blob/main/android-launch.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-launch.yaml
 ```
 
 ### Step 3: Execute your Test Suite

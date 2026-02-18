@@ -5,9 +5,8 @@ keywords: ['files upload', 'app test automation', 'media upload', 'upload automa
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
-
-# Uploading Files and Media on Real Devices
 <RealDeviceTag value="Real Device" />
 <BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
@@ -113,7 +112,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 </Tabs>
 
 <Note>
-**- Each automation session permits a maximum of five file uploads.**
+- Each automation session permits a maximum of five file uploads.**
 
 - In manual testing, iOS app needs to installed first to upload non-media files.
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.

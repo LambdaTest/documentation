@@ -6,9 +6,6 @@ keywords: ['github app', 'testmu ai integration', 'AI test generation', 'PR auto
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# <BrandName /> AI Cloud GitHub App Integration
-
 ## 1. Overview
 
 ### What is the <BrandName /> AI Cloud GitHub App?
@@ -128,7 +125,6 @@ After installing the GitHub App, each repository requires a configuration file t
 Create a `.testmu ai/config.yaml` file in the root directory of your repository with the following structure:
 
 ```yaml
-# TestMu AI AI Cloud Configuration
 project_id: "your_project_id"
 folder_id: "your_folder_id"
 assignee: your_user_id
@@ -146,7 +142,9 @@ test_url: "https://your-deployed-app-url.com/"
 | `environment_id` | The target testing environment (browser, OS, device configurations) | Create environments in Test Manager and reference their IDs |
 | `test_url` | The base URL of your application under test | Your staging or testing environment URL where tests will be executed |
 
-> **Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+<Note>
+**Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+</Note>
 
 <Tip>
 **Maximize AI Context**

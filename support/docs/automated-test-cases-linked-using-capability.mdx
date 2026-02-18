@@ -9,7 +9,9 @@ import { BrandName } from "/snippets/BrandName.mdx";
 
 Test Manager supports linking automated test runs directly to specific test cases using Test Case IDs. This feature enables better traceability and management of your automated testing workflow.
 
-> Currently, this feature is supported on [HyperExecute](/support/docs/getting-started-with-hyperexecute/) and Web Automation tests.
+<Note>
+Currently, this feature is supported on [HyperExecute](/support/docs/getting-started-with-hyperexecute/) and Web Automation tests.
+</Note>
 
 ## How to Link a Test Case ID
 
@@ -27,8 +29,6 @@ const capabilities = {
 - `tms.tc_id` : The key used to link a test case in Test Manager. Replace "TC-1470" with your desired Test Case ID.
 
 <Info>
-**NOTE**
-
 - Ensure the Test Case ID exists in Test Manager before linking.  
 - The Test Case ID format should match exactly as shown in Test Manager
 - Each automated test run can be linked to one test case at a time

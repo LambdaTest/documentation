@@ -21,9 +21,7 @@ import { BrandName } from "/snippets/BrandName.mdx";
 - You must have created an Project on the SmartUI web app.
 
 <Warning>
-**Warning**
-
-This feature is supported for tests ran through <b>CLI</b> project type ([SDK](../smartui-selenium-java-sdk/), [Static CLI](../smartui-cli/), [Storybook](../smart-ui-storybook/)) projects on the SmartUI platform. Please contact support@testmu.ai for further information or requests.
+This feature is supported for tests ran through <b>CLI</b> project type ([SDK](../smartui-selenium-java-sdk/), [Static CLI](../smartui-cli/), [Storybook](../smart-ui-storybook/)) projects on the SmartUI platform. Please contact support@testmuai.com for further information or requests.
 </Warning>
 
 The following steps will guide you in running your Git branching Visual Regression test on <BrandName /> SmartUI platform:
@@ -243,8 +241,6 @@ In this case, the latest build run on the SmartUI project build history will be 
 In this case, the new build run with the `development` git branch name will be set to the current **Baseline** build for the SmartUI project.
 
 <Warning>
-**Note**
-
 For the first build generated for the **Baseline branch build** in the SmartUI Projects will be automatically set to **SYSTEM APPROVED** status by default.
 </Warning>
 
@@ -306,7 +302,7 @@ If this build with missing screenshots shows no visual changes compared to the b
 For builds with missing screenshots that do contain visual changes, you can manually approve them to set them as a new baseline if desired.
 
 <Note>
-**Note**: If a build contains any new screenshots that weren't present in the baseline, SmartUI interprets this as an intentional test case modification. In such cases, the `Missing Screenshots` tooltip will not be displayed, even if some screenshots from the baseline are missing.
+: If a build contains any new screenshots that weren't present in the baseline, SmartUI interprets this as an intentional test case modification. In such cases, the `Missing Screenshots` tooltip will not be displayed, even if some screenshots from the baseline are missing.
 </Note>
 
 

@@ -6,6 +6,8 @@ keywords: ['xcui', 'iOS', 'testmu ai', 'framework on testmu ai', 'testng', 'app 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 **BiDi (Bi-Directional)** refers to the **WebDriver BiDi protocol**, a new standard from the W3C (World Wide Web Consortium). Unlike the traditional WebDriver protocol (which works in a request → response model), **WebDriver BiDi enables two-way communication between your test script and the browser in real time**.
 
@@ -32,7 +34,7 @@ This guide details how to execute your **BiDi** tests on **HyperExecute** using 
 
 Download or Clone the BiDi sample from <BrandName />’s GitHub Repository
 
-<a href="https://github.com/<BrandName />/hyperexecute-bidi-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/hyperexecute-bidi-sample" />
 </Tip>
 
 ### Step 2: Download the CLI in your Project
@@ -46,7 +48,9 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 
 ### Step 3: Add the required Capabilities
 
-> The `webSocketUrl` capability is set to `true` to enable BiDi support.
+<Note>
+The `webSocketUrl` capability is set to `true` to enable BiDi support.
+</Note>
 
 ```javascript title="wdio.testmu ai.config.js"
 
@@ -68,7 +72,7 @@ capabilities: [{
 ### Step 4: Configure YAML in your Test Suite
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
+https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
 ```
 
 ### Step 5: Execute your Test Suite
@@ -99,4 +103,6 @@ Optimize your test pipeline using the following advanced features:
 - 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
 - 🔄 [Auto-Healing](/support/docs/hyperexecute-auto-healing/) – Automatically recover from certain failures
 
-> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+<Note>
+For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+</Note>

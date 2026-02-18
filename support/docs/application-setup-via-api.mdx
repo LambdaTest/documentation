@@ -5,6 +5,8 @@ keywords: ['appium', 'application operations', 'testmu ai', 'mobile testing', 'a
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -18,7 +20,7 @@ To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application 
 </Note>
 
 <Tip>
-**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 </Tip>
 
@@ -77,8 +79,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789``
 
 <Warning>
-**note**
-
 The upload time of your application can range from a few seconds to a minute, depending on the size of your application. Therefore, do not interrupt the cURL command request until you receive the response.
 </Warning>
 

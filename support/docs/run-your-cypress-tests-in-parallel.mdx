@@ -1,22 +1,13 @@
+---
+title: Run Your Cypress Tests In Parallel On <BrandName /> Platform
+
+sidebarTitle: Parallel Testing
+
+keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Testing Online', 'Run Cypress', 'Cypress Run Specific Test', 'Cypress Testing Environment', 'How to Run Cypress Tests']
+---
+
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-
-﻿---
-id: run-your-cypress-tests-in-parallel
-title: Run Your Cypress Tests In Parallel On <BrandName /> Platform
-hide_title: true
-sidebarTitle: Parallel Testing
-description: Run multiple Cypress tests on the <BrandName /> cloud simultaneously across 40+ browser versions. This documentation will help you in running Cypress tests in parallel.
-keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Testing Online', 'Run Cypress', 'Cypress Run Specific Test', 'Cypress Testing Environment', 'How to Run Cypress Tests']
-
-url: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
-site_name: <BrandName />
-slug: run-your-cypress-tests-in-parallel/
-canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
----
-# Run Your Cypress Tests In Parallel
----
 
 If you want to run your tests parallelly on the <BrandName /> platform, you can do that using either of the following two ways:
 
@@ -69,8 +60,6 @@ For example, if you want to run your Cypress tests on 5 parallel sessions, use t
 ```
 
 <Info>
-**NOTE**
-
 The number of parallel test running on the <BrandName /> platform at a time, is based on the concurrency plan of your <BrandName /> account. In case the number of parallel tests is more than the concurrency plan, the remaining tests will get queued and run after the existing tests are complete. For example, suppose you have a concurrency plan of 5 parallel sessions and want to run 50 tests parallelly. In this case, only 5 parallel tests will be executed at a time, and the rest 45 will be queued. As the test finishes running, the queued tests will be moved to the running state based on availability.
 
 </Info>

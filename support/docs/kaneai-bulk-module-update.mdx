@@ -6,9 +6,6 @@ keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai modules', 'bulk u
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Bulk Module Update
-
 Maintaining many test cases that share the same module can become slow and error-prone when a module evolves. Each time a module is updated, you would otherwise have to manually open and edit every affected test case and bump the module version one by one.
 
 The **Bulk Module Update** feature solves this by allowing you to:
@@ -18,8 +15,6 @@ The **Bulk Module Update** feature solves this by allowing you to:
 - Safely roll the new module version into your existing tests while keeping execution verification explicit and controlled
 
 <Info>
-**Note**
-
 Bulk Module Update is currently supported only for **KaneAI test cases**. Support for non-KaneAI test cases is coming soon.
 </Info>
 
@@ -68,7 +63,9 @@ The **Update Test Cases** button will be disabled if:
 
 You will see a message such as:
 
-> "This module version is not authored yet. Author it in a test to enable bulk update."
+<Note>
+"This module version is not authored yet. Author it in a test to enable bulk update."
+</Note>
 
 **To resolve:** Use the module in a test case and complete its authoring/validation, then ensure eligible KaneAI test cases are available.
 

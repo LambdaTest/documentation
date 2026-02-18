@@ -1,19 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: smartui-git-branching-strategy
+---
 title: Git Branching Strategy in SmartUI Storybook Integration
 sidebarTitle: Storybook Git Baseline Branching
-description: In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the <BrandName /> Automation Cloud across 40+ browser versions.
-keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
-url: https://www.testmuai.com/support/docs/smartui-github-app-integration/
-site_name: <BrandName />
-slug: smartui-git-branching-strategy/
-canonical: https://www.testmuai.com/support/docs/smartui-git-branching-strategy/
 
+keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ---
 
 <img loading="lazy" src='/assets/images/smart-visual-testing/git-doc-header.webp' alt="Smart Visual Testing" width="1600" height="803" />
@@ -30,9 +23,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-git-branching-strategy/
 - You must have created an Project on the SmartUI web app.
 
 <Warning>
-**Warning**
-
-This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@testmu.ai for further information or requests.
+This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@testmuai.com for further information or requests.
 </Warning>
 
 The following steps will guide you in running your Git branching Visual Regression test on <BrandName /> SmartUI platform:
@@ -195,8 +186,6 @@ In this case, the latest build run on the SmartUI project build history will be 
 In this case, the new build run with the `development` git branch name will be set to the current **Baseline** build for the SmartUI project.
 
 <Warning>
-**Note**
-
 For the first build generated for the **Baseline branch build** in the SmartUI Projects will be automatically set to **SYSTEM APPROVED** status by default.
 </Warning>
 
@@ -272,7 +261,5 @@ $ smartui storybook <Your localhost URL or Static Build folder path> --config .s
 ```
 
 <Warning>
-**Warning**
-
 In the above workflow, if there are no changes which are committed to your `Git` repository and if a build with the same commit number already exists in the build history of the SmartUI project.
 </Warning>

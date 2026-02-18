@@ -6,8 +6,6 @@ keywords: ['nightwatch selenium', 'nightwatch js', 'nightwatch js selenium', 'ja
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Nightwatch with Selenium: Tutorial to Run Your First Test on <BrandName />
 * * *
 
 In this topic, you will learn how to configure and run your JavaScript automation testing scripts on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **JavaScript** framework **Nightwatch**.
@@ -24,7 +22,7 @@ By the end of this topic, you will be able to:
 4. Test your locally hosted pages on <BrandName /> platform.
 5. Explore advanced features of <BrandName />. 
 
->**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on GitHub](https://github.com/<BrandName />/nightwatch-selenium-sample). You can either download or clone the repository to quickly run your tests.
+>**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on GitHub](https://github.com/LambdaTest/nightwatch-selenium-sample). You can either download or clone the repository to quickly run your tests.
 
 ## Prerequisites To Run Automation Tests With Selenium & Nightwatch Framework
 * * *
@@ -37,9 +35,9 @@ Before getting started with Automated Scripts using Selenium with Nightwatch fra
 
 ### Installing Selenium Dependencies and tutorial repo
 
-**Step 1:** Clone the <BrandName />’s [nightwatch-selenium-sample repository](https://github.com/<BrandName />/nightwatch-selenium-sample) and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [nightwatch-selenium-sample repository](https://github.com/LambdaTest/nightwatch-selenium-sample) and navigate to the code directory as shown below:
 ```bash
-git clone https://github.com/TestMu AI/nightwatch-selenium-sample
+git clone https://github.com/LambdaTest/nightwatch-selenium-sample
 cd nightwatch-selenium-sample
 ```
 **Step 2:** Install the required project dependencies using the command below:
@@ -77,13 +75,13 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 Let’s check out a sample **Nightwatch** framework code running on <BrandName /> Selenium Grid. This is a simple Nightwatch automation script that tests a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
 
 ```javascript title="googleTest.js" reference
-https://github.com/TestMu AI/nightwatch-selenium-sample/blob/master/tests/googleTest.js
+https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/tests/googleTest.js
 ```
 ### Configuration of Your Test Capabilities
 **Step 4:** Below is the `nightwatch.conf.js` file where we will be declaring the desired capabilities. Since we are using remote webdriver, we have to define which browser environment we want to run the test. We do that by passing browser environment details to <BrandName /> Selenium Grid via desired capabilities class.
 
 ```javascript title="nightwatch.conf.js" reference
-https://github.com/TestMu AI/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
+https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
 <Warning>
 You can generate capabilities for your test requirements with the help of our inbuilt **<a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>**.

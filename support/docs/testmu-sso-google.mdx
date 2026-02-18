@@ -6,9 +6,6 @@ keywords: ['sso', 'testmu ai sso', 'google custom', 'google workspace', 'saml', 
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# <BrandName /> SSO & Google Workspace Using SAML
-
 * * *
 
 <BrandName /> provides seamless Single Sign-On (SSO) integration with Google Workspace, enabling your team to access <BrandName /> using their existing Google credentials. This integration streamlines user management and enhances security by centralizing authentication through your Google Workspace identity provider.
@@ -39,13 +36,13 @@ The SSO integration process involves configuring both Google Workspace and <Bran
 
 3. **Add Custom SAML App**: Click **Add App** and select **Add custom SAML app** to create a new SAML application for <BrandName /> integration.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/add-custom-saml-app.png' alt="Navigate to Web and Mobile Apps" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/add-custom-saml-app.png' alt="Navigate to Web and Mobile Apps" width="944" height="487" />
 
 4. **Configure Application Details**: 
    - **App name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> SSO App" to easily identify this application in your Google Workspace admin console.
    - Click **Continue** to proceed to the next configuration step.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/custom-app-creation.png' alt="Add custom SAML app" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/custom-app-creation.png' alt="Add custom SAML app" width="944" height="487" />
 
 5. **Retrieve Google Identity Provider Details**: On the **Google Identity Provider details** page, you'll need to collect the following information for <BrandName /> configuration:
 
@@ -57,7 +54,7 @@ The SSO integration process involves configuring both Google Workspace and <Bran
     
     Click **Continue** to proceed.
 
-    <img loading="lazy" src='/assets/images/testmu ai-sso-google/sp-details.png' alt="<BrandName /> Configuration Details" width="944" height="487" />
+    <img loading="lazy" src='/assets/images/lambdatest-sso-google/sp-details.png' alt="<BrandName /> Configuration Details" width="944" height="487" />
 
 ### Step 2: Create Connection in <BrandName />
 
@@ -65,11 +62,11 @@ The SSO integration process involves configuring both Google Workspace and <Bran
 
 7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "<BrandName /> Google SSO". This name will help you identify and manage this connection in your <BrandName /> organization. Click **Add New Connection** to proceed.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/sso-setup-testmu ai.png' alt="<BrandName /> SSO Settings" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/sso-setup-testmu ai.png' alt="<BrandName /> SSO Settings" width="944" height="487" />
 
 8. **Select Identity Provider**: From the list of supported identity providers, select **Other SAML Provider** to configure Google Workspace integration.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/idp-selector.png' alt="Select Other SAML Provider" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/idp-selector.png' alt="Select Other SAML Provider" width="944" height="487" />
 
 9. **Retrieve <BrandName /> Configuration Details**: <BrandName /> will generate and display the configuration details required for your Google Workspace setup. These critical details include:
     - **Assertion Consumer Service (ACS) URL**: The secure endpoint where Google will send SAML authentication responses
@@ -78,7 +75,7 @@ The SSO integration process involves configuring both Google Workspace and <Bran
     
     **Important**: Securely copy these details as you'll need to enter them in your Google Workspace admin console to complete the integration.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/configure-idp.png' alt="<BrandName /> Configuration Details" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/configure-idp.png' alt="<BrandName /> Configuration Details" width="944" height="487" />
 
 Click **Continue** to proceed to the next step.
 
@@ -101,7 +98,7 @@ Click **Continue** to proceed to the next step.
     - **Name ID Format**: Set to **"X509_SUBJECT"** - this specifies the format for the Name ID attribute
     - **Name ID**: Set to **"Basic Information > Primary Email"** - this serves as the primary user identifier
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/service-provider-detail.png' alt="Configure Service Provider Details" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/service-provider-detail.png' alt="Configure Service Provider Details" width="944" height="487" />
 
 13. **Configure Attribute Mapping**: Click **Add mapping** to establish the user attribute mappings required by <BrandName />:
     - **Google Directory attributes**: Select the appropriate field from the Google directory attributes dropdown
@@ -113,11 +110,11 @@ Click **Continue** to proceed to the next step.
     - **Last Name**: Map to `family_name`
     
 
-    <img loading="lazy" src='/assets/images/testmu ai-sso-google/attribute-mapping.png' alt="Configure Attribute Mapping" width="944" height="487" />
+    <img loading="lazy" src='/assets/images/lambdatest-sso-google/attribute-mapping.png' alt="Configure Attribute Mapping" width="944" height="487" />
 
 14. **Complete Google Workspace Setup**: Click **Finish** to finalize the SAML application configuration in Google Workspace.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/app-detail-google.png' alt="Enter app details" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/app-detail-google.png' alt="Enter app details" width="944" height="487" />
 
 15. **Enable SAML Application**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps**, locate the <BrandName /> SAML application you created, click **User access**, then configure access for your organization:
     - **On for everyone**: Enable access for all users in your organization
@@ -127,7 +124,7 @@ Click **Continue** to proceed to the next step.
     
     Select your preferred access level and click **Save** to activate the application.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/update-app-for-user-access.png' alt="Turn On SAML App" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/update-app-for-user-access.png' alt="Turn On SAML App" width="944" height="487" />
 
 ### Step 4: Complete <BrandName /> Integration
 
@@ -142,7 +139,7 @@ Click **Continue** to proceed to the next step.
     - `yourcompany.com` - enables authentication for all users with @yourcompany.com email addresses
     - `subsidiary.com,partner.com` - supports multiple domains (comma-separated)
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/certificate-upload.png' alt="Upload Google Certificate and SSO URL" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/certificate-upload.png' alt="Upload Google Certificate and SSO URL" width="944" height="487" />
 
 19. **Pre-Integration Verification**: Before finalizing the connection, ensure the following:
     - All required configuration fields are properly completed
@@ -174,7 +171,7 @@ After completing the integration, verify that your SSO setup is functioning corr
 4. **Complete Authentication**: You'll be redirected to Google's sign-in page. Enter your Google Workspace credentials.
 5. **Verify Successful Authentication**: After successful authentication, you should be automatically redirected to your <BrandName /> organization.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/sp-initiated-sso.png' alt="<BrandName /> SSO Login Page" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/sp-initiated-sso.png' alt="<BrandName /> SSO Login Page" width="944" height="487" />
 
 ## Troubleshooting Common Issues
 
@@ -186,7 +183,7 @@ If you encounter issues with your SSO integration, the following troubleshooting
 
 If you receive an "App not enabled" error, the SAML application hasn't been properly activated for your users in Google Workspace.
 
-<img loading="lazy" src='/assets/images/testmu ai-sso-google/app-not-enabled.png' alt="App Not Enabled Error" width="944" height="487" />
+<img loading="lazy" src='/assets/images/lambdatest-sso-google/app-not-enabled.png' alt="App Not Enabled Error" width="944" height="487" />
 
 **Resolution**: Return to the Google Admin Console, navigate to your SAML application, and ensure it's enabled for the appropriate users or organizational units.
 
@@ -198,4 +195,6 @@ If you receive an "App not enabled" error, the SAML application hasn't been prop
 4. **Domain Restrictions**: Verify that SSO domains in <BrandName /> correspond to your organization's email domains
 5. **User Permissions**: Ensure users have appropriate access to the SAML application in Google Workspace
 
-> **Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!
+<Note>
+**Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
+</Note>
