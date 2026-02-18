@@ -5,6 +5,7 @@ keywords: ['biometric authentication', 'Fingerprint authentication', 'app test a
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -32,9 +33,7 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
     |`canEvaluatePolicy`: The canEvaluatePolicy(_:error:) method of LAContext that checks whether a specific biometric authentication policy can be evaluated on the device.|
 
 <Warning>
-**note**
-
-  We don’t support apps using IOS Keychain APIs with Biometric access control. For more details [IOS Keychain Documentation](https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id)
+We don’t support apps using IOS Keychain APIs with Biometric access control. For more details [IOS Keychain Documentation](https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id)
   </Warning>
 
 </Tab>
@@ -81,9 +80,11 @@ driver.execute_script("lambda-biometric-injection=fail")
 | lambda-hook | lambda-biometric-injection  || `lambda-biometric-injection=fail` <br /> OR <br /> `lambda-biometric-injection=pass` |
 
 <Note>
-**- To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.**
+- To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.**
 
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
 </Note>
 
-> 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices
+<Note>
+📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices
+</Note>

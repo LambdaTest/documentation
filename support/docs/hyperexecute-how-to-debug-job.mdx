@@ -6,8 +6,6 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# How to Debug a Failed Job
 As a developer or tester, you know that running tests is an essential part of the software development process. However, there are times when your tests may fail, and you may not be sure how to debug the issue, and you find yourself scratching your head, wondering what went wrong. 
 
 The HyperExecute Dashboard provides a central view of all your test runs, including the test results, error logs, and performance metrics. By understanding how to find and interpret error logs, you can quickly identify the root cause of a failed test and take steps to fix the issue. This document will help you debug failed tests on HyperExecute by finding error logs in different stages using the HyperExecute Dashboard.
@@ -23,7 +21,9 @@ You can see in the screenshot mentioned below that the Pre Step of the Task has 
 
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-pre-logs.png' alt="Image" />
 
-> **NOTE :** During the execution of pre-commands, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-pre-steps-error/) page.
+<Note>
+**NOTE :** During the execution of pre-commands, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-pre-steps-error/) page.
+</Note>
 
 ## Scenarios
 To check the issues caused in the Scenario Step, there are multiple ways to find the issue. Let's explore each way:
@@ -58,7 +58,9 @@ To enable these logs, you need to explicitly mention the required flag in your [
 
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-scenario-view-log2.png' alt="Image" />
 
-> **NOTE :** During the execution of scenario, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-scenario-steps-error/) page.
+<Note>
+**NOTE :** During the execution of scenario, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-scenario-steps-error/) page.
+</Note>
 
 ## Root Cause Analysis Report
 You can also check out our AI Native [RCA Report](/support/docs/ai-powered-test-failure-analysis/), which will help you to quickly identify various error categories and also offer a comprehensive overview of the underlying causes.
@@ -81,4 +83,6 @@ In the below screenshot, we can clearly see that there is some issue in fetching
 
 <img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-post-logs.png' alt="Image" />
 
-> You can also check the complete [Detailed Job Report](/support/docs/hyperexecute-reports/) which can help you to analyze the outcome of your tests based on your framework.
+<Note>
+You can also check the complete [Detailed Job Report](/support/docs/hyperexecute-reports/) which can help you to analyze the outcome of your tests based on your framework.
+</Note>

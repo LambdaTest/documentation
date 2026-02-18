@@ -9,7 +9,9 @@ import { BrandName } from "/snippets/BrandName.mdx";
 
 This guide takes you step-by-step through the process of using <BrandName />'s Accessibility Tool with Cypress v10 and above to run automated tests for your website.
 
-> **NOTE:** This documentation is applicable for **Cypress v10** and **later versions**.
+<Note>
+**NOTE:** This documentation is applicable for **Cypress v10** and **later versions**.
+</Note>
 
 ## Prerequisites
 
@@ -27,13 +29,13 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<a href="https://github.com/<BrandName />/testmu ai-accessibility-cypress-v10" target="_blank" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<a href="https://github.com/LambdaTest/testmu ai-accessibility-cypress-v10" target="_blank" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 </Tip>
 
 Configure the desired capabilities based on your test requirements. For example:
 
 ```yaml reference title="testmu ai-config.json"
-https://github.com/TestMu AI/testmu ai-accessibility-cypress-v10/blob/main/testmu ai-config.json
+https://github.com/LambdaTest/testmu ai-accessibility-cypress-v10/blob/main/testmu ai-config.json
 ```
 
 ### Step 2: Establish User Authentication
@@ -74,7 +76,7 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 - If you are passing npm dependencies through **package.json**, then add the below mentioned line there:
 
 ```javascript reference title="package.json"
-https://github.com/TestMu AI/testmu ai-accessibility-cypress-v10/blob/main/package.json
+https://github.com/LambdaTest/testmu ai-accessibility-cypress-v10/blob/main/package.json
 ```
 
 - If you are using **testmu ai-config.json** to pass the dependency, then pass the given line there:
@@ -109,7 +111,7 @@ import 'testmu ai-cypress-cli/accessibility/scanner'
 Add this template in your config file.
 
 ```javascript reference title="cypress.config.js"
-https://github.com/TestMu AI/testmu ai-accessibility-cypress-v10/blob/main/cypress.config.js
+https://github.com/LambdaTest/testmu ai-accessibility-cypress-v10/blob/main/cypress.config.js
 ```
 
 #### 4. Add the capabilities in the `testmu ai-config.json` file

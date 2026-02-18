@@ -25,7 +25,9 @@ Enable tunnel directly by setting the `tunnel` flag to `true` in your HyperExecu
 ```yaml title="hyperexecute.yaml"
 tunnel: true
 ```
-> Recommended if you want to quickly enable tunnel access for locally hosted apps.
+<Note>
+Recommended if you want to quickly enable tunnel access for locally hosted apps.
+</Note>
 
 ### 2. Using Existing `tunnel`
 If you already have a running tunnel, you can reuse it by specifying its name to access your applications which are locally hosted or behind a firewall.
@@ -34,7 +36,9 @@ If you already have a running tunnel, you can reuse it by specifying its name to
 tunnelNames: ["lambdatest_tunnel"]
 ```
 
-> Useful when running multiple jobs and you don’t want to spawn new tunnels each time.
+<Tip>
+Useful when running multiple jobs and you don’t want to spawn new tunnels each time.
+</Tip>
 
 ### 3. Advanced `tunnel` Configurations
 These are the parameters you can use to configure your [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel) settings when running it.
@@ -48,7 +52,9 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
 
-> HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
+<Note>
+HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
+</Note>
 
 ```yaml title="hyperexecute.yaml"
 tunnel: true

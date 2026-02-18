@@ -1,19 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: smartui-cypress-sdk
+---
 title: Integrate SmartUI SDK with Cypress Tests
 sidebarTitle: Cypress
-description: In this documentation, learn how integrate your Cypress automated tests with <BrandName />'s SmartUI.
+
 keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
-
-url: https://www.testmuai.com/support/docs/smartui-cypress-sdk/
-slug: smartui-cypress-sdk/
-canonical: https://www.testmuai.com/support/docs/smartui-cypress-sdk/
-
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ---
 
 Welcome to the world of simplified visual testing with the SmartUI SDK.
@@ -46,7 +39,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 You can clone the sample repository to run `Cyoress` tests with `SmartUI` and use the `cypress/e2e/smartuiSDKLocal.cy.js` file.
 
 ```bash
-git clone https://github.com/<BrandName />/smartui-cypress-sdk-sample
+git clone https://github.com/LambdaTest/smartui-cypress-sdk-sample
 cd smartui-cypress-sdk-sample
 ```
 ### **Step 2**: Install the Dependencies
@@ -66,6 +59,7 @@ npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
 
 ```js
 import '@lambdatest/cypress-driver'
+import { NewTag } from "/snippets/NewTag.mdx";
 ```
 
 3. Update your config `(cypress.config.js)` or `plugins/index.js` with the following snippet
@@ -611,7 +605,7 @@ If you encounter issues not covered here:
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

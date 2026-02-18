@@ -67,7 +67,9 @@ $env:LOCALSTACK_API_KEY=<YOUR_API_KEY> localstack start -d
 
 To showcase how you can run LocalStack on your local machine and execute your tests, we will showcase a sample solution to resize images uploaded to a local S3 through a serverless application. The solution will feature a simple web user interface that uses local Lambda functions to generate S3 pre-signed URLs allowing the S3 bucket notifications to trigger a Python Lambda that runs image resizing. 
 
-> **Note:** The code for the solution in this post is located in this [repository on GitHub](https://github.com/localstack-samples/sample-serverless-image-resizer-s3-lambda). You can clone this repository and install its local dependencies by executing the following commands in your terminal:
+<Note>
+**Note:** The code for the solution in this post is located in this [repository on GitHub](https://github.com/localstack-samples/sample-serverless-image-resizer-s3-lambda). You can clone this repository and install its local dependencies by executing the following commands in your terminal:
+</Note>
 
 ```bash
 git clone 
@@ -94,7 +96,9 @@ bin/deploy.sh
 
 The above command will create the **S3 buckets**, put the bucket names into the parameter store, create the `DLQ Topic` for failed Lambda invokes, create the Lambda functions, connect the S3 bucket to the resizer lambda, and create the web application.
 
-> **Note:** You can visit **webapp.s3-website.localhost.localstack.cloud:4566** on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
+<Note>
+**Note:** You can visit **webapp.s3-website.localhost.localstack.cloud:4566** on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
+</Note>
 
 <img loading="lazy" src='/assets/images/localstack-integration/localstack-one.webp' alt="add" width="1346" height="647" />
 
@@ -192,4 +196,6 @@ Below is an example of a **HyperExecute** job that was triggered through the abo
 
 <img loading="lazy" src='/assets/images/localstack-integration/localstack-six.webp' alt="remove" width="1347" height="644" />
 
-> That was all you need to know for <BrandName /> + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+<Note>
+That was all you need to know for <BrandName /> + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+</Note>

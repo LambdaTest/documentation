@@ -5,14 +5,13 @@ keywords: ['device reservation', 'private cloud', 'device booking', 'testmu ai d
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Device Reservation on Private Device Cloud
-
 **<BrandName /> Device Reservation** enables users to reserve private cloud devices in **advance**, ensuring uninterrupted access during critical testing windows. By scheduling devices ahead of time, teams can **prevent conflicts**, eliminate last-minute delays, and run both manual and automated tests with greater reliability. This becomes particularly valuable for time-sensitive releases, large-scale regression cycles, and continuous integration pipelines, where guaranteed device availability is essential.
 
 Beyond preventing scheduling conflicts, Device Reservation also helps organizations **optimize resource utilization**, enforce fair usage policies, and gain clearer visibility into device allocation across teams, leading to more efficient and predictable testing operations.
 
-> Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmu.ai** to enable it for your organization and try it out.
+<Note>
+Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmuai.com** to enable it for your organization and try it out.
+</Note>
 ---
 
 ## Use Cases 
@@ -90,7 +89,7 @@ These rules apply to both admins and members, except admins can still override r
 - Once the reserved time ends, the device session is automatically closed and released.
 
 <Tip>
-**- Reservation cannot be edited after the slot has been started.**
+- Reservation cannot be edited after the slot has been started.**
 
 - If an **admin** deletes any reservation, it is **cancelled** immediately.
 - In automation, reservations cannot be extended automatically in the last 15 minutes. Extensions must be handled manually.

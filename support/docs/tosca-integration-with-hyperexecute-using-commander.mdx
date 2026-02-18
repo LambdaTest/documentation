@@ -1,21 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: tosca-integration-with-hyperexecute-using-commander
+---
 title: Tosca Integration using Commander
-hide_title: true
+
 sidebarTitle: Tosca Integration using Commander
-description: This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute 
+
 keywords: ['hyperexecute integrations', 'hyperexecute integrations with products', 'products', 'tosca', 'tricentis']
-url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
-site_name: <BrandName />
-slug: tosca-integration-with-hyperexecute-using-commander/
-canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
 ---
 
-# Tosca Integration using Commander
+import { BrandName } from "/snippets/BrandName.mdx";
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute.
 
@@ -56,7 +47,9 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 **Step 8:** Now go to the [**Jobs**](https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 <img loading="lazy" src='/assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp' alt="Image" width="1365" height="650" />
 
-> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
+<Note>
+Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
+</Note>
 
 ***
 ## Integrate Tosca with HyperExecute using YAML
@@ -156,7 +149,9 @@ uploadArtefacts:
       - Demo_Sample/**
 
 ```
-> Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.
+<Note>
+Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.
+</Note>
 
 - After configuring the YAML, execute it via terminal using the following command:
 

@@ -80,7 +80,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the Karate from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/testmu ai/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
 </Tip>
 
 ### Step 2: Download the CLI in your Project
@@ -120,7 +120,7 @@ function fn() {
 ```
 
 <Note>
-**- `lambdaHooks` sets test status based on execution outcome.**
+- `lambdaHooks` sets test status based on execution outcome.**
 
 - `hub` is dynamically picked to support Selenium Grid for UI tests.
 - Supports environment-based configuration using `karate.env`.
@@ -170,7 +170,9 @@ testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https
 - A specific step definition class
 - A subset of feature files based on folder/module
 
-> mvn test -Dkarate.options="--tags @smoke"
+<Note>
+mvn test -Dkarate.options="--tags @smoke"
+</Note>
 </Info>
 
 #### 4. Test Discovery Configuration
@@ -203,10 +205,12 @@ src/test/java/app/payments.feature
 Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/TestMu AI/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
+https://github.com/LambdaTest/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
 ```
 
-> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
+<Note>
+📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
+</Note>
 
 ### Step 5: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:

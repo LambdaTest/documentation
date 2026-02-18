@@ -1,24 +1,18 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: private-dependencies-cypress
+---
 title: Execute Cypress Tests Including Private Dependencies
 sidebarTitle: Execute Including Private Dependencies
-description: This article guides you on how to execute your Cypress tests including the private dependencies on <BrandName /> platform.
-keywords: ['Cypress Automation', 'Cypress With <BrandName />', '<BrandName /> With Cypress', 'Private Dependencies', 'Execute Cypress Tests', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests With <BrandName />', 'Execute With Private Dependencies', '<BrandName /> Cloud Platform']
 
-url: https://www.testmuai.com/support/docs/private-dependencies-cypress/
-site_name: <BrandName />
-slug: private-dependencies-cypress/
-canonical: https://www.testmuai.com/support/docs/private-dependencies-cypress/
+keywords: ['Cypress Automation', 'Cypress With <BrandName />', '<BrandName /> With Cypress', 'Private Dependencies', 'Execute Cypress Tests', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests With <BrandName />', 'Execute With Private Dependencies', '<BrandName /> Cloud Platform']
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **<BrandName /> platform**.
 Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 
-> In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/<BrandName />/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+<Note>
+In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+</Note>
 
 ## Steps To Execute Using Private Dependencies
 
@@ -70,7 +64,9 @@ You can either add private dependency in the `package.json` file or in the `test
 
   <img loading="lazy" src='/assets/images/cypress/dependencies/dependencies-4.webp' alt="Image" width="1282" height="722" />
 
-  > If you are using an **access token** in the private dependency and you are accessing its value from the **environment variable**, in that case, you have to add `dep_token` capability and define all those in environment variables in it. You can pass multiple environment variables as comma-separated.
+<Tip>
+> If you are using an **access token** in the private dependency and you are accessing its value from the **environment variable**, in that case, you have to add `dep_token` capability and define all those in environment variables in it. You can pass multiple environment variables as comma-separated.
+</Tip>
 
   Refer the below screenshot for the help.
 
@@ -78,12 +74,18 @@ You can either add private dependency in the `package.json` file or in the `test
 
   <img loading="lazy" src='/assets/images/cypress/dependencies/dependencies-5.webp' alt="Image" width="1282" height="722" />
 
-  > All the keys present in **dep_tokens** will be replaced in the `.npmrc` file and if the key is not present in the environment variable, it will throw an error.
+<Note>
+> All the keys present in **dep_tokens** will be replaced in the `.npmrc` file and if the key is not present in the environment variable, it will throw an error.
+</Note>
 
 After doing this setup, run your tests on the **<BrandName /> platform** and now the test will execute perfectly with the **private dependencies**.
 
-> To download private dependencies over tunnel follow this [documentation](/support/docs/npm-via-tunnel/).
+<Note>
+To download private dependencies over tunnel follow this [documentation](/support/docs/npm-via-tunnel/).
+</Note>
 
 ---
 
-> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
+<Note>
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+</Note>

@@ -5,9 +5,8 @@ keywords: ['testmu ai automation', 'ios app automation', 'group folder redirect'
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
-
-# Group Folder Redirect for iOS Apps
 <RealDeviceTag value="Real Device" /> 
 <BrandName /> now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
@@ -62,7 +61,7 @@ Launch your Appium test, the app will automatically use its private container fo
 ---
 
 <Info>
-**- <BrandName /> launches an **instrumented version** of your app with **Group Folder Redirect** support.  **
+- <BrandName /> launches an **instrumented version** of your app with **Group Folder Redirect** support.  **
 
 - All file system operations that previously relied on the App Group container now use the **private container**.  
 - Your tests remain compatible and functional, even after app resigning.

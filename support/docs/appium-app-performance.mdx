@@ -5,6 +5,7 @@ keywords: ['regular expression testmu ai', 'regular expression app automation']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -16,7 +17,9 @@ You can enable performance tracking in your existing automation tests with the f
 "appProfiling" : true;
 ```
 
-> This feature is available for Appium tests on **iOS and Android (version 9+)**. For full functionality, ensure the `resignApp` capability is set to `true`.
+<Note>
+This feature is available for Appium tests on **iOS and Android (version 9+)**. For full functionality, ensure the `resignApp` capability is set to `true`.
+</Note>
 
 <img loading="lazy" src='/assets/images/appium-app/app-profiling.png' alt="cmd" width="768" height="373" />
 
@@ -113,7 +116,9 @@ High device temperature can degrade performance and harm the user experience. <B
 
 Sometimes, your application stops responding, and you receive a pop-up to wait or close the app. Application freezes and crashes are frustrating for users. <BrandName /> provides detailed logs on ANR events, that helps you diagnose the root causes and eliminate them.
 
-> Currently, ANR monitoring is available for **Android devices** only.
+<Note>
+Currently, ANR monitoring is available for **Android devices** only.
+</Note>
 
 Metrics Provided:
 
@@ -151,5 +156,7 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
 
 <img loading="lazy" src='/assets/images/appium-app/app-profiling-api-result.png' alt="cmd" width="768" height="373" />
 
-> Got any questions?<br />
-> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmu.ai](https://support.lambdatest.com/).
+<Note>
+Got any questions?<br />
+Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+</Note>

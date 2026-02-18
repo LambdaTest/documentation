@@ -6,6 +6,8 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
 
@@ -28,7 +30,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/<BrandName />/testng-selenium-hyperexecute-sample/tree/localdriver" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/tree/localdriver" />
 </Tip>
 
 ### Step 2: Update YAML Configuration:
@@ -118,7 +120,7 @@ platformConfig:
 ```
 
 <Info>
-**- For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.**
+- For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.**
 
 - For operating system **android** and **ios**, the **os** and **deviceName** flags are mandatory, rest are optional.
 </Info>

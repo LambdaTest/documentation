@@ -26,7 +26,7 @@ With this plugin, you can:
 
 ### Option 2: Manual Installation via JAR
 
-1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/<BrandName />/katalon-studio-smartui-plugin/releases).
+1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/LambdaTest/katalon-studio-smartui-plugin/releases).
 2. In Katalon Studio, go to **Project > Settings > Plugins > Import Plugin**.
 3. Select the downloaded `.jar` file and click **Import**.
 
@@ -42,7 +42,9 @@ With this plugin, you can:
 4. Enter project name, approvers, and tags (optional).
 5. Click **Submit** and copy your **Project Token** from the dashboard.
 
-> Your Project Token will be used to authenticate screenshot uploads to SmartUI.
+<Note>
+Your Project Token will be used to authenticate screenshot uploads to SmartUI.
+</Note>
 
 ---
 
@@ -123,8 +125,10 @@ Then use it in your test:
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')
 ```
 
-> Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
-> Use `selectBoxes` to compare only specific regions (e.g., main content area).
+<Note>
+Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
+Use `selectBoxes` to compare only specific regions (e.g., main content area).
+</Note>
 
 ---
 

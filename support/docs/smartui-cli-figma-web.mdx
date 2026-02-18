@@ -1,19 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: smartui-cli-figma-web
+---
 title: Getting started with <BrandName />'s SmartUI Figma-Web CLI
 sidebarTitle: Figma-Web CLI
-description: In this documentation, learn how to compare your figma designs to live production websites and web applications.
+
 keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
-
-url: https://www.testmuai.com/support/docs/smartui-cli/
-slug: smartui-cli-figma-web/
-canonical: https://www.testmuai.com/support/docs/smartui-cli-figma-web/
-
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ---
 
 Welcome to the <BrandName /> SmartUI Figma Web CLI documentation!
@@ -42,10 +35,12 @@ The following steps will guide you in running your visual tests for Figma files 
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-> Example Figma URL:
-> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
-> - `figma_file_token`: `abc12345`
-> - `figma_ids`: `2417-58969`
+<Note>
+Example Figma URL:
+`https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+- `figma_file_token`: `abc12345`
+- `figma_ids`: `2417-58969`
+</Note>
 
 ---
 
@@ -225,10 +220,10 @@ npx smartui upload-figma-web designs.json
 
 ### Working example with actual web comparisons
 
-1. Please clone the following sample GitHub repo (`https://github.com/<BrandName />/smartui-figma-web-cli-sample`).
+1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/smartui-figma-web-cli-sample`).
 
 ```bash
-git clone https://github.com/<BrandName />/smartui-figma-web-cli-sample
+git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample
 ```
 2. Install the node modules using the command:
 
@@ -299,8 +294,10 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 ```
 
 >**Points to Consider**
-> - The browsers listed in the Figma configuration are used solely to enable comparisons between your designs and their corresponding live webpages.
-> - Websites may exhibit browser-specific behaviors. To account for these variations, it is recommended to create distinct designs tailored for each browser, if necessary.
+<Note>
+- The browsers listed in the Figma configuration are used solely to enable comparisons between your designs and their corresponding live webpages.
+- Websites may exhibit browser-specific behaviors. To account for these variations, it is recommended to create distinct designs tailored for each browser, if necessary.
+</Note>
 
 ## Best Practices
 
@@ -546,7 +543,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </Tab>
 </Tabs>

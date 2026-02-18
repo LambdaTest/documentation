@@ -5,16 +5,16 @@ keywords: ['appium', 'appium languages', 'appium framework', 'configuration', 's
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 
-
-# Supported Appium Versions
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
 
 Customize your testing experience on <BrandName /> by selecting the appropriate Appium version for your tests on real devices. <BrandName /> offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
 
 <Info>
-**- We also provide Support for Appium 3.0.2 on following versions**
+- We also provide Support for Appium 3.0.2 on following versions**
 
   - **Android Devices:** 13, 15, 16
   - **iOS Devices:** 16, 17, 18, 26
@@ -64,7 +64,7 @@ capabilities.setCapability("platformName", "ios");
 | 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 
 <Note>
-**- If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.**
+- If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.**
 
 - For devices running iOS 17 and newer, it is recommended to use Appium versions `2.2.1` and `above` to ensure the best compatibility and performance.
 </Note>

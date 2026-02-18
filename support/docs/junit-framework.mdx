@@ -6,6 +6,8 @@ keywords: ['java selenium', 'java selenium tutorial', 'java selenium webdriver',
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 In this topic, you will learn how to configure and run tests using **JUnit** on <BrandName />'s [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
@@ -24,7 +26,7 @@ By the end of this topic, you will be able to:
 <Tip>
 **Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/junit-selenium-sample" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <GitHubButton url="https://github.com/LambdaTest/junit-selenium-sample" />
 
 </Tip>
 
@@ -52,10 +54,10 @@ Before you can start performing Java automation testing with Selenium, you would
 
 ### Cloning Repo and Installing Dependencies
 
-**Step 1:** Clone the <BrandName />’s [junit-selenium-sample](https://github.com/<BrandName />/junit-selenium-sample) repository and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [junit-selenium-sample](https://github.com/LambdaTest/junit-selenium-sample) repository and navigate to the code directory as shown below:
 
 ```bash
-git clone https://github.com/TestMu AI/junit-selenium-sample
+git clone https://github.com/LambdaTest/junit-selenium-sample
 cd junit-selenium-sample
 ```
 
@@ -102,7 +104,7 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 ### Sample Test with JUnit
 
-Let’s checkout sample JUnit code running <BrandName /> Selenium grid. This is a simple JUnit automation script similar to the script we have used in our [Github repo](https://github.com/<BrandName />/junit-selenium-sample). This JUnit Selenium script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
+Let’s checkout sample JUnit code running <BrandName /> Selenium grid. This is a simple JUnit automation script similar to the script we have used in our [Github repo](https://github.com/LambdaTest/junit-selenium-sample). This JUnit Selenium script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
 
 ```java title="JUnit To Do"
 import org.junit.After;
@@ -193,9 +195,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 ```
 
 <Info>
-**Note**
-
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **<a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>**.
+You can generate capabilities for your test requirements with the help of our inbuilt 🔗 **<a href="https://www.lambdatest.com/capabilities-generator/">Capabilities Generator Tool</a>**.
 
 </Info>
 
@@ -218,7 +218,7 @@ mvn test -P single
 
 ### Setting up the Parallel Environment
 
-Here is the `Parallelized class` we use for running our Parallel Tests using JUnit. You can also find the below code in our [GitHub repo](https://github.com/<BrandName />/junit-selenium-sample).
+Here is the `Parallelized class` we use for running our Parallel Tests using JUnit. You can also find the below code in our [GitHub repo](https://github.com/LambdaTest/junit-selenium-sample).
 
 ```java title="Parallelized Class"
 import java.util.concurrent.ExecutorService;
@@ -372,7 +372,7 @@ You can test your locally hosted or privately hosted projects with [<BrandName /
 <Tip>
 **Tunnel Help**
 
-Refer our :link: [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+Refer our 🔗 [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
 </Tip>
 

@@ -1,18 +1,11 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: applitools-integration-cypress
+---
 title: Applitools Integration With <BrandName /> For Cypress
 sidebarTitle: Applitools Integration For Cypress
-description: <BrandName /> integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud platform. You can execute your Cypress automation test scripts on <BrandName /> directly from your Applitools instance.
+
 keywords: ['testmu ai integrations', 'applitools for cypress', 'testmu ai cypress', 'cypress automation', 'testmu ai integration with applitools', 'applitools integration', 'cross browser testing', 'free cross browser testing tool']
-url: https://www.testmuai.com/support/docs/applitools-integration-with-testmu/
-site_name: <BrandName />
-slug: applitools-integration-cypress/
-canonical: https://www.testmuai.com/support/docs/applitools-integration-cypress/
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
 
 ---
 
@@ -48,7 +41,9 @@ You can download or clone the sample GitHub project from the following repo - [C
   <img loading="lazy" src='/assets/images/applitools-cypress/applitools1.webp' alt="Image" width="1353" height="622" />
 
 <Warning>
-> Set the **testConcurrency** and **browser configuration** as per the requirement.
+<Note>
+Set the **testConcurrency** and **browser configuration** as per the requirement.
+</Note>
 </Warning>
 
 
@@ -58,7 +53,9 @@ You can download or clone the sample GitHub project from the following repo - [C
   npm install @applitools/eyes-cypress --save-dev
   ```
 
-  > It will create Applitools Eyes to an Existing Node.js Cypress Project.
+<Note>
+> It will create Applitools Eyes to an Existing Node.js Cypress Project.
+</Note>
 
 ## Setting up <BrandName /> CLI and Dependencies
 
@@ -76,7 +73,9 @@ You can download or clone the sample GitHub project from the following repo - [C
   testmu ai-cypress init
   ```
 
-  > It will create a **testmu ai-config.json** file in the root directory of your project.
+<Note>
+> It will create a **testmu ai-config.json** file in the root directory of your project.
+</Note>
 
 - Add spec file path in the `run_setting` and your **<BrandName /> credentials** in the auth section of the `testmu ai-config.json` file as shown in the image below.
 
@@ -98,7 +97,9 @@ testmu ai-cypress run
 
 ---
 
-> The first test case that you execute will be considered as the base image by default by Applitools.
+<Note>
+The first test case that you execute will be considered as the base image by default by Applitools.
+</Note>
 
 <img loading="lazy" src='/assets/images/applitools-cypress/applitools4.webp' alt="Image" width="1353" height="622" />
 
@@ -114,4 +115,6 @@ Applitools will compare the base image with this test and highlight the differen
 
 <img loading="lazy" src='/assets/images/applitools-cypress/applitools6.webp' alt="Image" width="1353" height="622" />
 
-> That’s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+<Note>
+That’s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+</Note>

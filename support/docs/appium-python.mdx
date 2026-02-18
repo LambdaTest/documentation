@@ -5,6 +5,10 @@ keywords: ['python appium', 'python appium tutorial', 'real devices', 'testmu ai
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
+
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -25,7 +29,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 <Tip>
 **Sample repo**
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/LT-appium-python" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <GitHubButton url="https://github.com/LambdaTest/LT-appium-python" />
 </Tip>
 
 ### Step 2: Setup the Environment Variables
@@ -77,7 +81,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </Tabs>
 
 <Tip>
-**- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, 🔗 [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or 🔗 [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).**
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
@@ -265,7 +269,7 @@ startingTest()
 </Tabs>
 
 <Tip>
-**- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices****
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 
 </Tip>
 ### Step 5: Configure the Test Capabilities
@@ -318,7 +322,7 @@ desired_caps = {
 </Tabs>
 
 <Info>
-**- You must add the generated **APP_URL** to the `app` capability in the config file.**
+- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
@@ -360,7 +364,9 @@ python3 android.py
 
 </Tip>
 
-  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
+<Note>
+> Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
+</Note>
 
 ## Reference Guides
 

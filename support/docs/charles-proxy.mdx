@@ -35,21 +35,27 @@ Before getting started with the setup, you would have to follow these steps:
 
 1. Download **Charles Proxy** software from [the official website](https://www.charlesproxy.com/) and install it. You can also download from the links below.
 
-   > - [Windows](https://www.charlesproxy.com/download/#)
+<Note>
+> - [Windows](https://www.charlesproxy.com/download/#)
    > - [MacOS](https://www.charlesproxy.com/download/#)
    > - [Linux](https://www.charlesproxy.com/download/#)
+</Note>
 
 2. Download the <BrandName /> Tunnel binary file and extract it to setup the tunnel.
 
-   > - [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+<Note>
+> - [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
    > - [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
    > - [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+</Note>
 
 3. Or you can download the **GUI** tunnel application **Underpass** to setup the tunnel easily without using terminal.
 
-   > - [Underpass for Windows](https://downloads.lambdatest.com/underpass/master/UnderPass%20Setup.exe)
+<Note>
+> - [Underpass for Windows](https://downloads.lambdatest.com/underpass/master/UnderPass%20Setup.exe)
    > - [Underpass for Mac](https://downloads.lambdatest.com/underpass/master/UnderPass.dmg)
    > - [Underpass for Linux](https://downloads.lambdatest.com/underpass/master/UnderPass.AppImage)
+</Note>
 
 ## Installing Charles Root Certificate
 
@@ -78,7 +84,9 @@ Now, navigate to the **Proxy Settings** on Charles to view the **Port Number** u
 
 ---
 
-> In this case the Port number which is in use is `8888`. We will be using it to configure the <BrandName /> Tunnel.
+<Note>
+In this case the Port number which is in use is `8888`. We will be using it to configure the <BrandName /> Tunnel.
+</Note>
 
 ## Configuring The <BrandName /> Tunnel
 
@@ -104,7 +112,9 @@ But here we need to add the Charles proxy server through which we want to route 
 --proxy-port 8888
 ```
 
-> You can get your <BrandName /> Access Key from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+<Note>
+You can get your <BrandName /> Access Key from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+</Note>
 
 You need to run the above command from the terminal in the directory where you have extracted the **LT binary file** as shown. Make sure that **Charles Proxy Session** is up and running before you can start the tunnel. Now once the tunnel is setup, you will be able to see **"You can start testing now"** in the terminal as shown.
 
@@ -131,7 +141,9 @@ On clicking the **Launch** button, you will be able to start the tunnel with the
 ## Steps to download the SSL certificate in the <BrandName /> Private Real Devices:
 
 ---
-> Only for **Private Cloud** Users.
+<Note>
+Only for **Private Cloud** Users.
+</Note>
 
 **Step 1:** Launch the session with the tunnel which we have enabled and visit http://chls.pro/ssl site to download the SSL certificate.
 
@@ -166,11 +178,15 @@ Now there are 2 ways of enabling **SSL proxying** without which we will not be a
 
 - Then you need to add the host of the site [amazon.com] under **Include** to enable SSH Proxying.
 
-  > There is no need to mention the port number here as it will be allocated by default on adding.
+<Note>
+> There is no need to mention the port number here as it will be allocated by default on adding.
+</Note>
 
   <img loading="lazy" src='/assets/images/charles/charles5.png' alt="cmd" />
 
-> We have added `*amazon.com*` so that we target the domain and all traffic that contains it in it's URL. <br /> You can also add `*` (wildcard) and it will intercept end to end flow of data.
+<Note>
+We have added `*amazon.com*` so that we target the domain and all traffic that contains it in it's URL. <br /> You can also add `*` (wildcard) and it will intercept end to end flow of data.
+</Note>
 
   ***
 
@@ -233,4 +249,6 @@ Now when we try opening the URL, we can see the `testmu ai` appear in the place 
 
 ***
 
-> That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmu.ai.
+<Note>
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+</Note>

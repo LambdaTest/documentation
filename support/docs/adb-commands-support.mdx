@@ -5,6 +5,8 @@ keywords: ['appium', 'java', 'testmu ai java', 'framework on testmu ai', 'testng
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 
 
 Android Debug Bridge (adb) is a versatile command-line tool that lets users communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps. 
@@ -17,7 +19,9 @@ driver.execute_script("lambda-adb", params)
 
 ## Supported Commands
 
-> **NOTE :** All these commands are supported on both Real and Virtual Devices except for the [**adb shell dumpsys**](/support/docs/adb-commands-support/#adb-shell-command) command, which is not supported for Virtual Device.
+<Note>
+**NOTE :** All these commands are supported on both Real and Virtual Devices except for the [**adb shell dumpsys**](/support/docs/adb-commands-support/#adb-shell-command) command, which is not supported for Virtual Device.
+</Note>
 
 ###  Swipe
 **adb shell input swipe** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -257,7 +261,9 @@ result = driver.execute_script("lambda-adb",params)
   This command is used to test the network connectivity between the Android device and a specified host, such as `google.com`. When executed it sends four ICMP request packets to the host and wait for responses. The output includes details such as packet transmission time, success rate and round-trip time, which helps diagnose network connectivity and latency issues. The following is a Python sample using the adb command:
 
 <Warning>
-> **Note :** The **-c** is required in this command
+<Note>
+**Note :** The **-c** is required in this command
+</Note>
 </Warning>
 
   ```python

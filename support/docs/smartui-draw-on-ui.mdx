@@ -38,7 +38,9 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 4. **Click "Save"** to apply the annotation
 5. **Choose application scope**: Apply to current screenshot only or all browser variants
 
-> **Tip:** Start with **Ignore Region** for simple dynamic content like timestamps or notification counters. It's the most straightforward annotation type.
+<Tip>
+**Tip:** Start with **Ignore Region** for simple dynamic content like timestamps or notification counters. It's the most straightforward annotation type.
+</Tip>
 
 ## Annotation Methods
 
@@ -111,7 +113,9 @@ Ignoring a "Last updated" timestamp in a dashboard that changes with each page l
 
 **What Happens:** Only the selected regions will be compared in future builds, while all other areas are automatically ignored.
 
-> **Note:** You can define multiple select regions. All selected regions will be compared, and everything outside these regions will be ignored.
+<Note>
+**Note:** You can define multiple select regions. All selected regions will be compared, and everything outside these regions will be ignored.
+</Note>
 
 **Example**
 
@@ -155,7 +159,9 @@ Perfect for handling dynamic elements that may appear in different positions but
 
 <img loading="lazy" src='/assets/images/smart-visual-testing/annotation-tool/resultoffloatingregion.png' alt="Result of floating region" width="1366" height="636" />
 
-> **Tip:** Make the blue region large enough to encompass all possible positions of the element, and keep the yellow region focused on the specific element you want to test.
+<Tip>
+**Tip:** Make the blue region large enough to encompass all possible positions of the element, and keep the yellow region focused on the specific element you want to test.
+</Tip>
 
 **Example**
 
@@ -193,7 +199,9 @@ Testing a notification badge that may appear in different positions based on con
 
 <img loading="lazy" src='/assets/images/smart-visual-testing/annotation-tool/resultofignorecolors.png' alt="Result of ignore colors" width="1366" height="636" />
 
-> **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
+<Note>
+**Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
+</Note>
 
 **Example**
 
@@ -228,7 +236,9 @@ Ignoring color differences in a themed navigation bar while testing its structur
 
 **What Happens:** The outer selected region will be compared, but the inner ignored sub-region will be excluded from comparison, giving you precise control over what gets tested.
 
-> **Tip:** Use Select Ignore when you need granular control over comparison areas within a larger component. Ensure the ignore region is completely within the select region.
+<Tip>
+**Tip:** Use Select Ignore when you need granular control over comparison areas within a larger component. Ensure the ignore region is completely within the select region.
+</Tip>
 
 ### Example
 
@@ -273,7 +283,9 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 **Step 3:** Click on the **Save** button to confirm deletion.
 
-> **Note:** Deleting annotations will trigger a re-run of the comparison, and the previously ignored/selected areas will be included in future comparisons.
+<Note>
+**Note:** Deleting annotations will trigger a re-run of the comparison, and the previously ignored/selected areas will be included in future comparisons.
+</Note>
 
 ### Applying Annotations
 
@@ -287,7 +299,9 @@ After creating your annotations, you'll see a modal dialog with options:
 
 2. **Apply to All Browser Variants:** The annotation will be applied to all browser/viewport combinations for this screenshot (e.g., Chrome, Firefox, Safari on desktop).
 
-> **Best Practice:** While you can apply annotations to all browser variants, it's recommended to manually verify that these areas are configured correctly for each browser. Certain browsers may render elements differently, potentially causing inconsistencies in your annotations.
+<Note>
+**Best Practice:** While you can apply annotations to all browser variants, it's recommended to manually verify that these areas are configured correctly for each browser. Certain browsers may render elements differently, potentially causing inconsistencies in your annotations.
+</Note>
 
 ### Annotation Color Coding
 
@@ -309,7 +323,9 @@ Speed up your annotation workflow with these keyboard shortcuts:
 - `Shift + T:` Define a region encompassing the entire screenshot
 - `Delete or Backspace:` Remove the currently selected annotation
 
-> **Tip:** Use keyboard shortcuts for precise control when resizing annotation boxes, especially for small or complex regions.
+<Tip>
+**Tip:** Use keyboard shortcuts for precise control when resizing annotation boxes, especially for small or complex regions.
+</Tip>
 
 ## Best Practices
 

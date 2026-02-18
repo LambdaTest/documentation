@@ -5,9 +5,8 @@ keywords: ['Apple Pay', 'iOS', 'automation', 'testing', 'payment']
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
-
-# Apple Pay Automation on Real Devices
 <RealDeviceTag value="Real Device" /> 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
@@ -15,7 +14,9 @@ For **testing payment flows**, validating Apple Pay becomes critical. Automation
 
 With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+<Note>
+To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+</Note>
 
 ---
 ## Use Cases
@@ -37,7 +38,9 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | iPhone 14    | 16      |
 | iPhone 13    | 15      |
 
-> We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
+<Note>
+We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
+</Note>
 ---
 ## Capabilities
 
@@ -85,7 +88,7 @@ desired_caps = {
 </Tabs>
 
 <Info>
-**- You must add the generated **APP_URL** to the `app` capability in the config file.**
+- You must add the generated **APP_URL** to the `app` capability in the config file.**
 
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 

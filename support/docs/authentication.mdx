@@ -15,12 +15,6 @@ Authenticate your Cypress test runs in the following ways -
 2. Utilizing the **CLI params**. (or)
 3. Mention your **username** and **access key** in the **testmu ai-config.json**.
 
-<Info>
-**Note**
-
-We use the following order of precedence to determine which auth credentials to use if you use more than one option to pass your auth credentials:
-CLI arguments > Options set in testmu ai-config.json > Environment variables
-</Info>
 
 ## Utilizing CLI Params:
 
@@ -105,7 +99,5 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 </Tabs>
 
 <Tip>
-**Note**
-
 By doing so, the auth credentials you use in your **testmu ai-config.json** file will get overridden only if these options are not provided in **testmu ai-config.json** file.
 </Tip>

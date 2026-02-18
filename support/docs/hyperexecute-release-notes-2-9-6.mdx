@@ -33,17 +33,19 @@ reports/staging/run_001/cucumber/
 reports/builds/test_42/cucumber/
 ```
 
-> Your Testrunner.java file should have the complete path from where partial reports will be added. Example:
-> ```javascript title="Testrunner.java"
-> plugin = {
->     "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
->     "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
-> }
-> ```
-> You can configure your hyperexecute.yaml as:
-> ```yaml title="hyperexecute.yaml"
-> partialReports:
->   location: target/abc/**/pqr/**/cucumber-reports
->   frameworkName: cucumber
->   type: json
-> ```
+<Note>
+Your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+```javascript title="Testrunner.java"
+plugin = {
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+}
+```
+You can configure your hyperexecute.yaml as:
+```yaml title="hyperexecute.yaml"
+partialReports:
+  location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
+```
+</Note>

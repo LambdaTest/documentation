@@ -6,9 +6,6 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# How to configure sourcePayload
-
 When you run your tests on HyperExecute, the test scripts are zipped, encrypted and uploaded to our secure servers temporarily for execution through the [HyperExecute CLI binary](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/). However, to make this process seamlessly fit in your pipeline you can use the `sourcePayload` Yaml parameter.
 
 Once you set `sourcePayload`, your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and sent through the HyperExecute CLI. Learn more detailed documentation below.
@@ -37,13 +34,15 @@ sourcePayload:
 4.  **accessToken**: Your personal access token (PAT), generated on your Git platform. If you want to know how to generate a PAT for GitHub, go through [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) section.  
 
 <Note>
-**Note**: You don’t need to use a Personal Access Token if your repository is public.
+: You don’t need to use a Personal Access Token if your repository is public.
 </Note>
 
 
 5. **commit**: If you want to run a specific commit file other than the **HEAD** commit, then you need to define here the specific commit ID.
 
-> As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
+<Note>
+As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
+</Note>
 
 ```yaml title="hyperexecute.yaml"
 sourcePayload:
@@ -53,7 +52,9 @@ sourcePayload:
   accessToken: ${{ .secrets.<GIT_PAT> }}
   commit: <optional>
 ```
-> You can assign a name to your PAT via the HyperExecute vault feature and replace it in place of the `GIT_PAT` tag in the example given above. 
+<Note>
+You can assign a name to your PAT via the HyperExecute vault feature and replace it in place of the `GIT_PAT` tag in the example given above.
+</Note>
     
 ***
 
@@ -118,7 +119,7 @@ sourcePayload:
 
 <Warning>
 <Note>
-**Note**: While configuring your PAT, ensure that the access is given for all keys under `repo`. Moreover, you will also have to give all the accesses for `read` keys.
+: While configuring your PAT, ensure that the access is given for all keys under `repo`. Moreover, you will also have to give all the accesses for `read` keys.
 </Note>
 
 </Warning>

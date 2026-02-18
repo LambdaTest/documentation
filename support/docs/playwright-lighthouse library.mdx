@@ -6,17 +6,21 @@ keywords: ['generate lighthouse reports in playwright', 'generate lighthouse rep
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
 
 <BrandName /> lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
 
-> Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium** browsers.
+<Note>
+Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium** browsers.
+</Note>
 
 <Tip>
 **Sample repository**
 
-The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/<BrandName />/playwright-sample/blob/main/playwright-lighthouse-report.js" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests. <GitHubButton url="https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js" />
 </Tip>
 
 ## Prerequisites
@@ -45,7 +49,9 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
 ```
 
 ### For Authenticated Pages
-> This feature is only supported on **Windows** and **macOS** platforms.
+<Note>
+This feature is only supported on **Windows** and **macOS** platforms.
+</Note>
 
 The feature allows you to generate Lighthouse reports for authenticated web pages using Playwright. This is particularly useful for testing performance, accessibility, SEO, and other quality metrics for pages that require authentication. By leveraging authentication tokens, you can analyze restricted pages in your Playwright tests on both **Windows** and **macOS** environments.
 
@@ -80,7 +86,7 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 This following script performs web automation testing using the Playwright and Lighthouse libraries on the <BrandName /> platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
 
 ```javascript reference title="playwright-lighthouse-report.js"
-https://github.com/TestMu AI/playwright-sample/blob/main/playwright-lighthouse-report.js
+https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js
 ```
 
 ## Trigger your Test on <BrandName />

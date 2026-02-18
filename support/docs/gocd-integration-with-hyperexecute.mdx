@@ -6,6 +6,8 @@ keywords: ['gocd', 'testmu ai', 'gocd integrations', 'gocd pipelines', 'gocd tes
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
 
 GoCD, short for "Go Continuous Delivery," is an open-source continuous integration and continuous delivery (CI/CD) server that helps automate and streamline the software development and release process. It is designed to facilitate the efficient and reliable delivery of software from development to production.
 
@@ -24,7 +26,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/<BrandName />/hyp-ci-cd-integration-sample/tree/gocd" className="github__anchor"><img loading="lazy" src='/assets/images/icons/github.png' alt="Image" /> View on GitHub</a>
+<GitHubButton url="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/gocd" />
 </Tip>
 
 ### Step 1: Start the GoCD Server
@@ -84,7 +86,9 @@ chmod +x hyperexecute
 ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>
 ```
 
-> Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. <br />
+<Note>
+Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. <br />
+</Note>
 - **Mac** -> darwin <br />
 - **Linux** -> linux <br />
 - **Windows**-> windows

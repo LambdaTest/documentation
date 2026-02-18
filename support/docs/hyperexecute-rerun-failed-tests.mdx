@@ -23,7 +23,9 @@ To rerun a job, the following requirements must be fulfilled.
 - Your test suite should be available on **Git** (Github, Azure Repos and Bitbucket are supported) and linked to a [Project](/support/docs/hyperexecute-projects). This is required because each time a job is rerun, HyperExecute needs access to your test suite.
 - Make sure you are using **YAML version 0.1** with auto-split mode and discovery mode as local only. 
 
-> Support for YAML version 0.2 and other modes will be added soon.
+<Note>
+Support for YAML version 0.2 and other modes will be added soon.
+</Note>
 
 <Note>
 **You can use the rerun feature for jobs started from your **local machine as long as Git info is available** (i.e., you’re running tests from a cloned Git repo).**
@@ -47,7 +49,9 @@ HyperExecute provides you flexibility to select different parameters while rerun
 - **Using Same or Latest Commit:** You can reuse the same commit as the original job or the latest commit from your repository. This lets you rerun after fixing your test suite or application under test.
 - **Adjusting Concurrency:** The **YAML remains the same** for the rerun and the original job to maintain the same environment, but you can change the concurrency on which the rerun job will run.
 
-> If there are multiple test cases under a failed scenario, all those test cases will be rerun if the scenario is marked as failed.
+<Tip>
+If there are multiple test cases under a failed scenario, all those test cases will be rerun if the scenario is marked as failed.
+</Tip>
 
 ## How to Rerun a Job
 **Step 1 :** Go to the **Jobs** section in the HyperExecute dashboard. <br />
@@ -64,6 +68,6 @@ Then click **Rerun** to start the new job.
 <img loading="lazy" src='/assets/images/hyperexecute/features/rerun/2.png' alt="Image" />
 
 <Warning>
-If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmu.ai](mailto:support@testmu.ai). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
+If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmuai.com](mailto:support@testmuai.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
 </Warning>
 

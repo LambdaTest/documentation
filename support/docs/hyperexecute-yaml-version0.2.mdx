@@ -10,7 +10,7 @@ import { BrandName } from "/snippets/BrandName.mdx";
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
 <Info>
-**- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.**
+- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
 
 - Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
@@ -97,7 +97,7 @@ framework:
     - "-Dplatname=win"
 ```
 <Info>
-**- For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.**
+- For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.
 
 - For **maven/junit4** and **maven/junit5**  the supported discovery types are **method** and **class**. The default is **method**.
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**. 
@@ -136,7 +136,9 @@ The region parameter specifies the region or location where the Appium tests wil
 - us (United States)
 - eu (European Union)
 
-> The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
+<Note>
+The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
+</Note>
 
 ```yaml
 framework:
@@ -154,7 +156,9 @@ framework:
     artifacts: true
 ```
 
-> 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
+<Note>
+📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
+</Note>
 
 ### `language`
 

@@ -6,8 +6,6 @@ keywords: ['karma selenium', 'karma integration with testmu ai', 'testmu ai inte
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Karma Test Runner Integration With <BrandName /> 
 * * *
 
 Designed for rapid development, Karma testing framework is an open-source test runner for JavaScript that runs on Node.js. It was earlier termed as Testacular. Karma test runner increases web developers daily-basis productivity & ensures their web app stays more robust by offering quick and easy automated testing. Karma is highly favored in the web developer community due to its outstanding plugin support and integrations with numerous renowned CI packages such as Jenkins, Travis, and Semaphore. It is highly configurable to provide web developers a testing environment where they can receive feedback, instantly from their piece of code.
@@ -16,7 +14,7 @@ Designed for rapid development, Karma testing framework is an open-source test r
 
 ## Prerequisites
 * * *
->All the code samples in this documentation can be found in the [Karma <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/<BrandName />/angular-karma-sample). You can either download or clone the repository to quickly run your tests.
+>All the code samples in this documentation can be found in the [Karma <BrandName /> Repository on <img src='/assets/images/GitHub_icon/github-icon.webp' alt="Image" width="25" height="25"  /> GitHub](https://github.com/LambdaTest/angular-karma-sample). You can either download or clone the repository to quickly run your tests.
 
 In order to perform tests with <BrandName /> using Karma testing framework, you would need the below things to be already set up:
 
@@ -56,28 +54,32 @@ export LT_ACCESS_KEY="YOUR ACCESS KEY"
 * * *
 Clone the sample project from <BrandName /> GitHub repository by using the below command in your cmd/terminal.
 
-`git clone https://github.com/TestMu AI/angular-karma-sample && cd angular-karma-sample`
+`git clone https://github.com/LambdaTest/angular-karma-sample && cd angular-karma-sample`
 
 Install the node.js dependencies and Karma CLI globally using the below command.
 
 `npm install -g karma-cli && npm install`
 
-> **Change Browsers & Framework For Sample Project:**
-> If you wish to add more browsers or change the framework to something other than the one used in our Sample project then you can do so by editing the browser array/ framework array in the *karma.conf.js* file.
+<Note>
+**Change Browsers & Framework For Sample Project:**
+If you wish to add more browsers or change the framework to something other than the one used in our Sample project then you can do so by editing the browser array/ framework array in the *karma.conf.js* file.
+</Note>
 
 ## Configuring <BrandName /> tunnel To Run Karma Tests With <BrandName />
 * * *
 To help you perform cross browser testing of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name <BrandName /> tunnel. With <BrandName /> tunnel, you can execute a test your local Karma tests on cloud for performing automated cross browser testing on more than 2000 browsers offered by Selenium Grid on <BrandName />. So you make sure how well your changes look, even before your customers. Curious to know more about <BrandName /> tunnel?
 
-> Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
-> * [Documentation For Windows User](/support/docs/local-testing-for-windows/)
-> * [Documentation For Mac User](/support/docs/local-testing-for-macos/)
-> * [Documentation For Linux User](/support/docs/local-testing-for-linux/)
+<Note>
+Follow our documentation on <BrandName /> tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
+* [Documentation For Windows User](/support/docs/local-testing-for-windows/)
+* [Documentation For Mac User](/support/docs/local-testing-for-macos/)
+* [Documentation For Linux User](/support/docs/local-testing-for-linux/)
 
-> Download the binary file of:
-> * [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-> * [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-> * [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+Download the binary file of:
+* [<BrandName /> tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+</Note>
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
@@ -87,7 +89,7 @@ Once, the tunnel is successfully set up. You can add the below code to your capa
 * * *
 To integrate Karma test runner with <BrandName /> you need to set up <BrandName /> authentication credentials **(access key & username)** as your environment variables in the ***karma.conf.js*** file.
 
-Below is a sample config file for integrating Karma test runner with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our [GitHub repository for Karma](https://github.com/<BrandName />/angular-karma-sample).
+Below is a sample config file for integrating Karma test runner with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our [GitHub repository for Karma](https://github.com/LambdaTest/angular-karma-sample).
 
 ``` js
 // Karma testing framework configuration file, see link for more information
@@ -187,7 +189,7 @@ customLaunchers: { chrome: {
 ```
 
 <Warning>
-**Note**: psuedoActivityInterval is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
+: psuedoActivityInterval is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
 </Warning>
 
 

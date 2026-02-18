@@ -7,7 +7,9 @@ keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI H
 import { BrandName } from "/snippets/BrandName.mdx";
 
 
-> This is currently in the **Beta** version.
+<Note>
+This is currently in the **Beta** version.
+</Note>
 
 HyperExecute supports integration with GitHub App, enabling secure, fine-grained, and scalable access to your GitHub repositories without relying on long-lived Personal Access Tokens (PATs).
 
@@ -57,7 +59,9 @@ After installation, GitHub automatically redirects you to: `https://{{accounts_b
 
 The redirect URL includes an `installation_id` parameter required for configuration.
 
-> **Note:** Only Org Admins can complete the registration. Organization users can view mappings but cannot modify them.
+<Note>
+**Note:** Only Org Admins can complete the registration. Organization users can view mappings but cannot modify them.
+</Note>
 
 ### Approach 2: Your Existing GitHub App (On-Prem)
 
@@ -84,7 +88,9 @@ The redirect URL includes an `installation_id` parameter required for configurat
    - `installation_id`
    - Additional app details as required
 
-> **Note:** For GitHub Enterprise setups with multiple organizations, repeat this setup for each organization.
+<Note>
+**Note:** For GitHub Enterprise setups with multiple organizations, repeat this setup for each organization.
+</Note>
 
 **Additional Required Configuration**
 
@@ -126,4 +132,6 @@ https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration
 
 The redirect contains the `installation_id` parameter, which is required for configuration.
 
-> **Note:** Only Org Admins can complete this configuration step.
+<Note>
+**Note:** Only Org Admins can complete this configuration step.
+</Note>

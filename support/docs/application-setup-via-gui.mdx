@@ -5,6 +5,8 @@ keywords: ['appium', 'application operations', 'testmu ai', 'mobile testing', 'a
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -23,10 +25,12 @@ Wait for the file to upload and process. A success message will indicate when yo
 
 <img loading="lazy" src='/assets/images/appium-app/application/real-device-upload.gif' alt="Image" />
 
-> Learn how to [Upload Apps on <BrandName />’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
+<Note>
+Learn how to [Upload Apps on <BrandName />’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
+</Note>
 
 <Info>
-**- You can access the [**Virtual Device Dashboard**](https://app.lambdatest.com/console/realtime/app).**
+- You can access the [**Virtual Device Dashboard**](https://app.lambdatest.com/console/realtime/app).**
 
 - For **Virtual Devices**, the steps remain identical to those for Real Devices.  
 - The only difference is that for **iOS applications**, you must upload a **.zip** file instead of an `.ipa` file, as simulators accept `.zip` format.  
@@ -42,7 +46,7 @@ Wait for the file to upload and process. A success message will indicate when yo
 <img loading="lazy" src='/assets/images/appium-app/application/automation-upload.gif' alt="Image" />
 
 <Info>
-**- The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.  **
+- The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.  **
 
 - To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload — the rest of the flow remains identical.
 </Info>

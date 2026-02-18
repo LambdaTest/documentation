@@ -1,21 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: docker-tunnel
+---
 title: Localhost Testing With Docker Tunnel
-hide_title: true
+
 sidebarTitle: Docker Tunnel
-description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the <BrandName /> platform.
+
 keywords: ['local app testing', 'testmu ai local testing', 'testmu ai local tunnel', '<BrandName /> tunnel', 'local app testing for linux', 'ssh connection', 'shared ssh', 'secure-shell-tunnel', 'docker compose ssh tunnel', 'docker vpn tunnel']
-url: https://www.testmuai.com/support/docs/docker-tunnel/
-site_name: <BrandName />
-slug: docker-tunnel/
-canonical: https://www.testmuai.com/support/docs/docker-tunnel/
 ---
 
-# Docker Tunnel
+import { BrandName } from "/snippets/BrandName.mdx";
 
 ***
 With the help of the Docker Tunnel, i.e., Docker and <BrandName /> Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the <BrandName /> platform, with the help of 3000+ real browsers (desktop and mobile) and operating systems.
@@ -93,7 +84,9 @@ Now, in order to fetch the current tunnel status, just execute the below command
 
 * You can also use Proxy running on another docker container within same default bridge network, assuming the container in which proxy is running has IP 172.17.0.2.
 
-> Note: The IP can be found from inside of the container or by inspecting the network to which container is attached.
+<Note>
+Note: The IP can be found from inside of the container or by inspecting the network to which container is attached.
+</Note>
 
 Consider the below example:
 
@@ -101,7 +94,9 @@ Consider the below example:
 
 * You can also use Proxy running on another docker container within same custom bridge network, assuming the container in which proxy is running has IP 172.17.0.2.
 
-> Note: When you create custom network, containers can reach each other using container names due to automatic service discovery. Assuming that custom-network already exists and container named proxy-service has a proxy server running.
+<Note>
+Note: When you create custom network, containers can reach each other using container names due to automatic service discovery. Assuming that custom-network already exists and container named proxy-service has a proxy server running.
+</Note>
 
 Consider the below example:
 
@@ -129,12 +124,14 @@ On Linux, containers can run in a special network mode called host. This network
 
 Unfortunately, on both mac and windows, host networking mode is not available due to docker-machine implementation. The recommended approach to access services on the host machine is to use a special hostname *host.docker.internal*, which resolves to the host machine.
 
-> You can find more details on these, using [this link](https://docs.docker.com/docker-for-mac/networking/) for Mac, and [this link](https://docs.docker.com/docker-for-windows/networking/) for Windows respectively.
+<Note>
+You can find more details on these, using [this link](https://docs.docker.com/docker-for-mac/networking/) for Mac, and [this link](https://docs.docker.com/docker-for-windows/networking/) for Windows respectively.
+</Note>
 
 The test scripts need to use this special hostname to access the web services running on the host machine. The most idiomatic way of testing docker infra is creating a custom bridge network and access services using their container names. This method works on all operating systems.
 
 ## Conclusion
 * * *
-Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmu.ai](mailto:support@testmu.ai).
+Test your locally hosted pages and privately hosted pages at <BrandName /> [Selenium Test Automation](https://www.lambdatest.com/selenium-automation/) Platform using Docker Tunnel, via SSH based integration tunnel. If you still have any doubts or questions, please don’t hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at [support@testmuai.com](mailto:support@testmuai.com).
 
 Happy testing! 🙂

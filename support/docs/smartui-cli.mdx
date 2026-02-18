@@ -1,19 +1,12 @@
-import { BrandName } from "/snippets/BrandName.mdx";
-
-
-
-﻿---
-id: smartui-cli
+---
 title: Capture Static URLs via CLI
 sidebarTitle: Capture Static URLs
-description: In this documentation, learn how to perform Visual UI Testing using command line interface on the <BrandName /> Automation Cloud across 40+ browser versions.
+
 keywords: ['Visual Regression', 'Visual Regression Testing Guide', 'Visual Regression Test Automation', 'Visual Regression Automation Testing', 'Running Visual Regression Tests', 'Visual Regression Testing Online', 'Run Visual Regression', 'Visual Regression Run Specific Test', 'Visual Regression Testing Environment', 'How to Run Visual Regression Tests']
-
-url: https://www.testmuai.com/support/docs/smartui-cli/
-slug: smartui-cli/
-canonical: https://www.testmuai.com/support/docs/smartui-cli/
-
 ---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
 ---
 
 With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
@@ -82,14 +75,7 @@ Once, the `URLs` file will be created, you will be seeing the sample pre-filled 
 ]
 
 ```
-<Warning>
-**Please Note**
 
-The `waitForTimeout` is an optional configuration.
-
-If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
-
-</Warning>
 
 ## Step 3: Configure your Project Token
 
@@ -289,10 +275,12 @@ Specify a custom build name to group your screenshots in the following way:
 npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
 ```
 
-> Note:
-> - If no build name is provided, a random name will be automatically assigned to the build.
-> - Specifying the name of an existing build within the project will append the screenshots to that build.
-> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
+<Note>
+Note:
+- If no build name is provided, a random name will be automatically assigned to the build.
+- Specifying the name of an existing build within the project will append the screenshots to that build.
+- Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
+</Note>
 
 ## Setup with Continuous Integration (CI)
 

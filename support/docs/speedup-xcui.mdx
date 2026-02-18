@@ -5,6 +5,8 @@ keywords: ['XCUI test filters', 'app test automation', 'XCUI', 'filter', 'testmu
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
+import { VirtualDeviceTag } from '/snippets/VirtualDeviceTag.mdx';
 
 
 
@@ -38,8 +40,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 | `skip-testing`<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> | Allows the user to run all the tests/classes except the ones provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
 
 <Info>
-**Note**
-
 You can not use the following filters simultaneously. 
 - `only-testing` and `skip-testing`
 - `xctestplan` and `only-testing`/`skip-testing`

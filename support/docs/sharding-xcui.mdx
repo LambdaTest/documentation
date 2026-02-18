@@ -5,6 +5,7 @@ keywords: ['sharding', 'XCUIT', 'appium', 'real devices', 'testmu ai cloud platf
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
 
 <RealDeviceTag value="Real Device" />
@@ -13,8 +14,6 @@ Generally the XCUI tests are run in sequence which is a time taking process. Thi
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
 
 <Tip>
-**Note**
-
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimise your testing process with HyperExecute. 
 </Tip>
 
@@ -241,7 +240,9 @@ framework:
     "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
 ```
 
-> Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
+<Note>
+Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
+</Note>
 
 ## Additional Links
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)

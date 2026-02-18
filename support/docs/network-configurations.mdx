@@ -5,15 +5,16 @@ keywords: ['testmu ai automation', 'appium network logs', 'espresso network logs
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import { RealDeviceTag } from '/snippets/RealDeviceTag.mdx';
 
-
-# Network Logs and Configurations
 <RealDeviceTag value="Real Device" />
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services—all without leaving your testing workflow.
 
 On <BrandName />, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+<Note>
+To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+</Note>
 
 ---
 
@@ -44,7 +45,7 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 | **includeHosts** | List                 | None    | Only capture network logs for these hosts; all others will be excluded. |
 
 <Info>
-**- `networkLogsExcludeHosts` and `networkLogsIncludeHosts` are mutually exclusive. If both are set, **IncludeHosts** takes precedence.**
+- `networkLogsExcludeHosts` and `networkLogsIncludeHosts` are mutually exclusive. If both are set, **IncludeHosts** takes precedence.**
 
 </Info>
 
@@ -135,7 +136,7 @@ Execute your test script using your preferred automation framework with the abov
 ---
 
 <Tip>
-**- **Certificate-pinned apps** may fail if pinned hosts are not excluded.**
+- **Certificate-pinned apps** may fail if pinned hosts are not excluded.**
 
 - Available only on **Pro Plan**.
 - Certain HTTPS connections (e.g., using custom certificate pinning) cannot be intercepted even with MITM.

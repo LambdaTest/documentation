@@ -6,8 +6,6 @@ keywords: ['browserstack testmu ai migration', 'browserstack testmu ai porting',
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
-
-# Migration from BrowserStack to <BrandName />
 * * *
 <BrandName /> and BrowserStack both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from BrowserStack to <BrandName />
 
@@ -22,7 +20,7 @@ Firstly, you need to change the authentication in your configuration settings of
 
 You can find Username and Access Key from your <BrandName /> Account Settings.
 
-<img loading="lazy" src='/assets/images/browserstack-testmu ai-migration/dashboard.webp' alt="Image" width="1024" height="667"  /> */}
+<img loading="lazy" src='/assets/images/browserstack-lambdatest-migration/dashboard.webp' alt="Image" width="1024" height="667"  /> */}
 
 When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the following updates are required in your existing code:
 
@@ -116,7 +114,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 ## Configuring Selenium 3 Tests on <BrandName />
 ***
-Migrating your Selenium 3 tests from BrowserStack to <BrandName /> requires only a few simple configuration changes. In the sections below, we’ll guide you through updating your test setup, applying Selenium 3–compatible capabilities, and running your test sessions on real browsers hosted on the <BrandName /> cloud.
+Migrating your Selenium 3 tests from BrowserStack to <BrandName /> requires only a few simple configuration changes. In the sections below, we’ll guide you through updating your test setup, applying Selenium 3--compatible capabilities, and running your test sessions on real browsers hosted on the <BrandName /> cloud.
 ***
 
 ### <BrandName /> Automation Capabilities
@@ -315,4 +313,4 @@ public class TextValidationTest {
 
 Visit <BrandName /> Web Automation dashboard to view your test execution result.
 
-<img loading="lazy" src='/assets/images/browserstack-testmu ai-migration/testmu ai-safar-execution.png' alt="<BrandName /> text validation result" width="1024" height="667"  />
+<img loading="lazy" src='/assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png' alt="<BrandName /> text validation result" width="1024" height="667"  />
