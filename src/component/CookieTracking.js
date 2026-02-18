@@ -150,7 +150,7 @@ export default function CookieTrackingLogin(e) {
       window.sendAnalytics('signup_button_clicked', {
         'event': 'signup_button_clicked',
         'eventCategory': 'Click',
-        'eventAction': 'header',
+        'eventAction': 'all pages',
         'eventLabel': window.location.href,
       });
     }
