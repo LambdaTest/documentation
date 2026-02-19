@@ -82,7 +82,7 @@ class TestLink:
         Verify click and title of page
         :return: None
         """
-        driver.get('https://testmu ai.github.io/sample-todo-app/')
+        driver.get('https://lambdatest.github.io/sample-todo-app/')
         driver.find_element_by_name("li1").click()
         driver.find_element_by_name("li2").click()
 
@@ -94,7 +94,7 @@ class TestLink:
         Verify item submission
         :return: None
         """
-        driver.get('https://testmu ai.github.io/sample-todo-app/')
+        driver.get('https://lambdatest.github.io/sample-todo-app/')
         sample_text = "Happy Testing at TestMu AI"
         email_text_field = driver.find_element_by_id("sampletodotext")
         email_text_field.send_keys(sample_text)

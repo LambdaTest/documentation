@@ -61,7 +61,7 @@ desired_cap = {
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"
 driver = webdriver.Remote(desired_capabilities = desired_cap, command_executor = url)
 
-driver.get("https://testmu ai.github.io/sample-todo-app/")
+driver.get("https://lambdatest.github.io/sample-todo-app/")
 time.sleep(2)
 
 list1 = driver.find_element_by_xpath("//input[@name='li1']")

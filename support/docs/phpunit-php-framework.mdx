@@ -74,7 +74,7 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 ### Sample Test with PHP Unit
 Here is the sample PHP test file `TestMu AI.php` that we used for running a sample test using PHP Unit.
 ```php
-//TestMu AI.php
+//Lambdatest.php
 <?php
     
 require_once('vendor/autoload.php');
@@ -88,7 +88,7 @@ use PHPUnit\Framework\Assert;
 	public function testAdd() {
 	try{		
 		$itemName = 'Yey, Lets add it to list';
-		self::$driver->get("https://testmu ai.github.io/sample-todo-app/");
+		self::$driver->get("https://lambdatest.github.io/sample-todo-app/");
 		$element1 = self::$driver->findElement(WebDriverBy::name("li1"));
 		$element1->click();
 			
@@ -225,7 +225,7 @@ public function setupLambdatest($bName, $VName, $osName)
 		$this->setupLambdatest($browser, $version, $os);
 		$itemName = 'Yey, Lets add it to list';
 		try{
-			self::$driver->get("https://testmu ai.github.io/sample-todo-app/");
+			self::$driver->get("https://lambdatest.github.io/sample-todo-app/");
 			$element1 = self::$driver->findElement(WebDriverBy::name("li1"));
 			$element1->click();
 			

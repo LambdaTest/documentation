@@ -46,7 +46,7 @@ For **Windows**, you can download **PHP** from [PHP for Windows](http://windows.
 ### Installing Selenium Dependencies and Tutorial Repo
 **Step 1:** Clone the <BrandName />’s [Php-Selenium repository](https://github.com/<BrandName />-sample-test-frameworks/Php-Selenium) and navigate to the code directory as shown below:
 ```bash
-git clone https://github.com/TestMu AI-sample-test-frameworks/Php-Selenium
+git clone https://github.com/Lambdatest-sample-test-frameworks/Php-Selenium
 cd Php-Selenium
 ```
 **Step 2:** Install the composer dependencies in the current project directory using the command below:
@@ -111,7 +111,7 @@ class TestMu AI{
 		self::$driver = RemoteWebDriver::create($url, $desired_capabilities); 		
 				
 		$itemName = 'Yey, Lets add it to list';
-        self::$driver->get("https://4dvanceboy.github.io/testmu ai/lambdasampleapp.html");
+        self::$driver->get("https://4dvanceboy.github.io/lambdatest/lambdasampleapp.html");
         $element1 = self::$driver->findElement(WebDriverBy::name("li1"));
 		$element1->click();
 			

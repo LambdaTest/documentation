@@ -66,7 +66,7 @@ module.exports = {
   name: 'Wd-selenium-sample Todo Test',
   run : function (browser) {
     return browser
-      .get("https://testmu ai.github.io/sample-todo-app/").then(function(){
+      .get("https://lambdatest.github.io/sample-todo-app/").then(function(){
         browser.elementById('li1').clickElement().then(function(){
             console.log("Successfully clicked first list item.");
         });

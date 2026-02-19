@@ -62,7 +62,7 @@ The example mentioned below would help you to execute your **Cucumber JS** Testi
 //nodejs-cucumber-todo/features/todo.feature
 Feature: Automate a website
     Scenario: perform click events
-      When visit url "https://testmu ai.github.io/sample-todo-app"
+      When visit url "https://lambdatest.github.io/sample-todo-app"
       When field with name "First Item" is present check the box
       When field with name "Second Item" is present check the box
       When select the textbox add "Let's add new to do item" in the box
@@ -87,7 +87,7 @@ const webdriver = require('selenium-webdriver');
 module.exports = function() {
  
   this.When(/^visit url "([^"]*)"$/, function (url, next) {
-    this.driver.get('https://testmu ai.github.io/sample-todo-app').then(next);
+    this.driver.get('https://lambdatest.github.io/sample-todo-app').then(next);
   });
  
   this.When(/^field with name "First Item" is present check the box$/, function (next) {
