@@ -96,7 +96,7 @@ exports.test = base.test.extend({
   page: async ({ page, playwright }, use, testInfo) => {
     // Configure TestMu AI platform for cross-browser testing
     let fileName = testInfo.file.split(path.sep).pop()
-    if (testInfo.project.name.match(/testmu ai/)) {
+    if (testInfo.project.name.match(/lambdatest/)) {
       modifyCapabilities(testInfo.project.name, `${testInfo.title} - ${fileName}`)
 
       const browser = await chromium.connect({

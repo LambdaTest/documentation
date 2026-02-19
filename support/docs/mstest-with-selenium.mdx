@@ -100,7 +100,7 @@ namespace SingleLTSelenium
 
             driver = new RemoteWebDriver(new Uri("https://" + username + ":" + accesskey + gridURL), capabilities, TimeSpan.FromSeconds(2000));
 
-            driver.Url = "https://testmu ai.github.io/sample-todo-app/";
+            driver.Url = "https://lambdatest.github.io/sample-todo-app/";
 
             Assert.AreEqual("Sample page - lambdatest.com", driver.Title);
             // Click on First Check box
