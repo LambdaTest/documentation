@@ -99,7 +99,7 @@ Follow these steps to install and authorize the <BrandName /> Cloud GitHub App f
 
 Navigate to the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
 
-<img loading="lazy" src={require('../assets/images/kaneai-github-app/install-github-app.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-one.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
 
 ### Step 2: Configure Repository Access
@@ -109,11 +109,17 @@ During installation, you'll need to specify which repositories should have acces
 - **Organization-wide Installation**: Select **All repositories** to enable the app across your entire GitHub organization
 - **Selective Installation**: Choose **Only select repositories** and specify individual repositories for more granular control
 
-<img loading="lazy" src={require('../assets/images/kaneai-github-app/github-repository-selection.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-two.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
-After making your selection and clicking the **Install and Authorize** button, you will be redirected to <BrandName />'s integration page where under the **My Integrations** section you will be able to see this application.
+After making your selection and clicking the Install and Authorize button, you will be redirected to TestMu AI where you will be asked to login.
 
-<img loading="lazy" src={require('../assets/images/kaneai-github-app/integration-success.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+Once done, you will be redirected to the Integrations page.  
+
+<img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-four.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+
+In the sidebar, you can see that the TestMu AI Cloud GitHub App has been successfully integrated. You can also view and copy the configurations such as project ID and folder ID directly from the sidebar and paste them into your repository. 
+
+<img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-three.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
 
 :::tip Best Practice
