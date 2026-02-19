@@ -96,9 +96,9 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 5:** Click on Authenticate and you will be redirected to lambdatest.com for authentication. 
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-auth.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 6:** Provide valid credentials and authorise client to use <BrandName /> MCP server. 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-auth-credentials.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-auth-credentials-1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 7:** Post authorisation, launch your IDE. 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-ide-auth.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-ide-auth-1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 8:** MCP Lambdatest should be connected successfully.
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-success.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
