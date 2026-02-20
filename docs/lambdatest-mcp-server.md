@@ -11,7 +11,7 @@ keywords:
   - MCP
   - MCP server
 url: https://www.testmuai.com/support/docs/testmu-mcp-server/
-site_name: TestMu AI
+site_name: LambdaTest
 slug: testmu-mcp-server/
 canonical: https://www.testmuai.com/support/docs/testmu-mcp-server/
 ---
@@ -67,6 +67,12 @@ Here are the key benefits of using <BrandName /> MCP Server:
 
 ## Connecting to <BrandName /> MCP Server
 
+### One Click MCP Setup
+
+Click on the below icon to add MCP server:
+
+[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=mcp-lambdatest&config=eyJkaXNhYmxlZCI6ZmFsc2UsInRpbWVvdXQiOjYwLCJhbHdheXNBbGxvdyI6W10sImNvbW1hbmQiOiJucHggbWNwLXJlbW90ZUBsYXRlc3QgaHR0cHM6Ly9tY3AubGFtYmRhdGVzdC5jb20vbWNwIn0%3D)
+
 ### Connecting with Cline
 Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant that integrates directly into your development workflow. It provides intelligent code suggestions and documentation assistance, and now, with MCP support, you can interface with external tools like HyperExecute to enhance your testing capabilities. Cline offers natural language interactions with your codebase, allowing you to simply describe what you need rather than manually configuring everything.
 
@@ -83,16 +89,34 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 6:** Click on the Cline icon to open the Cline panel.<br />
 
 
-### Connecting Cline to <BrandName /> MCP Server
+#### Connecting Cline to <BrandName /> MCP Server
 
 #### VS Code Configuration:
 
 **Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
-**Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
+**Step 2:** Under the MCP Servers section, click Configure/Installed.
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Add Server Name as **MCP-<BrandName />**.<br />
-**Step 4:** Enter the following server configuration and save it: `https://mcp.lambdatest.com/mcp` <br />
+**Step 3:** Click Configure MCP Servers
+
+**Step 4:** Enter the following server configuration and save it:
+
+
+```json
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "npx",
+      "args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
+      "alwaysAllow": []
+    }
+  }
+}
+```
+
+
 **Step 5:** Click on Authenticate and you will be redirected to lambdatest.com for authentication. 
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-auth.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 6:** Provide valid credentials and authorise client to use <BrandName /> MCP server. 
@@ -101,7 +125,6 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-ide-auth-1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 8:** MCP Lambdatest should be connected successfully.
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-success.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
 
 ### Interacting with <BrandName /> MCP Server
 
