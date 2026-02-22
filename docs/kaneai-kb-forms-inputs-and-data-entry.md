@@ -246,7 +246,7 @@ click on "Verify" button
 assert "Welcome, John" is visible
 ```
 
-For real TOTP-based MFA, see the [TOTP Authentication](/support/docs//kaneai-totp) guide.
+For real TOTP-based MFA, see the [TOTP Authentication](/support/docs/kaneai-totp) guide.
 
 ## Sliders & Range Inputs
 
