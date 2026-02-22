@@ -2,7 +2,7 @@
 id: kane-ai-automation-code-generation
 title: KaneAI Automation Code Generation
 hide_title: false
-sidebar_label: Automation Code Generation
+sidebar_label: Code Generation
 description: Explore KaneAI’s features and components to generate automation test code.
 keywords:
   - testmu ai automation
