@@ -1275,59 +1275,75 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: ["why-we-need-kane-ai","use-cases-of-kane-ai"],
+        items: [
+          "why-we-need-kane-ai",
+          "use-cases-of-kane-ai",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Author Your First Test",
+            items: [
+              "author-your-first-desktop-browser-test",
+              "author-your-first-mobile-browser-test",
+              "author-your-first-mobile-app-test"
+            ],
+          },
+        ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Author Your First Test",
+        label: "Knowledge Base",
+        link: {
+          type: "doc",
+          id: "kaneai-kb-knowledge-base-index",
+        },
         items: [
           {
             type: "category",
+            label: "Authoring Guides",
             collapsed: true,
-            label: "Author Web Tests",
             items: [
-              "author-your-first-desktop-browser-test",
-              "author-your-first-mobile-browser-test",
+              "kaneai-kb-finding-and-interacting-with-elements",
+              "kaneai-kb-forms-inputs-and-data-entry",
+              "kaneai-kb-assertions-and-validation",
+              "kaneai-kb-dynamic-content-waits-and-page-state",
+              "kaneai-kb-mobile-app-testing-patterns",
             ],
           },
           {
             type: "category",
+            label: "Advanced Testing",
             collapsed: true,
-            label: "Author App Tests",
-            items: ["author-your-first-mobile-app-test"],
+            items: [
+              "kaneai-kb-authentication-and-session-management",
+              "kaneai-kb-api-testing-and-network-assertions",
+              "kaneai-kb-js-snippets-and-workarounds",
+              "kaneai-failure-conditions",
+            ],
           },
-        ],
+          {
+            type: "category",
+            label: "Variables and Parameters",
+            collapsed: true,
+            link: {
+                    type: "doc",
+                    id: "kaneai-variables-and-parameters",
+                  },
+            items: [
+              "kane-ai-using-variables",
+              "kane-ai-secrets",
+              "kane-ai-smart-variables",
+              "kane-ai-using-parameters",
+              "kane-ai-using-datasets",
+            ],
+          },
+          "kane-ai-command-guide",
+          "kane-ai-automation-code-generation",
+          "error-handling-kaneai",
+              ],
       },
 
-      {
-        type: "category",
-        collapsed: true,
-        label: "Test Manager",
-        items: [
-          "kane-ai-test-plan",
-          "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation",
-          "test-runs-configurations",
-          "kaneai-scheduled-test-runs",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Variables and Parameters",
-        link: {
-          type: "doc",
-          id: "kaneai-variables-and-parameters",
-        },
-        items: [
-          "kane-ai-using-variables",
-          "kane-ai-secrets",
-          "kane-ai-smart-variables",
-          "kane-ai-using-parameters",
-          "kane-ai-using-datasets",
-        ],
-      },
       {
         type: "category",
         collapsed: true,
@@ -1382,24 +1398,38 @@ module.exports = {
           },
         ],
       },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Manager",
+        items: [
+          "kane-ai-test-plan",
+          "kaneai-hyperexecute-test-run-execution",
+          "kaneai-ci-cd-automation",
+          "test-runs-configurations",
+          "kaneai-scheduled-test-runs",
+        ],
+      },
+      
       {
         type: "doc",
         label: "GitHub App Integration",
         id: "github-app-integration",
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Knowledge Base",
-        items: [
-          "kane-ai-command-guide",
-          "kaneai-failure-conditions",
-          "kane-ai-web-test-writing-guidelines",
-          "kane-ai-app-test-writing-guidelines",
-          "error-handling-kaneai",
-          "kane-ai-automation-code-generation",
-        ],
-      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Knowledge Base",
+      //   items: [
+      //     "kane-ai-command-guide",
+      //     "kaneai-failure-conditions",
+      //     "kane-ai-web-test-writing-guidelines",
+      //     "kane-ai-app-test-writing-guidelines",
+      //     "error-handling-kaneai",
+      //     "kane-ai-automation-code-generation",
+      //   ],
+      // },
       {
         type: "category",
         collapsed: true,
@@ -1410,23 +1440,23 @@ module.exports = {
           "kaneai-edit-test-steps",
         ],
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Release Notes",
-        link: {
-          type: "doc",
-          id: "kaneai-release-notes",
-        },
-        items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "September, 2024",
-            items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
-          },
-        ],
-      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Release Notes",
+      //   link: {
+      //     type: "doc",
+      //     id: "kaneai-release-notes",
+      //   },
+      //   items: [
+      //     {
+      //       type: "category",
+      //       collapsed: true,
+      //       label: "September, 2024",
+      //       items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
+      //     },
+      //   ],
+      // },
     ],
   ],
 
