@@ -1392,7 +1392,6 @@ module.exports = {
               "kane-ai-deeplink-support",
               "kaneai-network-throttling",
               "kaneai-gps-location",
-              "kaneai-scroll-until-mobile",
               "kaneai-mobile-app-accessibility",
             ],
           },
