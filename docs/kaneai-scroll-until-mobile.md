@@ -6,11 +6,6 @@ sidebar_label: Scroll Until Element
 description: Learn how to use Scroll Until Element feature in KaneAI to automate scrolling using natural language commands for mobile app testing
 keywords:
   - testmu ai automation
-  - testmu ai kaneai
-  - kaneai mobile app
-  - scroll until element
-  - natural language commands
-  - mobile scrolling
 url: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
 site_name: TestMu AI
 slug: kaneai-scroll-until-mobile/
