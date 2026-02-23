@@ -5,15 +5,15 @@ hide_title: false
 sidebar_label: Mobile App Testing Patterns
 description: Best practices for authoring reliable native mobile app tests in KaneAI covering Android and iOS patterns, OTP fields, keyboards, pickers, and mobile-specific interactions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai mobile testing
   - kaneai app testing
   - kaneai android
   - kaneai iOS
   - mobile automation
-url: https://www.lambdatest.com/support/docs/kaneai-kb-mobile-app-testing-patterns
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns
+site_name: TestMu AI
 slug: kaneai-kb-mobile-app-testing-patterns/
 ---
 
@@ -28,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile App Testing Patterns",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-mobile-app-testing-patterns"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns"
         }]
       })
     }}

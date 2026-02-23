@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: Finding & Interacting with Elements
 description: Learn how to reliably target and interact with web and mobile elements using KaneAI's natural language instructions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai elements
   - kaneai locators
   - element targeting
   - natural language testing
-url: https://www.lambdatest.com/support/docs/kaneai-kb-finding-and-interacting-with-elements
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements
+site_name: TestMu AI
 slug: kaneai-kb-finding-and-interacting-with-elements/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Finding & Interacting with Elements",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-finding-and-interacting-with-elements"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements"
         }]
       })
     }}
