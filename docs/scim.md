@@ -588,21 +588,21 @@ Conflicts happen when a user belongs to multiple SCIM groups that compete for th
 **When do conflicts happen?**
 
 <Tabs className="docs__val" groupId="entity-type">
-<TabItem value="team" label="Team" default>
-
-**Never.** Teams are additive — a user can be in as many teams as needed.
-
-</TabItem>
-<TabItem value="group" label="Concurrency Group">
+<TabItem value="group" label="Concurrency Group" default>
 
 When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool" — the user can only be in one.
 
 </TabItem>
 <TabItem value="suborg" label="Sub-Organization">
 
-Two scenarios:
-1. **Same type:** User in two groups mapped to **different** sub-orgs (e.g., Group X → "US Team", Group Y → "EU Team")
-2. **Cross-type:** User in a sub-org group **and** a concurrency group or team group from a **different** SCIM group. Sub-orgs take users out of the parent org's resource pool, making parent-org team/group assignments invalid.
+When the same user is in two SCIM groups mapped to **different** sub-orgs. Example: Group X → "US Team" and Group Y → "EU Team" — the user can only be in one.
+
+</TabItem>
+<TabItem value="crosstype" label="Cross-Type">
+
+When a user is mapped to a **sub-organization** from one SCIM group and a **concurrency group or team** from another SCIM group. Example: Group A maps to Sub-Org "US Team" and Group B maps to Concurrency Group "Dev Pool".
+
+**Why does this conflict?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
 
 </TabItem>
 </Tabs>
