@@ -190,7 +190,7 @@ test_url: "https://your-deployed-app-url.com/"
 
 > **Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
 
-You can also view and copy the configurations such as project ID and folder ID directly from the integration sidebar in <BrandName /> and paste them into your repository.
+You can also view and copy the configurations such as project ID and folder ID directly from the integration sidebar in <BrandName /> and paste them in the config.yaml file of your repository.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-three.png').default} alt="Copy configuration values from integration sidebar" className="doc_img"/>
 
@@ -225,7 +225,7 @@ your-repo/
 
 ---
 
-## Try It Out — Sample Repository
+{/* ## Try It Out — Sample Repository
 
 We maintain a public sample repository — [ai-native-quality-validation-sample](https://github.com/LambdaTest/ai-native-quality-validation-sample) — that showcases the full <BrandName /> Cloud GitHub App workflow in action. Browse existing pull requests to see real AI-generated test cases, execution results, and Root Cause Analysis comments.
 
@@ -247,7 +247,8 @@ To experience the full workflow hands-on, fork the sample repository and run the
 Since the sample repository uses GitHub Pages for deployment, you can get up and running immediately after forking — no need to set up your own hosting or CI/CD pipeline. Just fork, configure, and trigger.
 :::
 
----
+--- */}
+
 
 ## Triggering Test Generation
 
