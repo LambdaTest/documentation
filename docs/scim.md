@@ -507,21 +507,6 @@ When a SCIM group is renamed in your IDP, the mapped team or concurrency group i
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/group-approve-mapping.png').default} alt="Approving a SCIM group mapping" width="404" height="206" className="doc_img img_center"/><br/> -->
 
-### Deleted Target {#target-deleted}
-
-If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged as `target_deleted` and the status changes to **Pending**.
-
-:::warning Manual re-mapping required
-When a target is deleted, the mapping **will not auto-create a replacement** — even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
-:::
-
-**To fix a `target_deleted` mapping:**
-
-1. Go to **SCIM Group Provisioning** dashboard
-2. Find the group with `target_deleted` status
-3. Click the group and select a **new target entity**
-4. Click **Approve** — members will be synced to the new target
-
 ### Mapping Rules (Automatic Mapping)
 
 Instead of mapping each group manually, create rules that auto-match groups by name.
@@ -640,6 +625,21 @@ Two scenarios:
 :::tip To avoid conflicts
 Prefer **teams** when users need to be in multiple groups — teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
 :::
+
+### Deleted Target {#target-deleted}
+
+If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged as `target_deleted` and the status changes to **Pending**.
+
+:::warning Manual re-mapping required
+When a target is deleted, the mapping **will not auto-create a replacement** — even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
+:::
+
+**To fix a `target_deleted` mapping:**
+
+1. Go to **SCIM Group Provisioning** dashboard
+2. Find the group with `target_deleted` status
+3. Click the group and select a **new target entity**
+4. Click **Approve** — members will be synced to the new target
 
 ### Group API Operations
 
