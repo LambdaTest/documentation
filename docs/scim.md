@@ -875,53 +875,16 @@ Quick reference for common scenarios. Everything below is handled automatically 
 
 ### FAQ
 
-<details>
-<summary><strong>Can a group be mapped to multiple targets?</strong></summary>
-
-Yes. A single SCIM group can map to a Team **and** a Concurrency Group simultaneously. Each mapping syncs independently.
-</details>
-
-<details>
-<summary><strong>Can two SCIM groups map to the same entity?</strong></summary>
-
-No. Each entity (team, concurrency group, or sub-org) can only be owned by one SCIM group. This prevents conflicting membership lists.
-</details>
-
-<details>
-<summary><strong>Can I disable group provisioning without losing data?</strong></summary>
-
-Yes. The toggle only blocks new IDP group operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume.
-</details>
-
-<details>
-<summary><strong>Can I restore a deleted group?</strong></summary>
-
-Yes. Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members need to be re-pushed.
-</details>
-
-<details>
-<summary><strong>Can roles be downgraded?</strong></summary>
-
-Yes. Roles are recomputed across all groups. When a user is removed from a group with a higher role, their effective role drops to the next highest across remaining groups. If no groups have roles, it defaults to **User**.
-</details>
-
-<details>
-<summary><strong>What happens to a conflict when one group is deleted?</strong></summary>
-
-The conflict is **auto-resolved** in favor of the remaining group. No admin action needed.
-</details>
-
-<details>
-<summary><strong>What's the difference between Approved and Auto-Approved?</strong></summary>
-
-Both sync members identically. **Auto-Approved** means a mapping rule matched and approved it automatically. **Approved** means an admin approved it manually.
-</details>
-
-<details>
-<summary><strong>Do mapping rules overwrite existing mappings?</strong></summary>
-
-No. Rules only apply when a group is first created or renamed. Once a mapping exists (manual or auto), rules don't overwrite it.
-</details>
+| Question | Answer |
+|---|---|
+| Can a group be mapped to multiple targets? | Yes. A single SCIM group can map to a Team **and** a Concurrency Group simultaneously. Each mapping syncs independently. |
+| Can two SCIM groups map to the same entity? | No. Each entity can only be owned by one SCIM group. This prevents conflicting membership lists. |
+| Can I disable group provisioning without losing data? | Yes. The toggle only blocks new IDP operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume. |
+| Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members need to be re-pushed. |
+| Can roles be downgraded? | Yes. Roles are recomputed across all groups. If the highest role is removed, the effective role drops to the next highest. Defaults to **User** if none set. |
+| What happens to a conflict when one group is deleted? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
+| What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** = mapping rule matched automatically. **Approved** = admin approved manually. |
+| Do mapping rules overwrite existing mappings? | No. Rules only apply when a group is first created or renamed. Existing mappings (manual or auto) are not overwritten. |
 
 ---
 
