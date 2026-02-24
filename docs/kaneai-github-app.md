@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# <BrandName /> Cloud GitHub App Integration
+# <BrandName /> GitHub App Integration
 
 **Your pull requests should deliver proof, not just code.**
 
@@ -84,9 +84,11 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 
 #### Account Requirements
 
-- **<BrandName /> Enterprise Account**: An active <BrandName /> account with appropriate licensing. [Sign up now](https://accounts.lambdatest.com/register) if you don't have an account yet.
+- **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up now</a> if you don't have an account yet.
 
-- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups receive a 14-day free trial of KaneAI with full feature access.
+- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can [start a free trial](https://kaneai.lambdatest.com/allocate-kane) to explore KaneAI's key workflows.
+
+<img loading="lazy" src={require('../assets/images/kaneai-github-app/allocate-free-kane-trial.png').default} alt="KaneAI free trial signup" className="doc_img"/>
 
 #### Repository Requirements
 
@@ -180,26 +182,22 @@ test_url: "https://your-deployed-app-url.com/"
 
 #### Configuration Parameters
 
-| Parameter | Description | How to Obtain |
-|-----------|-------------|---------------|
-| `project_id` | The unique identifier for your <BrandName /> Test Manager project | Navigate to your project in Test Manager and copy the ID from the URL |
-| `folder_id` | The folder where generated test cases will be organized | Create or select a folder in Test Manager and obtain its ID from the URL |
-| `assignee` | The <BrandName /> user ID who will be assigned to test runs for executions | Can be referenced from APIs |
-| `environment_id` | The target testing environment (browser, OS, device configurations) | Create environments in Test Manager and reference their IDs |
-| `test_url` | The base URL of your application under test | Your staging or testing environment URL where tests will be executed |
+| Parameter | Description |
+|-----------|-------------|
+| `project_id` | The unique identifier for your <BrandName /> Test Manager project |
+| `folder_id` | The folder where generated test cases will be organized |
+| `assignee` | The <BrandName /> user ID who will be assigned to test runs for executions |
+| `environment_id` | The target testing environment (browser, OS, device configurations) |
+| `test_url` | The base URL of your application under test (your staging or testing environment URL) |
 
-> **Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
-
-You can also view and copy the configurations such as project ID and folder ID directly from the integration sidebar in <BrandName /> and paste them in the config.yaml file of your repository.
+After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values — project ID, folder ID, assignee, and environment ID — are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-three.png').default} alt="Copy configuration values from integration sidebar" className="doc_img"/>
 
+> **Note:** All configuration IDs can also be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+
 :::tip Maximize AI Context
-The `README.md` file in your repository is analyzed by KaneAI to understand your application's purpose, architecture, and business logic. A comprehensive README significantly improves the quality and relevance of generated test cases. Include:
-- Application overview and key features
-- User workflows and critical paths
-- Architecture and technology stack
-- Business rules and validation logic
+KaneAI uses your `README.md` and `agent.md` to improve test quality. Keep your README comprehensive (app overview, key workflows, tech stack) and use `agent.md` for custom instructions like testing priorities, scenarios to cover or skip, and domain-specific rules.
 :::
 
 #### Repository Structure
