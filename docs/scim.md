@@ -78,7 +78,7 @@ Go to **Settings** > **Organization Settings** > **Security** tab. Copy the **SC
 
 Paste the SCIM Base URL and Bearer Token into your IDP's provisioning settings.
 
-<Tabs className="docs__val" groupId="idp-provider">
+<Tabs className="docs__val" groupId="idp-provider" queryString="idp">
 <TabItem value="okta" label="Okta" default>
 
 Full walkthrough: [Okta SCIM Guide](/support/docs/scim/okta/)
@@ -173,7 +173,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 ### User API Operations
 
-<Tabs className="docs__val">
+<Tabs className="docs__val" groupId="user-op" queryString="user-op">
 <TabItem value="create-user" label="Create" default>
 
 **Request:** POST `https://auth.lambdatest.com/api/scim/Users`
@@ -450,7 +450,7 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 Once a group is pushed, it needs to be **mapped** to tell <BrandName /> what to do with its members. Select your target entity type below to see the details relevant to you:
 
-<Tabs className="docs__val" groupId="entity-type">
+<Tabs className="docs__val" groupId="entity-type" queryString="entity">
 <TabItem value="team" label="Team" default>
 
 **Teams are additive** — a user can belong to multiple teams at once, so there are no conflicts.
@@ -507,7 +507,7 @@ A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` t
 
 Instead of mapping each group manually, create rules that auto-match groups by name.
 
-<Tabs className="docs__val">
+<Tabs className="docs__val" groupId="rule-type" queryString="rule">
 <TabItem value="prefix" label="Prefix" default>
 
 Matches group names **starting with** a pattern (case-insensitive).
@@ -587,7 +587,7 @@ Conflicts happen when a user belongs to multiple SCIM groups that compete for th
 
 **When do conflicts happen?**
 
-<Tabs className="docs__val" groupId="entity-type">
+<Tabs className="docs__val" groupId="entity-type" queryString="entity">
 <TabItem value="group" label="Concurrency Group" default>
 
 When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool" — the user can only be in one.
@@ -639,7 +639,7 @@ When a target is deleted, the mapping **will not auto-create a replacement** —
 
 ### Group API Operations
 
-<Tabs className="docs__val">
+<Tabs className="docs__val" groupId="group-op" queryString="group-op">
 <TabItem value="create-group" label="Create" default>
 
 **Request:** POST `https://auth.lambdatest.com/api/scim/Groups`
@@ -828,7 +828,7 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 Quick reference for common scenarios. Everything below is handled automatically — no action needed unless noted.
 
-<Tabs className="docs__val">
+<Tabs className="docs__val" groupId="sync-source" queryString="sync">
 <TabItem value="idp-changes" label="Your IDP changes" default>
 
 | You do this in your IDP | What happens in LambdaTest | Action needed? |
