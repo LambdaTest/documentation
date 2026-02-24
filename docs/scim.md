@@ -499,10 +499,6 @@ A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` t
 
 > **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
 
-:::warning Entity rename sync
-When a SCIM group is renamed in your IDP, the mapped team or concurrency group is **automatically renamed to match**. If you rename an entity manually in <BrandName />, the next IDP group rename will overwrite it. To control names, rename in your IDP.
-:::
-
 **To map manually:** Go to **SCIM Group Provisioning** dashboard > click a Pending group > select target type and entity > **Approve**.
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/group-approve-mapping.png').default} alt="Approving a SCIM group mapping" width="404" height="206" className="doc_img img_center"/><br/> -->
