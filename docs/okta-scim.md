@@ -105,6 +105,44 @@ Also if you want to assign this attribute at a okta group level choose Attribute
 **Step 10:** To enable the Okta provisioning service for <BrandName />, set Create Users, Update User Attributes and Deactivate Users to enabled
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/okta/provisioning-enabled.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
+## Pushing Groups from Okta
+
+Once user provisioning is working, you can push Okta groups to <BrandName /> for automatic team, concurrency group, or sub-org assignment.
+
+:::note Prerequisites
+Group Provisioning must be enabled for your org. Contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> to activate it.
+:::
+
+**Step 1:** In Okta, go to your <BrandName /> application > **Push Groups** tab.
+
+**Step 2:** Click **Push Groups** > choose **Find groups by name** or **Find groups by rule**.
+
+**Step 3:** Search for or select the groups you want to push, then click **Save**.
+
+**Step 4:** Okta will immediately push the group and its members to <BrandName /> via SCIM.
+
+**Step 5:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the pushed groups and configure mappings.
+
+### Setting Roles on Okta Groups
+
+To assign <BrandName /> roles (Admin, User, Guest) to all members of an Okta group:
+
+1. In your Okta app's **Push Groups** settings, the `LambdatestRoles` attribute is sent automatically if configured
+2. Alternatively, set `LambdatestRoles` in the SCIM group extension: `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group`
+3. The role applies to **all** members of the group. When a user is in multiple groups, the **highest** role wins (Admin > User > Guest)
+
+### What Happens After Pushing
+
+| Okta Action | <BrandName /> Effect |
+|---|---|
+| Push a group | Group created, mapping rules evaluated, members synced |
+| Add member to group | Member added to all mapped <BrandName /> entities |
+| Remove member from group | Member removed (if no other group maps them there), role recomputed |
+| Rename group in Okta | Group renamed, mapped entity renamed to match, rules re-evaluated |
+| Unlink/delete pushed group | Group soft-deleted, members safely unassigned, roles recomputed |
+
+> For details on mapping, conflicts, and rules, see the [SCIM Provisioning guide](/support/docs/scim/#group-provisioning).
+
 > That's all you need to know about <BrandName /> SCIM Auto User Provisioning with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
