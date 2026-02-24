@@ -503,11 +503,24 @@ A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` t
 When a SCIM group is renamed in your IDP, the mapped team or concurrency group is **automatically renamed to match**. If you rename an entity manually in <BrandName />, the next IDP group rename will overwrite it. To control names, rename in your IDP.
 :::
 
-**Deleted target:** If an admin deletes a mapped team, concurrency group, or sub-org, the mapping reverts to **Pending**. Re-approve with a new target.
-
 **To map manually:** Go to **SCIM Group Provisioning** dashboard > click a Pending group > select target type and entity > **Approve**.
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/group-approve-mapping.png').default} alt="Approving a SCIM group mapping" width="404" height="206" className="doc_img img_center"/><br/> -->
+
+### Deleted Target {#target-deleted}
+
+If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged as `target_deleted` and the status changes to **Pending**.
+
+:::warning Manual re-mapping required
+When a target is deleted, the mapping **will not auto-create a replacement** — even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
+:::
+
+**To fix a `target_deleted` mapping:**
+
+1. Go to **SCIM Group Provisioning** dashboard
+2. Find the group with `target_deleted` status
+3. Click the group and select a **new target entity**
+4. Click **Approve** — members will be synced to the new target
 
 ### Mapping Rules (Automatic Mapping)
 
@@ -837,7 +850,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 | You do this in LambdaTest | What happens | Important |
 |---|---|---|
 | **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
-| **Delete a mapped entity** | Mapping reverts to Pending. | Re-approve with a new target |
+| **Delete a mapped entity** | Mapping flagged as `target_deleted`, reverts to Pending. Auto-create is blocked. | [Manually re-map](#target-deleted) to a new target |
 | **Manually remove a member from a team** | Removal is immediate but **temporary** — next IDP sync re-adds them. | Remove **in your IDP** instead |
 | **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
 | **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
@@ -869,7 +882,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 | Members are in the SCIM group but not in the sub-org | Check for [conflicts](#conflicts). The user may belong to another group with a competing exclusive mapping. |
 | User has an unexpected role | Check **all** SCIM group memberships — roles follow highest-wins (Admin > User > Guest). The user may inherit Admin from another group. |
 | User keeps getting re-added after manual removal | SCIM is the source of truth. Remove the user **in your IDP** instead. |
-| Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted. Re-approve with a valid target. |
+| Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted (`target_deleted`). If renamed, rules may auto-approve. If deleted, [manual re-mapping](#target-deleted) is required. |
 | Auto-approve didn't create my sub-organization | Sub-orgs are never auto-created (billing/setup required). Create the sub-org first, then approve manually. |
 | Can't map two SCIM groups to the same team | Each entity can only be mapped from one SCIM group. Use a single group, or merge in your IDP. |
 
