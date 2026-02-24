@@ -351,9 +351,18 @@ DELETE only **deactivates** the account — it does not permanently delete it. F
 
 ## Group Provisioning {#group-provisioning}
 
+:::tip Quick Start
+1. Push groups from your IDP (happens automatically once SCIM is configured)
+2. Go to **SCIM Group Provisioning** dashboard in <BrandName />
+3. Approve the mapping (choose Team, Concurrency Group, or Sub-Org)
+4. Members are synced. Done.
+
+The rest of this section covers advanced configuration — mapping rules, roles, and conflict resolution.
+:::
+
 ### How It Works
 
-Groups and members are stored **as soon as your IDP pushes them** — even before any mapping is configured. Mapping only controls **where** members are assigned (which team, group, or sub-org).
+Groups and members are stored **as soon as your IDP pushes them** — even before any mapping is configured. Mapping only controls **where** members are assigned.
 
 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0', margin: '2rem 0'}}>
 
@@ -439,19 +448,60 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 ### Mapping Groups to LambdaTest Entities
 
-Once a group is pushed, it needs to be **mapped** to tell <BrandName /> what to do with its members. A single group can have **multiple mappings** — e.g., map `eng-backend` to both a Team and a Concurrency Group simultaneously.
+Once a group is pushed, it needs to be **mapped** to tell <BrandName /> what to do with its members. Select your target entity type below to see the details relevant to you:
 
-| Target | Type | On member removal | Auto-create | Conflicts |
-|---|---|---|---|---|
-| **Team** | `Additive` — user can be in multiple teams | Removed from team (unless another SCIM group maps them there) | Yes | No |
-| **Concurrency Group** | `Exclusive` — user can only belong to one | Moved back to org default group | Yes | Yes — if same user maps to two different groups |
-| **Sub-Organization** | `Exclusive` — user can only belong to one | Moved back to root org | No (requires manual setup) | Yes — if same user maps to two different sub-orgs |
+<Tabs className="docs__val" groupId="entity-type">
+<TabItem value="team" label="Team" default>
 
-> **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync)
+**Teams are additive** — a user can belong to multiple teams at once, so there are no conflicts.
 
-**Entity rename sync:** When a SCIM group is renamed in your IDP, the mapped <BrandName /> entity (team or concurrency group) is **automatically renamed to match**. This keeps names consistent between your IDP and <BrandName /> without manual intervention. Sub-organizations are not renamed (they have independent naming).
+| | |
+|---|---|
+| **Auto-create** | Yes — if the team doesn't exist, it's created automatically |
+| **On member removal** | Removed from team (unless another SCIM group also maps them there) |
+| **On group rename** | Team is **automatically renamed** to match the IDP group name |
+| **Conflicts** | None — teams are never exclusive |
 
-**Deleted target handling:** If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged with `target_deleted: true` and reverts to **Pending** status on the next sync. The admin needs to re-approve the mapping with a new target.
+This is the simplest and most common mapping. If you're just starting out, **Team is the recommended choice**.
+
+</TabItem>
+<TabItem value="group" label="Concurrency Group">
+
+**Concurrency groups are exclusive** — a user can only belong to one at a time.
+
+| | |
+|---|---|
+| **Auto-create** | Yes — if the group doesn't exist, it's created automatically |
+| **On member removal** | User moved back to the org's **default concurrency group** |
+| **On group rename** | Concurrency group is **automatically renamed** to match the IDP group name |
+| **Conflicts** | Yes — if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
+
+</TabItem>
+<TabItem value="suborg" label="Sub-Organization">
+
+**Sub-organizations are exclusive** — a user can only belong to one at a time. Sub-orgs also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
+
+| | |
+|---|---|
+| **Auto-create** | No — sub-orgs must be created manually first (they have billing and setup requirements) |
+| **On member removal** | User moved back to the **root organization** |
+| **On group rename** | Sub-org is **not** renamed (sub-orgs have independent naming) |
+| **Conflicts** | Yes — two types: (1) same user in two groups mapped to **different** sub-orgs, or (2) same user in a sub-org group **and** a concurrency group/team group from a different SCIM group |
+
+**Why cross-type conflicts?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
+
+</TabItem>
+</Tabs>
+
+A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` to both a Team and a Concurrency Group simultaneously.
+
+> **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
+
+:::warning Entity rename sync
+When a SCIM group is renamed in your IDP, the mapped team or concurrency group is **automatically renamed to match**. If you rename an entity manually in <BrandName />, the next IDP group rename will overwrite it. To control names, rename in your IDP.
+:::
+
+**Deleted target:** If an admin deletes a mapped team, concurrency group, or sub-org, the mapping reverts to **Pending**. Re-approve with a new target.
 
 **To map manually:** Go to **SCIM Group Provisioning** dashboard > click a Pending group > select target type and entity > **Approve**.
 
@@ -487,7 +537,7 @@ Matches **every group**. Use as a low-priority catch-all fallback.
 - **ON** → finds (or creates) the target entity by name → mapping approved → members synced immediately.
 - **OFF** → creates a Pending mapping → admin approves manually.
 
-**Rules are evaluated by priority** (highest first). First match wins.
+**Rules are evaluated by priority** (highest first). First match wins. If **no rule matches**, the group stays Pending until an admin maps it manually.
 
 | Priority | Rule | Target | Auto-Approve | Example match |
 |---|---|---|---|---|
@@ -518,18 +568,14 @@ When a user is in **multiple groups with different roles**, the highest-priority
 | `org-admins` | Admin |
 | **Effective role** | **Admin** (highest wins) |
 
-**Role changes are applied in both directions** — roles can be upgraded *and* downgraded:
+**Roles can be upgraded and downgraded.** The effective role is always the **highest** across all current group memberships — removing a user from one group only downgrades their role if no other group provides it.
 
 | Scenario | What happens |
 |---|---|
 | User added to a group with `Admin` role | Role upgraded to Admin (if currently lower) |
-| User removed from the `Admin` group | Role **downgraded** to the next highest across remaining groups (e.g., User) |
+| User removed from the `Admin` group | Role recomputed — drops to next highest (e.g., User) if no other group gives Admin |
 | All groups removed, or no roles set | Role defaults to **User** |
 | Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed — may downgrade |
-
-:::note
-Roles are recomputed across **all** of a user's SCIM groups whenever any group membership or role changes. The effective role is always the highest across all current group memberships.
-:::
 
 ### One Group per Entity
 
@@ -537,32 +583,45 @@ Each <BrandName /> entity (team, concurrency group, or sub-org) can only be mapp
 
 ### Conflicts {#conflicts}
 
-Conflicts happen when a user belongs to multiple SCIM groups whose mappings compete for the **same exclusive slot**. There are three types:
-
-| Conflict Type | When it happens | Example |
-|---|---|---|
-| **Exclusive Group** | User mapped to two different **concurrency groups** | Group A → "QA Pool", Group B → "Dev Pool" — user can only be in one |
-| **Exclusive Sub-Org** | User mapped to two different **sub-organizations** | Group X → "US Team", Group Y → "EU Team" — user can only be in one |
-| **Cross-Type Exclusive** | User mapped to a **sub-org** from one group and a **concurrency group or team** from another | Group A → Sub-Org "US Team", Group B → Concurrency Group "Dev Pool" — sub-org assignment is exclusive with other entity types |
-
-:::info What happens during a conflict
-The user **keeps their current assignment** until an admin resolves the conflict. No automatic changes are made — SCIM does not silently override existing assignments when there's ambiguity.
+:::note Teams don't have conflicts
+If you're only mapping to **Teams**, you can skip this section entirely. Teams are additive — no conflicts possible.
 :::
+
+Conflicts happen when a user belongs to multiple SCIM groups that compete for the **same exclusive slot**. When a conflict occurs, the user **keeps their current assignment** until an admin resolves it — nothing changes automatically.
+
+**When do conflicts happen?**
+
+<Tabs className="docs__val" groupId="entity-type">
+<TabItem value="team" label="Team" default>
+
+**Never.** Teams are additive — a user can be in as many teams as needed.
+
+</TabItem>
+<TabItem value="group" label="Concurrency Group">
+
+When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool" — the user can only be in one.
+
+</TabItem>
+<TabItem value="suborg" label="Sub-Organization">
+
+Two scenarios:
+1. **Same type:** User in two groups mapped to **different** sub-orgs (e.g., Group X → "US Team", Group Y → "EU Team")
+2. **Cross-type:** User in a sub-org group **and** a concurrency group or team group from a **different** SCIM group. Sub-orgs take users out of the parent org's resource pool, making parent-org team/group assignments invalid.
+
+</TabItem>
+</Tabs>
 
 **To resolve:**
 
 1. Go to **SCIM Group Provisioning** dashboard > **Conflicts** tab
-2. Each conflict card shows the **Current** group (the one the user is already assigned to) and the **Incoming** group (the one trying to claim the user)
-3. Click **Keep Current** to keep the existing assignment, or **Use Incoming** to switch the user to the new group's target
-4. <BrandName /> remembers this decision — if the IDP pushes the same combination again, no new conflict is created
+2. Each conflict card shows the **Current** group (where the user is now) and the **Incoming** group (the one trying to claim the user)
+3. Click **Keep Current** or **Use Incoming**
+4. <BrandName /> remembers this decision — the same combination won't create a new conflict
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/conflict-resolution.png').default} alt="Resolving a SCIM group conflict" width="404" height="206" className="doc_img img_center"/><br/> -->
 
 :::tip To avoid conflicts
-- Don't put the same user in two SCIM groups that map to **different concurrency groups**.
-- Don't put the same user in two SCIM groups that map to **different sub-organizations**.
-- Don't put the same user in a sub-org group **and** a concurrency group / team group — sub-orgs are exclusive with other entity types.
-- Prefer **teams** when users need to be in multiple groups — teams never create conflicts.
+Prefer **teams** when users need to be in multiple groups — teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
 :::
 
 ### Group API Operations
@@ -752,30 +811,35 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 ---
 
-## Side Effects & Behaviors {#side-effects}
+## What Happens When... {#sync-behavior}
 
-Quick reference for what happens during common operations. These are handled automatically — no action required unless noted.
+Quick reference for common scenarios. Everything below is handled automatically — no action needed unless noted.
 
-### Changes from Your IDP
+<Tabs className="docs__val">
+<TabItem value="idp-changes" label="Your IDP changes" default>
 
-| Action | What happens | Admin action needed? |
+| You do this in your IDP | What happens in LambdaTest | Action needed? |
 |---|---|---|
-| **Group renamed** | Name updated. Mapped team/concurrency group **renamed to match**. Mapping rules re-evaluated — if a different rule matches, mapping reverts to **Pending**. Members unaffected. | Only if mapping status changed to Pending |
-| **Group deleted** | Soft-deleted. Roles recomputed (may downgrade). Members safely unassigned (checks other groups first). Mappings rejected. Conflicts auto-resolved. | No |
-| **Member added to group** | Added to all approved-mapped entities. Role recomputed. If assignment creates a conflict (exclusive entity), conflict raised for admin resolution. | Only if conflict created |
-| **Member removed from group** | Unassigned from mapped entities — but only if no other SCIM group maps them to the same target. Role recomputed (may downgrade). If another group was waiting (lost a conflict), it may now be applied. | Only if conflict created |
-| **Previously deleted group re-pushed** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
-| **Roles changed on group** | All members' roles recomputed immediately (may upgrade or downgrade). | No |
+| **Rename a group** | Group name updated. Mapped team/concurrency group **renamed to match**. Mapping rules re-evaluated. | Only if mapping reverted to Pending |
+| **Delete a group** | Soft-deleted. Members safely unassigned. Roles recomputed. Conflicts auto-resolved. | No |
+| **Add a member to a group** | Added to all mapped entities. Role recomputed. | Only if a [conflict](#conflicts) is created |
+| **Remove a member from a group** | Unassigned from mapped entities (only if no other group maps them there). Role recomputed. | No |
+| **Re-push a previously deleted group** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
+| **Change roles on a group** | All members' roles recomputed immediately. | No |
 
-### Changes from LambdaTest Admin
+</TabItem>
+<TabItem value="admin-changes" label="LambdaTest Admin changes">
 
-| Action | What happens | Important |
+| You do this in LambdaTest | What happens | Important |
 |---|---|---|
-| **Team / group / sub-org renamed** | **Nothing breaks.** Mappings use internal IDs, not names. However, the next IDP group rename will overwrite the entity name to match the IDP group name. | Entity names follow the IDP |
-| **Mapped entity deleted** | Mapping flagged as `target_deleted` and reverts to Pending on next sync. | Re-approve with a new target |
-| **Member manually removed from team** | Removal is immediate but **temporary** — next IDP sync re-adds them. | To permanently remove, do it **in your IDP** |
-| **Manual assignment to concurrency group / sub-org** | SCIM overrides non-SCIM assignments for exclusive entities on next sync. | Avoid conflicting manual + SCIM assignments |
-| **Manual role change for a SCIM-managed user** | Role may be overwritten on next IDP sync if the user's SCIM groups have roles configured. | Manage roles via IDP groups instead |
+| **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
+| **Delete a mapped entity** | Mapping reverts to Pending. | Re-approve with a new target |
+| **Manually remove a member from a team** | Removal is immediate but **temporary** — next IDP sync re-adds them. | Remove **in your IDP** instead |
+| **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
+| **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
+
+</TabItem>
+</Tabs>
 
 <br />
 
@@ -798,30 +862,62 @@ Quick reference for what happens during common operations. These are handled aut
 | Issue | Solution |
 |---|---|
 | Members not appearing in teams or sub-orgs | Group mapping is still **Pending**. Approve it in the dashboard or create an auto-approve mapping rule. |
-| User has an unexpected role | Roles follow highest-priority-wins (Admin > User > Guest). Check **all** SCIM group memberships — they may inherit Admin from another group. |
-| User's role didn't change after updating the group | Roles are recomputed across all groups. If another group still has the higher role, the effective role won't change. Remove the role from **all** groups. |
-| User keeps getting re-added after manual removal | SCIM is the source of truth. Remove the user from the group **in your IDP** instead. |
-| Group mapping reverted to Pending | Group was renamed (rules re-evaluated) or the target entity was deleted. Re-approve with a valid target. |
-| Auto-approve didn't create my sub-organization | Sub-orgs are **never** auto-created (billing/setup required). Create the sub-org first, then approve the mapping manually. |
-| Conflict shows "Unknown conflict type" or empty type | The conflict was created before cross-type support was added. Ask support to run a data migration. |
-| Can't map two SCIM groups to the same team | Each entity can only be mapped from one group. Use a single SCIM group, or merge the groups in your IDP. |
-| Members are in the SCIM group but not in the sub-org | Check for **conflicts** in the dashboard. The user may belong to another group with a competing exclusive mapping. |
-| IDP roles not showing in the groups list | Ensure the group has `LambdatestRoles` set in the IDP extension. Roles appear in the group detail and list views. |
+| Members are in the SCIM group but not in the sub-org | Check for [conflicts](#conflicts). The user may belong to another group with a competing exclusive mapping. |
+| User has an unexpected role | Check **all** SCIM group memberships — roles follow highest-wins (Admin > User > Guest). The user may inherit Admin from another group. |
+| User keeps getting re-added after manual removal | SCIM is the source of truth. Remove the user **in your IDP** instead. |
+| Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted. Re-approve with a valid target. |
+| Auto-approve didn't create my sub-organization | Sub-orgs are never auto-created (billing/setup required). Create the sub-org first, then approve manually. |
+| Can't map two SCIM groups to the same team | Each entity can only be mapped from one SCIM group. Use a single group, or merge in your IDP. |
 
 ### FAQ
 
-| Question | Answer |
-|---|---|
-| Can a group be mapped to multiple targets? | Yes. A single group can map to a Team **and** a Concurrency Group simultaneously. Each mapping syncs independently. |
-| Can two groups map to the same entity? | No. Each entity can only be owned by one SCIM group. This prevents conflicting membership lists. |
-| Can I disable group provisioning without affecting users? | Yes. The toggle only blocks new IDP group operations. Existing groups, mappings, and assignments are preserved. |
-| Can I restore a deleted group? | Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members must be re-pushed. |
-| Can roles be downgraded? | Yes. When a user is removed from a group with a higher role, their effective role is recomputed across remaining groups and may decrease. |
-| What if a user is in no SCIM groups? | Their role defaults to **User**. No entity assignments are made. |
-| Does the group search in the dashboard support partial matching? | Yes. Search is **case-insensitive** and matches anywhere in the group name (not just prefix). Leading/trailing spaces are trimmed. |
-| What happens to a conflict if I delete one of the conflicting groups? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
-| Can I have both a mapping rule and a manual mapping? | Mapping rules only apply when a group is first created or renamed. Once a mapping exists (manual or auto), rules don't overwrite it. |
-| What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** means a mapping rule approved it automatically. **Approved** means an admin approved it manually. |
+<details>
+<summary><strong>Can a group be mapped to multiple targets?</strong></summary>
+
+Yes. A single SCIM group can map to a Team **and** a Concurrency Group simultaneously. Each mapping syncs independently.
+</details>
+
+<details>
+<summary><strong>Can two SCIM groups map to the same entity?</strong></summary>
+
+No. Each entity (team, concurrency group, or sub-org) can only be owned by one SCIM group. This prevents conflicting membership lists.
+</details>
+
+<details>
+<summary><strong>Can I disable group provisioning without losing data?</strong></summary>
+
+Yes. The toggle only blocks new IDP group operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume.
+</details>
+
+<details>
+<summary><strong>Can I restore a deleted group?</strong></summary>
+
+Yes. Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members need to be re-pushed.
+</details>
+
+<details>
+<summary><strong>Can roles be downgraded?</strong></summary>
+
+Yes. Roles are recomputed across all groups. When a user is removed from a group with a higher role, their effective role drops to the next highest across remaining groups. If no groups have roles, it defaults to **User**.
+</details>
+
+<details>
+<summary><strong>What happens to a conflict when one group is deleted?</strong></summary>
+
+The conflict is **auto-resolved** in favor of the remaining group. No admin action needed.
+</details>
+
+<details>
+<summary><strong>What's the difference between Approved and Auto-Approved?</strong></summary>
+
+Both sync members identically. **Auto-Approved** means a mapping rule matched and approved it automatically. **Approved** means an admin approved it manually.
+</details>
+
+<details>
+<summary><strong>Do mapping rules overwrite existing mappings?</strong></summary>
+
+No. Rules only apply when a group is first created or renamed. Once a mapping exists (manual or auto), rules don't overwrite it.
+</details>
 
 ---
 
