@@ -493,6 +493,8 @@ This is the simplest and most common mapping. If you're just starting out, **Tea
 </TabItem>
 </Tabs>
 
+---
+
 A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` to both a Team and a Concurrency Group simultaneously.
 
 > **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
@@ -610,6 +612,8 @@ Two scenarios:
 
 </TabItem>
 </Tabs>
+
+---
 
 **To resolve:**
 
