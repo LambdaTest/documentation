@@ -87,7 +87,11 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 
 - **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up now</a> if you don't have an account yet.
 
-- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can [start a free trial](https://kaneai.lambdatest.com/allocate-kane) to explore KaneAI's key workflows.
+- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a free trial to explore KaneAI's key workflows.
+
+<div style={{textAlign: 'center', margin: '20px 0'}}>
+<a href="https://kaneai.lambdatest.com/allocate-kane" style={{display: 'inline-block', backgroundColor: '#1F883D', color: '#ffffff', padding: '8px 18px', borderRadius: '6px', fontSize: '14px', fontWeight: '600', textDecoration: 'none'}}>Start KaneAI Free Trial →</a>
+</div>
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/allocate-free-kane-trial.png').default} alt="KaneAI free trial signup" className="doc_img"/>
 
@@ -224,13 +228,16 @@ your-repo/
 
 ---
 
-{/* ## Try It Out — Sample Repository
+## Try It Out — Sample Repository
 
-We maintain a public sample repository — [ai-native-quality-validation-sample](https://github.com/LambdaTest/ai-native-quality-validation-sample) — that showcases the full <BrandName /> Cloud GitHub App workflow in action. Browse existing pull requests to see real AI-generated test cases, execution results, and Root Cause Analysis comments.
+Explore the GitHub App workflow using our public sample repository:
 
-:::note View-Only Access
-The sample repository is publicly visible — you can explore all PR comments, test reports, and the complete workflow history. However, you cannot raise pull requests or post comments on this repository. Navigate to any open pull request to view previous workflow runs, including AI-generated test cases, execution results, and Root Cause Analysis comments — all available for viewing only.
-:::
+**[ai-native-quality-validation-sample](https://github.com/LambdaTest/ai-native-quality-validation-sample)**
+
+Browse the open pull requests to see:
+- AI-generated test cases
+- Test execution results
+- Root Cause Analysis comments
 
 #### Quick Start with Your Own Fork
 
@@ -239,14 +246,10 @@ To experience the full workflow hands-on, fork the sample repository and run the
 1. **Fork the repository** — Click **Fork** on the [sample repository](https://github.com/LambdaTest/ai-native-quality-validation-sample) to create a copy under your GitHub account.
 2. **Install the GitHub App** — Install the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on your forked repository (see [Installation](#installation) above).
 3. **Configure your credentials** — Add the `.lambdatest/config.yaml` file with your <BrandName /> project ID, folder ID, and other configuration values (see [Repository Configuration](#repository-configuration)).
-4. **Deploy via GitHub Pages** — The repository uses GitHub Pages for deployment, so your fork is ready to serve the application with no additional infrastructure needed.
+4. **Set up GitHub Pages & Actions** — Enable GitHub Pages and GitHub Actions in your forked repository to handle deployment and workflows.
 5. **Trigger the workflow** — Open a pull request in your fork and comment `@KaneAI Validate this PR` to see the full AI testing pipeline in action.
 
-:::tip No Infrastructure Required
-Since the sample repository uses GitHub Pages for deployment, you can get up and running immediately after forking — no need to set up your own hosting or CI/CD pipeline. Just fork, configure, and trigger.
-:::
-
---- */}
+---
 
 
 ## Triggering Test Generation
