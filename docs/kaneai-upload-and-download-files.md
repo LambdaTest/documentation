@@ -70,7 +70,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 > - Supported file formats:
 >    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
 >    - **Videos :** MP4 (Maximum size: 50 MB)
->    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image3.png').default} alt="Image" className="doc_img"/>
