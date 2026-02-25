@@ -217,6 +217,8 @@
       }
     }
     window.sendAmplitudeEvents = sendAmplitudeEvents;
+
+    // Sidebar navigation tracking
     window.addEventListener('click', function (event) {
       if (event.target.matches(".menu__link")) {
         const menuLink = event.target.closest("a");
