@@ -3591,11 +3591,6 @@ module.exports = {
             label: "Multiple Projects per Repo",
             id: "smartui-multiple-projects-per-repo",
           },
-          {
-            type: "doc",
-            label: "Build Options Settings",
-            id: "build-options-for-visual-regression-testing",
-          },
         ],
       },
 
