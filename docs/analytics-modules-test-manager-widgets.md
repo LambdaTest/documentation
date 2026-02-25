@@ -119,17 +119,17 @@ The Milestone Trends widget provides a visual overview of test case execution re
 
 This widget helps you quickly identify milestones that have a high failure rate and may need immediate attention. By tracking pass/fail trends across milestones, you can monitor release readiness, spot regressions early, and make data-driven decisions about which milestones require additional testing effort.
 
-## Builds Summary
+## Test Runs Summary
 
-The Builds Summary widget provides a comprehensive overview of the builds created in your test automation or manual efforts. It displays the total number of builds created, and the split between Passed, Failed, and Skipped builds.
+The Test Runs Summary widget provides a comprehensive overview of the test runs created in your test automation or manual efforts. It displays the total number of test runs created, and the split between Passed, Failed, and Skipped test runs.
 
 ### How it works?
 
-* This widget helps you understand the overall build status of your test automation or manual efforts.
-* It provides a detailed breakdown of the builds created, and the split between Passed, Failed, and Skipped builds.
-* You can use this widget to identify the most critical failed builds that need immediate attention.
+* This widget helps you understand the overall test run status of your test automation or manual efforts.
+* It provides a detailed breakdown of the test runs created, and the split between Passed, Failed, and Skipped test runs.
+* You can use this widget to identify the most critical failed test runs that need immediate attention.
 
 ### Value Proposition
 
-By using this widget, you can get a quick overview of the builds created in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
+By using this widget, you can get a quick overview of the test runs created in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
 
