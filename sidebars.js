@@ -3131,6 +3131,11 @@ module.exports = {
         label: "JUnit Report",
         id: "espresso-junit-report",
       },
+      {
+        type: "doc",
+        label: "Visual Regression",
+        id: "espresso-visual-regression",
+      },
     ],
   ],
 
@@ -3189,6 +3194,11 @@ module.exports = {
         type: "doc",
         label: "XCResult",
         id: "xcresult",
+      },
+      {
+        type: "doc",
+        label: "Visual Regression",
+        id: "xcui-visual-regression",
       },
     ],
   ],
@@ -3504,6 +3514,16 @@ module.exports = {
                 label: "Layout Testing",
                 id: "smartui-layout-testing",
               },
+              {
+                type: "doc",
+                label: "Mismatch Thresholds",
+                id: "smartui-mismatch-thresholds",
+              },
+              {
+                type: "doc",
+                label: "Diff Highlighter",
+                id: "smartui-diff-highlighter",
+              },
             ],
           },
         ],
@@ -3566,6 +3586,11 @@ module.exports = {
             type: "doc",
             label: "Multiple Projects per Repo",
             id: "smartui-multiple-projects-per-repo",
+          },
+          {
+            type: "doc",
+            label: "Build Options Settings",
+            id: "build-options-for-visual-regression-testing",
           },
         ],
       },
