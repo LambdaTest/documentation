@@ -115,6 +115,36 @@ In the documentation, we will discuss how to integrate JumpCloud with <BrandName
 - **Step 13:**  Go **Identity Management** and paste **SCIM Base URL** and **Bearer Token**. and then click Save button.
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/18.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
 
+## Provisioning Groups from JumpCloud
+
+Once SCIM user provisioning is working, you can also push JumpCloud user groups to <BrandName />.
+
+:::note Prerequisites
+Group Provisioning must be enabled for your org. Contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> to activate it.
+:::
+
+**Step 1:** In JumpCloud Admin Console, go to your <BrandName /> SSO Application > **User Groups** tab.
+
+**Step 2:** Select the user groups you want to provision to <BrandName />.
+
+**Step 3:** Click **Activate** to start pushing group membership via SCIM.
+
+**Step 4:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+
+### What Happens After Provisioning
+
+| JumpCloud Action | <BrandName /> Effect |
+|---|---|
+| Group activated for provisioning | Group created, mapping rules evaluated, members synced |
+| User added to group | Member added to all mapped <BrandName /> entities |
+| User removed from group | Member removed (if no other group maps them there), role recomputed |
+| Group renamed | Group renamed, mapped entity renamed to match, rules re-evaluated |
+| Group deactivated/deleted | Group soft-deleted, members safely unassigned, roles recomputed |
+
+> For details on mapping, conflicts, and rules, see the [SCIM Provisioning guide](/support/docs/scim/#group-provisioning).
+
+---
+
 - **Step 14:** Enter email that does not exist on <BrandName /> platform and provide test email details, and click **Test Connection** and activate button.
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/19.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/20.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
