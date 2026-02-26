@@ -119,30 +119,10 @@ Full walkthrough: [JumpCloud SCIM Guide](/support/docs/scim/jumpcloud/)
 
 Full walkthrough: [PingOne SCIM Guide](/support/docs/pingone-scim/)
 
-1. In PingOne, go to **Integrations** > **Provisioning** > **Connections** tab > click **+** (New Connection)
-2. Select **Identity Store** (SCIM) > **Next** > search for **SCIM** > select **SCIM** (Outbound) > **Next**
-3. Enter a **Name** (e.g., your org name) > **Next**
-4. **Configure Authentication:**
-   - **SCIM BASE URL:** paste the Base URL from <BrandName />
-   - **Users Resource:** `/Users`
-   - **SCIM Version:** `2.0`
-   - **Groups Resource:** `/Groups`
-   - **Authentication Method:** `OAuth 2 Bearer Token`
-   - **OAuth Access Token:** paste the Bearer Token from <BrandName />
-   - **Auth Type Header:** `Bearer`
-5. Click **Test Connection** > **Next**
-6. **Configure Preferences:**
-   - **User Filter Expression:** `userName eq "%s"`
-   - **User Identifier:** `workEmail`
-   - **Custom Attribute Schema URNs:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User`
-   - **Group Membership Handling:** `Merge` (recommended)
-   - Enable: **Create Users**, **Update Users**, **Disable Users**
-7. Click **Save**
-8. Go to **Rules** tab > create a provisioning rule > select users and groups to sync > configure attribute mapping > **Save**
-
-:::tip
-Add `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` to the **Custom Attribute Schema URNs** field to enable sending `OrganizationRole` and `LambdatestGroup` from PingOne.
-:::
+1. In PingOne, go to **Integrations** > **Provisioning** > create a new **SCIM Outbound** connection
+2. Enter the **SCIM Base URL** and **Bearer Token** from <BrandName />
+3. Configure preferences — set **User Identifier** to `workEmail` and enable **Create**, **Update**, **Disable** users
+4. Create a provisioning **Rule** to select which users and groups to sync
 
 </TabItem>
 <TabItem value="other" label="Other IDPs">
