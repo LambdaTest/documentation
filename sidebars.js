@@ -4449,6 +4449,11 @@ module.exports = {
         label: "JumpCloud",
         id: "jumpcloud-scim",
       },
+      {
+        type: "doc",
+        label: "PingOne",
+        id: "pingone-scim",
+      },
     ],
   ],
 
