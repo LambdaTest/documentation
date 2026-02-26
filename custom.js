@@ -218,51 +218,40 @@
     }
     window.sendAmplitudeEvents = sendAmplitudeEvents;
 
-    // Sidebar navigation tracking
     window.addEventListener('click', function (event) {
-      if (event.target.matches(".menu__link")) {
-        const menuLink = event.target.closest("a");
-        var page_title =
-          menuLink.getAttribute("title") ||
-          menuLink.textContent?.trim() ||
+      // Sidebar navigation tracking
+      const menuLink = event.target.closest(".menu__link");
+      // Search result click tracking
+      const searchHit = event.target.closest(".DocSearch-Hit a");
+
+      // Determine which link was actually clicked
+      const clickedLink = searchHit || menuLink;
+      if (clickedLink && clickedLink.href) {
+        const page_title =
+          clickedLink.getAttribute("title") ||
+          clickedLink.textContent?.trim() ||
           "";
-        var page_url = menuLink.href || "";
+        const page_url = clickedLink.href || "";
         const urlObj = new URL(page_url, window.location.origin);
-        var page_path =
+        const page_path =
           urlObj.pathname.split("/").filter(Boolean).pop() || "";
+
         let params = window.location.href.split("/");
         let pageName = params[params.length - 2];
-        if (pageName.includes('hyperexecute')) {
-          sendAmplitudeEvents('HYP: page changed - docs', {
+
+        if (pageName.includes("hyperexecute")) {
+          sendAmplitudeEvents("HYP: page changed - docs", {
             pageName,
           });
         } else {
           sendAmplitudeEvents("Page Viewed", {
-            page_title: page_title,
-            page_url: page_url,
-            page_path: page_path,
+            page_title,
+            page_url,
+            page_path,
           });
         }
       }
 
-      // Search result click tracking
-      const searchHit = event.target.closest(".DocSearch-Hit a");
-      if (searchHit && searchHit.href) {
-        var page_title =
-          searchHit.getAttribute("title") ||
-          searchHit.textContent?.trim() ||
-          "";
-        var page_url = searchHit.href || "";
-        const urlObj = new URL(page_url, window.location.origin);
-        var page_path =
-          urlObj.pathname.split("/").filter(Boolean).pop() || "";
-
-        sendAmplitudeEvents("Page Viewed", {
-          page_title: page_title,
-          page_url: page_url,
-          page_path: page_path,
-        });
-      }
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
         let codeblock = target.closest('.lambdatest__codeblock');
