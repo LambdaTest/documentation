@@ -551,7 +551,7 @@ This is the simplest and most common mapping. If you're just starting out, **Tea
 
 ---
 
-A single SCIM group can have **multiple mappings** — e.g., map `eng-backend` to both a Team and a Concurrency Group simultaneously.
+A single SCIM group can only be mapped to **one** <BrandName /> entity (one team, one concurrency group, or one sub-org). To assign the same users to multiple entities, use separate IDP groups.
 
 > **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
 
@@ -942,7 +942,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 
 | Question | Answer |
 |---|---|
-| Can a group be mapped to multiple targets? | Yes. A single SCIM group can map to a Team **and** a Concurrency Group simultaneously. Each mapping syncs independently. |
+| Can a group be mapped to multiple targets? | No. A single SCIM group can only map to **one** entity (team, concurrency group, or sub-org). To assign the same users to multiple entities, use separate IDP groups. |
 | Can two SCIM groups map to the same entity? | No. Each entity can only be owned by one SCIM group. This prevents conflicting membership lists. |
 | Can I disable group provisioning without losing data? | Yes. The toggle only blocks new IDP operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume. |
 | Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members need to be re-pushed. |
