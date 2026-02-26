@@ -246,8 +246,8 @@
       }
 
       // Search result click tracking
-      if (event.target.matches(".DocSearch-Hit a")) {
-        const searchHit = event.target.closest(".DocSearch-Hit a");
+      const searchHit = event.target.closest(".DocSearch-Hit a");
+      if (searchHit && searchHit.href) {
         var page_title =
           searchHit.getAttribute("title") ||
           searchHit.textContent?.trim() ||
