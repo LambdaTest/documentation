@@ -135,15 +135,41 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ### Step 3: Add the Capabilities to enable the Accessibility 
-To generate the accessibility reports, add a capability `accessibility: true` in your test files. You can also define some advanced capabilities like `accessibility.wcagVersion`, `accessibility.bestPractice`, and `accessibility.needsReview` as shown below:
+
+To generate accessibility reports, you need to set the `accessibility: true` capability in your test files. 
+
+There are two primary ways to run accessibility tests on HyperExecute:
+
+#### 1. On-Demand Scans (via Hooks)
+For precise control over which pages are scanned, you can trigger scans manually at specific points in your test execution. This is the recommended approach to reduce test execution time on the HyperExecute grid and focus only on relevant pages.
+
+To use this, simply enable accessibility in your capabilities:
+```java title="test.java"
+capabilities.setCapability("accessibility", true); // Enable accessibility testing
+```
+
+Then, trigger the scan directly within your test script when the desired page is fully loaded:
+```java title="test.java"
+// Execute the LambdaTest accessibility scan hook
+driver.executeScript("lambda-accessibility-scan");
+```
+*Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated.*
+
+#### 2. Continuous Auto-Scanning
+If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you must pass the `accessibility.autoscan` capability:
 
 ```java title="test.java"
 capabilities.setCapability("accessibility", true); // Enable accessibility testing
-capabilities.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
+capabilities.setCapability("accessibility.autoscan", true); // Automatically scan all pages
+```
+
+#### Advanced Capabilities
+You can also define other settings capabilities to refine your scan rules:
+```java title="test.java"
+capabilities.setCapability("accessibility.wcagVersion", "wcag21aa"); // Specify WCAG version (e.g., WCAG 2.1 Level AA)
 capabilities.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
 capabilities.setCapability("accessibility.needsReview", true); // Include issues that need review
 ```
-
 ### Step 4: Configure your YAML file
 Configure your YAML file as per your use cases using **key value** pairs. In this sample YAML file, we have mentioned:
 
