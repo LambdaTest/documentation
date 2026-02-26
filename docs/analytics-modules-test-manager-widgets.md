@@ -9,6 +9,7 @@ keywords:
  - Test Manager analytics
  - Test Cases trends
  - Test Case Build Status
+ - Milestone Trends
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: TestMu AI
 slug: analytics-modules-test-manager-widgets/
@@ -104,17 +105,31 @@ The Test Cases Types widget provides a detailed breakdown of the types of test c
 
 By using this widget, you can get insights into the types of test cases created in your test automation or manual efforts. This helps you optimize your testing efforts and choose the most effective type of test cases for your website or web application.
 
-## Builds Summary 
+## Milestone Trends
 
-The Builds Summary widget provides a comprehensive overview of the builds created in your test automation or manual efforts. It displays the total number of builds created, and the split between Passed, Failed, and Skipped builds.
+The Milestone Trends widget provides a visual overview of test case execution results across your milestones. It displays a stacked bar chart where each bar represents a milestone, broken down by **Passed** and **Failed** test case counts.
 
 ### How it works?
 
-* This widget helps you understand the overall build status of your test automation or manual efforts.
-* It provides a detailed breakdown of the builds created, and the split between Passed, Failed, and Skipped builds.
-* You can use this widget to identify the most critical failed builds that need immediate attention.
+* Each bar on the chart represents a milestone in your project, with the height indicating the count of test runs for that specific status.
+* The bar is split into two color-coded segments: **Passed** (green) and **Failed** (red), giving you an at-a-glance view of milestone health.
+* You can filter the data by date range to analyze milestone performance over specific time periods.
 
 ### Value Proposition
 
-By using this widget, you can get a quick overview of the builds created in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
+This widget helps you quickly identify milestones that have a high failure rate and may need immediate attention. By tracking pass/fail trends across milestones, you can monitor release readiness, spot regressions early, and make data-driven decisions about which milestones require additional testing effort.
+
+## Test Runs Summary
+
+The Test Runs Summary widget provides a comprehensive overview of the test runs created in your test automation or manual efforts. It displays the total number of test runs created, and the split between Passed, Failed, and Skipped test runs.
+
+### How it works?
+
+* This widget helps you understand the overall test run status of your test automation or manual efforts.
+* It provides a detailed breakdown of the test runs created, and the split between Passed, Failed, and Skipped test runs.
+* You can use this widget to identify the most critical failed test runs that need immediate attention.
+
+### Value Proposition
+
+By using this widget, you can get a quick overview of the test runs created in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
 
