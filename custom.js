@@ -217,16 +217,41 @@
       }
     }
     window.sendAmplitudeEvents = sendAmplitudeEvents;
+
     window.addEventListener('click', function (event) {
-      if (event.target.matches(".menu__link")) {
-        let params = window.location.href.split('/');
+      // Sidebar navigation tracking
+      const menuLink = event.target.closest(".menu__link");
+      // Search result click tracking
+      const searchHit = event.target.closest(".DocSearch-Hit a");
+
+      // Determine which link was actually clicked
+      const clickedLink = searchHit || menuLink;
+      if (clickedLink && clickedLink.href) {
+        const page_title =
+          clickedLink.getAttribute("title") ||
+          clickedLink.textContent?.trim() ||
+          "";
+        const page_url = clickedLink.href || "";
+        const urlObj = new URL(page_url, window.location.origin);
+        const page_path =
+          urlObj.pathname.split("/").filter(Boolean).pop() || "";
+
+        let params = window.location.href.split("/");
         let pageName = params[params.length - 2];
-        if (pageName.includes('hyperexecute')) {
-          sendAmplitudeEvents('HYP: page changed - docs', {
+
+        if (pageName.includes("hyperexecute")) {
+          sendAmplitudeEvents("HYP: page changed - docs", {
             pageName,
-          })
+          });
+        } else {
+          sendAmplitudeEvents("Page Viewed", {
+            page_title,
+            page_url,
+            page_path,
+          });
         }
       }
+
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
         let codeblock = target.closest('.lambdatest__codeblock');
