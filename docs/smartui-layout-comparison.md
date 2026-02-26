@@ -74,13 +74,36 @@ SmartUI's layout comparison feature allows you to focus specifically on layout d
 
 Before using the Layout Comparison feature, ensure you meet the following requirements:
 
-- SmartUI CLI version `4.1.8` or above is installed
-- The feature is only supported when using the `smartui exec` (smartUISnapshot) command
-- The feature must be enabled by contacting support@testmuai.com
+- **For SmartUI SDK (smartui exec):** SmartUI CLI version `4.1.8` or above is installed.
+
+> [!WARNING]
+> The baseline images **must** be generated with the layout strategy enabled. Only then will the comparison work correctly. If you try to compare new images (with layout enabled) against old baseline images (without layout enabled), the layout comparison will fail or behave unexpectedly.
 
 ## How to Use Layout Comparison with SmartUI
 
-To use the layout comparison feature, you need to set the `ignoreType` option to `"layout"` when taking a screenshot:
+Layout Comparison can be executed in two different ways depending on your integration.
+
+### 1. Using SmartUI Hooks (Native Automation)
+If you are using the SmartUI Hooks approach (triggering visual tests directly through Selenium, Playwright, or Cypress capabilities without the CLI wrapper), you must pass the `ignoreType` option within your LambdaTest capabilities (`ltOptions`). 
+
+Once the capability is passed, the Remote Node Client will capture the structural layout states during your session, allowing you to use the Layout Comparison mode.
+
+**Example (Playwright):**
+```javascript
+const capabilities = {
+  'browserName': 'Chrome',
+  'LT:Options': {
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'smartUI.project': 'My-Project',
+    // Enable Layout Testing via Hook
+    'ignoreType': ['layout']
+  }
+};
+```
+
+### 2. Using SmartUI SDK (smartUISnapshot command)
+If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreType` option to `"layout"` when taking a specific screenshot within your code:
 
 <Tabs>
   <TabItem value='javascript' label='JavaScript' default>
