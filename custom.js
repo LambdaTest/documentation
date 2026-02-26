@@ -217,15 +217,51 @@
       }
     }
     window.sendAmplitudeEvents = sendAmplitudeEvents;
+
+    // Sidebar navigation tracking
     window.addEventListener('click', function (event) {
       if (event.target.matches(".menu__link")) {
-        let params = window.location.href.split('/');
+        const menuLink = event.target.closest("a");
+        var page_title =
+          menuLink.getAttribute("title") ||
+          menuLink.textContent?.trim() ||
+          "";
+        var page_url = menuLink.href || "";
+        const urlObj = new URL(page_url, window.location.origin);
+        var page_path =
+          urlObj.pathname.split("/").filter(Boolean).pop() || "";
+        let params = window.location.href.split("/");
         let pageName = params[params.length - 2];
         if (pageName.includes('hyperexecute')) {
           sendAmplitudeEvents('HYP: page changed - docs', {
             pageName,
-          })
+          });
+        } else {
+          sendAmplitudeEvents("Page Viewed", {
+            page_title: page_title,
+            page_url: page_url,
+            page_path: page_path,
+          });
         }
+      }
+
+      // Search result click tracking
+      if (event.target.matches(".DocSearch-Hit a")) {
+        const searchHit = event.target.closest(".DocSearch-Hit a");
+        var page_title =
+          searchHit.getAttribute("title") ||
+          searchHit.textContent?.trim() ||
+          "";
+        var page_url = searchHit.href || "";
+        const urlObj = new URL(page_url, window.location.origin);
+        var page_path =
+          urlObj.pathname.split("/").filter(Boolean).pop() || "";
+
+        sendAmplitudeEvents("Page Viewed", {
+          page_title: page_title,
+          page_url: page_url,
+          page_path: page_path,
+        });
       }
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
