@@ -115,7 +115,9 @@ Full walkthrough: [JumpCloud SCIM Guide](/support/docs/scim/jumpcloud/)
 4. **User Groups** tab > select groups > **Activate** > **Save**
 
 </TabItem>
-<TabItem value="pingone" label="PingOne / PingFederate">
+<TabItem value="pingone" label="PingOne">
+
+Full walkthrough: [PingOne SCIM Guide](/support/docs/pingone-scim/)
 
 1. In PingOne, go to **Integrations** > **Provisioning** > **Connections** tab > click **+** (New Connection)
 2. Select **Identity Store** (SCIM) > **Next** > search for **SCIM** > select **SCIM** (Outbound) > **Next**
@@ -157,10 +159,13 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 **Custom Attribute Schema URNs** — add these to your IDP's SCIM custom attribute configuration to send role and group assignments:
 
-| Schema URN | Purpose | Attributes |
-|---|---|---|
-| `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` | User extension | `OrganizationRole` (Admin/User/Guest), `LambdatestGroup` (concurrency group name) |
-| `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` | Group extension | `LambdatestRoles` (array of Admin/User/Guest — applied to all group members) |
+| Purpose | Schema URN |
+|---|---|
+| **User extension** | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` |
+| **Group extension** | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` |
+
+- **User extension attributes:** `OrganizationRole` (Admin / User / Guest), `LambdatestGroup` (concurrency group name)
+- **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest — applied to all group members)
 
 </TabItem>
 </Tabs>
@@ -209,10 +214,14 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
-| Attribute | Full SCIM Path | Required | Values | Notes |
-|---|---|---|---|---|
-| `OrganizationRole` | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole` | No | `Admin`, `User`, `Guest` | Sets the user's organization role. Defaults to `User` if not provided. |
-| `LambdatestGroup` | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup` | No | _(concurrency group name)_ | Assigns the user to a concurrency group by name. The group must already exist in your organization. Contact support to enable concurrency groups. |
+| Attribute | Required | Values | Notes |
+|---|---|---|---|
+| `OrganizationRole` | No | `Admin`, `User`, `Guest` | Sets the user's [organization role](#roles). Defaults to `User` if not provided. |
+| `LambdatestGroup` | No | _(concurrency group name)_ | Assigns the user to a concurrency group by name. The group must already exist. Contact support to enable concurrency groups. |
+
+For PATCH operations, use the fully qualified SCIM path:
+- **OrganizationRole:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`
+- **LambdatestGroup:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`
 
 > **What can be updated:** `OrganizationRole`, `LambdatestGroup`, and `active` can be updated via SCIM. `userName` is immutable after creation. `name` can only be changed from <BrandName /> Account Settings.
 
@@ -357,11 +366,11 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 **Patchable paths:**
 
-| Path | Value | Description |
-|---|---|---|
-| `active` | `true` / `false` | Enable or disable the user |
-| `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole` | `Admin`, `User`, `Guest` | Change organization role |
-| `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup` | _(group name)_ | Move user to a different concurrency group |
+| Path | Value |
+|---|---|
+| `active` | `true` / `false` |
+| `urn:ietf:params:scim:schemas:extension:`<br/>`LambdaTest:2.0:User:OrganizationRole` | `Admin`, `User`, `Guest` |
+| `urn:ietf:params:scim:schemas:extension:`<br/>`LambdaTest:2.0:User:LambdatestGroup` | _(concurrency group name)_ |
 
 **Response:** `200 OK` — returns the full updated user object.
 
@@ -408,12 +417,7 @@ DELETE only **deactivates** the account — it does not permanently delete it. F
 ## Group Provisioning {#group-provisioning}
 
 :::tip Quick Start
-1. Push groups from your IDP (happens automatically once SCIM is configured)
-2. Go to **SCIM Group Provisioning** dashboard in <BrandName />
-3. Approve the mapping (choose Team, Concurrency Group, or Sub-Org)
-4. Members are synced. Done.
-
-The rest of this section covers advanced configuration — mapping rules, roles, and conflict resolution.
+Push groups from your IDP → approve the mapping in the **SCIM Group Provisioning** dashboard → members are synced automatically.
 :::
 
 ### How It Works
@@ -507,9 +511,12 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
-| Attribute | Full SCIM Path | Required | Values | Notes |
-|---|---|---|---|---|
-| `LambdatestRoles` | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles` | No | `Admin`, `User`, `Guest` | Assigns organization roles to **all members** of the group. When set, all users in this group inherit these roles. Highest role wins if a user is in multiple groups. |
+| Attribute | Required | Values | Notes |
+|---|---|---|---|
+| `LambdatestRoles` | No | `Admin`, `User`, `Guest` | Assigns [organization roles](#roles) to **all members** of the group. Highest role wins if a user is in multiple groups. |
+
+For PATCH operations, use the fully qualified SCIM path:
+- **LambdatestRoles:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles`
 
 ### Mapping Groups to LambdaTest Entities
 
