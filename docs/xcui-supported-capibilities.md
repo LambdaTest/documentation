@@ -70,6 +70,8 @@ This document provide details about the features and capabilities supported for 
 | resignApp <br /> <br />Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
 | testRemarks <br /> <br />  <RealDeviceTag value="Real Device" />| Boolean| Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
 | retries <br /> <br />  <RealDeviceTag value="Real Device" />| Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
+| region <RealDeviceTag value="Real Device" />| String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
+| uploadMedia <RealDeviceTag value="Real Device" />| String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 :::note
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
