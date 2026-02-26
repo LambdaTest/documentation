@@ -4493,7 +4493,7 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Getting Started with Scim",
+        label: "SCIM Provisioning",
         id: "scim",
       },
       {
@@ -4510,6 +4510,11 @@ module.exports = {
         type: "doc",
         label: "JumpCloud",
         id: "jumpcloud-scim",
+      },
+      {
+        type: "doc",
+        label: "PingOne",
+        id: "pingone-scim",
       },
     ],
   ],
