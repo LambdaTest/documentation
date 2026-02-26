@@ -114,11 +114,38 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ### Step 3: Configure the Necessary Capabilities
 
-To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
+To enable the accessibility testing within your automated test suite, set `accessibility: true` in your configuration file.
+
+There are two primary ways to run accessibility tests:
+
+#### 1. On-Demand Scans (via Hooks)
+For precise control over which pages are scanned, you can trigger scans manually at specific points in your test execution. This is the recommended approach to reduce test execution time and focus only on relevant pages.
+
+To use this, simply enable accessibility in your capabilities:
+```java
+capability.setCapability("accessibility", true); // Enable accessibility testing
+```
+
+Then, trigger the scan directly within your test script when the desired page is fully loaded:
+```java
+// Execute the LambdaTest accessibility scan hook
+driver.executeScript("lambda-accessibility-scan");
+```
+*Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated.*
+
+#### 2. Continuous Auto-Scanning
+If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoscan` capability:
 
 ```java
 capability.setCapability("accessibility", true); // Enable accessibility testing
-capability.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
+capability.setCapability("accessibility.autoscan", true); // Automatically scan all pages
+```
+
+#### Advanced Capabilities
+You can also define other settings capabilities to refine your scan rules as described below:
+
+```java
+capability.setCapability("accessibility.wcagVersion", "wcag21aa"); // Specify WCAG version (e.g., WCAG 2.1 Level AA)
 capability.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
 capability.setCapability("accessibility.needsReview", true); // Include issues that need review
 ```
