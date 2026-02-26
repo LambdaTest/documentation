@@ -3133,7 +3133,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Visual Regression",
+        label: "SmartUI Visual Regression",
         id: "espresso-visual-regression",
       },
     ],
@@ -3197,7 +3197,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Visual Regression",
+        label: "SmartUI Visual Regression",
         id: "xcui-visual-regression",
       },
     ],
@@ -3364,6 +3364,23 @@ module.exports = {
                         type: "doc",
                         label: "Appium Java SDK",
                         id: "smartui-appium-java-sdk",
+                      },
+                    ],
+                  },
+                  {
+                    type: "category",
+                    label: "Native Apps",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Espresso",
+                        id: "espresso-visual-regression",
+                      },
+                      {
+                        type: "doc",
+                        label: "XCUITest",
+                        id: "xcui-visual-regression",
                       },
                     ],
                   },
