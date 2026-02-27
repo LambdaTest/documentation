@@ -84,7 +84,7 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 
 #### Account Requirements
 
-- **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up now</a> if you don't have an account yet.
+- **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. [Sign up now](https://accounts.lambdatest.com/register) if you don't have an account yet.
 
 - **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a free trial to explore KaneAI's key workflows.
 
