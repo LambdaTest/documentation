@@ -2882,6 +2882,7 @@ module.exports = {
     },
     [
       "app-automation-app-sim",
+      "build-ios-app-for-simulator-testing",
       "virtual-device-flutter-apps",
     ],
   ],
