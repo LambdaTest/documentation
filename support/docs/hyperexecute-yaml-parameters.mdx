@@ -53,7 +53,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 |-----|------|------------|
 | [cacheKey](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) | String | File which can be used to generate unique key for cache. Example : package.json |
 | [cacheDirectories](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | List of Strings | Dependency directories that are cached to improve the test execution speed. |
-| [env](/support/docs/deep-dive-into-hyperexecute-yaml/#env) | Map | No | Here we can define all the env variables for VM , we can even refer all the key stored in vault by using syntax like `${{ .secrets.KeyName }}`.|
+| [env](/support/docs/deep-dive-into-hyperexecute-yaml/#env) | Map | No |
 | [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) | Map | Install any dependent language/framework with any specific version. |
 | [retryOnFailure](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) | Boolean | If set to true, then it will retry tests based on `maxRetries` key as defined below. <br /> Default value is `false`. |
 | [maxRetries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) | Integer | The maximum number of times your scenarios can be retried. <br /> If `retryOnFailure` is true then Default value will be 2. Value Range 1 to 5.|
