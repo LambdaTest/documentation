@@ -56,6 +56,8 @@ testDiscovery:
   type: raw
   mode: dynamic
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
+```
+
 ```yaml
 testDiscovery:
   type: raw
