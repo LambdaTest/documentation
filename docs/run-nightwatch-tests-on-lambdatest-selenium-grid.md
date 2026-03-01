@@ -187,13 +187,56 @@ const capabilities = {
 }
 ```
 
+## Using the NightwatchJS Agent Skill with TestMu AI
+***
+
+The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The nightwatchjs-skill package includes:
+
+```
+nightwatchjs-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing NightwatchJS Agent Skill
+***
+
+Install a NightwatchJS Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nightwatchjs-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/nightwatchjs-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only nightwatchjs-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+
 ## Additional Links
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 * [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
-<nav aria-label="breadcrumbs">
+
+<nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>

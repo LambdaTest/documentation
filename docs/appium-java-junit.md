@@ -436,11 +436,46 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
-## Reference Guides
+## Using the JUnit 5 Agent Skill with TestMu AI
+***
 
-- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The junit-5-skill package includes:
+
+```
+junit-5-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing JUnit 5 Agent Skill
+***
+
+Install a JUnit 5 Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/junit-5-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/junit-5-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only junit-5-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 ## Additional Links
 
@@ -449,6 +484,14 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+
+## Reference Guides
+
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

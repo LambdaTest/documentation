@@ -92,6 +92,7 @@ Imagine you want to run a test on an iPhone. You don't need a specific model, ju
 You can pass both `deviceName` and `platformVersion` regex patterns together or use any one of them as per your requirements. This flexibility allows you to match specific devices, versions, or combinations based on your needs.
 :::
 
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

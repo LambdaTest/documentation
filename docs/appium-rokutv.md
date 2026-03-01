@@ -320,6 +320,7 @@ We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list
 |`roku: deepLink`|`contentId`, `mediaType`|As described in the [Roku dev docs](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#using-ecp-commands-for-testing-deep-linking), you can deep link into content in the running application using a content ID and media type. For this command, `contentId` is required, and `mediaType` defaults to `movie` and must be one of the [valid media types](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior). Note that this command acts on the currently-running app. If you want to test deep-linking into an app that is not launched, use `activateApp` instead.|
 |`roku: ecpInput`|`params`|This command allows calling the `/input` ECP command directly. An arbitrary set of key/value pairs can be sent in as a JSON object. No url-encoding of the values needs to be done. For example, to represent the parameters in the ECP command `POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8` from the ECP docs, you would construct a `params` of `{"acceleration.x": "0.0", "acceleration.y": "0.0", "acceleration.z": "9.8"}`|
 
+
 ## Additional Links
 
 ---
