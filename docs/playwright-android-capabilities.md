@@ -83,6 +83,7 @@ To quote an example, consider you want to run the test on an Pixel. It doesn’t
 Refer [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) to read more on this.
 
 
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

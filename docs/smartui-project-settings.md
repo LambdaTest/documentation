@@ -381,6 +381,7 @@ Only the **Admin** or **Creator** of the project can delete a project. Once dele
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for project configuration issues

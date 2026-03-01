@@ -450,6 +450,7 @@ Follow these best practices to get the most out of the annotation tool:
 
 For more comprehensive troubleshooting, refer to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide).
 
+
 ## Additional Resources
 
 - [SmartUI Project Settings](/support/docs/smartui-project-settings) - Configure comparison settings

@@ -238,6 +238,49 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 - We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
 :::
 
+
+
+## Using the XCUITest Agent Skill with TestMu AI
+***
+
+The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The xcuitest-skill package includes:
+
+```
+xcuitest-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing XCUITest Agent Skill
+***
+
+Install a XCUITest Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xcuitest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/xcuitest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

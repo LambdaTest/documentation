@@ -184,6 +184,50 @@ npm run test
 
 3. Visit the <BrandName /> Automation Dashboard to see the results of your Puppeteer Mocha tests.
 
+
+
+
+## Using the Mocha Agent Skill with TestMu AI
+***
+
+The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The mocha-skill package includes:
+
+```
+mocha-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Mocha Agent Skill
+***
+
+Install a Mocha Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/mocha-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/mocha-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

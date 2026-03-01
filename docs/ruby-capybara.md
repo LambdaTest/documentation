@@ -79,7 +79,7 @@ Before you can start performing Ruby automation testing with Selenium, you would
 
 ### Installing Selenium Dependencies and Tutorial Repo
 
-**Step 1:** Clone the <BrandName />�s [Capybara-Ruby repository](https://github.com/lambdatest/Capybara-Cucumber-Ruby) and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />�s [Capybara-Ruby repository](https://github.com/lambdatest/Capybara-Cucumber-Ruby) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/Capybara-Cucumber-Ruby.git
 cd Capybara-Cucumber-Ruby
@@ -208,7 +208,7 @@ You can test your locally hosted or privately hosted projects with [<BrandName /
 
 >Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
-Here�s how you can establish <BrandName /> Tunnel.
+Here�s how you can establish <BrandName /> Tunnel.
 
 >Download the binary file of:
 >* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
@@ -219,7 +219,7 @@ Open command prompt and navigate to the binary folder.
 
 Run the following command:
 ```bash
-LT -user {user�s login email} -key {user�s access key}
+LT -user {user�s login email} -key {user�s access key}
 ```
 So if your user name is <BrandName />@example.com and key is 123456, the command would be:
 ```bash
@@ -235,13 +235,56 @@ caps = {
             ...
         }  
 ```
+## Using the Capybara Agent Skill with TestMu AI
+***
+
+The [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The capybara-skill package includes:
+
+```
+capybara-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Capybara Agent Skill
+***
+
+Install a Capybara Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/capybara-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/capybara-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only capybara-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+
 ## Additional Links
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 * [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
-<nav aria-label="breadcrumbs">
+
+<nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>

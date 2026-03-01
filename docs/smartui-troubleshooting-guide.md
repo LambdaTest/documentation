@@ -1096,6 +1096,7 @@ If you encounter issues not covered in this guide:
    - Error messages and logs
    - Steps to reproduce
 
+
 ## Additional Resources
 
 - [Project Settings](/support/docs/smartui-project-settings)

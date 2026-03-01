@@ -289,6 +289,7 @@ await smartuiSnapshot(driver, 'Page');
 - Very complex sticky behaviors (multiple sticky elements, conditional stickiness) may need manual configuration
 - Test thoroughly before relying on automatic handling
 
+
 ## Additional Resources
 
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)

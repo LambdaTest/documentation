@@ -211,6 +211,7 @@ describe('Layout Structure Test', () => {
 });
 ```
 
+
 ## Additional Resources
 
 - [SmartUI SDK Documentation](/docs/smartui-sdk-config-options)

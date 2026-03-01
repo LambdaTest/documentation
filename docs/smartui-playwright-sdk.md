@@ -693,6 +693,7 @@ If you encounter issues not covered here:
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)

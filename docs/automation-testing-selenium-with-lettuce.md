@@ -168,6 +168,49 @@ Once you are able to connect **<BrandName /> Tunnel** successfully, you would ju
 ```bash
 "tunnel" : true
 ```
+
+## Using the Lettuce Agent Skill with TestMu AI
+***
+
+The [lettuce-skill](https://github.com/LambdaTest/agent-skills/tree/main/lettuce-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The lettuce-skill package includes:
+
+```
+lettuce-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Lettuce Agent Skill
+***
+
+Install a Lettuce Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/lettuce-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/lettuce-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only lettuce-skill, clone the repository directly into your tool’s skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+
 ## Additional Links
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)

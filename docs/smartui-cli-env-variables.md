@@ -345,6 +345,7 @@ The following environment variables are also available for advanced configuratio
 | `MAX_CONCURRENT_PROCESSING` | Max concurrent processing threads | `0` (auto) |
 | `DO_NOT_USE_USER_AGENT` | Disable user agent | `false` |
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
