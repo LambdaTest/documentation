@@ -287,6 +287,7 @@ If you are unable to run the automation script with the above mentioned commands
 
 Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
+
 ## Additional Links
 
 ---

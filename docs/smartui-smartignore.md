@@ -240,6 +240,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 | Displacement | ✅ Ignored | ✅ Ignored |
 | Best For | Content + layout | Layout only |
 
+
 ## Additional Resources
 
 - [Project Settings](/support/docs/smartui-project-settings)

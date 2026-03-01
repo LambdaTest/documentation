@@ -317,11 +317,55 @@ The capabilities object in the sample code are defined as:
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
+## Using the Cucumber Agent Skill with TestMu AI
+***
+
+The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cucumber-skill package includes:
+
+```
+cucumber-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Cucumber Agent Skill
+***
+
+Install a Cucumber Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cucumber-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cucumber-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cucumber-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

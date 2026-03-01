@@ -593,6 +593,7 @@ await smartuiSnapshot(driver, 'Page', options);
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Detailed solutions for common issues
