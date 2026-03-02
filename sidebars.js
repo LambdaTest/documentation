@@ -1244,6 +1244,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Platform Overview",
+        id: "ai-agent-testing-platform-overview",
+      },
+      {
+        type: "doc",
         label: "Test Your First AI Agent",
         id: "testing-your-first-ai-agent",
       },
