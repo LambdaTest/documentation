@@ -56,7 +56,11 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 In this topic, you will learn how to configure and run your JavaScript automation testing scripts on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **JavaScript** framework **Nightwatch**.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/gYfRDCCFTZI" title="How to Run NightwatchJS Browser Automation Tests on <BrandName />" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="gYfRDCCFTZI" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Objective
 ***
