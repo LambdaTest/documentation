@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: Forms, Inputs & Data Entry
 description: Practical guide to handling forms, dropdowns, date pickers, file uploads, and complex input patterns in KaneAI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai forms
   - kaneai inputs
   - kaneai data entry
   - form testing
-url: https://www.lambdatest.com/support/docs/kaneai-kb-forms-inputs-and-data-entry
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry
+site_name: TestMu AI
 slug: kaneai-kb-forms-inputs-and-data-entry/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Forms, Inputs & Data Entry",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-forms-inputs-and-data-entry"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry"
         }]
       })
     }}

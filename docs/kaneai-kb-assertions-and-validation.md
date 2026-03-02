@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: Assertions & Validation
 description: Comprehensive guide to writing reliable assertions in KaneAI with real-world examples, best practices, and workarounds for common validation scenarios
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai assertions
   - kaneai validation
   - test assertions
   - visual assertions
-url: https://www.lambdatest.com/support/docs/kaneai-kb-assertions-and-validation
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation
+site_name: TestMu AI
 slug: kaneai-kb-assertions-and-validation/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Assertions & Validation",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-assertions-and-validation"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation"
         }]
       })
     }}

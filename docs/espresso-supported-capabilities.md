@@ -20,6 +20,9 @@ canonical: https://www.testmuai.com/support/docs/espresso-supported-capabilities
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
 
 
 <script type="application/ld+json"
@@ -71,6 +74,9 @@ This document provide details about the features and capabilities supported for 
 | singleRunnerInvocation | Boolean | Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false` |
 | testRemarks <br /> <br /> | Boolean | Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
 | retries <br /> <br /> | Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
+| region | String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
+| networkProfile <RealDeviceTag value="Real Device" /> | String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
+| uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 :::note
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."

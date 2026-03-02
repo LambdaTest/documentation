@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: API Testing & Network Assertions
 description: Combine API testing with UI testing in KaneAI — make API calls, assert network responses, validate backend behavior alongside frontend interactions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai api testing
   - kaneai network assertions
   - kaneai curl
   - api ui testing
-url: https://www.lambdatest.com/support/docs/kaneai-kb-api-testing-and-network-assertions
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions
+site_name: TestMu AI
 slug: kaneai-kb-api-testing-and-network-assertions/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "API Testing & Network Assertions",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-api-testing-and-network-assertions"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions"
         }]
       })
     }}

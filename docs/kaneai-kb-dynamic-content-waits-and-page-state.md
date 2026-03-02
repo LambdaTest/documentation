@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: Dynamic Content, Waits & Page State
 description: Handle loading spinners, async content, toast notifications, modals, infinite scroll, and timing-sensitive scenarios in KaneAI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai waits
   - kaneai dynamic content
   - kaneai loading
   - async testing
-url: https://www.lambdatest.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state
+site_name: TestMu AI
 slug: kaneai-kb-dynamic-content-waits-and-page-state/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Dynamic Content, Waits & Page State",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state"
         }]
       })
     }}

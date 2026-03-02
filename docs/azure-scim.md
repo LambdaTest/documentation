@@ -113,6 +113,50 @@ In the above example we are using the appRoleAssignments attribute of microsoft 
 
 After custom attribute creation, we have to map them using “Add new mapping”
 
+## Provisioning Groups from Azure AD
+
+Once user provisioning is configured, you can also push Azure AD groups to <BrandName />.
+
+:::note Prerequisites
+Group Provisioning must be enabled for your org. Contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> to activate it.
+:::
+
+**Step 1:** In Azure portal, go to your <BrandName /> Enterprise Application > **Provisioning** > **Mappings**.
+
+**Step 2:** Click **Provision Azure Active Directory Groups** and ensure it is **Enabled**.
+
+**Step 3:** Review the attribute mappings. The required mappings are:
+- `displayName` → `displayName`
+- `members` → `members`
+
+**Step 4:** Under **Users and groups**, assign the groups you want to provision.
+
+**Step 5:** Start a provisioning cycle (or wait for the 40-minute auto sync).
+
+**Step 6:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+
+### Setting Roles on Azure AD Groups
+
+Azure AD sends roles via the SCIM group extension `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group`. To assign roles:
+
+1. Create a custom attribute `LambdatestRoles` under the group schema in your Azure AD attribute mappings
+2. Map it to an Azure AD attribute or set it as a constant (e.g., `User`, `Admin`, or `Guest`)
+3. The role applies to **all** members of the group. Highest role wins across multiple groups (Admin > User > Guest)
+
+### What Happens After Provisioning
+
+| Azure AD Action | <BrandName /> Effect |
+|---|---|
+| Group provisioned | Group created, mapping rules evaluated, members synced |
+| Member added to group | Member added to all mapped <BrandName /> entities |
+| Member removed from group | Member removed (if no other group maps them there), role recomputed |
+| Group renamed | Group renamed, mapped entity renamed to match, rules re-evaluated |
+| Group deprovisioned | Group soft-deleted, members safely unassigned, roles recomputed |
+
+> For details on mapping, conflicts, and rules, see the [SCIM Provisioning guide](/support/docs/scim/#group-provisioning).
+
+---
+
 **Step 10:** To enable the Azure AD provisioning service for <BrandName />, change the Provisioning Status to On in the Settings section.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/provisioning-on.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

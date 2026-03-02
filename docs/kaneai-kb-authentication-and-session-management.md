@@ -5,15 +5,15 @@ hide_title: false
 sidebar_label: Authentication & Session Management
 description: Test login flows, TOTP/MFA, SSO, session persistence, and secure authentication patterns in KaneAI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai authentication
   - kaneai TOTP
   - kaneai MFA
   - kaneai login testing
   - kaneai session
-url: https://www.lambdatest.com/support/docs/kaneai-kb-authentication-and-session-management
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management
+site_name: TestMu AI
 slug: kaneai-kb-authentication-and-session-management/
 ---
 
@@ -28,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Authentication & Session Management",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-authentication-and-session-management"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management"
         }]
       })
     }}

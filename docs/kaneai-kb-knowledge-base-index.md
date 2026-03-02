@@ -5,14 +5,14 @@ hide_title: true
 sidebar_label: Knowledge Base
 description: Central hub for all KaneAI test authoring guides, best practices, workarounds, and reference documentation
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai knowledge base
   - kaneai guides
   - kaneai best practices
   - test authoring
-url: https://www.lambdatest.com/support/docs/kaneai-kb-knowledge-base-index
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index
+site_name: TestMu AI
 slug: kaneai-kb-knowledge-base-index/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Knowledge Base",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-knowledge-base-index"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index"
         }]
       })
     }}

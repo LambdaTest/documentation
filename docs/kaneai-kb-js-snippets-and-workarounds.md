@@ -5,14 +5,14 @@ hide_title: false
 sidebar_label: JS Snippets & Workarounds
 description: Work around natural language limitations in KaneAI using JavaScript snippets for DOM manipulation, validation, date pickers, shadow DOM, and more
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai javascript
   - kaneai js snippet
   - kaneai workaround
   - kaneai limitations
-url: https://www.lambdatest.com/support/docs/kaneai-kb-js-snippets-and-workarounds
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds
+site_name: TestMu AI
 slug: kaneai-kb-js-snippets-and-workarounds/
 ---
 
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "JS Snippets & Workarounds",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-kb-js-snippets-and-workarounds"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds"
         }]
       })
     }}
