@@ -20,6 +20,7 @@ slug: github-app-integration/
 canonical: https://www.testmuai.com/support/docs/github-app-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -84,7 +85,7 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 
 #### Account Requirements
 
-- **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. [Sign up now](https://accounts.lambdatest.com/register) if you don't have an account yet.
+- **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up now</a> if you don't have an account yet.
 
 - **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a free trial to explore KaneAI's key workflows.
 
@@ -403,5 +404,8 @@ Every test run, result, and AI recommendation is permanently recorded in your PR
 
 Watch the video below for a complete walkthrough of the <BrandName /> Cloud GitHub App in action — from installation to AI-powered test generation and reporting.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/GTiqj7FFWfg" title="LambdaTest Cloud GitHub App - AI-Powered PR Validation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<div className="ytframe">
+<div className="youtube" data-embed="GTiqj7FFWfg" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>

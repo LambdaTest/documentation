@@ -54,19 +54,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Airbrake is a software tool and service designed to assist developers in tracking and monitoring errors within web and mobile applications. Its primary purpose is promptly identifying and diagnosing software errors and exceptions, enabling developers to react swiftly and effectively.
 
-<div class="blog__ytframe">
-<div class="blog__youtube" data-embed="_amxJrEiMyA">
-    <div class="blog__play-button"></div>
+<div className="ytframe">
+<div className="youtube" data-embed="_amxJrEiMyA" data-loading-attribute="eager">
+  <div className="play-button"></div>
 </div>
 </div>
 
 <BrandName />'s integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during <a href={`${BRAND_URL}`}>cross-browser testing</a>. With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
-
-<div className="ytframe"> 
-<div className="youtube" data-embed="_amxJrEiMyA">
-    <div className="play-button"></div>
-</div>
-</div>
 
 
 ## Integrating Airbrake With <BrandName />
