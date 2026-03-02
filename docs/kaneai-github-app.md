@@ -404,5 +404,9 @@ Every test run, result, and AI recommendation is permanently recorded in your PR
 
 Watch the video below for a complete walkthrough of the <BrandName /> Cloud GitHub App in action — from installation to AI-powered test generation and reporting.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/GTiqj7FFWfg" title="LambdaTest Cloud GitHub App - AI-Powered PR Validation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="GTiqj7FFWfg" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
