@@ -43,7 +43,11 @@ import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/C
 
 Add widgets of multiple products and various insights to your dashboard. You can create a custom dashboard with the widgets of your choice. You can add widgets of the same type multiple times and also edit the layout of the dashboard according to your configuration.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/EHHA1z1KB4c?si=pE0tP4ReVgkMIR-_" title="Create Customed Dashboard using Lambdatest Analytics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="EHHA1z1KB4c" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ### Prerequisites
 

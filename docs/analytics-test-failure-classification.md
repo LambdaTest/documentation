@@ -44,7 +44,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 <BrandName /> Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency. The AI model analyzes the test execution data and categorizes the failures based on various parameters such as environment, browser, OS, and failure type. This allows you to focus on the most critical issues and prioritize your testing efforts.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/fq78e4cjYuM?si=Pro4bEdFPzsYt5mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="fq78e4cjYuM" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Pre-requisites For Failure Categorization AI
 

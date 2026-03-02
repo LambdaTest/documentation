@@ -38,7 +38,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/ge8w56jZTWw?si=3EJwrMTH6GC_hDd3" title="Exploring Pre-Built Templates in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="ge8w56jZTWw" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## About the Dashboard templates:
 
