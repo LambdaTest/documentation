@@ -202,3 +202,45 @@ Tunnel Capability
 
 
 
+
+
+## Using the xUnit Agent Skill with TestMu AI
+***
+
+The [xunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/xunit-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The xunit-skill package includes:
+
+```
+xunit-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing xUnit Agent Skill
+***
+
+Install a xUnit Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xunit-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/xunit-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only xunit-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

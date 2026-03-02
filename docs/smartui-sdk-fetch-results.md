@@ -371,6 +371,7 @@ npx smartui capture urlTest.json --config config.json --fetch-results results.js
 # 4. Export to PDF or CSV for sharing
 ```
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
