@@ -46,7 +46,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 Custom widgets in <BrandName /> Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/DEY1hhEme6Q?si=hBN9X2hK-QHvgHIA" title="Exploring Custom Widgets for Dashboards in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="DEY1hhEme6Q" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Prerequisites
 

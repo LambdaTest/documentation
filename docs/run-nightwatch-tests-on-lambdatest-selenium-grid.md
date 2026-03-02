@@ -17,7 +17,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,7 +56,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 In this topic, you will learn how to configure and run your JavaScript automation testing scripts on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **JavaScript** framework **Nightwatch**.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/gYfRDCCFTZI" title="How to Run NightwatchJS Browser Automation Tests on <BrandName />" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="gYfRDCCFTZI" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Objective
 ***
@@ -91,7 +96,7 @@ npm i
 ```
 
 ### Setting up Your Authentication
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Profile</a>.
 
 **Step 3:** Set <BrandName /> `Username` and `Access Key` in environment variables.
 <Tabs className="docs__val">
@@ -186,11 +191,55 @@ const capabilities = {
 }
 ```
 
+## Using the NightwatchJS Agent Skill with TestMu AI
+***
+
+The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The nightwatchjs-skill package includes:
+
+```
+nightwatchjs-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing NightwatchJS Agent Skill
+***
+
+Install a NightwatchJS Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nightwatchjs-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/nightwatchjs-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only nightwatchjs-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+
 ## Additional Links
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 * [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
