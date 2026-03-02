@@ -1,0 +1,231 @@
+---
+title: "Android – What We Cover"
+sidebarTitle: "Android – What We Cover"
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+# <BrandName /> Accessibility Android – What We Cover
+
+<Note>
+This document describes <BrandName /> Accessibility coverage for Android. For platform or accessibility support, contact <BrandName /> support.
+</Note>
+
+---
+
+## 1. Purpose and scope
+
+This document describes **what <BrandName /> Accessibility Android covers**: a **full WCAG rules reference** (100% for Android), a **checklist** of rules the platform can check, **how to use** the accessibility testing platform to run scans and view results, and **how to check** / **how to do** (remediation) for **native Android apps**. It is intended for teams who:
+
+- Run accessibility scans on Android apps via <BrandName /> Accessibility (e.g. <BrandName /> Accessibility DevTools or the accessibility testing platform with supported engines).
+- Need a single reference for **what is checked** on Android, **how to use** the platform, and **how to verify or fix** issues.
+- Target **WCAG 2.0, 2.1, and 2.2** (Level A, AA, and selected AAA) as applicable to native Android.
+
+**Technology:** <BrandName /> Accessibility for **native Android apps** (Views, Jetpack Compose where applicable). **Platform:** Android (check <BrandName /> docs for supported API levels and devices).
+
+---
+
+## 2. Full WCAG rules reference (100% – Android)
+
+Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.2** at Levels **A, AA, and AAA** as they apply to **native Android apps**. Use this as the master reference for full Android accessibility coverage.
+
+### 2.1 Principle 1 – Perceivable
+
+| ID | Success criterion | Level | WCAG |
+|----|--------------------|-------|------|
+| 1.1.1 | Non-text Content | A | 2.0 |
+| 1.2.1 | Audio-only and Video-only (Prerecorded) | A | 2.0 |
+| 1.2.2 | Captions (Prerecorded) | A | 2.0 |
+| 1.2.3 | Audio Description or Media Alternative (Prerecorded) | A | 2.0 |
+| 1.2.4 | Captions (Live) | AA | 2.0 |
+| 1.2.5 | Audio Description (Prerecorded) | AA | 2.0 |
+| 1.2.6 | Sign Language (Prerecorded) | AAA | 2.0 |
+| 1.2.7 | Extended Audio Description (Prerecorded) | AAA | 2.0 |
+| 1.2.8 | Media Alternative (Prerecorded) | AAA | 2.0 |
+| 1.2.9 | Audio-only (Live) | AAA | 2.0 |
+| 1.3.1 | Info and Relationships | A | 2.0 |
+| 1.3.2 | Meaningful Sequence | A | 2.0 |
+| 1.3.3 | Sensory Characteristics | A | 2.0 |
+| 1.3.4 | Orientation | AA | 2.1 |
+| 1.3.5 | Identify Input Purpose | AA | 2.1 |
+| 1.3.6 | Identify Purpose | AAA | 2.1 |
+| 1.4.1 | Use of Color | A | 2.0 |
+| 1.4.2 | Audio Control | A | 2.0 |
+| 1.4.3 | Contrast (Minimum) | AA | 2.0 |
+| 1.4.4 | Resize Text | AA | 2.0 |
+| 1.4.5 | Images of Text | AA | 2.0 |
+| 1.4.6 | Contrast (Enhanced) | AAA | 2.0 |
+| 1.4.7 | Low or No Background Audio | AAA | 2.0 |
+| 1.4.8 | Visual Presentation | AAA | 2.0 |
+| 1.4.9 | Images of Text (No Exception) | AAA | 2.0 |
+| 1.4.10 | Reflow | AA | 2.1 |
+| 1.4.11 | Non-text Contrast | AA | 2.1 |
+| 1.4.12 | Text Spacing | AA | 2.1 |
+| 1.4.13 | Content on Hover or Focus | AA | 2.1 |
+
+### 2.2 Principle 2 – Operable
+
+| ID | Success criterion | Level | WCAG |
+|----|--------------------|-------|------|
+| 2.1.1 | Keyboard | A | 2.0 |
+| 2.1.2 | No Keyboard Trap | A | 2.0 |
+| 2.1.3 | Keyboard (No Exception) | AAA | 2.0 |
+| 2.1.4 | Character Key Shortcuts | A | 2.1 |
+| 2.2.1 | Timing Adjustable | A | 2.0 |
+| 2.2.2 | Pause, Stop, Hide | A | 2.0 |
+| 2.2.3 | No Timing | AAA | 2.0 |
+| 2.2.4 | Interruptions | AAA | 2.0 |
+| 2.2.5 | Re-authenticating | AAA | 2.0 |
+| 2.2.6 | Timeouts | AAA | 2.1 |
+| 2.3.1 | Three Flashes or Below Threshold | A | 2.0 |
+| 2.3.2 | Three Flashes | AAA | 2.0 |
+| 2.3.3 | Animation from Interactions | AAA | 2.2 |
+| 2.4.1 | Bypass Blocks | A | 2.0 |
+| 2.4.2 | Page Titled | A | 2.0 |
+| 2.4.3 | Focus Order | A | 2.0 |
+| 2.4.4 | Link Purpose (In Context) | A | 2.0 |
+| 2.4.5 | Multiple Ways | AA | 2.0 |
+| 2.4.6 | Headings and Labels | AA | 2.0 |
+| 2.4.7 | Focus Visible | AA | 2.0 |
+| 2.4.8 | Location | AAA | 2.0 |
+| 2.4.9 | Link Purpose (Link Only) | AAA | 2.0 |
+| 2.4.10 | Section Headings | AAA | 2.0 |
+| 2.4.11 | Focus Not Obscured (Minimum) | AA | 2.2 |
+| 2.4.12 | Focus Not Obscured (Enhanced) | AAA | 2.2 |
+| 2.4.13 | Focus Appearance | AAA | 2.2 |
+| 2.5.1 | Pointer Gestures | A | 2.1 |
+| 2.5.2 | Pointer Cancellation | A | 2.1 |
+| 2.5.3 | Label in Name | A | 2.1 |
+| 2.5.4 | Motion Actuation | A | 2.1 |
+| 2.5.5 | Target Size | AAA | 2.1 |
+| 2.5.6 | Concurrent Input Mechanisms | AAA | 2.1 |
+| 2.5.7 | Dragging Movements | AA | 2.2 |
+| 2.5.8 | Target Size (Minimum) | AA | 2.2 |
+
+### 2.3 Principle 3 – Understandable
+
+| ID | Success criterion | Level | WCAG |
+|----|--------------------|-------|------|
+| 3.1.1 | Language of Page | A | 2.0 |
+| 3.1.2 | Language of Parts | AA | 2.0 |
+| 3.1.3 | Unusual Words | AAA | 2.0 |
+| 3.1.4 | Abbreviations | AAA | 2.0 |
+| 3.1.5 | Reading Level | AAA | 2.0 |
+| 3.1.6 | Pronunciation | AAA | 2.0 |
+| 3.2.1 | On Focus | A | 2.0 |
+| 3.2.2 | On Input | A | 2.0 |
+| 3.2.3 | Consistent Navigation | AA | 2.0 |
+| 3.2.4 | Consistent Identification | AA | 2.0 |
+| 3.2.5 | Change on Request | AAA | 2.0 |
+| 3.2.6 | Consistent Help | A | 2.2 |
+| 3.3.1 | Error Identification | A | 2.0 |
+| 3.3.2 | Labels or Instructions | A | 2.0 |
+| 3.3.3 | Error Suggestion | AA | 2.0 |
+| 3.3.4 | Error Prevention (Legal, Financial, Data) | AA | 2.0 |
+| 3.3.5 | Help | AAA | 2.0 |
+| 3.3.6 | Error Prevention (All) | AAA | 2.0 |
+| 3.3.7 | Redundant Entry | A | 2.2 |
+| 3.3.8 | Accessible Authentication (Minimum) | AA | 2.2 |
+| 3.3.9 | Accessible Authentication (Enhanced) | AAA | 2.2 |
+
+### 2.4 Principle 4 – Robust
+
+| ID | Success criterion | Level | WCAG |
+|----|--------------------|-------|------|
+| 4.1.1 | Parsing | A | 2.0 (obsolete in 2.2) |
+| 4.1.2 | Name, Role, Value | A | 2.0 |
+| 4.1.3 | Status Messages | AA | 2.1 |
+
+**Total:** WCAG 2.2 includes **87 success criteria**. 4.1.1 Parsing is obsolete in WCAG 2.2.
+
+---
+
+## 3. What we cover – checklist (Android)
+
+### 3.1 WCAG 2.0 (Level A and AA) – Android-relevant
+
+| WCAG | Level | Brief description | What we cover (Android) |
+|------|-------|-------------------|--------------------------|
+| 1.1.1 Non-text Content | A | Text alternatives for non-text content | Images have `android:contentDescription`. |
+| 1.3.1 Info and Relationships | A | Structure programmatically determinable | Buttons, checkboxes, toggles have names and roles. |
+| 1.4.3 Contrast (Minimum) | AA | Text contrast 4.5:1 (3:1 large) | Insufficient color ratio detection. |
+| 2.1.1 Keyboard | A | All functionality via keyboard/AT | Operable via TalkBack and switch access. |
+| 2.1.2 No Keyboard Trap | A | Focus not trapped | Focus can leave modals/custom controls. |
+| 2.4.2 Page Titled | A | Screens have titles | Screen/activity titles. |
+| 2.4.3 Focus Order | A | Focus order preserves meaning | Logical focus order; no nested interactive elements. |
+| 3.3.2 Labels or Instructions | A | Labels provided | Field labels (hint, labelFor, TextInputLayout). |
+| 4.1.2 Name, Role, Value | A | Name, role, value for UI components | contentDescription, roles, values; unique labels. |
+
+### 3.2 WCAG 2.1 (Level A and AA) – Android-relevant
+
+| WCAG | Level | Brief description | What we cover (Android) |
+|------|-------|-------------------|--------------------------|
+| 1.3.4 Orientation | AA | Not restricted to one orientation | Fixed orientation lock detection. |
+| 2.5.3 Label in Name | A | Accessible name includes visible label | Mismatched label text detection. |
+| 2.5.5 Target Size | AAA | Touch target size (48×48 dp) | Undersized touch target; insufficient spacing. |
+| 4.1.3 Status Messages | AA | Status messages determinable | Live regions / announceForAccessibility(). |
+
+### 3.3 Android-specific rules
+
+| Rule name | WCAG | Level | Impact | What we cover |
+|-----------|------|-------|--------|----------------|
+| Missing Image Alt | 1.1.1 | A | Critical | Images have `android:contentDescription`. |
+| Missing View Accessibility | 4.1.2 | A | Serious | Interactive views have contentDescription or labels. |
+| Insufficient Color Ratio | 1.4.3 | AA | Serious | Text meets contrast ratios. |
+| Missing Field Label | 3.3.2 | A | Serious | EditText has label via hint, labelFor, or TextInputLayout. |
+| Missing Screen Title | 2.4.2 | A | Serious | Activities have descriptive titles. |
+| Undersized Touch Target | 2.5.5 | AAA | Moderate | Touch targets at least 48dp × 48dp. |
+| Fixed Orientation Lock | 1.3.4 | AA | Moderate | App supports both orientations. |
+
+---
+
+## 4. How to use the platform to test (Android)
+
+| Step | How to use |
+|------|------------|
+| **1. Access** | Log in to <BrandName /> and open Accessibility section. |
+| **2. Select app** | Upload APK/AAB, select Android platform and device. |
+| **3. Run scan** | Start accessibility scan against WCAG rules. |
+| **4. View report** | Review violations, passes, and incomplete items. |
+| **5. Filter** | Filter by WCAG level, rule ID, or impact. |
+| **6. Export** | Export report (PDF, CSV) or share link. |
+
+<Tip>
+Combine automated scans with **manual testing** (TalkBack, Switch Access, font scaling) and the **What we do NOT cover** document for full WCAG coverage.
+</Tip>
+
+---
+
+## 5. How to check and how to do (Android)
+
+### 5.1 Labels (1.1.1, 1.3.1, 3.3.2, 4.1.2)
+
+- **Images:** Set `android:contentDescription` or `null` for decorative.
+- **Buttons:** Set `contentDescription` or `android:text`.
+- **EditText:** Use `android:hint`, `labelFor`, or TextInputLayout.
+- **Switches:** Set `contentDescription` describing what is toggled.
+
+### 5.2 Color contrast (1.4.3)
+
+- Use colors meeting **4.5:1** for normal text, **3:1** for large text.
+- Use theme colors (`?attr/colorOnSurface`, `?attr/colorSurface`).
+
+### 5.3 Touch target sizing (2.5.5, 2.5.8)
+
+- Ensure **48dp × 48dp** minimum with adequate spacing.
+
+### 5.4 Orientation (1.3.4)
+
+- Use `android:screenOrientation="unspecified"` unless lock is essential.
+
+---
+
+## 6. Summary
+
+- **Full WCAG reference:** Section 2 lists 100% of WCAG criteria for Android.
+- **What we cover:** Section 3 is the checklist of rules <BrandName /> Accessibility Android can check.
+- **Use this doc** as a single reference for Android accessibility coverage.
+
+---
+
+For support, contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or email support@testmuai.com.
