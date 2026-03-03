@@ -345,6 +345,7 @@ If you encounter issues not covered here:
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [SmartUI CLI Documentation](/support/docs/smartui-cli)

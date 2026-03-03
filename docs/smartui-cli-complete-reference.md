@@ -1030,6 +1030,7 @@ npx smartui capture urls.json --config .smartui.json
 
 ---
 
+
 ## Additional Resources
 
 - [SmartUI CLI Documentation](/support/docs/smartui-cli)

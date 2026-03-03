@@ -1244,6 +1244,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Platform Overview",
+        id: "ai-agent-testing-platform-overview",
+      },
+      {
+        type: "doc",
         label: "Test Your First AI Agent",
         id: "testing-your-first-ai-agent",
       },
@@ -2883,6 +2888,7 @@ module.exports = {
     },
     [
       "app-automation-app-sim",
+      "build-ios-app-for-simulator-testing",
       "virtual-device-flutter-apps",
     ],
   ],
@@ -3136,6 +3142,11 @@ module.exports = {
         label: "JUnit Report",
         id: "espresso-junit-report",
       },
+      {
+        type: "doc",
+        label: "SmartUI Visual Regression",
+        id: "espresso-visual-regression",
+      },
     ],
   ],
 
@@ -3194,6 +3205,11 @@ module.exports = {
         type: "doc",
         label: "XCResult",
         id: "xcresult",
+      },
+      {
+        type: "doc",
+        label: "SmartUI Visual Regression",
+        id: "xcui-visual-regression",
       },
     ],
   ],
@@ -3362,6 +3378,23 @@ module.exports = {
                       },
                     ],
                   },
+                  {
+                    type: "category",
+                    label: "Native Apps",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Espresso",
+                        id: "espresso-visual-regression",
+                      },
+                      {
+                        type: "doc",
+                        label: "XCUITest",
+                        id: "xcui-visual-regression",
+                      },
+                    ],
+                  },
                 ],
               },
             ],
@@ -3508,6 +3541,16 @@ module.exports = {
                 type: "doc",
                 label: "Layout Testing",
                 id: "smartui-layout-testing",
+              },
+              {
+                type: "doc",
+                label: "Mismatch Thresholds",
+                id: "smartui-mismatch-thresholds",
+              },
+              {
+                type: "doc",
+                label: "Diff Highlighter",
+                id: "smartui-diff-highlighter",
               },
             ],
           },
@@ -4478,6 +4521,11 @@ module.exports = {
         type: "doc",
         label: "JumpCloud",
         id: "jumpcloud-scim",
+      },
+      {
+        type: "doc",
+        label: "PingOne",
+        id: "pingone-scim",
       },
     ],
   ],

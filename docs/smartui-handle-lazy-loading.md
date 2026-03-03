@@ -385,6 +385,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for lazy loading issues

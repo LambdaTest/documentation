@@ -253,6 +253,7 @@ After selecting your preferred language, refer to the specific documentation for
 - **[Java SDK](/support/docs/smartui-appium-java-sdk)** - Complete guide with best practices and troubleshooting
 - **[Appium Hooks](/support/docs/smartui-appium-hooks)** - For JavaScript, Python, Ruby, and C# implementations
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for common issues

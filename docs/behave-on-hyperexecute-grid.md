@@ -304,6 +304,49 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
+
+
+## Using the Behave Agent Skill with TestMu AI
+***
+
+The [behave-skill](https://github.com/LambdaTest/agent-skills/tree/main/behave-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The behave-skill package includes:
+
+```
+behave-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Behave Agent Skill
+***
+
+Install a Behave Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/behave-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/behave-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only behave-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

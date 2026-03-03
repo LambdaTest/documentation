@@ -163,6 +163,49 @@ You would need to execute the below command in your terminal/cmd.
 
 `npm run single`
 
+
+
+## Using the WebdriverIO Agent Skill with TestMu AI
+***
+
+The [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The webdriverio-skill package includes:
+
+```
+webdriverio-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing WebdriverIO Agent Skill
+***
+
+Install a WebdriverIO Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/webdriverio-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/webdriverio-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only webdriverio-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

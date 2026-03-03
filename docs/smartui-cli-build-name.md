@@ -150,6 +150,7 @@ This approach provides a structured and efficient way to manage visual tests:
 - **Consolidated Screenshot Grouping:** Screenshots from all tests within the same job are appended to a single build for seamless organization.
 - **Uninterrupted Git Workflow:** Git branching strategies remain unaffected, enabling robust baseline management across branches.
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)

@@ -9,6 +9,7 @@ keywords:
  - Test Manager analytics
  - Test Cases trends
  - Test Case Build Status
+ - Milestone Trends
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: TestMu AI
 slug: analytics-modules-test-manager-widgets/
@@ -112,32 +113,31 @@ The Milestone Trends widget displays a stacked bar chart of milestones, with eac
 
 This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort.
 
-## Issue Summary
+## Milestone Trends
 
-The Issue Summary widget shows the trend of issues and requirements linked to test cases or raised during test runs in Test Manager.
-
-### How it works?
-
-* Tracks issues linked to test cases as well as issues raised directly within test runs.
-* Visualize whether issues are increasing or decreasing over time.
-
-### Value Proposition
-
-This widget helps you monitor the volume and trend of issues across your testing efforts, enabling you to identify patterns and prioritize resolution.
-
-## Test Cases Types
-
-The Test Cases Types widget displays a pie chart of test cases split by their **Type** field (e.g., Regression, Smoke, Sanity, or any custom type defined in your project).
+The Milestone Trends widget provides a visual overview of test case execution results across your milestones. It displays a stacked bar chart where each bar represents a milestone, broken down by **Passed** and **Failed** test case counts.
 
 ### How it works?
 
-* Each segment of the pie chart represents a test case type, based on the **Type** field of each test case.
-* Quickly see the distribution of test case types across your project.
+* Each bar on the chart represents a milestone in your project, with the height indicating the count of test runs for that specific status.
+* The bar is split into two color-coded segments: **Passed** (green) and **Failed** (red), giving you an at-a-glance view of milestone health.
+* You can filter the data by date range to analyze milestone performance over specific time periods.
 
 ### Value Proposition
 
-This widget helps you understand the composition of your test suite and ensure the right balance of test types (Regression, Smoke, Sanity, etc.) for effective coverage.
+This widget helps you quickly identify milestones that have a high failure rate and may need immediate attention. By tracking pass/fail trends across milestones, you can monitor release readiness, spot regressions early, and make data-driven decisions about which milestones require additional testing effort.
 
+## Test Runs Summary
 
+The Test Runs Summary widget provides a comprehensive overview of the test runs created in your test automation or manual efforts. It displays the total number of test runs created, and the split between Passed, Failed, and Skipped test runs.
 
+### How it works?
+
+* This widget helps you understand the overall test run status of your test automation or manual efforts.
+* It provides a detailed breakdown of the test runs created, and the split between Passed, Failed, and Skipped test runs.
+* You can use this widget to identify the most critical failed test runs that need immediate attention.
+
+### Value Proposition
+
+By using this widget, you can get a quick overview of the test runs created in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
 

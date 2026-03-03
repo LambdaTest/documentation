@@ -170,6 +170,7 @@ On clicking the session name of the respective test, you can view the details of
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/pw-build.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

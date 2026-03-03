@@ -42,7 +42,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/0CwsyCZOzYU?si=3YMIA6hb5mAu50ba" title="Exploring the CoPilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="0CwsyCZOzYU" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Prerequisites
 

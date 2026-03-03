@@ -273,6 +273,7 @@ await smartuiSnapshot(driver, 'Video Page');
 </TabItem>
 </Tabs>
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for video-related issues

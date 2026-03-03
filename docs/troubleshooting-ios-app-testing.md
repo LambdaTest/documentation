@@ -43,28 +43,72 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Troubleshooting iOS App Testing
 ***
 
-While uploading .app files on Simulators, you may come across an error on the <BrandName /> platform - *No .app found inside zip*. In such cases, you may need to re-evaluate how you're building your iOS applications. To upload and test `. apps` files on Simulators, your iOS app need to be build for Simulators. 
+While uploading `.app` files on Simulators, you may encounter issues such as the app crashing immediately or the error *"No .app found inside zip"*. These problems typically occur when the app is not built correctly for the Simulator platform.
 
-Shown below are the steps for converting your `.app` file to a `.zip` file.
+:::tip
+For a complete step-by-step guide on building your iOS app for Simulator testing, see [Building Your iOS App for Simulator Testing](/docs/build-ios-app-for-simulator-testing/).
+:::
 
-1. Download and install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
+## Common Issues
 
-2. Open your testing project in Xcode.
+### App crashes immediately with "App quit unexpectedly"
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/project-file.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+**Cause:** Your `.app` is built for physical iOS devices (Mach-O Platform 2 — `iphoneos`) instead of the iOS Simulator (Platform 7 — `iphonesimulator`).
 
-3. Head to **File** and click **Show in Finder** option to open the .app file once your build runs successfully.
+**Solution:** Rebuild your app targeting the iOS Simulator SDK. In Xcode, select a **Simulator destination** (e.g., *iPhone 15 Pro*) instead of *Any iOS Device*, then build. For command line builds, use the `-sdk iphonesimulator` flag:
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/show-in-finder.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+```bash
+xcodebuild -project YourProject.xcodeproj \
+           -scheme YourScheme \
+           -configuration Debug \
+           -sdk iphonesimulator \
+           -arch arm64 \
+           build
+```
 
-4. Compress the `.app` file into a `.zip` file.
+You can verify the platform using:
 
- <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/zip-file.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+```bash
+vtool -show-build YourApp.app/YourApp
+```
+
+The output should show `platform: IOSSIMULATOR` (Platform 7).
+
+:::info
+Your Simulator build must include the **arm64** architecture. There is no need to exclude it from Simulator builds.
+:::
+
+### "No .app found inside zip" error
+
+**Cause:** The `.zip` archive structure is incorrect. The `.app` bundle should be at the root of the archive.
+
+**Solution:**
+1. Build your app for the Simulator (as described above).
+2. Locate the `.app` file in Xcode: right-click the `.app` under **Products** and select **Show in Finder**.
+3. Right-click the `.app` file in Finder and select **Compress** to create the `.zip` file.
+
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/project-file.webp').default} alt="Open project in Xcode" width="1281" height="722" className="doc_img"/>
+
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/show-in-finder.webp').default} alt="Show in Finder" width="1281" height="722" className="doc_img"/>
+
+ <img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/zip-file.webp').default} alt="Compress to zip" width="1281" height="722" className="doc_img"/>
 
 Your `.zip` file is now ready for upload on <BrandName /> servers.
 
->**Note**: If you are unable to install the iOS zip file on the <BrandName /> platform, you need to remove the arm64 architecture from both your project and the pod project.<br /> <br />
-To do so, go to the **Build Settings** of your project. From **Excluded Architecture** dropdown, add any iOS Simulator SDK with value arm64 .<br /><br />
-<img loading="lazy" src={require('../assets/images/troubleshoot-ios-testing/6.webp').default} alt="Integrating <BrandName /> With Testsigma" width="1281" height="722" className="doc_img"/>
+### Build fails with architecture errors
 
-That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+**Cause:** The project may have incorrect architecture settings.
+
+**Solution:** In Xcode **Build Settings**, verify:
+
+| Setting | Value |
+|---|---|
+| **Architectures** | `$(ARCHS_STANDARD)` |
+| **Base SDK** | iOS |
+| **Supported Platforms** | iOS Simulator |
+
+Ensure you are **not** excluding arm64 from Simulator builds.
+
+---
+
+That's all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.

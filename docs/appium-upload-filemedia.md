@@ -82,7 +82,7 @@ By the end of this topic, you will be able to:
 
 - **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
-- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
 
 ## Upload File and Media feature in App Automation
 
@@ -166,6 +166,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.
 
 :::
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
