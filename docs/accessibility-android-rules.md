@@ -47,6 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 | Rule Name | WCAG | Level | Impact | Description |
 |-----------|------|-------|--------|-------------|
+| Interactive Role Undefined | 4.1.2 | A | Critical | Interactive container elements (ViewGroup, FrameLayout, LinearLayout, etc.) that are clickable but lack a **role** for screen readers. A label (contentDesc) provides the **Name** only; WCAG 4.1.2 requires both Name and Role. Add a semantic child widget (Button, Switch, CheckBox, etc.) so the role is programmatically determinable, or ensure the container is not the sole interactive focus. |
 | Missing Image Alt | 1.1.1 | A | Critical | Images lack alternative text descriptions that screen readers can announce to users. Add `android:contentDescription` to meaningful images or set to empty string for decorative images to ensure proper accessibility support. |
 | Missing View Accessibility | 4.1.2 | A | Serious | Interactive elements like buttons, clickable views, or custom controls lack proper accessibility labels that describe their purpose. Ensure all interactive Views have clear `android:contentDescription` or associated labels for screen readers. |
 | Unlabeled Checkbox Element | 4.1.2 | A | Serious | Checkbox controls are missing accessible names that describe their purpose or current state. Provide descriptive labels using `android:text`, `android:contentDescription`, or associated TextView labels so users understand what they're selecting. |
