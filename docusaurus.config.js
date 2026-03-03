@@ -72,7 +72,7 @@ module.exports = {
         alt: 'LambdaTest',
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
-        href: 'https://www.testmuai.com',
+        href: 'https://www.lambdatest.com',
         target: '_self',
         width: '147',
         height: '26',
