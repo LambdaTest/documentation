@@ -135,7 +135,7 @@ Then, trigger the scan directly within your test script when the desired page is
 
 ```javascript
 // Execute the LambdaTest accessibility scan hook
-await page.evaluate(() => document.dispatchEvent(new CustomEvent('lambda-accessibility-scan')));
+await page.evaluate('lambda-accessibility-scan');
 ```
 
 *Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated.*
