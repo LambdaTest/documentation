@@ -52,58 +52,66 @@ The Test Manager Widgets module is currently in  <NewTag value="BETA" bgColor="#
 
 <img loading="lazy" src={require('../assets/images/analytics/tms-widgets-dashboard.webp').default} alt="Test Manager Snapshot" width="768" height="373" className="doc_img"/>
 
-## Test Cases Summary 
+:::tip Filtering Widgets
+Every widget supports configurable filters. Click the **three-dot menu** on any widget to apply filters and narrow down the displayed results based on your specific criteria.
+:::
 
-The Test Cases Summary provides the Total unique test cases created, Total split between Automated and Manual test cases. 
+:::tip Drill Down into Data
+All widgets support drill-down. Click on any data point in a chart — such as a segment in a pie chart, a bar in a bar chart, or a status value — to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
+:::
 
-### How it works?
+## Test Cases Summary
 
-* Using the Test Cases Summary widget, you can easily find information about the count, and type of the test cases through the highly customizable widgets.
-* The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
-
-### Value Proposition
-
-This widget helps you understand the overall test case status of your website or web application. It provides a detailed breakdown of the test cases created, and the split between Automated and Manual test cases.
-
-## Test Cases Trend 
-
-The Test Cases Trend widget provides a comprehensive overview of your test cases trend. It displays the total number of test cases created over a period of time.
+The Test Cases Summary widget displays the total count of test cases and the split between **Automated** and **Manual** test cases. The classification is determined by the **Automation Status** field on each test case — if set to *Automated*, it is counted under Automated; all others fall into the Manual category.
 
 ### How it works?
 
-* This widget helps you understand the overall test case trend of your website or web application.
-* It provides a detailed breakdown of the test cases created over a period of time.
+* View the total number of unique test cases created in your project.
+* See the breakdown between Automated and Manual test cases based on the Automation Status field.
 
 ### Value Proposition
 
-This widget helps you identify the most critical test cases that need immediate attention. You can use this widget to track the progress of your test cases over a period of time.
+This widget gives you a quick snapshot of your test case inventory and the balance between automated and manual coverage, helping you plan your testing strategy.
 
-## Issue Summary
+## Test Cases Trend
 
-The Issue Summary widget provides a comprehensive overview of the issues detected in your test automation or manual efforts. It displays the total number of issues detected.
+The Test Cases Trend widget tracks the number of test cases created over a period of time, helping you visualize how your test suite is growing.
 
 ### How it works?
 
-* This widget helps you understand the overall issue status of your test automation or manual efforts.
-* See if the issues are increasing or decreasing over time.
+* Displays a trend line of test cases created over the selected time period.
+* Use this to monitor the pace of test case creation across your team.
 
 ### Value Proposition
 
-By using this widget, you can get a quick overview of the issues detected in your test automation or manual efforts. This helps you optimize your testing efforts and improve the overall quality of your website or web application.
+This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and ensure consistent test coverage as your product grows.
 
-## Test Cases Types 
+## Test Runs Summary
 
-The Test Cases Types widget provides a detailed breakdown of the types of test cases created in your test automation or manual efforts. It displays the total number of Regression test cases, SMOKE & Sanity test cases, and any other Hybrid test cases created.
+The Test Runs Summary widget provides an overall summary of your test runs, with the data split by test instance statuses and their counts.
 
 ### How it works?
 
-* This widget helps you understand the types of test cases created in your test automation or manual efforts.
-* It provides a detailed breakdown of the Regression test cases, SMOKE & Sanity test cases, and any other Hybrid test cases created.
-* You can use this widget to identify the most effective type of test cases for your website or web application.
+* Displays the total number of test runs and the breakdown of test instances by status (Not Started, Passed, Failed, Skipped, and custom statuses).
+* Quickly identify test runs with the highest number of failed or pending instances.
 
 ### Value Proposition
 
-By using this widget, you can get insights into the types of test cases created in your test automation or manual efforts. This helps you optimize your testing efforts and choose the most effective type of test cases for your website or web application.
+This widget gives you a high-level view of test run health across your project, helping you prioritize runs that need attention and track overall execution progress.
+
+## Milestone Trends
+
+The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs.
+
+### How it works?
+
+* Each bar represents a milestone, with stacked segments showing the count of test instances by status.
+* Supported statuses include **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
+* Filter the data by date range to analyze milestone performance over specific time periods.
+
+### Value Proposition
+
+This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort.
 
 ## Milestone Trends
 
