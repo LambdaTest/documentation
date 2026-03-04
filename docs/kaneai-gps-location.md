@@ -1,9 +1,9 @@
 ---
 id: kaneai-gps-location
-title: GPS location mocking for Mobile App Authoring
+title: GPS Location Mocking for Mobile App and Mobile Browser Authoring
 hide_title: false
 sidebar_label: GPS Location
-description: Learn how to use GPS Location Override feature in KaneAI for testing location-based mobile app functionalities
+description: Learn how to use GPS Location Override feature in KaneAI for testing location-based functionalities in Mobile App and Mobile Browser sessions
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -41,13 +41,15 @@ canonical: https://www.testmuai.com/support/docs/kaneai-gps-location//
     }}
 ></script>
 
-> This document provides detailed instructions for utilizing GPS Location Override feature in KaneAI's mobile app testing. It covers how to set GPS coordinates during session initialization to test location-based application behavior accurately.
+> This document provides detailed instructions for utilizing the GPS Location Override feature in KaneAI for both Mobile App and Mobile Browser testing. It covers how to set GPS coordinates at the start of a session as well as within a running session to test location-based application behavior accurately.
 
 ## Overview
 
 Testing location-based application behavior (such as geo-restricted content, regional UI, compliance flows, or location-aware features) is challenging when device GPS coordinates are dynamic or tied to the physical location of the tester.
 
 The GPS Location Override feature solves this problem by allowing users to explicitly define latitude and longitude values during session initialization. This ensures consistent, repeatable, and deterministic testing of location-dependent scenarios on supported mobile devices.
+
+This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
 
 ## How To Use
 
@@ -78,10 +80,8 @@ GPS coordinates can be verified
 
 ## Limitations
 
-- GPS override is applied only during authoring session initialization
-- GPS coordinates cannot be changed while the session is running
-- Replay/Edit sessions reuse GPS values from the original session
-- Currently not supported for Mobile Browser sessions
+- GPS override is applied only during session initialization and can be changed mid-session.
+- Replay/Edit sessions reuse GPS values from the original session.
 
 ## Troubleshooting
 
@@ -97,16 +97,6 @@ GPS coordinates can be verified
 - Verify that latitude and longitude values are within valid ranges
 - Ensure values are passed as valid numbers or numeric strings
 
-
-### Feature Not Working in Mobile Browser
-
-**Issue:** GPS override Currently not suported for mobile browser testing.
-
-**Reason:**
-- GPS Location Override is not currently supported for Mobile Browser sessions
-
-**Workaround:**
-- Use Mobile App testing for GPS-dependent scenarios
 
 ---
 
