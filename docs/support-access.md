@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # <BrandName /> Support Access
 ***
-The Support Access feature allows <BrandName /> to take access to your <BrandName /> account and log in on your behalf from the backend. By granting access to your account, our team can help you with debugging issues or do activities on your behalf. You can revoke this access anytime
+The Support Access feature allows authorised TestMu AI support personnel to temporarily access your TestMu AI account for triaging and technical assistance purposes. This access is granted only with your consent and can be revoked at any time.
 
 :::tip Quick Link
 You can directly navigate to the Support Access page by this [**link**](https://accounts.lambdatest.com/support).
