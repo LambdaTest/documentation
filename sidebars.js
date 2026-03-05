@@ -1249,6 +1249,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Features & Metrics",
+        id: "agent-features-and-metrics",
+      },
+      {
+        type: "doc",
         label: "Test Your First AI Agent",
         id: "testing-your-first-ai-agent",
       },
