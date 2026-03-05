@@ -62,7 +62,8 @@ The platform supports **5 agent types**:
 
 ## Chat Agent
 
-### Features
+<Tabs>
+<TabItem value="features" label="Features" default>
 
 #### Workflow-Based Test Generation
 
@@ -129,7 +130,14 @@ The platform supports **5 agent types**:
 
 #### Go-Live Assessment
 
-- **Production Readiness Verdict**: GREEN (Ready), YELLOW (Ready with Caveats), RED (Not Ready)
+:::info Production Readiness Verdicts
+| Verdict | Meaning |
+|---------|---------|
+| 🟢 **GREEN** | Ready for production |
+| 🟡 **YELLOW** | Ready with caveats |
+| 🔴 **RED** | Not ready |
+:::
+
 - **Overall Score**: Weighted composite score (0–100)
 - **Confidence Level**: Based on number of evaluations run
   - HIGH: 100+ evaluations
@@ -149,9 +157,12 @@ The platform supports **5 agent types**:
 - **Pause/Resume**: Temporarily pause and resume scheduled runs
 - **Run History**: Track all scheduled execution results
 
-### Metrics
+</TabItem>
+<TabItem value="metrics" label="Metrics">
 
-Chat agents are evaluated on **9 quality metrics**, each scored on a 0–100% scale:
+:::tip
+Chat agents are evaluated on **9 quality metrics**, each scored on a **0–100% scale**.
+:::
 
 | # | Metric | What It Measures |
 |---|--------|-----------------|
@@ -176,15 +187,19 @@ Chat agents are evaluated on **9 quality metrics**, each scored on a 0–100% sc
 - Actionable recommendations
 - Validation criteria results (Pass/Fail/Unable to Verify per criterion with evidence and confidence level)
 
+</TabItem>
+</Tabs>
+
 ---
 
 ## Voice Agent
 
-### Overview
+:::note
+The Voice agent is functionally **identical to the Chat Agent**, with one key difference: conversations happen as **audio (WAV)** instead of text. The platform conducts voice-based conversations with your agent and evaluates the audio interaction using the same quality metrics.
+:::
 
-The Voice agent is functionally identical to the Chat Agent, with one key difference: **conversations happen as audio (WAV) instead of text**. The platform conducts voice-based conversations with your agent and then evaluates the audio interaction using the same quality metrics as the Chat agent.
-
-### Features
+<Tabs>
+<TabItem value="features" label="Features" default>
 
 All features from the Chat Agent are available:
 
@@ -199,28 +214,43 @@ All features from the Chat Agent are available:
 - Go-Live assessment with production readiness verdict
 - Scheduled runs
 
-**What's Different:**
-
+:::caution What's Different from Chat
 - Conversations with the agent are conducted via **audio (WAV)** instead of text messages
 - The agent's voice responses are captured and transcribed for evaluation
 - Evaluation is performed on the full audio conversation transcript
+:::
 
-### Metrics
+</TabItem>
+<TabItem value="metrics" label="Metrics">
 
-Same **9 quality metrics** as the Chat agent (Bias Detection, Hallucination Detection, Completeness, Context Awareness, Response Quality, Conversation Flow, User Satisfaction, File Handling Quality, File Generation Accuracy).
+Same **9 quality metrics** as the Chat agent:
+
+| # | Metric |
+|---|--------|
+| 1 | Bias Detection |
+| 2 | Hallucination Detection |
+| 3 | Completeness |
+| 4 | Context Awareness |
+| 5 | Response Quality |
+| 6 | Conversation Flow |
+| 7 | User Satisfaction |
+| 8 | File Handling Quality |
+| 9 | File Generation Accuracy |
+
+</TabItem>
+</Tabs>
 
 ---
 
 ## Phone Caller Inbound Agent
 
-### Overview
+:::info Two Evaluation Modes
+- **Pre-evaluation** — The platform simulates customers calling your voice agent with live test calls, then evaluates the resulting conversations
+- **Post-evaluation** — Upload your production call recordings and transcripts from real customer interactions for evaluation on the platform
+:::
 
-Phone Caller Inbound agents support two evaluation modes:
-
-- **Pre-evaluation**: The platform simulates customers calling your voice agent with live test calls, then evaluates the resulting conversations
-- **Post-evaluation**: Upload your production call recordings and transcripts from real customer interactions for evaluation on the platform
-
-### Features — Pre-evaluation (Live Test Calls)
+<Tabs>
+<TabItem value="pre-eval" label="Pre-evaluation (Live Test Calls)" default>
 
 #### Phone Number Management
 
@@ -266,7 +296,8 @@ Phone Caller Inbound agents support two evaluation modes:
 - **Call Duration Tracking**: Live duration counter during active calls
 - **Call Termination**: End calls in progress if needed
 
-### Features — Post-evaluation (Production Recording Analysis)
+</TabItem>
+<TabItem value="post-eval" label="Post-evaluation (Recording Analysis)">
 
 #### Voice Analytics
 
@@ -285,11 +316,20 @@ Phone Caller Inbound agents support two evaluation modes:
 - **DTMF Detection**: Phone keypad inputs (0–9, *, #) captured and displayed in transcript
 - **Download**: Download recording audio and transcript files
 
-### Features — Shared (Both Pre & Post Evaluation)
+</TabItem>
+<TabItem value="shared" label="Shared (Both Modes)">
 
 #### Go-Live Assessment
 
-- **Production Readiness Verdict**: GREEN / YELLOW / RED / NO_DATA
+:::info Production Readiness Verdicts
+| Verdict | Confidence Threshold |
+|---------|---------------------|
+| 🟢 **GREEN** | Score ≥ 80 — Ready for Production |
+| 🟡 **YELLOW** | Score 65–79 — Ready with Caveats |
+| 🔴 **RED** | Score < 65 — Not Ready |
+| ⚪ **NO_DATA** | Insufficient data to assess |
+:::
+
 - **Overall Score & Confidence**: Weighted score with confidence based on call volume
   - HIGH: 100+ calls analyzed
   - MEDIUM: 50–99 calls
@@ -314,9 +354,12 @@ Phone Caller Inbound agents support two evaluation modes:
 - **Pause/Resume**: Temporarily pause and resume scheduled runs
 - **Run History**: Track all scheduled execution results
 
-### Metrics
+</TabItem>
+<TabItem value="metrics" label="Metrics">
 
-Phone Caller agents are evaluated across **8 metric categories** with **30+ individual metrics**:
+:::tip
+Phone Caller agents are evaluated across **8 metric categories** with **30+ individual metrics**.
+:::
 
 #### A. Conversation Flow & Interaction Dynamics
 
@@ -381,7 +424,9 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 #### H. Detected Issue Tags (Automated)
 
-The system automatically detects and tags the following issues:
+:::warning
+The system automatically detects and flags the following issues in every call recording.
+:::
 
 | Issue Tag | What It Detects |
 |-----------|----------------|
@@ -397,33 +442,32 @@ The system automatically detects and tags the following issues:
 | No Response | Agent silence when a response was expected |
 | BLANK/EMPTY STT | Empty transcription segments |
 
-**Threshold Configurations:**
+#### Threshold Configurations
 
-| Metric | Excellent | Good | Poor |
-|--------|-----------|------|------|
+| Metric | 🟢 Excellent | 🟡 Good | 🔴 Poor |
+|--------|-------------|--------|--------|
 | Average Latency | ≤ 1000ms | ≤ 2500ms | > 2500ms |
 | Words Per Minute | ≥ 160 (Fast) | 131–160 (Good) | < 110 (Slow) |
 | Voice Quality Index | ≥ 2.5 / 5 | — | < 2.5 / 5 |
 | Average Pitch | 85–300 Hz (Normal) | — | < 85 or > 300 Hz |
 
+</TabItem>
+</Tabs>
+
 ---
 
 ## Phone Caller Outbound Agent
 
-### Overview
+:::note
+Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre-evaluation and Post-evaluation) and shares all features, with a few key differences in pre-evaluation mode only.
+:::
 
-Phone Caller Outbound supports the same two evaluation modes as Inbound:
-
-- **Pre-evaluation**: The platform triggers your agent to make outbound calls, then evaluates the conversations
-- **Post-evaluation**: Upload production call recordings and transcripts for evaluation
-
-### Differences from Inbound
-
-Phone Caller Outbound shares all features with Phone Caller Inbound (both pre-evaluation and post-evaluation), with the following differences in the pre-evaluation mode:
+<Tabs>
+<TabItem value="differences" label="Differences from Inbound" default>
 
 #### Outbound-Specific Pre-evaluation Features
 
-- **Scenario Generation**: Generate up to 7 outbound test scenarios (vs. 20 for inbound)
+- **Scenario Generation**: Generate up to **7** outbound test scenarios (vs. 20 for inbound)
 - **Caller Profile Selection**: Select an outbound caller profile when generating scenarios
 - **Outbound Number Pool**: Reserve phone numbers from the outbound pool for test calls
 - **Passive Mode**: Listen to outbound calls without interfering (for QA monitoring)
@@ -435,17 +479,24 @@ Phone Caller Outbound shares all features with Phone Caller Inbound (both pre-ev
 - **Reservations**: View and manage per-suite number reservations
 - **Clear Reservations**: Release reserved numbers when done
 
-All other features — phone number management, voice configuration, test suites, call execution, post-evaluation (voice analytics, recording upload, batch analysis), go-live assessment, metrics, and scheduling — are identical to Phone Caller Inbound.
+:::tip
+All other features — phone number management, voice configuration, test suites, call execution, post-evaluation (voice analytics, recording upload, batch analysis), go-live assessment, metrics, and scheduling — are **identical to Phone Caller Inbound**.
+:::
 
-### Metrics
+</TabItem>
+<TabItem value="metrics" label="Metrics">
 
-Same as Phone Caller Inbound (all 8 categories, 30+ metrics).
+Same as Phone Caller Inbound — all **8 categories** and **30+ metrics**.
+
+</TabItem>
+</Tabs>
 
 ---
 
 ## Image Analyzer Agent
 
-### Features
+<Tabs>
+<TabItem value="features" label="Features" default>
 
 #### Image Analysis
 
@@ -458,21 +509,30 @@ Same as Phone Caller Inbound (all 8 categories, 30+ metrics).
 
 Three types of evaluation criteria can be created:
 
-**Brand Guideline Criteria:**
+<Tabs>
+<TabItem value="brand" label="Brand Guidelines">
+
 - Allowed colors and prohibited colors
 - Required fonts
 - Logo requirements (text description)
 
-**Technical Specification Criteria:**
+</TabItem>
+<TabItem value="technical" label="Technical Specifications">
+
 - Required dimensions (width × height)
 - Aspect ratio requirements
 - Allowed file formats
 - Maximum file size
 - Minimum resolution
 
-**Custom Rule Criteria:**
+</TabItem>
+<TabItem value="custom" label="Custom Rules">
+
 - Freeform rule text
 - Checklist items to validate
+
+</TabItem>
+</Tabs>
 
 All criteria support:
 - Active/Inactive toggle (only active criteria are used during analysis)
@@ -492,7 +552,8 @@ All criteria support:
 - **Quality Trends**: Daily score breakdown over the last 30 days with bar chart visualization
 - **Prompt Performance**: Top 20 prompts ranked by average quality score, showing min/max scores, usage count, and comparison vs. overall average
 
-### Metrics
+</TabItem>
+<TabItem value="metrics" label="Metrics">
 
 | Metric | Scale | What It Measures |
 |--------|-------|-----------------|
@@ -504,17 +565,21 @@ All criteria support:
 
 **Quality Score Interpretation:**
 
-| Score Range | Label | Color |
-|-------------|-------|-------|
-| 90–100 | Excellent | Green |
-| 80–89 | Good | Green |
-| 60–79 | Fair | Yellow/Orange |
-| 0–59 | Poor | Red |
+| Score Range | Label | Rating |
+|-------------|-------|--------|
+| 90–100 | Excellent | 🟢 |
+| 80–89 | Good | 🟢 |
+| 60–79 | Fair | 🟡 |
+| 0–59 | Poor | 🔴 |
 
 **Custom Criteria Compliance:**
+
 For each active criterion, results show:
-- Compliance status: PASS, FAIL, or PARTIAL (color-coded badges)
+- Compliance status: **PASS**, **FAIL**, or **PARTIAL** (color-coded badges)
 - Compliance details with specific observations
+
+</TabItem>
+</Tabs>
 
 ---
 
@@ -528,21 +593,27 @@ For each active criterion, results show:
 
 ### Test Profiles
 
-- Available for: Chat, Voice, Phone Caller (Inbound/Outbound)
+:::note Available for: Chat · Voice · Phone Caller (Inbound/Outbound)
+:::
+
 - Custom key-value data with typed fields (string, number, boolean, email, URL, textarea, JSON)
 - Default profile marking
 - Import/Export as JSON
 
 ### Personas
 
-- Available for: Chat, Voice, Phone Caller (Inbound/Outbound)
+:::note Available for: Chat · Voice · Phone Caller (Inbound/Outbound)
+:::
+
 - Pre-built persona library
 - Custom persona creation
 - Persona assignment to scenarios
 
 ### Scheduling
 
-- Available for: Chat, Voice, Phone Caller (Inbound/Outbound)
+:::note Available for: Chat · Voice · Phone Caller (Inbound/Outbound)
+:::
+
 - Cron-based scheduling (Hourly, Daily, Weekdays, Weekly, Monthly, Custom)
 - Timezone support (full IANA timezone list)
 - Pause/Resume/Delete scheduled runs
@@ -550,18 +621,24 @@ For each active criterion, results show:
 
 ### Go-Live Assessment
 
-- Available for: Chat, Voice, Phone Caller (Inbound/Outbound)
-- Production readiness verdict (GREEN/YELLOW/RED)
-  - GREEN: Score ≥ 80 (Ready for Production)
-  - YELLOW: Score 65–79 (Ready with Caveats)
-  - RED: Score < 65 (Not Ready)
+:::note Available for: Chat · Voice · Phone Caller (Inbound/Outbound)
+:::
+
+| Verdict | Score Range | Meaning |
+|---------|------------|---------|
+| 🟢 GREEN | ≥ 80 | Ready for Production |
+| 🟡 YELLOW | 65–79 | Ready with Caveats |
+| 🔴 RED | < 65 | Not Ready |
+
 - Overall score with confidence level
 - Scenario coverage analysis
 - AI-powered risk assessment and recommendations
 
 ### Environment Management
 
-- Available for: All agent types
+:::note Available for: All agent types
+:::
+
 - Create and manage test environments
 - Variable management (name, value, type, persistence)
 - Per-environment variable scoping
@@ -569,7 +646,9 @@ For each active criterion, results show:
 
 ### Validation Criteria
 
-- Available for: Chat, Voice, Phone Caller (Inbound/Outbound)
+:::note Available for: Chat · Voice · Phone Caller (Inbound/Outbound)
+:::
+
 - Custom pass/fail criteria per scenario
 - Evidence-based validation with confidence levels (High/Medium/Low)
 - Compliance percentage tracking
@@ -580,60 +659,60 @@ For each active criterion, results show:
 ## Feature Availability Matrix
 
 | Feature | Chat | Voice | Phone Caller Inbound | Phone Caller Outbound | Image Analyzer |
-|---------|------|-------|---------------------|-----------------------|---------------|
-| Workflow & Document Upload | Yes | Yes | No | No | No |
-| AI Scenario Generation | Yes | Yes | Yes (up to 20) | Yes (up to 7) | No |
-| Manual Scenario Creation | Yes | Yes | Yes | Yes | No |
-| Test Suites | Yes | Yes | Yes | Yes | No |
-| Endpoint Profiles | Yes | Yes | No | No | No |
-| Test Profiles | Yes | Yes | Yes | Yes | No |
-| Personas | Yes | Yes | Yes | Yes | No |
-| Playground | Yes | Yes | No | No | No |
-| Audio-Based Conversations | No | Yes | No | No | No |
-| Phone Numbers | No | No | Yes | Yes | No |
-| Voice Selection (per scenario) | No | No | Yes | Yes | No |
-| Background Noise Simulation | No | No | Yes | Yes | No |
-| Live Call Execution (Pre-eval) | No | No | Yes | Yes | No |
-| Production Recording Upload (Post-eval) | No | No | Yes | Yes | No |
-| Batch Recording Analysis | No | No | Yes | Yes | No |
-| Call Recording Playback | No | No | Yes | Yes | No |
-| DTMF Support | No | No | Yes | Yes | No |
-| Passive Mode | No | No | No | Yes | No |
-| Outbound Pool | No | No | No | Yes | No |
-| Image Upload & Analysis | No | No | No | No | Yes |
-| Custom Evaluation Criteria | No | No | No | No | Yes |
-| Brand Guideline Checks | No | No | No | No | Yes |
-| Image Analytics Dashboard | No | No | No | No | Yes |
-| Metric Thresholds | Yes | Yes | Yes | Yes | No |
-| Go-Live Assessment | Yes | Yes | Yes | Yes | No |
-| Validation Criteria | Yes | Yes | Yes | Yes | No |
-| Scheduled Runs | Yes | Yes | Yes | Yes | No |
-| HyperExecute Integration | Yes | Yes | No | No | No |
-| Import/Export Profiles | Yes | Yes | No | No | No |
+|---------|:----:|:-----:|:--------------------:|:---------------------:|:--------------:|
+| Workflow & Document Upload | ✅ | ✅ | ❌ | ❌ | ❌ |
+| AI Scenario Generation | ✅ | ✅ | ✅ (up to 20) | ✅ (up to 7) | ❌ |
+| Manual Scenario Creation | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Test Suites | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Endpoint Profiles | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Test Profiles | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Personas | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Playground | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Audio-Based Conversations | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Phone Numbers | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Voice Selection (per scenario) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Background Noise Simulation | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Live Call Execution (Pre-eval) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Production Recording Upload (Post-eval) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Batch Recording Analysis | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Call Recording Playback | ❌ | ❌ | ✅ | ✅ | ❌ |
+| DTMF Support | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Passive Mode | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Outbound Pool | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Image Upload & Analysis | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Custom Evaluation Criteria | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Brand Guideline Checks | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Image Analytics Dashboard | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Metric Thresholds | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Go-Live Assessment | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Validation Criteria | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Scheduled Runs | ✅ | ✅ | ✅ | ✅ | ❌ |
+| HyperExecute Integration | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Import/Export Profiles | ✅ | ✅ | ❌ | ❌ | ❌ |
 
 ---
 
 ## Metrics Availability Matrix
 
 | Metric Category | Chat | Voice | Phone Caller Inbound | Phone Caller Outbound | Image Analyzer |
-|----------------|------|-------|---------------------|-----------------------|---------------|
-| Bias Detection | Yes | Yes | No | No | No |
-| Hallucination Detection | Yes | Yes | No | No | No |
-| Completeness | Yes | Yes | No | No | No |
-| Context Awareness | Yes | Yes | No | No | No |
-| Response Quality | Yes | Yes | No | No | No |
-| Conversation Flow | Yes | Yes | No | No | No |
-| User Satisfaction | Yes | Yes | No | No | No |
-| File Handling Quality | Yes | Yes | No | No | No |
-| File Generation Accuracy | Yes | Yes | No | No | No |
-| Latency & Interaction Dynamics | No | No | Yes | Yes | No |
-| Accuracy & Effectiveness (FCR, etc.) | No | No | Yes | Yes | No |
-| CSAT & User Experience | No | No | Yes | Yes | No |
-| Business Operational Metrics | No | No | Yes | Yes | No |
-| Audio Voice Quality | No | No | Yes | Yes | No |
-| STT Evaluation | No | No | Yes | Yes | No |
-| Issue Detection Tags | No | No | Yes | Yes | No |
-| Validation Criteria | Yes | Yes | Yes | Yes | No |
-| Image Quality Score | No | No | No | No | Yes |
-| Prompt Compliance | No | No | No | No | Yes |
-| Brand/Technical Spec Compliance | No | No | No | No | Yes |
+|----------------|:----:|:-----:|:--------------------:|:---------------------:|:--------------:|
+| Bias Detection | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Hallucination Detection | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Completeness | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Context Awareness | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Response Quality | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Conversation Flow | ✅ | ✅ | ❌ | ❌ | ❌ |
+| User Satisfaction | ✅ | ✅ | ❌ | ❌ | ❌ |
+| File Handling Quality | ✅ | ✅ | ❌ | ❌ | ❌ |
+| File Generation Accuracy | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Latency & Interaction Dynamics | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Accuracy & Effectiveness (FCR, etc.) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| CSAT & User Experience | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Business Operational Metrics | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Audio Voice Quality | ❌ | ❌ | ✅ | ✅ | ❌ |
+| STT Evaluation | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Issue Detection Tags | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Validation Criteria | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Image Quality Score | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Prompt Compliance | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Brand/Technical Spec Compliance | ❌ | ❌ | ❌ | ❌ | ✅ |
