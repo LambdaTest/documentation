@@ -70,8 +70,8 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: 'LambdaTest',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo_dark.svg',
+        src: 'https://www.testmuai.com/support/img/logo.svg',
+        srcDark: 'https://www.testmuai.com/support/img/logo_dark.svg',
         href: 'https://www.lambdatest.com',
         target: '_self',
         width: '147',
