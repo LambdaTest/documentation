@@ -208,11 +208,13 @@ KaneAI allows you to retrieve specific information from your web page during tes
 
 ## Conditional Actions
 
-Highlight that nested conditions are not yet supported. Additionally usage of modules within if else conditions is part of the roadmap.
+Use conditional logic to execute actions based on specific conditions on the page. KaneAI supports **If / Else‑If / Else** blocks with multiple conditions combined via AND / OR logic. You can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [Conditional Logic](/support/docs/kaneai-conditional-logic/).
 
-Use conditional logic to execute actions based on specific conditions on the page.
+:::note
+Nested conditions (an If / Else block inside another If / Else block) are not supported.
+:::
 
-**Conditional Click** 
+**Conditional Click**
 Example:
  **if pop up is present in the viewport then click on it**: clicks on a pop-up element if it is visible within the current view.
 

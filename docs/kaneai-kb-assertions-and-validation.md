@@ -257,7 +257,7 @@ if price < 200 then click "Add to Cart" else select the second product
 ```
 
 :::note
-Nested conditions are **not yet supported**. Keep conditional logic simple and flat. For complex branching, break the test into separate test cases.
+Nested conditions (an If / Else block inside another If / Else block) are **not supported**. Keep conditional logic simple and flat. For complex branching, use Else‑If branches or break the test into separate test cases. See the full [Conditional Logic](/support/docs/kaneai-conditional-logic/) guide.
 :::
 
 ## Unsupported Assertions (Current Limitations)
