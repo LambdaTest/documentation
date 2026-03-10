@@ -1378,6 +1378,7 @@ module.exports = {
               "kaneai-totp",
               "kaneai-database",
               "kaneai-rename-instructions",
+              "kaneai-conditional-logic",
             ],
           },
           {
