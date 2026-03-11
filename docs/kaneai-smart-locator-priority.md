@@ -147,4 +147,4 @@ In most cases:
 
 - [Failure Conditions](/support/docs/kaneai-failure-conditions/)
 - [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)
-- [Custom Instructions in KaneAI Test Generation](/support/docs/generate-test-cases/)
+- [Custom Instructions in KaneAI Test Generation](/support/docs/generate-test-cases-with-ai/)
