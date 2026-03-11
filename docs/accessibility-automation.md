@@ -65,6 +65,12 @@ Our goal is **a web that's accessible to all**.  Accessibility automation helps 
 - **Issue Detection:** Get clear reports highlighting the specific accessibility roadblocks found, their severity (critical, high, medium, low), and suggestions on how to fix them.
 - **Automated Scans:** These tools meticulously scan your web pages, checking them against a comprehensive set of accessibility best practices. This includes identifying issues like missing image descriptions (alt text), insufficient color contrast between text and background, or incorrect use of ARIA attributes (accessibility features for screen readers and other assistive technologies).
 
+:::note Playwright browser limitation
+For **Playwright Accessibility Automation**, use the **Chrome** browser.
+
+`pw-chromium` is currently not supported for accessibility report generation because the required accessibility extension does not load reliably in Playwright bundled Chromium sessions.
+:::
+
 ## The Power Behind the Scenes
 
 - **Rules Engine:** This is the brain of the operation, defining the accessibility rules based on established guidelines.

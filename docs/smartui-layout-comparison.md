@@ -214,5 +214,6 @@ describe('Layout Structure Test', () => {
 ## Additional Resources
 
 - [SmartUI SDK Documentation](/docs/smartui-sdk-config-options)
-- [Visual Regression Testing Guide](/docs/smart-visual-testing)
+- [Visual Regression Testing Guide](/support/docs/smart-visual-regression-testing/)
 - [Comparison Settings Documentation](/docs/test-settings-options)
+- [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)

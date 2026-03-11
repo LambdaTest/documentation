@@ -2573,6 +2573,7 @@ module.exports = {
               "custom-dns-map",
               "network-data-masking",
               "upload-files-using-lambdatest",
+              "mock-video-injection-web-automation-selenium-chromium",
               "setup-pre-run-executable",
               "har-log-viewer",
               "build-split",
@@ -3410,6 +3411,11 @@ module.exports = {
                 type: "doc",
                 label: "Selenium Hooks",
                 id: "selenium-visual-regression",
+              },
+              {
+                type: "doc",
+                label: "Hooks Layout + Full Page",
+                id: "smartui-hooks-layout-fullpage-smartignore",
               },
               {
                 type: "doc",

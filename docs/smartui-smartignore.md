@@ -80,6 +80,29 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
   height="200"
   className='doc_img'
 />
+
+#### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
+
+If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+
+```javascript
+const capabilities = {
+  browserName: 'Chrome',
+  'LT:Options': {
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    visual: true,
+    'smartUI.project': 'My-Project',
+    ignoreType: ['smartignore']
+  }
+};
+```
+
+> Smart Ignore is a strategy mode. Prefer `ignoreType` strategy configuration over a standalone `smartignore: true` flag.
+
+For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
+- [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
+
 ## Use Cases of Smart Ignore
 
 #### Content Management Systems
