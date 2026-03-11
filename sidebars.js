@@ -3056,7 +3056,8 @@ module.exports = {
               "device-passcode-appautomation",
               "set-device-dark-mode",
               "smart-heal-appium",
-              "apple-pay-auto"
+              "apple-pay-auto",
+              "button-text-click"
             ],
           },
           {
