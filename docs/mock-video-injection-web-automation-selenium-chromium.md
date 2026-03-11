@@ -233,20 +233,6 @@ Adjust the `--use-file-for-fake-video-capture` path to match your target platfor
 | `--use-file-for-fake-video-capture=<path>` | Uses the specified file as the fake camera feed |
 | `--use-file-for-fake-audio-capture=<path>` | Uses the specified file as fake microphone input (`.wav` format) |
 
-## Platform Compatibility
-
-:::caution macOS limitation
-On **macOS**, `getUserMedia()` correctly returns a `MediaStream` with valid track label, resolution (`640x360`), and frame rate (`30fps`). However, Chrome on macOS does **not** decode MJPEG frames into the `<video>` element rendering pipeline. `readyState` stays at `0` and `videoWidth` / `videoHeight` remain `0`.
-
-Use **Linux** for mock video injection tests that require visual verification or canvas-based frame analysis. macOS is suitable only for API-level checks that validate stream properties without rendering frames.
-:::
-
-| Platform | getUserMedia | Track Label | Resolution | Frame Rate | Video Element Rendering |
-|---|---|---|---|---|---|
-| Linux (Ubuntu 20 / Chrome 145) | PASS | File-based | 640x360 | 30fps | PASS |
-| macOS (Sequoia / Chrome 145) | PASS | File-based | 640x360 | 30fps | FAIL (`readyState=0`) |
-| Windows | Untested | — | — | — | — |
-
 ## Troubleshooting
 
 | Issue | Solution |
