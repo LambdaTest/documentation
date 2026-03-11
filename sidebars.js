@@ -1330,6 +1330,7 @@ module.exports = {
               "kaneai-kb-api-testing-and-network-assertions",
               "kaneai-kb-js-snippets-and-workarounds",
               "kaneai-failure-conditions",
+              "kaneai-smart-locator-priority",
             ],
           },
           {
