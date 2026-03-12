@@ -78,6 +78,10 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/performance_testing/index.html"></iframe>
                     </TabItem>
+                    <TabItem value="analytics" label="Analytics">
+                        <iframe className="embed-responsive-item"
+                            src="https://swagger-api-support.lambdatest.com/analytics/index.html"></iframe>
+                    </TabItem>
                 </Tabs>
             </div>
         </Layout>
