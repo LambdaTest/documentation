@@ -157,6 +157,35 @@ To capture a screenshot of the content currently visible in your viewport, rathe
     ],
 ```
 
+<hr/>
+
+**customViewports**
+
+The `customViewports` property provides a way to define precisely which browser + viewport combinations should be rendered. This bypasses the default **cartesian product behavior** (where every viewport is automatically rendered on every specified browser). 
+
+This is particularly useful if you need to enforce a specific screen size only on Safari, but another screen size across Chrome and Firefox.
+
+:::caution Mutually Exclusive Configurations
+The `customViewports` option and the standard `browsers` / `viewports` arrays are **mutually exclusive**. 
+- To use the standard cartesian matrix, configure `browsers` + `viewports`.
+- To specify distinct pairs, use `customViewports` **only**, and ensure `browsers` and `viewports` are removed from your `web` object.
+:::
+
+**How to configure `customViewports`:**
+
+Below is an example of providing targeted sizes depending on the browser context. When using this configuration, SmartUI will generate screenshots only for the explicitly declared matches, allowing for highly optimized test metrics. 
+
+```json title="Sample `web` object with customViewports"
+    "customViewports": [
+      { "browser": "chrome", "viewport": { "width": 1200, "height": 800 } },
+      { "browser": "chrome", "viewport": { "width": 375, "height": 667 } },
+      { "browser": "firefox", "viewport": { "width": 1200, "height": 800 } },
+      { "browser": "safari", "viewport": { "width": 1200 } }
+    ]
+```
+
+*Note: As demonstrated with `safari` above, the `height` property within a viewport object is optional. If omitted, SmartUI performs a full-page capture automatically.*
+
 </TabItem>
 
 <TabItem value='mobile' label='Mobile Configuration'>
