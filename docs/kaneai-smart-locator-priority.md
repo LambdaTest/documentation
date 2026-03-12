@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Smart Locator Priority
 
-Smart Locator Priority lets your organization define the order in which KaneAI should prefer supported locator strategies inside the **Smart Locator** workflow.
+Smart Locator Priority lets your organization define the order in which KaneAI should prefer supported locator strategies while authoring test cases in KaneAI.
 
 This is useful when your application is more stable with one locator type over another and you want that preference applied consistently at the organization level.
 
@@ -55,6 +55,7 @@ Smart Locator currently supports prioritizing these locator strategies:
 
 1. **CSS selector**
 2. **XPath**
+3. **Full XPath**
 
 The locator type placed at the top of the list is given higher priority than the locator types below it.
 
@@ -75,18 +76,9 @@ You may want to adjust the default order if:
 
 ## Where to Find It
 
-You can configure Smart Locator Priority from:
-
-1. **Organization Settings**
-2. **Org Product Preferences**
-3. **Kane AI**
-4. **Smart locator priority**
-
-Direct access link:
-
 - [Open Smart Locator Priority in Organization Settings](https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority)
 
-The following screen shows where the setting is located inside Organization Settings:
+The following screen shows where the setting is located:
 
 <img
   loading="lazy"
@@ -104,33 +96,11 @@ The following screen shows where the setting is located inside Organization Sett
 5. Drag and drop the supported locator types into your preferred order.
 6. Keep the most preferred locator strategy at the top of the list.
 
-Once updated, the new order becomes the organization-level Smart Locator preference.
-
-## Current Supported Locator Types
-
-At the moment, the UI supports these locator types:
-
-- **CSS selector**
-- **XPath**
-
-The design is intended to support additional locator types in the future.
-
-## Organization-Level Behavior
-
-Smart Locator Priority is configured at the organization level so teams can keep one shared preference for locator resolution behavior.
+Once updated, the new order becomes the organization-level Smart Locator preference for any newly authored or edited test cases in KaneAI.
 
 :::note
-This setting is intended for organization-wide KaneAI behavior and is typically managed by organization admins.
+The change in priority will not reflect in already authored test cases and will only be updated when a test step is authored or re-authored in KaneAI playground.
 :::
-
-## Recommended Default Approach
-
-If you do not have a strong reason to change the order, keep the default order that works best for your team’s application stability.
-
-In most cases:
-
-- use **CSS selector** first when your application has stable DOM structure and consistent attributes
-- use **XPath** first only when your workflows depend heavily on XPath-based targeting
 
 ## Best Practices
 
