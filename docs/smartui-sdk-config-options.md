@@ -175,7 +175,7 @@ The `customViewports` option and the standard `browsers` / `viewports` arrays ar
 
 Below is an example of providing targeted sizes depending on the browser context. When using this configuration, SmartUI will generate screenshots only for the explicitly declared matches, allowing for highly optimized test metrics. 
 
-```json title="Sample `web` object with customViewports"
+```json title="Sample web object with customViewports"
     "customViewports": [
       { "browser": "chrome", "viewport": { "width": 1200, "height": 800 } },
       { "browser": "chrome", "viewport": { "width": 375, "height": 667 } },
