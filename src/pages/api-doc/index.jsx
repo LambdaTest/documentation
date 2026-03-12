@@ -34,7 +34,7 @@ function ApiDoc() {
             description="Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs for Selenium automation, App automation, Smart UI automation and Automated screenshots. ">
             <div className="lambda-api">
                 <Tabs groupId="key" queryString>
-                    <TabItem value="selenium-automation-api" label="Selenium Automation API">
+                    <TabItem value="selenium-automation-api" label="Web Automation API">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/index.html"></iframe>
                     </TabItem>
@@ -50,7 +50,7 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/smartui/index.html"></iframe>
                     </TabItem>
-                    <TabItem value="cypress-automation" label="Cypress Automation">
+                    <TabItem value="cypress-automation" label="Cypress Artifacts API">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/cypress/index.html"></iframe>
                     </TabItem>
