@@ -133,5 +133,5 @@ While executing your Test Cases every Network Throttle step will be honoered. In
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.jpeg').default} alt="throttling-command-script" className="doc_img"/>
 
 :::note
- Offline Mode is not supported yet but it will be added in future release.
+ Offline Mode is supported only for iOS devices.
 :::

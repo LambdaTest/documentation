@@ -114,8 +114,6 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 ### Offline Mode
 
-#### Android
-
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
     ```python
     caps = {
@@ -128,14 +126,11 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
-:::note
-Currently, for iOS, we do not support any capability or LambdaHook for offline mode.
-:::
 
 
 ## Toggle Offline/Online Mode via API
 
-- For android devices you can use the offline/online mode API as well within the running test session:
+- For Android and iOS devices, you can use the offline/online mode API within the running test session:
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \

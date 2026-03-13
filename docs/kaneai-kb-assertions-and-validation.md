@@ -11,6 +11,10 @@ keywords:
   - kaneai validation
   - test assertions
   - visual assertions
+  - element state assertions
+  - DOM attribute assertions
+  - CSS property assertions
+  - textual query
 url: https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation
 site_name: TestMu AI
 slug: kaneai-kb-assertions-and-validation/
@@ -18,6 +22,7 @@ slug: kaneai-kb-assertions-and-validation/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -110,6 +115,119 @@ Validate calculations and numeric values.
 assert 3 + 4 = 7
 assert the cart total equals the sum of item prices visible
 ```
+
+## Element State & Attribute Assertions
+
+Assert element states, DOM attributes, and computed CSS properties by querying the DOM directly. Describe the element using its visible text or description and state the condition you want to verify.
+
+:::note Desktop & Mobile Web Only
+Element State & Attribute Assertions are currently supported on **desktop web** and **mobile web** only. Native mobile app assertions (Android/iOS) are planned for a future phase.
+:::
+
+
+### Element State Assertions
+
+Verify the interactive state of UI elements using natural language.
+
+| State | Positive Example | Negative Example |
+|---|---|---|
+| **Enabled / Disabled** | `Assert the "Submit Order" button is enabled` | `Assert the "Authorize Payment" button is disabled` |
+| **Visible / Hidden** | `Assert the "Dashboard panel" is visible` | `Assert the "Hidden section" is not visible` |
+| **Clickable** | `Assert the "Click Me" button is clickable` | `Assert the "View Only" button is not clickable` |
+| **Present / Absent** | `Assert the "Account widget" is present` | `Assert the error banner is not present` |
+| **Checked / Unchecked** | `Assert the "Terms" checkbox is checked` | `Assert the "Newsletter" checkbox is not checked` |
+| **Toggled On / Off** | `Assert the Notifications toggle is toggled on` | `Assert the Dark Mode toggle is toggled off` |
+
+:::warning Present vs. Visible
+These two assertions behave differently when an element is not found:
+- **"Assert element is hidden"** — Element must exist in the DOM but not be displayed. Returns an **error** if the element is not found at all.
+- **"Assert element is not present"** — Element does not exist in the DOM. Returns **pass** if the element is not found.
+:::
+
+### DOM Attribute Assertions
+
+Assert the value of any HTML, ARIA, or data attribute on an element.
+
+| Category | Example |
+|---|---|
+| **ARIA** | `Assert the aria-expanded of the "Accordion Header" equals "true"` |
+| **ARIA** | `Assert the aria-label of the Close button equals "Close dialog"` |
+| **ARIA** | `Assert the role of the alert element equals "alert"` |
+| **Data attributes** | `Assert the data-testid of the "Workspace" equals "main-content"` |
+| **Data attributes** | `Assert the data-status of the "Sprint tracker" equals "active"` |
+| **HTML attributes** | `Assert the placeholder of the search input contains "Search"` |
+| **HTML attributes** | `Assert the href of the "Dashboard" link starts with "https://"` |
+| **HTML attributes** | `Assert the src of the Logo image ends with ".svg"` |
+| **Form attributes** | `Assert the action of the Signup form equals "/api/signup"` |
+| **Form attributes** | `Assert the method of the form equals "POST"` |
+
+**Attribute existence checks:**
+
+```
+Assert the Sample video has a controls attribute
+Assert the input has a required attribute
+Assert the NoAlt image does not have an alt attribute
+```
+
+### CSS Property Assertions
+
+Assert computed CSS property values for the following properties:
+
+`color` · `background-color` · `border-color` · `font-size` · `font-family` · `font-weight` · `font-style` · `display` · `visibility` · `opacity`
+
+| Category | Example |
+|---|---|
+| **Color** | `Assert the color of the "Alert message" equals "rgb(255, 0, 0)"` |
+| **Named color** | `Assert the background-color of the "Banner" equals "blue"` |
+| **Font size** | `Assert the font-size of the "Heading" equals "24px"` |
+| **Font family** | `Assert the font-family of the "Body text" contains "Arial"` |
+| **Font weight** | `Assert the font-weight of the "Bold text" equals "700"` |
+| **Font style** | `Assert the font-style of the "Quote" equals "italic"` |
+| **Display** | `Assert the display of the "Layout" equals "flex"` |
+| **Visibility** | `Assert the visibility of the "Layer" equals "hidden"` |
+| **Opacity** | `Assert the opacity of the "Watermark" equals "0.5"` |
+
+:::note CSS Value Normalization
+CSS values are automatically normalized before comparison:
+- **Colors:** Named colors (e.g., "red") are converted to RGB. All hex/rgb/rgba formats normalize to a canonical form.
+- **Font families:** Surrounding quotes are stripped.
+- **Whitespace:** Extra whitespace is collapsed.
+
+Named color normalization is exact-match only — "red" maps to `rgb(255, 0, 0)`, but shades like `#d10000` will **not** match "red". Use exact RGB values for precision.
+:::
+
+### Supported Operators
+
+**String Operators**
+
+| Operator | NL Triggers | Example |
+|---|---|---|
+| Equals | "is", "equals" | `Assert the role equals "alert"` |
+| Does not equal | "is not", "does not equal" | `Assert the type does not equal "password"` |
+| Contains | "contains", "includes" | `Assert the placeholder contains "Search"` |
+| Does not contain | "does not contain" | `Assert the href does not contain "staging"` |
+| Starts with | "starts with" | `Assert the href starts with "https://"` |
+| Does not start with | "does not start with" | `Assert the href does not start with "http://"` |
+| Ends with | "ends with" | `Assert the src ends with ".svg"` |
+| Does not end with | "does not end with" | `Assert the src does not end with ".png"` |
+
+**Numeric Operators**
+
+| Operator | NL Triggers | Example |
+|---|---|---|
+| Greater than | "is greater than" | `Assert the data-count is greater than "5"` |
+| Less than | "is less than" | `Assert the data-index is less than "10"` |
+| Greater than or equal | "is at least" | `Assert the data-score is at least "5"` |
+| Less than or equal | "is at most" | `Assert the data-priority is at most "5"` |
+
+Negation is supported across all assertion types using "NOT", "is not", "isn't", or "does not have".
+
+### Limitations
+
+- **Shadow DOM not supported:** Elements inside shadow DOM boundaries are not accessible.
+- **No regex matching:** Pattern-based matching (e.g., "Assert data-id matches `[a-f0-9-]{36}`") is not supported.
+- **Value length cap:** Attribute or CSS values exceeding 500 characters are truncated with a warning.
+- **Hidden element resolution:** Element finding relies on vision. Elements present in the DOM but not visible on the page may not be resolved correctly.
 
 ## Writing Good Assertions: Do's and Don'ts
 
@@ -266,28 +384,13 @@ These assertion types are not yet available via natural language. Use **JS snipp
 
 | Category | Example | Workaround |
 |---|---|---|
-| **Element State** (disabled/enabled) | `assert the submit button is disabled` | JS: `document.querySelector('button[type="submit"]').disabled` |
-| **CSS Properties** | `assert font size is 16px` | JS: `getComputedStyle(element).fontSize` |
 | **Specific DOM Position** | `assert the 5th table column contains "Jordan"` | JS: `document.querySelectorAll('td')[4].textContent` |
 | **Action-Based** | `assert tooltip appears after hover` | Split into: hover step → wait → assert tooltip text |
 | **Nested Conditions** | `assert A is true AND B is visible` | Split into two separate assertions |
 | **Changes Over Time** | `assert the spinner disappears after 5 seconds` | Use wait step, then assert spinner is not visible |
 
-
-### JS Snippet Workaround: Assert CSS Property
-
-```javascript
-const element = document.querySelector('.price-tag');
-const fontSize = getComputedStyle(element).fontSize;
-if (fontSize === '16px') {
-  return 'PASS: Font size is 16px';
-} else {
-  throw new Error('FAIL: Font size is ' + fontSize);
-}
-```
-
 :::info
-For the full list of JS execution options, see [JS Snippets](/support/docs/kane-ai-javascript-execution) guide.
+For the full list of JS execution options, see [JS Snippets](/support/docs/kane-ai-javascript-execution/) guide.
 :::
 
 ## Configuring Assertion Failure Behavior
