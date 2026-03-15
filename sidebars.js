@@ -1237,33 +1237,56 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started",
-        id: "getting-started-with-agent-to-agent-testing",
-
+        type: "category",
+        label: "Overview",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Getting Started",
+            id: "getting-started-with-agent-to-agent-testing",
+          },
+          {
+            type: "doc",
+            label: "Platform Overview",
+            id: "ai-agent-testing-platform-overview",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "Platform Overview",
-        id: "ai-agent-testing-platform-overview",
+        type: "category",
+        label: "Setup & Integration",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Chat Agent API Integration",
+            id: "chat-agent-api-integration",
+          },
+          {
+            type: "doc",
+            label: "Test Your First AI Agent",
+            id: "testing-your-first-ai-agent",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "Features & Metrics",
-        id: "agent-features-and-metrics",
+        type: "category",
+        label: "Reference",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Features & Metrics",
+            id: "agent-features-and-metrics",
+          },
+          {
+            type: "doc",
+            label: "FAQs",
+            id: "agent-to-agent-faqs",
+          },
+        ],
       },
-      {
-        type: "doc",
-        label: "Test Your First AI Agent",
-        id: "testing-your-first-ai-agent",
-      },
-      {
-        type: "doc",
-        label: "FAQs",
-        id: "agent-to-agent-faqs",
-      }
-
-
     ],
   ],
 
