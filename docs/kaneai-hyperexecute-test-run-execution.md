@@ -111,7 +111,7 @@ Before clicking **Execute**, you can optionally click **Advanced Configurations*
 | **Test Configuration** | Configure console logs, network logs, network full HAR, timezone, and retry on failure settings for your execution. |
 | **Network Settings** | Set up tunnel for local/restricted environments, geolocation routing, and region selection for web tests. |
 | **Replace URL** | Replace the pattern URL for all web tests in the run to execute in different environments. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
-| **Performance** | Enable Lighthouse performance reports (Lighthouse Audits) for web tests only. |
+| **Performance** | Enable Lighthouse performance reports (Lighthouse Audits). |
 | **Visual Regression** | Add visual testing configuration — select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
 | **Accessibility Testing** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. |
 | **Reports** | Generate HTML reports and receive them via email. See [below](#reports). |
