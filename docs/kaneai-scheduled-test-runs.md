@@ -59,7 +59,7 @@ In this documentation, you will learn how to create a scheduled test run using p
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/4.png').default} alt="testing"  className="doc_img" />
 
-**Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure settings like network logs, console settings, or accessibility testing. If necessary, [replace URL settings](/support/docs/kaneai-dynamic-url-replacement/). Finally, click **Schedule Test Run** to create a recurring schedule.
+**Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/5.png').default} alt="testing"  className="doc_img" />
 

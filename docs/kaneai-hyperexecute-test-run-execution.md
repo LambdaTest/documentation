@@ -101,7 +101,58 @@ Only KaneAI test cases for which code generation has been successful will be ava
 - Initiate the run using HyperExecute by clicking **Run with HyperExecute**.
 - View all test instances in the dashboard.
 - Set the desired concurrency level, e.g., 5.
-- Click Execute to run the tests.
+
+#### Advanced Configurations
+
+Before clicking **Execute**, you can optionally click **Advanced Configurations** to customize your test execution. The following settings are available:
+
+| Setting | Description |
+|---|---|
+| **Test Configuration** | Configure console logs, network logs, network full HAR, timezone, and retry on failure settings for your execution. |
+| **Network Settings** | Set up tunnel for local/restricted environments, geolocation routing, and region selection for web tests. |
+| **Replace URL** | Replace the pattern URL for all web tests in the run to execute in different environments. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
+| **Performance** | Enable Lighthouse performance reports (Lighthouse Audits) for web tests only. |
+| **Visual Regression** | Add visual testing configuration — select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
+| **Accessibility Testing** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. |
+| **Reports** | Generate HTML reports and receive them via email. See [below](#reports). |
+
+#### Reports
+
+Enable the **Reports** option in Advanced Configurations to generate an HTML report for your test run. Reports are supported for both web and mobile test executions.
+
+- **Generate HTML Report** — Toggle to **Yes** to enable report generation.
+- **Email Addresses** — Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-advanced-config.png').default} alt="Reports option in Advanced Configurations" className="doc_img"/>
+
+**Accessing the Report**
+
+Once your test run execution is complete, you can access the generated HTML report from the HyperExecute Job page. Navigate to the job and click on the **Reports** section to view or download the report.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-hyperexecute-job.png').default} alt="HTML report on HyperExecute Job page" className="doc_img"/>
+
+**HTML Report Overview**
+
+The generated HTML report includes:
+
+- **Summary** — Job metadata (job number, labels, username, build time, date), test summary with pass/fail counts and donut charts, scenario summary, task analytics, and browser-level breakdown.
+- **Test Cases** — A detailed list of all test cases with their status (pass/fail), OS, OS version, browser, duration, and links to view the test or watch the video recording.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-html-summary.png').default} alt="HTML report summary page" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-html-test-cases.png').default} alt="HTML report test cases page" className="doc_img"/>
+
+**Email Report**
+
+If you added email addresses, recipients receive an email with a summary of the test run results along with the HTML report as an attachment.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-email.png').default} alt="Test run report received via email" className="doc_img"/>
+
+:::tip
+Reports are also available when configuring [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
+:::
+
+- Click **Execute** to run the tests.
 
 #### Monitor Execution on HyperExecute
 - Navigate to the HyperExecute page.
