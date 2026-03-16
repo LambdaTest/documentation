@@ -265,134 +265,172 @@ Add the following configuration to your `.smartui.json` file:
 
 **List of supported Device viewports**
 
-| IOS Devices            | Android Devices             |
-|------------------|------------------------|
-| iPad 10.2 (2019)| Blackberry KEY2 LE     |
-| iPad 10.2 (2020)| Galaxy A12             |
-| iPad 10.2 (2021)| Galaxy A21s            |
-| iPad 9.7 (2017) | Galaxy A22             |
-| iPad Air (2019) | Galaxy A31             |
-| iPad Air (2020) | Galaxy A32             |
-| iPad Air (2022) | Galaxy A51             |
-| iPad mini (2019)| Galaxy A7              |
-| iPad mini (2021)| Galaxy A70             |
-| iPad Pro 11 (2021)| Galaxy A70           |
-| iPad Pro 11 (2022)| Galaxy A8            |
-| iPad Pro 12.9 (2018)| Galaxy A8+         |
-| iPad Pro 12.9 (2020)| Galaxy J7 Prime    |
-| iPad Pro 12.9 (2021)| Galaxy M12         |
-| iPad Pro 12.9 (2021)| Galaxy M31         |
-| iPad Pro 12.9 (2022)| Galaxy Note10      |
-| iPhone 11        | Galaxy Note10+         |
-| iPhone 11        | Galaxy Note20          |
-| iPhone 11 Pro    | Galaxy Note20 Ultra 5G |
-| iPhone 11 Pro Max| Galaxy S10             |
-| iPhone 12        | Galaxy S10+            |
-| iPhone 12        | Galaxy S10e            |
-| iPhone 12 Mini   | Galaxy S20             |
-| iPhone 12 Pro    | Galaxy S20 FE          |
-| iPhone 12 Pro Max| Galaxy S20 Ultra       |
-| iPhone 13        | Galaxy S20+            |
-| iPhone 13 Mini   | Galaxy S21 5G          |
-| iPhone 13 Pro    | Galaxy S21 FE          |
-| iPhone 13 Pro Max| Galaxy S21 Ultra 5G    |
-| iPhone 14        | Galaxy S21+            |
-| iPhone 14 Plus   | Galaxy S21+ 5G         |
-| iPhone 14 Pro    | Galaxy S22 5G          |
-| iPhone 14 Pro Max| Galaxy S22 Ultra 5G    |
-| iPhone 15        | Galaxy S23             |
-| iPhone 15 Plus   | Galaxy S23 Ultra       |
-| iPhone 15 Pro    | Galaxy S23+            |
-| iPhone 15 Pro Max| Galaxy S24             |
-| iPhone 6         | Galaxy S24+            |
-| iPhone 6s        | Galaxy S24 Ultra       |
-| iPhone 6S Plus   | Galaxy S7              |
-| iPhone 7         | Galaxy S7 Edge         |
-| iPhone 7 Plus    | Galaxy S8              |
-| iPhone 8         | Galaxy S8+             |
-| iPhone 8         | Galaxy S9              |
-| iPhone 8 Plus    | Galaxy S9+             |
-| iPhone SE (2016)| Galaxy Tab A7 Lite     |
-| iPhone SE (2020)| Galaxy Tab A8          |
-| iPhone SE (2022)| Galaxy Tab S3          |
-| iPhone X         | Galaxy Tab S4          |
-| iPhone XR        | Galaxy Tab S7          |
-| iPhone XS        | Galaxy Tab S8          |
-| iPhone XS Max    | Galaxy Tab S8+         |
-|                  | Huawei Mate 20 Pro     |
-|                  | Huawei P20 Pro         |
-|                  | Huawei P30             |
-|                  | Huawei P30 Pro         |
-|                  | Microsoft Surface Duo  |
-|                  | Moto G7 Play           |
-|                  | Moto G9 Play           |
-|                  | Moto G Stylus 5G (2022)|
-|                  | Nexus 5                |
-|                  | Nexus 5X               |
-|                  | Nokia 5                |
-|                  | Nothing Phone (1)      |
-|                  | OnePlus 10 Pro         |
-|                  | OnePlus 11             |
-|                  | OnePlus 6              |
-|                  | OnePlus 6T             |
-|                  | OnePlus 7              |
-|                  | OnePlus 7T             |
-|                  | OnePlus 8              |
-|                  | OnePlus 9              |
-|                  | OnePlus 9 Pro          |
-|                  | OnePlus Nord           |
-|                  | OnePlus Nord 2         |
-|                  | OnePlus Nord CE        |
-|                  | Oppo A12               |
-|                  | Oppo A15               |
-|                  | Oppo A54               |
-|                  | Oppo A5s               |
-|                  | Oppo F17               |
-|                  | Oppo K10               |
-|                  | Pixel 3                |
-|                  | Pixel 3 XL             |
-|                  | Pixel 3a               |
-|                  | Pixel 4                |
-|                  | Pixel 4 XL             |
-|                  | Pixel 4a               |
-|                  | Pixel 5                |
-|                  | Pixel 6                |
-|                  | Pixel 6 Pro            |
-|                  | Pixel 7                |
-|                  | Pixel 7 Pro            |
-|                  | Pixel 8                |
-|                  | Pixel 8 Pro            |
-|                  | Poco M2 Pro            |
-|                  | POCO X3 Pro            |
-|                  | Realme 5i              |
-|                  | Realme 7i              |
-|                  | Realme 8i              |
-|                  | Realme C21Y            |
-|                  | Realme C21             |
-|                  | Realme GT2 Pro         |
-|                  | Redmi 8                |
-|                  | Redmi 9                |
-|                  | Redmi 9A               |
-|                  | Redmi 9C               |
-|                  | Redmi Note 10 Pro      |
-|                  | Redmi Note 8           |
-|                  | Redmi Note 8 Pro       |
-|                  | Redmi Note 9           |
-|                  | Redmi Note 9           |
-|                  | Redmi Note 9 Pro Max   |
-|                  | Redmi Y2               |
-|                  | Tecno Spark 7          |
-|                  | Vivo Y22               |
-|                  | Vivo T1 5G             |
-|                  | Vivo V7                |
-|                  | Vivo Y11               |
-|                  | Vivo Y12               |
-|                  | Vivo Y20g              |
-|                  | Vivo Y50               |
-|                  | Xiaomi 12 Pro          |
-|                  | Xperia Z5              |
-|                  | Xperia Z5 Dual         |
-|                  | Zenfone 6              |
+
+**Note:** Use the exact string names provided below in the `devices` array of your `.smartui.json` mobile configuration.
+
+| iOS Devices | Android Devices |
+|---|---|
+| `iPad 10.2 (2019)` | `Aquos Sense 5G` |
+| `iPad 10.2 (2020)` | `Blackberry KEY2 LE` |
+| `iPad 10.2 (2021)` | `Galaxy A10s` |
+| `iPad 10.9 (2022)` | `Galaxy A11` |
+| `iPad 9.7 (2017)` | `Galaxy A12` |
+| `iPad Air (2019)` | `Galaxy A13` |
+| `iPad Air (2020)` | `Galaxy A21s` |
+| `iPad Air (2022)` | `Galaxy A22` |
+| `iPad Air 11 (2024)` | `Galaxy A31` |
+| `iPad Air 13 (2024)` | `Galaxy A32` |
+| `iPad mini (2019)` | `Galaxy A51` |
+| `iPad mini (2021)` | `Galaxy A52s 5G` |
+| `iPad Pro 11 (2021)` | `Galaxy A53 5G` |
+| `iPad Pro 11 (2022)` | `Galaxy A7` |
+| `iPad Pro 11 (2024)` | `Galaxy A70` |
+| `iPad Pro 12.9 (2018)` | `Galaxy A8` |
+| `iPad Pro 12.9 (2020)` | `Galaxy A8 Plus` |
+| `iPad Pro 12.9 (2021)` | `Galaxy J7 Prime` |
+| `iPad Pro 12.9 (2022)` | `Galaxy M12` |
+| `iPad Pro 13 (2024)` | `Galaxy M31` |
+| `iPhone 11` | `Galaxy Note10` |
+| `iPhone 11 Pro` | `Galaxy Note10 Plus` |
+| `iPhone 11 Pro Max` | `Galaxy Note20` |
+| `iPhone 12` | `Galaxy Note20 Ultra` |
+| `iPhone 12 Mini` | `Galaxy S10` |
+| `iPhone 12 Pro` | `Galaxy S10 Plus` |
+| `iPhone 12 Pro Max` | `Galaxy S10e` |
+| `iPhone 13` | `Galaxy S20` |
+| `iPhone 13 Mini` | `Galaxy S20 FE` |
+| `iPhone 13 Pro` | `Galaxy S20 Plus` |
+| `iPhone 13 Pro Max` | `Galaxy S20 Ultra` |
+| `iPhone 14` | `Galaxy S21` |
+| `iPhone 14 Plus` | `Galaxy S21 FE` |
+| `iPhone 14 Pro` | `Galaxy S21 Plus` |
+| `iPhone 14 Pro Max` | `Galaxy S21 Ultra` |
+| `iPhone 15` | `Galaxy S22` |
+| `iPhone 15 Plus` | `Galaxy S22 Ultra` |
+| `iPhone 15 Pro` | `Galaxy S23` |
+| `iPhone 15 Pro Max` | `Galaxy S23 Plus` |
+| `iPhone 16` | `Galaxy S23 Ultra` |
+| `iPhone 16 Plus` | `Galaxy S24` |
+| `iPhone 16 Pro` | `Galaxy S24 Plus` |
+| `iPhone 16 Pro Max` | `Galaxy S24 Ultra` |
+| `iPhone 17` | `Galaxy S25` |
+| `iPhone 17 Pro` | `Galaxy S25 Plus` |
+| `iPhone 17 Pro Max` | `Galaxy S25 Ultra` |
+| `iPhone 6` | `Galaxy S7` |
+| `iPhone 6s` | `Galaxy S7 Edge` |
+| `iPhone 6s Plus` | `Galaxy S8` |
+| `iPhone 7` | `Galaxy S8 Plus` |
+| `iPhone 7 Plus` | `Galaxy S9` |
+| `iPhone 8` | `Galaxy S9 Plus` |
+| `iPhone 8 Plus` | `Galaxy Tab A 10.1 (2019)` |
+| `iPhone SE (2016)` | `Galaxy Tab A7 Lite` |
+| `iPhone SE (2020)` | `Galaxy Tab A8` |
+| `iPhone SE (2022)` | `Galaxy Tab S3` |
+| `iPhone X` | `Galaxy Tab S4` |
+| `iPhone XR` | `Galaxy Tab S7` |
+| `iPhone XS` | `Galaxy Tab S8` |
+| `iPhone XS Max` | `Galaxy Tab S8 Plus` |
+|  | `Galaxy Tab S9` |
+|  | `Galaxy Z Flip6` |
+|  | `Galaxy Z Flip7` |
+|  | `Galaxy Z Fold6` |
+|  | `Galaxy Z Fold7` |
+|  | `Honeywell CT40` |
+|  | `Honor X9a 5G` |
+|  | `Huawei Mate 20 Pro` |
+|  | `Huawei P20 Pro` |
+|  | `Huawei P30` |
+|  | `Huawei P30 Lite` |
+|  | `Huawei P30 Pro` |
+|  | `Huawei P50 Pro` |
+|  | `Microsoft Surface Duo` |
+|  | `Moto G Stylus (2022)` |
+|  | `Moto G22` |
+|  | `Moto G54 5G` |
+|  | `Moto G7 Play` |
+|  | `Moto G71 5G` |
+|  | `Moto G9 Play` |
+|  | `Motorola Edge 30` |
+|  | `Motorola Edge 40` |
+|  | `Motorola Edge 50 Pro` |
+|  | `Nexus 5` |
+|  | `Nexus 5X` |
+|  | `Nokia 5` |
+|  | `Nothing Phone (1)` |
+|  | `Nothing Phone 1` |
+|  | `Nothing Phone 2` |
+|  | `OnePlus 10 Pro` |
+|  | `OnePlus 11` |
+|  | `OnePlus 12` |
+|  | `OnePlus 6` |
+|  | `OnePlus 6T` |
+|  | `OnePlus 7` |
+|  | `OnePlus 7T` |
+|  | `OnePlus 8` |
+|  | `OnePlus 9` |
+|  | `OnePlus 9 Pro` |
+|  | `OnePlus Nord` |
+|  | `OnePlus Nord 2` |
+|  | `OnePlus Nord CE` |
+|  | `Oppo A12` |
+|  | `Oppo A15` |
+|  | `Oppo A54` |
+|  | `Oppo A5s` |
+|  | `Oppo F17` |
+|  | `Oppo K10` |
+|  | `Pixel 10 Pro` |
+|  | `Pixel 10 Pro XL` |
+|  | `Pixel 3` |
+|  | `Pixel 3 XL` |
+|  | `Pixel 3a` |
+|  | `Pixel 4` |
+|  | `Pixel 4 XL` |
+|  | `Pixel 4a` |
+|  | `Pixel 5` |
+|  | `Pixel 6` |
+|  | `Pixel 6 Pro` |
+|  | `Pixel 6a` |
+|  | `Pixel 7` |
+|  | `Pixel 7 Pro` |
+|  | `Pixel 7a` |
+|  | `Pixel 8` |
+|  | `Pixel 8 Pro` |
+|  | `Pixel 9` |
+|  | `Pixel 9 Pro` |
+|  | `Pixel 9 Pro XL` |
+|  | `Pixel Tablet` |
+|  | `Poco M2 Pro` |
+|  | `POCO X3 Pro` |
+|  | `Realme 5i` |
+|  | `Realme 7i` |
+|  | `Realme 8i` |
+|  | `Realme C21` |
+|  | `Realme C21Y` |
+|  | `Realme GT2 Pro` |
+|  | `Redmi 8` |
+|  | `Redmi 9` |
+|  | `Redmi 9A` |
+|  | `Redmi 9C` |
+|  | `Redmi Note 10 Pro` |
+|  | `Redmi Note 13 Pro` |
+|  | `Redmi Note 8` |
+|  | `Redmi Note 8 Pro` |
+|  | `Redmi Note 9` |
+|  | `Redmi Note 9 Pro Max` |
+|  | `Redmi Y2` |
+|  | `Tecno Spark 7` |
+|  | `Vivo T1` |
+|  | `Vivo V7` |
+|  | `Vivo Y11` |
+|  | `Vivo Y12` |
+|  | `Vivo Y20g` |
+|  | `Vivo Y22` |
+|  | `Vivo Y50` |
+|  | `Xiaomi 12 Pro` |
+|  | `Xperia 10 IV` |
+|  | `Xperia Z5` |
+|  | `Xperia Z5 Dual` |
+|  | `Zenfone 6` |
 
 </TabItem>
 </Tabs>
