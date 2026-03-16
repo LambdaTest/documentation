@@ -51,6 +51,10 @@ KaneAI lets you export generated test code directly to your GitHub or GitLab rep
 
 This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.
 
+:::note Beta Feature
+This feature is currently in **beta** and is not generally available. If you would like access, please reach out to [support@lambdatest.com](mailto:support@lambdatest.com).
+:::
+
 ## Prerequisites
 
 - A <BrandName /> account with access to KaneAI and Test Manager.
