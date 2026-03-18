@@ -83,7 +83,15 @@ Use descriptive names to easily identify test runs later.
 - Click Save Test Run to finalize the setup.
 - View the created test run and its associated test instances in the dashboard.
 
+Test instances are organized using a **Folders** sidebar on the left, reflecting the folder structure of the test cases added to the test run. Only folders whose test cases are included in the test run are displayed, and each folder shows the count of test instances it contains (e.g., `3/3`, `4/4`).
+
+- Select a folder to filter and view only its test instances. The status summary (Passed, Failed, Not Started, Skipped) is displayed in the top-right corner of the listing for the selected folder.
+- Collapse or expand folders for easier navigation.
+- Click the **three-dot menu** on the **Folders** header to toggle **Include Child Folders** — when enabled (default), selecting a parent folder also displays test instances from its child folders.
+
 <img loading="lazy" src={require('../assets/images/test-run/6.png').default} alt="Real "  className="doc_img"/>
+
+<!-- screenshot: folder sidebar with Include Child Folders option -->
 
 ### Step 7: Bulk Update Options
 - To update multiple test instances:
