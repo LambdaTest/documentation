@@ -57,7 +57,11 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | Capability                  | Type       | Default | Required / Optional | Description                                                                                 |
 |----------------------------|------------|---------|---------------------|---------------------------------------------------------------------------------------------|
 | **applePay**                | Boolean    | true    | Mandatory           | Enables Apple Pay provisioning including Wallet, Sandbox card, AssistiveTouch, and Passcode on supported real iOS devices. |
-| **applePayCardType**        | Array      | None    | Optional           | Specify preferred payment networks. Currently, you can choose from four supported cards: ["amex", "visa", "master", "discover"].|
+| **applePayCardType**        | Array      | None    | Optional           | Specify preferred payment networks. Currently, you can choose from four supported cards: `["amex", "visa", "master", "discover"]`.|
+
+:::tip
+The `applePayCardType` array follows a **priority order**. The order you provide determines which card type is used first. For example, `["visa", "master"]` will prioritize Visa over MasterCard.
+:::
 
 ---
 
@@ -105,7 +109,116 @@ To enable Apple Pay automation, include the following capability in your automat
 
 ---
 
-### Step 3: Confirm Apple Pay Payment
+### Step 3: Update Shipping, Billing, and Contact Details (Optional)
+
+Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `lambda-applepay-details` hook. This allows you to customize the payment information dynamically during your automation test.
+
+<Tabs>
+  <TabItem value="python" label="Python">
+    <CodeBlock className="language-python">
+{`driver.execute_script("lambda-applepay-details", {
+    "shippingDetails": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "street": "221B Baker Street",
+        "city": "London",
+        "postalCode": "NW1 6XE",
+        "state": "London",
+        "country": "UK"
+    },
+    "billingDetails": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "street": "221B Baker Street",
+        "city": "London",
+        "postalCode": "NW1 6XE",
+        "state": "London",
+        "country": "UK"
+    },
+    "contact": {
+        "email": "john.doe@example.com",
+        "phone": "+441234567890"
+    }
+})`}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="java" label="Java">
+    <CodeBlock className="language-java">
+{`Map<String, Object> shippingDetails = new HashMap<>();
+shippingDetails.put("firstName", "John");
+shippingDetails.put("lastName", "Doe");
+shippingDetails.put("street", "221B Baker Street");
+shippingDetails.put("city", "London");
+shippingDetails.put("postalCode", "NW1 6XE");
+shippingDetails.put("state", "London");
+shippingDetails.put("country", "UK");
+
+Map<String, Object> billingDetails = new HashMap<>();
+billingDetails.put("firstName", "John");
+billingDetails.put("lastName", "Doe");
+billingDetails.put("street", "221B Baker Street");
+billingDetails.put("city", "London");
+billingDetails.put("postalCode", "NW1 6XE");
+billingDetails.put("state", "London");
+billingDetails.put("country", "UK");
+
+Map<String, Object> contact = new HashMap<>();
+contact.put("email", "john.doe@example.com");
+contact.put("phone", "+441234567890");
+
+Map<String, Object> applePayDetails = new HashMap<>();
+applePayDetails.put("shippingDetails", shippingDetails);
+applePayDetails.put("billingDetails", billingDetails);
+applePayDetails.put("contact", contact);
+
+driver.executeScript("lambda-applepay-details", applePayDetails);`}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="javascript" label="JavaScript">
+    <CodeBlock className="language-javascript">
+{`await driver.executeScript("lambda-applepay-details", {
+    shippingDetails: {
+        firstName: "John",
+        lastName: "Doe",
+        street: "221B Baker Street",
+        city: "London",
+        postalCode: "NW1 6XE",
+        state: "London",
+        country: "UK"
+    },
+    billingDetails: {
+        firstName: "John",
+        lastName: "Doe",
+        street: "221B Baker Street",
+        city: "London",
+        postalCode: "NW1 6XE",
+        state: "London",
+        country: "UK"
+    },
+    contact: {
+        email: "john.doe@example.com",
+        phone: "+441234567890"
+    }
+});`}
+    </CodeBlock>
+  </TabItem>
+</Tabs>
+
+#### Hook Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| **shippingDetails** | Object | Shipping address information including firstName, lastName, street, city, postalCode, state, and country. |
+| **billingDetails** | Object | Billing address information with the same fields as shippingDetails. |
+| **contact** | Object | Contact information including email and phone number. |
+
+:::note
+All parameters are optional. You can provide only the details you need to update. For example, you can update only the billing details without providing shipping or contact information.
+:::
+
+---
+
+### Step 4: Confirm Apple Pay Payment
 
 - To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment.
 - This can be done using <BrandName /> hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
@@ -119,7 +232,7 @@ driver.execute_script(
 
 ---
 
-### Step 4: Enter Passcode to Complete Payment
+### Step 5: Enter Passcode to Complete Payment
 
 - After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment.
   
