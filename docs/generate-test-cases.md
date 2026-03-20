@@ -176,6 +176,12 @@ We support multiple input formats, including:
 - **Documents**
 - **JSON or XML**
 
+:::info Public URLs Only
+Currently, the AI Test Case Generator can only access **publicly available URLs**. Websites behind a VPN, corporate proxy, firewall, or those requiring authentication to reach the landing page cannot be analyzed.
+
+**Support for private URLs is coming soon.**
+:::
+
 #### Add Input Requirements
 
 ##### Text Input
