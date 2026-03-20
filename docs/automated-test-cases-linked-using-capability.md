@@ -52,16 +52,43 @@ To link an automated test run with a specific test case, add the `tms.tc_id` key
 ```javascript
 const capabilities = {
   "lt:Options": {
+      "project": "Your Project Name", // Specify the project where the test run should be created
       "tms.tc_id": "TC-1470" // Link the test execution to the Test Case ID 'TC-1470'
   }
 };
 ```
 
 - `lt:Options` : A JSON object containing additional options for <BrandName /> configurations.
+- `project` : The name of the project in Test Manager where the test run should be created. If not specified, the test run will be created under **LambdaTest Default Project**.
 - `tms.tc_id` : The key used to link a test case in Test Manager. Replace "TC-1470" with your desired Test Case ID.
 
+## Specifying Target Project
+
+When you link a test case using `tms.tc_id`, a test run is automatically created with your build name. By default, this test run is created under **LambdaTest Default Project**.
+
+To ensure the test run is created in the correct project, use the `project` capability along with `tms.tc_id`:
+
+```javascript
+const capabilities = {
+  "browserName": "Chrome",
+  "browserVersion": "latest",
+  "lt:Options": {
+      "platform": "Windows 10",
+      "build": "Playwright Build",
+      "name": "Sample Test",
+      "project": "Demo-Project", // Target project name
+      "tms.tc_id": "TC-95668" // Test case ID from the target project
+  }
+};
+```
+
+:::warning
+The `project` name must match exactly as it appears in Test Manager. If the project name is incorrect or doesn't exist, the test run will be created under **LambdaTest Default Project**.
+:::
+
 :::info NOTE
-- Ensure the Test Case ID exists in Test Manager before linking.  
+- Ensure the Test Case ID exists in Test Manager before linking.
 - The Test Case ID format should match exactly as shown in Test Manager
 - Each automated test run can be linked to one test case at a time
+- The test case specified in `tms.tc_id` should belong to the project specified in `project` capability
 :::

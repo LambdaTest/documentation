@@ -1797,7 +1797,8 @@ module.exports = {
           "testrail-integration-with-lambdatest-selenium-grid",
           "zebrunner-integration",
           "zephyr-scale",
-          "testmo-integration"
+          "testmo-integration",
+          "alm-octane-integration"
         ],
       },
 
