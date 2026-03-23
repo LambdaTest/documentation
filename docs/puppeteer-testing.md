@@ -2,7 +2,7 @@
 id: puppeteer-testing-guide
 title: How To Run Puppeteer Tests On TestMu AI Platform
 hide_title: true
-sidebar_label: Puppeteer Testing
+sidebar_label: Run Your First Test
 description: Learn how to run your Puppeteer tests across 40+ browsers and operating systems on the TestMu AI automation platform
 keywords:
   - puppeteer testing
@@ -174,6 +174,9 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Puppeteer b
 On clicking the session name of the respective test, you can view the details of Puppeteer test session that you just executed. For example, the below screenshot shows a test execution details of Puppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
 
 <img loading="lazy" src={require('../assets/images/puppeteer-testing/logs.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+
+
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
