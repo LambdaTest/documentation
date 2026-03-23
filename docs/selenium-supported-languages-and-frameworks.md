@@ -1,6 +1,6 @@
 ---
 id: selenium-supported-languages-and-frameworks
-title: Languages and Frameworks supported on TestMu AI Selenium
+title: Languages and Frameworks supported on TestMu AI Selenium Grid
 hide_title: false
 sidebar_label: Languages and Frameworks
 description: HyperExecute Grid supports languages and frameworks that are compatible with Selenium 

@@ -60,7 +60,7 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 ## Prerequisites
 
-- A <BrandName /> account. If you don't have one, [sign up for free]({BRAND_URL}).
+- A <BrandName /> account. If you don't have one, <a href={BRAND_URL}>sign up for free</a>.
 - Your <BrandName /> **Username** and **Access Key** from the [Automation Dashboard](https://automation.lambdatest.com/).
 - An AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
