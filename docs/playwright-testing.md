@@ -2,7 +2,7 @@
 id: playwright-testing-guide
 title: How To Run Playwright Tests On TestMu AI Platform
 hide_title: true
-sidebar_label: Playwright Testing
+sidebar_label: Run Your First Test
 description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on over 40+ browsers and operating systems.
 keywords:
   - playwright testing
@@ -187,5 +187,7 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/pw-build.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+
+
 
 

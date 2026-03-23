@@ -1,7 +1,7 @@
 ---
 id: authentication
 title: Authentication
-sidebar_label: Authentication
+sidebar_label: Authenticate Test
 description: Explore comprehensive documentation on Cypress Automation and Testing for building robust, secure authentication systems. Understand authentication processes and bolster your testing efficiency.
 keywords:
   - Cypress Automation

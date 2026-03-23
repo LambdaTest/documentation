@@ -1,7 +1,7 @@
 ---
 id: getting-started-with-cypress-testing
 title: Getting Started With Cypress Testing On TestMu AI Platform
-sidebar_label: Cypress Testing
+sidebar_label: Run Your First Test
 hide_title: true
 description: In this documentation, learn how to perform end-to-end Cypress testing on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
@@ -38,7 +38,7 @@ Cypress is a modern web front-end testing tool built with JavaScript Mocha. It o
 
 Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
 
-In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress’ kitchen sink sample app to execute our tests. 
+In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypressï¿½ kitchen sink sample app to execute our tests. 
 
 
 
@@ -315,6 +315,9 @@ Now you need to activate the tunnel capability in the `lambdatest-config.json` f
 ```
 
 You can provide the name of the **<BrandName /> tunnel** as per your requirements.
+
+
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

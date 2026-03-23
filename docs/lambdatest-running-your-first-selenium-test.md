@@ -2,7 +2,7 @@
 id: lambdatest-running-your-first-selenium-test
 title: Run Your First Test on TestMu AI using Selenium
 hide_title: false
-sidebar_label: Running Your First Job
+sidebar_label: Run Your First Test
 description: Learn how to run your first Selenium test on TestMu AI's cross-browser testing platform. Step-by-step guide for setup and execution on 3000+ browsers.
 keywords:
   - Automation Platform

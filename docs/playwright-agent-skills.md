@@ -1,0 +1,192 @@
+---
+id: playwright-agent-skills
+title: Run Your Playwright Tests Using Agent Skills
+hide_title: false
+sidebar_label: Run Your Test With Agent Skills
+description: Learn how to use TestMu AI Agent Skills to generate production-ready Playwright test automation using AI coding assistants like Claude Code, GitHub Copilot, and Cursor.
+keywords:
+  - playwright agent skills
+  - ai test automation
+  - playwright ai coding
+  - agent skills playwright
+  - testmu ai agent skills
+url: https://www.testmuai.com/support/docs/playwright-agent-skills/
+site_name: TestMu AI
+slug: playwright-agent-skills/
+canonical: https://www.testmuai.com/support/docs/playwright-agent-skills/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TestMu AI",
+          "item": "https://www.testmuai.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.testmuai.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Playwright Agent Skills",
+          "item": "https://www.testmuai.com/support/docs/playwright-agent-skills/"
+        }]
+    })
+  }}
+></script>
+
+# Run Your Playwright Tests Using Agent Skills
+
+Instead of manually setting up your Playwright project, you can use **Agent Skills** to let your AI coding assistant generate production-ready Playwright test automation for you.
+
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation code.
+
+## What Are Agent Skills?
+
+Agent Skills are self-contained packages of instructions, code patterns, debugging guides, and CI/CD configurations for specific testing frameworks. Once installed, your AI assistant works like a **Senior QA automation architect** with knowledge of:
+
+- Proper project structure for each framework
+- Correct dependency versions and configurations
+- Both local and <BrandName /> cloud execution patterns
+- Common pitfalls and debugging approaches
+- CI/CD integration with GitHub Actions
+
+## Prerequisites
+
+- A <BrandName /> account. If you don't have one, [sign up for free]({BRAND_URL}).
+- Your <BrandName /> **Username** and **Access Key** from the [Automation Dashboard](https://automation.lambdatest.com/).
+- An AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
+
+## Installing the Playwright Agent Skill
+
+Clone the repository and copy the Playwright skill into your AI tool's skills directory:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+
+# For Claude Code
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# For Cursor
+cp -r agent-skills/playwright-skill .cursor/skills/
+
+# For GitHub Copilot
+cp -r agent-skills/playwright-skill .github/skills/
+
+# For Gemini CLI
+cp -r agent-skills/playwright-skill .gemini/skills/
+```
+
+:::tip
+If you prefer installing **all available framework skills**, clone the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
+
+## Set Up Your Authentication
+
+Configure your <BrandName /> credentials as environment variables:
+
+```bash
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+## Running Your First Test Using Agent Skills
+
+Once installed, simply ask your AI assistant to write tests in natural language:
+
+```
+"Write Playwright tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
+```
+
+```
+"Set up a Playwright TypeScript project with Page Object Model and run tests on TestMu AI"
+```
+
+```
+"Run Playwright tests on real mobile devices on TestMu AI cloud"
+```
+
+The Agent Skill automatically handles:
+
+1. **Project setup** - Creates the right folder structure, dependencies, and config files
+2. **Language detection** - Maps your request to the correct language (TypeScript, JavaScript, Python, Java, or C#)
+3. **Execution target** - Configures local or <BrandName /> cloud execution via CDP WebSocket
+4. **Best practices** - Uses web-first assertions, accessible selectors (`getByRole`, `getByLabel`), and Page Object Model
+
+## What's Included in the Playwright Skill
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+| Section | Details |
+|---------|---------|
+| **Project Setup** | Dependencies, versions, configuration files, project structure |
+| **Core Patterns** | Complete, runnable code examples with web-first assertions |
+| **Cloud Integration** | <BrandName /> CDP WebSocket connection and capabilities configuration |
+| **CI/CD Integration** | GitHub Actions workflows with reporting and parallel execution |
+| **Debugging Guide** | Common issues mapped to solutions |
+| **Best Practices** | Actionable recommendations for production code |
+
+## Supported Languages and Frameworks
+
+The Playwright Agent Skill supports 5 languages. The following framework docs also reference their own dedicated Agent Skills:
+
+### Languages
+| Language | Agent Skill | Documentation |
+|----------|------------|---------------|
+| TypeScript (default) | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [TypeScript with Playwright](/docs/typescript-with-playwright/) |
+| JavaScript | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [JavaScript with Playwright](/docs/javascript-with-playwright/) |
+| Java | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [Java with Playwright](/docs/java-with-playwright/) |
+| Python | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [Python with Playwright](/docs/python-with-playwright/) |
+| C# | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [C# with Playwright](/docs/csharp-with-playwright/) |
+
+### Frameworks with Dedicated Agent Skills
+| Framework | Agent Skill | Documentation |
+|-----------|------------|---------------|
+| Jest | [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) | [Jest with Playwright](/docs/jest-with-playwright/) |
+| JUnit 5 | [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) | [JUnit with Playwright](/docs/junit-with-playwright/) |
+| CucumberJS | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [CucumberJS with Playwright](/docs/playwright-with-cucumberjs/) |
+
+## Supported AI Tools
+
+| Tool | Type | Installation Path |
+|------|------|-------------------|
+| Claude Code | CLI | `.claude/skills/` |
+| GitHub Copilot | Extension | `.github/skills/` |
+| Cursor | IDE | `.cursor/skills/` |
+| Gemini CLI | CLI | `.gemini/skills/` |
+| Codex CLI | CLI | `.codex/skills/` |
+| OpenCode | CLI | `.opencode/skills/` |
+| Claude.ai | Web | Settings > Features > Skills |
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Playwright Agent Skills
+      </span>
+    </li>
+  </ul>
+</nav>
