@@ -42,49 +42,146 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# What is <BrandName /> Browser Cloud?
+# <BrandName /> Browser Cloud
 ***
 
-<BrandName /> Browser Cloud gives your AI agents on-demand access to real
-browsers in the cloud. Build agents that browse, scrape, and interact with any
-website - without getting blocked, losing login state, or managing browser
-infrastructure yourself.
+Find all the guides, resources, and examples you need to build on <BrandName /> Browser Cloud.
 
 <iframe src="https://assets.testmuai.com/resources/images/testmu-ai/sectionFold/browser-cloud-final-home-video.webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen height="400" width="710"></iframe>
-
-## Why Browser Cloud?
-***
-
-​A better way to take your agents and LLMs online
-
-AI agents that interact with the web run into real problems fast: bot detection,
-CAPTCHAs, lost cookies, flaky headless browsers, and no way to see what went
-wrong. Browser Cloud solves all of this out of the box.
-
-| Challenge | How Browser Cloud Handles It |
-|-----------|----------------------------|
-| Sites detect and block your agent | Built-in stealth patches browser fingerprints so your agent looks human |
-| Login state lost between runs | Profiles and context transfer persist cookies, storage, and auth |
-| Can't access localhost or internal apps | Encrypted tunnels connect cloud browsers to your local network |
-| No visibility into what the agent did | Every session is recorded with video, console logs, and network capture |
-| Uploading/downloading files is painful | File service handles transfers between your machine and the cloud browser |
-| Managing browser infra at scale | 3,000+ browser/OS combinations managed by <BrandName /> |
-
-
-## Prerequisites
-***
-
-To use <BrandName /> Browser Cloud, you need:
-
-1. A <BrandName /> account - [sign up on TestMu AI](https://www.testmuai.com) if you don't have one
-2. Your **Username** and **Access Key** from **Settings -> Account Settings**
-3. **Node.js 16+** installed (Node 18+ if using Playwright)
 
 ## Get Started
 ***
 
-Ready to get started? [Launch your first cloud browser session](/support/docs/launch-first-session/).
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/launch-first-session/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🚀 Quickstart</h3>
+      <p>Launch your first cloud browser session in under 5 minutes.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/connect-to-session/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🔌 Connect Your Agent</h3>
+      <p>Drive sessions with Puppeteer, Playwright, or Selenium.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-sessions-overview/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>📡 Sessions API</h3>
+      <p>Create, manage, and release browser sessions programmatically.</p>
+    </a>
+  </div>
+</div>
 
+## Features
+***
+
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-stealth/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🛡️ Stealth Mode</h3>
+      <p>Built-in fingerprint masking, CAPTCHA solving, and ad blocking.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-context/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🍪 Session Persistence</h3>
+      <p>Transfer cookies, local storage, and login state across sessions.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-files/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>📁 Files API</h3>
+      <p>Upload and download files between your machine and the cloud browser.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-extensions/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🧩 Chrome Extensions</h3>
+      <p>Load Chrome extensions into your cloud browser sessions.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-tunnel/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🔒 Localhost Tunnel</h3>
+      <p>Access localhost and internal networks from cloud browsers.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-debugging/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🔍 Debugging</h3>
+      <p>Video replays, console logs, and full network capture for every session.</p>
+    </a>
+  </div>
+</div>
+
+## Cookbook
+***
+
+Ready-to-run examples to get you started fast.
+
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-crewai" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>OpenAI Computer Use</h3>
+      <p>Build a browser automation agent using Browser Cloud and OpenAI's Computer Use.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-claude-computer-use" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>Claude Computer Use</h3>
+      <p>Build a browser automation agent using Browser Cloud and Claude's Computer Use.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-gemini-computer-use" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>Gemini</h3>
+      <p>Learn how Browser Cloud and Gemini power a fully autonomous browser agent.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-playwright-js" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>Playwright Starter</h3>
+      <p>Build a starter project with Browser Cloud and Playwright.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-puppeteer-js" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>Puppeteer Starter</h3>
+      <p>Build a starter project with Puppeteer and Browser Cloud.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-quick-actions" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>Quick Actions</h3>
+      <p>Trigger browser tasks instantly. Scrape, screenshot, and PDF in one line.</p>
+    </a>
+  </div>
+</div>
+
+## Resources
+***
+
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-api-reference/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>📖 API Reference</h3>
+      <p>Full reference for the Browser Cloud API.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-skills/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🤖 AI Agent Skills</h3>
+      <p>Pre-built skills to accelerate your agent development.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-session-configuration/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>⚙️ Session Configuration</h3>
+      <p>All session options and configuration parameters.</p>
+    </a>
+  </div>
+</div>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

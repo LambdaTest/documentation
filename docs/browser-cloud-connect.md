@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/connect-to-session/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -75,16 +77,15 @@ Make sure you have completed the following before connecting to a session:
 
 ---
 
+## Basic Usage
 
-## Puppeteer
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
 
 Most Puppeteer scripts start with `puppeteer.launch()` to launch a local
 browser. With the TestMu AI Browser SDK, you replace that with
 `client.puppeteer.connect()` to connect to a cloud browser instead. Your
 subsequent Puppeteer calls work exactly the same as before.
-
-
-## Basic Usage
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
@@ -121,8 +122,96 @@ The `browser` object returned by `client.puppeteer.connect()` is a standard
 Puppeteer `Browser`. Use it exactly as you would with plain Puppeteer - all
 existing Puppeteer knowledge applies.
 
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
+
+Like Puppeteer, the main change is how you connect - replacing
+`chromium.launch()` with `client.playwright.connect()`.
+
+:::note
+Playwright requires **Node.js 18+**. If you see a version error,
+upgrade with `nvm install 18 && nvm use 18`.
+:::
+
+```typescript
+import { Browser } from '@testmuai/browser-cloud';
+
+const client = new Browser();
+
+const session = await client.sessions.create({
+    adapter: 'playwright',
+    lambdatestOptions: {
+        build: 'My Agent',
+        name: 'Playwright Session',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+        }
+    }
+});
+
+// Returns browser, context, AND page - all three ready to use
+const { browser, context, page } = await client.playwright.connect(session);
+
+await page.goto('https://example.com');
+await page.screenshot({ path: 'screenshot.png' });
+
+await browser.close();
+await client.sessions.release(session.id);
+```
+
+Notice the key difference from Puppeteer: `client.playwright.connect()` returns
+three objects - `browser`, `context`, and `page` - instead of just a browser.
+These are standard Playwright objects. Use them exactly as you would with plain
+Playwright.
+
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
+
+Selenium connects to <BrandName /> differently from Puppeteer and Playwright.
+Instead of WebSocket, it uses the standard **WebDriver protocol over HTTP**,
+connecting to <BrandName />'s Selenium Hub.
+
+```typescript
+import { Browser } from '@testmuai/browser-cloud';
+
+const client = new Browser();
+
+const session = await client.sessions.create({
+    adapter: 'selenium',
+    lambdatestOptions: {
+        build: 'My Agent',
+        name: 'Selenium Session',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+        }
+    }
+});
+
+// Returns a standard Selenium WebDriver
+const driver = await client.selenium.connect(session);
+
+await driver.get('https://example.com');
+const title = await driver.getTitle();
+console.log('Title:', title);
+
+await driver.quit();
+await client.sessions.release(session.id);
+```
+
+The `driver` object is a standard Selenium `WebDriver`. Use it exactly as you
+would with plain `selenium-webdriver`.
+
+  </TabItem>
+</Tabs>
+
+---
 
 ## What the SDK Does for You
+
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
 
 When you call `client.puppeteer.connect(session)`, the SDK handles several
 things automatically based on your session configuration:
@@ -137,12 +226,46 @@ things automatically based on your session configuration:
 
 5. **Profile loading.** If `profileId` is set, saved cookies are loaded from disk. And when you call `browser.close()`, the profile is automatically saved with the current cookies.
 
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
+
+When you call `client.playwright.connect(session)`:
+
+1. **Connects** to <BrandName /> cloud via `chromium.connect`
+2. **Gets or creates** a `BrowserContext` and `Page`
+3. **Injects stealth scripts** (if enabled) via `page.addInitScript()` - these run before any page JavaScript:
+   - Hides `navigator.webdriver`
+   - Fakes `chrome.runtime` (simulates extensions presence)
+   - Fakes `navigator.plugins` (3 standard Chrome plugins)
+   - Sets `navigator.languages = ['en-US', 'en']`
+   - Patches `permissions.query` for notifications
+   - Spoofs WebGL vendor/renderer
+4. **Auto-applies stealth** to new pages via `context.on('page')`
+5. **Patches interactions** (if humanize enabled) - `page.click()`, `page.type()`, and `page.fill()` get random delays
+6. **Loads/saves profile** (if `profileId` set)
+
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
+
+When you call `client.selenium.connect(session)`:
+
+1. **Connects** to the <BrandName /> Selenium Hub at `https://hub.lambdatest.com/wd/hub` via HTTP
+2. **Reads** `LT_USERNAME` and `LT_ACCESS_KEY` from your environment variables
+3. **Builds** W3C capabilities from your session config
+4. **Connects** over the standard WebDriver protocol
+
+The Selenium adapter **ignores** `session.websocketUrl` and builds its own connection.
+
+  </TabItem>
+</Tabs>
+
+---
 
 ## Adding Session Features
 
 ```typescript
 const session = await client.sessions.create({
-    adapter: 'puppeteer',
+    adapter: 'puppeteer',   // or 'playwright' or 'selenium'
     stealthConfig: {                   // Anti-bot detection
         humanizeInteractions: true,
         randomizeUserAgent: true,
@@ -154,8 +277,12 @@ const session = await client.sessions.create({
 });
 ```
 
+---
 
 ## Full Working Example
+
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -197,155 +324,112 @@ async function main() {
 main().catch(console.error);
 ```
 
-> **Important:** Sessions remain active until explicitly released or timed out.
-> Always call `client.sessions.release()` when finished instead of waiting for
-> the timeout.
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
 
-
-## When to Choose Puppeteer
-
-| Use Case | Why Puppeteer |
-|----------|---------------|
-| General agent automation | Mature, well-documented, large ecosystem |
-| Stealth-heavy tasks | Best stealth plugin support (`puppeteer-extra-plugin-stealth`) |
-| Simple return type | Returns a single `Browser` object (vs Playwright's 3 objects) |
-
----
-
-
-## Playwright
-
-Like Puppeteer, the main change is how you connect - replacing
-`chromium.launch()` with `client.playwright.connect()`.
-
-> **Note:** Playwright requires **Node.js 18+**. If you see a version error,
-> upgrade with `nvm install 18 && nvm use 18`.
-
-
-## Basic Usage
+A complete script that creates a session, scrapes a page title, and cleans up
+with proper error handling:
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
 
 const client = new Browser();
 
-const session = await client.sessions.create({
-    adapter: 'playwright',
-    lambdatestOptions: {
-        build: 'My Agent',
-        name: 'Playwright Session',
-        'LT:Options': {
-            username: process.env.LT_USERNAME,
-            accessKey: process.env.LT_ACCESS_KEY,
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'playwright',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
         }
+    });
+
+    console.log(`View session: ${session.sessionViewerUrl}`);
+
+    try {
+        const { browser, context, page } = await client.playwright.connect(session);
+
+        await page.goto('https://news.ycombinator.com');
+        const title = await page.title();
+        console.log('Page title:', title);
+
+        await browser.close();
+    } finally {
+        await client.sessions.release(session.id);
     }
-});
+}
 
-// Returns browser, context, AND page - all three ready to use
-const { browser, context, page } = await client.playwright.connect(session);
-
-await page.goto('https://example.com');
-await page.screenshot({ path: 'screenshot.png' });
-
-await browser.close();
-await client.sessions.release(session.id);
+main().catch(console.error);
 ```
 
-Notice the key difference from Puppeteer: `client.playwright.connect()` returns
-three objects - `browser`, `context`, and `page` - instead of just a browser.
-These are standard Playwright objects. Use them exactly as you would with plain
-Playwright.
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
 
-
-## What the SDK Does for You
-
-When you call `client.playwright.connect(session)`:
-
-1. **Connects** to <BrandName /> cloud via `chromium.connect`
-2. **Gets or creates** a `BrowserContext` and `Page`
-3. **Injects stealth scripts** (if enabled) via `page.addInitScript()` - these run before any page JavaScript:
-   - Hides `navigator.webdriver`
-   - Fakes `chrome.runtime` (simulates extensions presence)
-   - Fakes `navigator.plugins` (3 standard Chrome plugins)
-   - Sets `navigator.languages = ['en-US', 'en']`
-   - Patches `permissions.query` for notifications
-   - Spoofs WebGL vendor/renderer
-4. **Auto-applies stealth** to new pages via `context.on('page')`
-5. **Patches interactions** (if humanize enabled) - `page.click()`, `page.type()`, and `page.fill()` get random delays
-6. **Loads/saves profile** (if `profileId` set)
-
-
-## When to Choose Playwright
-
-| Use Case | Why Playwright |
-|----------|----------------|
-| Complex form interactions | Built-in `page.fill()` method |
-| Auto-waiting | Playwright automatically waits for elements before interacting |
-| Multi-page workflows | Better context management for complex navigation |
-| Existing Playwright codebase | Drop-in replacement for `chromium.launch()` |
-
----
-
-
-## Selenium
-
-Selenium connects to <BrandName /> differently from Puppeteer and Playwright.
-Instead of WebSocket, it uses the standard **WebDriver protocol over HTTP**,
-connecting to <BrandName />'s Selenium Hub.
-
-
-## Basic Usage
+A complete script that creates a session, scrapes a page title, and cleans up
+with proper error handling:
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
 
 const client = new Browser();
 
-const session = await client.sessions.create({
-    adapter: 'selenium',
-    lambdatestOptions: {
-        build: 'My Agent',
-        name: 'Selenium Session',
-        'LT:Options': {
-            username: process.env.LT_USERNAME,
-            accessKey: process.env.LT_ACCESS_KEY,
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'selenium',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
         }
+    });
+
+    console.log(`View session: ${session.sessionViewerUrl}`);
+
+    try {
+        const driver = await client.selenium.connect(session);
+
+        await driver.get('https://news.ycombinator.com');
+        const title = await driver.getTitle();
+        console.log('Page title:', title);
+
+        await driver.quit();
+    } finally {
+        await client.sessions.release(session.id);
     }
-});
+}
 
-// Returns a standard Selenium WebDriver
-const driver = await client.selenium.connect(session);
-
-await driver.get('https://example.com');
-const title = await driver.getTitle();
-console.log('Title:', title);
-
-await driver.quit();
-await client.sessions.release(session.id);
+main().catch(console.error);
 ```
 
-The `driver` object is a standard Selenium `WebDriver`. Use it exactly as you
-would with plain `selenium-webdriver`.
+  </TabItem>
+</Tabs>
 
+:::warning
+Sessions remain active until explicitly released or timed out.
+Always call `client.sessions.release()` when finished instead of waiting for
+the timeout.
+:::
 
-## Key Difference: HTTP, Not WebSocket
+---
 
-Selenium connects to the <BrandName /> Selenium Hub at
-`https://hub.lambdatest.com/wd/hub` via HTTP. The adapter reads `LT_USERNAME`
-and `LT_ACCESS_KEY` from your environment variables, builds W3C capabilities
-from your session config, and connects over the standard WebDriver protocol.
+## When to Choose
 
-This means the Selenium adapter **ignores** `session.websocketUrl` and builds
-its own connection.
-
-
-## When to Choose Selenium
-
-| Use Case | Why Selenium |
-|----------|--------------|
-| Existing Selenium test suite | Minimal migration - same WebDriver API |
-| Standard WebDriver protocol | Industry-standard, language-agnostic protocol |
-| Simple automation tasks | Straightforward page navigation and interaction |
+| Use Case | Recommended | Why |
+|----------|-------------|-----|
+| General agent automation | Puppeteer | Mature, well-documented, large ecosystem |
+| Stealth-heavy tasks | Puppeteer | Best stealth plugin support (`puppeteer-extra-plugin-stealth`) |
+| Complex form interactions | Playwright | Built-in `page.fill()` method |
+| Auto-waiting | Playwright | Automatically waits for elements before interacting |
+| Multi-page workflows | Playwright | Better context management for complex navigation |
+| Existing Selenium test suite | Selenium | Minimal migration - same WebDriver API |
+| Simple return type | Puppeteer | Returns a single `Browser` object (vs Playwright's 3 objects) |
 
 ---
 

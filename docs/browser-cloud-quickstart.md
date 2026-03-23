@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/launch-first-session/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,6 +97,9 @@ npm i @testmuai/browser-cloud
 Let's create a simple script that launches a cloud browser, navigates to a page,
 and cleans up:
 
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
+
 ```typescript
 // my-first-session.ts
 
@@ -103,7 +108,6 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-    // Create a session
     const session = await client.sessions.create({
         adapter: 'puppeteer',
         lambdatestOptions: {
@@ -119,8 +123,15 @@ async function main() {
     console.log('Session created:', session.id);
     console.log('View live session at:', session.sessionViewerUrl);
 
-    // Your session is now ready to use!
-    // When done, release the session
+    // Connect and use the browser
+    const browser = await client.puppeteer.connect(session);
+    const page = (await browser.pages())[0];
+
+    await page.goto('https://example.com');
+    console.log('Title:', await page.title());
+
+    // Clean up
+    await browser.close();
     await client.sessions.release(session.id);
     console.log('Session released');
 }
@@ -128,54 +139,98 @@ async function main() {
 main().catch(console.error);
 ```
 
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
 
-## Connecting to Your Session
-***
-
-Now that you have a session, connect to it using your preferred automation tool:
-
-```typescript
-// Connect via Puppeteer
-const browser = await client.puppeteer.connect(session);
-const page = (await browser.pages())[0];
-
-await page.goto('https://example.com');
-console.log('Title:', await page.title());
-```
-
-Run it:
-
-```bash
-npx ts-node my-first-session.ts
-```
-
-You can open the `sessionViewerUrl` printed in the console to watch the browser
-session live on the <BrandName /> dashboard.
-
-
-## Session Features
-***
-
-Want to do more with your session? Here are some common options you can add when
-creating:
+:::note
+Playwright requires **Node.js 18+**.
+:::
 
 ```typescript
-const session = await client.sessions.create({
-    adapter: 'puppeteer',
-    stealthConfig: {                  // Make the browser look human
-        humanizeInteractions: true,
-        randomizeUserAgent: true,
-    },
-    profileId: 'my-saved-login',      // Persist auth across runs
-    tunnel: true,                     // Access localhost from cloud
-    timeout: 600000,                  // 10-minute timeout
-    lambdatestOptions: { ... }
-});
+// my-first-session.ts
+
+import { Browser } from '@testmuai/browser-cloud';
+
+const client = new Browser();
+
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'playwright',
+        lambdatestOptions: {
+            build: 'Getting Started',
+            name: 'My First Session',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
+
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
+
+    // Connect and use the browser
+    const { browser, context, page } = await client.playwright.connect(session);
+
+    await page.goto('https://example.com');
+    console.log('Title:', await page.title());
+
+    // Clean up
+    await browser.close();
+    await client.sessions.release(session.id);
+    console.log('Session released');
+}
+
+main().catch(console.error);
 ```
 
-You've now created your first TestMu AI session and learned the basics of session
-management. With these fundamentals, you can start building more complex agent
-workflows on <BrandName /> Browser Cloud.
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
+
+```typescript
+// my-first-session.ts
+
+import { Browser } from '@testmuai/browser-cloud';
+
+const client = new Browser();
+
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'selenium',
+        lambdatestOptions: {
+            build: 'Getting Started',
+            name: 'My First Session',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
+
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
+
+    // Connect and use the browser
+    const driver = await client.selenium.connect(session);
+
+    await driver.get('https://example.com');
+    console.log('Title:', await driver.getTitle());
+
+    // Clean up
+    await driver.quit();
+    await client.sessions.release(session.id);
+    console.log('Session released');
+}
+
+main().catch(console.error);
+```
+
+  </TabItem>
+</Tabs>
+
+
+
+
 
 
 
