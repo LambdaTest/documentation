@@ -17,8 +17,6 @@ canonical: https://www.testmuai.com/support/docs/connect-to-session/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -79,8 +77,7 @@ Make sure you have completed the following before connecting to a session:
 
 ## Basic Usage
 
-<Tabs>
-  <TabItem value="puppeteer" label="Puppeteer" default>
+### Puppeteer
 
 Most Puppeteer scripts start with `puppeteer.launch()` to launch a local
 browser. With the TestMu AI Browser SDK, you replace that with
@@ -122,8 +119,7 @@ The `browser` object returned by `client.puppeteer.connect()` is a standard
 Puppeteer `Browser`. Use it exactly as you would with plain Puppeteer - all
 existing Puppeteer knowledge applies.
 
-  </TabItem>
-  <TabItem value="playwright" label="Playwright">
+### Playwright
 
 Like Puppeteer, the main change is how you connect - replacing
 `chromium.launch()` with `client.playwright.connect()`.
@@ -165,8 +161,7 @@ three objects - `browser`, `context`, and `page` - instead of just a browser.
 These are standard Playwright objects. Use them exactly as you would with plain
 Playwright.
 
-  </TabItem>
-  <TabItem value="selenium" label="Selenium">
+### Selenium
 
 Selenium connects to <BrandName /> differently from Puppeteer and Playwright.
 Instead of WebSocket, it uses the standard **WebDriver protocol over HTTP**,
@@ -203,15 +198,11 @@ await client.sessions.release(session.id);
 The `driver` object is a standard Selenium `WebDriver`. Use it exactly as you
 would with plain `selenium-webdriver`.
 
-  </TabItem>
-</Tabs>
-
 ---
 
 ## What the SDK Does for You
 
-<Tabs>
-  <TabItem value="puppeteer" label="Puppeteer" default>
+### Puppeteer
 
 When you call `client.puppeteer.connect(session)`, the SDK handles several
 things automatically based on your session configuration:
@@ -226,8 +217,7 @@ things automatically based on your session configuration:
 
 5. **Profile loading.** If `profileId` is set, saved cookies are loaded from disk. And when you call `browser.close()`, the profile is automatically saved with the current cookies.
 
-  </TabItem>
-  <TabItem value="playwright" label="Playwright">
+### Playwright
 
 When you call `client.playwright.connect(session)`:
 
@@ -244,8 +234,7 @@ When you call `client.playwright.connect(session)`:
 5. **Patches interactions** (if humanize enabled) - `page.click()`, `page.type()`, and `page.fill()` get random delays
 6. **Loads/saves profile** (if `profileId` set)
 
-  </TabItem>
-  <TabItem value="selenium" label="Selenium">
+### Selenium
 
 When you call `client.selenium.connect(session)`:
 
@@ -255,9 +244,6 @@ When you call `client.selenium.connect(session)`:
 4. **Connects** over the standard WebDriver protocol
 
 The Selenium adapter **ignores** `session.websocketUrl` and builds its own connection.
-
-  </TabItem>
-</Tabs>
 
 ---
 
@@ -281,8 +267,7 @@ const session = await client.sessions.create({
 
 ## Full Working Example
 
-<Tabs>
-  <TabItem value="puppeteer" label="Puppeteer" default>
+### Puppeteer
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -324,8 +309,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-  </TabItem>
-  <TabItem value="playwright" label="Playwright">
+### Playwright
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -366,8 +350,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-  </TabItem>
-  <TabItem value="selenium" label="Selenium">
+### Selenium
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -407,9 +390,6 @@ async function main() {
 
 main().catch(console.error);
 ```
-
-  </TabItem>
-</Tabs>
 
 :::warning
 Sessions remain active until explicitly released or timed out.
