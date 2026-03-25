@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/connect-to-session/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -75,6 +77,7 @@ Make sure you have completed the following before connecting to a session:
 
 ---
 
+## Basic Usage
 ## Basic Usage
 
 ### Puppeteer
@@ -204,6 +207,11 @@ would with plain `selenium-webdriver`.
 
 ### Puppeteer
 
+### Puppeteer
+
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
+
 When you call `client.puppeteer.connect(session)`, the SDK handles several
 things automatically based on your session configuration:
 
@@ -252,6 +260,7 @@ The Selenium adapter **ignores** `session.websocketUrl` and builds its own conne
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',   // or 'playwright' or 'selenium'
+    adapter: 'puppeteer',   // or 'playwright' or 'selenium'
     stealthConfig: {                   // Anti-bot detection
         humanizeInteractions: true,
         randomizeUserAgent: true,
@@ -264,10 +273,16 @@ const session = await client.sessions.create({
 ```
 
 ---
+---
 
 ## Full Working Example
 
 ### Puppeteer
+
+### Puppeteer
+
+<Tabs>
+  <TabItem value="puppeteer" label="Puppeteer" default>
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -331,12 +346,31 @@ async function main() {
             }
         }
     });
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'playwright',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 
     console.log(`View session: ${session.sessionViewerUrl}`);
 
     try {
         const { browser, context, page } = await client.playwright.connect(session);
+    console.log(`View session: ${session.sessionViewerUrl}`);
 
+    try {
+        const { browser, context, page } = await client.playwright.connect(session);
+
+        await page.goto('https://news.ycombinator.com');
+        const title = await page.title();
+        console.log('Page title:', title);
         await page.goto('https://news.ycombinator.com');
         const title = await page.title();
         console.log('Page title:', title);
@@ -360,6 +394,18 @@ import { Browser } from '@testmuai/browser-cloud';
 
 const client = new Browser();
 
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'selenium',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 async function main() {
     const session = await client.sessions.create({
         adapter: 'selenium',
