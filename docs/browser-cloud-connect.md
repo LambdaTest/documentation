@@ -78,7 +78,6 @@ Make sure you have completed the following before connecting to a session:
 ---
 
 ## Basic Usage
-## Basic Usage
 
 ### Puppeteer
 
@@ -205,10 +204,6 @@ would with plain `selenium-webdriver`.
 
 ## What the SDK Does for You
 
-### Puppeteer
-
-### Puppeteer
-
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>
 
@@ -225,7 +220,8 @@ things automatically based on your session configuration:
 
 5. **Profile loading.** If `profileId` is set, saved cookies are loaded from disk. And when you call `browser.close()`, the profile is automatically saved with the current cookies.
 
-### Playwright
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
 
 When you call `client.playwright.connect(session)`:
 
@@ -242,7 +238,8 @@ When you call `client.playwright.connect(session)`:
 5. **Patches interactions** (if humanize enabled) - `page.click()`, `page.type()`, and `page.fill()` get random delays
 6. **Loads/saves profile** (if `profileId` set)
 
-### Selenium
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
 
 When you call `client.selenium.connect(session)`:
 
@@ -253,13 +250,15 @@ When you call `client.selenium.connect(session)`:
 
 The Selenium adapter **ignores** `session.websocketUrl` and builds its own connection.
 
+  </TabItem>
+</Tabs>
+
 ---
 
 ## Adding Session Features
 
 ```typescript
 const session = await client.sessions.create({
-    adapter: 'puppeteer',   // or 'playwright' or 'selenium'
     adapter: 'puppeteer',   // or 'playwright' or 'selenium'
     stealthConfig: {                   // Anti-bot detection
         humanizeInteractions: true,
@@ -273,13 +272,8 @@ const session = await client.sessions.create({
 ```
 
 ---
----
 
 ## Full Working Example
-
-### Puppeteer
-
-### Puppeteer
 
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>
@@ -324,7 +318,8 @@ async function main() {
 main().catch(console.error);
 ```
 
-### Playwright
+  </TabItem>
+  <TabItem value="playwright" label="Playwright">
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -346,31 +341,12 @@ async function main() {
             }
         }
     });
-async function main() {
-    const session = await client.sessions.create({
-        adapter: 'playwright',
-        lambdatestOptions: {
-            build: 'Agent Scripts',
-            name: 'Scrape Example',
-            'LT:Options': {
-                username: process.env.LT_USERNAME,
-                accessKey: process.env.LT_ACCESS_KEY,
-            }
-        }
-    });
 
     console.log(`View session: ${session.sessionViewerUrl}`);
 
     try {
         const { browser, context, page } = await client.playwright.connect(session);
-    console.log(`View session: ${session.sessionViewerUrl}`);
 
-    try {
-        const { browser, context, page } = await client.playwright.connect(session);
-
-        await page.goto('https://news.ycombinator.com');
-        const title = await page.title();
-        console.log('Page title:', title);
         await page.goto('https://news.ycombinator.com');
         const title = await page.title();
         console.log('Page title:', title);
@@ -384,7 +360,8 @@ async function main() {
 main().catch(console.error);
 ```
 
-### Selenium
+  </TabItem>
+  <TabItem value="selenium" label="Selenium">
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -394,18 +371,6 @@ import { Browser } from '@testmuai/browser-cloud';
 
 const client = new Browser();
 
-async function main() {
-    const session = await client.sessions.create({
-        adapter: 'selenium',
-        lambdatestOptions: {
-            build: 'Agent Scripts',
-            name: 'Scrape Example',
-            'LT:Options': {
-                username: process.env.LT_USERNAME,
-                accessKey: process.env.LT_ACCESS_KEY,
-            }
-        }
-    });
 async function main() {
     const session = await client.sessions.create({
         adapter: 'selenium',
@@ -436,6 +401,9 @@ async function main() {
 
 main().catch(console.error);
 ```
+
+  </TabItem>
+</Tabs>
 
 :::warning
 Sessions remain active until explicitly released or timed out.
