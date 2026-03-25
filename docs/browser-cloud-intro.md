@@ -42,8 +42,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# <BrandName /> Browser Cloud
+# Getting Started With TestMu AI Browser Cloud
 ***
+
+TestMu AI is a scalable browser designed for AI agents to handle scraping, testing, and automation, without the overhead of managing infrastructure.
+
 
 Find all the guides, resources, and examples you need to build on <BrandName /> Browser Cloud.
 
@@ -54,21 +57,21 @@ Find all the guides, resources, and examples you need to build on <BrandName /> 
 
 <div className="row">
   <div className="col col--4 margin-bottom--lg">
-    <a className="card padding--lg" href="/support/docs/launch-first-session/" style={{height: '100%', textDecoration: 'none'}}>
-      <h3>🚀 Quickstart</h3>
-      <p>Launch your first cloud browser session in under 5 minutes.</p>
+    <a className="card padding--lg" href="/support/docs/browser-cloud-sdk-setup/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🛠️ Set Up the SDK</h3>
+      <p>Install the TestMu AI Browser SDK and configure your credentials.</p>
     </a>
   </div>
   <div className="col col--4 margin-bottom--lg">
     <a className="card padding--lg" href="/support/docs/connect-to-session/" style={{height: '100%', textDecoration: 'none'}}>
-      <h3>🔌 Connect Your Agent</h3>
+      <h3>🔌 Connect to a Session</h3>
       <p>Drive sessions with Puppeteer, Playwright, or Selenium.</p>
     </a>
   </div>
   <div className="col col--4 margin-bottom--lg">
-    <a className="card padding--lg" href="/support/docs/browser-cloud-sessions-overview/" style={{height: '100%', textDecoration: 'none'}}>
-      <h3>📡 Sessions API</h3>
-      <p>Create, manage, and release browser sessions programmatically.</p>
+    <a className="card padding--lg" href="/support/docs/browser-cloud-debugging/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🔍 Replay and Debug Sessions</h3>
+      <p>Video replays, console logs, and full network capture for every session.</p>
     </a>
   </div>
 </div>
@@ -105,12 +108,6 @@ Find all the guides, resources, and examples you need to build on <BrandName /> 
     <a className="card padding--lg" href="/support/docs/browser-cloud-tunnel/" style={{height: '100%', textDecoration: 'none'}}>
       <h3>🔒 Localhost Tunnel</h3>
       <p>Access localhost and internal networks from cloud browsers.</p>
-    </a>
-  </div>
-  <div className="col col--4 margin-bottom--lg">
-    <a className="card padding--lg" href="/support/docs/browser-cloud-debugging/" style={{height: '100%', textDecoration: 'none'}}>
-      <h3>🔍 Debugging</h3>
-      <p>Video replays, console logs, and full network capture for every session.</p>
     </a>
   </div>
 </div>

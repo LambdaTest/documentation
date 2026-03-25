@@ -61,7 +61,7 @@ controlling a cloud browser.
 ## Prerequisites
 ***
 
-**Step 1**: [Sign up on TestMu AI](https://www.testmuai.com)
+**Step 1**: [Sign up on TestMu AI](https://accounts.lambdatest.com/register)
 
 **Step 2**: Get your credentials:
 

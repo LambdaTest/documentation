@@ -143,6 +143,15 @@ import NewTag from '../src/component/newTag';
 <!-- start of second section -->
 
 <div className="home_main">
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Browser Cloud &nbsp; <NewTag  value="NEW" /></h2>
+      <div className="home_inners">
+        <a href="/support/docs/what-is-browser-cloud/"><p className="p_home_inners">What is Browser Cloud</p></a>
+        <a href="/support/docs/launch-first-session/"><p className="p_home_inners">Launch Session With SDK</p></a>
+        <a href="/support/docs/browser-cloud-skills/"><p className="p_home_inners">Launch Session With Agent Skills</p></a>
+        <a href="/support/docs/connect-to-session/"><p className="p_home_inners">Connect to a Session</p></a>
+      </div>
+    </div>
    <div className="home_inners_box">
       <h2 className='homeMain_h2'><VisualLightIcon className="home_icons home_light_icon" role="presentation"/> <VisualDarkIcon className="home_icons home_dark_icon" role="presentation"/>SmartUI</h2>
       <div className="home_inners">
@@ -157,7 +166,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-    <h2 className='homeMain_h2'><WebscannerLightIcon className="home_icons home_light_icon" role="presentation"/> <WebscannerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Scanner &nbsp; <NewTag  value="NEW" /></h2>
+    <h2 className='homeMain_h2'><WebscannerLightIcon className="home_icons home_light_icon" role="presentation"/> <WebscannerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Scanner</h2>
   <div className="home_inners">
     <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
     <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>

@@ -79,8 +79,7 @@ Make sure you have completed the following before connecting to a session:
 
 ## Basic Usage
 
-<Tabs>
-  <TabItem value="puppeteer" label="Puppeteer" default>
+### Puppeteer
 
 Most Puppeteer scripts start with `puppeteer.launch()` to launch a local
 browser. With the TestMu AI Browser SDK, you replace that with
@@ -122,8 +121,7 @@ The `browser` object returned by `client.puppeteer.connect()` is a standard
 Puppeteer `Browser`. Use it exactly as you would with plain Puppeteer - all
 existing Puppeteer knowledge applies.
 
-  </TabItem>
-  <TabItem value="playwright" label="Playwright">
+### Playwright
 
 Like Puppeteer, the main change is how you connect - replacing
 `chromium.launch()` with `client.playwright.connect()`.
@@ -165,8 +163,7 @@ three objects - `browser`, `context`, and `page` - instead of just a browser.
 These are standard Playwright objects. Use them exactly as you would with plain
 Playwright.
 
-  </TabItem>
-  <TabItem value="selenium" label="Selenium">
+### Selenium
 
 Selenium connects to <BrandName /> differently from Puppeteer and Playwright.
 Instead of WebSocket, it uses the standard **WebDriver protocol over HTTP**,
@@ -202,9 +199,6 @@ await client.sessions.release(session.id);
 
 The `driver` object is a standard Selenium `WebDriver`. Use it exactly as you
 would with plain `selenium-webdriver`.
-
-  </TabItem>
-</Tabs>
 
 ---
 
