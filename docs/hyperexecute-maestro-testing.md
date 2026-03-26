@@ -105,7 +105,7 @@ Enter your `APP_ID` in the YAML file that you have fetched in the above step.
 <TabItem value="android-rd" label="Android-Real Device" default>
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-realdevice.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-realdevice.yaml
 ```
 </TabItem>
 

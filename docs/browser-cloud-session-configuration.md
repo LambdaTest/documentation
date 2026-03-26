@@ -1,0 +1,184 @@
+---
+id: browser-cloud-session-configuration
+title: Session Configuration - TestMu AI Browser Cloud
+hide_title: true
+sidebar_label: Configure Session Options
+description: Complete reference for all options available when creating a session with the TestMu AI Browser SDK.
+keywords:
+  - browser cloud configuration
+  - session options
+  - stealth config
+  - browser cloud settings
+  - session create options
+url: https://www.testmuai.com/support/docs/browser-cloud-session-configuration/
+site_name: TestMu AI
+slug: browser-cloud-session-configuration/
+canonical: https://www.testmuai.com/support/docs/browser-cloud-session-configuration/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TestMu AI",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Browser Cloud",
+          "item": `${BRAND_URL}/support/docs/what-is-browser-cloud/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Session Configuration",
+          "item": `${BRAND_URL}/support/docs/browser-cloud-session-configuration/`
+        }]
+      })
+    }}
+></script>
+
+# Configure Session Options
+
+Complete reference for all options available when creating a session with the TestMu AI Browser SDK. Use these to control stealth, persistence, browser settings, network, and extensions.
+
+When you call `client.sessions.create()`, you can pass these options to
+configure the session's behavior, browser settings, and capabilities.
+
+## Quick Example
+
+Here is a typical `create` call that sets the most common options:
+
+```javascript
+const session = await client.sessions.create({
+  adapter: 'playwright',
+  dimensions: { width: 1920, height: 1080 },
+  blockAds: true,
+  stealthConfig: {
+    humanizeInteractions: true,
+    randomizeUserAgent: true,
+  },
+  proxy: 'http://my-proxy:8080',
+  lambdatestOptions: {
+    build: 'my-build',
+    name: 'my-test',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+  },
+});
+```
+
+The sections below describe every available option in detail.
+
+## Required Options
+
+| Option | Type | Description |
+|--------|------|----------------|
+| `adapter` | `'puppeteer' \| 'playwright' \| 'selenium'` | Which automation library to use |
+| `lambdatestOptions` | `object` | <BrandName /> capabilities (build name, test name, credentials) |
+
+## Stealth Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|----------------|
+| `stealthConfig.humanizeInteractions` | `boolean` | `false` | Add random delays to clicks and typing |
+| `stealthConfig.randomizeUserAgent` | `boolean` | `true` | Pick random user-agent from pool |
+| `stealthConfig.randomizeViewport` | `boolean` | `true` | Add ±20px jitter to viewport |
+| `stealthConfig.skipFingerprintInjection` | `boolean` | `false` | Disable all stealth |
+
+→ Learn more: [Avoid bot detection with Stealth Mode](/support/docs/browser-cloud-stealth/)
+
+## Persistence Options
+
+| Option | Type | Description |
+|--------|------|----------------|
+| `profileId` | `string` | Load/save persistent browser profile |
+| `sessionContext` | `SessionContext` | Pre-load cookies, localStorage, sessionStorage |
+
+
+## Browser Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|----------------|
+| `dimensions` | `{ width, height }` | - | Browser viewport size |
+| `userAgent` | `string` | - | Custom user-agent string |
+| `headless` | `boolean` | - | Run in headless mode |
+| `timeout` | `number` | `300000` | Session timeout in ms (5 min) |
+| `blockAds` | `boolean` | - | Block advertisements |
+| `solveCaptcha` | `boolean` | - | Enable CAPTCHA solving |
+
+## Network Options
+
+| Option | Type | Description |
+|--------|------|----------------|
+| `proxy` | `string` | Proxy URL |
+| `geoLocation` | `string` | Geolocation code (e.g. `'US'`, `'IN'`) |
+| `tunnel` | `boolean` | Enable <BrandName /> tunnel |
+| `tunnelName` | `string` | Named tunnel identifier |
+| `region` | `string` | <BrandName /> data center region |
+| `optimizeBandwidth` | `boolean \| config` | Block images/media/styles |
+
+
+## Extension Options
+
+| Option | Type | Description |
+|--------|------|----------------|
+| `extensionIds` | `string[]` | Chrome extension IDs to load |
+
+
+
+## Session Object
+
+After creation, you receive a Session object with these fields:
+
+```typescript
+interface Session {
+    id: string;                    // Unique session ID
+    websocketUrl: string;          // WebSocket URL for adapter connection
+    debugUrl: string;              // TestMu AI dashboard URL
+    config: SessionConfig;         // Original configuration
+    status: 'live' | 'released' | 'failed';
+    createdAt: string;             // ISO timestamp
+    timeout: number;               // Session timeout in ms
+    dimensions: Dimensions;        // Viewport dimensions
+    sessionViewerUrl?: string;     // Live session viewer URL
+    userAgent?: string;            // Resolved user-agent
+    stealthConfig?: StealthConfig; // Active stealth settings
+}
+```
+
+
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="/support/docs/what-is-browser-cloud/">
+        Browser Cloud
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Session Configuration
+      </span>
+    </li>
+  </ul>
+</nav>
