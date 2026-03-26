@@ -26,11 +26,7 @@ module.exports = {
             label: "Running Your First Job on HyperExecute",
             id: "hyperexecute-running-your-first-job",
           },
-          {
-            type: "doc",
-            label: "Run Your Test With Agent Skills",
-            id: "hyperexecute-agent-skills",
-          },
+        
           {
             type: "doc",
             label: "Guided Walkthrough",
@@ -3009,11 +3005,7 @@ module.exports = {
           id: "getting-started-with-appium-testing",
         },
         items: [
-          {
-            type: "doc",
-            label: "Run Your Test With Agent Skills",
-            id: "appium-agent-skills",
-          },
+        
           {
             type: "category",
             collapsed: true,
@@ -3197,11 +3189,7 @@ module.exports = {
         label: "Getting Started with Espresso Testing",
         id: "getting-started-with-espresso-testing",
       },
-      {
-        type: "doc",
-        label: "Run Your Test With Agent Skills",
-        id: "espresso-agent-skills",
-      },
+     
       {
         type: "category",
         collapsed: true,
@@ -3375,7 +3363,6 @@ module.exports = {
         },
         items: [
           "smartui-running-your-first-project",
-          "smartui-agent-skills",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",
           "smartui-approval-workflow-guide",

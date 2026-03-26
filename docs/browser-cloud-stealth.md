@@ -1,0 +1,251 @@
+---
+id: browser-cloud-stealth
+title: Stealth Mode - TestMu AI Browser Cloud
+hide_title: true
+sidebar_label: Stealth Mode to Avoid Bot Detection
+description: Make your agent's browser look like a real human user to bot-detection systems with TestMu AI Browser Cloud stealth mode.
+keywords:
+  - browser cloud stealth
+  - bot detection evasion
+  - fingerprint masking
+  - humanize interactions
+  - anti-detection browser
+url: https://www.testmuai.com/support/docs/browser-cloud-stealth/
+site_name: TestMu AI
+slug: browser-cloud-stealth/
+canonical: https://www.testmuai.com/support/docs/browser-cloud-stealth/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TestMu AI",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Browser Cloud",
+          "item": `${BRAND_URL}/support/docs/what-is-browser-cloud/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Stealth Mode",
+          "item": `${BRAND_URL}/support/docs/browser-cloud-stealth/`
+        }]
+      })
+    }}
+></script>
+
+# Avoid Bot Detection with Stealth Mode
+
+Make your agent's browser look like a real human user to bot-detection systems. Stealth mode masks fingerprints, randomizes user-agents, and humanizes interactions automatically.
+
+
+## Why Stealth Matters
+
+If your automated browser is getting blocked, served CAPTCHAs, or shown
+different content than a real user would see, it is likely because the target
+site's bot detection is flagging your session. Automated browsers leave
+detectable fingerprints that these systems check for:
+
+- `navigator.webdriver` is set to `true`
+- Missing Chrome plugins and runtime objects
+- Exact, round viewport dimensions like `1920x1080`
+- Identical user-agent strings across all sessions
+- Inhuman interaction speeds - instant clicks, perfectly uniform typing
+
+Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints, so
+the cloud browser is indistinguishable from a regular human user's Chrome
+session.
+
+
+## Enabling Stealth
+
+Add a `stealthConfig` to your session. That's it - the adapter handles
+everything else automatically:
+
+```typescript
+const session = await client.sessions.create({
+    adapter: 'puppeteer',
+    stealthConfig: {
+        humanizeInteractions: true,
+        randomizeUserAgent: true,
+        randomizeViewport: true,
+    },
+    lambdatestOptions: { ... }
+});
+```
+
+
+## Configuration Reference
+
+| Option | Type | Default | What It Does |
+|--------|------|---------|----------------|
+| `humanizeInteractions` | `boolean` | `false` | Adds random delays to clicks (50–150ms) and typing (30–130ms per character) |
+| `randomizeUserAgent` | `boolean` | `true` | Picks a random user-agent from a pool of 7 realistic Chrome/Firefox strings |
+| `randomizeViewport` | `boolean` | `true` | Adds ±20px random jitter to viewport dimensions |
+| `skipFingerprintInjection` | `boolean` | `false` | Disables all stealth entirely (Puppeteer only, useful for comparison testing) |
+
+
+## What Gets Patched
+
+The specific evasions depend on which adapter you're using.
+
+**Puppeteer** uses `puppeteer-extra` with the stealth plugin. This is the most
+comprehensive stealth solution available, patching:
+
+- `navigator.webdriver` (set to `undefined`)
+- Chrome runtime objects
+- WebGL vendor/renderer
+- Permission queries
+- Language and platform strings
+- iframe contentWindow access
+- Console.debug behavior
+- And approximately 15 more evasions
+
+**Playwright** uses custom scripts injected via `page.addInitScript()`. These
+scripts run **before** any page JavaScript executes, so detection scripts
+cannot observe the original values:
+
+| Evasion | What It Does |
+|---------|----------------|
+| `navigator.webdriver = false` | Hides the automation flag |
+| Fake `chrome.runtime` | Makes it look like Chrome extensions are present |
+| Fake `navigator.plugins` | Injects 3 standard Chrome plugins (PDF Plugin, PDF Viewer, Native Client) |
+| `navigator.languages` | Set to `['en-US', 'en']` |
+| `permissions.query` | Returns `'denied'` for notifications (matches real Chrome) |
+| WebGL spoofing | Reports "Intel Inc." / "Intel Iris OpenGL Engine" as GPU |
+
+> **Selenium** does not support stealth mode. Use Puppeteer or Playwright if
+> your agent needs anti-detection.
+
+
+## User-Agent Randomization
+
+When `randomizeUserAgent` is enabled (it is by default when any `stealthConfig`
+is set), the SDK picks from a pool of 7 realistic user-agent strings covering
+Chrome 119–120 and Firefox 121 on Windows, macOS, and Linux.
+
+The user-agent is selected **once** at session creation and stays consistent for
+the entire session. This is important - changing user-agent mid-session is a
+detection signal.
+
+If you provide an explicit `userAgent` in the session config, it takes priority
+over randomization.
+
+
+## Viewport Randomization
+
+When `randomizeViewport` is enabled, the SDK adds ±20 pixels of random jitter
+to your base viewport dimensions. Instead of the perfectly round `1920x1080`
+that bots typically fingerprint as, your session might run at `1907x1063` -
+subtly different each time.
+
+
+## Humanized Interactions
+
+When `humanizeInteractions` is enabled, the SDK monkey-patches interaction
+methods to add random delays:
+
+| Method | Adapter | Delay |
+|--------|---------|--------|
+| `page.click(selector)` | Puppeteer, Playwright | Random 50–150ms before clicking |
+| `page.type(selector, text)` | Puppeteer, Playwright | Random 30–130ms between each character |
+| `page.fill(selector, value)` | Playwright only | Random 50–150ms before filling |
+
+New pages created during the session automatically inherit the same humanized
+behavior.
+
+
+## Disabling Stealth
+
+To explicitly disable stealth (useful for comparison testing or sites that
+don't use bot detection):
+
+```typescript
+const session = await client.sessions.create({
+    adapter: 'puppeteer',
+    stealthConfig: {
+        skipFingerprintInjection: true,
+        randomizeUserAgent: false,
+        randomizeViewport: false,
+    },
+    lambdatestOptions: { ... }
+});
+```
+
+
+## Testing Your Stealth Setup
+
+The TestMu AI Browser SDK includes a built-in test that visits the bot detection
+site `bot.sannysoft.com` with stealth ON and OFF, saving screenshots for visual
+comparison:
+
+Screenshots are saved to `test-output/`. Stealth ON shows green checks; stealth
+OFF shows red failures.
+
+
+## How Stealth Works
+
+```
+Session Creation
+    │
+    ├─ stealthConfig present?
+    │   ├─ Yes → pick random UA, store on session.userAgent
+    │   └─ No  → skip
+    │
+    ▼
+Adapter.connect()
+    │
+    ├─ Puppeteer:
+    │   ├─ skipFingerprintInjection? → raw puppeteer.connect()
+    │   └─ else → puppeteerExtra.connect() with stealth plugin
+    │       ├─ Set random UA via page.setUserAgent()
+    │       ├─ Set random viewport via page.setViewport()
+    │       └─ Humanize: monkey-patch click/type
+    │
+    └─ Playwright:
+        ├─ Inject stealth scripts via page.addInitScript()
+        ├─ Auto-apply to new pages via context.on('page')
+        ├─ Set random UA via page.evaluate()
+        ├─ Set random viewport via page.setViewportSize()
+        └─ Humanize: monkey-patch click/type/fill
+```
+
+
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="/support/docs/what-is-browser-cloud/">
+        Browser Cloud
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Stealth Mode
+      </span>
+    </li>
+  </ul>
+</nav>
