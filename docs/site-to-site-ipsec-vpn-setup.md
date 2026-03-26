@@ -68,7 +68,7 @@ An IPsec Site-to-Site (S2S) VPN creates a permanent, encrypted tunnel between tw
 
 The diagram below illustrates the secure connection between your internal network and <BrandName />'s cloud infrastructure.
 
-<img loading="lazy" src={require('/img/s2s-vpn/network-architecture.png').default} alt="S2S VPN Network Architecture" className="doc_img" width="800"/>
+<img loading="lazy" src={require('/assets/images/s2s-vpn/network-architecture.png').default} alt="S2S VPN Network Architecture" className="doc_img" width="800"/>
 
 ### Traffic Flow Steps
 
@@ -151,13 +151,13 @@ Setting up an IPsec Site-to-Site VPN is **NOT** a self-service process. It requi
 
 Please provide the following details to your Network Team and share with <BrandName /> support to initiate the setup process.
 
-<img loading="lazy" src={require('/img/s2s-vpn/requirement-form.png').default} alt="S2S VPN Requirement Form" className="doc_img" width="600"/>
+<img loading="lazy" src={require('/assets/images/s2s-vpn/requirement-form.png').default} alt="S2S VPN Requirement Form" className="doc_img" width="600"/>
 
 Contact <BrandName /> support at **support@testmu.ai** with the above details to initiate the VPN setup process. Our Network Engineering team will review and contact you within 2 business days.
 
 ## Implementation Checklist
 
-<img loading="lazy" src={require('/img/s2s-vpn/implementation-checklist.png').default} alt="S2S VPN Implementation Checklist" className="doc_img" width="800"/>
+<img loading="lazy" src={require('/assets/images/s2s-vpn/implementation-checklist.png').default} alt="S2S VPN Implementation Checklist" className="doc_img" width="800"/>
 
 ## Troubleshooting
 
