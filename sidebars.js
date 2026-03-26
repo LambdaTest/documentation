@@ -4467,7 +4467,8 @@ module.exports = {
           "dedicated-proxy",
           "bypass-proxy-domains",
           "socks5-proxy-support",
-          "http2-support", // Added HTTP/2 support doc
+          "http2-support",
+          "site-to-site-ipsec-vpn-setup",
         ],
       },
       {
