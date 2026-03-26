@@ -4719,4 +4719,133 @@ module.exports = {
       },
     ],
   ],
+
+  BrowserCloudSidebar: [
+    {
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Get Started",
+        items: [
+          {
+            type: "doc",
+            label: "What is Browser Cloud",
+            id: "browser-cloud-intro",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With SDK",
+            id: "browser-cloud-quickstart",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With Agent Skills",
+            id: "browser-cloud-skills",
+          },
+          {
+            type: "doc",
+            label: "Connect to a Session",
+            id: "browser-cloud-connect",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Manage Your Sessions",
+        items: [
+          {
+            type: "doc",
+            label: "Understand the Sessions API",
+            id: "browser-cloud-sessions-overview",
+          },
+          {
+            type: "doc",
+            label: "Handle Session Lifecycle",
+            id: "browser-cloud-session-lifecycle",
+          },
+          {
+            type: "doc",
+            label: "Configure Session Options",
+            id: "browser-cloud-session-configuration",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Preserve Browser State",
+        items: [
+          {
+            type: "doc",
+            label: "Transfer Cookies & Storage",
+            id: "browser-cloud-context",
+          },
+          {
+            type: "doc",
+            label: "Stay Logged in Across Runs",
+            id: "browser-cloud-profiles",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Extend Your Browser",
+        items: [
+          {
+            type: "doc",
+            label: "Stealth Mode to Avoid Bot Detection",
+            id: "browser-cloud-stealth",
+          },
+          {
+            type: "doc",
+            label: "Upload and Download Files",
+            id: "browser-cloud-files",
+          },
+          {
+            type: "doc",
+            label: "Load Chrome Extensions",
+            id: "browser-cloud-extensions",
+          },
+          {
+            type: "doc",
+            label: "Access Localhost and Internal Networks",
+            id: "browser-cloud-tunnel",
+          },
+          {
+            type: "doc",
+            label: "One-Liner Scrape, Screenshot, and PDF",
+            id: "browser-cloud-quick-actions",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug and Troubleshoot",
+        items: [
+          {
+            type: "doc",
+            label: "Replay and Debug Sessions",
+            id: "browser-cloud-debugging",
+          },
+          {
+            type: "doc",
+            label: "API Reference",
+            id: "browser-cloud-api-reference",
+          },
+        ],
+      },
+    ],
+  ],
+
 };
