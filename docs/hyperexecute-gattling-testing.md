@@ -1,22 +1,22 @@
 ---
 id: hyperexecute-gattling-testing
-title: Gattling Automation on HyperExecute
+title: Gatling Automation on HyperExecute
 hide_title: false
-sidebar_label: Gattling
-description: Learn how to run Selenium automation tests on HyperExecute using the Gattling framework
+sidebar_label: Gatling
+description: Learn how to run Selenium automation tests on HyperExecute using the Gatling framework
 keywords:
-  - Gattling
-  - Gattling selenium
-  - Gattling Java Selenium
-  - Gattling automation testing
-  - selenium webdriver Gattling
-  - selenium Gattling testing tutorial
-  - Gattling Java Selenium framework
-  - testmu ai Gattling
+  - Gatling
+  - Gatling selenium
+  - Gatling Java Selenium
+  - Gatling automation testing
+  - selenium webdriver Gatling
+  - selenium Gatling testing tutorial
+  - Gatling Java Selenium framework
+  - testmu ai Gatling
   - frameworks on testmu ai
   - hyperexecute
-  - hyperexecute Gattling testing
-  - hyperexecute Gattling testing
+  - hyperexecute Gatling testing
+  - hyperexecute Gatling testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
 url: https://www.testmuai.com/support/docs/hyperexecute-gattling-testing/
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run automation tests on HyperExecute using Gattling framework",
+          "name": "How to run automation tests on HyperExecute using Gatling framework",
           "item": `${BRAND_URL}/support/docs/hyperexecute-gattling-testing/`
         }]
       })
@@ -91,7 +91,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Gattling Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Gatling Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/prateekLambda/Gatling-performance-hyperexecute" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
