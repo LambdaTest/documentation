@@ -130,7 +130,7 @@ driver.execute_script("lambda-biometric-injection=fail")
 :::note
 - To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
-- When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/).
+- When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/docs/).
 :::
 
 > 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices
