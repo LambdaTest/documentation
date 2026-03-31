@@ -375,6 +375,12 @@ private PopulationBuilder getPopulationBuilder() {
 }
 ```
 
+:::tip Sample repo
+Download or Clone the code sample for the Gatling TypeScript Performance Testing from the GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/gatling-hyperexecute-typescript" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ## Advanced Parameters
 Optimize your test pipeline using the following advanced features:
 
