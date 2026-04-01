@@ -286,7 +286,7 @@ Click **Run Test** to start the execution.
 
 After the test execution completes, navigate to the **Jobs** section to analyze results:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-job-results.jpg').default} alt="Gatling Job Results" width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-job-results.png').default} alt="Gatling Job Results" width="1920" height="868" className="doc_img"/>
 
 - **Job Summary:** View job duration, test duration, execution time, and status
 - **Scenarios Tab:** Monitor individual scenario execution and validate if tests ran for the required duration
