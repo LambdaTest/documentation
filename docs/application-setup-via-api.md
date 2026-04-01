@@ -236,7 +236,7 @@ Shown below is the response to the above cURL request.
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
---header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
+--header 'Authorization: Basic <Basic>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "appId": "APP10160161171698993659206876",
@@ -252,7 +252,7 @@ Shown below is the response to the above cURL request.
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
---header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
+--header 'Authorization: Basic <Basic>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "appId": "APP10160161171698993659206876",
