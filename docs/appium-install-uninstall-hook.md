@@ -73,6 +73,16 @@ driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 ```
 
+**JavaScript example:**
+```javascript
+await browser.execute("lambda-install-app", {
+  /* Change the App URL */
+  appUrl: "lt://APP1234567890ABCDEF1234567890",
+  /* Optional */
+  retainData: true
+});
+```
+
 ### Uninstall App
 
 You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
@@ -82,6 +92,14 @@ You can uninstall apps during the execution of an automation test using the comm
 driver.execute_script("lambda-uninstall-app=com.myApp.beta")
 driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
+
+**JavaScript example:**
+```javascript
+/* Change the App ID */
+const APP_ID = "com.lambdatest.proverbial";
+await browser.execute(`lambda-uninstall-app=${APP_ID}`);
+```
+
 ### Test App Upgrades with Hooks
 
 Testing app upgrades is important because users often update to the latest version instead of reinstalling the app. To ensure existing user data is preserved and the app continues to function properly after an upgrade, you can use the following hooks:
