@@ -136,6 +136,172 @@ The platform is built as a cloud-native, API-first system composed of three logi
 
 `Requirements Input` → `Scenario Generation` → `Agent-to-Agent Execution` → `AI Evaluation` → `Results & Go-Live`
 
+<div style={{background:'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',borderRadius:'16px',padding:'32px 24px',margin:'24px 0',fontFamily:'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif',border:'1px solid #e2e8f0'}}>
+
+<div style={{textAlign:'center',marginBottom:'24px'}}>
+  <div style={{fontSize:'18px',fontWeight:700,color:'#1e293b',marginBottom:'4px'}}>Platform Architecture</div>
+  <div style={{fontSize:'13px',color:'#64748b'}}>End-to-end flow from test configuration to production-readiness assessment</div>
+</div>
+
+<div style={{display:'flex',justifyContent:'center',gap:'16px',marginBottom:'8px',flexWrap:'wrap'}}>
+  <div style={{background:'#1e293b',color:'#fff',padding:'12px 24px',borderRadius:'10px',fontSize:'14px',fontWeight:600,textAlign:'center',minWidth:'140px'}}>
+    Web Application
+  </div>
+  <div style={{background:'#1e293b',color:'#fff',padding:'12px 24px',borderRadius:'10px',fontSize:'14px',fontWeight:600,textAlign:'center',minWidth:'140px'}}>
+    REST API / CLI
+  </div>
+  <div style={{background:'#1e293b',color:'#fff',padding:'12px 24px',borderRadius:'10px',fontSize:'14px',fontWeight:600,textAlign:'center',minWidth:'140px'}}>
+    CI/CD Pipelines
+  </div>
+</div>
+<div style={{textAlign:'center',fontSize:'12px',color:'#94a3b8',marginBottom:'12px'}}>Projects, scenarios, suites, and schedules are configured here</div>
+
+<div style={{textAlign:'center',fontSize:'20px',color:'#94a3b8',margin:'4px 0'}}>▼</div>
+<div style={{textAlign:'center',fontSize:'11px',color:'#64748b',marginBottom:'8px',fontStyle:'italic'}}>Authenticated requests (Bearer / API Key)</div>
+
+<div style={{display:'flex',justifyContent:'center',marginBottom:'8px'}}>
+  <div style={{background:'#fef3c7',border:'1px solid #f59e0b',padding:'10px 32px',borderRadius:'10px',fontSize:'13px',fontWeight:600,color:'#92400e',textAlign:'center'}}>
+    Authentication & Authorization Layer
+  </div>
+</div>
+<div style={{textAlign:'center',fontSize:'12px',color:'#94a3b8',marginBottom:'12px'}}>Per-organization isolation · Encrypted credential storage · Tunnel proxy for private agents</div>
+
+<div style={{textAlign:'center',fontSize:'20px',color:'#94a3b8',margin:'4px 0'}}>▼</div>
+<div style={{textAlign:'center',fontSize:'11px',color:'#64748b',marginBottom:'8px',fontStyle:'italic'}}>Validated request routed to testing modules</div>
+
+<div style={{background:'#fff',border:'2px solid #6366f1',borderRadius:'14px',padding:'24px 20px',marginBottom:'8px'}}>
+  <div style={{textAlign:'center',fontSize:'15px',fontWeight:700,color:'#4338ca',marginBottom:'4px',letterSpacing:'0.5px'}}>
+    TESTING ENGINE
+  </div>
+  <div style={{textAlign:'center',fontSize:'12px',color:'#6366f1',marginBottom:'16px'}}>
+    Orchestrates scenario execution across all agent modalities
+  </div>
+  <div style={{display:'flex',justifyContent:'center',gap:'12px',marginBottom:'16px',flexWrap:'wrap'}}>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>📞</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Phone Testing</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Inbound & Outbound</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Real calls via telephony providers</div>
+    </div>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>💬</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Chat Testing</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Webhook & API</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Multi-turn HTTP conversations</div>
+    </div>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>🎙️</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Voice Testing</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Real-time Multi-transport</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>REST, WebSocket & WebRTC</div>
+    </div>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>🖼️</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Image Evaluation</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Generation & Scoring</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Prompt → image → quality check</div>
+    </div>
+  </div>
+
+  <div style={{borderTop:'1px dashed #c7d2fe',paddingTop:'14px',marginTop:'4px'}}>
+    <div style={{textAlign:'center',fontSize:'11px',color:'#6366f1',marginBottom:'10px',fontWeight:600}}>CORE CAPABILITIES</div>
+    <div style={{display:'flex',justifyContent:'center',gap:'12px',flexWrap:'wrap'}}>
+      <div style={{background:'#f0fdf4',border:'1px solid #86efac',padding:'10px 18px',borderRadius:'8px',textAlign:'center',minWidth:'150px'}}>
+        <div style={{fontSize:'12px',fontWeight:600,color:'#166534'}}>AI Scenario Generation</div>
+        <div style={{fontSize:'11px',color:'#15803d',marginTop:'2px'}}>60–100+ from your docs</div>
+      </div>
+      <div style={{background:'#f0fdf4',border:'1px solid #86efac',padding:'10px 18px',borderRadius:'8px',textAlign:'center',minWidth:'150px'}}>
+        <div style={{fontSize:'12px',fontWeight:600,color:'#166534'}}>Test Orchestration</div>
+        <div style={{fontSize:'11px',color:'#15803d',marginTop:'2px'}}>Parallel suite execution</div>
+      </div>
+      <div style={{background:'#f0fdf4',border:'1px solid #86efac',padding:'10px 18px',borderRadius:'8px',textAlign:'center',minWidth:'150px'}}>
+        <div style={{fontSize:'12px',fontWeight:600,color:'#166534'}}>Scheduling Engine</div>
+        <div style={{fontSize:'11px',color:'#15803d',marginTop:'2px'}}>Cron-based regression runs</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style={{textAlign:'center',fontSize:'12px',color:'#94a3b8',marginBottom:'12px'}}>Executes tests against your agent · Captures recordings & conversation logs</div>
+
+<div style={{textAlign:'center',fontSize:'20px',color:'#94a3b8',margin:'4px 0'}}>▼</div>
+<div style={{textAlign:'center',fontSize:'11px',color:'#64748b',marginBottom:'8px',fontStyle:'italic'}}>Completed conversations sent for AI-powered scoring</div>
+
+<div style={{background:'#fff',border:'2px solid #f59e0b',borderRadius:'14px',padding:'20px',marginBottom:'8px'}}>
+  <div style={{textAlign:'center',fontSize:'15px',fontWeight:700,color:'#b45309',marginBottom:'4px',letterSpacing:'0.5px'}}>
+    AI EVALUATION LAYER
+  </div>
+  <div style={{textAlign:'center',fontSize:'12px',color:'#b45309',marginBottom:'12px'}}>
+    Scores every conversation across standardized quality dimensions
+  </div>
+  <div style={{display:'flex',justifyContent:'center',gap:'12px',flexWrap:'wrap'}}>
+    <div style={{background:'#fffbeb',border:'1px solid #fcd34d',padding:'8px 16px',borderRadius:'8px',fontSize:'12px',fontWeight:600,color:'#92400e',textAlign:'center'}}>
+      18+ Quality Dimensions
+    </div>
+    <div style={{background:'#fffbeb',border:'1px solid #fcd34d',padding:'8px 16px',borderRadius:'8px',fontSize:'12px',fontWeight:600,color:'#92400e',textAlign:'center'}}>
+      Recording Analysis
+    </div>
+    <div style={{background:'#fffbeb',border:'1px solid #fcd34d',padding:'8px 16px',borderRadius:'8px',fontSize:'12px',fontWeight:600,color:'#92400e',textAlign:'center'}}>
+      Go-Live Assessment
+    </div>
+    <div style={{background:'#fffbeb',border:'1px solid #fcd34d',padding:'8px 16px',borderRadius:'8px',fontSize:'12px',fontWeight:600,color:'#92400e',textAlign:'center'}}>
+      Threshold Scoring
+    </div>
+  </div>
+</div>
+<div style={{textAlign:'center',fontSize:'12px',color:'#94a3b8',marginBottom:'12px'}}>Produces per-scenario scores · Aggregates into Go-Live verdict (🟢 Green / 🟡 Yellow / 🔴 Red)</div>
+
+<div style={{textAlign:'center',fontSize:'20px',color:'#94a3b8',margin:'4px 0'}}>▼</div>
+<div style={{textAlign:'center',fontSize:'11px',color:'#64748b',marginBottom:'8px',fontStyle:'italic'}}>Results, recordings & assets persisted</div>
+
+<div style={{display:'flex',justifyContent:'center',gap:'16px',flexWrap:'wrap',marginBottom:'8px'}}>
+  <div style={{background:'#f1f5f9',border:'1px solid #cbd5e1',padding:'12px 20px',borderRadius:'10px',textAlign:'center',minWidth:'140px'}}>
+    <div style={{fontSize:'12px',fontWeight:600,color:'#475569'}}>Managed Database</div>
+    <div style={{fontSize:'11px',color:'#64748b',marginTop:'2px'}}>Scores & metadata</div>
+  </div>
+  <div style={{background:'#f1f5f9',border:'1px solid #cbd5e1',padding:'12px 20px',borderRadius:'10px',textAlign:'center',minWidth:'140px'}}>
+    <div style={{fontSize:'12px',fontWeight:600,color:'#475569'}}>Cache & Pub/Sub</div>
+    <div style={{fontSize:'11px',color:'#64748b',marginTop:'2px'}}>Live SSE streaming</div>
+  </div>
+  <div style={{background:'#f1f5f9',border:'1px solid #cbd5e1',padding:'12px 20px',borderRadius:'10px',textAlign:'center',minWidth:'140px'}}>
+    <div style={{fontSize:'12px',fontWeight:600,color:'#475569'}}>Encrypted Object Store</div>
+    <div style={{fontSize:'11px',color:'#64748b',marginTop:'2px'}}>Recordings & uploads</div>
+  </div>
+</div>
+<div style={{textAlign:'center',fontSize:'12px',color:'#94a3b8',marginBottom:'12px'}}>All data encrypted at rest · TLS in transit · Per-org isolation</div>
+
+<div style={{textAlign:'center',fontSize:'20px',color:'#94a3b8',margin:'4px 0'}}>▼</div>
+<div style={{textAlign:'center',fontSize:'11px',color:'#64748b',marginBottom:'8px',fontStyle:'italic'}}>Platform connects to your existing providers — no vendor lock-in</div>
+
+<div style={{background:'#fff',border:'1px solid #f9a8d4',borderRadius:'14px',padding:'16px 20px'}}>
+  <div style={{textAlign:'center',fontSize:'13px',fontWeight:700,color:'#9d174d',marginBottom:'10px',letterSpacing:'0.5px'}}>
+    EXTERNAL INTEGRATIONS
+  </div>
+  <div style={{display:'flex',justifyContent:'center',gap:'12px',flexWrap:'wrap'}}>
+    <div style={{background:'#fdf2f8',border:'1px solid #f9a8d4',padding:'10px 18px',borderRadius:'10px',textAlign:'center',minWidth:'120px'}}>
+      <div style={{fontSize:'12px',fontWeight:600,color:'#9d174d'}}>Telephony Providers</div>
+      <div style={{fontSize:'10px',color:'#be185d',marginTop:'2px'}}>Call placement & routing</div>
+    </div>
+    <div style={{background:'#fdf2f8',border:'1px solid #f9a8d4',padding:'10px 18px',borderRadius:'10px',textAlign:'center',minWidth:'120px'}}>
+      <div style={{fontSize:'12px',fontWeight:600,color:'#9d174d'}}>Voice Providers</div>
+      <div style={{fontSize:'10px',color:'#be185d',marginTop:'2px'}}>Voice session management</div>
+    </div>
+    <div style={{background:'#fdf2f8',border:'1px solid #f9a8d4',padding:'10px 18px',borderRadius:'10px',textAlign:'center',minWidth:'120px'}}>
+      <div style={{fontSize:'12px',fontWeight:600,color:'#9d174d'}}>Speech Services</div>
+      <div style={{fontSize:'10px',color:'#be185d',marginTop:'2px'}}>TTS & STT engines</div>
+    </div>
+    <div style={{background:'#fdf2f8',border:'1px solid #f9a8d4',padding:'10px 18px',borderRadius:'10px',textAlign:'center',minWidth:'120px'}}>
+      <div style={{fontSize:'12px',fontWeight:600,color:'#9d174d'}}>Issue Trackers</div>
+      <div style={{fontSize:'10px',color:'#be185d',marginTop:'2px'}}>Jira, GitHub, Confluence</div>
+    </div>
+    <div style={{background:'#fdf2f8',border:'1px solid #f9a8d4',padding:'10px 18px',borderRadius:'10px',textAlign:'center',minWidth:'120px'}}>
+      <div style={{fontSize:'12px',fontWeight:600,color:'#9d174d'}}>AI Models</div>
+      <div style={{fontSize:'10px',color:'#be185d',marginTop:'2px'}}>Scenario gen & evaluation</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 ### Supported Agent Types
 
 | Agent Type | How It Works | Primary Use Case |
