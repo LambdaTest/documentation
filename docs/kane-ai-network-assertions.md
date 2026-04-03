@@ -48,9 +48,13 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 # Let's see how to add Network Logs Assertions in a Test
 
-- **Start a test session** (Desktop or Mobile Web). 
+- **Start a test session** (Desktop Web, Mobile Web, or Mobile App).
 
-- All network calls are automatically recorded in the background as you navigate through your application, you can see the Network calls made so far through the **Assert Network Logs** option available in the " / " commands. 
+- For **Mobile Web** and **Mobile App** sessions, you need to enable the **Capture Network Logs** toggle before starting your session. Navigate to **Advanced Settings** > **Session Settings** and turn on the **Capture Network Logs** option.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/capture-network-logs.png').default} alt="Image" className="doc_img img_center"/>
+
+- All network calls are automatically recorded in the background as you navigate through your application. You can see the Network calls made so far through the **Assert Network Logs** option available in the " / " commands.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/hit-network-req.png').default} alt="Image" className="doc_img img_center"/>
 
@@ -80,6 +84,4 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center" style={{width: '60%'}}/>
 
-:::note
-This feature is not enabled for all users. Please contact our support team to request access.
-:::
+
