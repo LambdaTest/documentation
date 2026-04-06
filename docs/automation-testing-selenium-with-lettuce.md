@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Run Lettuce tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::warning Deprecated Framework
-Lettuce has not been updated since 2016 and only supports Python 2. Consider migrating to [Behave](/support/docs/behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid/) or [PyTest](/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/). This guide is maintained for existing users.
+Lettuce has not been updated since 2016 and only supports Python 2. Consider migrating to [Behave](/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/) or [PyTest](/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/). This guide is maintained for existing users.
 :::
 
 :::tip Sample repo
