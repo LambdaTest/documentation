@@ -1,24 +1,19 @@
 ---
 id: selenide-frameworks
-title: Execute Selenium Tests With Selenide
+title: Selenium With Selenide
 sidebar_label: Selenide
-description: Your guide to running tests using Selenide on TestMu AI's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Run Selenide tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.
 keywords:
-  - Selenide
-  - Selenium
-  - Selenium automation testing
-  - Selenium Testing tool
-  - Selenium testing tutorial
-  - selenium python
-  - Selenium Grid
-  - Selenium Automation
-
+  - selenide selenium cloud testing
+  - run selenide tests on selenium grid
+  - selenide parallel test execution
+  - selenide automation setup
+  - selenide cross browser testing
 image: /assets/images/og-images/selenium-testing-og.png
-
 url: https://www.testmuai.com/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
 site_name: TestMu AI
 slug: selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
-canonical: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
+canonical: https://www.testmuai.com/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,52 +40,37 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "LambdaTest With Selenide Automation Framework: Perform Automation Testing Faster On Cloud Selenium Grid",
+          "name": "Selenium With Selenide",
           "item": `${BRAND_URL}/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/`
         }]
       })
     }}
 ></script>
 
-# Selenium With Selenide Tutorial
-
----
-
-In this topic, you will learn how to configure and run tests using **Selenide** on <BrandName />'s [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
-
-## Objective
-
----
-
-By the end of this topic, you will be able to:
-
-1. Set up an environment for testing your hosted web pages using **Selenide** automation framework.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Run test cases in parallel using **Selenide** framework to reduce build times.
-4. Test your locally hosted pages on <BrandName /> platform.
-5. Explore advanced features of <BrandName />.
+Run Selenide tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/selenide-testng-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/selenide-testng-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
 
 ## Prerequisites
-
 ---
 
-Before you can start performing Java automation testing with Selenium, you would need to:
+Make sure you have the following set up before you start.
 
-- Install the latest **Java development environment**. We recommend to use **Java 11** version.
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the **Java development environment** (Java 11 recommended).
+4. Install **Maven**. Download it from [the official website](https://maven.apache.org/) or install it on **Linux/MacOS** using [**Homebrew**](https://brew.sh/).
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on <BrandName /> Selenium cloud grid.
+## Step 1: Clone the Sample Project
+---
 
-- Install **Maven**. It can be downloaded and installed following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
-
-### Cloning Repo and Installing Dependencies
-
-**Step 1:** Clone the <BrandName />’s [selenide-testng-sample](https://github.com/LambdaTest/selenide-testng-sample) repository and navigate to the code directory as shown below:
+Pull the sample repo to your local machine and navigate into the project directory.
 
 ```bash
 git clone https://github.com/LambdaTest/selenide-testng-sample
@@ -102,63 +83,78 @@ You may also want to run the command below to check for outdated dependencies.
 mvn versions:display-dependency-updates
 ```
 
-### Setting up Your Authentication
+## Step 2: Set Your Credentials
+---
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-**Step 2:** Set <BrandName /> `Username` and `Access Key` in environment variables.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
-
-<TabItem value="bash" label="Linux / MacOS" default>
-
+<TabItem value="bash" label="macOS / Linux" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \\
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \`
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
 </Tabs>
 
-:::info note
+:::info Note
 
-You can also mention your <BrandName /> credentials in each of the config files located at `selenide-testng-sample/src/test/resources/conf/`.
+You can also mention your TestMu AI credentials in each of the config files located at `selenide-testng-sample/src/test/resources/conf/`.
 
 :::
 
-## Run Your First Test
-
+## Step 3: Configure Your Test Capabilities
 ---
 
-### Sample Test with Selenide
+Define the browser, version, and OS for your test run.
 
-Let’s checkout sample Selenide code running <BrandName /> Selenium grid. This is a simple Selenide automation script similar to the script we have used in our [Github repo](https://github.com/LambdaTest/selenide-testng-sample).
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+```
+
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+:::
+
+Below is the sample Selenide test used in this project:
 
 ```java title="Selenide To Do"
 package com.lambdatest;
 
 import java.io.FileReader;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -189,28 +185,38 @@ public class LambdaTestSetup {
         JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + config_file));
         JSONObject envs = (JSONObject) config.get("environments");
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
         Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
         Iterator it = envCapabilities.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
+            String key = pair.getKey().toString();
+            if (key.equals("platformName")) {
+                browserOptions.setPlatformName(pair.getValue().toString());
+            } else if (key.equals("browserVersion")) {
+                browserOptions.setBrowserVersion(pair.getValue().toString());
+            } else {
+                ltOptions.put(key, pair.getValue().toString());
+            }
         }
 
         Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
         it = commonCapabilities.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            if (capabilities.getCapability(pair.getKey().toString()) == null) {
-                capabilities.setCapability(pair.getKey().toString(),
+            if (!ltOptions.containsKey(pair.getKey().toString())) {
+                ltOptions.put(pair.getKey().toString(),
                         (pair.getValue().toString().equalsIgnoreCase("true")
                                 || (pair.getValue().toString().equalsIgnoreCase("false"))
                                         ? Boolean.parseBoolean(pair.getValue().toString())
                                         : pair.getValue().toString()));
             }
         }
-        capabilities.setCapability("name", this.getClass().getName());
+        ltOptions.put("name", this.getClass().getName());
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
         username = System.getenv("LT_USERNAME");
         if (username == null) {
@@ -223,7 +229,7 @@ public class LambdaTestSetup {
         }
 
         driver = new RemoteWebDriver(
-                new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
+                new URL("https://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), browserOptions);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sessionId = driver.getSessionId().toString();
 
@@ -253,52 +259,37 @@ public class LambdaTestSetup {
 }
 ```
 
-### Configuring your Test Capabilities
+## Step 4: Run the Test
+---
 
-**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
+Trigger the test from your terminal.
 
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
-        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
-        capabilities.setCapability("network", true); // To enable network logs
-        capabilities.setCapability("visual", true); // To enable step by step screenshot
-        capabilities.setCapability("video", true); // To enable video recording
-        capabilities.setCapability("console", true); // To capture console logs
-```
-
-:::info Note
-
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
-
-:::
-
-### Executing the Test
-
-**Step 4:** Install the mandatory Selenium dependencies for Maven by running the below command:
+First, install the mandatory Selenium dependencies for Maven:
 
 ```bash
 mvn compile
 ```
 
-**Step 5:** The tests can be executed in the terminal using the following command:
+Then execute the tests:
+
+<Tabs className="docs__val">
+<TabItem value="single" label="Single Test" default>
 
 ```bash
 mvn test -P single
 ```
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+</TabItem>
+<TabItem value="parallel" label="Parallel Tests">
 
-## Run Parallel Tests using Selenide
+```bash
+mvn test -P parallel
+```
 
----
+</TabItem>
+</Tabs>
 
-### Setting up the Parallel Environment
-
-Here is an example of `parallel.testng.xml` file which would help you to run a single test on various browsers at the same time, you would also need to generate a config file `parallel.config.json` to define capabilities of the browsers.
+For parallel execution, the sample project includes a `parallel.testng.xml` that runs the test across multiple browsers simultaneously:
 
 ```xml title="parallel.testng.xml"
 <?xml version="1.0" encoding="UTF-8"?>
@@ -342,86 +333,57 @@ Here is an example of `parallel.testng.xml` file which would help you to run a s
 
   "environments": {
     "chrome": {
-      "platform": "windows 10",
+      "platformName": "Windows 10",
       "browserName": "chrome",
-      "version": "latest"
+      "browserVersion": "latest"
     },
     "firefox": {
-      "platform": "windows 8.1",
+      "platformName": "Windows 10",
       "browserName": "firefox",
-      "version": "latest"
+      "browserVersion": "latest"
     },
     "safari": {
-      "platform": "macOS Mojave",
+      "platformName": "macOS Mojave",
       "browserName": "safari",
-      "version": "latest"
+      "browserVersion": "latest"
     }
   }
 }
 ```
 
-### Executing Parallel Tests Using Selenide
-
-To run parallel tests using Selenide, we would have to execute the below command in the terminal:
-
-```bash
-mvn test -P parallel
-```
-
-:::info
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build).
-:::
-
-## Testing Locally Hosted or Privately Hosted Projects
-
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
-
-:::tip Tunnel Help
-
-Refer our :link: [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
-
-:::
-
-Here’s how you can establish <BrandName /> Tunnel.
-
-:::info Download the binary file
-
-- [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-:::
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-
-```bash
-./LT -user {user’s login email} -key {user’s access key}
-```
-
-So if your user name is **lambdatest@example.com**, the command would be:
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`./LT -user lambdatest@example.com -key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
-
-```java title="Tunnel Capability"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("tunnel", true);
-```
-
-## Additional Links
-
+## Step 5: View Your Results
 ---
 
-- [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+Check the Automation Dashboard to see exactly what happened during your test.
+
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
+
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
+
+## Run Selenide Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run Selenide tests with the TestMu AI Agent Skill.
+
+The [selenide-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenide-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenide-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenide-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -436,7 +398,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Selenide Automation Testing  </span>
+      <span className="breadcrumbs__link"> Selenium With Selenide </span>
     </li>
   </ul>
 </nav>

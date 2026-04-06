@@ -1,14 +1,16 @@
 ---
 id: inside-lambdatest-automation-platform
-title: Guided Walkthrough of Web Automation Platform
-hide_title: false
-sidebar_label: Inside Automation Platform
-description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the TestMu AI.
+title: Explore the Automation Dashboard
+sidebar_label: Explore the Dashboard
+description: Navigate the TestMu AI Automation Dashboard. View test results, video recordings, command logs, network logs, and build timelines.
 keywords:
-  - Automation Platform
-  - Dashboard
-  - Automation Testing
-  - testmu ai Dashboard
+  - automation dashboard
+  - testmu ai dashboard
+  - test results dashboard
+  - selenium test logs
+  - test video recording
+  - automation test analytics
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/inside-testmu-platform/
 site_name: TestMu AI
 slug: inside-testmu-platform/
@@ -34,56 +36,104 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Guided Walkthrough",
+          "name": "Explore the Automation Dashboard",
           "item": `${BRAND_URL}/support/docs/inside-testmu-platform/`
         }]
       })
     }}
 ></script>
 
-This page gives you a guided walkthrough of all the things on the <BrandName /> [Web Automation Dashboard](https://automation.lambdatest.com/build) and how you can get the most out of the platform, once you have successfully ran you first test.
+---
 
-We provide both Test and Build view for filtering your tests as per your requirement.
+The [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/homepage-guide.gif').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/homepage-guide.gif').default} alt="TestMu AI Automation Dashboard overview" className="doc_img" style={{ width: '100%' }}/>
 
-## Test Page
-Whenever you will click on any of your build or to a particular test, you will be landed on this page. In this page, you will get a detailed information for each of your executed tests like **Build** name, tests configurations (operating system, browser, resolution, browser version etc), command and video logs etc.
+## Build and Test Views
+---
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testPage.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+Filter and browse your tests using either the Build view or the Test view.
 
-### Tests
-In the left panel you can observe that it lists all the test cases of a particular build with its corresponding status (pass/fail), execution time, configurations used, and other relevant information.
+The dashboard groups your tests by build. Click any build to see its individual test cases. You can switch between Build and Test views depending on whether you want to see results grouped by build or listed individually.
 
-Additionally, you can sort the data according to date, status, and duration, as well as search for a specific test or apply a filter based on browser, OS, status, and tags.
+## Test Detail Page
+---
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/test.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+Click any test to open its detail page with full execution data.
+
+Each test detail page shows the build name, test status (pass/fail), execution time, browser and OS configuration, resolution, and framework used.
+
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testPage.png').default} alt="Test detail page showing execution data" className="doc_img" style={{ width: '100%' }}/>
+
+### Test List Panel
+
+The left panel lists all test cases within a build. Each entry shows the test status, execution time, and configuration.
+
+You can sort by date, status, or duration. Use the search bar to find a specific test, or filter by browser, OS, status, or tags.
+
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/test.png').default} alt="Test list panel with filters" className="doc_img" style={{ width: '100%' }}/>
 
 ### Test Summary
-The Test Summary section provides a high-level overview of the test run, allowing you to quickly assess overall progress, identify individual test cases, and access detailed information about specific tests.
 
-#### Core Test Information
-- Build Name: "Demo: Cucumber TestNG on HyperTest Grid"
-- Test status (passed or failed)
-- Test Name: "Perform Bing Search for <BrandName />"
-- Time taken for execution
-- Configurations used (resolution, browser, operating system, framework)
-- Last updated timestamp
+The summary section gives you a quick overview of the selected test.
 
+It displays:
+- **Build name** and **test name**
+- **Status** - passed or failed
+- **Execution time**
+- **Configuration** - resolution, browser, OS, framework
+- **Last updated** timestamp
 
-In the very left side, there is a button to copy your **test id** and beside it there is another button which allows you to **create an issue**, **rename**, **share** and **delete** that particular test.
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testSummary.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+Use the action buttons next to the test ID to copy the ID, create an issue, rename, share, or delete the test.
 
-### Command Logs
-You can access the commands involved in the test, and the logs on the right hand side on this Dashboard.
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testSummary.png').default} alt="Test summary section" className="doc_img" style={{ width: '100%' }}/>
 
-- **All Commands:** Each command that is run as a part of your test case is shown here. Each command also contains its own parameters, that can be accessed by hovering on the command.
-- **Logs:** View all kinds of logs at one place. You can toggle between the Console Logs, Terminal Logs and the Test Framework Logs.
-- **Network:** Access the network logs while your tests were getting executed on the Network tab.
+### Command Logs and Network
+---
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/commandLogsAndVideos.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+View every command executed during the test and all associated logs.
 
-### Test Videos
-<BrandName /> provides you videos of your tests to give you a clear picture of what goes on in the background.
+The right panel contains three tabs:
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testVideo.png').default} alt="Image" className="doc_img"style={{ width: '100%' }}/>
+- **All Commands** - Every Selenium command that ran during the test. Hover on a command to see its parameters.
+- **Logs** - Toggle between Console Logs, Terminal Logs, and Test Framework Logs.
+- **Network** - View all network requests and responses captured during execution.
+
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/commandLogsAndVideos.png').default} alt="Command logs and network tab" className="doc_img" style={{ width: '100%' }}/>
+
+### Video Recording
+
+Watch a full video playback of your test execution to see exactly what happened in the browser.
+
+<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testVideo.png').default} alt="Test video recording playback" className="doc_img" style={{ width: '100%' }}/>
+
+## Next Steps
+---
+
+Now that you know how to read the dashboard, explore more ways to manage and debug your tests.
+
+- [Filter your tests](/support/docs/filter-your-selenium-tests/) - narrow down results by browser, OS, status, or tags
+- [Share test results](/support/docs/sharing-test-results/) - send results to teammates
+- [Mark as bug](/support/docs/mark-as-bug-in-automation-testing/) - file a bug directly from a test session
+- [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
+- [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Explore the Automation Dashboard
+      </span>
+    </li>
+  </ul>
+</nav>

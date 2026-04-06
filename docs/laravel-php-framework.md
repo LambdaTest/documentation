@@ -1,21 +1,16 @@
 ---
 id: laravel-php-framework
-title: Laravel Dusk Selenium:Running Laravel Dusk Testing Scripts on Online Selenium Grid
-hide_title: true
+title: Selenium With Laravel Dusk
+hide_title: false
 sidebar_label: Laravel
-description: Now you can run your automation scripts using Selenium with Laravel Dusk on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
+description: Run Laravel Dusk Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
 keywords:
-  - laravel dusk
-  - laravel dusk selenium
-  - php selenium
-  - php automation testing
-  - selenium webdriver php
-  - selenium php testing tutorial
-  - php selenium framework
-  - selenium
-  - selenium automation testing
-  - selenium testing tool
-  - selenium testing tutorial
+  - laravel dusk selenium grid setup
+  - run laravel dusk tests on cloud
+  - php laravel automation tutorial
+  - laravel dusk cross browser testing
+  - laravel selenium parallel testing
+  - laravel dusk cloud testing example
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -23,6 +18,10 @@ slug: laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-test
 canonical: https://www.testmuai.com/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -42,95 +41,107 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Laravel Test",
+          "name": "Selenium With Laravel Dusk",
           "item": `${BRAND_URL}/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Laravel Dusk with Selenium: Tutorial to Run Your First Test on <BrandName />
-* * *
-In this topic, you will learn how to configure and run your PHP automation testing scripts on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **PHP** framework **Laravel**.
+---
 
-By the end of this topic, you will be able to:
+Run Laravel Dusk tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-1. Set up an environment for testing your locally hosted web pages using **Laravel** automation testing.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Run test cases in parallel using **Laravel** with Selenium to reduce build times.
-4. Test your locally hosted pages on <BrandName /> platform.
-5. Explore advanced features of <BrandName />.
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
->**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on  GitHub](https://github.com/LambdaTest/php-laravel-dusk-todo). You can either download or clone the repository to quickly run your tests.
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/php-laravel-dusk-todo" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-## Prerequisites For Running Laravel Dusk With Selenium
-* * *
-Before you begin automation testing with Laravel Dusk, you would need to:
+## Prerequisites
+---
+Complete the following steps before you begin automation testing with Laravel Dusk.
 
-* Download **PHP v7.1**. You can download and install **PHP** using following commands in the terminal:
+1. Download **PHP 8.1 or later** (current LTS recommended). Use the following commands in the terminal:
 
-  * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. But for the latest **MacOS** versions starting with **Monterey**, **PHP** has to be downloaded and installed manually by using below commands: 
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew install php
-  ```
-    * **Windows:** 
-  ```bash
-  sudo apt-get install curl libcurl3 libcurl3-dev php
-  ```
-  >**Note:** For **Windows**, you can download **PHP** from [pip documentation](http://windows.php.net/download/). Also, refer to this [documentation](http://php.net/manual/en/install.windows.php) for ensuring the accessibility of PHP through Command Prompt(cmd).
+   * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually: 
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   brew install php
+   ```
+   * **Windows:** Download **PHP** from [PHP for Windows](http://windows.php.net/download/) and add it to your system PATH. Refer to the [PHP Windows installation guide](http://php.net/manual/en/install.windows.php) to ensure PHP is accessible through Command Prompt (cmd).
   
-  You can change the **PHP** version to **7.1** by using below homebrew commands in the terminal:
-  ```bash
-  brew unlink php && brew link --force php@7.1
-  ```
-  >**Note:** You need to download **PHP v7.1** inorder to link to that version.
+2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
 
-* Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
+   **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+   ```bash
+   mv composer.phar /usr/local/bin/composer
+   ```  
 
-  **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
-  ```bash
-  mv composer.phar /usr/local/bin/composer
-  ```  
+## Step 1: Clone the Sample Project
+---
+Clone the repository and install dependencies.
 
-### Installing Selenium Dependencies and Tutorial Repo
-**Step 1:** Clone the <BrandName />’s [php-laravel-dusk-todo](https://github.com/LambdaTest/php-laravel-dusk-todo) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/php-laravel-dusk-todo
 cd php-laravel-dusk-todo
 ```
-**Step 2:** Install the composer dependencies in the current project directory using the commands below:
+
+Install the composer dependencies:
 ```bash
 composer install
 composer dump-autoload
 ```
-### Setting Up Your Authentication
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
 
-**Step 3:** Create .env from example file
+## Step 2: Set Your Credentials
+---
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Create .env from the example file:
 ```bash
 cp .env.example .env
 ```
-**Step 4:** You would have to update your <BrandName /> credentials in the newly created .env file.
+
+Update your TestMu AI credentials in the newly created .env file:
 ```bash
 LT_USERNAME="<Your_Username>"
-LT_ACCESS_KEY="<Your_Access_Key"
+LT_ACCESS_KEY="<Your_Access_Key>"
 ```
 
-**Step 5:** Set <BrandName /> `Username` and `Access Key` in environment variables.
-  * For **Linux/macOS**:
-  ```bash
-  export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"
-  ```
-  * For **Windows**:
-  ```bash
-  set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"
-  ```
+Set TestMu AI `Username` and `Access Key` in environment variables.
 
-## Run Your First Test
-***
-### Configuration Of Your Test Capabilities
-**Step 6:** In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. Update platform configuration in driver method of `tests/DuskTestCase.php`, to specify the target where tests should run. The capabilities object in the above code are defined as:
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
+---
+Define browser, version, and OS settings for your test run.
+
+Update platform configuration in the driver method of `tests/DuskTestCase.php` to specify the target where tests should run.
 
 ```php
 $capabilities = array(
@@ -141,64 +152,49 @@ $capabilities = array(
 			"version" => "latest"
      );
 ```
-> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
-### Executing the Test
-**Step 7**: The tests can be executed in the terminal using the following command:
+:::tip Capabilities Generator
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+:::
+
+## Step 4: Run the Test
+---
+Execute the Laravel Dusk test from the command line.
+
 ```bash
 php artisan dusk
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
-### Generate Test Cases
-* Change directory to the project root: `cd /your/project`
+## Step 5: View Your Results
+---
+Check the test output on the console and the TestMu AI dashboard.
 
-* To generate the test cases, you need to execute the following command 
-  `php artisan dusk:make {test case name}`. 
-  
-  An example for the same is shown below:
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to view your test results. The dashboard provides:
 
-  ```bash
-  php artisan dusk:make TodoTest
-  ```
+- Text logs for each test step
+- Screenshots captured during execution
+- Video recordings of the full test session
 
-Our sample test case can be found in `tests/Browser/TodoTest.php` file. It navigates to our **sample to-do app**.
+## Run Laravel Dusk Tests Using Agent Skills
+---
 
+Use AI coding assistants to generate and run Laravel Dusk tests with the TestMu AI Agent Skill.
 
-## Testing Locally Hosted or Privately Hosted Projects
-***
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+The [laravel-dusk-skill](https://github.com/LambdaTest/agent-skills/tree/main/laravel-dusk-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
->Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+Install the skill:
 
-Here’s how you can establish <BrandName /> Tunnel.
-
->Download the binary file of:
->* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
 ```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on to set the tunnel value to true by adding the following line in your config files:
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/laravel-dusk-skill .claude/skills/
 
-**Tunnel Capability**
-```php
- "tunnel" => true
+# For Cursor / Copilot
+cp -r agent-skills/laravel-dusk-skill .cursor/skills/
 ```
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -214,7 +210,7 @@ Once you are able to connect **<BrandName /> Tunnel** successfully, you would ju
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Laravel Test
+        Selenium With Laravel Dusk
       </span>
     </li>
   </ul>

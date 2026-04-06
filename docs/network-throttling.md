@@ -1,22 +1,13 @@
 ---
 id: network-throttling
-title: Network Throttling
-hide_title: true
-sidebar_label: Network Throttling
-description: Now test the functionality of your website over low latency networks ( 2G/3G/LTE) or even offline with different upload and download speeds. TestMu AI allows you to validate your website by simulating these network conditions by using its desired capabilities.
+title: Network Throttling for Selenium Tests
+sidebar_label: Test on a Slow Network
+description: Simulate low latency networks like 2G, 3G, LTE, or offline in Selenium tests using network throttling capabilities.
 keywords:
-  - cross browser testing
-  - network throttling
-  - selenium capabilities generator
-  - selenium desired capabilities
-  - testmu ai selenium grid capabilities
-  - testmu ai automation capabilities generator
-  - selenium capability configuration
-  - selenium automation testing
-  - selenium automation grid online
-  - configure selenium tests with network throttling desired capabilities
-  - network throttling capabilities
-  - throttling test on testmu ai
+  - network throttling selenium capability
+  - simulate 2G 3G 4G selenium tests
+  - custom network profile selenium automation
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/network-throttling/
 site_name: TestMu AI
 slug: network-throttling/
@@ -52,22 +43,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-There might be instances where you would have to check the functionality of your website on low latency networks (2G/3G/LTE) or even offline. Such networks have variable upload and download speeds which can alter how your website performs on different browsers.
+Test your website's functionality on low latency networks (2G/3G/LTE) or offline conditions. These networks have variable upload and download speeds that can alter how your website performs on different browsers.
 
-In order to validate your website on such network profiles, you can simulate these network conditions using our capabilities. If you want the test suite to start with the default network use our preset capabilities. However, the device will have unobstructed internet connectivity.
+To validate your website on such network profiles, simulate these network conditions using capabilities. If you want the test suite to start with the default network, use the preset capabilities. The device will have unobstructed internet connectivity.
 
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
-| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability helps to start test suite with default network. For example, if user selects the value **Regular 4G** then the capabilities will look like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
 
 ```yaml
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
-## List Of Network Profiles
-
+## List of Network Profiles
 ---
 
+The following table lists all available preset network profiles with their speed and latency values.
 
 | CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
 | ------------ | --------------------------- | ------------------------- | ------------------ |
@@ -81,13 +72,13 @@ capabilities.setCapability("networkThrottling", "Regular 4G");
 | Regular 4G | 4 Mbps                    | 3 Mbps                  | 20               |
 | DSL        | 2 Mbps                    | 1 Mbps                  | 5                |
 
-**Custom Network Profile**: For creating custom network conditions you can use objects. Define the upload speed, max download speed, and latency for the custom condition, as shown in the above table.
+**Custom Network Profile**: Create custom network conditions using objects. Define the upload speed, max download speed, and latency for the custom condition, as shown in the table above.
 
 ## Configuring Network Profile
-
 ---
 
-The Selenium JavaScript Executor allows you to enable network simulation capabilities for tests and to generate custom log files. You can use conditional capabilities to simulate network conditions for individual test cases. driver.executeScript("lambda-throttle-network", throttleParams);
+Use the Selenium JavaScript Executor to apply custom network throttling during tests.
+
 ```java
 // Using executeScript to apply custom network throttling
 Map<String, Object> throttleParams = Map.of(
@@ -99,19 +90,20 @@ Map<String, Object> throttleParams = Map.of(
 driver.executeScript("lambda-throttle-network", throttleParams);
 
 ```
-<BrandName /> now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
+TestMu AI allows you to select a network profile before running automation tests. This lets you conduct functional tests on low/high latency networks and offline. Use the networkProfile capability as shown below to simulate the network conditions.
 
 | JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS | EXAMPLE |
 | ----------------------- | ------------------------------------------ | -------------------- |
 | networkProfile | condition: a string or object representing browser network conditions | driver.execute_script("networkProfile", &lbrace;"condition": &lbrace;"download": 500,"upload": 100,"latency": 30&rbrace;&rbrace;) |
 
-## Configuring Network Throttling In Test Automation
-
+## Configuring Network Throttling in Test Automation
 ---
 
-To configure network throttling in automation, we have used the [<BrandName /> TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
+Define network throttle capabilities in your automation scripts to configure network throttling.
 
-### Configuring Capabilities For Pre-defined Network Settings
+To configure network throttling in automation, use the [TestMu AI TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run automation tests.
+
+### Configuring Capabilities for Pre-defined Network Settings
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("browserName", "Chrome");
@@ -120,7 +112,7 @@ caps.setCapability("name", "TestNG-Todo-Script-1");
 caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to Regular 4G 
 ```
 
-The following below is the TestNG code. It will validate your <BrandName /> credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
+The following TestNG code validates your TestMu AI credentials for authentication. The code selects basic capabilities such as OS, browser, browser version, and network.
 
 ### Configuring Custom Network Settings
 ```java
@@ -249,10 +241,10 @@ public class TestNGTodo1 {
 }
 ```
 
- You can find your defined network capabilities under the section ‘Input Config’ by navigating to the ‘METADATA’ section of your automation build-logs.
+ Find your defined network capabilities under the section 'Input Config' by navigating to the 'METADATA' section of your automation build-logs.
 
 
-> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmu.ai. Happy testing! 🙂
+> If you have any questions, feel free to share them with us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmuai.com. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

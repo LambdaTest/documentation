@@ -1,19 +1,15 @@
 ---
 id: lambda-exceptions
 title: View Assertion Errors On TestMu AI
-hide_title: true
-sidebar_label: View Assertion Errors Using Lambda Exceptions
-description: Learn how to manage and handle GET request errors in your Selenium automation scripts using the Lambda Exceptions features of TestMu AI.
+sidebar_label: Handle Exceptions
+description: Manage and display GET request assertion errors in Selenium scripts using the Lambda Exceptions feature.
 keywords:
-- AssertionError
-- Assertion Errors
-- AssertionError Exception
-- Assertion Error Handling
-- Catch Assertion Error
-- AssertionError Java
-- Lambda Exception
-- Assertion Failure
-
+  - catch assertion error selenium
+  - lambda exception test debugging
+  - view stacktrace on dashboard
+  - assertion error handling java
+  - selenium exception reporting
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/lambda-exceptions/
 site_name: TestMu AI
 slug: lambda-exceptions/
@@ -46,22 +42,26 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# View Assertion Errors On <BrandName />
+# View Assertion Errors On TestMu AI
 
 ***
-While handling GET requests in your Selenium scripts, many times the assertion might fail. To view these assertion errors as exceptions and handle them better, you can now use the Lambda Exceptions feature.
+While handling GET requests in your Selenium scripts, assertions might fail. Use the Lambda Exceptions feature to view these assertion errors as exceptions and handle them more effectively.
 
 ## What Are Lambda Exceptions?
-* * *
-Lambda Exception is the feature of <BrandName />, by which you can easily manage and handle your GET request errors, like AssertionError. By using this feature, the error gets displayed as an exception in the Exception tab of your test.
+---
+Lambda Exceptions let you manage and display GET request errors like AssertionError on the dashboard.
+
+Lambda Exception is a feature of TestMu AI that lets you manage and handle GET request errors, like AssertionError. The error gets displayed as an exception in the Exception tab of your test.
 
 For example:
 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception.webp').default} alt="Image"  className="doc_img" width="768" height="335"/>
 
-## How To Use Lambda Exception?
-* * *
-While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer the below Java syntax to catch this error and push it to <BrandName /> using Lambda Exceptions.
+## How to Use Lambda Exception
+---
+Catch assertion errors in GET requests and push them to the dashboard using JavascriptExecutor.
+
+While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer to the below Java syntax to catch this error and push it to TestMu AI using Lambda Exceptions.
 
 ```javascript
 try {
@@ -74,19 +74,21 @@ try {
 }
 ```
 
-In the above syntax, when the AssertionError is caught in the catch{} block, the exception message is added in the form of an array of Strings. This message is then pushed to <BrandName /> using the Lambda Exceptions feature, as shown via the JavascriptExecutor command.
+In the above syntax, when the AssertionError is caught in the catch{} block, the exception message is added as an array of Strings. This message is then pushed to TestMu AI using the Lambda Exceptions feature via the JavascriptExecutor command.
 
 ## Lambda Exception Demo
-* * *
-For demo purpose, we will create a script to:
+---
+Walk through a sample script that visits a URL, fetches the title, and asserts it against an expected value.
 
-* Visit www.lambdatest.com
+For demo purposes, this script will:
+
+* Visit www.testmuai.com
 * Fetch the title
-* Assert the title with expected value
+* Assert the title with the expected value
 
-### View Exception on <BrandName /> Using Lambda Exception
-* * *
-Below is the complete code for this script, using TestNG framework in Java.
+### View Exception on the Dashboard Using Lambda Exception
+---
+Below is the full code for this script, using TestNG framework in Java.
 
 ```javascript
 package com.lambdatest;
@@ -171,13 +173,15 @@ public class LambdaException {
 }
 ```
 
-Upon executing the above test as a TestNG script, you will notice that the test will fail. It is because we have provided an incorrect value in the ExpectedTitle variable, for demo purposes. So when you open the test view of this test and navigate to the Exception tab, you will find a message displaying this error, as shown below:
+When you execute the above test as a TestNG script, the test will fail. This is because we provided an incorrect value in the ExpectedTitle variable for demo purposes. When you open the test view and navigate to the Exception tab, you will find a message displaying this error:
 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception-error.webp').default} alt="lambdatest exceptions"  className="doc_img" width="768" height="346"/>
 
-### View StackTrace on <BrandName /> Using Lambda Exception
-* * *
-You can even view the complete StackTrace on the <BrandName /> platform, using the Lambda Exceptions feature. For this, you need to convert the StackTrace to String and print it in the form of an array of Strings. Below is the complete script to print the StackTrace, using the TestNG framework in Java:
+### View StackTrace on the Dashboard Using Lambda Exception
+---
+You can also view the full StackTrace on the dashboard using Lambda Exceptions.
+
+You can view the full StackTrace on the TestMu AI platform using the Lambda Exceptions feature. Convert the StackTrace to String and print it as an array of Strings. Below is the full script to print the StackTrace using TestNG framework in Java:
 
 ```javascript
 package com.lambdatest;
@@ -267,11 +271,11 @@ public class LambdaException {
 }
 ```
 
-Upon executing the above test as a TestNG script, it will provide you the same result as the view exception section, because we have provided an incorrect value in the ExpectedTitle variable, for demo purposes. So when you open the test view of this test and navigate to the Exception tab, you will find the complete StackTrace, as shown below:
+When you execute the above test as a TestNG script, it produces the same result as the view exception section because of the incorrect ExpectedTitle value. Open the test view and navigate to the Exception tab to find the full StackTrace:
 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-StackTrace.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
-Below is the complete StackTrace printed on the <BrandName /> platform, generated from above script.
+Below is the full StackTrace printed on the TestMu AI platform from the above script.
 
 ```javascript
 java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [Most Powerful Cross Browser Testing Tool Online | Lambdatest] at
@@ -313,7 +317,7 @@ java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Onl
 ```
 * * *
 
-That’s it! You can now easily handle and manage exceptions using the Lambda Exceptions feature. If you still have any doubt, please feel free to reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+You can now handle and manage exceptions using the Lambda Exceptions feature. If you have any questions, reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

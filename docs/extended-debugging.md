@@ -1,16 +1,15 @@
 ---
 id: extended-debugging-options
 title: Extended Debugging Options for Selenium Testing
-hide_title: false
-sidebar_label: Extended Debugging Options
-description: Learn how to use Extended Debugging Options on TestMu AI to intercept network requests, throttle CPU and network conditions, and download HAR files for advanced test debugging and performance analysis.
+sidebar_label: Enable Extended Debugging
+description: Intercept network requests, throttle CPU and network, and download HAR files for Selenium test debugging.
 keywords:
-- extended debugging options
-- selenium debugging
-- intercept network requests
-- throttle cpu selenium
-- throttle network selenium
-- har file download
+  - extended debugging selenium testmu ai
+  - intercept network requests selenium
+  - throttle cpu selenium testing
+  - throttle network selenium conditions
+  - download har file selenium test
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/extended-debugging-options/
 site_name: TestMu AI
 slug: extended-debugging-options/
@@ -19,22 +18,26 @@ canonical: https://www.testmuai.com/support/docs/extended-debugging-options/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<BrandName />'s Extended Debugging Options provide powerful capabilities to debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These advanced debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download comprehensive network analysis files—all within your test automation workflow.
+TestMu AI's Extended Debugging Options let you debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download network analysis files within your test automation workflow.
 
-With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a robust user experience across diverse conditions and environments.
+With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a solid user experience across diverse conditions and environments.
 
-## How can Extended Debugging Options help you?
+## How Extended Debugging Options Help You
+---
+Use these features to control network requests, test performance under constraints, and analyze network traffic.
 
-Extended Debugging Options on <BrandName /> provide comprehensive capabilities for advanced testing and debugging scenarios:
+Extended Debugging Options on TestMu AI provide capabilities for advanced testing and debugging scenarios:
 
-- **Network Request Control**: Intercept and modify outgoing requests to test API failures, redirects, and mock responses without setting up complex backend infrastructure.
+- **Network Request Control**: Intercept and modify outgoing requests to test API failures, redirects, and mock responses without setting up backend infrastructure.
 - **Performance Testing**: Simulate various CPU and network throttling conditions to understand how your application performs on low-end devices or poor network connections.
 - **Network Analysis**: Download HAR (HTTP Archive) files to perform detailed analysis of network traffic, load times, and resource optimization.
 - **Realistic Test Scenarios**: Create test conditions that mirror real-world user experiences, including offline modes, slow connections, and server errors.
 
 ## Available Extended Debugging Methods
+---
+Reference these methods to intercept requests, throttle resources, and download HAR files.
 
-<BrandName /> supports the following extended debugging methods:
+TestMu AI supports the following extended debugging methods:
 
 | Method | Description |
 |--------|-------------|
@@ -48,8 +51,10 @@ Extended Debugging Options on <BrandName /> provide comprehensive capabilities f
 ---
 
 ## 1. Intercept Network Requests
+---
+Modify outgoing network requests to test redirect, mock, and error scenarios.
 
-<BrandName /> provides three specialized methods to intercept and modify network requests, enabling you to test how your application behaves under different network conditions, mock API responses, and simulate error scenarios.
+TestMu AI provides three methods to intercept and modify network requests, enabling you to test how your application behaves under different network conditions, mock API responses, and simulate error scenarios.
 
 ### Method 1: Redirect Requests (`lt:intercept:redirect`)
 
@@ -212,6 +217,8 @@ await driver.get("https://example.com/images/photo.jpg");
 ---
 
 ## 2. Throttle CPU Performance
+---
+Simulate slower CPU to measure application performance under resource constraints.
 
 The `lt:throttle:cpu` method simulates lower or higher CPU usage on the testing device, allowing you to measure your application's performance under resource constraints.
 
@@ -253,6 +260,8 @@ await driver.get("https://www.wikipedia.org");
 ---
 
 ## 3. Throttle Network Conditions
+---
+Simulate various network speeds and latency to test application behavior on different connections.
 
 The `lambda-throttle-network` method enables you to simulate various network conditions including slower speeds, high latency, and offline modes. This helps ensure your application performs well across different connection types.
 
@@ -312,7 +321,7 @@ await driver.get("https://www.nytimes.com");
 
 ### Predefined Network Profiles
 
-<BrandName /> provides predefined network profiles for quick testing across common connection types:
+TestMu AI provides predefined network profiles for quick testing across common connection types:
 
 | Profile | Download Speed | Upload Speed | Latency (ms) |
 |---------|----------------|--------------|--------------|
@@ -329,9 +338,9 @@ await driver.get("https://www.nytimes.com");
 
 ---
 
----
-
 ## 4. Download HAR File
+---
+Download network activity data in HAR format for detailed performance analysis.
 
 The `lt:downloadHAR` method downloads network activity data in HAR (HTTP Archive) format, enabling detailed analysis of network performance, resource loading times, and HTTP transactions.
 
@@ -370,7 +379,7 @@ await driver.executeScript("lt:downloadHAR", {
 
 :::info HAR File Analysis
 HAR files can be analyzed using tools like:
-- Chrome DevTools (Network tab → right-click → "Save all as HAR")
+- Chrome DevTools (Network tab - right-click - "Save all as HAR")
 - Online HAR analyzers
 - Performance monitoring tools
 
@@ -380,12 +389,34 @@ These files contain detailed information about request/response headers, timing 
 ---
 
 ## Best Practices
+---
+Follow these guidelines when using extended debugging options in your tests.
 
-When using Extended Debugging Options on <BrandName />, consider the following best practices:
+When using Extended Debugging Options on TestMu AI, consider the following best practices:
 
 - **Use Wildcards Wisely**: When intercepting requests, use specific URL patterns to avoid unintended interceptions.
 - **Test Incrementally**: Start with mild throttling conditions and gradually increase constraints to identify performance breaking points.
 - **Combine Methods**: Use multiple methods together (e.g., network throttling + CPU throttling) to simulate realistic low-end device scenarios.
 - **Analyze HAR Files**: Download HAR files for failed tests to identify network-related issues and performance bottlenecks.
 
-By leveraging these Extended Debugging Options, you can create comprehensive test scenarios that validate your application's behavior under diverse real-world conditions, ensuring a robust and reliable user experience.
+By using these Extended Debugging Options, you can create test scenarios that validate your application's behavior under diverse real-world conditions, ensuring a reliable user experience.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Extended Debugging Options for Selenium Testing
+      </span>
+    </li>
+  </ul>
+</nav>

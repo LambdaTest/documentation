@@ -1,21 +1,18 @@
 ---
 id: selenium-supported-languages-and-frameworks
-title: Languages and Frameworks supported on TestMu AI Selenium Grid
-hide_title: false
-sidebar_label: Languages and Frameworks
-description: HyperExecute Grid supports languages and frameworks that are compatible with Selenium 
+title: Supported Languages and Frameworks
+sidebar_label: Supported Languages & Frameworks
+description: Run Selenium tests in Java, JavaScript, Python, C#, PHP, and Ruby on the TestMu AI cloud grid. Find your framework-specific guide.
 keywords:
- - Selenium
- - selenium languages
- - frameworks of selenium
- - Selenium supported programming language
- - Selenium testing framework
- - Selenium Supported Languages and Frameworks
- - automation testing framework
- - test automation frameworks
- - selenium frameworks
- - TestMu AI HyperExecute
- - Super fast Selenium grid
+  - selenium supported languages
+  - selenium frameworks
+  - selenium java
+  - selenium python
+  - selenium javascript
+  - selenium csharp
+  - selenium php
+  - selenium ruby
+  - test automation frameworks
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
 site_name: TestMu AI
@@ -23,8 +20,6 @@ slug: selenium-supported-languages-and-frameworks/
 canonical: https://www.testmu.ai/support/docs/selenium-supported-languages-and-frameworks/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -46,20 +41,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Languages and Frameworks Supported",
+          "name": "Supported Languages and Frameworks",
           "item": `${BRAND_URL}/support/docs/selenium-supported-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
-Out of the box, <BrandName /> supports multiple languages under Selenium testing frameworks 
+
+---
+
+TestMu AI supports all languages and frameworks compatible with Selenium. Pick your language below to find setup instructions, working code samples, and framework-specific guides.
 
 <SeleniumSupportedLanguage />
 
-<div className="lt-framework-list-footer">
-    <p>In case your favorite framework or tool isn't listed here, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.
-    <br/>In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
-  </div>
+:::tip
+If your framework isn't listed, <span className="doc__lt" onClick={() => window.openLTChatWidget()}>contact us</span> and we'll help you get running.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -75,7 +72,7 @@ Out of the box, <BrandName /> supports multiple languages under Selenium testing
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Languages and Frameworks Supported
+       Supported Languages and Frameworks
       </span>
     </li>
   </ul>

@@ -1,15 +1,15 @@
 ---
 id: har-log-viewer
-title: HAR Log Viewer With Waterfall for Selenium Testing
-hide_title: true
-sidebar_label: HAR Log Viewer With Waterfall
-description: Learn how to use HAR Log Viewer With Waterfall for Selenium automation testing on TestMu AI.
+title: HAR Log Viewer With Waterfall
+sidebar_label: Inspect HAR Logs
+description: Analyze web page performance with the HAR Log Viewer and Waterfall chart for Selenium tests on TestMu AI.
 keywords:
-- har log viewer with waterfall
-- har log viewer
-- har log viewer with waterfall testmu ai
-- har log viewer network logs
-- har log viewer with waterfall selenium
+  - har log viewer
+  - har waterfall chart
+  - network performance selenium
+  - har log viewer testmu ai
+  - selenium network logs
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/har-log-viewer-with-waterfall/
 site_name: TestMu AI
 slug: har-log-viewer-with-waterfall/
@@ -18,34 +18,74 @@ canonical: https://www.testmuai.com/support/docs/har-log-viewer-with-waterfall/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# HAR Log Viewer With Waterfall for Selenium Testing
-***
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HAR Log Viewer With Waterfall",
+          "item": `${BRAND_URL}/support/docs/har-log-viewer-with-waterfall/`
+        }]
+      })
+    }}
+></script>
 
-<BrandName /> Web Automation provides the HAR (HTTP Archive) Log Viewer with Waterfall that helps you analyze the performance of web pages for your Selenium automation tests. 
+---
 
-It provides a visual representation of how resources on a webpage are loaded and interact over time. The key component of this feature is the "waterfall" view, which graphically displays the sequence and duration of requests as a web page loads.
+The HAR (HTTP Archive) Log Viewer with Waterfall displays how resources on a web page load and interact over time. Use it to identify bottlenecks and optimize page performance in your Selenium tests.
 
-## How to Use HAR Log Viewer With Waterfall on <BrandName />?
-***
+## How to Use the HAR Log Viewer
+---
 
-To get the network logs using HAR Log Viewer With Waterfall, you need to pass `network.full.har = true` in your test scripts.
+Enable HAR logging by passing `network.full.har = true` in your test capabilities.
 
-Once you run the tests, navigate to the Web Automation Dashboard to see the HAR Log Viewer With Waterfall in action.
+Once the test runs, open the Web Automation Dashboard and navigate to the **Network** tab to see the waterfall chart.
 
-<img loading="lazy" src={require('../assets/images/har_waterfall.png').default} alt="add" width="1342" height="643" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/har_waterfall.png').default} alt="HAR Log Viewer waterfall chart showing resource load times" width="1342" height="643" className="doc_img"/>
 
-In the above view, each resource (like an HTML file, a CSS stylesheet, JavaScript file, or an image) is represented as a horizontal bar. The length of the bar indicates the time taken to load that resource. The sequence in which these bars are arranged reflects the order in which the browser requested these resources. This graphical representation allows developers and testers to quickly identify bottlenecks or performance issues in the page loading process.
+Each resource (HTML, CSS, JavaScript, images) appears as a horizontal bar. The bar length shows load time, and the sequence reflects the order the browser requested them.
 
-## Use Cases for HAR Log Viewer With Waterfall
-***
+## Use Cases
+---
 
-- **Performance Optimization**: By analyzing the waterfall chart, developers can pinpoint resources that take longer to load and optimize them. This might involve compressing images, minifying CSS and JavaScript files, or implementing better caching strategies.
-- **Diagnosing Load Order Issues**: Sometimes, the order in which resources load can impact the performance. Developers can use the HAR viewer to rearrange the loading sequence for efficiency, like ensuring critical CSS and JavaScript load first.
-- **Network Issues Identification**: Slow loading times can also be due to network issues. The HAR Log Viewer can help identify if the delay is server-side (long time to first byte) or network-related (slow download time).
-- **Performance Monitoring Over Time**: By regularly analyzing HAR logs, teams can monitor the performance of their web pages over time. This is crucial for detecting performance degradation or improvements following updates or changes to the site.
-- **Third-Party Resource Management**: Many websites rely on third-party resources (like ads, analytics scripts, etc.). The HAR viewer helps in identifying the impact of these resources on overall page load time and optimizing their loading strategy.
-- **Comparative Analysis**: By comparing HAR files before and after optimization efforts, developers can quantitatively measure the effectiveness of their changes in reducing load times and improving user experience.
-- **Understanding Browser Behavior**: Different browsers can behave differently in terms of resource loading. By analyzing HAR files from different browsers, developers can understand these nuances and optimize for cross-browser compatibility.
-- **Compliance and Testing**: Ensuring that a site loads efficiently under various conditions (like slow network speeds) is essential for compliance with web performance standards. HAR logs can be used to test and ensure compliance under these scenarios.
+Apply the HAR Log Viewer to diagnose and improve page performance.
 
+- **Performance optimization** - Pinpoint slow-loading resources and compress images, minify CSS/JS, or improve caching.
+- **Load order diagnosis** - Check if critical CSS and JavaScript load before non-essential resources.
+- **Network issue identification** - Determine if delays are server-side (slow time to first byte) or network-related (slow download).
+- **Performance monitoring** - Compare HAR logs over time to detect degradation after deployments.
+- **Third-party resource impact** - Measure how ads, analytics scripts, and other external resources affect load time.
+- **Before/after comparison** - Compare HAR files before and after optimization to measure improvements.
+- **Cross-browser analysis** - Analyze HAR files from different browsers to understand loading differences.
 
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        HAR Log Viewer With Waterfall
+      </span>
+    </li>
+  </ul>
+</nav>

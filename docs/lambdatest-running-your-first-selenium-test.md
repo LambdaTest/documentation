@@ -1,14 +1,17 @@
 ---
 id: lambdatest-running-your-first-selenium-test
-title: Run Your First Test on TestMu AI using Selenium
-hide_title: false
+title: Run Your First Selenium Test
 sidebar_label: Run Your First Test
-description: Learn how to run your first Selenium test on TestMu AI's cross-browser testing platform. Step-by-step guide for setup and execution on 3000+ browsers.
+description: Run your first Selenium test on TestMu AI's cloud grid. Clone a sample project, set credentials, configure capabilities, and execute.
 keywords:
-  - Automation Platform
-  - Dashboard
-  - Automation Testing
-  - testmu ai Dashboard
+  - selenium first test
+  - run selenium test online
+  - selenium cloud testing
+  - selenium java testng
+  - testmu ai selenium tutorial
+  - selenium getting started
+  - cross browser testing selenium
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/
 site_name: TestMu AI
 slug: testmu-running-your-first-selenium-test/
@@ -39,54 +42,55 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Inside LambdaTest Automation Platform",
-          "item": `${BRAND_URL}/support/docs/lambdatest-running-your-first-selenium-test/`
+          "name": "Run Your First Selenium Test",
+          "item": `${BRAND_URL}/support/docs/testmu-running-your-first-selenium-test/`
         }]
       })
     }}
 ></script>
 
-<BrandName /> provides a powerful Selenium Grid that allows you to perform automated cross-browser testing on over **3000+ real browsers** and operating systems. This guide will walk you through the process of setting up and running your first Selenium test on the <BrandName /> platform.
+---
 
-## Prerequisites
-Before you begin, ensure you have the following:
-
-- Your [<BrandName /> Username and Access Key](https://accounts.lambdatest.com/security)
-- Install Java Development Kit (JDK). We recommend Java version 11
-- Install [Maven](https://maven.apache.org/)
-- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
-
-## Run your first test
-
-### Step 1: Configure Your Test Suite
+This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Java and TestNG. Clone a sample project, set your credentials, and execute a test.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on our Standard Grid.
+All the code used in this guide is available in the sample repository. Clone it to get started.
 
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/Java-TestNG-Selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
+
+## Prerequisites
+---
+
+Make sure you have the following set up before you start.
+
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
+4. Install [Maven](https://maven.apache.org/).
+
+## Step 1: Clone the Sample Project
+---
+
+Pull the sample repo to your local machine and navigate into the project directory.
 
 ```bash
 git clone https://github.com/LambdaTest/java-testng-selenium
 cd java-testng-selenium
 ```
 
-### Step 2: Update the dependencies
+## Step 2: Set Your Credentials
+---
 
-Before proceeding forward, run the below command to update the outdated dependencies 
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-```bash
-mvn versions:display-dependency-updates
-```
-
-### Step 3: Setup your <BrandName /> Credentials
-
-In your terminal (as per your respective Operating System), run these command to setup your <BrandName /> credentials.
-> You can see your credentials below if you have logged into our platform.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
 
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value="bash" label="macOS / Linux" default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -109,13 +113,42 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-### Step 4: Execute your test
+## Step 3: Configure Your Test Capabilities
+---
 
-Run the following command to execute your test on <BrandName />
+Define which browser, version, and OS your test runs on.
+
+The sample project includes a preconfigured capabilities object that tells the grid which browser and OS to use. Here is an example:
+
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setPlatformName("Windows 10");
+browserOptions.setBrowserVersion("latest");
+
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("build", "My First Test");
+ltOptions.put("name", "Sample Test - Single");
+ltOptions.put("w3c", true);
+
+browserOptions.setCapability("LT:Options", ltOptions);
+```
+
+You can customize these values to test on any browser, version, or OS. Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities code for your target configuration.
+
+:::note
+For the full list of supported capabilities, see [Desired Capabilities in Selenium](/support/docs/selenium-automation-capabilities/).
+:::
+
+## Step 4: Run the Test
+---
+
+Trigger the test from your terminal using Maven.
+
+Execute a single test or run multiple tests in parallel:
 
 <Tabs className="docs__val">
 
-<TabItem value="bash" label="Single Test" default>
+<TabItem value="single" label="Single Test" default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -125,7 +158,7 @@ Run the following command to execute your test on <BrandName />
 
 </TabItem>
 
-<TabItem value="powershell" label="Parallel Test" default>
+<TabItem value="parallel" label="Parallel Test" default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -136,7 +169,48 @@ Run the following command to execute your test on <BrandName />
 </TabItem>
 </Tabs>
 
-## Monitor the Test Execution
-Visit the [<BrandName /> Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+## Step 5: View Your Results
+---
 
-<img loading="lazy" src={require('../assets/images/selenium/running-first-test/run-first-test.png').default} alt="Image"  className="doc_img"/>
+Check the Automation Dashboard to see exactly what happened during your test.
+
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
+
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
+
+<img loading="lazy" src={require('../assets/images/selenium/running-first-test/run-first-test.png').default} alt="TestMu AI Automation Dashboard showing test results"  className="doc_img"/>
+
+## Next Steps
+---
+
+Now that your first test is running, explore what else you can do.
+
+- [Explore the dashboard](/support/docs/inside-testmu-platform/) - understand timelines, analytics, and automation logs
+- [Configure capabilities](/support/docs/selenium-automation-capabilities/) - set browsers, versions, OS, and advanced options
+- [Pick your language](/support/docs/selenium-supported-languages-and-frameworks/) - find framework-specific guides for Java, Python, JavaScript, C#, and more
+- [Test locally hosted apps](/support/docs/testing-locally-hosted-pages/) - use TestMu AI Tunnel to test staging or internal sites
+- [Debug your tests](/support/docs/debugging-options/) - enable extended logging and diagnostics
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+       Run Your First Selenium Test
+      </span>
+    </li>
+  </ul>
+</nav>

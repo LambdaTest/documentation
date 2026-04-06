@@ -1,14 +1,15 @@
 ---
 id: selenium-faq
 title: Frequently Asked Questions
-hide_title: false
-sidebar_label: FAQs
-description: Get quick answers to all your Selenium queries with our Frequently Asked Questions documentation.
+sidebar_label: Selenium FAQ
+description: Find answers to common questions about running Selenium tests on the cloud grid.
 keywords:
-  - TestMu AI Selenium
-  - TestMu AI Selenium help
-  - TestMu AI Selenium documentation
-  - FAQs
+  - selenium testing FAQ
+  - selenium grid common questions
+  - automation testing troubleshooting
+  - selenium cloud grid help
+  - selenium test configuration questions
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-faq/
 site_name: TestMu AI
 slug: selenium-faq/
@@ -35,11 +36,31 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Integrations",
+          "name": "Selenium FAQ",
           "item": `${BRAND_URL}/support/docs/selenium-faq/`
         }]
       })
     }}
 ></script>
 
-In this document we will note down the faq by our customers
+This document covers frequently asked questions from our customers about Selenium testing on TestMu AI.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Frequently Asked Questions
+      </span>
+    </li>
+  </ul>
+</nav>

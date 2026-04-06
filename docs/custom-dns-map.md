@@ -1,13 +1,13 @@
 ---
 id: custom-dns-map
-title: Custom DNS Mapping
-hide_title: false
-sidebar_label: Custom DNS Mapping
-description: Learn how to provide Custom IP for Domains.
+title: Custom DNS Mapping for Selenium Tests
+sidebar_label: Map a Custom DNS Entry
+description: Define custom IP addresses for specific domains during Selenium tests using the customDnsMap capability.
 keywords:
-    - custom dns mapping
-    - testmu ai custom dns map
-
+  - custom dns mapping selenium capability
+  - redirect domain IP selenium testing
+  - override dns resolution test automation
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/custom-dns-map/
 site_name: TestMu AI
 slug: custom-dns-map/
@@ -38,11 +38,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
 ## Overview
+---
 
-The `customDnsMap` capability allows users to define custom IP addresses for specific domains. This is useful when you need to redirect domain requests to different IP addresses for testing purposes, without altering the global or browser-specific configurations.
+The `customDnsMap` capability lets you define custom IP addresses for specific domains.
 
-The customDnsMap capability is specified in the following format:
+This is useful when you need to redirect domain requests to different IP addresses for testing purposes, without altering the global or browser-specific configurations.
+
+The customDnsMap capability uses the following format:
 
 ```bash
 "customDnsMap": {
@@ -54,23 +58,24 @@ The customDnsMap capability is specified in the following format:
 }
 ```
 
-Here `<domain1>` and `<domain2>` are the domain names to be redirected, and `<IP1>` and `<IP2>` are the corresponding IP addresses. When a domain listed in the `customDnsMap` is accessed, it will resolve to the specified IP address in the map, overriding any existing DNS resolution for that domain.
+Here `<domain1>` and `<domain2>` are the domain names to be redirected, and `<IP1>` and `<IP2>` are the corresponding IP addresses. When a domain listed in the `customDnsMap` is accessed, it resolves to the specified IP address, overriding any existing DNS resolution for that domain.
 
 ## Use Cases
+---
 
-The customDnsMap capability can be used for a variety of purposes, including:
+The customDnsMap capability serves a variety of testing purposes.
 
-- **Domain Redirection for Testing:** If you're testing a web application and need it to connect to a specific backend server, you can use customDnsMap to redirect the domain to a different IP address, such as a staging or development server.
+- **Domain Redirection for Testing:** Redirect a domain to a different IP address, such as a staging or development server, when testing a web application that needs to connect to a specific backend.
 
-- **Local Development Testing:** Developers working on local setups might want to test their application's behavior when accessed via a domain name instead of localhost. With customDnsMap, they can map their preferred domain to the local IP address.
+- **Local Development Testing:** Map a preferred domain to the local IP address to test application behavior when accessed via a domain name instead of localhost.
 
-- **Simulating Server Failures:** To test how an application responds to server failures, you can redirect a domain to an invalid or different IP address using customDnsMap.
+- **Simulating Server Failures:** Redirect a domain to an invalid or different IP address to test how an application responds to server failures.
 
-- **Overriding Default DNS Resolutions:** In situations where a default DNS resolution is set, but a specific test scenario requires a different IP address, customDnsMap can be used to override the default resolution for that particular test.
+- **Overriding Default DNS Resolutions:** When a default DNS resolution is set but a specific test scenario requires a different IP address, use customDnsMap to override the resolution for that particular test.
 
-- **Load Balancer Testing:** If an application's architecture includes multiple backend servers with a load balancer, customDnsMap can redirect traffic to a specific server, allowing testers to evaluate its performance and functionality in isolation.
+- **Load Balancer Testing:** Redirect traffic to a specific server to evaluate its performance and functionality in isolation.
 
-The following example shows how to use the `customDnsMap` capability to redirect traffic to a staging server for the domain `example.com`:
+The following example shows how to redirect traffic to a staging server for the domain `example.com`:
 
 ```bash
 "customDnsMap": {
@@ -78,18 +83,40 @@ The following example shows how to use the `customDnsMap` capability to redirect
 }
 ```
 
-With this configuration in place, whenever a user accesses the domain `example.com`, their request will be redirected to the IP address `192.168.1.100`, which is the staging server.
+With this configuration, whenever a user accesses `example.com`, the request redirects to `192.168.1.100`, which is the staging server.
 
 ## Benefits
+---
 
-The `customDnsMap` capability offers a number of benefits, including:
+The `customDnsMap` capability offers the following benefits.
 
-- **Flexibility:** It allows users to easily and dynamically redirect traffic to different IP addresses, without the need for global configuration changes.
+- **Flexibility:** Easily and dynamically redirect traffic to different IP addresses without global configuration changes.
 
-- **Control:** It gives users complete control over how their domains are resolved, which is essential for testing and debugging purposes.
+- **Control:** Gain full control over how domains are resolved, which is essential for testing and debugging.
 
-- **Efficiency:** It can help to improve the efficiency of testing and development workflows by eliminating the need to switch between different environments manually.
+- **Efficiency:** Improve testing and development workflows by eliminating the need to switch between different environments manually.
 
 ## Conclusion
+---
 
-The `customDnsMap` capability is a powerful tool that can be used to improve the efficiency and flexibility of testing and development workflows. It is a valuable addition to the <BrandName /> platform, and it is sure to be used by many testers and developers to improve the quality of their software.
+The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Custom DNS Mapping for Selenium Tests
+      </span>
+    </li>
+  </ul>
+</nav>

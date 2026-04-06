@@ -1,15 +1,13 @@
 ---
 id: upload-files-using-lambdatest
 title: Upload Files Using TestMu AI Selenium Grid
-hide_title: true
-sidebar_label: Upload Files Using TestMu AI Selenium Grid
-description: TestMu AI Selenium Grid allows you to upload any file inside your Selenium test scripts, to ensure cross-browser compatibility on over 3000+ browsers and OS. 
+sidebar_label: Upload Files to the Browser
+description: Upload files to the TestMu AI Selenium Grid and use them in automation test scripts across 3000+ browsers.
 keywords:
-  - upload files
-  - upload files inside selenium scripts
-  - upload files using testmu ai
-  - testmu ai upload files
-  - upload files selenium
+  - upload files selenium grid cloud
+  - lambda userFiles capability
+  - file upload automation testing selenium
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/upload-files-using-testmu/
 site_name: TestMu AI
 slug: upload-files-using-testmu/
@@ -42,43 +40,41 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Upload Files Using <BrandName /> Selenium Grid
+# Upload Files Using TestMu AI Selenium Grid
 
-In Selenium automation testing, you might have come across the need to test the upload functionality on a web app or a website. <BrandName /> now allows you to work with upload file functionality on the cloud-based Selenium Grid and test the upload feature on 3000+ browser and OS combinations.
+In Selenium automation testing, you may need to test the upload functionality on a web app or website. TestMu AI lets you test the upload feature on the cloud-based Selenium Grid across 3000+ browser and OS combinations.
 
-In this document, you will see how you can upload a file on the <BrandName /> platform and access it via an automation test script.
+This document explains how to upload a file on the TestMu AI platform and access it via an automation test script.
 
-## How To Upload Files On <BrandName /> Platform
+## How to Upload Files on TestMu AI Platform
+---
 
-* * *
+Upload files to the cloud-based Selenium Grid using the [API for uploading user-files](/api-doc/).
 
-You can upload the files on the <BrandName /> cloud based Selenium Grid, using our [API for uploading user-files](/api-doc/). Follow the steps below to learn how:
-
-*   Open [<BrandName />'s API for uploading user-files](/api-doc/) <img loading="lazy" src={require('../assets/images/uploads/upload-files.webp').default} alt="Upload file" width="1281" height="721" className="doc_img"/>
-*   Click on the Lock icon to authorize your account. <img loading="lazy" src={require('../assets/images/uploads/upload-files-1.webp').default} alt="lock icon" width="1281" height="721" className="doc_img"/>]
-*   Enter your <BrandName /> username and access key, in the box that appears, to validate your credentials. Once done, click on the "Authorise button to verify the credentials, and click on Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
+1. Open [TestMu AI's API for uploading user-files](/api-doc/). <img loading="lazy" src={require('../assets/images/uploads/upload-files.webp').default} alt="Upload file" width="1281" height="721" className="doc_img"/>
+2. Click on the Lock icon to authorize your account. <img loading="lazy" src={require('../assets/images/uploads/upload-files-1.webp').default} alt="lock icon" width="1281" height="721" className="doc_img"/>]
+3. Enter your TestMu AI username and access key to validate your credentials. Click the "Authorise" button to verify the credentials, and click Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
 
 
-> To get your <BrandName /> Username and Access Key, visite your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
+> Get your TestMu AI Username and Access Key from your [TestMu AI automation dashboard](https://accounts.lambdatest.com/dashboard). Click on the "key" icon in the top right corner.
 <img loading="lazy" src={require('../assets/images/uploads/access-key.webp').default} alt="automation key" width="1281" height="721" className="doc_img"/>
 
-*   Then click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>
-*   Once your authorization is successful and you click on the Try it out button, an option to select the file will appear on your screen. Choose the file to be uploaded using the "Choose File" button and click on Execute to upload it on the <BrandName /> platform. <img loading="lazy" src={require('../assets/images/uploads/upload-files-4.webp').default} alt="200 status code" width="1281" height="721" className="doc_img"/>
+4. Click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>
+5. Select the file using the "Choose File" button and click Execute to upload it on the TestMu AI platform. <img loading="lazy" src={require('../assets/images/uploads/upload-files-4.webp').default} alt="200 status code" width="1281" height="721" className="doc_img"/>
    
 
-> **Note**: You can upload multiple files to our lambda storage. A maximum of 150 files can be uploaded per organization. We have limit of 20 MB files size per API. So if you are total file sizes reach the limit, please upload your files in multiple API calls.
+> **Note**: You can upload multiple files to lambda storage. A maximum of 150 files can be uploaded per organization. The file size limit is 20 MB per API call. If your total file sizes reach the limit, upload your files in multiple API calls.
 
-Once the file is successfully uploaded, you will see a response body with 200 response code, as shown in the image below: <img loading="lazy" src={require('../assets/images/uploads/upload-files-5.webp').default} alt="upload file" width="1281" height="721" className="doc_img"/>
+Once the file uploads successfully, you will see a response body with 200 response code, as shown in the image below: <img loading="lazy" src={require('../assets/images/uploads/upload-files-5.webp').default} alt="upload file" width="1281" height="721" className="doc_img"/>
 
-## How To Test The Uploaded File On <BrandName /> Platform
+## How to Test the Uploaded File on TestMu AI Platform
+---
 
-* * *
+Test the uploaded file on the TestMu AI platform to perform automation testing on the cloud-based Selenium Grid.
 
-Now once the file is uploaded successfully, you can test this file on the <BrandName /> platform, to perform automation testing on cloud-based Selenium Grid on over 3000 browser and OS combinations.
+Add the [desired capability](https://www.testmuai.com/capabilities-generator/) into your automation script for file upload.
 
-To do so, you need to first add the [desired capability](https://www.lambdatest.com/capabilities-generator/) into your automation script for file upload.
-
-For example: Suppose you uploaded 3 files with name "804402.png", "file_example_JPG_2500kB.jpg", and "Sample_File_To_Upload.txt", then the desired capability to be added will be:
+For example: If you uploaded 3 files named "804402.png", "file_example_JPG_2500kB.jpg", and "Sample_File_To_Upload.txt", add the following desired capability:
 
 **Java**
 
@@ -147,9 +143,9 @@ var capabilities = {
 }
 ```
 
-Now you can use the files uploaded for your use case in the automation test script. 
+Now you can use the uploaded files in your automation test script. 
 
-Shown below is the file path for uploading on both desktop and mobile operating systems.
+The following table shows the file path for uploaded files on both desktop and mobile operating systems.
 
 |Operating System  | Default Download Path |
 |------------- | --------------------------|
@@ -159,7 +155,7 @@ Shown below is the file path for uploading on both desktop and mobile operating 
 | Android | /storage/emulated/0/Android/data/com.android.chrome/files/Download/ |
 | iOS | /Users/ltuser/Downloads/ios/media |
 
-For example, let's say you want to upload a file on a web page via test script, then the sample Java code for this operation (on Windows and macOS) will be:
+For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS):
 
 ```java
    // If the file is 804402.png, and testing environment is Windows OS
@@ -173,20 +169,25 @@ For example, let's say you want to upload a file on a web page via test script, 
 
 * * *
 
-# Download Files from <BrandName /> Storage while test execution
+# Download Files from TestMu AI Storage During Test Execution
+---
 
-During Selenium automation testing, there are scenarios where you need to retrieve files from <BrandName />'s cloud storage directly to the machine running your test. <BrandName /> provides a download hook that enables you to fetch files from lambda storage seamlessly during test execution.
+Retrieve files from TestMu AI cloud storage directly to the machine running your test during Selenium automation testing.
 
+## Prerequisites
+---
 
-Before using the download hook, ensure that:
-- Files are already uploaded to <BrandName /> storage using the [file upload API](https://www.lambdatest.com/support/api-doc/)
-- You have the exact file names stored in lambda storage
+Verify the following before using the download hook.
+
+1. Upload files to TestMu AI storage using the [file upload API](https://www.testmuai.com/support/api-doc/).
+2. Confirm the exact file names stored in lambda storage.
 
 ## Download Hook Implementation
+---
+
+Use the executeScript command to fetch files from lambda storage.
 
 ### Basic Syntax
-
-The download hook uses a simple executeScript command to fetch files from lambda storage:
 
 ```
 driver.executeScript("lambda-files-download=file_name")
@@ -196,7 +197,7 @@ driver.executeScript("lambda-files-download=file_name")
 
 * * *
 
-That's it! You can now successfully upload files and use them with Selenium Automation testing on <BrandName />'s cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@testmu.ai](mailto:support@testmu.ai) <br />Happy Testing!
+You can now successfully upload files and use them with Selenium Automation testing on TestMu AI's cloud server. If you face any issues, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or mail us at [support@testmuai.com](mailto:support@testmuai.com). <br />Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -212,7 +213,7 @@ That's it! You can now successfully upload files and use them with Selenium Auto
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Upload Files Using <BrandName />
+        Upload Files Using TestMu AI
       </span>
     </li>
   </ul>

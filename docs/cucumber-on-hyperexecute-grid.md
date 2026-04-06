@@ -103,7 +103,7 @@ capability.setCapability(CapabilityType.PLATFORM, platform);
 capability.setCapability("build", "Your Build Name");
 ```
 
-> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
 
 ### Step 2: Setup the CLI in your Test Suite

@@ -1,30 +1,26 @@
 ---
 id: run-webdriverio-automation-scripts-on-lambdatest
-title: Selenium WebDriver IO:Run WebDriverIO Automation Scripts on Selenium Grid | TestMu AI
-hide_title: true
+title: Selenium With WebDriverIO
 sidebar_label: WebDriverIO
-description: Now you can run your automation scripts using Selenium with WebDriverIO on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
+description: Run WebDriverIO Selenium automation scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems.
 keywords:
-  - webdriverio selenium grid
-  - selenium webdriver tutorial
-  - webdriverio
-  - webdriverio tutorial
-  - javascript selenium
-  - javascript automation testing
-  - selenium webdriver javascript
-  - selenium javascript testing tutorial
-  - javascript selenium framework
+  - webdriverio selenium grid testing
+  - run webdriverio tests cloud
+  - webdriverio selenium cloud execution
+  - webdriverio automation setup guide
+  - webdriverio parallel testing selenium
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,74 +39,84 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "JavaScript WebDriverIO with Selenium",
+          "name": "Selenium With WebDriverIO",
           "item": `${BRAND_URL}/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# WebDriverIO with Selenium: Tutorial to Run Your First Test on <BrandName />
-* * *
-In this topic, you will learn how to automate your website testing using Selenium with WebDriverIO Automation on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+---
 
-## Objective
-***
-By the end of this topic, you will be able to:
+Run WebDriverIO tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-1. Run a sample Selenium Webdriver test using JavaScript on <BrandName /> Automation.
-2. Comprehend and configure Selenium test suite with respect to your capabilities.
-3. Select the specific browsers to run your test on.
-4. Explore the advanced features of <BrandName />.
-5. Run your test cases in parallel to reduce build times.
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/webdriverio-selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-## Prerequisites For Running WebDriverIO Selenium Tests
-* * *
-Before getting started with Automated Scripts using WebDriverIO Selenium on <BrandName /> Automation, you need to:
+## Prerequisites
+---
+Complete these steps before running WebDriverIO Selenium tests on TestMu AI.
 
-* The first step is to download and install node.js and node package manager or npm. You should be having nodejs v6 or newer. Download it from [official NodeJS website](https://nodejs.org/en/).
-* Make sure to use the latest version of JavaScript.
-* Download [Selenium JavaScript bindings](http://www.seleniumhq.org/download/) from the official Selenium website.
-* Once you download the JavaScript bindings, extract the ZIP file which you’ve downloaded. After extracting the file, you need to add Selenium Java bindings which is a JAR file and all the dependent libraries to your classpath.
+1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
+3. Install **npm** from the [official npm website](https://www.npmjs.com/).
+4. Download [Selenium JavaScript bindings](http://www.seleniumhq.org/download/) from the official website.
 
-### Installing Selenium Dependencies and Tutorial Repo
+## Step 1: Clone the Sample Project
+---
+Clone the TestMu AI WebDriverIO Selenium sample repository to your local machine.
 
-**Step 1:** Clone our repo to see the sample test case to run the first test on Lambdatest.
 ```bash
 git clone https://github.com/LambdaTest/webdriverio-selenium.git
+cd webdriverio-selenium
 ```
-**Step 2:** Install all the required dependencies for the project.
+
+Install the required dependencies:
 ```bash
 npm i webdriverio
 npm i selenium-webdriver
-cd webdriverio-selenium
 npm i
 ```
-## Run Your First Test 
 
-**Step 3:** Go to you project file and open `tests/specs/single_test.js` to see the test case.
-```
-//single_test.js
-var assert = require('assert');
+## Step 2: Set Your Credentials
+---
+Set your TestMu AI username and access key as environment variables.
 
-describe('Lambdatest Demo Test', function() {
-  it('Lambdatest Demo TestCase', function () {
-    browser
-      .url('https://lambdatest.github.io/sample-todo-app/')
-      .click('*[name="li1"]')
-      .click('*[name="li2"]')
-      .setValue('*[id="sampletodotext"]','Lambdatest\n');
-    
-    assert(browser.getTitle().match(/Sample page - lambdatest.com/i));
-  });
-});
-```
-### Configuration of Your Test Capabilities
-You can use **[<BrandName /> Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
+<Tabs className="docs__val">
 
-**Step 4:** Go to your `conf/single.conf.js` file where you can set your test capabilities.
-```
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
+---
+Update the capabilities in `conf/single.conf.js` to define the browser and platform settings.
+
+```js
 //single.conf.js
 user= process.env.LT_USERNAME || "<your username>",
 key= process.env.LT_ACCESS_KEY || "<your accessKey>",
@@ -127,7 +133,8 @@ exports.config = {
 
   capabilities: [{
     browserName: 'chrome',
-    version:"64.0",
+    browserVersion: 'latest',
+    platformName: 'Windows 10',
     name:"Test webdriverio",
     build:"build 1",
   }],
@@ -156,175 +163,56 @@ exports.config = {
   }
 }
 ```
-## Sample Test
-***
-**Step 5:** Now you can explore the sample test case to be run on the cloud using `WD` framework in `scripts/lambdatest.js`: 
-```
-// lambdatest.js
-var chai = require("chai"),
-  chaiAsPromised = require("chai-as-promised"),
-  wd = require('wd'),
-  colors = require('colors'),
-  child_process = require('child_process')
 
-chai.use(chaiAsPromised);
-chai.should();
-chaiAsPromised.transferPromiseness = wd.transferPromiseness;
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
 
-wd.addPromiseChainMethod(
-  'onQuit', function (done) {
-    if (done) done();
-    return this;
-  }
-);
+## Step 4: Run the Test
+---
+Execute the test using the following command.
 
-function runOnlambdatest(caps, test, done) {
-  console.log("Starting Test: " + test.name.green + '\n');
-  var browser = wd.promiseChainRemote(config.seleniumHost, config.seleniumPort, username, accessKey);
-
-  // optional extra logging
-  browser.on('status', function (info) {
-    console.log(info.cyan);
-  });
-  browser.on('command', function (eventType, command, response) {
-    console.log(' > ' + eventType.green, command, (response || '').grey);
-  });
-  browser.on('http', function (meth, path, data) {
-    console.log(' > ' + meth.yellow, path, (data || '').grey);
-  });
-
-  test.run(browser.init(caps)).fin(function () { return browser.quit(); }).onQuit(done).done();
-}
-
-var config_file = process.argv[2] || 'conf.js'
-var config = require(config_file).config;
-var test = require(config.test);
-
-var username = process.env.LT_USERNAME || config.user;
-var accessKey = process.env.LT_ACCESS_KEY || config.key;
-
-for (var i in config.capabilities) {
-  var caps = config.capabilities[i];
-  if (caps["tunnel"]) {
-    //start tunnel
-  }
-  else {
-    runOnlambdatest(caps, test);
-  }
-}
-```
-**Step 6:** Now you can create or update your `package.json` file. 
-```
-//package.json
-{
-  "name": "webdriverio-Lambdatest",
-  "version": "0.1.0",
-  "readme": "WendriverIO Integration with [Lambdatest](https://www.Lambdatest.com)",
-  "description": "Selenium examples for WebdriverIO and Lambdatest Automate",
-  "scripts": {
-    "test": "npm run single && npm run local && npm run parallel",
-    "single": "./node_modules/.bin/wdio conf/single.conf.js",
-    "parallel": "./node_modules/.bin/wdio conf/parallel.conf.js",
-    "local": "./node_modules/.bin/wdio conf/local.conf.js",
-    "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lambdatest/webdriverio-Lambdatest.git"
-  },
-  "keywords": [
-    "webdriverio",
-    "Lambdatest",
-    "selenium",
-    "tests"
-  ],
-  "bugs": {},
-  "homepage": "https://github.com/Lambdatest/webdriverio-Lambdatest#readme",
-  "dependencies": {
-    "webdriverio": "^4.14.2"
-  },
-  "devDependencies": {
-    "wdio-mocha-framework": "^0.6.4"
-  }
-}
-```
-## Run Your First Test
-***
-**Step 7:** You can run the following command below to execute your test.
+**Single test:**
 ```bash
 npm run single
 ```
-### In case of Parallel Testing 
-You can go to `conf/parallel.conf.js` file in the repo to configure your parallel test cases: 
-```
-exports.config = {
-  user: process.env.LT_USERNAME || 'YOUR LAMBDATEST USERNAME',
-  key: process.env.LT_ACCESS_KEY || 'YOUR LAMBDATEST ACCESS KEY',
 
-  updateJob: false,
-  specs: [
-    './tests/specs/single_test.js'
-  ],
-  exclude: [],
-
-  maxInstances: 10,
-  commonCapabilities: {
-    name: 'webdriverIO-parallel_test',
-    build: 'webdriverIO-lambdatest',
-    visual:false,
-    video:true,
-    console:false,
-    network:false
-  },
-
-  capabilities: [{
-    browserName: 'chrome',
-    version: '65.0',
-    platform: 'WIN10'
-  },{
-    browser: 'firefox',
-    version: '64.0',
-    platform: 'WIN7',
-  },{
-    browser: 'internet explorer'
-    version: '10.0',
-    platform: 'WIN10',
-  },{
-    browser: 'MicrosoftEdge'
-    version: '18.0',
-    platform: 'WIN10',
-  }],
-
-  logLevel: 'verbose',
-  coloredLogs: true,
-  screenshotPath: './errorShots/',
-  baseUrl: '',
-  waitforTimeout: 10000,
-  connectionRetryTimeout: 90000,
-  connectionRetryCount: 3,
-  host: 'hub.lambdatest.com',
-  port:'80',
-  
-  framework: 'mocha',
-  mochaOpts: {
-      ui: 'bdd'
-  }
-}
-
-// Code to support common capabilities
-exports.config.capabilities.forEach(function(caps){
-  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
-});
-```
-After you configure your tests you can run the following command to execute the tests: 
+**Parallel tests:**
 ```bash
 npm run parallel
 ```
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+## Step 5: View Your Results
+---
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+
+The dashboard provides:
+- Video recordings of each test session
+- Screenshots captured at each step
+- Console logs from the browser
+- Network logs for debugging
+- Detailed command logs
+
+## Run WebDriverIO Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run WebDriverIO tests with the TestMu AI Agent Skill.
+
+The [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/webdriverio-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/webdriverio-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -340,7 +228,7 @@ npm run parallel
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       JavaScript WebDriver IO with Selenium
+       Selenium With WebDriverIO
       </span>
     </li>
   </ul>

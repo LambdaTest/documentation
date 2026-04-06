@@ -1,22 +1,25 @@
 ---
 id: nunit-with-selenium
-title: NUnit with Selenium:Tutorial to run your first test on TestMu AI
-hide_title: true
+title: Selenium With NUnit
 sidebar_label: NUnit
-description: Now you can run your automation scripts using Selenium with NUnit on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
+description: Run NUnit Selenium tests on TestMu AI cloud grid with 3000+ browsers. Set up, configure, and execute C# tests.
 keywords:
-  - c# selenium
-  - c# selenium tutorial
-  - c# selenium webdriver
-  - c# selenium testing
+  - run NUnit Selenium tests cloud
+  - NUnit Selenium grid setup
+  - NUnit C# automation testing
+  - Selenium NUnit cross browser testing
+  - NUnit parallel testing cloud
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -36,255 +39,160 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "NUnit",
+          "name": "Selenium With NUnit",
           "item": `${BRAND_URL}/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# NUnit with Selenium: Tutorial to run your first test on Lambdatest
-***
-In this topic, you will learn how to configure and run your C# automation testing scripts on [<BrandName /> Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) using **C#** framework **NUnit**.
+---
 
-## Objective
-***
-By the end of this topic, you will be able to:
+Run NUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-1. Set up an environment for testing your hosted web pages using **NUnit** framework with **Selenium**.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Run test cases in parallel using **NUnit** with **Selenium** to reduce build times.
-4. Test your locally hosted pages on <BrandName /> platform.
-5. Explore advanced features of <BrandName />.
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
->**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on GitHub](https://github.com/LambdaTest/CSharp-NUnit-Selenium). You can either download or clone the repository to quickly run your tests.
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/CSharp-NUnit-Selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-## Prerequisites For Running NUnit Selenium Tests
-***
->**Note:** This tutorial is specifically for Windows users using **Microsoft Visual Studio**.
+## Prerequisites
+---
+Complete the following steps before running NUnit Selenium tests.
 
-Before you can start performing **C#** automation testing with **Selenium**, you would need to:
+1. Download and install **Selenium WebDriver** from the [official website](https://www.selenium.dev/downloads/).
+2. Install the latest version of C#.
+3. Install the **.Net** framework for developing applications using C#.
+4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
+5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
+6. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 
-* Download and install **Selenium WebDriver** from the [official website](https://www.selenium.dev/downloads/).
-* Make sure you work with latest version of C#.
-* **.Net** framework to deliver guidelines while developing a range of application using C#.
-* Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to appropriate folder. A [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
-* You would also need <BrandName /> tunnel binary file for testing your locally hosted or privately hosted projects.
+## Step 1: Clone the Sample Project
+---
+Clone the repository and navigate to the project directory.
 
-### Installing Selenium Dependencies and Tutorial Repo
-
-**Step 1:** Clone the <BrandName />’s [CSharp-NUnit-Selenium repository](https://github.com/LambdaTest/CSharp-NUnit-Selenium) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
 cd CSharp-NUnit-Selenium
 ```
 
-### Setting up Your Authentication
-Make sure you have your <BrandName /> credentials with you to run test automation scripts with C# on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/login) or through <BrandName /> Profile.
+## Step 2: Set Your Credentials
+---
+Configure your credentials to connect to the TestMu AI Selenium Grid.
 
-**Step 2:** Set <BrandName /> Username and Access Key in environment variables.
+Set TestMu AI Username and Access Key in environment variables.
 
- * For Linux/macOS:
- `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
- * For Windows:
- `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
+<Tabs className="docs__val">
 
-## Run Your First Test
-***
-### Sample Test Case
+<TabItem value="bash" label="macOS / Linux" default>
 
-**Step 3:** Navigate to `NUnitSeleniumTests.cs` using VSCode. Here is a sample code base for a single C# automated test using NUnit Framework. Copy and replace this code in the NUnitSeleniumTests.cs file in the project you opened in the previous step.
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
+---
+Define browser, version, and OS settings for your test run.
+
+In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+
 ```csharp
-using System;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
-using NUnit.Framework;
-using System.Threading;
-using System.Collections.Generic;
+var browserOptions = new ChromeOptions();
+browserOptions.PlatformName = "Windows 10";
+browserOptions.BrowserVersion = "latest";
 
-namespace NUnitSelenium
+var ltOptions = new Dictionary<string, object>
 {
-
-    public class NUnitSeleniumSample1
-    {
-        public static string LT_USERNAME = Environment.GetEnvironmentVariable("LT_USERNAME") == null ? "YOUR LT_USERNAME" : Environment.GetEnvironmentVariable("LT_USERNAME");
-        public static string LT_ACCESS_KEY = Environment.GetEnvironmentVariable("LT_ACCESS_KEY") == null ? "YOUR LT ACCESS KEY" : Environment.GetEnvironmentVariable("LT_ACCESS_KEY");
-        public static bool tunnel = Boolean.Parse(Environment.GetEnvironmentVariable("LT_TUNNEL") == null ? "false" : Environment.GetEnvironmentVariable("LT_TUNNEL"));
-        public static string build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "YOUR BUILD NAME" : Environment.GetEnvironmentVariable("LT_BUILD");
-        public static string seleniumUri = "https://hub.lambdatest.com:443/wd/hub";
-
-
-        ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
-        private String browser;
-        private String version;
-        private String os;
-
-        [SetUp]
-        public void Init()
-        {
-
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
-            capabilities.SetCapability(CapabilityType.Version, "96");
-            capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
-
-            //Requires a named tunnel.
-            if (tunnel)
-            {
-                capabilities.SetCapability("tunnel", tunnel);
-            }
-            if (build != null)
-            {
-                capabilities.SetCapability("build", build);
-            }
-
-            capabilities.SetCapability("user", LT_USERNAME);
-            capabilities.SetCapability("accessKey", LT_ACCESS_KEY);
-
-            capabilities.SetCapability("name",
-            String.Format("{0}:{1}",
-            TestContext.CurrentContext.Test.ClassName,
-            TestContext.CurrentContext.Test.MethodName));
-            driver.Value = new RemoteWebDriver(new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
-            Console.Out.WriteLine(driver);
-        }
-
-        [Test]
-        public void Todotest()
-        {
-            {
-                Console.WriteLine("Navigating to todos app.");
-                driver.Value.Navigate().GoToUrl("https://lambdatest.github.io/sample-todo-app/");
-
-                driver.Value.FindElement(By.Name("li4")).Click();
-                Console.WriteLine("Clicking Checkbox");
-                driver.Value.FindElement(By.Name("li5")).Click();
-
-
-                // If both clicks worked, then te following List should have length 2
-                IList<IWebElement> elems = driver.Value.FindElements(By.ClassName("done-true"));
-                // so we'll assert that this is correct.
-                Assert.AreEqual(2, elems.Count);
-
-                Console.WriteLine("Entering Text");
-                driver.Value.FindElement(By.Id("sampletodotext")).SendKeys("Yey, Let's add it to list");
-                driver.Value.FindElement(By.Id("addbutton")).Click();
-
-
-                // lets also assert that the new todo we added is in the list
-                string spanText = driver.Value.FindElement(By.XPath("/html/body/div/div/div/ul/li[6]/span")).Text;
-                Assert.AreEqual("Yey, Let's add it to list", spanText);
-
-            }
-        }
-
-        [TearDown]
-        public void Cleanup()
-        {
-            bool passed = TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Passed;
-            try
-            {
-                // Logs the result to LambdaTest
-                ((IJavaScriptExecutor)driver.Value).ExecuteScript("lambda-status=" + (passed ? "passed" : "failed"));
-            }
-            finally
-            {
-
-                // Terminates the remote webdriver session
-                driver.Value.Quit();
-            }
-        }
-    }
-}
+    { "build", "NUnit Build" },
+    { "name", "NUnit Test" },
+    { "w3c", true }
+};
+browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
-### Configuration of Your Test Capabilities
 
-**Step 4:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
-```csharp
-DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
-            capabilities.SetCapability(CapabilityType.Version, "96");
-            capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
-```
-> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
+:::tip Capabilities Generator
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+:::
 
-### Executing the Test
+## Step 4: Run the Test
+---
+Execute the NUnit test from Visual Studio or the command line.
 
-**Step 5:** Build the solution by clicking on **Build > Build Solution**.
+**In Visual Studio (Windows):**
 
-**Step 6:** As shown below click on Test Explorer on your MS Visual Studio:
+1. Build the solution by clicking **Build > Build Solution**.
+2. Open **Test Explorer** in Visual Studio.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/Test-Explorer-Screen.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 </p>
 
-**Step 7:** Click on **Run** from the Test Explorer to run the sample test as shown below:
+3. Click **Run** from the Test Explorer to run the sample test.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/Single-Test-Explorer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 </p>
 
-### Executing in Linux/macOS:
- * Install NuGet Packages for the project.
+**In Linux/macOS:**
+
+Install NuGet packages and build the project:
 ```csharp
 cd Packages
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
- * Clean and rebuild project.
 ```csharp
 nmake clean build
 ```
-Your results would be displayed on the test console and on the [<BrandName /> dashboard](https://automation.lambdatest.com/). <BrandName /> Dashboard will help you view all your text logs, screenshots and video recording for your entire Selenium tests.
 
-## Running Your Parallel Tests Using NUnit Testing Framework
-***
-### Executing the Parallel Tests
- * **Executing parallel tests in Windows:**
+## Step 5: View Your Results
+---
+Check the test output on the console and the TestMu AI dashboard.
 
- To run parallel tests, you may go to **Test Explorer** on Visual Studio as mentioned above and click on **Run All** tests to execute the tests. 
- 
- * **Executing  parallel tests in Linux/MacOS:**
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) to view your test results. The dashboard provides:
+
+- Text logs for each test step
+- Screenshots captured during execution
+- Video recordings of the full test session
+
+## Run NUnit Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run NUnit tests with the TestMu AI Agent Skill.
+
+The [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
 ```bash
-nmake test OR nmake all
-```
-Your results would be displayed on the test console and on the [<BrandName /> dashboard](https://automation.lambdatest.com/). <BrandName /> Dashboard will help you view all your text logs, screenshots and video recording for your entire Selenium tests.
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nunit-skill .claude/skills/
 
-## Testing Locally Hosted Projects Using NUnit Selenium
-***
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
-
->Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
-
-Here’s how you can establish <BrandName /> Tunnel.
-
->Download the binary file of:
->* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
-
-**Tunnel Capability**
-```bash
-DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability("tunnel", true);
+# For Cursor / Copilot
+cp -r agent-skills/nunit-skill .cursor/skills/
 ```
 
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -300,7 +208,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      NUnit Automation Testing  
+      Selenium With NUnit
       </span>
     </li>
   </ul>

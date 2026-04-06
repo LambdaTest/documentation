@@ -1,16 +1,15 @@
 ---
 id: selenium-set-browser-options
 title: Setting Browser Options
-hide_title: false
-sidebar_label: Browser Options
-description: This document leverages you to play around your browser options for setting up in the selenium
+sidebar_label: Set Browser-Specific Options
+description: Set browser options for Chrome, Firefox, and Edge in Selenium tests on TestMu AI.
 keywords:
-  - testmu ai automation
-  - selenium automation grid
-  - selenium browser
-  - chrome
-  - firefox
-  - edge
+  - selenium set browser options
+  - chrome options selenium configuration
+  - firefox options selenium setup
+  - edge options selenium testing
+  - ie mode microsoft edge selenium
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-set-browser-options/
 site_name: TestMu AI
 slug: selenium-set-browser-options/
@@ -29,7 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "TestMu AI",
+          "name": "Home",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -39,14 +38,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Set Browser Option",
+          "name": "Set Browser Options",
           "item": `${BRAND_URL}/support/docs/selenium-set-browser-options/`
         }]
       })
     }}
 ></script>
 
-Selenium lets you set browser arguments for Chromium based browsers. When selecting Chrome, Firefox, and Edge, you can set browser options using `ChromeOptions`, `EdgeOptions`, and `FirefoxOptions` capability as shown below.
+## Browser-Specific Options
+---
+Configure Chrome, Firefox, and Edge browser arguments using their respective Options classes.
+
+Selenium lets you set browser arguments for Chromium-based browsers. When selecting Chrome, Firefox, and Edge, you can set browser options using `ChromeOptions`, `EdgeOptions`, and `FirefoxOptions` capability as shown below.
 
 <Tabs className="docs__val">
 
@@ -122,9 +125,11 @@ Selenium lets you set browser arguments for Chromium based browsers. When select
 </Tabs>
 
 
-## Desired Capability to Automate IE Mode in Microsoft Edge
+## Automate IE Mode in Microsoft Edge
+---
+Run IE Mode automation on Microsoft Edge for Windows 11 using the InternetExplorerOptions class.
 
-<BrandName />'s Automation allows you to automate IE Mode in Microsoft Edge on Windows 11. You can pass the below desired capability in your test script and execute your tests.
+TestMu AI's Automation allows you to automate IE Mode in Microsoft Edge on Windows 11. Pass the below desired capability in your test script and execute your tests.
 
 ```java
 InternetExplorerOptions browserOptions = new InternetExplorerOptions();
@@ -137,3 +142,27 @@ ltOptions.put("project", "Untitled");
 ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
+
+:::tip
+For a detailed guide on IE Mode testing, see [Test in IE Mode on Edge](/support/docs/ie-mode-on-edge/).
+:::
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Setting Browser Options
+      </span>
+    </li>
+  </ul>
+</nav>
