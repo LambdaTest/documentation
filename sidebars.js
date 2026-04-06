@@ -3465,6 +3465,11 @@ module.exports = {
                 label: "Selenium Hooks",
                 id: "selenium-visual-regression",
               },
+          {
+            type: "doc",
+            label: "Element Screenshot",
+            id: "smartui-hooks-element-screenshot",
+          },
               {
                 type: "doc",
                 label: "Hooks Layout + Full Page",
