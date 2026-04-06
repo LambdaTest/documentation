@@ -15,6 +15,8 @@ canonical: https://www.testmuai.com/support/docs/build-inactivity-time/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
