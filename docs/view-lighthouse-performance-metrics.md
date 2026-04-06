@@ -16,6 +16,8 @@ site_name: TestMu AI
 slug: view-lighthouse-performance-metrics/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
+
 
 
 <script type="application/ld+json"
