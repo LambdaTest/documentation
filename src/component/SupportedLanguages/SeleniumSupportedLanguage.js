@@ -168,7 +168,7 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/">Jasmine For BDD</a>
         </li>
         <li>
-          <a href="/support/docs/karma-integration-with-lambdatest/">Karma Test Runner</a>
+          <a href="/support/docs/karma-integration-with-testmu/">Karma Test Runner</a>
         </li>
         <li>
           <a href="/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">TestCafe</a>

@@ -52,7 +52,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 Run Protractor tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::warning Deprecated Framework
-Protractor reached end-of-life in August 2023. Consider migrating to [Playwright](/support/docs/playwright-testing/) or [WebDriverIO](/support/docs/run-webdriverio-automation-scripts-on-lambdatest/). This guide is maintained for existing users.
+Protractor reached end-of-life in August 2023. Consider migrating to [Playwright](/support/docs/playwright-testing/) or [WebDriverIO](/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/). This guide is maintained for existing users.
 :::
 
 :::tip Sample repo
