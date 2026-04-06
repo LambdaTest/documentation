@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Run WD tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::warning Unmaintained Framework
-The WD library is largely unmaintained. Consider migrating to [WebDriverIO](/support/docs/run-webdriverio-automation-scripts-on-lambdatest/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
+The WD library is largely unmaintained. Consider migrating to [WebDriverIO](/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
 :::
 
 :::tip Sample repo

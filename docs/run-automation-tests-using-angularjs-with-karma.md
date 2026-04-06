@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Run AngularJS tests with Karma on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::warning Deprecated Framework
-AngularJS reached end-of-life in December 2021. Consider migrating to Angular with [Karma](/support/docs/karma-integration-with-lambdatest/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
+AngularJS reached end-of-life in December 2021. Consider migrating to Angular with [Karma](/support/docs/karma-integration-with-testmu/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
 :::
 
 :::tip Sample repo
