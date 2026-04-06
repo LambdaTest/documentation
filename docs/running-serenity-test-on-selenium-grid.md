@@ -1,19 +1,19 @@
 ---
 id: running-serenity-test-on-selenium-grid
-title: Execute Selenium Tests With Serenity BDD
-sidebar_label: Serenity BDD
-description: Your guide to running tests using Serenity BDD on TestMu AI's Selenium Grid of 3000+ real devices and desktop browsers.
+title: Selenium With Serenity BDD
+sidebar_label: Serenity
+description: Run Serenity BDD Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.
 keywords:
-  - serenity selenium
-  - serenity bdd
-  - selenium
-  - serenity automation testing
-  - serenity testing tutorial
-  - serenity selenium framework
+  - serenity bdd selenium cloud testing
+  - run serenity tests on selenium grid
+  - serenity bdd parallel execution
+  - serenity automation setup
+  - serenity cross browser testing
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/serenity-test-on-selenium-grid/
 site_name: TestMu AI
 slug: serenity-test-on-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/serenity-test-on-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/serenity-test-on-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,52 +40,37 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Running Serenity Test On Selenium Grid",
+          "name": "Selenium With Serenity BDD",
           "item": `${BRAND_URL}/support/docs/serenity-test-on-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Selenium With Serenity BDD Tutorial
-
----
-
-In this topic, you will learn how to configure and run tests using **Gauge** on <BrandName />'s [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
-
-## Objective
-
----
-
-By the end of this topic, you will be able to:
-
-1. Set up an environment for testing your hosted web pages using **Serenity** framework with **Selenium**.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Run test cases in parallel using **Serenity** with Selenium to reduce build times.
-4. Test your locally hosted pages on <BrandName /> platform.
-5. Explore advanced features of <BrandName />.
+Run Serenity BDD tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/Serenity-Selenium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/Serenity-Selenium-Sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
 
 ## Prerequisites
-
 ---
 
-Before you can start performing Java automation testing with Selenium, you would need to:
+Make sure you have the following set up before you start.
 
-- Install the latest **Java development environment**. We recommend to use **Java 11** version.
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the **Java development environment** (Java 11 recommended).
+4. Install **Maven**. Download it from [the official website](https://maven.apache.org/) or install it on **Linux/MacOS** using [**Homebrew**](https://brew.sh/).
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on <BrandName /> Selenium cloud grid.
+## Step 1: Clone the Sample Project
+---
 
-- Install **Maven**. It can be downloaded and installed following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
-
-### Cloning Repo and Installing Dependencies
-
-**Step 1:** Clone the <BrandName />’s [Serenity-Selenium-Sample](https://github.com/LambdaTest/Serenity-Selenium-Sample) repository and navigate to the code directory as shown below:
+Pull the sample repo to your local machine and navigate into the project directory.
 
 ```bash
 git clone https://github.com/LambdaTest/Serenity-Selenium-Sample
@@ -97,44 +83,38 @@ You may also want to run the command below to check for outdated dependencies.
 mvn versions:display-dependency-updates
 ```
 
-### Setting up Your Authentication
+## Step 2: Set Your Credentials
+---
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-**Step 2:** Set <BrandName /> **Username** and **Access Key** in environment variables.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
-
-<TabItem value="bash" label="Linux / MacOS" default>
-
+<TabItem value="bash" label="macOS / Linux" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \\
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \`
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
 </Tabs>
 
-## Run Your First Test
-
+## Step 3: Configure Your Test Capabilities
 ---
 
-### Sample Test with Serenity
+Define the browser, version, and OS for your test run.
 
-To run your first Serenity Test on <BrandName /> Selenium Grid, let’s understand our test case scenario, the test case below checks for the word "**LambdaTest**" on Google and tests if the title of the resultant page is "**LambdaTest-Google Search**".
+The sample feature file checks for the word "LambdaTest" on Google and validates the title of the resultant page:
 
 ```bash
 Feature: Google's Search Functionality
@@ -144,7 +124,7 @@ Feature: Google's Search Functionality
         Then I should see title "LambdaTest - Google Search"
 ```
 
-Following below is the `GooglePage.java` file for the above Test Case Scenario.
+Below is the `GooglePage.java` file for the above test case scenario:
 
 ```java title="GooglePage.java"
 package com.lambdatest.cucumber.pages;
@@ -180,16 +160,17 @@ public class GooglePage extends PageObject {
 }
 ```
 
-Below is the `<BrandName />SerenityDriver.java` file that shows the integration of Serenity with <BrandName />.
+Below is the `LambdaTestSerenityDriver.java` file that shows the integration of Serenity with TestMu AI:
 
 ```java title="LambdaTestSerenityDriver.java"
 package com.lambdatest;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import net.thucydides.core.util.EnvironmentVariables;
@@ -212,8 +193,10 @@ public class LambdaTestSerenityDriver implements DriverSource {
         }
 
         String environment = System.getProperty("environment");
-                DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("plugin","Serenity LambdaTest Plugin");
+                ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("plugin", "Serenity LambdaTest Plugin");
+        ltOptions.put("w3c", true);
 
         Iterator it = environmentVariables.getKeys().iterator();
         while (it.hasNext()) {
@@ -222,19 +205,20 @@ public class LambdaTestSerenityDriver implements DriverSource {
             if (key.equals("lt.user") || key.equals("lt.key") || key.equals("lt.grid")) {
                 continue;
             } else if (key.startsWith("lt_")) {
-                capabilities.setCapability(key.replace("lt_", ""), environmentVariables.getProperty(key));
+                ltOptions.put(key.replace("lt_", ""), environmentVariables.getProperty(key));
 
             } else if (environment != null && key.startsWith("environment." + environment)) {
 
-                capabilities.setCapability(key.replace("environment." + environment + ".", ""),
+                ltOptions.put(key.replace("environment." + environment + ".", ""),
                         environmentVariables.getProperty(key));
             }
         }
+        browserOptions.setCapability("LT:Options", ltOptions);
 
         try {
             String url = "https://" + username + ":" + accessKey + "@" + environmentVariables.getProperty("lt.grid")
                     + "/wd/hub";
-            return new RemoteWebDriver(new URL(url), capabilities);
+            return new RemoteWebDriver(new URL(url), browserOptions);
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -247,33 +231,33 @@ public class LambdaTestSerenityDriver implements DriverSource {
 }
 ```
 
-:::info Note
-
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
-
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
 :::
 
-### Executing the Test
+## Step 4: Run the Test
+---
 
-**Step 3:** The tests can be executed in the terminal using the following command:
+Trigger the test from your terminal.
+
+<Tabs className="docs__val">
+<TabItem value="single" label="Single Test" default>
 
 ```bash
 mvn verify -P single
 ```
 
-:::info
+</TabItem>
+<TabItem value="parallel" label="Parallel Tests">
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+```bash
+mvn verify -P parallel
+```
 
-:::
+</TabItem>
+</Tabs>
 
-## Run Your Parallel Test Using Serenity
-
----
-
-### Setting up the Parallel Environment
-
-To run parallel tests with Serenity, we will run **single.feature** test case in four different environments Chrome, Firefox, IE, and Safari.
+For parallel execution, the sample project runs **single.feature** test case in four different environments: Chrome, Firefox, IE, and Safari.
 
 ```java title="ParallelChromeTest.java"
 //Running Parallel Test On Chrome
@@ -284,81 +268,41 @@ public class ParallelChromeTest extends LambdaTestSerenityTest {
 }
 ```
 
-Similarly we define the class for the remaining browsers.
+Define similar classes for the remaining browsers.
 
-### Executing Parallel Tests Using Serenity
-
-To run parallel tests using Serenity, we would have to execute the below commands in the terminal:
-
-```bash
-mvn verify -P parallel
-```
-
-:::info
-
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build).
-
-:::
-
-## Testing Locally Hosted or Privately Hosted Projects
-
+## Step 5: View Your Results
 ---
 
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+Check the Automation Dashboard to see exactly what happened during your test.
 
-:::tip Tunnel Help
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
 
-Refer our :link: [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
 
-:::
-
-Here’s how you can establish <BrandName /> Tunnel.
-
-:::info Download the binary file
-
-- [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-:::
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-
-```bash
-./LT -user {user’s login email} -key {user’s access key}
-```
-
-So if your user name is **lambdatest@example.com**, the command would be:
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`./LT -user lambdatest@example.com -key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
-
-```java title="Tunnel Capability"
-tunnel = true
-```
-
-### Executing Local Tests Using Serenity
-
-To run local tests using Serenity, we would have to execute the below commands in the terminal:
-
-```bash
-mvn verify -P local
-```
-
-## Additional Links
-
+## Run Serenity BDD Tests Using Agent Skills
 ---
 
-- [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+Use AI coding assistants to generate and run Serenity BDD tests with the TestMu AI Agent Skill.
+
+The [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/serenity-bdd-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/serenity-bdd-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -374,7 +318,7 @@ mvn verify -P local
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Running Serenity Test On Selenium Grid
+       Selenium With Serenity BDD
       </span>
     </li>
   </ul>

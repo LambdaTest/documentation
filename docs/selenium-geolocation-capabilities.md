@@ -1,14 +1,13 @@
 ---
 id: selenium-geolocation-capabilities
-title: Selenium Testing from different Geolocations
-hide_title: false
-sidebar_label: IP Geolocation
-description: Selenium Geolocation capabilities documentation provides you the insights about the countries and region with their timezone TestMu AI supports so that you can test your application in that particular timezone.
+title: Selenium Testing from Different Geolocations
+sidebar_label: Test From a Different Country
+description: Run Selenium tests from different countries and timezones using the geoLocation capability.
 keywords:
-  - testmu ai automation
-  - selenium automation grid
-  - selenium geoloction
-  - timezone
+  - selenium geolocation capability testing
+  - test from different countries selenium
+  - geolocation IP timezone selenium automation
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-geolocation-capabilities/
 site_name: TestMu AI
 slug: selenium-geolocation-capabilities/
@@ -34,14 +33,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Selenium Geo location",
+          "name": "Selenium Geolocation",
           "item": `${BRAND_URL}/support/docs/selenium-geolocation-capabilities/`
         }]
       })
     }}
 ></script>
 
-<BrandName /> allows you to run your test from different geographies across the world.
+TestMu AI allows you to run your tests from different geographies across the world.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="n71MfNyDF5E">
@@ -50,18 +49,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 </div>
 
 :::warning NOTE
-You cannot perform Geolocation testing with locally hosted web applications using <BrandName /> Tunnel in a single test case. If you wish to perform both, then you can leverage parallel testing to run two tests simultaneously, one for Geolocation and the other for <BrandName /> Tunnel.
+You cannot perform Geolocation testing with locally hosted web applications using TestMu AI Tunnel in a single test case. If you wish to perform both, then you can leverage parallel testing to run two tests simultaneously, one for Geolocation and the other for TestMu AI Tunnel.
 :::
 
 
 | Key | Values | Capability Description  | Alias | Value Type | Example | Possible Errors |
 |-----|--------|-------------------------|-------|------------|---------|-----------------|
-| `geoLocation` | Example: US | This capability helps you to perform Selenium automation testing from different countries. <br/>`capabilities.setCapability("geoLocation","US");` |geo | String |`capabilities.setCapability("geoLocation","US");`|Case Sensitive <br/>Invalid location error
+| `geoLocation` | Example: US | This capability lets you run Selenium automation tests from different countries. <br/>`capabilities.setCapability("geoLocation","US");` |geo | String |`capabilities.setCapability("geoLocation","US");`|Case Sensitive <br/>Invalid location error
 
 
-> **NOTE :** You can verify whether your geolocation IP address is working or not via [MaxMind's GeoIP Web Services](https://www.maxmind.com/en/geoip-web-services-demo).
+> **NOTE:** Verify whether your geolocation IP address is working via [MaxMind's GeoIP Web Services](https://www.maxmind.com/en/geoip-web-services-demo).
 
-You can perform Selenium automation testing from the below-listed countries.
+You can run Selenium automation tests from the following countries.
 
 | Country | Country Codes | 
 |---------|---------------|
@@ -170,8 +169,9 @@ You can perform Selenium automation testing from the below-listed countries.
 | Vietnam         | "VN" | 
 
 ## List of Supported Timezones
+---
 
-Following are the list of supported Timezones for automation testing on the <BrandName /> platform.
+The following timezones are supported for automation testing on the TestMu AI platform.
 
 | City           | Timezone                                                       |
 | -------------- | -------------------------------------------------------------- |

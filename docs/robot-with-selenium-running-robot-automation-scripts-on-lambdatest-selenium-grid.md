@@ -1,28 +1,26 @@
 ---
 id: robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid
-title: Robot framework:Run automation scripts on TestMu AI-Selenium Grid
-hide_title: true
+title: Selenium With Robot Framework
 sidebar_label: Robot
-description: Now you can run your automation scripts using Selenium with Robot on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
+description: Run Robot Framework Selenium tests on TestMu AI cloud grid with 3000+ browser and OS combinations. Setup, config, and parallel execution included.
 keywords:
-  - robot
-  - robot selenium
-  - python selenium
-  - robot automation testing
-  - selenium webdriver robot
-  - selenium python testing tutorial
-  - python selenium framework
-  - testmu ai python
-  - framework on testmu ai
-
+  - robot framework selenium testing
+  - run robot tests on cloud grid
+  - robot framework automation cloud
+  - selenium webdriver robot framework
+  - cross browser testing robot
+  - robot framework parallel testing
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -42,84 +40,93 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Robot Selenium :Run Automation Scripts on Selenium Grid using Robot Testing Framework",
+          "name": "Selenium With Robot Framework",
           "item": `${BRAND_URL}/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Robot with Selenium: Tutorial to Run Your First Test on <BrandName />
-* * *
+---
 
-In this topic, you will learn how to configure and run your Python automation testing scripts on [<BrandName /> Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) using **Python** framework **Robot**. 
+Run Robot Framework tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-## Objective
-***
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-By the end of this topic, you will be able to:
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/Robot-Selenium-Sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-1. Set up an environment for testing your hosted web pages using **Robot** framework with **Selenium**.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Test your locally hosted pages on <BrandName /> platform.
-4. Explore advanced features of <BrandName />.
+## Prerequisites
+---
+Complete these steps before running your first Robot Framework Selenium test.
 
->**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on GitHub](https://github.com/LambdaTest/Robot-Selenium-Sample). You can either download or clone the repository to quickly run your tests.
-
-## Prerequisites For Running Robot Selenium Tests
-* * *
-Before you can start performing Python automation testing using Robot, you would need to:
-
-* Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
-* Make sure **pip** is installed in your system. You can install **pip** from [official pip documentation](https://pip.pypa.io/en/stable/installation/).
-* Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of **Selenium Client** and **WebDriver** are ideal for running your automation script on <BrandName /> Selenium cloud grid.
-* Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
+1. Install the latest Python build from the [official website](https://www.python.org/downloads/).
+2. Verify that **pip** is installed in your system. Install **pip** from [official pip documentation](https://pip.pypa.io/en/stable/installation/).
+3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
+4. Install **virtualenv** to isolate the build from other setups and ensure tests run with the specified module versions.
 ```bash
 pip install virtualenv
 ```
-### Installing Selenium Dependencies and Tutorial Repo
 
-**Step 1:** Clone the <BrandName />’s [Robot-Selenium-Sample repository](https://github.com/LambdaTest/Robot-Selenium-Sample) and navigate to the code directory as shown below:
+## Step 1: Clone the Sample Project
+---
+Clone the repository and set up the environment.
+
 ```bash
 git clone https://github.com/LambdaTest/Robot-Selenium-Sample
 cd Robot-Selenium-Sample
 ```
-**Step 2:** Create a virtual environment in your project folder the environment name is arbitrary.
+
+Create a virtual environment and activate it:
 ```bash
 virtualenv venv
-```
-**Step 3:** Activate the environment.
-```bash
 source venv/bin/activate
 ```
-**Step 4:** Install the [required packages](https://github.com/LambdaTest/Robot-Selenium-Sample/blob/master/requirements.txt) from the cloned project directory:
+
+Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
-### Setting up Your Authentication
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
 
-**Step 5:** Set <BrandName /> `Username` and `Access Key` in environment variables.
-  * For **Linux/macOS**:
+## Step 2: Set Your Credentials
+---
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Set TestMu AI `Username` and `Access Key` in environment variables.
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="macOS / Linux" default>
+
   <div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`export LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
-export LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
 </div>
 
-  * For **Windows**:
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`set LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
 </div>
 
-## Run Your First Test
-***
-### Sample Test Case
-Here is `common.robot` file to setup mandatory details to run at <BrandName />.
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
+---
+Define browser, version, and OS settings for your test run.
+
+Here is `common.robot` file to setup mandatory details to run at TestMu AI.
 ```python
 *** Settings ***
 Library  Selenium2Library
@@ -128,8 +135,8 @@ Library  Selenium2Library
  
 @{_tmp}
     ...  browserName: %{browserName},
-    ...  platform: %{platform},
-    ...  version: %{version},
+    ...  platformName: %{platform},
+    ...  browserVersion: %{version},
     ...  name: RobotFramework Lambda Test
  
 ${BROWSER}          %{ROBOT_BROWSER}
@@ -148,57 +155,54 @@ Open test browser
 Close test browser
     Close all browsers
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
-### Executing the Test 
+:::tip Capabilities Generator
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+:::
 
-**Step 6:** Please execute the command below to run your tests:
+## Step 4: Run the Test
+---
+Execute the Robot Framework test from the command line.
+
 ```bash
 make test_Windows_10_chrome_latest
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <BrandName /> automation dashboard. [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
-## Running Your Parallel Tests Using Robot Framework 
-***
-### Executing Parallel Tests Using Robot
-To run parallel tests using Robot, we would have to execute the below commands in the terminal:
+To run parallel tests:
 ```bash
 make run_all_in_parallel
 ```
-## Testing Locally Hosted or Privately Hosted Projects
-***
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+## Step 5: View Your Results
+---
+Check the test output on the console and the TestMu AI dashboard.
 
-Here’s how you can establish <BrandName /> Tunnel.
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to view your test results. The dashboard provides:
 
->Download the binary file of:
->* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+- Text logs for each test step
+- Screenshots captured during execution
+- Video recordings of the full test session
 
-Open command prompt and navigate to the binary folder.
+## Run Robot Framework Tests Using Agent Skills
+---
 
-Run the following command:
+Use AI coding assistants to generate and run Robot Framework tests with the TestMu AI Agent Skill.
+
+The [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
 ```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/robot-framework-skill .claude/skills/
 
-**Tunnel Capability**
-```bash
-"tunnel" = true
+# For Cursor / Copilot
+cp -r agent-skills/robot-framework-skill .cursor/skills/
 ```
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -214,7 +218,7 @@ Once you are able to connect **<BrandName /> Tunnel** successfully, you would ju
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Robot Automation Testing  
+      Selenium With Robot Framework
       </span>
     </li>
   </ul>

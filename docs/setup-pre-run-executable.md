@@ -1,18 +1,13 @@
 ---
 id: setup-pre-run-executable
-title: Install Custom Certificates on the VM Through Pre-run-executables
-hide_title: true
-sidebar_label: Setup Pre-run Executable
-description: Pre-run-executables allow you to run your custom scripts before the Selenium test is started. 
+title: Install Custom Certificates on the VM Through Pre-run Executables
+sidebar_label: Run a Pre-Test Script
+description: Run custom scripts before Selenium tests start to install certificates required for test execution.
 keywords:
-  - local app testing
-  - testmu ai local testing
-  - testmu ai local tunnel
-  - TestMu AI tunnel
-  - local app testing for linux
-  - TCP with TLS 1.2 secure connection
-  - TCP with TLS 1.2 secure connection tunnel
-  - shared TCP with TLS 1.2 secure connection
+  - pre-run executable selenium custom certificate
+  - install certificate VM automation test
+  - prerun post-run script selenium
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/setup-pre-run-executable/
 site_name: TestMu AI
 slug: setup-pre-run-executable/
@@ -45,39 +40,39 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Install Custom Certificates on the VM Through Pre-run-executables
+# Install Custom Certificates on the VM Through Pre-run Executables
 
 * * *
-Pre-run-executables allow you to run your custom scripts before the Selenium test is started. We can use this feature to install user custom certificates that are mandatory for test cases to execute successfully.
+Pre-run executables let you run custom scripts before the Selenium test starts. Use this feature to install user custom certificates that are required for test cases to execute successfully.
 
-To use certificates for Selenium tests, we require 3 things:
+To use certificates for Selenium tests, you need 3 things:
 
 * Certificate file.
-* The script that installs the certificate in our Virtual Machine (VM).
-* The script that deletes the certificate in our VM.
+* The script that installs the certificate in the Virtual Machine (VM).
+* The script that deletes the certificate in the VM.
 
 ## Instructions
+---
 
-* * *
-Upload your certificate file, installation, and uninstallation script using the below instructions.
+Upload your certificate file, installation, and uninstallation script using the below steps.
 
 1. Upload your certificate using the below command.
 
 ```bash
 curl --location --request POST '<https://api.lambdatest.com/automation/api/v1/user-files>'
 ```
-2. For installing certificate on macOS, use the following command.
+2. Install the certificate on macOS using the following command.
 
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
-3. For installing certificate on Windows, use the below command.
+3. Install the certificate on Windows using the below command.
 
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 
-4. Use the following cURL request to upload pre and post run file altogether.
+4. Use the following cURL request to upload pre and post run files altogether.
 
 ```bash
 curl --request POST \
@@ -91,7 +86,7 @@ curl --request POST \
   --form 'name={NAME-OF-YOUR-PRERUN}' 
   ```
 
-5. Now run the below capabilities to use the certificate, pre and post run files in a test.
+5. Run the below capabilities to use the certificate, pre, and post run files in a test.
 
 ```bash
 "lambda:userFiles": ["certificate.p12"],
@@ -109,11 +104,11 @@ curl --request POST \
 ```
 
 
-> **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate value. 
+> **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate values. 
 
-6. After uploading your pre-run script, reach out to us either via chat support or email to get the scripts approved.
+6. After uploading your pre-run script, reach out to us via chat support or email to get the scripts approved.
 
-7. Once your script is approved, pass the `prerun` key in capability as
+7. Once your script is approved, pass the `prerun` key in the capability as follows:
 
 ```bash
 "prerun": {
@@ -122,22 +117,26 @@ curl --request POST \
 ```
 > **Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
 
-## Leverage the use of APIs to Pre-run Tests
-***
-Here are the `prerun` APIs:
+## Leverage the Use of APIs to Pre-run Tests
+---
+
+Use the following prerun APIs to manage pre-run files.
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
-* **POST/`files`:** Upload pre run executable file to our lambda storage.
-* **DELETE/`files`/`delete`:** Delete pre run from our lambda storage.
-* **POST/`files`/`validate`:** Check if the file is approved by <BrandName />.
+* **POST/`files`:** Upload pre run executable file to lambda storage.
+* **DELETE/`files`/`delete`:** Delete pre run from lambda storage.
+* **POST/`files`/`validate`:** Check if the file is approved by TestMu AI.
 * **PUT/`files`/`download`:** Download pre run executable file. 
 
-> **Note:** To know more about our APIs, check out our [API Documentation](https://www.lambdatest.com/support/api-doc/). 
+> **Note:** To learn more about our APIs, check out our [API Documentation](https://www.testmuai.com/support/api-doc/). 
 
 ## Sample Certificate Installation and Uninstallation File (macOS)
-***
+---
+
+Replace the placeholder values in each script file before use.
+
 * In `install_certificate.sh` replace `{CERTIFICATE-FILE-NAME}` with the certificate file name.
-* In `delete_certificate.sh` replace `{CERTIFICATE-NAME}` with the certificate name (You can use the **Keychain Access** to find the certificate name.)
+* In `delete_certificate.sh` replace `{CERTIFICATE-NAME}` with the certificate name (use **Keychain Access** to find the certificate name).
 
 Following are the contents of the sample file:
 
@@ -152,7 +151,10 @@ sudo security delete-certificate -c "Local Certificate"
 ```
 
 ## Sample Certificate Installation and Uninstallation File (Windows)
-***
+---
+
+Replace the placeholder values in each script file before use.
+
 * In `install_certificate.ps1` replace `{CERTIFICATE-FILE-NAME}` with the certificate file name.
 * In `delete_certificate.ps1` replace `{CERTIFICATE-NAME}` with the certificate name.
 

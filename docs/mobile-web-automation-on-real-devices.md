@@ -1,16 +1,15 @@
 ---
 id: mobile-web-automation-on-real-devices
-title: Mobile Web Automation Testing On Real Devices
-hide_title: true
-sidebar_label: Mobile Web Automation On Real Devices
-description: Perform mobile web automation via Appium on TestMu AI real device cloud. Test on real Android and iOS devices like iPhone, Samsung Galaxy, and Google Pixel.
+title: Mobile Web Automation Testing on Real Devices
+sidebar_label: Test on Real Mobile Browsers
+description: Run mobile web automation tests via Appium on real Android and iOS devices from Samsung, Apple, and more.
 keywords:
-- mobile web automation
-- appium mobile web automation
-- mobile web test automation
-- mobile web automation testmu ai
-- mobile web automation real device
-- how to perform mobile web automation
+  - mobile web automation real device
+  - appium test real android ios
+  - isRealMobile capability appium
+  - mobile web testing python appium
+  - run appium test on iphone
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/
 site_name: TestMu AI
 slug: mobile-web-automation-on-real-devices/
@@ -42,36 +41,39 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Mobile Web Automation Testing On Real Devices
+# Mobile Web Automation Testing on Real Devices
 ***
 
-Mobile web automation involves testing websites or web apps on real mobile devices like Android and iOS. Testing the appearance and performance of websites and web apps on a real device ensures that the test runs on real-world conditions, has better performance, and improves test coverage (across devices).
+Mobile web automation involves testing websites or web apps on real mobile devices like Android and iOS. Testing appearance and performance on a real device ensures that the test runs on real-world conditions, delivers better performance, and improves test coverage across devices.
 
- <BrandName /> allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices) from a wide range of OEMs like Samsung, Apple, Xiaomi, and more.
+ TestMu AI allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.testmuai.com/test-on-mobile-devices) from OEMs like Samsung, Apple, Xiaomi, and more.
 
-Here are the Prerequisites for performing mobile web automation on real devices using Python language. 
+## Prerequisites
+---
+Install Python and the Appium client library before running mobile web tests.
 
-1.  Download the latest version of [Python](https://www.python.org/downloads/).
-2.  Install the Appium dependency by running the following command from the CMD terminal.
+1. Download the latest version of [Python](https://www.python.org/downloads/).
+2. Install the Appium dependency by running the following command from the CMD terminal.
 
 ```
 pip install Appium-Python-Client
 ```
 :::info
-The above code will install the latest Python client library for Appium which only supports `w3c : True` capability.
+The above code installs the latest Python client library for Appium which only supports `w3c : True` capability.
 :::
 
 
-## Performing Mobile Web Automation On Real Devices
-* * *
+## Performing Mobile Web Automation on Real Devices
+---
+Pass the isRealMobile capability in your test scripts to run on a real device.
 
-To test on a real mobile device, you need to pass the below capability in your test scripts.
+To test on a real mobile device, pass the below capability in your test scripts.
 
 `'isRealMobile': True`
 
-You can also add the capability using the [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/). 
+You can also add the capability using the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). 
 
-In the below Python test script, we will take an example of our sample ToDo app. We will check two checkboxes of the list and add another item to the list. The test is performed on iPhone 11 with platform version iOS 13.
+In the below Python test script, we take an example of our sample ToDo app. We check two checkboxes of the list and add another item to the list. The test runs on iPhone 11 with platform version iOS 13.
 
 ```python
 //todo.py
@@ -131,7 +133,7 @@ time.sleep(5)
 driver.quit() 
 ```
 
-In the below test snippet, you will need to add your <BrandName /> Username and <BrandName /> Access Key. You can get them from the [<BrandName /> dashboard](https://accounts.lambdatest.com/dashboard). In the Hub URL, we have added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
+In the below test snippet, add your TestMu AI Username and TestMu AI Access Key. Get them from the [TestMu AI dashboard](https://accounts.lambdatest.com/dashboard). In the Hub URL, we added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
 
 ```
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"
@@ -143,11 +145,11 @@ Execute the below command in the terminal to run the test.
 python todo.py
 ```
 
-Visit the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/), you’ll find the complete mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) to find the mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
 
 <img loading="lazy" src={require('../assets/images/mobile-web-automation/mobile-web-automation-2.webp').default} alt="Image"  className="doc_img"/>
 
->That’s all! you have successfully executed the mobile web automation test on real devices. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+>You have successfully executed the mobile web automation test on real devices. If you have questions or need additional information, reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

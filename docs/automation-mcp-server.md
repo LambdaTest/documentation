@@ -1,17 +1,15 @@
 ---
 id: automation-mcp-server
-title: Introducing Automation MCP Server
-hide_title: false
-sidebar_label: Automation MCP Server
-description: Simplify test failure triaging with Automation MCP Server on TestMu AI. Powered by Model Context Protocol (MCP), it connects AI assistants to your test data for faster, smarter debugging.
-
+title: Getting Started with Automation MCP Server
+sidebar_label: Connect via MCP Server
+description: Triage test failures faster with the Automation MCP Server by connecting AI assistants to your test execution data.
 keywords:
-  - automation testing
-  - automation mcp server
-  - automated testing
-  - testmu ai
-  - MCP
-  - MCP server
+  - automation mcp server setup
+  - mcp test failure triaging
+  - ai-assisted test debugging
+  - selenium mcp integration
+  - model context protocol testing
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/automation-mcp-server/
 site_name: TestMu AI
 slug: automation-mcp-server/
@@ -40,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Languages and Framework",
+          "name": "Connect via MCP Server",
           "item": `${BRAND_URL}/support/docs/automation-mcp-server/`
         }]
       })
@@ -48,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with Automation MCP Server
-Automation MCP Server simplifies test failure triaging for all automation test cases executed on <BrandName />. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your test execution data on <BrandName />—significantly reducing triage and troubleshooting time.
+Automation MCP Server simplifies test failure triaging for all automation test cases executed on TestMu AI. By using the Model Context Protocol (MCP), it enables integration between AI assistants and your test execution data on TestMu AI - reducing triage and troubleshooting time.
 
 
 <div className="ytframe"> 
@@ -57,28 +55,31 @@ Automation MCP Server simplifies test failure triaging for all automation test c
 </div>
 </div>
 
-## What is Model Context Protocol (MCP)?
-The Model Context Protocol (MCP) acts like a “USB-C for AI integrations,” creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it much easier to expand capabilities across your digital workflow.
+## What Is Model Context Protocol (MCP)?
+---
+MCP acts as a universal interface between AI models and applications, creating a standardized language for AI assistants to connect with software tools.
+
+The Model Context Protocol (MCP) creates a standardized interface that allows AI assistants to connect with diverse software tools. This makes it easier to expand capabilities across your digital workflow.
 
 ## Key Benefits of Automation MCP Server
+---
+Use the Automation MCP Server to accelerate debugging and test analysis.
 
-Here are the key benefits of using the Automation MCP Server:
-
-1. Access your test execution data on <BrandName /> directly from your IDE/editor.
+1. Access your test execution data on TestMu AI directly from your IDE or editor.
 2. Triage and troubleshoot test failures to identify the root cause (RCA).
 3. Fix your test code based on the RCA and accelerate your development.
-4. Generate new test cases using execution data from <BrandName />.
-5. Leverage network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
+4. Generate new test cases using execution data from TestMu AI.
+5. Use network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
 
-## Supported Tools 
+## Supported Tools
+---
+Automation MCP Server provides five core tools for test analysis.
 
-Automation MCP Server provides five core tools:
-
-1. **Automation Test Details:** Fetches detailed information about a specific TestID from the <BrandName /> cloud.
-2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on <BrandName />.
+1. **Automation Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
+2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
 3. **Automation Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
 4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
-5. **Automation MCP Server:** Core interface that powers the above tools and connects your AI assistant to <BrandName /> data.
+5. **Automation MCP Server:** Core interface that powers the above tools and connects your AI assistant to TestMu AI data.
 
 
 <nav aria-label="breadcrumbs">

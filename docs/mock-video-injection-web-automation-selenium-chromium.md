@@ -1,8 +1,8 @@
 ---
 id: mock-video-injection-web-automation-selenium-chromium
 title: Mock Video Injection on Web Automation (Selenium/Chromium)
-sidebar_label: Mock Video Injection
-description: Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI for WebRTC, KYC, video conferencing, and getUserMedia-based workflows.
+sidebar_label: Inject a Mock Video Stream
+description: Inject a custom video file as a fake camera feed in Chromium-based Selenium tests for WebRTC and KYC workflows.
 tags:
   - how-to
   - web-automation
@@ -12,13 +12,11 @@ tags:
   - mock-camera
   - getUserMedia
 keywords:
-  - mock video injection
-  - selenium fake camera
-  - chromium fake video capture
-  - lambda:userFiles
-  - getUserMedia selenium
-  - webrtc automation testing
-  - mock camera feed
+  - mock video injection selenium
+  - fake camera feed chromium webrtc
+  - getUserMedia selenium automation
+  - lambda userFiles video capture
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/
 site_name: TestMu AI
 slug: mock-video-injection-web-automation-selenium-chromium/
@@ -53,25 +51,30 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Mock Video Injection on Web Automation (Selenium/Chromium)
 
-Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on <BrandName />. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls `getUserMedia()`.
+Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls `getUserMedia()`.
 
 ## How It Works
+---
 
-1. Upload your `.mjpeg` or `.y4m` video file to <BrandName /> using the web automation user-files API.
+Upload a video file, pre-load it onto the test VM, and pass Chrome flags to use it as a fake camera device.
+
+1. Upload your `.mjpeg` or `.y4m` video file to TestMu AI using the web automation user-files API.
 2. Pre-load the file onto the test VM using the `lambda:userFiles` capability.
 3. Pass Chrome flags to use the uploaded file as a fake camera device.
 
 Chrome treats the file as a looping camera feed, so any `getUserMedia({ video: true })` call receives frames from your file instead of a real camera.
 
 ## Prerequisites
+---
 
-- A <BrandName /> account with Web Automation access
-- A `.mjpeg` video file such as `sample_640x360.mjpeg`
-  - Recommended resolution: `640x360` or `1280x720`
-  - Chrome also supports `.y4m` (raw YUV4MPEG2) format
-- <BrandName /> credentials available as `LT_USERNAME` and `LT_ACCESS_KEY`
+Verify the following before configuring mock video injection.
+
+1. Get a TestMu AI account with Web Automation access from [your dashboard](https://accounts.lambdatest.com/dashboard).
+2. Prepare a `.mjpeg` video file such as `sample_640x360.mjpeg` (recommended resolution: `640x360` or `1280x720`; Chrome also supports `.y4m` format).
+3. Set TestMu AI credentials as `LT_USERNAME` and `LT_ACCESS_KEY`.
 
 ## Step 1: Upload the Video File
+---
 
 Upload your `.mjpeg` file using the web automation user-files API.
 
@@ -106,6 +109,9 @@ The `/mfs/v1.0/media/upload` endpoint is for mobile and app automation. For web 
 :::
 
 ## Step 2: Configure Selenium Capabilities
+---
+
+Add the video file and Chrome flags to your Selenium capabilities configuration.
 
 ### Java (Selenium 4, W3C)
 
@@ -197,6 +203,9 @@ const capabilities = {
 ```
 
 ## Step 3: Verify the Video Feed in Your Test
+---
+
+Navigate to a page that requests camera access and confirm the fake stream is active.
 
 After the session starts, navigate to a page that requests camera access and confirm the fake stream is being used.
 
@@ -213,8 +222,9 @@ Boolean isPlaying = (Boolean) driver.executeScript(
 ```
 
 ## File Paths by OS
+---
 
-The `lambda:userFiles` capability places files in these directories:
+The `lambda:userFiles` capability places files in these directories.
 
 | Platform | File Path |
 |---|---|
@@ -225,6 +235,9 @@ The `lambda:userFiles` capability places files in these directories:
 Adjust the `--use-file-for-fake-video-capture` path to match your target platform.
 
 ## Chrome Flags Reference
+---
+
+The following Chrome flags control fake media device behavior.
 
 | Flag | Purpose |
 |---|---|
@@ -234,6 +247,9 @@ Adjust the `--use-file-for-fake-video-capture` path to match your target platfor
 | `--use-file-for-fake-audio-capture=<path>` | Uses the specified file as fake microphone input (`.wav` format) |
 
 ## Troubleshooting
+---
+
+Refer to the following table for common issues and solutions.
 
 | Issue | Solution |
 |---|---|
@@ -244,3 +260,23 @@ Adjust the `--use-file-for-fake-video-capture` path to match your target platfor
 | Wrong resolution | Use a file resolution that matches your app expectations; `640x360` is a safe default |
 | Windows path errors | Use escaped backslashes: `C:\\Users\\ltuser\\Downloads\\sample_640x360.mjpeg` |
 | macOS video does not render | This is a known Chrome limitation; use Linux when visual verification is required |
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Mock Video Injection on Web Automation (Selenium/Chromium)
+      </span>
+    </li>
+  </ul>
+</nav>

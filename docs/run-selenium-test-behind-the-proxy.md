@@ -1,14 +1,15 @@
 ---
 id: run-selenium-test-behind-the-proxy
-title: Run Selenium Tests Behind The Proxy | TestMu AI
-hide_title: true
-sidebar_label: Run Selenium Tests Behind The Proxy
-description: This documentation will help you run Selenium test scripts if your system is behind a proxy or have a firewall configuration.
+title: Run Selenium Tests Behind the Proxy
+sidebar_label: Run Tests Behind a Proxy
+description: Define proxy settings in your Selenium C# scripts to run tests on the cloud grid behind a proxy server.
 keywords:
-- how do i run selenium tests through a proxy
-- run selenium tests behind proxy
-- run selenium c# test script
-- run selenium tests behind firewall
+  - run selenium tests through proxy
+  - selenium c# proxy configuration
+  - selenium tests behind firewall
+  - proxy settings selenium grid
+  - HttpCommandExecutor proxy setup
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/
 site_name: TestMu AI
 slug: selenium-tests-behind-proxy/
@@ -41,20 +42,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Run Selenium Tests Behind The Proxy
+# Run Selenium Tests Behind the Proxy
 * * *
 
-If your system is behind a proxy or protected by a firewall, you will not be able to run the Selenium test scripts directly on the <BrandName /> Selenium grid. You need to define your proxy settings so that the connection goes through as usual.
+If your system is behind a proxy or protected by a firewall, you cannot run Selenium test scripts directly on the TestMu AI Selenium grid. You need to define your proxy settings so the connection goes through as usual.
 
-This documentation will help you run your Selenium test behind a proxy server.
+This document shows you how to run your Selenium tests behind a proxy server.
 
-## How To Define Proxy Settings in Selenium C#?
-
-* * *
+## How to Define Proxy Settings in Selenium C#
+---
+Add the proxy host and port to the HttpCommandExecutor in your test code.
 
 You can define proxy programmatically by adding the below snippet in your code.
 
-```javascript
+```csharp
 HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri("https://username:accesskey@hub.lambdatest.com/"), TimeSpan.FromSeconds(60));
 WebProxy myproxy = new WebProxy("proxy_host:proxy_port", false);
 IWebDriver driver;
@@ -62,7 +63,7 @@ IWebDriver driver;
 
 Below is the NUnit code that shows the insertion of the above code snippet to define proxy settings.
 
-```javascript
+```csharp
 using System;
 using System.Drawing.Text;
 using System.Threading;
@@ -125,9 +126,9 @@ namespace TestSelenium3
 }
 ```
 
-Execute the above NUnit test scripts, and you’ll be able to run your Selenium tests directly on the <BrandName /> Selenium grid behind the proxy server.
+Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server.
 
-If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmu.ai.
+If you have any questions or need additional information, contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

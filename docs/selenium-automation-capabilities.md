@@ -1,20 +1,15 @@
 ---
 id: selenium-automation-capabilities
-title: Desired Capabilities in Selenium 
-hide_title: false
-sidebar_label: Desired Capabilities In Selenium
-description: This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in selenium for both desktop and mobile browsers.
+title: Desired Capabilities in Selenium
+sidebar_label: Desired Capabilities Overview
+description: Use the TestMu AI Capability Generator to declare desired capabilities in Selenium for desktop and mobile browsers.
 keywords:
-- cross browser testing
-- selenium capabilities generator
-- selenium desired capabilities
-- testmu ai selenium grid capabilities
-- testmu ai automation capabilities generator
-- selenium capability configuration
-- selenium automation testing
-- selenium automation grid online
-- configure selenium tests with desired capabilities
-- selenium webdriver capabilities for running tests on testmu ai
+  - selenium desired capabilities generator
+  - configure selenium test capabilities
+  - selenium grid capability settings
+  - selenium webdriver capabilities testmu ai
+  - selenium automation capabilities setup
+  - declare desired capabilities selenium
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-automation-capabilities/
 site_name: TestMu AI
@@ -47,12 +42,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-Desired Capabilities in Selenium test scripts, encoded as key-value pairs, allow you, as a tester or a developer, to define specific test environment requirements. These requirements encompass operating systems, browser combinations, versions, and other parameters supported by <BrandName />'s Cloud Grid to run your desired [automation framework tests](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks).
+Desired Capabilities in Selenium test scripts, encoded as key-value pairs, allow you to define specific test environment requirements. These requirements include operating systems, browser combinations, versions, and other parameters supported by TestMu AI's Cloud Grid to run your [automation framework tests](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks).
 
 :::tip
-You can also use <BrandName />'s [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium and Appium automation test scripts on the <BrandName /> [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
+You can also use TestMu AI's [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium and Appium automation test scripts on the TestMu AI [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
 
-You can generate the capabilities in all of the six programming languages i.e. Java, PHP, Ruby, JavaScript, C#, and Python.
+You can generate the capabilities in all six programming languages: Java, PHP, Ruby, JavaScript, C#, and Python.
 :::
 
 >The values provided for any capability are both **space-insensitive** and **case-insensitive**. This means that any value you provide as **Mac OS X 10.13** or **mac os x 10.13** would be correct.
@@ -68,28 +63,28 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href = "/support/docs/selenium-three-capabilities/">
   <div className="support_inners">
     <h3>Selenium v3</h3>
-    <p>Understand the capabolities supported in <BrandName /> for Selenium version 3</p>
+    <p>Understand the capabilities supported in TestMu AI for Selenium version 3</p>
   </div>
   </a>
 
   <a href = "/support/docs/selenium-four-capabilities/">
   <div className="support_inners">
     <h3>Selenium v4</h3>
-    <p>Understand the capabolities supported in <BrandName /> for Selenium version 4</p>
+    <p>Understand the capabilities supported in TestMu AI for Selenium version 4</p>
   </div>
   </a>
 
   <a href = "/support/docs/lambdatest-selenium-advance-capabilities/">
   <div className="support_inners">
-    <h3><BrandName /> Advanced Capabilities</h3>
-    <p>Discover additional capabilities offered by <BrandName /> beyond Selenium defaults for more control over test execution.</p>
+    <h3>TestMu AI Advanced Capabilities</h3>
+    <p>Discover additional capabilities offered by TestMu AI beyond Selenium defaults for more control over test execution.</p>
   </div>
   </a>
   
   <a href = "/support/docs/perform-selenium-automation-on-headless-browsers/">
   <div className="support_inners">
     <h3>Headless Browser Testing</h3>
-    <p>Explore how to run automated tests in browsers without a graphical user interface.</p>
+    <p>Run automated tests in browsers without a graphical user interface.</p>
   </div>
   </a>
 
@@ -124,7 +119,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/view-lighthouse-performance-metrics/">
   <div className="support_inners">
     <h3>Lighthouse Performance Metrics</h3>
-    <p>Leverage Lighthouse to analyze website performance metrics within your tests.</p>
+    <p>Analyze website performance metrics within your tests using Lighthouse.</p>
   </div>
   </a>
 
@@ -138,7 +133,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/debugging-options/">
   <div className="support_inners">
     <h3>Debugging Options</h3>
-    <p>Explore debugging tools provided by <BrandName /> to troubleshoot your tests.</p>
+    <p>Use debugging tools provided by TestMu AI to troubleshoot your tests.</p>
   </div>
   </a>
 
@@ -152,7 +147,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/smart-wait/">
   <div className="support_inners">
     <h3>SmartWait Functionality</h3>
-    <p>Understand how <BrandName />'s SmartWait feature waits for elements to become interactive before proceeding with tests.</p>
+    <p>Use TestMu AI's SmartWait feature to wait for elements to become interactive before proceeding with tests.</p>
   </div>
   </a>
 
@@ -166,21 +161,21 @@ You can generate the capabilities in all of the six programming languages i.e. J
   <a href="/support/docs/auto-healing/">
   <div className="support_inners">
     <h3>Autohealing</h3>
-    <p>Learn about <BrandName />'s autohealing functionality that automatically recovers from unexpected session issues.</p>
+    <p>Use TestMu AI's autohealing functionality to recover automatically from unexpected session issues.</p>
   </div>
   </a>
 
   <a href="/support/docs/command-annotations/">
   <div className="support_inners">
     <h3>Command Annotations</h3>
-    <p>Discover how to use <BrandName />'s command annotations to control test execution flow.</p>
+    <p>Use TestMu AI's command annotations to control test execution flow.</p>
   </div>
   </a>  
 
   <a href="/support/docs/har-log-viewer-with-waterfall/">
   <div className="support_inners">
     <h3>HAR Logs</h3>
-    <p>Utilize HTTP Archive (HAR) logs to analyze network traffic during your tests.</p>
+    <p>Analyze network traffic during your tests using HTTP Archive (HAR) logs.</p>
   </div>
   </a>  
 
@@ -216,16 +211,8 @@ Please reach out at our <span className="doc__lt" onClick={() => window.openLTCh
   </ul>
 </nav>
 
+[1]: https://www.testmuai.com/capabilities-generator/
 
-
-
-
-
-
-
-
-[1]: https://www.lambdatest.com/capabilities-generator/
-
-[3]: https://www.lambdatest.com/list-of-browsers/
-[4]: https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/
+[3]: https://www.testmuai.com/list-of-browsers/
+[4]: https://www.testmuai.com/support/docs/testing-locally-hosted-pages/
 [5]: http://www.w3.org/TR/2009/WD-webstorage-20091029/

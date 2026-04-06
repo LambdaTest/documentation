@@ -1,17 +1,15 @@
 ---
 id: selenium-java-sdk
 title: TestMu AI Selenium Java SDK - Zero Code Changes
-sidebar_label: Selenium Java SDK
-description: Run your Selenium TestNG tests on TestMu AI with zero code changes. Simple YAML configuration, Maven dependencies, and a single listener is all you need.
+sidebar_label: Java SDK
+description: Run Selenium TestNG tests on TestMu AI cloud grid with zero code changes using YAML config and Maven.
 keywords:
-  - selenium java sdk
-  - testmu ai java sdk
-  - selenium sdk
-  - zero code changes
-  - java selenium automation
-  - selenium testing
-  - testmu ai selenium
-
+  - selenium java sdk zero code changes
+  - testmu ai java sdk setup
+  - selenium cloud grid java maven
+  - java selenium testng cloud execution
+  - testmu selenium sdk configuration
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-java-sdk/
 slug: selenium-java-sdk/
 canonical: https://www.testmu.ai/support/docs/selenium-java-sdk/
@@ -47,43 +45,45 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# <BrandName /> Selenium Java SDK
+# TestMu AI Selenium Java SDK
 
 ---
 
-The <BrandName /> Selenium Java SDK enables you to run your existing Selenium TestNG tests on <BrandName />'s cloud grid with **zero code changes**. Simply configure a YAML file, add a Maven dependency, and include a single listener - that's all you need to get started.
+The TestMu AI Selenium Java SDK enables you to run your existing Selenium TestNG tests on TestMu AI's cloud grid with **zero code changes**. Configure a YAML file, add a Maven dependency, and include a single listener to get started.
 
 ## Key Features
 
 ---
 
+Review what the SDK offers out of the box.
+
 - **Zero Code Changes** - Run your existing Selenium tests without modifying your test code
 - **Simple Configuration** - YAML-based configuration for credentials and capabilities
 - **Thread-Safe by Default** - Built-in thread safety for parallel test execution
-- **Easy Integration** - Just add a dependency and listener to your project
+- **Easy Integration** - Add a dependency and listener to your project
 - **Cloud Grid Access** - Run tests on 3000+ real browsers and operating systems
 
 ## Prerequisites
 
 ---
 
-Before you begin, ensure you have:
+Complete these steps before using the SDK.
 
-- A <BrandName /> account. [Sign up for free](https://www.lambdatest.com/signup) if you don't have one
-- Your <BrandName /> [Username and Access Key](https://accounts.lambdatest.com/security)
-- Java 8 or higher installed
-- Maven installed and configured
-- An existing Java test project using TestNG (support for additional frameworks is coming soon).
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you do not have one.
+2. Get your TestMu AI [Username and Access Key](https://accounts.lambdatest.com/dashboard).
+3. Install Java 8 or higher.
+4. Install and configure Maven.
+5. Prepare an existing Java test project using TestNG (support for additional frameworks is coming soon).
 
 ## Quick Start
 
 ---
 
-Getting started with the <BrandName /> Selenium Java SDK requires only three simple steps:
+Get running on the cloud grid in three steps.
 
 ### Step 1: Add Maven Dependency
 
-To get started, add the <BrandName /> Selenium Java SDK dependency to your `pom.xml`. Make sure to also configure the agent to start automatically during your build process:
+Add the TestMu AI Selenium Java SDK dependency to your `pom.xml`. Configure the agent to start automatically during your build process:
 
 ```xml
 <dependencies>
@@ -162,16 +162,16 @@ To get started, add the <BrandName /> Selenium Java SDK dependency to your `pom.
 ```
 
 :::note
-You can check the latest version of [lambdatest-selenium-java-sdk](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-selenium-java-sdk) and update the version accordingly.
+Check the latest version of [testmuai-selenium-java-sdk](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-selenium-java-sdk) and update the version accordingly.
 :::
 
 ### Step 2: Create Configuration File
 
-Create a `lambdatest.yml` file in your project root directory with your <BrandName /> credentials and desired capabilities:
+Create a `lambdatest.yml` file in your project root directory with your TestMu AI credentials and desired capabilities:
 
 ```yaml
-# LambdaTest Configuration File for Tests
-# This file is loaded automatically by the LambdaTest SDK
+# TestMu AI Configuration File for Tests
+# This file is loaded automatically by the TestMu AI SDK
 
 username: YOUR_LAMBDATEST_USERNAME
 accesskey: YOUR_LAMBDATEST_ACCESS_KEY
@@ -186,7 +186,7 @@ build: SDK Build Classes Methods v1
 project: SDK Project
 name: SDK Test
 
-# LambdaTest features
+# TestMu AI features
 video: true
 network: false
 console: true
@@ -207,13 +207,13 @@ accesskey: ${LT_ACCESS_KEY}
 
 Set these environment variables before running your tests:
 
-- `LT_USERNAME` - Your <BrandName /> username
-- `LT_ACCESS_KEY` - Your <BrandName /> access key
+- `LT_USERNAME` - Your TestMu AI username
+- `LT_ACCESS_KEY` - Your TestMu AI access key
   :::
 
 ### Step 3: Add TestNG Listener
 
-Add the <BrandName /> status listener to your TestNG configuration:
+Add the TestMu AI status listener to your TestNG configuration:
 
 **Using testng.xml**
 
@@ -231,13 +231,15 @@ Add the <BrandName /> status listener to your TestNG configuration:
 </suite>
 ```
 
-That's it! Your tests are now configured to run on <BrandName />. No code changes required in your existing test methods.
+That's it! Your tests are now configured to run on TestMu AI. No code changes required in your existing test methods.
 
 ## Thread Safety
 
 ---
 
-The <BrandName /> Selenium Java SDK is **thread-safe by default**, making it perfect for parallel test execution. You can run multiple tests concurrently without worrying about thread synchronization issues.
+The SDK handles parallel execution without additional synchronization.
+
+The TestMu AI Selenium Java SDK is **thread-safe by default**, making it suitable for parallel test execution. You can run multiple tests concurrently without worrying about thread synchronization issues.
 
 ### Parallel Execution Example
 
@@ -264,7 +266,7 @@ The SDK fully supports parallel test execution with TestNG:
 
 ---
 
-Here's a simple example of how your existing tests work without any modifications:
+See how your existing tests work without any modifications.
 
 ```java
 import org.openqa.selenium.By;
@@ -285,7 +287,7 @@ public class BasicTest {
         options.setCapability("platformName", "Windows 10");
         options.setCapability("browserVersion", "latest");
 
-        // SDK automatically injects LambdaTest capabilities from lambdatest.yml
+        // SDK automatically injects TestMu AI capabilities from lambdatest.yml
         driver = new RemoteWebDriver(
             new URL("https://hub.lambdatest.com/wd/hub"),
             options
@@ -313,18 +315,20 @@ public class BasicTest {
 
 ---
 
+Resolve common issues when running tests with the SDK.
+
 ### Common Issues
 
-**Issue: Driver not connecting to <BrandName />**
+**Issue: Driver not connecting to TestMu AI**
 
 - Verify credentials in `lambdatest.yml` or environment variables
-- Check your <BrandName /> account has active minutes
+- Check your TestMu AI account has active minutes
 
 **Issue: Tests not marked as passed/failed**
 
 - Ensure TestNG listener is configured correctly
 - Verify driver session ID is available
-- Check network connectivity to <BrandName />
+- Check network connectivity to TestMu AI
 
 **Issue: Configuration not loading**
 
@@ -335,21 +339,25 @@ public class BasicTest {
 
 ---
 
-- [<BrandName /> Selenium Grid Documentation](/support/docs/getting-started-with-testmu-automation)
-- [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
+Find related guides and tools for further configuration.
+
+- [TestMu AI Selenium Grid Documentation](/support/docs/getting-started-with-testmu-automation)
+- [Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
 - [GitHub Repository](https://github.com/Lambdatest/lambdatest-java-selenium-sdk)
-- [<BrandName /> Support](https://www.lambdatest.com/support)
+- [TestMu AI Support](https://www.lambdatest.com/support)
 
 ## Changelog
 
 ---
 
+Track SDK version history and feature additions.
+
 ### Version 1.0.1 (Latest)
 
 **New Features:**
 
-- **Enhanced Thread Safety:** Improved driver instance management to ensure thread-safe operations during parallel test execution
-- **Tunnel Support**: Added support for <BrandName /> Tunnel configuration in `lambdatest.yml`
+- **Enhanced Thread Safety:** Improved driver instance management for thread-safe parallel test execution
+- **Tunnel Support**: Added support for TestMu AI Tunnel configuration in `lambdatest.yml`
   - Configure tunnel settings directly in YAML configuration
   - Automatic tunnel lifecycle management
 - **Enhanced Configuration**: Improved YAML configuration parsing and validation
@@ -364,10 +372,10 @@ public class BasicTest {
 
 **Core Features:**
 
-- Zero code changes approach for running Selenium tests on <BrandName />
+- Zero code changes approach for running Selenium tests on TestMu AI
 - YAML-based configuration (`lambdatest.yml`)
 - Two TestNG listener integration for automatic test status updates
-- Integration with <BrandName /> Selenium Grid
+- Integration with TestMu AI Selenium Grid
 
 **Supported Features:**
 
@@ -392,7 +400,7 @@ public class BasicTest {
       </a>
     </li>
     <li className='breadcrumbs__item breadcrumbs__item--active'>
-      <span className='breadcrumbs__link'> <BrandName /> Selenium Java SDK </span>
+      <span className='breadcrumbs__link'> TestMu AI Selenium Java SDK </span>
     </li>
   </ul>
 </nav>

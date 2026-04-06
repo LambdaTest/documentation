@@ -2,20 +2,15 @@
 id: perform-selenium-automation-on-headless-browsers
 title: How To Perform Headless Browser Testing
 hide_title: true
-sidebar_label: Headless Browser Testing
-description: Learn how to perform Headless browser testing on the TestMu AI platform, to perform cross-browser testing on 3000+ combinations of real devices, browsers, and OS.
+sidebar_label: Run Headless Tests
+description: Run headless browser tests on the TestMu AI cloud Selenium Grid across 3000+ browser and OS combinations.
 keywords:
-- Headless Browser Testing
-- Headless Testing Selenium
-- Headless Browser Selenium
-- Headless Chrome Selenium
-- Headless Chrome Windows
-- Selenium Headless Chrome
-- Selenium Chrome Headless
-- Chrome Headless Selenium
-- Selenium Headless Firefox
-- Headless Testing
-
+  - headless browser testing selenium
+  - run headless chrome selenium
+  - headless firefox selenium tests
+  - enable headless mode selenium grid
+  - headless browser automation cloud
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/
 site_name: TestMu AI
 slug: perform-selenium-automation-on-headless-browsers/
@@ -31,7 +26,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "TestMu AI",
+          "name": "Home",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -48,32 +43,36 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Perform Headless Browser Testing On Cloud Selenium Grid
+# Perform Headless Browser Testing on Cloud Selenium Grid
 
 ***
-Performing automated tests on the Headless browsers can be challenging as it does not contain any UI. <BrandName /> now allows you to perform Headless browser testing easily on its cloud-based Selenium Grid. In this document, you will learn how to enable and perform Headless browser testing on the <BrandName /> platform.
+TestMu AI allows you to run headless browser tests on its cloud-based Selenium Grid. This guide shows you how to enable and run headless browser testing on the TestMu AI platform.
 
-## Enabling The Headless Browser Testing On <BrandName />
-* * *
-For Headless browser testing on <BrandName />, you need to enable the desired capability of Headless browsing – ‘*headless*’. You can enable this capability using any one of the two methods mentioned below:
+## Enabling Headless Browser Testing on TestMu AI
+---
+Set the headless desired capability to run tests without a graphical user interface.
 
-### Enable Headless Browser Testing On Desired Capabilities Generator
-* * *
-Visit the [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator). Under the **Browser Specific Capabilities**, you can find a toggle button to enable **Headless** browsing. Just switch the button to true.
+For headless browser testing on TestMu AI, enable the desired capability for headless browsing. You can enable this capability using either of the two methods below:
+
+### Enable Headless Browser Testing on Desired Capabilities Generator
+---
+Visit the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). Under the **Browser Specific Capabilities**, find the toggle button to enable **Headless** browsing. Switch the button to true.
 
 <img loading="eager" src={require('../assets/images/headless-browser-testing/selenium-desired-capabilities-generator.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
-### Enable Headless Browser Testing Via Code
-* * *
-While writing the desired capabilities in your code, you can enable Headless browser testing, by adding the below syntax:
+### Enable Headless Browser Testing via Code
+---
+Add the headless capability directly in your test script code.
+
+While writing the desired capabilities in your code, enable headless browser testing by adding the below syntax:
 
 `capabilities.setCapability("headless",true);`
 
-Below is the complete code for a sample desired capabilities in various languages:
+Below is the complete code for sample desired capabilities in various languages:
 
 **Java**
 
-```javascript
+```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browser", "Chrome");
 capabilities.setCapability("version", "86");
@@ -87,7 +86,7 @@ caps.setCapability("headless",true);
 
 **C#**
 
-```javascript
+```csharp
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.SetCapability("user","username")
 capabilities.SetCapability("accessKey","access_key")
@@ -103,7 +102,7 @@ capabilities.setCapability("headless",true);
 
 **PHP**
 
-```javascript
+```php
 $capabilities = array(
 		"build" => "your build name",
 		"name" => "your test name",
@@ -117,7 +116,7 @@ $capabilities = array(
 
 **Ruby**
 
-```javascript
+```ruby
 capabilities = Selenium::WebDriver::Remote::Capabilities.new
 capabilities["build"] = "your build name"
 capabilities["name"] = "your test name"
@@ -156,12 +155,13 @@ capabilities = {
 	}
 ```
 
-## Perform Headless Browser Testing on <BrandName />
-* * *
+## Perform Headless Browser Testing on TestMu AI
+---
+Run a headless browser test using the TestNG framework in Java.
 
-Below is a example to perform Headless browser testing. For demo purpose, we have used TestNG framework of Java language.
+Below is an example to perform headless browser testing. For demo purposes, this uses the TestNG framework with Java.
 
-```javascript
+```java
 package com.lambdatest;
 
 import java.net.MalformedURLException;
@@ -245,13 +245,13 @@ public class HeadlessAutomation {
 }
 ```
 
-Upon executing the above code, the test will run on your <BrandName /> successfully. You can view the status of the test on your [Automation dashboard](https://automation.lambdatest.com/timeline).
+After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://automation.lambdatest.com/timeline).
 
 <img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.webp').default} alt="Image"  className="doc_img" width="768" height="348"/>
 
 * * *
 
-That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+If you have any questions, contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

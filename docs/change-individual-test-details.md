@@ -1,17 +1,21 @@
 ---
 id: change-individual-test-details
 title: Changing Individual Test Details
-hide_title: true
-sidebar_label: Changing Individual Test Details
-description: TestMu AI Selenium Automation Grid enables you to perform end-to-end
+sidebar_label: Edit Test Details
+description: Mark test status as pass or fail and rename tests during execution on the Selenium grid.
 keywords:
-  - testmu ai automation
-  - selenium automation grid
-  - selenium grid online
+  - mark test passed failed selenium
+  - rename test during execution
+  - lambda-status hook usage
+  - change test name selenium grid
+  - selenium test status update
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/change-individual-test-details/
 slug: change-individual-test-details/
 canonical: https://www.testmuai.com/support/docs/change-individual-test-details/
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -43,33 +47,155 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-There may be times when you wish to manipulate individual test details from your automation test build while performing automation testing with Selenium Grid on <BrandName />. This document will help you perform basic test operations for a particular test you wish to update.
+You can modify individual test details from your automation test build while running Selenium tests on TestMu AI. This guide covers marking test status and renaming tests during execution.
 
-## Marking Test Status As Pass Or Fail
+## Mark Test Status as Pass or Fail
+---
+Use the `lambda-status` hook via JavascriptExecutor to set the final status of a test on the TestMu AI dashboard.
 
-* * *
+When you run Selenium tests on the TestMu AI grid, a test that your local assertions marked as failed may show as completed on the dashboard. Use the `lambda-status` hook to explicitly set the correct status.
 
-While performing automation testing with Selenium on <BrandName /> Selenium Grid, you may face a scenario where a test that you declared as fail in your local instance may turn out to be completed successfully at <BrandName />. Don't worry though! We understand how imperative it is to flag an automation test as either **"pass"** or **"fail"** depending upon your testing requirement with respect to the validation of expected behaviour.
+You can set these status values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error`.
 
-If you wish to mark a test status as fail/pass at <BrandName /> then you can do so by executing the below code:
+### Code Samples
 
-* To mark test status to **fail**.  
+<Tabs className="docs__val">
 
-    ```driver.executeScript('lambda-status=failed')```
+<TabItem value="java" label="Java" default>
 
-* To mark test status to **pass**.  
+```java
+// Mark test as passed
+((JavascriptExecutor) driver).executeScript("lambda-status=passed");
 
-    ```driver.executeScript('lambda-status=passed')```
+// Mark test as failed
+((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+```
 
-Here are some newly added status you can use for interpreting test execution results: `skipped`, `ignored`, `unknown`, `error`.
+</TabItem>
 
-## Renaming Your Test
+<TabItem value="javascript" label="JavaScript">
 
-* * *
+```javascript
+// Mark test as passed
+await driver.executeScript('lambda-status=passed');
 
-Sometimes, you may wish to rename your test, after placing it under execution. You can do that with the help of below code:
+// Mark test as failed
+await driver.executeScript('lambda-status=failed');
+```
 
-```driver.executeScript('lambda-name=Your_test_name')```
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+# Mark test as passed
+driver.execute_script("lambda-status=passed")
+
+# Mark test as failed
+driver.execute_script("lambda-status=failed")
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+// Mark test as passed
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-status=passed");
+
+// Mark test as failed
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-status=failed");
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+// Mark test as passed
+$driver->executeScript("lambda-status=passed");
+
+// Mark test as failed
+$driver->executeScript("lambda-status=failed");
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+# Mark test as passed
+driver.execute_script("lambda-status=passed")
+
+# Mark test as failed
+driver.execute_script("lambda-status=failed")
+```
+
+</TabItem>
+
+</Tabs>
+
+:::tip
+Place the `lambda-status` call inside your test's teardown or `@AfterMethod` block so the status is set before the session ends. For the full list of Lambda Hooks, see [Lambda Hooks](/support/docs/lambda-hooks/).
+:::
+
+## Rename Your Test
+---
+Use the `lambda-name` hook to update the test name after execution has started.
+
+You can rename a running test to reflect dynamic data such as iteration count or data-driven parameters. Pass the new name through JavascriptExecutor:
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+await driver.executeScript('lambda-name=Your_test_name');
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+driver.execute_script("lambda-name=Your_test_name")
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+$driver->executeScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+driver.execute_script("lambda-name=Your_test_name")
+```
+
+</TabItem>
+
+</Tabs>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -90,4 +216,3 @@ Sometimes, you may wish to rename your test, after placing it under execution. Y
     </li>
   </ul>
 </nav>
-  

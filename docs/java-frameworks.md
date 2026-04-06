@@ -1,15 +1,14 @@
 ---
 id: java-framework
-title: Execute Selenium Tests With Java
+title: Selenium With Java
 sidebar_label: Java
-description: Your guide to running tests using Java on TestMu AI's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Run Java Selenium tests on TestMu AI cloud grid across 3000+ browsers and OS combinations.
 keywords:
-  - java selenium
-  - java selenium tutorial
-  - java selenium webdriver
-  - java selenium
-  - java selenium testing
-
+  - java selenium cloud testing
+  - run java tests on selenium grid
+  - java webdriver remote execution
+  - java automation cross browser testing
+  - selenium java cloud grid setup
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -40,67 +39,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Running Java Automation Testing Scripts On Selenium Grid using TestNG Framework",
+          "name": "Selenium With Java",
           "item": `${BRAND_URL}/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Selenium With Java Tutorial
-
 ---
 
-In this topic, you will learn how to configure and run tests using **Java** on <BrandName />'s [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
-
-## Objectives
-
----
-
-By the end of this topic, you will be able to:
-
-1. Set up an environment for testing your hosted web pages using **Java** with Selenium.
-2. Specify which browsers to perform **Java** automation testing on.
-3. Test your locally hosted pages on <BrandName /> platform.
-4. Explore advanced features of <BrandName />.
+Run your Java Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 ## Prerequisites
-
 ---
 
-Before you can start performing Java automation testing with Selenium, you would need to:
+Complete these steps before running Java Selenium tests.
 
-- Install the latest **Java development environment**. We recommend to use **Java 11** version.
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
+4. Download the latest [Selenium Java Client](https://www.selenium.dev/downloads/) and extract the ZIP file to your project directory.
+5. Add the Selenium JARs to your project dependencies in your IDE.
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from [the official website](https://www.selenium.dev/downloads/). Latest versions of **Selenium Client** and **WebDriver** are ideal for running your automation script on <BrandName /> Selenium cloud grid.
+<img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="IntelliJ project settings" width="1260" height="1071" className="doc_img"/>
 
-- Setup your environment with required Selenium bindings if you are using an IDE for running the tests. These are the steps required to configure your IDE :
+Navigate to **Dependencies** in module settings, click **+**, and add the downloaded Selenium JARs.
 
-  - **Step 1:** Download the latest Java Selenium Bindings from the [official website](https://www.selenium.dev/downloads/) and extract the **ZIP** file to your project directory.
-  - **Step 2:** Create a new Java project and once it's created, you can open the project settings. Here we are showing an example for the same in **IntelliJ IDEA CE**.
-    <img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="cmd" width="1260" height="1071" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="Selenium JARs added to project dependencies" width="1150" height="740" className="doc_img"/>
 
-  - **Step 3:** Navigate to **dependencies** in module settings where you can add your external JARs.
-  - **Step 4:** Under dependencies by clicking the **`+`** icon, you can add your downloaded **Selenium JARs** to the project. Once they are added, it should look like this :
-    <img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="cmd" width="1150" height="740" className="doc_img"/>
-
-Now you are good to run the Java automation testing scripts.
-
-## Run Your First Test
-
+## Step 1: Create the Test File
 ---
 
-Let’s start with a simple Selenium Remote WebDriver test first. The Java script below tests a simple to-do application with basic functionalities like mark items as done, add items in a list, calculate total pending items etc.
-
-### Sample Test with Java
+Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
 
 ```java title="JavaToDo.java"
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import java.util.HashMap;
 public class JavaTodo {
     String username = "YOUR_LAMBDATEST_USERNAME";
     String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
@@ -111,21 +90,16 @@ public class JavaTodo {
         new JavaTodo().test();
     }
     public void test() {
-        // To Setup driver
         setUp();
         try {
-              //Change it to production page
             driver.get("https://lambdatest.github.io/sample-todo-app/");
 
-              //Let's mark done first two items in the list.
-              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li1")).click();
             driver.findElement(By.name("li2")).click();
 
-             // Let's add an item in the list.
-              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
             driver.findElement(By.id("addbutton")).click();
 
-              // Let's check that the item we added is added in the list.
             String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
             if (enteredText.equals("Yey, Let's add it to list")) {
                 status = true;
@@ -137,14 +111,17 @@ public class JavaTodo {
         }
     }
     private void setUp() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
-        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get any available one.
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
+        ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
         try {
-            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
         } catch (MalformedURLException e) {
             System.out.println("Invalid grid URL");
         } catch (Exception e) {
@@ -154,19 +131,16 @@ public class JavaTodo {
     private void tearDown() {
         if (driver != null) {
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-            driver.quit(); //really important statement for preventing your test execution from a timeout.
+            driver.quit();
         }
     }
 }
 ```
 
-**Step 1:** Once you setup your environment with the latest Java Selenium bindings, create a new java file `<file_name>.java` in your current project or testing directory and add the above code snippet.
+## Step 2: Set Your Credentials
+---
 
-### Setting up your Authentication
-
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
-
-**Step 2:** Please edit and add your **UserName** and **AccessKey** which are generated from the platform in your `<file_name>.java` file:
+Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">
@@ -175,104 +149,43 @@ String accesskey= "${ YOUR_LAMBDATEST_ACCESS_KEY()}";`}
   </CodeBlock>
 </div>
 
-### Configuring your Test Capabilities
+## Step 3: Configure Capabilities
+---
 
-**Step 3:** In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code is defined as:
+Define the browser, version, and OS for your test run.
 
 ```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
-        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
+ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
-:::info Note
-
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
-
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
 :::
 
-### Executing the Test
+## Step 4: Run the Test
+---
 
-- If you are using an editor or IDE for running your tests, you can just build and run your configured java file in your editor/IDE.
-- If you are using a terminal/cmd, you would need to execute the following commands :
+Execute your Java test from your IDE or terminal.
+
+**From your IDE:** Build and run the Java file directly.
+
+**From the terminal:**
 
 ```bash
 cd to/file/location
-#Compile the test file:
-javac -classpath ".:/path/to/selenium/jarfile:" <file_name>.java
-#Run the test:
-java -classpath ".:/path/to/selenium/jarfile:" <file_name>
+javac -classpath ".:/path/to/selenium/jarfile:" JavaTodo.java
+java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
 ```
 
-**Example:**
-
-```bash
-cd /Users/macuser/Documents/LambdaTest_Java
-javac -classpath ".:/Users/macuser/Documents/LambdaTest_Java/selenium-server-4.1.1.jar:" JavaTodo.java
-java -classpath ".:/Users/macuser/Documents/LambdaTest_Java/selenium-server-4.1.1.jar:" JavaTodo
-```
-
-:::info
-
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://automation.lambdatest.com/build). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
-
-:::
-
-## Testing Locally Hosted or Privately Hosted Projects
-
----
-
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
-
-:::tip Tunnel Help
-
-Refer our :link: [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
-
-:::
-
-Here’s how you can establish <BrandName /> Tunnel.
-
-:::info Download the binary file
-
-- [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-:::
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-
-```bash
-./LT -user {user’s login email} -key {user’s access key}
-```
-
-So if your user name is **lambdatest@example.com**, the command would be:
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`./LT -user lambdatest@example.com -key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
-
-```java title="Tunnel Capability"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("tunnel", true);
-```
-
-## Additional Links
-
----
-
-- [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+Your test results appear on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -288,7 +201,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Java Automation Testing 
+      Selenium With Java
       </span>
     </li>
   </ul>

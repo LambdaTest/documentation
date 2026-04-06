@@ -1,18 +1,16 @@
 ---
 id: error-messages
-title: Common Error Messages That May Happen During Test Execution
-hide_title: true
-sidebar_label: Error Messages During Test Execution
-description: Here is a list of various error messages that may happen during test execution.
+title: Error Messages During Test Execution
+sidebar_label: Fix Error Messages
+description: Identify and resolve common error messages that occur during Selenium test execution on the cloud grid.
 keywords:
-  - supported browsers
-  - test cancellation
-  - max duration exceeded an error
-  - firefox
-  - authentication error
-  - common error messages
-  - exceeded queue limit error
-
+  - selenium test execution errors
+  - authentication error fix
+  - max duration exceeded
+  - element click intercepted
+  - stale element reference fix
+  - session not created error
+image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/error-messages/
 site_name: TestMu AI
 slug: error-messages/
@@ -50,92 +48,92 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Error Messages During Test Execution
 
 ***
-Below is a list of various error messages that may happen during test execution.
+Below is a list of error messages that may occur during test execution, along with their causes and solutions.
 
-## Authentication Error At The Time of Test Execution
+## Authentication Error at the Time of Test Execution
+---
+This error occurs when your Username or Access Key is missing or invalid.
 
-* * *
+This happens when the Username or Access Key you passed is missing or invalid.
 
-This happens due to Username or Access Key passed by you is missing or invalid.
+### How to Resolve?
 
-### How To Resolve?
+1. Go to the TestMu AI [Automation Dashboard](https://accounts.lambdatest.com/dashboard).
+2. Click the key icon at the top-right of the dashboard.
+3. Copy your username and access key.
 
-1. Go to <BrandName /> Automation Dashboard.
-2. Click on the key icon at the right top of the dashboard.
-3. Copy username and access key.
+## Max Duration Exceeded Error
+---
+The test was terminated because it exceeded the maximum allowed duration.
 
-## Max duration exceeded an error
+The test was terminated because it exceeded the maximum duration allowed (default is 1800 seconds).
 
-* * *
+### Possible Cause
 
-The test was terminated because it exceeded the maximum duration allowed. (default is 1800 seconds).
+This might result from several issues: 
 
-### Possible Cause:
+* Your test is too long. A single test case may contain multiple tests.
+* The test gets stuck in an endless loop, continuously sending commands.
 
-This might be caused by several issues: 
+### Possible Solution
 
-* Your test is too long. A single test case may be composed of multiple tests.
-* Test stucks in the endless loop, where test keeps sending commands.
+* Break your test into smaller, atomic tests.
+* Use the maxDuration desired capability option to set how long you want to wait for your test to complete.
+* Check your test for endless loops.
 
-### Possible Solution:
+## Test Cancellation - Status: Error
+---
+A queued test gets cancelled before execution starts.
 
-* Consider breaking up your test into smaller, atomic tests.
-* You can use the maxDuration desired capability option to indicate how long you want to wait for your test to complete.
-* In your test check for endless loops.
+When a test is placed in a queue but gets cancelled before execution.
 
-## Test Cancellation – Status: Error
-
-* * *
-
-When a test is placed under a queue but gets cancelled before execution.
-
-### Possible Cause:
+### Possible Cause
 
 This might occur due to various reasons:
 
-* The connection between the local machine of the user and <BrandName /> cloud server is aborted.
-* High latency may also lead your test script to test cancellation.
-* User cancels the test manually after placing it in queue.
+* The connection between your local machine and the TestMu AI cloud server is aborted.
+* High latency may also cause your test script to get cancelled.
+* You cancel the test manually after placing it in the queue.
 
 ## Exceeded Queue Limit Error
+---
+Your test runner closed the connection before a new session became available.
 
-* * *
+Your test runner started a new test on TestMu AI, but then closed the connection before a new test session became available.
 
-Your test runner started a new test on <BrandName />, but then closed the connection before we could make a new test session available.
-
-### Possible Cause:
+### Possible Cause
 
 This might occur due to several things:
 
-* Client timeout with browser tests. Please make sure to set the connection timeout in your test runner/framework high enough, as old browsers take a while to start up. It would be best to wait for at least a couple minutes.
-* You might be running too many tests at once. If you're exceeding the total number of concurrent test limit, we still queue the tests as per your plan. If this queueing takes too long, your test runner might disconnect before the test started.
+* Client timeout with browser tests. Make sure to set the connection timeout in your test runner or framework high enough, as older browsers take a while to start up. Wait for at least a couple of minutes.
+* You might be running too many tests at once. If you exceed the total concurrent test limit, tests are queued per your plan. If this queueing takes too long, your test runner might disconnect before the test starts.
 
-### Possible Solutions:
+### Possible Solutions
 
-* Increase the connection timeout setting in your test runner/framework. For example, for WebdriverIO, you can set connectionRetryTimeout: 210000.
-* Make sure you're not exceeding the total allowed concurrent test limit as per <BrandName /> Automation plan you're subscribed to.
+* Increase the connection timeout setting in your test runner or framework. For example, for WebdriverIO, set `connectionRetryTimeout: 210000`.
+* Make sure you are not exceeding the total allowed concurrent test limit for your TestMu AI Automation plan.
 
 ## Lambda Error
+---
+The grid failed to recognize your test input.
 
-* * *
-
-There are times when you may encounter Lambda Error stating the below message.
+You may encounter a Lambda Error with the below message.
 
 > **Lambda Error:** Uh Oh! Looks like our Grid failed to recognize your test input.
 
-### Possible Cause:
+### Possible Cause
 
-There could be numerous reasons behind this error messages. The most common ones are listed below:
+There could be several reasons behind this error. The most common ones include:
 
-* Infrastructure Unavailability: In case of too many incoming requests, sometimes our cloud server may fail to allocate a VM as per your request.
-* Incorrect Data Type for Desired Capabilities: If you send a string input for an integer data type capability then you may encounter Lambda Error.
-* Excessive web-traffic spikes may also lead to Lambda Error.
+* Infrastructure Unavailability: With too many incoming requests, the cloud server may fail to allocate a VM for your request.
+* Incorrect Data Type for Desired Capabilities: Sending a string input for an integer data type capability triggers a Lambda Error.
+* Excessive web-traffic spikes may also cause Lambda Error.
 
-## Element click intercepted - 400
+## Element Click Intercepted - 400
+---
+Another element is obscuring the element you want to click.
 
-* * *
-
-The Element Click command could not be completed because the element receiving the events is obscuring the element that was requested clicked.
+The Element Click command could not complete because another element is obscuring the target element.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -144,33 +142,33 @@ The Element Click command could not be completed because the element receiving t
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* It usually occurs when the target element that you want to click is overlaid by some other element in the web page.
-
-
-### Possible Solutions:
-
-* There are multiple ways to solve the given issue - check <a href="https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted">StackOverFlow for more information </a>
+* This usually occurs when the target element is overlaid by another element in the web page.
 
 
-## Element not interactable - 400
+### Possible Solutions
 
-* * *
-
-A command could not be completed because the element is not pointer- or keyboard interactable.
-
-### Possible Cause:
-
-1. Element has not properly rendered
-
-2. Element has rendered but it is not in the visible part of the screen
+* There are multiple ways to solve this issue. Check <a href="https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted">StackOverflow for more information</a>.
 
 
-### Possible Solutions:
+## Element Not Interactable - 400
+---
+The element is not ready for pointer or keyboard interaction.
 
-For 1. -> Use implicit /explicit wait:
-  - Implicit wait :
+A command could not complete because the element is not pointer- or keyboard interactable.
+
+### Possible Cause
+
+1. The element has not rendered yet.
+
+2. The element has rendered but is not in the visible part of the screen.
+
+
+### Possible Solutions
+
+For 1. -> Use implicit or explicit wait:
+  - Implicit wait:
     <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
     {`driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);`}
@@ -178,45 +176,45 @@ For 1. -> Use implicit /explicit wait:
     </div>
       
 
-  - Explicit wait :
+  - Explicit wait:
     <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
     {`WebDriverWait wait=new WebDriverWait(driver, 20); element1 = wait.until(ExpectedConditions.elementToBeClickable(By.className("fa-stack-1x")));`}
     </CodeBlock>
     </div>
 
-For 2. -> Solution is just to scroll till the element. Based on the version of Selenium it can be handled in different ways. For more information, refer this <a href= "https://stackoverflow.com/questions/45183797/element-not-interactable-exception-in-selenium-web-automation">link.</a>
+For 2. -> Scroll to the element. Based on the Selenium version, this can be handled in different ways. For more information, refer to this <a href= "https://stackoverflow.com/questions/45183797/element-not-interactable-exception-in-selenium-web-automation">link.</a>
 
 
 
-## Insecure certificate - 400
+## Insecure Certificate - 400
+---
+Navigation triggered a certificate warning due to an expired or invalid TLS certificate.
 
-* * *
+Navigation caused the user agent to hit a certificate warning, usually resulting from an expired or invalid TLS certificate.
 
-Navigation caused the user agent to hit a certificate warning, which is usually the result of an expired or invalid TLS certificate.
+### Possible Cause
 
-### Possible Cause:
-
-* SSL works through a combination of programs and encryption/decryption routine that exist on the web server computer and web server browser.
-* When a secure connection is not established between the server and client due to the certificate, following SSL certificate error will be manifested.
-* Suppose you provide some https request in the browser and get a prompt such as "This connection is untrusted" or the "The site’s security certificate is not trusted" (which varies as per the browser being used). Then such an error is subject to SSL certificate error.
+* SSL works through a combination of programs and encryption/decryption routines on the web server and browser.
+* When a secure connection is not established between the server and client due to the certificate, an SSL certificate error appears.
+* If you send an HTTPS request in the browser and get a prompt such as "This connection is untrusted" or "The site's security certificate is not trusted" (which varies by browser), this indicates an SSL certificate error.
 
 
-### Possible Solutions:
+### Possible Solutions
 
-We can essentially adjust our script such that the SSL exception is handled by itself, using Selenium Webdriver.
+You can adjust your script to handle the SSL exception automatically using Selenium WebDriver.
 
-* For understanding and handling SSL errors - check <a href="https://www.toolsqa.com/selenium-webdriver/ssl-certificate-in-selenium/">this site</a> for more information 
+* For understanding and handling SSL errors, check <a href="https://www.toolsqa.com/selenium-webdriver/ssl-certificate-in-selenium/">this site</a> for more information.
 
 
 ## Invalid Argument - 400
-
-* * *
+---
+The arguments passed to a command are invalid or malformed.
 
 The arguments passed to a command are either invalid or malformed.
 Example:
 
-It is for example not possible to set a window size to a negative value:
+You cannot set a window size to a negative value:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -236,35 +234,28 @@ Output:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* The invalid argument error is a WebDriver error that occurs when the arguments passed to a command are either invalid or malformed.
-* Invalid argument errors can be likened to TypeErrors in JavaScript, in that they can occur for a great many APIs when the input value is not of the expected type or malformed in some way.
-
-
-### Possible Solutions:
-
-* Check the values in your input and ensure they are actually valid.
+* The invalid argument error is a WebDriver error that occurs when the arguments passed to a command are invalid or malformed.
+* Invalid argument errors are similar to TypeErrors in JavaScript. They can occur for many APIs when the input value is not the expected type or is malformed.
 
 
-## Invalid cookie domain - 400
+### Possible Solutions
 
-* * *
+* Check the values in your input and verify they are valid.
+
+
+## Invalid Cookie Domain - 400
+---
+You attempted to set a cookie under a domain different from the current page.
 
 An illegal attempt was made to set a cookie under a different domain than the current page.
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
-`}
-</CodeBlock>
-</div>
+### Possible Cause
 
-### Possible Cause:
-
-* The invalid cookie domain error is a WebDriver error that occurs when an illegal attempt was made to set a cookie under a different domain than that of the current document. In WebDriver it is not permissible to set cookies for other domains than the domain of the current browsing context's document's domain.
+* The invalid cookie domain error occurs when you attempt to set a cookie under a different domain than the current browsing context. WebDriver does not permit setting cookies for other domains.
 Example:
-If the current domain were to be 'example.com', it would not be possible to add a cookie for the domain 'example.org':
+If the current domain is 'example.com', you cannot add a cookie for 'example.org':
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -290,32 +281,32 @@ Output:
 </CodeBlock>
 </div>
 
-## Invalid element state - 400
+## Invalid Element State - 400
+---
+The element is in a state that does not support the requested operation.
 
-* * *
-
-A command could not be completed because the element is in an invalid state, e.g. attempting to clear an element that isn't both editable and resettable.
-
-
-### Possible Cause:
-
-* When we try to perform some operation which is not applicable then it will throw InvalidElementStateException.
-* Let’s assume if the textbox is disabled and if you try to perform type operation then it will throw an exception.
-* If radio button,checkbox or any other web element is disabled and if you try to perform click event then it will throw an exception.
-* If any element supports only click events and if you try to perform type events then again it will throw an exception
+A command could not complete because the element is in an invalid state, e.g. attempting to clear an element that is not both editable and resettable.
 
 
-### Possible Solutions:
+### Possible Cause
 
-* Ensure performing the required operation based on element state.
-* If it is clickable element then perform click and if it supports type event then perform sendkeys.
-* If the element is disabled then  enable it first and then perform operations.
+* When you try to perform an operation that does not apply to the element, it throws InvalidElementStateException.
+* If a textbox is disabled and you try to type into it, it throws an exception.
+* If a radio button, checkbox, or other web element is disabled and you try to click it, it throws an exception.
+* If an element supports only click events and you try to perform type events, it throws an exception.
 
-For more, refer this <a href = "https://learn-automation.com/invalidelementstateexception-in-selenium-webdriver/">link (learn-automation.com) </a>.
 
-## Invalid selector - 400
+### Possible Solutions
 
-* * *
+* Verify you are performing the correct operation based on the element state.
+* If the element is clickable, perform a click. If it supports type events, use sendkeys.
+* If the element is disabled, enable it first before performing operations.
+
+For more, refer to this <a href = "https://learn-automation.com/invalidelementstateexception-in-selenium-webdriver/">link (learn-automation.com)</a>.
+
+## Invalid Selector - 400
+---
+The provided selector strategy is unknown or incorrect.
 
 Argument was an invalid selector.
 
@@ -326,25 +317,25 @@ Argument was an invalid selector.
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* The invalid selector error is a WebDriver error that occurs when an element retrieval command is used with an unknown web element selector strategy.
+* The invalid selector error occurs when an element retrieval command uses an unknown web element selector strategy.
 
-* The available selector strategies are CSS, link text, partial link text, tag name, and XPath. Any other selector strategy is rejected with this error.
+* The available selector strategies are CSS, link text, partial link text, tag name, and XPath. Any other selector strategy triggers this error.
 
-### Possible Solutions:
+### Possible Solutions
 
-* Do check the punctuation's such as @, ', and [].
-* Make sure that there is only one field name with that path; else, use the contains() method
+* Check punctuation such as @, ', and [].
+* Make sure there is only one field name with that path. Otherwise, use the contains() method.
 
 
-## The case where session not generated - invalid session id 404, session not created 500
+## Session Not Generated - Invalid Session ID 404 / Session Not Created 500
+---
+The session either does not exist, is not active, or could not be created.
 
-* * *
+### Invalid Session ID - 404
 
-### Invalid session id - 404
-
-Occurs if the given session id is not in the list of active sessions, meaning the session either does not exist or that it's not active.
+Occurs if the given session ID is not in the list of active sessions, meaning the session either does not exist or is not active.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -353,13 +344,13 @@ Occurs if the given session id is not in the list of active sessions, meaning th
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* As of 04/2021, sync mode will not be supported anymore starting from Node.js v16 due to changes in Chromium.
-* It is therefore advisable to use async to solve this error
-* The WebdriverIO site has an official guideline for the same - "How to enable/disable sync mode". Please take a look on this: <a href= "https://webdriver.io/docs/sync-vs-async#async-mode"> WebdriverIO </a> 
+* As of 04/2021, sync mode is no longer supported starting from Node.js v16 due to changes in Chromium.
+* Use async to solve this error.
+* The WebdriverIO site has an official guideline for this: <a href= "https://webdriver.io/docs/sync-vs-async#async-mode">WebdriverIO</a> 
 
-### Session not created - 500
+### Session Not Created - 500
 
 A new session could not be created.
 
@@ -370,20 +361,20 @@ A new session could not be created.
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* Incompatibility between version of the binaries being used 
+* Incompatibility between the versions of binaries being used.
 
-### Possible Solutions:
+### Possible Solutions
 
-* Can be primarily solved by ensuring Chrome version being used and the JDK, driver versions are compatible. Refer this link - <a href = "https://stackoverflow.com/questions/71571616/org-openqa-selenium-sessionnotcreatedexception-message-could-not-start-a-new-s"> stackoverflow</a>
+* Ensure the Chrome version and the JDK/driver versions are compatible. Refer to this link: <a href = "https://stackoverflow.com/questions/71571616/org-openqa-selenium-sessionnotcreatedexception-message-could-not-start-a-new-s">stackoverflow</a>
 
 
-## JavaScript error - 500
+## JavaScript Error - 500
+---
+A user-supplied script failed to execute in the browser.
 
-* * *
-
-The Javascript error is a WebDriver error that occurs when a script the supplied by the user fails to execute.
+The JavaScript error occurs when a script supplied by the user fails to execute.
 
 Example: 
 
@@ -408,44 +399,19 @@ Output:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* The underlying cause of the execution error is often supplied in the error message, along with a stacktrace provided by the JavaScript engine in the browser.
+* The underlying cause of the execution error is often supplied in the error message, along with a stacktrace from the JavaScript engine in the browser.
 
-### Possible Solutions:
+### Possible Solutions
 
-* Check for invalid declarations and definitions in your code
+* Check for invalid declarations and definitions in your code.
 
-## Invalid selector - 400
+## Move Target Out of Bounds - 500
+---
+The target for mouse interaction is outside the browser viewport.
 
-* * *
-
-Argument was an invalid selector.
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`org.openqa.selenium.InvalidSelectorException: invalid selector
-`}
-</CodeBlock>
-</div>
-
-### Possible Cause:
-
-* The invalid selector error is a WebDriver error that occurs when an element retrieval command is used with an unknown web element selector strategy.
-
-* The available selector strategies are CSS, link text, partial link text, tag name, and XPath. Any other selector strategy is rejected with this error.
-
-### Possible Solutions:
-
-* Do check the punctuation's such as @, ', and [].
-* Make sure that there is only one field name with that path; else, use the contains() method
-
-
-## Move target out of bounds - 500
-
-* * *
-
-The target for mouse interaction is not in the browser’s viewport and cannot be brought into that viewport.
+The target for mouse interaction is not in the browser's viewport and cannot be brought into view.
 
 Example:
 <div className="lambdatest__codeblock">
@@ -455,18 +421,18 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* Selenium enables replication for exact human behavior, so if code failure indicates element is not visible, then it is actually a case of element not being visible.
+* Selenium replicates exact human behavior, so if code failure indicates an element is not visible, the element is actually not visible.
 
-### Possible Solutions:
+### Possible Solutions
 
-* For a concise explanation regarding this error - <a href = "https://sqa.stackexchange.com/questions/45719/selenium-throws-movetargetoutofboundsexception-while-using-negative-value-in-the">refer here. </a>
+* For a detailed explanation, <a href = "https://sqa.stackexchange.com/questions/45719/selenium-throws-movetargetoutofboundsexception-while-using-negative-value-in-the">refer here.</a>
 
 
-## No such alert - 404
-
-* * *
+## No Such Alert - 404
+---
+You attempted to operate on a modal dialog when none was open.
 
 An attempt was made to operate on a modal dialog when one was not open.
 
@@ -477,18 +443,18 @@ An attempt was made to operate on a modal dialog when one was not open.
 </CodeBlock>
 </div>
 
-### Possible Cause/explanation:
+### Possible Cause/Explanation
 
-Refer these links for one of the possible explanations:
-* <a href= "https://stackoverflow.com/questions/7722940/no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error"> no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error </a>
-* <a href= "https://stackoverflow.com/questions/30771067/selenium-webdriver-unexpected-modal-dialog-alert"> selenium-webdriver-unexpected-modal-dialog-alert </a>
+Refer to these links for possible explanations:
+* <a href= "https://stackoverflow.com/questions/7722940/no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error">no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error</a>
+* <a href= "https://stackoverflow.com/questions/30771067/selenium-webdriver-unexpected-modal-dialog-alert">selenium-webdriver-unexpected-modal-dialog-alert</a>
 
 
-## No such cookie - 404
+## No Such Cookie - 404
+---
+No cookie matching the given path name was found in the current browsing context.
 
-* * *
-
-No cookie matching the given path name was found amongst the associated cookies of the current browsing context's active document.
+No cookie matching the given path name was found among the associated cookies of the current browsing context's active document.
 
 Example:
 <div className="lambdatest__codeblock">
@@ -498,19 +464,19 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* Creating a cookie before navigation to the site
+* Creating a cookie before navigating to the site.
 
-### Possible Solutions:
+### Possible Solutions
 
-* For a concise explanation regarding this error - <a href = "https://stackoverflow.com/questions/45842709/unable-to-set-cookies-in-selenium-webdriver">refer here. </a>
+* For a detailed explanation, <a href = "https://stackoverflow.com/questions/45842709/unable-to-set-cookies-in-selenium-webdriver">refer here.</a>
 
 
 
-## No such element - 404
-
-* * *
+## No Such Element - 404
+---
+The element could not be located on the page using the given search parameters.
 
 An element could not be located on the page using the given search parameters.
 
@@ -522,23 +488,23 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-Majorly in two cases
+This occurs mainly in two cases:
 
 * When using `webdriver.find_element_by_*("expression") //example : my_element = driver.find_element_by_xpath("xpath_expression")`
 
 * When using `element.find_element_by_*("expression")//example : my_element = element.find_element_by_*("expression")`
 
-There are different possibilities for this error to occur. Check the link below for more information.
+There are different possibilities for this error. Check the link below for more information.
 
-### Possible Solutions:
+### Possible Solutions
 
-* A detailed explanation regarding this error - <a href = "https://stackoverflow.com/questions/47993443/selenium-selenium-common-exceptions-nosuchelementexception-when-using-chrome">refer here. </a>
+* For a detailed explanation, <a href = "https://stackoverflow.com/questions/47993443/selenium-selenium-common-exceptions-nosuchelementexception-when-using-chrome">refer here.</a>
 
-## No such frame - 404
-
-* * *
+## No Such Frame - 404
+---
+The command to switch to a frame could not find the specified frame.
 
 A command to switch to a frame could not be satisfied because the frame could not be found.
 
@@ -550,19 +516,19 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* As per the HTML to switch to the desired frame you need to use WebDriverwait for the frame to be available and switch to it
+* To switch to the desired frame, use WebDriverWait for the frame to become available and then switch to it.
 
-### Possible Solutions:
-Implement suitable edits to either css selector or XPATH
+### Possible Solutions
+Implement suitable edits to either CSS selector or XPATH:
 
-* `CSS Selector` : `WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframe[id^='layui-layer-iframe'][src^='fangyuan']")))`
+* `CSS Selector`: `WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframe[id^='layui-layer-iframe'][src^='fangyuan']")))`
 * `XPATH`: `WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"//iframe[starts-with(@id,'layui-layer-iframe') and starts-with(@src,'fangyuan')]")))`
 
-## No such window - 404
-
-* * *
+## No Such Window - 404
+---
+The command to switch to a window could not find the specified window.
 
 A command to switch to a window could not be satisfied because the window could not be found.
 
@@ -574,33 +540,33 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Solution:
+### Possible Solution
 
 There are multiple approaches to this problem:
-* In export configuration, to delete everything at the end, you have to set `killinstances` to `true`
-* Check all the required configurations for the corresponding web browser driver (esp. for InternetExplorerDriver)
-* Enabling protected mode for all zones often might do the trick.
+* In export configuration, to delete everything at the end, set `killinstances` to `true`.
+* Check all required configurations for the corresponding web browser driver (especially for InternetExplorerDriver).
+* Enabling protected mode for all zones often resolves this.
 
-For more, refer <a href="https://stackoverflow.com/questions/47388733/selenium-org-openqa-selenium-nosuchwindowexception-currently-focused-window-ha">Stack Overflow</a>
+For more, refer to <a href="https://stackoverflow.com/questions/47388733/selenium-org-openqa-selenium-nosuchwindowexception-currently-focused-window-ha">Stack Overflow</a>.
 
 
-## No such shadow root - 404
-
-* * *
+## No Such Shadow Root - 404
+---
+The element does not have a shadow root attached.
 
 The element does not have a shadow root.
 
 
-### Explanation:
+### Explanation
 
-For `GET` request of Element Shadow Root - with URI template `/session/{session id}/element/{element id}/shadow`, if `shadow root` is null then error is returned with error code `no such shadow root`.
+For a `GET` request of Element Shadow Root with URI template `/session/{session id}/element/{element id}/shadow`, if `shadow root` is null, the error code `no such shadow root` is returned.
 
-For explanation regarding locator strategy, refer this <a href= "https://stackoverflow.com/questions/65044870/how-to-extract-info-within-a-shadow-root-open-using-selenium-python/65055114#65055114">link</a>
+For an explanation on locator strategy, refer to this <a href= "https://stackoverflow.com/questions/65044870/how-to-extract-info-within-a-shadow-root-open-using-selenium-python/65055114#65055114">link</a>.
 
 
-## Stale element reference - 404
-
-* * *
+## Stale Element Reference - 404
+---
+The referenced element is no longer attached to the DOM.
 
 A command failed because the referenced element is no longer attached to the DOM.
 Example:
@@ -611,22 +577,22 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-* The stale element reference error is a WebDriver error that occurs because the referenced web element is no longer attached to the DOM.
+* The stale element reference error occurs because the referenced web element is no longer attached to the DOM.
 
 * Every DOM element is represented in WebDriver by a unique identifying reference, known as a web element. The web element reference is a UUID used to execute commands targeting specific elements, such as getting an element's tag name and retrieving a property off an element.
 
-* When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be stale. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.
+* When an element is no longer attached to the DOM (it has been removed from the document or the document has changed), it is said to be stale. Staleness occurs, for example, when you have a web element reference and the document it was retrieved from navigates.
 
-### Possible Solutions:
-Some common solutions include: 
+### Possible Solutions
+Common solutions include: 
 
-* Refreshing the webpage - 
+* Refreshing the webpage:
 `driver.navigate().refresh();
  driver.findElement(By.xpath("xpath here")).click();`
 
-* Using 'try-catch' block within 'for loop' -
+* Using 'try-catch' block within 'for loop':
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`for(int i=0; i<=2;i++){
@@ -641,25 +607,25 @@ Some common solutions include:
 </CodeBlock>
 </div>
 
-* Using ExpectedConditions.refreshed
+* Using ExpectedConditions.refreshed:
 
-Wait for the element until its available. Use ExpectedConditions.refreshed to avoid StaleElementReferenceException and retrieve the element again. This method updates the element by redrawing it and we can access the referenced element.
+Wait for the element until it is available. Use ExpectedConditions.refreshed to avoid StaleElementReferenceException and retrieve the element again. This method updates the element by redrawing it so you can access the referenced element.
 
 `wait.until(ExpectedConditions.refreshed(ExpectedConditions.stalenessOf("table")));`
 
-* Using POM (lazy initialization)
-In POM, we use initElements() method which loads the element but it won’t initialize elements. initElements() takes latest address
+* Using POM (lazy initialization):
+In POM, use initElements() which loads the element but does not initialize elements. initElements() takes the latest address.
 
-For a detailed explanation regarding the approach to solve this error - 
-* <a href= "http://darrellgrainger.blogspot.com/2012/06/staleelementexception.html"> Link 1 </a>
+For a detailed explanation:
+* <a href= "http://darrellgrainger.blogspot.com/2012/06/staleelementexception.html">Link 1</a>
 * <a href = "https://www.softwaretestingmaterial.com/stale-element-reference-exception-selenium-webdriver/">Link 2</a>
 
 
-## Unsupported operation - 500
+## Unsupported Operation - 500
+---
+The requested operation is not supported for the given class or data structure.
 
-* * *
-
-Indicates that a command that should have executed properly cannot be supported for some reason.
+A command that should execute properly cannot be supported for some reason.
 
 Example:
 <div className="lambdatest__codeblock">
@@ -677,28 +643,28 @@ public class UnsupportedOperationExceptionExample {
 </CodeBlock>
 </div>
 
-(for java)
+(for Java)
 
-### Possible Cause:
+### Possible Cause
 
-An UnsupportedOperationException is thrown when a requested operation cannot be performed because it is not supported for that particular class. One of the most common causes for this exception is using the `asList()` method of the `java.util.Arrays` class. Since this method returns a fixed-size unmodifiable `List`, the `add()` or `remove()` methods are unsupported. Trying to add or remove elements from such a `List` will throw the `UnsupportedOperationException` exception.
+An UnsupportedOperationException is thrown when a requested operation cannot be performed because it is not supported for that class. One common cause is using the `asList()` method of `java.util.Arrays`. Since this method returns a fixed-size unmodifiable `List`, the `add()` or `remove()` methods are unsupported. Trying to add or remove elements from such a `List` throws the `UnsupportedOperationException`.
 
 Other cases where this exception can occur include:
 
 Using wrappers between collections and primitive types.
 Trying to remove elements using an `Iterator`.
-Trying to add, remove or set elements using `ListIterator`.
+Trying to add, remove, or set elements using `ListIterator`.
 
-### Possible Solutions:
+### Possible Solutions
 
-* The `UnsupportedOperationException` can be resolved by using a mutable collection, such as `ArrayList`, which can be modified. An unmodifiable collection or data structure should not be attempted to be modified.
+* Resolve the `UnsupportedOperationException` by using a mutable collection, such as `ArrayList`, which can be modified. Do not attempt to modify an unmodifiable collection or data structure.
 
-Refer this explanation from Rollbar for more info - <a href="https://rollbar.com/blog/fixing-unsupportedoperationexception-errors-in-java/"> Link </a>
+Refer to this explanation from Rollbar for more info: <a href="https://rollbar.com/blog/fixing-unsupportedoperationexception-errors-in-java/">Link</a>
 
 
-## unknown method - 405
-
-* * *
+## Unknown Method - 405
+---
+The request matched a known URL but used an unsupported HTTP method.
 
 The requested command matched a known URL but did not match any method for that URL.
 
@@ -710,30 +676,30 @@ Example:
 </CodeBlock>
 </div>
 
-### Possible Cause:
+### Possible Cause
 
-The unknown method error is a WebDriver error that occurs when the driver does not recognize the HTTP request method used for the endpoint.
+The unknown method error occurs when the driver does not recognize the HTTP request method used for the endpoint.
 
-* WebDriver provides a largely REST-ish API and not all endpoints in this API has `GET`, `POST`, and `DELETE` methods. This error occurs when you try to call an endpoint with an HTTP request method it does not support.
+* WebDriver provides a largely REST-ish API and not all endpoints have `GET`, `POST`, and `DELETE` methods. This error occurs when you call an endpoint with an HTTP request method it does not support.
 
-Refer this example - <a href = "https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/UnknownMethod"> Unknown Method error </a>
+Refer to this example: <a href = "https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/UnknownMethod">Unknown Method error</a>
 
 ## Unknown Error - 500
+---
+An unspecified error occurred in the driver while processing a command.
 
-* * *
+The unknown element error occurs when an unspecified error occurs in the driver while processing a command.
 
-The unknown element error is a WebDriver error that occurs when an unspecified error occurs in the driver whilst processing a command.
+An unknown error is usually specific to a particular driver, so read the error message for an indication of what happened.
 
-An unknown error will usually be specific to a particular driver, so it's a good idea to read the error message, if any, for an indication of what happened.
+## Unknown Command - 404
+---
+The driver does not recognize the command or HTTP endpoint.
 
-## unknown command - 404
-
-* * *
-
-The unknown command error is a WebDriver error that occurs when the driver does not recognize the command/HTTP endpoint.
+The unknown command error occurs when the driver does not recognize the command or HTTP endpoint.
 
 Example:
-The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and will return an unknown command error with a 404 Not Found HTTP status code
+The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and returns an unknown command error with a 404 Not Found HTTP status code.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -749,17 +715,17 @@ Date: Fri, 30 Mar 2018 15:30:51 GMT
 </CodeBlock>
 </div>
 
-## Script timeout - 500
+## Script Timeout - 500
+---
+A user-provided script did not complete before the session's script timeout expired.
 
-* * *
+An operation did not complete before its timeout expired.
 
-An operation did not complete before its timeout expired
+The script timeout error occurs when a script you provided did not complete before the session's script timeout duration expired.
 
-The script timeout error is a WebDriver error that occurs when a script the user has provided did not complete before the session's script timeout duration expired.
+The script timeout duration is a configurable capability. You can change how long the driver waits before interrupting an injected script. The driver waits 30 seconds by default before interrupting the script and returning a script timeout error, but you can extend, limit, or set this to indefinite.
 
-The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.
-
-If the session script timeout duration is set to indefinite by using a `null` value, you are at risk of putting the session into a non-recoverable state. Be aware that this should be used with caution.
+If you set the session script timeout duration to indefinite by using a `null` value, you risk putting the session into a non-recoverable state. Use this with caution.
 
 Example:
 <div className="lambdatest__codeblock">
@@ -786,13 +752,11 @@ Output:
 </CodeBlock>
 </div>
 
-* A workaround would be to use capabilities to extend the session's default script timeout.
+* A workaround is to use capabilities to extend the session's default script timeout.
 
 
-## unable to set cookies - 500
-
-* * *
-
+## Unable to Set Cookies - 500
+---
 A command to set a cookie's value could not be satisfied.
 
 `org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)`
@@ -810,28 +774,24 @@ EdgeDriver.get("https://www.google.ca/?gws_rd=ssl"); // The link is an example
 </CodeBlock>
 </div>
 
-### Explanation:
+### Explanation
 
-Creation of a cookie before navigating to the site.
+This error results from creating a cookie before navigating to the site.
 
-If you are trying to create a cookie on the domain `www.example.com`, then you would want to navigate to some page on that domain, create the cookie, and then start your test.
+If you need to create a cookie on the domain `www.example.com`, first navigate to some page on that domain, create the cookie, and then start your test.
 
-The best way to do this is to navigate to some page you know will not exist on the domain, e.g. `www.example.com/this404page`, then create the cookie. It should load a lot faster since it's an error page and shouldn't contain much content. After creating the cookie on the 404 page, start the test.
+Navigate to a page you know will not exist on the domain, e.g. `www.example.com/this404page`, then create the cookie. It loads faster since it is an error page with minimal content. After creating the cookie on the 404 page, start the test.
 
-## Unable to capture screen - 500
+## Unable to Capture Screen - 500
+---
+A screen capture could not be completed.
 
-* * *
-
-A screen capture was made impossible.
-
-Possible explanations - <a href="https://stackoverflow.com/questions/71526066/appium-unable-to-take-screenshot-on-xcode-13-3-and-ios-15-4"> (For Appium) </a>
+Possible explanations: <a href="https://stackoverflow.com/questions/71526066/appium-unable-to-take-screenshot-on-xcode-13-3-and-ios-15-4">(For Appium)</a>
 
 
-## unexpected alert open - 500
-
-* * *
-
-A command could not be executed because the remote end is not aware of it.
+## Unexpected Alert Open - 500
+---
+A command could not execute because the remote end encountered an unexpected alert.
 
 `org.openqa.selenium.UnhandledAlertException: unexpected alert open`
 
@@ -849,13 +809,13 @@ Example:
 </CodeBlock>
 </div>
 
-### Explanation:
+### Explanation
 
-This is happening because of the default behaviour of the driver when it encounters an alert. The default behaviour was set to "ACCEPT", thus the alert was closed automatically, and the switchTo().alert() couldn't find it explicitly.
+This happens because of the default behavior of the driver when it encounters an alert. The default behavior was set to "ACCEPT", so the alert was closed automatically, and the switchTo().alert() could not find it explicitly.
 
-The solution is to modify the default behaviour of the driver to ("IGNORE"), so that it doesn't close the alert but just ignores it.
+The solution is to modify the default behavior of the driver to ("IGNORE"), so that it does not close the alert but just ignores it.
 
-Thereafter you could use try-catch to catch the errors if any.
+Then use try-catch to catch any errors.
 
 
 * * *

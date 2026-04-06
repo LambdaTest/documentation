@@ -1,13 +1,12 @@
 ---
 id: run-automation-tests-using-angularjs-with-karma
-title: AngularJS Test Automation:Perform AngularJS Automated Testing using Cloud Selenium Grid | TestMu AI
-hide_title: true
-sidebar_label: AngularJS with Karma
-description: Now you can run your automation scripts using AngularJS with Karma on TestMu AI online Selenium Grid of 3000+ real desktop browsers and real operating systems.
+title: Selenium With AngularJS and Karma
+sidebar_label: AngularJS
+description: Run AngularJS automated tests with Karma on TestMu AI cloud Selenium Grid with 3000+ real browsers and operating systems.
 keywords:
-  - angularjs selenium testing
-  - angularjs automated testing
-  - angularjs test automation
+  - angularjs selenium grid testing
+  - angularjs karma automation setup
+  - angularjs automated testing cloud
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -17,6 +16,8 @@ canonical: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angul
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -36,77 +37,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "AngularJS with Karma and Selenium",
+          "name": "Selenium With AngularJS and Karma",
           "item": `${BRAND_URL}/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# AngularJS with Selenium: Tutorial to Run Your First Test on <BrandName />
-* * *
-In this topic, you will learn how to perform AngularJS Automated Testing using [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+---
 
-## Objective
-***
-By the end of this topic, you will be able to:
+Run AngularJS tests with Karma on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-1. Perform AngularJS automated testing on TestMu AI Selenium grid with **Karma** test runner.
-2. Leverage <BrandName />’s Advanced capabilities for AngularJS test automation.
-3. Test your locally hosted pages using AngularJS test automation.
-4. Run your test cases in parallel using AngularJS test automation to reduce build times.
+:::warning Deprecated Framework
+AngularJS reached end-of-life in December 2021. Consider migrating to Angular with [Karma](/support/docs/karma-integration-with-lambdatest/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
+:::
 
-## Prerequisites For Running Karma With Our Online Selenium Grid
-* * *
-Before getting started with automated scripts using AngularJS Automated Testing using Cloud Selenium Grid, you need to:
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-* Download and install NodeJS and node package manager or npm. Make sure you have NodeJS v6 or newer. Click here to download.
-```bash
-$ brew install node
-```
-* Make sure you are using the latest version of JavaScript.
-* Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official Selenium website.
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/angular-karma-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-## Sample Test Case 
-***
-All the code samples in this documentation can be found in the [AngularJS <BrandName /> Repository on GitHub](https://github.com/LambdaTest/angular-karma-sample). You can either download or clone the repository to quickly run your tests.
+## Prerequisites
+---
+Complete these steps before running AngularJS tests with Karma on TestMu AI.
 
-### Installing Dependencies
-You need to install the following dependencies:
+1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
+3. Install **npm** and upgrade to the latest version: `npm install npm@latest -g`
+4. Install [Angular CLI](https://angular.io/cli): `npm install -g @angular/cli`
+5. Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website.
 
-**Step 1:** Install npm from the official website by clicking [here](https://www.npmjs.com/). Here is the code you can run in your terminal to upgrade npm.
-```bash
-npm install npm@latest -g
-```
-**Step 2:** Next, you need to install [Angular CLI](https://angular.io/cli). Run the below command to install:
-```bash
-$ npm install -g @angular/cli
-```
+## Step 1: Clone the Sample Project
+---
+Clone the TestMu AI AngularJS Karma sample repository to your local machine.
 
-### Setting up Your Authentication
-
-**Step 3:** Set <BrandName /> username and access key in environment variables. It can be obtained from [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
- * For Linux/macOS:
- `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
- * For Windows:
- `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
-
-### Setting up the Test Environment
-
-**Step 4:** Clone the <BrandName />’s [angular-karma-sample repository](https://github.com/LambdaTest/angular-karma-sample) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
 ```
-**Step 5:** Install the project dependencies using the below command:
+
+Install the required dependencies:
 ```bash
-$ npm install
+npm install
 ```
 
-### Setting up the Test Config
+## Step 2: Set Your Credentials
+---
+Set your TestMu AI username and access key as environment variables.
 
-**Step 6:** If you look at `karma.conf.js` file you will find that we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium Grid capabilities via capabilities object. The capabilities object in the above code is defined as:
-```
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
+---
+Update the capabilities in the `karma.conf.js` file to define the browser and platform settings.
+
+```js
 customLaunchers: {
         chrome: {
              base: 'WebDriver',
@@ -123,87 +134,60 @@ customLaunchers: {
         }
     }
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
-### Writing your Test Cases
-The example mentioned below would help you to execute your AngularJS automation testing on Google Chrome.
-```
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
- 
-describe('workspace-project App', () => {
-  let page: AppPage;
- 
-  beforeEach(() => {
-    page = new AppPage();
-  });
- 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to karma-sample!');
-  });
- 
-  afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
-  });
-});
-```
-## Run Your First Test
-***
-Navigate to the directory where you cloned the [sample of Karma-Angular](https://github.com/LambdaTest/angular-karma-sample) and run the following command.
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
+
+## Step 4: Run the Test
+---
+Execute the test using the following command.
+
 ```bash
 karma start karma.conf.js
 ```
-or you could also run the test using:
+
+Or run the test using:
 ```bash
 npm test
 ```
-### Testing Locally Hosted or Privatley Hosted Projects
-You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
-
-Here’s how you can establish <BrandName /> Tunnel.
-
->Download the binary file of:
->* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
-```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
-
-**Tunnel Capability**
-```bash
-tunnel: true,
-```
-## Running Your Parallel Tests Using AngularJS
-***
-### Executing Parallel Tests Using AngularJS
-To run parallel tests using AngularJS, we would have to execute the below commands in the terminal:
-
-* For the above example code:
+**Parallel tests:**
 ```bash
 ng test
 ```
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
+## Step 5: View Your Results
+---
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+
+The dashboard provides:
+- Video recordings of each test session
+- Screenshots captured at each step
+- Console logs from the browser
+- Network logs for debugging
+- Detailed command logs
+
+## Run AngularJS with Karma Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run AngularJS with Karma tests with the TestMu AI Agent Skill.
+
+The [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/karma-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/karma-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -219,7 +203,7 @@ ng test
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       AngularJS with Karma and Selenium
+       Selenium With AngularJS and Karma
       </span>
     </li>
   </ul>
