@@ -243,7 +243,7 @@ If you receive an "App not enabled" error, the SAML application hasn't been prop
 5. **User Permissions**: Ensure users have appropriate access to the SAML application in Google Workspace
 
 
-> **Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@testmu.ai](mailto:support@testmu.ai). Happy Testing!
+> **Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

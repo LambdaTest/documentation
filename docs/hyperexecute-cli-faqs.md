@@ -67,7 +67,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
   This `hyperexecute-cli.log` file will also help you in debugging any issues with your tests. You can view the file and figure out exactly where your test run failed. 
 
-  If you want more help with debugging your issues, you can always contact [support@testmu.ai](mailto:support@testmu.ai) and provide them with this file along with your Job ID. 
+  If you want more help with debugging your issues, you can always contact [support@testmuai.com](mailto:support@testmuai.com) and provide them with this file along with your Job ID. 
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/faq/cli-log.png').default} alt="Image"  className="doc_img"/>
 

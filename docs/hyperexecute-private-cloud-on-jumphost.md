@@ -66,7 +66,7 @@ Congratulations on getting the HyperExecute Private setup deployed on your Azure
 
 To ensure that you have complete control over your HyperExecute application and your browsers, the virtual machine is completely customizable. You can make the modifications that you require and test all of your applications. Happy testing!
 
-> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai).
+> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

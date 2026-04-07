@@ -57,7 +57,7 @@ For certain use cases, you may need to perform tests on devices that are **passc
 
 <BrandName />’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real devices.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
 ---
 

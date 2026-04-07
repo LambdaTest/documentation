@@ -109,7 +109,7 @@ To do this, you can either perform VNet peering or VNet linking, or run HyperExe
 
 ***
 
-> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai).
+> If you have more questions regarding HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

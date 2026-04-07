@@ -53,7 +53,7 @@ export LT_USERNAME=<your username>
       -v /var/run/docker.sock:/var/run/docker.sock \
       --privileged dosel/zalenium start --lambdaTestEnabled true
 ```
-Kudos! As simple as that, you have integrated Zalenium with the <BrandName /> account. In case you have any questions, feel free to let us know by dropping an email at [support@testmu.ai][2], or just giving a shout to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
+Kudos! As simple as that, you have integrated Zalenium with the <BrandName /> account. In case you have any questions, feel free to let us know by dropping an email at [support@testmuai.com][2], or just giving a shout to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
 
 [1]: https://automation.lambdatest.com
 [2]: mailto:support%40lambdatest.com

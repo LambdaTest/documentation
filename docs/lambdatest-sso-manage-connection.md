@@ -65,7 +65,7 @@ Before proceeding you need to navigate to <a href="https://accounts.lambdatest.c
 2. Check the toggle for the users you want to exempt from SSO login
    <img loading="lazy" src={require('../assets/images/sso-self-serve/exempt-users-toggle.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-That's all you need to know for Managing <BrandName /> SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmu.ai](mailto:support@testmu.ai).
+That's all you need to know for Managing <BrandName /> SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

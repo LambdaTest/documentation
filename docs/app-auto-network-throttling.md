@@ -149,7 +149,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 - In offline mode, **live video** will not be available for the duration of the test session.
 :::
 
-> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmu.ai. Happy testing! 🙂
+> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmuai.com. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

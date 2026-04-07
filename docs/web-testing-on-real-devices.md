@@ -228,7 +228,7 @@ Your new Project will be created.--->
 
 <img loading="lazy" src={require('../assets/images/mobile-testing-real-devices/end-session.webp').default} alt="Image"  width="10" height="10" className="doc_img"/> 
 
->In case you have any questions or need any additional information, drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+>In case you have any questions or need any additional information, drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

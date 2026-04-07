@@ -138,7 +138,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 </div>
 :::info Note
 
-If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
+If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
 
 :::
 

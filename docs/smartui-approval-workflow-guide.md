@@ -368,6 +368,6 @@ npx smartui --markBaseline --baselineBuild "rollback-target"
 If you encounter issues with baseline management or need clarification on approval workflows:
 - Check the [SmartUI Baseline Management Documentation](/support/docs/smartui-baseline-management/)
 - Review [Multiselect & Bulk Operations Guide](/support/docs/smartui-multiselect-bulkops/)
-- Contact support at support@testmu.ai
+- Contact support at support@testmuai.com
 
 Understanding these functions and their workflow differences will help you maintain accurate visual regression testing and avoid baseline-related confusion.

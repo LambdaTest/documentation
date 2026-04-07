@@ -251,7 +251,7 @@ After you execute the above code, the test runs on TestMu AI successfully. View 
 
 * * *
 
-If you have any questions, contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing!
+That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

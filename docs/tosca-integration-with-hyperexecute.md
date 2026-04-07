@@ -76,7 +76,7 @@ HyperExecute seamlessly integrates with Tosca, providing a Just-in-Time Tosca En
 </div>
 
 
-> This is currently in the **Beta** version of the **Project** section in HyperExecute. To enable it for your organization, please contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or our [Customer Support](mailto:support@testmu.ai) team.
+> This is currently in the **Beta** version of the **Project** section in HyperExecute. To enable it for your organization, please contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or our [Customer Support](mailto:support@testmuai.com) team.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

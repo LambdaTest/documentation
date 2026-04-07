@@ -75,7 +75,7 @@ You can go through the table below to understand exactly why HyperExecute Privat
 
 ***
 
-> If you need more information about the HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai). Happy testing!
+> If you need more information about the HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com). Happy testing!
 
 
 <nav aria-label="breadcrumbs">

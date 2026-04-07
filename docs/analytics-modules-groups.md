@@ -63,4 +63,4 @@ The Usage by Groups widget provides insights into the performance of your test g
 
 ## Support and Assistance
 
-In case you need any assistance, reach out to our experts at [email](mailto:support@testmu.ai) or you can connect with our 24/7 chat support. We will be happy to help you! 
+In case you need any assistance, reach out to our experts at [email](mailto:support@testmuai.com) or you can connect with our 24/7 chat support. We will be happy to help you! 

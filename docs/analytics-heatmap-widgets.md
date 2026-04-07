@@ -353,4 +353,4 @@ After creating your heatmap widget:
 
 ## Support
 
-If you have any questions or need assistance with creating heatmap widgets, please reach out to our [24/7 customer support](mailto:support@testmu.ai) or visit our [Support Center](https://www.lambdatest.com/support/).
+If you have any questions or need assistance with creating heatmap widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).

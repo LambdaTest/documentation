@@ -149,7 +149,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-remove.webp').default} alt="pymo remove" className="doc_img" width="1358" height="642"/>
 
-> That was all you need to know for <BrandName /> + Paymo Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Paymo Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

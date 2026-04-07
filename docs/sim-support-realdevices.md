@@ -28,7 +28,7 @@ SIM & eSIM support allows testers to validate **SMS-driven workflows** on real m
 
 With **<BrandName />**, you can manually test SIM and eSIM scenarios on **Real Devices**. From selecting SIM-enabled devices in the dashboard to receiving OTPs directly on-screen, <BrandName /> offers a complete setup for validating SMS-driven features during live testing sessions.  
 
-> To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@testmu.ai**.<br />
+> To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@testmuai.com**.<br />
 
 ---
 

@@ -207,7 +207,7 @@ Kudos, you have successfully configured the Login profile. This profile will be 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-21.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
 >
-In case you have any questions, drop us an email at support@testmu.ai or simply give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> shout</span>. We are here to help you speed your test suites 24/7. Happy testing! 🙂
+In case you have any questions, drop us an email at support@testmuai.com or simply give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> shout</span>. We are here to help you speed your test suites 24/7. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -138,7 +138,7 @@ Your bugs will be logged right away.
 The Bugsnag integration will be uninstalled.
 
 >
-For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmu.ai](mailto:support@testmu.ai)**.
+For any queries, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmuai.com](mailto:support@testmuai.com)**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

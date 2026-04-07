@@ -74,7 +74,7 @@ Upon clicking the Error Report button, your Error Report will be generated.
 <img loading="lazy" src={require('../assets/images/uploads/image4-1024x541.webp').default} alt="Error report generated" width="1024" height="541" className="doc_img"/>
 
 >
-That's all!. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span> or you can also drop a mail to [support@testmu.ai](mailto:support@testmu.ai).<br />Happy testing!
+That's all!. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span> or you can also drop a mail to [support@testmuai.com](mailto:support@testmuai.com).<br />Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

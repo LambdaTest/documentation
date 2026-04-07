@@ -387,7 +387,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 ## Support
 
-For any queries or issues related to AI Root Cause Analysis, please reach out to our [24/7 customer support](mailto:support@testmu.ai). We're here to help you maximize the value of this powerful debugging tool!
+For any queries or issues related to AI Root Cause Analysis, please reach out to our [24/7 customer support](mailto:support@testmuai.com). We're here to help you maximize the value of this powerful debugging tool!
 
 ---
 
