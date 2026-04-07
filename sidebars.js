@@ -1260,6 +1260,12 @@ module.exports = {
         label: "Setup & Integration",
         collapsed: false,
         items: [
+
+            {
+            type: "doc",
+            label: "A2A CLI",
+            id: "testmu-a2a-cli",
+          },
           {
             type: "doc",
             label: "Chat Agent API Integration",
@@ -1270,6 +1276,7 @@ module.exports = {
             label: "Test Your First AI Agent",
             id: "testing-your-first-ai-agent",
           },
+        
         ],
       },
       {
