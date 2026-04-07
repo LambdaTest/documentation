@@ -149,7 +149,7 @@ Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) t
 
 <img loading="lazy" src={require('../assets/images/mobile-web-automation/mobile-web-automation-2.webp').default} alt="Image"  className="doc_img"/>
 
->You have successfully executed the mobile web automation test on real devices. If you have questions or need additional information, reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+>That’s all! you have successfully executed the mobile web automation test on real devices. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -128,7 +128,7 @@ namespace TestSelenium3
 
 Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server.
 
-If you have any questions or need additional information, contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmuai.com.
+If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

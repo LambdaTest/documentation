@@ -317,7 +317,7 @@ You can uninstall the installed mobile application. Select the **'Android'** ico
 You will be logged out from the test session.
 
 >
-That's all about live-interactive mobile application testing. In case you have any questions, please reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or you could mail us at [**support@testmu.ai**](mailto:support@testmu.ai).
+That's all about live-interactive mobile application testing. In case you have any questions, please reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or you could mail us at [**support@testmuai.com**](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -317,7 +317,7 @@ java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Onl
 ```
 * * *
 
-You can now handle and manage exceptions using the Lambda Exceptions feature. If you have any questions, reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
+That’s it! You can now easily handle and manage exceptions using the Lambda Exceptions feature. If you still have any doubt, please feel free to reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

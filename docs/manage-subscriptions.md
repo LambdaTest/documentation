@@ -185,7 +185,7 @@ In case you wish to resume your current plan, you do so by clicking on **‘Resu
 <img loading="lazy" src={require('../assets/images/manage-subscriptions/resume.webp').default} alt="manage subscription" width="930" height="203" className="doc_img"/>
 
 >
-That's it! You can now successfully upgrade to a new plan, switch between plans, and switch from Monthly to Annual plans. If you still have any doubt, please feel free to reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmu.ai**](mailto:support@testmu.ai).  <br />Happy testing! 
+That's it! You can now successfully upgrade to a new plan, switch between plans, and switch from Monthly to Annual plans. If you still have any doubt, please feel free to reach out to us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com).  <br />Happy testing! 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -358,7 +358,7 @@ export default function index() {
                 <details>
                   <summary>Is there a way where I can follow all of the steps in my test run on HyperExecute?
                   </summary>
-                  <p>Every time you run a test via the HyperExecute CLI, a hyperexecute-cli.log file is generated. It is present in the parent directory of your test and contains the details of your entire test run. This hyperexecute-cli.log file will also help you in debugging any issues with your tests. You can view the file and figure out exactly where your test run failed. If you want more help with debugging your issues, you can always contact support@testmu.ai and provide them with this file along with your Job ID.</p>
+                  <p>Every time you run a test via the HyperExecute CLI, a hyperexecute-cli.log file is generated. It is present in the parent directory of your test and contains the details of your entire test run. This hyperexecute-cli.log file will also help you in debugging any issues with your tests. You can view the file and figure out exactly where your test run failed. If you want more help with debugging your issues, you can always contact support@testmuai.com and provide them with this file along with your Job ID.</p>
                 </details>
               </TabItem>
               <TabItem value="feat">

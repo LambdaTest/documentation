@@ -54,7 +54,7 @@ Sub Organization Widgets provide a comprehensive overview of the test health and
 <img loading="lazy" src={require('../assets/images/analytics/sub-orgs-main.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 :::info
-The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmu.ai).
+The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmuai.com).
 :::
 
 ## How to use Sub-Organization Widgets?
@@ -68,7 +68,7 @@ To use the Sub-Organization Widgets, follow the below steps:
 <img loading="lazy" src={require('../assets/images/analytics/sub-orgs-onboarding.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 :::note Please Note
-The Sub Organization Widgets are available for the feature enabled users only. You need to have access to admin control to use these widgets. Please reach out to our [24/7 customer support](mailto:support@testmu.ai) to enable these features.
+The Sub Organization Widgets are available for the feature enabled users only. You need to have access to admin control to use these widgets. Please reach out to our [24/7 customer support](mailto:support@testmuai.com) to enable these features.
 :::
 
 ## What are the Key Insights Provided by Sub-Organization Widgets?
@@ -101,4 +101,4 @@ The `Sub Organization Browser/OS Distribution` widget provides a distribution of
 - **Device Coverage**: The widget provides the device coverage of your sub-organizations. This helps you to identify the device coverage of your sub-organizations and optimize the device coverage for your sub-organizations.
 
 ## Support and Assistance
-If you have any queries or need assistance with the Sub Organization Widgets, feel free to reach out to our [24/7 customer support](mailto:support@testmu.ai). Our experts will be happy to help you with your queries and provide you with the necessary assistance.
+If you have any queries or need assistance with the Sub Organization Widgets, feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com). Our experts will be happy to help you with your queries and provide you with the necessary assistance.

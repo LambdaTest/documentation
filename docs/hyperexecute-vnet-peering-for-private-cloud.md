@@ -255,7 +255,7 @@ If you have any questions about this process, you can reach out to the HyperExec
 
 **Note :**
 
--   In case of any issues in the above setup please reach out to [hyperexecute-privatecloudsupport@testmu.ai](mailto:hyperexecute-privatecloudsupport@testmu.ai) and we will get in touch with you.
+-   In case of any issues in the above setup please reach out to [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com) and we will get in touch with you.
     
 -   Please make sure that you have the contributor access for your Vnet and resource group before the setup.
     

@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Beyond preventing scheduling conflicts, Device Reservation also helps organizations **optimize resource utilization**, enforce fair usage policies, and gain clearer visibility into device allocation across teams, leading to more efficient and predictable testing operations.
 
-> Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmu.ai** to enable it for your organization and try it out.
+> Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmuai.com** to enable it for your organization and try it out.
 ---
 
 ## Use Cases 

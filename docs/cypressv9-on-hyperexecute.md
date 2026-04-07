@@ -483,7 +483,7 @@ You can download network logs via the Automate Dashboard. You can visualize HAR 
 :::
 
 ### Detailed Cypress Command Logs
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmu.ai**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
 The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
 

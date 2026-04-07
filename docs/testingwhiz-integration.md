@@ -88,7 +88,7 @@ You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do
 
 * * *
 
-> That's it folks! Now you can run your codefree automation testing super easily with this TestingWhiz and <BrandName /> integration. If you have any doubt or questions, feel free to contact our experts at **24/7 chat support** or mail us at [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+> That's it folks! Now you can run your codefree automation testing super easily with this TestingWhiz and <BrandName /> integration. If you have any doubt or questions, feel free to contact our experts at **24/7 chat support** or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

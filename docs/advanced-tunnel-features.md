@@ -199,7 +199,7 @@ LT --help
 
 > **Note:** For all modifiers/arguments, refer to the list of [<BrandName /> Tunnel Modifiers](/docs/lambda-tunnel-modifiers/).
 
-That was all you need to know for configuring a client connection through <BrandName /> Tunnel. In case you have any questions, feel free to share them with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmu.ai](mailto:support@testmu.ai). Happy testing! 🙂
+That was all you need to know for configuring a client connection through <BrandName /> Tunnel. In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

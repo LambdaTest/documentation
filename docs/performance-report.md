@@ -107,7 +107,7 @@ In runtime settings, you'll find the URL of the entered website, time, and date.
 
 <img loading="lazy" src={require('../assets/images/performance-report/lt5-3-1.webp').default} alt="Image"  className="doc_img" width="823" height="183"/>
 
-That is all about the LT browser Performance Report. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmu.ai](mailto:support@testmu.ai) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **24/7 chat support** </span>. Happy testing!
+That is all about the LT browser Performance Report. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **24/7 chat support** </span>. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

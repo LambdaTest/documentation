@@ -173,7 +173,7 @@ for cap in caps:
 ## Supported Languages And Frameworks
 ***
 
->That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmu.ai.
+>That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

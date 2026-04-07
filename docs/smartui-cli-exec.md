@@ -282,7 +282,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
 - Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmu.ai or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 ## Additional Resources
 
