@@ -3088,6 +3088,7 @@ module.exports = {
               "audio-injection",
               "regular-expression-appium",
               "appium-upload-media",
+              "appium-upload-contacts",
               "network-configurations",
               "app-auto-network-throttling",
               "sim-support",
