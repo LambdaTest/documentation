@@ -234,7 +234,7 @@ for (const item of elements) {
 
 ## Related Docs
 
-- [Selenium Hooks](/support/docs/selenium-hooks/)
+- [Selenium Hooks](/support/docs/selenium-visual-regression/)
 - [Hooks Layout + Full Page](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 - [Handle Dynamic Data](/support/docs/smartui-handle-dynamic-data/)
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)
