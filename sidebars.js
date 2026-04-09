@@ -2066,36 +2066,36 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Checklists",
+        label: "Coverage & Checklists",
         items: [
           {
             type: "doc",
-            label: "Web – What We Cover",
+            label: "Web Coverage",
             id: "accessibility-web-what-we-cover",
           },
           {
             type: "doc",
-            label: "Web – What We Do Not Cover",
+            label: "Web Manual Checklist",
             id: "accessibility-web-what-we-do-not-cover",
           },
           {
             type: "doc",
-            label: "iOS – What We Cover",
+            label: "iOS Coverage",
             id: "accessibility-ios-what-we-cover",
           },
           {
             type: "doc",
-            label: "iOS – What We Do Not Cover",
+            label: "iOS Manual Checklist",
             id: "accessibility-ios-what-we-do-not-cover",
           },
           {
             type: "doc",
-            label: "Android – What We Cover",
+            label: "Android Coverage",
             id: "accessibility-android-what-we-cover",
           },
           {
             type: "doc",
-            label: "Android – What We Do Not Cover",
+            label: "Android Manual Checklist",
             id: "accessibility-android-what-we-do-not-cover",
           },
         ],

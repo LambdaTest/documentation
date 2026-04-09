@@ -50,7 +50,7 @@ Use tags to organize native app accessibility scans by screen, flow, or activity
 You can use tags in two ways:
 
 - **From the dashboard UI** after a scan has already been created.
-- **During automation** when you trigger `lambda-accessibility-scan` in an Appium test.
+- **During automation** when you trigger `lambda-accessibility-scan` in your native app automation test.
 
 ## Before You Start
 
@@ -124,93 +124,58 @@ In the **All Issues** tab, you can group the results in two ways:
 
 ## Option 2: Add Tags During Automation
 
-Use this flow when you want to attach a tag at the exact moment you trigger a native app accessibility scan in Appium.
+Use this flow when you want to attach tags at the exact moment you trigger a native app accessibility scan during automation.
 
 This is useful when your test moves across multiple screens and you want each scan to carry its own label from the beginning.
 
 ### Basic Syntax
 
-Trigger the scan with `lambda-accessibility-scan` and pass a `tag` value.
+Trigger the scan with `lambda-accessibility-scan` and pass one or more tags.
 
-Each scan invocation accepts one tag value. If you want multiple screen labels in the same test flow, trigger the scan again with a different tag after navigating to the next screen.
-
-<Tabs>
-  <TabItem value="java" label="Java" default>
+Current public samples for this flow are available in the Selenium-style execution pattern shown below.
 
 ```java
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
     new HashMap<String, Object>() {{
-        put("tag", "Login Screen");
+        put("tags", Arrays.asList("Login Screen", "Smoke"));
     }}
 );
 ```
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-```python
-driver.execute_script("lambda-accessibility-scan", {"tag": "Login Screen"})
-```
-
-  </TabItem>
-  <TabItem value="javascript" label="JavaScript">
-
-```javascript
-await driver.execute("lambda-accessibility-scan", [{ tag: "Login Screen" }]);
-```
-
-  </TabItem>
-</Tabs>
 
 ### Example: Tag scans for multiple screens
 
-You can call the scan multiple times in the same test and use a different tag each time.
-
-<Tabs>
-  <TabItem value="java-example" label="Java" default>
+You can call the scan multiple times in the same test and use different tags for each scan.
 
 ```java
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
     new HashMap<String, Object>() {{
-        put("tag", "Login Screen");
+        put("tags", Arrays.asList("Login Screen", "Smoke"));
     }}
 );
 
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
     new HashMap<String, Object>() {{
-        put("tag", "Cart Screen");
+        put("tags", Arrays.asList("Cart Screen", "Checkout Flow"));
     }}
 );
 
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
     new HashMap<String, Object>() {{
-        put("tag", "Profile Screen");
+        put("tags", Arrays.asList("Profile Screen"));
     }}
 );
 ```
-
-  </TabItem>
-  <TabItem value="python-example" label="Python">
-
-```python
-driver.execute_script("lambda-accessibility-scan", {"tag": "Login Screen"})
-driver.execute_script("lambda-accessibility-scan", {"tag": "Cart Screen"})
-driver.execute_script("lambda-accessibility-scan", {"tag": "Profile Screen"})
-```
-
-  </TabItem>
-</Tabs>
 
 ## Tag Naming Tips
 
 - Use short, meaningful names such as `Login Screen`, `Search`, `Checkout`, or `Settings`.
 - Keep naming consistent across runs so filters and comparisons are easier to use.
 - Use one naming style across your team, for example screen names or feature-flow names.
-- Keep each tag within **64 characters**.
+- Keep each tag within **50 characters**.
 - Use only letters, numbers, spaces, hyphens, and underscores.
 
 ## Limitations and Notes
@@ -218,10 +183,10 @@ driver.execute_script("lambda-accessibility-scan", {"tag": "Profile Screen"})
 - Tag support applies to native app accessibility scans.
 - Tags help you organize scans, but they do not change scan behavior or issue detection.
 - If you do not add tags during automation, you can still assign them later from the dashboard.
-- During automation, each `lambda-accessibility-scan` call accepts a single tag value.
+- During automation, each `lambda-accessibility-scan` call can include one or more tags.
 - From the dashboard, you can assign multiple tags to the same scan.
 - A scan can have up to **20 tags**.
-- Each tag can be up to **64 characters** long.
+- Each tag can be up to **50 characters** long.
 - Use simple names with letters, numbers, spaces, hyphens, or underscores for best results.
 
 ## Related Docs

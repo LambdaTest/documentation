@@ -1,7 +1,7 @@
 ---
 id: accessibility-web-what-we-cover
-title: Web – What We Cover
-sidebar_label: Web – What We Cover
+title: Web Accessibility Coverage
+sidebar_label: Web Coverage
 description: Full WCAG reference, checklist, how coverage works, and how to use TestMu AI Accessibility on web. Covers WCAG 2.0, 2.1, 2.2 and remediation.
 keywords:
   - TestMu AI
@@ -15,13 +15,13 @@ slug: accessibility-web-what-we-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-web-what-we-cover/
 ---
 
-# TestMU AI / LambdaTest Accessibility Web – What We Cover
+# Web Accessibility Coverage
 
 **Note:** This document describes TestMU AI / LambdaTest Accessibility coverage for web. For platform or accessibility support, contact TestMU/LambdaTest support.
 
 ---
 
-## 1. Purpose and scope
+## Overview
 
 This document describes **what TestMU AI / LambdaTest Accessibility Web covers**: a **full WCAG rules reference** (100% for web), a **checklist** of rules the platform can check, **how coverage works** (semantic vs syntactic and why gaps exist), **how to use** the accessibility testing platform to run scans and view results, and **how to check** / **how to do** (remediation) for **websites and web apps**. It is intended for teams who:
 
@@ -33,11 +33,11 @@ This document describes **what TestMU AI / LambdaTest Accessibility Web covers**
 
 ---
 
-## 2. Full WCAG rules reference (100% – web)
+## WCAG Reference
 
-Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.2** at Levels **A, AA, and AAA** as they apply to **web**. Use this as the master reference for full web accessibility coverage. The **checklist in Section 3** shows which of these TestMU AI / LambdaTest Accessibility Web can check automatically or with supported rules.
+Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.2** at Levels **A, AA, and AAA** as they apply to **web**. Use this as the master reference for full web accessibility coverage. The **Coverage Checklist** below shows which of these TestMU AI / LambdaTest Accessibility Web can check automatically or with supported rules.
 
-### 2.1 Principle 1 – Perceivable
+### Principle 1 – Perceivable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -71,7 +71,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 1.4.12 | Text Spacing | AA | 2.1 |
 | 1.4.13 | Content on Hover or Focus | AA | 2.1 |
 
-### 2.2 Principle 2 – Operable
+### Principle 2 – Operable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -110,7 +110,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 2.5.7 | Dragging Movements | AA | 2.2 |
 | 2.5.8 | Target Size (Minimum) | AA | 2.2 |
 
-### 2.3 Principle 3 – Understandable
+### Principle 3 – Understandable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -136,7 +136,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 3.3.8 | Accessible Authentication (Minimum) | AA | 2.2 |
 | 3.3.9 | Accessible Authentication (Enhanced) | AAA | 2.2 |
 
-### 2.4 Principle 4 – Robust
+### Principle 4 – Robust
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -148,11 +148,11 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 
 ---
 
-## 3. Checklist (what we cover) – WCAG rules and versions
+## Coverage Checklist
 
-Below is a consolidated checklist of success criteria that TestMU AI / LambdaTest Accessibility Web can check against, by WCAG version. **Level** is A or AA; **Impact** is typical severity in reports (Critical, Serious, Moderate, Minor). Use **Section 5 – How to use the platform to test (Web)** to run scans.
+Below is a consolidated checklist of success criteria that TestMU AI / LambdaTest Accessibility Web can check against, by WCAG version. **Level** is A or AA; **Impact** is typical severity in reports (Critical, Serious, Moderate, Minor). Use **Use the Platform** to run scans.
 
-### 3.1 WCAG 2.0 (Level A and AA)
+### WCAG 2.0 (Level A and AA)
 
 | Rule / Area | WCAG | Level | Impact | What we cover |
 |-------------|------|-------|--------|----------------|
@@ -178,7 +178,7 @@ Below is a consolidated checklist of success criteria that TestMU AI / LambdaTes
 | Parsing | 4.1.1 Parsing | A | Moderate | Markup parses correctly (where applicable; obsolete in WCAG 2.2). |
 | Name, role, value | 4.1.2 Name, Role, Value | A | Critical | UI components have accessible name, role, and value/state. |
 
-### 3.2 WCAG 2.1 (additional; Level A and AA)
+### WCAG 2.1 (additional; Level A and AA)
 
 | Rule / Area | WCAG | Level | Impact | What we cover |
 |-------------|------|-------|--------|----------------|
@@ -193,7 +193,7 @@ Below is a consolidated checklist of success criteria that TestMU AI / LambdaTes
 | Motion actuation | 2.5.4 Motion Actuation | A | Moderate | Functionality not dependent on device/user motion only. |
 | Status messages | 4.1.3 Status Messages | AA | Serious | Status messages can be programmatically determined (e.g. live regions). |
 
-### 3.3 WCAG 2.2 (additional; where supported)
+### WCAG 2.2 (additional; where supported)
 
 | Rule / Area | WCAG | Level | Impact | What we cover |
 |-------------|------|-------|--------|----------------|
@@ -208,11 +208,11 @@ Below is a consolidated checklist of success criteria that TestMU AI / LambdaTes
 
 ---
 
-## 4. How coverage works: semantic vs syntactic (and why gaps exist)
+## How Coverage Works
 
 Beyond *what* is covered, it helps to understand **how** coverage works and **why** some criteria remain manual or partially covered. TestMU AI / LambdaTest Accessibility moves beyond **syntactic checking** (does the code look right?) toward **semantic analysis** (does the experience make sense?) where AI-enhanced rules apply.
 
-### 4.1 The "Semantic Gap": how AI enhances coverage
+### The "Semantic Gap": how AI enhances coverage
 
 Standard automated tools typically only read code; they cannot interpret content. **AI-enhanced rules** in TestMU Accessibility target the "Semantic Gap"—the difference between code being valid and code being meaningful.
 
@@ -225,7 +225,7 @@ Standard automated tools typically only read code; they cannot interpret content
 
 *Note: Exact AI rule names and availability depend on your TestMU/LambdaTest Accessibility configuration.*
 
-### 4.2 The "Partial" trap: what "partially" covered means
+### The "Partial" trap: what "partially" covered means
 
 Many rules are marked **partially** covered. In practice, "Partial" usually means the tool checks the **code** but not the full **visual or behavioral context**.
 
@@ -241,7 +241,7 @@ Many rules are marked **partially** covered. In practice, "Partial" usually mean
   - *What it catches:* Invalid ARIA combinations (e.g. `role="button"` without appropriate focusability).  
   - *What it misses:* Whether a custom widget *actually behaves* like the role it claims (interaction logic); that requires manual or assistive-technology testing.
 
-### 4.3 Why some criteria are "manual only"
+### Why some criteria are "manual only"
 
 Criteria that are **not covered** (or only partially covered) by automation typically fall into three groups that are difficult for tools to fully test:
 
@@ -257,7 +257,7 @@ Criteria that are **not covered** (or only partially covered) by automation typi
   Examples: 1.4.10 Reflow, 1.4.12 Text Spacing, 2.5.1 Pointer Gestures.  
   *Reason:* Testing reflow requires rendering at specific viewport sizes (e.g. 320px) and checking for horizontal scroll or overlap; text spacing requires applying user styles and checking for clipping. These need a rendering or interaction environment, not just code parsing.
 
-### 4.4 WCAG version specifics
+### WCAG version specifics
 
 - **4.1.1 Parsing:** Correctly treated as **obsolete** in WCAG 2.2 (removed from the standard). The rule set reflects this.
 - **2.5.8 Target Size (Minimum):** Often supported partially (e.g. a rule that checks approximate target size); measuring 24×24 CSS pixels is tractable.
@@ -267,7 +267,7 @@ Criteria that are **not covered** (or only partially covered) by automation typi
 
 ---
 
-## 5. How to use the platform to test (Web)
+## Use the Platform
 
 Use the TestMu AI Accessibility platform to run automated accessibility scans on your **website or web app**. Follow these steps to test covered items:
 
@@ -275,22 +275,22 @@ Use the TestMu AI Accessibility platform to run automated accessibility scans on
 |------|-------------------------|
 | **1. Access the platform** | Log in to TestMU / LambdaTest and open the **Accessibility** (or **TestMU AI Accessibility**) section for web testing. |
 | **2. Select URL or page** | Enter the **URL** of the page or web app to test, or select a page from your project. You can run a single-page scan or configure a flow (e.g. multi-page or logged-in state). |
-| **3. Run an accessibility scan** | Start an **accessibility scan** for the selected page(s). The platform runs automated checks against the rules listed in Section 3 (WCAG 2.0, 2.1, 2.2 Level A, AA, and selected AAA as supported). |
+| **3. Run an accessibility scan** | Start an **accessibility scan** for the selected page(s). The platform runs automated checks against the rules listed in **Coverage Checklist** (WCAG 2.0, 2.1, 2.2 Level A, AA, and selected AAA as supported). |
 | **4. View the report** | After the scan completes, open the **accessibility report**. Review **violations** (issues found), **passes** (rules that passed), and **incomplete** (items that need manual verification). |
 | **5. Filter by WCAG level or rule** | Use report filters to view issues by **WCAG level** (A, AA, AAA), **rule ID**, or **impact** (Critical, Serious, Moderate, Minor). Use this to prioritize fixes (e.g. Level A and AA first). |
-| **6. Export or share results** | Export the report (e.g. PDF, CSV) or share the report link with your team. Use results to fix issues (see Section 6 for remediation) and re-run scans to verify. |
+| **6. Export or share results** | Export the report (e.g. PDF, CSV) or share the report link with your team. Use results to fix issues (see **Verification and Remediation**) and re-run scans to verify. |
 
 **Tip:** Combine automated scans with **manual testing** (keyboard, screen reader, zoom, resize) and the **What we do NOT cover** document for full WCAG coverage and compliance.
 
 ---
 
-## 6. How to check and how to do (by principle)
+## Verification and Remediation
 
 For each principle (Perceivable, Operable, Understandable, Robust), below is a concise **how to check** and **how to do** (remediation) for the areas TestMU AI / LambdaTest Accessibility Web covers.
 
 ---
 
-### 6.1 Perceivable
+### Perceivable
 
 **What we cover (WCAG):** 1.1.1, 1.3.1, 1.4.1, 1.4.2, 1.4.3 (2.0); 1.3.4, 1.4.10, 1.4.11, 1.4.12 (2.1).
 
@@ -314,7 +314,7 @@ For each principle (Perceivable, Operable, Understandable, Robust), below is a c
 
 ---
 
-### 6.2 Operable
+### Operable
 
 **What we cover (WCAG):** 2.1.1, 2.1.2, 2.2.1, 2.2.2, 2.3.1, 2.4.1–2.4.4, 2.4.7 (2.0); 2.1.4, 2.5.1–2.5.4 (2.1); 2.4.11, 2.5.7, 2.5.8 (2.2).
 
@@ -343,7 +343,7 @@ For each principle (Perceivable, Operable, Understandable, Robust), below is a c
 
 ---
 
-### 6.3 Understandable
+### Understandable
 
 **What we cover (WCAG):** 3.2.1, 3.2.2, 3.3.1, 3.3.2 (2.0); 3.2.6, 3.3.7, 3.3.8 (2.2).
 
@@ -364,7 +364,7 @@ For each principle (Perceivable, Operable, Understandable, Robust), below is a c
 
 ---
 
-### 6.4 Robust
+### Robust
 
 **What we cover (WCAG):** 4.1.1 (2.0; obsolete in 2.2), 4.1.2 (2.0), 4.1.3 (2.1).
 
@@ -381,9 +381,9 @@ For each principle (Perceivable, Operable, Understandable, Robust), below is a c
 
 ---
 
-## 7. Summary
+## Summary
 
 - **Support:** For TestMU platform, accessibility coverage, or scan issues contact TestMU/LambdaTest support.
-- **Full WCAG reference:** Section 2 lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (87 total) as they apply to web. Use it as the master reference.
-- **What we cover:** Section 3 is the **checklist** of rules TestMu AI Accessibility Web can check (WCAG 2.0, 2.1, 2.2 Level A, AA, and selected AAA). Section 4 explains **how coverage works** (semantic vs syntactic, partial coverage, and why some criteria are manual only). Section 5 describes **how to use the platform to test** (run scan, view report, filter, export). Section 6 provides **how to check** and **how to do** (remediation) for each principle.
+- **Full WCAG reference:** **WCAG Reference** lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (87 total) as they apply to web. Use it as the master reference.
+- **What we cover:** **Coverage Checklist** is the rules checklist TestMu AI Accessibility Web can check (WCAG 2.0, 2.1, 2.2 Level A, AA, and selected AAA). **How Coverage Works** explains semantic vs syntactic coverage, partial coverage, and why some criteria remain manual. **Use the Platform** describes how to run scans and review reports. **Verification and Remediation** provides the practical fix guidance for each principle.
 - **Use this doc** as a single reference for what is covered on web, how coverage works, how to use the platform, and how to verify or fix issues.

@@ -1,7 +1,7 @@
 ---
 id: accessibility-web-what-we-do-not-cover
-title: Web – What We Do Not Cover
-sidebar_label: Web – What We Do Not Cover
+title: Web Accessibility Manual Checklist
+sidebar_label: Web Manual Checklist
 description: Checklist of WCAG criteria that require manual testing on web for full coverage with TestMu AI Accessibility.
 keywords:
   - TestMu AI
@@ -16,29 +16,29 @@ slug: accessibility-web-what-we-do-not-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-web-what-we-do-not-cover/
 ---
 
-# TestMU AI / LambdaTest Accessibility Web – What We Do NOT Cover
+# Web Accessibility Manual Checklist
 
 **Note:** This document describes TestMU AI / LambdaTest Accessibility coverage for web. For platform or accessibility support, contact TestMU/LambdaTest support.
 
 ---
 
-## 1. Purpose and scope
+## Overview
 
 This document describes **what TestMU AI / LambdaTest Accessibility Web does NOT cover**: the **manual tests** (and assistive-technology testing) that **you need to perform** for **full WCAG rules coverage and compliance**. TestMU Accessibility automated scanning on web typically covers a subset of accessibility issues; the rest require human judgment, keyboard/screen-reader testing, and media/layout checks.
 
-- **Full rules reference:** Section 2 lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (Level A, AA, and AAA) for web.
-- **What we do not cover:** Section 3 is a **checklist** of criteria that require **manual testing** (or assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them.
+- **Full rules reference:** **WCAG Reference** lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (Level A, AA, and AAA) for web.
+- **What we do not cover:** **Manual Checklist** lists the criteria that require **manual testing** (or assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them.
 - **How to do:** For each area, **how to test manually** (or with assistive technology) so you can achieve full coverage and compliance.
 
 **Why these are manual:** The companion **"What we cover"** document explains *how* coverage works (syntactic vs semantic, AI-enhanced rules, and what "partial" means) and *why* some criteria fall into manual-only categories (dynamic behavior, human judgment, complex visual rendering). Use that doc for the reasoning; use this doc for the manual test procedures.
 
 ---
 
-## 2. Full WCAG rules reference (100% – web)
+## WCAG Reference
 
 Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.2** at Levels **A, AA, and AAA**. Use this as the master reference for full web accessibility coverage.
 
-### 2.1 Principle 1 – Perceivable
+### Principle 1 – Perceivable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -72,7 +72,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 1.4.12 | Text Spacing | AA | 2.1 |
 | 1.4.13 | Content on Hover or Focus | AA | 2.1 |
 
-### 2.2 Principle 2 – Operable
+### Principle 2 – Operable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -111,7 +111,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 2.5.7 | Dragging Movements | AA | 2.2 |
 | 2.5.8 | Target Size (Minimum) | AA | 2.2 |
 
-### 2.3 Principle 3 – Understandable
+### Principle 3 – Understandable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -137,7 +137,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 3.3.8 | Accessible Authentication (Minimum) | AA | 2.2 |
 | 3.3.9 | Accessible Authentication (Enhanced) | AAA | 2.2 |
 
-### 2.4 Principle 4 – Robust
+### Principle 4 – Robust
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -149,17 +149,17 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 
 ---
 
-## 3. What we do NOT cover (checklist + how to do)
+## Manual Checklist
 
 The following criteria **require manual testing** (or assistive-technology testing) because TestMu AI Accessibility does not support them or only partially supports them.
 
-### How to do manual testing
+### How to Use This Checklist
 
 For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test)** column for the exact steps. Run these tests yourself (e.g. with keyboard, screen reader, zoom, or assistive technology) to achieve full WCAG coverage. Combine with automated scans from the [What we cover](/support/docs/accessibility-web-what-we-cover/) doc.
 
 ---
 
-### 3.1 Time-based media (1.2.1–1.2.9)
+### Time-based media (1.2.1–1.2.9)
 
 **We do not cover:** Quality and presence of captions, audio description, transcripts, sign language, live captions; equivalence of media alternatives.
 
@@ -174,7 +174,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.2 Meaningful sequence, sensory characteristics, orientation, input purpose (1.3.2, 1.3.3, 1.3.4, 1.3.5)
+### Meaningful sequence, sensory characteristics, orientation, input purpose (1.3.2, 1.3.3, 1.3.4, 1.3.5)
 
 **We do not cover:** Correct reading order when linearized; instructions not relying on shape/location/sound only; orientation not restricted; input purpose programmatically determinable for autofill and assistive tech.
 
@@ -187,7 +187,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.3 Use of color, audio control, resize text, images of text, reflow, content on hover (1.4.1, 1.4.2, 1.4.4, 1.4.5, 1.4.10, 1.4.13)
+### Use of color, audio control, resize text, images of text, reflow, content on hover (1.4.1, 1.4.2, 1.4.4, 1.4.5, 1.4.10, 1.4.13)
 
 **We do not cover:** That information is not conveyed by color alone; that auto-play audio has a control; 200% zoom without loss; images of text (or exception); reflow at 320px; hover/focus content is dismissible, hoverable, persistent.
 
@@ -202,7 +202,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.4 Keyboard and keyboard trap (2.1.1, 2.1.2)
+### Keyboard and keyboard trap (2.1.1, 2.1.2)
 
 **We do not cover:** That all functionality is achievable via keyboard; that focus is never trapped.
 
@@ -213,7 +213,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.5 Timing, pause/stop/hide (2.2.1, 2.2.2)
+### Timing, pause/stop/hide (2.2.1, 2.2.2)
 
 **We do not cover:** That time limits can be turned off, adjusted, or extended with warning; that moving/auto-updating content can be paused, stopped, or hidden.
 
@@ -224,7 +224,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.6 Three flashes and animation from interactions (2.3.1, 2.3.3)
+### Three flashes and animation from interactions (2.3.1, 2.3.3)
 
 **We do not cover:** That no content flashes more than 3 times per second in a way that could cause seizures; that motion animation triggered by interaction can be disabled (AAA).
 
@@ -235,7 +235,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.7 Bypass blocks, focus order, link purpose, focus visible (2.4.1, 2.4.3, 2.4.4, 2.4.7)
+### Bypass blocks, focus order, link purpose, focus visible (2.4.1, 2.4.3, 2.4.4, 2.4.7)
 
 **We do not cover:** That skip links work and are usable; that focus order is logical; that link purpose is clear in context; that focus indicator is visible.
 
@@ -248,7 +248,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.8 Multiple ways, headings and labels (2.4.5, 2.4.6)
+### Multiple ways, headings and labels (2.4.5, 2.4.6)
 
 **We do not cover:** That multiple ways to find content exist; that headings and labels describe topic/purpose.
 
@@ -259,7 +259,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.9 Focus not obscured, dragging, target size (2.4.11, 2.5.7, 2.5.8)
+### Focus not obscured, dragging, target size (2.4.11, 2.5.7, 2.5.8)
 
 **We do not cover:** That focused element is at least partially visible; that dragging has an alternative; that touch targets meet minimum size (with exceptions).
 
@@ -271,7 +271,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.10 On focus, on input (3.2.1, 3.2.2)
+### On focus, on input (3.2.1, 3.2.2)
 
 **We do not cover:** That focus or input alone does not change context (e.g. submit form, open new window).
 
@@ -282,7 +282,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.11 Consistent navigation, identification, help (3.2.3, 3.2.4, 3.2.6)
+### Consistent navigation, identification, help (3.2.3, 3.2.4, 3.2.6)
 
 **We do not cover:** That repeated nav and components are consistent; that help is in a consistent place.
 
@@ -294,7 +294,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.12 Error identification, suggestion, prevention; labels; redundant entry; auth (3.3.1–3.3.9)
+### Error identification, suggestion, prevention; labels; redundant entry; auth (3.3.1–3.3.9)
 
 **We do not cover:** Quality of error messages; presence of suggestions and confirmation; clarity of labels; redundant entry; accessible authentication.
 
@@ -309,7 +309,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.13 Language of page and parts (3.1.1, 3.1.2)
+### Language of page and parts (3.1.1, 3.1.2)
 
 **We do not cover:** That page language and language of parts are set so assistive technologies can use correct pronunciation.
 
@@ -320,7 +320,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.14 Status messages (4.1.3)
+### Status messages (4.1.3)
 
 **We do not cover:** That status messages (e.g. "Saved", "Error") are announced by assistive technologies without moving focus.
 
@@ -330,17 +330,17 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.15 AAA and other criteria
+### AAA and other criteria
 
 **We do not cover:** Level AAA criteria (e.g. 1.2.6–1.2.9, 1.3.6, 1.4.6–1.4.9, 2.1.3, 2.2.3–2.2.6, 2.3.2, 2.3.3, 2.4.8–2.4.10, 2.4.12–2.4.13, 2.5.5–2.5.6, 3.1.3–3.1.6, 3.2.5, 3.3.5–3.3.6, 3.3.9) unless you target AAA. For each, follow the corresponding Understanding WCAG document and test manually or with assistive technology as required.
 
 ---
 
-## 4. Summary
+## Summary
 
 - **Support:** For TestMU platform, accessibility coverage, or scan issues contact TestMU/LambdaTest support.
-- **Full rules:** Section 2 lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria for web (87 total; A, AA, AAA). Use it as the master reference.
-- **What we do not cover:** Section 3 lists criteria that require **manual testing** (and, where noted, assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them. For each area, a **checklist** and **how to do** (manual test procedure) are provided so you can achieve full rules coverage and compliance.
+- **Full rules:** **WCAG Reference** lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria for web (87 total; A, AA, AAA). Use it as the master reference.
+- **What we do not cover:** **Manual Checklist** lists the criteria that require **manual testing** (and, where noted, assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them. For each area, a **checklist** and **how to do** (manual test procedure) are provided so you can achieve full rules coverage and compliance.
 - **Use this doc** as a reference for manual testing responsibilities for full accessibility coverage. For *why* these criteria are manual (semantic vs syntactic, partial coverage, and manual-only categories), see the **"What we cover"** document.
 
-**Coverage cross-check:** Section 2 lists all **87** WCAG 2.2 success criteria (Principle 1: 29; Principle 2: 34; Principle 3: 21; Principle 4: 3). Section 3 addresses every criterion that requires manual or assistive-technology testing (including 1.2.x, 1.3.2–1.3.5, 1.4.1–1.4.5, 1.4.10–1.4.13, 2.1.x, 2.2.x, 2.3.1, 2.3.3, 2.4.x, 2.5.x, 3.1.x, 3.2.x, 3.3.x, 4.1.3, and AAA where applicable). Together with automated coverage (see "What we cover" doc), this document supports **100%** WCAG rules coverage for web.
+**Coverage cross-check:** **WCAG Reference** lists all **87** WCAG 2.2 success criteria (Principle 1: 29; Principle 2: 34; Principle 3: 21; Principle 4: 3). **Manual Checklist** addresses every criterion that requires manual or assistive-technology testing (including 1.2.x, 1.3.2–1.3.5, 1.4.1–1.4.5, 1.4.10–1.4.13, 2.1.x, 2.2.x, 2.3.1, 2.3.3, 2.4.x, 2.5.x, 3.1.x, 3.2.x, 3.3.x, 4.1.3, and AAA where applicable). Together with automated coverage (see **Web Accessibility Coverage**), this document supports **100%** WCAG rules coverage for web.

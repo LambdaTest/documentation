@@ -1,7 +1,7 @@
 ---
 id: accessibility-ios-what-we-do-not-cover
-title: iOS – What We Do Not Cover
-sidebar_label: iOS – What We Do Not Cover
+title: iOS Accessibility Manual Checklist
+sidebar_label: iOS Manual Checklist
 description: Checklist of WCAG criteria that require manual testing on iOS apps for full coverage with TestMu AI Accessibility.
 keywords:
   - TestMu AI
@@ -16,27 +16,27 @@ slug: accessibility-ios-what-we-do-not-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-ios-what-we-do-not-cover/
 ---
 
-# TestMU AI / LambdaTest Accessibility iOS – What We Do NOT Cover
+# iOS Accessibility Manual Checklist
 
 **Note:** This document describes TestMU AI / LambdaTest Accessibility coverage for iOS. For platform or accessibility support, contact TestMU/LambdaTest support.
 
 ---
 
-## 1. Purpose and scope
+## Overview
 
 This document describes **what TestMU AI / LambdaTest Accessibility iOS does NOT cover**: the **manual tests** (and assistive-technology testing) that **you need to perform** for **full WCAG rules coverage and compliance** on **native iOS apps**. TestMU Accessibility automated scanning on iOS covers a subset of accessibility issues; the rest require human judgment, VoiceOver/Switch Control testing, and media/layout checks.
 
-- **Full rules reference:** Section 2 lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (Level A, AA, and AAA) as they apply to **iOS** (native apps and in-app WebViews). EN 301 549 and Apple’s accessibility guidelines map to these criteria.
-- **What we do not cover:** Section 3 is a **checklist** of criteria that require **manual testing** (or assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them on iOS.
+- **Full rules reference:** **WCAG Reference** lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (Level A, AA, and AAA) as they apply to **iOS** (native apps and in-app WebViews). EN 301 549 and Apple’s accessibility guidelines map to these criteria.
+- **What we do not cover:** **Manual Checklist** lists the criteria that require **manual testing** (or assistive-technology testing) because TestMU Accessibility does not support them or only partially supports them on iOS.
 - **How to do:** For each area, **how to test manually** on iOS (VoiceOver, Switch Control, Dynamic Type, device settings, rotation, etc.) so you can achieve full coverage and compliance.
 
 ---
 
-## 2. Full WCAG rules reference (100% – iOS)
+## WCAG Reference
 
 Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.2** at Levels **A, AA, and AAA** as they apply to **native iOS apps**. Use this as the master reference for full iOS accessibility coverage. (Criteria apply to app UI, in-app content, and in-app WebViews where applicable.)
 
-### 2.1 Principle 1 – Perceivable
+### Principle 1 – Perceivable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -70,7 +70,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 1.4.12 | Text Spacing | AA | 2.1 |
 | 1.4.13 | Content on Hover or Focus | AA | 2.1 |
 
-### 2.2 Principle 2 – Operable
+### Principle 2 – Operable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -109,7 +109,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 2.5.7 | Dragging Movements | AA | 2.2 |
 | 2.5.8 | Target Size (Minimum) | AA | 2.2 |
 
-### 2.3 Principle 3 – Understandable
+### Principle 3 – Understandable
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -135,7 +135,7 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 | 3.3.8 | Accessible Authentication (Minimum) | AA | 2.2 |
 | 3.3.9 | Accessible Authentication (Enhanced) | AAA | 2.2 |
 
-### 2.4 Principle 4 – Robust
+### Principle 4 – Robust
 
 | ID | Success criterion | Level | WCAG |
 |----|--------------------|-------|------|
@@ -147,17 +147,17 @@ Below is a **complete** list of all success criteria for **WCAG 2.0, 2.1, and 2.
 
 ---
 
-## 3. What we do NOT cover (checklist + how to do – iOS)
+## Manual Checklist
 
 The following criteria **require manual testing** (or assistive-technology testing) on **iOS** because TestMu AI Accessibility does not support them or only partially supports them.
 
-### How to do manual testing (iOS)
+### How to Use This Checklist (iOS)
 
 For each area below, use the **Checklist** column to see what to verify and the **How to do (manual test – iOS)** column for the exact steps. Run these tests on device or simulator with **VoiceOver**, **Switch Control**, **Dynamic Type**, and rotation as needed. Combine with automated scans from the [What we cover](/support/docs/accessibility-ios-what-we-cover/) doc.
 
 ---
 
-### 3.1 Time-based media (1.2.1–1.2.9)
+### Time-based media (1.2.1–1.2.9)
 
 **We do not cover:** Quality and presence of captions, audio description, transcripts, sign language, live captions in in-app video/audio; equivalence of media alternatives.
 
@@ -172,7 +172,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.2 Meaningful sequence, sensory characteristics, orientation, input purpose (1.3.2, 1.3.3, 1.3.4, 1.3.5)
+### Meaningful sequence, sensory characteristics, orientation, input purpose (1.3.2, 1.3.3, 1.3.4, 1.3.5)
 
 **We do not cover:** Correct reading order when linearized with VoiceOver; instructions not relying on shape/location/sound only; orientation not restricted; input purpose programmatically determinable.
 
@@ -185,7 +185,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.3 Use of color, audio control, resize text, images of text, reflow, non-text contrast, text spacing, content on hover/focus (1.4.1, 1.4.2, 1.4.4, 1.4.5, 1.4.10, 1.4.11, 1.4.12, 1.4.13)
+### Use of color, audio control, resize text, images of text, reflow, non-text contrast, text spacing, content on hover/focus (1.4.1, 1.4.2, 1.4.4, 1.4.5, 1.4.10, 1.4.11, 1.4.12, 1.4.13)
 
 **We do not cover:** That information is not conveyed by color alone; that auto-play audio has a control; font scaling without loss; images of text (or exception); reflow; non-text contrast; text spacing override without loss; content on hover/focus (dismissible, hoverable, persistent).
 
@@ -202,7 +202,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.4 Keyboard / assistive technology and no focus trap (2.1.1, 2.1.2)
+### Keyboard / assistive technology and no focus trap (2.1.1, 2.1.2)
 
 **We do not cover:** That all functionality is achievable via VoiceOver and Switch Control; that focus is never trapped.
 
@@ -213,7 +213,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.5 Timing, pause/stop/hide (2.2.1, 2.2.2)
+### Timing, pause/stop/hide (2.2.1, 2.2.2)
 
 **We do not cover:** That time limits can be turned off, adjusted, or extended with warning; that moving/auto-updating content can be paused, stopped, or hidden.
 
@@ -224,7 +224,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.6 Three flashes and animation from interactions (2.3.1, 2.3.3)
+### Three flashes and animation from interactions (2.3.1, 2.3.3)
 
 **We do not cover:** That no content flashes more than 3 times per second in a way that could cause seizures; that motion animation triggered by interaction can be disabled (AAA).
 
@@ -235,7 +235,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.7 Bypass blocks, focus order, link/button purpose, focus visible (2.4.1, 2.4.3, 2.4.4, 2.4.7)
+### Bypass blocks, focus order, link/button purpose, focus visible (2.4.1, 2.4.3, 2.4.4, 2.4.7)
 
 **We do not cover:** That skip-to-main (or equivalent) works; that focus order is logical; that link/button purpose is clear in context; that focus indicator is visible.
 
@@ -248,7 +248,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.8 Multiple ways, headings and labels (2.4.5, 2.4.6)
+### Multiple ways, headings and labels (2.4.5, 2.4.6)
 
 **We do not cover:** That multiple ways to find content/screens exist; that headings and labels describe topic/purpose.
 
@@ -259,7 +259,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.9 Focus not obscured, dragging, target size (2.4.11, 2.5.7, 2.5.8)
+### Focus not obscured, dragging, target size (2.4.11, 2.5.7, 2.5.8)
 
 **We do not cover:** That focused element is at least partially visible; that dragging has an alternative; that touch targets meet minimum size (with exceptions).
 
@@ -271,7 +271,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.10 On focus, on input (3.2.1, 3.2.2)
+### On focus, on input (3.2.1, 3.2.2)
 
 **We do not cover:** That focus or input alone does not change context (e.g. submit form, navigate away).
 
@@ -282,7 +282,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.11 Consistent navigation, identification, help (3.2.3, 3.2.4, 3.2.6)
+### Consistent navigation, identification, help (3.2.3, 3.2.4, 3.2.6)
 
 **We do not cover:** That repeated nav and components are consistent; that help is in a consistent place.
 
@@ -294,7 +294,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.12 Error identification, suggestion, prevention; labels; redundant entry; auth (3.3.1–3.3.8)
+### Error identification, suggestion, prevention; labels; redundant entry; auth (3.3.1–3.3.8)
 
 **We do not cover:** Quality of error messages; presence of suggestions and confirmation; clarity of labels; redundant entry; accessible authentication.
 
@@ -309,7 +309,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.13 Language of page and parts (3.1.1, 3.1.2)
+### Language of page and parts (3.1.1, 3.1.2)
 
 **We do not cover:** That app/content language and language of parts are set so assistive technologies can use correct pronunciation (e.g. for WebViews or localized strings).
 
@@ -320,7 +320,7 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.14 Status messages (4.1.3)
+### Status messages (4.1.3)
 
 **We do not cover:** That status messages (e.g. "Saved", "Error") are announced by VoiceOver without moving focus.
 
@@ -330,18 +330,18 @@ For each area below, use the **Checklist** column to see what to verify and the 
 
 ---
 
-### 3.15 AAA and other criteria
+### AAA and other criteria
 
 **We do not cover:** Level AAA criteria (e.g. 1.2.6–1.2.9, 1.3.6, 1.4.6–1.4.9, 2.1.3, 2.2.3–2.2.6, 2.3.2, 2.3.3, 2.4.8–2.4.10, 2.4.12–2.4.13, 2.5.5–2.5.6, 3.1.3–3.1.6, 3.2.5, 3.3.5–3.3.6, 3.3.9) unless you target AAA. For each, follow the corresponding Understanding WCAG document and test manually or with VoiceOver/Switch Control as required on iOS.
 
 ---
 
-## 4. Summary
+## Summary
 
 - **Support:** For TestMU platform, accessibility coverage, or device issues contact TestMU/LambdaTest support.
-- **Full rules:** Section 2 lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (87 total) as they apply to **iOS** (A, AA, AAA). Use it as the master reference for full iOS accessibility coverage.
-- **What we do not cover:** Section 3 lists criteria that require **manual testing** (and, where noted, assistive-technology testing with **VoiceOver** and **Switch Control**) because TestMU Accessibility does not support them or only partially supports them on iOS. For each area, a **checklist** and **how to do** (manual test procedure on iOS) are provided so you can achieve full rules coverage and compliance.
+- **Full rules:** **WCAG Reference** lists **100% of WCAG 2.0, 2.1, and 2.2** success criteria (87 total) as they apply to **iOS** (A, AA, AAA). Use it as the master reference for full iOS accessibility coverage.
+- **What we do not cover:** **Manual Checklist** lists the criteria that require **manual testing** (and, where noted, assistive-technology testing with **VoiceOver** and **Switch Control**) because TestMU Accessibility does not support them or only partially supports them on iOS. For each area, a **checklist** and **how to do** (manual test procedure on iOS) are provided so you can achieve full rules coverage and compliance.
 - **Use this doc** as a reference for manual testing responsibilities for full iOS accessibility coverage.
 
-**Coverage cross-check:** Section 2 lists all **87** WCAG 2.2 success criteria (Principle 1: 29; Principle 2: 34; Principle 3: 21; Principle 4: 3). Section 3 addresses every criterion that requires manual or assistive-technology testing (including 1.2.x, 1.3.2–1.3.5, 1.4.1–1.4.5, 1.4.10–1.4.13, 2.1.x, 2.2.x, 2.3.1, 2.3.3, 2.4.x, 2.5.x, 3.1.x, 3.2.x, 3.3.x, 4.1.3, and AAA where applicable). Together with automated coverage (see “What we cover” doc), this document supports **100%** WCAG rules coverage for iOS.
+**Coverage cross-check:** **WCAG Reference** lists all **87** WCAG 2.2 success criteria (Principle 1: 29; Principle 2: 34; Principle 3: 21; Principle 4: 3). **Manual Checklist** addresses every criterion that requires manual or assistive-technology testing (including 1.2.x, 1.3.2–1.3.5, 1.4.1–1.4.5, 1.4.10–1.4.13, 2.1.x, 2.2.x, 2.3.1, 2.3.3, 2.4.x, 2.5.x, 3.1.x, 3.2.x, 3.3.x, 4.1.3, and AAA where applicable). Together with automated coverage (see **iOS Accessibility Coverage**), this document supports **100%** WCAG rules coverage for iOS.
 
