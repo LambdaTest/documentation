@@ -2,10 +2,10 @@
 id: accessibility-tag-support
 title: Tag Support for Accessibility Scans
 sidebar_label: Tag Support
-description: Use tags to organize native app accessibility scans by screen, flow, or activity from the dashboard or during automation.
+description: Use tags to organize accessibility scans on mobile devices by screen, flow, or activity from the dashboard or during automation.
 keywords:
   - accessibility tags
-  - native app accessibility
+  - mobile accessibility
   - lambda-accessibility-scan
   - appium accessibility tag
   - accessibility scan tags
@@ -45,23 +45,23 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Tag Support for Accessibility Scans
 
-Use tags to organize native app accessibility scans by screen, flow, or activity. This helps you label scans with names like `Login Screen`, `Cart Screen`, or `Profile Screen` so your team can quickly understand what each scan represents.
+Use tags to organize accessibility scans on mobile devices by screen, flow, or activity. This helps you label scans with names like `Login Screen`, `Cart Screen`, or `Profile Screen` so your team can quickly understand what each scan represents.
 
 You can use tags in two ways:
 
 - **From the dashboard UI** after a scan has already been created.
-- **During automation** when you trigger `lambda-accessibility-scan` in your native app automation test.
+- **During automation** when you trigger `lambda-accessibility-scan` in your mobile accessibility automation test.
 
 ## Before You Start
 
 Make sure you have:
 
-- Access to <BrandName /> Accessibility for native app testing.
-- A native app accessibility scan result available in the dashboard, or
-- An Appium test with accessibility enabled for native app automation.
+- Access to <BrandName /> Accessibility for mobile-device testing.
+- An accessibility scan result from a mobile-device session available in the dashboard, or
+- An Appium test with accessibility enabled in any supported Appium flow for mobile accessibility automation.
 
 :::note
-Tag support is available for native app accessibility scans. Tags are optional. If you do not add a tag, your scans continue to work as usual.
+Tag support is available for accessibility scans that run on mobile devices. Tags are optional. If you do not add a tag, your scans continue to work as usual.
 :::
 
 ## What Tags Help You Do
@@ -124,7 +124,7 @@ In the **All Issues** tab, you can group the results in two ways:
 
 ## Option 2: Add Tags During Automation
 
-Use this flow when you want to attach tags at the exact moment you trigger a native app accessibility scan during automation.
+Use this flow when you want to attach tags at the exact moment you trigger an accessibility scan during automation on a mobile device.
 
 This is useful when your test moves across multiple screens and you want each scan to carry its own label from the beginning.
 
@@ -132,7 +132,7 @@ This is useful when your test moves across multiple screens and you want each sc
 
 Trigger the scan with `lambda-accessibility-scan` and pass one or more tags.
 
-Current public samples for this flow are available in the Selenium-style execution pattern shown below.
+Tag support is available in all supported Appium flows for mobile accessibility automation. The exact method name depends on your client library, but the payload pattern stays the same: call `lambda-accessibility-scan` and pass a `tags` list.
 
 ```java
 ((JavascriptExecutor) driver).executeScript(
@@ -141,6 +141,21 @@ Current public samples for this flow are available in the Selenium-style executi
         put("tags", Arrays.asList("Login Screen", "Smoke"));
     }}
 );
+```
+
+```python
+driver.execute_script(
+    "lambda-accessibility-scan",
+    {
+        "tags": ["Login Screen", "Smoke"]
+    }
+)
+```
+
+```javascript
+await driver.execute("lambda-accessibility-scan", [{
+  tags: ["Login Screen", "Smoke"]
+}]);
 ```
 
 ### Example: Tag scans for multiple screens
@@ -170,24 +185,25 @@ You can call the scan multiple times in the same test and use different tags for
 );
 ```
 
-## Tag Naming Tips
+## Best Practices
 
 - Use short, meaningful names such as `Login Screen`, `Search`, `Checkout`, or `Settings`.
 - Keep naming consistent across runs so filters and comparisons are easier to use.
 - Use one naming style across your team, for example screen names or feature-flow names.
 - Keep each tag within **50 characters**.
 - Use only letters, numbers, spaces, hyphens, and underscores.
+- Keep each scan to **20 tags** or fewer.
+- Add tags during automation when you want scans to be labeled from the start, and use the dashboard flow when you want to organize existing scans afterward.
 
-## Limitations and Notes
+## Troubleshooting
 
-- Tag support applies to native app accessibility scans.
+- Tag support is currently available only for accessibility scans that run on **mobile devices**.
+- You can use it while testing **mobile apps** and **web apps on mobile devices**.
 - Tags help you organize scans, but they do not change scan behavior or issue detection.
 - If you do not add tags during automation, you can still assign them later from the dashboard.
-- During automation, each `lambda-accessibility-scan` call can include one or more tags.
+- During automation, each `lambda-accessibility-scan` call can include one or more tags in all supported Appium flows.
 - From the dashboard, you can assign multiple tags to the same scan.
-- A scan can have up to **20 tags**.
-- Each tag can be up to **50 characters** long.
-- Use simple names with letters, numbers, spaces, hyphens, or underscores for best results.
+- If tags do not appear where expected, confirm the scan was run on a mobile-device session and that accessibility scanning is enabled for that workflow.
 
 ## Related Docs
 
