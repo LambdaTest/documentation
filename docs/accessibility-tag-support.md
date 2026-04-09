@@ -85,6 +85,8 @@ In the issue view, open the scan or view you want to label and click the tag ico
 
 In the **Assign Tags** modal, search for an existing tag or create a new one, then save your selection.
 
+You can assign multiple tags to the same scan from the dashboard.
+
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/tag-support/assign-tag-modal.png').default} alt="Assign Tags modal for accessibility scans" className="doc_img"/>
 
 ### Step 3: Review tagged issues
@@ -129,6 +131,8 @@ This is useful when your test moves across multiple screens and you want each sc
 ### Basic Syntax
 
 Trigger the scan with `lambda-accessibility-scan` and pass a `tag` value.
+
+Each scan invocation accepts one tag value. If you want multiple screen labels in the same test flow, trigger the scan again with a different tag after navigating to the next screen.
 
 <Tabs>
   <TabItem value="java" label="Java" default>
@@ -206,17 +210,23 @@ driver.execute_script("lambda-accessibility-scan", {"tag": "Profile Screen"})
 - Use short, meaningful names such as `Login Screen`, `Search`, `Checkout`, or `Settings`.
 - Keep naming consistent across runs so filters and comparisons are easier to use.
 - Use one naming style across your team, for example screen names or feature-flow names.
+- Keep each tag within **64 characters**.
+- Use only letters, numbers, spaces, hyphens, and underscores.
 
 ## Limitations and Notes
 
 - Tag support applies to native app accessibility scans.
 - Tags help you organize scans, but they do not change scan behavior or issue detection.
 - If you do not add tags during automation, you can still assign them later from the dashboard.
+- During automation, each `lambda-accessibility-scan` call accepts a single tag value.
+- From the dashboard, you can assign multiple tags to the same scan.
+- A scan can have up to **20 tags**.
+- Each tag can be up to **64 characters** long.
 - Use simple names with letters, numbers, spaces, hyphens, or underscores for best results.
 
 ## Related Docs
 
 - [Native App Accessibility Automation](/support/docs/accessibility-native-app-automation-test/)
 - [Accessibility App Scanner](/support/docs/accessibility-app-scanner/)
+- [Navigating Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
 - [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
-- [Accessibility FAQ](/support/docs/accessibility-faq/)
