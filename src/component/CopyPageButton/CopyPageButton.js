@@ -160,12 +160,11 @@ export default function CopyPageButton() {
 
   async function handleItem(id) {
     const rawUrl = typeof window !== 'undefined' ? window.location.href : '';
-    // If the page provides a canonical .md URL (e.g. API reference per-endpoint URL), use it.
-    // Otherwise fall back to current URL + .md suffix — matching stage Mintlify format.
-    const mdUrl = (pageContent && pageContent.getMdUrl)
+    // API reference provides a real .md URL; for Docusaurus doc pages use the page URL as-is
+    // (Docusaurus doesn't serve raw .md at runtime).
+    const aiUrl = (pageContent && pageContent.getMdUrl)
       ? pageContent.getMdUrl()
-      : rawUrl.replace(/\/$/, '') + '.md';
-    const aiQuery = `Read from ${mdUrl} so I can ask questions about it.`;
+      : rawUrl.replace(/\/$/, '');
 
     setShowDropdown(false);
     switch (id) {
@@ -177,21 +176,20 @@ export default function CopyPageButton() {
         break;
       }
       case 'view-markdown': {
-        // Open a new window showing the page content as plain markdown text
+        // Show page content as plain markdown text in a new tab
         const markdown = await getPageMarkdown();
         const blob = new Blob([markdown], { type: 'text/plain;charset=utf-8' });
-        const blobUrl = URL.createObjectURL(blob);
-        window.open(blobUrl, '_blank');
+        window.open(URL.createObjectURL(blob), '_blank');
         break;
       }
       case 'open-chatgpt':
-        window.open(`https://chatgpt.com/?q=${encodeURIComponent(aiQuery)}`, '_blank');
+        window.open(`https://chatgpt.com/?q=${encodeURIComponent(aiUrl)}`, '_blank');
         break;
       case 'open-claude':
-        window.open(`https://claude.ai/new?q=${encodeURIComponent(aiQuery)}`, '_blank');
+        window.open(`https://claude.ai/new?q=${encodeURIComponent(aiUrl)}`, '_blank');
         break;
       case 'open-perplexity':
-        window.open(`https://www.perplexity.ai/search?q=${encodeURIComponent(aiQuery)}`, '_blank');
+        window.open(`https://www.perplexity.ai/search?q=${encodeURIComponent(aiUrl)}`, '_blank');
         break;
       case 'copy-mcp':
         await navigator.clipboard.writeText(MCP_SERVER_URL).catch(() => {});

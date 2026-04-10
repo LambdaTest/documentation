@@ -73,7 +73,7 @@
 .searchWrapper :global(.DocSearch-Button) {
   display: flex !important;
   width: 100%;
-  min-width: 360px;
+  min-width: 200px;
   border-radius: 24px;
   border: 1px solid var(--ifm-color-emphasis-300);
   background: var(--ifm-background-color);
@@ -266,39 +266,128 @@
   stroke: var(--brand-amber);
 }
 
-/* Responsive */
+/* Mobile-only elements — hidden on desktop */
+.mobileRight {
+  display: none;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mobileIconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+  padding: 6px;
+}
+
+/* ── Responsive: collapse below 996px ── */
 @media (max-width: 996px) {
+  .mobileRight {
+    display: flex;
+    margin-left: auto;
+    gap: 4px;
+  }
+
+  .searchGroup {
+    display: none;
+  }
+
+  .row1Right {
+    display: none;
+  }
+
+  .row1 {
+    padding: 0 16px;
+  }
+
+  .row2 {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background: var(--ifm-background-color);
+    border-top: 1px solid var(--ifm-color-emphasis-200);
+    padding: 12px 16px 24px;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .mobileMenuLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-700);
+    text-decoration: none !important;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .mobileMenuLink:hover {
+    background: var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-900);
+  }
+
+  .mobileMenuLinkActive {
+    color: var(--brand-amber);
+  }
+
+  .mobileMenuLinkActive svg {
+    stroke: var(--brand-amber);
+  }
+
+  .mobileMenuDivider {
+    height: 1px;
+    background: var(--ifm-color-emphasis-200);
+    margin: 8px 0;
+  }
+
+  .mobileMenuGetStarted {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: var(--brand-amber);
+    color: white !important;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 24px;
+    text-decoration: none !important;
+    margin-top: 4px;
+    transition: opacity 0.15s;
+  }
+
+  .mobileMenuGetStarted:hover {
+    opacity: 0.9;
+  }
+}
+
+/* ── Medium screens: keep full layout, reduce search width ── */
+@media (min-width: 997px) and (max-width: 1280px) {
   .row1 {
     padding: 0 16px;
     gap: 8px;
   }
 
-  .searchWrapper {
-    max-width: 300px;
-  }
-
   .searchWrapper :global(.DocSearch-Button) {
-    min-width: 200px;
-  }
-
-  .askAiBtn span,
-  .iconLink span {
-    display: none;
-  }
-
-  .loginLink {
-    display: none;
+    min-width: 160px;
   }
 
   .row2Inner {
     padding: 0 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .row2Inner::-webkit-scrollbar {
-    display: none;
   }
 }
 

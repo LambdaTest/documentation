@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import { Highlight, themes } from 'prism-react-renderer';
 import MethodBadge from './MethodBadge';
 import styles from './TryItModal.module.css';
+import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton } from './langUtils';
 
 const githubWithGreenKeys = {
   ...themes.github,
@@ -86,7 +87,7 @@ function buildCurl(endpoint, username, password, params) {
 function CollapsibleSection({ title, defaultOpen = true, description, children }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div style={{ marginBottom: '16px', border: '1px solid #e5e7eb', borderRadius: '12px', background: '#ffffff', overflow: 'hidden' }}>
+    <div style={{ marginBottom: '16px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', background: 'var(--ifm-background-color)', overflow: 'hidden' }}>
       <button
         onClick={() => setOpen((v) => !v)}
         style={{
@@ -172,8 +173,8 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
             value={value}
             onChange={(e) => onChange(e.target.value)}
             style={{ ...inputStyle, cursor: 'pointer', appearance: 'auto' }}
-            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = '#fff'; }}
-            onBlur={(e) => { e.target.style.borderColor = '#e2e8f0'; e.target.style.background = '#fafafa'; }}
+            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = 'var(--ifm-background-color)'; }}
+            onBlur={(e) => { e.target.style.borderColor = 'var(--ifm-color-emphasis-200)'; e.target.style.background = 'var(--ifm-color-emphasis-100)'; }}
           >
             <option value="">-- select --</option>
             {enumValues.map((v) => (
@@ -187,8 +188,8 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder || `enter ${sublabel || label}`}
             style={inputStyle}
-            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = '#fff'; }}
-            onBlur={(e) => { e.target.style.borderColor = '#e2e8f0'; e.target.style.background = '#fafafa'; }}
+            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = 'var(--ifm-background-color)'; }}
+            onBlur={(e) => { e.target.style.borderColor = 'var(--ifm-color-emphasis-200)'; e.target.style.background = 'var(--ifm-color-emphasis-100)'; }}
           />
         )}
       </div>
@@ -196,7 +197,7 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
   );
 }
 
-export default function TryItModal({ endpoint, onClose }) {
+export default function TryItModal({ endpoint, onClose, selectedLang: selectedLangProp, onLangChange }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [params, setParams] = useState({});
@@ -206,6 +207,12 @@ export default function TryItModal({ endpoint, onClose }) {
   const [curlCopied, setCurlCopied] = useState(false);
   const [respCopied, setRespCopied] = useState(false);
   const [liveRespCopied, setLiveRespCopied] = useState(false);
+  const [localLang, setLocalLang] = useState('cURL');
+  const selectedLang = selectedLangProp !== undefined ? selectedLangProp : localLang;
+  const setSelectedLang = onLangChange || setLocalLang;
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const langBtnRef = useRef(null);
+  const closeLangDropdown = useCallback(() => setLangDropdownOpen(false), []);
 
   function copyText(text, setFn) {
     try {
@@ -268,6 +275,10 @@ export default function TryItModal({ endpoint, onClose }) {
   }
 
   const curlCode = buildCurl(endpoint, username, password, params);
+  const langDef = LANGUAGES.find((l) => l.label === selectedLang) || LANGUAGES[0];
+  const codeToShow = selectedLang === 'cURL'
+    ? curlCode
+    : generateCodeExample(endpoint, selectedLang, { username, password, params });
   const hasAuth = endpoint.auth && endpoint.auth.length > 0;
   const hasQuery = endpoint.queryParams && endpoint.queryParams.length > 0;
   const hasPath = endpoint.pathParams && endpoint.pathParams.length > 0;
@@ -403,12 +414,25 @@ export default function TryItModal({ endpoint, onClose }) {
             {/* cURL panel */}
             <div className={styles.codePanel}>
               <div className={styles.codePanelHeader}>
-                <span style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>{endpoint.name}</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '12px', color: '#6b7280', fontFamily: 'monospace' }}>cURL</span>
+                <span style={{ fontSize: '13px', fontWeight: 600, color: '#374151', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{endpoint.name}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
+                  <LangSelectorButton
+                    selectedLang={selectedLang}
+                    open={langDropdownOpen}
+                    onClick={() => setLangDropdownOpen((o) => !o)}
+                    btnRef={langBtnRef}
+                  />
+                  <LangDropdownPortal
+                    open={langDropdownOpen}
+                    anchorRef={langBtnRef}
+                    langs={LANGUAGES}
+                    selected={selectedLang}
+                    onSelect={setSelectedLang}
+                    onClose={closeLangDropdown}
+                  />
                   <button
-                    title="Copy cURL"
-                    onClick={() => copyText(curlCode, setCurlCopied)}
+                    title="Copy code"
+                    onClick={() => copyText(codeToShow, setCurlCopied)}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', color: curlCopied ? '#16a34a' : '#9ca3af', padding: '2px', transition: 'color 0.15s' }}
                   >
                     {curlCopied ? (
@@ -423,16 +447,7 @@ export default function TryItModal({ endpoint, onClose }) {
                   </button>
                 </div>
               </div>
-              <pre className={styles.codeBlock}>
-                <code>
-                  {curlCode.split('\n').map((line, i) => {
-                    if (line.startsWith('curl')) return <span key={i}><span style={{ color: '#c4490d', fontFamily: 'inherit' }}>curl</span>{line.slice(4)}{'\n'}</span>;
-                    if (line.includes('--url')) return <span key={i}><span style={{ color: '#1d6eb5' }}>  --url </span><span style={{ color: '#0A3069' }}>{line.replace('  --url ', '')}</span>{'\n'}</span>;
-                    if (line.includes('--header')) return <span key={i}><span style={{ color: '#1d6eb5' }}>  --header </span><span style={{ color: '#374151' }}>{line.replace('  --header ', '')}</span></span>;
-                    return <span key={i}>{line}{'\n'}</span>;
-                  })}
-                </code>
-              </pre>
+              <CodeHighlight code={codeToShow} language={langDef.prism} />
             </div>
 
             {/* Static spec response panel — always shown */}

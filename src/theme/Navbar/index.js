@@ -16,7 +16,7 @@ function applyTheme(theme) {
 
 const NAV_LINKS = [
   { to: '/support/', label: 'Home', icon: HomeIcon },
-  { to: '/support/docs/', label: 'Docs', icon: DocsIcon },
+  { to: '/support/docs/getting-started-with-lambdatest-automation/', label: 'Docs', icon: DocsIcon },
   { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
   { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
 ];
@@ -105,9 +105,38 @@ function isActiveLink(pathname, to) {
   return pathname.startsWith(to);
 }
 
+function HamburgerIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const location = useLocation();
   const [colorMode, setColorModeState] = useState(getStoredTheme);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -116,6 +145,11 @@ export default function Navbar() {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return () => observer.disconnect();
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   function toggleColorMode() {
     const next = colorMode === 'dark' ? 'light' : 'dark';
@@ -132,28 +166,17 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      {/* Hidden sentinel: Docusaurus's useTOCHighlight does document.querySelector('.navbar').clientHeight
-          to offset scroll position. We satisfy that query here without polluting our nav's class list. */}
+      {/* Hidden sentinel for Docusaurus scroll offset calculation */}
       <div className="navbar" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100px', pointerEvents: 'none', visibility: 'hidden', zIndex: -1 }} aria-hidden="true" />
-      {/* Row 1 */}
+
+      {/* ── Desktop Row 1 ── */}
       <div className={styles.row1}>
         <a href="https://www.testmuai.com" className={styles.logoLink}>
-          <img
-            src="/support/img/logo.svg"
-            alt="TestMu AI"
-            className={styles.logoLight}
-            width="147"
-            height="26"
-          />
-          <img
-            src="/support/img/logo_dark.svg"
-            alt="TestMu AI"
-            className={styles.logoDark}
-            width="147"
-            height="26"
-          />
+          <img src="/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="28" />
+          <img src="/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="28" />
         </a>
 
+        {/* Search + Ask AI — hidden on mobile */}
         <div className={styles.searchGroup}>
           <div className={styles.searchWrapper}>
             <SearchBar />
@@ -164,40 +187,40 @@ export default function Navbar() {
           </button>
         </div>
 
+        {/* Right buttons — hidden on mobile */}
         <div className={styles.row1Right}>
-          <a
-            href="https://github.com/LambdaTest"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.iconLink}
-          >
+          <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
             <GithubIcon />
             <span>Github</span>
           </a>
-
-          <a href="https://accounts.lambdatest.com/login" className={styles.loginLink}>
-            Login
+          <a href="https://accounts.lambdatest.com/login" className={styles.loginLink}>Login</a>
+          <a id="signbtn" href="https://accounts.lambdatest.com/register" className={styles.getStartedBtn}>
+            <span>Get Started Free</span> <span className={styles.arrow}>&rsaquo;</span>
           </a>
-
-          <a
-            id="signbtn"
-            href="https://accounts.lambdatest.com/register"
-            className={styles.getStartedBtn}
-          >
-            Get Started Free <span className={styles.arrow}>&rsaquo;</span>
-          </a>
-
-          <button
-            className={styles.gearBtn}
-            onClick={toggleColorMode}
-            aria-label="Toggle dark mode"
-          >
+          <button className={styles.gearBtn} onClick={toggleColorMode} aria-label="Toggle dark mode">
             {colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
+
+        {/* Mobile-only: search + sparkle + menu icons (right side) */}
+        <div className={styles.mobileRight}>
+          <button className={styles.mobileIconBtn} onClick={openPanel} aria-label="Ask AI">
+            <SparkleIcon />
+          </button>
+          <button className={styles.mobileIconBtn} onClick={toggleColorMode} aria-label="Toggle dark mode">
+            {colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button
+            className={styles.mobileIconBtn}
+            onClick={() => setMobileMenuOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
           </button>
         </div>
       </div>
 
-      {/* Row 2 */}
+      {/* ── Desktop Row 2 (nav links) ── */}
       <div className={styles.row2}>
         <div className={styles.row2Inner}>
           {NAV_LINKS.map(({ to, label, icon: Icon }) => (
@@ -212,6 +235,28 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+
+      {/* ── Mobile menu overlay ── */}
+      {mobileMenuOpen && (
+        <div className={styles.mobileMenu}>
+          {NAV_LINKS.map(({ to, label, icon: Icon }) => (
+            <a
+              key={to}
+              href={to}
+              className={`${styles.mobileMenuLink} ${isActiveLink(location.pathname, to) ? styles.mobileMenuLinkActive : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Icon />
+              <span>{label}</span>
+            </a>
+          ))}
+          <div className={styles.mobileMenuDivider} />
+          <a href="https://accounts.lambdatest.com/login" className={styles.mobileMenuLink}>Login</a>
+          <a id="signbtn-mobile" href="https://accounts.lambdatest.com/register" className={styles.mobileMenuGetStarted}>
+            Get Started Free &rsaquo;
+          </a>
+        </div>
+      )}
     </nav>
   );
 }

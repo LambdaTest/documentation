@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import { useLocation } from '@docusaurus/router';
 import { useHistory } from 'react-router-dom';
@@ -49,6 +49,7 @@ export default function ApiDoc() {
 
   const [selectedEndpoint, setSelectedEndpoint] = useState(null);
   const [tryItEndpoint, setTryItEndpoint] = useState(null);
+  const [selectedLang, setSelectedLang] = useState('cURL');
 
   // Initialize with first endpoint
   useEffect(() => {
@@ -327,7 +328,7 @@ export default function ApiDoc() {
             <EndpointDetail
               endpoint={selectedEndpoint}
               onTryIt={setTryItEndpoint}
-              mobileCodeSlot={<CodeExamples endpoint={selectedEndpoint} />}
+              mobileCodeSlot={<CodeExamples endpoint={selectedEndpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} />}
             />
             {/* Bottom padding so floating bar doesn't overlap content */}
             <div style={{ height: '80px' }} />
@@ -335,7 +336,7 @@ export default function ApiDoc() {
 
           {/* Right Panel: Code Examples */}
           <div className={styles.rightPanel}>
-            <CodeExamples endpoint={selectedEndpoint} />
+            <CodeExamples endpoint={selectedEndpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} />
           </div>
         </div>
       </div>
@@ -345,6 +346,8 @@ export default function ApiDoc() {
         <TryItModal
           endpoint={tryItEndpoint}
           onClose={() => setTryItEndpoint(null)}
+          selectedLang={selectedLang}
+          onLangChange={setSelectedLang}
         />
       )}
     </Layout>

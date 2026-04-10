@@ -323,26 +323,167 @@ function simplifyResponses(responses, spec) {
   return out;
 }
 
-// Match a slug (e.g. "fetch-all-builds-of-an-account") to an OpenAPI endpoint by:
-// 1. exact slug(summary) match within tag
-// 2. fuzzy summary match
-function findEndpointBySlug(endpoints, groupName, slug) {
-  // First try matching by tag
+// Extract lowercase word set from a string
+function toWordSet(str) {
+  return new Set(
+    String(str).toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+  );
+}
+
+// Extract words from a URL path, splitting camelCase segments
+function pathWordSet(pth) {
+  const words = new Set();
+  for (const seg of pth.split('/').filter(Boolean)) {
+    const cleaned = seg.replace(/[{}]/g, '');
+    const spaced = cleaned.replace(/([a-z])([A-Z])/g, '$1 $2');
+    for (const w of spaced.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)) {
+      words.add(w);
+    }
+  }
+  return words;
+}
+
+// How many words in `query` appear in `candidate`
+// Exact match = 1.0 credit; prefix match = 0.7 credit (exact beats prefix in ties)
+// Prefix rules:
+//   cw.startsWith(w): candidate is a longer form of query word — always allowed (e.g. 'log'→'logs')
+//   w.startsWith(cw): query is longer than candidate — only allowed when candidate is ≥60% of query
+//                     length (prevents 'appium'.startsWith('app') false match)
+function coverage(query, candidate) {
+  if (query.size === 0) return 0;
+  let matches = 0;
+  for (const w of query) {
+    if (candidate.has(w)) { matches += 1.0; continue; }
+    if (w.length >= 4) {
+      for (const cw of candidate) {
+        if (cw.length >= 3 && cw.startsWith(w)) { matches += 0.7; break; }
+        if (cw.length >= 3 && w.startsWith(cw) && cw.length / w.length >= 0.6) { matches += 0.7; break; }
+      }
+    }
+  }
+  return matches / query.size;
+}
+
+// Jaccard similarity between two word sets (strict — no prefix)
+function jaccard(a, b) {
+  let inter = 0;
+  for (const x of a) if (b.has(x)) inter++;
+  const unionSize = new Set([...a, ...b]).size;
+  return unionSize === 0 ? 0 : inter / unionSize;
+}
+
+// Infer likely HTTP methods from slug words
+const METHOD_HINTS = {
+  upload: ['POST'], create: ['POST'], add: ['POST'], execute: ['POST'], post: ['POST'],
+  get: ['GET'], fetch: ['GET'], list: ['GET'], retrieve: ['GET'],
+  update: ['PUT', 'PATCH'], edit: ['PUT', 'PATCH'], patch: ['PATCH'],
+  delete: ['DELETE'], remove: ['DELETE'],
+  stop: ['PUT', 'POST'],
+};
+function inferMethods(words) {
+  const out = new Set();
+  for (const w of words) {
+    const hints = METHOD_HINTS[w];
+    if (hints) hints.forEach((m) => out.add(m));
+  }
+  return out;
+}
+
+// Combined score: max of coverage and Jaccard against summary + path words,
+// with a +0.15 boost when the endpoint's HTTP method matches slug-implied method
+function scoreEndpoint(e, slugWordSet) {
+  const combined = new Set([...toWordSet(e.summary), ...pathWordSet(e.path)]);
+  let score = Math.max(coverage(slugWordSet, combined), jaccard(slugWordSet, combined));
+  const implied = inferMethods(slugWordSet);
+  if (implied.size > 0 && implied.has(e.method)) score = Math.min(1.0, score + 0.15);
+  return score;
+}
+
+// Return all scored candidates for a slug, sorted best-first.
+// Used by rankCandidates() to build a global match table.
+function rankCandidates(endpoints, groupName, slug) {
   const tagged = endpoints.filter((e) =>
     e.tags.some((t) => slugify(t) === slugify(groupName))
   );
   const pool = tagged.length > 0 ? tagged : endpoints;
+  const slugWords = toWordSet(slug.replace(/-/g, ' '));
 
-  // Exact slug match
-  let hit = pool.find((e) => slugify(e.summary) === slug);
-  if (hit) return hit;
+  const candidates = [];
 
-  // Try slug containment
-  hit = pool.find((e) => {
+  // Exact slug match on summary (score 2.0 — always wins)
+  const exact = pool.find((e) => slugify(e.summary) === slug);
+  if (exact) return [{ e: exact, score: 2.0 }];
+
+  // Summary slug containment (score 1.5)
+  const contained = pool.find((e) => {
     const s = slugify(e.summary);
     return s.includes(slug) || slug.includes(s);
   });
-  return hit || null;
+  if (contained) return [{ e: contained, score: 1.5 }];
+
+  // Entire spec has only 1 endpoint (e.g. single-endpoint APIs)
+  if (endpoints.length === 1) return [{ e: endpoints[0], score: 1.0 }];
+
+  // Score-based: return all candidates ≥ 0.50 threshold
+  for (const e of pool) {
+    const score = scoreEndpoint(e, slugWords);
+    if (score >= 0.50) candidates.push({ e, score });
+  }
+  candidates.sort((a, b) => b.score - a.score);
+  return candidates;
+}
+
+// Match slugs to endpoints for a group, resolving collisions greedily:
+// build a ranked candidate list per slug, then assign best-score first,
+// preventing two slugs from claiming the same endpoint.
+function matchSlugsToEndpoints(allEndpoints, groupName, slugs) {
+  // Build candidates for each slug (index matches slugs array)
+  const ranked = slugs.map((slug) => rankCandidates(allEndpoints, groupName, slug));
+
+  // Greedy assignment: pick the globally highest (slug, candidate) pair first
+  const assigned = new Array(slugs.length).fill(null); // endpoint or null
+  const usedKey = new Set(); // "method:path" keys already claimed
+
+  // Flatten all first-choices into a priority queue
+  let changed = true;
+  while (changed) {
+    changed = false;
+    // Find the unassigned slug with the highest-scored available candidate
+    let bestScore = -1, bestSlugIdx = -1, bestCand = null;
+    for (let i = 0; i < slugs.length; i++) {
+      if (assigned[i] !== null) continue; // already assigned (null = stub is also "assigned")
+      // Find the first available candidate for this slug
+      for (const cand of ranked[i]) {
+        const key = `${cand.e.method}:${cand.e.path}`;
+        if (!usedKey.has(key)) {
+          if (cand.score > bestScore) {
+            bestScore = cand.score;
+            bestSlugIdx = i;
+            bestCand = cand;
+          }
+          break; // only consider top available candidate per slug
+        }
+      }
+    }
+    if (bestSlugIdx === -1) break; // no more assignable slugs
+
+    const key = `${bestCand.e.method}:${bestCand.e.path}`;
+    usedKey.add(key);
+    assigned[bestSlugIdx] = bestCand.e;
+    changed = true;
+  }
+
+  return assigned; // null entries are stubs
+}
+
+// Legacy wrapper used for flat (no-heading) pages — still matches single slug
+function findEndpointBySlug(endpoints, groupName, slug) {
+  const cands = rankCandidates(endpoints, groupName, slug);
+  return cands.length > 0 ? cands[0].e : null;
 }
 
 function findApiRef(obj) {
@@ -425,9 +566,11 @@ for (const apiSection of apiRef.groups) {
     } else if (item && item.group) {
       const groupName = item.group;
       const groupEntry = { name: groupName, endpoints: [] };
-      for (const pg of item.pages || []) {
-        const slug = String(pg).split('/').pop();
-        const endpoint = findEndpointBySlug(allEndpoints, groupName, slug);
+      const slugs = (item.pages || []).map((pg) => String(pg).split('/').pop());
+      // Use collision-aware matching for the whole group at once
+      const matched = matchSlugsToEndpoints(allEndpoints, groupName, slugs);
+      slugs.forEach((slug, i) => {
+        const endpoint = matched[i];
         totalEndpoints++;
         if (endpoint) {
           matchedEndpoints++;
@@ -451,7 +594,7 @@ for (const apiSection of apiRef.groups) {
             path: `/${slug}`,
           });
         }
-      }
+      });
       apiEntry.groups.push(groupEntry);
     }
   }

@@ -196,7 +196,7 @@ function ShowChildAttributes({ defaultOpen = false, children }) {
         {open ? 'Hide child attributes' : 'Show child attributes'}
       </button>
       {open && (
-        <div style={{ padding: '0 10px', background: '#fff' }}>
+        <div style={{ padding: '0 10px', background: 'var(--ifm-background-color)' }}>
           {children}
         </div>
       )}
@@ -413,8 +413,8 @@ function ResponseSection({ responses, responseSchema }) {
                 position: 'absolute',
                 top: '110%',
                 left: 0,
-                background: '#fff',
-                border: '1px solid #e5e7eb',
+                background: 'var(--ifm-background-color)',
+                border: '1px solid var(--ifm-color-emphasis-200)',
                 borderRadius: '8px',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                 zIndex: 20,

@@ -1,10 +1,25 @@
-.layoutWrapper {
+.docLayoutWrapper {
   position: relative;
 }
 
-.copyBtnContainer {
+/* Position button at the right edge of the center content column.
+   The TOC occupies col--3 = 25% on desktop. We pad-right to stay
+   within the article column, matching stage-mintlify's layout. */
+.copyBtnRow {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 16px;
+  right: calc(25% + 16px);
   z-index: 5;
+}
+
+/* On narrow viewports where TOC is hidden, align to content edge */
+@media (max-width: 996px) {
+  .copyBtnRow {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 0;
+    right: auto;
+    top: auto;
+  }
 }

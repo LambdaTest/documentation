@@ -41,14 +41,7 @@
                   "type": "string",
                   "in": "query",
                   "required": false,
-                  "description": "To fetch the list of builds with specific statuses. You can pass multiple comma seperated statuses e.g. running,queued,completed,timeout and error.",
-                  "enum": [
-                    "running",
-                    "queued",
-                    "completed",
-                    "timeout",
-                    "error"
-                  ]
+                  "description": "To fetch the list of builds with specific statuses. You can pass multiple comma seperated statuses e.g. running,queued,completed,timeout and error."
                 },
                 {
                   "name": "fromdate",
@@ -149,16 +142,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -254,16 +237,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -333,16 +306,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -416,16 +379,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -520,16 +473,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -592,14 +535,7 @@
                   "type": "string",
                   "in": "query",
                   "required": false,
-                  "description": "To fetch the list of sessions with specific statuses. You can pass multiple comma seperated statuses e.g. running,queued,completed,passed,failed,timeout,error and lambda-error.",
-                  "enum": [
-                    "running",
-                    "queued",
-                    "completed",
-                    "timeout",
-                    "error"
-                  ]
+                  "description": "To fetch the list of sessions with specific statuses. You can pass multiple comma seperated statuses e.g. running,queued,completed,passed,failed,timeout,error and lambda-error."
                 },
                 {
                   "name": "fromdate",
@@ -709,16 +645,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -824,16 +750,6 @@
                   "description": "pet status in the store",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -904,16 +820,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -997,16 +903,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1087,16 +983,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1167,16 +1053,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -1266,16 +1142,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1349,16 +1215,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1425,16 +1281,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -1503,16 +1349,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1580,16 +1416,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1651,16 +1477,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -1706,17 +1522,7 @@
                   "type": "string"
                 }
               },
-              "responseSchema": [],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
-              ]
+              "responseSchema": []
             },
             {
               "name": "Upload terminal logs to our lambda storage",
@@ -1781,16 +1587,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -1857,16 +1653,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             }
@@ -1944,30 +1730,76 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
-              "name": "seleniumappium log of a test session",
+              "name": "selenium/appium log of a test session",
               "method": "GET",
-              "path": "/seleniumappium-log-of-a-test-session",
-              "servers": [
+              "path": "/sessions/{session_id}/v2/log/selenium",
+              "description": "To fetch selenum/appium log that contains grid requests and reponses of a test session in plain text.",
+              "auth": [
                 {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "message": "URL is succesfully generated",
+                    "status": "success",
+                    "url": "<string>"
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
                 },
                 {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
                 }
               ]
             },
@@ -2040,30 +1872,76 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
-              "name": "consolebrowser log of a test session",
+              "name": "console/browser log of a test session",
               "method": "GET",
-              "path": "/consolebrowser-log-of-a-test-session",
-              "servers": [
+              "path": "/sessions/{session_id}/v2/log/console",
+              "description": "To fetch console/browser log that contains console errors thrown by application during a test session in plain json text.",
+              "auth": [
                 {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "message": "URL is succesfully generated",
+                    "status": "success",
+                    "url": "<string>"
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
                 },
                 {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
                 }
               ]
             },
@@ -2136,16 +2014,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -2217,16 +2085,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -2297,16 +2155,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -2396,16 +2244,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -2488,16 +2326,6 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -2569,16 +2397,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -2635,16 +2453,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             }
@@ -2708,16 +2516,6 @@
                   "required": true,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -2789,16 +2587,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -2855,16 +2643,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -2933,16 +2711,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -2982,17 +2750,7 @@
                   "type": "string"
                 }
               },
-              "responseSchema": [],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
-              ]
+              "responseSchema": []
             }
           ]
         },
@@ -3051,16 +2809,6 @@
                   "required": true,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -3127,16 +2875,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -3194,16 +2932,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -3243,17 +2971,7 @@
                   "type": "string"
                 }
               },
-              "responseSchema": [],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
-              ]
+              "responseSchema": []
             }
           ]
         },
@@ -3345,16 +3063,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -3413,16 +3121,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             }
@@ -3484,16 +3182,6 @@
                   "required": true,
                   "description": "",
                   "hasChildren": true
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             },
@@ -3560,16 +3248,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             },
             {
@@ -3626,16 +3304,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             }
@@ -3722,16 +3390,6 @@
                   "description": "",
                   "hasChildren": false
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
@@ -3809,16 +3467,6 @@
                   "required": false,
                   "description": "",
                   "hasChildren": false
-                }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
                 }
               ]
             }
@@ -3966,34 +3614,9 @@
                   "description": "",
                   "hasChildren": true
                 }
-              ],
-              "servers": [
-                {
-                  "url": "https://api.lambdatest.com/automation/api/v1",
-                  "description": "US"
-                },
-                {
-                  "url": "https://eu-api.lambdatest.com/automation/api/v1",
-                  "description": "EU"
-                }
               ]
             }
           ]
-        }
-      ],
-      "servers": [
-        {
-          "url": "https://api.lambdatest.com/automation/api/v1"
-        },
-        {
-          "url": "https://api.lambdatest.com/automation/api/v2",
-          "description": "V2"
-        },
-        {
-          "url": "https://eu-api.lambdatest.com/automation/api/v1"
-        },
-        {
-          "url": "https://eu-api.lambdatest.com/automation/api/v2"
         }
       ]
     },
@@ -4634,34 +4257,432 @@
           "name": "App Management",
           "endpoints": [
             {
-              "name": "upload framework",
-              "method": "GET",
-              "path": "/upload-framework"
+              "name": "Upload a framework file for testing(Espresso/XCUI)",
+              "method": "POST",
+              "path": "/app/uploadFramework",
+              "description": "Upload a framework file for testing purposes. Supports Espresso for Android and XCUITest for iOS.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "Successfully uploaded the framework.",
+                  "example": {
+                    "app_id": "lt://APP1016038711693231735315475",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "url": "<string>"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "415": {
+                  "description": "Unsupported media type. Ensure the provided file format is valid.",
+                  "example": null,
+                  "type": null
+                },
+                "500": {
+                  "description": "Internal server error. Please try again later.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "app_id",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "type",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "upload app real device",
-              "method": "GET",
-              "path": "/upload-app-real-device"
+              "name": "Upload Application to a Real Device",
+              "method": "POST",
+              "path": "/app/upload/realDevice",
+              "description": "Upload an application (.ipa,.apk,.aab) for testing on a real device.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "Application successfully uploaded for testing.",
+                  "example": {
+                    "app_id": "APP10160502401693989036908244",
+                    "name": "Appname",
+                    "type": "android",
+                    "app_url": "lt://APPID",
+                    "url": "APP_URL",
+                    "custom_id": "Custom"
+                  },
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "415": {
+                  "description": "Unsupported media type. Ensure the provided file format is valid.",
+                  "example": null,
+                  "type": null
+                },
+                "500": {
+                  "description": "Internal server error. Please try again later.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "app_id",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "type",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "app_url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "custom_id",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "fetch all uploaded apps",
+              "name": "Fetch all uploaded applications",
               "method": "GET",
-              "path": "/fetch-all-uploaded-apps"
+              "path": "/app/data",
+              "description": "Fetch all applications based on the provided type (android/iOS) and access level (user/organization).",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "type",
+                  "type": "string",
+                  "in": "query",
+                  "required": true,
+                  "description": "Application type (android/iOS)"
+                },
+                {
+                  "name": "level",
+                  "type": "string",
+                  "in": "query",
+                  "required": true,
+                  "description": "Access level (user/organization)"
+                },
+                {
+                  "name": "offset",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "Page offset defines the number of records to skip before fetching data. It is used along with the limit to fetch a specific page of data."
+                },
+                {
+                  "name": "limit",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch specified number of records. e.g. limit=10"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successfully retrieved applications.",
+                  "example": {
+                    "metaData": {
+                      "type": "<string>",
+                      "total": 123
+                    },
+                    "data": [
+                      {
+                        "app_id": "<string>",
+                        "name": "<string>",
+                        "type": "<string>",
+                        "updated_at": "2018-03-15T12:00:00Z",
+                        "shared": true,
+                        "source": "<string>"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "404": {
+                  "description": "Resource not found.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "metaData",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "data",
+                  "type": "array",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             },
             {
-              "name": "get app by custom id",
+              "name": "Get data by Custom ID",
               "method": "GET",
-              "path": "/get-app-by-custom-id"
+              "path": "/app/custom_id/{customId}",
+              "description": "Retrieve data by custom ID from LambdaTest.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "customId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "The custom ID to retrieve data for"
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "metadataPresent",
+                  "type": "boolean",
+                  "in": "query",
+                  "required": true,
+                  "description": "Specify if metadata is present (true or false)"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful response",
+                  "example": [
+                    {
+                      "app_id": "<string>",
+                      "source": "<string>",
+                      "type": "android",
+                      "url": "<string>",
+                      "patched_url": "<string>",
+                      "name": "<string>",
+                      "custom_id": "<string>",
+                      "md5_hash": "<string>",
+                      "cf_url": "<string>",
+                      "cf_ap_url": "<string>",
+                      "cf_patched_url": "<string>",
+                      "cf_ap_patched_url": "<string>"
+                    }
+                  ],
+                  "type": "array"
+                }
+              },
+              "responseSchema": []
             },
             {
-              "name": "delete uploaded apps",
-              "method": "GET",
-              "path": "/delete-uploaded-apps"
+              "name": "Delete your uploaded applications",
+              "method": "DELETE",
+              "path": "/app/delete",
+              "description": "Delete the uploaded applications based on the provided appIds.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "Successfully deleted the selected application(s).",
+                  "example": {
+                    "message": "Deleted successfully."
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "Bad request. Invalid input or missing parameters.",
+                  "example": null,
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "default": {
+                  "description": "An unexpected error occurred.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "delete single app",
-              "method": "GET",
-              "path": "/delete-single-app"
+              "name": "Delete a single uploaded application",
+              "method": "DELETE",
+              "path": "/app/{appId}",
+              "description": "Deletes an uploaded application using its unique `appId`.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "appId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "The ID of the application to delete (e.g., `APP1234567890`)."
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Application deleted successfully.",
+                  "example": {
+                    "message": "Deleted successfully."
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "Bad request. Invalid or missing appId.",
+                  "example": null,
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "404": {
+                  "description": "Application not found.",
+                  "example": null,
+                  "type": null
+                },
+                "default": {
+                  "description": "An unexpected error occurred.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             }
           ]
         },
@@ -4729,9 +4750,61 @@
               "responseSchema": []
             },
             {
-              "name": "delete media asset",
-              "method": "GET",
-              "path": "/delete-media-asset"
+              "name": "Delete a media asset",
+              "method": "DELETE",
+              "path": "/mfs/v1.0/media/{media_id}",
+              "description": "Deletes the media files associated with the given `media_id`.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "media_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "The Media Id to retrieve data for deletion."
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successfully deleted the selected media(s).",
+                  "example": {
+                    "Status": "Deleted successfully."
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "Bad request. Invalid input or missing parameters.",
+                  "example": null,
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized access. Authentication required.",
+                  "example": null,
+                  "type": null
+                },
+                "default": {
+                  "description": "An unexpected error occurred.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
               "name": "Upload Media File (Image/Video/Document/Certificate)",
@@ -4886,9 +4959,47 @@
               "responseSchema": []
             },
             {
-              "name": "get concurrency details",
+              "name": "Get your account's concurrency details",
               "method": "GET",
-              "path": "/get-concurrency-details"
+              "path": "/org/concurrency",
+              "description": "Retrieve the concurrency details for your account.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation ()",
+                  "example": {
+                    "data": {
+                      "max_concurrency": 123,
+                      "max_queue": 123,
+                      "queued": 123,
+                      "running": 123
+                    }
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             }
           ]
         },
@@ -5112,14 +5223,7 @@
                   "type": "string",
                   "in": "query",
                   "required": false,
-                  "description": "To fetch the list of builds with specific status. You can pass multiple comma seperated status e.g. running,queued,completed,timeout and error.",
-                  "enum": [
-                    "running",
-                    "queued",
-                    "completed",
-                    "timeout",
-                    "error"
-                  ]
+                  "description": "To fetch the list of builds with specific status. You can pass multiple comma seperated status e.g. running,queued,completed,timeout and error."
                 },
                 {
                   "name": "fromdate",
@@ -5208,9 +5312,85 @@
               ]
             },
             {
-              "name": "fetch build details",
+              "name": "Fetch specified build details",
               "method": "GET",
-              "path": "/fetch-build-details"
+              "path": "/builds/{build_id}",
+              "description": "To fetch build details of the buildid specified by the user.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "build_id",
+                  "type": "integer",
+                  "in": "path",
+                  "required": true,
+                  "description": "Build ID that details you want to fetch"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "data": {
+                      "build_id": 1,
+                      "name": "asdaskjaaa",
+                      "user_id": 1212,
+                      "username": "john smith",
+                      "status_ind": "completed",
+                      "create_timestamp": "2018-12-23 14:30:14",
+                      "end_timestamp": "2018-12-25 12:46:38",
+                      "tags": [
+                        "tag1",
+                        "tag2",
+                        "tag3"
+                      ]
+                    },
+                    "message": "Retrieve build list was successful",
+                    "status": "success"
+                  },
+                  "type": null
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                },
+                "404": {
+                  "description": "Resource not found",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
               "name": "Delete Build",
@@ -5356,9 +5536,59 @@
               ]
             },
             {
-              "name": "stop running build",
-              "method": "GET",
-              "path": "/stop-running-build"
+              "name": "Stop a running build",
+              "method": "PUT",
+              "path": "/builds/{build_id}/stop",
+              "description": "Stops the execution of a running build using its `build_id`.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "build_id",
+                  "type": "integer",
+                  "in": "path",
+                  "required": true,
+                  "description": "The ID of the build to stop."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "Build stopped successfully.",
+                  "example": null,
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized. Invalid or missing authentication.",
+                  "example": null,
+                  "type": null
+                },
+                "404": {
+                  "description": "Build ID not found.",
+                  "example": null,
+                  "type": null
+                },
+                "409": {
+                  "description": "Stop request already in progress.",
+                  "example": null,
+                  "type": null
+                },
+                "500": {
+                  "description": "Internal server error.",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": []
             }
           ]
         },
@@ -5366,19 +5596,324 @@
           "name": "Session",
           "endpoints": [
             {
-              "name": "fetch all sessions",
+              "name": "Fetch list of all sessions",
               "method": "GET",
-              "path": "/fetch-all-sessions"
+              "path": "/sessions",
+              "description": "To fetch list of sessions. You can also limit the number of records, and paginate through your data using Parameters.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "build_id",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "To filter sessions of specific build."
+                },
+                {
+                  "name": "username",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To filter sessions of specific user."
+                },
+                {
+                  "name": "offset",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "It defines the number of lists on the basis of limit parameter. e.g offset=10"
+                },
+                {
+                  "name": "limit",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch specified number of records. e.g. limit=10"
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch the list of sessions with specific status. You can pass multiple comma seperated status e.g. queued,completed,passed,failed,timeout,error and lambda error."
+                },
+                {
+                  "name": "fromdate",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch the list of sessions that executed from the specified Start Date. The Date format must be YYYY-MM-DD. e.g. \"2018-03-15\"."
+                },
+                {
+                  "name": "todate",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch the list of sessions that executed till the specified End Date. If both fromdate and todate value provided then it works as range filter. The Date format must be YYYY-MM-DD. e.g. \"2018-03-15\"."
+                },
+                {
+                  "name": "sort",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To sort the list in ascending or descending order using multiple keys. e.g. \"asc.user_id,desc.duration\""
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "Meta": {
+                      "attributes": {
+                        "org_id": 123
+                      },
+                      "result_set": {
+                        "count": 1,
+                        "limit": 1,
+                        "offset": 123,
+                        "total": 100
+                      }
+                    },
+                    "data": [
+                      {
+                        "test_id": "Z17EF-OPUKH-BDAE8-YEPXU",
+                        "build_id": 1,
+                        "build_name": "MACOS 10.12-CHROME-2018-12-23",
+                        "user_id": 250563,
+                        "username": "bahubali",
+                        "status_ind": "passed",
+                        "create_timestamp": "2019-02-05 08:24:36",
+                        "start_timestamp": "2019-02-05 08:24:58",
+                        "end_timestamp": "2019-02-05 08:27:22",
+                        "remark": "completed",
+                        "platform": "android",
+                        "version": "12",
+                        "name": "Google Pixel 6_12_1JNEQOQMS1",
+                        "session_id": "e7f2d7jkwdkbjdsvbkc8d0569",
+                        "device": "Google Pixel 6",
+                        "duration": "369",
+                        "tag": [
+                          "tag1",
+                          "tag2",
+                          "tag3"
+                        ],
+                        "appium_logs": "sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/appium",
+                        "console_logs": "sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/console",
+                        "network_logs": "sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/network",
+                        "device_logs": "sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/devicelog",
+                        "command_logs": "sessions/jnwkdnkvdsf0c4-4jnkdjkbdvscbfc5/log/command",
+                        "video_url": "?mobile=true&testID=AMABJDFAB9G&auth=0880eb1993ghkdjsvkbjfd",
+                        "screenshot_url": "http://dmanfqoqano.cloudfront.net/orgId-0/AIQBFMANNB9G/screenshots.zip"
+                      }
+                    ]
+                  },
+                  "type": null
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                },
+                "404": {
+                  "description": "Not Found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "Meta",
+                  "type": "object",
+                  "required": true,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "data",
+                  "type": "array",
+                  "required": true,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             },
             {
-              "name": "get session info",
+              "name": "session specific information",
               "method": "GET",
-              "path": "/get-session-info"
+              "path": "/sessions/{session_id}",
+              "description": "To fetch specified session details such as name, status,os,browser,version and all generated logs endpoint.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "SESSION ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "data": {
+                      "test_id": "Z17EF-OPUKH-BDAE8-YEPXU",
+                      "build_id": 1,
+                      "name": "mytest",
+                      "user_id": 250563,
+                      "username": "bahubali",
+                      "duration": 123,
+                      "platform": "win10",
+                      "browser": "chrome",
+                      "browser_version": "71.0",
+                      "device": "<string>",
+                      "status_ind": "<string>",
+                      "session_id": "bc02fd99593f14e37850745d66197f89",
+                      "build_name": "my-build",
+                      "create_timestamp": "2019-02-05 08:24:36",
+                      "start_timestamp": "2019-02-05 08:24:58",
+                      "end_timestamp": "2019-02-05 08:27:22",
+                      "remark": "completed",
+                      "console_logs_url": "https://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/console",
+                      "network_logs_url": "https://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/network",
+                      "command_logs_url": "http://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/command",
+                      "appium_logs_url": "http://api.lambdatest.com/automation/api/v1/sessions/bc02fd99593f14e37850745d66197f89/log/appium",
+                      "screenshot_url": "https://s3.amazonaws.com/ml-screenshots/00HIR-IQNLL-SDVHV-KDTBM/video/index.m3u8",
+                      "video_url": "https://d15x9hjibri3lt.cloudfront.net/00HIR-IQNLL-SDVHV-KDTBM/screenshots.zip",
+                      "customData": {}
+                    },
+                    "message": "Retrieve session was successful",
+                    "status": "success"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                },
+                "404": {
+                  "description": "Resource associated to session_id is not available.",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "pet status in the store",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "delete session",
-              "method": "GET",
-              "path": "/delete-session"
+              "name": "Delete test session",
+              "method": "DELETE",
+              "path": "/sessions/{session_id}",
+              "description": "Delete a session.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "SESSION ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "message": "Session deleted successfully",
+                    "status": "success"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                },
+                "403": {
+                  "description": "Forbidden! Operation not allowed.",
+                  "example": {
+                    "message": "Forbidden! Operation not allowed.",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "404": {
+                  "description": "Resource associated to session_id is not available.",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
               "name": "Update session name and status.",
@@ -5463,19 +5998,185 @@
               ]
             },
             {
-              "name": "fetch session video",
+              "name": "Fetch recorded video of a test session id.",
               "method": "GET",
-              "path": "/fetch-session-video"
+              "path": "/sessions/{session_id}/video",
+              "description": "To fetch video of a recorded test session.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "message": "Retrieve video url was successful",
+                    "status": "success",
+                    "url": "<string>",
+                    "view_video_url": "<string>"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                },
+                "404": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "message",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "view_video_url",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "fetch session app url",
+              "name": "Fetch the app URL for a particular session",
               "method": "GET",
-              "path": "/fetch-session-app-url"
+              "path": "/metadata/{session_id}/details",
+              "description": "Retrieve the app URL being used for a specific session.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "ID of the session"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "appUrl": "<string>"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "appUrl",
+                  "type": "string",
+                  "required": true,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "stop running session",
-              "method": "GET",
-              "path": "/stop-running-session"
+              "name": "Stop a running test session",
+              "method": "PUT",
+              "path": "/sessions/{test_id}/stop",
+              "description": "Stops a running test session using its `test_id`",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "test_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "The ID of the session (test) to stop."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "Test Session stopped successfully.",
+                  "example": null,
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized request.",
+                  "example": null,
+                  "type": null
+                },
+                "404": {
+                  "description": "Test Id not found.",
+                  "example": null,
+                  "type": null
+                },
+                "409": {
+                  "description": "Stop Already in Progress.",
+                  "example": null,
+                  "type": null
+                },
+                "500": {
+                  "description": "Internal Server Error",
+                  "example": null,
+                  "type": null
+                }
+              },
+              "responseSchema": []
             }
           ]
         },
@@ -5483,29 +6184,366 @@
           "name": "Session Logs",
           "endpoints": [
             {
-              "name": "get command logs",
+              "name": "command logs of a test session",
               "method": "GET",
-              "path": "/get-command-logs"
+              "path": "/sessions/{session_id}/log/command",
+              "description": "To fetch the all executed commands of a test session in plain json text.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "pageoffset",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "Page offset defines the number of records to skip, based on the limit parameter, to fetch a specific page of data. e.g pageoffset=10"
+                },
+                {
+                  "name": "limit",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "To fetch specified number of records. e.g. limit=10"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "Value": {
+                      "logType": "requestLog",
+                      "testID": "5HLCQ-HPCWH-UOE2O-2CUFA",
+                      "status": 0,
+                      "timestamp": 1551356385,
+                      "orgID": 0,
+                      "requestId": "82e3b7cd-3b04-4bc8-9d2b-567aff450fe4",
+                      "RequestStartTime": 1551356385,
+                      "requestMethod": "POST",
+                      "requestPath": "/wd/hub/session/2F42BCCC-BF43-426A-A72F-F58F58167496/element/node-DF5D363E-84A2-4CA4-9AC4-0F398C606082/click",
+                      "duration": 8,
+                      "requestBody": "{\"sessionId\": \"2F42BCCC-BF43-426A-A72F-F58F58167496\", \"id\": \"node-DF5D363E-84A2-4CA4-9AC4-0F398C606082\"}",
+                      "responseBody": "{\"status\":0,\"sessionId\":\"2F42BCCC-BF43-426A-A72F-F58F58167496\",\"value\":{}}",
+                      "responseStatus": "200 OK",
+                      "screenshotId": "56bcabhakjasnac75142bc"
+                    }
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "Value",
+                  "type": "object",
+                  "required": true,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             },
             {
-              "name": "get appium logs",
+              "name": "appium log of a test session",
               "method": "GET",
-              "path": "/get-appium-logs"
+              "path": "/sessions/{session_id}/log/appium",
+              "description": "To fetch appium log that contains grid requests and reponses of a test session in plain json text.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": null,
+                  "type": null
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": []
             },
             {
-              "name": "get network logs",
+              "name": "Network log of a test session",
               "method": "GET",
-              "path": "/get-network-logs"
+              "path": "/sessions/{session_id}/log/network",
+              "description": "To fetch Network log that contains all the requested urls of a test session in plain json text.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "get logs based on session id"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "_id": "uigakk12kbad",
+                    "cache": {},
+                    "startedDateTime": "2022-03-14T08:48:33.516688738Z",
+                    "time": 0,
+                    "timings": {
+                      "receive": 0,
+                      "send": 0,
+                      "wait": 0
+                    },
+                    "request": {
+                      "bodySize": 0,
+                      "cookies": [
+                        "<string>"
+                      ],
+                      "headers": [
+                        "<string>"
+                      ],
+                      "headersSize": -1,
+                      "httpVersion": "HTTP/1.1",
+                      "method": "CONNECT",
+                      "queryString": [
+                        "<string>"
+                      ],
+                      "url": "http://testing.com"
+                    },
+                    "response": {
+                      "bodySize": 0,
+                      "content": {
+                        "encodeing": "base64",
+                        "mimeType": "",
+                        "text": "",
+                        "size": 0
+                      },
+                      "cookies": [
+                        "<string>"
+                      ],
+                      "headers": [
+                        "<string>"
+                      ],
+                      "headersSize": -1,
+                      "httpVersion": "HTTP/1.1",
+                      "redirectURL": "",
+                      "status": 200,
+                      "statusText": "OK"
+                    }
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "_id",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "cache",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "startedDateTime",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "time",
+                  "type": "integer",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                },
+                {
+                  "name": "timings",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "request",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "response",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             },
             {
-              "name": "get device logs",
+              "name": "devicelog log of a test session",
               "method": "GET",
-              "path": "/get-device-logs"
+              "path": "/sessions/{session_id}/log/devicelog",
+              "description": "To fetch devicelog log that contains devicelog errors thrown by application during a test session in plain json text.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": null,
+                  "type": null
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": []
             },
             {
-              "name": "get device logs zip",
+              "name": "devicelog custom logs of a test session in .zip file",
               "method": "GET",
-              "path": "/get-device-logs-zip"
+              "path": "/sessions/{session_id}/log/devicelogzip",
+              "description": "To fetch devicelog in zipped format that contains all device logs including custom logs generated during a test session.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "session_id",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "Session ID"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Zipped device logs fetched successfully.",
+                  "example": null,
+                  "type": null
+                },
+                "400": {
+                  "description": "session id not found",
+                  "example": {
+                    "message": "Either resource not found or already deleted",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                },
+                "401": {
+                  "description": "Access denied. Auth error.",
+                  "example": "HTTP Basic: Access denied.",
+                  "type": "string"
+                }
+              },
+              "responseSchema": []
             }
           ]
         }
@@ -5520,24 +6558,379 @@
           "noHeading": true,
           "endpoints": [
             {
-              "name": "upload screenshot",
-              "method": "GET",
-              "path": "/upload-screenshot"
+              "name": "Upload any locally captured images to SmartUI for visual regression testing.Maximum Upload Size:100MB",
+              "method": "POST",
+              "path": "/v2/upload",
+              "description": "Using this API you can upload any local images to our cloud comparsion. You can upload images and add their meta-data information to map the screenshots for comparsion.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "requestBody": {
+                "schema": "see OpenAPI spec"
+              },
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "example": {
+                    "data": {
+                      "filesUploaded": {
+                        "error": "",
+                        "message": "",
+                        "fileName": "Screenshot 2022-12-05 at 5.00.37 PM.png",
+                        "screenshotName": "screenshot1"
+                      },
+                      "buildName": "build-1",
+                      "buildId": "f3e9bf89-4b61-4eb2-ad60-aaa72150d05e",
+                      "projectName": "demo-project",
+                      "totalFilesUploaded": 1,
+                      "projectId": "65bd1675-fe42-40bf-9698-7610cb4211bd"
+                    },
+                    "status": "success"
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "Invalid/Missing Project Token . Missing mandatory parameters or wrong input.",
+                  "example": {
+                    "data": "Please Specify Project Token. It is a mandatory parameter",
+                    "message": "error",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "get build status",
+              "name": "Fetch build status by buildId or buildName",
               "method": "GET",
-              "path": "/get-build-status"
+              "path": "/build/status",
+              "description": "This API fetches the build status along with the count of different screenshot statuses. **Note:** When both `buildId` and `buildName` are provided in the request, `buildId` will be given priority over `buildName`.\n",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "projectToken",
+                  "type": "string",
+                  "in": "query",
+                  "required": true,
+                  "description": "Validate and map the project in which the build exists"
+                },
+                {
+                  "name": "buildId",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Unique ID for the build. You can get it from the URL of build's tests page."
+                },
+                {
+                  "name": "buildName",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Name of the build. (For storybook project, provide build ID)"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "data": {
+                      "changesFound": 2,
+                      "approved": 3,
+                      "underReview": 0,
+                      "rejected": 0,
+                      "buildId": "2423e94d-7f12-460c-8de7-e35db3698d8a",
+                      "buildName": "c24dd3e",
+                      "projectName": "web-project",
+                      "buildStatus": "Changes Need Approval",
+                      "message": "Fetched Build Status Successfully"
+                    },
+                    "status": "success"
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "Mandatory parameters are missing/empty in request. Please add/correct them in query parameters",
+                  "example": {
+                    "data": {
+                      "data": {
+                        "changesFound": 0,
+                        "approved": 0,
+                        "underReview": 0,
+                        "rejected": 0,
+                        "buildId": "",
+                        "buildName": "",
+                        "projectName": "",
+                        "buildStatus": "",
+                        "message": ""
+                      }
+                    },
+                    "message": "Mandatory parameters are missing/empty in request. Please add/correct them in query parameters",
+                    "status": "fail"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "get screenshot build status",
+              "name": "Fetch build status by buildId / buildName",
               "method": "GET",
-              "path": "/get-screenshot-build-status"
+              "path": "/screenshot/build/status",
+              "description": "This API fetches the status of all screenshots which are uploaded to smartui using either build id or build name. **Note:** When both `buildId` and `buildName` are provided in the request, `buildId` will be given priority over `buildName`.\n",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "projectToken",
+                  "type": "string",
+                  "in": "query",
+                  "required": true,
+                  "description": "To validate the project in which you want to map your uploaded screenshots"
+                },
+                {
+                  "name": "buildId",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "You can pass the id of speicifc build if you need to map multiple screenshots of different tests to one build. (Optional)"
+                },
+                {
+                  "name": "buildName",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "You can pass the name of specific build if you need to map multiple screenshots of different tests to one build. (Optional)"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "data": {
+                      "Screenshots": [
+                        {
+                          "screenshotId": "3137e779-e00a-4d88-8cbe-9ff2eb8cceaf",
+                          "mismatchPercentage": 12.65,
+                          "threshold": 1200,
+                          "status": "Under Screening"
+                        }
+                      ],
+                      "buildId": "50af60e1-8709-40b1-981f-19636de5a590",
+                      "buildName": "0e1915b",
+                      "projectName": "FPS-Monterey",
+                      "buildStatus": "1 Under Review"
+                    },
+                    "status": "success"
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "Either Screenshot don't exist or bad input",
+                  "example": {
+                    "data": {
+                      "Screenshots": "null",
+                      "buildId": "f3e9bf89-4b61-4eb2-ad60-aaa72150d05e",
+                      "buildName": "build-1",
+                      "projectName": "demo-project"
+                    },
+                    "status": "success"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "data",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": false
+                }
+              ]
             },
             {
-              "name": "get build screenshots",
+              "name": "Fetch SmartUI build screenshots by project_id and build_id",
               "method": "GET",
-              "path": "/get-build-screenshots"
+              "path": "/build/screenshots",
+              "description": "This API fetches all screenshots of a particular build with comparison details. **Note:** When both `build_id` and `build_name` are provided in the request, `buildId` will be given priority over `buildName`.\n",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "project_name",
+                  "type": "string",
+                  "in": "query",
+                  "required": true,
+                  "description": "The name of the particular project (project id can also be used)"
+                },
+                {
+                  "name": "project_id",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Unique identifier of the project (project name can also be used)"
+                },
+                {
+                  "name": "build_name",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Build name can also be used instead of build Id (Optional)"
+                },
+                {
+                  "name": "build_id",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Fetches all the screenshots of a particular build"
+                },
+                {
+                  "name": "baseline",
+                  "type": "boolean",
+                  "in": "query",
+                  "required": false,
+                  "description": "Fetches the screenshots of the baseline build of the project"
+                },
+                {
+                  "name": "screenshot_name",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Fetches details of a specific screenshot"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "screenshots": [
+                      {
+                        "screenshot_name": "first",
+                        "captured_image": "URL",
+                        "baseline_image": "URL",
+                        "compared_image": "URL",
+                        "browser_name": "chrome",
+                        "browser_version": "118.0",
+                        "viewport": "1920x1080",
+                        "os": "default",
+                        "mismatch_percentage": 0.1,
+                        "status": "Approved",
+                        "approved_by": "dummy",
+                        "captured_image_timestamp": "2023-11-10 13:47:24",
+                        "compared_image_timestamp": "2023-11-10 13:47:29"
+                      }
+                    ],
+                    "build": {
+                      "build_id": "c74f72b5-2dd9-42a4-9478-cd8174a56152",
+                      "name": "build-1",
+                      "baseline": false,
+                      "build_status": "Approved"
+                    },
+                    "project": {
+                      "project_id": "ed2ee7bc-d90d-4719-91a7-19636de5a590",
+                      "name": "web-project",
+                      "username": "dummy"
+                    }
+                  },
+                  "type": "object"
+                },
+                "400": {
+                  "description": "Either Screenshot don't exist or bad input specified",
+                  "example": {
+                    "error": "smartui project not found for specified input"
+                  },
+                  "type": "object"
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "screenshots",
+                  "type": "array",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "build",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "project",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             }
           ]
         }
@@ -14095,9 +15488,229 @@
           "noHeading": true,
           "endpoints": [
             {
-              "name": "get test issues",
+              "name": "Get Test Issue Data",
               "method": "GET",
-              "path": "/get-test-issues"
+              "path": "/api/v1/test-issue/{testId}",
+              "description": "This endpoint retrieves accessibility test issues based on the provided test ID with filters such as impact, best practice and needs review parameters in the query string.\n\n### Request\n\n- Method: GET\n- Path Parameter:\n\n    - testId (string): Test ID of the accessibility test.\n\n- Query Parameters:\n\n    - impact (string): [minor, moderate, critical and serious].\n\n    - bestPractice (boolean)\n\n    - needsReview (boolean)",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "pathParams": [
+                {
+                  "name": "testId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": ""
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "impact",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": ""
+                },
+                {
+                  "name": "bestPractice",
+                  "type": "boolean",
+                  "in": "query",
+                  "required": false,
+                  "description": ""
+                },
+                {
+                  "name": "needsReview",
+                  "type": "boolean",
+                  "in": "query",
+                  "required": false,
+                  "description": ""
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "example": {
+                    "test_info": {
+                      "total_issues": 18,
+                      "critical_issues": 4,
+                      "minor_issues": 1,
+                      "moderate_issues": 9,
+                      "serious_issues": 4,
+                      "test_id": "LAT-0LO26CZII1HQOO42TCFYY",
+                      "scan_type": "workflow",
+                      "org_id": 33464884,
+                      "status": "completed",
+                      "user_id": 1000137129,
+                      "test_name": "Workflow Scan | 1725000152130",
+                      "created_at": "2024-08-30T06:42:33Z",
+                      "active": true,
+                      "updated_at": "2024-08-30T06:42:33Z",
+                      "username": "amanraj",
+                      "email": "amanraj@lambdatest.com",
+                      "test_type": "manual"
+                    },
+                    "scan_json": [
+                      {
+                        "test_id": "LAT-0LO26CZII1HQOO42TCFYY",
+                        "url": "https://www.google.com/",
+                        "issue_count": 8,
+                        "scan_id": "BZLZFQLT",
+                        "accessibility_score": 98,
+                        "standard": "wcag21aa",
+                        "startDate": "2024-08-30T06:43:14.462Z",
+                        "current_timestamp": 1725000194,
+                        "scanType": "workflow",
+                        "axeVersion": "4.9.1",
+                        "extensionVersion": "1.1.1",
+                        "bestPracticesEnabled": true,
+                        "needsReviewEnabled": true,
+                        "allIssues": [
+                          {
+                            "bestPractice": false,
+                            "class": "",
+                            "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+                            "failureSummary": "Fix any of the following:\n  No valid skip link found\n  Page does not have a heading\n  Page does not have a landmark region",
+                            "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/bypass?application=axeAPI",
+                            "html": "PGh0bWwgaXRlbXNjb3BlPSIiIGl0ZW10eXBlPSJodHRwOi8vc2NoZW1hLm9yZy9XZWJQYWdlIiBsYW5nPSJlbi1JTiI+",
+                            "htmlTagName": "html",
+                            "id": "bypass",
+                            "impact": "serious",
+                            "issueId": "VqHh3wClrw",
+                            "name": "Page must have means to bypass repeated blocks",
+                            "needsReview": true,
+                            "target": "html",
+                            "url": "https://www.google.com/",
+                            "wcagGuideline": "WCAG 2.0",
+                            "wcagVersion": [
+                              "2.4.1"
+                            ],
+                            "xpath": "/html"
+                          }
+                        ],
+                        "failedRules": [
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "aria-allowed-role"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "landmark-one-main"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "page-has-heading-one"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "region"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "aria-valid-attr-value"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "bypass"
+                          }
+                        ],
+                        "issueSummary": {
+                          "bestPractices": 6,
+                          "critical": 1,
+                          "minor": 1,
+                          "moderate": 5,
+                          "needsReview": 2,
+                          "serious": 1
+                        },
+                        "needsReview": [
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "aria-valid-attr-value"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "bypass"
+                          }
+                        ],
+                        "source": {
+                          "productName": "LambdaTest Accessibility DevTools",
+                          "productVersion": "1.1.1"
+                        }
+                      },
+                      {
+                        "test_id": "LAT-0LO26CZII1HQOO42TCFYY",
+                        "url": "https://w3school.com/",
+                        "issue_count": 10,
+                        "scan_id": "IA9EKXIE",
+                        "accessibility_score": 99,
+                        "standard": "wcag21aa",
+                        "startDate": "2024-08-30T06:43:14.462Z",
+                        "current_timestamp": 1725000194,
+                        "scanType": "workflow",
+                        "axeVersion": "4.9.1",
+                        "extensionVersion": "1.1.1",
+                        "bestPracticesEnabled": true,
+                        "needsReviewEnabled": true,
+                        "failedRules": [
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "image-alt"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "landmark-one-main"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "link-name"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "page-has-heading-one"
+                          },
+                          {
+                            "count": 1,
+                            "mode": "automated",
+                            "name": "region"
+                          }
+                        ],
+                        "issueSummary": {
+                          "bestPractices": 4,
+                          "critical": 3,
+                          "minor": 0,
+                          "moderate": 4,
+                          "needsReview": 0,
+                          "serious": 3
+                        },
+                        "source": {
+                          "productName": "LambdaTest Accessibility DevTools",
+                          "productVersion": "1.1.1"
+                        }
+                      }
+                    ]
+                  },
+                  "type": null
+                }
+              },
+              "responseSchema": []
             }
           ]
         }
@@ -14112,9 +15725,167 @@
           "noHeading": true,
           "endpoints": [
             {
-              "name": "get rca",
+              "name": "Get AI-powered Root Cause Analysis for test failures.",
               "method": "GET",
-              "path": "/get-rca"
+              "path": "/public/rca",
+              "description": "This endpoint retrieves the AI-powered Root Cause Analysis (RCA) for the specified test, job, task, or stage IDs. The RCA returned by this API matches the same test-level AI RCA displayed on the UI dashboard.\n\nAt least one of test_ids, job_ids, task_ids, or stage_ids must be provided.",
+              "auth": [
+                {
+                  "name": "Authorization",
+                  "type": "string",
+                  "in": "header",
+                  "required": true,
+                  "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
+                }
+              ],
+              "queryParams": [
+                {
+                  "name": "test_ids",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Comma-separated list of test IDs to fetch RCA for."
+                },
+                {
+                  "name": "job_ids",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Comma-separated list of job IDs to fetch RCA for."
+                },
+                {
+                  "name": "task_ids",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Comma-separated list of task IDs to fetch RCA for."
+                },
+                {
+                  "name": "stage_ids",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "Comma-separated list of stage IDs to fetch RCA for."
+                },
+                {
+                  "name": "page",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "Page number for paginated results. Default is 1."
+                },
+                {
+                  "name": "limit",
+                  "type": "integer",
+                  "in": "query",
+                  "required": false,
+                  "description": "Maximum number of records to return per page. Default is 10."
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful operation",
+                  "example": {
+                    "status": "success",
+                    "data": [
+                      {
+                        "test_id": "RMAA-AND-160849-XXXX",
+                        "job_id": "e3251d99-805a-4b3f-a3f5-c0ea9b1d2e3f",
+                        "stage_id": "stage-xyz-67890",
+                        "task_id": "task-abc-12345",
+                        "build_id": "290136414",
+                        "rca_category": "Test Data Issue",
+                        "create_timestamp": "2026-03-05T11:13:32Z",
+                        "rca_detail": {
+                          "root_cause_category": "Test Data Issue",
+                          "parent_failure_category": "Infrastructure Issue",
+                          "failure_summary": "App could not reach backend server, so the expected button was not displayed and the test failed.",
+                          "stack_trace": "org.openqa.selenium.NoSuchElementException: no such element...",
+                          "root_cause_failure_stack_trace": "java.net.ConnectException: Connection refused (Connection refused)...",
+                          "analysis": [
+                            "Device logs show the app could not connect to the backend server.",
+                            "Because the server call failed, the expected UI element was never loaded."
+                          ],
+                          "steps_to_fix": [
+                            {
+                              "issue": "Backend server not reachable from the test device.",
+                              "module": "Mobile app backend connection",
+                              "suggested_fix": "Ensure the backend server is accessible from the test environment."
+                            }
+                          ],
+                          "error_timeline": [
+                            {
+                              "step_name": "App connects to backend",
+                              "timestamp": "2026-03-05T11:17:22Z",
+                              "source_log": "Device Logs",
+                              "summary": "Connection to backend server timed out."
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "pagination": {
+                      "limit": 10,
+                      "page": 1,
+                      "total": 1
+                    }
+                  },
+                  "type": null
+                },
+                "400": {
+                  "description": "Bad request error occurred while processing the request.",
+                  "example": {
+                    "error": "at least one of test_ids, job_ids, task_ids, or stage_ids is required",
+                    "status": "failed"
+                  },
+                  "type": null
+                },
+                "401": {
+                  "description": "Unauthorized. Invalid or expired authentication token.",
+                  "example": {
+                    "message": "Invalid Token"
+                  },
+                  "type": null
+                },
+                "403": {
+                  "description": "Forbidden. Authorization token is missing from the request.",
+                  "example": {
+                    "message": "Authorization token missing."
+                  },
+                  "type": null
+                },
+                "500": {
+                  "description": "Server-side error occurred while processing the request.",
+                  "example": {
+                    "error": "error getting rca data",
+                    "status": "failed"
+                  },
+                  "type": null
+                }
+              },
+              "responseSchema": [
+                {
+                  "name": "status",
+                  "type": "string",
+                  "required": false,
+                  "description": "Status of the API response.",
+                  "hasChildren": false
+                },
+                {
+                  "name": "data",
+                  "type": "array",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                },
+                {
+                  "name": "pagination",
+                  "type": "object",
+                  "required": false,
+                  "description": "",
+                  "hasChildren": true
+                }
+              ]
             }
           ]
         }
