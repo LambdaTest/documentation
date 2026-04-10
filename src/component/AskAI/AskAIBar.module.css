@@ -253,9 +253,4 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
-  .drawer {
-    width: 100vw;
-    border-left: none;
-  }
-}
+/* Panel auto-closes at ≤996px via JS; no CSS override needed */

@@ -29,6 +29,18 @@ export default function AskAIBar() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, closePanel]);
 
+  // Auto-close panel when viewport is too narrow (≤996px)
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 996px)');
+    function handleNarrow(e) {
+      if (e.matches && isOpen) closePanel();
+    }
+    mql.addEventListener('change', handleNarrow);
+    // Also close immediately if already narrow when panel opens
+    if (mql.matches && isOpen) closePanel();
+    return () => mql.removeEventListener('change', handleNarrow);
+  }, [isOpen, closePanel]);
+
   // When AI panel opens: narrow the entire #__docusaurus root (navbar + content)
   // so the whole layout shifts left and the panel fills the right 420px.
   // Also toggle a body class so CSS can hide the right panel and show inline code examples.
