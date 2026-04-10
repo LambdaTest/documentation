@@ -29,30 +29,30 @@ export default function AskAIBar() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, closePanel]);
 
-  // When AI panel opens: narrow only .main-wrapper (NOT #__docusaurus) so the navbar
-  // stays full-width and fills the area above the drawer — eliminating the visual gap.
+  // When AI panel opens: narrow the entire #__docusaurus root (navbar + content)
+  // so the whole layout shifts left and the panel fills the right 420px.
   // Also toggle a body class so CSS can hide the right panel and show inline code examples.
   useEffect(() => {
-    const mw = document.querySelector('.main-wrapper');
+    const root = document.getElementById('__docusaurus');
     if (isOpen) {
       document.body.classList.add('ai-panel-open');
-      if (mw) {
-        mw.style.transition = 'padding-right 0.25s ease';
-        mw.style.boxSizing = 'border-box';
-        mw.style.paddingRight = '420px';
+      if (root) {
+        root.style.transition = 'padding-right 0.25s ease';
+        root.style.boxSizing = 'border-box';
+        root.style.paddingRight = '420px';
       }
     } else {
       document.body.classList.remove('ai-panel-open');
-      if (mw) {
-        mw.style.paddingRight = '0px';
+      if (root) {
+        root.style.paddingRight = '0px';
       }
     }
     return () => {
       document.body.classList.remove('ai-panel-open');
-      if (mw) {
-        mw.style.paddingRight = '0px';
-        mw.style.transition = '';
-        mw.style.boxSizing = '';
+      if (root) {
+        root.style.paddingRight = '0px';
+        root.style.transition = '';
+        root.style.boxSizing = '';
       }
     };
   }, [isOpen]);
