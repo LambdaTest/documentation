@@ -1,0 +1,202 @@
+.faqLayout {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100vh - 100px);
+}
+
+.faqCenter {
+  flex: 1;
+  min-width: 0;
+  max-width: 780px;
+  padding: 32px 40px;
+  padding-bottom: 100px;
+}
+
+.faqHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+}
+
+.faqTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ─── Tab bar ─────────────────────────────────────────────── */
+
+.tabBar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabBar::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBtn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.tabBtn:hover {
+  color: #111827;
+}
+
+.tabBtnActive {
+  color: #ED5F00;
+  border-bottom-color: #ED5F00;
+  font-weight: 600;
+}
+
+/* ─── Accordion container ─────────────────────────────────── */
+
+.accordionGroup {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionGroup details {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordionGroup details:last-child {
+  border-bottom: none;
+}
+
+.accordionGroup details > summary {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 20px !important;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #111827;
+  user-select: none;
+  transition: background 0.1s;
+  background-color: #ffffff !important;
+}
+
+.accordionGroup details > summary:hover {
+  background-color: #f9fafb !important;
+}
+
+.accordionGroup details[open] > summary {
+  background-color: #f9fafb !important;
+}
+
+.accordionGroup details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordionGroup details > summary::marker {
+  display: none;
+}
+
+.accordionGroup details > summary::before {
+  content: '▶';
+  font-size: 9px;
+  color: #6b7280;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+  display: inline-block;
+  margin-top: 4px;
+  width: 14px;
+}
+
+.accordionGroup details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.accordionGroup details > p,
+.accordionGroup details > div,
+.accordionGroup details > ul,
+.accordionGroup details > ol,
+.accordionGroup details > pre,
+.accordionGroup details > code {
+  padding: 4px 20px 16px 44px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #374151;
+}
+
+/* nested content after summary */
+.accordionGroup details > *:not(summary) {
+  padding-left: 44px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #374151;
+}
+
+/* ─── HyperExecute sub-tabs ──────────────────────────────── */
+
+.subTabBar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subTabBar::-webkit-scrollbar {
+  display: none;
+}
+
+.subTabBtn {
+  padding: 8px 14px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.subTabBtn:hover {
+  color: #374151;
+}
+
+.subTabBtnActive {
+  color: #ED5F00;
+  border-bottom-color: #ED5F00;
+  font-weight: 600;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 996px) {
+  .faqCenter {
+    padding: 24px 16px;
+    padding-bottom: 100px;
+  }
+}
