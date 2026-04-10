@@ -1,0 +1,207 @@
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 15px;
+}
+
+.detail {
+  padding: 8px 0;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-amber);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 24px;
+}
+
+/* URL Bar */
+.urlBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  margin-bottom: 32px;
+  min-width: 0;
+}
+
+/* Outer: constrained width, clips and scrolls */
+.urlScrollArea {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.urlScrollArea::-webkit-scrollbar {
+  height: 3px;
+}
+
+.urlScrollArea::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+/* Inner: content-driven width — overflows parent to trigger scroll */
+.urlScrollInner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.baseUrlSelect {
+  flex-shrink: 0;
+  max-width: 260px;
+  font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 13px;
+  color: var(--ifm-color-emphasis-700);
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 2px 6px;
+  cursor: pointer;
+  outline: none;
+  appearance: auto;
+  margin-right: 2px;
+}
+
+/* legacy — keep for backwards compat if referenced elsewhere */
+.urlPath {
+  flex: 1;
+  font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 13px;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tryItBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: #16a34a; /* default green; overridden per-method via inline style */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.tryItBtn:hover {
+  opacity: 0.9;
+}
+
+.playIcon {
+  font-size: 10px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Parameters */
+.paramRow {
+  padding: 16px 0;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.paramName {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--brand-amber);
+  font-family: 'SF Mono', SFMono-Regular, Consolas, monospace;
+}
+
+.paramType {
+  font-size: 13px;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.paramIn {
+  font-size: 13px;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.paramRequired {
+  font-size: 12px;
+  color: var(--method-delete);
+  font-weight: 600;
+}
+
+.paramDesc {
+  width: 100%;
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--ifm-color-emphasis-600);
+  line-height: 1.5;
+}
+
+/* Mobile-only code slot: hidden on desktop, shown after URL bar on narrow screens
+   OR when the AI panel is open (right panel hides, code examples show inline instead) */
+.mobileCodeSlot {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .mobileCodeSlot {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+
+:global(body.ai-panel-open) .mobileCodeSlot {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Code block */
+.codeBlock {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.codeBlock code {
+  background: transparent;
+  padding: 0;
+}
