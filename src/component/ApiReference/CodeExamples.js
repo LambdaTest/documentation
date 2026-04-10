@@ -97,6 +97,7 @@ function formatResponse(value) {
 
 export default function CodeExamples({ endpoint, selectedLang: selectedLangProp, onLangChange }) {
   const { openPanel } = useAIChat();
+  const dark = useDarkMode();
   const [localLang, setLocalLang] = useState('cURL');
   const selectedLang = selectedLangProp !== undefined ? selectedLangProp : localLang;
   const setSelectedLang = onLangChange || setLocalLang;
@@ -172,7 +173,7 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
             <SparkleIcon />
           </button>
         </div>
-        <div className="bg-white dark:bg-[#1e1e2e]">
+        <div style={{ background: dark ? '#1e1e2e' : '#ffffff' }}>
           <CodeHighlight code={code} language={langDef.prism} />
         </div>
       </div>
@@ -214,7 +215,7 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
               <SparkleIcon />
             </button>
           </div>
-          <div className="max-h-[420px] overflow-auto bg-white dark:bg-[#1e1e2e]">
+          <div className="max-h-[420px] overflow-auto" style={{ background: dark ? '#1e1e2e' : '#ffffff' }}>
             {respIsJson ? (
               <CodeHighlight code={currentResp} language="json" />
             ) : (
