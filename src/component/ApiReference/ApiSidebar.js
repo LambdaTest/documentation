@@ -90,8 +90,8 @@ export default function ApiSidebar({ apis, selectedEndpoint, onSelectEndpoint })
     <div className="text-sm relative">
       {apis.map((api, apiIdx) => (
         <div key={api.name} className={apiIdx === 0 ? '' : 'mt-6 lg:mt-8'}>
-          <div className="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-700 dark:text-gray-300 text-xs">
-            <h5 className="tracking-wide normal-case">{api.name}</h5>
+          <div className="sidebar-group-header flex items-center gap-2.5 pl-4 mb-2 font-semibold text-gray-700 dark:text-gray-300 text-xs">
+            <h5 className="tracking-wide normal-case m-0">{api.name}</h5>
           </div>
 
           <ul className="sidebar-group space-y-px list-none pl-0 m-0">

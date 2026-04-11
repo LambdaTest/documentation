@@ -333,7 +333,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "You can update either name or status or both of a build in single request.",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string<string>",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "status",
+                    "type": "string<string>",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -847,7 +862,40 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "You can update name, status, test tags of a session in single request.",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "status_ind",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "reason",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "custom_data",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "tags",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -1548,7 +1596,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "To upload terminal logs file",
+                "properties": [
+                  {
+                    "name": "file",
+                    "type": "string<binary>",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -1614,7 +1671,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To upload exception log for a given test session",
+                "properties": [
+                  {
+                    "name": "exception",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2116,7 +2182,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To upload exception log for a given test Id",
+                "properties": [
+                  {
+                    "name": "exception",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2534,7 +2609,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "To upload a new pre run executable files",
+                "properties": [
+                  {
+                    "name": "pre_run_file",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": "If your script requires some reference to other file that needs to be present in our machines then you can upload multiple pre_run_file and download those files in your script using download API"
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": true,
+                    "description": "Name of your pre run executable"
+                  },
+                  {
+                    "name": "post_run_file",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": "script file that will revert the actions performed by pre run file. If there is no post action that needs to performed then you can upload an empty file"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2604,7 +2700,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To delete a pre run executable",
+                "properties": [
+                  {
+                    "name": "file_path",
+                    "type": "string",
+                    "required": true,
+                    "description": "file path of pre run file in our lambda storage. To delete a pre run, you can either specify pre_run or post_run file path. You can get file_path from the GET /files API"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2661,7 +2766,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To check if the file is approved by Lambdatest",
+                "properties": [
+                  {
+                    "name": "file_path",
+                    "type": "string",
+                    "required": true,
+                    "description": "file path of pre run file in our lambda storage. You can get file_path from the GET /files API"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2728,7 +2842,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To download a pre run executable",
+                "properties": [
+                  {
+                    "name": "file_path",
+                    "type": "string",
+                    "required": true,
+                    "description": "file path of pre run file in our lambda storage. You can get file_path from the GET /files API"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2827,7 +2950,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "To upload new user files",
+                "properties": [
+                  {
+                    "name": "files",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2892,7 +3024,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To delete a user fle",
+                "properties": [
+                  {
+                    "name": "key",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -2949,7 +3090,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To download a user file",
+                "properties": [
+                  {
+                    "name": "key",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -3200,7 +3350,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "To upload new extensions",
+                "properties": [
+                  {
+                    "name": "extensions",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -3265,7 +3424,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "To delete a extension",
+                "properties": [
+                  {
+                    "name": "key",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -4135,7 +4303,76 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "start screenshot test payload.",
+                "properties": [
+                  {
+                    "name": "url",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "defer_time",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "email",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "mac_res",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "win_res",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "tunnel",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "tunnel_identifier",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "username",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "callback_url",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "configs",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -4271,7 +4508,32 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "appFile",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": "The application file to be uploaded."
+                  },
+                  {
+                    "name": "type",
+                    "type": "enum<string>",
+                    "required": true,
+                    "description": "The type of the application (XCUITest for iOS, Espresso for Android).",
+                    "enum": [
+                      "xcuit-ios",
+                      "espresso-android"
+                    ]
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": "Name of the application."
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -4346,7 +4608,38 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "appFile",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": "Path to the application file on your local system."
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": true,
+                    "description": "Name of the application."
+                  },
+                  {
+                    "name": "custom_id",
+                    "type": "string",
+                    "required": false,
+                    "description": "Custom ID of the application."
+                  },
+                  {
+                    "name": "visibility",
+                    "type": "enum<string>",
+                    "required": false,
+                    "description": "Visibility scope of the uploaded application.",
+                    "enum": [
+                      "individual",
+                      "team"
+                    ]
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -4586,7 +4879,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "appIds",
+                    "type": "string",
+                    "required": false,
+                    "description": "Comma-separated string of App IDs to delete (e.g., \"APP1016038711693231735315475\")"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -4821,7 +5123,34 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "media_file",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": "The media file to be uploaded."
+                  },
+                  {
+                    "name": "type",
+                    "type": "enum<string>",
+                    "required": false,
+                    "description": "Type of media (e.g., image, video, document, Certificate).",
+                    "enum": [
+                      "Image",
+                      "Video",
+                      "Documents",
+                      "Certificate"
+                    ]
+                  },
+                  {
+                    "name": "custom_id",
+                    "type": "string",
+                    "required": false,
+                    "description": "Optional custom identifier for later retrieval."
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -5021,7 +5350,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "appId",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "imageInjectionEnabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "screenshotUnblockEnabled",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -5067,7 +5417,64 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "app",
+                    "type": "string",
+                    "required": true,
+                    "description": "The APPID of the uploaded app, usually in the format 'lt://APP_ID'."
+                  },
+                  {
+                    "name": "testSuite",
+                    "type": "string",
+                    "required": true,
+                    "description": "The ID of the uploaded test suite to be executed, usually in the format 'lt://TestSuite_ID'."
+                  },
+                  {
+                    "name": "device",
+                    "type": "array",
+                    "required": true,
+                    "description": "List of device identifiers where the test should be executed. e.g., ['Galaxy S21 5G-12', 'iPhone 12']."
+                  },
+                  {
+                    "name": "queueTimeout",
+                    "type": "integer",
+                    "required": true,
+                    "description": "Maximum time in seconds to wait for devices to be available in the queue. Defaults to 10800 seconds (3 hours)."
+                  },
+                  {
+                    "name": "idleTimeout",
+                    "type": "integer",
+                    "required": true,
+                    "description": "Maximum idle time in seconds before a running test is terminated. Defaults to 150 seconds."
+                  },
+                  {
+                    "name": "deviceLog",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Enable or disable device log capturing. Defaults to true."
+                  },
+                  {
+                    "name": "network",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Enable or disable network log capturing. Defaults to false."
+                  },
+                  {
+                    "name": "build",
+                    "type": "string",
+                    "required": true,
+                    "description": "Name of the build for identification purposes."
+                  },
+                  {
+                    "name": "geoLocation",
+                    "type": "string",
+                    "required": false,
+                    "description": "Geo-location setting for the test, specified as a country code. Defaults to 'US'."
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -5133,7 +5540,58 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "app",
+                    "type": "string",
+                    "required": true,
+                    "description": "Uploaded app's APPID"
+                  },
+                  {
+                    "name": "testSuite",
+                    "type": "string",
+                    "required": true,
+                    "description": "Uploaded test suite's ID"
+                  },
+                  {
+                    "name": "device",
+                    "type": "array",
+                    "required": true,
+                    "description": "Device(s) to execute the test on"
+                  },
+                  {
+                    "name": "queueTimeout",
+                    "type": "integer",
+                    "required": true,
+                    "description": "Queue timeout value in seconds"
+                  },
+                  {
+                    "name": "idleTimeout",
+                    "type": "integer",
+                    "required": true,
+                    "description": "Idle timeout value in seconds"
+                  },
+                  {
+                    "name": "devicelog",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Enable or disable device logs"
+                  },
+                  {
+                    "name": "network",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Enable or disable network logs"
+                  },
+                  {
+                    "name": "build",
+                    "type": "string",
+                    "required": true,
+                    "description": "Build name"
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -5486,7 +5944,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "Updated Build Name",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string<string>",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -5559,7 +6026,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -5939,7 +6408,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "You can update both name and status of a session in single request.",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "status_ind",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "custom_data",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -6147,7 +6637,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -6572,7 +7064,46 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "multipart/form-data",
+                "description": "Pass your list of screenshots which needs to be uploaded for comparison. (Minimum 1 file required)",
+                "properties": [
+                  {
+                    "name": "files",
+                    "type": "string<binary>",
+                    "required": true,
+                    "description": ""
+                  },
+                  {
+                    "name": "projectToken",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  },
+                  {
+                    "name": "buildName",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "baseline",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "screenshotNames",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "githubURL",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -7402,7 +7933,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "Edit details by admin",
+                "properties": [
+                  {
+                    "name": "group_id",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "user_id",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -7464,7 +8016,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "role",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -7585,7 +8146,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "confirm_password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "new_password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -7840,7 +8416,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "group_id",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -7929,7 +8520,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -8046,7 +8646,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -8372,9 +8974,7 @@
                   "description": "Service Account ID"
                 }
               ],
-              "requestBody": {
-                "schema": "see OpenAPI spec"
-              },
+              "requestBody": null,
               "responses": {
                 "200": {
                   "description": "Success",
@@ -8528,9 +9128,7 @@
                   "description": "User ID"
                 }
               ],
-              "requestBody": {
-                "schema": "see OpenAPI spec"
-              },
+              "requestBody": null,
               "responses": {
                 "200": {
                   "description": "Success",
@@ -8672,7 +9270,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "new_password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -8787,9 +9400,7 @@
                   "description": "Basic authentication header of the form `Basic <encoded-value>`, where `<encoded-value>` is the base64-encoded string `username:password`."
                 }
               ],
-              "requestBody": {
-                "schema": "see OpenAPI spec"
-              },
+              "requestBody": null,
               "responses": {
                 "200": {
                   "description": "Success",
@@ -8854,7 +9465,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -9215,7 +9835,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "users",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "allocated_concurrency",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -9268,7 +9909,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "group_id",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -9387,7 +10037,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "groups",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -9571,7 +10230,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "users",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "allocated_concurrency",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10043,7 +10723,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "allocated_concurrency",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10104,7 +10799,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "sub_orgs",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10175,7 +10879,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "allocated_concurrency",
+                    "type": "object",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10367,7 +11086,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -10694,9 +11415,7 @@
                   "description": "Sub Org User ID"
                 }
               ],
-              "requestBody": {
-                "schema": "see OpenAPI spec"
-              },
+              "requestBody": null,
               "responses": {
                 "200": {
                   "description": "Regenerate User Token",
@@ -10773,7 +11492,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "role",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10903,7 +11631,22 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "confirm_password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "new_password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -10956,7 +11699,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "Move user to Sub Organization",
+                "properties": [
+                  {
+                    "name": "email",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -11018,7 +11770,34 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "Register user to Sub Organization",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "email",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "password",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "org_role",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -11161,9 +11940,7 @@
                   "description": "Sub Org Service Account ID"
                 }
               ],
-              "requestBody": {
-                "schema": "see OpenAPI spec"
-              },
+              "requestBody": null,
               "responses": {
                 "200": {
                   "description": "Regenerate Service Account Token",
@@ -11228,7 +12005,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -11305,7 +12091,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -11417,7 +12212,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -11447,7 +12244,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -11705,7 +12504,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -11735,7 +12536,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -12302,7 +13105,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -12344,7 +13149,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13022,7 +13829,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13060,7 +13869,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13094,7 +13905,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13366,7 +14179,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13404,7 +14219,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13613,7 +14430,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13659,7 +14478,16 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "test_run_instances",
+                    "type": "array",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -13705,7 +14533,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13811,7 +14641,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -13853,7 +14685,64 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "project_id",
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique identifier for the project."
+                  },
+                  {
+                    "name": "title",
+                    "type": "string",
+                    "required": true,
+                    "description": "Title of the milestone."
+                  },
+                  {
+                    "name": "description",
+                    "type": "string",
+                    "required": false,
+                    "description": "Detailed description of the milestone."
+                  },
+                  {
+                    "name": "test_run_id",
+                    "type": "array",
+                    "required": false,
+                    "description": "List of associated test run IDs."
+                  },
+                  {
+                    "name": "tags",
+                    "type": "array",
+                    "required": false,
+                    "description": "Tags associated with the milestone."
+                  },
+                  {
+                    "name": "start_at",
+                    "type": "string<date-time>",
+                    "required": true,
+                    "description": "Start date and time of the milestone in the format YYYY-MM-DD HH:mm:ss."
+                  },
+                  {
+                    "name": "end_at",
+                    "type": "string<date-time>",
+                    "required": true,
+                    "description": "End date and time of the milestone in the format YYYY-MM-DD HH:mm:ss."
+                  },
+                  {
+                    "name": "owned_by",
+                    "type": "integer",
+                    "required": true,
+                    "description": "User ID of the milestone owner."
+                  },
+                  {
+                    "name": "milestone_id",
+                    "type": "string",
+                    "required": false,
+                    "description": "Unique identifier for the milestone."
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -14052,7 +14941,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -14202,7 +15093,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -14231,7 +15124,9 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": []
               },
               "responses": {
                 "200": {
@@ -14271,7 +15166,34 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "secretKey",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  },
+                  {
+                    "name": "secretValue",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "username",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "orgID",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {
@@ -14367,7 +15289,28 @@
                 }
               ],
               "requestBody": {
-                "schema": "see OpenAPI spec"
+                "contentType": "application/json",
+                "description": "",
+                "properties": [
+                  {
+                    "name": "secretKey",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                  },
+                  {
+                    "name": "username",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  },
+                  {
+                    "name": "orgID",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                  }
+                ]
               },
               "responses": {
                 "200": {

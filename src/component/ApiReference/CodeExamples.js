@@ -59,8 +59,8 @@ function CodeHighlight({ code, language }) {
     <Highlight code={code} language={language} theme={dark ? themes.vsDark : githubWithGreenKeys}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={`${className} api-code-pre m-0 p-4 overflow-x-auto leading-relaxed bg-transparent`}
-          style={{ ...style, background: 'transparent', fontFamily: JETBRAINS_MONO, fontSize: '12px' }}
+          className={`${className} api-code-pre m-0 p-4 overflow-x-auto leading-relaxed`}
+          style={{ color: style.color, background: 'transparent', fontFamily: JETBRAINS_MONO, fontSize: '12px' }}
         >
           {tokens.map((line, i) => {
             const { className: lineCls, ...lineRest } = getLineProps({ line });
@@ -97,7 +97,6 @@ function formatResponse(value) {
 
 export default function CodeExamples({ endpoint, selectedLang: selectedLangProp, onLangChange }) {
   const { openPanel } = useAIChat();
-  const dark = useDarkMode();
   const [localLang, setLocalLang] = useState('cURL');
   const selectedLang = selectedLangProp !== undefined ? selectedLangProp : localLang;
   const setSelectedLang = onLangChange || setLocalLang;
@@ -123,26 +122,25 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
   const currentResp = currentTab ? formatResponse(responses[currentTab]) : '';
   const respIsJson = currentResp.startsWith('{') || currentResp.startsWith('[');
 
-  async function copyCode() {
+  function copyText(text, setFn) {
     try {
-      await navigator.clipboard.writeText(code);
-      setCodeCopied(true);
-      setTimeout(() => setCodeCopied(false), 1500);
+      navigator.clipboard.writeText(text).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+      });
     } catch {}
+    setFn(true);
+    setTimeout(() => setFn(false), 1500);
   }
-  async function copyResp() {
-    try {
-      await navigator.clipboard.writeText(currentResp);
-      setRespCopied(true);
-      setTimeout(() => setRespCopied(false), 1500);
-    } catch {}
-  }
+  function copyCode() { copyText(code, setCodeCopied); }
+  function copyResp() { copyText(currentResp, setRespCopied); }
 
   return (
     <div className="space-y-4">
       {/* Code Examples Panel */}
-      <div style={{ border: '1px solid #e5e7eb', borderRadius: '12px', overflow: 'hidden' }}>
-        <div className="flex items-center gap-2 px-4 py-2.5 dark:bg-[#1e1e2e]" style={{ background: '#F9F5F0', borderBottom: '1px solid #e5e7eb' }}>
+      <div style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', overflow: 'hidden' }}>
+        <div className="flex items-center gap-2 px-4 py-2.5" style={{ background: 'var(--ifm-color-emphasis-100)', borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
           <span className="flex-1 text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{endpoint.name}</span>
           <LangSelectorButton
             selectedLang={selectedLang}
@@ -173,15 +171,15 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
             <SparkleIcon />
           </button>
         </div>
-        <div style={{ background: dark ? '#1e1e2e' : '#ffffff' }}>
+        <div style={{ background: 'var(--ifm-background-color)' }}>
           <CodeHighlight code={code} language={langDef.prism} />
         </div>
       </div>
 
       {/* Response Panel */}
       {responseTabs.length > 0 && (
-        <div style={{ border: '1px solid #e5e7eb', borderRadius: '12px', overflow: 'hidden' }}>
-          <div className="flex items-center gap-1 px-2 dark:bg-[#1e1e2e]" style={{ background: '#F9F5F0', borderBottom: '1px solid #e5e7eb' }}>
+        <div style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', overflow: 'hidden' }}>
+          <div className="flex items-center gap-1 px-2" style={{ background: 'var(--ifm-color-emphasis-100)', borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
             <div className="flex-1 flex items-center">
               {responseTabs.map((tab) => {
                 const active = currentTab === tab;
@@ -215,7 +213,7 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
               <SparkleIcon />
             </button>
           </div>
-          <div className="max-h-[420px] overflow-auto" style={{ background: dark ? '#1e1e2e' : '#ffffff' }}>
+          <div className="max-h-[420px] overflow-auto" style={{ background: 'var(--ifm-background-color)' }}>
             {respIsJson ? (
               <CodeHighlight code={currentResp} language="json" />
             ) : (

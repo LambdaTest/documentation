@@ -1576,16 +1576,15 @@ hr {
 .DocSearch-Button {
   background: #FFFFFF !important;
   font-weight: 400 !important;
-  width: 238px;
   height: 38px !important;
   border: 1px solid #D4D4D4 !important;
-  border-radius: 6px !important;
+  border-radius: 999px !important;
 }
 
 [data-theme=dark] .DocSearch-Button {
   background: #0E1116 !important;
   border: 1px solid #262930 !important;
-  border-radius: 2px;
+  border-radius: 999px !important;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {

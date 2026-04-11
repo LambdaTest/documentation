@@ -8,7 +8,7 @@ function TypeBadge({ type }) {
   if (!type) return null;
   return (
     <span
-      className="px-1.5 py-0.5 text-xs font-mono bg-gray-100 text-gray-600 rounded border border-gray-200"
+      className="px-1.5 py-0.5 text-xs font-mono bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 rounded border border-gray-200 dark:border-white/10"
       style={{ display: 'inline-block' }}
     >
       {type}
@@ -19,7 +19,7 @@ function TypeBadge({ type }) {
 function RequiredBadge() {
   return (
     <span
-      className="px-2 py-0.5 text-xs bg-red-50 text-red-600 rounded-full border border-red-200"
+      className="px-2 py-0.5 text-xs bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full border border-red-200 dark:border-red-800"
       style={{ display: 'inline-block' }}
     >
       required
@@ -31,7 +31,7 @@ function DefaultBadge({ value }) {
   if (value === undefined || value === null) return null;
   return (
     <span
-      className="px-1.5 py-0.5 text-xs font-mono bg-gray-100 text-gray-500 rounded border border-gray-200"
+      className="px-1.5 py-0.5 text-xs font-mono bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 rounded border border-gray-200 dark:border-white/10"
       style={{ display: 'inline-block' }}
     >
       default:{String(value)}
@@ -50,13 +50,13 @@ function InlineText({ text }) {
           <code
             key={i}
             style={{
-              background: '#f3f4f6',
-              border: '1px solid #e5e7eb',
+              background: 'var(--ifm-color-emphasis-100)',
+              border: '1px solid var(--ifm-color-emphasis-200)',
               borderRadius: '4px',
               padding: '1px 5px',
               fontSize: '12px',
               fontFamily: 'monospace',
-              color: '#374151',
+              color: 'var(--ifm-color-emphasis-700)',
             }}
           >
             {part.slice(1, -1)}
@@ -82,10 +82,10 @@ function EnumPills({ values }) {
             padding: '2px 8px',
             fontSize: '12px',
             fontFamily: 'monospace',
-            background: '#f3f4f6',
-            border: '1px solid #e5e7eb',
+            background: 'var(--ifm-color-emphasis-100)',
+            border: '1px solid var(--ifm-color-emphasis-200)',
             borderRadius: '4px',
-            color: '#374151',
+            color: 'var(--ifm-color-emphasis-700)',
           }}
         >
           {String(v)}
@@ -114,7 +114,7 @@ function ParamRow({ param }) {
       </div>
       {/* Row 2: description */}
       {param.description && (
-        <p className="text-sm text-gray-600" style={{ margin: '8px 0 0', lineHeight: '1.6' }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400" style={{ margin: '8px 0 0', lineHeight: '1.6' }}>
           <InlineText text={param.description} />
         </p>
       )}
@@ -169,7 +169,7 @@ function ShowChildAttributes({ defaultOpen = false, children }) {
     <div
       style={{
         marginTop: '8px',
-        border: '1px solid #e5e7eb',
+        border: '1px solid var(--ifm-color-emphasis-200)',
         borderRadius: '6px',
         overflow: 'hidden',
       }}
@@ -182,11 +182,11 @@ function ShowChildAttributes({ defaultOpen = false, children }) {
           gap: '6px',
           width: '100%',
           padding: '6px 10px',
-          background: '#f9fafb',
+          background: 'var(--ifm-color-emphasis-100)',
           border: 'none',
           cursor: 'pointer',
           fontSize: '12px',
-          color: '#374151',
+          color: 'var(--ifm-color-emphasis-700)',
           textAlign: 'left',
         }}
       >
@@ -232,7 +232,7 @@ function ResponsePropRow({ prop, depth = 0 }) {
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
         <span style={{ fontFamily: 'monospace', fontSize: '14px' }}>
           {namePrefix && (
-            <span style={{ color: '#9ca3af', fontWeight: 400 }}>{namePrefix}</span>
+            <span style={{ color: 'var(--ifm-color-emphasis-400)', fontWeight: 400 }}>{namePrefix}</span>
           )}
           <span style={{ color: '#ED5F00', fontWeight: 600 }}>{nameLast}</span>
         </span>
@@ -240,30 +240,30 @@ function ResponsePropRow({ prop, depth = 0 }) {
         {prop.required && <RequiredBadge />}
       </div>
       {prop.description && (
-        <p className="text-sm text-gray-600" style={{ margin: '8px 0 0', lineHeight: '1.6' }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400" style={{ margin: '8px 0 0', lineHeight: '1.6' }}>
           <InlineText text={prop.description} />
         </p>
       )}
       {exampleDisplay && (
-        <div style={{ margin: '6px 0 0', fontSize: '13px', color: '#6b7280' }}>
+        <div style={{ margin: '6px 0 0', fontSize: '13px', color: 'var(--ifm-color-emphasis-500)' }}>
           <span>Example:</span>
           {isArrayExample ? (
             <div style={{
               marginTop: '6px',
               padding: '10px 14px',
-              background: '#f9fafb',
-              border: '1px solid #e5e7eb',
+              background: 'var(--ifm-color-emphasis-100)',
+              border: '1px solid var(--ifm-color-emphasis-200)',
               borderRadius: '8px',
               fontFamily: 'monospace',
               fontSize: '13px',
-              color: '#374151',
+              color: 'var(--ifm-color-emphasis-700)',
             }}>
               {exampleDisplay}
             </div>
           ) : (
             <>
               {' '}
-              <code style={{ fontFamily: 'monospace', fontWeight: 600, color: '#374151', background: 'none', padding: 0 }}>
+              <code style={{ fontFamily: 'monospace', fontWeight: 600, color: 'var(--ifm-color-emphasis-700)', background: 'none', padding: 0 }}>
                 {exampleDisplay}
               </code>
             </>
@@ -380,7 +380,7 @@ function ResponseSection({ responses, responseSchema }) {
           gap: '12px',
           marginBottom: '16px',
           paddingBottom: '8px',
-          borderBottom: '1px solid #e5e7eb',
+          borderBottom: '1px solid var(--ifm-color-emphasis-200)',
           flexWrap: 'wrap',
         }}
       >
@@ -413,11 +413,11 @@ function ResponseSection({ responses, responseSchema }) {
                 position: 'absolute',
                 top: '110%',
                 left: 0,
-                background: 'var(--ifm-background-color)',
+                background: 'var(--ifm-card-background-color, #ffffff)',
                 border: '1px solid var(--ifm-color-emphasis-200)',
                 borderRadius: '8px',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                zIndex: 20,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+                zIndex: 100,
                 minWidth: '100px',
                 overflow: 'hidden',
               }}
@@ -435,8 +435,8 @@ function ResponseSection({ responses, responseSchema }) {
                     textAlign: 'left',
                     fontSize: '13px',
                     fontWeight: code === selectedCode ? 600 : 400,
-                    color: code.startsWith('2') ? '#15803d' : '#374151',
-                    background: code === selectedCode ? '#f9fafb' : 'none',
+                    color: code.startsWith('2') ? '#15803d' : 'var(--ifm-color-emphasis-700)',
+                    background: code === selectedCode ? 'var(--ifm-color-emphasis-100)' : 'none',
                     border: 'none',
                     cursor: 'pointer',
                   }}
@@ -444,7 +444,7 @@ function ResponseSection({ responses, responseSchema }) {
                   {code}
                   {code === selectedCode && (
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 6l3 3 5-5" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
                 </button>
@@ -455,7 +455,7 @@ function ResponseSection({ responses, responseSchema }) {
 
         {/* application/json label — show when there's JSON content */}
         {hasJsonContent && (
-          <span style={{ fontSize: '12px', color: '#6b7280', fontFamily: 'monospace' }}>
+          <span style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-500)', fontFamily: 'monospace' }}>
             application/json
           </span>
         )}
@@ -463,24 +463,24 @@ function ResponseSection({ responses, responseSchema }) {
 
       {/* Description */}
       {description && (
-        <p className="text-sm text-gray-600" style={{ marginBottom: '12px' }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400" style={{ marginBottom: '12px' }}>
           {description}
         </p>
       )}
 
       {/* Type info for non-object responses */}
       {responseType && responseType !== 'object' && responseType !== 'array' && (
-        <p className="text-sm text-gray-600" style={{ marginBottom: '8px' }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400" style={{ marginBottom: '8px' }}>
           The response is of type{' '}
           <code
             style={{
-              background: '#f3f4f6',
-              border: '1px solid #e5e7eb',
+              background: 'var(--ifm-color-emphasis-100)',
+              border: '1px solid var(--ifm-color-emphasis-200)',
               borderRadius: '4px',
               padding: '1px 6px',
               fontSize: '12px',
               fontFamily: 'monospace',
-              color: '#374151',
+              color: 'var(--ifm-color-emphasis-700)',
             }}
           >
             {responseType}
@@ -491,17 +491,17 @@ function ResponseSection({ responses, responseSchema }) {
 
       {/* Example for non-2xx or simple-type responses */}
       {!is2xx && exampleValue !== undefined && exampleValue !== null && (
-        <p className="text-sm text-gray-600" style={{ marginBottom: '16px' }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400" style={{ marginBottom: '16px' }}>
           Example:{' '}
           <code
             style={{
-              background: '#f3f4f6',
-              border: '1px solid #e5e7eb',
+              background: 'var(--ifm-color-emphasis-100)',
+              border: '1px solid var(--ifm-color-emphasis-200)',
               borderRadius: '4px',
               padding: '2px 8px',
               fontSize: '12px',
               fontFamily: 'monospace',
-              color: '#374151',
+              color: 'var(--ifm-color-emphasis-700)',
             }}
           >
             {typeof exampleValue === 'string' ? exampleValue : JSON.stringify(exampleValue)}
@@ -520,7 +520,7 @@ function ResponseSection({ responses, responseSchema }) {
 
       {/* No schema fallback */}
       {is2xx && !hasSchema && !description && (
-        <p className="text-sm text-gray-500">No schema available for this response.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">No schema available for this response.</p>
       )}
     </section>
   );
@@ -563,7 +563,13 @@ function UrlBar({ endpoint, onTryIt }) {
 
   function copyUrl() {
     const url = `${selectedBase}${endpoint.path}`;
-    navigator.clipboard.writeText(url).catch(() => {});
+    try {
+      navigator.clipboard.writeText(url).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+      });
+    } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   }
@@ -595,7 +601,7 @@ function UrlBar({ endpoint, onTryIt }) {
               fontSize: '13px',
               color: 'var(--ifm-color-emphasis-700)',
               background: 'transparent',
-              border: '1px solid #d1d5db',
+              border: '1px solid var(--ifm-color-emphasis-300)',
               borderRadius: '6px',
               padding: '2px 6px',
               cursor: 'pointer',
@@ -614,7 +620,7 @@ function UrlBar({ endpoint, onTryIt }) {
             const isParam = seg.startsWith('{') && seg.endsWith('}');
             return (
               <React.Fragment key={i}>
-                <span style={{ color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>/</span>
+                <span style={{ color: 'var(--ifm-color-emphasis-400)', fontFamily: 'monospace', fontSize: '13px' }}>/</span>
                 {isParam ? (
                   <span style={{ fontFamily: 'monospace', fontSize: '13px', color: '#15803d', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '6px', padding: '1px 8px' }}>
                     {seg}
@@ -640,13 +646,13 @@ function UrlBar({ endpoint, onTryIt }) {
           border: 'none',
           cursor: 'pointer',
           padding: '4px',
-          color: copied ? '#16a34a' : '#9ca3af',
+          color: copied ? '#16a34a' : 'var(--ifm-color-emphasis-400)',
           display: 'flex',
           alignItems: 'center',
           transition: 'color 0.15s',
         }}
-        onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#374151'; }}
-        onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = '#9ca3af'; }}
+        onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = 'var(--ifm-color-emphasis-800)'; }}
+        onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = 'var(--ifm-color-emphasis-400)'; }}
       >
         {copied ? (
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -758,14 +764,20 @@ export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeS
       )}
 
       {/* Request Body */}
-      {endpoint.requestBody && (
+      {endpoint.requestBody && Array.isArray(endpoint.requestBody.properties) && endpoint.requestBody.properties.length > 0 && (
         <section className={styles.section}>
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
-            Request Body
-          </h2>
-          <pre className={styles.codeBlock}>
-            <code>{JSON.stringify(endpoint.requestBody, null, 2)}</code>
-          </pre>
+          <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Body</h2>
+            {endpoint.requestBody.contentType && (
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{endpoint.requestBody.contentType}</span>
+            )}
+          </div>
+          {endpoint.requestBody.description && (
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{endpoint.requestBody.description}</p>
+          )}
+          {endpoint.requestBody.properties.map((prop, i) => (
+            <ParamRow key={i} param={prop} />
+          ))}
         </section>
       )}
 

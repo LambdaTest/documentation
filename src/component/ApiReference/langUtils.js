@@ -1,5 +1,13 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+
+function safeBase64(str) {
+  try {
+    return btoa(unescape(encodeURIComponent(str)));
+  } catch {
+    return btoa(str.replace(/[^\x00-\xFF]/g, '?'));
+  }
+}
 
 // prism language mapping — only use languages bundled in prism-react-renderer
 export const LANGUAGES = [
@@ -31,18 +39,59 @@ export function generateCodeExample(endpoint, language, { username, password, pa
 
   const authValue =
     username && password
-      ? `Basic ${btoa(`${username}:${password}`)}`
+      ? `Basic ${safeBase64(`${username}:${password}`)}`
       : 'Basic <encoded-value>';
 
+  // Build body snippet
+  const bodyProps = endpoint.requestBody?.properties || [];
+  const contentType = endpoint.requestBody?.contentType || 'application/json';
+  const isMultipart = contentType === 'multipart/form-data';
+  const bodyExample = bodyProps.length > 0
+    ? Object.fromEntries(bodyProps.map((p) => {
+        const val = (params && params[`__body__${p.name}`]) ||
+          (p.type.includes('integer') || p.type.includes('number') ? 0 :
+           p.type.includes('boolean') ? true :
+           p.type.includes('array') ? [] :
+           `<${p.name}>`);
+        return [p.name, val];
+      }))
+    : null;
+
   switch (language) {
-    case 'cURL':
-      return `curl --request ${method} \\\n  --url "${url}" \\\n  --header "Authorization: ${authValue}"`;
-    case 'Python':
-      return `import requests\n\nurl = "${url}"\nheaders = {\n    "Authorization": "${authValue}"\n}\n\nresponse = requests.${methodLower}(url, headers=headers)\nprint(response.json())`;
-    case 'JavaScript':
-      return `fetch("${url}", {\n  method: "${method}",\n  headers: {\n    "Authorization": "${authValue}",\n    "Content-Type": "application/json"\n  }\n})\n  .then(res => res.json())\n  .then(data => console.log(data));`;
-    case 'PHP':
-      return `<?php\n\n$client = new \\GuzzleHttp\\Client();\n\n$response = $client->request('${method}', '${url}', [\n    'headers' => [\n        'Authorization' => '${authValue}',\n    ],\n]);\n\necho $response->getBody();`;
+    case 'cURL': {
+      let curlBody = '';
+      if (bodyExample) {
+        if (isMultipart) {
+          curlBody = bodyProps.map((p) => ` \\\n  --form '${p.name}=${bodyExample[p.name]}'`).join('');
+          curlBody = ` \\\n  --header "Content-Type: multipart/form-data"` + curlBody;
+        } else {
+          curlBody = ` \\\n  --header "Content-Type: application/json" \\\n  --data '${JSON.stringify(bodyExample, null, 2).replace(/\n/g, '\n  ')}'`;
+        }
+      }
+      return `curl --request ${method} \\\n  --url "${url}" \\\n  --header "Authorization: ${authValue}"${curlBody}`;
+    }
+    case 'Python': {
+      const pyBody = bodyExample
+        ? (isMultipart
+            ? `, files={${bodyProps.map((p) => `"${p.name}": "${bodyExample[p.name]}"`).join(', ')}}`
+            : `, json=${JSON.stringify(bodyExample, null, 4).replace(/\n/g, '\n')}`)
+        : '';
+      return `import requests\n\nurl = "${url}"\nheaders = {\n    "Authorization": "${authValue}"\n}\n\nresponse = requests.${methodLower}(url, headers=headers${pyBody})\nprint(response.json())`;
+    }
+    case 'JavaScript': {
+      const jsBody = bodyExample && !isMultipart
+        ? `,\n  body: JSON.stringify(${JSON.stringify(bodyExample, null, 4).replace(/\n/g, '\n  ')})`
+        : '';
+      return `fetch("${url}", {\n  method: "${method}",\n  headers: {\n    "Authorization": "${authValue}"${bodyExample && !isMultipart ? ',\n    "Content-Type": "application/json"' : ''}\n  }${jsBody}\n})\n  .then(res => res.json())\n  .then(data => console.log(data));`;
+    }
+    case 'PHP': {
+      const phpBody = bodyExample
+        ? (isMultipart
+            ? `    'multipart' => [${bodyProps.map((p) => `\n        ['name' => '${p.name}', 'contents' => '${bodyExample[p.name]}']`).join(',')}],\n`
+            : `    'json' => ${JSON.stringify(bodyExample, null, 8).replace(/\n/g, '\n    ')},\n`)
+        : '';
+      return `<?php\n\n$client = new \\GuzzleHttp\\Client();\n\n$response = $client->request('${method}', '${url}', [\n    'headers' => [\n        'Authorization' => '${authValue}',\n    ],\n${phpBody}]);\n\necho $response->getBody();`;
+    }
     case 'Go':
       return `package main\n\nimport (\n    "fmt"\n    "net/http"\n    "io"\n)\n\nfunc main() {\n    req, _ := http.NewRequest("${method}", "${url}", nil)\n    req.Header.Add("Authorization", "${authValue}")\n\n    res, _ := http.DefaultClient.Do(req)\n    defer res.Body.Close()\n    body, _ := io.ReadAll(res.Body)\n    fmt.Println(string(body))\n}`;
     case 'Java':
@@ -65,11 +114,6 @@ function ChevronUpDown() {
 
 export function LangDropdownPortal({ open, anchorRef, langs, selected, onSelect, onClose }) {
   const [rect, setRect] = useState(null);
-  const dark = typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark';
-  const bg = dark ? '#1e1e2e' : '#ffffff';
-  const borderColor = dark ? '#3a3a4a' : '#e5e7eb';
-  const textColor = dark ? '#e0e0e0' : '#333333';
-  const hoverBg = dark ? '#2a2a3a' : '#f5f5f5';
 
   useEffect(() => {
     if (open && anchorRef.current) {
@@ -96,8 +140,8 @@ export function LangDropdownPortal({ open, anchorRef, langs, selected, onSelect,
         top: rect.bottom + 6,
         right: window.innerWidth - rect.right,
         zIndex: 9999,
-        background: bg,
-        border: `1px solid ${borderColor}`,
+        background: 'var(--ifm-card-background-color, #ffffff)',
+        border: '1px solid var(--ifm-color-emphasis-200)',
         borderRadius: 10,
         boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
         minWidth: 150,
@@ -117,11 +161,11 @@ export function LangDropdownPortal({ open, anchorRef, langs, selected, onSelect,
               display: 'flex', alignItems: 'center', gap: 8,
               width: '100%', padding: '7px 12px',
               border: 'none', background: 'transparent', cursor: 'pointer',
-              fontSize: 13, color: active ? '#ED5F00' : textColor,
+              fontSize: 13, color: active ? '#ED5F00' : 'var(--ifm-color-emphasis-800)',
               textAlign: 'left', fontWeight: active ? 600 : 400,
               fontFamily: 'inherit',
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = hoverBg; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--ifm-color-emphasis-100)'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
           >
             <span style={{ flex: 1 }}>{l.label}</span>

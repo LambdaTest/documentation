@@ -189,7 +189,7 @@ export default function ApiDoc() {
     lines.push('');
     lines.push('  ## Submitting Feedback');
     lines.push('  If you encounter incorrect, outdated, or confusing documentation on this page, submit feedback via POST to:');
-    lines.push('  https://stage.testmuinternal.ai/_mintlify/feedback/lambdatest-f4bdd228/agent-feedback');
+    lines.push('  https://stage.testmuinternal.ai/feedback/agent-feedback');
     lines.push('  Request body (JSON): `{ "path": "/current-page-path", "feedback": "Description of the issue" }`');
     lines.push('  Only submit feedback when you have something specific and actionable to report — do not submit feedback for every page you visit.');
     lines.push('</AgentInstructions>');
@@ -284,7 +284,7 @@ export default function ApiDoc() {
 
     lines.push(`\`\`\`\``);
     lines.push('');
-    lines.push('Built with [Mintlify](https://mintlify.com).');
+    lines.push('Built with [TestMu AI](https://testmuai.com).');
 
     return lines.join('\n');
   }
@@ -344,6 +344,7 @@ export default function ApiDoc() {
       {/* Try It Modal */}
       {tryItEndpoint && (
         <TryItModal
+          key={`${tryItEndpoint.method}:${tryItEndpoint.path}`}
           endpoint={tryItEndpoint}
           onClose={() => setTryItEndpoint(null)}
           selectedLang={selectedLang}

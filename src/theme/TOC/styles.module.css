@@ -10,6 +10,11 @@
   display: none;
 }
 
+/* Hide TOC when AI panel is open (panel takes the right rail) */
+:global(body.ai-panel-open) .tocWrapper {
+  display: none;
+}
+
 .tocHeader {
   display: flex;
   align-items: center;

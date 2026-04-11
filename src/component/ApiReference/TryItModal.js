@@ -15,6 +15,15 @@ const githubWithGreenKeys = {
 
 const JETBRAINS_MONO = "'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', Menlo, monospace";
 
+// btoa only handles Latin1 — encode to UTF-8 bytes first to support any character
+function safeBase64(str) {
+  try {
+    return btoa(unescape(encodeURIComponent(str)));
+  } catch {
+    return btoa(str.replace(/[^\x00-\xFF]/g, '?'));
+  }
+}
+
 function useDarkMode() {
   const [dark, setDark] = useState(() =>
     typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark'
@@ -37,7 +46,7 @@ function CodeHighlight({ code, language }) {
         <pre
           className={className}
           style={{
-            ...style,
+            color: style.color,
             background: 'transparent',
             fontFamily: JETBRAINS_MONO,
             fontSize: '12px',
@@ -66,10 +75,6 @@ function CodeHighlight({ code, language }) {
 }
 
 function buildCurl(endpoint, username, password, params) {
-  const authHeader = username && password
-    ? `Basic ${btoa(`${username}:${password}`)}`
-    : 'Basic <encoded-value>';
-
   let url = `${endpoint.baseUrl}${endpoint.path}`;
   if (endpoint.pathParams) {
     endpoint.pathParams.forEach((p) => {
@@ -81,19 +86,43 @@ function buildCurl(endpoint, username, password, params) {
     .map((p) => `${encodeURIComponent(p.name)}=${encodeURIComponent(params[p.name])}`);
   if (queryParts.length) url += `?${queryParts.join('&')}`;
 
-  return `curl --request ${endpoint.method} \\\n  --url ${url} \\\n  --header 'Authorization: ${authHeader}'`;
+  const hasAuth = endpoint.auth && endpoint.auth.length > 0;
+  const authHeader = username && password
+    ? `Basic ${safeBase64(`${username}:${password}`)}`
+    : 'Basic <encoded-value>';
+  const authLine = hasAuth ? ` \\\n  --header 'Authorization: ${authHeader}'` : '';
+
+  const bodyProps = endpoint.requestBody?.properties || [];
+  const contentType = endpoint.requestBody?.contentType || 'application/json';
+  let bodyLine = '';
+  if (bodyProps.length > 0) {
+    const bodyEntries = bodyProps.map((p) => [p.name, params[`__body__${p.name}`] || '']);
+    if (contentType === 'multipart/form-data') {
+      bodyLine = bodyEntries
+        .filter(([, v]) => v)
+        .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
+        .join('');
+    } else {
+      const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v));
+      if (Object.keys(bodyObj).length) {
+        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyObj)}'`;
+      }
+    }
+  }
+
+  return `curl --request ${endpoint.method} \\\n  --url ${url}${authLine}${bodyLine}`;
 }
 
 function CollapsibleSection({ title, defaultOpen = true, description, children }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div style={{ marginBottom: '16px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', background: 'var(--ifm-background-color)', overflow: 'hidden' }}>
+    <div className={styles.collapsibleSection}>
       <button
         onClick={() => setOpen((v) => !v)}
         style={{
           display: 'flex', alignItems: 'center', gap: '8px', width: '100%',
           background: 'none', border: 'none', cursor: 'pointer', padding: '16px 20px',
-          fontSize: '15px', fontWeight: 700, color: '#111827', textAlign: 'left',
+          fontSize: '15px', fontWeight: 700, color: 'var(--ifm-color-emphasis-900)', textAlign: 'left',
         }}
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
@@ -105,7 +134,7 @@ function CollapsibleSection({ title, defaultOpen = true, description, children }
       {open && (
         <>
           {description && (
-            <div style={{ padding: '0 20px 16px', fontSize: '13.5px', color: '#374151', lineHeight: '1.7', borderBottom: '1px solid #f3f4f6' }}>
+            <div style={{ padding: '0 20px 16px', fontSize: '13.5px', color: 'var(--ifm-color-emphasis-700)', lineHeight: '1.7', borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
               {description}
             </div>
           )}
@@ -119,8 +148,8 @@ function CollapsibleSection({ title, defaultOpen = true, description, children }
 function InlineCode({ children }) {
   return (
     <code style={{
-      fontFamily: 'monospace', fontSize: '12.5px', background: '#f3f4f6',
-      border: '1px solid #e5e7eb', borderRadius: '4px', padding: '1px 6px', color: '#111827',
+      fontFamily: 'monospace', fontSize: '12.5px', background: 'var(--ifm-color-emphasis-100)',
+      border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '4px', padding: '1px 6px', color: 'var(--ifm-color-emphasis-900)',
     }}>
       {children}
     </code>
@@ -130,69 +159,107 @@ function InlineCode({ children }) {
 function ParamField({ label, sublabel, type, required, description, value, onChange, placeholder, inputType = 'text', enumValues }) {
   const inputStyle = {
     width: '100%', boxSizing: 'border-box', padding: '10px 14px',
-    border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '13px',
-    fontFamily: 'monospace', color: '#374151', background: '#fafafa', outline: 'none',
+    border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', fontSize: '13px',
+    fontFamily: 'monospace', color: 'var(--ifm-color-emphasis-800)', background: 'var(--ifm-color-emphasis-100)', outline: 'none',
   };
+  const focusHandlers = {
+    onFocus: (e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = 'var(--ifm-background-color)'; },
+    onBlur: (e) => { e.target.style.borderColor = 'var(--ifm-color-emphasis-200)'; e.target.style.background = 'var(--ifm-color-emphasis-100)'; },
+  };
+
+  const normalizedType = (type || '').toLowerCase();
+  const isBoolean = normalizedType === 'boolean';
+  const isInteger = normalizedType === 'integer' || normalizedType === 'number';
+
+  function renderInput() {
+    if (enumValues && enumValues.length > 0) {
+      return (
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          style={{ ...inputStyle, cursor: 'pointer', appearance: 'auto' }}
+          {...focusHandlers}
+        >
+          <option value="">-- select --</option>
+          {enumValues.map((v) => (
+            <option key={v} value={v}>{String(v)}</option>
+          ))}
+        </select>
+      );
+    }
+    if (isBoolean) {
+      return (
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          style={{ ...inputStyle, cursor: 'pointer', appearance: 'auto' }}
+          {...focusHandlers}
+        >
+          <option value="">select {sublabel || label}</option>
+          <option value="true">true</option>
+          <option value="false">false</option>
+        </select>
+      );
+    }
+    if (isInteger) {
+      return (
+        <input
+          type="number"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder || `enter ${sublabel || label}`}
+          style={inputStyle}
+          {...focusHandlers}
+        />
+      );
+    }
+    return (
+      <input
+        type={inputType}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder || `enter ${sublabel || label}`}
+        style={inputStyle}
+        {...focusHandlers}
+      />
+    );
+  }
+
   return (
     <div style={{
       display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', alignItems: 'start',
-      padding: '16px 20px', borderTop: '1px solid #f3f4f6',
+      padding: '16px 20px', borderTop: '1px solid var(--ifm-color-emphasis-200)',
     }}>
       {/* Left: label + type + required + description */}
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '6px' }}>
-          <span style={{ fontFamily: 'monospace', fontWeight: 700, fontSize: '13.5px', color: '#111827' }}>
+          <span style={{ fontFamily: 'monospace', fontWeight: 700, fontSize: '13.5px', color: 'var(--ifm-color-emphasis-900)' }}>
             {label}
             {sublabel && <span style={{ fontWeight: 700 }}>.{sublabel}</span>}
           </span>
           {type && (
-            <span style={{ fontSize: '12px', color: '#6b7280', fontFamily: 'monospace' }}>
+            <span style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-500)', fontFamily: 'monospace' }}>
               {type}
             </span>
           )}
         </div>
         {required && (
           <span style={{
-            display: 'inline-block', fontSize: '12px', background: '#fff1f1',
-            borderRadius: '20px', padding: '2px 10px', color: '#e53e3e', fontWeight: 500,
+            display: 'inline-block', fontSize: '12px', background: 'rgba(229,57,53,0.1)',
+            borderRadius: '20px', padding: '2px 10px', color: '#c4490d', fontWeight: 500,
             marginBottom: description ? '6px' : 0,
           }}>
             required
           </span>
         )}
         {description && (
-          <p style={{ margin: required ? '6px 0 0' : '0', fontSize: '12.5px', color: '#6b7280', lineHeight: '1.6' }}>
+          <p style={{ margin: required ? '6px 0 0' : '0', fontSize: '12.5px', color: 'var(--ifm-color-emphasis-600)', lineHeight: '1.6' }}>
             {description}
           </p>
         )}
       </div>
-      {/* Right: select or input */}
-      <div>
-        {enumValues && enumValues.length > 0 ? (
-          <select
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            style={{ ...inputStyle, cursor: 'pointer', appearance: 'auto' }}
-            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = 'var(--ifm-background-color)'; }}
-            onBlur={(e) => { e.target.style.borderColor = 'var(--ifm-color-emphasis-200)'; e.target.style.background = 'var(--ifm-color-emphasis-100)'; }}
-          >
-            <option value="">-- select --</option>
-            {enumValues.map((v) => (
-              <option key={v} value={v}>{String(v)}</option>
-            ))}
-          </select>
-        ) : (
-          <input
-            type={inputType}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={placeholder || `enter ${sublabel || label}`}
-            style={inputStyle}
-            onFocus={(e) => { e.target.style.borderColor = '#ED5F00'; e.target.style.background = 'var(--ifm-background-color)'; }}
-            onBlur={(e) => { e.target.style.borderColor = 'var(--ifm-color-emphasis-200)'; e.target.style.background = 'var(--ifm-color-emphasis-100)'; }}
-          />
-        )}
-      </div>
+      {/* Right: input based on type */}
+      <div>{renderInput()}</div>
     </div>
   );
 }
@@ -254,13 +321,33 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
     if (queryParts.length) url += `?${queryParts.join('&')}`;
 
     const authHeader = username && password
-      ? `Basic ${btoa(`${username}:${password}`)}`
+      ? `Basic ${safeBase64(`${username}:${password}`)}`
       : '';
+
+    const bodyProps = endpoint.requestBody?.properties || [];
+    const contentType = endpoint.requestBody?.contentType || 'application/json';
+    let fetchBody;
+    let fetchHeaders = { ...(authHeader && { Authorization: authHeader }) };
+    if (bodyProps.length > 0) {
+      if (contentType === 'multipart/form-data') {
+        const fd = new FormData();
+        bodyProps.forEach((p) => { if (params[`__body__${p.name}`]) fd.append(p.name, params[`__body__${p.name}`]); });
+        fetchBody = fd;
+        // Don't set Content-Type for FormData — browser sets it with boundary
+      } else {
+        const bodyObj = Object.fromEntries(bodyProps.map((p) => [p.name, params[`__body__${p.name}`] || '']).filter(([, v]) => v));
+        if (Object.keys(bodyObj).length) {
+          fetchBody = JSON.stringify(bodyObj);
+          fetchHeaders['Content-Type'] = 'application/json';
+        }
+      }
+    }
 
     try {
       const res = await fetch(url, {
         method: endpoint.method.toUpperCase(),
-        headers: { 'Content-Type': 'application/json', ...(authHeader && { Authorization: authHeader }) },
+        headers: fetchHeaders,
+        ...(fetchBody && { body: fetchBody }),
       });
       const text = await res.text();
       let body;
@@ -282,13 +369,15 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
   const hasAuth = endpoint.auth && endpoint.auth.length > 0;
   const hasQuery = endpoint.queryParams && endpoint.queryParams.length > 0;
   const hasPath = endpoint.pathParams && endpoint.pathParams.length > 0;
+  const bodyProps = endpoint.requestBody?.properties || [];
+  const hasBody = bodyProps.length > 0;
 
   // Static spec responses — always shown
   const specResponses = endpoint.responses || {};
   const specCodes = Object.keys(specResponses).filter(
     (code) => specResponses[code].example != null
   );
-  const defaultSpecTab = specCodes.find((c) => !c.startsWith('2')) || specCodes[0] || null;
+  const defaultSpecTab = specCodes.find((c) => c.startsWith('2')) || specCodes[0] || null;
   const [activeSpecTab, setActiveSpecTab] = useState(defaultSpecTab);
 
   function getSpecExample(code) {
@@ -341,10 +430,10 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
             {/* Description */}
             {endpoint.description && (
               <div style={{ marginBottom: '24px' }}>
-                <h3 style={{ fontWeight: 700, fontSize: '18px', margin: '0 0 8px', color: '#111827' }}>
+                <h3 style={{ fontWeight: 700, fontSize: '18px', margin: '0 0 8px', color: 'var(--ifm-color-emphasis-900)' }}>
                   {endpoint.name}
                 </h3>
-                <p style={{ fontSize: '14px', color: '#6b7280', lineHeight: '1.6', margin: 0 }}>
+                <p style={{ fontSize: '14px', color: 'var(--ifm-color-emphasis-600)', lineHeight: '1.6', margin: 0 }}>
                   {endpoint.description}
                 </p>
               </div>
@@ -407,14 +496,72 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                 ))}
               </CollapsibleSection>
             )}
+
+            {/* Body */}
+            {hasBody && (
+              <CollapsibleSection
+                title="Body"
+                description={endpoint.requestBody.description || null}
+              >
+                {bodyProps.map((p) => (
+                  <ParamField
+                    key={p.name} label={p.name}
+                    type={p.type} required={p.required}
+                    description={p.description}
+                    enumValues={p.enum}
+                    value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
+                  />
+                ))}
+              </CollapsibleSection>
+            )}
           </div>
 
           {/* Right: code + response */}
           <div className={styles.rightCol}>
+            {/* Live response — shown at top after Send */}
+            {response && (
+              <div className={styles.responsePanel}>
+                <div className={styles.responseTabs}>
+                  <button
+                    style={{
+                      padding: '8px 12px', border: 'none', background: 'none', cursor: 'default',
+                      fontSize: '13px', fontWeight: 600,
+                      color: String(response.status).startsWith('2') ? 'var(--ifm-color-emphasis-800)' : '#c4490d',
+                      borderBottom: `2px solid ${String(response.status).startsWith('2') ? 'var(--ifm-color-emphasis-800)' : '#c4490d'}`,
+                    }}
+                  >
+                    {response.status}
+                  </button>
+                  <button
+                    onClick={() => copyText(typeof response.body === 'string' ? response.body : JSON.stringify(response.body, null, 2), setLiveRespCopied)}
+                    style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer', color: liveRespCopied ? '#16a34a' : 'var(--ifm-color-emphasis-400)', padding: '4px', transition: 'color 0.15s' }}
+                    title="Copy response"
+                  >
+                    {liveRespCopied ? (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                    ) : (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+                    )}
+                  </button>
+                </div>
+                <div className={styles.responseBody} style={{ padding: 0 }}>
+                  {(() => {
+                    const txt = typeof response.body === 'string'
+                      ? response.body
+                      : JSON.stringify(response.body, null, 2);
+                    const isJson = txt.trim().startsWith('{') || txt.trim().startsWith('[');
+                    return isJson
+                      ? <CodeHighlight code={txt} language="json" />
+                      : <pre style={{ margin: 0, padding: '16px 20px', fontFamily: JETBRAINS_MONO, fontSize: '12px', whiteSpace: 'pre-wrap', wordBreak: 'break-all', lineHeight: '1.8', color: 'var(--ifm-color-emphasis-700)' }}>{txt}</pre>;
+                  })()}
+                </div>
+              </div>
+            )}
+
             {/* cURL panel */}
             <div className={styles.codePanel}>
               <div className={styles.codePanelHeader}>
-                <span style={{ fontSize: '13px', fontWeight: 600, color: '#374151', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{endpoint.name}</span>
+                <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ifm-color-emphasis-700)', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{endpoint.name}</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
                   <LangSelectorButton
                     selectedLang={selectedLang}
@@ -433,7 +580,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                   <button
                     title="Copy code"
                     onClick={() => copyText(codeToShow, setCurlCopied)}
-                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: curlCopied ? '#16a34a' : '#9ca3af', padding: '2px', transition: 'color 0.15s' }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: curlCopied ? '#16a34a' : 'var(--ifm-color-emphasis-400)', padding: '2px', transition: 'color 0.15s' }}
                   >
                     {curlCopied ? (
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -464,8 +611,8 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                         style={{
                           padding: '8px 12px', border: 'none', background: 'none', cursor: 'pointer',
                           fontSize: '13px', fontWeight: isActive ? 600 : 400,
-                          color: isActive ? (isError ? '#c4490d' : '#6b7280') : '#6b7280',
-                          borderBottom: isActive ? `2px solid ${isError ? '#c4490d' : '#6b7280'}` : '2px solid transparent',
+                          color: isActive ? (isError ? '#c4490d' : 'var(--ifm-color-emphasis-800)') : 'var(--ifm-color-emphasis-500)',
+                          borderBottom: isActive ? `2px solid ${isError ? '#c4490d' : 'var(--ifm-color-emphasis-800)'}` : '2px solid transparent',
                           transition: 'color 0.12s',
                         }}
                       >
@@ -475,7 +622,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                   })}
                   <button
                     onClick={() => copyText(getSpecExample(activeSpecTab), setRespCopied)}
-                    style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer', color: respCopied ? '#16a34a' : '#9ca3af', padding: '4px', transition: 'color 0.15s' }}
+                    style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer', color: respCopied ? '#16a34a' : 'var(--ifm-color-emphasis-400)', padding: '4px', transition: 'color 0.15s' }}
                     title="Copy response"
                   >
                     {respCopied ? (
@@ -491,51 +638,12 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                     const isJson = txt.trim().startsWith('{') || txt.trim().startsWith('[');
                     return isJson
                       ? <CodeHighlight code={txt} language="json" />
-                      : <pre style={{ margin: 0, padding: '16px 20px', fontFamily: JETBRAINS_MONO, fontSize: '12px', whiteSpace: 'pre-wrap', wordBreak: 'break-all', lineHeight: '1.8', color: '#374151' }}>{txt}</pre>;
+                      : <pre style={{ margin: 0, padding: '16px 20px', fontFamily: JETBRAINS_MONO, fontSize: '12px', whiteSpace: 'pre-wrap', wordBreak: 'break-all', lineHeight: '1.8', color: 'var(--ifm-color-emphasis-700)' }}>{txt}</pre>;
                   })()}
                 </div>
               </div>
             )}
 
-            {/* Live response — shown after Send */}
-            {response && (
-              <div className={styles.responsePanel}>
-                <div className={styles.responseTabs}>
-                  <button
-                    style={{
-                      padding: '8px 12px', border: 'none', background: 'none', cursor: 'default',
-                      fontSize: '13px', fontWeight: 600,
-                      color: String(response.status).startsWith('2') ? '#374151' : '#c4490d',
-                      borderBottom: `2px solid ${String(response.status).startsWith('2') ? '#374151' : '#c4490d'}`,
-                    }}
-                  >
-                    {response.status}
-                  </button>
-                  <button
-                    onClick={() => copyText(typeof response.body === 'string' ? response.body : JSON.stringify(response.body, null, 2), setLiveRespCopied)}
-                    style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer', color: liveRespCopied ? '#16a34a' : '#9ca3af', padding: '4px', transition: 'color 0.15s' }}
-                    title="Copy response"
-                  >
-                    {liveRespCopied ? (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                    ) : (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
-                    )}
-                  </button>
-                </div>
-                <div className={styles.responseBody} style={{ padding: 0 }}>
-                  {(() => {
-                    const txt = typeof response.body === 'string'
-                      ? response.body
-                      : JSON.stringify(response.body, null, 2);
-                    const isJson = txt.trim().startsWith('{') || txt.trim().startsWith('[');
-                    return isJson
-                      ? <CodeHighlight code={txt} language="json" />
-                      : <pre style={{ margin: 0, padding: '16px 20px', fontFamily: JETBRAINS_MONO, fontSize: '12px', whiteSpace: 'pre-wrap', wordBreak: 'break-all', lineHeight: '1.8', color: '#374151' }}>{txt}</pre>;
-                  })()}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>

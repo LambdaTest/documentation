@@ -155,6 +155,52 @@ function resolveRef(ref, spec) {
   return node || null;
 }
 
+// Extract body params from a requestBody object, resolving $refs
+function extractRequestBody(requestBody, spec) {
+  if (!requestBody) return null;
+  const content = requestBody.content || {};
+  const contentType = Object.keys(content)[0] || 'application/json';
+  const bodyContent = content[contentType];
+  if (!bodyContent || !bodyContent.schema) return null;
+
+  let schema = bodyContent.schema;
+  if (schema.$ref) schema = resolveRef(schema.$ref, spec) || schema;
+
+  // Handle allOf
+  if (Array.isArray(schema.allOf)) {
+    const merged = { properties: {}, required: [] };
+    for (const sub of schema.allOf) {
+      const resolved = sub.$ref ? resolveRef(sub.$ref, spec) || sub : sub;
+      if (resolved.properties) Object.assign(merged.properties, resolved.properties);
+      if (resolved.required) merged.required = merged.required.concat(resolved.required);
+    }
+    schema = merged;
+  }
+
+  const props = schema.properties || {};
+  const required = schema.required || [];
+  const properties = Object.entries(props).map(([name, propSchema]) => {
+    let resolved = propSchema.$ref ? resolveRef(propSchema.$ref, spec) || propSchema : propSchema;
+    const hasEnum = Array.isArray(resolved.enum) && resolved.enum.length > 0;
+    const type = resolved.type || 'string';
+    const format = resolved.format || null;
+    const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
+    return {
+      name,
+      type: displayType,
+      required: required.includes(name),
+      description: resolved.description || '',
+      ...(hasEnum && { enum: resolved.enum }),
+    };
+  });
+
+  return {
+    contentType,
+    description: requestBody.description || '',
+    properties,
+  };
+}
+
 // Walk a schema and produce a realistic example JSON value
 function schemaToExample(schema, spec, seen = new Set()) {
   if (!schema) return null;
@@ -552,7 +598,7 @@ for (const apiSection of apiRef.groups) {
           ...((auth.length || endpoint.securityAuth?.length) && { auth: [...(endpoint.securityAuth || []), ...auth] }),
           ...(pathParams.length && { pathParams }),
           ...(queryParams.length && { queryParams }),
-          ...(endpoint.requestBody && { requestBody: { schema: 'see OpenAPI spec' } }),
+          ...(endpoint.requestBody && { requestBody: extractRequestBody(endpoint.requestBody, spec) }),
           responses: simplifyResponses(endpoint.responses, spec),
           responseSchema: extractResponseSchema(endpoint.responses, spec),
         });
@@ -583,7 +629,7 @@ for (const apiSection of apiRef.groups) {
             ...((auth.length || endpoint.securityAuth?.length) && { auth: [...(endpoint.securityAuth || []), ...auth] }),
             ...(pathParams.length && { pathParams }),
             ...(queryParams.length && { queryParams }),
-            ...(endpoint.requestBody && { requestBody: { schema: 'see OpenAPI spec' } }),
+            ...(endpoint.requestBody && { requestBody: extractRequestBody(endpoint.requestBody, spec) }),
             responses: simplifyResponses(endpoint.responses, spec),
             responseSchema: extractResponseSchema(endpoint.responses, spec),
           });

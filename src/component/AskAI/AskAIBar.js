@@ -8,6 +8,9 @@ export default function AskAIBar() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const PANEL_WIDTH = isExpanded ? 680 : 420;
   const inputRef = useRef(null);
   const messagesEndRef = useRef(null);
 
@@ -51,10 +54,11 @@ export default function AskAIBar() {
       if (root) {
         root.style.transition = 'padding-right 0.25s ease';
         root.style.boxSizing = 'border-box';
-        root.style.paddingRight = '420px';
+        root.style.paddingRight = `${PANEL_WIDTH}px`;
       }
     } else {
       document.body.classList.remove('ai-panel-open');
+      setIsExpanded(false);
       if (root) {
         root.style.paddingRight = '0px';
       }
@@ -67,7 +71,7 @@ export default function AskAIBar() {
         root.style.boxSizing = '';
       }
     };
-  }, [isOpen]);
+  }, [isOpen, PANEL_WIDTH]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -98,7 +102,7 @@ export default function AskAIBar() {
 
   const drawer = (
     <>
-      <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`}>
+      <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`} style={{ width: `${PANEL_WIDTH}px` }}>
         {/* Header */}
         <div className={styles.drawerHeader}>
           <div className={styles.drawerTitle}>
@@ -109,11 +113,18 @@ export default function AskAIBar() {
             <span>Assistant</span>
           </div>
           <div className={styles.drawerActions}>
-            <button className={styles.iconBtn} title="Expand" aria-label="Expand">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
+            <button className={styles.iconBtn} onClick={() => setIsExpanded(v => !v)} title={isExpanded ? 'Collapse' : 'Expand'} aria-label={isExpanded ? 'Collapse' : 'Expand'}>
+              {isExpanded ? (
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="4 14 10 14 10 20" /><polyline points="20 10 14 10 14 4" />
+                  <line x1="10" y1="14" x2="3" y2="21" /><line x1="21" y1="3" x2="14" y2="10" />
+                </svg>
+              ) : (
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
+                  <line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+                </svg>
+              )}
             </button>
             <button className={styles.iconBtn} onClick={closePanel} aria-label="Close">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

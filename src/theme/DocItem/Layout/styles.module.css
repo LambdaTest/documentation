@@ -2,9 +2,8 @@
   position: relative;
 }
 
-/* Position button at the right edge of the center content column.
-   The TOC occupies col--3 = 25% on desktop. We pad-right to stay
-   within the article column, matching stage-mintlify's layout. */
+/* Position button at the right edge of the article column.
+   The TOC occupies col--3 (~25%) so we offset by that + a gap. */
 .copyBtnRow {
   position: absolute;
   top: 16px;
@@ -12,14 +11,23 @@
   z-index: 5;
 }
 
-/* On narrow viewports where TOC is hidden, align to content edge */
+/* Give the first h1 right padding so its text doesn't run behind the button */
+.docLayoutWrapper :global(article h1:first-of-type),
+.docLayoutWrapper :global(.theme-doc-markdown h1:first-of-type) {
+  padding-right: 180px;
+}
+
+/* On narrow viewports where TOC is hidden, stack vertically */
 @media (max-width: 996px) {
   .copyBtnRow {
     position: static;
     display: flex;
     justify-content: flex-end;
     padding: 8px 0;
-    right: auto;
-    top: auto;
+  }
+
+  .docLayoutWrapper :global(article h1:first-of-type),
+  .docLayoutWrapper :global(.theme-doc-markdown h1:first-of-type) {
+    padding-right: 0;
   }
 }

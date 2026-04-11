@@ -50,17 +50,11 @@
   flex: 1;
   min-width: 0;
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #d1d5db transparent;
+  scrollbar-width: none;
 }
 
 .urlScrollArea::-webkit-scrollbar {
-  height: 3px;
-}
-
-.urlScrollArea::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 3px;
+  display: none;
 }
 
 /* Inner: content-driven width — overflows parent to trigger scroll */
@@ -140,7 +134,7 @@
 /* Parameters */
 .paramRow {
   padding: 16px 0;
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
 .paramName {

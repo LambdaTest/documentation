@@ -4,7 +4,6 @@
   min-height: 0;
   width: 100%;
   overflow: hidden;
-  background: var(--ifm-background-color);
 }
 
 /* SharedSidebar uses position:sticky with a top:6rem inline offset.
@@ -13,6 +12,7 @@
 .apiLayout :global(#sidebar-content) {
   position: static !important;
   height: 100% !important;
+  border-right: 1px solid var(--ifm-color-emphasis-200) !important;
 }
 
 /* Shared container for center + right — both scroll independently. */

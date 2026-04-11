@@ -64,10 +64,7 @@ export default function SharedSidebar({ children }) {
             ))}
           </ul>
           {children && (
-            <>
-              <div style={{ height: '1px', background: 'var(--ifm-color-emphasis-200)', margin: '12px 0 16px' }} />
-              <div>{children}</div>
-            </>
+            <div>{children}</div>
           )}
         </div>
       </div>
