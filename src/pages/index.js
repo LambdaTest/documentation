@@ -4,11 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function NewTag({ value }) {
   return (
-    <span style={{
-      fontSize: '10px', fontWeight: 700, background: '#ED5F00', color: '#fff',
-      borderRadius: '4px', padding: '1px 5px', letterSpacing: '0.5px',
-      textTransform: 'uppercase', marginLeft: '4px', verticalAlign: 'middle',
-    }}>
+    <span className="newTagColor" style={{ marginLeft: '4px', verticalAlign: 'middle' }}>
       {value}
     </span>
   );
