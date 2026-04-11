@@ -8,10 +8,14 @@ keywords:
   - audit log
   - test instance logs
   - execution history
-url: https://www.lambdatest.com/support/docs/test-instance-audit-logs/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/test-instance-audit-logs/
+site_name: TestMu AI
 slug: test-instance-audit-logs/
+canonical: https://www.testmuai.com/support/docs/test-instance-audit-logs/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +24,18 @@ slug: test-instance-audit-logs/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Run Creation",
-          "item": "https://www.lambdatest.com/support/docs/test-instance-audit-logs/"
+          "item": `${BRAND_URL}/support/docs/test-instance-audit-logs/`
         }]
       })
     }}

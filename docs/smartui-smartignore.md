@@ -9,9 +9,10 @@ keywords:
 - ignore displacement differences
 - smart ignore layout shifts
 - AI based auto ignore
-url: https://www.lambdatest.com/support/docs/smartui-smartignore/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-smartignore/
+site_name: TestMu AI
 slug: smartui-smartignore/
+canonical: https://www.testmuai.com/support/docs/smartui-smartignore/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -79,6 +80,29 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
   height="200"
   className='doc_img'
 />
+
+#### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
+
+If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+
+```javascript
+const capabilities = {
+  browserName: 'Chrome',
+  'LT:Options': {
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    visual: true,
+    'smartUI.project': 'My-Project',
+    ignoreType: ['smartignore']
+  }
+};
+```
+
+> Smart Ignore is a strategy mode. Prefer `ignoreType` strategy configuration over a standalone `smartignore: true` flag.
+
+For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
+- [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
+
 ## Use Cases of Smart Ignore
 
 #### Content Management Systems
@@ -239,6 +263,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 | Displacement | ✅ Ignored | ✅ Ignored |
 | Best For | Content + layout | Layout only |
 
+
 ## Additional Resources
 
 - [Project Settings](/support/docs/smartui-project-settings)
@@ -248,4 +273,4 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 
 ---
 
-> **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](https://www.lambdatest.com/support/docs/) for updates.
+> **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](/support/docs/) for updates.

@@ -2,21 +2,22 @@
 id: disable-screenshot-block
 title: Disable Screenshot Block for Android
 sidebar_label: Disable Screenshot Block
-description: Discover how to disable screenshot blocking on LambdaTest Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 10000+ real mobile devices.
+description: Discover how to disable screenshot blocking on TestMu AI Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 3000+ real mobile devices.
 keywords:
   - screenshot unblock
   - disable screenshot block
   - app test automation
   - Biometric security
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - screenshot disable
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/disable-screenshot-block/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/disable-screenshot-block/
+site_name: TestMu AI
 slug: disable-screenshot-block/
+canonical: https://www.testmuai.com/support/docs/disable-screenshot-block/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +27,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,17 +38,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/disable-screenshot-block/"
+          "item": `${BRAND_URL}/support/docs/disable-screenshot-block/`
         }]
       })
     }}
@@ -59,12 +62,12 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this tool. You can test your apps with this tool in our app-live tests and app automation tests.
 This document details all you need to know about the tool.
 
-LambdaTest now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
+<BrandName /> now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
 
 :::info
 **OS Version:** Android Disable Screenshot Unblock is supported for all os versions.
 
-This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
+This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
 :::
 
@@ -113,17 +116,17 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
 **Disable Screenshot Block** will only work for applications that were uploaded after 28th June 2023.
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

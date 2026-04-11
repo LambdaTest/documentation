@@ -10,10 +10,13 @@ keywords:
   - test cases
   - automation
   - hyperexecute
-url: https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-capabilityr/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability/
+site_name: TestMu AI
 slug: automated-test-cases-linked-using-capability/
+canonical: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +25,18 @@ slug: automated-test-cases-linked-using-capability/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linking Automated Test Cases to Test Manager",
-          "item": "https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-capability/"
+          "item": `${BRAND_URL}/support/docs/automated-test-cases-linked-using-capability/`
         }]
       })
     }}
@@ -54,7 +57,7 @@ const capabilities = {
 };
 ```
 
-- `lt:Options` : A JSON object containing additional options for LambdaTest configurations.
+- `lt:Options` : A JSON object containing additional options for <BrandName /> configurations.
 - `tms.tc_id` : The key used to link a test case in Test Manager. Replace "TC-1470" with your desired Test Case ID.
 
 :::info NOTE

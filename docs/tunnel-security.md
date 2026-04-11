@@ -5,18 +5,20 @@ hide_title: true
 sidebar_label: Tunnel Security
 description: Guide to manage your Tunnel Security
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute
   - hyperexecute automation grid online
   - hyperexecute getting started
-image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/tunnel-security/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/tunnel-security/
+site_name: TestMu AI
 slug: tunnel-security/
+canonical: https://www.testmuai.com/support/docs/tunnel-security/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: tunnel-security/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Tunnel Security",
-          "item": "https://www.lambdatest.com/support/docs/tunnel-security/"
+          "item": `${BRAND_URL}/support/docs/tunnel-security/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: tunnel-security/
 
 # Tunnel Security
 
-LambdaTest allows you to configure various sharing and security options for LambdaTest Tunnel. With these options, you can restrict tunnel creation to specific users, turn tunnel sharing on or off and control which domains are accessible (or inaccessible) through the tunnel.
+<BrandName /> allows you to configure various sharing and security options for <BrandName /> Tunnel. With these options, you can restrict tunnel creation to specific users, turn tunnel sharing on or off and control which domains are accessible (or inaccessible) through the tunnel.
 
 > **Note:** Only administrators are able to view and manage these settings in the security tab of the organization settings page.
 
@@ -52,7 +54,7 @@ LambdaTest allows you to configure various sharing and security options for Lamb
 
 With the Tunnel Creation option, administrators can choose who has the permission to start a tunnel in your organization. This can ensure that only authorized individuals are allowed to start a tunnel, for example, only admin accounts. By default, all users in the organization can create a tunnel. To allow only for specific users, follow these steps:
 
-**Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** -> **Organization Settings**, navigate to **Security** tab and click on **Tunnel Security** button.
 

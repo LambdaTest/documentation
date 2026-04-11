@@ -3,7 +3,7 @@ id: puppeteer-mocha
 title: Run Puppeteer Tests Using Mocha
 hide_title: true
 sidebar_label: Integrate With Mocha
-description: Learn how to integrate and run your Puppeteer tests using Mocha across 40+ browser versions on the LambdaTest platform.
+description: Learn how to integrate and run your Puppeteer tests using Mocha across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with mocha test runner
   - puppeteer testing with mocha test runner
@@ -13,12 +13,15 @@ keywords:
   - how to use puppeteer for testing
   - test puppeteer
   - puppeteer testing tutorial
-  - puppeteer testing lambdatest
+  - puppeteer testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/puppeteer-testing-with-mocha/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/puppeteer-testing-with-mocha/
+site_name: TestMu AI
 slug: puppeteer-testing-with-mocha/
+canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-mocha/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -26,18 +29,18 @@ slug: puppeteer-testing-with-mocha/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Puppeteer Testing With Mocha",
-          "item": "https://www.lambdatest.com/support/docs/puppeteer-testing-with-mocha/"
+          "item": `${BRAND_URL}/support/docs/puppeteer-testing-with-mocha/`
         }]
       })
     }}
@@ -48,17 +51,17 @@ slug: puppeteer-testing-with-mocha/
 
 Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
 
-LambdaTest allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations. 
+<BrandName /> allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations. 
 
-This guide will cover the basics of getting started with Puppeteer testing with Mocha on the LambdaTest platform.
+This guide will cover the basics of getting started with Puppeteer testing with Mocha on the <BrandName /> platform.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
-1. Clone the LambdaTest-Puppeteer repository on your system.
+1. Clone the <BrandName />-Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
@@ -66,7 +69,7 @@ This guide will cover the basics of getting started with Puppeteer testing with 
 npm install
 ```
 
-3. In order to run your Puppeteer tests with Mocha, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+3. In order to run your Puppeteer tests with Mocha, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -88,9 +91,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Running Tests Using Mocha
 --- 
 
->**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
+>**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
 
-1. To run the Puppeteer Mocha tests on LambdaTest, you need make some tweaks to the `google.spec.js` file.
+1. To run the Puppeteer Mocha tests on <BrandName />, you need make some tweaks to the `google.spec.js` file.
 
 ```js
 const puppeteer = require('puppeteer');
@@ -179,17 +182,61 @@ npm run test
 ```
 
 
-3. Visit the LambdaTest Automation Dashboard to see the results of your Puppeteer Mocha tests.
+3. Visit the <BrandName /> Automation Dashboard to see the results of your Puppeteer Mocha tests.
+
+
+
+
+## Using the Mocha Agent Skill with TestMu AI
+***
+
+The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The mocha-skill package includes:
+
+```
+mocha-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Mocha Agent Skill
+***
+
+Install a Mocha Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/mocha-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/mocha-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

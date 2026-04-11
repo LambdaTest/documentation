@@ -3,14 +3,17 @@ id: team-management
 title: Team Management
 hide_title: false
 sidebar_label: Team Management
-description: This documentation will help you create and manage teams on LambdaTest.
+description: This documentation will help you create and manage teams on TestMu AI.
 keywords:
-- teams management lambdatest
+- teams management testmu ai
 - manage teams
-url: https://www.lambdatest.com/support/docs/team-management/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/team-management/
+site_name: TestMu AI
 slug: team-management/
+canonical: https://www.testmuai.com/support/docs/team-management/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,23 +23,23 @@ slug: team-management/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Settings and Security",
-          "item": "https://www.lambdatest.com/support/docs/team-management/"
+          "item": `${BRAND_URL}/support/docs/team-management/`
         }]
       })
     }}
 ></script>
 
-The LambdaTest Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
+The <BrandName /> Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 
 This functionality addresses the need for:
 
@@ -121,4 +124,3 @@ When a user is switched from one team (Team A) to another (Team B), they will no
 
 ### Scenario 4: All Teams are Deleted
 If all teams are removed, then all users can view all test results again.
-

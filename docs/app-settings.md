@@ -3,16 +3,16 @@ id: app-settings
 title: App Settings in Real Device Cloud
 hide_title: true
 sidebar_label: App Settings
-description: Explore App Settings in LambdaTest's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
+description: Explore App Settings in TestMu AI's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
 keywords:
 - app settings 
-url: https://www.lambdatest.com/support/docs/app-settings/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/app-settings/
+site_name: TestMu AI
 slug: app-settings/
+canonical: https://www.testmuai.com/support/docs/app-settings/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-import AndroidDeviceTag from '../src/component/androidDevice';
-import IOSDeviceTag from '../src/component/iosDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,77 +21,61 @@ import IOSDeviceTag from '../src/component/iosDevice';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "App Settings in Real Device Cloud",
-          "item": "https://www.lambdatest.com/support/docs/app-settings/"
+          "item": `${BRAND_URL}/support/docs/app-settings/`
         }]
       })
     }}
 ></script>
 
-# App Settings in Real Device Cloud 
+# App Settings in Real Device Cloud
 
-App settings play a crucial role in testing the environment for mobile applications. These settings, provided by LambdaTest, offer developers a range of capabilities to enhance testing procedures and ensure comprehensive validation of their apps functionality.
+App settings play a crucial role in testing the environment for mobile applications. These settings, provided by <BrandName />, offer developers a range of capabilities to enhance testing procedures and ensure comprehensive validation of their apps functionality.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/app-settings.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-## Disable app resinging <AndroidDeviceTag value="Android Device" /> <IOSDeviceTag value="iOS Device" />
+## Image Injection
 
-Enable the Disable App Resigning feature to use biometrics and image injection without needing to re-sign the app after updates. This simplifies development and testing by bypassing the app resigning process.
+Enable the Image Injection feature to capture images, QR codes, and barcode scans seamlessly within your app using <BrandName /> devices. Our approach utilizes Sensor Instrumentation to seamlessly integrate your app with various mobile sensors, such as the camera. By enabling Image Injection for a specific session, <BrandName /> seamlessly injects camera code modules into your app, effectively mocking or overriding the Android or iOS SDK used in your app.
 
-## Biometric Authentication <AndroidDeviceTag value="Android Device" /> <IOSDeviceTag value="iOS Device" />
+Check out our detailed [support documentation](/support/docs/camera-image-injection/) to learn in detail about the image injection feature.
 
-Enable the Biometric Authentication feature to effortlessly test your biometric authentication-reliant applications on designated remote Lambdatest devices. This functionality enables the emulation of diverse biometric authentication techniques such as fingerprint scanning, facial recognition and others. Leveraging this feature ensures thorough validation of your applications' security and functionality across a spectrum of realistic usage scenarios.
+## Biometric Authentication
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
+Enable this setting to effortlessly test your biometric authentication-reliant applications on designated remote TestMu AI devices. This functionality enables the emulation of diverse biometric authentication techniques such as fingerprint scanning, facial recognition and others. Leveraging this feature ensures thorough validation of your applications' security and functionality across a spectrum of realistic usage scenarios.
 
-## Image Injection <AndroidDeviceTag value="Android Device" /> <IOSDeviceTag value="iOS Device" />
+Check out our detailed [support documentation](/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
 
-Enable the Image Injection feature to capture images, QR codes, and barcode scans seamlessly within your app using LambdaTest devices. Our approach utilizes Sensor Instrumentation to seamlessly integrate your app with various mobile sensors, such as the camera. By enabling Image Injection for a specific session, LambdaTest seamlessly injects camera code modules into your app, effectively mocking or overriding the Android or iOS SDK used in your app.
+## Disable Screenshot Block (only Android)
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/camera-image-injection/) to learn in detail about the image injection feature.
+Enable this setting to conduct uninterrupted testing of your application's performance, even when screenshot capture is restricted within your app. This tool facilitates testing in both app-live and app automation scenarios, ensuring seamless evaluation of your applications.
 
-## Default Network Logs <AndroidDeviceTag value="Android Device" /> <IOSDeviceTag value="iOS Device" />
+Check out our detailed [support documentation](/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
 
-Enable the Default Network Logs feature to seamlessly initiate network log capturing at the beginning of each session within your application. By enabling this setting at the app level, you prioritize the logging of network activities over device logs, ensuring comprehensive monitoring of network interactions right from the start. 
+## Default Network Logs
 
-## Language and Local <AndroidDeviceTag value="Android Device" /> <IOSDeviceTag value="iOS Device" />
-Enable the Language & Locale feature to first select the language for the application, and then choose the locale. Once enabled, the language cannot be changed during the session.
-
-## Disable Screenshot Block <AndroidDeviceTag value="Android Device" />
-
-Enable the Disable Screenshot Block feature to conduct uninterrupted testing of your application's performance, even when screenshot capture is restricted within your app. This tool facilitates testing in both app-live and app automation scenarios, ensuring seamless evaluation of your applications.
-
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
-
-## App Arguments <IOSDeviceTag value="iOS Device" />
-Enable the App Arguments feature to provide custom arguments before launching the app, allowing you to configure specific settings or behaviors. These arguments are passed to the app at startup, enabling you to control app modes, enable debugging, or customize other options based on your needs.
-
-
-
-
-
-
+Enable this feature to seamlessly initiate network log capturing at the beginning of each session within your application. By enabling this setting at the app level, you prioritize the logging of network activities over device logs, ensuring comprehensive monitoring of network interactions right from the start. 
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

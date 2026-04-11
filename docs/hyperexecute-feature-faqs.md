@@ -3,16 +3,20 @@ id: he-feature-faqs
 title: Features FAQs
 hide_title: true
 sidebar_label: Features FAQs
-description: Explore HyperExecute Feature FAQs | Get comprehensive answers and insights to enhance your understanding of LambdaTest's HyperExecute feature. Maximize efficiency and effectiveness in your testing processes.
+description: Explore HyperExecute Feature FAQs | Get comprehensive answers and insights to enhance your understanding of TestMu AI's HyperExecute feature. Maximize efficiency and effectiveness in your testing processes.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-feature-faqs/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-feature-faqs/
+site_name: TestMu AI
 slug: hyperexecute-feature-faqs/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-feature-faqs/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: hyperexecute-feature-faqs/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-feature-faqs/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-feature-faqs/`
         }]
       })
     }}
@@ -79,7 +83,7 @@ slug: hyperexecute-feature-faqs/
 
 #### 7. **Can I use HyperExecute to run test cases on Microsoft Excel?**
 
-  Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit [our documentation](/support/docs/hyperexecute-winapp-integration/) for this feature or contact support@lambdatest.com to know more.
+  Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit [our documentation](/support/docs/hyperexecute-winapp-integration/) for this feature or contact support@testmuai.com to know more.
 
 ***
 
@@ -91,12 +95,12 @@ For more information on HyperExecute features, visit this [page](/support/docs/k
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

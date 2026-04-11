@@ -2,19 +2,21 @@
 id: kane-ai-app-test
 title: Automate your App Testing with KaneAI
 hide_title: false
-sidebar_label: Author your First App Test
+sidebar_label: App Test
 description: Learn how to automate app testing with KaneAI. Generate and execute tests in plain English, save cases, and run them seamlessly
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai app test
-url: https://www.lambdatest.com/support/docs/kane-ai-app-agent
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kane-ai-app-test/
+site_name: TestMu AI
 slug: kane-ai-app-test/
+canonical: https://www.testmuai.com/support/docs/kane-ai-app-test/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Web Test",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-app-test"
+          "item": `${BRAND_URL}/support/docs/kane-ai-app-test/`
         }]
       })
     }}
@@ -56,7 +58,7 @@ For example:
 - Write the test in the text field "This is a sample app".
 - Click on the "+" button.
 
-Continue to add instructions/commands in plain English as you go; KaneAI will automatically queue them for execution, eliminating the need to wait for one test to finish before writing the next. Click the **Fininsh Test**.
+Continue to add instructions/commands in plain English as you go; KaneAI will automatically queue them for execution, eliminating the need to wait for one test to finish before writing the next. Click the **Finish Test**.
 
 > **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
 

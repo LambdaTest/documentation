@@ -1,26 +1,22 @@
 ---
 id: group-tests-using-custom-tags
-title: How To Create Custom Automation Tags
-hide_title: true
-sidebar_label: Group Tests Using Custom Tags
-description: Now group your tests and organize them efficiently with the help of Custom Tags. LambdaTest allows you to create custom tags and filter them with a click.
+title: How to Create Custom Automation Tags
+sidebar_label: Tag and Group Tests
+description: Create custom tags in desired capabilities to group, view, and filter automation tests on the dashboard.
 keywords:
-    - LambdaTest automation
-    - selenium automation grid
-    - selenium grid online
-    - online selenium automation
-    - selenium automation grid online
-    - LambdaTest selenium automation grid
-    - selenium tutorial
-    - Selenium getting started
-    - lambdatest getting started
-    - filter tests
-    - custom tags
-    - group tests
-url: https://www.lambdatest.com/support/docs/group-tests-using-custom-tags/
-site_name: LambdaTest
+  - create custom tags selenium
+  - group automation tests by tag
+  - filter tests using custom tags
+  - selenium desired capabilities tags
+  - automation dashboard tag filter
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
+site_name: TestMu AI
 slug: group-tests-using-custom-tags/
+canonical: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +25,18 @@ slug: group-tests-using-custom-tags/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Group Test Using Custom Tags",
-          "item": "https://www.lambdatest.com/support/docs/group-tests-using-custom-tags/"
+          "item": `${BRAND_URL}/support/docs/group-tests-using-custom-tags/`
         }]
       })
     }}
@@ -50,13 +46,13 @@ slug: group-tests-using-custom-tags/
 
 * * *
 
-LambdaTest allows you to group your automation tests using custom tags. In this document, we will see how to create custom tags and use them. For demonstration purposes, we have used a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the LambdaTest platform.
+TestMu AI allows you to group your automation tests using custom tags. This document shows how to create custom tags and use them. For demonstration purposes, we use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the TestMu AI platform.
 
-## How To Create Custom Tags While Performing Automation On LambdaTest Selenium Grid?
+## How to Create Custom Tags on the Selenium Grid
+---
+Add a tags capability with a String array to your desired capabilities.
 
-* * *
-
-You can create a custom tag using a simple step. While writing your Selenium automation tests, when you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, just add the below lines of code.
+You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
 
 *   Create a String array that contains the names of your custom tags, separated by a comma.
 ```javascript
@@ -67,7 +63,7 @@ You can create a custom tag using a simple step. While writing your Selenium aut
         String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
 ```       
 
-*   Now you just need to add this custom tag in your Desired Capabilities instance, as shown below:
+*   Now add this custom tag in your Desired Capabilities instance:
 ```javascript
         DesiredCapabilities caps = new DesiredCapabilities();
         .
@@ -80,57 +76,57 @@ You can create a custom tag using a simple step. While writing your Selenium aut
 
 <img loading="lazy" src={require('../assets/images/uploads/custom-tags-5-1.webp').default} alt="custom tags" width="1089" height="708" className="doc_img"/>
 
-You have successfully created the custom tags. Let's now see how to view the custom tags and how to group the test based on custom tags in the below section.
+You have successfully created the custom tags. Let us now see how to view and group tests based on custom tags.
 
-## How To View Custom Tags On LambdaTest Platform?
+## How to View Custom Tags on the Platform
+---
+View your custom tags in the Timeline or Automation Logs views on the dashboard.
 
-* * *
+There are multiple ways to view custom tags in the automation dashboard, such as Timeline view and Automation logs view.
 
-There are multiple ways by which you can view the custom tags in the automation dashboard, such as Timeline view and Automation logs view. We will see one by one, how to view the custom tags in each of these.
+### How to View Custom Tags on Your Timeline
 
-### How To View Custom Tags On Your Timeline?
-
-Navigate to [Timeline](https://automation.lambdatest.com/timeline/) view of your automation dashboard, and toggle the **Build View** to **Test View**, as shown in the image below:
+Navigate to [Timeline](https://automation.lambdatest.com/timeline/) view of your automation dashboard, and toggle the **Build View** to **Test View**:
 
 <img loading="lazy" src={require('../assets/images/uploads/build-view.webp').default} alt="Automation build" width="1024" height="414" className="doc_img"/>
 
 You can see the applied custom tags below the tests in this Test View. <img loading="lazy" src={require('../assets/images/uploads/test-view.webp').default} alt="Test View" width="1024" height="461" className="doc_img"/>
 
-### How To View Custom Tags On Your Automation Logs?
+### How to View Custom Tags on Your Automation Logs
 
 * * *
 
 Navigate to [Automation Logs](https://automation.lambdatest.com/logs) of your automation dashboard, and you can see the applied custom tags below the tests in the left panel. <img loading="lazy" src={require('../assets/images/uploads/tags-1.webp').default} alt="Automation logs" width="1024" height="407" className="doc_img"/>
 
-## How To Filter Tests Using Custom Tags On LambdaTest Platform?
+## How to Filter Tests Using Custom Tags on the Platform
+---
+Select one or more custom tags in the filter toolbar to narrow down your test results.
 
-* * *
-
-You can also filter the tests on your automation dashboard with the help of these custom tags. Let us see how.
+You can filter tests on your automation dashboard with these custom tags.
 
 Navigate to [Automation Logs](https://automation.lambdatest.com/logs) of your automation dashboard, and you can see a filter by name **Tags** in the filter toolbar. <img loading="lazy" src={require('../assets/images/uploads/tags-2.webp').default} alt="Automation tags" width="1024" height="399" className="doc_img"/>
 
-Click on it and select the Tag by which you want to filter the tests on your dashboard. For example, we have filtered the test using _Tag2_ custom tag, as shown in the image below:
+Click on it and select the Tag by which you want to filter the tests on your dashboard. For example, we have filtered the test using _Tag2_ custom tag:
 
 <img loading="lazy" src={require('../assets/images/uploads/tags-3.webp').default} alt="automation log tags" width="1838" height="790" className="doc_img"/>
 
-You can even filter the tests by selecting multiple custom tags at once, from the filter toolbar, as shown in the image below:
+You can filter tests by selecting multiple custom tags at once from the filter toolbar:
 
 <img loading="lazy" src={require('../assets/images/uploads/custom-tags-13.webp').default} alt="custom automation tags" width="1024" height="429" className="doc_img"/>
 
 * * *
 
-> Kudos! You have successfully created a custom tag and grouped your tests based on the custom tag. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing to us on [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! :)
+> You have successfully created a custom tag and grouped your tests based on the custom tag. If you have questions, share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

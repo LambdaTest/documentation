@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Running Your First Test
 description: Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works
 keywords:
-  - smart visual testing in lambdatest
+  - smart visual testing in testmu ai
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
   - regression testing tool
@@ -15,9 +15,10 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smartui-running-your-first-project/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
+site_name: TestMu AI
 slug: smartui-running-your-first-project/
+canonical: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -25,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,30 +36,30 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-running-your-first-project/"
+          "item": `${BRAND_URL}/support/docs/smartui-running-your-first-project/`
         }]
       })
     }}
 ></script>
 
-This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of LambdaTest that ensures your web applications look flawless across all browsers and devices.
+This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of <BrandName /> that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Step 1: Create a SmartUI Project
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
@@ -73,7 +76,7 @@ Now select your desired framework and click on the **Configure** button. For the
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample code repository from the LambdaTest GitHub repository to run the project on the SmartUI.
+Download or Clone the code sample code repository from the <BrandName /> GitHub repository to run the project on the SmartUI.
 
 <a href="https://github.com/LambdaTest/smartui-java-testng-sample" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
@@ -133,7 +136,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-### Setting LambdaTest Credentials (for Hooks)
+### Setting <BrandName /> Credentials (for Hooks)
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
@@ -260,6 +263,47 @@ Now that you've run your first project, explore these resources to enhance your 
 - **Manage Baselines**: Understand [Baseline Management](/support/docs/smartui-baseline-management) for effective test comparisons
 - **Troubleshooting**: If you encounter issues, check the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
 
+## Using the SmartUI Agent Skill with TestMu AI
+***
+
+The [smartui-skill](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The smartui-skill package includes:
+
+```
+smartui-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing SmartUI Agent Skill
+***
+
+Install a SmartUI Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/smartui-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/smartui-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only smartui-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for common issues
@@ -268,3 +312,4 @@ Now that you've run your first project, explore these resources to enhance your 
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Handle pages with dynamic content
 - [Baseline Management](/support/docs/smartui-baseline-management) - Manage your test baselines
 - [SDK Documentation](/support/docs/smartui-selenium-java-sdk) - Framework-specific integration guides
+

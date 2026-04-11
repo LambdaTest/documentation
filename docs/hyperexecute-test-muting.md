@@ -5,15 +5,18 @@ hide_title: true
 sidebar_label: Test Muting
 description: Understand how to mute tests on scenario level in HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Test Muting
   - Mute test cases
-url: https://www.lambdatest.com/support/docs/hyperexecute-test-muting/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
+site_name: TestMu AI
 slug: hyperexecute-test-muting/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-test-muting/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +26,17 @@ slug: hyperexecute-test-muting/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-test-muting"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-test-muting`
         }]
       })
     }}
@@ -57,7 +60,7 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 
 
-**Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
 

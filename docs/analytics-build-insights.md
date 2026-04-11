@@ -7,13 +7,23 @@ keywords:
   - analytics
   - build insights
   - build compare
-  - Perfecto test insights alternative 
+  - Perfecto test insights alternative
   - perfecto test insights
-  - test observability 
-url: https://www.lambdatest.com/support/docs/analytics-build-insights/
-site_name: LambdaTest
+  - test observability
+  - group by
+  - test grouping
+  - browser grouping
+  - os grouping
+  - environment filtering
+  - unique instances 
+url: https://www.testmuai.com/support/docs/analytics-build-insights/
+site_name: TestMu AI
 slug: analytics-build-insights/
+canonical: https://www.testmuai.com/support/docs/analytics-build-insights/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +33,17 @@ slug: analytics-build-insights/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Build Insights",
-          "item": "https://www.lambdatest.com/support/docs/analytics-build-insights/"
+          "item": `${BRAND_URL}/support/docs/analytics-build-insights/`
         }]
       })
     }}
@@ -48,6 +58,8 @@ import NewTag from '../src/component/newTag';
 Build Insights is your build-level health dashboard. It shows how stable each build is, how long it took, and which tests are causing problems so you can decide quickly whether a build is safe to promote or needs more work.
 
 With Build Insights, you can view all your unique builds in a centralized list, then drill down into individual build details to explore comprehensive metrics and test-level insights. The feature is designed to be intuitive and accessible, whether you're a QA engineer analyzing test results or a team lead tracking overall build health.
+
+Build Insights also supports **Unique Instances** view, which consolidates retry runs by grouping tests by name and environment (browser + OS + device + resolution), showing only the final run result for cleaner, more accurate reporting. For a comprehensive guide on how unique instances and retry attempts are detected, see [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/).
 
 ## Build Insights Flow
 
@@ -134,11 +146,36 @@ Use filters to narrow analysis to exactly the slice you care about (for example,
 - Click the share icon next to the filters to share the current view with your team
 - Generate shareable links to the build details page (note: filter settings are not preserved in shared links)
 
+### Unique Test Instances
+
+The **Show Unique Instances** toggle consolidates retry runs to give you a cleaner, more accurate view of your test results. This feature applies to both the **Insights** and **Tests** tabs.
+
+**How it works:**
+
+- When **ON**: Within the current build, tests are grouped by **test name + environment** (browser + OS + device + resolution) as a single instance. Only the **final run** of each instance is considered in reporting, eliminating noise from intermediate retry attempts. This affects:
+  - **Insights tab**: Key metrics, charts, and Smart Tags reflect deduplicated counts based on final run results
+  - **Tests tab**: The test list shows only the final execution per unique test-environment combination
+
+- When **OFF**: All individual test executions are shown, including every retry attempt.
+
+The grouping is scoped to the individual build ID, meaning each build's metrics reflect only the deduplicated results within that specific build run.
+
+**Your Settings Are Remembered:**
+Your Show Unique Instances preference is automatically saved, so you don't need to re-enable it each time you visit. Build Insights and Test Insights remember their settings independently, allowing you to configure each page to suit your workflow.
+
+:::note Processing Time
+Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
+:::tip Learn More
+Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
+:::
+
 ## Tab 1: Insights
 
 Use the **Insights** tab to understand the overall health and performance of the selected build before you dive into individual tests.
 
-<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-1-insights.png').default} alt="Build Insights - Insights Tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-1-insights.webp').default} alt="Build Insights - Insights Tab" className="doc_img"/>
 
 ### Key Metrics Summary
 
@@ -202,11 +239,36 @@ Use the **Tests** tab when you are ready to debug at the individual test level.
 Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.
 :::
 
-<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-2-tests.png').default} alt="Build Insights - Tests Tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-2-tests.webp').default} alt="Build Insights - Tests Tab" className="doc_img"/>
 
 ### Search Functionality
 
 Use the search bar to jump straight to a specific test by name (for example, when a developer shares a failing spec file name).
+
+### Group By
+
+The **Group By** dropdown allows you to organize tests by specific environment attributes, making it easier to identify patterns across different configurations.
+
+**Location**: The Group By dropdown is positioned adjacent to the search bar.
+
+**Available Grouping Options:**
+- **Browser**: Group tests by browser version (e.g., Chrome 120, Firefox 115)
+- **OS**: Group tests by operating system version (e.g., Windows 10, macOS Ventura)
+- **Resolution**: Group tests by screen resolution (e.g., 1920x1080, 1366x768)
+- **Device**: Group tests by device type (e.g., Desktop, Mobile)
+
+**Default Behavior:**
+- By default, all grouping options are selected, which displays a flat list view showing all tests without grouping
+- Deselecting one or more options groups the tests by the remaining selected attributes
+
+**Your Settings Are Remembered:**
+Your Group By selections are automatically saved, so when you return to Build Insights, your preferred grouping configuration is already applied.
+
+**Use Cases:**
+- **Browser compatibility analysis**: Deselect all except Browser to quickly see which browsers have the most failures
+- **OS-specific debugging**: Group by OS to identify platform-specific issues
+- **Resolution testing**: Group by Resolution to spot responsive design problems
+- **Multi-dimensional grouping**: Combine multiple grouping options to create hierarchical views (e.g., group by Browser and then by OS within each browser group)
 
 ### Test Results Table
 
@@ -215,12 +277,26 @@ The main table displays individual test executions with three key columns:
 #### Test Name Column
 
 For each test, you'll see:
+
+**Primary Line:**
 - **Test Name**: The full name of the test (e.g., `PROD_Verify FTD feature for the build atxRD_flakyBuild - flaky_test_detection.spec.ts`)
-- **Duration**: How long the test took to execute (e.g., "82s", "84s")
-- **Execution Timestamp**: When the test was executed (e.g., "02/12/2025, 13:25:23")
+
+**Secondary Line (Environment Info):**
+Each test row displays detailed execution context with visual icons in the following order:
+- **Duration**: How long the test took to execute (e.g., "82s", "2m 15s")
+- **Timestamp**: When the test was executed in a readable format (e.g., "Jan 20, 2026 5:12 PM")
+- **Username**: The user who executed the test
+- **Browser**: Browser name and version with browser icon (e.g., Chrome icon with "Chrome 120")
+- **OS**: Operating system with OS icon (e.g., Windows icon with "Windows 10")
+- **Device**: Device type indicator (e.g., Desktop, Mobile)
+- **Resolution**: Screen resolution used (e.g., "1920x1080")
+- **Smart Tags**: Intelligent test categorization tags (e.g., "Flaky Test", "New Failure", "Performance Anomaly")
+
+**Additional Information:**
 - **Project/Tag**: Associated project or tag (e.g., "atxSmoke")
-- **Device Icon**: Visual indicator showing the device/platform used
 - **Test Tags**: Clickable tags associated with the test (e.g., "playwright_test", "atxSmoke_test")
+
+The environment icons match the visual style used throughout the Test Intelligence drilldown views, providing consistent visual identification of execution contexts.
 
 #### History Column
 
@@ -291,8 +367,11 @@ This approach ensures that Build Insights can provide you with meaningful histor
 ## Best Practices
 
 1. **Check builds early and often**: Start your day on the Build Insights page to spot risky builds before they block releases.
-2. **Filter with intent**: Use filters to answer specific questions (for example, “Are failures only on Windows?”) instead of browsing everything at once.
+2. **Filter with intent**: Use filters to answer specific questions (for example, "Are failures only on Windows?") instead of browsing everything at once.
 3. **Trust history, not one run**: Use Result History, Duration History, and the test History column to judge stability over time, not just a single execution.
-4. **Share context, not just failures**: When sharing a build, also mention which metrics you looked at (for example, “pass rate dropped from 98% to 90% in the last 3 runs”).
+4. **Share context, not just failures**: When sharing a build, also mention which metrics you looked at (for example, "pass rate dropped from 98% to 90% in the last 3 runs").
 5. **Standardize build names**: Maintain common build names so histories stay meaningful and easy to compare across days and weeks.
+6. **Use Unique Instances for accurate reporting**: Toggle on "Show Unique Instances" to consolidate retry runs and see the true pass/fail state of each test-environment combination, especially when your pipeline uses automatic retries.
+7. **Leverage Group By for pattern analysis**: Use the Group By dropdown in the Tests tab to organize tests by Browser, OS, Resolution, or Device. This helps quickly identify environment-specific failures and compatibility issues.
+8. **Combine grouping with filters**: Apply filters first to narrow down to relevant tests (for example, failed tests only), then use Group By to see how those failures distribute across environments.
 

@@ -3,14 +3,17 @@ id: test-run-creation-and-management
 title: Test Run - Creation and Management
 hide_title: false
 sidebar_label: Create & Manage Test Run
-description: Gain insights into effective Test Run Creation with LambdaTest, designed to streamline your workflow.
+description: Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.
 keywords:
   - test run
   - test run creation 
-url: https://www.lambdatest.com/support/docs/test-run-creation-and-management/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/test-run-creation-and-management/
+site_name: TestMu AI
 slug: test-run-creation-and-management/
+canonical: https://www.testmuai.com/support/docs/test-run-creation-and-management/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,23 +22,23 @@ slug: test-run-creation-and-management/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Run Creation",
-          "item": "https://www.lambdatest.com/support/docs/test-run-creation-and-management/"
+          "item": `${BRAND_URL}/support/docs/test-run-creation-and-management/`
         }]
       })
     }}
 ></script>
-This guide outlines the steps required to create, configure, and manage test runs within LambdaTest's Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
+This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
 
 ## 1. Creating a Test Run
 ### Step 1: Initiate a New Test Run
@@ -78,9 +81,17 @@ Use descriptive names to easily identify test runs later.
 ## 3. Saving and Managing Test Runs
 ### Step 6: Finalize the Test Run
 - Click Save Test Run to finalize the setup.
-- View the created test run and its associated test cases in the main dashboard.
+- View the created test run and its associated test instances in the dashboard.
+
+Test instances are organized using a **Folders** sidebar on the left, reflecting the folder structure of the test cases added to the test run. Only folders whose test cases are included in the test run are displayed, and each folder shows the count of test instances it contains (e.g., `3/3`, `4/4`).
+
+- Select a folder to filter and view only its test instances. The status summary (Passed, Failed, Not Started, Skipped) is displayed in the top-right corner of the listing for the selected folder.
+- Collapse or expand folders for easier navigation.
+- Click the **three-dot menu** on the **Folders** header to toggle **Include Child Folders** — when enabled (default), selecting a parent folder also displays test instances from its child folders.
 
 <img loading="lazy" src={require('../assets/images/test-run/6.png').default} alt="Real "  className="doc_img"/>
+
+<!-- screenshot: folder sidebar with Include Child Folders option -->
 
 ### Step 7: Bulk Update Options
 - To update multiple test instances:
@@ -95,9 +106,10 @@ Use descriptive names to easily identify test runs later.
 
 <img loading="lazy" src={require('../assets/images/test-run/8.png').default} alt="Real "  className="doc_img"/>
 
-## 4. Enhancing Test Runs with Additional Context
+## 4. Enhancing Test Runs with Test Evidences
 ### Step 9: Adding Remarks and Attachments
 - Add Remarks or actual outcomes to enhance test instance execution details.
+- You can add remarks and attachments at both the individual test step level and the overall test instance level.
 
 <img loading="lazy" src={require('../assets/images/test-run/9.png').default} alt="Real "  className="doc_img"/>
 
@@ -106,26 +118,42 @@ Use descriptive names to easily identify test runs later.
 <img loading="lazy" src={require('../assets/images/test-run/10.png').default} alt="Real "  className="doc_img"/>
 
 ### Step 10: Editing Test Runs
-- Modify an existing test run by adding new test cases or removing unnecessary ones.
-- Access the test run’s options to make edits.
+- You can edit an existing test run to add new test cases or remove unnecessary ones. Click the **edit** icon to make changes.
+
+:::note
+KaneAI test runs can only be edited if they have not been executed.
+:::
 
 <img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Real "  className="doc_img"/>
 
-## 5. Executing and Archiving Test Runs
-### Step 11: Execute on LambdaTest Cloud
-- Click the Play Icon to execute test instances on the LambdaTest Cloud.
+## 5. Execute Test Runs on <BrandName /> Cloud
+
+Execute your manual test instances directly on <BrandName /> Cloud — no local setup or environment configuration required. This allows your team to run manual tests on real browsers and devices hosted on the cloud, making it one of the most efficient ways to validate your test cases.
+
+**To execute a test run:**
+
+1. Click the **Play** icon on any test instance to launch execution on <BrandName /> Cloud.
+
 <img loading="lazy" src={require('../assets/images/test-run/11.png').default} alt="Real "  className="doc_img"/>
 
-- During execution, manually update the status of test cases and test steps as needed.
+2. During execution, update the status of individual test cases and test steps in real time as you verify each one.
+
 <img loading="lazy" src={require('../assets/images/test-run/14.png').default} alt="Real "  className="doc_img"/>
 
-### Step 12: Duplicate or Archive Test Runs
-- Use the three-dot menu on a test run to Duplicate or Archive the run.
-- Archiving helps maintain a clean workspace by storing completed test runs separately.
+:::tip Why execute on the Cloud?
+Running test instances on <BrandName /> Cloud gives you access to a wide range of real browsers, devices, and OS combinations — without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
+:::
+
+## 6. Test Run Options
+
+You can manage your test runs using the options available in the **three-dot menu** on each test run. The following actions are available:
+
+| Action | Description |
+|---|---|
+| **Edit** | Modify the test run by adding or removing test cases. |
+| **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
+| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
+| **Delete** | Permanently remove a test run that is no longer needed. |
 
 <img loading="lazy" src={require('../assets/images/test-run/13.png').default} alt="Real "  className="doc_img"/>
 
-## Video Explanation
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/test-run/output.mp4').default} type="video/mp4" />
-</video>

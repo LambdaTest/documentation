@@ -2,7 +2,7 @@
 id: biometric-authentication
 title: Biometric Authentication
 sidebar_label: Biometric Authentication
-description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on LambdaTest Real Device Cloud Platform with 10000+ real mobile devices.
+description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
 keywords:
   - biometric authentication
   - Fingerprint authentication
@@ -10,15 +10,16 @@ keywords:
   - Biometric security
   - Biometric Authentication Testing
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - Facial recognition
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/biometric-authentication/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/biometric-authentication/
+site_name: TestMu AI
 slug: biometric-authentication/
+canonical: https://www.testmuai.com/support/docs/biometric-authentication/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -27,6 +28,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,17 +39,17 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/biometric-authentication/"
+          "item": `${BRAND_URL}/support/docs/biometric-authentication/`
         }]
       })
     }}
@@ -54,7 +57,7 @@ import RealDeviceTag from '../src/component/realDevice';
 <RealDeviceTag value="Real Device" /> 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
-LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
+<BrandName /> now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
 :::info
 **OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
@@ -110,10 +113,6 @@ To enable biometric authentication feature in your automation script, set the ca
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setcapability("enableBiometricsAuthentication",true)
 ```
-:::note
-Explicitly set the `autoAcceptAlerts` capability to false in order to run biometric tests on iOS devices.
-::: 
-
 
 ### Using Lambda-Hook
 
@@ -131,6 +130,7 @@ driver.execute_script("lambda-biometric-injection=fail")
 :::note
 - To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
+- When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/docs/).
 :::
 
 > 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices

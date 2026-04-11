@@ -3,21 +3,24 @@ id: accessibility-test-scheduling-edit
 title: Edit an Accessibility Scan
 hide_title: false
 sidebar_label: Edit the Scan
-description: Easily edit accessibility scan settings in LambdaTest. Update scan names, recurrence schedules, and timings to keep your tests organized and efficient.
+description: Easily edit accessibility scan settings in TestMu AI. Update scan names, recurrence schedules, and timings to keep your tests organized and efficient.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-test-scheduling-edit/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/accessibility-test-scheduling-edit/
+site_name: TestMu AI
 slug: accessibility-test-scheduling-edit/
+canonical: https://www.testmuai.com/support/docs/accessibility-test-scheduling-edit/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +30,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Edit an Accessibility Scan",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-test-scheduling-edit/"
+          "item": `${BRAND_URL}/support/docs/accessibility-test-scheduling-edit/`
         }]
       })
     }}
@@ -45,7 +48,7 @@ import NewTag from '../src/component/newTag';
 The Edit Report feature in Accessibility Scheduling allows you to modify scan settings for your scheduled accessibility tests. This document provides a step-by-step guide to update the scan name, recurrence details, and time for accessibility reports.
 
 ## Accessing the Edit Report Feature
-- Navigate to the Accessibility section on your LambdaTest dashboard.
+- Navigate to the Accessibility section on your <BrandName /> dashboard.
 - Select the report you want to edit from the Scheduled Tests list.
 - Click on the Edit button located at the top right corner of the report.
 

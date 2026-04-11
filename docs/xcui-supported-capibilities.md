@@ -2,25 +2,27 @@
 id: xcui-supported-capabilities
 title: XCUI Supported Capabilities
 sidebar_label: Supported Capabilities
-description: Now you can run your XCUI framework on LambdaTest online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
+description: Now you can run your XCUI framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
   - espresso
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
-image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/xcui-supported-capabilities/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
+site_name: TestMu AI
 slug: xcui-supported-capabilities/
+canonical: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,23 +32,23 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Espresso Supported Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/xcui-supported-capabilities/"
+          "item": `${BRAND_URL}/support/docs/xcui-supported-capabilities/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-This document provide details about the features and capabilities supported for XCUI Framework on LambdaTest.
+This document provide details about the features and capabilities supported for XCUI Framework on <BrandName />.
 
 > The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 
@@ -68,6 +70,8 @@ This document provide details about the features and capabilities supported for 
 | resignApp <br /> <br />Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
 | testRemarks <br /> <br />  <RealDeviceTag value="Real Device" />| Boolean| Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
 | retries <br /> <br />  <RealDeviceTag value="Real Device" />| Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
+| region <RealDeviceTag value="Real Device" />| String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
+| uploadMedia <RealDeviceTag value="Real Device" />| String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 :::note
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."

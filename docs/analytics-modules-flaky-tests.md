@@ -5,10 +5,14 @@ sidebar_label: Flaky Tests Insights
 description: Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
+site_name: TestMu AI
 slug: analytics-modules-test-intelligence-flaky-test-analytics/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,24 +22,28 @@ slug: analytics-modules-test-intelligence-flaky-test-analytics/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/`
         }]
       })
     }}
 ></script>
 The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/h_A4KRo2V8Q?si=k_acrR-06_FO0N7q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="h_A4KRo2V8Q" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Flakiness Trends
 The Flakiness Trends widget allows the QA teams to analyze the trends of the flaky tests executed on the platform categorized into Passed, Failed, and Flaky which can easily be filtered with the legends added at the top of the graph.

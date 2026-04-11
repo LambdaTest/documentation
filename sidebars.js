@@ -1,9 +1,12 @@
 module.exports = {
+
+  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay',
+
   HyperExecuteSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -23,6 +26,7 @@ module.exports = {
             label: "Running Your First Job on HyperExecute",
             id: "hyperexecute-running-your-first-job",
           },
+        
           {
             type: "doc",
             label: "Guided Walkthrough",
@@ -71,7 +75,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "HyperExecute CLI Web View",
+        label: "HyperExecute GUI App",
         link: {
           type: "doc",
           id: "hyperexecute-cli-gui",
@@ -243,6 +247,7 @@ module.exports = {
                 items: [
                   "nunit-on-hyperexecute-grid",
                   "specflow-on-hyperexecute-grid",
+                  "reqnroll-on-hyperexecute-grid",
                 ],
               },
               {
@@ -522,18 +527,8 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "GitHub App",
-                id: "hyperexecute-github-app-integration",
-              },
-              {
-                type: "doc",
                 label: "Katalon",
                 id: "katalon-integration-with-hyperexecute",
-              },
-              {
-                type: "doc",
-                label: "Postman",
-                id: "hyperexecute-postman-collection-integration",
               },
               {
                 type: "doc",
@@ -593,13 +588,18 @@ module.exports = {
           },
           {
             type: "category",
-            label: "Integration with LambdaTest Products",
+            label: "Integration with TestMu AI Products",
             collapsed: true,
             link: {
               type: "doc",
               id: "integration-lt-products",
             },
             items: [
+              {
+                type: "doc",
+                label: "SmartUI Capture Onboarding",
+                id: "hyperexecute-smart-ui-capture-onboarding",
+              },
               {
                 type: "category",
                 label: "HyperExecute Smart UI - Hooks",
@@ -976,7 +976,6 @@ module.exports = {
                 collapsed: true,
                 label: "August, 2025",
                 items: [
-                  "hyperexecute-release-notes-3-0-1",
                   "hyperexecute-release-notes-3-0-0",
                   "hyperexecute-release-notes-2-9-9",
                   "hyperexecute-release-notes-2-9-8",
@@ -1240,23 +1239,56 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started",
-        id: "getting-started-with-agent-to-agent-testing",
-
+        type: "category",
+        label: "Overview",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Getting Started",
+            id: "getting-started-with-agent-to-agent-testing",
+          },
+          {
+            type: "doc",
+            label: "Platform Overview",
+            id: "ai-agent-testing-platform-overview",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "Test Your First AI Agent",
-        id: "testing-your-first-ai-agent",
+        type: "category",
+        label: "Setup & Integration",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Chat Agent API Integration",
+            id: "chat-agent-api-integration",
+          },
+          {
+            type: "doc",
+            label: "Test Your First AI Agent",
+            id: "testing-your-first-ai-agent",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "FAQs",
-        id: "agent-to-agent-faqs",
-      }
-
-
+        type: "category",
+        label: "Reference",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Features & Metrics",
+            id: "agent-features-and-metrics",
+          },
+          {
+            type: "doc",
+            label: "FAQs",
+            id: "agent-to-agent-faqs",
+          },
+        ],
+      },
     ],
   ],
 
@@ -1278,60 +1310,76 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: ["why-we-need-kane-ai","use-cases-of-kane-ai"],
+        items: [
+          "why-we-need-kane-ai",
+          "use-cases-of-kane-ai",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Author Your First Test",
+            items: [
+              "author-your-first-desktop-browser-test",
+              "author-your-first-mobile-browser-test",
+              "author-your-first-mobile-app-test"
+            ],
+          },
+        ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Author Your First Test",
+        label: "Knowledge Base",
+        link: {
+          type: "doc",
+          id: "kaneai-kb-knowledge-base-index",
+        },
         items: [
-          "generate-multiple-tests-with-ai",
           {
             type: "category",
+            label: "Authoring Guides",
             collapsed: true,
-            label: "Author Web Tests",
             items: [
-              "author-your-first-desktop-browser-test",
-              "author-your-first-mobile-browser-test",
+              "kaneai-kb-finding-and-interacting-with-elements",
+              "kaneai-kb-forms-inputs-and-data-entry",
+              "kaneai-kb-assertions-and-validation",
+              "kaneai-kb-dynamic-content-waits-and-page-state",
+              "kaneai-kb-mobile-app-testing-patterns",
             ],
           },
           {
             type: "category",
+            label: "Advanced Testing",
             collapsed: true,
-            label: "Author App Tests",
-            items: ["author-your-first-mobile-app-test"],
+            items: [
+              "kaneai-kb-authentication-and-session-management",
+              "kaneai-kb-api-testing-and-network-assertions",
+              "kaneai-kb-js-snippets-and-workarounds",
+              "kaneai-failure-conditions",
+              "kaneai-smart-locator-priority",
+            ],
           },
-        ],
+          {
+            type: "category",
+            label: "Variables and Parameters",
+            collapsed: true,
+            link: {
+                    type: "doc",
+                    id: "kaneai-variables-and-parameters",
+                  },
+            items: [
+              "kane-ai-using-variables",
+              "kane-ai-secrets",
+              "kane-ai-smart-variables",
+              "kane-ai-using-parameters",
+              "kane-ai-using-datasets",
+            ],
+          },
+          "kane-ai-command-guide",
+          "kane-ai-automation-code-generation",
+          "error-handling-kaneai",
+              ],
       },
 
-      {
-        type: "category",
-        collapsed: true,
-        label: "Test Manager",
-        items: [
-          "kane-ai-test-plan",
-          "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation",
-          "test-runs-configurations",
-          "kaneai-scheduled-test-runs",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Variables and Parameters",
-        link: {
-          type: "doc",
-          id: "kaneai-variables-and-parameters",
-        },
-        items: [
-          "kane-ai-using-variables",
-          "kane-ai-secrets",
-          "kane-ai-smart-variables",
-          "kane-ai-using-parameters",
-          "kane-ai-using-datasets",
-        ],
-      },
       {
         type: "category",
         collapsed: true,
@@ -1356,6 +1404,8 @@ module.exports = {
               "kaneai-totp",
               "kaneai-database",
               "kaneai-rename-instructions",
+              "kaneai-conditional-logic",
+              "kane-ai-network-assertions",
             ],
           },
           {
@@ -1363,7 +1413,6 @@ module.exports = {
             collapsed: true,
             label: "Desktop Browser",
             items: [
-              "kane-ai-network-assertions",
               "kane-ai-drag-drop",
               "kaneai-dynamic-url-replacement",
               "kaneai-chrome-options",
@@ -1380,30 +1429,43 @@ module.exports = {
               "kane-ai-deeplink-support",
               "kaneai-network-throttling",
               "kaneai-gps-location",
-              "kaneai-scroll-until-mobile",
               "kaneai-mobile-app-accessibility",
             ],
           },
         ],
       },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Manager",
+        items: [
+          "kane-ai-test-plan",
+          "kaneai-hyperexecute-test-run-execution",
+          "kaneai-ci-cd-automation",
+          "test-runs-configurations",
+          "kaneai-scheduled-test-runs",
+        ],
+      },
+      
       {
         type: "doc",
         label: "GitHub App Integration",
         id: "github-app-integration",
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Knowledge Base",
-        items: [
-          "kane-ai-command-guide",
-          "kaneai-failure-conditions",
-          "kane-ai-web-test-writing-guidelines",
-          "kane-ai-app-test-writing-guidelines",
-          "error-handling-kaneai",
-          "kane-ai-automation-code-generation",
-        ],
-      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Knowledge Base",
+      //   items: [
+      //     "kane-ai-command-guide",
+      //     "kaneai-failure-conditions",
+      //     "kane-ai-web-test-writing-guidelines",
+      //     "kane-ai-app-test-writing-guidelines",
+      //     "error-handling-kaneai",
+      //     "kane-ai-automation-code-generation",
+      //   ],
+      // },
       {
         type: "category",
         collapsed: true,
@@ -1414,23 +1476,23 @@ module.exports = {
           "kaneai-edit-test-steps",
         ],
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Release Notes",
-        link: {
-          type: "doc",
-          id: "kaneai-release-notes",
-        },
-        items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "September, 2024",
-            items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
-          },
-        ],
-      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Release Notes",
+      //   link: {
+      //     type: "doc",
+      //     id: "kaneai-release-notes",
+      //   },
+      //   items: [
+      //     {
+      //       type: "category",
+      //       collapsed: true,
+      //       label: "September, 2024",
+      //       items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
+      //     },
+      //   ],
+      // },
     ],
   ],
 
@@ -1505,7 +1567,6 @@ module.exports = {
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
           "real-time-upload-and-download-files",
-          "real-time-self-signed-certificate",
         ],
       },
       "troubleshooting-ios-apps",
@@ -1515,9 +1576,9 @@ module.exports = {
 
   IntegrationsSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -1620,6 +1681,7 @@ module.exports = {
         },
         items: [
           "slack-integration",
+          "opsgenie-integration",
           "microsoft-teams-integration",
           "rocketchat-integration-with-lambdatest",
           "integrating-mattermost-with-lambdatest",
@@ -1627,6 +1689,7 @@ module.exports = {
           "google-chat-integration",
           "webex-teams-integration",
           "zoho-cliq-integration",
+          "webhooks-integration",
         ],
       },
       {
@@ -1714,7 +1777,6 @@ module.exports = {
           "ghost-inspector-integration",
           "accelq-integration",
           "algoshack-integration",
-          "testim-integration",
         ],
       },
 
@@ -1736,8 +1798,7 @@ module.exports = {
           "testrail-integration-with-lambdatest-selenium-grid",
           "zebrunner-integration",
           "zephyr-scale",
-          "testmo-integration",
-          "qtest-integration",
+          "testmo-integration"
         ],
       },
 
@@ -1772,7 +1833,7 @@ module.exports = {
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
-          "shopify-integration",
+          // "shopify-integration",
           "vscode-extension",
           "xcode-plugin-lambdamax",
           "docker-tunnel-extension",
@@ -1805,9 +1866,9 @@ module.exports = {
 
   AccessibilityTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -1988,6 +2049,11 @@ module.exports = {
             items: [
               {
                 type: "doc",
+                label: "Rules & Checklist",
+                id: "accessibility-rules-checklist",
+              },
+              {
+                type: "doc",
                 label: "Android",
                 id: "accessibility-android-rules",
               },
@@ -1997,6 +2063,43 @@ module.exports = {
                 id: "accessibility-ios-rules",
               },
             ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Checklists",
+        items: [
+          {
+            type: "doc",
+            label: "Web – What We Cover",
+            id: "accessibility-web-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "Web – What We Do Not Cover",
+            id: "accessibility-web-what-we-do-not-cover",
+          },
+          {
+            type: "doc",
+            label: "iOS – What We Cover",
+            id: "accessibility-ios-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "iOS – What We Do Not Cover",
+            id: "accessibility-ios-what-we-do-not-cover",
+          },
+          {
+            type: "doc",
+            label: "Android – What We Cover",
+            id: "accessibility-android-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "Android – What We Do Not Cover",
+            id: "accessibility-android-what-we-do-not-cover",
           },
         ],
       },
@@ -2013,8 +2116,7 @@ module.exports = {
           "accessibility-passed-test-cases",
           "accessibility-capture-screenshot",
           "accessibility-fragment-identifier",
-          "accessibility-web-score",
-          "accessibility-web-runtime-control"
+          "accessibility-web-score"
         ],
       },
       {
@@ -2058,9 +2160,9 @@ module.exports = {
 
   SettingsAndSecuritySidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2078,7 +2180,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "LambdaTest Public IP Ranges",
+        label: "TestMu AI Public IP Ranges",
         id: "lambdatest-public-ip",
       },
       {
@@ -2096,11 +2198,11 @@ module.exports = {
 
   TestManagerSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
-        className: "back-to-main-menu",
+        className: 'back-to-main-menu'
       },
     },
     [
@@ -2124,7 +2226,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Import Test Cases",
-            items: ["csv-import", "one-click-migration-from-testrail"],
+            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale"],
           },
           "generate-test-cases-with-ai",
           // "create-manage-test-cases",
@@ -2155,6 +2257,7 @@ module.exports = {
         label: "Test Runs",
         items: [
           "test-run-creation-and-management",
+          "sync-test-instance",
           "test-instance-audit-logs"
         ],
       },
@@ -2183,14 +2286,14 @@ module.exports = {
           "lambdatest-azure-devops-app",
         ],
       },
-    ],
+    ]
   ],
 
   RealDeviceSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2307,34 +2410,30 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Getting Started",
-        link: {
-          type: "doc",
-          id: "getting-started-with-lambdatest-automation",
-        },
+        label: "Get Started",
         items: [
+          "getting-started-with-lambdatest-automation",
           "lambdatest-running-your-first-selenium-test",
+          "selenium-agent-skills",
+          "migrate-selenium-test-suite",
           "inside-lambdatest-automation-platform",
+            "selenium-supported-languages-and-frameworks",
+                      "supported-browsers-and-operating-systems-for-the-web-interface",
+
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Languages and Frameworks",
-        link: {
-          type: "doc",
-          id: "selenium-supported-languages-and-frameworks",
-        },
+        label: "Choose Your Language & Framework",
         items: [
+        
           {
             type: "category",
             collapsed: true,
             label: "Java",
-            link: {
-              type: "doc",
-              id: "java-framework",
-            },
             items: [
+              "java-framework",
               "selenium-java-sdk",
               "testng-framework",
               "junit-frameworks",
@@ -2349,11 +2448,8 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "JavaScript",
-            link: {
-              type: "doc",
-              id: "running-javascript-test-scripts-on-lambdatest",
-            },
             items: [
+              "running-javascript-test-scripts-on-lambdatest",
               "running-protractor-test-scripts-on-lambdatest",
               "automation-testing-with-mocha-and-selenium",
               "run-nightwatch-tests-on-lambdatest-selenium-grid",
@@ -2373,26 +2469,21 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "C#",
-            link: {
-              type: "doc",
-              id: "csharp-with-selenium",
-            },
             items: [
+              "csharp-with-selenium",
               "nunit-with-selenium",
               "selenium-xunit",
               "mstest-with-selenium",
               "specflow-with-selenium",
+              "reqnroll-with-selenium-appium",
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "Python",
-            link: {
-              type: "doc",
-              id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
-            },
             items: [
+              "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
               "unit-testing-in-python",
               "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
               "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
@@ -2404,11 +2495,8 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "PHP",
-            link: {
-              type: "doc",
-              id: "php-framework",
-            },
             items: [
+              "php-framework",
               "behat-php-framework",
               "laravel-php-framework",
               "codeception-php-framework",
@@ -2419,11 +2507,12 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Ruby",
-            link: {
-              type: "doc",
-              id: "ruby",
-            },
-            items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
+            items: [
+              "ruby",
+              "ruby-capybara",
+              "ruby-rspec",
+              "ruby-testunit",
+            ],
           },
           "executing-tesbo-automation-script-over-online-selenium-grid",
         ],
@@ -2431,93 +2520,118 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Test Capabilities",
-        link: {
-          type: "doc",
-          id: "selenium-automation-capabilities",
-        },
+        label: "Set Up Test Environment",
         items: [
           {
             type: "category",
             collapsed: true,
-            label: "Selenium Capabilities",
+            label: "Configure Capabilities",
             items: [
+              "selenium-automation-capabilities",
               "selenium-default-capabilities",
               "selenium-three-capabilities",
               "selenium-four-capabilities",
               "lambdatest-selenium-advance-capabilities",
             ],
           },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Browser Configuration",
-            items: [
-              "perform-selenium-automation-on-headless-browsers",
-              "custom-chrome",
-              "selenium-set-browser-options",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Organize Tests",
-            items: [
-              "command-annotations",
-              "selenium-add-test-meta-data",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Web Performance",
-            items: [
-              "view-lighthouse-performance-metrics",
-              "lighthouse-reports-hooks",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Debugging",
-            items: [
-              "debugging-options",
-              "telemetry-logs",
-              "extended-debugging-options"
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Advance Use Cases",
-            items: [
-              "auto-heal",
-              "autoheal-with-hooks",
-              "selenium-geolocation-capabilities",
-              "selenium-mask-your-data",
-              "custom-header",
-              "smart-wait",
-              "network-throttling",
-              "custom-dns-map",
-              "network-data-masking",
-              "upload-files-using-lambdatest",
-              "setup-pre-run-executable",
-              "har-log-viewer",
-              "upload-files-using-lambdatest",
-              "build-split",
-            ],
-          },
+          "perform-selenium-automation-on-headless-browsers",
+          "custom-chrome",
+          "selenium-set-browser-options",
+          "ie-mode-on-edge",
+          "change-browser-window-size",
+          "Selenium-Grid-Configuration",
+          "auto-heal",
+          "autoheal-with-hooks",
+          "smart-wait",
         ],
       },
+  
       {
-        type: "doc",
-        label: "Automation MCP Server",
-        id: "automation-mcp-server",
+        type: "category",
+        collapsed: true,
+        label: "Simulate Real User Conditions",
+        items: [
+          "selenium-geolocation-capabilities",
+          "network-throttling",
+          "configure-timezones",
+          "custom-header",
+          "custom-dns-map",
+          "mock-video-injection-web-automation-selenium-chromium",
+          "mobile-web-automation-on-real-devices",
+        ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Troubleshooting",
+        label: "Handle Files and Sensitive Data",
+        items: [
+          "upload-files-using-lambdatest",
+          "download-files-using-lambdatest-selenium-grid",
+          "selenium-mask-your-data",
+          "network-data-masking",
+          "setup-pre-run-executable",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test in Local Environments",
+        items: [
+          "test-locally-hosted-websites-with-selenium",
+          "white-listing-proxy-with-lambdatest",
+          "run-selenium-test-behind-the-proxy",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Manage Your Runs",
+        items: [
+          "filter-your-selenium-tests",
+          "group-tests-using-custom-tags",
+          "group-and-filter-your-test-builds-using-build-tags",
+          "change-individual-test-details",
+          "sharing-test-results",
+          "mark-as-bug-in-automation-testing",
+          "live-interaction",
+          "build-split",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug Your Test Suites",
+        items: [
+          "debugging-options",
+          "telemetry-logs",
+          "extended-debugging-options",
+          "har-log-viewer",
+          "view-lighthouse-performance-metrics",
+          "lighthouse-reports-hooks",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Connect Your Tools",
+        items: [
+          "selenium-bidi-integration",
+          "automation-mcp-server",
+          "lambda-hooks",
+          "command-annotations",
+          "selenium-add-test-meta-data",
+        ],
+      },
+      {
+        type: "link",
+        label: "Trigger Tests From CI/CD",
+        href: "/support/docs/integrations-with-ci-cd-tools/",
+       
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshoot",
         items: [
           "error-messages",
           "timeouts-issues-and-resolutions",
@@ -2525,166 +2639,143 @@ module.exports = {
           "performance-tips",
         ],
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Knowledge Base",
-        items: [
-          "lambda-hooks",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Configuration",
-            items: [
-              "environment-variables",
-              "Selenium-Grid-Configuration",
-              "supported-browsers-and-operating-systems-for-the-web-interface",
-              "change-individual-test-details",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Proxy Settings",
-            items: [
-              "white-listing-proxy-with-lambdatest",
-              "run-selenium-test-behind-the-proxy",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "How To Guide",
-            items: [
-              "filter-your-selenium-tests",
-              "mark-as-bug-in-automation-testing",
-              "sharing-test-results",
-              "download-files-using-lambdatest-selenium-grid",
-              "live-interaction",
-              "group-tests-using-custom-tags",
-              "group-and-filter-your-test-builds-using-build-tags",
-            ],
-          },
-          "mobile-web-automation-on-real-devices",
-          "selenium-bidi-integration",
-        ],
-      },
-      {
-        type: "doc",
-        label: "Frequently Asked Questions",
-        id: "selenium-faq",
-      },
     ],
   ],
 
   CypressTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
     },
     [
       {
-        type: "doc",
-        label: "Cypress Testing",
-        id: "getting-started-with-cypress-testing",
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        items: [
+          {
+            type: "doc",
+            label: "Cypress Testing",
+            id: "getting-started-with-cypress-testing",
+          },
+          {
+            type: "doc",
+            label: "Run Your Test With Agent Skills",
+            id: "cypress-agent-skills",
+          },
+          {
+            type: "doc",
+            label: "Authentication",
+            id: "authentication",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "Authentication",
-        id: "authentication",
+        type: "category",
+        collapsed: true,
+        label: "Test Capabilities",
+        items: [
+          {
+            type: "doc",
+            label: "Parallel Testing",
+            id: "run-your-cypress-tests-in-parallel",
+          },
+          {
+            type: "doc",
+            label: "Specify Browsers and OS",
+            id: "supported-browsers-and-os",
+          },
+          {
+            type: "doc",
+            label: "Supported Cypress Versions",
+            id: "supported-cypress-versions",
+          },
+          {
+            type: "doc",
+            label: "Cypress Testing Using WebKit",
+            id: "cypress-webkit",
+          },
+          {
+            type: "doc",
+            label: "Cypress CLI Commands",
+            id: "cypress-cli-commands",
+          },
+          {
+            type: "doc",
+            label: "Configure Cypress Test Execution",
+            id: "run-settings",
+          },
+          {
+            type: "doc",
+            label: "Test On Different Screen Resolutions",
+            id: "screen-resolution-cypress",
+          },
+          {
+            type: "doc",
+            label: "Environment Variables Support for Cypress Tests",
+            id: "cyp-environment",
+          },
+          {
+            type: "doc",
+            label: "Execute Including Private Dependencies",
+            id: "private-dependencies-cypress",
+          },
+          {
+            type: "doc",
+            label: "Install NPM via Tunnel",
+            id: "npm-via-tunnel",
+          },
+          {
+            type: "doc",
+            label: "Download Artefacts For Cypress Project",
+            id: "download-artefacts-cypress",
+          },
+        ],
       },
       {
-        type: "doc",
-        label: "Parallel Testing",
-        id: "run-your-cypress-tests-in-parallel",
-      },
-      {
-        type: "doc",
-        label: "Specify Browsers and OS",
-        id: "supported-browsers-and-os",
-      },
-      {
-        type: "doc",
-        label: "Supported Cypress Versions",
-        id: "supported-cypress-versions",
-      },
-      {
-        type: "doc",
-        label: "Cypress Testing Using WebKit",
-        id: "cypress-webkit",
-      },
-      {
-        type: "doc",
-        label: "Cypress CLI Commands",
-        id: "cypress-cli-commands",
-      },
-      {
-        type: "doc",
-        label: "Configure Cypress Test Execution",
-        id: "run-settings",
-      },
-      {
-        type: "doc",
-        label: "Test On Different Screen Resolutions",
-        id: "screen-resolution-cypress",
-      },
-      {
-        type: "doc",
-        label: "Download Artefacts For Cypress Project",
-        id: "download-artefacts-cypress",
-      },
-      {
-        type: "doc",
-        label: "Integrate LambdaTest with Cypress Dashboard",
-        id: "integrate-lambdatest-with-cypress",
-      },
-      {
-        type: "doc",
-        label: "Execute Including Private Dependencies",
-        id: "private-dependencies-cypress",
-      },
-      {
-        type: "doc",
-        label: "Applitools Integration For Cypress",
-        id: "applitools-integration-cypress",
-      },
-      {
-        type: "doc",
-        label: "Report Portal IO Integration For Cypress",
-        id: "report-portal-cypress",
-      },
-      {
-        type: "doc",
-        label: "Multi Reporters Support",
-        id: "cyp-multi-reporters",
-      },
-      {
-        type: "doc",
-        label: "Environment Variables Support for Cypress Tests",
-        id: "cyp-environment",
-      },
-      {
-        type: "doc",
-        label: "Cypress Terminal Reports",
-        id: "cypress-detailed-command-logs",
-      },
-      {
-        type: "doc",
-        label: "Install NPM via Tunnel",
-        id: "npm-via-tunnel",
+        type: "category",
+        collapsed: true,
+        label: "Integrations",
+        items: [
+          {
+            type: "doc",
+            label: "Integrate TestMu AI with Cypress Dashboard",
+            id: "integrate-lambdatest-with-cypress",
+          },
+          {
+            type: "doc",
+            label: "Applitools Integration For Cypress",
+            id: "applitools-integration-cypress",
+          },
+          {
+            type: "doc",
+            label: "Report Portal IO Integration For Cypress",
+            id: "report-portal-cypress",
+          },
+          {
+            type: "doc",
+            label: "Multi Reporters Support",
+            id: "cyp-multi-reporters",
+          },
+          {
+            type: "doc",
+            label: "Cypress Terminal Reports",
+            id: "cypress-detailed-command-logs",
+          },
+        ],
       },
     ],
   ],
 
   PlaywrightTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2693,13 +2784,12 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Playwright Testing ",
-        items: ["playwright-testing-guide"],
-      },
-      {
-        type: "doc",
-        id: "playwright-sdk",
-        label: "Playwright SDK",
+        label: "Getting Started",
+        items: [
+          "playwright-testing-guide",
+          "playwright-agent-skills",
+          "playwright-sdk",
+        ],
       },
       {
         type: "category",
@@ -2740,33 +2830,47 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Test on Android Device",
-        link: {
-          type: "doc",
-          id: "playwright-android-guide",
-        },
-        items: ["playwright-android-caps", "playwright-webview-test"],
+        label: "Test Capabilities",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Test on Android Device",
+            link: {
+              type: "doc",
+              id: "playwright-android-guide",
+            },
+            items: ["playwright-android-caps", "playwright-webview-test"],
+          },
+          "playwright-ios-guide",
+          "parallel-playwright-test",
+          "migrate-playwright-tests",
+          "playwright-test-execution-setup",
+          "playwright-bundled-browser-support",
+          "playwright-caps",
+          "local-testing-playwright",
+          "playwright-auto-heal",
+        ],
       },
-      "playwright-ios-guide",
-      "parallel-playwright-test",
-      "migrate-playwright-tests",
-      "playwright-test-execution-setup",
-      "playwright-bundled-browser-support",
-      "playwright-caps",
-      "local-testing-playwright",
-      "playwright-playwrighttest",
-      "playwright-cucumberjs",
-      "playwright-cicd",
-      "playwright-lighthouse-library",
-      "playwright-auto-heal",
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrations",
+        items: [
+          "playwright-playwrighttest",
+          "playwright-cucumberjs",
+          "playwright-cicd",
+          "playwright-lighthouse-library",
+        ],
+      },
     ],
   ],
 
   PuppeteerTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2774,16 +2878,38 @@ module.exports = {
     [
       {
         type: "category",
-        collapsed: true,
-        label: "Puppeteer Testing ",
+        collapsed: false,
+        label: "Getting Started",
         items: [
           "puppeteer-testing-guide",
+          "puppeteer-agent-skills",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Capabilities",
+        items: [
           "puppeteer-test-execution",
           "puppeteer-capabilities",
           "local-testing-puppeteer",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Frameworks",
+        items: [
           "puppeteer-mocha",
           "puppeteer-jest",
           "puppeteer-pytest-pyppeteer",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "CI/CD",
+        items: [
           "puppeteer-cicd",
         ],
       },
@@ -2792,9 +2918,9 @@ module.exports = {
 
   K6BrowserTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2810,26 +2936,25 @@ module.exports = {
 
   EmuSimuSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
     },
     [
       "app-automation-app-sim",
+      "build-ios-app-for-simulator-testing",
       "virtual-device-flutter-apps",
-      "emulator-simulator-avaiable-devices",
-      "camera-image-injection-vd",
     ],
   ],
 
   AppiumTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2844,6 +2969,7 @@ module.exports = {
           id: "getting-started-with-appium-testing",
         },
         items: [
+        
           {
             type: "category",
             collapsed: true,
@@ -2925,6 +3051,7 @@ module.exports = {
               },
               "appium-kotlin",
               "test-flutter-apps",
+             
             ],
           },
           {
@@ -2984,7 +3111,8 @@ module.exports = {
               "device-passcode-appautomation",
               "set-device-dark-mode",
               "smart-heal-appium",
-              "apple-pay-auto"
+              "apple-pay-auto",
+              "button-text-click"
             ],
           },
           {
@@ -3013,9 +3141,9 @@ module.exports = {
 
   EspressoTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3026,6 +3154,7 @@ module.exports = {
         label: "Getting Started with Espresso Testing",
         id: "getting-started-with-espresso-testing",
       },
+     
       {
         type: "category",
         collapsed: true,
@@ -3076,17 +3205,17 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Espresso Mock Server",
-        id: "espresso-mock-server",
+        label: "MockWebServer & Localhost",
+        id: "espresso-mockwebserver-localhost",
       },
     ],
   ],
 
   XCUITestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3138,6 +3267,11 @@ module.exports = {
         label: "XCResult",
         id: "xcresult",
       },
+      {
+        type: "doc",
+        label: "SmartUI Visual Regression",
+        id: "xcui-visual-regression",
+      },
     ],
   ],
 
@@ -3176,9 +3310,9 @@ module.exports = {
 
   VisualRegressionTestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3196,9 +3330,9 @@ module.exports = {
           "smartui-running-your-first-project",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",
+          "smartui-approval-workflow-guide",
         ],
       },
-
       {
         type: "category",
         collapsed: false,
@@ -3291,10 +3425,6 @@ module.exports = {
               {
                 type: "category",
                 label: "Mobile Testing",
-                link: {
-                  type: "doc",
-                  id: "smartui-appium-sdk",
-                },
                 collapsed: true,
                 items: [
                   {
@@ -3311,22 +3441,17 @@ module.exports = {
                   },
                   {
                     type: "category",
-                    label: "Mobile Hooks",
+                    label: "Native Apps",
                     collapsed: true,
                     items: [
                       {
                         type: "doc",
-                        label: "Appium Hooks",
-                        id: "smartui-appium-hooks",
-                      },
-                      {
-                        type: "doc",
-                        label: "Espresso Hooks",
+                        label: "Espresso",
                         id: "espresso-visual-regression",
                       },
                       {
                         type: "doc",
-                        label: "XCUI Hooks",
+                        label: "XCUITest",
                         id: "xcui-visual-regression",
                       },
                     ],
@@ -3344,6 +3469,11 @@ module.exports = {
                 type: "doc",
                 label: "Selenium Hooks",
                 id: "selenium-visual-regression",
+              },
+              {
+                type: "doc",
+                label: "Hooks Layout + Full Page",
+                id: "smartui-hooks-layout-fullpage-smartignore",
               },
               {
                 type: "doc",
@@ -3445,6 +3575,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Audit & Activity Logs",
+            id: "smartui-audit-logs",
+          },
+          {
+            type: "doc",
             label: "Smart Comments",
             id: "smartui-smart-comments",
           },
@@ -3472,6 +3607,16 @@ module.exports = {
                 type: "doc",
                 label: "Layout Testing",
                 id: "smartui-layout-testing",
+              },
+              {
+                type: "doc",
+                label: "Mismatch Thresholds",
+                id: "smartui-mismatch-thresholds",
+              },
+              {
+                type: "doc",
+                label: "Diff Highlighter",
+                id: "smartui-diff-highlighter",
               },
             ],
           },
@@ -3736,7 +3881,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "LambdaTest Products",
+            label: "TestMu AI Products",
             items: [
               {
                 type: "doc",
@@ -3753,6 +3898,11 @@ module.exports = {
                     collapsed: true,
                     label: "SmartUI Hooks",
                     items: [
+                      {
+                        type: "doc",
+                        label: "SmartUI Capture Onboarding",
+                        id: "hyperexecute-smart-ui-capture-onboarding",
+                      },
                       {
                         type: "doc",
                         label: "Selenium",
@@ -3919,6 +4069,7 @@ module.exports = {
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
         "analytics-dashboard-settings",
+        "analytics-report-scheduling",
       ],
     },
     {
@@ -3930,11 +4081,6 @@ module.exports = {
         id: "analytics-widgets",
       },
       items: [
-        "dashboards-custom-widgets",
-        "analytics-test-case-insights",
-
-        "analytics-modules-resource-utilization",
-        "analytics-test-time-trends",
         {
           type: "category",
           collapsed: true,
@@ -3950,6 +4096,23 @@ module.exports = {
         },
         {
           type: "category",
+          collapsed: false,
+          label: "Custom Widgets",
+          link: {
+            type: "doc",
+            id: "dashboards-custom-widgets",
+          },
+          items: [
+            "analytics-heatmap-widgets",
+            "analytics-bar-line-widgets",
+            "analytics-table-widgets",
+          ],
+        },
+        "analytics-test-case-insights",
+        "analytics-modules-resource-utilization",
+        "analytics-test-time-trends",
+        {
+          type: "category",
           collapsed: true,
           label: "Error Insights",
           items: [
@@ -3958,7 +4121,6 @@ module.exports = {
           ],
         },
         "analytics-allure-api-widgets",
-
         "analytics-modules-groups",
       ],
     },
@@ -3971,6 +4133,7 @@ module.exports = {
         "analytics-modules-test-intelligence-flaky-test-analytics",
         "analytics-build-insights",
         "analytics-build-comparison",
+        "analytics-unique-instances-retry-detection",
         "analytics-smart-tags-test-intelligence",
         "analytics-test-failure-classification",
         "analytics-ai-root-cause-analysis",
@@ -3995,9 +4158,9 @@ module.exports = {
 
   TestIntelligence: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4023,9 +4186,9 @@ module.exports = {
 
   LambdaTestMigrationGuideSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4033,22 +4196,22 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "LambdaTest Migration Guide",
+        label: "TestMu AI Migration Guide",
         id: "capability-map",
       },
       {
         type: "doc",
-        label: "BrowserStack To LambdaTest Migration",
+        label: "BrowserStack To TestMu AI Migration",
         id: "browserstack-to-lambdatest-migration-guide",
       },
       {
         type: "doc",
-        label: "Sauce Labs To LambdaTest Migration",
+        label: "Sauce Labs To TestMu AI Migration",
         id: "saucelabs-to-lambdatest-migration-guide",
       },
       {
         type: "doc",
-        label: "Legacy Platform To LambdaTest Migration",
+        label: "Legacy Platform To TestMu AI Migration",
         id: "migrate-legacy-lambdatest",
       },
     ],
@@ -4056,9 +4219,9 @@ module.exports = {
 
   VisualUITestingSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4083,7 +4246,7 @@ module.exports = {
           "mark-as-bug",
           "automated-ss-api",
           "ss-behind-login",
-          "default-list-of-browsers-for-screesnshot-testing",
+          "default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing",
         ],
       },
       {
@@ -4134,9 +4297,9 @@ module.exports = {
 
   LTBrowserSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4192,7 +4355,7 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Setting up LambdaTest MCP Server",
+        label: "Setting up TestMu AI MCP Server",
         id: "lambdatest-mcp-server",
       },
     ],
@@ -4201,9 +4364,9 @@ module.exports = {
 
   TestingLocalPagesSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4269,7 +4432,8 @@ module.exports = {
           "dedicated-proxy",
           "bypass-proxy-domains",
           "socks5-proxy-support",
-          "http2-support", // Added HTTP/2 support doc
+          "http2-support",
+          "site-to-site-ipsec-vpn-setup",
         ],
       },
       {
@@ -4291,9 +4455,9 @@ module.exports = {
 
   TestManagementSidebar: [
     {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
       customProps: {
         className: "back-to-main-menu",
       },
@@ -4364,7 +4528,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Deleting LambdaTest Account",
+        label: "Deleting TestMu AI Account",
         id: "delete-lambdatest-account",
       },
       {
@@ -4407,7 +4571,7 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Getting Started with Scim",
+        label: "SCIM Provisioning",
         id: "scim",
       },
       {
@@ -4424,6 +4588,11 @@ module.exports = {
         type: "doc",
         label: "JumpCloud",
         id: "jumpcloud-scim",
+      },
+      {
+        type: "doc",
+        label: "PingOne",
+        id: "pingone-scim",
       },
     ],
   ],
@@ -4503,4 +4672,133 @@ module.exports = {
       },
     ],
   ],
+
+  BrowserCloudSidebar: [
+    {
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Get Started",
+        items: [
+          {
+            type: "doc",
+            label: "What is Browser Cloud",
+            id: "browser-cloud-intro",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With SDK",
+            id: "browser-cloud-quickstart",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With Agent Skills",
+            id: "browser-cloud-skills",
+          },
+          {
+            type: "doc",
+            label: "Connect to a Session",
+            id: "browser-cloud-connect",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Manage Your Sessions",
+        items: [
+          {
+            type: "doc",
+            label: "Understand the Sessions API",
+            id: "browser-cloud-sessions-overview",
+          },
+          {
+            type: "doc",
+            label: "Handle Session Lifecycle",
+            id: "browser-cloud-session-lifecycle",
+          },
+          {
+            type: "doc",
+            label: "Configure Session Options",
+            id: "browser-cloud-session-configuration",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Preserve Browser State",
+        items: [
+          {
+            type: "doc",
+            label: "Transfer Cookies & Storage",
+            id: "browser-cloud-context",
+          },
+          {
+            type: "doc",
+            label: "Stay Logged in Across Runs",
+            id: "browser-cloud-profiles",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Extend Your Browser",
+        items: [
+          {
+            type: "doc",
+            label: "Stealth Mode to Avoid Bot Detection",
+            id: "browser-cloud-stealth",
+          },
+          {
+            type: "doc",
+            label: "Upload and Download Files",
+            id: "browser-cloud-files",
+          },
+          {
+            type: "doc",
+            label: "Load Chrome Extensions",
+            id: "browser-cloud-extensions",
+          },
+          {
+            type: "doc",
+            label: "Access Localhost and Internal Networks",
+            id: "browser-cloud-tunnel",
+          },
+          {
+            type: "doc",
+            label: "One-Liner Scrape, Screenshot, and PDF",
+            id: "browser-cloud-quick-actions",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug and Troubleshoot",
+        items: [
+          {
+            type: "doc",
+            label: "Replay and Debug Sessions",
+            id: "browser-cloud-debugging",
+          },
+          {
+            type: "doc",
+            label: "API Reference",
+            id: "browser-cloud-api-reference",
+          },
+        ],
+      },
+    ],
+  ],
+
 };

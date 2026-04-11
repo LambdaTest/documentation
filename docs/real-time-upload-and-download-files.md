@@ -3,10 +3,10 @@ id: real-time-upload-and-download-files
 title: Upload and Download Files
 hide_title: false
 sidebar_label: Upload and Download Files
-description: Easily upload and download files during remote testing with LambdaTest. Manage cross-platform file transfers for seamless workflows across desktop and mobile devices.
+description: Easily upload and download files during remote testing with TestMu AI. Manage cross-platform file transfers for seamless workflows across desktop and mobile devices.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool
@@ -16,13 +16,15 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/real-time-upload-and-download-files/
+site_name: TestMu AI
 slug: real-time-upload-and-download-files/
+canonical: https://www.testmuai.com/support/docs/real-time-upload-and-download-files/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,18 +33,18 @@ import TabItem from '@theme/TabItem';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Upload and Download Files",
-          "item": "https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/"
+          "item": `${BRAND_URL}/support/docs/real-time-upload-and-download-files/`
         }]
       })
     }}
@@ -67,7 +69,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-web-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -81,7 +83,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-mobile-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -95,7 +97,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-app.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -152,9 +154,9 @@ The Upload and Download Files feature allows you to manage files directly within
 
 | File Type | Supported Formats | Maximum File Size |
 |-----------|-------------------|-------------------|
-| Image | JPG, JPEG, PNG, GIF, BMP, DCM, STL, SIF | 15 MB |
+| Image | JPG, JPEG, PNG, GIF, BMP | 15 MB |
 | Video | MP4, MOV, 3GP | 15 MB |
-| Non-media | XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, PPT, Contacts, Zip, CER, PFX | 15 MB |
+| Non-media | XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, PPT, Contacts | 15 MB |
 
 </TabItem>
 <TabItem value="download" label="Downloading Files" default>
@@ -169,7 +171,7 @@ The Upload and Download Files feature allows you to manage files directly within
 :::info
 - **Number of File Uploads per Session :** You can upload 5 files max per testing session.
 
-- **File Storage Duration :** All files uploaded to Lambdatest servers, whether media or non-media, will be retained for a period of 30 days. After this period, the files will be automatically purged from the servers.
+- **File Storage Duration :** All files uploaded to TestMu AI servers, whether media or non-media, will be retained for a period of 30 days. After this period, the files will be automatically purged from the servers.
 
 <!-- - **Non-Media File Considerations for iOS :** For non-media files on iOS, it is imperative to ensure that the iOS app has the `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` keys set to `true` in the `Info.plist` file. -->
 :::

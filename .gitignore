@@ -8,6 +8,9 @@
 .docusaurus
 .cache-loader
 
+# Temp (unnecessary / local-only files moved here)
+/temp
+
 # Misc
 .DS_Store
 .env.local

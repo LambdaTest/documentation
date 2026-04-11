@@ -1,15 +1,22 @@
 ---
 id: white-listing-proxy-with-lambdatest
-title: White-listing Proxy With LambdaTest
-hide_title: true
-sidebar_label: White Listing Proxy With LambdaTest
-description: This documentation will help you learn how you can white list LambdaTest domain if you are accessing the internet through a firewall-protected network.
+title: Whitelisting Proxy with TestMu AI
+sidebar_label: Whitelist Proxy IPs
+description: Whitelist the TestMu AI domain to connect from a firewall-protected network.
 keywords:
- - White-listing Proxy With LambdaTest
-url: https://www.lambdatest.com/support/docs/white-listing-proxy-with-lambdatest/
-site_name: LambdaTest
-slug: white-listing-proxy-with-lambdatest/
+  - whitelist lambdatest domain firewall
+  - proxy configuration selenium grid
+  - firewall access lambdatest ports
+  - network security whitelist testing
+  - TCP port 80 443 whitelist
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
+site_name: TestMu AI
+slug: white-listing-proxy-with-testmu/
+canonical: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,52 +26,52 @@ slug: white-listing-proxy-with-lambdatest/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "White-listing Proxy With LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/white-listing-proxy-with-lambdatest/"
+          "name": "White-listing Proxy With TestMu AI",
+          "item": `${BRAND_URL}/support/docs/white-listing-proxy-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# White-listing Proxy With LambdaTest
+# Whitelisting Proxy with TestMu AI
 * * *
 
-If you are accessing the internet through a firewall-protected network then you may face an issue in connecting with LambdaTest. You may encounter the below error messages:
+If you access the internet through a firewall-protected network, you may face issues connecting with TestMu AI. You may encounter error messages.
 
-In such scenarios, you may need to whitelist LambdaTest domain. Whitelisting is a process which conveys your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain trusted by you. Whitelisting is a security procedure to help users access a website or web-app which is considered to be non-malicious by their network security team.
+In such scenarios, you need to whitelist the TestMu AI domain. Whitelisting tells your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain that you trust. Whitelisting is a security procedure to help users access a website or web-app that their network security team considers non-malicious.
 
-You can relay the below domain to your network security team, asking them to whitelist it so you could connect with LambdaTest from your firewall protected network.
+Relay the below domain to your network security team and ask them to whitelist it so you can connect with TestMu AI from your firewall-protected network.
 
 | PROTOCOL | PORTS       | SOURCE                 | DESTINATION      |
 |----------|-------------|------------------------|------------------|
-| TCP      | 80, 443, 22 | All LambdaTest Clients | *.lambdatest.com |
+| TCP      | 80, 443, 22 | All TestMu AI Clients | *.lambdatest.com |
 
->In case of any queries or special request related to whitelisting, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **shout**</span>.
+>In case of any queries or special requests related to whitelisting, reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat support**</span>.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       White-Listing Proxy With LambdaTest
+       Whitelisting Proxy With TestMu AI
       </span>
     </li>
   </ul>

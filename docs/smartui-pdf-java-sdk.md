@@ -9,9 +9,10 @@ keywords:
   - Visual Regression Testing
   - PDF Testing
   - Java Development
-url: https://www.lambdatest.com/support/docs/smartui-pdf-java-sdk/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
+site_name: TestMu AI
 slug: smartui-pdf-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -19,6 +20,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +31,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI PDF Java SDK",
-          "item": "https://www.lambdatest.com/support/docs/smartui-pdf-java-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-pdf-java-sdk/`
         }]
       })
     }}
@@ -53,7 +56,7 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 - Java 8 or higher installed on your system
 - Maven or Gradle build tool
 - Familiarity with Java development
-- Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project
@@ -168,7 +171,7 @@ public class SmartuiPdfLocalTest {
 
 <TabItem value='cloud' label='Cloud Mode'>
 
-Upload PDFs downloaded during LambdaTest cloud test execution:
+Upload PDFs downloaded during <BrandName /> cloud test execution:
 
 "> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
 
@@ -391,7 +394,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 
 3. Verify file size is within limits
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Verify PROJECT_TOKEN is set correctly:
    ```bash
@@ -524,11 +527,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

@@ -1,28 +1,25 @@
 ---
 id: testng-framework
-title: Run your Selenium TestNG tests on LambdaTest
+title: Selenium With TestNG
 sidebar_label: TestNG
-description: Your guide to running tests using TestNG on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Run TestNG Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.
 keywords:
-  - java selenium
-  - testng selenium
-  - testng
-  - testng tutorial
-  - testng selenium framework
-  - java selenium tutorial
-  - java selenium webdriver
-  - java selenium
-  - java selenium testing
-image: /assets/images/og-images/TestNG-framework-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid
-site_name: LambdaTest
-slug: testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/
+  - testng selenium cloud testing
+  - run testng tests on selenium grid
+  - testng parallel test execution
+  - java testng automation setup
+  - testng cross browser testing
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,85 +29,70 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Running Java Automation Scripts On Selenium Grid Using TestNG Framework",
-          "item": "https://www.lambdatest.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/"
+          "name": "Selenium With TestNG",
+          "item": `${BRAND_URL}/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
-This guide walks you through the process of running Selenium TestNG tests on LambdaTest, a cloud-based cross-browser testing platform. By following these steps, you can seamlessly execute automated tests on a wide range of browsers and operating systems using LambdaTest’s Selenium Grid.
 
-## Prerequisites
-Before you begin, ensure you have the following:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
-- Install Java Development Kit (JDK). We recommend Java version 11
-- Install [Maven](https://maven.apache.org/)
-- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
-
-## Step 1: Configure your test suite
+Run TestNG tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on our Standard Grid.
+All the code used in this guide is available in the sample repository.
 
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/Java-TestNG-Selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
 
-```bash title="terminal"
-git clone https://github.com/LambdaTest/Java-TestNG-Selenium.git
+## Prerequisites
+---
+
+Make sure you have the following set up before you start.
+
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the **Java development environment** (Java 11 recommended).
+4. Install **Maven**. Download it from [the official website](https://maven.apache.org/) or install it on **Linux/MacOS** using [**Homebrew**](https://brew.sh/).
+
+## Step 1: Clone the Sample Project
+---
+
+Pull the sample repo to your local machine and navigate into the project directory.
+
+```bash
+git clone https://github.com/LambdaTest/Java-TestNG-Selenium
 cd Java-TestNG-Selenium
 ```
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+You may also want to run the command below to check for outdated dependencies.
 
-```java title="Test.java"
-public static String hubURL = "https://hub.lambdatest.com/wd/hub";
-```
-
-## Step 2: Update the dependencies
-Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
-
-```bash title="terminal"
+```bash
 mvn versions:display-dependency-updates
 ```
 
-```xml reference
-https://github.com/LambdaTest/java-testng-selenium/blob/master/pom.xml
-```
+## Step 2: Set Your Credentials
+---
 
-## Step 3: Configure your test Capabilities
-LambdaTest requires specific capabilities to set the browser, browser version, operating system, and other configurations for your test.
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-Example desired capabilities for testing on Chrome 120:
-
-```java title="Test.java"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("browserName", "chrome");
-capabilities.setCapability("version", "120.0");
-capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-capabilities.setCapability("build", "LambdaTestSampleApp");
-capabilities.setCapability("name", "LambdaTestTestNGSample");
-```
-
-:::tip
-Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
-:::
-
-## Step 4: Setup your LambdaTest credentials
-In your terminal (as per your respective Operating System), run these command to setup your LambdaTest credentials.
-> You can see your credentials below if you have logged into our platform.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value="bash" label="macOS / Linux" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -118,7 +100,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -129,43 +110,128 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-## Step 5: Execute your test
-If you are using the sample code repository (provided above), then use the below mentioned command to trigger your tests:
+## Step 3: Configure Your Test Capabilities
+---
 
-<Tabs className="docs__val" queryString="testType">
-<TabItem value="single" label="Run single tests" default>
+Define the browser, version, and OS for your test run.
 
-```bash title="terminal"
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "TestMu AISampleApp");
+        ltOptions.put("name", "TestMu AIJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+```
+
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+:::
+
+## Step 4: Run the Test
+---
+
+Trigger the test from your terminal.
+
+<Tabs className="docs__val">
+<TabItem value="single" label="Single Test" default>
+
+```bash
 mvn test -D suite=single.xml
 ```
 
-```xml reference
-https://github.com/LambdaTest/java-testng-selenium/blob/master/single.xml
-```
 </TabItem>
+<TabItem value="parallel" label="Parallel Tests">
 
-<TabItem value="parallel" label="Run parallel tests" default>
-
-```bash title="terminal"
+```bash
 mvn test -D suite=parallel.xml
 ```
 
-```xml reference
-https://github.com/LambdaTest/java-testng-selenium/blob/master/parallel.xml
-```
 </TabItem>
+</Tabs>
 
-<TabItem value="single-parallel" label="Single test on multiple browsers" default>
-Here is an example xml file which would help you to run a single test on various browsers at the same time:
+Below is the sample TestNG test used in this project:
 
-```xml
+```java title="TestNG To Do"
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+public class TestNGTodo{
+    public String username = "YOUR_LAMBDATEST_USERNAME";
+    public String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    boolean status = false;
+    @BeforeClass
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "TestMu AISampleApp");
+        ltOptions.put("name", "TestMu AIJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @Test
+    public void testSimple() throws Exception {
+       try {//Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+              // Let's check that the item we added is added in the list.
+            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @AfterClass
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
+```
+
+For parallel execution, the sample project includes a `testng.xml` that runs the test across multiple browsers simultaneously:
+
+```xml title="testng.xml"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="LambaTestSuite" parallel="tests">
 
   <test name="WIN8TEST">
   <parameter name="browser" value="firefox"/>
-  <parameter name="version" value="62.0"/>
+  <parameter name="version" value="latest"/>
   <parameter name="platform" value="WIN8"/>
     <classes>
       <class name="LambdaTest.TestNGToDo"/>
@@ -174,7 +240,7 @@ Here is an example xml file which would help you to run a single test on various
 
   <test name="WIN10TEST">
   <parameter name="browser" value="chrome"/>
-  <parameter name="version" value="79.0"/>
+  <parameter name="version" value="latest"/>
   <parameter name="platform" value="WIN10"/>
     <classes>
       <class name="LambdaTest.TestNGToDo"/>
@@ -182,7 +248,7 @@ Here is an example xml file which would help you to run a single test on various
   </test> <!-- Test -->
   <test name="MACTEST">
   <parameter name="browser" value="safari"/>
-  <parameter name="version" value="11.0"/>
+  <parameter name="version" value="latest"/>
   <parameter name="platform" value="macos 10.13"/>
     <classes>
       <class name="LambdaTest.TestNGToDo"/>
@@ -191,14 +257,55 @@ Here is an example xml file which would help you to run a single test on various
 
 </suite>
 ```
-</TabItem>
 
-</Tabs>
+## Step 5: View Your Results
+---
 
-Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
-<img loading="lazy" src={require('../assets/images/selenium/language-frameworks/java/1.png').default} alt="Image"  className="doc_img"/>
+Check the Automation Dashboard to see exactly what happened during your test.
 
-## Additional Links
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
+
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
+
+## Run TestNG Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run TestNG tests with the TestMu AI Agent Skill.
+
+The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/testng-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/testng-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link"> Selenium With TestNG </span>
+    </li>
+  </ul>
+</nav>

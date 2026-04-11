@@ -3,17 +3,20 @@ id: test-flutter-apps
 title: How to test flutter apps using Appium framework
 hide_title: true
 sidebar_label: Testing Flutter Apps
-description: Learn how to test flutter apps for Appium testing across 10000+ real Android and iOS devices.
+description: Learn how to test flutter apps for Appium testing across 3000+ real Android and iOS devices.
 keywords:
 - how to test flutter apps
 - how to test flutter apps on android
 - test flutter apps on ios
 - test flutter apps on iphone
 - flutter test app
-url: https://www.lambdatest.com/support/docs/testing-flutter-apps/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/testing-flutter-apps/
+site_name: TestMu AI
 slug: testing-flutter-apps/
+canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +26,17 @@ slug: testing-flutter-apps/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Testing Flutter Apps With Appium",
-          "item": "https://www.lambdatest.com/support/docs/testing-flutter-apps/"
+          "item": `${BRAND_URL}/support/docs/testing-flutter-apps/`
         }]
       })
     }}
@@ -44,9 +47,9 @@ slug: testing-flutter-apps/
 
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now test Flutter apps on the LambdaTest [Appium testing](#) platform across 10000+ real Android and iOS devices. LambdaTest supports Appium’s Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on LambdaTest cloud servers and then run your automated tests. 
+You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium/`}>Appium testing</a> platform across 3000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
-## Prerequisites
+## Testing Apps Using Appium Flutter Driver
 ***
 
 Before automating Flutter apps using Appium, make sure you have the following things configured.
@@ -80,7 +83,7 @@ void main() {
  desiredCapabilities.setCapability("automationName", "flutter");
 ```
 
-Shown below is the test script for automating Flutter apps on LambdaTest platform.
+Shown below is the test script for automating Flutter apps on <BrandName /> platform.
 
 ```py
 import os
@@ -125,17 +128,146 @@ counter_element = FlutterElement(driver, counter_finder)
 print(counter_element.text)
 ```
 
->In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+## Testing Apps Using Appium Flutter Integration Driver
+---
+
+The [Appium Flutter Integration Driver](https://www.testmuai.com/support/docs/appium-flutter-integration/) lets you write tests in languages like Java, Python, JavaScript, and others that Appium supports. It works by embedding a small server inside your Flutter app which talks back to Appium and drives UI interactions.
+
+Check out this [Flutter Appium Java GitHub](https://github.com/LambdaTest/flutter-appium-java/) repository for a hands-on reference.
+
+
+To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *automationName* capability to *FlutterIntegration*.
+
+```java
+desired_caps = {
+  "deviceName": "Galaxy S20",
+  "platformName": "Android",
+  "platformVersion": "15",
+  "isRealMobile": True,   # Set False for virtual devices
+  "app": "YOUR_APP_URL",
+  "build": "Sample Build",
+  "name": "Sample Test",
+  "automationName": "FlutterIntegration"  # Use Flutter Integration Driver
+}
+```
+
+The example below shows a basic login flow for an Android Flutter app using the Appium Flutter Integration Driver. It covers driver setup, Flutter-specific capabilities, and widget interaction using *ValueKey*.
+
+```java
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Parameters;
+import java.net.URL;
+import java.util.HashMap;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.flutter.FlutterIntegrationTestDriver;
+import io.appium.java_client.flutter.android.FlutterAndroidDriver;
+
+public class AndroidApp_Flutter_Integration {
+
+    FlutterIntegrationTestDriver driver;
+
+    @Test
+    @Parameters(value = { "device", "version", "platform" })
+    public void AndroidApp1(String device, String version, String platform) {
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            HashMap<String, Object> ltOptions = new HashMap<>();
+
+            ltOptions.put("automationName", "FlutterIntegration");
+            ltOptions.put("nativeFlutterLaunch", true);
+            ltOptions.put("platformName", platform);
+            ltOptions.put("deviceName", device);
+            ltOptions.put("platformVersion", version);
+            ltOptions.put("isRealMobile", true);
+
+            capabilities.setCapability("LT:Options", ltOptions);
+
+            driver = new FlutterAndroidDriver(
+                new URL("https://username:accessKey@mobile-hub.lambdatest.com/wd/hub"),
+                capabilities
+            );
+
+            WebElement username = driver.findElement(AppiumBy.flutterKey("username"));
+            username.sendKeys("user@example.com");
+
+            WebElement password = driver.findElement(AppiumBy.flutterKey("password"));
+            password.sendKeys("password123");
+
+            WebElement loginBtn = driver.findElement(AppiumBy.flutterKey("login_btn"));
+            loginBtn.click();
+
+            driver.quit();
+        } catch (Exception e) {
+            driver.quit();
+        }
+    }
+}
+```
+
+Below is a screenshot showing Appium test automation running with the Flutter Integration Driver on the TestMu AI platform.
+
+<img loading="lazy" src={require('../assets/images/appium-flutter-integration-driver.webp').default} alt="Running Appium tests with Flutter Integration Driver on TestMu AI" width="1365" height="650" className="doc_img"/>
+
+
+
+
+>In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+
+
+
+## Using the Flutter Testing Agent Skill with TestMu AI
+***
+
+The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The flutter-testing-skill package includes:
+
+```
+flutter-testing-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Flutter Testing Agent Skill
+***
+
+Install a Flutter Testing Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/flutter-testing-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/flutter-testing-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

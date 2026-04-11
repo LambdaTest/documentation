@@ -2,18 +2,19 @@
 id: smartui-handle-sticky-elements
 title: Handle Pages with Sticky Elements
 sidebar_label: Handle Sticky Elements
-description: Ensure accurate visual testing with LambdaTest SmartUI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
+description: Ensure accurate visual testing with TestMu AI SmartUI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - sticky-elements
   - sticky header
   - sticky footer
   - visual testing
   - false positives
-url: https://www.lambdatest.com/support/docs/smartui-handle-sticky-elements/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/
+site_name: TestMu AI
 slug: smartui-handle-sticky-elements/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Handle Sticky Elements",
-          "item": "https://www.lambdatest.com/support/docs/smartui-handle-sticky-elements/"
+          "item": `${BRAND_URL}/support/docs/smartui-handle-sticky-elements/`
         }]
       })
     }}
@@ -286,6 +288,7 @@ await smartuiSnapshot(driver, 'Page');
 
 - Very complex sticky behaviors (multiple sticky elements, conditional stickiness) may need manual configuration
 - Test thoroughly before relying on automatic handling
+
 
 ## Additional Resources
 

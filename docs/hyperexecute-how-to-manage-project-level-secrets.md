@@ -5,14 +5,17 @@ hide_title: false
 sidebar_label: How to Manage Project Level Secrets in HyperExecute
 description: Find out how to Save and Manage Secrets
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Save and Manage Secrets
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
+site_name: TestMu AI
 slug: hyperexecute-how-to-manage-project-level-secrets/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,27 +25,27 @@ slug: hyperexecute-how-to-manage-project-level-secrets/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-manage-project-level-secrets/`
         }]
       })
     }}
 ></script>
-Secrets in LambdaTest HyperExecute are encrypted environment variables used to store sensitive data securely like **Access tokens**, **API Keys**, **Passwords**. Secrets are injected into your test environment at runtime, so you never expose them directly in your codebase or logs.
+Secrets in <BrandName /> HyperExecute are encrypted environment variables used to store sensitive data securely like **Access tokens**, **API Keys**, **Passwords**. Secrets are injected into your test environment at runtime, so you never expose them directly in your codebase or logs.
 
-Managing sensitive information like API tokens, credentials, and access keys is crucial when running tests in LambdaTest HyperExecute. To address this, HyperExecute offers a Secrets Management system, and one of its powerful features is Project Level Secrets. This feature lets you define secrets scoped to a specific project, making secret handling more secure, easier, and collaborative for your teams.
+Managing sensitive information like API tokens, credentials, and access keys is crucial when running tests in <BrandName /> HyperExecute. To address this, HyperExecute offers a Secrets Management system, and one of its powerful features is Project Level Secrets. This feature lets you define secrets scoped to a specific project, making secret handling more secure, easier, and collaborative for your teams.
 
 ## What Are Project Level Secrets?
-Project-level secrets are bound to a specific HyperExecute project instead of a user or account. When a job runs using that project (referenced by name or id in the YAML configuration, which is a sub-parameter of project parameter), the project-level secrets are automatically available to the test environment.
+Project-level secrets are bound to a specific HyperExecute project instead of a user or account. When a job runs using that project ( referenced by id or both id and name in the YAML configuration, which are sub-parameters of project parameter), the project-level secrets are automatically available to the test environment.
 
 ### Key Points
 - Define secrets once per project.
@@ -52,7 +55,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the LambdaTest platform. Follow the instructions to [Create a Project](https://www.lambdatest.com/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:
@@ -73,7 +76,9 @@ runson: linux
 autosplit: true
 concurrency: 2
 
-project: your-project-name
+project:
+  name: 'demo-project' 
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' 
 
 # highlight-start
 env:
@@ -98,4 +103,4 @@ env:
 - **Security :** Secrets remain encrypted and are never logged or exposed in your code.
 - **Easy Maintenance :** Update secrets in one place when values change, and all users/jobs referencing the project get the updated secrets immediately.
 
-By defining and managing secrets at the project level in LambdaTest HyperExecute, teams can ensure safer handling of sensitive data, reduce duplication efforts, and make test runs more consistent and secure.
+By defining and managing secrets at the project level in <BrandName /> HyperExecute, teams can ensure safer handling of sensitive data, reduce duplication efforts, and make test runs more consistent and secure.

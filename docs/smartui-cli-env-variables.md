@@ -15,8 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli-env-variables/
+url: https://www.testmuai.com/support/docs/smartui-cli-env-variables/
 slug: smartui-cli-env-variables/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-env-variables/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -34,18 +36,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-env-variables/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-env-variables/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ This guide is designed to provide you with comprehensive information about the v
 
 ## 1. Setting the Project Name
 
-Set the Project Name you want to add the current build run to by exporting these environment variables:
+Set the Project Name you want to add the current build run to by exporting these enviroment variables:
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -343,6 +345,7 @@ The following environment variables are also available for advanced configuratio
 | `MAX_CONCURRENT_PROCESSING` | Max concurrent processing threads | `0` (auto) |
 | `DO_NOT_USE_USER_AGENT` | Disable user agent | `false` |
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
@@ -356,12 +359,12 @@ The following environment variables are also available for advanced configuratio
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

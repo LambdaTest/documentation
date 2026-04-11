@@ -1,10 +1,10 @@
 {
-    "index_name": "lambdatest-internal",
+    "index_name": "testmuai",
     "start_urls": [
-      "https://staging.lambdatestinternal.com/support/"
+      "https://www.testmuai.com/support/"
     ],
     "sitemap_urls": [
-      "https://staging.lambdatestinternal.com/support/sitemap.xml"
+      "https://www.testmuai.com/support/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": [

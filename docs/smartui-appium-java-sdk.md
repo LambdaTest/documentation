@@ -17,8 +17,9 @@ keywords:
   - Mobile App Testing
   - App Visual Testing
 
-url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk  
-slug: smartui-appium-java-sdk
+url: https://www.testmuai.com/support/docs/smartui-appium-java-sdk/
+slug: smartui-appium-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-appium-java-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +27,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 ---
 
@@ -36,18 +39,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-app-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-app-sdk/`
         }]
       })
     }}
@@ -58,7 +61,7 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 ## Prerequisites
 
 - Basic understanding of mobile app testing and Appium
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials
 - An active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit
 
 ## Create a SmartUI Project
@@ -133,10 +136,10 @@ public class YourTestClass {
         // Configure screenshot settings
         Map<String, String> ssConfig = new HashMap<>();
         // Either use environment variable
-        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable      
-        // ssConfig.put("buildName", "First Build"); // Optional 
+        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable
+        // ssConfig.put("buildName", "First Build"); // Optional
         ssConfig.put("deviceName", "iPhone 15"); // Required, you can use the variables that you are setting in the cloud capabilities
-    
+
         ssConfig.put("platform", "iOS"); // Optional,you can use the variables that you are setting in the cloud capabilities
 
         try {
@@ -147,16 +150,16 @@ public class YourTestClass {
 // Your test code here - Example of native app interactions
             driver.findElement(MobileBy.AccessibilityId("username-input")).sendKeys("test@example.com");
             driver.findElement(MobileBy.AccessibilityId("password-input")).sendKeys("password123");
-            
+
             // Take screenshot of login form
             SmartUI.smartuiAppSnapshot(driver, "Login Form", ssConfig);
-            
+
             driver.findElement(MobileBy.AccessibilityId("login-button")).click();
-            
+
             // Wait for home screen to load
             WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("home-screen")));
-            
+
             // Take screenshot of home screen
             SmartUI.smartuiAppSnapshot(driver, "Home Screen", ssConfig);
 
@@ -199,7 +202,7 @@ ssConfig.put("platform", "iOS");
 ```
 
 #### Important Notes:
-- It is advised to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device 
+- It is advised to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
@@ -368,10 +371,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Use meaningful build names
 - Run tests on consistent device configurations
 
-</TabItem>
-</Tabs>
-
-## Troubleshooting
+**Troubleshooting**
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
@@ -403,14 +403,14 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
    </dependency>
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-**Issue: Project Not Found Error**
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -443,7 +443,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
    ```
 
 2. Wait for specific elements to be visible:
@@ -472,8 +472,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
    ```java
-   Map<String, Object> ignoreBoxes = new HashMap<>();
-   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
+   Map<String, Object"> ignoreBoxes = new HashMap<">();
+   ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
    ```
 
 4. Test XPath locators in isolation before using in config
@@ -504,7 +504,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 **Issue: Screenshot Names Not Matching Baseline**
 
-**Symptoms**: Screenshots appear as New instead of comparing with baseline
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -517,8 +517,19 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Avoid special characters in screenshot names
 4. Check for case sensitivity issues
 
+**Getting Help**
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 
@@ -533,12 +544,33 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Appium Java SDK </span>
+    </li>
+  </ul>
+</nav>
+
+</TabItem>
+</Tabs>
+
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

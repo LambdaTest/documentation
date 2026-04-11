@@ -2,22 +2,24 @@
 id: accessibility-android-rules
 title: Android Accessibility Rules - Quick Reference
 sidebar_label: Android
-description: Use LambdaTest Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-android-rules/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/accessibility-android-rules/
+site_name: TestMu AI
 slug: accessibility-android-rules/
+canonical: https://www.testmuai.com/support/docs/accessibility-android-rules/
 ---
  
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Rules",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-rules/"
+          "item": `${BRAND_URL}/support/docs/accessibility-android-rules/`
         }]
       })
     }}
@@ -45,6 +47,7 @@ import TabItem from '@theme/TabItem';
 
 | Rule Name | WCAG | Level | Impact | Description |
 |-----------|------|-------|--------|-------------|
+| Interactive Role Undefined | 4.1.2 | A | Critical | Interactive container elements (ViewGroup, FrameLayout, LinearLayout, etc.) that are clickable but lack a **role** for screen readers. A label (contentDesc) provides the **Name** only; WCAG 4.1.2 requires both Name and Role. Add a semantic child widget (Button, Switch, CheckBox, etc.) so the role is programmatically determinable, or ensure the container is not the sole interactive focus. |
 | Missing Image Alt | 1.1.1 | A | Critical | Images lack alternative text descriptions that screen readers can announce to users. Add `android:contentDescription` to meaningful images or set to empty string for decorative images to ensure proper accessibility support. |
 | Missing View Accessibility | 4.1.2 | A | Serious | Interactive elements like buttons, clickable views, or custom controls lack proper accessibility labels that describe their purpose. Ensure all interactive Views have clear `android:contentDescription` or associated labels for screen readers. |
 | Unlabeled Checkbox Element | 4.1.2 | A | Serious | Checkbox controls are missing accessible names that describe their purpose or current state. Provide descriptive labels using `android:text`, `android:contentDescription`, or associated TextView labels so users understand what they're selecting. |

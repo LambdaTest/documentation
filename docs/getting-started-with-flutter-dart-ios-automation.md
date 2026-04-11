@@ -1,17 +1,18 @@
 ---
 id: getting-started-with-flutter-dart-ios-automation
-title: Flutter Dart Testing On LambdaTest - iOS
+title: Flutter Dart Testing On TestMu AI - iOS
 sidebar_label: Flutter Dart iOS
-description: This guide details running your first Flutter Dart test on real iPhones using LambdaTest's Real Device Cloud.
+description: This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.
 keywords:
 - flutter
-- lambdatest
-- framework on lambdatest
+- testmu ai
+- framework on testmu ai
 - app testing
 - real devices
-url: https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-ios-automation/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/
+site_name: TestMu AI
 slug: getting-started-with-flutter-dart-ios-automation/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -20,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +32,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Flutter Tests on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-android-automation/"
+          "name": "Getting Started With Flutter Tests on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-android-automation/`
         }]
       })
     }}
@@ -48,17 +51,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
-In this guide, we will explore how to run your first Flutter Dart test on an iOS device using the LambdaTest Real Device Cloud. By combining the capabilities of Flutter Dart and LambdaTest, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+In this guide, we will explore how to run your first Flutter Dart test on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
 
 ## Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
-2. You will need a LambdaTest username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
 3. Access to a Flutter **Sample** test suite (.zip).
 
 :::tip
 
-If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on LambdaTest by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/Flutter_iOS.zip).
+If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on <BrandName /> by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/Flutter_iOS.zip).
 
 :::
 
@@ -66,7 +69,7 @@ If you do not have any **Flutter iOS** test suite (.zip), you can run your sampl
 
 ### Step 1: Upload Your Test Suite
 
-Upload your **iOS** test suite (.zip file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **iOS** test suite (.zip file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -170,7 +173,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 ### Step 3: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/builds).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/builds).
 
 ## Capabilities Supported
 
@@ -220,15 +223,58 @@ Do note that Flutter builds when run in parallel, result in separate builds bein
 :::
 
 
+
+
+## Using the Flutter Testing Agent Skill with TestMu AI
+***
+
+The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The flutter-testing-skill package includes:
+
+```
+flutter-testing-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Flutter Testing Agent Skill
+***
+
+Install a Flutter Testing Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/flutter-testing-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/flutter-testing-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

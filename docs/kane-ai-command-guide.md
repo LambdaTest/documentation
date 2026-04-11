@@ -4,14 +4,15 @@ title: KaneAI - Command Guide
 sidebar_label: Command Types
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai instructions
   - kane ai commands
-url: https://www.lambdatest.com/support/docs/kane-ai-command-guide
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kane-ai-command-guide/
+site_name: TestMu AI
 slug: kane-ai-command-guide/
+canonical: https://www.testmuai.com/support/docs/kane-ai-command-guide/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -173,26 +174,27 @@ Assertions are used to validate whether your expectations match the actual outco
 | **Visual Assertions** | Confirm **image or logo visibility**.<ul><li>Example: Assert company logo appears in header</li><li>Example: Assert product image is visible</li></ul> |
 | **Relative Assertions** | Validate **element relationships**.<ul><li>Example: Assert login button is in same column as username</li><li>Example: Assert submit & cancel buttons are in same row</li></ul> |
 | **Mathematical Assertions** | Check **numeric calculations**.<ul><li>Example: Assert `3 + 4 = 7`</li></ul> |
+| **Element State Assertions** | Verify **element states** like enabled, disabled, visible, hidden, checked, clickable, and more.<ul><li>Example: Assert the "Submit" button is enabled</li><li>Example: Assert the "Terms" checkbox is checked</li></ul> |
+| **DOM Attribute Assertions** | Assert **HTML, ARIA, or data attribute** values on elements.<ul><li>Example: Assert the aria-expanded of the "Menu" equals "true"</li><li>Example: Assert the href of the "Dashboard" link contains "/dashboard"</li></ul> |
+| **CSS Property Assertions** | Validate **computed CSS properties** like color, font-size, opacity, and more.<ul><li>Example: Assert the font-size of the "Heading" equals "24px"</li><li>Example: Assert the background-color of the "Banner" equals "blue"</li></ul> |
 
 :::note
 Since **July 20, 2025**, all assertions fail tests immediately by default.  
 Older tests may still use *warn-and-continue* until edited.  
-More info: [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)  
+More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)  
 :::
 
 ---
 
-## Unsupported Assertions (Coming Soon)
+## Unsupported Assertions
 
-Currently, the following assertion types are not available in KaneAI. These features are being developed and will be supported soon:
+The following assertion types are not yet available via natural language. Use **JS snippets** as workarounds where applicable.
 
 | Category | Example | Description |
 | :--- | :--- | :--- |
-| **Element State** | Assert if submit button is disabled | Directly accessing and asserting an element's state (e.g., enabled/disabled) is not supported yet. | 
-| **Element Property** | Assert if font size is 16px | Direct assertions on element properties (like CSS styles) are not yet available. |
-| **Spatial** | Assert the 5th column of the table contains "Jordan.Mathews" | Requires detailed knowledge of the DOM structure to assert based on element positions and arrangement. 
-| **Action-based** | Assert tooltip appears after hover | Assertions based on actions (e.g., hover or click) are split into multiple steps and not fully supported as a single assertion yet. |
-| **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involve multiple layers of validation within a single assertion. |
+| **Spatial** | Assert the 5th column of the table contains "Jordan.Mathews" | Requires detailed knowledge of the DOM structure to assert based on element positions and arrangement. |
+| **Action-based** | Assert tooltip appears after hover | Assertions based on actions (e.g., hover or click) need to be split into multiple steps (hover → wait → assert). |
+| **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involving multiple layers of validation within a single assertion are not supported. Split into separate assertions. |
 
 ---
 
@@ -207,11 +209,13 @@ KaneAI allows you to retrieve specific information from your web page during tes
 
 ## Conditional Actions
 
-Highlight that nested conditions are not yet supported. Additionally usage of modules within if else conditions is part of the roadmap.
+Use conditional logic to execute actions based on specific conditions on the page. KaneAI supports **If / Else‑If / Else** blocks with multiple conditions combined via AND / OR logic. You can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [Conditional Logic](/support/docs/kaneai-conditional-logic/).
 
-Use conditional logic to execute actions based on specific conditions on the page.
+:::note
+Nested conditions (an If / Else block inside another If / Else block) are not supported.
+:::
 
-**Conditional Click** 
+**Conditional Click**
 Example:
  **if pop up is present in the viewport then click on it**: clicks on a pop-up element if it is visible within the current view.
 

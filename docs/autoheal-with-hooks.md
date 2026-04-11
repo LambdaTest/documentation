@@ -1,20 +1,23 @@
 ---
 id: autoheal-with-hooks
-title: How to use AutoHeal using Hooks
-hide_title: false
-sidebar_label: AutoHeal using Hooks
-description: Learn how to use LambdaTest Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
+title: How to Use AutoHeal Using Hooks
+sidebar_label: Configure Auto-Heal Hooks
+description: Enable and disable AutoHeal at any point in your Selenium test script using hooks for precise control.
 keywords:
-- auto heal lambdatest
-- auto heal test flakiness restrictions
-- auto healing lambdatest
-url: https://www.lambdatest.com/support/docs/autoheal-with-hooks/
-site_name: LambdaTest
+  - autoheal selenium hooks enable disable
+  - auto healing dynamic element changes
+  - selenium self-healing hooks control
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/autoheal-with-hooks/
+site_name: TestMu AI
 slug: autoheal-with-hooks/
+canonical: https://www.testmuai.com/support/docs/autoheal-with-hooks/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -25,27 +28,30 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "AutoHeal with Hooks",
-          "item": "https://www.lambdatest.com/support/docs/autoheal-with-hooks/"
+          "item": `${BRAND_URL}/support/docs/autoheal-with-hooks/`
         }]
       })
     }}
 ></script>
-Autoheal feature automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements’ IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
 
-Autoheal can be started or stopped at any point in your test script using simple hooks. This allows for precise control over when your tests should attempt element healing, improving reliability and reducing flaky tests. This guide explains how to enable and disable Autoheal in your Selenium scripts using the lambdatest hooks.
+Autoheal automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements' IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
+
+Autoheal can be started or stopped at any point in your test script using hooks. This allows for precise control over when your tests should attempt element healing. This guide explains how to enable and disable Autoheal in your Selenium scripts using the TestMu AI hooks.
 
 ## Using Autoheal Hooks in Tests
-Autoheal hooks can be inserted anywhere in the script depending on where you need dynamic element handling. Typical flow:
+---
+
+Insert Autoheal hooks anywhere in the script depending on where you need dynamic element handling.
 
 - Navigate to your test page.
 - [Start Autoheal](/support/docs/autoheal-with-hooks/#enable-autoheal) before interacting with elements that may change.
@@ -56,34 +62,38 @@ Autoheal hooks can be inserted anywhere in the script depending on where you nee
 This gives you fine-grained control over Autoheal, improving test stability without affecting unrelated test steps.
 
 ## Enable AutoHeal
-Use the following hook to **start** Autoheal at any point in your Selenium test script:
+---
+
+Use the following hook to **start** Autoheal at any point in your Selenium test script.
 
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 ```
 
-**Usage :** Place this hook right before interacting with elements that may dynamically change during the test.
+**Usage:** Place this hook right before interacting with elements that may dynamically change during the test.
 
 ## Disable AutoHeal
-Use the following hook to **stop** Autoheal at any point in your Selenium test script:
+---
+
+Use the following hook to **stop** Autoheal at any point in your Selenium test script.
 
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ```
 
-**Usage :** Place this hook immediately after the actions requiring Autoheal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
+**Usage:** Place this hook immediately after the actions requiring Autoheal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
 
 ## Sample Script
+---
+
+Review the following sample script to see how Autoheal hooks work in practice.
 
 ```python title="Test.py"
 import os
-import sys
 import time
-
 from selenium import webdriver
 
-LT_USERNAME = os.getenv('LT_USERNAME')
-LT_ACCESS_KEY = os.getenv('LT_ACCESS_KEY')
+platform = os.getenv('HYPEREXECUTE_PLATFORM')
 
 desired_cap_chrome = {
   "build" : "Lambdatest Build 2",
@@ -98,7 +108,7 @@ desired_cap_chrome = {
   'goog:chromeOptions': {'args': ['--window-size=400x300']},
 }
 
-hub = f"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
+hub = f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@hub.lambdatest.com/wd/hub"
 
 def OneTest(caps, sleepTime):
   begin = time.time()
@@ -125,7 +135,27 @@ def OneTest(caps, sleepTime):
   driver.execute_script("console.log('Test completed successfully');")
   driver.quit()
 
-OneTest(desired_cap_chrome, 5)
+OneTest(desired_cap_chrome, 2)
 ```
 
-With these steps, you can seamlessly integrate LambdaTest HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.
+With these steps, you can integrate TestMu AI HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        How to Use AutoHeal Using Hooks
+      </span>
+    </li>
+  </ul>
+</nav>

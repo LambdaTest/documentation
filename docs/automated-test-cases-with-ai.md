@@ -8,10 +8,13 @@ keywords:
   - automated test cases
   - automated test cases with ai 
   - test cases
-url: https://www.lambdatest.com/support/docs/automated-test-cases-with-ai/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/automated-test-cases-with-ai/
+site_name: TestMu AI
 slug: automated-test-cases-with-ai/
+canonical: https://www.testmuai.com/support/docs/automated-test-cases-with-ai/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +23,18 @@ slug: automated-test-cases-with-ai/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Automated Test Cases with AI",
-          "item": "https://www.lambdatest.com/support/docs/automated-test-cases-with-ai/"
+          "item": `${BRAND_URL}/support/docs/automated-test-cases-with-ai/`
         }]
       })
     }}
@@ -44,7 +47,7 @@ Test Manager enables the creation and management of automated test cases directl
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-2. Open the Test Manager dashboard, and in the **Projects** section, you will find the **LambdaTest Automation** project automatically created.
+2. Open the Test Manager dashboard, and in the **Projects** section, you will find the **<BrandName /> Automation** project automatically created.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-project-two.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

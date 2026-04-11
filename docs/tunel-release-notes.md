@@ -3,16 +3,20 @@ id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Get the latest release notes for LambdaTest Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
+description: Get the latest release notes for TestMu AI Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
 keywords:
-  - LambdaTest Tunnel
-  - LambdaTest Tunnel help
-  - LambdaTest Tunnel documentation
+  - TestMu AI Tunnel
+  - TestMu AI Tunnel help
+  - TestMu AI Tunnel documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/tunnel-release-notes/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/tunnel-release-notes/
+site_name: TestMu AI
 slug: tunnel-release-notes/
+canonical: https://www.testmuai.com/support/docs/tunnel-release-notes/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,21 +26,25 @@ slug: tunnel-release-notes/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Release Notes",
-          "item": "https://www.lambdatest.com/support/docs/tunel-release-notes/"
+          "item": `${BRAND_URL}/support/docs/tunel-release-notes/`
         }]
       })
     }}
 ></script>
+## Version 3.2.25 (28th Dec 2025)
+- **Security Updates and Stability Fixes**
+  - Security Fixes for CVE
+  - 
 ## Version 3.2.24 (7th Dec 2025)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE

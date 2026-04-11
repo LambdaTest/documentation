@@ -10,9 +10,10 @@ keywords:
   - Git Integration
   - Merge Strategy
   - Branch Management
-url: https://www.lambdatest.com/support/docs/smartui-branch-merging/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-branch-merging/
+site_name: TestMu AI
 slug: smartui-branch-merging/
+canonical: https://www.testmuai.com/support/docs/smartui-branch-merging/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -31,17 +33,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Branch Merging",
-          "item": "https://www.lambdatest.com/support/docs/smartui-branch-merging/"
+          "item": `${BRAND_URL}/support/docs/smartui-branch-merging/`
         }]
       })
     }}
@@ -182,7 +184,7 @@ Status Issues
 - Verify build status
    - Check permissions
    - Review approval history
-If you encounter any issues with branch merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmuai.com.
 
 </TabItem>
 </Tabs>

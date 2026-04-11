@@ -2,7 +2,7 @@
 id: smartui-katalon-plugin
 title: SmartUI Plugin for Katalon Studio
 sidebar_label: Katalon Plugin
-description: Integrate LambdaTest SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.
+description: Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -17,9 +17,10 @@ keywords:
   - Katalon Studio
   - Katalon SmartUI Integration
 
-url: https://www.lambdatest.com/support/docs/smartui-katalon-plugin/
-site_name: LambdaTest
-slug: smartui-katalon-plugin
+url: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
+site_name: TestMu AI
+slug: smartui-katalon-plugin/
+canonical: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -27,6 +28,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,23 +39,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Katalon Plugin",
-          "item": "https://www.lambdatest.com/support/docs/smartui-katalon-plugin/"
+          "item": `${BRAND_URL}/support/docs/smartui-katalon-plugin/`
         }]
       })
     }}
 ></script>
 
-The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [LambdaTest SmartUI](https://www.lambdatest.com/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
+The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [<BrandName /> SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:
 - Capture screenshots at any point in your test flow
@@ -233,12 +236,12 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

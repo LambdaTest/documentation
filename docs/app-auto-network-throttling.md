@@ -3,23 +3,24 @@ id: app-auto-network-throttling
 title: Network Throttling for Appium tests
 hide_title: false
 sidebar_label: Network Throttling
-description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. LambdaTest empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.
+description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. TestMu AI empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.
 keywords:
     - cross platform testing
     - network throttling
     - Appium capabilities generator
     - Appium desired capabilities
-    - LambdaTest Appium grid capabilities
-    - LambdaTest automation capabilities generator for Appium
+    - TestMu AI Appium grid capabilities
+    - TestMu AI automation capabilities generator for Appium
     - Appium capability configuration
     - Appium automation testing
     - Appium automation grid online
     - configure Appium tests with network throttling desired capabilities
     - network throttling capabilities for Appium
-    - throttling test on LambdaTest with Appium
-url: https://www.lambdatest.com/support/docs/app-auto-network-throttling/
-site_name: LambdaTest
+    - throttling test on TestMu AI with Appium
+url: https://www.testmuai.com/support/docs/app-auto-network-throttling/
+site_name: TestMu AI
 slug: app-auto-network-throttling/
+canonical: https://www.testmuai.com/support/docs/app-auto-network-throttling/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -28,6 +29,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,18 +39,18 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/app-auto-network-throttling/"
+          "item": `${BRAND_URL}/support/docs/app-auto-network-throttling/`
         }]
       })
     }}
@@ -57,7 +60,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
-LambdaTest simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
+<BrandName /> simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
 
 ## Workflow
 ### Initialization
@@ -111,8 +114,6 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 ### Offline Mode
 
-#### Android
-
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
     ```python
     caps = {
@@ -125,14 +126,11 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
-:::note
-Currently, for iOS, we do not support any capability or LambdaHook for offline mode.
-:::
 
 
 ## Toggle Offline/Online Mode via API
 
-- For android devices you can use the offline/online mode API as well within the running test session:
+- For Android and iOS devices, you can use the offline/online mode API within the running test session:
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
@@ -142,26 +140,26 @@ Currently, for iOS, we do not support any capability or LambdaHook for offline m
     ```
 
 :::note
-- **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.4
+- **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.
 
 - **Wrong Capability Name or Value:** Providing an incorrect capability value results in a bad request error with a descriptive message.
 
 - **LambdaHook Error:** If you pass any wrong value in LambdaHook, you will receive an error message.
 
-- In offline mode, **live video** will not be available for the duration of the iOS sessions.
+- In offline mode, **live video** will not be available for the duration of the test session.
 :::
 
-> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@lambdatest.com. Happy testing! 🙂
+> In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmuai.com. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

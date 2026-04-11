@@ -11,9 +11,10 @@ keywords:
   - storybook cli
   - command line interface
   - visual regression testing
-url: https://www.lambdatest.com/support/docs/smartui-cli-complete-reference/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-cli-complete-reference/
+site_name: TestMu AI
 slug: smartui-cli-complete-reference/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-complete-reference/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +22,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +32,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI CLI Complete Reference",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-complete-reference/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-complete-reference/`
         }]
       })
     }}
@@ -52,7 +55,7 @@ This comprehensive reference guide covers all SmartUI CLI and Storybook CLI comm
 
 - Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
 - npm or yarn package manager
-- LambdaTest account credentials
+- <BrandName /> account credentials
 - SmartUI project created
 
 :::note
@@ -163,8 +166,8 @@ smartui exec [options] -- <command>
 | `--fetch-results [filename]` | | Fetch results and save to JSON file | `results.json` |
 | `--buildName <string>` | | Custom build name for test run | Random |
 | `--scheduled <string>` | | Specify schedule ID | - |
-| `--userName <string>` | | LambdaTest username (overrides env) | - |
-| `--accessKey <string>` | | LambdaTest access key (overrides env) | - |
+| `--userName <string>` | | <BrandName /> username (overrides env) | - |
+| `--accessKey <string>` | | <BrandName /> access key (overrides env) | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -210,8 +213,8 @@ smartui capture [options] <file>
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
 | `--scheduled <string>` | | Schedule ID | - |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -259,8 +262,8 @@ smartui upload [options] <directory>
 | `--ignoreDir <patterns>` | `-i` | Comma-separated directories to ignore | - |
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 
 **Examples:**
 ```bash
@@ -617,8 +620,8 @@ These options are available but may not be prominently documented:
 | Option | Commands | Description | Example |
 |--------|----------|-------------|---------|
 | `--scheduled <string>` | `capture`, `exec` | Specify schedule ID for scheduled test runs | `smartui capture urls.json --scheduled "schedule-123"` |
-| `--userName <string>` | `capture`, `exec`, `upload` | Override LambdaTest username (overrides env) | `smartui capture urls.json --userName "user"` |
-| `--accessKey <string>` | `capture`, `exec`, `upload` | Override LambdaTest access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
+| `--userName <string>` | `capture`, `exec`, `upload` | Override <BrandName /> username (overrides env) | `smartui capture urls.json --userName "user"` |
+| `--accessKey <string>` | `capture`, `exec`, `upload` | Override <BrandName /> access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
 | `--env <prod\|stage>` | `storybook` | Switch between production and staging environments | `smartui storybook http://localhost:6006 --env stage` |
 | `--force` | `capture` | Forcefully apply parallel instances even if not optimal | `smartui capture urls.json --parallel 10 --force` |
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
@@ -652,8 +655,8 @@ smartui storybook ./storybook-static --force-rebuild
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PROJECT_TOKEN` | SmartUI project token | Yes (for CLI projects) |
-| `LT_USERNAME` | LambdaTest username | Yes (for Hooks) |
-| `LT_ACCESS_KEY` | LambdaTest access key | Yes (for Hooks) |
+| `LT_USERNAME` | <BrandName /> username | Yes (for Hooks) |
+| `LT_ACCESS_KEY` | <BrandName /> access key | Yes (for Hooks) |
 
 </TabItem>
 
@@ -907,6 +910,70 @@ test:
 - Log errors for debugging
 
 </TabItem>
+
+<TabItem value='results-reporting' label='Results Reporting'>
+**Results Reporting**
+
+Use the [SmartUI Reporter](https://smartui-reporter.netlify.app/) to visualize and analyze test results:
+
+1. **Export Results**: Use `--fetch-results` flag to generate JSON
+   ```bash
+   npx smartui capture urls.json --config config.json --fetch-results results.json
+   ```
+
+2. **Upload to Reporter**: Visit [SmartUI Reporter](https://smartui-reporter.netlify.app/) and upload `results.json`
+
+3. **View & Export**: Access tabular view with statistics, screenshot links, and export to PDF/CSV
+
+**Alternative**: Fetch results via [SmartUI API](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots)
+
+For detailed steps, see [Fetch Results Documentation](/support/docs/smartui-sdk-fetch-results/#using-smartui-reporter-tool).
+
+</TabItem>
+
+<TabItem value='url-grouping' label='URL Grouping for Large Test Suites'>
+**URL Grouping for Large Test Suites**
+
+When working with large numbers of URLs (1000+) that can be divided into sections/groups, you have two strategies:
+
+**Strategy 1: Single Project with Branching**
+- Use one SmartUI project with Smart Git branching
+- All sections in a single project dashboard
+- Each section can have its own branch
+- Unified tracking and reporting
+
+```bash
+# Enable Smart Git
+export SMART_GIT=true
+
+# Run different sections in different branches
+git checkout -b section1-bathroom
+npx smartui capture sections/section1.json --config config.json --buildName "Section1-Bathroom"
+```
+
+**Strategy 2: Separate Projects**
+- Create individual projects for each section
+- Complete isolation between sections
+- Independent baselines and approvals
+- Minimal projects with single branch
+
+```bash
+# Section 1 - Bathroom Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_BATHROOM}"
+npx smartui capture bathroom/urls.json --config config.json
+
+# Section 2 - Kitchens Project
+export PROJECT_TOKEN="${PROJECT_TOKEN_KITCHENS}"
+npx smartui capture kitchens/urls.json --config config.json
+```
+
+**When to Use Each:**
+- **Single Project**: Unified dashboard, cross-section analysis, shared configs
+- **Separate Projects**: Complete isolation, independent workflows, different configs
+
+For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/support/docs/hyperexecute-smart-ui-capture-onboarding/#11-url-grouping-strategies-for-large-test-suites).
+
+</TabItem>
 </Tabs>
 
 ---
@@ -962,6 +1029,7 @@ npx smartui capture urls.json --config .smartui.json
 </Tabs>
 
 ---
+
 
 ## Additional Resources
 

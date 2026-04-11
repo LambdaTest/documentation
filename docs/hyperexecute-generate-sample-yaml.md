@@ -5,13 +5,17 @@ hide_title: false
 sidebar_label: Generate your HyperExecute YAML
 description: This document helps you to understand how to generate the HyperExecute YAML files using the HyperExecute dashboard and then a sample yaml file for understanding the YAML
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-generate-sample-yaml/
-site_name: LambdaTest generating hyperexecute yaml
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/hyperexecute-generate-sample-yaml/
+site_name: TestMu AI generating hyperexecute yaml
 slug: hyperexecute-generate-sample-yaml/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-generate-sample-yaml/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +25,17 @@ slug: hyperexecute-generate-sample-yaml/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Generate HyperExecute YAML",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-generate-sample-yaml/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-generate-sample-yaml/`
         }]
       })
     }}

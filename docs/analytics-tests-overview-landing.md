@@ -2,13 +2,16 @@
 id: analytics-widgets-tests-overview-landing
 title: Test Overview Widgets
 sidebar_label: Tests Overview
-description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
+description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing/
+site_name: TestMu AI
 slug: analytics-widgets-tests-overview-landing/
+canonical: https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +21,17 @@ slug: analytics-widgets-tests-overview-landing/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Analytics Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/"
+          "item": `${BRAND_URL}/support/docs/analytics-widgets-tests-overview-landing/`
         }]
       })
     }}
@@ -36,7 +39,7 @@ slug: analytics-widgets-tests-overview-landing/
 
 import NewTag from '../src/component/newTag';
 
-Analytics in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
+Analytics in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
 <div className="support_main">
 
@@ -85,5 +88,5 @@ Analytics in LambdaTest allows the QA managers and executives to efficiently tra
 </div>
 
 :::info
-The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
+The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmuai.com).
 :::

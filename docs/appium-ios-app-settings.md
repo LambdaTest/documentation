@@ -7,16 +7,19 @@ keywords:
   - appium
   - ios
   - app settings
-  - lambdatest ios
-  - automation on lambdatest
+  - testmu ai ios
+  - automation on testmu ai
   - ios app settings
   - app automation
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-ios-app-settings/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/appium-ios-app-settings/
+site_name: TestMu AI
 slug: appium-ios-app-settings/
+canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 ---
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,23 +29,23 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "iOS App Settings",
-          "item": "https://www.lambdatest.com/support/docs/appium-ios-app-settings/"
+          "item": `${BRAND_URL}/support/docs/appium-ios-app-settings/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of LambdaTest due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
+**iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of <BrandName /> due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
 This document will guide you on how to access and use iOS settings for **App Automation session.**
 
@@ -102,87 +105,62 @@ params = {"Permission Settings":{"Location":"While using the app", "Precise Loca
 ```
 
 :::
+
 ### Custom App Settings 
 
 These are the settings added by the app developer using the [iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html#//apple_ref/doc/uid/10000059i-CH6-SW11).
 
-Currently, App Automate supports the following **custom settings** - 
+**Supported custom settings**
 
-*1. Toggles-* 
+Currently, App Automate supports the following custom settings:
 
-Toggles represent simple On/Off switches. To automate toggles, use the setting name as the key and set its value to "On" or "Off".
+- Toggles
 
-Example => Biometric : On
+- Multivalued Settings
 
+- Nested Settings
 
-*2. Multivalued Settings-*
+- Sliders
 
-Multivalued settings allow users to choose from multiple options, such as dropdowns or segmented controls. The setting name is the key, and the selected option is the value.
+- Textfields
 
-Example => Currency : Rs
+Apart from Textfields and Sliders, for every other settings, we have to pass the Name of that particular setting as the **key-value pair**. For example:
 
-*3. Nested Settings-*
+- "Reset App" : "On".
 
-Nested settings refer to child panes or submenus within the main settings. To interact with them, use the main setting name and specify the desired nested option.
+For **textfields and sliders**, we pass the index of that particular textfield or slider starting from 1 when we traverse from top to bottom. For example:
 
-Example => Other Settings : [Country:USA , Voice Command : On]
+1. "Slider-1":"0.1",
 
-*4. Sliders-*
+2. "TextField-2":"ABCD"
 
-Sliders accept decimal values between 0 and 1. If multiple sliders are present, specify the index to target a specific one.
+The values in Slider are entered on a scale from 0-1 which means the values are not integers but decimals.
 
-Example => Slider-1 : 0.5
-
-*5. Textfields-*
-
-Textfields accept plain text input. If multiple textfields exist, use an indexed key to target the correct field.
-
-Example => TextField-1 : This is LambdaTest
-
-*6. Secure Textfields-* 
-
-Secure textfields are similar to regular textfields but are used for sensitive data like passwords. They obscure the text as it’s entered.
-
-Example => SecureTextField-1: 000000
-
-Note: If any key is not present, we should get an error saying one of the keys is missing in the passed preferences.
-
-**Important Considerations:** 
-
-*1. Default Values-* 
-
-If a Textfield or Secure Textfield has a default value, it will be cleared before applying the new preference. To retain the default value, pass it explicitly in the preference.
-
-*2. Clearing Values-*
-
-Pass an empty string ("") to clear an existing value.
-
-*3. Untouched Fields-* 
-
-To leave a Textfield/Secure Textfield untouched, simply omit it from the preferences.
+If any key is not present, we should get an error saying one of the keys is missing in the passed preferences.
 
 ### Remember
 
 The title of the keys displayed on your iOS app settings page must be unique.
 
 
+
 ## Additional Links
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

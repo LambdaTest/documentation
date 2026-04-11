@@ -2,16 +2,17 @@
 id: accessibility-ios-rules
 title: iOS Accessibility Rules - Quick Reference
 sidebar_label: iOS
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-ios-rules/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/accessibility-ios-rules/
+site_name: TestMu AI
 slug: accessibility-ios-rules/
+canonical: https://www.testmuai.com/support/docs/accessibility-ios-rules/
 ---
  
 import CodeBlock from '@theme/CodeBlock';
@@ -20,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility iOS Rules",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-ios-rules/"
+          "item": `${BRAND_URL}/support/docs/accessibility-ios-rules/`
         }]
       })
     }}

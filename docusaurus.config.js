@@ -3,13 +3,13 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
-  url: 'https://www.lambdatest.com',
-  noIndex: true,
+  url: 'https://www.testmu.ai',
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'TestMu AI', // Usually your GitHub org/user name.
   projectName: 'TestMu AI', // Usually your repo name.
+  trailingSlash: true,
   customFields: {
     docsbotTeamId: process.env.DOCSBOT_TEAM_ID || '',
     docsbotBotId: process.env.DOCSBOT_BOT_ID || '',
@@ -18,21 +18,21 @@ module.exports = {
     require.resolve('./custom.js'),
   ],
   scripts: [
-  
+
     {
-      src: 'https://assets.testmuai.com/resources/js/salesforce_chatwidget.js',
+      src: 'https://assets.testmu.ai/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
-      src: 'https://assets.testmuai.com/resources/js/lambda_gtm.js',
+      src: 'https://assets.testmu.ai/resources/js/lambda_gtm.js',
       defer: true,
     },
     {
-      src: 'https://assets.testmuai.com/resources/js/sf_chat.js',
+      src: 'https://assets.testmu.ai/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
     },
-   
+
   ],
   themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
   plugins: [
@@ -88,7 +88,7 @@ module.exports = {
         alt: 'LambdaTest',
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
-        href: 'https://www.testmuai.com',
+        href: 'https://www.testmu.ai',
         target: '_self',
         width: '147',
         height: '26',
@@ -119,4 +119,3 @@ module.exports = {
     ],
   ],
 };
-

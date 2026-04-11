@@ -1,22 +1,25 @@
 ---
 id: automation-testing-using-jasmine-with-karma
-title: Jasmine Test Runner:Run Jasmine Testing on LambdaTest Selenium Grid | LambdaTest
-hide_title: true
-sidebar_label: Jasmine for BDD
-description: Now you can run your automation scripts using Jasmine with Karma on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+title: Selenium With Jasmine and Karma
+sidebar_label: Jasmine
+description: Run Jasmine BDD tests with Karma on TestMu AI cloud Selenium Grid with 3000+ real browsers and operating systems.
 keywords:
-  - jasmine selenium
-  - karma selenium
-  - javascript selenium
-  - javascript automation testing
-  - selenium webdriver javascript
-  - selenium javascript testing tutorial
-  - javascript selenium framework
-image: /assets/images/og-images/jasmine-with-karma.jpg
-url: https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
+  - jasmine karma selenium grid testing
+  - run jasmine tests cloud
+  - jasmine bdd test automation
+  - karma test runner selenium setup
+  - jasmine selenium cloud execution
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/
 ---
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,126 +28,89 @@ slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "Home",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Jasmine for BDD",
-          "item": "https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/"
+          "name": "Selenium With Jasmine and Karma",
+          "item": `${BRAND_URL}/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Jasmine Test Runner: Run Jasmine Testing on LambdaTest Selenium Grid
-* * *
+---
 
-LambdaTest Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
+Run Jasmine BDD tests with Karma on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-This topic will help you demonstrate:
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-* How to run a Jasmine testing and Selenium testing script on LambdaTest Selenium Cloud with Karma test runner for Angular?
-* How to test your locally hosted pages using Jasmine test runner?
-* How to run your test cases in parallel to reduce build times?
-* How to leverage LambdaTest’s Advanced capabilities?
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/karma-jasmine-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-### Jasmine Testing Using Jasmine Test Runner
-* * *
-Jasmine test runner is a BDD test automation framework which helps you to write clean and powerful test cases for JavaScript. It executes independently with respect to DOM or other JavaScript frameworks. 
+## Prerequisites
+---
+Complete these steps before running Jasmine tests with Karma on TestMu AI.
 
-### Karma Test Runner
-* * *
-Developed by AngularJS team, Karma is a Javascript test runner that helps to evaluate your source code across different browsers on the basis of your test code. The results are displayed using CLI to represent the test’s pass/fail status on various browsers. To know more refer to the [Karma’s official website](http://karma-runner.github.io/3.0/index.html).
+1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+2. Install **NodeJS** and **npm** from [nodejs.org](https://nodejs.org/en/).
+3. Install [Node.js](https://nodejs.org/) (latest LTS version recommended).
 
-## Prerequisites For Running Karma With LambdaTest Selenium Grid
-* * *
->All the code samples in this documentation can be found in the [Jasmine LambdaTest Repository on <img src={require('../assets/images/GitHub_icon/github-icon.webp').default} alt="Image" width="25" height="25" /> GitHub](https://github.com/LambdaTest/karma-jasmine-sample). You can either download or clone the repository to quickly run your tests.
+## Step 1: Clone the Sample Project
+---
+Clone the TestMu AI Jasmine Karma sample repository to your local machine.
 
-
-In order to perform your karma tests with LambdaTest, you would need the below things to be already set up:
-
-#### 1. Global Dependencies
-
-* Make sure to use the latest version of JavaScript.
-* A [Git or GitHub repository](https://github.com/)
-* Download and [install node.js](https://nodejs.org/en/) and node package manager or npm.
-* To install node.js with homebrew use the below command.
-
-`$ brew install node`
-
-* If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
-
-`npm install npm@latest -g`
-
-#### 2. LambdaTest Authentication Credentials
-
-Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
-
-* **For Linux/Mac:**
-```
-$ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> 
-$ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
+```bash
+git clone https://github.com/LambdaTest/karma-jasmine-sample
+cd karma-jasmine-sample
 ```
 
-* **For Windows:**
+Install the required dependencies:
+```bash
+npm install
 ```
-$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
-$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
-```
 
-## Setting Up The Environment For Jasmine Testing Using Selenium
-* * *
-You need to clone our [GitHub repository](https://github.com/LambdaTest/protractor-selenium-sample) which demonstrates a [sample of Karma-Jasmine](https://github.com/LambdaTest/karma-jasmine-sample).
+## Step 2: Set Your Credentials
+---
+Set your TestMu AI username and access key as environment variables.
 
-After cloning, you need to navigate to the cloned directory and install project dependencies using the below command:
+<Tabs className="docs__val">
 
-`$ npm install`
+<TabItem value="bash" label="macOS / Linux" default>
 
-The example mentioned below would help you to perform Jasmine testing in Google Chrome.
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-``` js
-describe('add', function () {
-    it('should add two numbers and return the result', function () {
-        expect(window.add(1, 2)).toBe(3);
-    });
-});
- 
-describe('subtract', function () {
-    it('should subtract two numbers', function () {
-        expect(window.subtract(2, 1)).toBe(1);
-    });
-});
- 
-describe('updateAppState', function () {
-    it('should push a new state into the browser history', function () {
-        window.updateAppState({
-            message: 'Getting Started with LambdaTest'
-        });
-        expect(window.history.state).toEqual({
-            message: 'Getting Started with LambdaTest'
-        })
-    });
-});
-```
-## Running Jasmine Tests Using Karma
-* * *
-Navigate to the directory where you cloned the [sample of Karma-Jasmine](https://github.com/LambdaTest/karma-jasmine-sample) and run the following command.
+</TabItem>
 
-`$ karma start karma.conf.js`
+<TabItem value="powershell" label="Windows" default>
 
-or you could also run the test using:
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-`$ npm test`
+</TabItem>
+</Tabs>
 
-## Browser Launcher Configuration
-* * *
-If you look at ***karma.conf.js*** file you will find that we are passing browser, browser version, and operating system information, along with LambdaTest [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) capabilities via capabilities object. The capabilities object in the above code is defined as:
+## Step 3: Configure Your Test Capabilities
+---
+Update the capabilities in the `karma.conf.js` file to define the browser and platform settings.
 
 ``` js
 customLaunchers: {
@@ -162,62 +128,70 @@ customLaunchers: {
     }
 ```
 
-The most important capabilities to understand here are ‘browserName’, ‘version’, and ‘platform’. They define which browser environment you wish to run the test on. Rest of the capabilities are important in test management and debugging. We have an inbuilt [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) tool as well that you use to generate capabilities code for your test suite.
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
 
-## Testing Locally Hosted Projects Using Jasmine Test Runner
-* * *
-To help you perform cross browser testing of your locally stored web pages, LambdaTest provides an SSH(Secure Shell) tunnel connection with the name LambdaTest tunnel. With LambdaTest tunnel, you can run your Jasmine tests using Karma to perform automated cross browser testing on browsers offered by online Selenium Grid at LambdaTest. So you make sure how well your changes look, even before your customers. Curious to know more about LambdaTest tunnel?
+## Step 4: Run the Test
+---
+Execute the test using the following command.
 
-> Follow our documentation on LambdaTest tunnel to know it all. OS specific instructions to download and setup tunnel binary can be found at the following links.
-> * [Documentation For Windows User](/docs/local-testing-for-windows/)
-> * [Documentation For Mac User](/docs/local-testing-for-macos/)
-> * [Documentation For Linux User](/docs/local-testing-for-linux/)
-
-> Download the binary file of:
-> * [LambdaTest tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-> * [LambdaTest tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-> * [LambdaTest tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
-
-``` js
-//Test Websites Using Localhost
-customLaunchers: { chrome: {
-        tunnel: true, // In case karma is running on local machine
-    }   }
-```
-> **Important Note**: Some Safari & IE browsers don’t support automatic resolution of the URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to use "`localhost.lambdatest.com`" or replace the string "localhost" with machine IP address. For example, if you wanted to test "`http://localhost/dashboard`" or, and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://localhost.lambdatest.com/dashboard`".
-
-## Avoid Timeouts With psuedoActivityInternal
-* * *
-To make sure our machines are not hold for long due to some incorrect test, we have come up with a restriction on the number of seconds that our machine is kept reserved for you. In cases, where our servers fail to retrieve a request from your local machine for more than 90 seconds, then your tests are aborted from the queue with the error message related to Timeouts.
-
-If you wish to avoid such timeouts, you need to make use of the below parameter:
-``` js
-customLaunchers: { chrome: {
- pseudoActivityInterval: 5000 // 5000 ms heartbeat to avoid timeouts
- } }
+```bash
+karma start karma.conf.js
 ```
 
-> **Note**: psuedoActivityInternal is presented as a default parameter with a value set to 0. Make sure to provide a value more than 0 in order to avoid the timeouts.
+Or run the test using:
+```bash
+npm test
+```
 
-Execute Jasmine testing using Karma & increase your test coverage using LambdaTest’s online Selenium Grid. Happy Testing!
+## Step 5: View Your Results
+---
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+
+The dashboard provides:
+- Video recordings of each test session
+- Screenshots captured at each step
+- Console logs from the browser
+- Network logs for debugging
+- Detailed command logs
+
+## Run Jasmine Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run Jasmine tests with the TestMu AI Agent Skill.
+
+The [jasmine-skill](https://github.com/LambdaTest/agent-skills/tree/main/jasmine-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/jasmine-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/jasmine-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Jasmine for BDD
+        Selenium With Jasmine and Karma
       </span>
     </li>
   </ul>

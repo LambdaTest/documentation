@@ -3,20 +3,22 @@ id: accessibility-automation-settings
 title: Configure Accessibility Automation
 hide_title: false
 sidebar_label: Configure Accessibility Automation
-description: Customize your testing with LambdaTest Accessibility DevTools' extensive settings, tailored to meet your specific needs and preferences.
+description: Customize your testing with TestMu AI Accessibility DevTools' extensive settings, tailored to meet your specific needs and preferences.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-automation-settings/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/accessibility-automation-settings/
+site_name: TestMu AI
 slug: accessibility-automation-settings/
+canonical: https://www.testmuai.com/support/docs/accessibility-automation-settings/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Settings",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-automation-settings/"
+          "item": `${BRAND_URL}/support/docs/accessibility-automation-settings/`
         }]
       })
     }}
@@ -76,17 +78,17 @@ accessibility.wcagVersion: 'wcag21a'
 ```
 
 ### 3. Best Practices Checks
-> The default value for **best practice** check is **`false`** focusing strictly on WCAG violations.
 
 - **Purpose:** Include or exclude checks that go beyond the defined WCAG standards but are considered good practices for optimal usability.
+- **Default Value:** The default setting is false, focusing strictly on WCAG violations.
 - **Implementation:** Enable best practice checks by setting bestPractice to true in your configuration file.
 
 ```bash
-accessibility.bestPractice: true
+accessibility.bestPractice: false
 ```
 
 ### 4. Needs Review
-> The default value for **needs review** check is **`false`**
+
 - **Purpose:** Flag potential accessibility issues that might require human evaluation for definitive assessment.
 - **Implementation:** Enable needs review checks by setting needsReview to true in your configuration file. This ensures potentially ambiguous issues get flagged for manual review.
 

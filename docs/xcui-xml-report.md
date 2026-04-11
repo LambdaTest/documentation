@@ -7,19 +7,21 @@ keywords:
   - xcui
   - java
   - xcui junit xml reports
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices
 
-url: https://www.lambdatest.com/support/docs/xcui-report/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/xcui-report/
+site_name: TestMu AI
 slug: xcui-report/
+canonical: https://www.testmuai.com/support/docs/xcui-report/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 
@@ -31,29 +33,40 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Report",
-          "item": "https://www.lambdatest.com/support/docs/xcui-junit-report/"
+          "item": `${BRAND_URL}/support/docs/xcui-junit-report/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the LambdaTest platform.
+XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the <BrandName /> platform.
 
-> This feature is also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+## Objective
+---
+### By the end of this document, you should be able to:
+
+1. Fetch XML reports for non-shard XCUI builds.
+
+2. Fetch XML reports for shard builds, both for individual shards and all shards collectively.
+
+
 
 ## XML report APIs
-### Non-shard build
+----
+
+**Non-shard build :** 
 To fetch the XML report for a `non-shard` build, you can use the following cURL command:
+
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -62,7 +75,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 </CodeBlock>
 </div>
 
-### Shard build (For single shard)
+
+**Shard build (For single shard):**
 To fetch the XML report for a `single shard` in a shard build,use:
 
 <div className="lambdatest__codeblock">
@@ -72,7 +86,8 @@ To fetch the XML report for a `single shard` in a shard build,use:
 </CodeBlock>
 </div>
 
-### Shard build (For all the shards)
+
+**Shard build (For all the shards):**
 To fetch the XML reports for `all shards` in a shard build, use:
 
 <div className="lambdatest__codeblock">
@@ -82,8 +97,10 @@ To fetch the XML reports for `all shards` in a shard build, use:
 </CodeBlock>
 </div>
 
+
+
 :::note
-- Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
+- Authenticate the API using your <BrandName /> username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
 - It is recommended to run the sharding test(via HyperExecute CLI) in the verbose mode i.e. with the **--verbose** flag. This allows the shard ID(task ID) and build ID(Job ID) to be displayed in the logs and then they can be used to fetch the above reports.
 - In case the report is not a valid XML format, the `encoder=true` parameter can be utilized to prevent the decoding of certain characters. Decoding is usually performed at the server's end to enhance the readability of the report. 
 :::
@@ -91,12 +108,12 @@ To fetch the XML reports for `all shards` in a shard build, use:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

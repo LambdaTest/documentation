@@ -8,10 +8,13 @@ keywords:
 - upload files
 - download files
 - kane ai
-url: https://www.lambdatest.com/support/docs/kaneai-upload-and-download-files/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/
+site_name: TestMu AI
 slug: kaneai-upload-and-download-files/
+canonical: https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,25 +24,25 @@ slug: kaneai-upload-and-download-files/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Upload and Download Files",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-upload-and-download-files/"
+          "item": `${BRAND_URL}/support/docs/kaneai-upload-and-download-files/`
         }]
       })
     }}
-></script>This guide provides a step-by-step process for uploading and downloading files within Kane AI, a cloud-based testing platform provided by LambdaTest. Users can easily upload files from their local system, access pre-uploaded files, and download files generated during a test session.
+></script>This guide provides a step-by-step process for uploading and downloading files within Kane AI, a cloud-based testing platform provided by <BrandName />. Users can easily upload files from their local system, access pre-uploaded files, and download files generated during a test session.
 
 ## Prerequisites
 
-- A valid LambdaTest account with access to Kane AI.
+- A valid <BrandName /> account with access to Kane AI.
 - An active test session on Kane AI.
 - Supported file formats:
   - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
@@ -48,7 +51,7 @@ slug: kaneai-upload-and-download-files/
 
 ## Steps to Upload a File
 ### Step 1: Initiate a Test Session
-- Log in to your LambdaTest account.
+- Log in to your <BrandName /> account.
 - Click on **Create a Web Test** to start a new session within Kane AI.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image1.png').default} alt="Image" className="doc_img"/>
@@ -67,7 +70,7 @@ slug: kaneai-upload-and-download-files/
 > - Supported file formats:
 >    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
 >    - **Videos :** MP4 (Maximum size: 50 MB)
->    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image3.png').default} alt="Image" className="doc_img"/>

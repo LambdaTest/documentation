@@ -1,22 +1,23 @@
 ---
 id: download-files-using-lambdatest-selenium-grid
-title: Download Files Using LambdaTest Selenium Grid
-hide_title: true
-sidebar_label: Download Files Inside Test Machine
-description: LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts.
+title: Download Files Using TestMu AI Selenium Grid
+sidebar_label: Download Files From the Browser
+description: Download files inside test VMs using base64 encoding with Java, Python, Node.js, C#, and Ruby scripts.
 keywords:
-  - Selenium grid
-  - download test
-  - test download
-  - automation script
-  - automate download
-  - base64
-  - base64 encryption
-  - base64 decryption
-url: https://www.lambdatest.com/support/docs/download-files-using-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: download-files-using-lambdatest-selenium-grid/
+  - download file selenium grid
+  - lambda-file-content base64
+  - selenium file download test
+  - lambda-file-exists check
+  - automate file download selenium
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
+site_name: TestMu AI
+slug: download-files-using-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/download-files-using-testmu-selenium-grid/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,18 +26,18 @@ slug: download-files-using-lambdatest-selenium-grid/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Download Files",
-          "item": "https://www.lambdatest.com/support/docs/download-files-using-lambdatest-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/download-files-using-testmu-selenium-grid/`
         }]
       })
     }}
@@ -45,24 +46,24 @@ slug: download-files-using-lambdatest-selenium-grid/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Download Files Using LambdaTest Selenium Grid
+# Download Files Using TestMu AI Selenium Grid
 
 ***
 
-While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
+While performing Selenium test automation, you may want to test the download functionality of your web-application or website. With TestMu AI Selenium Grid, you can test the download feature on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption and decryption.
 
-LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, LambdaTest has provided three main flags using JavascriptExecutor to:
+TestMu AI Selenium Grid provides an encoded string of base64 that you can use to download any file inside the virtual machine triggered through your Selenium testing scripts. TestMu AI provides three main flags using JavascriptExecutor to:
 
 - Check whether the downloaded file exists in the test machine.
 
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");
 ```
-- Retrieve file metadata such as md5 code, modified time, name and size
+- Retrieve file metadata such as md5 code, modified time, name, and size.
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");
 ```
-- Download file content using base64 encoding
+- Download file content using base64 encoding.
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");
 ```
@@ -73,10 +74,12 @@ ie:.
 print driver.execute_script("lambda-file-list=sample");
 Response: List of files in downloads dir starting with sample
 ```
->Note: Don’t forget to feed the file format with the file name to the JavaScriptExecutor.
+>Note: Include the file format with the file name in the JavaScriptExecutor.
 
-## Downloading File Using Selenium With Java
-***
+## Downloading File Using Selenium with Java
+---
+Use the lambda-file hooks in Java to verify, inspect, and download files from the test VM.
+
 <Tabs className="docs__val">
 <TabItem value="android" label="Selenium 4" default>
 
@@ -102,8 +105,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class PullFileSelenium {
-    public String username = "johnduo";
-    public String accesskey = "Y6TyVzfvvWrK8bo2tNABUYR9e8RduQPCu2tN";
+    public String username = "YOUR_LAMBDATEST_USERNAME";
+    public String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
     public RemoteWebDriver driver;
     public String gridURL = "@hub.lambdatest.com/wd/hub";
     String status = "passed";
@@ -294,8 +297,10 @@ public class DownloadCheck {
 </Tabs>
 
 
-## Downloading File Using Selenium With Python
-***
+## Downloading File Using Selenium with Python
+---
+Use the lambda-file hooks in Python to verify and download files from the test VM.
+
 ```python
 import unittest
 import time
@@ -381,8 +386,11 @@ class LTAutomate(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
-## Downloading File Using Selenium With Node.js
-***
+
+## Downloading File Using Selenium with Node.js
+---
+Use the lambda-file hooks in Node.js to verify and download files from the test VM.
+
 ```javascript
 const webdriver = require('selenium-webdriver');
 
@@ -456,9 +464,11 @@ function downloadFeature() {
 downloadFeature();
 ```
 
-## Downloading File Using Selenium With C#
-***
-```js
+## Downloading File Using Selenium with C#
+---
+Use the lambda-file hooks in C# to verify and download files from the test VM.
+
+```csharp
 using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
@@ -574,9 +584,11 @@ namespace NUnitSelenium
 }
 ```
 
-## Downloading File Using Selenium With Ruby
-***
-```js
+## Downloading File Using Selenium with Ruby
+---
+Use the lambda-file hooks in Ruby to verify and download files from the test VM.
+
+```ruby
 require 'selenium-webdriver'
 require 'test/unit'
 
@@ -608,8 +620,8 @@ class LtTest < Test::Unit::TestCase
         Result
         -------
         """
-        username= "prateeks"
-        accessToken= "ABCDEFGHIJKLMNOPQRST"
+        username= "YOUR_LAMBDATEST_USERNAME"
+        accessToken= "YOUR_LAMBDATEST_ACCESS_KEY"
         gridUrl = "hub.lambdatest.com/wd/hub"
  
         caps = {                       
@@ -664,18 +676,18 @@ class LtTest < Test::Unit::TestCase
     end
 end
 ```
-Got Questions? Give a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout</span> to us. We’re here for you 24/7. Happy testing! 🙂
+Got questions? Give a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> to us. We are here for you 24/7.
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

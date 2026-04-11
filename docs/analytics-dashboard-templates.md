@@ -5,10 +5,14 @@ sidebar_label: Create with Pre-Built templates
 description: Discover Dashboard Templates for streamlined test analysis. Save time with pre-built widgets tailored to specific testing needs. Learn more
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-dashboard-templates/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-dashboard-templates/
+site_name: TestMu AI
 slug: analytics-dashboard-templates/
+canonical: https://www.testmuai.com/support/docs/analytics-dashboard-templates/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,23 +22,27 @@ slug: analytics-dashboard-templates/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-templates/"
+          "item": `${BRAND_URL}/support/docs/analytics-dashboard-templates/`
         }]
       })
     }}
 ></script>
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/ge8w56jZTWw?si=3EJwrMTH6GC_hDd3" title="Exploring Pre-Built Templates in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="ge8w56jZTWw" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## About the Dashboard templates:
 
@@ -46,7 +54,7 @@ With various templates available for different test analytics purposes, testers 
 
 ## Prerequisites
 
-You should have an account subscribed to [Lambdatest Account](https://accounts.lambdatest.com) and have relevant test data available in the system.
+You should have an account subscribed to [TestMu AI Account](https://accounts.lambdatest.com) and have relevant test data available in the system.
 
 <img loading="lazy" src={require('../assets/images/analytics/Dashboard-Template.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -54,7 +62,7 @@ You should have an account subscribed to [Lambdatest Account](https://accounts.l
 
 To use a dashboard template, follow these steps:
 
-- Go to [Lambdatest Analytics](https://analytics.lambdatest.com).
+- Go to [TestMu AI Analytics](https://analytics.lambdatest.com).
 - Now, click on `Create Dashboard` Button on the home page.
 - Select a `pre-build` dashboards template based on your test analytics requirements.
 - Apply relevant `filters` to customize the data displayed on the dashboard. (Optional)

@@ -3,17 +3,21 @@ id: tosca-integration-hyperexecute
 title: Tosca
 hide_title: true
 sidebar_label: Tosca
-description: Integrate Tricentis Tosca with LambdaTest HyperExecute for efficient, no-code testing. Seamlessly connect Tosca Commander, DEX, and SAP for an optimized testing workflow.
+description: Integrate Tricentis Tosca with TestMu AI HyperExecute for efficient, no-code testing. Seamlessly connect Tosca Commander, DEX, and SAP for an optimized testing workflow.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - tosca
     - tricentis
-url: https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute/
+site_name: TestMu AI
 slug: tosca-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +27,17 @@ slug: tosca-integration-with-hyperexecute/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Tosca Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/tosca-integration-with-hyperexecute/`
         }]
       })
     }}
@@ -72,17 +76,17 @@ HyperExecute seamlessly integrates with Tosca, providing a Just-in-Time Tosca En
 </div>
 
 
-> This is currently in the **Beta** version of the **Project** section in HyperExecute. To enable it for your organization, please contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or our [Customer Support](mailto:support@lambdatest.com) team.
+> This is currently in the **Beta** version of the **Project** section in HyperExecute. To enable it for your organization, please contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or our [Customer Support](mailto:support@testmuai.com) team.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

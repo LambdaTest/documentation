@@ -2,7 +2,7 @@
 id: insights-private-desktop
 title: Private Desktop Insights
 sidebar_label: Private Desktop
-description: Discover LambdaTest's Private Desktop Insights for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Private Desktop Insights for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - analytics
   - test insights
@@ -11,10 +11,13 @@ keywords:
   - Desktop trends
   - Desktop status ratio
 
-url: https://www.lambdatest.com/support/docs/insights-private-desktop/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/insights-private-desktop/
+site_name: TestMu AI
 slug: insights-private-desktop/
+canonical: https://www.testmuai.com/support/docs/insights-private-desktop/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +27,17 @@ slug: insights-private-desktop/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/insights-private-desktop/"
+          "item": `${BRAND_URL}/support/docs/insights-private-desktop/`
         }]
       })
     }}
@@ -45,10 +48,10 @@ slug: insights-private-desktop/
 import NewTag from '../src/component/newTag';
 
 
-LambdaTest Private desktop Insights provide comprehensive insights into your private desktop testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your desktop device usage insights, and more.
+<BrandName /> Private desktop Insights provide comprehensive insights into your private desktop testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your desktop device usage insights, and more.
 
 :::note
-The Private desktop Insights is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).
+The Private desktop Insights is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 ## Device Usage Insights 
@@ -91,4 +94,4 @@ We provide a range of filters to help you customize your insights dashboard. You
 
 ## Support 
 
-If you have any questions or need further assistance, please feel free to reach out to our [24/7 customer support](mailto:support@lambdatest.com). Our team of experts is always here to help you with your testing efforts.
+If you have any questions or need further assistance, please feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com). Our team of experts is always here to help you with your testing efforts.

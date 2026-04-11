@@ -7,17 +7,19 @@ description: List of devices available on HyperExecute for Emulator and Simulato
 keywords:
   - hyperexecute device list
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - emulator
   - simulator
   - hyperexecute dashboard
-url: https://www.lambdatest.com/support/docs/hyperexecute-emu-simu-devices-list/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
+site_name: TestMu AI
 slug: hyperexecute-emu-simu-devices-list/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-emu-simu-devices-list/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Appium",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Virtual Devices - HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-run-jmeter-tests/`
         }]
       })
     }}

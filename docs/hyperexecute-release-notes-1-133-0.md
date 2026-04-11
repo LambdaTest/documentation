@@ -5,14 +5,18 @@ hide_title: false
 sidebar_label: Version 1.133.0
 description: Versions 1.133.0
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-133-0/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-1-133-0/
+site_name: TestMu AI
 slug: hyperexecute-release-notes-1-133-0/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-1-133-0/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: hyperexecute-release-notes-1-133-0/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-133-0/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-1-133-0/`
         }]
       })
     }}
@@ -45,7 +49,7 @@ The new integration between Bamboo CI and HyperExecute will allow teams to execu
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/bamboo.png').default} alt="Image"  className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [Bamboo CI](https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [Bamboo CI](/support/docs/bamboo-integration-with-hyperexecute/) with HyperExecute.
 
 ## GoCD Integration
 
@@ -55,4 +59,4 @@ The integration between GoCD and HyperExecute will allow teams to execute their 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/gocd.png').default} alt="Image"  className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [GoCD](https://www.lambdatest.com/support/docs/gocd-integration-with-hyperexecute/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [GoCD](/support/docs/gocd-integration-with-hyperexecute/) with HyperExecute.

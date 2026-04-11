@@ -1,7 +1,7 @@
 ---
 id: authentication
 title: Authentication
-sidebar_label: Authentication
+sidebar_label: Authenticate Test
 description: Explore comprehensive documentation on Cypress Automation and Testing for building robust, secure authentication systems. Understand authentication processes and bolster your testing efficiency.
 keywords:
   - Cypress Automation
@@ -15,15 +15,17 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/authentication/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/authentication/
+site_name: TestMu AI
 slug: authentication/
+canonical: https://www.testmuai.com/support/docs/authentication/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -46,8 +48,8 @@ The following args can be used while running tests using the run command.
 
 | Arg        | Shorthand | Accepted values            |
 | ---------- | --------- | -------------------------- |
-| --username | --user        | Your LambdaTest username   |
-| --access_key      | --ak        | Your LambdaTest access key |
+| --username | --user        | Your <BrandName /> username   |
+| --access_key      | --ak        | Your <BrandName /> access key |
 
 For example -
 
@@ -62,7 +64,7 @@ For example -
 
 ---
 
-The auth option will help you in specifying your username and access key. You can find your username and access key in the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
+The auth option will help you in specifying your username and access key. You can find your username and access key in the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -70,8 +72,8 @@ The options supported in the auth are as follows:
 
 | Arg            | Accepted values            |
 | -------------- | -------------------------- |
-| **username**   | Your LambdaTest username   |
-| **access_key** | Your LambdaTest access key |
+| **username**   | Your <BrandName /> username   |
+| **access_key** | Your <BrandName /> access key |
 
 For example -
 
@@ -91,8 +93,8 @@ While utilizing the CLI params, you can set up the following environment variabl
 
 | Env variable      | Accepted values            |
 | ----------------- | -------------------------- |
-| **LT_USERNAME**   | Your LambdaTest username   |
-| **LT_ACCESS_KEY** | Your LambdaTest access key |
+| **LT_USERNAME**   | Your <BrandName /> username   |
+| **LT_ACCESS_KEY** | Your <BrandName /> access key |
 
 Or you can also set environment variables using following commands:
 
@@ -129,12 +131,12 @@ By doing so, the auth credentials you use in your **lambdatest-config.json** fil
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

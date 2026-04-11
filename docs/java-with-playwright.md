@@ -1,9 +1,9 @@
 ---
 id: java-with-playwright
-title: Run your Java automation scripts with Playwright on LambdaTest
+title: Run your Java automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: Java
-description: Run your Java automation scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your Java automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - java playwright
   - java automation testing
@@ -11,13 +11,17 @@ keywords:
   - playwright java testing guide
   - java playwright framework
 
-url: https://www.lambdatest.com/support/docs/java-with-playwright/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/java-with-playwright/
+site_name: TestMu AI
 slug: java-with-playwright/
+canonical: https://www.testmuai.com/support/docs/java-with-playwright/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +31,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Java with Playwright",
-          "item": "https://www.lambdatest.com/support/docs/java-with-playwright/"
+          "item": `${BRAND_URL}/support/docs/java-with-playwright/`
         }]
       })
     }}
@@ -46,7 +50,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Java with Playwright: Running Your First Test
 * * *
 
-Learn how to use Playwright with Java to automate web application testing across 50+ real browsers and operating systems on LambdaTest cloud platform.
+Learn how to use Playwright with Java to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
 
 ## Prerequisites
 ***
@@ -54,7 +58,7 @@ Learn how to use Playwright with Java to automate web application testing across
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or clone the code sample for the Playwright Java from the LambdaTest GitHub repository to run the tests.
+Download or clone the code sample for the Playwright Java from the <BrandName /> GitHub repository to run the tests.
 
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -71,11 +75,11 @@ cd playwright-java
 npm install
 ```
 
-3. A LambdaTest Username and Access key. You can get it from your LambdaTest Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-4. To run Playwright tests, set your LambdaTest Username and Access key in the Environment Variables.
+4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
 
 
 ## Run your Playwright tests with Java
@@ -155,8 +159,50 @@ mvn -Dexec.mainClass="com.lambdatest.PlaywrightTestSingle" -Dexec.classpathScope
 ## View your test results
 ---
 
-Go to the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright Java test results.
+Go to the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright Java test results.
 
 
 
 
+
+
+## Using the Playwright Agent Skill with TestMu AI
+***
+
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Playwright Agent Skill
+***
+
+Install a Playwright Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

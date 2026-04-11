@@ -4,16 +4,17 @@ title: Handle Dynamic Data in Visual Tests
 sidebar_label: Dynamic Data
 description: Learn how to handle dynamic data in SmartUI visual regression tests by ignoring or selecting specific DOM elements that change between test runs.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - dynamic data
   - ignore elements
   - select elements
   - visual testing
   - false positives
-url: https://www.lambdatest.com/support/docs/smartui-handle-dynamic-data/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/
+site_name: TestMu AI
 slug: smartui-handle-dynamic-data/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Handle Dynamic Data",
-          "item": "https://www.lambdatest.com/support/docs/smartui-handle-dynamic-data/"
+          "item": `${BRAND_URL}/support/docs/smartui-handle-dynamic-data/`
         }]
       })
     }}
@@ -590,6 +592,7 @@ await smartuiSnapshot(driver, 'Page', options);
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

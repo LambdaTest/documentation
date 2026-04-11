@@ -5,13 +5,14 @@ hide_title: false
 sidebar_label: Guided Walkthrough
 description: Learn how to manage tests, update the images, compare the images, perform testing using the dashboard.
 keywords:
-  - LambdaTest SmartUI
-  - LambdaTest SmartUI help
-  - LambdaTest SamrtUI documentation
+  - TestMu AI SmartUI
+  - TestMu AI SmartUI help
+  - TestMu AI SamrtUI documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/smartui-guided-walkthrough/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-guided-walkthrough/
+site_name: TestMu AI
 slug: smartui-guided-walkthrough/
+canonical: https://www.testmuai.com/support/docs/smartui-guided-walkthrough/
 
 ---
 
@@ -20,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,21 +31,22 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Guided Walkthrough of SmartUI",
-          "item": "https://www.lambdatest.com/support/docs/smartui-guided-walkthrough/"
+          "item": `${BRAND_URL}/support/docs/smartui-guided-walkthrough/`
         }]
       })
     }}
 ></script>
+
 This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample project](/support/docs/smartui-running-your-first-project/).
 
 ## Projects Page

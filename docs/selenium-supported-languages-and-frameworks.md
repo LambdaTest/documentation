@@ -1,30 +1,28 @@
 ---
 id: selenium-supported-languages-and-frameworks
-title: Languages and Frameworks supported on LambdaTest Selenium
-hide_title: false
-sidebar_label: Languages and Frameworks
-description: HyperExecute supports languages and frameworks that are compatible with Selenium 
+title: Supported Languages and Frameworks
+sidebar_label: Supported Languages & Frameworks
+description: Run Selenium tests in Java, JavaScript, Python, C#, PHP, and Ruby on the TestMu AI cloud grid. Find your framework-specific guide.
 keywords:
- - Selenium
- - selenium languages
- - frameworks of selenium
- - Selenium supported programming language
- - Selenium testing framework
- - Selenium Supported Languages and Frameworks
- - automation testing framework
- - test automation frameworks
- - selenium frameworks
- - LambdaTest HyperExecute
- - Super fast Selenium grid
-image: /assets/images/og-images/selenium-grid-supported-languages-frameworks.jpg
-url: https://www.lambdatest.com/support/docs/selenium-supported-languages-and-frameworks/
-site_name: LambdaTest
+  - selenium supported languages
+  - selenium frameworks
+  - selenium java
+  - selenium python
+  - selenium javascript
+  - selenium csharp
+  - selenium php
+  - selenium ruby
+  - test automation frameworks
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
+site_name: TestMu AI
 slug: selenium-supported-languages-and-frameworks/
+canonical: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,45 +32,47 @@ import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/Selen
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Languages and Frameworks Supported",
-          "item": "https://www.lambdatest.com/support/docs/selenium-supported-languages-and-frameworks/"
+          "name": "Supported Languages and Frameworks",
+          "item": `${BRAND_URL}/support/docs/selenium-supported-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
-Out of the box, LambdaTest supports multiple languages under Selenium testing frameworks 
+
+---
+
+TestMu AI supports all languages and frameworks compatible with Selenium. Pick your language below to find setup instructions, working code samples, and framework-specific guides.
 
 <SeleniumSupportedLanguage />
 
-<div className="lt-framework-list-footer">
-    <p>In case your favorite framework or tool isn't listed here, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.
-    <br/>In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
-  </div>
+:::tip
+If your framework isn't listed, <span className="doc__lt" onClick={() => window.openLTChatWidget()}>contact us</span> and we'll help you get running.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Languages and Frameworks Supported
+       Supported Languages and Frameworks
       </span>
     </li>
   </ul>

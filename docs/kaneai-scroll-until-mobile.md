@@ -5,15 +5,11 @@ hide_title: false
 sidebar_label: Scroll Until Element
 description: Learn how to use Scroll Until Element feature in KaneAI to automate scrolling using natural language commands for mobile app testing
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
-  - kaneai mobile app
-  - scroll until element
-  - natural language commands
-  - mobile scrolling
-url: https://www.lambdatest.com/support/docs/kaneai-scroll-until-mobile/
-site_name: LambdaTest
+  - testmu ai automation
+url: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
+site_name: TestMu AI
 slug: kaneai-scroll-until-mobile/
+canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
 ---
 
 <script type="application/ld+json"
@@ -23,7 +19,7 @@ slug: kaneai-scroll-until-mobile/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },{
           "@type": "ListItem",
@@ -34,7 +30,7 @@ slug: kaneai-scroll-until-mobile/
           "@type": "ListItem",
           "position": 3,
           "name": "Scroll Until Element",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-scroll-until-mobile/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/"
         }]
       })
     }}
@@ -141,4 +137,4 @@ If you encounter execution issues, refer to the table below:
 
 ---
 
-> Have any feedback or request? Reach out to us via [support@lambdatest.com](mailto:support@lambdatest.com) and we would be happy to hear from you.
+> Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.

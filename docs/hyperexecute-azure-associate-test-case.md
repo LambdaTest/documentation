@@ -12,10 +12,14 @@ keywords:
     - azure integration
     - azure associate test case
     - test case
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-azure-associate-test-case/
+site_name: TestMu AI
 slug: hyperexecute-azure-associate-test-case/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-azure-associate-test-case/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +29,17 @@ slug: hyperexecute-azure-associate-test-case/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Test Plan Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-azure-associate-test-case/`
         }]
       })
     }}
@@ -47,7 +51,7 @@ slug: hyperexecute-azure-associate-test-case/
 
 After setting up a Test Plan, now you need to associate your test cases as well with the Test Plan. To perform the same, we must have a Visual Studio IDE installed in our local machine. Login with same credentials for Visual Studio as in Test Plan.
 
-Follow the steps below to complete the test case association:
+Follow the steps below to compelete the test case association:
 
 **Step 1:** In your Visual Studio Code IDE, click on a **sln** file in a **C# project**.
 

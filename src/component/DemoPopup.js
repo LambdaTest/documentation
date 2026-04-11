@@ -89,7 +89,7 @@ const DemoPopup = ({ show, open_modal }) => {
         };
 
         try {
-            const response = await axios.post(`https://stage-forms.lambdatestinternal.com/api/forms/contact`, JSON.stringify(formdata), {
+            const response = await axios.post(`https://forms.lambdatest.com/api/forms/contact`, JSON.stringify(formdata), {
                 headers: {
                     'Content-type': 'application/json',
                 },

@@ -9,14 +9,16 @@ keywords:
   - dashboard
   - test insights
   - executive reporting
-url: https://www.lambdatest.com/support/docs/analytics-project-report/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-project-report/
+site_name: TestMu AI
 slug: analytics-project-report/
+canonical: https://www.testmuai.com/support/docs/analytics-project-report/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Project - Reports and C-Suite Insights 
 
@@ -32,7 +34,7 @@ The Project Analytics Dashboard is a comprehensive platform designed to provide 
 
 ## Prerequisites
 
-- **Active LambdaTest Account:** Some advanced features may require a paid subscription.
+- **Active <BrandName /> Account:** Some advanced features may require a paid subscription.
 - **Project Data:** At least one project with executed tests and available data.
 - **Dashboard Setup:** Dashboards and widgets configured for your projects.
 - **Permissions:** Appropriate access to analytics and export features.
@@ -44,7 +46,7 @@ The Project Analytics Dashboard is a comprehensive platform designed to provide 
 <Tabs>
 <TabItem value="qa" label="QA/Managers" default>
 
-1. **Login** to your LambdaTest account.
+1. **Login** to your <BrandName /> account.
 2. Navigate to the **Insights** section.
 3. Select or create a project dashboard.
 4. Use **Date Range** and **Project Name** filters for targeted analysis.
@@ -162,7 +164,7 @@ A: Use the export/download option in the dashboard (feature availability may dep
 
 **Q: Who can I contact for support?**
 
-A: Reach out to [support@lambdatest.com](mailto:support@lambdatest.com) for assistance.
+A: Reach out to [support@testmuai.com](mailto:support@testmuai.com) for assistance.
 
 </TabItem>
 <TabItem value="executive" label="For Executives">
@@ -187,5 +189,5 @@ A: Yes, use the share/export features to distribute insights across your leaders
 ## Support and Assistance
 
 <Admonition type="info" title="Need Help?">
-For further details, troubleshooting, or personalized guidance, refer to the respective documentation sections or contact LambdaTest support. Our team is available 24/7 to help you maximize the value of your Project Analytics Dashboard and ensure your testing initiatives are successful.
+For further details, troubleshooting, or personalized guidance, refer to the respective documentation sections or contact <BrandName /> support. Our team is available 24/7 to help you maximize the value of your Project Analytics Dashboard and ensure your testing initiatives are successful.
 </Admonition>

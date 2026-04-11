@@ -5,15 +5,16 @@ hide_title: false
 sidebar_label: Rename Steps
 description: Learn how to rename test steps in KaneAI for API, JS, Database, Network Assertion and Visual Comparison instructions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai test steps
   - rename instructions
   - test step management
   - slash commands
-url: https://www.lambdatest.com/support/docs/kaneai-rename-instructions/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
+site_name: TestMu AI
 slug: kaneai-rename-instructions/
+canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
 ---
 
 <script type="application/ld+json"
@@ -23,7 +24,7 @@ slug: kaneai-rename-instructions/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },{
           "@type": "ListItem",
@@ -34,7 +35,7 @@ slug: kaneai-rename-instructions/
           "@type": "ListItem",
           "position": 3,
           "name": "GPS location",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-rename-instructions/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-rename-instructions/"
         }]
       })
     }}
@@ -95,4 +96,4 @@ The **Rename Test Steps** feature allows users to change a test step’s name wi
 
 ---
 
-> Have any feedback or request? Reach out to us via [support@lambdatest.com](mailto:support@lambdatest.com) and we would be happy to hear from you.
+> Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.

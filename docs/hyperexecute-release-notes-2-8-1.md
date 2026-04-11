@@ -5,18 +5,20 @@ hide_title: false
 sidebar_label: Version 2.8.1
 description: Version 2.8.1
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-8-1/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-2-8-1/
+site_name: TestMu AI
 slug: hyperexecute-release-notes-2-8-1/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-2-8-1/
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';
 import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import BugFixTag from '../src/component/bugFixTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-8-1/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-8-1/`
         }]
       })
     }}
