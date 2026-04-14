@@ -59,7 +59,7 @@ Create a test run and add your test cases following the standard [test run setup
 
 Once enabled, you can arrange the test cases in the order you want them to execute. The test cases listed will be executed in this sequence for each configuration assigned.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image1.jpg').default} alt="enable-sequential-execution" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image1.png').default} alt="enable-sequential-execution" className="doc_img"/>
 
 :::note
 Parameterized test cases must use the default dataset with single values when running sequentially.
@@ -69,7 +69,7 @@ Parameterized test cases must use the default dataset with single values when ru
 
 For a **single-platform sequential run** (e.g., desktop web only), you can select multiple configurations at a global level. For example, you can run the same sequence on both Linux with Chrome 137 and Linux with Firefox — a separate sequential run is created for each configuration.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image2.jpg').default} alt="single-platform-configuration" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image2.png').default} alt="single-platform-configuration" className="doc_img"/>
 
 ### Step 3: Preview and Save
 
@@ -81,27 +81,27 @@ Click **Show execution preview** to review the test sequence before executing. T
 
 You can also configure sequential runs that span multiple platforms — for example, running a web test followed by a mobile app test. When multiple platforms are combined (desktop web, mobile browser, mobile app), the global configuration option is replaced with per-test-case configuration.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image3.jpg').default} alt="multi-platform-sequential-test-cases" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image3.png').default} alt="multi-platform-sequential-test-cases" className="doc_img"/>
 
 ### Step 1: Select Configurations Per Test Case
 
 Assign the appropriate configuration to each test case individually. Choose configurations that match the platform each test case was authored on.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image4.jpg').default} alt="multi-platform-configurations" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image4.png').default} alt="multi-platform-configurations" className="doc_img"/>
 
 ### Step 2: Arrange Execution Order and Preview
 
 Set the execution order based on your test dependencies. Use the execution preview to verify the sequence — for example, a web login test running first, followed by an iOS app verification test.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image5.jpg').default} alt="multi-platform-execution-preview" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image5.png').default} alt="multi-platform-execution-preview" className="doc_img"/>
 
 ### Step 3: Execute the Sequential Run
 
 Save and execute the test run. The test instances will run one after another in the defined order.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image6.jpg').default} alt="execute-sequential-run" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image6.png').default} alt="execute-sequential-run" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image7.jpg').default} alt="sequential-run-results" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/sequential-test-runs/image7.png').default} alt="sequential-run-results" className="doc_img"/>
 
 ---
 
