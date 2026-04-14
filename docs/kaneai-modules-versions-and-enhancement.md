@@ -1,19 +1,20 @@
 ---
 id: kaneai-modules-versions-and-enhancement
-title: Modules Versioning and Enhancements
+title: Module Versioning and Enhancements
 hide_title: false
-sidebar_label: Modules Versioning and Enhancements
-description: This documentation will help you to understand how to version your created modules and perform the Enhancements
+sidebar_label: Versioning and Enhancements
+description: Learn how module versioning works in KaneAI — track changes, compare versions, and revert to previous versions of your test modules.
 keywords:
-- modules versioning
-- enhancements
-- modules
+  - module versioning
+  - version history
+  - module enhancements
+  - compare module versions
+  - revert module version
 url: https://www.testmuai.com/support/docs/kaneai-modules-versions-and-enhancement/
 site_name: TestMu AI
 slug: kaneai-modules-versions-and-enhancement/
 canonical: https://www.testmuai.com/support/docs/kaneai-modules-versions-and-enhancement/
 ---
-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -34,99 +35,93 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Modules Versioning",
+          "name": "KaneAI Modules",
+          "item": `${BRAND_URL}/support/docs/kane-ai-modules/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Module Versioning",
           "item": `${BRAND_URL}/support/docs/kaneai-modules-versions-and-enhancement/`
         }]
       })
     }}
 ></script>
-This guide provides step-by-step instructions on how to enhance the usability of the module section. By implementing module versioning and improving user interaction, users can efficiently manage modules, track changes, and reuse them across various test cases.
 
-## Step 1: Viewing and Creating Modules
-- Navigate to the **Modules** section.
-- View the list of available modules or click **Create a New Module** to add one.
-- The updated interface allows for improved module visibility and usability.
-- Each module card displays the count of test cases linked to it.
+Every time you modify a module in KaneAI, a new version is created automatically. This version history lets you track what changed, compare any two versions side by side, and revert to a previous version when needed. Version control is especially valuable when multiple team members work with the same modules across test cases.
 
-## Deleting a Module
-
-You can delete modules that are no longer needed from the module listing page.
-
-1. Navigate to the **Modules** section
-2. Locate the module you want to delete
-3. Click the meatball menu (•••) icon on the module card
-4. Select **Delete**
-
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/delete-module.png').default} alt="delete-module" className="doc_img img_center"/>
+For an overview of creating, using, and managing modules, see [Modules](/support/docs/kane-ai-modules/).
 
 ---
 
-:::warning Important
-Only modules that are **not linked to any test cases** can be deleted. If a module is currently used in one or more test cases, the delete option will be disabled. You must first remove the module from all linked test cases before deleting it.
+## How Versioning Works
+
+When you edit an existing module — for example, by adding, removing, or modifying a test step — KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image8.png').default} alt="version-increment" className="doc_img img_center"/>
+
+After a new version is created, test cases that use the module can either:
+
+- **Accept the new version** — Update the test case to use the latest module version
+- **Continue using the current version** — Keep the existing version without changes
+
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image9.png').default} alt="version-selection" className="doc_img img_center"/>
+
+:::tip
+To update a module version across many test cases at once, use the [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) feature.
 :::
 
 ---
 
-## Step 2: Accessing Module Details
-- Click on a module to view its complete details, including:
-    - Descriptions
-    - Tags
-    - Version history
-- Utilize **Version History** to track changes and reuse module updates in multiple test cases.
+## Viewing Version History
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image2.png').default} alt="Image" className="doc_img img_center"/>
+Open any module from the **Modules** listing page to see its complete details, including:
 
-## Step 3: Comparing and Reverting Module Versions
-- Compare different versions of a module.
-- Review modifications made between versions.
-- Revert to a previous version if required.
+- Description and tags
+- Full version history with timestamps
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image3.png').default} alt="Image" className="doc_img img_center"/>
+The version history shows every change made to the module, who made it, and when.
 
-## Step 4: Creating a Module from KNI Agent
-- If test steps are already present:
-    - Pause the test.
-    - Select the relevant test steps.
-    - Click Create Module to extract them into a reusable module.
-- Modules now support variables, parameters, and secrets.
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image2.png').default} alt="module-details" className="doc_img img_center"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image4.png').default} alt="Image" className="doc_img img_center"/>
+---
 
-## Step 5: Defining Module Properties
-- Click on the module and enter details such as:
-    - Module Name (e.g., Sample Module)
-    - Description and Tags
-- Click Create Module to save the test step as a reusable module with a specific version.
+## Comparing Versions
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image5.png').default} alt="Image" className="doc_img img_center"/>
+You can compare any two versions of a module to see exactly what changed between them.
 
-## Step 6: Editing and Importing Modules
-- Click on an existing module to modify its steps or properties.
-- To import a module into the web agent:
-    - Click the slash icon
-    - Select Add Module
-    - Choose from the list of created modules
+1. Open the module and navigate to the **Version History** section.
+2. Select the two versions you want to compare.
+3. Review the differences — added, removed, or modified steps are highlighted.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image6.png').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image3.png').default} alt="compare-versions" className="doc_img img_center"/>
 
-## Step 7: Executing Test Steps
-- Click **Add in Queue** to execute test steps.
-- The executed test steps will be displayed in the results section.
+---
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image7.png').default} alt="Image" className="doc_img img_center"/>
+## Reverting to a Previous Version
 
-## Step 8: Updating Module Versions
-- If changes are made to an existing module, a new version will be created automatically.
-- For example, adding a test step (e.g., clicking on login) will prompt an updated version (e.g., from 1.1 to 1.2).
+If a module update introduces problems, you can revert to any earlier version.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image8.png').default} alt="Image" className="doc_img img_center"/>
+1. Open the module and go to **Version History**.
+2. Select the version you want to restore.
+3. Confirm the revert.
 
-## Step 9: Version Selection Flexibility
-- Users can choose to either:
-    - Accept the new version.
-    - Continue using the current version.
-- The newly updated version will reflect the added test step.
+Reverting creates a new version (it does not delete the intermediate versions), so you maintain a complete audit trail.
 
-By implementing these enhancements, module management is now more efficient, flexible, and user-friendly. Users can seamlessly create, modify, and reuse test modules to streamline automation testing.
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image3.png').default} alt="revert-version" className="doc_img img_center"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image9.png').default} alt="Image" className="doc_img img_center"/>
+---
+
+## Linked Test Cases
+
+The module detail page includes a **Linked Test Cases** tab that shows all test cases using the module, grouped by version. This helps you understand the impact of a version change before making updates.
+
+From this tab you can navigate directly to individual test case summary pages.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/bulk-module-update/linked-test-cases.png').default} alt="linked-test-cases" className="doc_img img_center"/>
+
+---
+
+## Related Guides
+
+- [Modules](/support/docs/kane-ai-modules/) — Create, use, and manage modules
+- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) — Update a module version across multiple test cases in one action

@@ -16,6 +16,8 @@ site_name: TestMu AI
 slug: kaneai-bulk-module-update/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,25 +26,30 @@ slug: kaneai-bulk-module-update/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
+          "name": "KaneAI Modules",
+          "item": `${BRAND_URL}/support/docs/kane-ai-modules/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
           "name": "Bulk Module Update",
-          "item": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/"
+          "item": `${BRAND_URL}/support/docs/kaneai-bulk-module-update/`
         }]
       })
     }}
 ></script>
 
-# Bulk Module Update
-
 Maintaining many test cases that share the same module can become slow and error-prone when a module evolves. Each time a module is updated, you would otherwise have to manually open and edit every affected test case and bump the module version one by one.
+
+For an overview of modules, see [Modules](/support/docs/kane-ai-modules/).
 
 The **Bulk Module Update** feature solves this by allowing you to:
 
@@ -242,3 +249,8 @@ The following limitations apply currently to the Bulk Module Update Feature:
 2. Once Code-Gen is validated, the test case's code-gen status will be updated and execution verified will be set to **true**
 
 ---
+
+## Related Guides
+
+- [Modules](/support/docs/kane-ai-modules/) — Create, use, and manage modules
+- [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) — Track changes, compare versions, and revert modules
