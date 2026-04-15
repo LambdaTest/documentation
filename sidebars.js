@@ -4537,6 +4537,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Roles and Permissions (RBAC)",
+        id: "rbac-roles-and-permissions",
+      },
+      {
+        type: "doc",
         label: "Multi Factor Authentication",
         id: "multi-factor-authentication",
       },

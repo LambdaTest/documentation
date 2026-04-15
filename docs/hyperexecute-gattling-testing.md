@@ -93,7 +93,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 :::tip Sample repo
 Download or Clone the code sample for the Gatling Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/prateekLambda/Gatling-performance-hyperexecute" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/gatling-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ### Step 2: Download the CLI in your Project
@@ -376,9 +376,9 @@ private PopulationBuilder getPopulationBuilder() {
 ```
 
 :::tip Sample repo
-Download or Clone the code sample for the Gatling TypeScript Performance Testing from the GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Gatling Performance Testing from the GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/gatling-hyperexecute-typescript" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/gatling-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ## Advanced Parameters
