@@ -18,6 +18,7 @@ slug: rbac-roles-and-permissions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -65,17 +66,19 @@ Navigate to **Organization Settings** > **Custom Roles & Permissions** from the 
 
 <BrandName /> provides three default roles out of the box:
 
-| Role | Description | Product Access | Entity Permissions |
-|------|-------------|----------------|-------------------|
-| **Admin** | Full access to all products and entities with complete permissions. | All Products (Accessibility, Insights, KaneAI, Automation, SmartUI, HyperExecute, Test Manager, and more) | List, Read, Create, Update, Delete, Execute on all entities |
-| **User** | Standard access with full permissions on most products and entities. | All Products (Test Manager, KaneAI, Real Time, Automation, Accessibility, Web Scanner, and more) | List, Read, Create, Update, Delete, Execute on all entities |
-| **Guest** | Read-only access across products with limited entity permissions. | All Products (SmartUI, HyperExecute, Test Manager, More Tools, KaneAI, Real Time, Real Device, and more) | List, Read only on entities |
+| Role | Description | Entity Permissions |
+|------|-------------|-------------------|
+| **Admin** | Full access to all products and entities with complete permissions. | List, Read, Create, Update, Delete, Execute on all entities |
+| **User** | Standard access with full permissions on most products and entities. | List, Read, Create, Update, Delete, Execute on all entities |
+| **Guest** | Read-only access across products with limited entity permissions. | List, Read only on entities |
 
 :::tip
-Roles are auto-applied at login. By default, the **User** role has all permissions enabled. Permission changes take effect the next time a user logs in.
+Roles are auto-applied at login. Permission changes take effect the next time a user logs in.
 :::
 
 ## Create a Custom Role
+
+Custom roles give you the flexibility to tailor access permissions to match your organization's specific needs. Unlike the default roles (Admin, User, Guest), which cannot be edited, custom roles allow you to define exactly which products, entities, and actions each team member can access. To set up custom permissions, you need to create a custom role.
 
 **Step 1:** On the **Custom Roles & Permissions** page, click the **Create New Role** button in the top-right corner.
 
@@ -103,16 +106,19 @@ When creating or editing a role, add **List of Products** as an entity and selec
 
 ### When to use Product Level Access
 
-- **Team isolation**:Your organization has separate QA, development, and design teams. The QA team needs KaneAI, Test Manager, and HyperExecute, while the design team only needs SmartUI for visual regression reviews.
 - **Security & compliance**:Restrict sensitive products like Insights or Settings to admins and leads only, ensuring regular testers don't have access to org-level analytics or configurations.
 - **Onboarding new members**:New team members can be given a limited role with access to only Real Time and Automation while they ramp up, then gradually expanded to include KaneAI and HyperExecute.
 - **Client or vendor access**:External contractors working on a specific product area (e.g., mobile testing) can be restricted to only Real Device and Automation without exposing the rest of the platform.
 
 ## Entity Level Access
 
-Entity-level access allows you to configure granular permissions for specific items and product areas within the platform.
+Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Currently, entity-level access is supported for **Test Manager** only.
 
-### Select Specific
+:::info
+Support for entity-level access in other products is planned for future releases.
+:::
+
+### Select Specific Entities
 
 Assign permissions to specific items within the platform:
 
@@ -122,7 +128,7 @@ Assign permissions to specific items within the platform:
 | **Workflows** | Grant access to specific workflows. |
 | **Test Runs** | Grant access to specific test runs. |
 
-### Granular Control
+### Granular Control <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />
 
 Configure fine-grained permissions within specific product areas:
 
