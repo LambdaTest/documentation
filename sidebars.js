@@ -1415,6 +1415,7 @@ module.exports = {
               "kaneai-database",
               "kaneai-rename-instructions",
               "kaneai-conditional-logic",
+              "kaneai-while-loops",
               "kane-ai-network-assertions",
             ],
           },
