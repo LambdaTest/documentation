@@ -271,10 +271,10 @@ The following nesting patterns are **not supported**:
 
 ## Limitations
 
-- **No For‑Each loop construct.** Collection iteration is expressed via the [While + JS pattern](#collection-iteration-pattern-while--javascript) in v1.
+- **No For‑Each loop construct.** Collection iteration can be handled using a While Loop with JavaScript steps for index management.
 - **Hard cap of 30 iterations per execution.** The safety cap is fixed and not user‑configurable. Contact support if you have a scenario that legitimately requires more.
 - **Nested While Loops are not supported.** You cannot place a While Loop inside another While Loop (see [Nesting Rules](#nesting-rules)).
-- **While Loops cannot live inside conditional branches.** A While Loop cannot be placed inside an If / Else branch in v1.
+- **While Loops cannot live inside conditional branches.** A While Loop cannot be placed inside an If / Else branch.
 - **No Break / Continue commands.** There is no way to exit a loop early or skip to the next iteration; structure your condition to terminate naturally.
 - **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop — you must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
 - **Both operands in a condition cannot be parameters at the same time.** At least one side must be a runtime‑updated value. See `BOTH_OPERANDS_AS_PARAMETERS` in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
@@ -364,11 +364,11 @@ Example valid forms: `{{counter}} < ${max_retries}`, `${status} == "ready"`, `{{
 
 ### How do I exit a While Loop early?
 
-Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported in v1. Structure your exit condition — for example, combine it with an additional flag variable you set from inside the loop — so the loop terminates naturally on the next re‑evaluation.
+Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported. Structure your exit condition — for example, combine it with an additional flag variable you set from inside the loop — so the loop terminates naturally on the next re‑evaluation.
 
 ### Can I nest a While Loop inside another While Loop?
 
-No. Nested loops are not supported in v1, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body — see [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
+No. Nested loops are not supported, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body — see [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
 
 ### What happens if my condition is already false on the first check?
 
