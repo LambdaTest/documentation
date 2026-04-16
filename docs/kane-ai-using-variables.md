@@ -91,6 +91,39 @@ For such _local_ variables, only the scope of the variable can be changed to a g
 By visiting the [variables page](https://kaneai.lambdatest.com/variables), you can click on "Create new" option and add relevant details and scope. You can list of all global and environment variables on this page.
 You can edit the session value for the variables here which will lead to updation of the value in all new test executions and sessions for that variable.
 
+### From a Manual Interaction step
+
+While reviewing a Manual Interaction step, you can replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret — without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** Manual Interaction sessions.
+
+#### Steps to convert a value
+
+1. Open the recorded Manual Interaction step (for example, *Type in main search input field 'test.com'*).
+2. **Select the portion** of the instruction text you want to replace (for example, highlight `test.com`).
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/HighlightScreenshot.png').default} alt="Image" className="doc_img img_center"/>
+3. In the **Convert as** popover that appears, choose one of the three tabs:
+   - **`{$}` Parameter** — test-level variable, supports selecting an existing parameter or creating a new one.
+   - **`{x}` Variable** — Global or Environment variable, supports selecting an existing variable or creating a new one.
+   - **🔒 Secret** — encrypted value that resolves only at execution time. Only new secrets can be created from this tab.
+4. Either pick an existing entry from the searchable list, or click **`+` Create Parameter / Variable / Secret** to define a new one inline.
+5. The selected text in the step is replaced with the variable reference (for example, `{{search_query}}`). The step updates in place.
+
+#### Support matrix
+
+| Variable Type | Use Existing | Create New | Scope |
+|---------------|--------------|------------|-------|
+| `{$}` Parameter | Supported | Supported | Test-level |
+| `{x}` Variable | Supported | Supported | Global / Environment |
+| 🔒 Secret | Not supported | Supported | Vault-level |
+
+
+
+:::note
+- Existing secrets cannot be reused from the Convert as popover — the Secret tab only exposes the **`+` Create Secret** action. This is enforced for security, so a fresh secret must be created each time one is assigned to a Manual Interaction step.
+- This is only supported for `Click` and `Type` Commands
+:::
+
+For details on secrets and parameters, see [KaneAI Secrets](/support/docs/kane-ai-secrets/) and [KaneAI Parameters](/support/docs/kane-ai-using-parameters/).
+
 ## How to leverage variables during authoring
 Variables can be used to enhance your test cases, making them more dynamic.
 

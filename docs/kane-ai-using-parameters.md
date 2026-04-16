@@ -71,6 +71,21 @@ Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_numb
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Image" className="doc_img"/>
 
+## From a Manual Interaction step
+
+You can also convert a hard-coded value in a Manual Interaction step into a Parameter directly — without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** Manual Interaction sessions.
+
+1. Open the recorded Manual Interaction step.
+2. **Select the portion** of the instruction text you want to parameterize (for example, highlight `test.com`).
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/HighlightScreenshot.png').default} alt="Image" className="doc_img img_center"/>
+3. In the **Convert as** popover that appears, switch to the **`{$}` Parameter** tab.
+4. Either pick an existing parameter from the searchable list, or click **`+` Create Parameter** to define a new one inline.
+5. The selected text in the step is replaced with the parameter reference (for example, `{{search_query}}`). The parameterized step is now ready for data-driven execution.
+
+:::note
+This flow is only supported for `Click` and `Type` commands. For the full Convert as popover behavior across Parameters, Variables, and Secrets, see [Creating variables from a Manual Interaction step](/support/docs/kane-ai-using-variables/#from-a-manual-interaction-step).
+:::
+
 ## Test Summary Page
 Upon completing the test, review the Test Summary Page, where all utilized parameters are clearly displayed, and the corresponding generated code is readily available for seamless integration into future test scenarios.
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/7.png').default} alt="Image" className="doc_img"/>
