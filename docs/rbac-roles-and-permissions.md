@@ -73,10 +73,10 @@ Navigate to **Organization Settings** > **Custom Roles & Permissions** from the 
 | **Guest** | Read-only access across products with limited entity permissions. | List, Read only on entities |
 
 :::tip
-Roles are auto-applied at login. Permission changes take effect the next time a user logs in.
+Roles are auto-applied at login.
 :::
 
-## Create a Custom Role
+## Creating and Applying Custom Roles
 
 Custom roles give you the flexibility to tailor access permissions to match your organization's specific needs. Unlike the default roles (Admin, User, Guest), which cannot be edited, custom roles allow you to define exactly which products, entities, and actions each team member can access. To set up custom permissions, you need to create a custom role.
 
@@ -91,6 +91,16 @@ Custom roles give you the flexibility to tailor access permissions to match your
 <img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/create-new-role.png').default} alt="Create New Role dialog with entity dropdown showing Select Specific, Product Access, and Granular Control sections" className="doc_img"/>
 
 **Step 4:** Click **Create** to complete the process.
+
+**Step 5:** Assign the custom role to users or teams based on your use case:
+
+- **To assign to individual users:** Navigate to **Organization Settings** > **Members**, click on the user's row or the options menu, and assign the custom role.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/apply-custom-roles.png').default} alt="Apply custom roles to users from the Members page" className="doc_img"/>
+
+- **To assign to a team:** Navigate to **Organization Settings** > **Teams**, select a team, and assign the desired custom role. All members of the team will automatically inherit the same permissions.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/team-custom-role-access.png').default} alt="Assign custom roles to teams" className="doc_img"/>
 
 ## Product Level Access
 
@@ -124,9 +134,9 @@ Assign permissions to specific items within the platform:
 
 | Entity | Description |
 |--------|-------------|
-| **Projects** | Grant access to specific Test Manager projects. |
-| **Workflows** | Grant access to specific workflows. |
-| **Test Runs** | Grant access to specific test runs. |
+| **Projects** | Grant access to Test Manager projects. |
+| **Test Runs** | Grant access to test runs. |
+| **Test Cases and Test Case Instances** | Grant access to Test Manager test cases and test case instances. |
 
 ### Granular Control <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />
 
@@ -135,7 +145,7 @@ Configure fine-grained permissions within specific product areas:
 | Entity | Description |
 |--------|-------------|
 | **HyperExecute** | Control permissions for jobs, tasks, stages, and configurations within HyperExecute. |
-| **KaneAI and Test Manager** | Control permissions for test cases, test plans, builds, milestones, and other Test Manager entities. |
+| **KaneAI and Test Manager** | Control permissions for test plans, builds, milestones, and other Test Manager entities. |
 | **Automation** | Control permissions for builds, sessions, and automation-related resources. |
 | **Analytics** | Control permissions for dashboards, widgets, and reporting features. |
 | **Organization** | Control permissions for organization-level settings, user management, and team management. |
