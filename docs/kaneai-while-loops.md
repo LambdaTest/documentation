@@ -48,6 +48,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 KaneAI supports repeating a block of steps using **While Loops**. A While Loop executes the steps inside its body for as long as a user‑defined condition evaluates to **true**, and re‑checks the condition before every iteration.
 
+:::note Availability
+This feature is being rolled out gradually. If you don't see **While Loop** in the slash command menu, contact your <BrandName /> support representative to get it enabled.
+:::
 
 ## How It Works
 
