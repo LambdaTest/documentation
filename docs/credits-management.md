@@ -130,6 +130,19 @@ The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, video
 * **Regeneration** also consumes credits at **10 credits per scenario**.
 
 >This ensures fair usage—you are charged only for **actual output** produced by the AI.
+
+#### Conversational Layer
+
+The AI Test Case Generator includes a **Conversational Layer** that lets you refine generated scenarios and test cases through natural‑language messages. Credits are consumed based on the scope of each refinement:
+
+| Action | Credit Cost |
+|--------|-------------|
+| Edit or modify a **scenario** (including its test cases) | **5 credits** |
+| Edit or modify a single **test case** | **1 credit** |
+
+* Credits are deducted **per message** based on the scope of the change.
+* If your message affects multiple scenarios, credits are deducted for each scenario impacted.
+
 ---
 
 ## FAQs
