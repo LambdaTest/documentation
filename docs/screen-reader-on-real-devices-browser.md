@@ -1,7 +1,7 @@
 ---
 id: screen-reader-on-real-devices-browser
-title: Screen Reader (TalkBack) for Android - Web Browser
-sidebar_label: Screen Reader
+title: Screen Reader (TalkBack) on Android Devices
+sidebar_label: TalkBack (Android)
 description: Test the accessibility of your website with the Screen Reader from TestMu AI. Using actual Android devices, navigate through elements with spoken descriptions to make sure they adhere to WCAG standards.
 keywords:
   - image injection

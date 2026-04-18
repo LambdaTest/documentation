@@ -1,18 +1,18 @@
 ---
-id: screen-reader-voiceover-real-devices-app
+id: screen-reader-voiceover-real-devices-browser
 title: Screen Reader (VoiceOver) on iOS Devices
 sidebar_label: VoiceOver (iOS)
-description: Test your app's and website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
+description: Test your website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices. Navigate through web elements with spoken descriptions, ensuring compliance with WCAG standards.
 keywords:
   - screen reader
   - voiceover
   - accessibility
-  - app testing
+  - browser testing
   - real devices
-url: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/
+url: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-browser/
 site_name: TestMu AI
-slug: screen-reader-voiceover-real-devices-app/
-canonical: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app/
+slug: screen-reader-voiceover-real-devices-browser/
+canonical: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-browser/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -40,14 +40,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Screen Reader on Real Devices App",
-          "item": `${BRAND_URL}/support/docs/screen-reader-voiceover-real-devices-app/`
+          "name": "Screen Reader on Real Devices Browser",
+          "item": `${BRAND_URL}/support/docs/screen-reader-voiceover-real-devices-browser/`
         }]
       })
     }}
 ></script>
 
-Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on <BrandName />, you can test the accessibility of your website on supported real iOS devices. 
+Manual accessibility testing ensures that your website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on <BrandName />, you can test the accessibility of your website on supported real iOS devices.
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
@@ -56,21 +56,19 @@ This feature is currently in **Beta**. Please reach out to our [Support](https:/
 :::
 
 
-## Accessing Screen Reader in Real Device App Testing
+## Accessing Screen Reader in Real Device Browser Testing
 
 VoiceOver-enabled devices are available in a separate device pool. To access them, you need to enable the VoiceOver toggle from Advanced Settings before selecting a device.
 
-**Step 1:** Click on **Real Devices** > **App Testing/Browser Testing**.
+**Step 1:** Click on **Real Devices** > **Browser Testing**.
 
 **Step 2:** Click on **Advanced Settings** and navigate to the **Device Control** section.
 
 **Step 3:** Enable the **VoiceOver** toggle. This filters the device list to show only VoiceOver-enabled devices from the dedicated pool.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/voiceover.png').default} className="doc_img"/>
 
-**Step 4:** Select an iOS device from the filtered list and click **Start** to launch your session. Once the session starts, the VoiceOver feature will be active on the device.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/step_two_voiceover.png').default} className="doc_img"/>
+**Step 4:** Select an iOS device from the filtered list, enter your URL, and click **Start** to launch your session. Once the session starts, the VoiceOver feature will be active on the device.
 
 > Make sure your system's audio is turned on to hear the spoken descriptions provided by VoiceOver.
 
@@ -89,7 +87,7 @@ The VoiceOver feature is currently supported on selected iOS devices, allowing a
 
 The navigation behavior on iOS—such as moving to the next or previous element, auto-reading from the start of the page, and interacting with UI elements—can be performed using keyboard shortcuts when **VoiceOver** is enabled.
 
-On a real iOS device, VoiceOver navigation can be executed via keyboard shortcuts and touch gestures as well . However, when performing  accessibility testing, using keyboard shortcuts is the most efficient way to validate VoiceOver interactions.
+On a real iOS device, VoiceOver navigation can be executed via keyboard shortcuts and touch gestures as well. However, when performing accessibility testing, using keyboard shortcuts is the most efficient way to validate VoiceOver interactions.
 
 Ensuring that your website or application is accessible using **keyboard shortcuts** guarantees that it will also be accessible through touch gestures. If a site is fully navigable and interactable using VoiceOver keyboard commands, it will be equally accessible through swipe gestures and VoiceOver touch commands.
 
@@ -130,4 +128,3 @@ By incorporating **VoiceOver** keyboard navigation into your accessibility testi
 
  If the keyboard shortcuts do not work initially, click on the device screen in your test session to ensure that it is in focus.
 :::
-
