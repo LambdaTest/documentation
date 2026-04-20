@@ -1,6 +1,6 @@
 ---
 id: contacts-on-real-devices-browser
-title: Access your Contacts
+title: Access your Contacts on Real Devices (Browser)
 sidebar_label: Contacts
 description: Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 10000+ real mobile devices.
 keywords:

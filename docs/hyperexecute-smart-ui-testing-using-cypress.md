@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-testing-using-cypress
-title: SmartUI Testing Using HyperExecute
+title: SmartUI Testing Using HyperExecute with Cypress
 hide_title: true
 sidebar_label: Cypress
 description: Boost bug detection speed using HyperExecute smart UI testing with Cypress. Perform Visual UI Regression Testing for perfect app delivery.

@@ -1,6 +1,6 @@
 ---
 id: appium-ruby-cucumber
-title: Appium with Cucumber
+title: Appium with Cucumber for Ruby
 sidebar_label: Cucumber
 description: Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 3000+ Real Devices.
 keywords:
