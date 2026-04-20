@@ -1,6 +1,6 @@
 ---
 id: selenium-supported-languages-and-frameworks
-title: Supported Languages and Frameworks
+title: Selenium Supported Languages and Frameworks
 sidebar_label: Supported Languages & Frameworks
 description: Run Selenium tests in Java, JavaScript, Python, C#, PHP, and Ruby on the TestMu AI cloud grid. Find your framework-specific guide.
 keywords:

@@ -1,6 +1,6 @@
 ---
 id: appium-languages-and-frameworks
-title: Supported Languages And Frameworks
+title: Appium Supported Languages and Frameworks
 sidebar_label: Languages and Frameworks
 description: Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on TestMu AI Real Device Cloud Platform.
 keywords:

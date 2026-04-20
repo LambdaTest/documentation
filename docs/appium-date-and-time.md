@@ -1,6 +1,6 @@
 ---
 id: appium-date-and-time
-title: Set Custom Date, Time & Hour Format on Real Devices
+title: Configure Date, Time & Hour Format on Real Devices Using Appium
 hide_title: true
 sidebar_label: Set Date and Time 
 description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.

@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-org-product-preferences
-title: How to List Supported Browser in HyperExecute via API
+title: Access and Change HyperExecute Org Product Preferences
 hide_title: false
 sidebar_label: How to Access and Change Org Product Preferences
 description: Find out how to access and change org product preferences for hyperexecute.

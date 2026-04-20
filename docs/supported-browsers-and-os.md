@@ -1,6 +1,6 @@
 ---
 id: supported-browsers-and-os
-title: Supported Browsers and Operating Systems
+title: Supported Browsers and Operating Systems for Cypress
 sidebar_label: Specify Browsers and OS
 description: Check out the list of supported browsers and operating systems for Cypress testing on the TestMu AI platform.
 keywords:

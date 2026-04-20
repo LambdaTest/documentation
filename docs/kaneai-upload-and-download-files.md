@@ -1,6 +1,6 @@
 ---
 id: kaneai-upload-and-download-files
-title: Upload and Download Files
+title: Upload and Download Files in KaneAI
 hide_title: false
 sidebar_label: Upload and Download Files
 description: This documentation will help you to understand how to Upload and Download Files
