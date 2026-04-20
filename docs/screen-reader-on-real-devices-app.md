@@ -1,7 +1,7 @@
 ---
 id: screen-reader-on-real-devices-app
-title: Screen Reader (TalkBack) for Android Application
-sidebar_label: Screen Reader
+title: Screen Reader (TalkBack) on Android Devices
+sidebar_label: TalkBack (Android)
 description: Test your app's accessibility with TestMu AI's Screen Reader. Navigate through app elements with spoken descriptions on real Android devices, ensuring compliance with WCAG standards.
 keywords:
   - image injection

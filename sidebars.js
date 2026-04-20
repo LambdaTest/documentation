@@ -2353,7 +2353,15 @@ module.exports = {
               "contacts-on-real-devices",
               "real-device-adb-shell",
               "ui-inspector",
-              "screen-reader-on-real-devices-app",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Screen Reader",
+                items: [
+                  "screen-reader-on-real-devices-app",
+                  "screen-reader-voiceover-real-devices-app",
+                ],
+              },
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
@@ -2382,7 +2390,15 @@ module.exports = {
             collapsed: true,
             label: "Features",
             items: [
-              "screen-reader-on-real-devices-browser",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Screen Reader",
+                items: [
+                  "screen-reader-on-real-devices-browser",
+                  "screen-reader-voiceover-real-devices-browser",
+                ],
+              },
               "ip-geolocation-on-real-devices-browser",
               "assistive-touch-on-real-ios-browser",
               "dark-mode-on-browser",
