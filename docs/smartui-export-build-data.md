@@ -2,17 +2,18 @@
 id: smartui-export-build-data
 title: Export SmartUI Build Data
 sidebar_label: Export Build Data
-description: Export SmartUI build results from the dashboard as PDF, CSV, or JSON after opening a build and using the Export option in the menu.
+description: Export a SmartUI build from the dashboard in PDF, CSV, or JSON using the build menu, after the UI finishes loading export data.
 keywords:
   - SmartUI export
-  - Visual regression export
-  - SmartUI build PDF
+  - SmartUI PDF
   - SmartUI CSV
   - SmartUI JSON
+  - Visual regression export
+  - Build export
   - TestMu AI SmartUI
+slug: smartui-export-build-data/
 url: https://www.testmuai.com/support/docs/smartui-export-build-data/
 site_name: TestMu AI
-slug: smartui-export-build-data/
 canonical: https://www.testmuai.com/support/docs/smartui-export-build-data/
 ---
 
@@ -44,39 +45,50 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Export SmartUI Build Data
 
-You can download **build-level** data for a SmartUI run directly from the <BrandName /> UI—useful for sharing summaries with stakeholders, attaching evidence to tickets, or processing results in other tools.
+From the <BrandName /> dashboard you can export **build-level** data for a SmartUI run—comparison outcomes, statuses, and related metadata—without using the CLI or API. Use it for stakeholder summaries, ticket attachments, spreadsheets, or downstream automation.
 
-## Before you start
+## Prerequisites
 
-- Open the **SmartUI** area of the dashboard and navigate into the **project** that contains your build.
-- Open the **build** you want to export (the run whose screenshots and comparison outcomes you need).
+1. Open **SmartUI** and select the **project** that contains your build.
+2. Open the **build** you want to export (the completed run you need a snapshot of).
 
 ## Export from the build view
 
-1. With the build open, go to the **three-dot menu** (⋮) in the **top-right** of the build screen.
-2. Select **Export**.
-3. The product **loads and prepares** the build data. Wait until this step finishes (progress or completion is shown in the UI).
-4. When loading completes, choose how you want to download the data:
-   - **PDF** — human-readable report style output
-   - **CSV** — tabular data for spreadsheets or pipelines
-   - **JSON** — structured data for scripts, APIs, or custom tooling
+### Step 1: Open Export from the build menu
 
-5. Confirm or follow the browser prompt to save the file to your machine.
+With the build page open, select the **three-dot menu** (⋮) in the **upper-right** corner, then choose **Export**.
 
-:::info
-The exact file name and contents follow the current SmartUI release. If a format is temporarily unavailable for a very large build, try again after the run fully settles or use another format.
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/export_options/export-button.png').default} className="doc_img" alt="SmartUI build screen with three-dot menu and Export option highlighted" />
+
+### Step 2: Wait for export data to load
+
+The product gathers build data for export. Stay on the view until loading **finishes** (spinner or progress clears). Large builds can take longer; avoid closing the tab during this step.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/export_options/loading-data.png').default} className="doc_img" alt="Export loading state while build data is prepared" />
+
+### Step 3: Choose a format and download
+
+When loading completes, select **PDF**, **CSV**, or **JSON**. Your browser will download the file (exact name depends on the product version). Use your browser’s download bar or downloads folder if the save dialog does not appear.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/export_options/loading-complete-and-export-options.png').default} className="doc_img" alt="Export ready with PDF CSV and JSON download options" />
+
+:::tip
+If a download does not start, check pop-up or download permissions for your <BrandName /> domain, then try the same format again after a short wait.
 :::
 
-## When to use each format
+## Choose a format
 
-| Format | Typical use |
-|--------|-------------|
-| **PDF** | Reviews, email attachments, compliance or release documentation |
-| **CSV** | Filtering and pivoting in Excel, Google Sheets, or data warehouses |
-| **JSON** | Automation, dashboards, or merging with your own CI metadata |
+| Format | Best for |
+|--------|----------|
+| **PDF** | Readable summaries for reviews, email, or release records. |
+| **CSV** | Sorting, filtering, and charts in Excel, Google Sheets, or BI tools. |
+| **JSON** | Scripts, custom dashboards, or merging with CI metadata. |
+
+Column and field names in CSV/JSON follow the current SmartUI release; if you automate parsing, pin expectations to a tested export sample after upgrades.
 
 ## Related docs
 
-- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) — approve or reject many screenshots inside a build
-- [Audit & Activity Logs](/support/docs/smartui-audit-logs/) — track changes across the project
-- [Fetching Results through SmartUI SDK](/support/docs/smartui-sdk-fetch-results/) — programmatic access to results from your tests
+- [Running Your First SmartUI Project](/support/docs/smartui-running-your-first-project/)
+- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/)
+- [Audit & Activity Logs](/support/docs/smartui-audit-logs/)
+- [Fetching Results through SmartUI SDK](/support/docs/smartui-sdk-fetch-results/)
