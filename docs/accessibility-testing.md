@@ -44,33 +44,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-- **Manual Testing (DevTools)** -- browser-based scanning and assisted testing for websites and web apps.
-- **Automation** -- automated accessibility checks in supported test frameworks (Selenium, Cypress, Playwright, and more).
-- **Test Scheduling** -- recurring site scans driven by sitemaps, crawlers, or manual URL lists inside the Accessibility product (not the same doc set as the standalone Web Scanner product).
-- **Web Scanner** -- the separate **Web Scanner** product in the docs sidebar, where you add URLs and run accessibility scans on that surface. Use Accessibility **Test Scheduling** when your workflow is native to Accessibility scheduling, not Web Scanner.
-- **Mobile App Testing** -- manual and automated accessibility testing for native Android and iOS apps, including KaneAI-authored flows.
-- **Reports** -- dashboard, issue views, [exporting and sharing](/support/docs/accessibility-exporting-sharing-reports/), passed tests, and bug reporting (issue-tracker connections live under **External integrations** in the sidebar, not inside Reports).
-- **Integrations** (sidebar) -- **Integrations with TestMu AI products** (Web Scanner, KaneAI, HyperExecute with Selenium, and related surfaces) and **External integrations** (CI/CD, Jira/Slack) for how Accessibility connects to the rest of your toolchain.
-- **Features** (sidebar: **Web**, then **Mobile**, then **Common**) -- **Web**: hide/restore, AI issue detection, capture screenshot, web score, fragment identifier, and PDF scanning; **Mobile**: scan tags; **Common**: remediation guidance and analytics widgets.
-- **Checklists** -- coverage summaries, WCAG rule repositories, and manual verification guidance.
-- **Accessibility MCP Server** -- AI-assisted accessibility analysis only. For installing and configuring the **platform-wide** TestMu AI MCP Server (all tools), use [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) in the main docs sidebar.
+<BrandName />’s Accessibility Testing Suite ensures digital experiences are accessible to everyone. Whether it's a website, web app, or mobile app, the suite simplifies the process of testing and improving accessibility. It offers various types of accessibility testing, including support for NVDA, VoiceOver, and TalkBack, ensuring seamless experiences for users with visual, motor, and hearing impairments. It helps businesses adhere to global accessibility standards while enhancing usability across platforms. Additionally, automated accessibility checks for both web and mobile apps streamline the testing process, ensuring compliance with global standards like WCAG.
 
 ## What is Accessibility Testing?
 
-| If you want to... | Start here |
-|-----|-----|
-| Test a website manually | [Manual Testing (DevTools)](/support/docs/accessibility-devtools/) |
-| Run your first browser scan quickly | [Run a Quick Scan](/support/docs/accessibility-testing-run-quick-scan/) |
-| Run automated web tests | [Automation](/support/docs/accessibility-automation/) |
-| Schedule recurring scans | [Test Scheduling](/support/docs/accessibility-test-scheduling/) |
-| Use Web Scanner for scans | [Web Scanner](/support/docs/web-scanner-getting-started/) |
-| Test a mobile app manually | [Manual App Scanner](/support/docs/accessibility-app-scanner/) |
-| Run mobile automation | [Appium Automation](/support/docs/accessibility-native-app-automation-test/) |
-| Author mobile flows in KaneAI | [KaneAI Mobile App Testing](/support/docs/kaneai-mobile-app-accessibility/) |
-| View reports and issues | [Reports](/support/docs/accessibility-testing-navigating-dashboard/) |
-| Connect CI/CD or Jira/Slack | [CI/CD Integration Guide](/support/docs/accessibility-cicd-integration-guide/) · [Integrations (Jira / Slack)](/support/docs/accessibility-report-integrations/) |
-| Look up supported rules and gaps | [Web](/support/docs/accessibility-web-what-we-cover/) · [iOS](/support/docs/accessibility-ios-what-we-cover/) · [Android](/support/docs/accessibility-android-what-we-cover/) |
-| Use AI-assisted analysis | [Accessibility MCP Server](/support/docs/accessibility-mcp-server/) |
+Accessibility testing is the process of evaluating and improving web apps, websites, and mobile apps to ensure they are usable by everyone, including individuals with disabilities.
 
 This includes people with:
 
