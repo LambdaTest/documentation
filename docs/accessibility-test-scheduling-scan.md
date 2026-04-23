@@ -82,7 +82,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ### Advanced Options
 - **Local Testing Setup (Tunnel) :** If scanning locally hosted URLs, add a Local Testing Setup/Tunnel to access non-public environments. <NewTag value="Upcoming" />
-- **Login Configuration :** For pages requiring authentication, configure the Login Settings by providing credentials or session details.
+- **Login Configuration :** For pages behind authentication, use **Add login configurations** to open the login modal, pick a saved profile, or create one (**Basic**, **Form**, or **Multi-page**). You can also manage profiles from the dashboard **Login configurations** entry. See **[Login & Authentication for Scheduled Scans](/support/docs/accessibility-test-scheduling-login-authentication/)**.
 - **Review Issues :** Enable Needs Review for areas requiring manual inspection.
 - **Best Practices Issues :** Check Best Practices to include suggestions for better accessibility.
 
