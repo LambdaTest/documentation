@@ -1,102 +1,59 @@
 ---
 id: accessibility-mcp-server
-title: Introducing Accessibility MCP Server
-hide_title: false
+title: Accessibility MCP Server
 sidebar_label: Accessibility MCP Server
-description: TestMu AI’s Accessibility MCP Server tests public URLs and React apps, providing detailed reports and AI-driven insights to quickly identify and fix accessibility issues.
-
-keywords:
-  - accessibility testing
-  - accessibility
-  - testmu ai
-  - MCP
-  - MCP server
+description: Use the Accessibility MCP Server for supported AI-assisted accessibility analysis workflows.
+slug: accessibility-mcp-server/
 url: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 site_name: TestMu AI
-slug: accessibility-mcp-server/
 canonical: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Accessibility MCP Server
 
+Accessibility MCP Server enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows.
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Languages and Framework",
-          "item": `${BRAND_URL}/support/docs/accessibility-mcp-server/`
-        }]
-      })
-    }}
-></script>
+It is **not** the same as the **[TestMu AI MCP Server](/support/docs/testmu-mcp-server/)** entry in the main sidebar, which covers installing and using the platform MCP for multiple TestMu AI tools. This document is only for **Accessibility-specific** MCP workflows.
 
-# Getting Started with Accessibility MCP Server
-<BrandName />’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
+This page describes what the Accessibility MCP Server is, when an MCP-connected, AI-assisted analysis flow makes sense, and how that surface differs from DevTools, Automation, and Web Scanner. Use it to orient prerequisites and boundaries before connecting a client or routing work into an MCP-based accessibility review.
 
-Users receive actionable insights that not only helps to pinpoint and report roadblocks within web applications but also help in resolving them.
+## When to use this
 
-The server utilizes the Model Context Protocol (MCP) to streamline the integration of AI and assistance, thereby minimizing the effort required to address accessibility concerns.
+Use the MCP Server when you want an AI-assisted workflow that can request Accessibility analysis through supported MCP-compatible clients and tools.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="2G_U2LYzIao" data-loading-attribute="eager">
-  <div className="play-button"></div>
-</div>
-</div>
+## What it is good for
 
-## What is Model Context Protocol (MCP)?
+- analyzing supported public URLs through an MCP-based workflow
+- supporting selected local-app analysis flows where MCP support is available
+- routing users into an AI-assisted accessibility review flow instead of a browser-extension or framework-execution flow
 
-The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
+## Prerequisites
 
-## Key Features of Accessibility MCP Server
+- access to the Accessibility MCP Server feature
+- an MCP-compatible client or workflow that can connect to the server
+- a public URL or supported local application flow you are authorized to test
 
-Here are the key benefits of using Accessibility MCP Server:
+## Onboarding checklist (first connection)
 
-- Conducts analysis to identify accessibility issues within the application.
-- Generates a comprehensive accessibility report that can be shared with team members.
-- Provides suggested remediations for addressing accessibility (a11y) issues in locally hosted applications.
+1. Install and verify the **platform** MCP prerequisites from [Introducing TestMu AI MCP Server](/support/docs/testmu-mcp-server/) if your client expects the shared endpoint model.
+2. Confirm with your admin that **Accessibility MCP** is enabled for the workspace (feature flag or contract).
+3. In your MCP client (for example Cursor, VS Code extension, or internal agent), add the **Accessibility MCP server definition** supplied in your account documentation—endpoint, auth mode, and scopes differ by release; copy from the in-product help or support article your CS team provides.
+4. Start with a **single public URL** smoke test authorized for scanning; avoid sensitive or authenticated pages until tunnel or auth patterns are validated.
+5. Compare MCP output with a **DevTools or automation report** for the same URL so you trust the interpretation before relying on it in compliance conversations.
+6. Escalate gaps to support with **client name**, **server version**, and **timestamp** if tool calls fail.
 
-## **Available Tools**
+## Product boundary
 
-Accessibility MCP Server provides following two core tools:
+Accessibility MCP Server is a dedicated product surface. It is not the same as:
 
-1. `getAccessibilityReport`: Fetches detailed accessibility report for the specified public URL. Users can view this report in their browser to analyse the issues.
-2. `buildLocalAppForAnalysis`:  Builds and serves your local react application via <BrandName /> and identifies accessibility issues in the application.
-3. `AnalyseAppViaTunnel`: Helps test local apps which are already running via <BrandName /> tunnel for accessibility failures.
+- **Accessibility DevTools**, which is for browser-based manual and assisted testing
+- **Accessibility Automation**, which is for framework-driven automated execution
+- **Web Scanner**, which is an integrated URL-scanning surface
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Accessibility MCP Server
-      </span>
-    </li>
-  </ul>
-</nav>
+## Related docs
 
-
+- [Introducing TestMu AI MCP Server](/support/docs/testmu-mcp-server/) (platform-wide MCP setup)
+- [Choosing the Right Accessibility Tool](/support/docs/accessibility-choosing-the-right-tool/)
+- [Accessibility DevTools (Overview)](/support/docs/accessibility-devtools/)
+- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
+- [Starting an Accessibility Scan with Web Scanner](/support/docs/web-scanner-accessibility-scan/)

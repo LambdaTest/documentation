@@ -39,26 +39,38 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "What is Accessibility Testing",
+          "name": "Run Your Quick Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-run-quick-scan/`
         }]
       })
     }}
 ></script>
+Quick Scan is the fastest way to check a single page for accessibility issues using the DevTools extension. It scans the full page and returns a list of issues grouped by severity.
+
+:::note
+Quick Scan performs the same check as a Full Page Scan. If you want details on what the scan covers and how issues are categorized, see [Full Page Scan](/support/docs/accessibility-testing-full-page-scanner/).
+:::
+
 ## Prerequisite
 
-- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
+- You have [installed the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
 
-## Trigger the Accessibility DevTool
+## Run the scan
 
-- Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
-- Click on the **Full Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
+1. Open the target webpage.
+2. Open **DevTools** (Inspect panel) and select the **<BrandName /> Accessibility DevTools** tab.
+3. Click the **Full Page Scan** button.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/1.png').default} alt="DevTools quick scan trigger" className="doc_img"/>
 
-## Review Your Issues
+## Review the results
 
-- This will list down all of the issues after scanning your complete webpage.
-- You can click on those issues to check with which particular element it is causing issue.
+The scan returns a list of issues found on the page. Click any issue to see which element is affected and where it appears in the DOM.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/2.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/2.png').default} alt="DevTools quick scan results" className="doc_img"/>
+
+## Next steps
+
+- To scan only part of the page, see [Partial Page Scan](/support/docs/accessibility-testing-partial-page-scanner/).
+- To scan across multiple pages, see [Multi-Page Scan](/support/docs/accessibility-testing-multi-page-scanner/).
+- To configure WCAG version, best practices, and needs review, see [Configure Accessibility DevTools](/support/docs/accessibility-devtools-settings/).

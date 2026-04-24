@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Accessibility Testing Test",
+          "name": "Selenium Accessibility Automation",
           "item": `${BRAND_URL}/support/docs/accessibility-automation-test/`
         }]
       })

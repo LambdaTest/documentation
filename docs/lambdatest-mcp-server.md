@@ -48,6 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Getting Started with <BrandName /> MCP Server
 <BrandName /> MCP Server is all-in-one MCP server that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
 
+If you only need **Accessibility** analysis through MCP (not the full multi-tool server described on this page), use the dedicated [Accessibility MCP Server](/support/docs/accessibility-mcp-server/) guide under Accessibility Testing in the sidebar.
 
 ## What is Model Context Protocol (MCP)?
 

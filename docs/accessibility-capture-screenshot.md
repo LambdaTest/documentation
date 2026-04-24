@@ -2,15 +2,14 @@
 id: accessibility-capture-screenshot
 title: Accessibility Capture Screenshot
 sidebar_label: Capture Screenshot
-description: The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers.
+description: Capture annotated screenshots with red bounding boxes highlighting accessibility violations during manual and automated testing.
 keywords:
   - TestMu AI
   - Accessibility
   - Testing
-  - Manual
-  - Accessibility Testing Settings
-  - Fragment identifier
-  - wcag
+  - capture screenshot
+    - accessibility screenshots
+    - visual evidence
 url: https://www.testmuai.com/support/docs/accessibility-capture-screenshot/
 site_name: TestMu AI
 slug: accessibility-capture-screenshot/
@@ -40,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Accessibility Android Test",
+          "name": "Capture Screenshot",
           "item": `${BRAND_URL}/support/docs/accessibility-capture-screenshot/`
         }]
       })

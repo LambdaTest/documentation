@@ -9,8 +9,6 @@ keywords:
   - Accessibility
   - Testing
   - DevTools
-  - run quick scan
-  - test issues
   - Keyboard Scan
   - Tab Order
 url: https://www.testmuai.com/support/docs/accessibility-keyboard-scan/
@@ -40,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "What is Accessibility Testing",
+          "name": "Keyboard Accessibility Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-keyboard-scan/`
         }]
       })
@@ -59,6 +57,8 @@ The Assistive Keyboard Accessibility Test combines automated tab simulation with
 2. Open the Accessibility Devtools from your chrome devtools option
 3. Under Assistive Tests, select Keyboard Scan
 
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/keyboard-scan.png').default} alt="Keyboard Scan initiation in DevTools" className="doc_img" width="1360" height="768" />
+
 **Step 2: Select Test Scope**
 
 Choose how much of the page you want to test:
@@ -67,6 +67,8 @@ Choose how much of the page you want to test:
 - **Partial Page**: Allows you to select a specific section or component
   - After selecting this option, click and drag to highlight the area you want to test
   - Or click on a container element to test that specific section
+
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/full-partial-option.png').default} alt="Full Page and Partial Page scope options" className="doc_img" width="1360" height="768" />
 
 > **Tip**: For complex pages, start with partial page tests on individual components before running a full page test.
 
@@ -87,16 +89,22 @@ The tool will ask: "Are there any interactive elements within the scope that sho
 
 If you select "**No**":
 
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/missed-elements-no.png').default} alt="No missing elements selected" className="doc_img" width="1360" height="768" />
+
 - The manual verification is complete
 - No manual issues are logged
 - The test proceeds to generate the final report
 
 If you select "**Yes**":
 
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/missed-elements-yes.png').default} alt="Yes — missing elements prompt" className="doc_img" width="1360" height="768" />
+
 - You'll see the prompt: "Please click on the interactive element(s) that were missed in the tab order"
 - Click on any interactive elements (buttons, links, form fields, etc.) that should be keyboard accessible but weren't in the tab list.
 - Each element you select will be logged as an accessibility violation.
 - Click Confirm Selection when you've identified all missing elements
+
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/missed-elements-yes-selection.png').default} alt="Selecting missed interactive elements" className="doc_img" width="1360" height="768" />
 
 **Step 5: Review Automated Findings**
 
@@ -106,6 +114,14 @@ While you're performing the manual check, the tool runs our accessibility automa
 - Nested interactive elements
 - Scrollable regions without keyboard access
 - Focus indicators missing or unclear
+
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/report-on-plugin.png').default} alt="Keyboard scan report in DevTools plugin" className="doc_img" width="1360" height="768" />
+
+You can inspect individual issues directly on the page or use the highlight option to visualize them:
+
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/report-inspect-option.png').default} alt="Inspect option for keyboard scan findings" className="doc_img" width="1360" height="768" />
+
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/report-highlight-option.png').default} alt="Highlight option for keyboard scan findings" className="doc_img" width="1360" height="768" />
 
 <br/>
 

@@ -3,7 +3,7 @@ id: accessibility-update-devtools-extension
 title: Update your Accessibility DevTools Chrome Extension
 hide_title: false
 sidebar_label: Update DevTools Chrome Extension
-description: This document guides you step by step n=on how to update the TestMu AI accessibility devtools chrome extension.
+description: Update the TestMu AI Accessibility DevTools Chrome extension to get the latest features and fixes.
 keywords:
     - TestMu AI
     - Accessibility
@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "What is Accessibility Testing",
+          "name": "Update DevTools Chrome Extension",
           "item": `${BRAND_URL}/support/docs/accessibility-update-devtools-extension/`
         }]
       })

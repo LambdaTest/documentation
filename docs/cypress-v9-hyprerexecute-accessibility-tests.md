@@ -3,7 +3,7 @@ id: cypress-v9-hyprerexecute-accessibility-tests
 title: Accessibility Testing on HyperExecute using Cypress v9
 hide_title: false
 sidebar_label:  Cypress v9
-description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 9 and below
+description: Run Accessibility Automation with Cypress v9 on HyperExecute to detect and report accessibility issues during automated execution.
 keywords:
     - TestMu AI
     - Accessibility
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Cypress Accessibility Testing",
+          "name": "Cypress v9 Accessibility on HyperExecute",
           "item": `${BRAND_URL}/support/docs/cypress-v9-hyprerexecute-accessibility-tests/`
         }]
       })

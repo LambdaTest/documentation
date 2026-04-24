@@ -9,9 +9,8 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-    - run quick scan
-    - test issues
     - Full Page Scanner
+    - full page scan
 url: https://www.testmuai.com/support/docs/accessibility-testing-full-page-scanner/
 site_name: TestMu AI
 slug: accessibility-testing-full-page-scanner/
@@ -40,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run Full Page Scanner",
+          "name": "Full Page Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-full-page-scanner/`
         }]
       })
@@ -54,7 +53,7 @@ Full Page Scanner is used to analyze the accessibility of entire web pages at on
 - **WCAG Compliance Checks :** It identifies potential violations against relevant WCAG guidelines (e.g., missing alt text, insufficient color contrast, keyboard navigation issues).
 - **Automated Issue Detection :** It automatically highlights problems and provides detailed descriptions, pinpointing them directly on the scanned page.
 - **Prioritization Options:** It prioritizes issues based on severity and potential impact, helping you focus on the most critical ones first.
-- **Integration with other tools:** You can integrate the Full Page Scanner with other <BrandName /> features like screen readers and automated checks for a more comprehensive analysis.
+- **Report Integration:** Results from a Full Page Scan are saved to the Accessibility dashboard for review, export, and integration with issue trackers.
 
 ## Execute the Full Page Scanner for Your Website
 

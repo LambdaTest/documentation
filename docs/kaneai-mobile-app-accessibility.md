@@ -16,6 +16,8 @@ site_name: TestMu AI
 slug: kaneai-mobile-app-accessibility/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: kaneai-mobile-app-accessibility/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile App Accessibility Testing",
-          "item": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/"
+          "item": `${BRAND_URL}/support/docs/kaneai-mobile-app-accessibility/`
         }]
       })
     }}
@@ -43,6 +45,10 @@ slug: kaneai-mobile-app-accessibility/
 # Mobile App Accessibility Testing
 
 Mobile app accessibility testing enables automated accessibility scanning for native mobile applications in KaneAI. This feature performs accessibility checks during test execution, helping identify accessibility issues and ensure compliance with accessibility standards.
+
+## Product boundary
+
+This page is for KaneAI-authored mobile flows. If you are triggering scans directly from Appium code, use [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/). If you want manual screen-by-screen validation on a real device, use [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/).
 
 <!-- :::info Prerequisite
 The **Native App Accessibility** add-on must be enabled for your account to use this feature.

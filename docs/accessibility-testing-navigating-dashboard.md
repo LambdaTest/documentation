@@ -1,101 +1,48 @@
 ---
 id: accessibility-testing-navigating-dashboard
-title: Navigating Dashboard
-hide_title: false
-sidebar_label: Navigating Dashboard
-description: Access valuable insights and actionable steps for improving your website's accessibility performance with Accessibility Dashboard.
-keywords:
-    - TestMu AI
-    - Accessibility
-    - Testing
-    - DevTools
-    - run quick scan
-    - test issues
-    - Dashboard
+title: Navigating the Dashboard
+sidebar_label: Navigating the Dashboard
+description: Learn how to open, filter, review, and act on Accessibility reports in the dashboard.
+slug: accessibility-testing-navigating-dashboard/
 url: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
 site_name: TestMu AI
-slug: accessibility-testing-navigating-dashboard/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Navigating the Dashboard
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Navigating Dashboard",
-          "item": `${BRAND_URL}/support/docs/accessibility-testing-navigating-dashboard/`
-        }]
-      })
-    }}
-></script>
-Accessibility Dashboard offers a comprehensive overview of your website's accessibility performance, providing valuable insights and actionable steps for improvement.
+The Accessibility dashboard is the main place to review completed scans, open detailed reports, and act on findings.
 
-You can access the dashboard either by clicking on the **Dashboard** button as shown below or you can visit the [Accessibility Dashboard](https://accessibility.lambdatest.com/) directly.
+Continue reading to understand the dashboard's purpose and how to navigate between reports. You will also see where to access issue-level views, exports, and supporting actions that close the loop after a scan completes.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/1.png').default} alt="automation-dashboard" className="doc_img"/>
+## What you can do here
 
-- You will be redirected to the page like below from where you can access all the tests run.
+- open completed tests
+- filter reports by scan type, user, and WCAG-related dimensions
+- review issue summary and all issues
+- export and share reports
+- open related actions such as hide/restore and bug filing
 
-- You can also **share your tests**, **download reports** and can also **rename** or **delete** the tests.
+## Onboarding: first time in the dashboard
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/2.png').default} alt="automation-dashboard" className="doc_img"/>
+1. **Sign in** to TestMu AI and open **Accessibility** from the product navigation (exact placement can vary by account layout).
+2. **Locate the report list** for your workspace: completed DevTools sessions, automation builds, scheduled scans, or Web Scanner imports should each appear as rows or cards once processing has finished.
+3. **Pick a report** by name, time, or URL. If nothing appears, confirm the upstream run finished (Automation dashboard for Selenium, or your scan wizard for scheduling/Web Scanner).
+4. **Scan the header** for counts, severity mix, and (if shown) **Accessibility Web Score**—use this as a triage compass before drilling down.
+5. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** for grouped insight, then **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** for line-item work.
+6. Use **filters** (date, user, scan type, WCAG-related fields where available) to narrow large histories.
+7. When you are ready to share evidence, use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** or integrations from **[Integrations](/support/docs/accessibility-report-integrations/)**.
 
-## Filters
+## Typical dashboard workflow
 
-### Search Tests
+1. Open the completed report.
+2. Review high-level stats and issue counts.
+3. Move into Issue Summary or All Issues.
+4. Take actions such as export, hide/restore, or bug reporting.
 
-Directly search your desired tests from the search bar.
+## Related docs
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/3.png').default} alt="automation-dashboard" className="doc_img"/>
-
-### Scan Type
-
-- You can filter out your tests as per the scan type:
-    - **Full Page Scan :** Get a comprehensive analysis of entire web page for accessibility compliance & best practices.
-    - **Partial Page Scan :** Get the accessibility check for selected sections or elements within a web page.
-    - **Multi Page Scan :** Learn how to assess accessibility across various pages for site-wide compliance.
-    - **Workflow Scan :** Workflow Scan sequentially ensure accessibility standards across multiple pages or flows.
-- Select your type of scan and click on **Apply** button.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/4.png').default} alt="automation-dashboard" className="doc_img"/>
-
-### WCAG Criteria
-
-You can check your website accessibility compliance as per the specific WCAG version.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/5.png').default} alt="automation-dashboard" className="doc_img"/>
-
-### User
-
-- You can also filter out your tests based on the user name.
-- If you want to check the tests executed by your any team mate, you can check it with just one click.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/6.png').default} alt="automation-dashboard" className="doc_img"/>
-
-### Sort By
-
-You can also sort your dashboard tests via:
-
-- Scan Type
-- Issue Count
-
-Apply the **Ascending** or **Descending** sorting as well.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/7.png').default} alt="automation-dashboard" className="doc_img"/>
+- [Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)
+- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
+- [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)
+- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)

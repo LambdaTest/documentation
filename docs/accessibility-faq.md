@@ -1,6 +1,6 @@
 ---
 id: accessibility-faq
-title: Accessibility Tool Frequently Asked Questions!!
+title: Accessibility FAQs
 hide_title: false
 sidebar_label:  FAQs
 description: This document consists of frequently asked questions related to the accessibility tool of TestMu AI. It will help you to answer some of your common questions.
@@ -52,11 +52,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 We adhere to **WCAG 2.2 AA**, the most recent version of the Web Content Accessibility Guidelines. In addition to this, we support the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.
 
 ## Do you have screen reader support?
-Yes, we provide comprehensive screen reader support:
+Yes, we provide screen reader support:
 
-- **Windows:** Full support for popular screen readers like JAWS and NVDA.
-- **macOS:** Complete support for VoiceOver.
-- **Mobile:** We actively develop support for VoiceOver on Android and TalkBack on iOS. These mobile screen reader supports are expected to be fully implemented soon, enhancing our accessibility testing capabilities across all major platforms.
+- **Windows:** JAWS and NVDA.
+- **macOS:** VoiceOver.
+- **Android:** TalkBack.
+
+See [Screen Reader Overview](/support/docs/screen-reader-on-accessibility/) for setup and usage details.
 
 ## Which browsers are supported?
 Our accessibility testing tools are optimized for **Chromium-based** browsers, **version 90 and above**. This includes **Google Chrome, Microsoft Edge, and other Chromium-based browsers**. Using the latest version ensures the best compatibility and performance with our tools.
@@ -88,8 +90,8 @@ Our system uses a proprietary algorithm to assign severity statuses to accessibi
 - Legal compliance implications
 This nuanced approach helps you prioritize your accessibility improvements effectively.
 
-## What frameworks are supported?
-Currently we offer support for Selenium, Cypress and PlayWright.
+## What frameworks are supported for web automation?
+Accessibility Automation supports Selenium, Cypress (v9 and v10+), Playwright, WebdriverIO, TestNG, JUnit 5, NUnit (C#), Robot Framework, and Cucumber (Java). All of these can also run on HyperExecute. See [Accessibility Automation](/support/docs/accessibility-automation/) for the full list.
 
 ## Can I share the dashboard link with anyone?
 Yes, you can share dashboard links with anyone within your organization. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.
@@ -104,11 +106,17 @@ The <BrandName /> accessibility score is a proprietary metric designed to give y
 ## How many parallel automated accessibility tests can I run?
 The number of parallel automated accessibility tests you can run depends on the number of parallels included in your automation plan. For example, if your plan includes 2 parallels, you can run 2 concurrent tests.
 
-## Can I run tests on mobile browsers/apps?
-Currently, our accessibility testing tools are optimized for desktop web environments. Mobile browser and app testing is not supported at this time. However, we recognize the growing importance of mobile accessibility and are actively working on expanding our capabilities to include mobile platforms in future updates.
+## Can I run tests on mobile apps?
+Yes. Mobile app accessibility testing is supported through:
+
+- **App Scanner (Manual):** Interactive screen-by-screen scanning on real devices. See [Accessibility App Scanner](/support/docs/accessibility-app-scanner/).
+- **Native App Automation:** Automated accessibility checks via Appium during test execution. See [Native App Automation](/support/docs/accessibility-native-app-automation-test/).
+- **KaneAI:** Insert accessibility scan instructions into KaneAI-authored mobile test flows. See [KaneAI Mobile Accessibility](/support/docs/kaneai-mobile-app-accessibility/).
+
+Mobile web browser accessibility testing through automation is not currently supported.
 
 ## Do you support accessibility testing for PDFs?
-At present, we do not support accessibility testing for PDF documents. Our focus is on web content accessibility. For PDF accessibility, we recommend using specialized PDF accessibility tools or consulting with PDF accessibility experts.
+Yes. PDF Accessibility Scanning is available as part of the Accessibility product. See [PDF Accessibility Scanning](/support/docs/accessibility-pdf-accessibility-scanning/) for details on supported capabilities and how to use this feature.
 
 ## How many pages can be scanned for accessibility in a workflow scan?
 There is currently no limitation on the number of pages that can be scanned in a workflow scan. This allows you to:

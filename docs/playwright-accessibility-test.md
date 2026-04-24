@@ -2,7 +2,7 @@
 id: playwright-accessibility-test
 title: Automation Tests with Accessibility Tool using Playwright
 sidebar_label: Playwright
-description: Use TestMu AI Accessibility DevTools with Playwright to detect and report accessibility issues with automation, following WCAG guidelines.
+description: Use TestMu AI Accessibility Automation with Playwright to detect and report accessibility issues during automated test execution.
 keywords:
     - TestMu AI
     - Accessibility
@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Accessibility Testing Test",
+          "name": "Playwright Accessibility Automation",
           "item": `${BRAND_URL}/support/docs/playwright-accessibility-test/`
         }]
       })

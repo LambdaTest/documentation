@@ -1,0 +1,70 @@
+---
+id: accessibility-appium-webdriverio
+title: Appium WebdriverIO
+sidebar_label: Appium WebdriverIO
+description: Appium WebdriverIO with Accessibility—WDIO config, async hooks, lambda-accessibility-scan, and reports.
+slug: accessibility-appium-webdriverio/
+url: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
+site_name: TestMu AI
+canonical: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
+---
+
+# Appium WebdriverIO
+
+Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or iOS. Accessibility is enabled on the **remote options** object, and you call **`lambda-accessibility-scan`** from async tests or hooks.
+
+## Prerequisites
+
+- WebdriverIO + `@wdio/appium-service` (or your chosen runner) configured for TestMu AI
+- App artifact available to the grid
+- Accessibility entitlement
+
+## Onboarding path
+
+### 1. Set capabilities in `wdio.conf.ts` (or `.js`)
+
+```ts
+export const config = {
+  capabilities: [{
+    platformName: 'Android',
+    'appium:deviceName': 'Pixel.*',
+    'appium:app': 'lt://APP_ID',
+    'accessibility': true,
+    // 'accessibility.autoscan': true,
+  }],
+  // host/user/key per your standard WDIO LambdaTest preset
+};
+```
+
+Match keys to your Appium server version (`appium:` prefix for W3C caps).
+
+### 2. Call the hook after screens load
+
+```ts
+await browser.execute('lambda-accessibility-scan');
+```
+
+Use WDIO’s **`waitUntil`** patterns before executing the hook so dynamic content is present.
+
+### 3. Run the suite
+
+```bash
+npx wdio run wdio.conf.ts
+```
+
+### 4. Review Accessibility results
+
+Same dashboard path as other mobile automation ([overview](/support/docs/accessibility-native-app-automation-test/)).
+
+## Troubleshooting
+
+| Symptom | What to check |
+|--------|----------------|
+| `execute` undefined | Ensure the session is still active and you are not using a mocked driver in unit tests. |
+| No report | Missing `accessibility: true` or hook never awaited. |
+
+## Related docs
+
+- [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
+- [Appium TestNG](/support/docs/accessibility-appium-testng/)
+- [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)

@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "TestMu AI URL Crawler",
+          "name": "Accessibility URL Crawler",
           "item": `${BRAND_URL}/support/docs/accessibility-test-crawler/`
         }]
       })
@@ -95,7 +95,7 @@ You can fine-tune your URL crawling by including or excluding certain URLs based
 
 
 
-## Step 6: Analyze the Scan Report  
+## Step 4: Analyze the Scan Report  
 Once the scan is complete, you can analyze the scan report, which includes:  
 - **Total Issues:** A graph summarizing the detected accessibility issues.  
 - **Severity Trends:** Categorized by severity (Critical, Serious, Moderate, Minor).  
@@ -107,5 +107,9 @@ You can drill down into individual URLs for a more detailed analysis of accessib
 
 > Note: The crawler functionality is available only when creating a new scheduled scan, not for scans that have already been scheduled.
 
+## Related docs
 
-
+- [Test Scheduling - Sitemap (Overview)](/support/docs/accessibility-test-scheduling/)
+- [Login & Authentication for Scheduled Scans](/support/docs/accessibility-test-scheduling-login-authentication/)
+- [Create Scheduled Scan](/support/docs/accessibility-test-scheduling-scan/)
+- [Sitemap Extraction & URL Import](/support/docs/accessibility-sitemap-extraction-url-import/)

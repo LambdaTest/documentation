@@ -1,98 +1,52 @@
 ---
 id: accessibility-app-scanner
-title: Accessibility App Scanner
-sidebar_label: Manual
-description: TestMu AI Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
-keywords:
-    - TestMu AI
-    - Accessibility
-    - Testing
-    - Manual
-    - Accessibility Testing Settings
+title: Accessibility App Scanner (Overview)
+sidebar_label: Accessibility App Scanner
+description: Manual mobile app accessibility testing on real devices—upload, session, scan screens, review issues, and export reports.
+slug: accessibility-app-scanner/
 url: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 site_name: TestMu AI
-slug: accessibility-app-scanner/
 canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 ---
- 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+# Accessibility App Scanner (Overview)
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Accessibility Android Test",
-          "item": `${BRAND_URL}/support/docs/accessibility-app-scanner/`
-        }]
-      })
-    }}
-></script>
+Accessibility App Scanner is the **manual** mobile app workflow for reviewing accessibility issues on **real Android or iOS devices**, screen by screen, without writing Appium code.
 
-<BrandName /> offers a powerful Accessibility Scanner for native Android and iOS apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
+## When to use this
+
+Use App Scanner when you want to **inspect** Android or iOS app screens interactively and validate findings as you move through the app—ideal for exploratory passes, design reviews, or reproducing issues filed by users.
 
 ## Prerequisites
-- You must have access to the <BrandName /> Real Device Cloud.
-- Your Android app (.apk or .aab) or iOS app should be uploaded to the platform.
 
+- Access to **Accessibility** and **App Scanner** for your organization
+- A **build** of the app you are authorized to test (store build, enterprise IPA/APK, or uploaded artifact per your workflow)
+- A **device profile** that matches your audience (OS version, screen size)
 
-## Steps to perform Accessibility Testing using the App Scanner
-### Step 1: Navigate to the Accessibility Section
-- Log in to your <BrandName /> dashboard.
-- From the left-hand menu, click on Accessibility.
-- Select the **App Scanner** tab under the Accessibility tab.
+## Onboarding: first manual scan
 
-### Step 2: Upload your Application
-- To start accessibility testing, you need to upload your application first.
-- Click on the **Upload** button to upload it from your local system.
-- You can also install via Playstore or Firebase or upload via URL.
+1. **Upload or select** the application package in the App Scanner flow (follow in-product prompts for accepted formats).
+2. **Pick a real device** pool that matches your target users (OS + locale).
+3. **Launch the session** and wait until the app is installed and foregrounded.
+4. **Navigate critical journeys** (onboarding, login, checkout, settings). After each major screen stabilizes, trigger the **scan** action the UI provides.
+5. **Review issues** in the side panel or overlay—open each item to see rule text, element context, and suggested remediation where available.
+6. **Save or end** the session so results appear under Accessibility **Reports** for dashboard analysis ([Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)).
+7. Optional: run a **[Screen Reader](/support/docs/screen-reader-on-accessibility/)** pass on the same build for manual confirmation.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/app-upload.png').default} alt="Image" className="doc_img img_center"/>
+## Typical workflow (summary)
 
-### Step 3: Launch Manual App Testing
-- Choose the target Android or iOS device and select your application.
-- Click on the **Start** button to launch the manual testing session on the selected device.
+1. Upload or select the app.
+2. Start the device session.
+3. Scan important screens manually.
+4. Review the issues.
+5. Save the report and move into dashboard analysis if needed.
 
-### Step 4: Scan the App Screens
-- Once the session is started and your app is launched on the device, click on the **Start Scanning** button to start the scanning of current page.
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/1.png').default} alt="Image" className="doc_img img_center"/>
-<br />
-- Interact with your app just like a real user — navigate through different screens, buttons, and views.
-- The scanner will analyze the current screen and return a list of detected accessibility issues.
+## Product boundary
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/2.png').default} alt="Image" className="doc_img img_center"/>
+App Scanner is a manual mobile-app workflow. If you are running Appium code, use [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/). If you are authoring the flow in KaneAI, use [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/).
 
-### Step 5: Review Accessibility Issues
-After scanning, you’ll see a categorized list of issues based on severity (Critical, Serious, Moderate, Minor). Each issue includes:
-- Description of the accessibility problem.
-- List of affected element.
-- Suggested fix or recommendation.
+## Related docs
 
-Continue testing by navigating to additional screens in the app and scanning them one-by-one. This helps ensure that your entire app meets accessibility standards across all flows and use cases.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/3.png').default} alt="Image" className="doc_img img_center"/>
-
-### Step 6: Accessibility Report
-After completion of your scanning, click on the **Save Test** button.
-- Go to the **Manual Reports** tab under the Accessibility tab.
-- Select your desired report
-- You can also share the report over email, export it in JSON, CSV and PDF format, and also you create an issue as well for that report.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/4.png').default} alt="Image" className="doc_img img_center"/>
+- [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
+- [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/)
+- [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
