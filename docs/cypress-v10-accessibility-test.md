@@ -3,7 +3,7 @@ id: cypress-v10-accessibility-test
 title: Automation Tests with Accessibility Tool using Cypress v10
 hide_title: false
 sidebar_label:  Cypress v10 
-description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 10 and above
+description: Run Accessibility Automation in Cypress v10 and later to detect and report accessibility issues during automated web test execution.
 keywords:
     - TestMu AI
     - Accessibility
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Cypress Accessibility Testing",
+          "name": "Cypress v10 Accessibility Automation",
           "item": `${BRAND_URL}/support/docs/cypress-v10-accessibility-test/`
         }]
       })

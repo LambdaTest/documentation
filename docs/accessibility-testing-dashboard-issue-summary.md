@@ -1,66 +1,43 @@
 ---
 id: accessibility-testing-dashboard-issue-summary
 title: Issue Summary
-hide_title: false
 sidebar_label: Issue Summary
-description: Get a comprehensive guide of your website's test summary, including total issues, their type, affected element groups, best practices, and WCAG guidelines.
-keywords:
-    - TestMu AI
-    - Accessibility
-    - Testing
-    - DevTools
-    - Issue Summary
+description: Understand the summary view of Accessibility issues, affected elements, guidelines, and counts.
+slug: accessibility-testing-dashboard-issue-summary/
 url: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-issue-summary/
 site_name: TestMu AI
-slug: accessibility-testing-dashboard-issue-summary/
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-dashboard-issue-summary/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Issue Summary
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Navigating Dashboard",
-          "item": `${BRAND_URL}/support/docs/accessibility-testing-dashboard-issue-summary/`
-        }]
-      })
-    }}
-></script>
-The issue summary page describes the complete test summary. It divides the complete report in two major sections :
+Issue Summary gives you the high-level breakdown of a completed Accessibility run before you move into issue-level triage.
 
-## Summary
+Read on for the summary metrics surfaced after each run. Each signal is meant to help you prioritize remediation before you drill into individual issues, so you can align fixes with severity and coverage first.
 
-- **Total Issues :** Total number of issues your website have.
-- **Issue Types :** Total number of segregated issues your website have.
-- **Affected Element groups :** Total number of element groups affected.
-- **Best Practices :** Recommended Best Practices to make your website more compliant.
-- **Needs Review :** Total number of issues that needs to be reviewed.
-- **Affected WCAG Guidelines :** Total number of WCAG Guidelineds affecting from these issues.
+## What you can review
 
-## Issue Breakdown
+- total issues
+- issue types
+- affected element groups
+- best-practice findings
+- needs-review findings
+- affected WCAG guidelines
 
-This section breaksdown the above stated numbers in more detailed and visual representation.
+## When to use this
 
-- The graph represents the type of issues and how many are they.
-- URLs of the affected page.
-- What are the WCAG Guidelines that are affected
-- The Elements that got affected.
+Use this view when you want to understand report shape and severity before drilling into individual issues.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/8.png').default} alt="automation-dashboard" className="doc_img"/>
+## How to use Issue Summary (onboarding)
+
+1. From **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)**, open a completed report.
+2. Select **Issue Summary** (or the equivalent tab/panel name in the UI).
+3. Read **severity totals** first—critical/serious items usually block users or compliance narratives.
+4. Scan **guideline or rule groupings** to see which WCAG themes dominate (contrast, keyboard, forms, ARIA, etc.).
+5. Use **needs-review** and **best-practice** counts to decide how much manual validation you owe before filing engineering tickets.
+6. When a bucket looks actionable, jump to **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** filtered or grouped by that bucket, or open the **[Web Rule Repository](/support/docs/accessibility-web-rule-repository/)** entry for the rule text.
+
+## Related docs
+
+- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
+- [Accessibility Web Score](/support/docs/accessibility-web-score/)

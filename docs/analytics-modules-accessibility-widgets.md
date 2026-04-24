@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Test Overview",
+          "name": "Accessibility Dashboard Widgets",
           "item": `${BRAND_URL}/support/docs/analytics-modules-accessibility-widgets/`
         }]
       })
@@ -50,6 +50,15 @@ Top 10 URLs Issue Criticality, and more.
 :::note
 The Accessibility Widgets module is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
+
+## Onboarding: where to find the widgets
+
+1. Open **Insights** (or the analytics area your account exposes) from the main TestMu AI navigation.
+2. Add or enable the **Accessibility** widget pack on your dashboard canvas (exact UI depends on the analytics release).
+3. Pick a **date range** that includes at least one completed Accessibility scan; empty widgets usually mean no data in range.
+4. Start with **Accessibility Test Overview** for totals, then **Types of Scans** to confirm manual vs automated mix, then **Top 10 URLs Issue Criticality** for remediation focus.
+5. Click through any **drill-down** links the widgets expose to jump into the underlying Accessibility report when available.
+6. For executive readouts, **export** or screenshot the widgets and pair them with narrative from **[Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/)**—widgets summarize engineering signals, not legal conclusions.
 
 ## Accessibility Test Overview
 

@@ -1,0 +1,48 @@
+---
+id: accessibility-issue-remediation-guide
+title: Accessibility Issue Remediation Guide
+sidebar_label: Accessibility Issue Remediation Guide
+description: Use this guide to move from Accessibility findings to remediation planning, prioritization, and rule-level fixes.
+slug: accessibility-issue-remediation-guide/
+url: https://www.testmuai.com/support/docs/accessibility-issue-remediation-guide/
+site_name: TestMu AI
+canonical: https://www.testmuai.com/support/docs/accessibility-issue-remediation-guide/
+---
+
+# Accessibility Issue Remediation Guide
+
+This guide helps teams move from issue discovery to remediation planning.
+
+You will learn how to translate report findings into an ordered remediation path that matches user impact. You will also see when to step from summary views into rule-level detail so fixes stay aligned with the underlying WCAG expectations.
+
+## Recommended remediation order
+
+1. Fix critical blockers on core user journeys first.
+2. Resolve serious issues that affect navigation, interaction, or major content access.
+3. Use rule repository and checklist pages for rule-specific explanation.
+4. Re-run the affected workflow and compare the updated report.
+
+## How to use this guide
+
+- start from Issue Summary to understand the report shape
+- move into All Issues for affected elements and issue detail
+- use rule repository pages for deeper remediation guidance
+- save or export updated reports after validation
+
+## Onboarding sprint (1–2 week template)
+
+| Day | Focus |
+|-----|--------|
+| 1 | Baseline scan on **top 5 URLs**; export snapshot ([exporting](/support/docs/accessibility-exporting-sharing-reports/)). |
+| 2–3 | Fix **critical** keyboard and name/role issues using rule pages. |
+| 4–5 | Address **serious** contrast and form labeling issues; re-scan. |
+| 6 | Manual pass with **[Screen Reader](/support/docs/screen-reader-on-accessibility/)** guidance on primary flows. |
+| 7 | Review **needs-review** items; hide accepted risk with rationale ([hide/restore](/support/docs/accessibility-hide-restore-issues/)). |
+
+Adjust cadence to your release train; keep evidence in ticketing tools via **[integrations](/support/docs/accessibility-report-integrations/)**.
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
+- [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/)

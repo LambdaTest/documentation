@@ -1,0 +1,42 @@
+---
+id: accessibility-android-rule-mismatched-label-text
+title: Mismatched Label Text
+sidebar_label: Mismatched Label Text
+description: Rule-level Accessibility guidance for Mismatched Label Text on Android.
+slug: accessibility-android-rule-mismatched-label-text/
+---
+
+# Mismatched Label Text
+
+The accessible name of an Android element must contain its visible text so that voice-access users can activate controls by speaking what they see.
+
+:::info WCAG Reference
+**Maps to:** WCAG 2.5.3 Label in Name | **Applies to:** WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.1 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html)
+:::
+
+## What this rule checks
+
+The scanner compares the visible text of interactive elements with their computed accessible name (from `contentDescription` or labeling relationships) and flags mismatches where the visible text is not included in the accessible name.
+
+## Why it matters
+
+Voice Access users say "tap [visible text]" to interact with controls. If the accessible name differs from the visible text, the voice command fails and users cannot activate the control.
+
+## Common failure patterns
+
+- a button labeled "Submit" visually but with `contentDescription` set to "Send data"
+- a `contentDescription` that abbreviates or paraphrases the visible text
+- programmatic label updates that fall out of sync with the visible UI
+
+## Remediation guidance
+
+- ensure the `contentDescription` contains the visible text (it can be longer but must include the visible words)
+- prefer not setting `contentDescription` on elements that already have visible text, letting the framework use the text directly
+- audit dynamic content where visible text and accessible text are set independently
+- test with Voice Access to confirm controls respond to their visible label
+
+## Related docs
+
+- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

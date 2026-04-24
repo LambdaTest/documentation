@@ -45,73 +45,51 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-<BrandName /> Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
+This page covers the settings available in the Accessibility DevTools browser extension. These settings apply when you run scans manually through the DevTools panel.
 
-> Click on your **profile icon** >> **Settings** button.
+:::note
+If you are configuring settings for automated test execution (Selenium, Cypress, Playwright, etc.), see [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/) instead.
+:::
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/1.png').default} alt="automation-dashboard" className="doc_img"/>
+## Access DevTools settings
 
-## Scan Settings
+Click on your **profile icon** and then **Settings**.
 
-To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/1.png').default} alt="Accessibility DevTools settings" className="doc_img"/>
 
-```java
-capabilities: [{
-  accessibility : true,                 // Enable accessibility testing
-  accessibility.wcagVersion: 'wcag21a', // Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibility.bestPractice: false,    // Exclude best practice issues from results
-  accessibility.needsReview: true       // Include issues that need review
-}]
-```
+## WCAG version
 
-### WCAG Version
+Select which **WCAG version** your DevTools scans should check against. Options include WCAG 2.0, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, WCAG 2.2 A, and WCAG 2.2 AA. The recommended version is **WCAG 2.1 AA**.
 
-- It defines which **Web Content Accessibility Guidelines (WCAG)** version your tests should adhere to. You can select any WCAG Version to run compliance tests with a specific version. Typically, WCAG 2.0, WCAG 2.1 AA, or WCAG 2.1 AAA are used in general practice, but the recommended version is **WCAG 2.1 AA**.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/4.png').default} alt="WCAG version selector" className="doc_img"/>
 
-- To set the wcag version in your automated tests, set the capability `wcagVersion: <YOUR_WCAG_VERSION>` in your configuration file.
+## Review Issues
 
-```bash
-accessibility.wcagVersion: 'wcag21a'
-```
+Some issues require manual review before they can be confirmed as true violations. When this setting is enabled, the scan results include a **Needs Review** category.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/4.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/5.png').default} alt="Needs Review issues" width="1346" height="647" className="doc_img"/>
 
-### Review Issues
+To review an issue:
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashbaord to initiate the process.
+1. Click on the issue to expand it.
+2. Select the element you want to evaluate.
+3. Click **Yes** to confirm it as an issue, or leave it unconfirmed.
+4. Use **Undo** to reverse a confirmation.
 
-To enable the needs review checks in your automated tests, set the capability `needsReview: true` in your configuration file.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/6.png').default} alt="Review and confirm issues" className="doc_img"/>
 
-```bash
-needsReview: true
-```
+## Best Practices
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/5.png').default} alt="automation-dashboard" width="1346" height="647" className="doc_img"/>
+Enable this setting to include issues that go beyond WCAG requirements but improve overall user experience. Best practice issues are reported separately from WCAG violations.
 
-- This will open the list of issues that needs to be reviewed.
-- Click on the particular issue >> select that particular element that you want to confirm it as an issue.
-- Click on **Yes** option to confirm it as an issue.
-- You can also **Undo** that particular issue. This means if you will visit that issue again, you can see an **undo** option which will unlist it again from the list of **confirmed issues**.
+## Autosave Reports
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/6.png').default} alt="automation-dashboard" className="doc_img"/>
+This option is enabled by default. When active, scan results are automatically saved to the Accessibility dashboard. Toggle it off if you want to review results without persisting them.
 
-### Best Practices
+<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/3.png').default} alt="Autosave reports setting" className="doc_img"/>
 
-**Best practices** are those issues that may not violate Accessibility guidelines but fixing them will enhance your user experience.
+## Related docs
 
-- To enable the best practices checks in your automated tests, set the capability `bestPractice: true` in your configuration file.
-
-```bash
-bestPractice: true
-```
-
-## Other Settings
-
-### Autosave Reports
-
->**Note :** By default, this option is activated.
-
-- Toggle to activate / deactivate the option.
-- This option ensures that your tests are consistently saved on the dashboard.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/settings/3.png').default} alt="automation-dashboard" className="doc_img"/>
+- [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
+- [Run Your Quick Scan](/support/docs/accessibility-testing-run-quick-scan/)
+- [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)

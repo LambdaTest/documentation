@@ -47,6 +47,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Navigate to: `https://webscanner.lambdatest.com/webscan/builds`
 
+If you use **Accessibility Test Scheduling** inside the main Accessibility product (sitemaps, crawlers, URL lists there) rather than this Web Scanner web app, follow [Test Scheduling](/support/docs/accessibility-test-scheduling/) instead.
+
 You will see a unified dashboard with the following primary controls:
 
 <img loading="lazy" src={require('../assets/images/web-scanner/unified-dashboard-controls.png').default} alt="Web Scanner Dashboard Controls" className="doc_img"/>

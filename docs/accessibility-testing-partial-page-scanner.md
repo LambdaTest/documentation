@@ -9,9 +9,8 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-    - run quick scan
-    - test issues
     - Partial Page Scanner
+    - partial page scan
 url: https://www.testmuai.com/support/docs/accessibility-testing-partial-page-scanner/
 site_name: TestMu AI
 slug: accessibility-testing-partial-page-scanner/
@@ -40,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run Partial Page Scanner",
+          "name": "Partial Page Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-partial-page-scanner/`
         }]
       })

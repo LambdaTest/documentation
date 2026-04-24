@@ -56,7 +56,7 @@ With this feature, you can seamlessly validate a range of accessibility issues t
 ## How to Use:
 - **For Selenium Users:**
 To start accessibility testing with Selenium, you have to pass `"accessibility", true` capability in your test files.
-> 📕 Check out our detailed guide on [executing your accessibility tests using Selenium on HyperExecute](/support/docs/selenium-hyprerexecute-accessibility-tests/).
+> 📕 Check out our detailed guide on [HyperExecute integration — Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
 
 - **For Cypress Users:**
 To start accessibility testing with Cypress, you have to pass `accessibility: true` capability in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file as well as update other necessary configurations in your project.

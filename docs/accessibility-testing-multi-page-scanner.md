@@ -9,9 +9,8 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-    - run quick scan
-    - test issues
     - Multi Page Scanner
+    - multi page scan
 url: https://www.testmuai.com/support/docs/accessibility-testing-multi-page-scanner/
 site_name: TestMu AI
 slug: accessibility-testing-multi-page-scanner/
@@ -40,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run Multi Page Scanner",
+          "name": "Multi-Page Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-multi-page-scanner/`
         }]
       })
@@ -60,7 +59,7 @@ You can use Multi Page Scanner for:
 - Performs accessibility checks on each scanned page using the same principles as the Full Page Scanner.
 - Generates a consolidated report highlighting issues across all scanned pages, prioritizing them based on severity and impact.
 
-## Execute the Full Page Scanner for Your Website
+## Execute the Multi Page Scanner
 
 ### Prerequisite
 

@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "What is Accessibility Testing",
+          "name": "Install Accessibility Toolkit",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-install-devtools/`
         }]
       })

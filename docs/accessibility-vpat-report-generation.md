@@ -1,0 +1,136 @@
+---
+id: accessibility-vpat-report-generation
+title: VPAT Report Generation
+sidebar_label: VPAT Report Generation
+description: End-to-end workflow for using Accessibility Testing outputs as evidence toward a VPAT—scope, scans, manual verification, exports, and what still requires human sign-off.
+slug: accessibility-vpat-report-generation/
+url: https://www.testmuai.com/support/docs/accessibility-vpat-report-generation/
+site_name: TestMu AI
+canonical: https://www.testmuai.com/support/docs/accessibility-vpat-report-generation/
+keywords:
+  - VPAT
+  - ACR
+  - Section 508
+  - WCAG conformance
+  - accessibility procurement
+  - audit evidence
+---
+
+# VPAT Report Generation
+
+A **Voluntary Product Accessibility Template (VPAT®)** is a structured way to document how a product meets accessibility criteria (commonly WCAG 2.x and/or Section 508 / EN 301 549, depending on the template version you use). Buyers and compliance teams use it in **procurement** and **audit** conversations.
+
+**TestMu AI Accessibility Testing** can speed up **evidence collection**—issue lists, severities, URLs or screens, remediation notes, and exports—but it does **not** auto-generate a finished VPAT. Filling the official template, assigning **Conformance** levels per criterion, and signing off for your organization remain **human** steps, often with accessibility specialists and legal review.
+
+This page walks **end to end** from scoping a release to packaging outputs that feed VPAT-style tables. It is **not legal advice**; treat it as a practical bridge between product workflows and VPAT preparation.
+
+## What a VPAT is (and is not)
+
+| VPAT is | VPAT is not |
+| --- | --- |
+| A standardized **product disclosure** of accessibility characteristics | A certificate that your product is “fully accessible” |
+| A table-oriented document aligned to **specific criteria** (WCAG success criteria, 508 clauses, etc.) | A single PDF export from any one tool |
+| Something **your organization** completes and stands behind | Something automated scans alone can complete |
+
+Official templates and guidance are maintained by **ITI (Information Technology Industry Council)**. Your team chooses the right edition (e.g. WCAG 2.x, Section 508, EN 301 549) for the markets and contracts you care about.
+
+## What Accessibility Testing contributes
+
+Use the product as an **evidence engine** alongside manual testing and policy review:
+
+- **Automated and semi-automated findings** tied to pages, components, or builds (web and mobile, depending on your setup).
+- **Coverage signals** (what was scanned, when, and under which WCAG target) to support your “evaluation methods used” narrative.
+- **Triage and remediation context**—issue detail, hide/restore for noise, bug export—so engineering and accessibility leads can align before you freeze wording in the VPAT.
+- **Exports and integrations** for stakeholders who work outside the dashboard ([Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/), [Integrations (Jira / Slack)](/support/docs/accessibility-report-integrations/)).
+
+What Accessibility Testing **does not** replace:
+
+- **Full manual conformance evaluation** for every success criterion (keyboard-only journeys, zoom/reflow, screen reader behavior, cognitive and multimedia checks where applicable).
+- **Authoritative Conformance** labels (Supports / Partially Supports / Does Not Support / Not Applicable) in the VPAT—those are your judgments, informed by evidence.
+- **Legal or contractual interpretation** of ADA, EAA, Section 508, or customer-specific accessibility addenda.
+
+For framework language at a high level, see the **[Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/)**.
+
+## End-to-end workflow
+
+Follow these phases in order; later phases assume earlier decisions are documented (scope, WCAG level, build or release ID).
+
+### Phase 1 — Lock scope and standards
+
+1. **Define the product boundary** for this VPAT cycle: web app only, mobile apps, admin vs customer surfaces, embedded third-party widgets, etc.
+2. **Pick the VPAT template edition** and the **WCAG conformance target** (e.g. 2.1 AA) your procurement or policy requires. Confirm what your Accessibility projects are configured to use—see **[Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)**.
+3. **List representative environments**: browsers, OS versions, assistive technologies you will cite in “evaluation methods used.” Align with how you actually test (for example **[Manual Testing (DevTools)](/support/docs/accessibility-devtools/)** and **[Assistive technology (manual)](/support/docs/screen-reader-on-accessibility/)** guides).
+4. **Record a traceability ID** (release version, sprint, or build) and keep the same ID on every export and screenshot filename so auditors can follow the thread.
+
+### Phase 2 — Baseline automated coverage
+
+1. **Run scans** that match your VPAT scope: DevTools sessions for targeted UX, **[Automation](/support/docs/accessibility-automation/)** for regression suites (including the **[HyperExecute integration — Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)** guide where you use that integration), **[Test Scheduling](/support/docs/accessibility-test-scheduling/)** or **[Web Scanner](/support/docs/web-scanner-getting-started/)** for broader URL coverage where applicable.
+2. Open completed work in the dashboard using **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)**; use **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** and **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** for a severity- and criteria-oriented view.
+3. Capture **what was in scope** for each run (URLs, app package, scan type). You will reuse this wording in VPAT “remarks” or evaluation-method sections.
+
+### Phase 3 — Manual verification and gaps
+
+VPAT readers expect evidence beyond automation.
+
+1. Walk **core user journeys** keyboard-only and with assistive technologies relevant to your audience; use your checklist docs as a matrix: **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-ios-what-we-cover/)**, **[Android](/support/docs/accessibility-android-what-we-cover/)** (including **manual test checklist** sections where present).
+2. Log **pass/fail/needs retest** per journey or per WCAG theme, not only per automated issue ID.
+3. For anything **Partially Supports** or **Does Not Support**, collect **screenshots, short repro steps, and dates**—the same artifacts you would attach in a bug or audit response.
+
+### Phase 4 — Triage, remediate, re-scan
+
+1. Use **[Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)** only for agreed false positives or noise; document the rationale so your VPAT story matches the report.
+2. Route fixes through engineering; use **[Bug Report](/support/docs/accessibility-report-bug/)** or **[Integrations](/support/docs/accessibility-report-integrations/)** if issues should live in your tracker.
+3. **Re-run** the same scan types after fixes and keep **before/after** exports if procurement asks for remediation history.
+
+### Phase 5 — Package evidence for VPAT tables
+
+1. **Export** the report state you want frozen for this VPAT version ([Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)). Exports reflect **filters and hide/restore** at export time—export intentionally.
+2. Build an **evidence index**: map each major VPAT section or WCAG theme to one or more attachments (export file name, dashboard link if permitted internally, ticket IDs).
+3. **Draft table rows** in the official template: for each criterion, add **Conformance**, **Remarks**, and pointers to evidence. Prefer concise remarks that quote scan type, date, and scope (“WCAG 2.1 AA DevTools scan on v2.3.1, 2026-04-10, customer checkout only”).
+4. For **Accessibility Web Score** or similar summaries, use them only as **supporting context**, not as a substitute for criterion-by-criterion statements—see **[Accessibility Web Score](/support/docs/accessibility-web-score/)**.
+
+### Phase 6 — Internal review and publication
+
+1. Have an **accessibility SME** verify that table wording matches evidence and that no criterion is marked **Supports** without documented manual or automated coverage.
+2. Route through **legal or procurement** per your company policy before sharing externally.
+3. Version the VPAT document (e.g. `VPAT_ProductName_2026-04_v1.pdf`) and store it with the underlying export bundle.
+
+## Mapping product outputs to VPAT-style rows
+
+You will not find a one-to-one button from “issue type” to “VPAT row.” Instead:
+
+- **Rule or issue categories** in the dashboard often **align to WCAG success criteria** or platform checks; use your **[rule repository](/support/docs/accessibility-web-rule-repository/)** (web) or platform equivalents to justify which criterion each finding relates to.
+- **“Supports”** usually requires both absence of blocking defects **and** documented manual checks for that criterion’s intent.
+- **“Partially Supports”** is common when automation passes but assistive technology or keyboard behavior still has gaps—or when only part of the product was evaluated.
+- **“Not Applicable”** needs a short justification (e.g. “product has no video; criterion x.x.x not applicable”).
+
+If stakeholders conflate **score** or **issue count** with **legal compliance**, point them to the compliance guide and this page together.
+
+## Evidence checklist (audit binder)
+
+Before you call the VPAT draft “ready for review,” confirm you have:
+
+- [ ] Locked **product version**, **WCAG/508 edition**, and **evaluation dates**
+- [ ] **Inventory of scans** (types, environments, URLs or app builds)
+- [ ] **Exported reports** matching the frozen dashboard state for that version
+- [ ] **Manual test matrix** or checklist results for critical journeys
+- [ ] **Assistive technology** notes where relevant (product, version, OS)
+- [ ] **Remediation log** for any open **Partially Supports** / **Does Not Support** items
+- [ ] **Internal sign-off** list (accessibility lead, product owner, legal if required)
+
+## Common pitfalls
+
+- **Treating a single export as the VPAT** — Buyers expect the ITI-style tables and your org’s responses, not only a scan PDF.
+- **Overselling automation** — Many WCAG criteria need manual judgment; say what was actually tested.
+- **Ignoring scope drift** — A VPAT tied to “v3.0” must not silently reuse v2.9 exports without a documented delta.
+- **Hiding issues without documentation** — Align hide/restore decisions with what you are willing to defend in remarks.
+
+## Related docs
+
+- [Accessibility Compliance Guide (ADA / WCAG / EAA / 508)](/support/docs/accessibility-compliance-guide/)
+- [Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)
+- [Choosing the Right Tool](/support/docs/accessibility-choosing-the-right-tool/)
+- [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
+- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
+- [Accessibility Web Score](/support/docs/accessibility-web-score/)
+- [Screen reader testing overview](/support/docs/screen-reader-on-accessibility/)

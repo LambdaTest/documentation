@@ -244,7 +244,7 @@ import NewTag from '../src/component/newTag';
 <div className="home_inners_box">
        <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/><BrandName /> MCP Server &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
-        <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up <BrandName /> MCP Server</p></a>
+        <a href="/support/docs/testmu-mcp-server/"><p className="p_home_inners">Setting up <BrandName /> MCP Server</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -262,12 +262,13 @@ import NewTag from '../src/component/newTag';
       <h2 className='homeMain_h2'><AccessibilityLightIcon className="home_icons home_light_icon" role="presentation"/> <AccessibilityDarkIcon className="home_icons home_dark_icon" role="presentation"/>Accessibility Testing</h2>
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
-        <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
-        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Web Automation</p></a>
-        <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Sitemap Scheduling</p></a>
-        <a href="/support/docs/accessibility-app-scanner/"><p className="p_home_inners">Native App Scanner &nbsp; </p></a> 
-        <a href="/support/docs/accessibility-native-app-automation-test/"><p className="p_home_inners">Native App Automation &nbsp; </p></a>
-        <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
+        <a href="/support/docs/accessibility-choosing-the-right-tool/"><p className="p_home_inners">Choose Your Tool</p></a>
+        <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Manual Testing</p></a>
+        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Automation</p></a>
+        <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Test Scheduling</p></a>
+        <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Web Scanner</p></a>
+        <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Reports</p></a>
+        <a href="/support/docs/accessibility-app-scanner/"><p className="p_home_inners">Mobile App Testing</p></a>
       </div>
     </div>
         <div className="home_inners_box">

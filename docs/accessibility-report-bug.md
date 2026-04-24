@@ -1,70 +1,43 @@
 ---
 id: accessibility-report-bug
-title: Report Bugs on your Integration tools from TestMu AI Accessibility Testing
-hide_title: false
-sidebar_label: Report Bugs
-description: Report the bugs that you are expereinceing
-keywords:
-    - TestMu AI
-    - Accessibility
-    - Testing
-    - Bug Reporting
-    - Reports
+title: Bug Report
+sidebar_label: Bug Report
+description: Create a bug from Accessibility report data and send it to your integrated issue workflow.
+slug: accessibility-report-bug/
 url: https://www.testmuai.com/support/docs/accessibility-report-bug/
 site_name: TestMu AI
-slug: accessibility-report-bug/
 canonical: https://www.testmuai.com/support/docs/accessibility-report-bug/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Bug Report
 
+Use Bug Report to convert Accessibility findings into actionable engineering work.
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Navigating Dashboard",
-          "item": `${BRAND_URL}/support/docs/accessibility-report-bug/`
-        }]
-      })
-    }}
-></script>
-The Bug Reporting feature in <BrandName /> Accessibility Testing helps you to efficiently log, track, and manage accessibility issues identified during testing. This feature ensures seamless collaboration between testers and developers by integrating with popular issue tracking tools.
+Bug Report turns confirmed accessibility findings into engineering work items inside the issue trackers your team already trusts. This page explains when raising a bug from a report is appropriate and how that action extends remediation beyond the dashboard into delivery rituals. Use it when you want a repeatable handoff from accessibility evidence to tracked fixes.
 
-## Key Features
-- **Integration with Issue Tracking Tools :** Supports integrations with Jira, Trello, Asana, GitHub, GitLab, and Slack.
-- **Detailed Issue Reports :** Capture essential details such as element selectors, contrast issues, ARIA violations, and WCAG compliance errors.
-- **Team Collaboration :** Assign bugs to team members, set priorities, and track resolution status.
+## Typical flow
 
-## Steps to Report a Bug
-### Prerequisite
-- Integrate your <BrandName /> account with your required [Bug Tracker platform](/support/docs/bug-tracking-tools/).
+1. Open the report.
+2. Review the issue or issue group.
+3. Use the report action to create a bug.
+4. Route it into the team's issue-management workflow.
 
-### Step 1. Navigating to Accessibility Test Report
-- Navigate to **Accessibility** section in your <BrandName /> dashboard.
-- Go to the **Manual/Automation** Reports.
-- Select the report for which you want to mark it as **Bug**.
+## Best use cases
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/01.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+- confirmed issues on real user flows
+- high-severity findings that need engineering follow-up
+- tracked remediation work tied to releases or audits
 
-### Step 2. Reporting an Issue
-- Click on the **Report Bug** icon in the top right cornter.
-- A pop-up window will open, fill up the details and create a issue for the same.
-- The issue will be notified in your selected bug reporting platform.
+## Onboarding: file a bug from a report
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/02.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+1. Open **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** and select the finding you want tracked.
+2. Choose **Report bug** (or equivalent) from the row or detail actions.
+3. Confirm the **title** auto-fills from the rule or element; edit so engineers recognize the user impact.
+4. Attach **screenshots or HAR** if the dialog offers uploads—speeds reproduction.
+5. Pick the **integration project** (Jira/Azure/etc.) if connected via **[Integrations](/support/docs/accessibility-report-integrations/)**; otherwise copy the deep link into your tracker manually.
+6. After the engineering fix ships, **re-run** the scan and link the new build to the same ticket for closure.
+
+## Related docs
+
+- [Integrations (JIRA / Slack / GitHub)](/support/docs/accessibility-report-integrations/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

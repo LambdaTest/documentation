@@ -3,13 +3,13 @@ id: accessibility-automation-settings
 title: Configure Accessibility Automation
 hide_title: false
 sidebar_label: Configure Accessibility Automation
-description: Customize your testing with TestMu AI Accessibility DevTools' extensive settings, tailored to meet your specific needs and preferences.
+description: Configure capabilities for TestMu AI Accessibility Automation including WCAG version, best practices, and needs review settings.
 keywords:
     - TestMu AI
     - Accessibility
     - Testing
-    - DevTools
-    - Accessibility Testing Settings
+    - Automation
+    - Accessibility Automation Settings
 url: https://www.testmuai.com/support/docs/accessibility-automation-settings/
 site_name: TestMu AI
 slug: accessibility-automation-settings/

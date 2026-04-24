@@ -1,7 +1,7 @@
 ---
 id: screen-reader-on-accessibility
 title: Screen Reader
-sidebar_label: Screen Reader
+sidebar_label: Overview
 description: Test your app's accessibility with TestMu AI's Screen Reader as per the WCAG standards.
 keywords:
   - screen reader
@@ -51,13 +51,28 @@ Screen readers are essential for making digital environments accessible to visua
 ## Screen Reader Support in <BrandName /> Accessibility Testing
 <BrandName /> supports the following screen readers during Accessibility Testing:
 
-- **NVDA (NonVisual Desktop Access)** – Windows
-- **VoiceOver** – macOS
-- **TalkBack** – Android
-> 📕 To learn more about using TalkBack for Android devices, refer to the [TalkBack Documentation](/support/docs/screen-reader-on-real-devices-app/).
+- **NVDA (NonVisual Desktop Access)** – Windows. See [NVDA on Windows](/support/docs/accessibility-nvda-windows/).
+- **JAWS (Job Access With Speech)** – Windows. See [JAWS on Windows](/support/docs/accessibility-jaws-windows/).
+- **VoiceOver** – macOS. See [VoiceOver on macOS](/support/docs/accessibility-voiceover-macos/).
+- **TalkBack** – Android. See [TalkBack on Android](/support/docs/accessibility-talkback-android/).
 
 These tools allow developers and testers to evaluate how well their applications or websites perform for visually impaired users, ensuring accessibility compliance and usability.
+
+## Onboarding: pick a screen reader path
+
+| If you test on… | Start here |
+|------------------|------------|
+| Windows desktop web | [NVDA on Windows](/support/docs/accessibility-nvda-windows/) (free, common) or [JAWS on Windows](/support/docs/accessibility-jaws-windows/) (enterprise) |
+| macOS desktop web | [VoiceOver on macOS](/support/docs/accessibility-voiceover-macos/) |
+| Android app or web | [TalkBack on Android](/support/docs/accessibility-talkback-android/) (often paired with [App Scanner](/support/docs/accessibility-app-scanner/)) |
+
+**Suggested order of operations:** run an automated or DevTools scan first, export the top issues, then walk the same URLs with a screen reader to confirm real-world impact before filing engineering bugs.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/accessibility-testing/screen-reader/output.mp4').default} type="video/mp4" />
 </video>
+
+## Related docs
+
+- [Accessibility Testing (Overview)](/support/docs/accessibility-testing/)
+- [Choosing the Right Accessibility Tool](/support/docs/accessibility-choosing-the-right-tool/)

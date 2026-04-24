@@ -9,9 +9,8 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-    - run quick scan
-    - test issues
     - Workflow Scanner
+    - workflow scan
 url: https://www.testmuai.com/support/docs/accessibility-testing-workflow-scanner/
 site_name: TestMu AI
 slug: accessibility-testing-workflow-scanner/
@@ -40,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run Workflow Scanner",
+          "name": "Workflow Scan",
           "item": `${BRAND_URL}/support/docs/accessibility-testing-workflow-scanner/`
         }]
       })
@@ -55,7 +54,7 @@ Workflow Scan allows you to record multiple real-time interactions and page load
 - **Save time and effort :** Tests multiple pages at once without needing individual scans.
 - **Prioritize issues based on usage :** Focuses on problems encountered in typical user journeys.
 
-## Execute the Full Page Scanner for Your Website
+## Execute the Workflow Scanner
 
 ### Prerequisite
 
