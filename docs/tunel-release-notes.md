@@ -41,10 +41,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+## Version 3.2.27 (25th April 2026)
+- **Security Updates and Stability Fixes**
+  - Security and vulnerability fixes
+
+## Version 3.2.26 (8th March 2026)
+- **Security Updates and Stability Fixes**
+  - Security fixes and code sanity
+
 ## Version 3.2.25 (28th Dec 2025)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
-  - 
+
 ## Version 3.2.24 (7th Dec 2025)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
