@@ -4718,6 +4718,26 @@ module.exports = {
         label: "Setting up TestMu AI MCP Server",
         id: "lambdatest-mcp-server",
       },
+      {
+        type: "doc",
+        label: "Automation MCP Server",
+        id: "automation-mcp-server",
+      },
+      {
+        type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
+      },
+      {
+        type: "doc",
+        label: "SmartUI MCP Server",
+        id: "smartui-mcp-server",
+      },
+      {
+        type: "doc",
+        label: "HyperExecute MCP Server",
+        id: "hyperexecute-mcp-server",
+      },
     ],
   ],
 
