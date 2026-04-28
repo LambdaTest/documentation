@@ -2,7 +2,7 @@
 id: kane-cli-cli-reference
 title: CLI Reference
 sidebar_label: CLI Reference
-description: Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure.
+description: "Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure."
 keywords:
   - kane cli reference
   - kane cli commands

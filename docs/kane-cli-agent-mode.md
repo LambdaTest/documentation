@@ -2,7 +2,7 @@
 id: kane-cli-agent-mode
 title: Agent Mode
 sidebar_label: Agent Mode
-description: Use the --agent flag to get structured NDJSON output from Kane CLI: designed for AI coding agents like Claude Code, Codex CLI, and Gemini CLI.
+description: "Use the --agent flag to get structured NDJSON output from Kane CLI: designed for AI coding agents like Claude Code, Codex CLI, and Gemini CLI."
 keywords:
   - kane cli agent mode
   - ndjson
