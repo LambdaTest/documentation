@@ -2,7 +2,7 @@
 id: kane-cli-modes
 title: Modes of Operation
 sidebar_label: Modes
-description: Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations.
+description: "Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations."
 keywords:
   - kane cli modes
   - interactive tui

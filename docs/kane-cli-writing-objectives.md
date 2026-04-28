@@ -2,7 +2,7 @@
 id: kane-cli-writing-objectives
 title: Writing Objectives
 sidebar_label: Writing Objectives
-description: Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results.
+description: "Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results."
 keywords:
   - kane cli objectives
   - natural language testing
