@@ -26,7 +26,7 @@ module.exports = {
             label: "Running Your First Job on HyperExecute",
             id: "hyperexecute-running-your-first-job",
           },
-        
+
           {
             type: "doc",
             label: "Guided Walkthrough",
@@ -1260,6 +1260,12 @@ module.exports = {
         label: "Setup & Integration",
         collapsed: false,
         items: [
+
+          {
+            type: "doc",
+            label: "A2A CLI",
+            id: "testmu-a2a-cli",
+          },
           {
             type: "doc",
             label: "Chat Agent API Integration",
@@ -1363,9 +1369,9 @@ module.exports = {
             label: "Variables and Parameters",
             collapsed: true,
             link: {
-                    type: "doc",
-                    id: "kaneai-variables-and-parameters",
-                  },
+              type: "doc",
+              id: "kaneai-variables-and-parameters",
+            },
             items: [
               "kane-ai-using-variables",
               "kane-ai-secrets",
@@ -1377,7 +1383,7 @@ module.exports = {
           "kane-ai-command-guide",
           "kane-ai-automation-code-generation",
           "error-handling-kaneai",
-              ],
+        ],
       },
 
       {
@@ -1460,7 +1466,7 @@ module.exports = {
           "kaneai-scheduled-test-runs",
         ],
       },
-      
+
       {
         type: "doc",
         label: "GitHub App Integration",
@@ -2762,8 +2768,8 @@ module.exports = {
           "selenium-agent-skills",
           "migrate-selenium-test-suite",
           "inside-lambdatest-automation-platform",
-            "selenium-supported-languages-and-frameworks",
-                      "supported-browsers-and-operating-systems-for-the-web-interface",
+          "selenium-supported-languages-and-frameworks",
+          "supported-browsers-and-operating-systems-for-the-web-interface",
 
         ],
       },
@@ -2772,7 +2778,7 @@ module.exports = {
         collapsed: true,
         label: "Choose Your Language & Framework",
         items: [
-        
+
           {
             type: "category",
             collapsed: true,
@@ -2889,7 +2895,7 @@ module.exports = {
           "smart-wait",
         ],
       },
-  
+
       {
         type: "category",
         collapsed: true,
@@ -2970,7 +2976,7 @@ module.exports = {
         type: "link",
         label: "Trigger Tests From CI/CD",
         href: "/support/docs/integrations-with-ci-cd-tools/",
-       
+
       },
       {
         type: "category",
@@ -3313,7 +3319,7 @@ module.exports = {
           id: "getting-started-with-appium-testing",
         },
         items: [
-        
+
           {
             type: "category",
             collapsed: true,
@@ -3463,7 +3469,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-rokutv","appium-androidtv"],
+            items: ["appium-appletv", "appium-firetv", "appium-rokutv", "appium-androidtv"],
           },
           {
             type: "category",
@@ -3498,7 +3504,7 @@ module.exports = {
         label: "Getting Started with Espresso Testing",
         id: "getting-started-with-espresso-testing",
       },
-     
+
       {
         type: "category",
         collapsed: true,
@@ -3814,11 +3820,11 @@ module.exports = {
                 label: "Selenium Hooks",
                 id: "selenium-visual-regression",
               },
-          {
-            type: "doc",
-            label: "Element Screenshot",
-            id: "smartui-hooks-element-screenshot",
-          },
+              {
+                type: "doc",
+                label: "Element Screenshot",
+                id: "smartui-hooks-element-screenshot",
+              },
               {
                 type: "doc",
                 label: "Hooks Layout + Full Page",
@@ -5159,6 +5165,138 @@ module.exports = {
             type: "doc",
             label: "API Reference",
             id: "browser-cloud-api-reference",
+          },
+        ],
+      },
+    ],
+  ],
+
+  KaneCLISidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "kane-cli-introduction",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "Installation",
+            id: "kane-cli-installation",
+          },
+          {
+            type: "doc",
+            label: "Quick Start",
+            id: "kane-cli-quickstart",
+          },
+          {
+            type: "doc",
+            label: "Authentication",
+            id: "kane-cli-authentication",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Core Concepts",
+        items: [
+          {
+            type: "doc",
+            label: "Modes of Operation",
+            id: "kane-cli-modes",
+          },
+          {
+            type: "doc",
+            label: "Writing Objectives",
+            id: "kane-cli-writing-objectives",
+          },
+          {
+            type: "doc",
+            label: "Variables & Context",
+            id: "kane-cli-variables-and-context",
+          },
+          {
+            type: "doc",
+            label: "Configuration",
+            id: "kane-cli-configuration",
+          },
+          {
+            type: "doc",
+            label: "Test Manager Integration",
+            id: "kane-cli-tms-integration",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Agent Mode",
+        items: [
+          {
+            type: "doc",
+            label: "Agent Mode",
+            id: "kane-cli-agent-mode",
+          },
+          {
+            type: "doc",
+            label: "Parallel Execution",
+            id: "kane-cli-parallel-execution",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "CI/CD & Skills",
+        items: [
+          {
+            type: "doc",
+            label: "CI/CD Integration",
+            id: "kane-cli-cicd",
+          },
+          {
+            type: "doc",
+            label: "Skills for AI Agents",
+            id: "kane-cli-skills",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Reference",
+        items: [
+          {
+            type: "doc",
+            label: "CLI Reference",
+            id: "kane-cli-cli-reference",
+          },
+          {
+            type: "doc",
+            label: "Error Codes",
+            id: "kane-cli-error-codes",
+          },
+          {
+            type: "doc",
+            label: "Troubleshooting",
+            id: "kane-cli-troubleshooting",
+          },
+          {
+            type: "doc",
+            label: "Changelog",
+            id: "kane-cli-changelog",
           },
         ],
       },
