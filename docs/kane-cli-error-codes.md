@@ -242,7 +242,7 @@ Verify with `kane-cli whoami`, then retry the run.
 | **Reason code** | `infra_error.credits_exhausted` |
 | **Status** | `ERROR` |
 | **What happened** | The <BrandName /> controller returned a `402 Payment Required` response. Your account has no remaining credits for AI agent runs. |
-| **Action** | Purchase additional credits or upgrade your plan on the [<BrandName /> billing page]({BRAND_URL}/billing). Contact your account administrator if you are on a team plan. |
+| **Action** | Purchase additional credits or upgrade your plan on the [<BrandName /> billing page](https://billing.lambdatest.com/billing/plans/). Contact your account administrator if you are on a team plan. |
 
 ---
 
