@@ -31,10 +31,10 @@ Accessibility Testing supports compliance workflows, but automated results alone
 1. **WCAG** is the technical baseline—map automated findings to success criteria using **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-ios-what-we-cover/)**, and **[Android](/support/docs/accessibility-android-what-we-cover/)** checklists plus rule repositories.
 2. **ADA / EAA / 508 conversations** still require **manual evidence** (keyboard-only paths, screen readers, policy docs). Use Accessibility outputs as **inputs**, not the final legal position.
 3. Establish a **definition of done**: e.g., “no open critical/serious automated issues on core journeys + documented manual matrix.”
-4. For procurement or VPAT work, pair this guide with **[VPAT Report Generation](/support/docs/accessibility-vpat-report-generation/)** and **[Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)**.
+4. For procurement or VPAT-style evidence work, pair this guide with **[VPAT and ACR evidence (customer-owned templates)](/support/docs/accessibility-vpat-report-generation/)**—TestMu AI does **not** provide VPAT or ACR reports—and **[Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)**.
 
 ## Related docs
 
 - [Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)
-- [VPAT Report Generation](/support/docs/accessibility-vpat-report-generation/)
+- [VPAT and ACR evidence (customer-owned templates)](/support/docs/accessibility-vpat-report-generation/)
 - [Web Accessibility Coverage](/support/docs/accessibility-web-what-we-cover/)

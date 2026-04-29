@@ -1,8 +1,8 @@
 ---
 id: accessibility-vpat-report-generation
-title: VPAT Report Generation
-sidebar_label: VPAT Report Generation
-description: End-to-end workflow for using Accessibility Testing outputs as evidence toward a VPAT—scope, scans, manual verification, exports, and what still requires human sign-off.
+title: VPAT and ACR evidence (customer-owned templates)
+sidebar_label: VPAT & ACR evidence
+description: TestMu AI does not provide VPAT or ACR reports. Use Accessibility Testing to gather evidence while your organization completes official ITI VPAT or ACR templates separately.
 slug: accessibility-vpat-report-generation/
 url: https://www.testmuai.com/support/docs/accessibility-vpat-report-generation/
 site_name: TestMu AI
@@ -14,15 +14,22 @@ keywords:
   - WCAG conformance
   - accessibility procurement
   - audit evidence
+  - no VPAT report
 ---
 
-# VPAT Report Generation
+# VPAT and ACR evidence (customer-owned templates)
+
+:::danger TestMu AI does not provide VPAT or ACR deliverables
+**TestMu AI does not issue, host, or ship an official VPAT® document or Accessibility Conformance Report (ACR)** as a product output. There is **no** “download VPAT” or “generate VPAT” action in the platform that replaces your organization’s own procurement or accessibility documentation.
+
+What you **do** get from **Accessibility Testing** are **testing artifacts**—issues, severities, URLs or screens, exports, integrations—that **you** may choose to cite while **your team** completes the official **ITI VPAT** (or equivalent) and assigns **Conformance** levels. This page is only a **workflow guide** for that evidence work.
+:::
 
 A **Voluntary Product Accessibility Template (VPAT®)** is a structured way to document how a product meets accessibility criteria (commonly WCAG 2.x and/or Section 508 / EN 301 549, depending on the template version you use). Buyers and compliance teams use it in **procurement** and **audit** conversations.
 
-**TestMu AI Accessibility Testing** can speed up **evidence collection**—issue lists, severities, URLs or screens, remediation notes, and exports—but it does **not** auto-generate a finished VPAT. Filling the official template, assigning **Conformance** levels per criterion, and signing off for your organization remain **human** steps, often with accessibility specialists and legal review.
+**TestMu AI Accessibility Testing** can speed up **evidence collection**—issue lists, severities, URLs or screens, remediation notes, and exports—but it does **not** auto-generate a finished VPAT or ACR. Filling the official template, assigning **Conformance** levels per criterion, and signing off for your organization remain **human** steps, often with accessibility specialists and legal review.
 
-This page walks **end to end** from scoping a release to packaging outputs that feed VPAT-style tables. It is **not legal advice**; treat it as a practical bridge between product workflows and VPAT preparation.
+This page walks **end to end** from scoping a release to packaging outputs that **you** can reference when drafting VPAT-style tables **outside** the product. It is **not legal advice**; treat it as a practical bridge between product workflows and VPAT preparation.
 
 ## What a VPAT is (and is not)
 
@@ -31,6 +38,7 @@ This page walks **end to end** from scoping a release to packaging outputs that 
 | A standardized **product disclosure** of accessibility characteristics | A certificate that your product is “fully accessible” |
 | A table-oriented document aligned to **specific criteria** (WCAG success criteria, 508 clauses, etc.) | A single PDF export from any one tool |
 | Something **your organization** completes and stands behind | Something automated scans alone can complete |
+| | An official VPAT or ACR **delivered by TestMu AI** (the platform does not provide these reports) |
 
 Official templates and guidance are maintained by **ITI (Information Technology Industry Council)**. Your team chooses the right edition (e.g. WCAG 2.x, Section 508, EN 301 549) for the markets and contracts you care about.
 
@@ -93,7 +101,7 @@ VPAT readers expect evidence beyond automation.
 
 1. Have an **accessibility SME** verify that table wording matches evidence and that no criterion is marked **Supports** without documented manual or automated coverage.
 2. Route through **legal or procurement** per your company policy before sharing externally.
-3. Version the VPAT document (e.g. `VPAT_ProductName_2026-04_v1.pdf`) and store it with the underlying export bundle.
+3. Version **your organization’s** VPAT or ACR file (e.g. `VPAT_ProductName_2026-04_v1.pdf`) and store it with the underlying **TestMu AI export** bundle for traceability.
 
 ## Mapping product outputs to VPAT-style rows
 

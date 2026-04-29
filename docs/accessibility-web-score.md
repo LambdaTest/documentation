@@ -138,4 +138,4 @@ For fix order and rule context, use the **[Accessibility Issue Remediation Guide
 - [Passed Test Cases](/support/docs/accessibility-passed-test-cases/)  
 - [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)  
 - [Accessibility Compliance Guide (ADA / WCAG / EAA / 508)](/support/docs/accessibility-compliance-guide/)  
-- [VPAT Report Generation](/support/docs/accessibility-vpat-report-generation/)  
+- [VPAT and ACR evidence (customer-owned templates)](/support/docs/accessibility-vpat-report-generation/)  

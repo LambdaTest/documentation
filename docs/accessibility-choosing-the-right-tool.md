@@ -209,7 +209,7 @@ Pair screen reader sessions with [Keyboard Scan](/support/docs/accessibility-key
 
 **Rule repositories:** [Web](/support/docs/accessibility-web-rule-repository/) · [Android](/support/docs/accessibility-android-rule-repository/) · [iOS](/support/docs/accessibility-ios-rule-repository/).
 
-**Compliance framing (not legal advice):** [Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/) · [VPAT Report Generation](/support/docs/accessibility-vpat-report-generation/).
+**Compliance framing (not legal advice):** [Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/) · [VPAT and ACR evidence (customer-owned templates)](/support/docs/accessibility-vpat-report-generation/) (TestMu AI does **not** provide VPAT or ACR reports).
 
 ---
 
