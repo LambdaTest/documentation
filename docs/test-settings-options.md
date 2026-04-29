@@ -38,7 +38,7 @@ Here are common **pixel-to-pixel** comparison options. The first group is **acti
 - `ignore` — Reduces P2P false positives (`antialiasing`, `alpha`, `colors`, `nothing`).
 - `transparency` — Overlay transparency for the diff view.
 
-The sections **Bounding Boxes**, **Ignore Boxes**, and **Ignore Areas Colored** further down describe **region- and color-based** comparison ideas. Per product engineering, **those three are not reliably mapped to automation capabilities in the exact JSON shapes shown in legacy samples**—see the warning before **Bounding Boxes**. For region-level control today, prefer **[Draw on UI / annotations](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with **[support](mailto:support@testmuai.com)** before committing a prospect integration.
+The sections **[Bounding Boxes](#bounding-boxes---compare-only-specific-area)**, **[Ignore Boxes](#ignore-boxes---ignore-only-specific-area)**, and **[Ignore Areas Colored](#ignore-areas-colored---removes-the-colored-content-from-the-comparison)** describe **region- and color-based** comparison. Examples nest keys under **`smartUI.options`** / **`smart_ui.options`** like the options above; **still validate** with your integration or support—see the warning before **Bounding Boxes**. For region-level control in the product UI, prefer **[Draw on UI / annotations](/support/docs/smartui-draw-on-ui/)**.
 
 ## Examples with comparison settings
 
@@ -234,10 +234,10 @@ let capabilities = {
 ---
 
 :::warning `boundingBoxes`, `ignoredBoxes`, `ignoreAreasColoredWith`
-These three comparison modes exist in SmartUI’s **pixel-to-pixel** model, but **capability-level examples below may not match what the grid accepts today**. **Do not copy them into production** without validation. Options from **Image Threshold** through **Transparency** on this page are the well-supported comparison settings. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or ask support for the current API contract.
+These three comparison modes exist in SmartUI’s **pixel-to-pixel** model. The examples below nest them under **`smartUI.options`** (Selenium) and **`smart_ui.options`** (Cypress)—the same shape as **Image Threshold** through **Transparency**—but **behavior can still vary by integration**; **do not copy into production** without validating against your session or with **[support](mailto:support@testmuai.com)**. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with support.
 :::
 
-### Bounding Boxes - Compare only specific area
+### Bounding Boxes - Compare only specific area {#bounding-boxes---compare-only-specific-area}
 
 The bounding boxes are the areas created on the screenshot which needs to be compared with the baseline ignoring other areas from the screenshot.
 
@@ -271,9 +271,11 @@ let capabilities = {
 
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
-  // highlight-next-line
-  "boundingBoxes" : [box1, box2] // Your bounding box configuration
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "boundingBoxes": [box1, box2] // Compare only these regions (P2P)
+  }
 };
 
 ```
@@ -283,22 +285,24 @@ let capabilities = {
 <TabItem value="cypress" label="Cypress">
 
 ```json title="Make changes in your /project/lambdatest-config.json"
-"smart_ui":{
-   "project":"<Your Project Name>",
-   "boundingBoxes":[
+"smart_ui": {
+  "project": "<Your Project Name>",
+  "options": {
+    "boundingBoxes": [
       {
-         "left":100,
-         "top":500,
-         "right":800,
-         "bottom":300
+        "left": 100,
+        "top": 500,
+        "right": 800,
+        "bottom": 300
       },
       {
-         "left":800,
-         "top":50,
-         "right":20,
-         "bottom":700
+        "left": 800,
+        "top": 50,
+        "right": 20,
+        "bottom": 700
       }
-   ]
+    ]
+  }
 }
 
 ```
@@ -310,7 +314,7 @@ let capabilities = {
 
 ---
 
-### Ignore Boxes - Ignore only specific area
+### Ignore Boxes - Ignore only specific area {#ignore-boxes---ignore-only-specific-area}
 
 **Reference only —** verify with support before relying on capability wiring.
 
@@ -344,9 +348,11 @@ let capabilities = {
 
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
-  // highlight-next-line
-  "ignoredBoxes" : [box1, box2] // Your bounding box configuration
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "ignoredBoxes": [box1, box2] // Ignore these regions during P2P compare
+  }
 };
 
 ```
@@ -356,22 +362,24 @@ let capabilities = {
 <TabItem value="cypress" label="Cypress">
 
 ```json title="Make changes in your /project/lambdatest-config.json"
-"smart_ui":{
-   "project":"<Your Project Name>",
-   "ignoredBoxes":[
+"smart_ui": {
+  "project": "<Your Project Name>",
+  "options": {
+    "ignoredBoxes": [
       {
-         "left":100,
-         "top":500,
-         "right":800,
-         "bottom":300
+        "left": 100,
+        "top": 500,
+        "right": 800,
+        "bottom": 300
       },
       {
-         "left":800,
-         "top":50,
-         "right":20,
-         "bottom":700
+        "left": 800,
+        "top": 50,
+        "right": 20,
+        "bottom": 700
       }
-   ]
+    ]
+  }
 }
 
 ```
@@ -383,7 +391,7 @@ let capabilities = {
 
 ---
 
-### Ignore Areas Colored - Removes the colored content from the comparison
+### Ignore Areas Colored - Removes the colored content from the comparison {#ignore-areas-colored---removes-the-colored-content-from-the-comparison}
 
 **Reference only —** verify with support before relying on capability wiring.
 
@@ -408,9 +416,11 @@ let capabilities = {
 
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
-  // highlight-next-line
-  "ignoreAreasColoredWith" : color // Your bounding box configuration
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "ignoreAreasColoredWith": color // Ignore pixels matching this RGBA in P2P compare
+  }
 };
 
 ```
@@ -420,13 +430,15 @@ let capabilities = {
 <TabItem value="cypress" label="Cypress">
 
 ```json title="Make changes in your /project/lambdatest-config.json"
-"smart_ui":{
-   "project":"<Your Project Name>",
-   "ignoreAreasColoredWith": {
+"smart_ui": {
+  "project": "<Your Project Name>",
+  "options": {
+    "ignoreAreasColoredWith": {
       "r": 242,
       "g": 201,
       "b": 76,
       "a": 1
+    }
   }
 }
 
