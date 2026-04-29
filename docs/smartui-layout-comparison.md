@@ -83,24 +83,13 @@ Before using the Layout Comparison feature, ensure you meet the following requir
 
 Layout Comparison can be executed in two different ways depending on your integration.
 
-### 1. Using SmartUI Hooks (Native Automation)
-If you are using the SmartUI Hooks approach (triggering visual tests directly through Selenium, Playwright, or Cypress capabilities without the CLI wrapper), you must pass the `ignoreType` option within your LambdaTest capabilities (`ltOptions`). 
+### 1. Using SmartUI Hooks (native automation)
 
-Once the capability is passed, the Remote Node Client will capture the structural layout states during your session, allowing you to use the Layout Comparison mode.
+If you use **SmartUI Hooks** (visual tests through Selenium / Playwright / Cypress on the grid **without** the `smartui exec` wrapper), **layout comparison is applied per screenshot** by passing **`ignoreType: ["layout"]`** (and `screenshotName`, and optionally `fullPage`, and other layout-related keys) in the **object** you send to **`smartui.takeScreenshot`** via `executeScript`—**not** by relying on `ignoreType` or layout flags **only** inside `LT:Options`.
 
-**Example (Playwright):**
-```javascript
-const capabilities = {
-  'browserName': 'Chrome',
-  'LT:Options': {
-    'user': process.env.LT_USERNAME,
-    'accessKey': process.env.LT_ACCESS_KEY,
-    'smartUI.project': 'My-Project',
-    // Enable Layout Testing via Hook
-    'ignoreType': ['layout']
-  }
-};
-```
+For **`LT:Options`**, you still set **`smartUI.project`** (and `visual`, credentials). **Do not** assume `LT:Options.ignoreType: ['layout']` or similar capability-only snippets alone will enable layout for Hooks; that does not match current supported behavior.
+
+**See:** [SmartUI Hooks - Layout, Full Page, and Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/) for Java, JavaScript, and C# hook examples.
 
 ### 2. Using SmartUI SDK (smartUISnapshot command)
 If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreType` option to `"layout"` when taking a specific screenshot within your code:

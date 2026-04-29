@@ -31,15 +31,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites.
 
-Here are the following common test setting options -
+Here are common **pixel-to-pixel** comparison options. The first group is **actively used** through `smartUI.options` (or your framework’s equivalent) in typical integrations:
 
-- `largeImageThreshold` - Sets the pixel granularity at the rate to which the pixel blocks are created.
-- `errorType` - Show the differences in the output screen by identifying the pixel changes type and capture the intended view.
-- `ignore` - To remove the Pixel to Pixel false-positive rate in identifying the screenshot.
-- `transparency` - To help adjust test transparency settings and strike a balance between highlighting in visual screening.
-- `boundingBoxes: [box1, box2]` - By specifying a bounding box measured in pixels from the top left, you can narrow down the area of comparison.
-- `ignoredBoxes: [box1, box2]` - By specifying a bounding box measured in pixels from the top left, you can exclude part of the image from comparison.
-- `ignoreAreasColoredWith` - By specifying a RGBA color, you can exclude colored areas of the image from comparison.
+- `largeImageThreshold` — Pixel granularity for how comparison blocks are formed.
+- `errorType` — How differences are highlighted (`movement`, `flat`, etc.).
+- `ignore` — Reduces P2P false positives (`antialiasing`, `alpha`, `colors`, `nothing`).
+- `transparency` — Overlay transparency for the diff view.
+
+The sections **Bounding Boxes**, **Ignore Boxes**, and **Ignore Areas Colored** further down describe **region- and color-based** comparison ideas. Per product engineering, **those three are not reliably mapped to automation capabilities in the exact JSON shapes shown in legacy samples**—see the warning before **Bounding Boxes**. For region-level control today, prefer **[Draw on UI / annotations](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with **[support](mailto:support@testmuai.com)** before committing a prospect integration.
 
 ## Examples with comparison settings
 
@@ -234,9 +233,15 @@ let capabilities = {
 
 ---
 
+:::warning `boundingBoxes`, `ignoredBoxes`, `ignoreAreasColoredWith`
+These three comparison modes exist in SmartUI’s **pixel-to-pixel** model, but **capability-level examples below may not match what the grid accepts today**. **Do not copy them into production** without validation. Options from **Image Threshold** through **Transparency** on this page are the well-supported comparison settings. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or ask support for the current API contract.
+:::
+
 ### Bounding Boxes - Compare only specific area
 
 The bounding boxes are the areas created on the screenshot which needs to be compared with the baseline ignoring other areas from the screenshot.
+
+**Reference only —** verify with support before relying on capability wiring.
 
 This specific case is used to compare only a specific area of the screenshot from the **baseline**.
 
@@ -306,6 +311,8 @@ let capabilities = {
 ---
 
 ### Ignore Boxes - Ignore only specific area
+
+**Reference only —** verify with support before relying on capability wiring.
 
 The ignored boxes are the areas created on the screenshot which needs to be ignored with the baseline comparing the other areas from the screenshot.
 
@@ -377,6 +384,8 @@ let capabilities = {
 ---
 
 ### Ignore Areas Colored - Removes the colored content from the comparison
+
+**Reference only —** verify with support before relying on capability wiring.
 
 You can exclude the pixels that match the specified color on a **baseline** image from the comparison view. This feature will ignore that specific regions with the color pixels and shows the comparison view.
 
