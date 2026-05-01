@@ -64,7 +64,43 @@ Within the API module, you can input the curl command to configure the API setti
   <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image2.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
 
-## 3. Validating API Response on KaneAI
+## 3. Handling + in Form-Encoded Bodies
+
+When the request `Content-Type` is `application/x-www-form-urlencoded`, a `+` character in the encoded payload is interpreted as a space unless it is encoded as `%2B`.
+
+### Manual entry in KaneAI
+
+When typing values directly into the request body editor, KaneAI correctly preserves `+` characters.
+
+| You type            | Server receives    |
+| ------------------- | ------------------ |
+| `+917777711791`     | `+917777711791`    |
+| `%2B917777711791`   | `+917777711791`    |
+
+After execution, the response/echo panel displays the resolved value, so you can visually confirm the value received by the server.
+
+### Pasting cURL commands
+
+For pasted cURL commands, raw `+` characters inside form-urlencoded bodies are resolved as spaces during processing.
+
+| cURL body                          | Server receives           |
+| ---------------------------------- | ------------------------- |
+| `-d 'phone=+917777711791'`         | `phone= 917777711791`     |
+| `-d 'phone=%2B917777711791'`       | `phone=+917777711791`     |
+
+To send a literal plus sign from a pasted cURL request, encode it as `%2B`.
+
+**Example:**
+
+```bash
+curl -X POST 'https://api.example.com/update-user' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'phone=%2B917777711791'
+```
+
+This request sends `phone=+917777711791` to the server.
+
+## 4. Validating API Response on KaneAI
 
 To ensure the API works as expected, use the validation feature. This step confirms that the API responds correctly and can be added to test steps.
 
@@ -73,7 +109,7 @@ To ensure the API works as expected, use the validation feature. This step confi
   <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image3.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
 
-## 4. Adding Non-Success APIs in Test Steps
+## 5. Adding Non-Success APIs in Test Steps
 
 For APIs that do not return a 200 status, you can review the response body and manually add them to the test steps as required.
 
@@ -82,7 +118,7 @@ For APIs that do not return a 200 status, you can review the response body and m
   <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image8.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
 
-## 5. Adding Multiple APIs in One Go
+## 6. Adding Multiple APIs in One Go
 
 KaneAI allows batch processing of multiple APIs to streamline testing. This feature is helpful for scenarios requiring the execution of several API calls in succession.
 
@@ -91,7 +127,7 @@ KaneAI allows batch processing of multiple APIs to streamline testing. This feat
   <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
 
-## 6. Handling Different HTTP Methods
+## 7. Handling Different HTTP Methods
 
 KaneAI supports various HTTP methods like POST, PUT, GET, and DELETE, allowing you to test diverse API interactions.
 
@@ -102,7 +138,7 @@ KaneAI supports various HTTP methods like POST, PUT, GET, and DELETE, allowing y
   
     <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image9.jpg').default} alt="kenai-jira integration" className="doc_img"/>
 
-## 7. Executing and Reviewing Test Steps
+## 8. Executing and Reviewing Test Steps
 
 Once all APIs are added, KaneAI enables simultaneous execution, with details available on methods used, response statuses, and execution times.
 
