@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-mcp-server
-title: Introducing HyperExecute MCP Server
+title: Introducing HyperExecute MCP Tool
 hide_title: false
-sidebar_label: HyperExecute MCP Server
-description: HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow.
+sidebar_label: HyperExecute MCP Tool
+description: HyperExecute MCP Tool is an AI-native test orchestration tool within the TestMu AI MCP Server that dramatically simplifies and accelerates your automated testing workflow.
 keywords:
   - hyperexecute performance testing
   - hyperexecute
@@ -44,10 +44,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started with HyperExecute MCP Server
-HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
+# Getting Started with HyperExecute MCP Tool
+HyperExecute MCP Tool is an AI-native test orchestration tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
 
-## Watch HyperExecute MCP in Action​
+## Watch HyperExecute MCP Tool in Action
 
 Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
 
@@ -61,9 +61,9 @@ Get a comprehensive overview of HyperExecute's capabilities by watching our intr
 
 The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
 
-## Key Benefits of HyperExecute MCP Server
+## Key Benefits of HyperExecute MCP Tool
 
-Here are the key benefits of using HyperExecute MCP Server:
+Here are the key benefits of using HyperExecute MCP Tool:
 
 - **Automated Setup:** Reduce configuration time from hours to seconds
 - **Smart Analysis:** Automatically identify project types, frameworks, and test structures
@@ -75,7 +75,7 @@ Here are the key benefits of using HyperExecute MCP Server:
 
 ## Available HyperExecute MCP Tools
 
-HyperExecute MCP Server provides five main tools:
+HyperExecute MCP Tool provides five main capabilities:
 
 1. **Test Runner Command Generation Tool:** Analyzes your project structure and generates appropriate test commands.
 2. **HyperExecute YAML Generation Tool:** Creates configuration files based on project analysis.

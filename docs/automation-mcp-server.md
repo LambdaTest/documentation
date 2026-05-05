@@ -1,8 +1,8 @@
 ---
 id: automation-mcp-server
-title: Getting Started with Automation MCP Server
-sidebar_label: Connect via MCP Server
-description: Triage test failures faster with the Automation MCP Server by connecting AI assistants to your test execution data.
+title: Getting Started with Automation MCP Tool
+sidebar_label: Connect via MCP Tool
+description: Triage test failures faster with the Automation MCP Tool by connecting AI assistants to your test execution data.
 keywords:
   - automation mcp server setup
   - mcp test failure triaging
@@ -45,8 +45,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started with Automation MCP Server
-Automation MCP Server simplifies test failure triaging for all automation test cases executed on TestMu AI. By using the Model Context Protocol (MCP), it enables integration between AI assistants and your test execution data on TestMu AI - reducing triage and troubleshooting time.
+# Getting Started with Automation MCP Tool
+Automation MCP Tool simplifies test failure triaging for all automation test cases executed on TestMu AI. It is a tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) that enables integration between AI assistants and your test execution data — reducing triage and troubleshooting time.
 
 
 <div className="ytframe"> 
@@ -61,9 +61,9 @@ MCP acts as a universal interface between AI models and applications, creating a
 
 The Model Context Protocol (MCP) creates a standardized interface that allows AI assistants to connect with diverse software tools. This makes it easier to expand capabilities across your digital workflow.
 
-## Key Benefits of Automation MCP Server
+## Key Benefits of Automation MCP Tool
 ---
-Use the Automation MCP Server to accelerate debugging and test analysis.
+Use the Automation MCP Tool to accelerate debugging and test analysis.
 
 1. Access your test execution data on TestMu AI directly from your IDE or editor.
 2. Triage and troubleshoot test failures to identify the root cause (RCA).
@@ -73,13 +73,13 @@ Use the Automation MCP Server to accelerate debugging and test analysis.
 
 ## Supported Tools
 ---
-Automation MCP Server provides five core tools for test analysis.
+Automation MCP Tool provides five core capabilities for test analysis.
 
 1. **Automation Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
 2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
 3. **Automation Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
 4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
-5. **Automation MCP Server:** Core interface that powers the above tools and connects your AI assistant to TestMu AI data.
+5. **Automation MCP Tool:** Core interface that powers the above capabilities and connects your AI assistant to TestMu AI data.
 
 
 <nav aria-label="breadcrumbs">
@@ -96,7 +96,7 @@ Automation MCP Server provides five core tools for test analysis.
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Automation MCP Server
+        Automation MCP Tool
       </span>
     </li>
   </ul>

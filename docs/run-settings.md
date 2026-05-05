@@ -159,6 +159,12 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
   </TabItem>
 </Tabs>
 
+#### Using CLI
+
+| Flag                         | Purpose                                        | Type   |
+| ---------------------------- | ---------------------------------------------- | ------ |
+| --exclude_specs              | Spec files to exclude from test execution      | String |
+
 ## Geolocation
 #### Using `lambdatest-config.json`
 You can use the *geo_location* key in *run_settings* option to specify the Spec files.
@@ -327,6 +333,13 @@ You can name your test cases and categorize your Cypress builds by build number,
 }
 ```
 
+#### Using CLI
+
+| Flag              | Purpose                    | Type   |
+| ----------------- | -------------------------- | ------ |
+| --bn, --build-name | Set build name            | String |
+| -t, --tags         | Run tests with specific tags | String |
+
 ## Headless Browser
 You can run Headless tests with Cypress by the `headless` key to `true`.
 
@@ -344,12 +357,18 @@ You can run Headless tests with Cypress by the `headless` key to `true`.
 }
 ```
 
+#### Using CLI
+
+| Flag                        | Purpose                  | Type    |
+| --------------------------- | ------------------------ | ------- |
+| --headless, --headless-mode | Run tests in headless mode | Boolean |
+
 ## Capture Network Logs
 You can generate Network logs with Cypress by setting the `network` key to `true`.
 
 | Key |  Description | Type |
 | -------- | ------------ | -------- |
-| headless   | Record network packets while the test is running | Boolean |
+| network   | Record network packets while the test is running | Boolean |
 
 **Example**:
 
@@ -360,6 +379,12 @@ You can generate Network logs with Cypress by setting the `network` key to `true
   }
 }
 ```
+
+#### Using CLI
+
+| Flag            | Purpose              | Type   |
+| --------------- | -------------------- | ------ |
+| --net, --network | Capture network logs | String |
 
 ## NPM Package Dependencies
 In order to run your tests on <BrandName />, we refer to your `package.json` and use those dependencies and devDependencies. Since, `package.json` may contain several dependencies which may not be required to run your Cypress tests. We recommend to use `npm_dependencies` parameter to list down the required dependencies to run your test, because it will reduce your build time on <BrandName />.
@@ -403,3 +428,596 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
   "useNodeVersion":"20"
 }
 ```
+
+#### Using CLI
+
+| Flag                       | Purpose                                    | Type    |
+| -------------------------- | ------------------------------------------ | ------- |
+| --nodeV, --useNodeVersion  | Specify Node.js version for Cypress runtime | String  |
+| --node18, --useNode18      | Use Node.js v18 for Cypress runtime (legacy) | Boolean |
+
+## Environment Variables
+#### Using `lambdatest-config.json`
+You can use the `environment` key in `run_settings` option to set environment variables that will be available during test execution.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "environment": "KEY1=value1,KEY2=value2"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                       | Purpose                                          | Type   |
+| -------------------------- | ------------------------------------------------ | ------ |
+| --envs, --env-variables    | Set environment variables before test execution  | String |
+
+## System Environment Variables
+You can use system environment variables during test execution using the `sys_env_keys` key. This allows you to pass system-level environment variable keys that will be available in the test environment.
+
+#### Using `lambdatest-config.json`
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "sys_env_keys": "KEY1,KEY2"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                              | Purpose                                              | Type   |
+| --------------------------------- | ---------------------------------------------------- | ------ |
+| --sys-envs, --sys-env-variables   | Set system environment variables during test run     | String |
+
+## Environment File
+You can specify a `.env` file path to load environment variables from a file.
+
+#### Using `lambdatest-config.json`
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "env_file": ".env"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag               | Purpose              | Type   |
+| ------------------ | -------------------- | ------ |
+| --envfl, --env-file | Path of `.env` file | String |
+
+## Tunnel
+#### Using `lambdatest-config.json`
+You can use the `tunnel` key in `run_settings` to enable <BrandName /> tunnel for testing locally hosted or privately hosted pages.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "tunnel": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag            | Purpose                   | Type   |
+| --------------- | ------------------------- | ------ |
+| --tun, --tunnel | Enable LambdaTest tunnel  | String |
+
+## Tunnel Name
+#### Using `lambdatest-config.json`
+You can use the `tunnel_name` key in `run_settings` to specify the tunnel name when using multiple tunnels.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "tunnel_name": "my-tunnel"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                   | Purpose                     | Type   |
+| ---------------------- | --------------------------- | ------ |
+| --tname, --tunnel_name | Set LambdaTest tunnel name  | String |
+
+## Tunnel Auto Start
+#### Using `lambdatest-config.json`
+You can use the `autostart` key in `run_settings` to automatically start a tunnel before test execution.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "autostart": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag              | Purpose                   | Type   |
+| ----------------- | ------------------------- | ------ |
+| --autostart, --tat | Enable tunnel auto start | String |
+
+## Build Identifier
+#### Using `lambdatest-config.json`
+You can use the `build_identifier` key in `run_settings` to set a build identifier or build counter for your test builds.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "build_identifier": "build-123"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                      | Purpose                                 | Type   |
+| ------------------------- | --------------------------------------- | ------ |
+| --bi, --build-identifier  | Set build identifier or build counter   | String |
+
+## Build Tags
+#### Using `lambdatest-config.json`
+You can use the `build_tags` key in `run_settings` to set build-level tags for categorizing your builds.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "build_tags": "nightly,regression"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag              | Purpose         | Type   |
+| ----------------- | --------------- | ------ |
+| --bt, --build-tags | Set build tags | String |
+
+## Parallels
+#### Using `lambdatest-config.json`
+You can use the `parallels` key in `run_settings` to specify the number of parallel sessions for test execution.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "parallels": 5
+  }
+}
+```
+
+#### Using CLI
+
+| Flag              | Purpose                        | Type   |
+| ----------------- | ------------------------------ | ------ |
+| -p, --parallels   | Number of parallel sessions    | String |
+
+## Stop on Failure
+#### Using `lambdatest-config.json`
+You can use the `stop_on_failure` key in `run_settings` to stop other tests if any test in the session fails.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "stop_on_failure": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                     | Purpose                                           | Type    |
+| ------------------------ | ------------------------------------------------- | ------- |
+| --sof, --stop_on_failure | Stop other tests if any test in session fails     | Boolean |
+
+## Exit on Failure
+#### Using `lambdatest-config.json`
+You can use the `exit_on_failure` key in `run_settings` to exit the CLI with code 1 if any test fails.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "exit_on_failure": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                     | Purpose                        | Type   |
+| ------------------------ | ------------------------------ | ------ |
+| --eof, --exit-on-failure | Exit with code 1 on failure    | String |
+
+## Retry Failed Tests
+#### Using `lambdatest-config.json`
+You can use the `retry_failed` key in `run_settings` to retry failed tests in a new build.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "retry_failed": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                       | Purpose                             | Type    |
+| -------------------------- | ----------------------------------- | ------- |
+| --ret_fail, --retry_failed | Retry failed tests in a new build   | Boolean |
+
+## Reject Unauthorized
+#### Using `lambdatest-config.json`
+You can use the `reject_unauthorized` key in `run_settings` to control whether self-signed SSL certificates are accepted during external requests.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "reject_unauthorized": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                        | Purpose                                                     | Type    |
+| --------------------------- | ----------------------------------------------------------- | ------- |
+| --ra, --reject_unauthorized | Reject self-signed certificates in external requests        | Boolean |
+
+## Dedicated Proxy
+#### Using `lambdatest-config.json`
+You can use the `dedicated_proxy` key in `run_settings` to enable a dedicated proxy for your test sessions.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "dedicated_proxy": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                    | Purpose                  | Type    |
+| ----------------------- | ------------------------ | ------- |
+| --dp, --dedicated_proxy | Enable dedicated proxy   | Boolean |
+
+## Cypress Settings
+#### Using `lambdatest-config.json`
+You can use the `cypress_settings` key in `run_settings` to pass additional Cypress settings.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "cypress_settings": "video=true,screenshotOnRunFailure=true"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                      | Purpose                | Type   |
+| ------------------------- | ---------------------- | ------ |
+| --cy, --cypress_settings  | Pass Cypress settings  | String |
+
+## NPM Force Install
+#### Using `lambdatest-config.json`
+You can use the `npm_force` key in `run_settings` to force npm install and bypass dependency conflicts.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "npm_force": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                  | Purpose            | Type    |
+| --------------------- | ------------------ | ------- |
+| --npm-f, --npm-force  | Force npm install  | Boolean |
+
+## Legacy Peer Dependencies
+#### Using `lambdatest-config.json`
+You can use the `legacy_peer_deps` key in `run_settings` to use legacy peer dependencies during npm install.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "legacy_peer_deps": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                          | Purpose                                            | Type    |
+| ----------------------------- | -------------------------------------------------- | ------- |
+| --npm-lpd, --legacy-peer-deps | Use legacy peer dependencies during npm install   | Boolean |
+
+## NPM Via Tunnel
+#### Using `lambdatest-config.json`
+You can use the `npm_via_tunnel` key in `run_settings` to install npm packages behind a private VPN through the tunnel. Note that this may increase build duration.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "npm_via_tunnel": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                          | Purpose                                                            | Type    |
+| ----------------------------- | ------------------------------------------------------------------ | ------- |
+| --npm_tun, --npm_via_tunnel   | Install npm packages behind private VPN (increases build duration) | Boolean |
+
+## Command Logs
+#### Using `lambdatest-config.json`
+You can use the `command_log` key in `run_settings` to show command logs on the <BrandName /> dashboard.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "command_log": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                       | Purpose                          | Type   |
+| -------------------------- | -------------------------------- | ------ |
+| --cmd_log, --command_log   | Show command logs on dashboard   | String |
+
+## Network HTTP2 Logs
+#### Using `lambdatest-config.json`
+You can use the `network_http2` key in `run_settings` to capture HTTP2 network logs during test execution.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "network_http2": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                          | Purpose                      | Type    |
+| ----------------------------- | ---------------------------- | ------- |
+| --net_http2, --network_http2  | Capture HTTP2 network logs   | Boolean |
+
+## Network WebSocket Logs
+#### Using `lambdatest-config.json`
+You can use the `network_ws` key in `run_settings` to bypass WebSocket calls for network logs.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "network_ws": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                    | Purpose                                   | Type    |
+| ----------------------- | ----------------------------------------- | ------- |
+| --net_ws, --network_ws  | Bypass WebSocket calls for network logs   | Boolean |
+
+## Network SSE Logs
+#### Using `lambdatest-config.json`
+You can use the `network_sse` key in `run_settings` to bypass Server-Sent Events (SSE) for network logs.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "network_sse": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                      | Purpose                              | Type    |
+| ------------------------- | ------------------------------------ | ------- |
+| --net_sse, --network_sse  | Bypass SSE events for network logs   | Boolean |
+
+## SmartUI - Visual UI Project
+#### Using `lambdatest-config.json`
+You can use the `vi_project` key in `run_settings` to set the SmartUI project name for visual regression testing.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "vi_project": "my-smartui-project"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                       | Purpose                      | Type   |
+| -------------------------- | ---------------------------- | ------ |
+| --vip, --vi-project        | Set Visual UI project name   | String |
+
+## SmartUI - Visual UI Build
+#### Using `lambdatest-config.json`
+You can use the `vi_build` key in `run_settings` to set the SmartUI build name.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "vi_build": "my-smartui-build"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                  | Purpose                    | Type   |
+| --------------------- | -------------------------- | ------ |
+| --vib, --vi-build     | Set Visual UI build name   | String |
+
+## SmartUI - Visual UI Baseline
+#### Using `lambdatest-config.json`
+You can use the `vi_base` key in `run_settings` to set the current build as the baseline for SmartUI visual comparison.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "vi_base": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                    | Purpose                           | Type    |
+| ----------------------- | --------------------------------- | ------- |
+| --vibase, --vi-base     | Set Visual UI baseline build      | Boolean |
+
+## Accessibility Testing
+#### Using `lambdatest-config.json`
+You can use the `accessibility` key in `run_settings` to enable accessibility testing for Cypress.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "accessibility": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                                       | Purpose                                    | Type    |
+| ------------------------------------------ | ------------------------------------------ | ------- |
+| --cypress_accessibility, --accessibility   | Enable accessibility testing for Cypress   | Boolean |
+
+## Timezone
+#### Using `lambdatest-config.json`
+You can use the `timezone` key in `run_settings` to set a custom timezone on the test machine.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "timezone": "US/Eastern"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag            | Purpose                          | Type   |
+| --------------- | -------------------------------- | ------ |
+| --tz, --timezone | Set custom timezone in machine  | String |
+
+## Region
+#### Using `lambdatest-config.json`
+You can use the `region` key in `run_settings` to set the data center region for test execution.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "region": "us"
+  }
+}
+```
+
+Supported values: `us`, `eu`, `ap`
+
+#### Using CLI
+
+| Flag             | Purpose                                     | Type   |
+| ---------------- | ------------------------------------------- | ------ |
+| --reg, --region  | Set data center region (e.g., us, eu, ap)   | String |
+
+## Sync Mode
+#### Using `lambdatest-config.json`
+You can use the `sync` key in `run_settings` to enable sync mode, which makes the CLI wait for test completion before exiting.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "sync": true
+  }
+}
+```
+
+#### Using CLI
+
+| Flag              | Purpose                                       | Type   |
+| ----------------- | --------------------------------------------- | ------ |
+| --sync, --sync-mode | Enable sync mode to wait for test completion | String |
+
+## Video Recording
+#### Using `lambdatest-config.json`
+You can use the `video` key in `run_settings` to enable or disable video recording of your test sessions. Video recording is enabled by default.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "video": true
+  }
+}
+```
+
+## Cypress Version
+#### Using `lambdatest-config.json`
+You can use the `cypress_version` key in `run_settings` to specify a particular Cypress version for test execution. If not specified, the version is auto-detected from your project dependencies.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "cypress_version": "13.6.0"
+  }
+}
+```
+
+## Cypress Environment File
+#### Using `lambdatest-config.json`
+You can use the `cypress-env-file` key in `run_settings` to load Cypress environment variables from a JSON file.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "cypress-env-file": "cypress.env.json"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                          | Purpose                                | Type   |
+| ----------------------------- | -------------------------------------- | ------ |
+| --cypress-env-file            | Path of Cypress environment JSON file  | String |
+
+## Private Cloud
+#### Using `lambdatest-config.json`
+You can use the `privateCloud` key in `run_settings` to specify a custom private cloud endpoint.
+
+```javascript title="lambdatest-config.json"
+{
+  "run_settings": {
+    "privateCloud": "your-private-cloud"
+  }
+}
+```
+
+#### Using CLI
+
+| Flag                   | Purpose                    | Type   |
+| ---------------------- | -------------------------- | ------ |
+| --pC, --privateCloud   | Set custom private cloud   | String |

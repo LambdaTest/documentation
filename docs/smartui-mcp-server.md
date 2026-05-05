@@ -1,9 +1,9 @@
 ---
 id: smartui-mcp-server
-title: Introducing SmartUI MCP Server
+title: Introducing SmartUI MCP Tool
 hide_title: false
-sidebar_label: SmartUI MCP Server
-description: Debug visual regressions faster with SmartUI MCP Server—get natural-language insights, human-like summaries, visual change detection, and root cause analysis from SmartUI comparison runs.
+sidebar_label: SmartUI MCP Tool
+description: Debug visual regressions faster with SmartUI MCP Tool—get natural-language insights, human-like summaries, visual change detection, and root cause analysis from SmartUI comparison runs.
 keywords:
   - smartui
   - visual testing
@@ -49,9 +49,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started with SmartUI MCP Server
+# Getting Started with SmartUI MCP Tool
 ***
-The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
+The SmartUI MCP Tool allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is a tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">
@@ -61,17 +61,17 @@ The SmartUI  MCP Server allows you to debug visual regressions using SmartUI com
 
 ## How Does It Work?​
 
-This MCP server processes SmartUI visual comparison data by calling specific analysis tools with a comparisonId. Each tool simulates a different debugging layer—pixel diff, layout, DOM structure, and human perception.
+This MCP tool processes SmartUI visual comparison data by calling specific analysis capabilities with a comparisonId. Each capability simulates a different debugging layer—pixel diff, layout, DOM structure, and human perception.
 
-The server fetches the visual assets (screenshots, DOM snapshots, metadata) and returns natural-language outputs such as:
+The tool fetches the visual assets (screenshots, DOM snapshots, metadata) and returns natural-language outputs such as:
 
 - "The CTA button lost color contrast, impacting accessibility."
 
 - "Header layout shifted left due to padding changes."
 
-## Key Benefits of SmartUI MCP Server
+## Key Benefits of SmartUI MCP Tool
 
-Here are the key benefits of using the SmartUI  MCP Server:
+Here are the key benefits of using the SmartUI MCP Tool:
 
 - **No Manual Debugging:** Automatically detects visual regressions and UI layout shifts from screenshots and DOM changes.
 - **Human-Like Interpretation:** Simulates how a real user perceives visual changes using cognitive and Gestalt principles.
@@ -160,7 +160,7 @@ If the `comparisonId` is invalid or resources are missing, a message like the fo
     </li>
     <li className='breadcrumbs__item breadcrumbs__item--active'>
       <span className='breadcrumbs__link'>
-        SmartUI MCP Server
+        SmartUI MCP Tool
       </span>
     </li>
   </ul>

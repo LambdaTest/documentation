@@ -95,6 +95,14 @@ We provide a range of filters to help you customize your insights dashboard. You
 * Test Status - Filter your insights based on specific test statuses.
 * Project Name - Filter your insights based on specific project names.
 
-## Support 
+## Custom Widgets for Private Devices
+
+The widgets above provide standard, pre-built dashboards for private real device insights. If you need more tailored views — such as per-device test counts, duration breakdowns by product, or bar chart comparisons — you can build **custom widgets** using the Custom Widget builder.
+
+All custom widgets for private devices use the filter `is_dedicated = Equals = true` to scope data to your dedicated devices only.
+
+For step-by-step instructions and recommended widget configurations, see [Custom Widgets — Private/Dedicated Device Widgets](/support/docs/dashboards-custom-widgets/#privatededicated-device-widgets).
+
+## Support
 
 If you have any questions or need further assistance, please feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com). Our team of experts is always here to help you with your testing efforts.

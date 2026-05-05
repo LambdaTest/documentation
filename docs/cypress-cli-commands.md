@@ -142,6 +142,12 @@ Given below are the additional flags available with the `run` command.
 | `--tz, --timezone` | Set custom timezone in machine | String |
 | `--reg, --region` | Set data center region (e.g., us, eu, ap) | String |
 | `--pC, --privateCloud` | Set custom private cloud | String |
+| `--exclude_specs` | Exclude specific spec files from test execution | String |
+| `--cypress-env-file` | Path of Cypress environment JSON file | String |
+| `--video` | Enable or disable video recording | Boolean |
+| `--cypress_version` | Set Cypress version for test execution | String |
+| `--fullHar` | Capture full HAR network logs | Boolean |
+| `--enableCFT` | Enable Cypress Framework Testing | Boolean |
 
 ## `build-info` command
 You can use the `build-info` command to get information on the build.
