@@ -2301,7 +2301,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Accessibility MCP Server",
+        label: "Accessibility MCP Tool",
         id: "accessibility-mcp-server",
       },
       {
@@ -2695,9 +2695,7 @@ module.exports = {
               "apple-pay-manual",
               "audio-injection-manual",
               "upload-files-media",
-              "multi-device-testing",
-              "manual-app-profiling",
-              "manual-tests-dashboard"
+              "multi-device-testing"
             ],
           },
         ],
@@ -3935,6 +3933,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Group by Test Cases",
+            id: "smartui-group-by-test-cases",
+          },
+          {
+            type: "doc",
             label: "Export Build Data",
             id: "smartui-export-build-data",
           },
@@ -4185,7 +4188,7 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "SmartUI MCP Server",
+            label: "SmartUI MCP Tool",
             id: "smartui-mcp-server",
           },
         ],
@@ -4730,22 +4733,22 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Automation MCP Server",
+        label: "Automation MCP Tool",
         id: "automation-mcp-server",
       },
       {
         type: "doc",
-        label: "Accessibility MCP Server",
+        label: "Accessibility MCP Tool",
         id: "accessibility-mcp-server",
       },
       {
         type: "doc",
-        label: "SmartUI MCP Server",
+        label: "SmartUI MCP Tool",
         id: "smartui-mcp-server",
       },
       {
         type: "doc",
-        label: "HyperExecute MCP Server",
+        label: "HyperExecute MCP Tool",
         id: "hyperexecute-mcp-server",
       },
     ],

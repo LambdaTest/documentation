@@ -186,6 +186,10 @@ Drilldown functionality for Custom Concurrency Trends widget is coming soon. Thi
 
 ---
 
+:::tip Minute-Level Granularity
+When you apply a time filter of **1 day or less**, the concurrency data is displayed at **minute-level granularity**. This is useful for pinpointing exact concurrency spikes, debugging queue buildups during specific test runs, or analyzing resource usage during dedicated time windows.
+:::
+
 ## Value Proposition
 
 By analyzing the concurrency trends, you can make informed decisions about scaling your testing infrastructure, ensuring efficient resource allocation, and minimizing queuing times. These widgets empower you to strike the right balance between test execution speed and cost-effectiveness.

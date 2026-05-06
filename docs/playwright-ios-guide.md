@@ -11,6 +11,10 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
   - playwright real devices
+  - playwright java ios
+  - playwright csharp ios
+  - playwright python ios
+  - playwright multi language mobile
 
 url: https://www.testmuai.com/support/docs/playwright-ios-device/
 site_name: TestMu AI
@@ -18,6 +22,8 @@ slug: playwright-ios-device/
 canonical: https://www.testmuai.com/support/docs/playwright-ios-device/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,65 +51,97 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Getting Started With Playwright Testing on iOS Real Devices
 * * *
-Playwright test automation on real iOS devices is now supported on <BrandName />. Test on latest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
+Playwright test automation on real iOS devices is now supported on <BrandName /> across **Node.js, Java, C#, and Python**. Test on latest iPhone and iPad Safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
-> Testing with Playwright on real iOS and Android devices is currently supported with Playwright **v1.53.2**
+:::tip Supported Versions
+- Playwright versions **v1.53.0** and above are supported for iOS real device testing.
+- All languages use the **stock Playwright packages** — no custom forks or client-side changes required.
+:::
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+Set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-1. Clone the <BrandName />-Playwright repository on your system using the following command.
-```
-git clone https://github.com/LambdaTest/playwright-sample/
-```
-
-2. Install the npm dependencies.
-
-```
-npm install
-```
-
-3. Add browserWSEndpoint (browser end point URL) in your test script.
-
-```js
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-```
-
-4. In order to run your Playwright tests on iOS devices , you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 **Windows**
 
-```js
+```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
 
-```js
+```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
+### Language-Specific Setup
+
+<Tabs className="docs__val">
+
+<TabItem value="nodejs" label="Node.js" default>
+
+Install the Playwright package:
+
+```bash
+npm install playwright
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+Install the Playwright package:
+
+```bash
+pip install playwright
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+Add the Playwright dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.playwright</groupId>
+    <artifactId>playwright</artifactId>
+    <version>1.54.0</version>
+</dependency>
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+Add the Playwright NuGet package:
+
+```bash
+dotnet add package Microsoft.Playwright
+```
+
+</TabItem>
+
+</Tabs>
+
 ## Run Your First Test
 ---
 
-1. Add the below code snippet in your test scripts to initiate your first Playwright test on <BrandName />.
+<Tabs className="docs__val">
 
-```javascript title="lambdatest-sample.js"
-require('dotenv').config();
+<TabItem value="nodejs" label="Node.js" default>
+
+```javascript title="playwright-ios-test.js"
 const { webkit } = require("playwright");
-const { expect } = require("expect");
 
 (async () => {
-  console.log('Starting Playwright iOS Real Device test...');
-  console.log('Device: iPhone 16 (iOS 18)');
-  
   const capabilities = {
     "LT:Options": {
       "platformName": "ios",
@@ -111,130 +149,276 @@ const { expect } = require("expect");
       "platformVersion": "18",
       "isRealMobile": true,
       "build": "Playwright iOS Build",
-      "name": "Playwright iOS test",
+      "name": "Playwright iOS Test",
       "user": process.env.LT_USERNAME,
       "accessKey": process.env.LT_ACCESS_KEY,
       "network": true,
       "video": true,
       "console": true,
-      "projectName": "New UI",
     },
   };
 
-  console.log('Connecting to LambdaTest iOS cloud...');
-  console.log('Username:', process.env.LT_USERNAME);
-  console.log('Platform: iOS 18, Device: iPhone 16');
-
-  let browser = await webkit.connect(
-      `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-          JSON.stringify(capabilities))}`,
+  const browser = await webkit.connect(
+    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+      JSON.stringify(capabilities)
+    )}`
   );
 
-  console.log('Connected to iOS device successfully!');
-  console.log(`Device: iPhone 16, iOS 18`);
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-  console.log('Creating browser context...');
-  let context = await browser.newContext({
-    hasTouch: true,  // Enable touch support for iOS
-    isMobile: true   // Enable mobile mode for iOS
-  });
-  let page = await context.newPage();
-
-  console.log('Navigating to Wikipedia...');
-  await page.goto('https://www.wikipedia.org/', { timeout: 30000 });
-  
-  console.log('Finding search input...');
-  let element = await page.locator('input[name="search"]');
-  
-  console.log('Clicking search input...');
-  await element.click();
-  
-  console.log('Typing "playwright"...');
-  await element.fill('playwright');
-  
-  console.log('Clicking search input again...');
-  await element.click();
-  
-  console.log('Current URL:', await page.url());
-  
-  console.log('Finding and clicking search button...');
-  await page.locator('#search-form > fieldset > button').click();
-  
-  console.log('Waiting for search results...');
+  await page.goto("https://duckduckgo.com", { timeout: 30000 });
+  await page.locator('[name="q"]').fill("LambdaTest");
+  await page.locator('[name="q"]').press("Enter");
   await page.waitForTimeout(3000);
-  
-  console.log('Counting occurrences of "19th century"...');
-  const count = await page.getByText('19th century').count();
-  console.log('Found', count, 'occurrences of "19th century"');
-  
+
+  const title = await page.title();
+  console.log("Page title:", title);
+
   try {
-    console.log('Verifying count equals 3...');
-    expect(count).toEqual(3);
-    console.log('iOS Test PASSED! Found exactly 3 occurrences');
-    
-    // Mark the test as completed or failed
-    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: "setTestStatus", arguments: {status: "passed", remark: "Wikipedia test passed - found 3 occurrences of '19th century'" },})}`);
-    console.log('Marked test as PASSED in LambdaTest dashboard');
-    
-    await teardown(page, context, browser)
+    if (title.includes("LambdaTest")) {
+      await page.evaluate(
+        (_) => {},
+        `lambdatest_action: ${JSON.stringify({
+          action: "setTestStatus",
+          arguments: { status: "passed", remark: "Title verified" },
+        })}`
+      );
+    }
   } catch (e) {
-    console.log('iOS Test FAILED!');
-    console.log('Error:', e.message);
-    console.log('Expected: 3 occurrences of "19th century"');
-    console.log('Actual count:', count);
-    
-    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: "setTestStatus", arguments: { status: "failed", remark: e.message }})}`);
-    console.log('Marked test as FAILED in LambdaTest dashboard');
-    
-    await teardown(page, context, browser)
-    throw e.stack
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: "setTestStatus",
+        arguments: { status: "failed", remark: e.message },
+      })}`
+    );
   }
 
-})().catch(err => {
-  console.error('Unexpected error occurred in iOS test:');
-  console.error(err);
-  process.exit(1);
-});
-
-async function teardown(page, context, browser) {
-  console.log('Cleaning up iOS test resources...');
-  try {
-    console.log('   Closing page...');
-    await Promise.race([
-      page.close(),
-      new Promise(resolve => setTimeout(resolve, 10000)) // 10 second timeout
-    ]);
-    console.log('Page closed');
-    
-    console.log('Closing context...');
-    await Promise.race([
-      context.close(),
-      new Promise(resolve => setTimeout(resolve, 10000)) // 10 second timeout
-    ]);
-    console.log('Context closed');
-    
-    console.log('   Closing browser connection...');
-    await Promise.race([
-      browser.close(),
-      new Promise(resolve => setTimeout(resolve, 15000)) // 15 second timeout for browser
-    ]);
-    console.log('Browser closed');
-    
-    console.log('iOS test completed and resources cleaned up!');
-  } catch (error) {
-    console.log('Cleanup completed with warnings:', error.message);
-  }
-    process.exit(0);
-} 
-
+  await page.close();
+  await context.close();
+  await browser.close();
+})();
 ```
-----
 
-2. Pass the below command to run the test.
+Run the test:
 
+```bash
+node playwright-ios-test.js
 ```
-node playwright-ios-real-device.js
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python title="playwright_ios_test.py"
+import os, json, urllib.parse
+from playwright.sync_api import sync_playwright
+
+def main():
+    capabilities = {
+        "LT:Options": {
+            "platformName": "ios",
+            "deviceName": "iPhone 16",
+            "platformVersion": "18",
+            "isRealMobile": True,
+            "build": "Playwright iOS Build",
+            "name": "Playwright iOS Test",
+            "user": os.environ["LT_USERNAME"],
+            "accessKey": os.environ["LT_ACCESS_KEY"],
+            "network": True,
+            "video": True,
+            "console": True,
+        }
+    }
+
+    ws_endpoint = (
+        f"wss://cdp.lambdatest.com/playwright?capabilities="
+        f"{urllib.parse.quote(json.dumps(capabilities))}"
+    )
+
+    with sync_playwright() as p:
+        browser = p.webkit.connect(ws_endpoint)
+        context = browser.new_context()
+        page = context.new_page()
+
+        page.goto("https://duckduckgo.com", timeout=30000)
+        page.locator('[name="q"]').fill("LambdaTest")
+        page.locator('[name="q"]').press("Enter")
+        page.wait_for_timeout(3000)
+
+        title = page.title()
+        print(f"Page title: {title}")
+
+        try:
+            if "LambdaTest" in title:
+                page.evaluate(
+                    "_ => {}",
+                    'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title verified"}}',
+                )
+        except Exception as e:
+            page.evaluate(
+                "_ => {}",
+                f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"status": "failed", "remark": str(e)}})}',
+            )
+
+        page.close()
+        context.close()
+        browser.close()
+
+if __name__ == "__main__":
+    main()
 ```
+
+Run the test:
+
+```bash
+python playwright_ios_test.py
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+```java title="PlaywrightIosTest.java"
+package com.lambdatest;
+
+import com.microsoft.playwright.*;
+import com.google.gson.Gson;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+
+public class PlaywrightIosTest {
+    public static void main(String[] args) {
+        Map<String, Object> ltOptions = Map.of(
+            "platformName", "ios",
+            "deviceName", "iPhone 16",
+            "platformVersion", "18",
+            "isRealMobile", true,
+            "build", "Playwright iOS Build",
+            "name", "Playwright iOS Test",
+            "user", System.getenv("LT_USERNAME"),
+            "accessKey", System.getenv("LT_ACCESS_KEY"),
+            "network", true,
+            "video", true,
+            "console", true
+        );
+
+        Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
+        String capsJson = new Gson().toJson(capabilities);
+        String wsEndpoint = "wss://cdp.lambdatest.com/playwright?capabilities="
+            + URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
+
+        try (Playwright playwright = Playwright.create()) {
+            Browser browser = playwright.webkit().connect(wsEndpoint);
+            BrowserContext context = browser.newContext();
+            Page page = context.newPage();
+
+            page.navigate("https://duckduckgo.com",
+                new Page.NavigateOptions().setTimeout(30000));
+            page.locator("[name=\"q\"]").fill("LambdaTest");
+            page.locator("[name=\"q\"]").press("Enter");
+            page.waitForTimeout(3000);
+
+            String title = page.title();
+            System.out.println("Page title: " + title);
+
+            try {
+                if (title.contains("LambdaTest")) {
+                    page.evaluate("_ => {}",
+                        "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+                }
+            } catch (Exception e) {
+                page.evaluate("_ => {}",
+                    "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"failed\", \"remark\": \"" + e.getMessage() + "\"}}");
+            }
+
+            page.close();
+            context.close();
+            browser.close();
+        }
+    }
+}
+```
+
+Run the test:
+
+```bash
+mvn compile exec:java -Dexec.mainClass="com.lambdatest.PlaywrightIosTest"
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp title="PlaywrightIosTest.cs"
+using Microsoft.Playwright;
+using System.Text.Json;
+using System.Web;
+
+var capabilities = new Dictionary<string, object>
+{
+    ["LT:Options"] = new Dictionary<string, object>
+    {
+        ["platformName"] = "ios",
+        ["deviceName"] = "iPhone 16",
+        ["platformVersion"] = "18",
+        ["isRealMobile"] = true,
+        ["build"] = "Playwright iOS Build",
+        ["name"] = "Playwright iOS Test",
+        ["user"] = Environment.GetEnvironmentVariable("LT_USERNAME")!,
+        ["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY")!,
+        ["network"] = true,
+        ["video"] = true,
+        ["console"] = true,
+    }
+};
+
+var capsJson = JsonSerializer.Serialize(capabilities);
+var wsEndpoint = $"wss://cdp.lambdatest.com/playwright?capabilities={HttpUtility.UrlEncode(capsJson)}";
+
+using var playwright = await Playwright.CreateAsync();
+var browser = await playwright.Webkit.ConnectAsync(wsEndpoint);
+var context = await browser.NewContextAsync();
+var page = await context.NewPageAsync();
+
+await page.GotoAsync("https://duckduckgo.com", new PageGotoOptions { Timeout = 30000 });
+await page.Locator("[name=\"q\"]").FillAsync("LambdaTest");
+await page.Locator("[name=\"q\"]").PressAsync("Enter");
+await page.WaitForTimeoutAsync(3000);
+
+var title = await page.TitleAsync();
+Console.WriteLine($"Page title: {title}");
+
+try
+{
+    if (title.Contains("LambdaTest"))
+    {
+        await page.EvaluateAsync("_ => {}",
+            "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+    }
+}
+catch (Exception e)
+{
+    await page.EvaluateAsync("_ => {}",
+        $"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\": \"failed\", \"remark\": \"{e.Message}\"}}}}");
+}
+
+await page.CloseAsync();
+await context.CloseAsync();
+await browser.CloseAsync();
+```
+
+Run the test:
+
+```bash
+dotnet run
+```
+
+</TabItem>
+
+</Tabs>
 
 ## View your Playwright test results
 ***
@@ -247,9 +431,9 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 
 :::note
 
-- Only Safari and Node.js integrations are currently supported; we plan to extend compatibility to additional browsers and languages soon.
+- Safari is the supported browser for iOS real device testing. All four languages — **Node.js, Java, C#, and Python** — are supported using stock Playwright packages.
 
-- Playwright testing on real iOS devices is currently supported on latest iOS versions—iOS 17, iOS 18, and iOS 26—across both iPhones and iPads. Extension of device coverage is currently in progress.
+- Playwright testing on real iOS devices is currently supported on latest iOS versions — iOS 17, iOS 18, and iOS 26 — across both iPhones and iPads.
 
 :::
 

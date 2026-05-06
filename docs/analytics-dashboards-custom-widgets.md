@@ -281,5 +281,56 @@ For detailed widget-specific use cases and examples, see:
 - [Bar and Line Chart Use Cases](/docs/analytics-bar-line-widgets#use-cases-for-bar-and-line-chart-widgets)
 - [Table Widget Use Cases](/docs/analytics-table-widgets#use-cases-for-table-widgets)
 
+## Private/Dedicated Device Widgets
+
+If your organization uses **Private Real Devices** (dedicated devices), you can create custom widgets to track usage and performance specifically for those devices. All private device widgets use the filter `is_dedicated = Equals = true` to scope data to dedicated devices only.
+
+Since the custom widget builder scopes data per product, you will need to create **separate widgets for each product** (e.g., App Automation and Real Device) to get a complete view.
+
+### Recommended Widget Configurations
+
+#### Testing by Device (Table)
+
+Get a per-device breakdown showing test count and total duration on each dedicated device.
+
+| Property | Value |
+|----------|-------|
+| Visualization | Table |
+| Column | `device` |
+| Measures | `test_id` (Count), `duration` (Sum) |
+| Filter | `is_dedicated` = Equals = `true` |
+
+Create one widget for **App Automation** and one for **Real Device** testing.
+
+#### Testing by Type — Table
+
+Get a product-level summary (e.g., "App Automation Real Device", "Manual App Testing Real Device") for dedicated devices.
+
+| Property | Value |
+|----------|-------|
+| Visualization | Table |
+| Column | `product` |
+| Measures | `test_id` (Count), `duration` (Sum) |
+| Filter | `is_dedicated` = Equals = `true` |
+
+Create one widget for **App Automation** and one for **Real Device** testing.
+
+#### Testing by Type — Bar Chart
+
+Same data as the table above, rendered as a bar chart for visual comparison.
+
+| Property | Value |
+|----------|-------|
+| Visualization | Bar |
+| X-axis | `product` |
+| Y-axis (Measure) | `duration` (Sum) |
+| Filter | `is_dedicated` = Equals = `true` |
+
+Create one widget for **App Automation** and one for **Real Device** testing.
+
+The screenshot below shows a sample Private Real Device dashboard with all six widgets configured:
+
+<img loading="lazy" src={require('../assets/images/analytics/private-device-dashboard.jpg').default} alt="Private Real Device Dashboard" width="1400" height="700" className="doc_img"/>
+
 > If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).
 
