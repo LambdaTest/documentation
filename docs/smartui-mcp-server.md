@@ -69,21 +69,9 @@ The tool fetches the visual assets (screenshots, DOM snapshots, metadata) and re
 
 - "Header layout shifted left due to padding changes."
 
-## Key Benefits of SmartUI MCP Tool
+## What You Can Do
 
-Here are the key benefits of using the SmartUI MCP Tool:
-
-- **No Manual Debugging:** Automatically detects visual regressions and UI layout shifts from screenshots and DOM changes.
-- **Human-Like Interpretation:** Simulates how a real user perceives visual changes using cognitive and Gestalt principles.
-- **Context-Aware Fixes:** Suggests accurate UI fixes based on visual evidence (React, HTML, CSS).
-- **Rapid RCA:** Identifies exact UI elements responsible for changes and provides the root cause in plain language.
-- **Layered Visual Analysis:** Run independent or combined analysis: pixel-level, layout, DOM structure, and perceptual.
-- **MCP-Native Integration:** Seamlessly works with <BrandName />’s MCP-enabled environments and SmartUI workflows.
-- **Developer-Ready Summaries:** Outputs are designed for frontend teams—easy to read, act, and commit to code.
-
-## Supported Tools
-
-The following tools return human-readable summaries and require only a comparisonId as input.
+The following capabilities return human-readable summaries and require only a comparisonId as input.
 
 1. `getSmartUIResources`:
 
@@ -139,6 +127,16 @@ Runs a multi-layer analysis across pixel, layout, DOM, and perception layers. Be
 **Example Output:**
 
 > "The 'Subscribe' CTA lost its background color and dropped in emphasis. This is likely due to a CSS override on `.cta-btn`. Padding changes have also affected alignment. Suggest restoring background and resetting layout values."
+
+## Why Use the SmartUI MCP Tool
+
+- **No Manual Debugging:** Automatically detects visual regressions and UI layout shifts from screenshots and DOM changes.
+- **Human-Like Interpretation:** Simulates how a real user perceives visual changes using cognitive and Gestalt principles.
+- **Context-Aware Fixes:** Suggests accurate UI fixes based on visual evidence (React, HTML, CSS).
+- **Rapid RCA:** Identifies exact UI elements responsible for changes and provides the root cause in plain language.
+- **Layered Visual Analysis:** Run independent or combined analysis: pixel-level, layout, DOM structure, and perceptual.
+- **MCP-Native Integration:** Seamlessly works with <BrandName />'s MCP-enabled environments and SmartUI workflows.
+- **Developer-Ready Summaries:** Outputs are designed for frontend teams — easy to read, act, and commit to code.
 
 ## Error Handling
 

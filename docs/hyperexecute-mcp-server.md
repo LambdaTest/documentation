@@ -61,9 +61,17 @@ Get a comprehensive overview of HyperExecute's capabilities by watching our intr
 
 The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
 
-## Key Benefits of HyperExecute MCP Tool
+## What You Can Do
 
-Here are the key benefits of using HyperExecute MCP Tool:
+HyperExecute MCP Tool provides five main capabilities:
+
+1. **Test Runner Command Generation:** Analyzes your project structure and generates appropriate test commands.
+2. **YAML Configuration Generation:** Creates configuration files based on project analysis.
+3. **Documentation Lookup:** Provides answers to your queries by fetching information from documentation.
+4. **Job Info Retrieval:** Retrieves information about specific test jobs.
+5. **Session Details:** Fetches session details for comprehensive test analysis.
+
+## Why Use the HyperExecute MCP Tool
 
 - **Automated Setup:** Reduce configuration time from hours to seconds
 - **Smart Analysis:** Automatically identify project types, frameworks, and test structures
@@ -72,13 +80,3 @@ Here are the key benefits of using HyperExecute MCP Tool:
 - **Real-Time Monitoring:** Track test executions with immediate updates
 - **Efficient Debugging:** Inspect test results with comprehensive recordings
 - **Instant Documentation:** Access relevant documentation through integrated AI agents
-
-## Available HyperExecute MCP Tools
-
-HyperExecute MCP Tool provides five main capabilities:
-
-1. **Test Runner Command Generation Tool:** Analyzes your project structure and generates appropriate test commands.
-2. **HyperExecute YAML Generation Tool:** Creates configuration files based on project analysis.
-3. **HyperExecute Documentation Tool:** Provides answers to your queries by fetching information from documentation.
-4. **HyperExecute Job Info Tool:** Retrieves information about specific test jobs.
-5. **HyperExecute Sessions Tool:** Fetches session details for comprehensive test analysis.

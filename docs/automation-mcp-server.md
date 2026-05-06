@@ -61,25 +61,24 @@ MCP acts as a universal interface between AI models and applications, creating a
 
 The Model Context Protocol (MCP) creates a standardized interface that allows AI assistants to connect with diverse software tools. This makes it easier to expand capabilities across your digital workflow.
 
-## Key Benefits of Automation MCP Tool
+## What You Can Do
 ---
-Use the Automation MCP Tool to accelerate debugging and test analysis.
+Automation MCP Tool provides five core capabilities for test analysis.
+
+1. **Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
+2. **Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
+3. **Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
+4. **Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
+5. **Core Interface:** Powers the above capabilities and connects your AI assistant to TestMu AI data.
+
+## Why Use the Automation MCP Tool
+---
 
 1. Access your test execution data on TestMu AI directly from your IDE or editor.
 2. Triage and troubleshoot test failures to identify the root cause (RCA).
 3. Fix your test code based on the RCA and accelerate your development.
 4. Generate new test cases using execution data from TestMu AI.
 5. Use network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
-
-## Supported Tools
----
-Automation MCP Tool provides five core capabilities for test analysis.
-
-1. **Automation Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
-2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
-3. **Automation Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
-4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
-5. **Automation MCP Tool:** Core interface that powers the above capabilities and connects your AI assistant to TestMu AI data.
 
 
 <nav aria-label="breadcrumbs">
