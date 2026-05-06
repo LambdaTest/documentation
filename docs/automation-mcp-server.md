@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with Automation MCP Tool
-Automation MCP Tool simplifies test failure triaging for all automation test cases executed on TestMu AI. It is a tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) that enables integration between AI assistants and your test execution data — reducing triage and troubleshooting time.
+Automation MCP Tool simplifies test failure triaging for all automation test cases executed on TestMu AI. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) that enables integration between AI assistants and your test execution data — reducing triage and troubleshooting time.
 
 
 <div className="ytframe"> 

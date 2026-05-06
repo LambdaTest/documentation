@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with HyperExecute MCP Tool
-HyperExecute MCP Tool is an AI-native test orchestration tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
+HyperExecute MCP Tool is an AI-native test orchestration tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
 
 ## Watch HyperExecute MCP Tool in Action
 
