@@ -53,6 +53,21 @@ This page provides a comprehensive overview of how long your data is retained ac
 Enterprise customers can request extended retention periods for most data types. Contact your account manager or [support@lambdatest.com](mailto:support@lambdatest.com) for details.
 :::
 
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '20px 0 30px'}}>
+  <a href="#web-automation" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Web Automation</a>
+  <a href="#app-automation" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>App Automation</a>
+  <a href="#real-device-cloud" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Real Device Cloud</a>
+  <a href="#real-time-testing" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Real-Time Testing</a>
+  <a href="#hyperexecute" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>HyperExecute</a>
+  <a href="#smartui" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>SmartUI</a>
+  <a href="#test-manager" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Test Manager</a>
+  <a href="#kaneai" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>KaneAI</a>
+  <a href="#accessibility" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Accessibility</a>
+  <a href="#analytics--insights" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Analytics / Insights</a>
+  <a href="#web-scanner" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Web Scanner</a>
+  <a href="#platform" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500'}}>Platform</a>
+</div>
+
 ---
 
 ## Web Automation

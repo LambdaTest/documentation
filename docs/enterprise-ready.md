@@ -54,6 +54,21 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> is built for enterprise-scale testing. This page provides a comprehensive overview of how <BrandName /> meets the requirements of enterprise buyers across security, compliance, access control, deployment, integrations, and more.
 
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '20px 0 30px'}}>
+  <a href="#single-sign-on" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Single Sign-On</a>
+  <a href="#audit-logs" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Audit Logs</a>
+  <a href="#role-based-access-control" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>RBAC</a>
+  <a href="#product-security" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Product Security</a>
+  <a href="#deployment-options" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Deployment Options</a>
+  <a href="#team-management" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Team Management</a>
+  <a href="#integrations" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Integrations</a>
+  <a href="#reporting--analytics" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Reporting & Analytics</a>
+  <a href="#sla--support" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>SLA & Support</a>
+  <a href="#data-protection--gdpr" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Data Protection & GDPR</a>
+  <a href="#change-management" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Change Management</a>
+  <a href="#product-assortment" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Product Assortment</a>
+</div>
+
 ## Single Sign-On
 
 <BrandName /> supports enterprise Single Sign-On (SSO) to centralize user authentication through your organization's identity provider. SSO eliminates the need for separate credentials and enforces your authentication policies across all <BrandName /> products.
