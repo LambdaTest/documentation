@@ -108,19 +108,15 @@ This ensures that recorded steps remain consistent with the actual UI interactio
 
 - **Drag and drop on canvas based elements:** Canvas elements rely on custom rendering, which makes drag and drop actions unreliable to record accurately.
 
-- **Double click:** Manual Interaction currently captures single click actions only.
-
-- **Right click:** Context menu interactions triggered by right click are not supported.
-
 - **Hover:** Mouse hover actions that trigger tooltips or menus cannot be recorded.
+
+:::info
+Double click, right click, and press-and-hold (long press) **are now supported** in Manual Interaction. See [Click Interactions](/support/docs/kane-ai-click-interactions/) for capture rules and platform support.
+:::
 
 ### Mobile Apps
 
 - **Two finger scroll:** Multi touch gestures are not captured during recording.
-
-- **Click and hold:** Long press interactions are not supported in Manual Interaction.
-
-- **Double click:** Only single tap actions can be recorded on mobile devices.
 
 - **Copy and paste:** Clipboard based actions are not captured during recording.
 
