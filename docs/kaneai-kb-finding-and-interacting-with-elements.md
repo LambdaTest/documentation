@@ -239,15 +239,18 @@ assert tooltip text "Total revenue for the fiscal year" is visible
 
 ## Drag and Drop
 
-KaneAI supports drag-and-drop interactions for sortable lists, kanban boards, and similar UI patterns.
+KaneAI supports drag-and-drop interactions on **Desktop Web, Android apps, iOS apps, and Mobile Web** — for sortable lists, kanban boards, sliders, payment confirmation gestures, and similar UI patterns.
 
 ```
 drag "Task: Fix Bug" and drop it on the "In Progress" column
 drag the first item and drop it below the third item in the list
+drag "Card A" to "Column B"
 ```
 
-:::note
-Drag and Drop is only supported in Web Tests and not in Mobile app tests right now.
+Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS — Mobile Web is **NL-only**.
+
+:::info
+See the [Drag and Drop](/support/docs/kane-ai-drag-drop/) guide for the full platform matrix, gesture classification rules, and replay behavior.
 :::
 
 ## When Natural Language Isn't Enough
@@ -273,6 +276,9 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 | Action | Example Instructions |
 |---|---|
 | **Click** | `click on the "Submit" button` |
+| **Double / N-Click** | `double click the title` , `click the button 5 times` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Right Click** | `right click on the file row` (web only) — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Long Press** | `long press the menu icon for 3 seconds` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
 | **Type** | `type "hello world" in the search input` |
 | **Clear** | `clear the email input field` |
 | **Hover** | `hover on the "Products" menu` |

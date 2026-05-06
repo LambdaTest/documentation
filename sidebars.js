@@ -1401,6 +1401,8 @@ module.exports = {
               "kane-ai-geolocation-tunnel-proxy",
               "kaneai-auto-heal",
               "kane-ai-scroll-in-feature",
+              "kane-ai-drag-drop",
+              "kane-ai-click-interactions",
               "kane-ai-jira-integration",
               "kane-ai-api-testing",
               {
@@ -1430,7 +1432,6 @@ module.exports = {
             collapsed: true,
             label: "Desktop Browser",
             items: [
-              "kane-ai-drag-drop",
               "kaneai-dynamic-url-replacement",
               "kaneai-chrome-options",
               "kaneai-custom-headers",
