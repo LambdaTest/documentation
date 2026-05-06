@@ -3933,6 +3933,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Group by Test Cases",
+            id: "smartui-group-by-test-cases",
+          },
+          {
+            type: "doc",
             label: "Export Build Data",
             id: "smartui-export-build-data",
           },
