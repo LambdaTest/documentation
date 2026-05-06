@@ -82,8 +82,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 **Documentation:**
 - [Getting Started with SSO](/support/docs/single-sign-on/)
 - [SCIM Overview](/support/docs/scim/)
-- [Okta SCIM Integration](/support/docs/okta-scim/)
-- [Azure AD SCIM Integration](/support/docs/azure-scim/)
+- [Okta SCIM Integration](/support/docs/scim/okta/)
+- [Azure AD SCIM Integration](/support/docs/scim/azure/)
 - [PingOne SCIM Integration](/support/docs/pingone-scim/)
 - [JumpCloud SCIM Integration](/support/docs/jumpcloud-scim/)
 
@@ -166,7 +166,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 **Documentation:**
 - [HyperExecute Private Cloud Setup](/support/docs/hyperexecute-private-cloud-setup/)
 - [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/)
-- [Public IP Ranges](/support/docs/lambdatest-public-ip/)
+- [Public IP Ranges](/support/docs/testmu-public-ip/)
 
 ---
 
