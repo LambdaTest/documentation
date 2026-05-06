@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Getting Started with SmartUI MCP Tool
 ***
-The SmartUI MCP Tool allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is a tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/) built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
+The SmartUI MCP Tool allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">

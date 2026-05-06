@@ -11,7 +11,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 
 # Accessibility MCP Tool
 
-Accessibility MCP Tool enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows. It is a tool within the [TestMu AI MCP Server](/support/docs/lambdatest-mcp-server/).
+Accessibility MCP Tool enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/).
 
 This page describes what the Accessibility MCP Tool is, when an MCP-connected, AI-assisted analysis flow makes sense, and how that surface differs from DevTools, Automation, and Web Scanner. Use it to orient prerequisites and boundaries before connecting a client or routing work into an MCP-based accessibility review.
 
