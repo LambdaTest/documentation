@@ -1,25 +1,23 @@
 ---
 id: accessibility-mcp-server
-title: Accessibility MCP Server
-sidebar_label: Accessibility MCP Server
-description: Use the Accessibility MCP Server for supported AI-assisted accessibility analysis workflows.
+title: Accessibility MCP Tool
+sidebar_label: Accessibility MCP Tool
+description: Use the Accessibility MCP Tool for supported AI-assisted accessibility analysis workflows.
 slug: accessibility-mcp-server/
 url: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 ---
 
-# Accessibility MCP Server
+# Accessibility MCP Tool
 
-Accessibility MCP Server enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows.
+Accessibility MCP Tool enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/).
 
-It is **not** the same as the **[TestMu AI MCP Server](/support/docs/testmu-mcp-server/)** entry in the main sidebar, which covers installing and using the platform MCP for multiple TestMu AI tools. This document is only for **Accessibility-specific** MCP workflows.
-
-This page describes what the Accessibility MCP Server is, when an MCP-connected, AI-assisted analysis flow makes sense, and how that surface differs from DevTools, Automation, and Web Scanner. Use it to orient prerequisites and boundaries before connecting a client or routing work into an MCP-based accessibility review.
+This page describes what the Accessibility MCP Tool is, when an MCP-connected, AI-assisted analysis flow makes sense, and how that surface differs from DevTools, Automation, and Web Scanner. Use it to orient prerequisites and boundaries before connecting a client or routing work into an MCP-based accessibility review.
 
 ## When to use this
 
-Use the MCP Server when you want an AI-assisted workflow that can request Accessibility analysis through supported MCP-compatible clients and tools.
+Use the Accessibility MCP Tool when you want an AI-assisted workflow that can request Accessibility analysis through supported MCP-compatible clients and tools.
 
 ## What it is good for
 
@@ -29,7 +27,7 @@ Use the MCP Server when you want an AI-assisted workflow that can request Access
 
 ## Prerequisites
 
-- access to the Accessibility MCP Server feature
+- access to the Accessibility MCP Tool feature
 - an MCP-compatible client or workflow that can connect to the server
 - a public URL or supported local application flow you are authorized to test
 
@@ -44,7 +42,7 @@ Use the MCP Server when you want an AI-assisted workflow that can request Access
 
 ## Product boundary
 
-Accessibility MCP Server is a dedicated product surface. It is not the same as:
+Accessibility MCP Tool is a dedicated product surface. It is not the same as:
 
 - **Accessibility DevTools**, which is for browser-based manual and assisted testing
 - **Accessibility Automation**, which is for framework-driven automated execution

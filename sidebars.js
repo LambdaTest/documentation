@@ -2302,7 +2302,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Accessibility MCP Server",
+        label: "Accessibility MCP Tool",
         id: "accessibility-mcp-server",
       },
       {
@@ -4176,7 +4176,7 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "SmartUI MCP Server",
+            label: "SmartUI MCP Tool",
             id: "smartui-mcp-server",
           },
         ],
@@ -4721,22 +4721,22 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Automation MCP Server",
+        label: "Automation MCP Tool",
         id: "automation-mcp-server",
       },
       {
         type: "doc",
-        label: "Accessibility MCP Server",
+        label: "Accessibility MCP Tool",
         id: "accessibility-mcp-server",
       },
       {
         type: "doc",
-        label: "SmartUI MCP Server",
+        label: "SmartUI MCP Tool",
         id: "smartui-mcp-server",
       },
       {
         type: "doc",
-        label: "HyperExecute MCP Server",
+        label: "HyperExecute MCP Tool",
         id: "hyperexecute-mcp-server",
       },
     ],
