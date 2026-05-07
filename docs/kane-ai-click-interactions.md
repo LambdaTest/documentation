@@ -123,9 +123,10 @@ In Recording mode, the capture layer classifies touch gestures by duration and m
 
 | Gesture | Rule |
 |---------|------|
-| Tap | Touch &lt; 500 ms, no movement |
-| **Long Press** | **Touch ≥ 500 ms, no movement (&lt; 10 px drift)** |
-| Drag | Movement ≥ 10 px |
+| Tap | Touch &lt; 1 second, no movement |
+| **Long Press** | **Touch ≥ 1 second, no movement (&lt; 10 px drift)** |
+| Swipe | Movement ≥ 10 px |
+| Drag | Hold ≥ 1 second + Movement ≥ 10 px |
 
 ### Common Use Cases
 
@@ -139,13 +140,12 @@ In Recording mode, the capture layer classifies touch gestures by duration and m
 
 ---
 
-## Multi-Click (Double / Triple / N-Click)
+## Multi-Click (Double / N-Click)
 
 ### Author with Natural Language
 
 ```
 double click on the submit button
-triple click the paragraph
 click the increment button 5 times
 tap twice on the like button
 tap thrice on the notification bell
@@ -157,13 +157,17 @@ tap thrice on the notification bell
 |---------|---------|-----------|
 | Double click | `double click on the submit button` | 2 |
 | Double tap | `double tap to zoom in` | 2 |
-| Triple click | `triple click the paragraph` | 3 |
-| Click N times | `click the button 5 times` | 5 |
+| Click N times | `click the button 5 times` | N |
 | Tap twice / thrice | `tap twice on the like button` | 2 / 3 |
 
 :::note
 On mobile, **`click`** and **`tap`** are interchangeable. `double click X` maps to the same multi-click action as `double tap X`.
 :::
+
+#### Frequency Rules
+
+- **Maximum:** 20 clicks per instruction. Higher values are rejected as `INVALID_PARAMETER`.
+- **Phrasing:** Use `click X N times` for N ≥ 3. The literal phrase `triple click X` is not supported.
 
 ### Manual Interaction Capture
 
@@ -243,7 +247,7 @@ Each click type displays a distinct icon and pill label in the **Sidebar**, **Te
 | Normal click | CLICK | Default cursor |
 | Long press | LONG PRESS | Hold / timer |
 | Double click | MULTI CLICK | Double-click |
-| Triple / N-click | MULTI CLICK | Multi-click |
+| N-click (3+) | MULTI CLICK | Multi-click |
 | Right click | RIGHT CLICK | Context menu |
 
 ---
@@ -277,7 +281,7 @@ Yes. `double click` (frequency = 2) fires a native `dblclick` event. Two separat
 Yes. `double click` and `double tap` are interchangeable on mobile.
 
 **What is the maximum click frequency?**
-There is no hard limit, but very high frequencies (100+) may time out. Tested reliably up to 20.
+20 clicks per instruction. Higher values are rejected as `INVALID_PARAMETER`.
 
 **Why does right click fail on mobile?**
 Right click is a mouse-specific interaction that doesn't exist on touchscreens. Use `long press` instead — it opens context menus in most apps.
@@ -286,7 +290,7 @@ Right click is a mouse-specific interaction that doesn't exist on touchscreens. 
 No. KaneAI treats positional `right` as a description of the panel, not a gesture modifier.
 
 **How does KaneAI tell a tap from a long press during recording?**
-By duration: under 500 ms = tap, ≥ 500 ms with no movement = long press, movement over 10 px = drag.
+By duration: under 1 second = tap, ≥ 1 second with no movement = long press, movement over 10 px = swipe (or drag if held ≥ 1 second).
 
 **How does KaneAI detect a double click during recording?**
 Two clicks within 200 ms at the same location (within 10 px).
@@ -307,11 +311,12 @@ Yes. All three work inside Modules — create, import, edit, and version-bump as
 1. **Right click is web-only.** Returns `UNSUPPORTED_OPERATION` on mobile.
 2. **Mutual exclusivity.** Long press, multi-click, and right click cannot be combined in a single instruction.
 3. **Long press duration range.** Limited to 0.5–30 seconds only.
-4. **Mobile Web — no Manual Interaction.** Only NL instructions are available for long press and multi-click on mobile browsers.
-5. **iOS Landscape — no Manual Interaction.** Long press and multi-click MI capture are not supported in Landscape orientation.
-6. **Duration accuracy.** Long press is accurate to ±200 ms. Use cases requiring millisecond precision should account for this tolerance.
-7. **Multi-click on dynamic elements.** If the target moves, disappears, or changes between clicks (N > 2), later clicks may miss. Ensure element stability.
-8. **Nested conditions not supported.** `if A then if B then triple click X else double click Y` — nested if-else with click modifiers is not supported.
-9. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported — secret values cannot be parsed as numeric durations.
-10. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
+4. **Multi-click frequency cap.** Maximum 20 clicks per instruction. The literal phrase `triple click X` is not supported — use `click X 3 times` instead.
+5. **Mobile Web — no Manual Interaction.** Only NL instructions are available for long press and multi-click on mobile browsers.
+6. **iOS Landscape — no Manual Interaction.** Long press and multi-click MI capture are not supported in Landscape orientation.
+7. **Duration accuracy.** Long press is accurate to ±200 ms. Use cases requiring millisecond precision should account for this tolerance.
+8. **Multi-click on dynamic elements.** If the target moves, disappears, or changes between clicks, later clicks may miss. Ensure element stability.
+9. **Nested if-else not supported.** Single-level if-else with click modifiers works (e.g. `if popup is visible then right click on it`), but nested if-else inside another conditional is not supported.
+10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported — secret values cannot be parsed as numeric durations.
+11. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
 

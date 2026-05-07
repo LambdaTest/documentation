@@ -105,9 +105,10 @@ Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform 
 
 | Input                                  | Captured As |
 | -------------------------------------- | ----------- |
-| Touch &lt; 500 ms, no movement         | Tap         |
-| Touch ≥ 500 ms, no movement (&lt; 10 px drift) | Long press  |
-| **Movement ≥ 10 px**                   | **Drag**    |
+| Touch &lt; 1 second, no movement       | Tap         |
+| Touch ≥ 1 second, no movement (&lt; 10 px drift) | Long press  |
+| Movement ≥ 10 px                       | Swipe       |
+| **Hold ≥ 1 second + Movement ≥ 10 px** | **Drag**    |
 
 :::info
 For tap, long-press, multi-click, and right-click authoring, see [Click Interactions](/support/docs/kane-ai-click-interactions/).
