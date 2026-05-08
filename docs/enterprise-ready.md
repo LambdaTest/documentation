@@ -62,6 +62,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   <a href="#deployment-options" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Deployment Options</a>
   <a href="#team-management" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Team Management</a>
   <a href="#integrations" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Integrations</a>
+  <a href="#test-data-generation" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Test Data Generation</a>
   <a href="#reporting--analytics" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Reporting & Analytics</a>
   <a href="#sla--support" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>SLA & Support</a>
   <a href="#data-protection--gdpr" style={{display: 'inline-block', padding: '8px 16px', borderRadius: '6px', border: '1px solid #e0e0e0', backgroundColor: '#f8f9fa', color: '#1a1a1a', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s'}}>Data Protection & GDPR</a>
@@ -211,6 +212,24 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 **Documentation:**
 - [Integrations Overview](/support/docs/integrations-with-ci-cd-tools/)
 - [GitHub App Integration](/support/docs/github-app-integration/)
+
+---
+
+## Test Data Generation
+
+<BrandName /> provides built-in capabilities to generate, manage, and protect the test data your teams use across automation. Teams can author synthetic datasets for data-driven tests, mask sensitive payloads in network logs and recordings, and parameterize tests so the same flow runs across environments and inputs without rework.
+
+**Capabilities:**
+- **Synthetic data generation** — author datasets in KaneAI Test Manager, populate values manually, autofill with AI based on parameter names, or import from CSV; default datasets are immutable and every dataset carries full version history with revert/restore support
+- **Data masking** — mask sensitive payloads (passwords, tokens, API keys, auth headers, cookies) in HTTP network logs via the `network.mask` Selenium capability; mask credentials, geolocation, and storage state captured in HyperExecute test recordings (Lambda Masking)
+- **Parameterization** — pass dynamic values into test cases at runtime using variables, secrets (encrypted), smart variables (resolved at execution), parameters, and datasets to reuse the same test across environments such as staging, pre-prod, and prod
+
+**Documentation:**
+- [Test Data Generation Overview](/support/docs/test-data-generation/)
+- [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
+- [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
+- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
+- [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2-3-1/#mask-your-sensitive-data)
 
 ---
 
