@@ -2,7 +2,7 @@
 id: lambdatest-mcp-server
 title: Introducing TestMu AI MCP Server
 hide_title: False
-sidebar_label: Setting up TestMu AI MCP Server
+sidebar_label: Set Up TestMu AI MCP Server
 description: With TestMu AI MCP Server, explore all TestMu AI MCP Server tools in one place, from setup to usage.
 keywords:
   - hyperexecute performance testing
@@ -45,142 +45,266 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started with <BrandName /> MCP Server
-<BrandName /> MCP Server is all-in-one MCP server that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
+# Getting Started with TestMu AI MCP Server
 
-If you only need **Accessibility** analysis through MCP (not the full multi-tool server described on this page), use the dedicated [Accessibility MCP Server](/support/docs/accessibility-mcp-server/) guide under Accessibility Testing in the sidebar.
+TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, SmartUI, and Accessibility - which you can invoke through natural language prompts in your IDE or AI client.
 
-## What is Model Context Protocol (MCP)?
+## Available Tools
 
-The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
+---
 
-## Key Benefits of <BrandName /> MCP Server
+TestMu AI MCP Server provides four tools, each covering a different area of testing:
 
-Here are the key benefits of using <BrandName /> MCP Server:
+1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** AI-native test orchestration. Auto-generates test runner commands and HyperExecute YAML, monitors jobs, and surfaces session details.
+2. **[Automation Tool:](/support/docs/automation-mcp-server/)** Triage and debug automation test failures. Pulls execution data, command/network/console logs, and helps identify root cause directly inside your IDE.
+3. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** Debug visual regressions. Returns natural-language summaries of pixel, layout, DOM, and perceptual differences from any SmartUI comparison run.
+4. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance.
 
-- **Automated Setup:** Reduce configuration time from hours to seconds
-- **Smart Analysis:** Automatically identify project types, frameworks, and test structures
-- **Dynamic Commands:** Generate precise test commands tailored to your project
-- **Auto-Configuration:** Create accurate YAML configuration files without manual intervention
-- **Real-Time Monitoring:** Track test executions with immediate updates
-- **Efficient Debugging:** Inspect test results with comprehensive recordings
-- **Instant Documentation:** Access relevant documentation through integrated AI agents
+## Connecting to TestMu AI MCP Server
 
-## Connecting to <BrandName /> MCP Server
 
-### One Click MCP Setup
+---
 
-Click on the below icon to add MCP server:
+TestMu AI MCP Server works with any MCP-compatible AI client. Pick your client below, paste the configuration, and complete the OAuth flow with your TestMu AI account.
+
+- **Server URL:** `https://mcp.lambdatest.com/mcp`
+- **Authentication:** OAuth (you will be redirected to testmuai.com on first use)
+
+### Cursor
+
+Use the one-click install button to add the server to Cursor:
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=mcp-lambdatest&config=eyJkaXNhYmxlZCI6ZmFsc2UsInRpbWVvdXQiOjYwLCJhbHdheXNBbGxvdyI6W10sImNvbW1hbmQiOiJucHggbWNwLXJlbW90ZUBsYXRlc3QgaHR0cHM6Ly9tY3AubGFtYmRhdGVzdC5jb20vbWNwIn0%3D)
 
-### Connecting with Cline
-Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant that integrates directly into your development workflow. It provides intelligent code suggestions and documentation assistance, and now, with MCP support, you can interface with external tools like HyperExecute to enhance your testing capabilities. Cline offers natural language interactions with your codebase, allowing you to simply describe what you need rather than manually configuring everything.
+**Or configure manually:**
 
-#### Installing Cline in VS Code:
-
-**Step 1:** Open VS Code.<br />
-**Step 2:** Click on the Extensions icon in the Activity Bar on the side of the window (or press `Ctrl+Shift+X`).<br />
-**Step 3:** Search for **Cline** in the Extensions Marketplace.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-**Step 4:** Click **Install** on the Cline – The Collaborative AI Coder extension.<br />
-**Step 5:** Once installed, you'll see the Cline icon in your VS Code sidebar.<br />
-**Step 6:** Click on the Cline icon to open the Cline panel.<br />
-
-
-#### Connecting Cline to <BrandName /> MCP Server
-
-#### VS Code Configuration:
-
-**Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
-**Step 2:** Under the MCP Servers section, click Configure/Installed.
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-**Step 3:** Click Configure MCP Servers
-
-**Step 4:** Enter the following server configuration and save it:
-
+1. Open **Cursor Settings > Tools & MCP** and click **Add new MCP server**.
+2. Paste the configuration:
 
 ```json
 {
-  "mcpServers": {
-    "mcp-lambdatest": {
-      "disabled": false,
-      "timeout": 60,
-      "command": "npx",
-      "args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
-      "alwaysAllow": []
-    }
-  }
-}
-```
-
-
-**Step 5:** Click on Authenticate and you will be redirected to lambdatest.com for authentication. 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-auth.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-**Step 6:** Provide valid credentials and authorise client to use <BrandName /> MCP server. 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-auth-credentials-1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-**Step 7:** Post authorisation, launch your IDE. 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-ide-auth-1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-**Step 8:** MCP Lambdatest should be connected successfully.
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-success.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-### Interacting with <BrandName /> MCP Server
-
-Once connected, you can start using Cline to interact with the <BrandName /> MCP Server. A common workflow would be:
-
-**Step 1:** Open your project in VS Code.<br />
-**Step 2:** Open the Cline panel.<br />
-**Step 3:** Type the following prompt: `Analyze the project and create a LambdaTest YAML file using MCP LambdaTest server.`<br />
-**Step 4:** Cline will:
-- analyze your project structure.
-- Identify your testing framework and test files.
-- Generate appropriate test runner commands.
-- Create a complete <BrandName /> YAML configuration file tailored to your project.
-- Save the YAML file to your project directory.<br />
-
-**Step 5:** You can then review the generated YAML file and make any necessary adjustments (if any, e.g., adding environment variables, etc.) before running your tests on the <BrandName /> MCP Platform.
-
-You can also ask Cline for more specific operations, such as:
-
-- "What are the key features of <BrandName />?"
-- "What does failFast in HyperExecute mean?"
-
-The natural language interface allows you to work with HyperExecute without having to remember specific command syntax or configuration details.
-
-## Connecting With Other MCP-Compatible Tools
-
-For any other MCP-compatible tool, use the following URL format:
-
-```
-https://mcp.lambdatest.com/mcp
-```
-In your MCP tool, use the following configuration file:
-
-```
-{
   "mcpServers": {
     "mcp-lambdatest": {
-      "disabled": false,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "mcp-remote@latest",
-        "https://mcp.lambdatest.com/mcp",
-      ]
+      "url": "https://mcp.lambdatest.com/mcp"
     }
   }
 }
 ```
 
-## Available <BrandName /> MCP Tools
+3. Save and restart Cursor. Complete the OAuth flow when prompted.
 
-<BrandName /> MCP Server provides five main tools:
+**Project-level configuration:** Create `.cursor/mcp.json` in your project root to share with your team.
 
-1. **[HyperExecute MCP Server:](/support/docs/hyperexecute-mcp-server/)** HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow
-2. **[Automation MCP Server:](/support/docs/automation-mcp-server/)** Automation MCP Server simplifies test failure triaging for all automation test cases executed on <BrandName />. 
-3. **[SmartUI MCP Server:](/support/docs/smartui-mcp-server/)** The SmartUI MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis.
-4. **[Accessibility MCP Server:](/support/docs/accessibility-mcp-server/)** <BrandName />’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
+### Claude Code
+
+Run this in your terminal:
+
+```shell
+claude mcp add --transport http mcp-lambdatest https://mcp.lambdatest.com/mcp
+```
+
+Then run `/mcp` inside Claude Code, select **mcp-lambdatest**, and complete the OAuth flow.
+
+**Scope flags:** `--scope local` (default, current project), `--scope project` (shared via `.mcp.json`), `--scope user` (all projects).
+
+### Claude Desktop
+
+1. Open **Settings > Connectors**.
+2. Click **Add Custom Connector** and enter the URL:
+
+```
+https://mcp.lambdatest.com/mcp
+```
+
+3. Complete the OAuth flow to connect your TestMu AI account.
+
+Custom connectors in Claude Desktop are configured through **Settings > Connectors**, not the `claude_desktop_config.json` file. Custom connectors are available on Pro, Max, Team, and Enterprise plans.
+
+### Claude.ai (Web)
+
+1. Go to [claude.ai/settings/connectors](https://claude.ai/settings/connectors).
+2. Click **Add custom connector** and enter:
+   - **Name:** TestMu AI
+   - **URL:** `https://mcp.lambdatest.com/mcp`
+3. Click **Add**, then **Connect** and complete the OAuth flow.
+4. To use the connector in a chat, click the **+** button in the chat input and enable **TestMu AI** under **Connectors**.
+
+### GitHub Copilot (VS Code)
+
+1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run **MCP: Add Server**, choosing **Workspace** or **Global**. Or create `.vscode/mcp.json` manually:
+
+```json
+{
+  "servers": {
+    "mcp-lambdatest": {
+      "type": "http",
+      "url": "https://mcp.lambdatest.com/mcp"
+    }
+  }
+}
+```
+
+2. When prompted, confirm that you trust the server.
+3. Complete the OAuth flow when first invoked. Use **MCP: List Servers** to manage installed servers.
+
+### Antigravity
+
+1. In the Agent panel, click the **...** menu, then **MCP Servers**, then **Manage MCP Servers**.
+2. Click **View raw config** and add the configuration to `mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "serverUrl": "https://mcp.lambdatest.com/mcp"
+    }
+  }
+}
+```
+
+3. Save and refresh the MCP servers panel. Complete the OAuth flow when prompted.
+
+:::note
+Antigravity has a global limit of around 100 active MCP tools across all servers. If you are hitting that limit, disable tools you do not need from the MCP settings panel.
+:::
+
+### OpenAI Codex CLI
+
+Run this in your terminal:
+
+```shell
+codex mcp add mcp-lambdatest --url https://mcp.lambdatest.com/mcp
+```
+
+Then start an OAuth login:
+
+```shell
+codex mcp login mcp-lambdatest
+```
+
+Verify with `codex mcp list`.
+
+**Manual config:** Add the following to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.mcp-lambdatest]
+url = "https://mcp.lambdatest.com/mcp"
+```
+
+### Cline (VS Code)
+
+1. Open the **Cline panel** in VS Code, then **MCP Servers > Configure MCP Servers**.
+2. Paste the configuration:
+
+```json
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "npx",
+      "args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
+      "alwaysAllow": []
+    }
+  }
+}
+```
+
+3. Click **Authenticate** and complete the OAuth flow.
+
+### Continue
+
+1. Create `.continue/mcpServers/testmu-ai.yaml` in your workspace and add:
+
+```yaml
+name: TestMu AI mcpServer
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: TestMu AI
+    type: streamable-http
+    url: https://mcp.lambdatest.com/mcp
+```
+
+2. Switch to **Agent Mode** in Continue and complete the OAuth flow when prompted.
+
+:::note
+MCP servers in Continue work in Agent Mode only.
+:::
+
+### Other Tools
+
+If your MCP client is not listed above, use one of these connection methods:
+
+| Transport | URL | Notes |
+|---|---|---|
+| **Streamable HTTP** (recommended) | `https://mcp.lambdatest.com/mcp` | Modern transport, widely supported |
+| **STDIO** (via `mcp-remote`) | See below | Fallback for clients that only support stdio |
+
+**Universal STDIO configuration** for any client that accepts the standard `mcpServers` format:
+
+```json
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.lambdatest.com/mcp"]
+    }
+  }
+}
+```
+
+## A Typical Workflow
+
+---
+
+Once connected, open your project in your AI-enabled IDE and use natural language to invoke tools:
+
+1. Open your project in your AI-enabled IDE.
+2. Open the chat panel of your MCP client.
+3. Type: `Analyze the project and create a TestMu AI YAML file using the TestMu AI MCP Server.`
+
+Your client will:
+
+- Analyze your project structure
+- Identify your testing framework and test files
+- Generate appropriate test runner commands
+- Create a complete TestMu AI YAML configuration tailored to your project
+- Save the YAML file to your project directory
+
+You can also ask questions like:
+
+- "What does failFast in HyperExecute mean?"
+- "Triage the last failed test on TestID `XXXXX`."
+- "Run a SmartUI analysis on comparisonId `YYYYY`."
+- "Run an accessibility report on `https://example.com`."
+
+## Troubleshooting
+
+---
+
+**OAuth flow does not open or fails**
+
+- Make sure pop-ups are not blocked in your default browser.
+- If you have previously connected and the connection has expired, look for a **Disconnect** or **Clear authentication** option in your client's MCP settings, then reconnect.
+- Verify your TestMu AI account has the necessary permissions for the workspace you are trying to access.
+
+**Tools not appearing after configuration**
+
+- Fully restart your client (close and reopen, not just reload the window).
+- For Cursor, Claude Desktop, and Antigravity, this means quitting from the Dock or Taskbar.
+- For VS Code, Cline, Continue, and Zed, reload the window via the Command Palette.
+- For Continue, confirm you are in **Agent Mode**.
+- For Antigravity, check that you have not exceeded the active tool limit across all MCP servers.
+- Verify the configuration JSON, TOML, or YAML is valid (no trailing commas, matching braces, correct indentation).
+
+**Command not found: npx errors**
+
+This usually means your MCP client cannot find Node.js on its PATH. Use the full path to `npx`:
+
+```shell
+which npx   # macOS/Linux
+where npx   # Windows
+```
+
+Then replace `"command": "npx"` in your config with the full path returned (for example, `/usr/local/bin/npx`).

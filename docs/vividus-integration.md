@@ -64,7 +64,7 @@ implementation(group: 'org.vividus', name: 'vividus-plugin-lambdatest', version:
 2. Next you need to add the <BrandName /> cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
 
 ```javascript
-Next you need to add the <BrandName /> cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
+Next you need to add the TestMu AI cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
 ```
 
 3. Now you need to specify you <BrandName /> username and access key in the same configuration.properties file, using below syntax:

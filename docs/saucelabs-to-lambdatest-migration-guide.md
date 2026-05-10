@@ -85,7 +85,7 @@ public static final String access_key = "SauceLabs_AccessKey";
 ```
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Selenium Grid Credentials" default>
+<TabItem value="android" label="TestMu AI Selenium Grid Credentials" default>
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -108,7 +108,7 @@ You need to now change the hub URL in the configuration settings of your test su
 ```
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Selenium Grid URL" default>
+<TabItem value="android" label="TestMu AI Selenium Grid URL" default>
 
 ```js
 @hub.lambdatest.com/wd/hub
@@ -154,7 +154,7 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -209,7 +209,7 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -242,7 +242,7 @@ This test script performs a basic text validation on the website [<BrandName /> 
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="<BrandName /> Execution With Selenium 4 Capabilities" default>
+<TabItem value="ios" label="TestMu AI Execution With Selenium 4 Capabilities" default>
 
 ```java
 // TextValidationTest.java
@@ -308,7 +308,7 @@ public class TextValidationTest {
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Execution With Selenium 3 Capabilities" default>
+<TabItem value="android" label="TestMu AI Execution With Selenium 3 Capabilities" default>
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
