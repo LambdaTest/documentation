@@ -175,7 +175,7 @@ Add your capabilities using the [<BrandName /> Capabilities Generator](https://w
 
 <Tabs className="docs__val">
 
-<TabItem value="android" label="Selenium 4 <BrandName /> Capabilities" default>
+<TabItem value="android" label="Selenium 4 TestMu AI Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -189,7 +189,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 </TabItem>
 
-<TabItem value="ios" label="Selenium 3 <BrandName /> Capabilities" default>
+<TabItem value="ios" label="Selenium 3 TestMu AI Capabilities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -223,7 +223,7 @@ This test script performs a basic text validation on the website [<BrandName /> 
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="<BrandName /> Execution With Selenium 4 Capabilities" default>
+<TabItem value="ios" label="TestMu AI Execution With Selenium 4 Capabilities" default>
 
 ```java
 // TextValidationTest.java
@@ -289,7 +289,7 @@ public class TextValidationTest {
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Execution With Selenium 3 Capabilities" default>
+<TabItem value="android" label="TestMu AI Execution With Selenium 3 Capabilities" default>
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration

@@ -128,8 +128,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
 capabilities.setCapability("version", "70.0");
 capabilities.setCapability("platform", "win10"); # If this cap isn't specified, it will just get the any available one
-capabilities.setCapability("build", "<BrandName />SampleApp");
-capabilities.setCapability("name", "<BrandName />JavaSample");
+capabilities.setCapability("build", "TestMu AI SampleApp");
+capabilities.setCapability("name", "TestMu AI JavaSample");
 ```
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.

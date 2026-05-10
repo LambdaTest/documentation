@@ -123,7 +123,7 @@ capabilities.setCapability("bstack:options", bstackOptions);
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -172,7 +172,7 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();

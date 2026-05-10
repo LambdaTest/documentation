@@ -64,7 +64,7 @@ To harness the **IP Geolocation** feature in your automated tests, employ the `g
 
 **Java Example:** 
 ```java
-// Java code for configuring IP Geolcation in tests on <BrandName />
+// Java code for configuring IP Geolcation in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("geoLocation", "FR");
 // Add other capabilities as needed

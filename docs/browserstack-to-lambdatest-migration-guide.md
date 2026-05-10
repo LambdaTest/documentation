@@ -96,7 +96,7 @@ You need to now change the hub URL in the configuration settings of your test su
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Selenium Grid URL" default>
+<TabItem value="android" label="TestMu AI Selenium Grid URL" default>
 
 ```js
 @hub.lambdatest.com/wd/hub
@@ -145,7 +145,7 @@ capabilities.setCapability("bstack:options", bstackOptions);
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -203,7 +203,7 @@ caps.setCapability("browserstack.key", "YOUR_ACCESS_KEY");
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Capabilities" default>
+<TabItem value="android" label="TestMu AI Capabilities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -235,7 +235,7 @@ This test script performs a basic text validation on the website [<BrandName /> 
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="<BrandName /> Execution With Selenium 4 Capabilities" default>
+<TabItem value="ios" label="TestMu AI Execution With Selenium 4 Capabilities" default>
 
 ```java
 // TextValidationTest.java
@@ -302,7 +302,7 @@ public class TextValidationTest {
 
 </TabItem>
 
-<TabItem value="android" label="<BrandName /> Execution With Selenium 3 Capabilities" default>
+<TabItem value="android" label="TestMu AI Execution With Selenium 3 Capabilities" default>
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
