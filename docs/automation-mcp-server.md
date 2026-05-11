@@ -1,7 +1,7 @@
 ---
 id: automation-mcp-server
 title: Getting Started with Automation MCP Tool
-sidebar_label: Connect via MCP Tool
+sidebar_label: Automation
 description: Triage test failures faster with the Automation MCP Tool by connecting AI assistants to your test execution data.
 keywords:
   - automation mcp server setup
@@ -46,7 +46,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with Automation MCP Tool
-Automation MCP Tool simplifies test failure triaging for all automation test cases executed on TestMu AI. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) that enables integration between AI assistants and your test execution data — reducing triage and troubleshooting time.
+---
+
+Automation MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It connects your AI client to test execution data on TestMu AI, letting you triage and debug automation failures directly from your IDE.
 
 
 <div className="ytframe"> 
@@ -55,30 +57,42 @@ Automation MCP Tool simplifies test failure triaging for all automation test cas
 </div>
 </div>
 
-## What Is Model Context Protocol (MCP)?
----
-MCP acts as a universal interface between AI models and applications, creating a standardized language for AI assistants to connect with software tools.
+## Key Benefits
 
-The Model Context Protocol (MCP) creates a standardized interface that allows AI assistants to connect with diverse software tools. This makes it easier to expand capabilities across your digital workflow.
-
-## What You Can Do
----
-Automation MCP Tool provides five core capabilities for test analysis.
-
-1. **Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
-2. **Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
-3. **Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
-4. **Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
-5. **Core Interface:** Powers the above capabilities and connects your AI assistant to TestMu AI data.
-
-## Why Use the Automation MCP Tool
 ---
 
-1. Access your test execution data on TestMu AI directly from your IDE or editor.
-2. Triage and troubleshoot test failures to identify the root cause (RCA).
-3. Fix your test code based on the RCA and accelerate your development.
-4. Generate new test cases using execution data from TestMu AI.
-5. Use network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
+Use the Automation tool to accelerate debugging and test analysis:
+
+- Access your test execution data on TestMu AI directly from your IDE or editor.
+- Triage and troubleshoot test failures to identify the root cause (RCA).
+- Fix your test code based on the RCA and accelerate your development.
+- Generate new test cases using execution data from TestMu AI.
+- Use network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
+
+## Capabilities
+
+---
+
+The Automation MCP Tool provides four capabilities:
+
+1. **Automation Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
+2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on TestMu AI.
+3. **Automation Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
+4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
+
+## How to Invoke
+
+---
+
+Once your MCP client is connected, use natural language to interact with the Automation tool. Example prompts:
+
+- "Triage the failure for TestID `<testID>`."
+- "Show me the network logs for TestID `<testID>`."
+- "What console errors occurred during the last failed test?"
+- "Pull the Selenium command logs for `<testID>` and tell me where it failed."
+- "Generate a new test case based on the execution flow of TestID `<testID>`."
+
+Your AI client will route the request to the appropriate capability, pull the relevant data from TestMu AI, and return the results inline.
 
 
 <nav aria-label="breadcrumbs">

@@ -1,57 +1,98 @@
 ---
 id: accessibility-mcp-server
 title: Accessibility MCP Tool
-sidebar_label: Accessibility MCP Tool
-description: Use the Accessibility MCP Tool for supported AI-assisted accessibility analysis workflows.
+sidebar_label: Accessibility
+description: Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance using the Accessibility MCP Tool.
 slug: accessibility-mcp-server/
 url: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-mcp-server/
+keywords:
+  - accessibility testing
+  - accessibility mcp
+  - a11y
+  - testmu ai
+  - MCP
+  - MCP server
 ---
 
-# Accessibility MCP Tool
+import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-Accessibility MCP Tool enables supported AI-assisted Accessibility workflows for public URLs and selected local app analysis flows. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/).
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Accessibility MCP Tool",
+          "item": `${BRAND_URL}/support/docs/accessibility-mcp-server/`
+        }]
+      })
+    }}
+></script>
 
-This page describes what the Accessibility MCP Tool is, when an MCP-connected, AI-assisted analysis flow makes sense, and how that surface differs from DevTools, Automation, and Web Scanner. Use it to orient prerequisites and boundaries before connecting a client or routing work into an MCP-based accessibility review.
+# Getting Started with Accessibility MCP Tool
 
-## When to use this
+Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It runs accessibility checks on publicly hosted URLs and local React applications, and returns a detailed report with remediation guidance.
 
-Use the Accessibility MCP Tool when you want an AI-assisted workflow that can request Accessibility analysis through supported MCP-compatible clients and tools.
 
-## What it is good for
+## Key Features
 
-- analyzing supported public URLs through an MCP-based workflow
-- supporting selected local-app analysis flows where MCP support is available
-- routing users into an AI-assisted accessibility review flow instead of a browser-extension or framework-execution flow
+---
 
-## Prerequisites
+- Identifies accessibility issues in your application.
+- Generates an accessibility report you can share with your team.
+- Provides remediation guidance for a11y issues in locally hosted applications.
 
-- access to the Accessibility MCP Tool feature
-- an MCP-compatible client or workflow that can connect to the server
-- a public URL or supported local application flow you are authorized to test
+## Capabilities
 
-## Onboarding checklist (first connection)
+---
 
-1. Install and verify the **platform** MCP prerequisites from [Introducing TestMu AI MCP Server](/support/docs/testmu-mcp-server/) if your client expects the shared endpoint model.
-2. Confirm with your admin that **Accessibility MCP** is enabled for the workspace (feature flag or contract).
-3. In your MCP client (for example Cursor, VS Code extension, or internal agent), add the **Accessibility MCP server definition** supplied in your account documentation—endpoint, auth mode, and scopes differ by release; copy from the in-product help or support article your CS team provides.
-4. Start with a **single public URL** smoke test authorized for scanning; avoid sensitive or authenticated pages until tunnel or auth patterns are validated.
-5. Compare MCP output with a **DevTools or automation report** for the same URL so you trust the interpretation before relying on it in compliance conversations.
-6. Escalate gaps to support with **client name**, **server version**, and **timestamp** if tool calls fail.
+1. **getAccessibilityReport** - Fetches a detailed accessibility report for a public URL. You can view the report in your browser to analyze the issues.
+2. **buildLocalAppForAnalysis** - Builds and serves your local React application via TestMu AI and identifies accessibility issues.
+3. **analyseAppViaTunnel** - Tests a local app already running via TestMu AI tunnel for accessibility failures.
 
-## Product boundary
+## How to Invoke
 
-Accessibility MCP Tool is a dedicated product surface. It is not the same as:
+---
 
-- **Accessibility DevTools**, which is for browser-based manual and assisted testing
-- **Accessibility Automation**, which is for framework-driven automated execution
-- **Web Scanner**, which is an integrated URL-scanning surface
+Once your MCP client is connected, use natural language to interact with the Accessibility tool. Example prompts:
 
-## Related docs
+- "Run an accessibility report on `https://example.com`."
+- "Build my local React app and check it for accessibility issues."
+- "I have a local app running on port 3000 via TestMu AI tunnel, check it for a11y failures."
+- "Show me the accessibility violations on the homepage and how to fix them."
 
-- [Introducing TestMu AI MCP Server](/support/docs/testmu-mcp-server/) (platform-wide MCP setup)
-- [Choosing the Right Accessibility Tool](/support/docs/accessibility-choosing-the-right-tool/)
-- [Accessibility DevTools (Overview)](/support/docs/accessibility-devtools/)
-- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
-- [Starting an Accessibility Scan with Web Scanner](/support/docs/web-scanner-accessibility-scan/)
+Your AI client will route the request to the appropriate capability and return the report or remediation guidance inline.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Accessibility MCP Tool
+      </span>
+    </li>
+  </ul>
+</nav>

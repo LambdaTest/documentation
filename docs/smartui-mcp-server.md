@@ -2,8 +2,8 @@
 id: smartui-mcp-server
 title: Introducing SmartUI MCP Tool
 hide_title: false
-sidebar_label: SmartUI MCP Tool
-description: Debug visual regressions faster with SmartUI MCP Tool—get natural-language insights, human-like summaries, visual change detection, and root cause analysis from SmartUI comparison runs.
+sidebar_label: SmartUI
+description: Debug visual regressions with SmartUI MCP Tool. Get natural-language summaries of pixel, layout, DOM, and perceptual differences from SmartUI comparison runs.
 keywords:
   - smartui
   - visual testing
@@ -50,8 +50,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with SmartUI MCP Tool
-***
-The SmartUI MCP Tool allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is a tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
+---
+
+SmartUI MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you debug visual regressions from SmartUI comparison runs by returning natural-language summaries of pixel, layout, DOM, and perceptual differences.
+
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">
@@ -59,88 +61,77 @@ The SmartUI MCP Tool allows you to debug visual regressions using SmartUI compar
 </div>
 </div>
 
-## How Does It Work?​
+## How Does It Work?
 
-This MCP tool processes SmartUI visual comparison data by calling specific analysis capabilities with a comparisonId. Each capability simulates a different debugging layer—pixel diff, layout, DOM structure, and human perception.
+---
+
+The SmartUI MCP Tool processes visual comparison data by calling specific analysis capabilities with a `comparisonId`. Each capability simulates a different debugging layer: pixel diff, layout, DOM structure, and human perception.
 
 The tool fetches the visual assets (screenshots, DOM snapshots, metadata) and returns natural-language outputs such as:
 
 - "The CTA button lost color contrast, impacting accessibility."
-
 - "Header layout shifted left due to padding changes."
 
-## What You Can Do
+## Capabilities
 
-The following capabilities return human-readable summaries and require only a comparisonId as input.
+---
 
-1. `getSmartUIResources`:
+All capabilities take a `comparisonId` as input. Start with `analyzeSmartUIRun` for a full picture, then use the individual capabilities to investigate a specific layer.
 
-Fetches all assets for a SmartUI visual comparison run.
+### analyzeSmartUIRun
 
-**Input:**
-```
-{
-  "comparisonId": "string"
-}
-```
-
-**Output:**
-
-A human-friendly description of which assets were found (e.g., screenshots, DOM JSONs), and suggestions if any are missing.
-
-2. `summarizePixelDiff`:
-
-Summarizes raw pixel differences between baseline and current screenshots.
-
-**Example Output:**
-
-> "Significant pixel differences were detected in the hero banner and footer. These likely stem from background color changes and text shifts."
-
-3. `summarizeLayoutDiff`:
-
-Identifies spacing, alignment, and size-related layout issues.
-
-**Example Output:**
-
-> "The login button has moved 16px downward compared to the baseline. This affects the visual balance of the form."
-
-4. `summarizeDomDiff`:
-
-Describes what changed in the DOM structure and attributes.
-
-**Example Output:**
-
-> "The `aria-label` for the submit button has been removed. The button also now includes an extra `disabled` attribute."
-
-5. `analyzeHumanDiff`:
-
-Simulates how a human eye would perceive the change. Focuses on color, emphasis, and Gestalt principles.
-
-**Example Output:**
-
-> "The pricing table appears visually heavier due to a font weight increase. This disrupts the balance between sections."
-
-6. `analyzeSmartUIRun`:
-
-Runs a multi-layer analysis across pixel, layout, DOM, and perception layers. Best used when you want a full debugging summary.
-
-**Example Output:**
+Runs analysis across all layers - pixel, layout, DOM, and perception - and returns a single consolidated summary. Use this first when a visual diff fails and you are not sure where to look.
 
 > "The 'Subscribe' CTA lost its background color and dropped in emphasis. This is likely due to a CSS override on `.cta-btn`. Padding changes have also affected alignment. Suggest restoring background and resetting layout values."
 
-## Why Use the SmartUI MCP Tool
+### summarizePixelDiff
 
-- **No Manual Debugging:** Automatically detects visual regressions and UI layout shifts from screenshots and DOM changes.
-- **Human-Like Interpretation:** Simulates how a real user perceives visual changes using cognitive and Gestalt principles.
-- **Context-Aware Fixes:** Suggests accurate UI fixes based on visual evidence (React, HTML, CSS).
-- **Rapid RCA:** Identifies exact UI elements responsible for changes and provides the root cause in plain language.
-- **Layered Visual Analysis:** Run independent or combined analysis: pixel-level, layout, DOM structure, and perceptual.
-- **MCP-Native Integration:** Seamlessly works with <BrandName />'s MCP-enabled environments and SmartUI workflows.
-- **Developer-Ready Summaries:** Outputs are designed for frontend teams — easy to read, act, and commit to code.
+Use this when you suspect a color, image, or rendering change. It compares the baseline and current screenshots at the pixel level.
+
+> "Significant pixel differences were detected in the hero banner and footer. These likely stem from background color changes and text shifts."
+
+### summarizeLayoutDiff
+
+Use this when elements appear misaligned or have moved. It identifies spacing, alignment, and size-related changes.
+
+> "The login button has moved 16px downward compared to the baseline. This affects the visual balance of the form."
+
+### summarizeDomDiff
+
+Use this when you suspect an HTML or attribute change caused the visual difference. It compares the DOM structure between runs.
+
+> "The `aria-label` for the submit button has been removed. The button also now includes an extra `disabled` attribute."
+
+### analyzeHumanDiff
+
+Use this when the diff looks minor technically but feels visually wrong. It simulates how a human eye perceives the change in terms of color, weight, and emphasis.
+
+> "The pricing table appears visually heavier due to a font weight increase. This disrupts the balance between sections."
+
+### getSmartUIResources
+
+Fetches the screenshots, DOM snapshots, and metadata for a comparison run. Use this to confirm assets are available before running an analysis.
+
+Returns a description of what was found and flags anything missing.
+
+## How to Invoke
+
+---
+
+Once your MCP client is connected, use natural language to interact with the SmartUI tool. Example prompts:
+
+- "Run a full SmartUI analysis on comparisonId `<id>`."
+- "What changed in the layout for comparisonId `<id>`?"
+- "Why did the visual diff fail for comparisonId `<id>`?"
+- "Summarize the DOM changes for comparisonId `<id>`."
+
+Your AI client will route the request to the appropriate analysis layer.
 
 ## Error Handling
 
-If the `comparisonId` is invalid or resources are missing, a message like the following will be returned:
+---
+
+If the `comparisonId` is invalid or resources are missing, you will receive:
 
 > "Error analyzing SmartUI run: comparisonId not found or visual resources are incomplete."
 

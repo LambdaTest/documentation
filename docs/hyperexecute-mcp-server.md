@@ -2,8 +2,8 @@
 id: hyperexecute-mcp-server
 title: Introducing HyperExecute MCP Tool
 hide_title: false
-sidebar_label: HyperExecute MCP Tool
-description: HyperExecute MCP Tool is an AI-native test orchestration tool within the TestMu AI MCP Server that dramatically simplifies and accelerates your automated testing workflow.
+sidebar_label: HyperExecute
+description: HyperExecute MCP Tool lets you set up test jobs, generate YAML configurations, and monitor HyperExecute runs directly from your IDE using natural language prompts.
 keywords:
   - hyperexecute performance testing
   - hyperexecute
@@ -45,11 +45,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 # Getting Started with HyperExecute MCP Tool
-HyperExecute MCP Tool is an AI-native test orchestration tool within the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
+---
 
-## Watch HyperExecute MCP Tool in Action
-
-Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
+HyperExecute MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you set up HyperExecute test jobs, generate YAML configurations, and monitor runs directly from your IDE using natural language prompts.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="tLe5VPcGDxs">
@@ -57,21 +55,11 @@ Get a comprehensive overview of HyperExecute's capabilities by watching our intr
 </div>
 </div>
 
-## What is Model Context Protocol (MCP)?
+## Key Benefits
 
-The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
+---
 
-## What You Can Do
-
-HyperExecute MCP Tool provides five main capabilities:
-
-1. **Test Runner Command Generation:** Analyzes your project structure and generates appropriate test commands.
-2. **YAML Configuration Generation:** Creates configuration files based on project analysis.
-3. **Documentation Lookup:** Provides answers to your queries by fetching information from documentation.
-4. **Job Info Retrieval:** Retrieves information about specific test jobs.
-5. **Session Details:** Fetches session details for comprehensive test analysis.
-
-## Why Use the HyperExecute MCP Tool
+Here are the key benefits of using the HyperExecute tool:
 
 - **Automated Setup:** Reduce configuration time from hours to seconds
 - **Smart Analysis:** Automatically identify project types, frameworks, and test structures
@@ -80,3 +68,29 @@ HyperExecute MCP Tool provides five main capabilities:
 - **Real-Time Monitoring:** Track test executions with immediate updates
 - **Efficient Debugging:** Inspect test results with comprehensive recordings
 - **Instant Documentation:** Access relevant documentation through integrated AI agents
+
+## Capabilities
+
+---
+
+The HyperExecute MCP Tool provides five capabilities:
+
+1. **Test Runner Command Generation:** Analyzes your project structure and generates appropriate test commands.
+2. **HyperExecute YAML Generation:** Creates a HyperExecute YAML configuration file based on your project analysis.
+3. **HyperExecute Documentation Lookup:** Answers your queries by fetching information from the HyperExecute documentation.
+4. **HyperExecute Job Info:** Retrieves information about a specific test job.
+5. **HyperExecute Sessions:** Fetches session details for a given test run.
+
+## How to Invoke
+
+---
+
+Once your MCP client is connected, use natural language to interact with the HyperExecute tool. Example prompts:
+
+- "Analyze this project and create a HyperExecute YAML file."
+- "What does `failFast` mean in HyperExecute?"
+- "Get the status of HyperExecute job `<jobID>`."
+- "Show me session details for the last failed run."
+- "Generate the test runner command for this Selenium project."
+
+Your AI client will route the request to the appropriate capability and return the results inline.
