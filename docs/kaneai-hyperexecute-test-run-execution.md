@@ -102,21 +102,39 @@ Only KaneAI test cases for which code generation has been successful will be ava
 - View all test instances in the dashboard.
 - Set the desired concurrency level, e.g., 5.
 
-#### Advanced Configurations
+## Advanced Configurations
 
 Before clicking **Execute**, you can optionally click **Advanced Configurations** to customize your test execution. The following settings are available:
 
 | Setting | Description |
 |---|---|
-| **Test Configuration** | Configure console logs, network logs, network full HAR, timezone, and retry on failure settings for your execution. |
-| **Network Settings** | Set up tunnel for local/restricted environments, geolocation routing, and region selection for web tests. |
-| **Replace URL** | Replace the pattern URL for all web tests in the run to execute in different environments. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
-| **Performance** | Enable Lighthouse performance reports (Lighthouse Audits). |
+| **Region** | Choose a region for web tests such as _eastus_ or _centralindia_ to select the region from where the VM is allocated. |
+| **Mobile Region** | Choose a region for mobile app tests such as _us_, _ap_, or _eu_ to select the region from where the device is allocated. |
+| **Tunnel** | Add the tunnel name if you want to run using <BrandName /> Tunnel for private applications. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. See [Tunnel Support](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support) for details. |
+| **Dedicated Proxy** | Add the region of the dedicated proxy such as _us_ or _eu_. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
+| **Geolocation** | Set the geolocation from which you want to run your tests. See the list of supported geolocations [here](/support/docs/selenium-geolocation-capabilities/). Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
+| **Console Log** | Enable console log capture for web tests. Options: `false`, `error`, `warn`, `info`, `true`. |
+| **Network Logs** | Enable capture of network calls during the test. |
+| **Network Full HAR** | Capture complete network requests and responses during web tests. |
+| **Network Throttle** | Enable network throttling for mobile tests by defining download speed, upload speed, and latency. |
+| **Timezone** | Define the timezone for web test runs (e.g., UTC+01:00 format). |
+| **Retry on Failure** | Enable to retry on failure. When enabled, retries are triggered both on [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) failure and individual test case failure. Defaults to true. See [Retry on Failure](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) for details. |
+| **Max Retries** | Define the maximum number of retries when retry on failure is enabled. Max value 5, default 1. See [Max Retries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) for details. |
+| **Replace URL** | Dynamically replace any pattern URL in test cases with a replacement URL for the entire test run. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
+| **Performance** | Enable Lighthouse performance reports for web tests. Supported on limited OS browser combinations. May slow down execution time. See [Lighthouse Performance Metrics](/support/docs/view-lighthouse-performance-metrics/) for details. |
+| **App Profiling** | Enable app performance metrics tracking for native mobile app tests. See [App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details. |
+| **Android App ID** | Specify an Android app ID (`lt://<APP_ID>`) to override the existing app in the test instance configuration. |
+| **iOS App ID** | Specify an iOS app ID (`lt://<APP_ID>`) to override the existing app in the test instance configuration. |
 | **Visual Regression** | Add visual testing configuration — select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
-| **Accessibility Testing** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. |
-| **Reports** | Generate HTML reports and receive them via email. See [below](#reports). |
+| **Accessibility** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. May slow down execution time. |
+| **Report Enabled** | Set to true to generate an HTML report for the test run. The report can be accessed from the HyperExecute Job page after execution. See [below](#reports). |
+| **Report Email To** | An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when report is enabled. |
 
-#### Reports
+:::note
+Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
+:::
+
+### Reports
 
 Enable the **Reports** option in Advanced Configurations to generate an HTML report for your test run. Reports are supported for both web and mobile test executions.
 
@@ -154,7 +172,7 @@ Reports are also available when configuring [Scheduled Test Runs](/support/docs/
 
 - Click **Execute** to run the tests.
 
-#### Monitor Execution on HyperExecute
+### Monitor Execution on HyperExecute
 - Navigate to the HyperExecute page.
 - Observe the discovery and rapid execution of test cases.
 
