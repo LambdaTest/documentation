@@ -42,7 +42,9 @@ Manual Interaction in KaneAI lets you take direct control of the application dur
 
 This is especially useful when you need to reach a very specific UI state, handle complex flows, or deal with elements that are difficult to describe in words. You can pause the agent, perform actions like a real user, and then resume automated authoring from that exact point.
 
-Manual Interaction works for Web and Mobile app testing, making it easier to capture realistic user behavior across platforms. 
+Manual Interaction works for Web and Mobile app testing, making it easier to capture realistic user behavior across platforms.
+
+You can also pause recording at any time within a Manual Interaction session to navigate or set up app state without those actions being logged as test steps, then resume recording from the same point.
 
 
 <!-- :::note
@@ -63,6 +65,36 @@ While you are in Authoring mode, you can enable Manual Interaction by clicking t
 Every action you perform such as clicking, typing, scrolling, or navigating through screens is automatically captured by the agent and converted into natural language test steps. You do not need to describe these actions in natural language while Manual Interaction is active.
 
 When you want to switch back to writing instructions in plain language, simply click Turn off Manual Interaction. From that point onward, the agent will again follow natural language commands.
+
+### Pause Recording
+While you are in a Manual Interaction session, you can temporarily pause recording so that your actions are not captured as test steps. This is useful when you need to log in, navigate to a specific screen, dismiss unrelated dialogs, or explore the app without cluttering the step list. The session enters a draft state where the application remains fully interactable, but no steps are added to the step list.
+
+**How to use Pause Recording**
+
+1. Open an active Authoring or playground session.
+
+2. With Manual Interaction enabled, click **Pause Recording** in the Manual Interaction toolbar.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-toolbar.png').default} alt="Manual Interaction toolbar showing the Pause Recording control" className="doc_img img_center"/>
+
+3. If a confirmation dialog appears, confirm to proceed. The dialog is shown by default and is suppressed once you select **Don't show again** on it.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-confirmation.png').default} alt="Pause Recording confirmation dialog" className="doc_img img_center"/>
+
+4. Interact with the application freely. Pages load, forms accept input, and navigation works as expected, but the step list stops growing — the session transitions to Draft state.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Manual Interaction session in the draft state with the paused indicator and Start recording control" className="doc_img img_center"/>
+
+5. Click **Start recording** when you are ready to capture steps again.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/start-recording-toolbar.png').default} alt="Manual Interaction toolbar showing the Start recording control while the session is paused" className="doc_img img_center"/>
+
+**What to expect while paused**
+
+- The application is fully interactable — only the recorder is paused.
+- The step list stays exactly as it was at the moment you paused.
+
+
 ### Limitations of Instructions
 Manual Interaction focuses only on capturing real-time UI actions, so it has a few limitations you should be aware of. It cannot record any instruction that involves logic, validation, or reusable test components. These need to be added through natural language instructions after you finish interacting with the application.
 
@@ -254,6 +286,25 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 - Exact pixel-level precision may vary depending on the UI implementation.
 - Always validate the outcome using an assertion rather than relying only on the recorded movement.
 
+### Use Case 6: Reaching a setup state without recording it
+This use case applies when you need to navigate your app to a specific starting point — for example, logging in, accepting a cookie banner, or opening a particular screen — but you do not want any of those preparatory steps to appear in your test.
+
+**Steps:**
+
+1. Start the test in Authoring mode and enable Manual Interaction.
+
+2. Click Pause Recording in the Manual Interaction toolbar and confirm in the dialog.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Manual Interaction session in the draft state with the paused indicator" className="doc_img img_center"/>
+
+3. Perform the setup actions you want to skip from recording, such as logging in or navigating to the target screen.
+
+4. Click Start recording once the application is in the desired starting state.
+
+5. Continue interacting with the app or switch to natural language instructions. From this point onward, your actions are recorded as test steps.
+
+6. Add assertions in natural language as needed to validate behavior.
+
 
 
 ## Best practices
@@ -262,6 +313,7 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 - Switch back to natural language for validations and assertions.
 - Review recorded steps to ensure they reflect the intended behavior.
 - Avoid unsupported interactions to prevent incomplete steps.
+- Use Pause Recording when you need to log in, navigate, or set up app state without those actions being captured as test steps.
 
 ## Troubleshooting:
 ### Manual actions are not being recorded
@@ -281,6 +333,9 @@ System level popups are not supported through Manual Interaction. These flows ne
 
 ### Application state does not look correct after switching modes
 After turning off Manual Interaction, give the application a moment to stabilize before adding new steps or assertions. This helps avoid inconsistencies in recorded steps.
+
+### My actions stopped getting recorded mid-session
+Check whether recording is paused. When Pause Recording is active, the session is in a draft state — your interactions affect the application but are not captured as test steps. Click Start recording in the Manual Interaction toolbar to resume.
 
 
 
