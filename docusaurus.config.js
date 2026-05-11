@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'TestMu AI', // Usually your GitHub org/user name.
   projectName: 'TestMu AI', // Usually your repo name.
+  trailingSlash: true,
   clientModules: [
     require.resolve('./custom.js'),
   ],
