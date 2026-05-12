@@ -52,11 +52,112 @@ import NewTag from '../src/component/newTag';
 
 The App Profiling dashboard provides comprehensive performance metrics to help you identify bottlenecks and optimize your application. This documentation explains each widget's purpose and how to interpret the data to improve app performance.
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-screenshot.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+The data on this dashboard comes from the App Profiling capability on Appium tests. To enable App Profiling on your test runs and review per-session metrics, see [App Performance Analytics](/support/docs/appium-app-performance-analytics/).
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-screenshot2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+## How to access
+
+1. Open the **Insights** section from the left sidebar of the <BrandName /> dashboard.
+2. Select **App Profiling**. The landing page lists every test that has App Profiling data.
+3. Click a test name to open its dashboard.
+
+The page is always scoped to the test you opened. Use the **Test Name** filter to add more tests to the comparison without leaving the dashboard or reset to revert.
+
+## Filter bar
+
+The filter bar at the top of the dashboard applies to every widget on the page.
+
+| Filter | Values | Default |
+|---|---|---|
+| **Test Name** | Multi-select, up to 25 tests | The test you opened (pre-selected) |
+| **OS** | Android, iOS | All |
+| **Device** | Specific device models recorded across the selected tests | All |
+| **App Build Version** | Build versions captured during the sessions | All |
+| **Page Label** | Page transition labels recorded by the test | All |
+| **Date Range** | Preset windows or a custom range with a time-of-day picker | Last 30 days |
+
+## Compare mode
+
+Each per-metric trend widget and Label Page Load Time supports **Compare** mode. Click **Compare** in the widget header, pick a dimension, then select up to five values to overlay on the chart.
+
+Compare dimensions:
+
+- **OS** — Android vs iOS
+- **Device** — for example Galaxy S23 vs Pixel 8 vs iPhone 15 Pro
+- **App Build Version** — for build-over-build comparisons
+- **Label** — for page-transition-level breakdowns
+
+Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
+
+## SLA thresholds
+
+SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered — Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
+
+Default thresholds:
+
+| Metric | Green(Ok) | Amber(Warning) | Red(Critical) |
+|---|---|---|---|
+| CPU (App) | < 15% | 15–30% | > 30% |
+| Memory (App) | < 300 MB | 300–400 MB | > 400 MB |
+| FPS | > 50 | 30–50 | < 30 |
+| Cold Startup | < 2000 ms | 2000–3000 ms | > 3000 ms |
+| Hot Startup | < 500 ms | 500–1000 ms | > 1000 ms |
+| Battery Temperature | < 40 °C | 40–45 °C | > 45 °C |
+| Label Page Load | < 2.5 s | 2.5–3.0 s | > 3.0 s |
+
+Thresholds render as:
+
+- Horizontal reference lines on trend charts.
+- Coloured background bands behind the chart area.
+- Cell-level heatmap colouring on Device Performance Matrix.
+- Coloured value text on Performance Overview cards.
+
+:::note
+Admins can override the defaults at the organisation level. Regular users see the configured thresholds applied but cannot modify them.
+:::
 
 ## Understanding Performance Metrics Widgets
 
-### CPU Utilization Trend
+### 1. Performance Overview
+
+A strip of KPI cards summarising the headline metrics over the selected window.
+
+- **Avg CPU (%)** — application CPU usage averaged across sessions in scope.
+- **Avg Memory (MB)** — application memory usage averaged across sessions in scope.
+- **Avg FPS** — frames per second averaged across sessions in scope.
+- **Avg Cold Startup (ms)** — cold-start duration averaged across sessions in scope.
+- **Avg Crashes per Crashed Session** — `avg(crash_count)` over sessions that reported at least one crash. This is the mean crash count among already-crashed sessions, not a crash rate.
+
+> Cards are hidden automatically when the underlying metric are not recorded for the test session.
+
+### 2. Performance Trends
+
+A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible — CPU, FPS, Memory, Temperature, Battery, Network Upload and Network Download are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
+
+### 3. Device Performance Matrix
+
+A table comparing performance metrics across the devices that ran in the filtered scope. One row per device.
+
+| Column | Description |
+|---|---|
+| **Device** | Device model |
+| **CPU App (%)** | Application CPU usage, colour-coded against the configured SLA threshold |
+| **CPU System (%)** | System-level CPU usage |
+| **Memory App (MB)** | Application memory, colour-coded against the configured SLA threshold |
+| **Memory System (MB)** | System-level memory |
+| **FPS** | Frame rate, colour-coded against the configured SLA threshold |
+| **Sessions** | Session count for that device in the filtered scope |
+
+Click any column header to sort. The dashboard-level **Device** filter intentionally does not narrow this widget — the matrix is itself the device breakdown.
+
+### 4. Label Page Load Time
+
+Duration per page transition label, captured from the `label` events recorded inside the test. Each visible label is plotted as a horizontal bar showing its average duration; the widget shows the top labels by session count by default, and a label selector inside the widget lets you add or remove labels from the chart.
+
+SLA thresholds render as vertical green/amber/red bands behind the bars, with the configured threshold drawn as a dashed reference line — bars that extend into the red band are out of SLA. The stats panel below the chart reports Min / Max / Avg duration across the visible labels.
+
+### 5. CPU Utilization Trend
 
 **Widget Purpose:**
 This graph tracks CPU consumption over time, separating system-level processing from app-specific usage.
@@ -77,7 +178,7 @@ This graph tracks CPU consumption over time, separating system-level processing 
 - Optimize algorithms with high computational complexity
 - Consider using more efficient data structures
 
-### Frame Rate Trends
+### 6. Frame Rate Trends
 
 **Widget Purpose:**
 Visualizes rendering performance, highlighting both smooth operation and problematic frames.
@@ -100,7 +201,7 @@ Visualizes rendering performance, highlighting both smooth operation and problem
 - Implement hardware acceleration where appropriate
 - Use profiling tools to identify specific rendering bottlenecks
 
-### Memory Usage
+### 7. Memory Usage
 
 **Widget Purpose:**
 Monitors memory allocation patterns to identify potential leaks and inefficient resource usage.
@@ -123,10 +224,10 @@ Monitors memory allocation patterns to identify potential leaks and inefficient 
 - Consider using object pools for frequently created/destroyed objects
 - Implement memory leak detection in development builds
 
-### Battery Utilization
+### 8. Battery Utilization
 
 **Widget Purpose:**
-Tracks energy consumption to identify processes that may drain battery excessively.
+Tracks energy consumption to identify processes that may drain battery excessively. This data is for Android only and rendered only when the session recorded battery samples
 
 **Metrics Explained:**
 - **Battery (mAh)**: Energy consumption rate in milliampere-hours
@@ -144,7 +245,7 @@ Tracks energy consumption to identify processes that may drain battery excessive
 - Use dark mode or darker UI for OLED screens
 - Batch CPU-intensive operations
 
-### Network Utilization
+### 9. Network Utilization
 
 **Widget Purpose:**
 Monitors data transfer to identify inefficient network operations.
@@ -167,7 +268,7 @@ Monitors data transfer to identify inefficient network operations.
 - Implement offline capabilities
 - Use efficient image formats and compression
 
-### App Temperature
+### 10. Battery Temperature
 
 **Widget Purpose:**
 Measures device thermal performance to identify processes causing overheating.
@@ -187,7 +288,7 @@ Measures device thermal performance to identify processes causing overheating.
 - Implement adaptive performance based on device temperature
 - Consider lower quality graphics or processing when temperature is high
 
-### Cold Startup Time
+### 11. Cold Startup Time
 
 **Widget Purpose:**
 Measures application launch performance from a completely shut down state.
@@ -208,7 +309,7 @@ Measures application launch performance from a completely shut down state.
 - Consider using a splash screen for perceived performance
 - Reduce app dependencies and initialization chain
 
-### Hot Startup Time
+### 12. Hot Startup Time
 
 **Widget Purpose:**
 Measures application launch performance when re-opening from background.
