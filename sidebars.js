@@ -3456,7 +3456,8 @@ module.exports = {
               "set-device-dark-mode",
               "smart-heal-appium",
               "apple-pay-auto",
-              "button-text-click"
+              "button-text-click",
+              "ios-shake-gesture-appautomation"
             ],
           },
           {
