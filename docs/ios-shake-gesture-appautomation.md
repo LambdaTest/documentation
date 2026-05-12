@@ -1,6 +1,6 @@
 ---
 id: ios-shake-gesture-appautomation
-title: Trigger iOS Shake Gesture on Real Devices Using Appium
+title: Trigger iOS Shake Gesture on Mobile Devices Using Appium
 hide_title: true
 sidebar_label: Shake Gesture (iOS)
 description: Simulate a shake gesture on iOS real devices and simulators during Appium automation tests on TestMu AI using the lambda_executor hook.
@@ -74,11 +74,11 @@ This feature also works in **Web Automation tests on Real Devices**. The same `l
 | Platform           | OS Version          | 
 |--------------------|---------------------|
 | iOS Real Device    | iOS 16 and above    | 
-| iOS Simulator (Virtual) | All OS   | Fully Supported  |
+| iOS Simulator (Virtual) | All OS   | 
 
 ---
 
-## Support for Automation on Real Devices
+## Support for Automation on Mobile Devices
 
 To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gestures` action. No additional capability is required.
 
