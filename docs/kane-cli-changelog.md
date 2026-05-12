@@ -66,6 +66,40 @@ Check your current version:
 kane-cli --version
 ```
 
+## 0.2.11 — 2026-05-04
+
+**Setup & project/folder**
+- Project list loads instantly even on large accounts; type to search immediately.
+- KaneAI blocks test execution until a project and folder are selected, preventing lost runs.
+- Press **Esc** during setup to accept "KaneAI Generated" / "Untitled" defaults and move on immediately.
+- Switching profiles no longer carries the previous profile's project selection across.
+
+**Login**
+- Invalid username or access key is reported immediately so you can correct it before credentials are saved.
+- `kane-cli login --oauth` and username/access-key headless login no longer hang at completion.
+
+**In-browser indicator**
+- The floating badge now streams the current reasoning step (e.g. "Clicking the Add to cart button…") in real time.
+- Shows an animated "Thinking…" state between steps.
+- No longer appears in the macOS Dock or Windows/Linux taskbar.
+- Hides automatically when focus leaves Chrome and reappears when you return.
+
+**TUI / help**
+- `/help` opens a tabbed screen: Commands, Shortcuts, Setup, About.
+- Every slash command shows a confirmation box (✓ / ✗) with the outcome.
+- Breadcrumb at the bottom tracks your position in any flow.
+- Consistent keyboard-shortcut hints on every screen.
+
+**Text editing**
+- Cursor is visible even when the input box is empty.
+- **Tab** completes a slash command; **Enter** runs it (previously required two Enter presses).
+- Word-jump and word-delete shortcuts (Option/Ctrl + Arrow, Option/Ctrl + Delete) work correctly on macOS, Windows, and Linux.
+
+**New defaults**
+- Code Export is **on** by default.
+- Run mode defaults to **Testing** (uploads to TMS automatically).
+- A one-time upgrade summary is shown on first launch; use `/config` to revert any default.
+
 ---
 
 ## Reporting Issues

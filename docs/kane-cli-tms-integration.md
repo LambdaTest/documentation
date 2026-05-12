@@ -109,6 +109,12 @@ If you try to set a folder before choosing a project, Kane CLI asks you to pick 
 
 After a successful upload, Kane CLI prints two links to the terminal (see [Share Links at Session Exit](#share-links-at-session-exit)). Both lead into the <BrandName /> Test Manager for the test case that was just created.
 
+:::note Project and folder are required (v0.2.11+)
+KaneAI will not start a test run until both a project and a folder are selected. If neither is set you'll be taken through the setup flow first, so your results always land in the right place in TMS.
+
+During setup, press **Esc** at any prompt to instantly accept the defaults ("KaneAI Generated" project and "Untitled" folder). KaneAI confirms what it picked before continuing.
+:::
+
 ---
 
 ## Code Export
@@ -151,6 +157,10 @@ kane-cli run "Add an item to the cart" \
 Generated code is downloaded into a local directory under your session, by default `~/.testmuai/kaneai/sessions/<session-id>/code-export/`. At session exit Kane CLI prints a `CodeExport` line in the links box pointing to that directory.
 
 The same code is also available alongside the test case in Test Manager.
+
+:::note Default changed in v0.2.11
+Code Export is **on by default** starting in v0.2.11. Every test run produces Python (or JavaScript) automation code automatically. To turn it off, run `/config` and toggle the `codeExport` setting.
+:::
 
 ---
 

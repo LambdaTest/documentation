@@ -70,6 +70,10 @@ Kane CLI opens your default browser to the <BrandName /> consent page. Sign in a
 
 If you run `kane-cli login` interactively without flags, Kane CLI launches a guided login wizard that walks you through choosing a method, profile, and (for basic auth) entering credentials.
 
+:::note Headless login fix
+In v0.2.11, `kane-cli login --oauth` and username/access-key headless flows exit cleanly after authentication completes. Earlier versions could hang at this step.
+:::
+
 ---
 
 ## Basic Auth
@@ -105,6 +109,10 @@ Saved basic auth is used automatically for subsequent commands run under that pr
 ### Where to Find Your Access Key
 
 Sign in to the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password — anyone with your username and access key can run tests on your account.
+
+:::tip Credential validation
+As of v0.2.11, KaneAI validates your username and access key before saving them. If either is wrong you'll see an inline error and can correct it immediately — bad credentials are never written to disk.
+:::
 
 ---
 
@@ -150,6 +158,10 @@ Removes the stored credentials for that profile.
 ### Run Against a Specific Profile Without Switching
 
 A few commands accept `--profile <name>` so you can target a profile for a single invocation without changing the active one. This is supported on `kane-cli login`, `kane-cli whoami`, and `kane-cli balance`. For other commands, use `kane-cli profiles switch` first.
+
+:::note Profile isolation
+As of v0.2.11, switching to a different profile or account resets the active project and folder selection. The previous profile's project is never carried over.
+:::
 
 ---
 

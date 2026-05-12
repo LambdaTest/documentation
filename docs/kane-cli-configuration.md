@@ -107,6 +107,17 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `code_export.language` | `"python"` | `"python"` | Output language for generated code. Only `python` is supported. | `--code-language <lang>` |
 | `code_export.skip_validation` | boolean | `true` | Skip post-codegen worker-side validation. | TUI menu, or `--skip-code-validation` |
 
+:::note New defaults in v0.2.11
+Two settings changed their defaults in v0.2.11:
+
+| Setting | Old default | New default |
+|---|---|---|
+| `codeExport` | off | **on** |
+| `runMode` | exploration | **testing** (uploads to TMS) |
+
+On first launch after upgrading, KaneAI shows a one-time summary of these changes and explains how to revert them via `/config`.
+:::
+
 ---
 
 ## Updating Settings

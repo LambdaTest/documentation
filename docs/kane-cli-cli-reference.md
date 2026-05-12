@@ -212,6 +212,12 @@ kane-cli feedback \
 | `/clear` | | Clear chat history |
 | `/exit` | | Quit Kane CLI |
 
+:::tip Help screen (v0.2.11+)
+Type `/help` to open a tabbed help screen covering **Commands**, **Shortcuts**, **Setup**, and **About** — all in one place.
+
+Every slash command now shows a small confirmation box (✓ or ✗) after it runs, e.g. "Project switched to My Project". A breadcrumb at the bottom of the screen tracks where you are in any multi-step flow.
+:::
+
 ---
 
 ## Keyboard Shortcuts
@@ -225,6 +231,15 @@ kane-cli feedback \
 | Esc | Go back / close picker |
 | Up / Down | Navigate menu or input history |
 | Tab | Accept autocomplete |
+
+:::note Shortcut improvements in v0.2.11
+- **Tab** — auto-complete a slash command (no longer requires pressing Enter twice to run it; Tab fills, Enter runs).
+- **Word jump** — Option+Arrow (macOS) / Ctrl+Arrow (Windows, Linux) moves the cursor by word.
+- **Word delete** — Option+Delete (macOS) / Ctrl+Backspace (Windows, Linux) deletes the previous word.
+- **Esc** during setup — accepts "KaneAI Generated" / "Untitled" defaults immediately.
+
+These shortcuts work consistently across macOS, Windows, and Linux.
+:::
 
 ---
 

@@ -155,6 +155,12 @@ Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.c
 
 **Fix:** Verify your credentials on the <BrandName /> dashboard. Username and access key are case-sensitive. Make sure you're using the access key (not the password).
 
+**Bad credentials saved without warning**
+If you're on v0.2.10 or earlier and your username or access key was accepted silently but fails at runtime, upgrade to v0.2.11. From v0.2.11 onward, credentials are validated immediately on entry and rejected inline if incorrect.
+
+**`kane-cli login --oauth` hangs**
+This was a bug in v0.2.10 and earlier. Upgrade to v0.2.11 where headless OAuth and username/access-key login flows exit cleanly.
+
 ---
 
 ## Run Issues
