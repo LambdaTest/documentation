@@ -2,8 +2,8 @@
 id: codeceptjs-with-selenium
 title: CodeceptJS With Selenium - Run Tests on TestMu AI
 hide_title: true
-sidebar_label: JavaScript - CodeceptJS
-description: Run your CodeceptJS Selenium tests on TestMu AI's cloud grid across 3000+ real browsers, devices, and operating systems. Use the codeceptjs-lambdatest-service to sync test names and statuses automatically.
+sidebar_label: CodeceptJS
+description: Run CodeceptJS Selenium tests on TestMu AI's cloud grid across 3000+ browsers and OS. Use codeceptjs-lambdatest-service to auto-sync test names and statuses.
 keywords:
   - codeceptjs selenium
   - codeceptjs lambdatest
@@ -51,18 +51,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-[CodeceptJS](https://codecept.io/) is a modern end-to-end testing framework with a human-readable syntax. It supports Selenium via the WebDriver helper, making it straightforward to run browser automation tests on <BrandName />'s cloud Selenium Grid across 3000+ browser and OS combinations.
+CodeceptJS is a modern end-to-end testing framework with a human-readable syntax. It supports Selenium via the WebDriver helper, making it straightforward to run browser automation tests on TestMu AI cloud Selenium Grid across 3000+ browser and OS combinations.
 
 ## Prerequisites
 
 ---
 
+1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
 :::tip Sample repo
 Download or clone the CodeceptJS Selenium sample from the <BrandName /> GitHub repository to run the tests.
-
-
-
-1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 <a href="https://github.com/LambdaTest/lambdatest-codeceptjs-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -78,7 +76,7 @@ cd lambdatest-codeceptjs-sample
 npm install
 ```
 
-3. Retrieve your <BrandName /> username and access key from your TestMu AI Profile > Account Settings > Password & Security.
+3. Get your <BrandName /> username and access key from your <BrandName /> Profile > Account Settings > Password & Security.
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
 
@@ -145,15 +143,15 @@ exports.config = {
 }
 ```
 
-### Capability Reference
-
+:::note
 Use the **[<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)** to generate the `desiredCapabilities` object for any browser, OS, or device combination.
+:::
 
 ## Use the codeceptjs-lambdatest-service
 
 ---
 
-The `codeceptjs-lambdatest-service` package is a CodeceptJS helper that automatically syncs test names and test results with <BrandName /> after each test run. It uses CodeceptJS's built-in `_passed` and `_failed` hooks to push the outcome to the <BrandName /> platform in real time.
+The [codeceptjs-lambdatest-service](https://github.com/LambdaTest/codeceptjs-lambdatest-service) package is a CodeceptJS helper that automatically syncs test names and test results with <BrandName /> after each test run. It uses CodeceptJS's built-in `_passed` and `_failed` hooks to push the outcome to the <BrandName /> platform in real time.
 
 ### Install the Package
 
