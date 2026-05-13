@@ -2,7 +2,7 @@
 id: hyperexecute-testng-use-cases
 title: HyperExecute TestNG Use Cases
 sidebar_label: TestNG Use Cases
-description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
+description: Practical TestNG automation use cases on HyperExecute—parallel execution, data-driven tests, and Java workflows to accelerate QA delivery.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
