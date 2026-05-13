@@ -1,4 +1,4 @@
----
+﻿---
 id: fogbugz-integration
 title: FogBugz Integration
 hide_title: true
@@ -60,7 +60,7 @@ FogBugz is a web-based project management tool with features like bug and issue 
 </div>
 </div>
 
-<BrandName />'s integration with FogBugz allows you to avoid the hassle of maintaining issues and tasks manually and instead log bugs in a single click while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your FogBugz instance.
+<BrandName />'s integration with FogBugz allows you to avoid the hassle of maintaining issues and tasks manually and instead log bugs in a single click while performing [cross browser testing](https://www.testmuai.com) of your website from the <BrandName /> platform to your FogBugz instance.
 
 
 ## Integrating FogBugz With <BrandName />

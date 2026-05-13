@@ -1,4 +1,4 @@
----
+﻿---
 id: gitlab-ci-integration
 title: GitLab CI Integration
 hide_title: true
@@ -123,7 +123,7 @@ job:
     protractor single.conf.js
 ```
 
-<BrandName /> offers a [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to fetch coded values for your desired test configurations. For Instance, if you select the below configurations:
+<BrandName /> offers a [Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations. For Instance, if you select the below configurations:
 
 | FIELDS | SELECTED VALUES |
 | ------- | -------------- |

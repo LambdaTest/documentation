@@ -582,8 +582,8 @@ Check Project Type
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -596,7 +596,7 @@ If you encounter issues not covered here:
 - [Figma-App CLI Documentation](/support/docs/smartui-cli-figma-app)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 ### View SmartUI Results
 

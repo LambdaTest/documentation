@@ -1,4 +1,4 @@
----
+﻿---
 id: selenium-java-sdk
 title: TestMu AI Selenium Java SDK - Zero Code Changes
 sidebar_label: Java SDK
@@ -344,7 +344,7 @@ Find related guides and tools for further configuration.
 - [TestMu AI Selenium Grid Documentation](/support/docs/getting-started-with-testmu-automation)
 - [Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
 - [GitHub Repository](https://github.com/Lambdatest/lambdatest-java-selenium-sdk)
-- [TestMu AI Support](https://www.lambdatest.com/support)
+- [TestMu AI Support](https://www.testmuai.com/support)
 
 ## Changelog
 

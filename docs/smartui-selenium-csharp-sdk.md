@@ -250,7 +250,7 @@ You can enable synchronous snapshot status response by setting the `sync` option
      };
 
      Console.WriteLine("Driver started");
-     driver.Navigate().GoToUrl("https://www.lambdatest.com");
+     driver.Navigate().GoToUrl("https://www.testmuai.com");
      var result = await SmartUISnapshot.CaptureSnapshot(driver, "NYC", optionsForSync);
      Console.WriteLine(result);
      ```
@@ -756,8 +756,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -771,7 +771,7 @@ If you encounter issues not covered here:
 - [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

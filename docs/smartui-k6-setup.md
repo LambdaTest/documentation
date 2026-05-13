@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-k6-setup
 title: Getting started with SmartUI using K6
 sidebar_label: K6
@@ -423,8 +423,8 @@ If you encounter issues not covered here:
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -439,7 +439,7 @@ If you encounter issues not covered here:
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 For additional information about K6 framework please explore the documentation [here](/support/docs/k6-browser-testing/)
 

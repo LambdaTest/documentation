@@ -1,4 +1,4 @@
----
+﻿---
 id: integrate-test-reporting-test-management-tools
 title:  How to integrate test reporting & test management tools
 hide_title: true
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "TestMu AI integration with test management tools",
-          "item": "https://staging.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools/"
+          "item": "https://staging.testmuai.com/support/docs/integrate-test-reporting-test-management-tools/"
         }]
       })
     }}

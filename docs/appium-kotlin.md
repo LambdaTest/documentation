@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-kotlin
 title: Appium With Kotlin
 sidebar_label: Kotlin
@@ -366,7 +366,7 @@ caps.setCapability("device log", true)
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

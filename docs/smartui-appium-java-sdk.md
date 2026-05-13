@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-appium-java-sdk
 title: SmartUI App SDK Integration Guide
 sidebar_label: Appium Java SDK
@@ -62,7 +62,7 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 
 - Basic understanding of mobile app testing and Appium
 - Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials
-- An active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit
+- An active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit
 
 ## Create a SmartUI Project
 
@@ -524,8 +524,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -539,7 +539,7 @@ If you encounter issues not covered here:
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

@@ -1,4 +1,4 @@
----
+﻿---
 id: ranorex-integration-with-lambdatest
 title: How to Perform Automation Testing with Ranorex Using TestMu AI
 hide_title: true
@@ -53,11 +53,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 Ranorex is a GUI test automation framework which helps to execute E2E(End-to-End) testing of web, desktop, and mobile applications. Ranorex Core API is powered with Selenium WebDriver helping you to maximize your cross browser testing in an efficient manner.
 
-Selenium, as we know, has 4 variants, RC, IDE, WebDriver, & Grid. [Selenium IDE](https://www.lambdatest.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is built with the purpose of facilitating automated record-and-replay testing over Mozilla Firefox browsers. However, ever since Mozilla Firefox released its version 55, the IDE’s compatibility got disrupted and isn’t replaced till now. Ranorex helps you to overcome this scenario by optimizing their Core API in such manner that users of Selenium WebDriver could get to unleash the full potential of all Selenium variants irrespective of browser updates.
+Selenium, as we know, has 4 variants, RC, IDE, WebDriver, & Grid. [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is built with the purpose of facilitating automated record-and-replay testing over Mozilla Firefox browsers. However, ever since Mozilla Firefox released its version 55, the IDE’s compatibility got disrupted and isn’t replaced till now. Ranorex helps you to overcome this scenario by optimizing their Core API in such manner that users of Selenium WebDriver could get to unleash the full potential of all Selenium variants irrespective of browser updates.
 
 <BrandName /> offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 3000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
 
-In this documentation, we will demonstrate how to set up your Selenium Server using Ranorex, and how to connect it to <BrandName /> cloud-based [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You will be going through the below sections:
+In this documentation, we will demonstrate how to set up your Selenium Server using Ranorex, and how to connect it to <BrandName /> cloud-based [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You will be going through the below sections:
 
 
 
@@ -121,7 +121,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/14.webp').default} alt="set up Desired Capabilities" width="1365" height="730" className="doc_img"/>
 
-**Step 3:**  Fetch your DesiredCapabilities from <BrandName /> [Selenium Capability Generator](https://www.lambdatest.com/capabilities-generator/).
+**Step 3:**  Fetch your DesiredCapabilities from <BrandName /> [Selenium Capability Generator](https://www.testmuai.com/capabilities-generator/).
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/15.webp').default} alt="Selenium Capability Generator." width="1365" height="728" className="doc_img"/>
 

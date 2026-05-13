@@ -1,4 +1,4 @@
----
+﻿---
 id: dashboards-custom-widgets
 title: Custom Widgets in TestMu AI Analytics Dashboards
 sidebar_label: Create Custom Widgets
@@ -332,5 +332,5 @@ The screenshot below shows a sample Private Real Device dashboard with all six w
 
 <img loading="lazy" src={require('../assets/images/analytics/private-device-dashboard.jpg').default} alt="Private Real Device Dashboard" width="1400" height="700" className="doc_img"/>
 
-> If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).
+> If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).
 

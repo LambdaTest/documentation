@@ -1,4 +1,4 @@
----
+﻿---
 id: analytics-bar-line-widgets
 title: Bar and Line Chart Widgets
 sidebar_label: Bar & Line Chart Widgets
@@ -30,12 +30,12 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
@@ -402,4 +402,4 @@ After creating your bar or line chart widget:
 
 ## Support
 
-If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).
+If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).

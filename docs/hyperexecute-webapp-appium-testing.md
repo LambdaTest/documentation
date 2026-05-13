@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-webapp-appium-testing
 title: Appium Testing On HyperExecute - WebApp
 sidebar_label: Appium - WebApp
@@ -399,7 +399,7 @@ Sample Capabilities for both android and iOS web app mentioned below -
 </TabItem>
 </Tabs>
 
-> Refer to the [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to understand more about it.
+> Refer to the [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to understand more about it.
 
 ## Navigation in Automation Dashboard
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: kaneai-manual-interaction
 title: KaneAI Manual Interaction Mode 
 hide_title: false
@@ -22,17 +22,17 @@ canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Manual Interaction Mode",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-manual-interaction/"
+          "item": "https://www.testmuai.com/support/docs/kaneai-manual-interaction/"
         }]
       })
     }}

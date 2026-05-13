@@ -1,4 +1,4 @@
-// Modal.js
+﻿// Modal.js
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import { getCookie, getProductType, injectRevenueHero, parseJwt } from './utilities';
@@ -99,7 +99,7 @@ const DemoPopup = ({ show, open_modal }) => {
             form.current.reset();
             // getDemoFormResponse(true);
             if (formdata.email && formdata.email.toLowerCase().endsWith('gmail.com')) {
-                window.location.href = `https://www.lambdatest.com/thank-you`;
+                window.location.href = `https://www.testmuai.com/thank-you`;
                 return;
             }
             // window.sendAnalytics('DemoForm', {

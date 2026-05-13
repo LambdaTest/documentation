@@ -1,4 +1,4 @@
----
+﻿---
 id: extended-debugging-options
 title: Extended Debugging Options for Selenium Testing
 sidebar_label: Enable Extended Debugging
@@ -174,7 +174,7 @@ Inject error responses to test how your application handles failures using the `
 **Python:**
 ```python
 driver.execute_script("lt:intercept:error", {
-    "url": "https://www.lambdatest.com",
+    "url": "https://www.testmuai.com",
     "error": "TimedOut"
 })
 driver.get("https://www.lambdatest.com")

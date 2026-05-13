@@ -1,4 +1,4 @@
----
+﻿---
 id: browserstack-to-lambdatest-migration-guide
 title: How to migrate from BrowserStack to TestMu AI
 hide_title: true
@@ -122,7 +122,7 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
-To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of BrowserStack and <BrandName />:
@@ -182,7 +182,7 @@ With Selenium 3, the core capabilities remain:
 
 Optionally, you may also configure Selenium versions or other advanced settings based on your test requirements. However, for this migration guide, we will primarily focus on the three fundamental capabilities listed above.
 
-To generate capabilities for Selenium 3, you can use the [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) , which allows you to define essential automation parameters such as browser name, browser version, operating system, along with any additional test configurations required for execution.
+To generate capabilities for Selenium 3, you can use the [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/) , which allows you to define essential automation parameters such as browser name, browser version, operating system, along with any additional test configurations required for execution.
 
 Below are example capability representations from BrowserStack and <BrandName /> to help you understand how to adapt your existing configuration during migration.
 

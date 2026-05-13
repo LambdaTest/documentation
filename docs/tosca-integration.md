@@ -1,4 +1,4 @@
----
+﻿---
 id: tricentis-tosca-integration
 title: Tricentis Tosca Integration With TestMu AI’s Cloud Based Selenium Grid
 sidebar_label: Tricentis Tosca
@@ -19,7 +19,7 @@ canonical: https://www.testmuai.com/support/docs/tricentis-tosca-integration-tes
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
-<BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
+<BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
 
 This topic will be focusing on:
 
@@ -36,7 +36,7 @@ This topic will be focusing on:
 ***
 For demonstrating Tosca-<BrandName /> integration, we would be considering the following test scenario:
 
-1. Open [<BrandName /> Selenium PlayGround](https://www.lambdatest.com/selenium-playground/).
+1. Open [<BrandName /> Selenium PlayGround](https://www.testmuai.com/selenium-playground/).
 2. Click the "Simple Form Demo" link. 
 3. Enter the text "Happy Testing" in the text box.
 4. Click the "Get Checked value" button.
@@ -56,7 +56,7 @@ For demonstrating Tosca-<BrandName /> integration, we would be considering the f
 **Step 3:** On the successful project creation, click the **Modules** tab, right-click on the panel, then select **Scan -> Application**.
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_04.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-**Step 4:** Open Chrome browser and enter [test URL](https://www.lambdatest.com/selenium-playground/).
+**Step 4:** Open Chrome browser and enter [test URL](https://www.testmuai.com/selenium-playground/).
 
 **Step 5:** On the **Select Application** screen, select the Chrome browser instance that was open in the earlier step and click **Scan**
 
@@ -158,7 +158,7 @@ Shown below is the final test case view.
 <img loading="lazy" src={require('../assets/images/tosca-integration/mba-real.webp').default} alt="Image" width="1252" height="532" className="doc_img"/>
 
 
-*You can refer our [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator)
+*You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator)
  to choose different browser combination.*
 
 
@@ -201,7 +201,7 @@ In <BrandName /> Plateform , You can see check the log to validate the Web Appli
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers.
+To help you perform [cross browser testing](https://www.testmuai.com) of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers.
 Curious to know more about Lambda Tunnel?
 
 

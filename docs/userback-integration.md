@@ -1,4 +1,4 @@
----
+﻿---
 id: userback-integration
 title: Userback Integration
 hide_title: true
@@ -61,7 +61,7 @@ Userback is a platform that makes it easy for website and app teams to gather us
 </div>
 </div>
 
-<BrandName />'s integration with Userback offers a smooth solution to track, log, and manage bugs found during [cross-browser testing](https://www.lambdatest.com/). By integrating both platforms, developers can easily report bugs from <BrandName /> directly to their Userback instance. This eliminates the need for manual tasks and issue management, making the process much more efficient and hassle-free.
+<BrandName />'s integration with Userback offers a smooth solution to track, log, and manage bugs found during [cross-browser testing](https://www.testmuai.com/). By integrating both platforms, developers can easily report bugs from <BrandName /> directly to their Userback instance. This eliminates the need for manual tasks and issue management, making the process much more efficient and hassle-free.
 
 ## Integrating Userback With <BrandName />
 ***

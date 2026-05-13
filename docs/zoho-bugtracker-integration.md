@@ -1,4 +1,4 @@
----
+﻿---
 id: zoho-bugtracker-integration
 title: Zoho BugTracker Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Zoho BugTracker is a robust cloud-based bug reporting platform that allows you to keep track of bugs and fix them rapidly. With its multitude of customizations and automation features, issue tracking is simple and effective. Additionally, Zoho BugTracker includes SLA management, time tracking, collaboration, analytics, document management, and automation.
 
-The <BrandName /> integration with Zoho BugTracker allows you to log bugs while performing [cross browser testing](https://www.lambdatest.com/) of your websites and web apps across over 3000+ browsers and OS combinations on the cloud. From the <BrandName /> platform, you can easily log bugs to Zoho BugTracker dashboard.
+The <BrandName /> integration with Zoho BugTracker allows you to log bugs while performing [cross browser testing](https://www.testmuai.com/) of your websites and web apps across over 3000+ browsers and OS combinations on the cloud. From the <BrandName /> platform, you can easily log bugs to Zoho BugTracker dashboard.
 
 ## Integrating Zoho BugTracker With <BrandName />
 ***

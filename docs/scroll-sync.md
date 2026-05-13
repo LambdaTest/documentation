@@ -1,4 +1,4 @@
----
+﻿---
 id: scroll-sync
 title: What Is Scroll Sync In LT Browser?
 hide_title: true
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # What Is Scroll Sync In LT Browser?
 * * *
-With [LT Browser](https://www.lambdatest.com/lt-browser/), you can sync your scrolls from your device to web view and vice versa. It helps you to scroll through different devices so that scrolling on one device will scroll the same amount on another device. You can compare your website side-by-side over other devices via mirrored interactions.
+With [LT Browser](https://www.testmuai.com/lt-browser/), you can sync your scrolls from your device to web view and vice versa. It helps you to scroll through different devices so that scrolling on one device will scroll the same amount on another device. You can compare your website side-by-side over other devices via mirrored interactions.
 
 To get started, you need to download the executable file from here.
 

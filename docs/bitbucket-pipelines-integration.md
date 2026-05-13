@@ -1,4 +1,4 @@
----
+﻿---
 id: bitbucket-pipelines-integration
 title: Bitbucket Pipelines Integration With TestMu AI
 hide_title: true
@@ -25,7 +25,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "TestMu AI",
-          "item": "https://www.lambdatest.com/"
+          "item": "https://www.testmuai.com/"
         },{
           "@type": "ListItem",
           "position": 2,

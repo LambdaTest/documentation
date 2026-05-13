@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-pdf-comparison
 title: SmartUI Visual Regression Testing for PDF Files
 sidebar_label: PDF Testing
@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 :::caution
-This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).
+This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
 :::
 
 ## Prerequisites for Using SmartUI

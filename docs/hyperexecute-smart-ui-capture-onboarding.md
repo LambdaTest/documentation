@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-smart-ui-capture-onboarding
 title: SmartUI Capture Onboarding with HyperExecute
 hide_title: false
@@ -1218,7 +1218,7 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [LambdaTest Support](https://www.lambdatest.com/support) - Get help from our support team
+- [LambdaTest Support](https://www.testmuai.com/support) - Get help from our support team
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

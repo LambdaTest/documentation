@@ -109,7 +109,7 @@ Once, the `URLs` file will be created, you will be seeing the sample pre-filled 
 [
   {
     "name": "lambdatest-home-page",
-    "url": "https://www.lambdatest.com",
+    "url": "https://www.testmuai.com",
     "waitForTimeout": 1000 //Optional
   },
   {
@@ -401,7 +401,7 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 - [Environment Variables](/support/docs/smartui-cli-env-variables)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

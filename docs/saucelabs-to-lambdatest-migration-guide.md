@@ -1,4 +1,4 @@
----
+﻿---
 id: saucelabs-to-lambdatest-migration-guide
 title: How to migrate from Sauce Labs to TestMu AI
 hide_title: true
@@ -130,7 +130,7 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
-To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:
@@ -186,7 +186,7 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
-To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:

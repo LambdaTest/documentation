@@ -1,4 +1,4 @@
----
+﻿---
 id: sharing-lambda-tunnel
 title: Localhost Testing With Shared Tunnel
 hide_title: true
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Sharing <BrandName /> Tunnel
 
 * * *
-<BrandName /> is a [cross browser testing](https://www.lambdatest.com/) tool which allows you to test your locally hosted website or web application on 3000+ real browsers. It does so with the help of a TCP with TLS 1.2 secure connection tunnel which establishes a secure and unique connection from your local system to <BrandName /> cloud servers.
+<BrandName /> is a [cross browser testing](https://www.testmuai.com/) tool which allows you to test your locally hosted website or web application on 3000+ real browsers. It does so with the help of a TCP with TLS 1.2 secure connection tunnel which establishes a secure and unique connection from your local system to <BrandName /> cloud servers.
 
 Earlier with <BrandName /> Tunnel, users belonging to the same organization were able to choose any tunnel they want. So if a team had 5 members and all of them had configured their own tunnels, then they were able to shuffle their TCP with TLS 1.2 secure connection tunnel with any of the 5 connections. However, that is not the case anymore!
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: mark-as-bug
 title: Mark As Bug In Screenshot Testing
 hide_title: true
@@ -54,7 +54,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 - **Responsive Testing:** Perform cross browser testing across various mobile & desktop devices to ensure your website renders well across different view-ports. Run responsive testing on 46 devices in a single test session.
 
-- **Automation Testing:** Perform automated cross browser testing with our on-cloud Selenium Grid. You can execute parallel testing to trim down your test cycles drastically. Our [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) is compatible with every test automation framework that supports Selenium.
+- **Automation Testing:** Perform automated cross browser testing with our on-cloud Selenium Grid. You can execute parallel testing to trim down your test cycles drastically. Our [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) is compatible with every test automation framework that supports Selenium.
 
 - **Smart UI Testing:** Automated visual regression testing that performs a pixel-to-pixel comparison between multiple images & highlights any UI deviations such as padding, icon, text, etc., concerning the baseline images.
 

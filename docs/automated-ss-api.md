@@ -1,4 +1,4 @@
----
+﻿---
 id: automated-ss-api
 title: Automated Screenshot API For Cross Browser Testing
 hide_title: true
@@ -48,9 +48,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Automated Screenshot API For Cross Browser Testing
 ***
-Automated Screenshot API will help you [capture full-page screenshots](https://www.lambdatest.com/full-page-screen-capture) of any URL by invoking an API call to <BrandName /> cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into <BrandName />, by executing a JSON file in your preferred API development environment such as Postman.
+Automated Screenshot API will help you [capture full-page screenshots](https://www.testmuai.com/full-page-screen-capture) of any URL by invoking an API call to <BrandName /> cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into <BrandName />, by executing a JSON file in your preferred API development environment such as Postman.
 
-This document will help you leverage <BrandName /> [Automated Screenshot](https://www.lambdatest.com/automated-screenshot). You would learn how to:
+This document will help you leverage <BrandName /> [Automated Screenshot](https://www.testmuai.com/automated-screenshot). You would learn how to:
 
 * Fetch all OS + Browser combinations.
 * Fetch all Screen Resolutions.
@@ -80,7 +80,7 @@ $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/api-doc/#screenshots">Open API Document For Automated Screenshot Testing</a>
+<a href="https://www.testmuai.com/support/docs/api-doc/#screenshots">Open API Document For Automated Screenshot Testing</a>
 </div>
 
 
@@ -209,7 +209,7 @@ Example Value:
   "test_id": "TES11111111111111111111111111",
   "defer_time": 5,
   "test_status": "completed",
-  "url": "https://www.lambdatest.com",
+  "url": "https://www.testmuai.com",
   "callback_url": "https://www.example.com",
   "screenshots": [
     {
@@ -240,7 +240,7 @@ Client URL would be as followed:
 ```javascript
 curl -X POST "https://api.lambdatest.com/screenshots/v1" -H "accept: application/json" 
 -H "Authorization: Basic 123456789abcdefghijklmno=" -H "Content-Type: application/json" -d "
-{\"url\":\"https://www.lambdatest.com\",\"defer_time\":5,\"email\":true,\"mac_res\":\"1024x768\",
+{\"url\":\"https://www.testmuai.com\",\"defer_time\":5,\"email\":true,\"mac_res\":\"1024x768\",
 \"win_res\":\"1366X768\",\"configs\":{\"windows 10\":{\"chrome\":[\"74\"],\"firefox\":[\"66\"],
 \"opera\":[\"58\"],\"ie\":[\"11\"]},\"macos mojave\":{\"chrome\":[\"74\"]}}}"
 ```
@@ -248,7 +248,7 @@ Example value:
 
 ```javascript
 {
-  "url": "https://www.lambdatest.com",
+  "url": "https://www.testmuai.com",
   "defer_time": 5,
   "email": true,
   "mac_res": "1024x768",
@@ -287,7 +287,7 @@ Example Value:
 
 ```javascript
 {
-  "url": "https://www.lambdatest.com",
+  "url": "https://www.testmuai.com",
   "defer_time": 5,
   "email": true,
   "tunnel": true,
@@ -349,7 +349,7 @@ Example Value:
 
 ```javascript
 {
-  "url": "https://www.lambdatest.com",
+  "url": "https://www.testmuai.com",
   "defer_time": 5,
   "email": true,
   "mac_res": "1024x768",

@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-winapp-integration
 title: WinAppDriver
 hide_title: true
@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # WinAppDriver Integration with HyperExecute
 
-You can use HyperExecute run your tests that are based on Microsoft Office Suite. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.lambdatest.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 
+You can use HyperExecute run your tests that are based on Microsoft Office Suite. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.testmuai.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 
 
 You can go through the page below to understand how you can use HyperExecute to run your test cases. 
 

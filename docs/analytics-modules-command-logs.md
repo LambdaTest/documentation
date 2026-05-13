@@ -1,4 +1,4 @@
----
+﻿---
 id: analytics-modules-test-intelligence-command-logs-analytics
 title: Command Logs Analytics with Test Intelligence
 sidebar_label: Command Errors
@@ -50,7 +50,7 @@ TestMu AI Analytics help you intelligently analyze your test execution steps on 
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
-2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.lambdatest.com/test-intelligence).
+2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.
 5. Select the `Command Logs` option from the `Analytics Modules` section.
@@ -85,7 +85,7 @@ The following are the steps to use Command Logs Analytics:
 
    A line or bar chart is displayed with the x-axis representing the timestamp of the tests run and the y-axis representing the total number of unique errors in tests with command logs of respective response statuses. 
 
-   <img loading="lazy" src="https://www.lambdatest.com/resources/images/errorAi.png" alt="cmd" width="768" height="373" className="doc_img"/>
+   <img loading="lazy" src="https://www.testmuai.com/resources/images/errorAi.png" alt="cmd" width="768" height="373" className="doc_img"/>
 
    **Use Cases**
    1. Tracking response status trends over time
@@ -121,7 +121,7 @@ The following are the steps to use Command Logs Analytics:
 
    A table displays unique error messages, occurrences dots, the percentage of occurrences, the timestamp of the last error message, and tests with the error message command logs.
 
-   <img loading="lazy" src="https://www.lambdatest.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+   <img loading="lazy" src="https://www.testmuai.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
 
    **Use Cases**
    6. Identifying common error messages for prioritizing bug fixes

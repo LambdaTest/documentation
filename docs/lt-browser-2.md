@@ -1,4 +1,4 @@
----
+﻿---
 id: lt-browser-two
 title: LT Browser 2.0 - Test Website For Responsiveness Easily
 hide_title: true
@@ -80,7 +80,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 > **Note:** This product is deprecated and as a result, no further support will be provided for this feature by the <BrandName /> Organization.
 
-[LT Browser 2.0](https://www.lambdatest.com/lt-browser) is a Chromium-based mobile-friendly browser that enables web developers to build, test and debug their mobile websites for responsiveness across a wide range of 50+ pre-installed device viewports, including mobile, tablet, desktop and laptop.
+[LT Browser 2.0](https://www.testmuai.com/lt-browser) is a Chromium-based mobile-friendly browser that enables web developers to build, test and debug their mobile websites for responsiveness across a wide range of 50+ pre-installed device viewports, including mobile, tablet, desktop and laptop.
 
 The new LT Browser 2.0 boasts enhanced performance and several features that make it easier for you to create responsive websites for device viewports of all sizes.
 

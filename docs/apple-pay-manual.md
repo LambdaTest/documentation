@@ -1,4 +1,4 @@
----
+﻿---
 id: apple-pay-manual
 title: Apple Pay Manual Testing on Real Devices
 sidebar_label: Apple Pay 
@@ -89,7 +89,7 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 ## Additional Links
 
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
-- [<BrandName /> App Live Overview](https://www.lambdatest.com/app-live)
+- [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)
 
 ---

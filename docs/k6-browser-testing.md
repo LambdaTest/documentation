@@ -1,4 +1,4 @@
----
+﻿---
 id: k6-browser-testing
 title: How To Run k6 Browser Tests On TestMu AI Platform
 hide_title: true
@@ -134,7 +134,7 @@ export default async function() {
       "console": true,
       'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
       'tunnelName': '', // Optional
-      'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+      'geoLocation': '', // country code can be fetched from https://www.testmuai.com/capabilities-generator/
     },
   };
 

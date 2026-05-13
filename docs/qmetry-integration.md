@@ -1,4 +1,4 @@
----
+﻿---
 id: qmetry-integration
 title: How to Run QMetry Automation Tests using TestMu AI?
 hide_title: true
@@ -66,7 +66,7 @@ Once you have your project set up in the QMetry app and test suite ready, you ne
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-4.webp').default} alt="Finding Username and Access Key" width="2882" height="1801" className="doc_img"/>
 
->If you are on _[Lite](https://www.lambdatest.com/pricing)_ or _[Live](https://www.lambdatest.com/pricing)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
+>If you are on _[Lite](https://www.testmuai.com/pricing)_ or _[Live](https://www.testmuai.com/pricing)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
 6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [this guide](/docs/selenium-automation-capabilities/). 
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-3.webp').default} alt="Qmetry web capailities list" width="2882" height="1801" className="doc_img"/>

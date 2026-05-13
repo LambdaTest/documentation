@@ -1,4 +1,4 @@
----
+﻿---
 id: codeceptjs-with-selenium
 title: CodeceptJS With Selenium - Run Tests on TestMu AI
 hide_title: true
@@ -144,7 +144,7 @@ exports.config = {
 ```
 
 :::note
-Use the **[<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)** to generate the `desiredCapabilities` object for any browser, OS, or device combination.
+Use the **[<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/)** to generate the `desiredCapabilities` object for any browser, OS, or device combination.
 :::
 
 ## Use the codeceptjs-lambdatest-service
@@ -236,12 +236,12 @@ Visit the **[<BrandName /> Web Automation Dashboard](https://automation.lambdate
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com">
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com/support/docs/">
         Support
       </a>
     </li>

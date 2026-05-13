@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-inspector
 title: Appium Inspector Integration on TestMu AI
 sidebar_label: Appium Inspector
@@ -152,7 +152,7 @@ Enter in your UserName & Access Key. You may find the credentials available on [
 
 Configure <BrandName /> capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
-Alternatively, we can also go to our [capabilities generator](https://www.lambdatest.com/capabilities-generator/) and generate the Capability Representation using GUI.
+Alternatively, we can also go to our [capabilities generator](https://www.testmuai.com/capabilities-generator/) and generate the Capability Representation using GUI.
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

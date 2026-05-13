@@ -1,4 +1,4 @@
----
+﻿---
 id: guide-to-python
 title: Guide - Running Python Tests On TestMu AI Selenium Grid
 hide_title: true
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Quick Guide To Run Python Tests On <BrandName /> Selenium Grid
 * * *
 
-<BrandName /> Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.lambdatest.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage <BrandName /> Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on <BrandName /> Selenium cloud platform.
+<BrandName /> Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.testmuai.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage <BrandName /> Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on <BrandName /> Selenium cloud platform.
 
 ## Prerequisites
 ***
@@ -95,7 +95,7 @@ class LTAutomate(unittest.TestCase):
     ----------
     platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)
     browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge)
-    version :  Supported list of version can be found at https://www.lambdatest.com/capabilities-generator/
+    version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/
  
     Result
     -------
@@ -174,7 +174,7 @@ The first thing to note here, is the use of remote WebDriver. Also checkout how 
 
 To use your choice of environment for the test you can leverage our Capability Generator tool.
 
-<center><a href="https://www.lambdatest.com/capabilities-generator/"><button name="button"><BrandName /> Capability Generator Tool</button></a></center>
+<center><a href="https://www.testmuai.com/capabilities-generator/"><button name="button"><BrandName /> Capability Generator Tool</button></a></center>
 
 > **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
 

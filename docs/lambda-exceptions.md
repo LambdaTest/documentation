@@ -1,4 +1,4 @@
----
+﻿---
 id: lambda-exceptions
 title: View Assertion Errors On TestMu AI
 sidebar_label: Handle Exceptions

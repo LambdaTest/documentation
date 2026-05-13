@@ -1,4 +1,4 @@
----
+﻿---
 id: kaneai-ci-cd-automation
 title: Automating Test Runs Execution with CI/CD on KaneAI
 hide_title: false
@@ -83,7 +83,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
 - **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](/support/docs/selenium-geolocation-capabilities/).
 - **environment_id**: Define the environment on which you want to run the test run if required.
-- **retry_on_failure**: Define whether to retry on failure. When enabled, retries are triggered both when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails and when individual test cases fail. You can set the maximum number of retries using `max_retries`. You can find more details [here]( https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
+- **retry_on_failure**: Define whether to retry on failure. When enabled, retries are triggered both when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails and when individual test cases fail. You can set the maximum number of retries using `max_retries`. You can find more details [here]( https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
 - **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries). 
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](/support/docs/appium-app-performance-analytics/).
@@ -184,7 +184,7 @@ Here is a sample that you can use on how to integrate the API with Github Action
 In your Git repository, navigate to .github/workflows/ and create a file named sanity-test.yml.
 
 **Step 2: Sample for yml file**
-In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.lambdatest.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
+In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
 
 ```yml
 name: Run Sanity Tests on LambdaTest

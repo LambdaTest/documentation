@@ -1,4 +1,4 @@
----
+﻿---
 id: saucelabs-to-hyperexecute-migrate
 title: SauceLabs to HyperExecute
 hide_title: true
@@ -249,7 +249,7 @@ If you are having trouble migrating your tests from Sauce Labs to HyperExecute, 
 
 - #### You may not have updated your Test Scripts.
 
-  To fix this, you will need to replace the Sauce Labs specific code with the equivalent HyperExecute code. You can use the [HyperExecute Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to help you generate the correct desired capabilities for your tests.
+  To fix this, you will need to replace the Sauce Labs specific code with the equivalent HyperExecute code. You can use the [HyperExecute Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to help you generate the correct desired capabilities for your tests.
 
 - #### Your Job is executed, but you are getting an error in the HyperExecute Dashboard.
 

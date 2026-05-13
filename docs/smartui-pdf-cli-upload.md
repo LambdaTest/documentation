@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-pdf-cli-upload
 title: Upload PDFs via CLI
 sidebar_label: CLI Upload
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 :::caution
-This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).
+This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
 :::
 
 ## Prerequisites for Using SmartUI
@@ -380,8 +380,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -395,4 +395,4 @@ If you encounter issues not covered here:
 - [PDF Java SDK Upload](/support/docs/smartui-pdf-java-sdk)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)

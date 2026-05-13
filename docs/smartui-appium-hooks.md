@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-appium-hooks
 title: Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)
 sidebar_label: Appium Hooks
@@ -185,7 +185,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 :::tip Explore more capabilities
 
-To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.lambdatest.com/capabilities-generator/
+To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.testmuai.com/capabilities-generator/
 
 :::
 
@@ -723,8 +723,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [TestMu AI Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
