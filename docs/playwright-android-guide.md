@@ -1,7 +1,6 @@
 ---
 id: playwright-android-guide
 title: How To Run Playwright Tests On TestMu AI Android Devices
-hide_title: true
 sidebar_label: Getting Started
 description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
 keywords:
@@ -19,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/playwright-android/
 site_name: TestMu AI
 slug: playwright-android/
-canonical: https://www.testmu.ai/support/docs/playwright-android/
+canonical: https://www.testmuai.com/support/docs/playwright-android/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
@@ -55,15 +54,16 @@ Playwright Android automation is supported on <BrandName /> across **Node.js, Ja
 
 :::tip Supported Versions
 - Playwright versions **v1.20.0** to **v1.58.2** are supported for Android real device testing (excluding `v1.54.0`).
-- **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()` — all using stock Playwright packages, no custom forks required.
+- **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()`. All use stock Playwright packages, no custom forks required.
+- Playwright v1.53.2 is currently supported for Playwright C# (for Android & iOS).
 :::
 
 ## Prerequisites
-***
+---
 
-Set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+Set your <BrandName /> username and access key in the environment variables. You can get your <BrandName /> username and access key from your <BrandName /> Profile > Account Settings > Password & Security.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
 
 **Windows**
 
@@ -384,6 +384,7 @@ var capabilities = new Dictionary<string, object>
         ["network"] = true,
         ["video"] = true,
         ["console"] = true,
+        ["playwrightClientVersion"] = "1.53.2",
     }
 };
 
@@ -445,8 +446,5 @@ The <BrandName /> Automation Dashboard is where you can see the results of your 
 
 The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/playwright-android-build-view.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/playwright-android-build-view.png').default} alt="Playwright Android build and session details on TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
 
-On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
-
-<img loading="lazy" src={require('../assets/images/playwright-testing/playwright-android-dashboard.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
