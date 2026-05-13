@@ -1,7 +1,6 @@
 ---
 id: playwright-ios-guide
 title: How To Run Playwright Tests On TestMu AI iOS Devices
-hide_title: true
 sidebar_label: Test on iOS Device
 description: Here you can learn how to run Playwright tests on the TestMu AI iOS real devices.
 keywords:
@@ -56,16 +55,17 @@ Playwright test automation on real iOS devices is now supported on <BrandName />
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
 :::tip Supported Versions
-- Playwright versions **v1.53.0** and above are supported for iOS real device testing.
+- Playwright versions **v1.53.0** and above (until **v1.57.0**) are supported for iOS real device testing.
 - All languages use the **stock Playwright packages** — no custom forks or client-side changes required.
+- Playwright v1.53.2 is currently supported for Playwright C# (for Android & iOS).
 :::
 
 ## Prerequisites
-***
+---
 
-Set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+Set your <BrandName /> username and access key in the environment variables. You can get your <BrandName /> username and access key from your <BrandName /> Profile > Account Settings > Password & Security.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
 
 **Windows**
 
@@ -372,6 +372,7 @@ var capabilities = new Dictionary<string, object>
         ["network"] = true,
         ["video"] = true,
         ["console"] = true,
+        ["playwrightClientVersion"] = "1.53.2",
     }
 };
 
@@ -427,57 +428,16 @@ The <BrandName /> Automation Dashboard is where you can see the results of your 
 
 The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/playwright-ios-real-device.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/playwright-ios-build-view.png').default} alt="Playwright iOS build and session details on TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
 
 :::note
 
 - Safari is the supported browser for iOS real device testing. All four languages — **Node.js, Java, C#, and Python** — are supported using stock Playwright packages.
 
-- Playwright testing on real iOS devices is currently supported on latest iOS versions — iOS 17, iOS 18, and iOS 26 — across both iPhones and iPads.
+- Playwright testing on real iOS devices is currently supported on latest iOS versions (iOS 17, iOS 18, and iOS 26) across both iPhones and iPads.
 
 :::
 
 
 
 
-
-## Using the Playwright Agent Skill with TestMu AI
-***
-
-The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The playwright-skill package includes:
-
-```
-playwright-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Playwright Agent Skill
-***
-
-Install a Playwright Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/playwright-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/playwright-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
