@@ -1,4 +1,4 @@
----
+﻿---
 id: cerberus-integration
 title: Running Cerberus Automation Tests Using TestMu AI
 hide_title: true
@@ -58,7 +58,7 @@ Inside your Cerberus Testing tool, you need to set up <BrandName /> as your Test
 
 1.  Click on 'Create' a new Robot <img loading="lazy" src={require('../assets/images/uploads/cerbeus.webp').default} alt="Creating Cerberus Robot" width="1281" height="583" className="doc_img"/>
 2.  Enter the Robot name as per your choice, such as "<BrandName />Chrome85Win". Also choose the platform, browser, browser version and screen size of your choice. <img loading="lazy" src={require('../assets/images/uploads/cerbeus-1.webp').default} alt="New Robot Configurstion in Cerberus App" width="1281" height="578" className="doc_img"/>
-3.  You can also add optional desired capabilities of your choice, in the Capabilities tab. To know more about Desired Capabilities, you can refer to our [Selenium Autiomation Capabilities guide](/docs/selenium-automation-capabilities/) on our [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+3.  You can also add optional desired capabilities of your choice, in the Capabilities tab. To know more about Desired Capabilities, you can refer to our [Selenium Autiomation Capabilities guide](/docs/selenium-automation-capabilities/) on our [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 4.  Then switch to Executors tab, and click on "Add Executor". <img loading="lazy" src={require('../assets/images/uploads/cerbeus-2.webp').default} alt="Add Automation Test Executor" width="1281" height="582" className="doc_img"/>
 5.  In this Add Executor window, you need to pass following values to their corresponding options, as stated below:
 
@@ -71,7 +71,7 @@ Inside your Cerberus Testing tool, you need to set up <BrandName /> as your Test
 
     <img loading="lazy" src={require('../assets/images/uploads/cerbeus-3.webp').default} alt="Setting Up Executor Wizard" width="1281" height="578" className="doc_img"/>
 
-    > To get your <BrandName /> username and access key, please refer our [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+    > To get your <BrandName /> username and access key, please refer our [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 Once you are done, just click on the Create button and the <BrandName /> Robot executor will be created successfully, and will look something like this: <img loading="lazy" src={require('../assets/images/uploads/cerbeus-4.webp').default} alt="Setting <BrandName /> Robot Executor" width="1281" height="578" className="doc_img"/>
 

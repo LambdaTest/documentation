@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import DocSidebarItems from '@theme-original/DocSidebarItems';
 
 const TOP_LINKS = [
@@ -9,12 +9,12 @@ const TOP_LINKS = [
   },
   {
     label: 'Community',
-    href: 'https://community.lambdatest.com/',
+    href: 'https://community.testmuai.com/',
     icon: 'https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/users.svg',
   },
   {
     label: 'Blog',
-    href: 'https://www.lambdatest.com/blog/',
+    href: 'https://www.testmuai.com/blog/',
     icon: 'https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/newspaper.svg',
   },
 ];

@@ -1,4 +1,4 @@
----
+﻿---
 id: webex-teams-integration
 title: Webex Teams Integration
 hide_title: true
@@ -60,7 +60,7 @@ Cisco Webex Teams is a collaboration platform designed to help you and your team
 </div>
 </div>
 
-<BrandName /> and Webex Teams can be integrated to create detailed test cards in Webex Team Spaces for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your Webex Teams instance.
+<BrandName /> and Webex Teams can be integrated to create detailed test cards in Webex Team Spaces for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.testmuai.com) of your website from the <BrandName /> platform to your Webex Teams instance.
 
 
 ## Integrating Webex Teams With <BrandName />

@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-cli-upload
 title: Upload your Screenshots via CLI
 sidebar_label: Upload through CLI
@@ -223,7 +223,7 @@ npx smartui upload <directoryName>  --buildName "Sample Build Name"
 - [Environment Variables](/support/docs/smartui-cli-env-variables)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

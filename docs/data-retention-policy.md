@@ -1,4 +1,4 @@
----
+﻿---
 id: data-retention-policy
 title: Data Retention Policy
 sidebar_label: Data Retention
@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 This page provides a comprehensive overview of how long your data is retained across all <BrandName /> products. Unless stated otherwise, the default retention period is **60 days** from the date of creation.
 
 :::info Enterprise Retention
-Enterprise customers can request extended retention periods for most data types. Contact your account manager or [support@lambdatest.com](mailto:support@lambdatest.com) for details.
+Enterprise customers can request extended retention periods for most data types. Contact your account manager or [support@testmuai.com](mailto:support@testmuai.com) for details.
 :::
 
 <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '20px 0 30px'}}>
@@ -213,7 +213,7 @@ Test Manager entities (projects, test cases, test runs) have no retention limit.
 
 If your organization requires longer data retention for compliance, audit, or operational needs, contact our team:
 
-- **Email**: [support@lambdatest.com](mailto:support@lambdatest.com)
+- **Email**: [support@testmuai.com](mailto:support@testmuai.com)
 - **Enterprise inquiries**: Reach out to your account manager
 
 <nav aria-label="breadcrumbs">

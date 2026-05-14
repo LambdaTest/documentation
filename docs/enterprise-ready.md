@@ -1,4 +1,4 @@
----
+﻿---
 id: enterprise-ready
 title: Enterprise Readiness
 hide_title: false
@@ -143,7 +143,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - Private tenant deployment for AI features (Azure OpenAI)
 
 **Resources:**
-- [Security & Trust Page](https://www.lambdatest.com/trust/security#platform-security)
+- [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
 ---
@@ -253,9 +253,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 | Data retention | 60 days | Custom retention policies |
 
 **Contact:**
-- Email: [support@lambdatest.com](mailto:support@lambdatest.com)
-- Community: [community.lambdatest.com](https://community.lambdatest.com/)
-- Documentation: [lambdatest.com/support/docs](https://www.lambdatest.com/support/docs/)
+- Email: [support@testmuai.com](mailto:support@testmuai.com)
+- Community: [community.testmuai.com](https://community.testmuai.com/)
+- Documentation: [testmuai.com/support/docs](https://www.testmuai.com/support/docs/)
 
 ---
 
@@ -283,8 +283,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Documentation:**
 - [Data Retention Policy](/support/docs/data-retention-policy/)
-- [Privacy Policy](https://www.lambdatest.com/legal/privacy)
-- [Data Processing Agreement](https://www.lambdatest.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
+- [Privacy Policy](https://www.testmuai.com/legal/privacy)
+- [Data Processing Agreement](https://www.testmuai.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
 
 ---
 
@@ -326,7 +326,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.lambdatest.com/pricing)
+**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing)
 
 ---
 
@@ -335,7 +335,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 If you're evaluating <BrandName /> for your enterprise and need additional details on security, compliance, architecture, or deployment options:
 
 - **Enterprise Sales**: Contact your account manager
-- **Security Questionnaire**: Request via [support@lambdatest.com](mailto:support@lambdatest.com)
+- **Security Questionnaire**: Request via [support@testmuai.com](mailto:support@testmuai.com)
 - **SOC 2 Report**: Available under NDA — contact enterprise sales
 - **Architecture Diagram**: Available upon request with NDA in place
 

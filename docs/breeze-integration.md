@@ -1,4 +1,4 @@
----
+﻿---
 id: breeze-integration
 title: Breeze Integration
 hide_title: true
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Breeze facilitates project management on-cloud through an intuitive platform, offering Gantt charts, kanban tool, task management, and time tracking to help you finish your release cycles on time. With Breeze, you can keep track of deadlines, an individual effort of your colleagues, and acknowledge who is doing what in a project.
 
-<BrandName /> integration with Breeze will help you log UI bugs or observations in your Breeze project as you perform [cross browser testing](https://www.lambdatest.com) on <BrandName />. You can capture a screenshot of your website over a browser discrepancy, highlight the UI bug, report that bug to your colleague, provide a summary of the issue, all from the middle of your test-session at <BrandName />. All of the details that you may mention around a bug would be auto-populated in your respective Breeze project.
+<BrandName /> integration with Breeze will help you log UI bugs or observations in your Breeze project as you perform [cross browser testing](https://www.testmuai.com) on <BrandName />. You can capture a screenshot of your website over a browser discrepancy, highlight the UI bug, report that bug to your colleague, provide a summary of the issue, all from the middle of your test-session at <BrandName />. All of the details that you may mention around a bug would be auto-populated in your respective Breeze project.
 
 ## How To Integrate Breeze With Your <BrandName /> Account?
 ***

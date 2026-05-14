@@ -1,4 +1,4 @@
----
+﻿---
 id: ss-behind-login
 title: Taking Screenshots of Pages Behind Login
 hide_title: true
@@ -47,7 +47,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 # Taking Screenshots of Pages Behind Login
 ***
-<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.lambdatest.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
+<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="HT8ODEExxZM">
@@ -55,25 +55,8 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 </div>
 </div>
 
-This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.lambdatest.com/automated-screenshot) testing document to know more.
+This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot) testing document to know more.
 
-## Understanding The Basics Of Login Profile
-***
-
-To capture screenshots after your website's login page, you are required to configure a **login profile** in your <BrandName /> account. This login profile will help you store the values for respective login fields such as ID, E-mail, along with the **submit** button using the **Locators**.
-
-**What are locators?**
-
-Locators are used to find HTML elements of a web page in your automation test script. Selenium offers 8 locators to help you identify the particular HTML element you are looking for:
-
-1. [ID](https://www.lambdatest.com/blog/making-the-move-with-id-locator-in-selenium-webdriver/)
-2. [Name](https://www.lambdatest.com/blog/how-to-use-name-locator-in-selenium-automation-scripts/)
-3. [TagName](https://www.lambdatest.com/blog/locating-elements-by-tagname-in-selenium/)
-4. [CSS Selector](https://www.lambdatest.com/blog/how-pro-testers-use-css-selectors-in-selenium-automation-scripts/)
-5. [XPath](https://www.lambdatest.com/blog/complete-guide-for-using-xpath-in-selenium-with-examples/)
-6. [Class Name](https://www.lambdatest.com/blog/selenium-java-tutorial-class-name-locator-in-selenium/)
-7. [Link Text](https://www.lambdatest.com/blog/using-link-text-and-partial-link-text-in-selenium/)
-8. [Partial Link Text](https://www.lambdatest.com/blog/using-link-text-and-partial-link-text-in-selenium/)
 
 ## How This Works?
 ***
@@ -119,7 +102,7 @@ Select the **locator** as per your respective fields in the Login form.
 
 For the demonstration, let us capture the details for <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}><BrandName /> Login</a>.
 >
-**Note:** If you are already logged in to [LambdaTest](https://www.lambdatest.com), make sure to perform this drill in **incognito mode**.
+**Note:** If you are already logged in to [LambdaTest](https://www.testmuai.com), make sure to perform this drill in **incognito mode**.
 
 **Step 1:** Go to <a href="https://accounts.lambdatest.com/login" onClick={CookieTrackingLogin}>https://accounts.lambdatest.com/login</a>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
 

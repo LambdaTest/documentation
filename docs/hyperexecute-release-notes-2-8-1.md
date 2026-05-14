@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-release-notes-2-8-1
 title: Version 2.8.1
 hide_title: false
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 ## Enhanced `failFast` at the Scenario Level
-We have made am enhancement to our test configuration: the ability to use [`failFast`](http://lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) at the scenario level!
+We have made am enhancement to our test configuration: the ability to use [`failFast`](http://testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) at the scenario level!
 
 Previously, `failFast` could only be applied at the test level. Now, with this update, you can configure `failFast` to stop further scenario execution after a specified number of failed scenarios, providing more granular control over your testing process.
 

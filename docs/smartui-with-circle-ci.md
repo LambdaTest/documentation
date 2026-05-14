@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-with-circle-ci
 title: Circle CI Pipeline Integration with SmartUI
 sidebar_label: Circle CI
@@ -383,8 +383,8 @@ If you encounter issues not covered here:
 
 - Review [CircleCI Documentation](https://circleci.com/docs/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>

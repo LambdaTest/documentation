@@ -1,4 +1,4 @@
----
+﻿---
 id: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing
 title: Default List Of Browsers For Screenshot Testing
 hide_title: true
@@ -88,7 +88,7 @@ The default list of Mobile and Desktop browsers for [Automated Screenshot Testin
 | 7      | iOS                     | iOS 12.0     | iPhone XS Max |
 | 8      | Windows 10              | Firefox      | 60            |
 
->For more information, refer to [List of Browsers](https://www.lambdatest.com/list-of-browsers).
+>For more information, refer to [List of Browsers](https://www.testmuai.com/list-of-browsers).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

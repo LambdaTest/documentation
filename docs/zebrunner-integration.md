@@ -1,4 +1,4 @@
----
+﻿---
 id: zebrunner-integration
 title: How To Integrate TestMu AI With Zebrunner Instance
 hide_title: true
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Zebrunner is a modern test reporting and analytics tool which offers very comprehensive automated test results and analysis with the help of a smart AI-based failure classification system. Through Zebrunner, you can easily detect failures with the help of rich artifacts, such as video, screens, logs, etc., and fix issues faster.
 
-Zebrunner now offers integration with <BrandName /> to help you perform automated cross-browser testing taking advantage of the cloud-based Selenium Grid on over 2000 real browsers. <BrandName /> [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) integration to Zebrunner will help you run your Selenium automation scripts from Zebrunner instance to our cloud-based Selenium Grid very easily. Lets see how.
+Zebrunner now offers integration with <BrandName /> to help you perform automated cross-browser testing taking advantage of the cloud-based Selenium Grid on over 2000 real browsers. <BrandName /> [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) integration to Zebrunner will help you run your Selenium automation scripts from Zebrunner instance to our cloud-based Selenium Grid very easily. Lets see how.
 
 ## How To Integrate <BrandName /> With Zebrunner Instance
 

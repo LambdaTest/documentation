@@ -1,4 +1,4 @@
----
+﻿---
 id: web-testing-on-real-devices
 title: Web Testing On Real Devices
 hide_title: true
@@ -91,7 +91,7 @@ One-click bug logging allows users to capture screenshots for future reference a
 <img loading="lazy" src={require('../assets/images/mobile-testing-real-devices/create-issue.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
 
 
-*<BrandName /> offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [<BrandName /> integrations](https://www.lambdatest.com/integrations).*
+*<BrandName /> offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [<BrandName /> integrations](https://www.testmuai.com/integrations).*
 
 
 ## Video Recording Of A Test Session

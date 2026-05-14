@@ -1,4 +1,4 @@
----
+﻿---
 id: migrate-legacy-lambdatest
 title: How to Migrate From Legacy Test Execution Platform to TestMu AI
 hide_title: true
@@ -169,7 +169,7 @@ You need to now add the hub URL in the configuration settings of your test suite
 
 
 ### <BrandName /> Automation Capabilities
-Add your capabilities using the [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/), where you can quickly generate the required browser, OS, and platform configurations for your test script. Select the environment you want, copy the capabilities, and paste them directly into your script to run on <BrandName />.
+Add your capabilities using the [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/), where you can quickly generate the required browser, OS, and platform configurations for your test script. Select the environment you want, copy the capabilities, and paste them directly into your script to run on <BrandName />.
 
 
 

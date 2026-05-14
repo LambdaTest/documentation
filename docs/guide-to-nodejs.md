@@ -1,4 +1,4 @@
----
+﻿---
 id: guide-to-nodejs
 title: Guide:Running NodeJS Tests On Cloud Selenium Grid
 hide_title: true
@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Quick Guide To Run Node.js Tests On Cloud Selenium Grid
 ***
 
-<BrandName />’s [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the <BrandName /> Selenium automation grid.
+<BrandName />’s [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the <BrandName /> Selenium automation grid.
 
 ## Prerequisites
 ***
@@ -101,7 +101,7 @@ const webdriver = require('selenium-webdriver');
     ----------
     platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)
     browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge, Safari)
-    version :  Supported list of version can be found at https://www.lambdatest.com/capabilities-generator/
+    version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/
 */
  
 // username: Username can be found at automation dashboard
@@ -160,7 +160,7 @@ Do note the use of the remote webdriver here. We have passed browser environment
 To set up your own choice of environment for the test in the code, you can leverage our Capability Generator tool.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/capabilities-generator">TestMu AI Capability Generator Tool</a>
+<a href="https://www.testmuai.com/capabilities-generator">TestMu AI Capability Generator Tool</a>
 </div>
 
 > **Tear Down**: The tear down method helps the <BrandName /> platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ThemedImage from "@theme/ThemedImage";
 export default function HelpFulArticle() {
@@ -157,7 +157,7 @@ class HelpFulArticleClass extends React.Component {
                                <div className="social_button">
                         <h3 className='feedback__box__title feedback__box__title_helpful'>Still need help?</h3>
                         <span onClick={() => window.openLTChatWidget()} className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Chat with Us</span>
-                        <a role="button" tabIndex="0" href="https://community.lambdatest.com/" target="_blank" className="chat_btn"><img loading="lazy" src="/support/img/community.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Ask the Community</a>
+                        <a role="button" tabIndex="0" href="https://community.testmuai.com/" target="_blank" className="chat_btn"><img loading="lazy" src="/support/img/community.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Ask the Community</a>
                         {/* <a href="https://accounts.lambdatest.com/register" target="_blank"  className="btnlink">Start Free Testing</a> */}
                     </div>
                     </div> 

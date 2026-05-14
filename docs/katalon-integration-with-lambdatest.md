@@ -1,4 +1,4 @@
----
+﻿---
 id: katalon-integration-with-lambdatest
 title: Step By Step Guide to Integrate TestMu AI With Katalon
 hide_title: true
@@ -63,7 +63,7 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 
 ## How To Integrate <BrandName /> With Katalon?
 -----------------------------------------------------------------------------------------------------------------------------
-For integrating <BrandName /> with Katalon, make sure to run your test scripts through the ‘Remote’ desired capability. You can select all your desired capabilities from [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+For integrating <BrandName /> with Katalon, make sure to run your test scripts through the ‘Remote’ desired capability. You can select all your desired capabilities from [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 **Step 1:** Login to <BrandName />. If you haven’t signed up yet, click <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
 

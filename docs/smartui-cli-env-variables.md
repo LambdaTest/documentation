@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-cli-env-variables
 title: SmartUI SDK Environment Variables
 sidebar_label: Set Environment Variables
@@ -354,7 +354,7 @@ The following environment variables are also available for advanced configuratio
 - [CLI Upload](/support/docs/smartui-cli-upload)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

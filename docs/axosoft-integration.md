@@ -1,4 +1,4 @@
----
+﻿---
 id: axosoft-integration
 title: Axosoft Integration
 hide_title: true
@@ -61,7 +61,7 @@ Axosoft is a versatile project management tool designed for Agile teams and orga
 </div>
 </div>
 
-Axosoft Integration with <BrandName /> streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.lambdatest.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
+Axosoft Integration with <BrandName /> streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.testmuai.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
 
 Axosoft Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium and premium plans.
 

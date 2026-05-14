@@ -1,4 +1,4 @@
----
+﻿---
 id: supported-languages-and-frameworks
 title: Selenium Grid Supported Languages & Frameworks
 hide_title: true
@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Languages and Frameworks Supported By <BrandName /> Selenium Grid
 * * *
 
-Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) supports all the languages & frameworks that are compatible with [Selenium](https://www.lambdatest.com/selenium). Below mentioned are the ones for which we either already have documentation ready or are a work in progress.
+Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) supports all the languages & frameworks that are compatible with [Selenium](https://www.testmuai.com/selenium). Below mentioned are the ones for which we either already have documentation ready or are a work in progress.
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 
@@ -218,7 +218,7 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
 
 * * *
 
-There are [test automation](https://www.lambdatest.com/automation-testing) frameworks which provide out-of-the-box features & functionality to help users perform [Selenium test automation](https://www.lambdatest.com/selenium-automation) in a convenient manner. We support those frameworks too.
+There are [test automation](https://www.testmuai.com/automation-testing) frameworks which provide out-of-the-box features & functionality to help users perform [Selenium test automation](https://www.testmuai.com/selenium-automation) in a convenient manner. We support those frameworks too.
 
 ### Tesbo
 ***

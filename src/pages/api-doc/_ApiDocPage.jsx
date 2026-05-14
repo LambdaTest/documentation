@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared layout for all API Reference endpoint pages.
  * Receives groupSlug + endpointSlug derived from the generated page file,
  * looks up the endpoint from all-apis.json, and renders the 3-column layout.
@@ -62,15 +62,15 @@ const API_YAML_FILE_MAP = {
 
 const NAV_SECTIONS = [
   { label: 'Home', href: '/support/' },
-  { label: 'Docs', href: '/support/docs/getting-started-with-lambdatest-automation/' },
+  { label: 'Docs', href: '/support/docs/getting-started-with-testmu-automation/' },
   { label: 'API Reference', href: '/support/api-doc/' },
   { label: 'FAQ', href: '/support/faq/' },
 ];
 
 const TOP_LINKS = [
   { label: 'Status', href: 'https://status.lambdatest.io/' },
-  { label: 'Community', href: 'https://community.lambdatest.com/' },
-  { label: 'Blog', href: 'https://www.lambdatest.com/blog/' },
+  { label: 'Community', href: 'https://community.testmuai.com/' },
+  { label: 'Blog', href: 'https://www.testmuai.com/blog/' },
 ];
 
 function getStoredTheme() {

@@ -1,4 +1,4 @@
----
+﻿---
 id: getting-started-with-hyperexecute
 title: Getting Started with HyperExecute
 hide_title: false
@@ -99,18 +99,18 @@ Ready to experience the power of HyperExecute? Getting started is easy—we’ve
   <TabItem value="quick" label="Quick Run" default>
     Execute tests directly from the HyperExecute Portal with sample setup - perfect for new users who want to see results immediately.    
 
-    <a href="https://www.lambdatest.com/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
+    <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
 
   </TabItem>
   <TabItem value="CLI" label="Run on Local System">
      Run tests from your own machine using the HyperExecute CLI with sample project and preset configuration file. 
 
-     <a href="https://www.lambdatest.com/support/docs/hyperexecute-running-your-first-job/#2-using-local-system" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
+     <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#2-using-local-system" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
   <TabItem value="gitpod" label="Run on Gitpod">
     Run your tests in a fully managed online development environment, without any local installations or configurations.
 
-    <a href="https://www.lambdatest.com/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
+    <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
 </Tabs>
 :::

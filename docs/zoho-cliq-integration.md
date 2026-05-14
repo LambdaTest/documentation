@@ -1,4 +1,4 @@
----
+﻿---
 id: zoho-cliq-integration
 title: Zoho Cliq Integration
 hide_title: true
@@ -59,7 +59,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 Zoho Cliq is a team communication and collaboration platform designed to enhance productivity and streamline communication within organizations. It offers a range of features to facilitate real-time messaging, audio and video calls, file sharing, and integrations with other business applications.
 
 
-Integrating <BrandName /> with Zoho Cliq, users can create detailed test cards in Zoho Cliq Channels for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your Zoho Cliq instance.
+Integrating <BrandName /> with Zoho Cliq, users can create detailed test cards in Zoho Cliq Channels for logged bugs in <BrandName />. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.testmuai.com) of your website from the <BrandName /> platform to your Zoho Cliq instance.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="GSSvxCZ_ysE">

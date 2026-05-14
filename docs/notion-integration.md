@@ -1,4 +1,4 @@
----
+﻿---
 id: notion-integration
 title: Notion Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Notion is an all-in-one workspace for the teams where you can write, plan, collaborate, and get organized. You can take notes, assign tasks, manage projects, and much more. Notion has customized markdown support that integrates kanban boards, tasks, wikis, and databases.
 
-The <BrandName /> and Notion integration allows you to perform one-click bug logging while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps). You can mark and share bugs directly from the <BrandName /> to your Notion pages.
+The <BrandName /> and Notion integration allows you to perform one-click bug logging while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps). You can mark and share bugs directly from the <BrandName /> to your Notion pages.
 
 ## Integrating Notion With <BrandName /> Account
 ***

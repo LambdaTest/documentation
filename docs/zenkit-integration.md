@@ -1,4 +1,4 @@
----
+﻿---
 id: zenkit-integration
 title: Zenkit Integration
 hide_title: true
@@ -63,7 +63,7 @@ Zenkit is a SaaS tool that helps teams collaborate on projects and build databas
 </div>
 </div>
 
-<BrandName />'s integration with Zenkit provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.lambdatest.com/online-browser-testing). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Zenkit instance, eliminating the need to maintain tasks and issues manually.
+<BrandName />'s integration with Zenkit provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.testmuai.com/online-browser-testing). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Zenkit instance, eliminating the need to maintain tasks and issues manually.
 
 ## Integrating Zenkit With <BrandName />
 ***

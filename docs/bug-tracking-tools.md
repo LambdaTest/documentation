@@ -1,4 +1,4 @@
----
+﻿---
 id: bug-tracking-tools
 title: Bug Tracking Tools
 sidebar_label: Integrations
@@ -58,83 +58,83 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/jira-self-hosted-integration/">Jira Self Hosted Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/jira-self-hosted-integration/">Jira Self Hosted Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/airtable-integration/">Airtable Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/airtable-integration/">Airtable Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/notion-integration/">Notion Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/notion-integration/">Notion Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/linear-app-integration/">Linear App Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/linear-app-integration/">Linear App Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/vsts-integration/">Azure DevOps Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/vsts-integration/">Azure DevOps Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/youtrack-integration/">YouTrack Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/youtrack-integration/">YouTrack Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/mantis-integration/">Mantis Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/mantis-integration/">Mantis Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/pagerduty-integration/">PagerDuty Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/pagerduty-integration/">PagerDuty Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bugasura-integration/">Bugasura Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/bugasura-integration/">Bugasura Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zoho-bugtracker-integration/">Zoho Bug Tracker Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/zoho-bugtracker-integration/">Zoho Bug Tracker Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/goodday-integration/">GoodDay Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/goodday-integration/">GoodDay Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bugherd-integration/">BugHerd Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/bugherd-integration/">BugHerd Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zipboard-integration/">ZipBoard Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/zipboard-integration/">ZipBoard Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bugzilla-integration/">Bugzilla Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/bugzilla-integration/">Bugzilla Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bugsnag-integration/">Bugsnag Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/bugsnag-integration/">Bugsnag Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/assembla-integration/">Assembla Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/assembla-integration/">Assembla Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/taiga-integration/">Taiga Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/taiga-integration/">Taiga Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/servicenow-integration/">ServiceNow Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/servicenow-integration/">ServiceNow Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zohoproject-integration/">Zoho Project Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/zohoproject-integration/">Zoho Project Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/rally-integration/">Rally Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/rally-integration/">Rally Integration With <BrandName /></a>
 </div>
 :::info Note
 

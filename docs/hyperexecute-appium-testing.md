@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-appium-testing
 title: Appium Testing - Real Device On HyperExecute
 sidebar_label: Appium - Real Device
@@ -250,7 +250,7 @@ To configure SmartUI with HyperExecute, you need to simply add a capability in y
 "smartUI.project": "<YOUR_SMARTUI_PROJECT_NAME>"
 ```
 
-> Refer to the [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to understand how to write the capability in different languages.
+> Refer to the [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to understand how to write the capability in different languages.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/capability-generator.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 

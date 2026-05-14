@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-sdk-fetch-results
 title: Fetching Results through SmartUI SDK
 sidebar_label: Fetch Results
@@ -379,7 +379,7 @@ npx smartui capture urlTest.json --config config.json --fetch-results results.js
 - [CLI Exec Commands](/support/docs/smartui-cli-exec)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 - [SmartUI Reporter Tool](https://smartui-reporter.netlify.app/)
 - [SmartUI API Swagger Documentation](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots)
 

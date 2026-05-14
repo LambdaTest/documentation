@@ -1,4 +1,4 @@
----
+﻿---
 id: project-management-tools-bitbucket-integration
 title: Bitbucket Integration
 hide_title: true
@@ -100,7 +100,7 @@ That is it, you will be notified with a prompt message on top mentioning that Bi
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-realtimetest.webp').default} alt="real time test"  className="doc_img"width="1365" height="660"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-testing.webp').default} alt="testing"  className="doc_img" width="1348" height="619"/>
 

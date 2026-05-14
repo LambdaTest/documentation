@@ -1,4 +1,4 @@
----
+﻿---
 id: algoshack-integration
 title: algoQA Integration
 hide_title: true
@@ -68,7 +68,7 @@ By integrating <BrandName /> with algoQA, you can perform automated browser test
 <img loading="lazy" src={require('../assets/images/algoshack-integration/remote.png').default} alt="Image" width="1428" height="274"  className="doc_img img_center"/>
 
 
-3. Navigate to <BrandName /> [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
+3. Navigate to <BrandName /> [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) for declaring desired capabilities. For instance, if you wish to test on macOS High Sierra using Firefox browser then desired capabilities for Java frameworks would look like below.
 
 <img loading="lazy" src={require('../assets/images/algoshack-integration/caps.PNG').default} alt="Image" width="1274" height="565"  className="doc_img"/>
 

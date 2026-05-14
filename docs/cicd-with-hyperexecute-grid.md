@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-integration-with-ci-cd-tools
 title: Integration With CI/CD Tools
 hide_title: true
@@ -90,51 +90,51 @@ hyperexecute.exe –user LT_USERNAME –key LT_ACCESS_KEY –config path of the 
 Below are detailed instructions for CI/CD tool integrations to help you get the most out of HyperExecute.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/aws-codepipeline-with-hyperexecute/">AWS CodePipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/">AWS CodePipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/azure-with-hyperexecute/">Azure DevOps Pipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/azure-with-hyperexecute/">Azure DevOps Pipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/github-actions-with-hyperexecute/">GitHub Actions Pipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/">GitHub Actions Pipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gitlab-integration-with-hyperexecute/">GitLab Pipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/gitlab-integration-with-hyperexecute/">GitLab Pipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/circle-ci-with-hyperexecute/">CircleCI Pipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/circle-ci-with-hyperexecute/">CircleCI Pipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/jenkins-with-hyperexecute/">Jenkins Integration</a>
+<a href="https://www.testmuai.com/support/docs/jenkins-with-hyperexecute/">Jenkins Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bitbucket-pipeline-with-hyperexecute/">Bitbucket Pipeline Integration</a>
+<a href="https://www.testmuai.com/support/docs/bitbucket-pipeline-with-hyperexecute/">Bitbucket Pipeline Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/travis-ci-with-hyperexecute/">Travis CI Integration</a>
+<a href="https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/">Travis CI Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/teamcity-with-hyperexecute/">TeamCity Integration</a>
+<a href="https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/">TeamCity Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gocd-integration-with-hyperexecute/">GoCD Integration</a>
+<a href="https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/">GoCD Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/">Bamboo CI Integration</a>
+<a href="https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/">Bamboo CI Integration</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/semaphore-integration-with-hyperexecute/">Semaphore Integration</a>
+<a href="https://www.testmuai.com/support/docs/semaphore-integration-with-hyperexecute/">Semaphore Integration</a>
 </div>
 
 ***

@@ -1,4 +1,4 @@
----
+﻿---
 id: responsive-testing
 title: Check Responsiveness of Your Website | TestMu AI
 hide_title: true
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 > This feature is **deprecated** and as a result, no further support will be provided for this feature by the <BrandName /> Organization. 
 
 * * *
-As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At <BrandName />, you can [check RWD](https://www.lambdatest.com/responsive-test-online) through 50+ different devices in a single go!
+As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At <BrandName />, you can [check RWD](https://www.testmuai.com/responsive-test-online) through 50+ different devices in a single go!
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ttdcrgDcDgo">
@@ -53,11 +53,11 @@ As the word responsive suggests, this type of testing is used to check the appea
 
 ### How To Do Responsive Testing?
 
-**Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.lambdatest.com/smart-visual-ui-testing) menu in menu box.
+**Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.testmuai.com/smart-visual-ui-testing) menu in menu box.
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/responsive-1.webp').default} alt="Responsive Testing Online" width="1345" height="627" className="doc_img"/>
 
-**Step 2:** Input the URL for which you wish to test responsiveness. Select your monitor size (diagonal length in inches). Click ‘Generate’ to [generate screenshots](https://www.lambdatest.com/full-page-screen-capture).
+**Step 2:** Input the URL for which you wish to test responsiveness. Select your monitor size (diagonal length in inches). Click ‘Generate’ to [generate screenshots](https://www.testmuai.com/full-page-screen-capture).
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/responsive-2.webp').default} alt="Capture Screenshot" width="1345" height="627" className="doc_img"/>
 

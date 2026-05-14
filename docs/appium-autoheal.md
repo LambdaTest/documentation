@@ -1,4 +1,4 @@
----
+﻿---
 id: smart-heal-appium
 title: Smart Heal in Automation
 sidebar_label: Smart Heal
@@ -123,7 +123,7 @@ desired_caps = {
 </Tabs>
 
 :::tip
-You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 :::
 
 ### 3. Enable Smart Heal with Runtime Hooks

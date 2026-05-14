@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-cli-figma-app
 title: Getting Started with TestMu AI's SmartUI Figma-App CLI
 sidebar_label: Figma-App CLI
@@ -344,8 +344,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
-- Visit [TestMu AI Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 </TabItem>
 </Tabs>
@@ -359,7 +359,7 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)
 - [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
 - [SmartUI CLI Docs](/support/docs/smartui-cli/)
 - [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)

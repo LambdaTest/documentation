@@ -1,4 +1,4 @@
----
+﻿---
 id: codeless-automation-tools
 title: Integrations For Codeless Automation Tools
 hide_title: true
@@ -52,59 +52,59 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> offers integration with codeless automation tools to help you expand your cross browser testing coverage. Using the integration with your favorite codeless automation tool, you can perform automated browser testing on 3000+ real browsers and operating systems.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/">Run Selenium IDE Tests With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/">Run Selenium IDE Tests With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/katalon-integration-with-testmu/">Katalon Studio Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/katalon-integration-with-testmu/">Katalon Studio Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/ranorex-integration-with-testmu/">Ranorex Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/ranorex-integration-with-testmu/">Ranorex Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/run-oxygen-automation-scripts-on-testmu/">Oxygen Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/run-oxygen-automation-scripts-on-testmu/">Oxygen Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/leapwork-integration-with-testmu/">LEAPWORK Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/">LEAPWORK Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/testingwhiz-integration/">TestingWhiz Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/testingwhiz-integration/">TestingWhiz Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/cerberus-integration/">Cerberus Studio Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/cerberus-integration/">Cerberus Studio Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/qmetry-integration/">QMetry Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/qmetry-integration/">QMetry Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/vividus-integration/">Vividus Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/vividus-integration/">Vividus Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/testsigma-integration/">Testsigma Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/testsigma-integration/">Testsigma Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/">Tricentis Tosca Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/">Tricentis Tosca Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-testmu/">Ghost Inspector Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/">Ghost Inspector Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/accelq-integration/">Accelq Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/accelq-integration/">Accelq Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/algoqa-integration/">algoQA Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/algoqa-integration/">algoQA Integration With <BrandName /></a>
 </div>
 
 If your favorite Codeless automation tool is not in the above-mentioned, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **shout**</span> and we will have it ready shortly for you.

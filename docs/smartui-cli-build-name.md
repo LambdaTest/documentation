@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-sdk-build-name
 title: Grouping Screenshots through Build Names
 sidebar_label: Groups Screenshots by Build Names
@@ -158,4 +158,4 @@ This approach provides a structured and efficient way to manage visual tests:
 - [CLI Exec Commands](/support/docs/smartui-cli-exec)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)

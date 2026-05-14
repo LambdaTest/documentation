@@ -1,4 +1,4 @@
----
+﻿---
 id: project-management-tools-gitlab-integration
 title: GitLab Integration:TestMu AI
 hide_title: true
@@ -147,7 +147,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/realtime-test.webp').default} alt="realtime test"  className="doc_img" width="1365" height="660"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Mark as Bug** from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Mark as Bug** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/mark-bug.webp').default} alt="mark as bug"  className="doc_img" width="1358" height="619"/>
 

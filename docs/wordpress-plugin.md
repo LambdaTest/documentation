@@ -1,4 +1,4 @@
----
+﻿---
 id: wordpress-plugin
 title: TestMu AI WordPress Plugin For Browser Testing
 hide_title: true
@@ -89,7 +89,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <img loading="lazy" src={require('../assets/images/wordpress-plugin/8.webp').default} alt="screenshot testing setup" width="1356" height="660" className="doc_img"/>
 
-**Step 10:** Now you can Generate [Automated Screenshots](https://www.lambdatest.com/automated-screenshot) of your web pages or posts with <BrandName /> plugin. Go to All Posts and you will <BrandName /> icon below every post. Click on that icon.
+**Step 10:** Now you can Generate [Automated Screenshots](https://www.testmuai.com/automated-screenshot) of your web pages or posts with <BrandName /> plugin. Go to All Posts and you will <BrandName /> icon below every post. Click on that icon.
 
 <img loading="lazy" src={require('../assets/images/wordpress-plugin/9.webp').default} alt="Generate Automated Screenshots" width="1366" height="660" className="doc_img"/>
 

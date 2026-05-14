@@ -1,4 +1,4 @@
----
+﻿---
 id: google-chat-integration
 title: Google Chat Integration
 hide_title: true
@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 Google Chat enables business teams to streamline their communications within Google Workspace. With Google Chat, you can chat using text, create collaborative chat rooms, share files, and hold virtual conferences.
 
-<BrandName /> and Google Chat can be used to create test cards in Google Chats Spaces for logged bugs in <BrandName />. This will notify you every time a new bug is pushed while performing [cross browser testing](https://www.lambdatest.com/) of websites.
+<BrandName /> and Google Chat can be used to create test cards in Google Chats Spaces for logged bugs in <BrandName />. This will notify you every time a new bug is pushed while performing [cross browser testing](https://www.testmuai.com/) of websites.
 
 
 ## Integrating Google Chat With <BrandName />

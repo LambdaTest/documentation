@@ -1,4 +1,4 @@
----
+﻿---
 
 id: getting-started-with-appium-testing
 
@@ -118,7 +118,7 @@ Appium leverages the WebDriver protocol, similar to how Selenium automates web a
 
 
 
-Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud).
 
 
 

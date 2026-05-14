@@ -1,4 +1,4 @@
----
+﻿---
 id: capability-map
 title: TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
 hide_title: true
@@ -191,7 +191,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 To migrate your test suites from Sauce Labs, checkout this guide on [Migrating from Sauce Labs to <BrandName />](/support/docs/saucelabs-to-testmu-migration-guide/).
 
 :::tip 
-To generate capabilities use [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+To generate capabilities use [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
 

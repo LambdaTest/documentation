@@ -1,4 +1,4 @@
----
+﻿---
 id: siesta-integration
 title: Siesta Integration
 hide_title: true
@@ -86,7 +86,7 @@ C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/in
 <img loading="lazy" src={require('../assets/images/siesta/siesta-single-test.webp').default} alt="Image" width="1366" height="625"  className="doc_img"/>
 
 
-To generate desired capabilities for your test script, head over to our [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+To generate desired capabilities for your test script, head over to our [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 ## Parallel Testing With Siesta
 ***
