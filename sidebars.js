@@ -5268,6 +5268,11 @@ module.exports = {
             label: "Test Manager Integration",
             id: "kane-cli-tms-integration",
           },
+          {
+            type: "doc",
+            label: "Test.md",
+            id: "kane-cli-testmd",
+          },
         ],
       },
       {
