@@ -1,4 +1,4 @@
----
+﻿---
 id: analytics-table-widgets
 title: Table Widgets
 sidebar_label: Table Widgets
@@ -29,12 +29,12 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,
@@ -360,4 +360,4 @@ After creating your table widget:
 
 ## Support
 
-If you have any questions or need assistance with creating table widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.lambdatest.com/support/).
+If you have any questions or need assistance with creating table widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).

@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-release-notes-2-9-9
 title: Version 2.9.9
 hide_title: false
@@ -59,4 +59,4 @@ We are excited to announce emulator support for Chrome browser automation on Hyp
 ## Supported Environments
 Currently available on **Android 11** and **Android 12** emulators. More versions and browsers will be supported in future releases.
 
-👉 You can check detailed device support and capabilities at:[ <BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
+👉 You can check detailed device support and capabilities at:[ <BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/)

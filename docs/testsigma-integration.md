@@ -1,4 +1,4 @@
----
+﻿---
 id: testsigma-integration
 title: Running Automation Tests Using Testsigma TestMu AI Integration
 hide_title: true
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Testsigma is an unified codeless automation testing platform, designed and built for Agile and DevOps teams. With Testsigma, you can automate tests on Web, Mobile, and APIs; along with your team, with minimal or no coding skills required.
 
-Testsigma now offers integration with <BrandName /> to help you perform automated cross-browser testing taking advantage of the cloud-based [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on over 2000 real browsers. <BrandName /> Selenium Grid integration to Testsigma will help you run your Selenium automation scripts from Testsigma instance to our cloud-based Selenium Grid very easily. Lets see how.
+Testsigma now offers integration with <BrandName /> to help you perform automated cross-browser testing taking advantage of the cloud-based [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on over 2000 real browsers. <BrandName /> Selenium Grid integration to Testsigma will help you run your Selenium automation scripts from Testsigma instance to our cloud-based Selenium Grid very easily. Lets see how.
 
 
 ## How To Integrate <BrandName /> With Testsigma

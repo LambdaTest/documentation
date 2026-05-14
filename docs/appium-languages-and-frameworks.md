@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-languages-and-frameworks
 title: Appium Supported Languages and Frameworks
 sidebar_label: Languages and Frameworks
@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud).
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 

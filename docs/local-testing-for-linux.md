@@ -1,4 +1,4 @@
----
+﻿---
 id: local-testing-for-linux
 title: Legacy Binary For Linux
 hide_title: true
@@ -23,7 +23,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 <BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our secure shell tunneling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with Secure TCP with TLS 1.2 network protocol hosted by <BrandName /> tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with Secure TCP with TLS 1.2 network protocol hosted by <BrandName /> tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.testmuai.com/feature), even before it gets deployed over production environment.
 
 > Note: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for Linux](/docs/local-testing-linux/).
 
@@ -210,4 +210,4 @@ You can also find your **Access Key** by going to ‘**Settings**’ in the left
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-15.webp').default} alt="Image"  className="doc_img"/>
 
->**<BrandName /> tunnel Update:** Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com/) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
+>**<BrandName /> tunnel Update:** Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.testmuai.com/) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.

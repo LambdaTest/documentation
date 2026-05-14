@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-scenario-steps-error
 title: Debug your Scenario Steps Errors
 description: This document will help you debug your failed job if you are facing any errors in the Scenario stage.
@@ -55,7 +55,7 @@ OpenQA.Selenium.WebDriverException : The newSession command returned an unexpect
 401 Unauthorized !! Please include  `user` & `accessKey` in desired capabilities.
 ```
 
-To resolve this issue, you have to visit our [Automation Capability Generator](https://www.lambdatest.com/capabilities-generator/) site and configure your project suite capabilities generated as per your desired language and framework.
+To resolve this issue, you have to visit our [Automation Capability Generator](https://www.testmuai.com/capabilities-generator/) site and configure your project suite capabilities generated as per your desired language and framework.
 
 ## Unable to create Session
 
@@ -69,7 +69,7 @@ This is possible due to the following reasons:
 - If you have created local driver instead of remote webdriver connection
 - If your HUB URL is incorrect.
 
-To address this challenge, our recommended solution is to visit the [Automation Capability Generator](https://www.lambdatest.com/capabilities-generator/) website. Here, you can seamlessly generate accurate and valid sets of credentials and capabilities, thereby rectifying issues associated with test failures.
+To address this challenge, our recommended solution is to visit the [Automation Capability Generator](https://www.testmuai.com/capabilities-generator/) website. Here, you can seamlessly generate accurate and valid sets of credentials and capabilities, thereby rectifying issues associated with test failures.
 
 ## Invalid HUB Endpoint
 

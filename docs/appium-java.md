@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-java
 title: Appium with Java
 sidebar_label: Java
@@ -212,7 +212,7 @@ public class vanilla_android {
             browser.click();
 
             MobileElement url = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/url"));
-            url.sendKeys("https://www.lambdatest.com");
+            url.sendKeys("https://www.testmuai.com");
             MobileElement find = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/find"));
             find.click();
 
@@ -315,7 +315,7 @@ public class vanilla_ios {
 
            WebDriverWait el7 =  new WebDriverWait(driver, 30);
            el7.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url")));
-           driver.findElementById("url").sendKeys("https://www.lambdatest.com/");
+           driver.findElementById("url").sendKeys("https://www.testmuai.com/");
 
             //Clicks on the text box
             WebDriverWait el = new WebDriverWait(driver,90);
@@ -399,7 +399,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `false` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

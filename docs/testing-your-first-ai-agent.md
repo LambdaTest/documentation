@@ -3,7 +3,7 @@ id: testing-your-first-ai-agent
 title: Testing Your First AI Agent
 hide_title: false
 sidebar_label: Test Your First AI Agent
-description: Validate test chatbots, voice assistants, and hybrid deployments across all interaction types with industry's first Agent-to-Agent testing platform. 
+description: Step-by-step guide to setting up and running your first AI agent test on TestMu AI—configure inputs, run validations, and review results.
 keywords:
  - agent to agent testing
  - agentic testing

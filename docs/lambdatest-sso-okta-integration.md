@@ -1,4 +1,4 @@
----
+﻿---
 id: lambdatest-sso-okta-integration
 title: TestMu AI SSO & Okta Integration
 hide_title: false
@@ -29,19 +29,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "TestMu AI",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "SSO Okta Integration",
-          "item": "https://www.lambdatest.com/support/docs/testmu-sso-okta-integration/"
+          "item": "https://www.testmuai.com/support/docs/testmu-sso-okta-integration/"
         }
       ]
     })

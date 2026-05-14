@@ -1,4 +1,4 @@
----
+﻿---
 id: local-testing-linux
 title: Local Testing For Linux
 hide_title: true
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through <BrandName />. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />. You can leverage the new <BrandName /> tunnel binary for corporate firewalls and proxy settings without any restrictions. <BrandName /> tunnel follows various protocols such as Web Socket, HTTPS, TCP with TLS 1.2 secure connection, etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and <BrandName /> cloud servers.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with <BrandName /> tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with <BrandName /> tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.testmuai.com/feature), even before it gets deployed over the Production environment.
 
 You can download the binary file responsible for establishing a tunnel connection between your local device and our testing cloud by clicking on the downloadable link below.
 
@@ -143,7 +143,7 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 ## Geolocation Testing Through VPN with <BrandName /> tunnel
 ***
-Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different [geographic locations](https://www.testmuai.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 Use the following arguments in your command line.
 
@@ -222,7 +222,7 @@ You can also find your Access Key by going to **‘Settings’**  in the left 
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-16.webp').default} alt="Finding access key in profile section" width="1348" height="618" className="doc_img"/>
 
->**<BrandName /> tunnel Update:**  Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com/) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
+>**<BrandName /> tunnel Update:**  Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.testmuai.com/) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

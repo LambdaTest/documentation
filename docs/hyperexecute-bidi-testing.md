@@ -2,7 +2,7 @@
 id: hyperexecute-bidi-testing
 title: Execute BiDi Framework Tests on HyperExecute
 sidebar_label: BiDi
-description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.
+description: Follow this guide to run Selenium BiDi protocol tests seamlessly on HyperExecute and capture rich browser events with TestMu AI.
 keywords:
   - xcui
   - iOS

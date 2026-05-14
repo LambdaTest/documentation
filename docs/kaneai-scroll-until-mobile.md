@@ -1,4 +1,4 @@
----
+﻿---
 id: kaneai-scroll-until-mobile
 title: Scroll Until Element for Mobile Authoring
 hide_title: false
@@ -25,12 +25,12 @@ canonical: https://www.testmuai.com/support/docs/kaneai-scroll-until-mobile/
           "@type": "ListItem",
           "position": 1,
           "name": "TestMu AI",
-          "item": "https://www.lambdatest.com"
+          "item": "https://www.testmuai.com"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": "https://www.testmuai.com/support/docs/"
         },{
           "@type": "ListItem",
           "position": 3,

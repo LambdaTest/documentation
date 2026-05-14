@@ -1,4 +1,4 @@
----
+﻿---
 id: project-management-tools-paymo-integration
 title: Paymo Integration
 hide_title: true
@@ -108,7 +108,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-realtimetest.webp').default} alt="real time test" className="doc_img" width="1365" height="660"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **camera icon** from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that controller button in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **camera icon** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that controller button in the below image.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-findbugs.webp').default} alt="find bug" className="doc_img" width="1348" height="619"/>
 

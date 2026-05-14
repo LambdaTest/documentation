@@ -1,4 +1,4 @@
----
+﻿---
 id: katalon-integration
 title: Katalon Integration with TestMu AI
 sidebar_label: Katalon - Real Devices
@@ -139,12 +139,12 @@ Copy the Hub URL and add it to the Remote Server URL from the App Automation Das
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/008.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
-For the rest of the details, quickly head over to [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) and now we can proceed with the next steps.
+For the rest of the details, quickly head over to [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) and now we can proceed with the next steps.
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/009.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
 #### b. Desired Capabilities
-Add in all the [Desired Capabilities](https://www.lambdatest.com/capabilities-generator/) as shown below, then click Apply and Close.
+Add in all the [Desired Capabilities](https://www.testmuai.com/capabilities-generator/) as shown below, then click Apply and Close.
 
 **Mandatory Capabilities:**
 ```java
@@ -253,7 +253,7 @@ Once you have run your tests, you can view the test execution along with logs. Y
 ---
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
-- [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
+- [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

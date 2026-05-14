@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-java-junit
 title: Appium With JUnit
 sidebar_label: JUnit
@@ -206,7 +206,7 @@ public class android {
             wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();;
             Thread.sleep(10000);
 
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.lambdatest.com/");
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");
 
             wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
             Thread.sleep(5000);
@@ -314,7 +314,7 @@ public class ios {
             wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();
             Thread.sleep(10000);
 
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.lambdatest.com/");;
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");;
 
             wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
             Thread.sleep(5000);
@@ -404,7 +404,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 :::info
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 :::
 
 ### Step 6: Execute and Monitor your Tests

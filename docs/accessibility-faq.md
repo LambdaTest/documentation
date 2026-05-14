@@ -1,4 +1,4 @@
----
+﻿---
 id: accessibility-faq
 title: Accessibility FAQs
 hide_title: false
@@ -67,7 +67,7 @@ Our accessibility testing tools are optimized for **Chromium-based** browsers, *
 No, you don't need to add explicit wait times. Our advanced tools are designed with built-in intelligence to detect when DOM elements are loaded automatically. They then immediately initiate accessibility scans for these elements. This feature ensures a seamless and efficient testing process without manual intervention for timing.
 
 ## How can I enable accessibility for my account/organization?
-Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.lambdatest.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account.
+Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.testmuai.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account.
 
 ## How many accessibility automation scans does one organization get?
 Although there is limitations on the number of parallel tests or threads you can run but there are no restrictions on the number of pages you can scan for thorough accessibility testing.

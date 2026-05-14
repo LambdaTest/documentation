@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-how-to-configure-tunnel
 title: Tunnel Configuration in HyperExecute
 hide_title: false
@@ -123,7 +123,7 @@ tunnelOpts:
 If you are unable to access a particular website via the Actions environment even after setting the `tunnel: true` in the YAML file then please execute the following curl command:
 
 ```bash
-response=$(curl -o /dev/null -s -w "%{http_code}" https://www.lambdatest.com)
+response=$(curl -o /dev/null -s -w "%{http_code}" https://www.testmuai.com)
 
 ## You need to enter your website URL in place of LambdaTest URL
 ```

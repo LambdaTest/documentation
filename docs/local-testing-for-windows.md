@@ -1,4 +1,4 @@
----
+﻿---
 id: local-testing-for-windows
 title: Legacy Binary For Windows
 sidebar_label: Legacy Binary For Windows
@@ -19,7 +19,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 <BrandName /> Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our TCP with TLS 1.2 secure connection tunneling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection network protocol hosted by <BrandName /> Tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection network protocol hosted by <BrandName /> Tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.testmuai.com/feature), even before it gets deployed over production environment.
 
 > **Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for Windows](/docs/local-testing-windows/).
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: clickup-integration
 title: ClickUp 
 hide_title: true
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
  * * *
 ClickUp offers a highly customizable cloud-based platform to boost your productivity for both professional and personal life by storing all of your tasks, docs, conversations, timelines, spreadsheets, and more in a single place. You can have different views of the project such as Gantt view, board view, and calendar view. You could also chat with your colleagues, and share documents with the team. ClickUp also offers numerous features for time management, task management, project management, along with effective collaboration, reporting, and integrations to third-party tools such as <BrandName />.
 
-<BrandName /> integration with ClickUp will help you report bugs and UI anomalies directly in your desired project on ClickUp while performing [cross browser testing](https://www.lambdatest.com/) with <BrandName />. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from <BrandName />, in just a single click.
+<BrandName /> integration with ClickUp will help you report bugs and UI anomalies directly in your desired project on ClickUp while performing [cross browser testing](https://www.testmuai.com/) with <BrandName />. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from <BrandName />, in just a single click.
 
 ## How To Integrate ClickUp With Your <BrandName /> Account?
 ***
@@ -81,7 +81,7 @@ ClickUp offers a highly customizable cloud-based platform to boost your producti
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/7.webp').default} alt="real time testing" width="1364" height="643" className="doc_img"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-5.webp').default} alt="mark as bug icon" width="1325" height="653" className="doc_img"/>
 

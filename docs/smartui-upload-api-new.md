@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-upload-api-v2
 title: Getting Started With Uploading Screenshots through API for Visual Regression Testing
 sidebar_label: Upload through API
@@ -93,7 +93,7 @@ API_URL="https://api.lambdatest.com/automation/smart-ui/v2/upload"
 ```
 
 :::info NOTE
-For more information, please visit our [API documentation](https://www.lambdatest.com/support/api-doc/).
+For more information, please visit our [API documentation](https://www.testmuai.com/support/api-doc/).
 :::
 
 **Step 2:** Add the following information to your API payload `form-body`:

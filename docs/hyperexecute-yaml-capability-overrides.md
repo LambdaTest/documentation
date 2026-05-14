@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-yaml-capability-overrides
 title: YAML-Based Capability Overrides for Selenium Tests on HyperExecute
 hide_title: false
@@ -56,7 +56,7 @@ Previously, these capabilities were typically defined within the test script. Wi
 - Define a new `ltOptions` section inside your HyperExecute YAML file.
 - Specify any desired capabilities as key-value pairs under `ltOptions`.
 - During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 ## 🔑 Key Behavior Rules
 

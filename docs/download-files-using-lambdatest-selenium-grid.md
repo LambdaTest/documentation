@@ -1,4 +1,4 @@
----
+﻿---
 id: download-files-using-lambdatest-selenium-grid
 title: Download Files Using TestMu AI Selenium Grid
 sidebar_label: Download Files From the Browser
@@ -615,7 +615,7 @@ class LtTest < Test::Unit::TestCase
         ----------
         platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)
         browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge)
-        version :  Supported list of version can be found at https://www.lambdatest.com/capabilities-generator/
+        version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/
 
         Result
         -------

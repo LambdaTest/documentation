@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-python
 title: Appium with Python
 sidebar_label: Python
@@ -203,7 +203,7 @@ def startingTest():
         browser.click()
         url = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "url")))
-        url.send_keys("https://www.lambdatest.com")
+        url.send_keys("https://www.testmuai.com")
         find = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((MobileBsy.ACCESSIBILITY_ID, "find")))
         find.click()
@@ -295,7 +295,7 @@ def startingTest():
 
         url = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
             (MobileBy.ID, "com.lambdatest.proverbial:id/url")))
-        url.send_keys("https://www.lambdatest.com")
+        url.send_keys("https://www.testmuai.com")
 
         find = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
             (MobileBy.ID, "com.lambdatest.proverbial:id/find")))
@@ -369,7 +369,7 @@ desired_caps = {
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: analytics-faqs
 title: Analytics
 sidebar_label: FAQs
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Getting started with Analytics is simple.
 
-Step 1: Login into your [TestMu AI](https://www.lambdatest.com/) account
+Step 1: Login into your [TestMu AI](https://www.testmuai.com/) account
 
 Step 2: Visit the [Analytics](https://analytics.lambdatest.com/) page on the <BrandName /> dashboard
 

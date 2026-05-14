@@ -1,4 +1,4 @@
----
+﻿---
 id: opsgenie-integration
 title: OpsGenie Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 OpsGenie is a modern incident management platform by Atlassian that ensures critical alerts are never missed. It offers intelligent alerting, on-call scheduling, and escalation policies to help teams respond to incidents faster. OpsGenie aggregates alerts from monitoring tools and custom applications, routing them to the right people through multiple notification channels.
 
-With <BrandName /> and OpsGenie integration, you can log incidents directly while performing [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the <BrandName /> platform to OpsGenie.
+With <BrandName /> and OpsGenie integration, you can log incidents directly while performing [cross browser testing](https://www.testmuai.com/) of your websites (and web apps) from the <BrandName /> platform to OpsGenie.
 
 ## Integrating OpsGenie With <BrandName />
 ***

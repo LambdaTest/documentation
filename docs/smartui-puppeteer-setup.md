@@ -1,4 +1,4 @@
----
+﻿---
 id: puppeteer-visual-regression
 title: Getting started with SmartUI using Puppeteer
 sidebar_label: Puppeteer

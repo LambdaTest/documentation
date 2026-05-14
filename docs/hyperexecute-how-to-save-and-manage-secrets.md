@@ -3,7 +3,7 @@ id: hyperexecute-how-to-save-and-manage-secrets
 title: Securely Manage Your Secrets with HyperExecute
 hide_title: false
 sidebar_label: How to Manage Secrets in HyperExecute
-description: Find out how to Save and Manage Secrets
+description: Securely save and manage account-wide secrets in HyperExecute—encrypt credentials, rotate keys, and use them safely across automation runs.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help

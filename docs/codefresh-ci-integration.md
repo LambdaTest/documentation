@@ -1,4 +1,4 @@
----
+﻿---
 id: codefresh-ci-integration
 title: Codefresh CI Integration With TestMu AI
 hide_title: true
@@ -48,7 +48,7 @@ Codefresh is a cloud-native continuous integration and delivery platform that en
 
 Teams can quickly and easily build, test, and deploy their applications on any cloud platform, including Kubernetes, Docker, and AWS. Our intuitive, easy-to-use UI helps streamline the development process.
 
-<BrandName /> now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to trim down your test cycles drastically.
+<BrandName /> now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to trim down your test cycles drastically.
 
 ## Prerequisites
 ***

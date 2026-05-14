@@ -1,4 +1,4 @@
----
+﻿---
 id: github-app-integration
 title: TestMu Cloud GitHub App Integration
 hide_title: true
@@ -199,7 +199,7 @@ After installing the GitHub App, you are redirected to the [integration settings
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-three.png').default} alt="Copy configuration values from integration sidebar" className="doc_img"/>
 
-> **Note:** All configuration IDs can also be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+> **Note:** All configuration IDs can also be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.testmuai.com/support/api-doc/?key=test-management).
 
 :::tip Maximize AI Context
 KaneAI uses your `README.md` and `agent.md` to improve test quality. Keep your README comprehensive (app overview, key workflows, tech stack) and use `agent.md` for custom instructions like testing priorities, scenarios to cover or skip, and domain-specific rules.

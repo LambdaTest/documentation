@@ -1,4 +1,4 @@
----
+﻿---
 id: desired-capabilities-in-appium
 title: Desired Capabilities 
 sidebar_label: Desired Capabilities
@@ -56,11 +56,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-Desired capabilities in [Appium](https://www.lambdatest.com/appium) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.lambdatest.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions. 
+Desired capabilities in [Appium](https://www.testmuai.com/appium) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.testmuai.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions. 
 
-By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.lambdatest.com/mobile-app-testing). 
+By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.testmuai.com/mobile-app-testing). 
 
-> **Note:** With <BrandName /> [capabilities generator](https://www.lambdatest.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
+> **Note:** With <BrandName /> [capabilities generator](https://www.testmuai.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 
 <div class="desired-capabilities-page">
 
@@ -130,7 +130,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | enableImageInjection | TYPE: Boolean<br/> DEFAULT: false <br/>`enableImageInjection: true` | Used to enable the Image Injection for the app. <br/>Must send "media" capability along with this capability.| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | media | TYPE: STRING <br/>`media: Path to the image`|Used to provide the media to upload the file to the app for Image Injection. If this capability is not passed, then the no media will be sent to the device. <br/>Must send "enableImageInjection" capability along with this capability.|  <RealDeviceTag value="Real Device" /> |
 | enableBluetooth | TYPE: Boolean<br/> DEFAULT: false <br/>`enableBluetooth: true` | Used to enable the bluetooth functionality during the session.|  <RealDeviceTag value="Real Device" /> |
-| location | TYPE: HashMap <br/> <br/> Python example: <br/> `location: {"lat": "28.6235192", "long": "77.3662948"}` <br/> <br/> For examples in other languages, please head over to [Capability Generator](https://www.lambdatest.com/capabilities-generator/)  | Used to change the GPS Geolocation of the device to the location provided. <br/> If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device. <br/> It needs to be passed in a HashMap structure with `lat` & `long` being passed separately. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
+| location | TYPE: HashMap <br/> <br/> Python example: <br/> `location: {"lat": "28.6235192", "long": "77.3662948"}` <br/> <br/> For examples in other languages, please head over to [Capability Generator](https://www.testmuai.com/capabilities-generator/)  | Used to change the GPS Geolocation of the device to the location provided. <br/> If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device. <br/> It needs to be passed in a HashMap structure with `lat` & `long` being passed separately. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 
 
 ## Device configuration

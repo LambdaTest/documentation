@@ -1,4 +1,4 @@
----
+﻿---
 id: jira-self-hosted-integration
 title: Self-Hosted Jira Integration | TestMu AI
 hide_title: true
@@ -91,7 +91,7 @@ Once you have established <BrandName />-Jira integration, you can directly mark 
 
 <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-5.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1360"  height="614"/> 
 
-**Step 3**: A <BrandName /> virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. 
+**Step 3**: A <BrandName /> virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. 
 
 <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-6.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1344" height="626"/> 
 
