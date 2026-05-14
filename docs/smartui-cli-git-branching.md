@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-cli-git-branching-strategy
 title: Branching Strategy in SmartUI SDK
 sidebar_label: Default Branching Strategy
@@ -61,7 +61,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 ### Prerequisites for running Git with SmartUI
 
 - You have an account with [LambdaTest](https://accounts.lambdatest.com).
-- You must have an active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit.
+- You must have an active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit.
 - You must have created an Project on the SmartUI web app.
 
 :::caution Warning

@@ -1,4 +1,4 @@
----
+﻿---
 id: error-reports
 title: Getting The JavaScript Error Report Of Your Website
 hide_title: true
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Getting The JavaScript Error Report Of Your Website
 * * *
 
-[LT Browser](https://www.lambdatest.com/lt-browser/) monitors web-page errors and services that fail to load and alerting you when the issue occurs and generates a javascript error report of the particular website. For example, if your URL is not rendered correctly, it will throw an error message. 
+[LT Browser](https://www.testmuai.com/lt-browser/) monitors web-page errors and services that fail to load and alerting you when the issue occurs and generates a javascript error report of the particular website. For example, if your URL is not rendered correctly, it will throw an error message. 
 
 To get started, you need to download the executable file from here.
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-bitrise
 title: How to integrate your Appium tests with Bitrise 
 hide_title: true
@@ -48,12 +48,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
+Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](https://www.testmuai.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.testmuai.com/online-device-farm) of 3000+ real devices and OS versions.
 
 ## Prerequisites
 ***
 
-1. Ensure you have access to <BrandName /> [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.testmuai.com/real-device-cloud). If not, please [contact sales](https://www.testmuai.com/contact-us).
 
 2. A Bitrise account.
 

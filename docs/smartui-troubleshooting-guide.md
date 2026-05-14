@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-troubleshooting-guide
 title: Comprehensive Troubleshooting Guide for SmartUI
 sidebar_label: Troubleshooting Guide
@@ -1081,13 +1081,13 @@ If you encounter issues not covered in this guide:
    - Review [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 2. **Search Existing Issues**:
-   - Check [<BrandName /> Support](https://www.lambdatest.com/support)
+   - Check [<BrandName /> Support](https://www.testmuai.com/support)
    - Review community forums
    - Search knowledge base
 
 3. **Contact Support**:
    - Email: support@testmuai.com
-   - [24/7 Chat Support](https://www.lambdatest.com/support)
+   - [24/7 Chat Support](https://www.testmuai.com/support)
    - Include error messages, logs, and configuration details
 
 4. **Provide Diagnostic Information**:

@@ -1,4 +1,4 @@
----
+﻿---
 id: targetprocess-integration
 title: TargetProcess Integration
 hide_title: true
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 TargetProcess is an integrated project management tool that offers teams with a modern, customizable, and powerful Agile approach. TargetProcess provides an intuitive visual interface for teams to manage projects with ease. Whether you are new to Agile or want to scale it across, this tool has options to manage projects based on Scrum, Kanban, SAFe, NEXUS, or any other approach. You can create custom reports, dynamic visualizations, and more in seconds. The powerful boards make it unique enabling you to plan and track progress, and can be shared to broadcast information to others. Overall TargetProcess provides users a holistic solution to help them plan, track, and steer complex work at all levels.
 
-Using <BrandName /> integration with TargetProcess, you’ll be able to log bugs over your project in TargetProcess from <BrandName /> in just a single click. You can [capture a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title, and description to help relay further actions. You can do all that directly from <BrandName />.
+Using <BrandName /> integration with TargetProcess, you’ll be able to log bugs over your project in TargetProcess from <BrandName /> in just a single click. You can [capture a screenshot](https://www.testmuai.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title, and description to help relay further actions. You can do all that directly from <BrandName />.
 
 ## How To Integrate TargetProcess With Your <BrandName /> Account?
 ***

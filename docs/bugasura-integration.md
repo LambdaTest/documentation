@@ -1,4 +1,4 @@
----
+﻿---
 id: bugasura-integration
 title: Bugasura Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Bugasura is a simple and collaborative bug-tracking platform for modern SaaS teams. It comes with the ability to customize workflows and uses an agile approach to report, track and close issues.
 
-Using <BrandName /> and Bugasura integration, you can file bugs while performing [online browser testing](https://www.lambdatest.com) of your web applications from the <BrandName /> platform to your Bugasura instance and avoid the hassle of maintaining bugs and tasks manually.
+Using <BrandName /> and Bugasura integration, you can file bugs while performing [online browser testing](https://www.testmuai.com) of your web applications from the <BrandName /> platform to your Bugasura instance and avoid the hassle of maintaining bugs and tasks manually.
 
 ## Integrating Bugasura With <BrandName />
 ***

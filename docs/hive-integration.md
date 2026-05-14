@@ -1,4 +1,4 @@
----
+﻿---
 id: hive-integration
 title: Hive Integration
 hide_title: true
@@ -104,7 +104,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/hive-integration/jira-1.webp').default} alt="start" width="1365" height="660" className="doc_img"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that controller button in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that controller button in the below image.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/Capture9-3.webp').default} alt="bug icon" width="1348" height="619" className="doc_img"/>
 

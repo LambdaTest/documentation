@@ -1,4 +1,4 @@
----
+﻿---
 id: getting-started-with-selenium-4
 title: Getting Started With Selenium 4 On TestMu AI Platform
 sidebar_label: Getting Started
@@ -42,7 +42,7 @@ As a part of this step-by-step guide, we will run a Selenium 4 test that perform
 
 * * *
 
-To select the OS-device-browser combination for running the test, use <BrandName />'s [capability generator](https://www.lambdatest.com/capabilities-generator/). After selecting the combination, replace the capabilities given in the sample test script with the chosen combination.
+To select the OS-device-browser combination for running the test, use <BrandName />'s [capability generator](https://www.testmuai.com/capabilities-generator/). After selecting the combination, replace the capabilities given in the sample test script with the chosen combination.
 
 ###  Step 2 - Understanding the Sample Script
 

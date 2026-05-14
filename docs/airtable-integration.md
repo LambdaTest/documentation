@@ -1,4 +1,4 @@
----
+﻿---
 id: airtable-integration
 title: TestMu AI Integration With Airtable
 hide_title: true
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Airtable is a cloud-collaboration platform to help you organize your team with intuitive & interactive spreadsheets that works like a database. It offers a variety of views such as Grid view, Kanban view, Calendar view, Form view. You can log a task with priority, notes, deadline and more. You can even tag attachments to a task with a simple drag-and-drop. Be it marketing, project management, product design & UX, or a simple distribution record for offline businesses, Airtable helps you to manage a track of anything.
 
-Using <BrandName /> integration with Airtable, you'll be able to log bugs over your project in Airtable from <BrandName /> in just a single click. You can [capture a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from <BrandName /> and then mark a bug to your Airtable project with just a single click.
+Using <BrandName /> integration with Airtable, you'll be able to log bugs over your project in Airtable from <BrandName /> in just a single click. You can [capture a screenshot](https://www.testmuai.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from <BrandName /> and then mark a bug to your Airtable project with just a single click.
 
 ## How To Integrate Airtable With Your <BrandName /> Account?
 

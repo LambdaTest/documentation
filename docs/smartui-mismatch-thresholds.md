@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-mismatch-thresholds
 title: Mismatch Thresholds for SmartUI Visual Regression Testing
 sidebar_label: Mismatch Thresholds
@@ -13,7 +13,7 @@ keywords:
   - visual regression
   - smartui visual testing
 
-url: https://www.lambdatest.com/support/docs/smartui-mismatch-thresholds/
+url: https://www.testmuai.com/support/docs/smartui-mismatch-thresholds/
 slug: smartui-mismatch-thresholds/
 ---
 

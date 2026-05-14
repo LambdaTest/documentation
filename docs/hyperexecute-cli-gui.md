@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-cli-gui
 title: "HyperExecute GUI App"
 hide_title: false
@@ -54,7 +54,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Why HyperExecute GUI?
 ---
-**[HyperExecute](https://www.lambdatest.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered test detection, set up test environments with simple clicks and run your tests without coding.
+**[HyperExecute](https://www.testmuai.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered test detection, set up test environments with simple clicks and run your tests without coding.
 
 <img src={require('../assets/images/hyperexecute/gui/guilanding.png').default} />
 

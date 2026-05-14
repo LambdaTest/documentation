@@ -1,4 +1,4 @@
----
+﻿---
 id: lt-browser
 title: LT Browser - Test Website For Responsiveness Easily
 hide_title: true
@@ -78,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # LT Browser - Test Website For Responsiveness Easily
 * * *
 
-LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.lambdatest.com/lt-browser) and perform live testing across 50+ pre-installed device viewports.
+LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.testmuai.com/lt-browser) and perform live testing across 50+ pre-installed device viewports.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="RH95O9mOGoc" data-loading-attribute="eager">
@@ -133,7 +133,7 @@ To get started, you need to download the executable file from here.
 
 <img loading="lazy" src={require('../assets/images/uploads/LT-1.webp').default} alt="Open the LT Browser"  className="doc_img"  width="1366" height="727"/>
 
-**Step 2:** Once you hit Enter, the website would be loaded on 50+ devices. You can select any device to start [responsive testing](https://www.lambdatest.com/responsive-test-online) from the sidebar on the left. You can also monitor two different devices side by side by adding a device on the view screen.
+**Step 2:** Once you hit Enter, the website would be loaded on 50+ devices. You can select any device to start [responsive testing](https://www.testmuai.com/responsive-test-online) from the sidebar on the left. You can also monitor two different devices side by side by adding a device on the view screen.
 
 <img loading="lazy" src={require('../assets/images/uploads/LT-2.webp').default} alt="view screen"  className="doc_img" width="1366" height="723"/>
 
@@ -171,7 +171,7 @@ Let's try adding OnePlus 5 to the LT Browser. We will provide the mandatory deta
 
 <img loading="lazy" src={require('../assets/images/uploads/custom-device-3.webp').default} alt="custom device"  className="doc_img" width="1361" height="725"/>
 
-As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.lambdatest.com/mobile-view-website) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
+As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
 
 <img loading="lazy" src={require('../assets/images/uploads/LT-7.webp').default} alt="added device"  className="doc_img" width="1366" height="726"/>
 
@@ -191,7 +191,7 @@ If you open the LT Browser, you will notice a search bar displayed over the top-
 
 * * *
 
-**Step 1:** Click on the **camera icon** to [capture screenshot](https://www.lambdatest.com/full-page-screen-capture) of your website inside a mobile device screen of your choice.
+**Step 1:** Click on the **camera icon** to [capture screenshot](https://www.testmuai.com/full-page-screen-capture) of your website inside a mobile device screen of your choice.
 
 <img loading="lazy" src={require('../assets/images/uploads/capture-screenshot.webp').default} alt="capture screenshot"  className="doc_img" width="1366" height="720"/>
 
@@ -287,7 +287,7 @@ If you click on it, you will generate a shareable link to access the highlighted
 
 <img loading="lazy" src={require('../assets/images/uploads/mark-as-bug-1.webp').default} alt="mark as bug"  className="doc_img" width="1191" height="576"/>
 
-As you click on the mark as bug button, you will be presented with the screen which will present you few of <BrandName /> integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [<BrandName /> integrations](https://www.lambdatest.com/integrations).
+As you click on the mark as bug button, you will be presented with the screen which will present you few of <BrandName /> integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [<BrandName /> integrations](https://www.testmuai.com/integrations).
 
 <img loading="lazy" src={require('../assets/images/uploads/integrations.webp').default} alt="Integrations"  className="doc_img" width="1366" height="656"/>
 
@@ -363,7 +363,7 @@ Here is a screenshot of the <BrandName /> web-application which is captured afte
 
 * * *
 
-With LT Browser, not only can you evaluate how your [responsive web design](https://www.lambdatest.com/blog/responsive-web-design-all-you-need-to-know/) might look over 50+ device viewports but you can also debug your web-application to figure out the root cause behind a browser or UI bug.
+With LT Browser, not only can you evaluate how your [responsive web design](https://www.testmuai.com/blog/responsive-web-design-all-you-need-to-know/) might look over 50+ device viewports but you can also debug your web-application to figure out the root cause behind a browser or UI bug.
 
 To debug your website, click on the highlighted button with the debug icon.
 

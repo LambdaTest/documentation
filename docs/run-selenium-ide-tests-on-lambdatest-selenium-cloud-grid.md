@@ -1,4 +1,4 @@
----
+﻿---
 id: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid
 title: Guide to Run Selenium IDE Tests Using TestMu AI
 hide_title: true
@@ -54,9 +54,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Run Selenium IDE Tests with <BrandName /> Selenium Grid
 * * *
-[Selenium IDE](https://www.lambdatest.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
+[Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
 
-In this document, we will see how to run Selenium IDE tests on <BrandName /> cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
+In this document, we will see how to run Selenium IDE tests on <BrandName /> cloud [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ For the demonstration of executing Selenium IDE tests on the <BrandName /> grid,
 
 * * *
 
-The parallel testing on the [Cloud Selenium Grid](https://www.lambdatest.com/selenium-automation) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
+The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
 
 *   Right click on the test suite and go to Settings. <img loading="lazy" src={require('../assets/images/uploads/open-settings-in-Selenium-IDE.webp').default} alt="Test Suite Settings" width="898" height="422" className="doc_img"/>
 *   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src={require('../assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp').default} alt="Test Suite Properties" width="893" height="323" className="doc_img"/>
@@ -96,7 +96,7 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
 
 1.  **Set the [Desired Capabilities in Selenium](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
-    The [<BrandName /> Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
+    The [<BrandName /> Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 ```javascript
         capabilities = {
                 "platform" : "Windows 10",
@@ -164,7 +164,7 @@ selenium-side-runner --params "a='example-value' a.b='another example-value' a.b
 
 * * *
 
-Congrats! We have successfully executed our Selenium IDE tests on <BrandName /> Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.lambdatest.com) on 3000+ real browsers and operating systems online.
+Congrats! We have successfully executed our Selenium IDE tests on <BrandName /> Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.testmuai.com) on 3000+ real browsers and operating systems online.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

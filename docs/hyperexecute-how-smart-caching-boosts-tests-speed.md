@@ -1,4 +1,4 @@
----
+﻿---
 id: hyperexecute-how-smart-caching-boosts-tests-speed
 title: Turbo Boost Your Tests Execution with Smart Caching
 hide_title: true
@@ -88,4 +88,4 @@ Implementing Smart Caching offers numerous benefits:
 
 ## Additional Resources
 
-- [Deliver Faster: How Smart Caching Turbocharges Your Testing Workflow](https://www.lambdatest.com/blog/how-smart-caching-turbocharges-your-testing-workflow/)
+- [Deliver Faster: How Smart Caching Turbocharges Your Testing Workflow](https://www.testmuai.com/blog/how-smart-caching-turbocharges-your-testing-workflow/)

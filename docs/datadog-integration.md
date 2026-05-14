@@ -1,4 +1,4 @@
----
+﻿---
 id: datadog-integration
 title: Datadog Integration
 hide_title: true
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Datadog Integration
 ***
 
-Datadog is a cloud application monitoring and analytics tool. You can use it to compute performance metrics and event monitoring for infrastructure and cloud services. In addition, Datadog can monitor services such as servers, databases and tools. With <BrandName /> and Datadog integration, you can log bugs while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the <BrandName /> platform to Datadog.
+Datadog is a cloud application monitoring and analytics tool. You can use it to compute performance metrics and event monitoring for infrastructure and cloud services. In addition, Datadog can monitor services such as servers, databases and tools. With <BrandName /> and Datadog integration, you can log bugs while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps) from the <BrandName /> platform to Datadog.
 
 ## Integrating Datadog With <BrandName /> Account
 ***

@@ -1,4 +1,4 @@
----
+﻿---
 id: rbac-roles-and-permissions
 title: Roles and Permissions (RBAC)
 hide_title: false
@@ -12,7 +12,7 @@ keywords:
   - lambdatest rbac
   - product access
   - granular permissions
-url: https://www.lambdatest.com/support/docs/rbac-roles-and-permissions/
+url: https://www.testmuai.com/support/docs/rbac-roles-and-permissions/
 site_name: LambdaTest
 slug: rbac-roles-and-permissions/
 ---
@@ -49,7 +49,7 @@ import NewTag from '../src/component/newTag';
 This is especially useful for large enterprises with multiple teams where different groups need access to different parts of the platform, for example, one team working exclusively with KaneAI and Test Manager, while another only needs access to SmartUI and Automation.
 
 :::info
-Custom Roles and Permissions is an enterprise-level feature. Please contact your account manager or reach out to [support@lambdatest.com](mailto:support@lambdatest.com) to get it enabled for your organization.
+Custom Roles and Permissions is an enterprise-level feature. Please contact your account manager or reach out to [support@testmuai.com](mailto:support@testmuai.com) to get it enabled for your organization.
 :::
 
 ## Prerequisites

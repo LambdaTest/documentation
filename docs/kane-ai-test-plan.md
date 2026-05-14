@@ -1,4 +1,4 @@
----
+﻿---
 id: kane-ai-test-plan
 title: Intelligent Test Planner - Automate your Test Generation
 hide_title: false
@@ -50,7 +50,7 @@ This document will guide you through the end-to-end implementation for your web 
 You have to clearly state your goal or define the functionality that you want to test. This could be anything from validating a login process to ensuring the functionality of a shopping cart. The Intelligent Test Planner uses this objective as the basis for automatically generating the necessary test steps.
 
 #### Examples:
-- `Assess the auto-suggestions functionality in the search bar of the "https://www.lambdatest.com/support/docs"`
+- `Assess the auto-suggestions functionality in the search bar of the "https://www.testmuai.com/support/docs"`
 - `Verify user login functionality for "https://www.example-ecommerce.com/login"`
 - `Verify the add-to-cart functionality on the "https://www.example.com"`
 - `Evaluate the user signup process for a new user on https://www.examplesocial.com`

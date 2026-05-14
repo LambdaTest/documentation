@@ -1,4 +1,4 @@
----
+﻿---
 id: google-cloud-ci-integration
 title: How to run selenium test with google cloud CI
 hide_title: true
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Google Cloud Platform is one of the market’s leading public cloud providers and offers a variety of management services. Google Cloud Build and Google Cloud Run are two Google Cloud services that use pipelines to automate builds and deployments.
 
-Integrate your Selenium test suites with Google Cloud CI and perform automated cross-browser testing on [online Selenium Grid](https://www.lambdatest.com/selenium-automation) over 3000+ real browser environments. With this integration, you can also perform local testing of locally or privately hosted projects and Parallel testing to cut short test execution cycles and achieve faster go-to-market delivery.
+Integrate your Selenium test suites with Google Cloud CI and perform automated cross-browser testing on [online Selenium Grid](https://www.testmuai.com/selenium-automation) over 3000+ real browser environments. With this integration, you can also perform local testing of locally or privately hosted projects and Parallel testing to cut short test execution cycles and achieve faster go-to-market delivery.
 
 ## Prerequisites
 ***

@@ -1,4 +1,4 @@
----
+﻿---
 id: backlog-integration
 title: TestMu AI Integration With Backlog
 hide_title: true
@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 Backlog provides an online platform for project & code management. Using Backlog, you can collaborate with your teams working in different parts of SDLC(Software Development Life Cycle). It lets you organize, discuss, and track all the work in one place. It offers out-of-the-box features to help you orchestrate your release cycles better. Some of the important features include Git hosting, Git version control, and issue tracking.
 
-<BrandName /> integration with Backlog will help you file any UI bug on your Backlog project instance, directly from <BrandName />. If you ever come across a [browser compatibility](https://www.lambdatest.com/feature) bug while cross browser testing on <BrandName />, all you need to do is hit a single click and the bug will be logged into your Backlog project.
+<BrandName /> integration with Backlog will help you file any UI bug on your Backlog project instance, directly from <BrandName />. If you ever come across a [browser compatibility](https://www.testmuai.com/feature) bug while cross browser testing on <BrandName />, all you need to do is hit a single click and the bug will be logged into your Backlog project.
 
 ## How To Integrate Backlog With Your <BrandName /> Account?
 ***
@@ -99,7 +99,7 @@ Backlog provides an online platform for project & code management. Using Backlog
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/backlog-8.webp').default} alt="Backlog Integration" width="1344" height="614" className="doc_img"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/clickup-5.webp').default} alt="Backlog Integration" width="1325" height="653" className="doc_img"/>
 

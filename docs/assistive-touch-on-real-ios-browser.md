@@ -2,7 +2,7 @@
 id: assistive-touch-on-real-ios-browser
 title: Assistive Touch on Real iOS Devices (Browser)
 sidebar_label: Assistive Touch
-description: Simulate system-level actions like Home, Notification Center, Screenshot, and more during manual testing on real iOS devices.
+description: Trigger system actions like Home, Notification Center, and Screenshot while running manual browser testing sessions on real iOS devices.
 keywords:
   - assistive touch
   - ios gestures

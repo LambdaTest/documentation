@@ -1,4 +1,4 @@
----
+﻿---
 id: pagerduty-integration
 title: PagerDuty Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 PagerDuty is a bug tracking platform that uses machine learning and automation to notify clients of interrupts and failures. These flaws are discovered in real-time, informing the appropriate people to react to any issue as quickly as possible to avoid them in the future.
 
-With <BrandName /> and PagerDuty integration, you can log issues directly while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the <BrandName /> platform to PagerDuty.
+With <BrandName /> and PagerDuty integration, you can log issues directly while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps) from the <BrandName /> platform to PagerDuty.
 
 ## Integrating PagerDuty With <BrandName />
 ***

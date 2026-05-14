@@ -1,4 +1,4 @@
----
+﻿---
 id: analytics-test-insights
 title: Test Insights - Advanced insights for analyzing test runs
 sidebar_label: Tests Insights
@@ -58,7 +58,7 @@ import NewTag from '../src/component/newTag';
 ## Getting Started with Test Insights
 
 To get started with Test Insights, follow these steps:
-1. **Log in to your <BrandName /> account**: Go to the [<BrandName /> website](https://www.lambdatest.com) and log in with your credentials.
+1. **Log in to your <BrandName /> account**: Go to the [<BrandName /> website](https://www.testmuai.com) and log in with your credentials.
 2. **Navigate to the Analytics section**: Click on the "Insights" tab in the left sidebar of the <BrandName /> dashboard.
 3. **Select Test Insights**: In the Insights section, click on "Test Insights" to access the insights dashboard.
 4. **View Test Runs**: You will see a list of your test runs, along with various metrics and visualizations.

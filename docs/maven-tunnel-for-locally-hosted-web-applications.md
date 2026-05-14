@@ -1,4 +1,4 @@
----
+﻿---
 id: maven-tunnel-for-locally-hosted-web-applications
 title: Maven Tunnel For Locally Hosted Web Applications
 hide_title: false
@@ -27,7 +27,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "TestMu AI",
-          "item": "https://www.lambdatest.com/"
+          "item": "https://www.testmuai.com/"
         },{
           "@type": "ListItem",
           "position": 2,
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. <BrandName /> offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through <BrandName /> Selenium Grid.
 
-This document will help you configure a secure <BrandName /> Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
+This document will help you configure a secure <BrandName /> Tunnel to execute your [Selenium test automation](https://www.testmuai.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
 > <BrandName /> Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
 

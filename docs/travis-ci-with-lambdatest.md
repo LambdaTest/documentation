@@ -1,4 +1,4 @@
----
+﻿---
 id: travis-ci-with-lambdatest
 title: How to integrate Travis CI with TestMu AI
 hide_title: true
@@ -117,7 +117,7 @@ script:
   - node_modules/.bin/nightwatch -e chrome
 ```
 
-<BrandName /> offers a [**Selenium Desired Capabilities Generator**](https://www.lambdatest.com/capabilities-generator/) to fetch coded values for your desired test configurations.
+<BrandName /> offers a [**Selenium Desired Capabilities Generator**](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations.
 
 For Instance, if you select the below configurations:
 

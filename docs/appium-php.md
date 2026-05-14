@@ -1,4 +1,4 @@
----
+﻿---
 id: appium-php
 title:  Appium with PHP
 sidebar_label: PHP
@@ -236,7 +236,7 @@ try{
     $browser_element = $driver->findElement(WebDriverBy::id('Browser'));
     $browser_element->click();
     $url_element = $driver->findElement(WebDriverBy::id('url'));
-    $url_element->sendKeys("https://www.lambdatest.com");
+    $url_element->sendKeys("https://www.testmuai.com");
     $find_element = $driver->findElement(WebDriverBy::id('find'));
     $find_element->click();
     sleep(2);
@@ -298,7 +298,7 @@ try{
     sleep(5);
     
     $url_element = $driver->findElement(WebDriverBy::id('url'));
-    $url_element->sendkeys("https://www.lambdatest.com");
+    $url_element->sendkeys("https://www.testmuai.com");
 
     $find_element = $driver->findElement(WebDriverBy::id('find'));
     $find_element->click();
@@ -366,7 +366,7 @@ The capabilities object in the sample code are defined as:
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

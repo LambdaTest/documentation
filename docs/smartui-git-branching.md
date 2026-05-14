@@ -1,4 +1,4 @@
----
+﻿---
 id: smartui-git-branching-strategy
 title: Git Branching Strategy in SmartUI Storybook Integration
 sidebar_label: Storybook Git Baseline Branching
@@ -63,7 +63,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 ### Prerequisites for running Git with SmartUI
 
 - You have an account with [LambdaTest](https://accounts.lambdatest.com).
-- You must have an active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit.
+- You must have an active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit.
 - You must have created an Project on the SmartUI web app.
 
 :::caution Warning

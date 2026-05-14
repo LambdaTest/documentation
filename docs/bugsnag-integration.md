@@ -1,4 +1,4 @@
----
+﻿---
 id: bugsnag-integration
 title: Bugsnag Integration
 hide_title: true
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Bugsnag is an error-monitoring tool that allows your developers to quickly find, prioritize, and reproduce errors. Individual crashes are gathered together by underlying cause and shown as discrete errors in Bugsnag to allow for easy prioritizing; the error inbox can be sorted by event count, impacted users, error severity, or it can be limited to provide a list of errors matching a specified search parameter. 
 
-The <BrandName /> and Bugsnag integration allows you to perform one-click bug logging from <BrandName /> to your Bugsnag projects while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps).
+The <BrandName /> and Bugsnag integration allows you to perform one-click bug logging from <BrandName /> to your Bugsnag projects while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps).
 
 ## Integrating Bugsnag With <BrandName />
 ***
