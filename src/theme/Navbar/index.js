@@ -209,8 +209,8 @@ export default function Navbar() {
             <GithubIcon />
             <span>Github</span>
           </a>
-          <a href="https://accounts.lambdatest.com/login" className={styles.loginLink}>Login</a>
-          <a id="signbtn" href="https://accounts.lambdatest.com/register" className={styles.getStartedBtn}>
+          <a href="/login/" className={styles.loginLink}>Login</a>
+          <a id="signbtn" href="/register/" className={styles.getStartedBtn}>
             <span>Get Started Free</span> <span className={styles.arrow}>&rsaquo;</span>
           </a>
           <button className={styles.gearBtn} onClick={toggleColorMode} aria-label="Toggle dark mode">
@@ -232,8 +232,8 @@ export default function Navbar() {
                 <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.dotsItem}>
                   <GithubIcon /><span>Github</span>
                 </a>
-                <a href="https://accounts.lambdatest.com/login" className={styles.dotsItem}>Login</a>
-                <a href="https://accounts.lambdatest.com/register" className={`${styles.dotsItem} ${styles.dotsItemCta}`}>Get Started Free</a>
+                <a href="/login/" className={styles.dotsItem}>Login</a>
+                <a href="/register/" className={`${styles.dotsItem} ${styles.dotsItemCta}`}>Get Started Free</a>
               </div>
             )}
           </div>
