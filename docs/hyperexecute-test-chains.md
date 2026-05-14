@@ -2,7 +2,7 @@
 id: hyperexecute-test-chains
 title: HyperExecute Test Chains
 sidebar_label: Test Chains
-description: Discover the power of HyperExecute connected workflows and how testers or developers can leverage it for their daily autoamtion testing of their organization features.
+description: Learn how HyperExecute Test Chains link dependent jobs into end-to-end pipelines, enabling smarter orchestration and faster automation runs.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help

@@ -96,7 +96,7 @@ export default function FaqPage() {
               <details>
               <summary>Which operating systems, browsers, and browser versions are you providing for cross browser testing?
               </summary>
-              <p>There are 3000+ browsers, browser versions, operating systems, devices, and resolutions to choose from. To find out about the complete list of available browsers, check out <a href="{BRAND_URL}/list-of-browsers">list of browsers</a> page.</p>
+              <p>There are 3000+ browsers, browser versions, operating systems, devices, and resolutions to choose from. To find out about the complete list of available browsers, check out <a href={`${BRAND_URL}/list-of-browsers`}>list of browsers</a> page.</p>
               </details>
               <details>
               <summary>Are the sessions really running on real browsers or are they just emulators?
@@ -152,7 +152,7 @@ export default function FaqPage() {
               <details>
               <summary>How many simultaneous sessions can I start using one account?
               </summary>
-              <p>In the free plan you can run only one session at a time. Paid plan users can run multiple sessions depending upon their plan. Visit <a href="{BRAND_URL}/pricing">{BRAND_NAME} Pricing page</a> to checkout multiple session plans and their pricing.
+              <p>In the free plan you can run only one session at a time. Paid plan users can run multiple sessions depending upon their plan. Visit <a href={`${BRAND_URL}/pricing`}>{BRAND_NAME} Pricing page</a> to checkout multiple session plans and their pricing.
 
               </p>
               </details>
@@ -255,7 +255,7 @@ export default function FaqPage() {
               <details>
               <summary>How Many Parallel Sessions Do I Need?
               </summary>
-              <p><a href="{BRAND_URL}/concurrency-calculator/">{BRAND_NAME} Concurrency Calculator</a> is here to help you calculate the number of parallel sessions you need for your test coverage. Feed the information to our Concurrency Calculator, and it would suggest to you the appropriate number of parallel sessions.</p>
+              <p><a href={`${BRAND_URL}/concurrency-calculator/`}>{BRAND_NAME} Concurrency Calculator</a> is here to help you calculate the number of parallel sessions you need for your test coverage. Feed the information to our Concurrency Calculator, and it would suggest to you the appropriate number of parallel sessions.</p>
               </details>
 
               <details>
@@ -340,7 +340,7 @@ export default function FaqPage() {
 <details>
               <summary>Which testing frameworks does HyperExecute support?
               </summary>
-              <p>Though HyperExecute has a <a href='{BRAND_URL}/support/docs/hyperexecute-supported-languages-and-frameworks/'>very deep support</a> for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.</p>
+              <p>Though HyperExecute has a <a href={`${BRAND_URL}/support/docs/hyperexecute-supported-languages-and-frameworks/`}>very deep support</a> for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.</p>
               </details>
               <details>
               <summary>Can I run a specific command before running tests on HyperExecute?
@@ -404,22 +404,22 @@ export default function FaqPage() {
               <details>
               <summary>How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?
               </summary>
-              <p>You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by <a href='{BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#3-how-can-i-install-private-artifactory-dependencies-that-can-only-be-accessed-on-my-organizations-internal-network-on-hyperexecute-machines'>setting the tunnel flag to true </a> in HyperExecute’s YAML file.</p>
+              <p>You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#3-how-can-i-install-private-artifactory-dependencies-that-can-only-be-accessed-on-my-organizations-internal-network-on-hyperexecute-machines`}>setting the tunnel flag to true </a> in HyperExecute’s YAML file.</p>
               </details>
               <details>
               <summary>How can I use the Jenkins job choice parameters in the YAML file?
               </summary>
-              <p>You can do this by <a href='{BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#8-how-can-i-use-the-jenkins-job-choice-parameters-in-the-yaml-file'>directly calling the parameter keys</a> in the HyperExecute YAML file and use the Jenkins choice parameters.</p>
+              <p>You can do this by <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#8-how-can-i-use-the-jenkins-job-choice-parameters-in-the-yaml-file`}>directly calling the parameter keys</a> in the HyperExecute YAML file and use the Jenkins choice parameters.</p>
               </details>
               <details>
               <summary>I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?
               </summary>
-              <p>You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. To learn more about how to use this feature, go through <a href='{BRAND_URL}/support/docs/hyperexecute-inherit-config/'>this page</a>.</p>
+              <p>You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. To learn more about how to use this feature, go through <a href={`${BRAND_URL}/support/docs/hyperexecute-inherit-config/`}>this page</a>.</p>
               </details>
               <details>
               <summary>I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?
               </summary>
-              <p>You can use the "sourcePayload" flag to use HyperExecute's Yaml. With this, your test code is directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through <a href='{BRAND_URL}/support/docs/hyperexecute-how-to-configure-sourcePayload/'>this page</a>.</p>
+              <p>You can use the "sourcePayload" flag to use HyperExecute's Yaml. With this, your test code is directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through <a href={`${BRAND_URL}/support/docs/hyperexecute-how-to-configure-sourcePayload/`}>this page</a>.</p>
               </details>
                 </div>
               )}
@@ -586,13 +586,13 @@ export default function FaqPage() {
 <details>
               <summary>What resolutions, browsers, operating systems and devices are supported by the {BRAND_NAME} Automated Screenshot testing?
               </summary>
-              <p>To know more about browsers, OS, and devices supported by {BRAND_NAME} Automated Screenshot testinf, checkout <a href="{BRAND_URL}/list-of-browsers">list of browsers</a> page.
+              <p>To know more about browsers, OS, and devices supported by {BRAND_NAME} Automated Screenshot testinf, checkout <a href={`${BRAND_URL}/list-of-browsers`}>list of browsers</a> page.
               </p>
               </details>
               <details>
               <summary>Can I share these screenshots with my team?
               </summary>
-              <p>Yes. You can share these screenshots with your team. To know more about how you can do it, check out this tutorial guide on <a href="{BRAND_URL}/support/docs/automated-screenshot-testing/">Automated Screenshot testing</a>.</p>
+              <p>Yes. You can share these screenshots with your team. To know more about how you can do it, check out this tutorial guide on <a href={`${BRAND_URL}/support/docs/automated-screenshot-testing/`}>Automated Screenshot testing</a>.</p>
               </details>
               <details>
               <summary>Is there anyway I can take screenshot of pages behind firewall or authenticated pages?
@@ -675,7 +675,7 @@ export default function FaqPage() {
               <details>
               <summary>Which plan do I need to buy to get access to Realtime Native App testing?
               </summary>
-              <p>Any premium plan will allow you to test apps on emulators/simulators. The number of parallel sessions will depend on your parallel session plan. Refer to our <a href="{BRAND_URL}/pricing">plans and pricing</a>  page for further information.</p>
+              <p>Any premium plan will allow you to test apps on emulators/simulators. The number of parallel sessions will depend on your parallel session plan. Refer to our <a href={`${BRAND_URL}/pricing`}>plans and pricing</a>  page for further information.</p>
               </details>
               <details>
               <summary>How does the concurrency for Realtime Native App testing works?
@@ -892,7 +892,7 @@ export default function FaqPage() {
               <details>
               <summary>How can I generate "app_url" using the cURL command?
               </summary>
-              <p>To generate "app_url" using the cURL command, please refer to our <a href="{BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application">Appium testing documentation</a>.
+              <p>To generate "app_url" using the cURL command, please refer to our <a href={`${BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application`}>Appium testing documentation</a>.
               </p>
               </details>
 
@@ -921,7 +921,7 @@ export default function FaqPage() {
               <details>
               <summary>How can I generate "app_url" using the cURL command?
               </summary>
-              <p>To generate "app_url" using the cURL command, please refer to our <a href="{BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application">Appium testing documentation</a>.
+              <p>To generate "app_url" using the cURL command, please refer to our <a href={`${BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application`}>Appium testing documentation</a>.
               </p>
               </details>
 
@@ -956,7 +956,7 @@ export default function FaqPage() {
               <details>
               <summary>How can I generate "app_url" using the cURL command?
               </summary>
-              <p>To generate "app_url" using the cURL command, please refer to our <a href="{BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application">Appium testing documentation</a>.
+              <p>To generate "app_url" using the cURL command, please refer to our <a href={`${BRAND_URL}/support/docs/getting-started-with-appium-testing/#step-1-upload-your-application`}>Appium testing documentation</a>.
               </p>
               </details>
 
@@ -1114,7 +1114,7 @@ export default function FaqPage() {
 
               <p>Also, {BRAND_NAME} employs service clustering and network redundancies to eliminate single points of failure. Our strict backup regime and/or our Disaster Recovery service offering allows us to deliver a high service availability, as customer or test data is replicated across availability zones.
 
-              <br /> <br />For more details, please refer to <a href="{BRAND_URL}/trust/security#business-continuity-and-disaster-recovery">{BRAND_NAME} Trust</a> page.</p>
+              <br /> <br />For more details, please refer to <a href={`${BRAND_URL}/trust/security#business-continuity-and-disaster-recovery`}>{BRAND_NAME} Trust</a> page.</p>
 
               </ol>
 
@@ -1230,7 +1230,7 @@ export default function FaqPage() {
               <details>
               <summary>How can I upgrade my {BRAND_NAME} subscription?
               </summary>
-              <p>You can add more user accounts to your existing plan, or upgrade to another plan from the <a href="{BRAND_URL}/pricing">Pricing page</a>. Upgrades can be done any time, and are charged on a prorated basis. Thus, if your subscription is changed during a billing cycle, your billed amount for the month will be prorated. To know more, visit <a href="{BRAND_URL}/support/docs/manage-subscriptions/">{BRAND_NAME} Manage Subscription</a> documentation.</p>
+              <p>You can add more user accounts to your existing plan, or upgrade to another plan from the <a href={`${BRAND_URL}/pricing`}>Pricing page</a>. Upgrades can be done any time, and are charged on a prorated basis. Thus, if your subscription is changed during a billing cycle, your billed amount for the month will be prorated. To know more, visit <a href={`${BRAND_URL}/support/docs/manage-subscriptions/`}>{BRAND_NAME} Manage Subscription</a> documentation.</p>
               </details>
 
               <details>

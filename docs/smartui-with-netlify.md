@@ -3,7 +3,7 @@ id: smartui-with-netlify
 title: SmartUI Netlify Integration With TestMu AI
 hide_title: false
 sidebar_label: Netlify
-description: Simplify DevOps! Run blazing-fast Cypress tests on TestMu AI directly from your Netlify builds.
+description: Run automated SmartUI visual regression tests on TestMu AI directly from your Netlify build pipeline and catch UI changes before deploy.
 keywords:
   - testmu ai integrations
   - testmu ai netlify integration
