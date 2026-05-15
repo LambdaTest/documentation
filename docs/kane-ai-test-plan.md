@@ -9,6 +9,15 @@ keywords:
   - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai test plan
+  - AI test planner
+  - intelligent test generation
+  - automated test planning
+  - generate tests from objectives
+  - AI assisted test creation
+  - codeless test generation
+  - test scenario generation
+  - automated test suite creation
+  - natural language test generation
 url: https://www.testmuai.com/support/docs/kane-ai-test-plan/
 site_name: TestMu AI
 slug: kane-ai-test-plan/

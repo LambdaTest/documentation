@@ -2538,6 +2538,7 @@ module.exports = {
         label: "Introduction to Test Manager",
         id: "test-manager",
       },
+      "manual-to-automated-test-conversion",
       {
         type: "category",
         collapsed: true,

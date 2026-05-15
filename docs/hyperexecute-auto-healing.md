@@ -2,12 +2,21 @@
 id: hyperexecute-auto-healing
 title: Auto Healing in HyperExecute
 hide_title: true
-sidebar_label: Auto Healing
+sidebar_label: Auto Heal
 description: This documentation will help you to understand the concept of auto healing in hyperexecute
 keywords:
 - hyperexecute auto healing
 - auto healing
 - recover flaky tests
+- hyperexecute self-healing locators
+- auto-heal broken locators hyperexecute
+- smart heal hyperexecute
+- self-healing test automation hyperexecute
+- autoheal hyperexecute selenium
+- AI self-healing hyperexecute
+- DOM healing hyperexecute tests
+- hyperexecute locator recovery
+- fix flaky tests hyperexecute
 url: https://www.testmuai.com/support/docs/hyperexecute-auto-healing/
 site_name: TestMu AI
 slug: hyperexecute-auto-healing/
@@ -35,24 +44,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Background Services",
+          "name": "Auto Healing",
           "item": `${BRAND_URL}/support/docs/hyperexecute-auto-healing/`
         }]
       })
     }}
 ></script>
 
-# Auto Healing
+# Auto Healing for HyperExecute
 
-> This is currently in the **Beta** version.
-
-HyperExecute's Auto Healing feature helps you enhance the robustness of the test suites by automatically overcoming certain types of unexpected failures during the execution of your test scripts.
+HyperExecute's Auto Healing feature automatically recovers from locator failures during test execution, reducing flaky tests and improving the reliability of your test suites.
 
 ## Enable Auto Healing
 
-**Step 1:** ​To еnablе thе Auto Hеaling fеaturе, you nееd to pass thе **`autoHеal: truе`** as a capability in your WеbDrivеr configuration.
+**Step 1:** To enable the Auto Healing feature, you need to pass the **`autoHeal: true`** as a capability in your WebDriver configuration.
 
-```yaml
+```javascript
 const capability = {
     "browserName": "Chrome",
     "LT:Options": {
@@ -78,7 +85,12 @@ const capability = {
 
 ## How Auto Healing Works
 
-Auto Healing employs a dynamic locator strategy that adapts to DOM (Document Object Model) changes in real-time. When an element is initially located, the system records its DOM path and associated attributes. If subsequent attempts to find the element fail due to application updates, the Auto Healing mechanism activates. It analyzes the current DOM structure, comparing it against the previously recorded state, and generates new, contextually relevant locators by intelligently combining element attributes and hierarchical information. This process occurs seamlessly during test runtime, allowing scripts to continue execution despite locator changes. The system continuously monitors the web page for DOM modifications, ensuring sustained test reliability even in the face of frequent application updates.
+Auto Healing employs a dynamic locator strategy that adapts to DOM (Document Object Model) changes in real-time:
+
+1. **Record:** When an element is initially located, the system records its DOM path and associated attributes.
+2. **Detect:** If subsequent attempts to find the element fail due to application updates, the Auto Healing mechanism activates.
+3. **Heal:** It analyzes the current DOM structure, compares it against the previously recorded state, and generates new locators by combining element attributes and hierarchical information.
+4. **Continue:** The test continues execution seamlessly despite locator changes.
 
 ## Using AutoHeal with Hooks
 
@@ -97,25 +109,21 @@ This provides precise control over when element healing should be applied, impro
 
 
 ## Benefits of Auto Healing
-Here are some of the benefits of using HyperExecute's Auto Healing feature:
 
-- **Reduces the number of Flaky Tests:** Flaky tests are tests that fail intermittently, even though the underlying code has not changed. This can be caused by a variety of factors, such as unstable test environments, network latency, or changes in the browser's rendering engine. Auto Healing can help reduce the number of flaky tests by automatically retrying failed tests a certain number of times.
-- **Improves Test Reliability:** By automatically recovering from failures, Auto Healing can help improve the reliability of your test suite. This means that you can be more confident that your tests will always pass, even if there are temporary disruptions to the test environment.
-- **Saves Time and Effort:** Auto Healing can help save you time and effort by automating the process of recovering from failures. This means that you can focus on other tasks, such as developing new tests or fixing bugs.
+- **Reduces Flaky Tests:** Automatically recovers from intermittent locator failures caused by DOM changes.
+- **Improves Test Reliability:** Tests continue execution despite minor application updates, increasing confidence in results.
+- **Saves Time and Effort:** Reduces manual effort spent debugging and fixing broken locators.
 
 ## Limitations
-While the Auto Healing feature is designed to handle a wide range of issues, there are certain limitations to be aware of:
 
-- **Non-recoverable Errors:** Auto Healing cannot recover from certain types of errors, such as WebDriver initialization errors or system-level failures.
-- **Test Accuracy:** While Auto Healing can reduce test flakiness, it may also mask real issues in your application or test scripts. It's important to review the logs and understand why a test needed healing.
-- **Performance Impact:** While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to the additional checks and recovery mechanisms.
+- **Non-recoverable Errors:** Auto Healing cannot recover from WebDriver initialization errors or system-level failures.
+- **Test Accuracy:** May mask real issues in your application or test scripts. Review logs to understand why a test needed healing.
+- **Performance Impact:** Minimal, but enabling Auto Healing can slightly increase test execution time.
 
-## Best Practices
-By following these best practices, you can use auto healing to improve the reliability and efficiency of your test suite without introducing new risks.
+## Related Docs
 
-- Use a test automation framework that supports Auto Healing. This will make it easier to implement and manage Auto Healing in your test suite.
-- Identify the types of errors that you want to recover from. Not all errors can be recovered automatically. Focus on recovering from the most common and impactful errors.
-- Configure auto healing to retry tests a limited number of times. This will help to prevent infinite loops and resource exhaustion.
-- Log all Auto Healing activity. This will help you understand why tests are failing and to troubleshoot any problems that occur.
-- Monitor the effectiveness of Auto Healing. Track the number of tests that are healed and the number of false positives. This will help you to determine whether or not auto healing is providing a net benefit.
+- [Selenium Auto Healing](/support/docs/auto-healing/):Auto-heal for Selenium web automation tests
+- [Playwright Auto Healing](/support/docs/playwright-auto-healing/):Auto-heal for Playwright web automation tests
+- [Smart Heal for Appium](/support/docs/smart-heal-appium/):AI-powered self-healing for mobile app automation on real devices
+- [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests
 

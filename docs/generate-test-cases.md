@@ -9,6 +9,16 @@ keywords:
   - test case
   - test cases
   - generate test cases
+  - AI test case generation
+  - generate test cases from documents
+  - manual to automated test conversion
+  - convert manual tests to automated
+  - AI test generation from images
+  - AI test generation from text
+  - AI test generation from audio
+  - codeless test automation
+  - automated test case creation
+  - generate tests from requirements
 url: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 site_name: TestMu AI
 slug: generate-test-cases-with-ai/
