@@ -80,6 +80,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - These files are treated as variables and their paths are dynamically assigned.
 - These variables are named with prefix `FILE_`
 
+:::note
+The `FILE_` variable behavior described above applies to **Web tests**. In **App tests** no file variable is created. See [File Upload in App Tests](#file-upload-in-app-tests) below for more information.
+:::
+
 ### Step 5: Accessing Uploaded Files
 - In the test environment, type upload in the command field.
 - Select the required file from the available list using **double-curly braces syntax** (e.g.,`upload {{FILE_IMAGE_1_PNG}} in upload section`).
@@ -87,6 +91,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - On the right panel, all downloaded files in the session’s downloads folder will be displayed.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image4.png').default} alt="Image" className="doc_img"/>
+
+## File Upload in App Tests
+
+File upload behaves differently in App tests than in Web tests. In a Web test, <BrandName /> creates a file variable for each upload. App tests skip this step entirely — no file variable is created, so you never reference uploaded files with double-curly-brace syntax.
+
+### How it works
+
+When you upload files to an App test session, <BrandName /> injects them directly into the device's storage. The files become part of the device itself, which is why there is no variable to assign, track, or reference in your instructions.
+
+### Working with injected files
+
+Most native apps include their own file controls, such as an upload or attach button. Selecting one of these opens the device's system gallery or file picker, where your injected files are already available. You then choose the file you need and continue through the app's normal flow, exactly as a real user would.
 
 ## Downloading Files from Kane AI
 ### Step 1: Managing Downloaded Files
