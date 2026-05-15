@@ -2,12 +2,22 @@
 id: kaneai-auto-heal
 title: Auto-Heal for Automation Scripts in KaneAI with HyperExecute
 hide_title: false
-sidebar_label: Auto-Healing
+sidebar_label: Auto-Heal
 description: This documentation will help you to understand how auto-healing works on KaneAI
 keywords:
 - auto-heal
 - locators
 - kane ai
+- kaneai auto-heal locators
+- kaneai self-healing test automation
+- smart heal kaneai
+- AI auto-heal natural language
+- self-healing kaneai hyperexecute
+- kaneai locator recovery
+- auto-heal broken locators kaneai
+- NLP self-healing test scripts
+- visual query healing kaneai
+- AI native self-healing tests
 url: https://www.testmuai.com/support/docs/kaneai-auto-heal/
 site_name: TestMu AI
 slug: kaneai-auto-heal/
@@ -114,3 +124,10 @@ The video walkthrough explains:
 - How KaneAI generates scripts with fallback locators.
 - Demo of locator failure and Auto-Heal in action.
 - How KaneAI dynamically finds new locators using the original instruction.
+
+## Related Docs
+
+- [Selenium Auto Healing](/support/docs/auto-healing/):Auto-heal for Selenium web automation tests
+- [Playwright Auto Healing](/support/docs/playwright-auto-healing/):Auto-heal for Playwright web automation tests
+- [Smart Heal for Appium](/support/docs/smart-heal-appium/):AI-powered self-healing for mobile app automation on real devices
+- [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute

@@ -7,6 +7,15 @@ keywords:
   - selenium auto heal capability
   - auto healing flaky tests selenium
   - self-healing test automation
+  - selenium self-healing locators
+  - auto-heal broken locators selenium
+  - smart heal selenium
+  - self healing web automation
+  - autoheal selenium lambdatest
+  - DOM healing selenium tests
+  - AI self-healing selenium
+  - fix broken locators automatically
+  - selenium locator recovery
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/auto-healing/
 site_name: TestMu AI
@@ -57,7 +66,7 @@ No prerequisites are required. Enable auto-healing directly via desired capabili
 
 For **Java**, use the following code:
 
-```bash
+```java
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setBrowserVersion("118.0");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
@@ -66,6 +75,8 @@ ltOptions.put("accessKey", "YOUR_LAMBDATEST_ACCESS_KEY");
 ltOptions.put("project", "Untitled");
 ltOptions.put("selenium_version", "4.0.0");
 ltOptions.put("w3c", true);
+// highlight-next-line
+ltOptions.put("autoHeal", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 </TabItem>
@@ -74,7 +85,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 For **NodeJS**, use the following code:
 
-```bash
+```javascript
 const capability = {
 	"browserName": "Chrome",
 	"browserVersion": "118.0",
@@ -83,7 +94,9 @@ const capability = {
 		"accessKey": "YOUR_LAMBDATEST_ACCESS_KEY",
 		"project": "Untitled",
 		"w3c": true,
-		"plugin": "node_js-node_js"
+		"plugin": "node_js-node_js",
+		// highlight-next-line
+		"autoHeal": true
 	}
 }
 ```
@@ -93,15 +106,17 @@ const capability = {
 
 For **C#**, use the following code:
 
-```bash
+```csharp
 ChromeOptions capabilities = new ChromeOptions();
-capabilities.BrowserVersion = '118.0';
+capabilities.BrowserVersion = "118.0";
 Dictionary<string, object> ltOptions = new Dictionary<string, object>();
 ltOptions.Add("username", "YOUR_LAMBDATEST_USERNAME");
 ltOptions.Add("accessKey", "YOUR_LAMBDATEST_ACCESS_KEY");
 ltOptions.Add("project", "Untitled");
 ltOptions.Add("w3c", true);
 ltOptions.Add("plugin", "c#-c#");
+// highlight-next-line
+ltOptions.Add("autoHeal", true);
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 ```
 </TabItem>
@@ -110,7 +125,7 @@ capabilities.AddAdditionalOption("LT:Options", ltOptions);
 
 For **PHP**, use the following code:
 
-```bash
+```php
 $capability = array(
 	"browserName" => "Chrome",
 	"browserVersion" => "118.0",
@@ -119,7 +134,9 @@ $capability = array(
 		"accessKey" => "YOUR_LAMBDATEST_ACCESS_KEY",
 		"project" => "Untitled",
 		"w3c" => true,
-		"plugin" => "php-php"
+		"plugin" => "php-php",
+		// highlight-next-line
+		"autoHeal" => true
 	)
 );
 ```
@@ -129,16 +146,18 @@ $capability = array(
 
 For **Python**, use the following code:
 
-```bash
+```python
 options = ChromeOptions()
 options.browser_version = "118.0"
-lt_options = {};
-lt_options["username"] = "YOUR_LAMBDATEST_USERNAME";
-lt_options["accessKey"] = "YOUR_LAMBDATEST_ACCESS_KEY";
-lt_options["project"] = "Untitled";
-lt_options["w3c"] = True;
-lt_options["plugin"] = "python-python";
-options.set_capability('LT:Options', lt_options);
+lt_options = {}
+lt_options["username"] = "YOUR_LAMBDATEST_USERNAME"
+lt_options["accessKey"] = "YOUR_LAMBDATEST_ACCESS_KEY"
+lt_options["project"] = "Untitled"
+lt_options["w3c"] = True
+lt_options["plugin"] = "python-python"
+# highlight-next-line
+lt_options["autoHeal"] = True
+options.set_capability('LT:Options', lt_options)
 ```
 </TabItem>
 
@@ -146,16 +165,18 @@ options.set_capability('LT:Options', lt_options);
 
 For **Ruby**, use the following code:
 
-```bash
+```ruby
 options = Selenium::WebDriver::Options.chrome
 options.browser_version = "118.0"
-lt_options = {};
-lt_options[:username] = "YOUR_LAMBDATEST_USERNAME";
-lt_options[:accessKey] = "YOUR_LAMBDATEST_ACCESS_KEY";
-lt_options[:project] = "Untitled";
-lt_options[:w3c] = true;
-lt_options[:plugin] = "ruby-ruby";
-options.set_capability('LT:Options', lt_options);
+lt_options = {}
+lt_options[:username] = "YOUR_LAMBDATEST_USERNAME"
+lt_options[:accessKey] = "YOUR_LAMBDATEST_ACCESS_KEY"
+lt_options[:project] = "Untitled"
+lt_options[:w3c] = true
+lt_options[:plugin] = "ruby-ruby"
+# highlight-next-line
+lt_options[:autoHeal] = true
+options.set_capability('LT:Options', lt_options)
 ```
 </TabItem>
 
@@ -168,7 +189,7 @@ Selenium Locator auto-healing adjusts locators by merging attributes and context
 
 When an element is successfully located on the page, its DOM path is recorded for later use. If that same element is later referenced on the same page and is missing, the system evaluates the current page and generates new locators for altered elements based on previous benchmarks.
 
-<img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="Auto Healing workflow diagram showing how broken locators are detected and recovered" width="1346" height="647" className="doc_img"/>
 
 
 ## Auto Detection of New Locator
@@ -202,7 +223,7 @@ describe('Amazon Search Box Test', function () {
 
     beforeEach(async function () {
         driver = await new Builder()
-            .usingServer('LambdaTest_Hub_Url') 
+            .usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')
             .withCapabilities(capability)
             .build();
         vars = {};
@@ -232,22 +253,75 @@ To run the test, execute the below command:
 ./node_modules/.bin/mocha autohealingTest.js 
 ```
 
+## Using Auto Heal with Hooks
+
+You can start or stop Auto Heal at any point in your test script using hooks. This gives you fine-grained control over when element healing should be applied.
+
+### Enable Auto Heal
+
+Use the following hook to **start** Auto Heal at any point in your test script.
+
+```javascript
+driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
+```
+
+**Usage:** Place this hook right before interacting with elements that may dynamically change during the test.
+
+### Disable Auto Heal
+
+Use the following hook to **stop** Auto Heal at any point in your test script.
+
+```javascript
+driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
+```
+
+**Usage:** Place this hook immediately after the actions requiring Auto Heal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
+
+### Sample Script
+
+```python title="Test.py"
+import os
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.browser_version = "latest"
+lt_options = {
+    "build": "Autoheal Hooks Build",
+    "name": "Autoheal Test via Hooks",
+    "platformName": "Windows 10",
+    "w3c": True,
+    "autoHeal": True
+}
+options.set_capability("LT:Options", lt_options)
+
+hub = f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@hub.lambdatest.com/wd/hub"
+driver = webdriver.Remote(command_executor=hub, options=options)
+
+driver.get("https://www.selenium.dev")
+time.sleep(2)
+
+# Start auto-heal before interacting with dynamic elements
+driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
+
+driver.find_element(By.ID, 'td-block-1')
+driver.execute_script("document.getElementById('td-block-1').id='updatedtd-block-1';")
+driver.find_element(By.ID, 'td-block-1')  # Auto-heal detects the changed ID
+
+# Stop auto-heal after dynamic section
+driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
+
+driver.quit()
+```
+
 ## Benefits of Auto Healing
 ---
 
-Self-healing plays a vital role in refining the test automation process. Here are its primary advantages.
-
-1. **Increased Test Stability:**
-The auto-healing feature ensures that tests remain consistent and stable, even when faced with minor changes in the web application's UI. By dynamically adjusting to these changes, auto-healing overcomes test flakiness and provides reliability to your test suite.
-
-2. **Reduced Test Maintenance:**
-The system automatically adapts to evolving application interfaces, reducing the manual effort required to update test scripts and saving time and resources.
-
-3. **Intelligent Test Automation:**
- The auto-healing feature adds intelligence to automated tests and enables them to dynamically adapt to changes in an application and its environment. It applies artificial intelligence and machine learning algorithms to the self-healing of tests.
-
-4. **Reliable CI Pipeline:**
-With the auto-healing feature, TestMu AI ensures that the tests feeding into the CI pipeline are stable, reducing the chances of unexpected failures and ensuring a smoother development and deployment process.
+- **Increased Test Stability:** Tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
+- **Reduced Test Maintenance:** The system automatically adapts to evolving interfaces, reducing the manual effort required to update test scripts.
+- **Reliable CI Pipeline:** Stable tests feeding into CI pipelines reduce unexpected failures and ensure smoother deployments.
 
 ## Limitations of Auto Healing
 ---
@@ -261,6 +335,15 @@ While the Auto Healing feature handles a wide range of issues, there are certain
 * **Performance impact**: While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to additional checks and recovery mechanisms.
 
 The Auto Healing feature enhances your test suite, but it does not replace good test design and error handling practices. Always ensure your tests are well-designed, have proper error handling in place, and are reviewed regularly for issues that may be masked by the Auto Healing feature.
+
+---
+
+## Related Docs
+
+- [Playwright Auto Healing](/support/docs/playwright-auto-healing/):Auto-heal for Playwright web automation tests
+- [Smart Heal for Appium](/support/docs/smart-heal-appium/):AI-powered self-healing for mobile app automation on real devices
+- [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute
+- [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests
 
 ---
 

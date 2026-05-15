@@ -8,6 +8,16 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai code gen
+  - automation code generation
+  - generate test scripts from natural language
+  - export automation code
+  - test script generation multiple frameworks
+  - convert manual tests to code
+  - AI generated test scripts
+  - codeless to code automation
+  - selenium test generation
+  - playwright test generation
+  - download automation scripts
 url: https://www.testmuai.com/support/docs/kane-ai-automation-code-generation/
 site_name: TestMu AI
 slug: kane-ai-automation-code-generation/

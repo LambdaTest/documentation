@@ -10,6 +10,16 @@ keywords:
   - locator healing
   - mobile automation
   - testmu ai automation
+  - smart heal appium real device
+  - auto-heal appium mobile
+  - self-healing mobile test automation
+  - AI smart heal locator recovery
+  - appium locator healing iOS Android
+  - auto heal mobile app testing
+  - self-healing appium locators
+  - fix broken locators appium
+  - smart heal baseline appium
+  - AI ML mobile test healing
 url: https://www.testmuai.com/support/docs/smart-heal-appium/
 site_name: TestMu AI
 slug: smart-heal-appium/
@@ -28,11 +38,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # AI-Powered Smart Heal for Automation Tests
 <RealDeviceTag value="Real Device" /> 
 
-Locator failures can make tests brittle and cause frequent failures, slowing down development and testing. <BrandName />’s **Smart Heal** uses **AI/ML-powered algorithms** to automatically detect and recover from locator issues during test execution, ensuring smoother and more reliable automation.
+<BrandName />’s **Smart Heal** uses **AI-powered algorithms** to automatically detect and recover from locator failures during test execution. It intelligently detects missing elements, analyzes the UI in real time, and applies the closest valid match, keeping tests running smoothly despite UI changes. Both the **original and recovered locators** are logged for full visibility through the <BrandName /> dashboard.
 
-<BrandName /> now lets you enable **Smart Heal** for automation testing. This feature helps developers and testers handle locator failures without manual effort by intelligently detecting missing elements, analyzing the UI in real time, and applying the closest valid match. It keeps tests running smoothly despite UI changes and provides full visibility into healing actions, including both the **original and recovered locators** through logs and the <BrandName /> dashboard.
-
-> Smart Heal feature is currently in **closed beta** and continuously improving based on user feedback. Once publicly released, it will be available as part of AI credits—please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@testmuai.com** to enable it for your organization and try it out.
+> Smart Heal is currently in **closed beta**. To enable it for your organization, reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email **support@testmuai.com**.
 
 ---
 ## Use Cases
@@ -45,24 +53,21 @@ Locator failures can make tests brittle and cause frequent failures, slowing dow
 ---
 ## Smart Heal Workflow
 
-1. **Baseline Creation**  
-- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [<BrandName />  Hook](/support/docs/appium-testmu-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
-- For every user the **project name** and **test name** must remain the same across runs for Smart Heal to keep baseline applied successfully.
+1. **Baseline Creation**
+   Smart Heal requires at least one successful (**Passed**) test run to establish a baseline. On this initial run, <BrandName /> captures a **baseline snapshot** of all element locators in your script. Make sure to include the [<BrandName /> Hook](/support/docs/appium-testmu-hooks/#adding-custom-status--remark) to explicitly mark tests as passed during execution.
+   - The **project name** and **test name** must remain the same across runs for the baseline to apply.
+   - Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
 
+2. **Baseline Update**
+   After each successful test run, Smart Heal automatically updates your baseline to reflect the latest passed build. This ensures the most recent valid UI state is used as reference for future healing attempts.
 
-- On the initial successful test run with Smart Heal enabled, <BrandName /> captures a **baseline snapshot** of all element locators in your script. This baseline serves as the foundational reference for future healing attempts, ensuring that any changes to the UI can be intelligently detected and addressed.  
-
-2. **Baseline Updation**  
-   After each successful test run, Smart Heal can automatically update your baseline to reflect the latest fully passed build. This ensures that the most recent valid UI state is used as the reference for future healing attempts. Keeping the baseline updated helps maintain accurate detection of element changes and reduces unnecessary healing actions.
-   
-
-2. **Detection and Healing**  
+3. **Detection and Healing**
    In subsequent runs, if an element cannot be found due to **UI or DOM changes**, Smart Heal triggers automatically, leveraging **AI-driven analysis** of element attributes, hierarchy, and **visual cues** to find the closest valid match in the updated UI.
 
-3. **Retry with Healed Locator**  
+4. **Retry with Healed Locator**
    When a likely match is found, the test step retries with the **healed locator**. These adjustments apply at runtime so the test flow continues without interruption. Both the original and healed locators are logged for full transparency.
 
-4. **Fallback and Suggestions**  
+5. **Fallback and Suggestions**
    If Smart Heal cannot confidently identify an alternative, it records **AI-driven suggestions** in the dashboard. These insights help you quickly update or strengthen your locators to avoid repeated failures in future runs.
 
 
@@ -145,7 +150,7 @@ Once your app is uploaded and Smart Heal is enabled (either via capabilities or 
 
 ---
 
-# Viewing Results in Dashboard
+## Viewing Results in Dashboard
 
 ### Accessing the Dashboard
 Your test results are displayed on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
@@ -170,13 +175,20 @@ Each healed build has an associated icon. Hovering over this icon provides a too
 
 ### Session Details
 Access detailed execution logs that clearly differentiate between **original and healed selectors**, along with AI suggestions, and compare before-and-after screenshots. These insights help you understand how the Auto-Heal mechanism worked during execution and guide you in refining locators over time.
-![Smart Heal-1](../assets/images/real-device-app-testing/Auto-heal/Auto-Heal1.png)
+![Smart Heal - Session Details showing original and healed selectors](../assets/images/real-device-app-testing/Auto-heal/Auto-Heal1.png)
 
 ### AI Review on Failures
 When a test case fails, the dashboard provides **AI-powered analysis and suggestions** to help you quickly identify root causes and fix issues.
-![Smart Heal-1](../assets/images/real-device-app-testing/Auto-heal/Auto-heal2.png)
+![Smart Heal - AI Review on test failure with suggestions](../assets/images/real-device-app-testing/Auto-heal/Auto-heal2.png)
 
 
 :::info
-Smart Heal delivers the best results when applied to **static components** such as buttons or form fields, where locators remain relatively consistent across runs.  
+Smart Heal delivers the best results when applied to **static components** such as buttons or form fields, where locators remain relatively consistent across runs.
 :::
+
+## Related Docs
+
+- [Selenium Auto Healing](/support/docs/auto-healing/):Auto-heal for Selenium web automation tests
+- [Playwright Auto Healing](/support/docs/playwright-auto-healing/):Auto-heal for Playwright web automation tests
+- [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute
+- [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests

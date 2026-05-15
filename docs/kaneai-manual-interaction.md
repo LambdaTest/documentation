@@ -8,6 +8,16 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai manual interaction
+  - record and playback testing
+  - record user interactions
+  - codeless test recording
+  - manual to automated conversion
+  - observe user interactions
+  - record test steps
+  - AI test recording
+  - no-code test automation
+  - capture user actions
+  - hybrid test authoring
 url: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
 site_name: TestMu AI
 slug: kaneai-manual-interaction/
