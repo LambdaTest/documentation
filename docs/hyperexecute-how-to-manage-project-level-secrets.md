@@ -2,7 +2,7 @@
 id: hyperexecute-how-to-manage-project-level-secrets
 title: Manage Project Level Secrets in HyperExecute
 hide_title: false
-sidebar_label: How to Manage Project Level Secrets in HyperExecute
+sidebar_label: Project-Level Secrets
 description: Learn how to manage project-level secrets in HyperExecute—scope credentials per project, restrict access, and keep sensitive data secure.
 keywords:
   - TestMu AI Hyperexecute
