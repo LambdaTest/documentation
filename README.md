@@ -9,7 +9,7 @@
 
 [TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks.
 
-This repository powers the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) site, built with Docusaurus 2 and React. Contributions are welcome, whether it is fixing a typo or adding a new topic. The docs team will review and ship your changes.
+This repository powers TestMu AI documentations built with Docusaurus and React. Contributions are welcome, whether it is fixing a typo or adding a new topic. The docs team will review and ship your changes.
 
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
 - Browse the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for product guides and references.
