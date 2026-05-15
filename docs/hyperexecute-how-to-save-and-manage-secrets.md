@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-how-to-save-and-manage-secrets
-title: Securely Manage Your Secrets with HyperExecute
+title: Manage User-Level Secrets in HyperExecute
 hide_title: false
-sidebar_label: How to Manage Secrets in HyperExecute
-description: Securely save and manage account-wide secrets in HyperExecute—encrypt credentials, rotate keys, and use them safely across automation runs.
+sidebar_label: User-Level Secrets
+description: Securely save and manage user-level secrets in HyperExecute. Encrypt credentials, rotate keys, and use them safely across automation runs.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
@@ -42,12 +42,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Testing your webapp or applications often involves using the sensitive data like passwords, API keys, and other credentials. Storing these secrets data directly in your code can be risky and exposing it can lead to potential security breaches.
+Testing your webapp or applications often involves using sensitive data like passwords, API keys, and other credentials. Storing these secrets directly in your code can be risky and exposing them can lead to potential security breaches.
 
-HyperExecute provides a secure and user-friendly solution for managing your secrets during testing. This documentation will guide you through utilizing HyperExecute's **Secret Management Vault** to keep your sensitive information safe and secure.
+HyperExecute provides a secure **Secret Management Vault** to keep your sensitive information safe. This doc covers **user-level secrets** that are tied to your individual account.
+
+## Secret Scopes
+
+HyperExecute supports secrets at multiple levels:
+
+| Scope | Access | Use Case |
+|-------|--------|----------|
+| **User-Level** (this doc) | Tied to your individual account, available to all your jobs | Personal credentials, user-specific API keys |
+| **Org-Level** | Shared across all users and projects in the organization, managed by admins | Org-wide API keys, shared access tokens |
+| **[Project-Level](/support/docs/hyperexecute-how-to-manage-project-level-secrets/)** | Scoped to a specific project, shared across all users on the project | Project-specific credentials, team-shared keys |
 
 :::info
-These Secrets are stored as `key:value` pair where these **values** are not visible or accessible to anyone but can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-existing-secrets) with a new value.
+Secrets are stored as `key:value` pairs where **values** are encrypted and not visible to anyone. They can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-existing-secrets) with a new value.
 :::
 
 ## Create a New Secret

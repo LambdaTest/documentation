@@ -7,8 +7,15 @@ description: Learn how to integrate your jira tickets with KaneAI and test plann
 keywords:
   - testmu ai automation
   - testmu ai kaneai
-  - kaneai scroll elements
-  - kaneai sidebar scroll
+  - kaneai jira integration
+  - generate tests from jira tickets
+  - jira to automated tests
+  - convert jira requirements to tests
+  - AI test generation from jira
+  - test case generation from user stories
+  - jira test automation
+  - automated testing from requirements
+  - manual to automated jira
 url: https://www.testmuai.com/support/docs/kane-ai-jira-integration/
 site_name: TestMu AI
 slug: kane-ai-jira-integration/

@@ -149,15 +149,64 @@ Setting up an IPsec Site-to-Site VPN is **NOT** a self-service process. It requi
 
 ## S2S VPN Requirement Gathering
 
-Please provide the following details to your Network Team and share with <BrandName /> support to initiate the setup process.
+To initiate the VPN setup process, please gather the following details from your Network/Security team and share them with <BrandName /> support at **support@testmu.ai**.
 
-<img loading="lazy" src={require('/assets/images/s2s-vpn/requirement-form.png').default} alt="S2S VPN Requirement Form" className="doc_img" width="600"/>
+### Organization Info
 
-Contact <BrandName /> support at **support@testmu.ai** with the above details to initiate the VPN setup process. Our Network Engineering team will review and contact you within 2 business days.
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Organization Name** | Your company or organization name | Acme Corp |
+| **LambdaTest Account Email** | The email associated with your <BrandName /> account | admin@acme.com |
+| **Network/Security Contact Email** | Email of the technical contact from your network or security team | netops@acme.com |
+
+### Gateway Details
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **VPN Gateway Vendor** | The vendor/make of your on-premise VPN gateway or firewall device | Cisco, Fortinet, Palo Alto, AWS, Azure, etc. |
+| **Gateway Public IP** | The public IP address of your VPN gateway | 203.0.113.10 |
+| **Is Gateway behind NAT?** | Whether your gateway sits behind a NAT device. If **Yes**, provide the NAT IP address | No / Yes (specify NAT IP) |
+
+### Network Addressing
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Internal Subnets to Expose** | The private subnets (in CIDR format) that <BrandName /> test nodes need to reach. List one per line | 10.10.1.0/24, 192.168.5.0/24 |
+| **Internal Domain Names** | Internal domain names that should be routed through the VPN tunnel (for DNS routing) | uat.company.internal, app.corp |
+
+### IPsec Parameters Preference
+
+| Parameter | Options | Recommended |
+|-----------|---------|-------------|
+| **IKE Version** | IKEv1 / IKEv2 | IKEv2 (Recommended) |
+| **Auth Method** | Pre-Shared Key (PSK) / Certificates | Pre-Shared Key (PSK) |
+| **Phase 1 Encryption** | AES-256-GCM / AES-256-CBC / AES-128-GCM | AES-256-GCM (Preferred) |
+| **Phase 1 DH Group** | Group 14 / Group 19 (ECP-256) / Group 20 (ECP-384) | Group 20 (ECP-384) |
+
+:::tip Submit Your Request
+Send the above details to **support@testmu.ai** to submit your VPN setup request. <BrandName /> Network Engineering will review and contact you within **2 business days**.
+:::
 
 ## Implementation Checklist
 
-<img loading="lazy" src={require('/assets/images/s2s-vpn/implementation-checklist.png').default} alt="S2S VPN Implementation Checklist" className="doc_img" width="800"/>
+Setup involves parallel work from both teams. Use the checklists below to track progress.
+
+### Client Network Team
+
+- Identify VPN Gateway device
+- Obtain InfoSec approval
+- Complete Requirement Form (see [above](#s2s-vpn-requirement-gathering))
+- Configure Gateway with Parameters
+- Open UDP 500/4500 on Firewall
+- Configure Static Routes
+
+### <BrandName /> Network Team
+
+- Provide Public IP & Parameters
+- Configure Cloud VPN Gateway
+- Provide Cloud Subnet Ranges
+- Validate SA Establishment
+- End-to-End Connectivity Test
 
 ## Troubleshooting
 
