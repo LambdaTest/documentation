@@ -83,6 +83,11 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 ### Language-Specific Setup
 
+| Language | Supported Playwright Versions |
+|----------|-------------------------------|
+| **JavaScript (Node.js)** | Up to **v1.59.0** |
+| **Java, Python, C#** | Up to **v1.53.2** |
+
 <Tabs className="docs__val">
 
 <TabItem value="nodejs" label="Node.js" default>

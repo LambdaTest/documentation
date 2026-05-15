@@ -53,7 +53,7 @@ import TabItem from '@theme/TabItem';
 Playwright Android automation is supported on <BrandName /> across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the <BrandName /> platform.
 
 :::tip Supported Versions
-- Playwright versions **v1.20.0** to **v1.58.2** are supported for Android real device testing (excluding `v1.54.0`).
+- Playwright versions **v1.20.0** to **v1.59.0** are supported for Android real device testing (excluding `v1.54.0`).
 - **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()`. All use stock Playwright packages, no custom forks required.
 - Playwright v1.53.2 is currently supported for Playwright C# (for Android & iOS).
 :::
@@ -80,6 +80,11 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ### Language-Specific Setup
+
+| Language | Supported Playwright Versions |
+|----------|-------------------------------|
+| **JavaScript (Node.js)** | Up to **v1.59.0** |
+| **Java, Python, C#** | Up to **v1.53.2** |
 
 <Tabs className="docs__val">
 
