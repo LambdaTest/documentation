@@ -27,16 +27,17 @@ export default function Home() {
 
   return (
     <Layout
-      title="TestMu AI Documentation and Knowledge Hub"
-      description="Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms"
+      title="TestMu AI Documentation"
+      description="Explore guides, API docs, and examples for TestMu AI (Formerly LambdaTest) - the AI-native quality engineering platform.
+"
     >
       <div style={{ overflow: 'hidden' }}>
       {/* Hero */}
       <div className="Doc_intro_cta">
         <div className="container" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', width: '100%', position: 'relative', zIndex: 9 }}>
           <div className="Doc_intro_cta_text">
-            <h1>TestMu AI Documentation and Knowledge Hub</h1>
-            <p>Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms</p>
+            <h1>TestMu AI (Formerly LambdaTest) Documentation</h1>
+            <p>Build, run, and scale tests on TestMu AI, the AI-native quality engineering platform. Setup guides, API references, and tutorials in one place.</p>
           </div>
           <div className="Doc_intro_cta_image">
             <img loading="eager" src={homeLight} alt="" width="701" height="576" className="home_light_cta no-zoom" role="presentation" />
