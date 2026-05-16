@@ -1,16 +1,18 @@
 ---
 id: shared-cloud-usage
-title: Daily Usage Limit Per Organization | LambdaTest
+title: Daily Usage Limit Per Organization | TestMu AI
 hide_title: true
 sidebar_label: Daily Usage Limit Per Organization
-description: To ensure fair usage and best practices, LambdaTest enforces a daily capacity limit on the total test time for each organization.
+description: To ensure fair usage and best practices, TestMu AI enforces a daily capacity limit on the total test time for each organization.
 keywords:
   - over-exploitation
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/shared-cloud-usage/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/shared-cloud-usage/
+site_name: TestMu AI
 slug: shared-cloud-usage/
+canonical: https://www.testmuai.com/support/docs/shared-cloud-usage/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: shared-cloud-usage/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Daily Usage Limit",
-          "item": "https://www.lambdatest.com/support/docs/shared-cloud-usage/"
+          "item": `${BRAND_URL}/support/docs/shared-cloud-usage/`
         }]
       })
     }}
@@ -39,7 +41,7 @@ slug: shared-cloud-usage/
 # Daily Usage Limit Per Organization
 ***
 
-To avoid over-exploitation of LambdaTest and promote best practices, we have added a capacity constraint on the total test time that can be used by an organization in a day.
+To avoid over-exploitation of <BrandName /> and promote best practices, we have added a capacity constraint on the total test time that can be used by an organization in a day.
 
 | PARALLEL SESSIONS | COMPLETED RUN TIME (HRS) |
 | ---------- | ----------------- |
@@ -147,12 +149,12 @@ To avoid over-exploitation of LambdaTest and promote best practices, we have add
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

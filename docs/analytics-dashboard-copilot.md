@@ -5,12 +5,15 @@ sidebar_label: CoPilot - AI
 description: Analytics - Dashboard CoPilot to analyze your data and get insights faster then ever
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-dashboard-copilot/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
+site_name: TestMu AI
 slug: analytics-dashboard-copilot/
+canonical: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +23,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-copilot/"
+          "item": `${BRAND_URL}/support/docs/analytics-dashboard-copilot/`
         }]
       })
     }}
@@ -39,13 +42,17 @@ import NewTag from '../src/component/newTag';
 
 The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/0CwsyCZOzYU?si=3YMIA6hb5mAu50ba" title="Exploring the CoPilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="0CwsyCZOzYU" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## Prerequisites
 
 To access and utilize the full potential of the AI CoPilot Dashboard, ensure that you meet the following requirements:
 
-1. **LambdaTest Paid Account**: You must have an active LambdaTest paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
+1. **<BrandName /> Paid Account**: You must have an active <BrandName /> paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@testmuai.com](mailto:support@testmuai.com).
 
 :::note
 This feature is exclusively available to our valued paid users.
@@ -61,7 +68,7 @@ To know about the widgets and how to create a dashboard, refer to the [Analytics
 
 Follow these step-by-step instructions to access the AI CoPilot Dashboard:
 
-1. **Login**: Sign in to your LambdaTest account using your registered credentials.
+1. **Login**: Sign in to your <BrandName /> account using your registered credentials.
 
 2. **Navigate to Insights**: From the left navigation menu, locate and click on the "Insights" section to access the analytics and dashboard features.
 
@@ -107,6 +114,6 @@ We currently allow a maximum of **5 prompts per day** for each organization acco
 
 ## Support and Assistance
 
-We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@lambdatest.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
+We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
 
 Embrace the future of data analysis with the AI CoPilot Dashboard and unlock the full potential of your data. Start exploring, asking questions, and discovering valuable insights today!

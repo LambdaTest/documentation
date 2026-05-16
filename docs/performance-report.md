@@ -8,12 +8,15 @@ keywords:
     - performance report
     - LT browesr integration
     - Google lighthouse integration
-    - lambdatest reporting
+    - testmu ai reporting
     - lt browser
-url: https://www.lambdatest.com/support/docs/performance-report/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/performance-report/
+site_name: TestMu AI
 slug: performance-report/
+canonical: https://www.testmuai.com/support/docs/performance-report/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,18 +25,18 @@ slug: performance-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Performance Report",
-          "item": "https://www.lambdatest.com/support/docs/performance-report/"
+          "item": `${BRAND_URL}/support/docs/performance-report/`
         }]
       })
     }}
@@ -70,7 +73,7 @@ To get started, you need to download the executable file from here.
 
 ## How To View Performance Report On LT Browser?
 ***
-Make sure you've installed the LT Browser, you will need to login to the LT Browser through your LambdaTest login credentials.
+Make sure you've installed the LT Browser, you will need to login to the LT Browser through your <BrandName /> login credentials.
 
 **Step 1:**  Open the LT Browser. Select a device from the device List. For the demo, we are selecting **'Galaxy Note 9'**  and **'13-inch Macbook Air'**.
 
@@ -104,17 +107,17 @@ In runtime settings, you'll find the URL of the entered website, time, and date.
 
 <img loading="lazy" src={require('../assets/images/performance-report/lt5-3-1.webp').default} alt="Image"  className="doc_img" width="823" height="183"/>
 
-That is all about the LT browser Performance Report. Don't forget to share you experience or questions with us. You can drop us an email through [support@lambdatest.com](mailto:support@lambdatest.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **24/7 chat support** </span>. Happy testing!
+That is all about the LT browser Performance Report. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **24/7 chat support** </span>. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

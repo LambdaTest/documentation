@@ -3,13 +3,17 @@ id: azure-scim
 title: Azure AD Scim User Provisioning
 hide_title: false
 sidebar_label: Azure AD
-description: Integrating LambdaTest SCIM with Azure AD 
+description: Integrating TestMu AI SCIM with Azure AD 
 keywords:
-    - LambdaTest SCIM
-url: https://www.lambdatest.com/support/docs/scim/azure/
-site_name: LambdaTest
+    - TestMu AI SCIM
+url: https://www.testmuai.com/support/docs/scim/azure/
+site_name: TestMu AI
 slug: scim/azure/
+canonical: https://www.testmuai.com/support/docs/scim/azure/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,30 +22,30 @@ slug: scim/azure/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Scim",
-          "item": "https://www.lambdatest.com/support/docs/scim/"
+          "item": `${BRAND_URL}/support/docs/scim/`
         }]
       })
     }}
 ></script>
 ## Prerequisites
-Integrate SCIM With LambdaTest:
+Integrate SCIM With <BrandName />:
 
-* You will need an Enterprise plan with LambdaTest.
-* SSO must be already integrated. Please complete [LambdaTest SSO & Azure AD Integration](/support/docs/sso-azure-integration/)
+* You will need an Enterprise plan with <BrandName />.
+* SSO must be already integrated. Please complete [<BrandName /> SSO & Azure AD Integration](/support/docs/sso-azure-integration/)
 
 ## Integrating SCIM with Azure AD
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -56,14 +60,14 @@ Integrate SCIM With LambdaTest:
 **Step 4:** Sign in to the [Azure portal](https://portal.azure.com). Select Enterprise Applications, then select All applications.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/enterprise-applications.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-**Step 5:** In the applications list, select application used for LambdaTest SSO setup
+**Step 5:** In the applications list, select application used for <BrandName /> SSO setup
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/search-lambdatest-sso.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 6:** Select the Provisioning tab.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/provisioning-tab.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 
-**Step 7:** Under the Admin Credentials section, input your LambdaTest SCIM Base URL `https://auth.lambdatest.com/api/scim?aadOptscim062020`  and Bearer Token retrieved earlier in Step 3. Click Test Connection to ensure Azure AD can connect to LambdaTest. If the connection fails, ensure your LambdaTest account has Admin permissions and try again.
+**Step 7:** Under the Admin Credentials section, input your <BrandName /> SCIM Base URL `https://auth.lambdatest.com/api/scim?aadOptscim062020`  and Bearer Token retrieved earlier in Step 3. Click Test Connection to ensure Azure AD can connect to <BrandName />. If the connection fails, ensure your <BrandName /> account has Admin permissions and try again.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/credentials.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 8:** Under the Mappings section, select Synchronize Azure Active Directory Users.
@@ -76,9 +80,9 @@ Integrate SCIM With LambdaTest:
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/userName.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
  
-- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: Custom attribute used to set LambdaTest Organization Role for Users, If this attribute is not mapped User role would be set by default. Allowed values are (Admin/Guest/User)
+- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: Custom attribute used to set <BrandName /> Organization Role for Users, If this attribute is not mapped User role would be set by default. Allowed values are (Admin/Guest/User)
 
-- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`**: Used to assign an existing group in Lambdatest to a new user created in lambdatest through SCIM. (Applicable only if organisation has group support active)
+- **`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`**: Used to assign an existing group in TestMu AI to a new user created in TestMu AI through SCIM. (Applicable only if organisation has group support active)
 
 For filtering only **userName** attribute is supported and must be selected for filtering, click edit on userPrincipalName and make sure **Apply this mapping** is set to **Always**
 
@@ -110,7 +114,51 @@ In the above example we are using the appRoleAssignments attribute of microsoft 
 
 After custom attribute creation, we have to map them using “Add new mapping”
 
-**Step 10:** To enable the Azure AD provisioning service for LambdaTest, change the Provisioning Status to On in the Settings section.
+## Provisioning Groups from Azure AD
+
+Once user provisioning is configured, you can also push Azure AD groups to <BrandName />.
+
+:::note Prerequisites
+Group Provisioning must be enabled for your org. Contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> to activate it.
+:::
+
+**Step 1:** In Azure portal, go to your <BrandName /> Enterprise Application > **Provisioning** > **Mappings**.
+
+**Step 2:** Click **Provision Azure Active Directory Groups** and ensure it is **Enabled**.
+
+**Step 3:** Review the attribute mappings. The required mappings are:
+- `displayName` → `displayName`
+- `members` → `members`
+
+**Step 4:** Under **Users and groups**, assign the groups you want to provision.
+
+**Step 5:** Start a provisioning cycle (or wait for the 40-minute auto sync).
+
+**Step 6:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+
+### Setting Roles on Azure AD Groups
+
+Azure AD sends roles via the SCIM group extension `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group`. To assign roles:
+
+1. Create a custom attribute `LambdatestRoles` under the group schema in your Azure AD attribute mappings
+2. Map it to an Azure AD attribute or set it as a constant (e.g., `User`, `Admin`, or `Guest`)
+3. The role applies to **all** members of the group. Highest role wins across multiple groups (Admin > User > Guest)
+
+### What Happens After Provisioning
+
+| Azure AD Action | <BrandName /> Effect |
+|---|---|
+| Group provisioned | Group created, mapping rules evaluated, members synced |
+| Member added to group | Member added to all mapped <BrandName /> entities |
+| Member removed from group | Member removed (if no other group maps them there), role recomputed |
+| Group renamed | Group renamed, mapped entity renamed to match, rules re-evaluated |
+| Group deprovisioned | Group soft-deleted, members safely unassigned, roles recomputed |
+
+> For details on mapping, conflicts, and rules, see the [SCIM Provisioning guide](/support/docs/scim/#group-provisioning).
+
+---
+
+**Step 10:** To enable the Azure AD provisioning service for <BrandName />, change the Provisioning Status to On in the Settings section.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/provisioning-on.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 11:** When you are ready to provision, click Save.
@@ -120,18 +168,18 @@ This operation starts the initial synchronization cycle of all users in Scope in
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/save.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 
-> That's all you need to know about LambdaTest SCIM Auto User Provisioning with Azure AD.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+> That's all you need to know about <BrandName /> SCIM Auto User Provisioning with Azure AD.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

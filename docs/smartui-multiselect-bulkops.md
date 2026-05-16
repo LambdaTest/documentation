@@ -8,15 +8,18 @@ keywords:
   - Bulk Operations
   - Visual Testing Workflow
   - Batch Approval
-  - LambdaTest SmartUI
-url: https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/
-site_name: LambdaTest
+  - TestMu AI SmartUI
+url: https://www.testmuai.com/support/docs/smartui-multiselect-bulkops/
+site_name: TestMu AI
 slug: smartui-multiselect-bulkops/
+canonical: https://www.testmuai.com/support/docs/smartui-multiselect-bulkops/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +29,17 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Multiselect & Bulk Operations",
-          "item": "https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/"
+          "item": `${BRAND_URL}/support/docs/smartui-multiselect-bulkops/`
         }]
       })
     }}
@@ -51,237 +54,149 @@ Managing large visual regression builds can be time-consuming. **Multiselect & B
 - **Batch Rejection**: Quickly reject multiple incorrect screenshots.
 - **Bulk Status Update**: Change the status of multiple tests simultaneously.
 
-This guide explains the selection states, supported actions, and best practices to efficiently manage your visual regression tests.
+This guide explains the end-to-end workflow, supported actions, and best practices to avoid accidental approvals or baseline edits.
+
+:::info
+For a complete understanding of approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
 
 ---
 
-## Where Multiselect Appears
+## Where multiselect appears
 
-1. Sign in to [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+1. Sign in to [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 2. Open any project → choose a build.
-3. Navigate across tabs (e.g., **All**, **Changes Found**, **Under Screening**).  
+3. Navigate across tabs (e.g., **New**, **Changes Found**).  
 4. Look for the **selection toolbar** above the screenshot grid.
 
 <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/dashboard.png').default} alt="SmartUI multiselect toolbar on Builds dashboard" />
 
----
+### Selection states
 
-## Selection States
+| State | Description | Screenshot |
+| --- | --- | --- |
+| None selected | Bulk action buttons stay disabled until at least one screenshot is selected. | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/noselectionbulkops.png').default} alt="No selection state" /> |
+| Single selection | Shows contextual details (name, viewport, status). Bulk buttons activate. | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/noneselected.png').default} alt="Single screenshot selected" /> |
+| Multi selection | Displays count (e.g., “3 selected”) and unlocks all bulk actions. | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/selectedstate.png').default} alt="Multiple screenshots selected" /> |
 
-SmartUI supports three distinct selection states, each with different behaviors for bulk operations. The table below explains each state, how it works, and when to use it.
-
-| Selection State | Visual Indicator | How It Works | Scope of Operations | Use Case | Screenshot |
-|----------------|------------------|--------------|---------------------|----------|------------|
-| **None Selected** | No checkboxes checked, bulk buttons enabled | When no screenshots are explicitly selected, bulk operations apply to **all screenshots in the current build**, respecting active filters and tabs | All screenshots in current build | Quickly approve or reject all screenshots in a specific tab (e.g., all "Changes Found" screenshots) | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/noneselected.png').default} alt="None selected state - bulk operations apply to full build" /> |
-| **Multiple Selected** | Individual checkboxes checked, selection count displayed (e.g., "3 selected") | When you explicitly select multiple screenshots, bulk operations apply **only to the selected screenshots**. Works with tabs and filters | Only selected screenshots in current context | Approve specific screenshots while leaving others for review | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/selectedstate.png').default} alt="Multiple screenshots selected state" /> |
-| **Select All** | Toolbar checkbox checked, total count displayed (e.g., "12 selected") | Click the checkbox in the toolbar header to select all visible screenshots. You can then deselect individual screenshots if needed | All selected screenshots works with filters and tab selection | Select all screenshots in a tab, then deselect a few exceptions before bulk approving | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/allselect.png').default} alt="Select all screenshots in current view" /> |
-
-### Visual Examples
-
-**None Selected State:**
-<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/noselectionbulkops.png').default} alt="Bulk operations available when none selected" />
-
-**Selection with Tabs and Filters:**
-<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/tabselection.png').default} alt="Selection works with tabs and filters" />
+Use the checkbox beside each screenshot card or the **Select All** checkbox in the toolbar to toggle selections quickly.
 
 ---
 
-## Bulk Actions
+## Bulk actions
 
-The table below describes all available bulk actions, their workflows, and results. Each action works with all three selection states.
+### Approve screenshots
 
-| Action | Button Location | When to Use | Workflow | Result | Screenshot |
-|--------|----------------|-------------|----------|--------|------------|
-| **Approve Screenshots** | Toolbar **Approve** button | When diffs are valid or when approving all screenshots in a tab | 1. Navigate to appropriate tab (e.g., **Changes Found**, **Under Screening**)<br/>2. Choose selection method (None selected / Multiple selected / Select All)<br/>3. Click **Approve** button<br/>4. Confirm in dialog | • Screenshots marked as **Approved**<br/>• Move to **Approved** tab<br/>• Audit logs preserve approver name and timestamp | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/approvebulkops.png').default} alt="Approve bulk operation dialog" /> |
-| **Reject Screenshots** | Toolbar **Reject** button | When diffs are unexpected, unstable, or blocked by other issues | 1. Navigate to appropriate tab (e.g., **Changes Found**, **Under Screening**)<br/>2. Select screenshots to reject (or use none selected for all in tab)<br/>3. Click **Reject** button<br/>4. Confirm in dialog | • Screenshots marked as **Rejected**<br/>• Move to **Rejected** tab<br/>• Remain available for future comparison runs | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/rejectbulkops.png').default} alt="Reject bulk operation dialog" /> |
-| **Move to Baseline** | Toolbar **Move to Baseline** button | Once approved diffs represent the new expected UI, promote them to Baseline | 1. Navigate to **Approved** tab<br/>2. Choose selection method (None selected / Multiple selected / Select All)<br/>3. Click **Move to Baseline** button<br/>4. Confirm in dialog | • Screenshots become new baseline for future comparisons<br/>• Update reference snapshot for next comparison<br/>• Move to **Added To Baseline** tab | <img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/movebulkops.png').default} alt="Move to baseline bulk operation dialog" /> |
+Ideal when only a subset of diffs are valid.
 
-> **Important:** Baseline moves update the reference snapshot for the next comparison. Ensure you only promote validated UI changes to keep noise low in future runs.
+1. Filter to **Failed** or **Pending** tab.
+2. Select the screenshots that represent expected UI updates.
+3. Click **Approve**.
 
----
+<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/approvebulkops.png').default} alt="Approve bulk operation" />
 
-## Selection State Comparison
+SmartUI will:
+- Mark each screenshot as **Approved**.
+- Move them to the **Approved** tab for auditing.
+- Preserve audit logs with the approver name and timestamp.
 
-<Tabs className='docs__val' groupId='selection-states'>
-<TabItem value='none-selected' label='None Selected' default>
+### Reject screenshots
 
-**Behavior:**
-- No individual checkboxes checked
-- Bulk operations apply to **all screenshots** in current build/tab/filter
-- Fastest way to approve/reject entire builds or tabs
+Use this when a diff is unexpected, unstable, or blocked by other issues.
 
-**When to use:**
-- Approving all screenshots in "Changes Found" tab
-- Rejecting all screenshots in "Under Screening" tab
-- Moving all approved screenshots to baseline
+1. Select the screenshots within **Failed**/**Pending**.
+2. Click **Reject**.
 
-**Example:**
-1. Navigate to "Changes Found" tab
-2. Ensure no screenshots are selected
-3. Click **Approve** → All screenshots in that tab are approved
+<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/rejectbulkops.png').default} alt="Reject bulk operation" />
 
-</TabItem>
-<TabItem value='multiple-selected' label='Multiple Selected'>
+Rejected screenshots move to the **Rejected** tab and remain available for future comparison runs.
 
-**Behavior:**
-- Individual checkboxes checked for specific screenshots
-- Selection count displayed (e.g., "3 selected")
-- Bulk operations apply **only to selected screenshots**
-- Works with tabs and filters
+### Move approved screenshots to Baseline
 
-**When to use:**
-- Approving specific screenshots while leaving others for review
-- Rejecting outliers in a batch of changes
-- Moving specific approved screenshots to baseline
+Once approved diffs represent the new expected UI, promote them to Baseline:
 
-**Example:**
-1. Navigate to "Changes Found" tab
-2. Select 3 specific screenshots
-3. Click **Approve** → Only those 3 screenshots are approved
+1. Go to the **Approved** tab.
+2. Select individual screenshots, curated subsets, or **Select All**.
+3. Click **Move to Baseline**.
 
-</TabItem>
-<TabItem value='select-all' label='Select All'>
+<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/multiselect/movebulkops.png').default} alt="Move to baseline bulk operation" />
 
-**Behavior:**
-- Click toolbar checkbox to select all visible screenshots
-- Selection count shows total (e.g., "12 selected")
-- Can deselect individual screenshots after selecting all
-- Bulk operations apply to all selected screenshots
-
-**When to use:**
-- Selecting all screenshots in a tab, then deselecting exceptions
-- Quick way to select many screenshots without clicking each one
-
-**Example:**
-1. Navigate to "Changes Found" tab
-2. Click **Select All** checkbox → All 12 screenshots selected
-3. Deselect 2 screenshots that need review
-4. Click **Approve** → 10 screenshots are approved
-
-</TabItem>
-</Tabs>
+> Baseline moves update the reference snapshot for the next comparison. Ensure you only promote validated UI changes to keep noise low in future runs.
 
 ---
 
-## Multiselect Workflow Examples
+## Multiselect workflow example
 
 <Tabs className='docs__val' groupId='workflow'>
-<TabItem value='approve-all-in-tab' label='Approve All in Tab' default>
+  <TabItem value='approve-valid' label='Approve Valid Changes' default>
 
-**Scenario:** All screenshots in "Changes Found" tab are valid changes.
+1. Filter by tab `Changes Found`.
+2. Use **Select All** (only filtered screenshots are targeted).
+3. Deselect any screenshot needing manual review.
+4. Click **Approve** → confirm in the dialog.
+5. Bulk approval completes with a toast confirmation and updated counters.
 
-1. Navigate to **Changes Found** tab
-2. Ensure **no screenshots are selected** (none selected state)
-3. Click **Approve** button
-4. Confirm in the dialog: "Approve all screenshots"
-5. All screenshots in the tab are approved and moved to **Approved** tab
+  </TabItem>
 
-</TabItem>
-<TabItem value='approve-selected' label='Approve Selected Screenshots'>
+  <TabItem value='reject-outliers' label='Reject Outliers'>
 
-**Scenario:** Only specific screenshots in a tab are valid.
+1. Sort failures by **Severity**.
+2. Select the unexpected diffs (e.g., CTA color regressions).
+3. Click **Reject** to block them from merging.
+4. Add a note (optional) so teammates understand the rejection reason.
 
-1. Navigate to **Changes Found** tab
-2. **Select multiple screenshots** by checking their individual checkboxes
-3. Review selected screenshots (count displayed in toolbar)
-4. Click **Approve** button
-5. Confirm in the dialog: "Approve selected screenshots"
-6. Only selected screenshots are approved
+  </TabItem>
 
-</TabItem>
-<TabItem value='select-all-with-exceptions' label='Select All with Exceptions'>
+  <TabItem value='promote-baseline' label='Promote to Baseline'>
 
-**Scenario:** Most screenshots are valid, but a few need review.
+1. After QA approval, hop to the **Approved** tab.
+2. Select only the screenshots that represent canonical UI.
+3. Click **Move to Baseline**.
+4. Confirm to overwrite the existing baseline for the same test name + viewport.
 
-1. Navigate to **Changes Found** tab
-2. Click **Select All** checkbox in toolbar
-3. **Deselect** the screenshots that need manual review
-4. Click **Approve** button
-5. Confirm in the dialog
-6. All selected screenshots (except the deselected ones) are approved
-
-</TabItem>
-<TabItem value='reject-outliers' label='Reject Outliers'>
-
-**Scenario:** Some screenshots show unexpected regressions.
-
-1. Navigate to **Changes Found** tab
-2. **Select** the screenshots with unexpected diffs
-3. Click **Reject** button
-4. Confirm in the dialog
-5. Selected screenshots are rejected and moved to **Rejected** tab
-
-</TabItem>
-<TabItem value='promote-to-baseline' label='Promote to Baseline'>
-
-**Scenario:** After QA approval, promote approved screenshots to baseline.
-
-1. Navigate to **Approved** tab
-2. Choose selection method:
-   - **None selected**: Move all approved to baseline
-   - **Multiple selected**: Move only selected approved screenshots
-   - **Select All**: Move all visible approved screenshots
-3. Click **Move to Baseline** button
-4. Confirm in the dialog
-5. Selected screenshots become the new baseline for future comparisons
-
-</TabItem>
+  </TabItem>
 </Tabs>
 
 ---
 
-## Best Practices
+## Best practices
 
 <Tabs className='docs__val' groupId='best-practices'>
-<TabItem value='understand-selection-state' label='Understand Selection State' default>
+  <TabItem value='verify-filter' label='Verify Filter Context' default>
 
-**Understand Selection State**
+<ul>
+<li>Apply filters (approver, status, tab) before using <strong>Select All</strong>.</li>
+<li>Confirm the selected count matches expectations to avoid cross-build approvals.</li>
+</ul>
 
-- **None selected**: Operations affect all screenshots in current tab/filter
-- **Multiple selected**: Operations affect only selected screenshots
-- **Select All**: Quick way to select all, then deselect exceptions
-- Always check the selection count in the toolbar before bulk operations
+  </TabItem>
 
-</TabItem>
-<TabItem value='verify-filter-context' label='Verify Filter Context'>
+  <TabItem value='granular-selection' label='Stay Granular'>
 
-**Verify Filter Context**
+<ul>
+<li>Bulk actions are powerful—always double-check each screenshot thumbnail.</li>
+<li>Use single selection for high-risk diffs (checkout, payments, authentication).</li>
+</ul>
 
-- Apply filters (approver, status, tab) before using bulk operations
-- Confirm the selected count matches expectations
-- Remember that "none selected" applies to all screenshots in the current context
-- Use tabs and filters to narrow down before bulk operations
+  </TabItem>
 
-</TabItem>
-<TabItem value='granular-selection' label='Stay Granular'>
+  <TabItem value='post-action-review' label='Review Activity'>
 
-**Stay Granular**
+<ul>
+<li>After approving or rejecting, verify the activity log for transparency.</li>
+<li>If anything was mis-clicked, undo by moving screenshots back via their tab.</li>
+</ul>
 
-- Bulk actions are powerful—always double-check each screenshot thumbnail
-- Use multiple selection for high-risk diffs (checkout, payments, authentication)
-- Review selected screenshots before confirming bulk operations
-- Use "Select All" with caution—verify the count matches your expectations
+  </TabItem>
 
-</TabItem>
-<TabItem value='post-action-review' label='Review Activity'>
+  <TabItem value='baseline-discipline' label='Baseline Discipline'>
 
-**Review Activity**
+<ul>
+<li>Promote to baseline only after QA sign-off.</li>
+<li>Keep a release branch baseline separate using <a href='/support/docs/smartui-smart-git-strategy/'>Smart Git</a>.</li>
+</ul>
 
-- After approving or rejecting, verify the activity log for transparency
-- Check the tab counts to confirm operations completed as expected
-- If anything was mis-clicked, you can undo by moving screenshots back via their tab
-
-</TabItem>
-<TabItem value='baseline-discipline' label='Baseline Discipline'>
-
-**Baseline Discipline**
-
-- Promote to baseline only after QA sign-off
-- Use "none selected" carefully when moving to baseline—it affects all approved screenshots
-- Keep a release branch baseline separate using [Smart Git](/support/docs/smartui-smart-git-strategy/)
-- Review baseline changes in the **Added To Baseline** tab
-
-</TabItem>
+  </TabItem>
 </Tabs>
 
 ---
@@ -289,65 +204,48 @@ The table below describes all available bulk actions, their workflows, and resul
 ## Troubleshooting
 
 <Tabs className='docs__val' groupId='troubleshooting'>
-<TabItem value='selection-disabled' label='Selection Disabled' default>
+  <TabItem value='selection-disabled' label='Selection Disabled' default>
 
-**Issue: Selection Disabled**
+<p><strong>Symptoms</strong>: Checkboxes or bulk buttons stay disabled.</p>
+<p><strong>Fixes</strong>:</p>
+<ul>
+<li>Confirm you are in the Builds view, not inside an individual screenshot diff.</li>
+<li>Refresh the page or clear cache if the toolbar fails to render.</li>
+<li>Ensure your role has approval permissions on the project.</li>
+</ul>
 
-**Symptoms**: Checkboxes or bulk buttons stay disabled.
+  </TabItem>
 
-**Solutions**:
-1. Confirm you are in the Builds view, not inside an individual screenshot diff
-2. Refresh the page or clear cache if the toolbar fails to render
-3. Ensure your role has approval permissions on the project
-4. Check that the build is active (not archived)
+  <TabItem value='bulk-action-failed' label='Bulk Action Failed'>
 
-</TabItem>
-<TabItem value='unexpected-bulk-operation' label='Unexpected Bulk Operation'>
+<p><strong>Symptoms</strong>: Toast error when approving/rejecting.</p>
+<p><strong>Fixes</strong>:</p>
+<ul>
+<li>Retry after verifying network connectivity.</li>
+<li>Confirm the build is still active (not archived).</li>
+<li>Check <a href='/support/docs/smartui-troubleshooting-guide/#ci-cd-integration'>SmartUI Troubleshooting Guide</a> for API rate limits or backend incidents.</li>
+</ul>
 
-**Issue: Unexpected Bulk Operation**
+  </TabItem>
 
-**Symptoms**: More screenshots were affected than expected.
+  <TabItem value='baseline-promote-issues' label='Baseline Promotion Issues'>
 
-**Solutions**:
-1. **None selected state**: Remember that no selection means all screenshots in the current tab/filter are affected
-2. **Check selection count**: Always verify the count in the toolbar matches your expectations
-3. **Review filters**: Ensure active filters are set correctly before bulk operations
-4. **Use explicit selection**: When in doubt, explicitly select screenshots instead of using "none selected"
+<p><strong>Symptoms</strong>: Move to Baseline button disabled or no visible changes after promotion.</p>
+<p><strong>Fixes</strong>:</p>
+<ul>
+<li>Only <strong>Approved</strong> screenshots can be promoted; re-approve if needed.</li>
+<li>Baseline updates can take a minute to propagate—refresh or reopen the build.</li>
+<li>Ensure the associated branch/build is not locked by automated workflows.</li>
+</ul>
 
-</TabItem>
-<TabItem value='bulk-action-failed' label='Bulk Action Failed'>
-
-**Issue: Bulk Action Failed**
-
-**Symptoms**: Toast error when approving/rejecting.
-
-**Solutions**:
-1. Retry after verifying network connectivity
-2. Confirm the build is still active (not archived)
-3. Check [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for API rate limits or backend incidents
-4. Verify you have permissions for the operation
-
-</TabItem>
-<TabItem value='baseline-promote-issues' label='Baseline Promotion Issues'>
-
-**Issue: Baseline Promotion Issues**
-
-**Symptoms**: Move to Baseline button disabled or no visible changes after promotion.
-
-**Solutions**:
-1. Only **Approved** screenshots can be promoted; re-approve if needed
-2. Baseline updates can take a minute to propagate—refresh or reopen the build
-3. Ensure the associated branch/build is not locked by automated workflows
-4. Check the **Added To Baseline** tab to verify promotion completed
-
-</TabItem>
+  </TabItem>
 </Tabs>
 
 ---
 
-## Next Steps
+## Next steps
 
-- Compare multiselect approval speeds with your previous manual workflow and document the improvement
-- Pair multiselect with [Smart Ignore](/support/docs/smartui-smartignore/) to reduce noise before bulk approvals
-- Leverage [baseline management](/support/docs/smartui-baseline-management/) to keep production and release baselines in sync after bulk moves
-- Use [Smart Git Strategy](/support/docs/smartui-smart-git-strategy/) for branch-specific baseline management
+- Compare multiselect approval speeds with your previous manual workflow and document the improvement.
+- Pair multiselect with [Smart Ignore](/support/docs/smartui-smartignore/) to reduce noise before bulk approvals.
+- Leverage [baseline management](/support/docs/smartui-baseline-management/) to keep production and release baselines in sync after bulk moves.
+

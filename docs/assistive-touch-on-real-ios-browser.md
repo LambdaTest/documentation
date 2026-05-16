@@ -11,11 +11,12 @@ keywords:
   - screenshot testing
   - shake gesture
   - app switcher
-  - lambdatest ios
+  - testmu ai ios
   - real devices
-url: https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-browser/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-browser/
+site_name: TestMu AI
 slug: assistive-touch-on-real-ios-browser/
+canonical: https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-browser/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +24,8 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,25 +35,25 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Assistive Touch on Real iOS Devices",
-          "item": "https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-browser/"
+          "item": `${BRAND_URL}/support/docs/assistive-touch-on-real-ios-browser/`
         }]
       })
     }}
 ></script>
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
-LambdaTest's **Assistive Touch** feature enables you to perform key system-level actions directly from the testing toolbar during manual sessions on real iPhones and iPads.  
+<BrandName />'s **Assistive Touch** feature enables you to perform key system-level actions directly from the testing toolbar during manual sessions on real iPhones and iPads.  
 This allows you to replicate gestures such as going to the Home Screen, opening the Notification Center, taking screenshots, and more without relying on physical device buttons or gestures.
 
 ## Use Cases

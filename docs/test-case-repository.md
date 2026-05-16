@@ -3,15 +3,19 @@ id: test-case-repository
 title: Test Case Repository
 hide_title: true
 sidebar_label: Test Case Repository
-description: Manage your test case repository with LambdaTest's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
+description: Manage your test case repository with TestMu AI's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
 keywords:
   - test case repository
   - test cases
   - test case
-url: https://www.lambdatest.com/support/docs/test-case-repository/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/test-case-repository/
+site_name: TestMu AI
 slug: test-case-repository/
+canonical: https://www.testmuai.com/support/docs/test-case-repository/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,18 +24,18 @@ slug: test-case-repository/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Case Repository",
-          "item": "https://www.lambdatest.com/support/docs/test-case-repository/"
+          "item": `${BRAND_URL}/support/docs/test-case-repository/`
         }]
       })
     }}
@@ -66,12 +70,12 @@ A test case repository serves as a centralized location for all test cases withi
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

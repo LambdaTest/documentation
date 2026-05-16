@@ -5,13 +5,17 @@ hide_title: false
 sidebar_label: HyperExecute Job Reports
 description: Effortlessly download your HyperExecute job reports from the UI. Click the Report button on the top right-hand side of your tasks page. .
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-job-reports/
-site_name: LambdaTest
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/hyperexecute-job-reports/
+site_name: TestMu AI
 slug: hyperexecute-job-reports/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-job-reports/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +25,17 @@ slug: hyperexecute-job-reports/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Job Reports",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-job-reports/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-job-reports/`
         }]
       })
     }}
@@ -39,7 +43,7 @@ slug: hyperexecute-job-reports/
 HyperExecute Job Reports are designed to offer deep insights into the performance of your tests. By utilizing these reports, you can identify issues, track progress, and enhance your software testing workflow. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
 
 :::tip
-If you want to learn how to **generate** and **download** detailed reports, including **multiple reports**, please refer to the [HyperExecute Reports documentation](https://www.lambdatest.com/support/docs/hyperexecute-reports/) page.
+If you want to learn how to **generate** and **download** detailed reports, including **multiple reports**, please refer to the [HyperExecute Reports documentation](/support/docs/hyperexecute-reports/) page.
 :::
 
 ## Extent Report
@@ -112,5 +116,5 @@ The [JUnit XML Report](/support/docs/junit-xml-report/) provides a summary of te
 ## Robot Report
 [Robot Reports](/support/docs/robot-report/) provides a detailed summary of automated test execution using Robot Framework, including test case results, execution time, logs, and captured output. It helps analyze pass/fail trends, identify failures, and validate system functionality across environments.
 
-## Katalon Consolidated HTML Report
+## Katalon Report
 [Katalon Reports](/support/docs/hyperexecute-katalon-report/) summarizes the results of automated test executions in Katalon Studio, including test status, execution time, environment details, and error logs. It provides clear insights into test coverage, performance, and overall build quality.

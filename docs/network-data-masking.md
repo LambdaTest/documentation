@@ -1,36 +1,65 @@
 ---
 id: network-data-masking
-title: Network Data Masking
-hide_title: true
-sidebar_label: Network Data Masking
-description: LambdaTest provides network data masking capability to protect sensitive information during automation testing sessions.
+title: Network Data Masking for Selenium Tests
+sidebar_label: Mask Network Payloads
+description: Mask sensitive data like passwords, tokens, and API keys in network logs during automation testing sessions.
 keywords:
-- Network logs
-- Network Data Masking
-- custom headers bypass firewalls
-- masking of sensitive data
-url: https://www.lambdatest.com/support/docs/network-data-masking/
-site_name: LambdaTest
+  - mask sensitive data network logs selenium
+  - network data masking capability
+  - hide passwords tokens automation logs
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/network-data-masking/
+site_name: TestMu AI
 slug: network-data-masking/
+canonical: https://www.testmuai.com/support/docs/network-data-masking/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Network Data Masking",
+          "item": `${BRAND_URL}/support/docs/network-data-masking/`
+        }]
+      })
+    }}
+></script>
 
 # Network Data Masking 
 
-LambdaTest provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on LambdaTest platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
+TestMu AI provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on the TestMu AI platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
 
 By the end of this document, you will be able to:
 
 - Enable automatic masking of sensitive data in network logs
 - Protect confidential information
 
-## What is Network Data Masking?
+## What Is Network Data Masking?
+---
 
-Network data masking automatically identifies and masks sensitive information in HTTP network logs on LambdaTest traffic during test execution. When enabled, the system scans for predefined sensitive keywords in network requests and responses on LambdaTest, replacing their values with masked placeholders to prevent data exposure.
+Network data masking automatically identifies and masks sensitive information in HTTP network logs on the TestMu AI platform during test execution.
 
+When enabled, the system scans for predefined sensitive keywords in network requests and responses, replacing their values with masked placeholders to prevent data exposure.
 
 ## Sensitive Keywords Detected
+---
 
-The system automatically masks values for keys containing the following keywords:
+The system automatically masks values for keys containing the following keywords.
 
 | Keyword | Description |
 |---------|-------------|
@@ -45,6 +74,9 @@ The system automatically masks values for keys containing the following keywords
 | salt | Password salts, hash salts |
 
 ## Configuration
+---
+
+Set the `network.mask` capability to `true` to enable network data masking.
 
 ### Java Implementation
 
@@ -76,6 +108,9 @@ const capabilities = {
 ```
 
 ## Supported Values
+---
+
+The capability accepts the following values.
 
 | Value | Description |
 |-------|-------------|
@@ -83,6 +118,9 @@ const capabilities = {
 | false (default) | Disables network data masking (default behavior) |
 
 ## Masking Coverage
+---
+
+Network data masking covers the following areas of HTTP traffic.
 
 ### Request Headers
 
@@ -103,6 +141,9 @@ const capabilities = {
 - Security cookies with sensitive identifiers
 
 ## Example Scenarios
+---
+
+The following examples show how network logs appear before and after masking.
 
 ### Before Masking (network.mask: false)
 
@@ -129,9 +170,32 @@ auth_token=********; session_key=********
 ```
 
 ## Use Cases
+---
 
-- **Security Compliance**: Ensure sensitive data doesn't appear in test logs for compliance with security standards and regulations.
+Network data masking supports several testing and security scenarios.
+
+- **Security Compliance**: Ensure sensitive data does not appear in test logs for compliance with security standards and regulations.
 - **Team Collaboration**: Share test results and network logs safely without exposing production credentials or sensitive user data.
 - **CI/CD Pipeline Security**: Protect sensitive information in automated test reports that may be stored or shared across development teams.
 - **Third-party Integration Testing**: Mask API keys and authentication tokens when testing integrations with external services.
 - **Debug and Troubleshooting**: Review network traffic for debugging while keeping sensitive authentication data protected.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Network Data Masking
+      </span>
+    </li>
+  </ul>
+</nav>

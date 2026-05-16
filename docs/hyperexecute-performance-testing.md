@@ -7,20 +7,22 @@ description: Prevent app launch disaster! Test app performance under load with H
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - jmeter
   - k6
   - browser
   - apache
   - http
   - test plan
-url: https://www.lambdatest.com/support/docs/hyperexecute-performance-testing/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
+site_name: TestMu AI
 slug: hyperexecute-performance-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-performance-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Products Integration",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Performance Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-performance-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-performance-testing/`
         }]
       })
     }}

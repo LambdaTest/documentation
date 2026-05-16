@@ -3,16 +3,20 @@ id: list-of-supported-locales
 title: Supported Locales And Languages - Appium
 hide_title: false
 sidebar_label: Supported Locales And Languages
-description: Checkout the list of all supported locales by LambdaTest.
+description: Checkout the list of all supported locales by TestMu AI.
 keywords:
   - Supported locales
   - Locales
   - Appium supported locales
   
-url: https://www.lambdatest.com/support/docs/list-of-supported-locales/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/list-of-supported-locales/
+site_name: TestMu AI
 slug: list-of-supported-locales/
+canonical: https://www.testmuai.com/support/docs/list-of-supported-locales/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: list-of-supported-locales/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "List of Supported Locales",
-          "item": "https://www.lambdatest.com/support/docs/list-of-supported-locales/"
+          "item": `${BRAND_URL}/support/docs/list-of-supported-locales/`
         }]
       })
     }}
@@ -268,4 +272,4 @@ driver.execute_script('lambda_executor: {
 
 
 
-> That's all! In case you come across any doubts or have any questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+> That's all! In case you come across any doubts or have any questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmuai.com](mailto:support@testmuai.com)**.

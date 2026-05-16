@@ -10,9 +10,10 @@ keywords:
   - Visual Regression Testing
   - Git Integration
   - Branch Comparison
-url: https://www.lambdatest.com/support/docs/smartui-smart-git-strategy/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
+site_name: TestMu AI
 slug: smartui-smart-git-strategy/
+canonical: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -31,17 +33,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Smart Git Strategy",
-          "item": "https://www.lambdatest.com/support/docs/smartui-smart-git-strategy/"
+          "item": `${BRAND_URL}/support/docs/smartui-smart-git-strategy/`
         }]
       })
     }}
@@ -264,4 +266,4 @@ Regularly clean up old branches and their builds.
 
 ### Getting Help
 
-If you encounter any issues with Smart Git, please contact our support team at support@lambdatest.com.
+If you encounter any issues with Smart Git, please contact our support team at support@testmuai.com.

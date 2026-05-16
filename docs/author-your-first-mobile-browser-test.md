@@ -8,15 +8,17 @@ keywords:
  - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/author-your-first-mobile-browser-test
-site_name: LambdaTest
+  - testmu ai automation
+  - testmu ai kaneai
+url: https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/
+site_name: TestMu AI
 slug: author-your-first-mobile-browser-test/
+canonical: https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Author Your First Mobile Browser Test",
-          "item": "https://www.lambdatest.com/support/docs/author-your-first-mobile-browser-test"
+          "item": `${BRAND_URL}/support/docs/author-your-first-mobile-browser-test`
         }]
       })
     }}
@@ -96,7 +98,7 @@ As you add each instruction, KaneAI queues them in real-time without waiting for
 | Network Assertions                                                    | Not Supported         | Not yet available for mobile web; only supported on web.                                |
 | Negative Scenarios from App UX (e.g. switch app, go to home, go back) | Not Supported         | These are app-specific and not currently available in browser testing mode.             |        |
 
-> _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
+> _Have any feedback or request? Reach out to us via support@testmuai.com and we would be happy to hear from you._
 
 
 

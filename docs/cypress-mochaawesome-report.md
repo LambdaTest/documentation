@@ -3,7 +3,7 @@ id: cypress-mochaawesome-report
 title: Consolidated Mochawesome Report for Cypress
 hide_title: false
 sidebar_label: Cypress Mochawesome
-description: Discover how to create MochaAwesome test reports for Cypress framework testing on LambdaTest and how to download these reports from the dashboard
+description: Discover how to create MochaAwesome test reports for Cypress framework testing on TestMu AI and how to download these reports from the dashboard
 keywords:
     - cypress testing
     - cypress automation testing
@@ -12,10 +12,14 @@ keywords:
     - hyperexecute cypressv10 testing
     - hyperexecute cypress testing
   
-url: https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/cypress-mochaawesome-report/
+site_name: TestMu AI
 slug: cypress-mochaawesome-report/
+canonical: https://www.testmuai.com/support/docs/cypress-mochaawesome-report/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,18 +27,18 @@ slug: cypress-mochaawesome-report/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Mochawesome Report",
-          "item": "https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/"
+          "item": `${BRAND_URL}/support/docs/cypress-mochaawesome-report/`
         }]
       })
     }}
@@ -69,7 +73,7 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 :::
 
 ### Step 2: Configure the HyperExecute YAML File
-In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 ```yaml title="hyperexecute.yaml"
 report: true

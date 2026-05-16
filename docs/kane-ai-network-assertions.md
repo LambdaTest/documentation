@@ -8,14 +8,16 @@ keywords:
   - network
   - network logs assertion
   - assertion
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/kane-ai-network-assertions
-site_name: LambdaTest
+  - testmu ai kaneai
+url: https://www.testmuai.com/support/docs/kane-ai-network-assertions/
+site_name: TestMu AI
 slug: kane-ai-network-assertions/
+canonical: https://www.testmuai.com/support/docs/kane-ai-network-assertions/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ANetwork Assertions",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-network-assertions"
+          "item": `${BRAND_URL}/support/docs/kane-ai-network-assertions`
         }]
       })
     }}
@@ -46,9 +48,13 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 # Let's see how to add Network Logs Assertions in a Test
 
-- **Start a test session** (Desktop or Mobile Web). 
+- **Start a test session** (Desktop Web, Mobile Web, or Mobile App).
 
-- All network calls are automatically recorded in the background as you navigate through your application, you can see the Network calls made so far through the **Assert Network Logs** option available in the " / " commands. 
+- For **Mobile Web** and **Mobile App** sessions, you need to enable the **Capture Network Logs** toggle before starting your session. Navigate to **Advanced Settings** > **Session Settings** and turn on the **Capture Network Logs** option.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/capture-network-logs.png').default} alt="Image" className="doc_img img_center"/>
+
+- All network calls are automatically recorded in the background as you navigate through your application. You can see the Network calls made so far through the **Assert Network Logs** option available in the " / " commands.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/hit-network-req.png').default} alt="Image" className="doc_img img_center"/>
 
@@ -78,6 +84,4 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center" style={{width: '60%'}}/>
 
-:::note
-This feature is not enabled for all users. Please contact our support team to request access.
-:::
+

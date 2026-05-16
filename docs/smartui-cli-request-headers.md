@@ -11,9 +11,10 @@ keywords:
     - visual testing configuration
     - smartui.json
     - protected assets
-url: https://www.lambdatest.com/support/docs/smartui-cli-request-headers/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
+site_name: TestMu AI
 slug: smartui-cli-request-headers/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,18 +31,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
        "itemListElement": [{
          "@type": "ListItem",
          "position": 1,
-         "name": "LambdaTest",
-         "item": "https://www.lambdatest.com"
+         "name": "TestMu AI",
+         "item": BRAND_URL
        },{
          "@type": "ListItem",
          "position": 2,
          "name": "Support",
-         "item": "https://www.lambdatest.com/support/docs/"
+         "item": `${BRAND_URL}/support/docs/`
        },{
          "@type": "ListItem",
          "position": 3,
          "name": "Custom Request Headers in SmartUI CLI",
-         "item": "https://www.lambdatest.com/support/docs/smartui-cli-request-headers/"
+         "item": `${BRAND_URL}/support/docs/smartui-cli-request-headers/`
        }]
      })
    }}
@@ -67,12 +69,16 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
 
 ```json title="smartui.json"
 {
+  "smartUI": {
+    "project": "Your Project Name",
+    "build": "Build Name"
+  },
   "requestHeaders": [
     {
       "X-Custom-Header-1": "custom-value-1"
     },
     {
-      "Authorization": "custom-access-token"
+      "Authorization": "Bearer your-access-token"
     },
     {
         "X-Custom-Header-2": "custom-value-2"

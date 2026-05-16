@@ -1,25 +1,27 @@
 ---
 id: cucumber-script-testng-selenium
-title: Run your Selenium Cucumber tests on LambdaTest
+title: Selenium With Cucumber
 sidebar_label: Cucumber
-description: Your guide to running tests using Cucumber on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
+description: Run Cucumber TestNG Selenium tests on TestMu AI cloud grid across 3000+ browsers and devices.
 keywords:
-  - cucumber scripts
-  - cucumber
-  - testng
-  - cucumber with selenium
-  - cucumber testng
-  - cucumber testng runner
-  - cucmber testing tool
-url: https://www.lambdatest.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
-site_name: LambdaTest
+  - cucumber selenium cloud testing
+  - cucumber testng selenium grid
+  - run cucumber tests on cloud grid
+  - cucumber bdd automation setup
+  - cucumber cross browser testing
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
+site_name: TestMu AI
 slug: running-cucumber-scripts-with-testng-and-selenium/
+canonical: https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,98 +31,105 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Running Cucumber Scripts With TestNG And Selenium",
-          "item": "https://www.lambdatest.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/"
+          "name": "Selenium With Cucumber",
+          "item": `${BRAND_URL}/support/docs/running-cucumber-scripts-with-testng-and-selenium/`
         }]
       })
     }}
 ></script>
-This guide walks you through the process of running Selenium Cucumber tests on LambdaTest, a cloud-based cross-browser testing platform. By following these steps, you can seamlessly execute automated tests on a wide range of browsers and operating systems using LambdaTest’s Selenium Grid.
 
-## Prerequisites
-Before you begin, ensure you have the following:
+Run Cucumber tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
-- Install Java Development Kit (JDK). We recommend Java version 11
-- Install [Maven](https://maven.apache.org/)
-- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
-
-## Step 1: Configure your test suite
 :::tip Sample repo
-Download or Clone the code sample for the Cucumber from the LambdaTest GitHub repository to run the tests on our Standard Grid.
+All the code used in this guide is available in the sample repository.
 
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/cucumber-testng-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
 
-```bash title="terminal"
-git clone https://github.com/LambdaTest/cucumber-testng-sample.git
+## Prerequisites
+---
+
+Make sure you have the following set up before you start.
+
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the **Java development environment** (Java 11 recommended).
+4. Install **Maven**. Download it from [the official website](https://maven.apache.org/) or install it on **Linux/MacOS** using [**Homebrew**](https://brew.sh/).
+
+## Step 1: Clone the Sample Project
+---
+
+Pull the sample repo to your local machine and navigate into the project directory.
+
+```bash
+git clone https://github.com/LambdaTest/cucumber-testng-sample
 cd cucumber-testng-sample
 ```
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+You may also want to run the command below to check for outdated dependencies.
 
-```java title="Test.java"
-public static String hubURL = "https://hub.lambdatest.com/wd/hub";
-```
-
-## Step 2: Update the dependencies
-Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
-
-```bash title="terminal"
+```bash
 mvn versions:display-dependency-updates
 ```
 
-```xml reference
-https://github.com/LambdaTest/cucumber-testng-sample/blob/master/pom.xml
-```
+## Step 2: Set Your Credentials
+---
 
-### Setting up your Authentication
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
-
-**Step 2:** Set LambdaTest **Username** and **Access Key** in environment variables.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
-
-<TabItem value="bash" label="Linux / MacOS" default>
-
+<TabItem value="bash" label="macOS / Linux" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \\
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \`
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
-
 </TabItem>
 </Tabs>
 
-## Run Your First Test
-
+## Step 3: Configure Your Test Capabilities
 ---
 
-### Sample Test with Cucumber-TestNG
+Define the browser, version, and OS for your test run.
 
-Here is the sample feature file for Cucumber.
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.setPlatformName(platform);
+            browserOptions.setBrowserVersion("latest");
+
+            HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+            ltOptions.put("build", "Your Build Name");
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
+```
+
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+:::
+
+Below is the sample feature file for Cucumber:
 
 ```bash
 Feature: Add new item to ToDO list
@@ -134,15 +143,15 @@ Then add new item
 Then verify added item
 ```
 
-Here is the `TestRunner` file to automate our feature file through Selenium using TestNG.
+Here is the `TestRunner` file to automate the feature file through Selenium using TestNG:
 
 ```java title="TestRunner"
 package MyRunner;
 
 import java.net.URL;
+import java.util.HashMap;
 
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -185,15 +194,18 @@ public class TestRunner {
             String username = System.getenv("LT_USERNAME") == null ? "YOUR LT_USERNAME" : System.getenv("LT_USERNAME");
             String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY");
 
-            DesiredCapabilities capability = new DesiredCapabilities();
-            capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-            capability.setCapability(CapabilityType.VERSION,version);
-            capability.setCapability(CapabilityType.PLATFORM, platform);
-            capability.setCapability("build", "Your Build Name");
+            ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.setPlatformName(platform);
+            browserOptions.setBrowserVersion("latest");
+
+            HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+            ltOptions.put("build", "Your Build Name");
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
             String gridURL = "https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub";
             System.out.println(gridURL);
-            connection = new RemoteWebDriver(new URL(gridURL), capability);
-            System.out.println(capability);
+            connection = new RemoteWebDriver(new URL(gridURL), browserOptions);
+            System.out.println(browserOptions);
             System.out.println(connection);
 }
 
@@ -214,7 +226,7 @@ public class TestRunner {
 }
 ```
 
-Below are the step definitions.
+Below are the step definitions:
 
 ```java title="ToDoStepDefinition.java"
 package stepDefinitions;
@@ -279,106 +291,64 @@ public class ToDoStepDefinition extends TestRunner {
 }
 ```
 
-### Configuring your Test Capabilities
+## Step 4: Run the Test
+---
 
-**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
-
-```java
-DesiredCapabilities capability = new DesiredCapabilities();
-            capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-            capability.setCapability(CapabilityType.VERSION,version);
-            capability.setCapability(CapabilityType.PLATFORM, platform);
-            capability.setCapability("build", "Your Build Name");
-```
-
-:::info Note
-
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **[Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/)**.
-
-:::
-
-### Executing the Test
-
-**Step 4:** The tests can be executed in the terminal using the following command:
+Trigger the test from your terminal.
 
 ```bash
 mvn test
 ```
 
-:::info
-
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
-
-:::
-
-## Testing Locally Hosted or Privately Hosted Projects
-
+## Step 5: View Your Results
 ---
 
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+Check the Automation Dashboard to see exactly what happened during your test.
 
-:::tip Tunnel Help
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
 
-Refer our :link: [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
 
-:::
+## Run Cucumber Tests Using Agent Skills
+---
 
-Here’s how you can establish LambdaTest Tunnel.
+Use AI coding assistants to generate and run Cucumber tests with the TestMu AI Agent Skill.
 
-:::info Download the binary file
+The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-- [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
-
-:::
-
-Open command prompt and navigate to the binary folder.
-
-Run the following command:
+Install the skill:
 
 ```bash
-./LT -user {user’s login email} -key {user’s access key}
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cucumber-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/cucumber-skill .cursor/skills/
 ```
 
-So if your user name is **lambdatest@example.com**, the command would be:
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`./LT -user lambdatest@example.com -key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
-
-```java title="Tunnel Capability"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("tunnel", true);
-```
-
-## Additional Links
-
----
-
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Running Cucumber Scripts With TestNG And Selenium
+       Selenium With Cucumber
       </span>
     </li>
   </ul>

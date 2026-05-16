@@ -3,19 +3,22 @@ id: automated-st
 title: Perform Automated Screenshot Testing
 hide_title: true
 sidebar_label: Automated Screenshot Testing
-description: Effortlessly Master Automated Screenshot Testing with LambdaTest | Step-by-Step Instructions for Screenshot Testing, Downloads, and More!
+description: Effortlessly Master Automated Screenshot Testing with TestMu AI | Step-by-Step Instructions for Screenshot Testing, Downloads, and More!
 keywords:
-- automated screenshot testing in lambdatest
-- lambdatest automated screenshot testing
+- automated screenshot testing in testmu ai
+- testmu ai automated screenshot testing
 - free cross browser testing tool
 - online automated screenshot generation
 - cross browser screenshot generation
 - automated screenshot testing
 - automated screenshot generation
-url: https://www.lambdatest.com/support/docs/automated-screenshot-testing/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/automated-screenshot-testing/
+site_name: TestMu AI
 slug: automated-screenshot-testing/
+canonical: https://www.testmuai.com/support/docs/automated-screenshot-testing/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,27 +28,27 @@ slug: automated-screenshot-testing/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Automated Screenshot Testing",
-          "item": "https://www.lambdatest.com/support/docs/automated-screenshot-testing/"
+          "item": `${BRAND_URL}/support/docs/automated-screenshot-testing/`
         }]
       })
     }}
 ></script>
 
 # Automated Screenshot Testing
-> This feature is **deprecated** and as a result, no further support will be provided for this feature by the LambdaTest Organization. 
+> This feature is **deprecated** and as a result, no further support will be provided for this feature by the <BrandName /> Organization. 
 
 ***
-Automated Screenshot testing will help you capture screenshots in bulk through different desktops and mobile devices running on various OS in a single go! It is facilitated by instrumented UI test cases to help you realize how seamlessly your web app renders through different screen sizes using different browsers. At LambdaTest, you can capture up to 25 screenshots of different browsers and OS configurations in a single session. You can choose from a wide range of latest to oldest browser versions of Chrome, Firefox, Safari, Edge, Internet Explorer & Opera. Also, you can test on different operating systems Windows, macOS, Android, and iOS.
+Automated Screenshot testing will help you capture screenshots in bulk through different desktops and mobile devices running on various OS in a single go! It is facilitated by instrumented UI test cases to help you realize how seamlessly your web app renders through different screen sizes using different browsers. At <BrandName />, you can capture up to 25 screenshots of different browsers and OS configurations in a single session. You can choose from a wide range of latest to oldest browser versions of Chrome, Firefox, Safari, Edge, Internet Explorer & Opera. Also, you can test on different operating systems Windows, macOS, Android, and iOS.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="BC6a_E0OfA4">
@@ -77,7 +80,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 ## How To View Recent Screenshot Testing Sessions?
 ***
 
-**Step 1:** Click the â€˜Screenshotâ€™ submenu under the Visual UI Testing menu in the menu box. On the screenshot page, you will find the recent view button on the page. Click that button.
+**Step 1:** Click the ‘Screenshot’ submenu under the Visual UI Testing menu in the menu box. On the screenshot page, you will find the recent view button on the page. Click that button.
 
 <img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-5.webp').default} alt="Image" width="1918" height="910" className="doc_img"/>
 
@@ -101,7 +104,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 - Mobile Layout: If you are taking screenshots on mobile devices, you can choose mobile layout as portrait or in landscape mode.
 
-- Defer Time: If your page takes time to load completely, you can set a defer time so that thereâ€™s ample time for each element to load
+- Defer Time: If your page takes time to load completely, you can set a defer time so that there’s ample time for each element to load
 
 - Smart Scroll: You can ignore all the iframes on your page by choosing the smart scroll
 
@@ -142,7 +145,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 ## How To Use Basic Authentication For Password Protected Websites
 ***
-If the website you want to take screenshots on requires basic authentication, you can click on the basic authentication button and enter your login details. After that, click on â€˜Save,â€™ the basic authentication would be enabled, and you can take screenshots easily.
+If the website you want to take screenshots on requires basic authentication, you can click on the basic authentication button and enter your login details. After that, click on ‘Save,’ the basic authentication would be enabled, and you can take screenshots easily.
 
 <img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-15.webp').default} alt="Image" width="1920" height="912" className="doc_img"/>
 
@@ -156,17 +159,17 @@ In case you want to take a screenshot of a page behind the login, you can refer 
 
 >Similarly, you can perform Mobile Screenshot testing on Android emulators and iOS simulators by navigating to the mobile tab . Check [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices).
 
-That was all you need to know for performing automated screenshot testing on LambdaTest. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt"Â onClick={()Â =>Â window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for performing automated screenshot testing on <BrandName />. If you still have any questions for us, please feel free to reach us. Our experts are always  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>available on chat</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -3,15 +3,19 @@ id: siesta-integration
 title: Siesta Integration
 hide_title: true
 sidebar_label: Siesta
-description: Integrate LambdaTest with Siesta to perform automated browser testing of your locally hosted websites and web pages across 3000+ real browsers and operating systems.
+description: Integrate TestMu AI with Siesta to perform automated browser testing of your locally hosted websites and web pages across 3000+ real browsers and operating systems.
 keywords:
-  - lambdatest integration with siesta
-  - lambdatest and siesta integration 
-  - lambdatest siesta
-url: https://www.lambdatest.com/support/docs/siesta-integration/
-site_name: LambdaTest
+  - testmu ai integration with siesta
+  - testmu ai and siesta integration 
+  - testmu ai siesta
+url: https://www.testmuai.com/support/docs/siesta-integration/
+site_name: TestMu AI
 slug: siesta-integration/
+canonical: https://www.testmuai.com/support/docs/siesta-integration/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +25,17 @@ slug: siesta-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Siesta Integration",
-          "item": "https://www.lambdatest.com/support/docs/siesta-integration/"
+          "item": `${BRAND_URL}/support/docs/siesta-integration/`
         }]
       })
     }}
@@ -42,16 +46,16 @@ slug: siesta-integration/
 
 Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. You can run tests in browsers, Node.js, and Deno on Linux, macOS, and Windows.
 
-LambdaTest and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
+<BrandName /> and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
 
 ## Prerequisites
 ***
 
-1. A LambdaTest account. In case, you don't have an LambdaTest account, [sign up for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. In case, you don't have an <BrandName /> account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 2. Download Siesta from official Bryntum website.
 
-3. In order to run your Siesta tests, you will need to set your LambdaTest username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://automation.lambdatest.com/build) to access it.
+3. In order to run your Siesta tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://automation.lambdatest.com/build) to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="625" height="374"  className="doc_img"/>
 
@@ -87,7 +91,7 @@ To generate desired capabilities for your test script, head over to our [Desired
 ## Parallel Testing With Siesta
 ***
 
-LambdaTest lets you to perform parallel testing with Siesta across 3000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+<BrandName /> lets you to perform parallel testing with Siesta across 3000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
 To run your tests in parallel, pass the below command in the CMD terminal-
@@ -97,15 +101,15 @@ C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/in
 ```
 ---
 
-> If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com) Happy Testing!!
+> If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@testmuai.com](mailto:support@testmuai.com) Happy Testing!!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Siesta Integration</span>

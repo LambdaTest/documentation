@@ -10,19 +10,22 @@ keywords:
   - Detox testing
   - detox testing react native
   - detox automation testing
-  - detox lambdatest
+  - detox testmu ai
   - hyperexecute
   - hyperexecute detox testing
   - detox tests on hyperexecute
   - hyperexecute automation testing
   - HyperExecute React Native automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
+site_name: TestMu AI
 slug: hyperexecute-detox-testing/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,29 +35,29 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Detox automation tests on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-detox-testing/`
         }]
       })
     }}
 ></script>
 
-Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on LambdaTest HyperExecute using your local system setup.
+Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on <BrandName /> HyperExecute using your local system setup.
 
 ## Run a Sample Project
 ### Step 1: Clone Sample Repository
 
 :::tip Detox repo
-Download or Clone the Detox sample from LambdaTest’s GitHub Repository
+Download or Clone the Detox sample from <BrandName />’s GitHub Repository
 
 <a href="https://github.com/LambdaTest/LT-detox" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -103,7 +106,7 @@ Use the sample YAML below to configure your execution:
 https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
 
-> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/).
+> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 3: Monitor the Test Execution
 
@@ -113,4 +116,46 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 
 You can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You’ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.
 
-> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+
+
+## Using the Detox Agent Skill with TestMu AI
+***
+
+The [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The detox-skill package includes:
+
+```
+detox-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Detox Agent Skill
+***
+
+Install a Detox Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/detox-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/detox-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only detox-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

@@ -1,20 +1,24 @@
 ---
 id: sharing-test-results
-title: Sharing Test Results on LambdaTest
-hide_title: true
-sidebar_label: Sharing Test Results on LambdaTest
-description: This documentation will help you in sharing test results while performing automation testing on LambdaTest. You can share an instance of a single test result with a team member of your organization by retrieving the Session ID and appending it into the URL of automation logs.
+title: Sharing Test Results on TestMu AI
+sidebar_label: Share Test Results
+description: Share individual test results and execution videos with team members using Session ID and auth tokens.
 keywords:
-  - Share test results
-  - test results
-  - cross browser testing
-  - share the bug
-  - session report
-
-url: https://www.lambdatest.com/support/docs/sharing-test-results/
-site_name: LambdaTest
+  - share selenium test results
+  - get session id selenium
+  - share test execution video
+  - automation test result URL
+  - generate auth token MD5
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/sharing-test-results/
+site_name: TestMu AI
 slug: sharing-test-results/
+canonical: https://www.testmuai.com/support/docs/sharing-test-results/
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,130 +27,219 @@ slug: sharing-test-results/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Sharing Test Result",
-          "item": "https://www.lambdatest.com/support/docs/sharing-test-results/"
+          "item": `${BRAND_URL}/support/docs/sharing-test-results/`
         }]
       })
     }}
 ></script>
 
-# Sharing Test Results on LambdaTest
+# Sharing Test Results on TestMu AI
 
 * * *
 
-While performing automation testing with Selenium, the number of test cases that run in a queue or in parallel could be extensive. Finding a particular test case to share with your colleagues out of hundreds of automated test cases could sometimes be as challenging as finding a needle in a haystack. However, at LambdaTest we have made it easier for you to share your test results so you could collaborate faster with convenience.
+TestMu AI lets you share individual test results with team members. Retrieve the Session ID from your test script, then build a shareable URL for automation logs or execution videos.
 
-If you wish to share an instance of a single test result with a member of your organization then you can share it by retrieving the Session ID and appending it into the URL of automation logs.
+## Get the Session ID
+---
+Retrieve the Selenium Session ID programmatically so you can build shareable result URLs.
 
-To retrieve the Session ID use the below command.
-```javascript
-SessionId session = driver.getSessionId();
+Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+import org.openqa.selenium.remote.SessionId;
+
+SessionId session = ((RemoteWebDriver) driver).getSessionId();
+System.out.println("Session ID: " + session.toString());
 ```
 
-Share the below URL with respect to your Session ID.
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
 ```javascript
-https://automation.lambdatest.com/logs/?sessionID=8d56iz056f7999990472j5b85k700b2o //this is a sample Session ID
+const session = await driver.getSession();
+console.log("Session ID: " + session.getId());
 ```
-## How To Share Your Test Execution Video?
 
-Now you can also easily share a video of a specific test. To do so, you need to build a URL in the proper structure and share it. The correct syntax for the URL is:
+</TabItem>
 
-```javascript
+<TabItem value="python" label="Python">
+
+```python
+session_id = driver.session_id
+print("Session ID: " + session_id)
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+var sessionId = ((RemoteWebDriver)driver).SessionId;
+Console.WriteLine("Session ID: " + sessionId);
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+$sessionId = $driver->getSessionID();
+echo "Session ID: " . $sessionId;
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+session_id = driver.session_id
+puts "Session ID: #{session_id}"
+```
+
+</TabItem>
+
+</Tabs>
+
+Once you have the Session ID, share the automation logs URL with your colleague:
+
+```
+https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
+```
+
+## Share Your Test Execution Video
+---
+Build a shareable URL using the TestID/SessionID and an MD5-generated auth token.
+
+You can share a video recording of any test execution. Build the URL in the following format:
+
+```
 https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AUTH_TOKEN
 ```
 
-In the above URL syntax, there are 2 variables to be filled:
+### Step 1 - Get Your TestID or SessionID
 
-1. TestID/SessionID: To get your TestID/SessionID, go to the Automation Dashboard, and click on the test whose TestID/SessionID is required. Once the test results are open, you can see the TestID/SessionID highlighted as shown in the image below. You can click the "i" button on the status bar to access the test metadata. 
+Go to the **Automation Dashboard** and click on the test whose ID you need. Click the **"i"** button on the status bar to access the test metadata.
 
-<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-2.webp').default} alt="Automation dashboard showing test details" width="768" height="373" className="doc_img"/>
 
-After clicking on the "i" button, you will get the required test meta information. 
+After clicking the **"i"** button, you will see the test metadata including the SessionID.
 
-<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-1.webp').default} alt="Test metadata with SessionID" width="768" height="373" className="doc_img"/>
 
-So suppose your SessionID is HJKXM-RHZL1-SVPWY-AB8X6, then the updated URL will be:
+For example, if your SessionID is `HJKXM-RHZL1-SVPWY-AB8X6`, the URL becomes:
 
-```javascript
+```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=AUTH_TOKEN
 ```
 
-2. AUTH_TOKEN: The AUTH_TOKEN or Authentication Token is created with the help of MD5, in the following format:
-Java:
+### Step 2 - Generate the AUTH_TOKEN
+
+Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+MessageDigest m = MessageDigest.getInstance("MD5");
+String s = "username:access_key";
+m.update(s.getBytes(), 0, s.length());
+System.out.println("MD5: " + new BigInteger(1, m.digest()).toString(16));
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
 
 ```javascript
-MessageDigest m=MessageDigest.getInstance("MD5");
-String s = "username:access_key";
-m.update(s.getBytes(),0,s.length());
-System.out.println("MD5: "+new BigInteger(1,m.digest()).toString(16));
-```
-
-**Node:**
-
-```js
 var crypto = require('crypto');
-crypto.createHash('md5').update("username:access_key").digest("hex");
+var token = crypto.createHash('md5').update("username:access_key").digest("hex");
+console.log("AUTH_TOKEN: " + token);
 ```
 
-**Python**
+</TabItem>
+
+<TabItem value="python" label="Python">
 
 ```python
 import hashlib
-print(hashlib.md5("username:access_key".encode('utf-8')).hexdigest())
+token = hashlib.md5("username:access_key".encode('utf-8')).hexdigest()
+print("AUTH_TOKEN: " + token)
 ```
 
-**Ruby**
+</TabItem>
 
-```ruby
-Digest::MD5.hexdigest("username:access_key")
-```
+<TabItem value="csharp" label="C#">
 
-**PHP**
-
-```js
-echo md5("username:access_key");
-```
-
-**C#**
-
-```js
+```csharp
 byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("username:access_key");
-byte[] hashBytes =   System.Security.Cryptography.MD5.Create().ComputeHash(inputBytes);
-System.Text.StringBuilder sb = new System.Text.StringBuilder();
+byte[] hashBytes = System.Security.Cryptography.MD5.Create().ComputeHash(inputBytes);
+StringBuilder sb = new StringBuilder();
 for (int i = 0; i < hashBytes.Length; i++)
 {
     sb.Append(hashBytes[i].ToString("X2"));
 }
-base64 = sb.ToString();
+Console.WriteLine("AUTH_TOKEN: " + sb.ToString());
 ```
 
-So suppose the generated AUTH_TOKEN is 331k534uf3toef, then the updated URL will be:
+</TabItem>
 
-```javascript
+<TabItem value="php" label="PHP">
+
+```php
+$token = md5("username:access_key");
+echo "AUTH_TOKEN: " . $token;
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+require 'digest'
+token = Digest::MD5.hexdigest("username:access_key")
+puts "AUTH_TOKEN: #{token}"
+```
+
+</TabItem>
+
+</Tabs>
+
+For example, if the generated AUTH_TOKEN is `331k534uf3toef`, the final URL becomes:
+
+```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef
 ```
 
-Make sure you are logged into LambdaTest for accessing the sharing URL. Happy testing!
+:::note
+You must be logged into TestMu AI to access the sharing URL.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
@@ -157,5 +250,3 @@ Make sure you are logged into LambdaTest for accessing the sharing URL. Happy te
     </li>
   </ul>
 </nav>
-
-  

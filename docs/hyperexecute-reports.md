@@ -3,15 +3,19 @@ id: hyperexecute-reports
 title: Job Reports
 hide_title: false
 sidebar_label: HyperExecute Job Reports
-description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by LambdaTest.
+description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by TestMu AI.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-reports/
-site_name: LambdaTest
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/hyperexecute-reports/
+site_name: TestMu AI
 slug: hyperexecute-reports/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-reports/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +25,17 @@ slug: hyperexecute-reports/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-reports/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-reports/`
         }]
       })
     }}
@@ -39,7 +43,7 @@ slug: hyperexecute-reports/
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
 
 :::tip note
-Refer to this detailed [Job Reports](https://www.lambdatest.com/support/docs/hyperexecute-job-reports/) page to learn more about the types of reports being offered and how to configure them.
+Refer to this detailed [Job Reports](/support/docs/hyperexecute-job-reports/) page to learn more about the types of reports being offered and how to configure them.
 :::
 
 ## Steps to Generate and Download Reports

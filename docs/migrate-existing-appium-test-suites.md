@@ -3,16 +3,20 @@ id: migrate-existing-appium-test-suites
 title:  Migrate Appium Tests From Local Grid
 hide_title: true
 sidebar_label: Migrate From Local Grid
-description: This documentation will guide you through the process of migrating your existing Appium test suites from your local grid setup or another cloud testing tools to run on LambdaTest.
+description: This documentation will guide you through the process of migrating your existing Appium test suites from your local grid setup or another cloud testing tools to run on TestMu AI.
 keywords:
 - migrate appium tests from local grid 
-- migrate appium tests from local grid to lambdatest cloud
-- migrate appium tests from local grid to lambdatest
-- how to migrate appium tests from local grid to lambdatest
-url: https://www.lambdatest.com/support/docs/migrate-existing-appium-test-suites/
-site_name: LambdaTest
+- migrate appium tests from local grid to testmu ai cloud
+- migrate appium tests from local grid to testmu ai
+- how to migrate appium tests from local grid to testmu ai
+url: https://www.testmuai.com/support/docs/migrate-existing-appium-test-suites/
+site_name: TestMu AI
 slug: migrate-existing-appium-test-suites/
+canonical: https://www.testmuai.com/support/docs/migrate-existing-appium-test-suites/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: migrate-existing-appium-test-suites/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/migrate-existing-appium-test-suites/"
+          "item": `${BRAND_URL}/support/docs/migrate-existing-appium-test-suites/`
         }]
       })
     }}
@@ -41,9 +45,9 @@ slug: migrate-existing-appium-test-suites/
 # Migrate Appium Tests From Local Grid
 ***
  
-LambdaTest offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the LambdaTest platform. 
+<BrandName /> offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the <BrandName /> platform. 
 
-In this documentation, we look at how to leverage LambdaTest cloud for App automation and migrate your test scripts (or test suites) from your local grid. You can use LambdaTest's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
+In this documentation, we look at how to leverage <BrandName /> cloud for App automation and migrate your test scripts (or test suites) from your local grid. You can use <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
 
 ## Changes In The Test Script
 ***
@@ -53,9 +57,9 @@ To move from the local grid to the cloud-based Appium grid, you need to make som
 ## Authentication
 ***
 
-To run tests on LambdaTest, you will need LambdaTest authentication credentials: LambdaTest Username and a LambdaTest Access Key. If you do not have a LambdaTest account, visit the [LambdaTest register page](https://accounts.lambdatest.com/register) and create one.
+To run tests on <BrandName />, you will need <BrandName /> authentication credentials: <BrandName /> Username and a <BrandName /> Access Key. If you do not have a <BrandName /> account, visit the <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}><BrandName /> register page</a> and create one.
 
-You can get the LambdaTest Username and LambdaTest Access Key from your LambdaTest Profile.
+You can get the <BrandName /> Username and <BrandName /> Access Key from your <BrandName /> Profile.
 
 <img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-creds.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
@@ -78,12 +82,12 @@ caps = [
 ]
 ```
 
-## Running Tests On LambdaTest Appium Grid
+## Running Tests On <BrandName /> Appium Grid
 ***
 
-To begin, change the authentication in your test suite's configuration settings. To run the tests on LambdaTest Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
+To begin, change the authentication in your test suite's configuration settings. To run the tests on <BrandName /> Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
 
-Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your LambdaTest authentication details, and you are done. Here is the sample Python test script.
+Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your <BrandName /> authentication details, and you are done. Here is the sample Python test script.
 
 ```python
 #samplewikipedia.py
@@ -170,17 +174,18 @@ for cap in caps:
 ## Supported Languages And Frameworks
 ***
 
->That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+>That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -9,10 +9,14 @@ keywords:
   - sync scroll
   - compare your website side-by-side
   - scroll sync mirrored interactions
-url: https://www.lambdatest.com/support/docs/scroll-sync/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/scroll-sync/
+site_name: TestMu AI
 slug: scroll-sync/
+canonical: https://www.testmuai.com/support/docs/scroll-sync/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,18 +25,18 @@ slug: scroll-sync/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Scroll Sync",
-          "item": "https://www.lambdatest.com/support/docs/scroll-sync/"
+          "item": `${BRAND_URL}/support/docs/scroll-sync/`
         }]
       })
     }}
@@ -66,17 +70,17 @@ With now Scroll sync enabled you can compare your web-pages side by side.
 <br />
 
 >
-That is all about the Scroll Sync in LT Browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@lambdatest.com](mailto:support@lambdatest.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Customer Chat Support**</span>. <br />Happy testing!
+That is all about the Scroll Sync in LT Browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Customer Chat Support**</span>. <br />Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

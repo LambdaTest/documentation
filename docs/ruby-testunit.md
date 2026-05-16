@@ -1,21 +1,27 @@
 ---
 id: ruby-testunit
-title: TestUnit with Selenium:Run TestUnit Automation Scripts on Selenium Grid Cloud
-hide_title: true
+title: Selenium With Test::Unit
+hide_title: false
 sidebar_label: Test::Unit
-description: Now you can run your automation scripts using Selenium with Test::Unit on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Run Test::Unit Ruby Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
 keywords:
-  - test:unit
-  - test:unit selenium
-  - ruby selenium
-image: /assets/images/og-images/TestUnit-Automation.jpg
-url: https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/
+  - testunit selenium grid setup
+  - run testunit tests on cloud
+  - ruby testunit automation tutorial
+  - testunit cross browser testing
+  - testunit selenium example
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,235 +31,170 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Test::Unit Test",
-          "item": "https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/"
+          "name": "Selenium With Test::Unit",
+          "item": `${BRAND_URL}/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# TestUnit with Selenium: Tutorial to Run Your First Test on LambdaTest
-***
+---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on  [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using Ruby framework TestUnit.
+Run Test::Unit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-## Objective
-***
-By the end of this topic, you will be able to:
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-1. Set up an environment for testing your hosted web pages using **TestUnit** framework with **Selenium**.
-2. Run a sample Selenium with **TestUnit Ruby** on LambdaTest Automation.
-3. Setting up environment for testing your locally hosted web pages or website.
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/Ruby-UnitTest-Selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
->**Note:** All the code samples in this documentation can be found in the [LambdaTest's Repository on GitHub](https://github.com/LambdaTest/Ruby-UnitTest-Selenium). You can either download or clone the repository to quickly run your tests.
+## Prerequisites
+---
+Complete the following steps before you start Ruby automation testing with Selenium.
 
-## Prerequisites For Running TestUnit With Selenium
-***
-Before you can start performing Ruby automation testing with Selenium, you would need to:
+1. Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
+   * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
+   * For **Linux** or **Ubuntu**, run a simple apt command like below:
+   ```bash
+   sudo apt-get install ruby-full
+   ```
+   * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+   ```bash
+   brew install ruby
+   ```
+2. Install the [parallel_tests](https://github.com/grosser/parallel_tests) gem to run tests in parallel.
+3. Get the TestMu AI binary file for running tests on your locally hosted web pages.
 
-* Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
-  * For **Windows**, you can download from the [official website](https://rubyinstaller.org/downloads/).
-  * For **Linux** or **Ubuntu**, you can run a simple apt command like below:
-  ```bash
-  sudo apt-get install ruby-full
-  ```
-  * For **macOS**, you can run a [Homebrew](https://brew.sh/) command like this:
-  ```bash
-  brew install ruby
-  ```
-* To run tests in parallel you will require the [parallel_tests](https://github.com/grosser/parallel_tests) gem.
-* LambdaTest binary file for running tests on your locally hosted web pages.
+## Step 1: Clone the Sample Project
+---
+Clone the repository and install dependencies.
 
-### Installing Selenium Dependencies and Tutorial Repo
-
-**Step 1:**  Clone the [LambdaTest’s Ruby-UnitTest-Selenium repository](https://github.com/LambdaTest/Ruby-UnitTest-Selenium) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium.git
 cd Ruby-UnitTest-Selenium
 ```
-**Step 2:** After navigating to the cloned directory, install project dependencies using the below commands:
+
+Install project dependencies:
 ```bash
 bundle install
 ```
 
-### Setting up Your Authentication
-Make sure you have your LambdaTest credentials with you to run test automation scripts with TestUnit on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) or through LambdaTest Profile.
+## Step 2: Set Your Credentials
+---
+Configure your credentials to connect to the TestMu AI Selenium Grid.
 
-**Step 3:** Set LambdaTest Username and Access Key in environment variables.
- * For Linux/macOS:
- `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
- * For Windows:
- `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
+Set TestMu AI Username and Access Key in environment variables.
 
-## Run Your First Test
-***
-### Sample Test with TestUnit Ruby
+<Tabs className="docs__val">
 
-The example mentioned below would help you to execute your automation test using TestUnit Ruby.
-```ruby
-# LambdaTest.rb
+<TabItem value="bash" label="macOS / Linux" default>
 
-require 'rubygems'
-require 'selenium-webdriver'
-require 'test/unit'
-require_relative  "readConf"
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-class UnitTestLTSample < Test::Unit::TestCase
+</TabItem>
 
-    def setup
-		config = ReadConfig.new()	
-		lt_user = ENV['LT_USERNAME']
-		lt_key = ENV['LT_ACCESS_KEY']
-		lt_os = ENV['LT_OPERATING_SYSTEM']
-		lt_browser = ENV['LT_BROWSER']
-		lt_browser_version = ENV['LT_BROWSER_VERSION']
-		if(lt_user == "" || lt_user == nil)
-			lt_user = config.getDetails('LT_USERNAME')
-		end
-		if(lt_key == "" || lt_key == nil)
-			lt_key = config.getDetails('LT_ACCESS_KEY')
-		end
-		if(lt_browser == "" || lt_browser == nil)
-			lt_browser = config.getDetails('LT_BROWSER')
-		end
-		if(lt_os == "" || lt_os ==nil)
-			lt_os = config.getDetails('LT_OPERATING_SYSTEM')
-		end
-		if(lt_browser_version == "" || lt_browser_version == nil)
-			lt_browser_version = config.getDetails('LT_BROWSER_VERSION')
-		end	
-		caps = {						
-			:browserName => lt_browser,			
-			:version => lt_browser_version,			
-			:platform =>  lt_os,
-			:name =>  "UnitTest Sample Test",
-			:build =>  "UnitTest Selenium Build"
-		} 	
-		puts (caps)
-		@driver = Selenium::WebDriver.for(:remote,
-			:url => "http://"+lt_user+":"+lt_key+"@hub.lambdatest.com/wd/hub",
-			:desired_capabilities => caps)
-		
-		@driver.manage.window.maximize
-		
-        @driver.get("https://lambdatest.github.io/sample-todo-app/" )
-        sleep(10)
-	end
+<TabItem value="powershell" label="Windows" default>
 
-    def test_Login
-        item_name = "Yey, Lets add it to list"
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-        #Click on First Checkbox
-        fCheckbox = @driver.find_element(:name, 'li1')
-        fCheckbox.click
+</TabItem>
+</Tabs>
 
-        #Click on Second Checkbox
-        sCheckbox = @driver.find_element(:name, 'li2')
-        sCheckbox.click
-    
-        #Enter Item Name 
-        itemNameInput = @driver.find_element(:id, 'sampletodotext')
-        itemNameInput.send_keys item_name
-        
-        #Click on Add Button
-        addButton = @driver.find_element(:id, 'addbutton')
-        addButton.submit
+## Step 3: Configure Your Test Capabilities
+---
+Define browser, version, and OS settings for your test run.
 
-        # Verify Added Item
-        getItemName = @driver.find_element(:xpath, '/html/body/div/div/div/ul/li[6]/span').text
-		assert_equal(getItemName, item_name )
-    end
-    
-    def teardown
-		@driver.quit
-	end
-	
-end
-```
-### Configuration of Your Test Capabilities
-**Step 4:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities in the above code are defined as:
+In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+
 ```ruby
 caps = {						
 			:browserName => lt_browser,			
-			:version => lt_browser_version,			
-			:platform =>  lt_os,
+			:browser_version => lt_browser_version,			
+			:platform_name =>  lt_os,
 			:name =>  "UnitTest Sample Test",
 			:build =>  "UnitTest Selenium Build"
 		} 	
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
 
-### Executing the Test
+:::tip Capabilities Generator
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+:::
 
-**Step 5:** Navigate to the directory where you cloned the sample of TestUnit Ruby and run the following command.
+## Step 4: Run the Test
+---
+Execute the Test::Unit test from the command line.
+
 ```bash
 ruby LambdaTest.rb
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
-## Testing Locally Hosted or Privately Hosted Projects
-***
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+## Step 5: View Your Results
+---
+Check the test output on the console and the TestMu AI dashboard.
 
->Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to view your test results. The dashboard provides:
 
-Here’s how you can establish LambdaTest Tunnel.
+- Text logs for each test step
+- Screenshots captured during execution
+- Video recordings of the full test session
 
->Download the binary file of:
->* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+## Run Test::Unit Tests Using Agent Skills
+---
 
-Open command prompt and navigate to the binary folder.
+Use AI coding assistants to generate and run Test::Unit tests with the TestMu AI Agent Skill.
 
-Run the following command:
+The [testunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/testunit-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
 ```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/testunit-skill .claude/skills/
 
-**Tunnel Capability**
-```ruby
-caps = {             
-            ...          
-            :tunnel => true,         
-            ...
-        }  
+# For Cursor / Copilot
+cp -r agent-skills/testunit-skill .cursor/skills/
 ```
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Test::Unit Test
+        Selenium With Test::Unit
       </span>
     </li>
   </ul>

@@ -13,15 +13,17 @@ keywords:
     - playwright hyperexecute
     - real device playwright
     - real device test
-url: https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/
+site_name: TestMu AI
 slug: playwright-real-device-on-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,17 +33,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run playwright real deices automation tests on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/playwright-real-device-on-hyperexecute/`
         }]
       })
     }}
@@ -51,7 +53,7 @@ This guide explains how to run your **Playwright** tests on **Real devices (Andr
 ## Prerequisites
 Before running your tests, ensure you have:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file with the test configuration.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 
@@ -59,7 +61,7 @@ Before running your tests, ensure you have:
 You can use your own Playwright project or try the sample repo:. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Playwright Real Device from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Playwright Real Device from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -81,7 +83,7 @@ Update your test configuration with the required capabilities.
   </TabItem>
 </Tabs>
 
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
 ### Configure the CDP URL
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
@@ -159,3 +161,45 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/4.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+
+## Using the Playwright Agent Skill with TestMu AI
+***
+
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Playwright Agent Skill
+***
+
+Install a Playwright Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

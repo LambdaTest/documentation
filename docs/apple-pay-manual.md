@@ -10,20 +10,24 @@ keywords:
   - App Live
   - payment
 slug: apple-pay-manual/
-site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/apple-pay-manual/
+canonical: https://www.testmuai.com/support/docs/apple-pay-manual/
+site_name: TestMu AI
+url: https://www.testmuai.com/support/docs/apple-pay-manual/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
 # Apple Pay Testing on Real Devices
 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables in-app and web purchases with an extra layer of protection. Testing of Apple Pay is essential to validate the user experience, including wallet selection, passcode entry, and transaction confirmation.
 
-With LambdaTest App Live, you can test Apple Pay flows on **Real iOS Devices**. This guide walks you through enabling Apple Pay, configuring wallets, running the application, and completing transactions manually.
+With <BrandName /> App Live, you can test Apple Pay flows on **Real iOS Devices**. This guide walks you through enabling Apple Pay, configuring wallets, running the application, and completing transactions manually.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
 ---
 
@@ -47,7 +51,7 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 | iPhone 14    | 16          |
 | iPhone 13    | 15          |
 
-> We are actively working on expanding coverage to **all supported iOS devices** on LambdaTest Real Device Cloud.
+> We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 
 ---
 
@@ -85,7 +89,7 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 ## Additional Links
 
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
-- [LambdaTest App Live Overview](https://www.lambdatest.com/app-live)
+- [<BrandName /> App Live Overview](https://www.lambdatest.com/app-live)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)
 
 ---

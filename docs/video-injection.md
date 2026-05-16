@@ -2,26 +2,27 @@
 id: video-injection
 title: Video Injection
 sidebar_label: Video Injection
-description: Inject video content in your tests with LambdaTest to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
-
+description: Inject video content in your tests with TestMu AI to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
 keywords:
   - image injection
   - app test automation
   - camera image
   - QR code scanning
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/video-injection/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/video-injection/
+site_name: TestMu AI
 slug: video-injection/
+canonical: https://www.testmuai.com/support/docs/video-injection/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,23 +36,23 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Camera Image Injection",
-          "item": "https://www.lambdatest.com/support/docs/camera-image-injection/"
+          "item": `${BRAND_URL}/support/docs/camera-image-injection/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 10000+ real devices on the LambdaTest Real Device Cloud platform.
+Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 10000+ real devices on the <BrandName /> Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
 
@@ -61,46 +62,15 @@ This tool is ideal for testing features such as:
 - In-app video recording features
 
 ## How It Works
-LambdaTest utilizes **Sensor Instrumentation** to integrate with various mobile sensors, including the camera. When you enable Video Injection for a session, LambdaTest injects its camera code module into your app through Sensor Instrumentation. This module then mocks or overrides the iOS SDK used in your app.
-
-## Supported Camera APIs
-
-Below is the list of Camera APIs supported by the LambdaTest Image Injection tool.  
-Please ensure that your app uses only these APIs to enable Image Injection.
-
-<Tabs className="docs__val">
-
-<TabItem value="ios" label="iOS ≥ version 13" default>
-
-<div className="lambdatest__codeblock">
-
-  | Supported APIs |
-    |----------------|
-    | `AVCaptureVideoDataOutput`Used for capturing video frames via the `AVCaptureVideoDataOutputSampleBufferDelegate` protocol. <br /><br /> 📕 For details, please check [Documentation reference](https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutput)|
-</div>
-
-</TabItem>
-
-<TabItem value="android" label="Android ≥ version 9">
-
-<div className="lambdatest__codeblock">
-
-  | Supported APIs |
-    |----------------|
-    |`android.media.ImageReader` Enables retrieval and processing of image data directly from the camera capture pipeline. <br /><br /> 📕 For details, please check [Documentation reference](https://developer.android.com/reference/android/media/ImageReader) |
-</div>
-
-</TabItem>
-
-</Tabs>
+<BrandName /> utilizes **Sensor Instrumentation** to integrate with various mobile sensors, including the camera. When you enable Video Injection for a session, <BrandName /> injects its camera code module into your app through Sensor Instrumentation. This module then mocks or overrides the iOS SDK used in your app.
 
 ## Video Injection in App Automation
 
 This section explains how to use Video Injection with App automation. This section will also teach you how to use video injection for all the possible test cases for your app along with other useful information.
 
-### Step 1: Upload video to LambdaTest
+### Step 1: Upload video to <BrandName />
 
-You can use the following curl command to upload any video of your choice to the LambdaTest cloud. Please note that we support only **MP4 format is only supported and the video can be 50 MB or less**.
+You can use the following curl command to upload any video of your choice to the <BrandName /> cloud. Please note that we support only **MP4 format is only supported and the video can be 50 MB or less**.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -181,18 +151,18 @@ Refer to the code snippets given below to upload the video with the action `Vide
 
 You need to first add a logic to inject the uploaded video in the script. Thereafter add the logic to click the camera button in the mobile app. This will show you the last injected video on your mobile app screen.
 
-> 📕 Check the [documentation for Media Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
+> ?? Check the [documentation for Media Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

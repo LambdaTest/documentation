@@ -5,16 +5,18 @@ hide_title: false
 sidebar_label: Version 3.1.0
 description: Version 3.1.0
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-0/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-0/
+site_name: TestMu AI
 slug: hyperexecute-release-notes-3-1-0/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-0/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,25 +26,25 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-0/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-3-1-0/`
         }]
       })
     }}
 ></script>
-HyperExecute now supports **Katalon Consolidated HTML Report** generation, including all new report formats introduced in Katalon Studio 10 and above with the following support:
+HyperExecute now supports **Katalon Reports** generation, including all new report formats introduced in Katalon Studio 10 and above with the following support:
 - **Seamless Katalon Report Integration:** You can now generate Katalon HTML reports directly within your HyperExecute workflow.
 - **Support for Latest Report Structure:** HyperExecute is fully compatible with the new report schema and format updates introduced in Katalon Studio 10+.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/katalon-report.png').default} alt="Image"  className="doc_img"/>
 
-> 📘 Refer to our [Katalon Consolidated HTML Report Generation Guide](/support/docs/hyperexecute-katalon-report/) for a detailed setup walkthrough and examples.
+> 📘 Refer to our [Katalon Report Generation Guide](/support/docs/hyperexecute-katalon-report/) for a detailed setup walkthrough and examples.

@@ -10,9 +10,10 @@ keywords:
   - Git Integration
   - Build Management
   - Build Promotion
-url: https://www.lambdatest.com/support/docs/smartui-build-merging/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-build-merging/
+site_name: TestMu AI
 slug: smartui-build-merging/
+canonical: https://www.testmuai.com/support/docs/smartui-build-merging/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
@@ -31,17 +33,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Build Merging",
-          "item": "https://www.lambdatest.com/support/docs/smartui-build-merging/"
+          "item": `${BRAND_URL}/support/docs/smartui-build-merging/`
         }]
       })
     }}
@@ -140,7 +142,7 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 
 **Getting Help**
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmuai.com.
 
 </TabItem>
 </Tabs>
@@ -157,4 +159,4 @@ If you encounter any issues with build merging in SmartUI, please contact our su
 
 ### Getting Help
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmuai.com.

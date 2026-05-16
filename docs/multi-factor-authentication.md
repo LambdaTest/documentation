@@ -8,10 +8,15 @@ keywords:
 - multi factor authentication
 - mfa
 - password and security
-url: https://www.lambdatest.com/support/docs/multi-factor-authentication/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/multi-factor-authentication/
+site_name: TestMu AI
 slug: multi-factor-authentication/
+canonical: https://www.testmuai.com/support/docs/multi-factor-authentication/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 # Multi Factor Authentication (MFA)
 ---
@@ -21,7 +26,7 @@ slug: multi-factor-authentication/
 
 ## Enable User MFA
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -43,7 +48,7 @@ slug: multi-factor-authentication/
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/user-recovery.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-You have now successfully enabled User MFA on your LambdaTest account. 
+You have now successfully enabled User MFA on your <BrandName /> account. 
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/user-setup-complete.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -51,7 +56,7 @@ You have now successfully enabled User MFA on your LambdaTest account.
 ## Disable User MFA
 ---
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -63,7 +68,7 @@ You have now successfully enabled User MFA on your LambdaTest account.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/disable-user.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-**Step 4:**  Enter your account password to verify and disable the User MFA for your LambdaTest account.  
+**Step 4:**  Enter your account password to verify and disable the User MFA for your <BrandName /> account.  
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/disable-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -74,10 +79,10 @@ You have now successfully enabled User MFA on your LambdaTest account.
 You will be redirected to the login page to disable the MFA on your account. 
 
 
-## Enforce LambdaTest MFA For Your Organization
+## Enforce <BrandName /> MFA For Your Organization
 ---
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -109,7 +114,7 @@ You will be redirected to the login page to disable the MFA on your account.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/recovery-code.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-**Step 8:**  You have successfully set up your Multi-factor Authentication (MFA) for your LambdaTest account. 
+**Step 8:**  You have successfully set up your Multi-factor Authentication (MFA) for your <BrandName /> account. 
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/setup-complete.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -118,10 +123,10 @@ You will be redirected to the login page to disable the MFA on your account.
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/auth-code.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 
-## Disable Enforce LambdaTest MFA For Your Organization
+## Disable Enforce <BrandName /> MFA For Your Organization
 ---
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -133,10 +138,10 @@ You will be redirected to the login page to disable the MFA on your account.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/toggle-off.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-## Disable LambdaTest MFA For A User
+## Disable <BrandName /> MFA For A User
 ---
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -157,12 +162,12 @@ You have now successfully disabled MFA for a user.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

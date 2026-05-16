@@ -8,15 +8,17 @@ keywords:
  - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
-url: https://www.lambdatest.com/support/docs/author-your-first-mobile-app-test
-site_name: LambdaTest
+  - testmu ai automation
+  - testmu ai kaneai
+url: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
+site_name: TestMu AI
 slug: author-your-first-mobile-app-test/
+canonical: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Author Your First Mobile App Test",
-          "item": "https://www.lambdatest.com/support/docs/author-your-first-mobile-app-test"
+          "item": `${BRAND_URL}/support/docs/author-your-first-mobile-app-test`
         }]
       })
     }}

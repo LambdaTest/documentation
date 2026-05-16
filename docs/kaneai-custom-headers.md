@@ -7,10 +7,14 @@ description: Guide for usage of Database custom headers in KaneAI
 keywords:
   - Custom Headers
   - Headers
-url: https://www.lambdatest.com/support/docs/kaneai-custom-headers/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-custom-headers/
+site_name: TestMu AI
 slug: kaneai-custom-headers/
+canonical: https://www.testmuai.com/support/docs/kaneai-custom-headers/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,18 +23,18 @@ slug: kaneai-custom-headers/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Custom Headers",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-custom-headers/"
+          "item": `${BRAND_URL}/support/docs/kaneai-custom-headers/`
         }]
       })
     }}

@@ -1,28 +1,27 @@
 ---
 id: junit-frameworks
-title: Run your Selenium JUnit tests on LambdaTest
+title: Selenium With JUnit
 sidebar_label: JUnit
-description: Your guide to running tests using JUnit on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
+description: Run JUnit Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.
 keywords:
-  - java selenium
-  - java selenium tutorial
-  - java selenium webdriver
-  - java selenium
-  - java selenium testing
-  - junit
-  - junit tutorial
-  - junit test cases
-  - selenium junit
-image: /assets/images/og-images/JUnit-automation-testing-with-selenium.jpg
-url: https://www.lambdatest.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/
+  - junit selenium cloud testing
+  - run junit tests on selenium grid
+  - junit parallel test execution
+  - java junit automation setup
+  - junit cross browser testing
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,84 +31,67 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Selenium Test Behind Proxy",
-          "item": "https://www.lambdatest.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/"
+          "name": "Selenium With JUnit",
+          "item": `${BRAND_URL}/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
-This guide walks you through the process of running Selenium JUnit tests on LambdaTest, a cloud-based cross-browser testing platform. By following these steps, you can seamlessly execute automated tests on a wide range of browsers and operating systems using LambdaTest’s Selenium Grid.
 
-## Prerequisites
-Before you begin, ensure you have the following:
+Run JUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
-- Install Java Development Kit (JDK). We recommend Java version 11
-- Install [Maven](https://maven.apache.org/)
-- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
-
-## Step 1: Configure your test suite
 :::tip Sample repo
-Download or Clone the code sample for the JUnit from the LambdaTest GitHub repository to run the tests on our Standard Grid.
+All the code used in this guide is available in the sample repository.
 
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/junit-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
 :::
 
-```bash title="terminal"
-git clone https://github.com/LambdaTest/junit-selenium-sample.git
+## Prerequisites
+---
+
+Make sure you have the following set up before you start.
+
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the **Java development environment** (Java 11 recommended).
+4. Install **Maven**. Download it from [the official website](https://maven.apache.org/) or install it on **Linux/MacOS** using [**Homebrew**](https://brew.sh/).
+
+## Step 1: Clone the Sample Project
+---
+
+Pull the sample repo to your local machine and navigate into the project directory.
+
+```bash
+git clone https://github.com/LambdaTest/junit-selenium-sample
 cd junit-selenium-sample
 ```
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+You may also want to run the command below to check for outdated dependencies.
 
-```java title="Test.java"
-public static String hubURL = "https://hub.lambdatest.com/wd/hub";
-```
-
-## Step 2: Update the dependencies
-Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
-
-```bash title="terminal"
+```bash
 mvn versions:display-dependency-updates
 ```
 
-```xml reference
-https://github.com/LambdaTest/junit-selenium-sample/blob/master/pom.xml
-```
+## Step 2: Set Your Credentials
+---
 
-## Step 3: Configure your test Capabilities
-LambdaTest requires specific capabilities to set the browser, browser version, operating system, and other configurations for your test.
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-Example desired capabilities for testing on Chrome 120:
-
-```java title="Test.java"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("browserName", "chrome");
-capabilities.setCapability("version", "120.0");
-capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-capabilities.setCapability("build", "LambdaTestSeleniumSampleApp");
-capabilities.setCapability("name", "LambdaTestJUnitSample");
-```
-
-:::tip
-Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
-:::
-
-## Step 4: Setup your LambdaTest credentials
-In your terminal (as per your respective Operating System), run these command to setup your LambdaTest credentials.
-> You can see your credentials below if you have logged into our platform.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value="bash" label="macOS / Linux" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -117,7 +99,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -128,73 +109,313 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
+## Step 3: Configure Your Test Capabilities
+---
 
-## Step 5: Execute your test
-If you are using the sample code repository (provided above), then use the below mentioned command to trigger your tests:
+Define the browser, version, and OS for your test run.
 
-<Tabs className="docs__val" queryString="testType">
-<TabItem value="single" label="Run single tests" default>
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-```bash title="terminal"
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+```
+
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+:::
+
+## Step 4: Run the Test
+---
+
+Trigger the test from your terminal.
+
+<Tabs className="docs__val">
+<TabItem value="single" label="Single Test" default>
+
+```bash
 mvn test -P single
 ```
 
-```xml title="pom.xml"
-<profile>
-  <id>single</id>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <includes>
-            <include>com/lambdatest/JUnitTodo.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-</profile>
-```
-
 </TabItem>
+<TabItem value="parallel" label="Parallel Tests">
 
-<TabItem value="parallel" label="Run parallel tests" default>
-
-```bash title="terminal"
+```bash
 mvn test -P parallel
-```
-
-```xml title="pom.xml"
-<profile>
-  <id>parallel</id>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <includes>
-            <include>com/lambdatest/JUnitConcurrentTodo.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-</profile>
 ```
 
 </TabItem>
 </Tabs>
 
-Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+Below is the sample JUnit test that marks items as done, adds a new item to the list, and validates the result:
 
-<img loading="lazy" src={require('../assets/images/selenium/language-frameworks/java/1.png').default} alt="Image"  className="doc_img"/>
+```java title="JUnit To Do"
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import java.net.URL;
+import java.util.HashMap;
+public class JUnitTodo {
+    public String username = "YOUR_USERNAME";
+    public String accesskey = "YOUR_ACCESS_KEY";
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    boolean status = false;
+    @Before
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
-## Additional Links
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+    @Test
+    public void testSimple() throws Exception {
+       try {
+              //Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
 
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
+
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+
+              // Let's check that the item we added is added in the list.
+            String enteredText =       driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @After
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
+```
+
+For parallel execution, the sample project uses a `Parallelized` helper class and parameterized tests:
+
+```java title="Parallelized Class"
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.runners.Parameterized;
+import org.junit.runners.model.RunnerScheduler;
+
+public class Parallelized extends Parameterized {
+
+    private static class ThreadPoolScheduler implements RunnerScheduler {
+        private ExecutorService executor;
+
+        public ThreadPoolScheduler() {
+            String threads = System.getProperty("junit.parallel.threads", "15");
+            int numThreads = Integer.parseInt(threads);
+            executor = Executors.newFixedThreadPool(numThreads);
+        }
+
+        @Override
+        public void finished() {
+            executor.shutdown();
+            try {
+                executor.awaitTermination(10, TimeUnit.MINUTES);
+            } catch (InterruptedException exc) {
+                throw new RuntimeException(exc);
+            }
+        }
+
+        @Override
+        public void schedule(Runnable childStatement) {
+            executor.submit(childStatement);
+        }
+    }
+
+    public Parallelized(Class<?> klass) throws Throwable {
+        super(klass);
+        setScheduler(new ThreadPoolScheduler());
+    }
+}
+```
+
+```java title="Concurrent Todo App"
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.LinkedList;
+@RunWith(Parallelized.class)
+public class JUnitConcurrentTodo {
+     public String username = "YOUR_LT_USERNAME";
+    public String accesskey = "YOUR_LT_ACCESS_KEY";
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+     public String platform;
+     public String browserName;
+     public String browserVersion;
+    public RemoteWebDriver driver = null;
+     boolean status = false;
+        @Parameterized.Parameters
+     public static LinkedList<String[]> getEnvironments() throws Exception {
+        LinkedList<String[]> env = new LinkedList<String[]>();
+        env.add(new String[]{"Windows 10", "chrome", "latest"});
+        env.add(new String[]{"macOS Monterey","firefox","latest"});
+        env.add(new String[]{"Windows 10","internet explorer","latest"});
+        return env;
+    }
+    public JUnitConcurrentTodo(String platform, String browserName, String browserVersion) {
+        this.platform = platform;
+        this.browserName = browserName;
+        this.browserVersion = browserVersion;
+     }
+    @Before
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName(platform);
+        browserOptions.setBrowserVersion(browserVersion);
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "JUnitParallelSample");
+        ltOptions.put("name", "JUnitParallelSampleTest");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @Test
+    public void testParallel() throws Exception {
+       try {
+              //Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
+
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
+
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+
+              // Let's check that the item we added is added in the list.
+            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @After
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
+```
+
+## Step 5: View Your Results
+---
+
+Check the Automation Dashboard to see exactly what happened during your test.
+
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
+
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
+
+## Run JUnit Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run JUnit tests with the TestMu AI Agent Skill.
+
+The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/junit-5-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/junit-5-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Selenium With JUnit
+      </span>
+    </li>
+  </ul>
+</nav>

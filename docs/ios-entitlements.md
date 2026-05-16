@@ -9,10 +9,14 @@ keywords:
 - entitlements for ios apps
 - mobile app testing
 - ios app testing
-url: https://www.lambdatest.com/support/docs/ios-entitlements/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/ios-entitlements/
+site_name: TestMu AI
 slug: ios-entitlements/
+canonical: https://www.testmuai.com/support/docs/ios-entitlements/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -21,17 +25,17 @@ slug: ios-entitlements/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "iOS Entitlements",
-          "item": "https://www.lambdatest.com/support/docs/ios-entitlements"
+          "item": `${BRAND_URL}/support/docs/ios-entitlements`
         }]
       })
     }}
@@ -76,17 +80,17 @@ KEY|VALUE|DESCRIPTION
 --|--|--
 | resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br/> 3. This is only for iOS-specific applications and devices |
 >
-If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@lambdatest.com
+If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

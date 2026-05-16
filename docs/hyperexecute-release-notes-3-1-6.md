@@ -5,13 +5,14 @@ hide_title: false
 sidebar_label: Version 3.1.6
 description: Version 3.1.6
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - testmu ai Hyperexecute
+  - testmu ai Hyperexecute help
+  - testmu ai Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-6/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/
+site_name: TestMu AI
 slug: hyperexecute-release-notes-3-1-6/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -34,7 +35,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-1-6/"
+          "item": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-3-1-6/"
         }]
       })
     }}

@@ -1,22 +1,25 @@
 ---
 id: accessibility-report-bug
-title: Report Bugs on your Integration tools from LambdaTest Accessibility Testing
+title: Report Bugs on your Integration tools from TestMu AI Accessibility Testing
 hide_title: false
 sidebar_label: Report Bugs
 description: Report the bugs that you are expereinceing
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Bug Reporting
     - Reports
-url: https://www.lambdatest.com/support/docs/accessibility-report-bug/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/accessibility-report-bug/
+site_name: TestMu AI
 slug: accessibility-report-bug/
+canonical: https://www.testmuai.com/support/docs/accessibility-report-bug/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,22 +29,22 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Navigating Dashboard",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-report-bug/"
+          "item": `${BRAND_URL}/support/docs/accessibility-report-bug/`
         }]
       })
     }}
 ></script>
-The Bug Reporting feature in LambdaTest Accessibility Testing helps you to efficiently log, track, and manage accessibility issues identified during testing. This feature ensures seamless collaboration between testers and developers by integrating with popular issue tracking tools.
+The Bug Reporting feature in <BrandName /> Accessibility Testing helps you to efficiently log, track, and manage accessibility issues identified during testing. This feature ensures seamless collaboration between testers and developers by integrating with popular issue tracking tools.
 
 ## Key Features
 - **Integration with Issue Tracking Tools :** Supports integrations with Jira, Trello, Asana, GitHub, GitLab, and Slack.
@@ -50,18 +53,18 @@ The Bug Reporting feature in LambdaTest Accessibility Testing helps you to effic
 
 ## Steps to Report a Bug
 ### Prerequisite
-- Integrate your LambdaTest account with your required [Bug Tracker platform](https://www.lambdatest.com/support/docs/bug-tracking-tools/).
+- Integrate your <BrandName /> account with your required [Bug Tracker platform](/support/docs/bug-tracking-tools/).
 
 ### Step 1. Navigating to Accessibility Test Report
-- Navigate to **Accessibility** section in your LambdaTest dashboard.
+- Navigate to **Accessibility** section in your <BrandName /> dashboard.
 - Go to the **Manual/Automation** Reports.
 - Select the report for which you want to mark it as **Bug**.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/1.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/01.png').default} alt="accessibility-mark-bug" className="doc_img"/>
 
 ### Step 2. Reporting an Issue
 - Click on the **Report Bug** icon in the top right cornter.
 - A pop-up window will open, fill up the details and create a issue for the same.
 - The issue will be notified in your selected bug reporting platform.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/2.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/02.png').default} alt="accessibility-mark-bug" className="doc_img"/>

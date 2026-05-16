@@ -2,22 +2,24 @@
 id: error-handling-kaneai
 title: Error Handling in Authoring
 sidebar_label: Error Handling
-description: Use LambdaTest Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/error-handling-kaneai/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/error-handling-kaneai/
+site_name: TestMu AI
 slug: error-handling-kaneai/
+canonical: https://www.testmuai.com/support/docs/error-handling-kaneai/
 ---
  
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Rules",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-rules/"
+          "item": `${BRAND_URL}/support/docs/accessibility-android-rules/`
         }]
       })
     }}
@@ -192,7 +194,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 **Description:** This error indicates an internal issue within the system. it may be caused by problems such as creating input parameters, accessing secrets, or other internal issues. <br />
 **Common Authoring Error:** Errors related to parameter configuration, secret management, or system-level issues. <br />
-**Suggested Ways:** Please attempt to resolve the issue on your side. if the problem continues, contact support at support@lambdatest.com for assistance.
+**Suggested Ways:** Please attempt to resolve the issue on your side. if the problem continues, contact support at support@testmuai.com for assistance.
 
 ---
 
@@ -205,5 +207,4 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 ---
 
 <br />
-> _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
-
+> _Have any feedback or request? Reach out to us via support@testmuai.com and we would be happy to hear from you._

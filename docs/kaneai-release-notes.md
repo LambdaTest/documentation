@@ -3,16 +3,20 @@ id: kaneai-release-notes
 title: KaneAI Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Keep yourself informed about new releases from KaneAI. View our GenAI-Native testing assistant's detailed release notes, which include new features and enhancements.
+description: Keep yourself informed about new releases from KaneAI. View our AI-powered testing assistant's detailed release notes, which include new features and enhancements.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/kaneai-release-notes/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kaneai-release-notes/
+site_name: TestMu AI
 slug: kaneai-release-notes/
+canonical: https://www.testmuai.com/support/docs/kaneai-release-notes/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,22 +26,22 @@ slug: kaneai-release-notes/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Release Notes",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-release-notes/"
+          "item": `${BRAND_URL}/support/docs/kaneai-release-notes/`
         }]
       })
     }}
 ></script>
-KaneAI is a GenAI-Native testing agent that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
+KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/release-notes/release-notes.gif').default} alt="Image"  className="doc_img"/>
 

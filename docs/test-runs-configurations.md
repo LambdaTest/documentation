@@ -5,16 +5,20 @@ hide_title: false
 sidebar_label: Configurations
 description: Learn how to create, manage, and apply reusable environment configurations for your test runs in LambdaTest Test Manager.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - kaneai
   - test manager
   - configurations
   - test runs
   - environment setup
-url: https://www.lambdatest.com/support/docs/test-runs-configurations/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/test-runs-configurations/
+site_name: TestMu AI
 slug: test-runs-configurations/
+canonical: https://www.testmuai.com/support/docs/test-runs-configurations/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +28,17 @@ slug: test-runs-configurations/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Configurations in KaneAI & Test Manager",
-          "item": "https://www.lambdatest.com/support/docs/test-runs-configurations"
+          "item": `${BRAND_URL}/support/docs/test-runs-configurations`
         }]
       })
     }}
@@ -172,7 +176,7 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 | Option | Description |
 |--------|-------------|
 | **Auto Update** | Automatically updates the configuration when a new app version (matching `appPackage` or `bundleId`) is uploaded |
-| **Custom ID** | Links the configuration to an app uploaded via [API](https://www.lambdatest.com/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
+| **Custom ID** | Links the configuration to an app uploaded via [API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
 | **Pre-Installed App** | Available for Private Cloud only. Maps app capability to `Stock` for testing pre-installed applications |
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="auto-update-app" className="doc_img"/>

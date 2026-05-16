@@ -5,14 +5,18 @@ hide_title: true
 sidebar_label: CLI FAQs
 description: Explore HyperExecute CLI FAQs Downloading Test Artifacts, MacOS Verification, Test Run Steps & More! Get Quick Answers Here.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-faqs/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-cli-faqs/
+site_name: TestMu AI
 slug: hyperexecute-cli-faqs/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-faqs/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: hyperexecute-cli-faqs/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-cli-faqs/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-faqs/`
         }]
       })
     }}
@@ -63,7 +67,7 @@ slug: hyperexecute-cli-faqs/
 
   This `hyperexecute-cli.log` file will also help you in debugging any issues with your tests. You can view the file and figure out exactly where your test run failed. 
 
-  If you want more help with debugging your issues, you can always contact [support@lambdatest.com](mailto:support@lambdatest.com) and provide them with this file along with your Job ID. 
+  If you want more help with debugging your issues, you can always contact [support@testmuai.com](mailto:support@testmuai.com) and provide them with this file along with your Job ID. 
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/faq/cli-log.png').default} alt="Image"  className="doc_img"/>
 
@@ -76,12 +80,12 @@ For more information on the HyperExecute CLI, visit this [page](/support/docs/hy
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

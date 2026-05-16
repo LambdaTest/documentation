@@ -6,13 +6,16 @@ sidebar_label: Turbo Boost Your Tests Execution with Smart Caching
 description: Learn how to turbo boost your tests execution using the smart caching concept in hyperexecute
 keywords:
   - Smart Caching
-  - LambdaTest
-  - LambdaTest HyperExecute documentation
+  - TestMu AI
+  - TestMu AI HyperExecute documentation
   - How Smart Caching turbo boost your tests execution with HyperExecute
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
+site_name: TestMu AI
 slug: hyperexecute-how-smart-caching-boosts-tests-speed/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
 --- 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +25,17 @@ slug: hyperexecute-how-smart-caching-boosts-tests-speed/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/`
         }]
       })
     }}
@@ -44,7 +47,7 @@ Smart Caching significantly reduces test execution times by optimizing resource 
 
 ## Architecture
 
-Smart Caching operates on a distributed caching architecture, leveraging a network of caching nodes across LambdaTest's global infrastructure. This ensures low latency and high availability for test execution, regardless of user location.
+Smart Caching operates on a distributed caching architecture, leveraging a network of caching nodes across <BrandName />'s global infrastructure. This ensures low latency and high availability for test execution, regardless of user location.
 
 The core functionalities of Smart Caching include:
 

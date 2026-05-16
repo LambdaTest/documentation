@@ -5,12 +5,14 @@ sidebar_label: Allure Test Insights
 description: Test Insights by executing test cases using the Allure report with HyperExecute
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-allure-api-widgets/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-allure-api-widgets/
+site_name: TestMu AI
 slug: analytics-allure-api-widgets/
+canonical: https://www.testmuai.com/support/docs/analytics-allure-api-widgets/
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,24 +22,28 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-allure-api-widgets/"
+          "item": `${BRAND_URL}/support/docs/analytics-allure-api-widgets/`
         }]
       })
     }}
 ></script>
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/21XtN5PSMNI?si=4oVmKO88mzVlLVW1" title="Integrate Allure Test Insights with HyperExecute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="ytframe">
+<div className="youtube" data-embed="21XtN5PSMNI" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 ## How To Use Allure Test Insights?
 
@@ -155,7 +161,7 @@ className="doc_img"
 
 ## Support and Assistance
 
-We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the Allure API Insights with HyperExecute, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@lambdatest.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the Allure API Insights with HyperExecute.
+We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the Allure API Insights with HyperExecute, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the Allure API Insights with HyperExecute.
 
 Embrace the future of data analysis with the Allure API Insights with HyperExecute and unlock the full potential of your data. Start exploring, asking questions, and discovering valuable insights today!
 

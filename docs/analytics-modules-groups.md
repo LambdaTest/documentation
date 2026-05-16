@@ -2,19 +2,22 @@
 id: analytics-modules-groups
 title: Usage insights for Groups
 sidebar_label: Groups Insights
-description: Explore LambdaTest's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.
+description: Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.
 keywords:
   - analytics
   - groups
   - insights
   - usage
   - test intelligence
-url: https://www.lambdatest.com/support/docs/analytics-modules-groups/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-modules-groups/
+site_name: TestMu AI
 slug: analytics-modules-groups/
+canonical: https://www.testmuai.com/support/docs/analytics-modules-groups/
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -25,17 +28,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-flaky-test/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
         }]
       })
     }}
@@ -44,7 +47,7 @@ import NewTag from '../src/component/newTag';
 
 ### Introduction to Groups Insights
 
-LambdaTest Analytics Modules provide comprehensive insights into your test groups, helping you understand the performance of your test groups and the distribution of your test cases across different groups. This helps you identify the test groups that are performing well and the ones that need improvement. You can also track the execution time of your test groups and the number of test cases executed in each group.
+<BrandName /> Analytics Modules provide comprehensive insights into your test groups, helping you understand the performance of your test groups and the distribution of your test cases across different groups. This helps you identify the test groups that are performing well and the ones that need improvement. You can also track the execution time of your test groups and the number of test cases executed in each group.
 
 ### Usage by Groups
 
@@ -60,4 +63,4 @@ The Usage by Groups widget provides insights into the performance of your test g
 
 ## Support and Assistance
 
-In case you need any assistance, reach out to our experts at [email](mailto:support@lambdatest.com) or you can connect with our 24/7 chat support. We will be happy to help you! 
+In case you need any assistance, reach out to our experts at [email](mailto:support@testmuai.com) or you can connect with our 24/7 chat support. We will be happy to help you! 

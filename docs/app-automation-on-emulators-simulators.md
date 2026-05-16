@@ -1,21 +1,23 @@
 ---
 id: app-automation-app-sim
-title: App Automation using Emulators and Simulators on LambdaTest
-sidebar_label: Emulator / Simulator
-description: Learn how to run app automated tests on using Emulators and Simulators on LambdaTest.
+title: App Automation Using Emulators and Simulators on TestMu AI
+sidebar_label: App Automation (Emu/Sim)
+description: Learn how to run app automated tests on using Emulators and Simulators on TestMu AI.
 keywords:
   - app automation emulators simulators
   - app automation emulators 
   - app automation simulators
-url: https://www.lambdatest.com/support/docs/app-automation-on-emulators-simulators/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/
+site_name: TestMu AI
 slug: app-automation-on-emulators-simulators/
+canonical: https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,22 +27,23 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation Using Emulators and Simulators on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/app-automation-on-emulators-simulators/"
+          "name": "App Automation Using Emulators and Simulators on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/app-automation-on-emulators-simulators/`
         }]
       })
     }}
 ></script>
-LambdaTest enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
+
+<BrandName /> enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
@@ -48,37 +51,58 @@ LambdaTest enables developers and testers to automate mobile app testing using c
 </div>
 </div>
 
-:::note
-App Automation for Emulators and Simulators (**Beta**) supports Appium; contact [LambdaTest support](mailto:support@lambdatest.com) to access..
+---
+
+In this documеntation, learn how to run app automated tests on Emulators and Simulators using <BrandName /> virtual testing cloud. 
+
+:::info Note
+
+Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.lambdatest.com/contact-us).
 :::
 
 ## Prerequisites
-Before starting, ensure you have the following:
+---
 
-- Sign up for a [LambdaTest account](https://accounts.lambdatest.com/register) if you haven't already.
-- Download and install the [Appium Java Client](https://github.com/appium/java-client) to create automation scripts.
-- Retrieve your [Username and Access Key](https://accounts.lambdatest.com/security).
-- You have either Android application `.apk` or `.aab` or iOS application `.app` packaged in a `.zip`
+Bеforе you gеt startеd with App Automation on LambdaTеst, makе surе you havе thе following prеrеquisitеs in placе: 
 
-## Step 1: Upload your application
+1. <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>Sign up for a LambdaTеst account</a> if you havеn't alrеady. 
 
-Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the LambdaTest servers using our **REST API**. 
+2. Install [Appium Java Client](https://github.com/appium/java-client).
 
-:::tip Sample repo
-You can download the sample codebase to quickly run your tests. <a href="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> Android sample app</a> <a href="https://prod-mobile-artefacts.lambdatest.com/assets/docs/firefox.zip" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/>iOS sample app</a>
+3. A <BrandName /> Username and Access Key.
+
+4. Ensure you have an access to an **Android** app (*.apk* or *.aab* file) or an **iOS** *zip* file (containing *.app* file).
+
+:::tip
+
+Don't have **.apk** or **.app** filеs? You can still run your samplе tеsts on LambdaTеst using our samplе Android and iOS applications, accеssiblе through thе following links:
+
+* [Samplе Android App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
+* [Samplе iOS App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/firefox.zip) 
+
 :::
 
-You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+## Run Your First Test
+---
+
+Here are the following steps to run your first app automated test on Emulators and Simulators.
+
+### Step 1: Upload Your Application
+
+Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <Tabs className="docs__val">
   <TabItem value="file" label="App file" default>
 
 <Tabs className="docs__val">
-<TabItem value="macos-file" label="Linux / macOS" default>
+<TabItem value="macos-file" label="Linux/macOS" default>
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \
+{`curl -u "<USERNAME>:<KEY>" \
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \
 --form 'name="Android_App"' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'  
@@ -91,7 +115,7 @@ You need to provide your **Username** and **AccessKey** in the format `Username:
 <TabItem value="windows-file" label="Windows" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \
+{`curl -u "<USERNAME>:<KEY>" \
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \
 --form 'name="Android_App"' \
 --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
@@ -105,7 +129,7 @@ You need to provide your **Username** and **AccessKey** in the format `Username:
   <TabItem value="url" label="App URL" default>
 
 <Tabs className="docs__val">
-<TabItem value="macos-url" label="Linux / macOS" default>
+<TabItem value="macos-url" label="Linux macOS" default>
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -130,14 +154,20 @@ You need to provide your **Username** and **AccessKey** in the format `Username:
   </TabItem>
 </Tabs>
 
-:::info
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in next steps.
+:::info Note
+
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the Step 2.
+
 :::
 
-## Step 2: Write your automation script
-Write your automation script in your preferred language that Appium framework supports. In the below test script, ensure to update the `app_url`, `username` and `accesskey`. 
+### Step 2: Write Your Automation Script
 
-:::tip Note
+1. Write your automation script in your preferred language that Appium framework supports. 
+
+In the below test script, ensure to update the `app_url`, `username` and `accesskey`. 
+
+
+:::info Set the Capability
 To run the test on Emulator/Simulator, set the `isRealMobile` capability to `false`.
 :::
 
@@ -345,12 +375,82 @@ simulatorTest()
 </TabItem>
 </Tabs>
 
-## Step 3: Execute your test case
+2. Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
-Run `iOSApp.java` or `AndroidApp.java` in your editor to debug and run your code. You can view the same at LambdaTest [App Automation Dashboard](https://appautomation.lambdatest.com/build).
+<Tabs className="docs__val">
+  <TabItem value="androidXML" label="Android" default>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="100" name="Mobile" parallel="tests">
+
+
+    <test name="AppTest 1">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21 Ultra 5G"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
+
+    <test name="AppTest 2">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
+</suite>
+```
+
+</TabItem>
+
+<TabItem value="iOSXML" label="iOS" default>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="100" name="Mobile" parallel="tests">
+
+
+    <test name="iOSApp 1">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 11"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+
+    <test name="iOSApp 2">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 12 Pro"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+</suite>
+```
+
+</TabItem>
+</Tabs>
+
+### Step 3: Execute Your Test Case
+
+Debug and run your code. Run `iOSApp.java` or `AndroidApp.java` in your editor.
+
+### Step 4: View Test Execution
+
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <BrandName /> [App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## More About Desired Capabilities
-LambdaTest supports a wide range of additional Desired Capabilities to customize your testing environment:
+---
+
+Sample Capabilities for both Android and iOS are mentioned below -
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>
 
@@ -359,13 +459,12 @@ LambdaTest supports a wide range of additional Desired Capabilities to customize
     "deviceName": "Galaxy Tab S4",
     "platformName": "android",
     "platformVersion": "10",
-    "app": "YOUR_APP_URL", //Enter your APP URL fetched in above steps
-    // highlight-next-line
-    "isRealMobile": false,
+    "app": "App_url",
     "visual": true,
     "console": true,
     "deviceOrientation": "PORTRAIT",
     "build": "new-12",
+    "isRealMobile": false,
 }
 ```
 
@@ -377,8 +476,7 @@ LambdaTest supports a wide range of additional Desired Capabilities to customize
     "deviceName": "iPhone 12 Mini",
     "platformName": "ios",
     "platformVersion": "14",
-    "app": "YOUR_APP_URL",  //Enter your APP URL fetched in above steps
-    // highlight-next-line
+    "app": "App_url",
     "isRealMobile": false,
     "visual": true,
     "console": true,
@@ -389,3 +487,5 @@ LambdaTest supports a wide range of additional Desired Capabilities to customize
 
 </TabItem>
 </Tabs>
+
+

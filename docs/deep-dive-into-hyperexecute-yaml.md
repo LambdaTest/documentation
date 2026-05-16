@@ -5,17 +5,19 @@ hide_title: false
 sidebar_label: Deep Dive into HyperExecute YAML
 description: This document delivers detailed elucidations for each and every YAML flags, offering an in-depth understanding of each configuration parameter
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/
-site_name: LambdaTest Deep dive into hyperexecute yaml
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/
+site_name: TestMu AI Deep dive into hyperexecute yaml
 slug: deep-dive-into-hyperexecute-yaml/
+canonical: https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Deep Dive into HyperExecute YAML",
-          "item": "https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/"
+          "item": `${BRAND_URL}/support/docs/deep-dive-into-hyperexecute-yaml/`
         }]
       })
     }}
@@ -55,9 +57,10 @@ version: 0.1
 
 ### `runson`
 In this flag, you will define your required Operating System on which you want to run your tests.
+> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
 
 ```yaml
-runson: linux # win, win11, mac, mac12, mac13, mac14, mac15
+runson: linux # mac, mac13, win, win11
 ```
 
 If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
@@ -65,21 +68,8 @@ If you want to run a multi OS job, you can use [matrix method](/support/docs/hyp
 ```yaml
 runson: ${matrix.os}
 matrix:
-  os: [linux, mac12, mac13, mac14, mac15, win, win11]
+  os: [linux, mac, mac13, win, win11]
 ```
-
-#### Supported Values for `runson`
-
-| runson | Operating System |
-|--------|------------------|
-| linux  | Linux            |
-| win  (default)  | Windows 10       |
-| win11  | Windows 11       |
-| mac  (default)  | macOS Monterey   |
-| mac12  | macOS Monterey   |
-| mac13  | macOS Ventura    |
-| mac14  | macOS Sonoma     |
-| mac15  | macOS Sequoia    |
 
 ***
 
@@ -192,7 +182,7 @@ mode: dynamic #or -->
 
 The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines. 
 
-This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
+This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
 
 > **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
 
@@ -247,7 +237,7 @@ matrix:
 ***
 
 ### `exclusionMatrix`
-The [exclusion matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
+The [exclusion matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
 
 ```yaml
 #runson defines the OS of your test execution node.
@@ -431,6 +421,7 @@ Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-
 
 > 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
 
+
 ```yaml
 runtime:
   - language: java
@@ -549,7 +540,7 @@ partialReports:
 :::
 
 :::note
-Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below. <br />
+Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 ```yaml
 framework:
   name: maven/testng
@@ -579,7 +570,6 @@ plugin = {
 ```
 
 :::tip
-
 - 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
 - Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
 - How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
@@ -608,7 +598,7 @@ errorCategorizedReport:
   enabled: true
 ```
 
-> Refer to the [Error Categorized Report documentation](https://www.lambdatest.com/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
+> Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
 
 ***
 
@@ -962,14 +952,10 @@ alwaysRunPostSteps: true
 
 This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place. To know more about Projects [click here](/support/docs/hyperexecute-projects).
 
-```yaml
-project:
-  name: 'demo-project' #project name
-```
-
 :::info note
-Once you have created a project, you can either pass in your `project ID` or `project name` to trigger your job on the same project.
-
+- Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
+- If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
+:::
 ```yaml
 project:
   name: 'demo-project' #project name
@@ -978,36 +964,6 @@ project:
 :::
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/yaml/project.png').default} alt="project-hyperexecute" className="doc_img "/><br/><br/>
-
-***
-
-### `slackChannel`
-
-This flag allows you to receive real-time notifications about your Job updates in a Slack channel of your choice, ensuring that your team stays informed about all the Job status directly within your preferred Slack workspace.
-
-:::note Prerequisites
-- To avail this feature, connect with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Support Team.</span>
-- 📕 You must first [*integrate Slack*](https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/) from the **Integration** section of the LambdaTest dashboard.
-:::
-
-After successfully integrating Slack, specify the Slack channel where you want Job updates to be sent by updating your HyperExecute YAML file:
-
-```yaml title="hyperexecute.yaml"
-slackChannel: hyperexecute-job-updates #slack channel name
-```
-> This feature does not work for **private** Slack channels.
-
-Or, if you prefer using variable:
-
-```yaml title="hyperexecute.yaml"
-slackChannel: ${channel}
-```
-
-And then in your CLI/terminal, pass your desired channel name like:
-
-```yaml
-./hyperexecute --vars "channel=hyperexecute-job-updates" #enter your slack channel name
-```
 
 ***
 
@@ -1653,7 +1609,7 @@ background:
   - mysql-server
 ```
 
-> To learn more about it, refer to the [Background Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
+> To learn more about it, refer to the [Background Service](/support/docs/hyperexecute-background-services/) page.
 
 ***
 
@@ -1672,7 +1628,7 @@ preDirectives:
   - echo ${framework}
 ```
 
-> You can also use the vars method using the [CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
+> You can also use the vars method using the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
 
 ***
 

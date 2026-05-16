@@ -10,9 +10,10 @@ keywords:
   - androidtv
   - nvidia shield
   - python
-url: https://www.lambdatest.com/support/docs/appium-androidtv
-site_name: LambdaTest Docs
-slug: appium-androidtv
+url: https://www.testmuai.com/support/docs/appium-androidtv/
+site_name: TestMu AI Docs
+slug: appium-androidtv/
+canonical: https://www.testmuai.com/support/docs/appium-androidtv/
 
 ---
 
@@ -22,6 +23,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,28 +35,29 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Apple TV With Appium",
-          "item": "https://www.lambdatest.com/support/docs/appium-appletv/"
+          "item": `${BRAND_URL}/support/docs/appium-appletv/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-## Tutorial To Run Your First Test On LambdaTest
+## Tutorial To Run Your First Test On <BrandName />
 ---
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Android TV testing provides broader device coverage, enhances user experience by validating remote-based navigation and voice commands, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Android TV models. 
-In this guide, you will learn how to set up and run your **Android TV** automation testing scripts with **Appium** on the **LambdaTest Real Device Cloud platform**.
+In this guide, you will learn how to set up and run your **Android TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
+> Android TV support is available only with Private Device Plan.
+To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br /> 
 
 ## Objective
 ---
@@ -60,7 +65,7 @@ By the end of this topic, you will be able to:
 
 1.  Set up an environment for testing your Apps using **Android TV** with **Appium**.
 2.  Understand and configure the core capabilities required for your Appium test suite.
-3.  Explore the advanced features of LambdaTest.
+3.  Explore the advanced features of <BrandName />.
 
 ## Prerequisites
 
@@ -68,7 +73,7 @@ By the end of this topic, you will be able to:
 
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials in the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 
@@ -81,21 +86,10 @@ Before you can start performing App automation testing with Appium, you would ne
 
 ## Run Your First Test
 ---
-### 1. Upload your application
-Upload your **Android TV** application (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
- **Using App File from System:**
- <div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "undefined:undefined" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/android-tv-sample-app.apk"" -F "name="androidtv_app" -F "type="androidtv""
-`}
-</CodeBlock>
-</div>
+### 1. Set Up Authentication
 
-
-### 2. Set Up Authentication
-
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className="docs__val">
 
@@ -121,52 +115,81 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 </Tabs>
 
+### 2. Upload your application
+Upload your **Android TV** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+
+ **Using App File from System:**
+ <div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
+-X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \
+-F "appFile=@smarttube_stable.apk" \
+-F "name=androidtv_app" \
+-F "type=androidtv"
+`}
+</CodeBlock>
+</div>
+
+<p align="center">
+<img loading="lazy" src={require('../assets/images/uploads/android-tv-real-device.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+</p>
+
+
+
 ### 3. Configure Desired Capabilities
 
 In your automation script, set up the **platform capability** to specify that you are testing on an Android TV device.
 
 <Tabs>
-<TabItem value="Python" label="Python" default>
+<TabItem value="Java" label="Java" default>
 
-```python
-   desired_caps = {
-       "deviceName" : "Nvidia Shield TV",
-       "platformVersion" :  "11",
-        #highlight-next-line
-       "platform" : "androidtv",
-       "isRealMobile":True,
-       "build": "Android TV Testing",
-       "app":"APP_URL",     # Enter app url here
-        "network": False,
-       "geoLocation": "FR",
-       "devicelog": True,
-       "privateCloud": True, # For private cloud testing
-       "visual" : True,
-       "autoGrantPermissions": True
+```java
+  DesiredCapabilities capabilities = new DesiredCapabilities();
+  HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-   }
+  ltOptions.put("build", "Android TV Demo");
+  ltOptions.put("name", "Android TV Demo");
+  ltOptions.put("deviceName", "Nvidia Shield TV");
+  ltOptions.put("platformVersion", "11");
+  ltOptions.put("platformName", "androidtv");
+  ltOptions.put("isRealMobile", true);  
+  ltOptions.put("privateCloud", true);
+  ltOptions.put("w3c", true);
+  ltOptions.put("automationName", "UiAutomator2");
+  ltOptions.put("app", "lt://APP_ID");  
+  /* Optional Capability */
+  /* ltOptions.put("appPackage", "org.smarttube.stable"); */
+
+  capabilities.setCapability("LT:Options", ltOptions);
 ```
 
 </TabItem>
 </Tabs>
 
+Shown below is an execution snapshot from TestMu AI Dashboard:
+
+<p align="center">
+<img loading="lazy" src={require('../assets/images/uploads/execution-real-device.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+</p>
+
+
 ## Additional Links
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

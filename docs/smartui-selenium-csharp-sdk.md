@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-selenium-csharp-sdk
 title: Integrate SmartUI SDK with Selenium-CSharp
 sidebar_label: C#
-description: In this documentation, learn how integrate your Selenium C# automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Selenium C# automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,8 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-selenium-csharp-sdk/
+url: https://www.testmuai.com/support/docs/smartui-selenium-csharp-sdk/
 slug: smartui-selenium-csharp-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-csharp-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +27,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,18 +37,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "TestMu AI",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-selenium-csharp-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-selenium-csharp-sdk/`
         }]
       })
     }}
@@ -58,9 +61,9 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Create a SmartUI Project
 
@@ -91,16 +94,16 @@ cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 
 ```cs
 <ItemGroup>
-    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.1" />
+    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.4" />
 </ItemGroup>
 ```
 
 :::note
-You can check the latest version of [LambdaTest.Selenium.Driver]( https://www.nuget.org/packages/LambdaTest.Selenium.Driver) and update the latest version accordingly.
+You can check the latest version of [<BrandName />.Selenium.Driver]( https://www.nuget.org/packages/LambdaTest.Selenium.Driver) and update the latest version accordingly.
 :::
 ### **Step 3**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
@@ -199,7 +202,7 @@ Once, the configuration file will be created, you will be seeing the default con
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
 
-```java
+```csharp
 using System;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
@@ -208,9 +211,7 @@ using LambdaTest.Selenium.Driver;
 
 namespace LambdaTest.Selenium.TestProject
 {
-    public static class LocalTest
-    {
-        public static async Task Run()
+        public static class LocalTest
         {
             using IWebDriver driver = new ChromeDriver();
             try
@@ -228,9 +229,63 @@ namespace LambdaTest.Selenium.TestProject
                 driver.Quit();
             }
         }
-    }
 }
+```
 
+#### **Additional Functionality: Using `sync` Option in SmartUI C# SDK**
+
+You can enable synchronous snapshot status response by setting the `sync` option to `true` in the options dictionary. This allows you to wait for the snapshot status and receive the result directly in your test script.
+
+:::info
+- The `sync` functionality is supported only in <BrandName />.Selenium.Driver version **1.0.4 and above**.
+:::
+
+**Set the sync value in options:**
+
+     ```csharp
+     var optionsForSync = new Dictionary<string, object>
+     {
+             { "sync", true },
+             { "timeout", 100 } // timeout in seconds (30-900, default 600)
+     };
+
+     Console.WriteLine("Driver started");
+     driver.Navigate().GoToUrl("https://www.lambdatest.com");
+     var result = await SmartUISnapshot.CaptureSnapshot(driver, "NYC", optionsForSync);
+     Console.WriteLine(result);
+     ```
+
+**Notes:**
+- The default value of `sync` is `false` if not specified.
+- The `timeout` option defines how long to wait for the snapshot status response (in seconds). Allowed range: 30-900, default is 600.
+- When `sync` is `true`, the `result` variable will hold the value of the snapshot status response.
+
+
+**Sample response:**
+```json
+{
+    "snapshotName": "Sync-True",
+    "snapshotUUID": "95226130-72b6-4d45-ad6d-4ad8ddsa1",
+    "buildId": "8e0c078d-e85a-41ae-a8d5-4a0dsdf8bbd5",
+    "snapshotStatus": "failed",
+    "startedProcessingAt": "2025-08-26 09:58:21",
+    "finishedProcessingAt": "2025-08-26 10:03:12",
+    "screenshots": [
+        {
+            "captured_image": "<URL>",
+            "baseline_image": "<URL>",
+            "browser_name": "firefox",
+            "viewport": "1028",
+            "mismatch_percentage": 89.58,
+            "status": "Changes found",
+            "captured_image_timestamp": "2025-08-26 10:00:40",
+            "compared_image_timestamp": "2025-08-26 10:00:58",
+            "captured_diff": "<URL>",
+            "baseline_diff": "<URL>",
+        },
+        // ... more screenshots in the same format
+    ]
+}
 ```
 
 ### **Step 7:** Execute the Tests on SmartUI Cloud
@@ -579,7 +634,7 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
@@ -701,11 +756,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 
@@ -720,12 +776,12 @@ If you encounter issues not covered here:
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
@@ -741,12 +797,12 @@ If you encounter issues not covered here:
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -5,14 +5,15 @@ hide_title: false
 sidebar_label: Drag and Drop
 description: Learn how to test drag and drop interactions in KaneAI using natural language commands and manual recording for complex web interactions.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai drag drop
   - drag and drop testing
   - click and drag
-url: https://www.lambdatest.com/support/docs/kane-ai-drag-drop/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/kane-ai-drag-drop/
+site_name: TestMu AI
 slug: kane-ai-drag-drop/
+canonical: https://www.testmuai.com/support/docs/kane-ai-drag-drop/
 ---
 
 import Tabs from '@theme/Tabs';

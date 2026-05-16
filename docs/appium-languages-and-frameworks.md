@@ -2,7 +2,7 @@
 id: appium-languages-and-frameworks
 title: Supported Languages And Frameworks
 sidebar_label: Languages and Frameworks
-description: Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on LambdaTest Real Device Cloud Platform.
+description: Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on TestMu AI Real Device Cloud Platform.
 keywords:
   - supported languages
   - supported frameworks
@@ -11,13 +11,16 @@ keywords:
   - app automation
   - appium automation
   - appium testing
-url: https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
+site_name: TestMu AI
 slug: appium-languages-and-frameworks/
+canonical: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,23 +30,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Appium Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/"
+          "name": "Getting Started With Appium Testing on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
 
-Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on [LambdaTest Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.lambdatest.com/real-device-cloud).
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 
@@ -147,15 +150,58 @@ We are preparing documentation for more frameworks. If you want us to prioritize
 
 :::
 
+
+
+## Using the Appium Agent Skill with TestMu AI
+***
+
+The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The appium-skill package includes:
+
+```
+appium-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Appium Agent Skill
+***
+
+Install a Appium Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/appium-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/appium-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

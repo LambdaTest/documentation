@@ -1,28 +1,27 @@
 ---
 id: run-nightwatch-tests-on-lambdatest-selenium-grid
-title: Nightwatch Automation Testing:Run Nightwatch Tests on Online Selenium Grid | LambdaTest
-hide_title: true
+title: Selenium With Nightwatch.js
 sidebar_label: Nightwatch
-description: Run your automation scripts using Selenium with Nightwatch on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Run Nightwatch Selenium automation scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems.
 keywords:
-  - nightwatch selenium
-  - nightwatch js
-  - nightwatch js selenium
-  - javascript selenium
-  - javascript automation testing
-  - selenium webdriver javascript
-  - selenium javascript testing tutorial
-  - javascript selenium framework
-image: /assets/images/og-images/nightwatch-automation.jpg 
-url: https://www.lambdatest.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/
+  - nightwatch selenium grid testing
+  - run nightwatch tests cloud
+  - nightwatch parallel testing selenium
+  - nightwatch automation setup guide
+  - nightwatch selenium cloud execution
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,66 +31,61 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "JavaScript Nightwatch with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/"
+          "name": "Selenium With Nightwatch.js",
+          "item": `${BRAND_URL}/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Nightwatch with Selenium: Tutorial to Run Your First Test on LambdaTest
-* * *
+---
 
-In this topic, you will learn how to configure and run your JavaScript automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **JavaScript** framework **Nightwatch**.
+Run Nightwatch.js tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/gYfRDCCFTZI" title="How to Run NightwatchJS Browser Automation Tests on LambdaTest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
 
-## Objective
-***
-By the end of this topic, you will be able to:
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/nightwatch-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
-1. Set up an environment for testing your hosted web pages using **Nightwatch** framework with **Selenium**.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Run test cases in parallel using **Nightwatch** with Selenium to reduce build times.
-4. Test your locally hosted pages on LambdaTest platform.
-5. Explore advanced features of LambdaTest. 
+## Prerequisites
+---
+Complete these steps before running Nightwatch Selenium tests on TestMu AI.
 
->**Note:** All the code samples in this documentation can be found in the [LambdaTest's Repository on GitHub](https://github.com/LambdaTest/nightwatch-selenium-sample). You can either download or clone the repository to quickly run your tests.
+1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
+3. Install **npm** from the [official npm website](https://www.npmjs.com/).
+4. Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website.
 
-## Prerequisites To Run Automation Tests With Selenium & Nightwatch Framework
-* * *
-Before getting started with Automated Scripts using Selenium with Nightwatch framework on LambdaTest Automation, you need to:
+## Step 1: Clone the Sample Project
+---
+Clone the TestMu AI Nightwatch Selenium sample repository to your local machine.
 
-* Download and install **NodeJS**. You should be having **NodeJS v6** or newer. Click [here](https://nodejs.org/en/) to download.
-* Make sure you are using the latest version of **JavaScript**.
-* Install **npm** from the official website by clicking [here](https://www.npmjs.com/).
-* Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website. Latest versions of **Selenium Client** and **WebDriver** are ideal for running your JavaScript automation testing script on LambdaTest’s Selenium Grid.
-
-### Installing Selenium Dependencies and tutorial repo
-
-**Step 1:** Clone the LambdaTest’s [nightwatch-selenium-sample repository](https://github.com/LambdaTest/nightwatch-selenium-sample) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest/nightwatch-selenium-sample
 cd nightwatch-selenium-sample
 ```
-**Step 2:** Install the required project dependencies using the command below:
+
+Install the required dependencies:
 ```bash
 npm i
 ```
 
-### Setting up Your Authentication
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
+## Step 2: Set Your Credentials
+---
+Set your TestMu AI username and access key as environment variables.
 
-**Step 3:** Set LambdaTest `Username` and `Access Key` in environment variables.
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
   <div className="lambdatest__codeblock">
@@ -112,99 +106,83 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-## Run Your First Test
-***
-### Sample Test with NightwatchJS
-Let’s check out a sample **Nightwatch** framework code running on LambdaTest Selenium Grid. This is a simple Nightwatch automation script that tests a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
-
-```javascript title="googleTest.js" reference
-https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/tests/googleTest.js
-```
-### Configuration of Your Test Capabilities
-**Step 4:** Below is the `nightwatch.conf.js` file where we will be declaring the desired capabilities. Since we are using remote webdriver, we have to define which browser environment we want to run the test. We do that by passing browser environment details to LambdaTest Selenium Grid via desired capabilities class.
+## Step 3: Configure Your Test Capabilities
+---
+Update the capabilities in `nightwatch.conf.js` to define the browser and platform settings.
 
 ```javascript title="nightwatch.conf.js" reference
 https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
 
-### Executing the Test
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
 
-**Step 5:** The tests can be executed in the terminal using the following command
+## Step 4: Run the Test
+---
+Execute the test using the following command.
+
+**Single test:**
 ```bash
 npm run single
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). 
 
-<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-2.png').default} alt="Image"  className="doc_img"/> <br />
-
-LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
-
-<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-1.png').default} alt="Image"  className="doc_img"/> <br />
-
-## Running Your Parallel Tests Using Nightwatch Framework
-***
-### Executing Parallel Tests with Nightwatch
-
-To run parallel tests using **Nightwatch**, we would have to execute the below command in the terminal:
+**Parallel tests:**
 ```bash
 npm run parallel
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build).
 
-## Testing Locally Hosted or Privately Hosted Projects
-***
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+## Step 5: View Your Results
+---
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
 
->Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-2.png').default} alt="Image"  className="doc_img"/> <br />
 
-Here’s how you can establish LambdaTest Tunnel.
+The dashboard provides:
+- Video recordings of each test session
+- Screenshots captured at each step
+- Console logs from the browser
+- Network logs for debugging
+- Detailed command logs
 
->Download the binary file of:
->* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-1.png').default} alt="Image"  className="doc_img"/> <br />
 
-Open command prompt and navigate to the binary folder.
+## Run Nightwatch.js Tests Using Agent Skills
+---
 
-Run the following command:
+Use AI coding assistants to generate and run Nightwatch.js tests with the TestMu AI Agent Skill.
+
+The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
 ```bash
-LT -user {user’s login email} -key {user’s access key}
-```
-So if your user name is lambdatest@example.com and key is 123456, the command would be:
-```bash
-LT -user lambdatest@example.com -key 123456
-```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nightwatchjs-skill .claude/skills/
 
-**Tunnel Capability**
-```js
-const capabilities = {
-        tunnel: true,
-}
+# For Cursor / Copilot
+cp -r agent-skills/nightwatchjs-skill .cursor/skills/
 ```
 
-## Additional Links
-***
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       JavaScript Nightwatch with Selenium
+       Selenium With Nightwatch.js
       </span>
     </li>
   </ul>

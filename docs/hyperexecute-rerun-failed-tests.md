@@ -5,13 +5,17 @@ hide_title: false
 sidebar_label: Rerun Failed Tests
 description: Speed up debugging by rerunning only failed tests or entire jobs on HyperExecute using the rerun job feature.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-rerun-failed-tests/
-site_name: LambdaTest
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
+site_name: TestMu AI
 slug: hyperexecute-rerun-failed-tests/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,17 +24,17 @@ slug: hyperexecute-rerun-failed-tests/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-rerun-failed-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-rerun-failed-tests/`
         }]
       })
     }}
@@ -89,4 +93,4 @@ Then click **Rerun** to start the new job.
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Image"  className="doc_img"/>
 
 
-> If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
+> If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmuai.com](mailto:support@testmuai.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.

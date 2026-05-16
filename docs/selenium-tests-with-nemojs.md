@@ -1,19 +1,24 @@
 ---
 id: selenium-tests-with-nemojs
-title: Run Selenium Tests With NemoJS | LambdaTest
-hide_title: true
+title: Selenium With NemoJS
 sidebar_label: NemoJS
-description: This document will help you run Selenium automated tests with NemoJS across 3000+ browsers and operating systems on LambdaTest cloud Selenium Grid.
+description: Run NemoJS Selenium automated tests on TestMu AI cloud grid with 3000+ real browsers and operating systems.
 keywords:
-- nemo selenium
-- nemojs selenium
-- nemojs automation testing
-- nemojs automation framework
-image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/selenium-tests-with-nemojs/
-site_name: LambdaTest
+  - nemojs selenium grid testing
+  - run nemojs tests cloud
+  - nemojs automation setup guide
+  - nemojs parallel testing selenium
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
+site_name: TestMu AI
 slug: selenium-tests-with-nemojs/
+canonical: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
 ---
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,270 +28,169 @@ slug: selenium-tests-with-nemojs/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Selenium NemoJS Test",
-          "item": "https://www.lambdatest.com/support/docs/selenium-tests-with-nemojs/"
+          "name": "Selenium With NemoJS",
+          "item": `${BRAND_URL}/support/docs/selenium-tests-with-nemojs/`
         }]
       })
     }}
 ></script>
 
-# Run Selenium Tests With NemoJS
-* * *
+---
 
-NemoJS is an open-source NodeJS automation framework developed by PayPal. Nemo makes it easy to integrate Selenium automation into your NodeJS web projects.
+Run NemoJS tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
-This document will help you run Selenium automated tests with NemoJS on LambdaTest cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can run NemoJS automated test cases across 3000+ different browsers and operating systems.
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
+
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/Nemo-Lambdatest-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
 ## Prerequisites
-* * *
->
-All the code samples in this documentation can be found in the [NemoJS LambdaTest Repository on <img src={require('../assets/images/GitHub_icon/github-icon.webp').default} alt="Image" width="25" height="25" /> GitHub](https://github.com/LambdaTest/Nemo-Lambdatest-sample). You can either download or clone the repository to quickly run your tests.
+---
+Complete these steps before running NemoJS Selenium tests on TestMu AI.
 
-Before starting running your Selenium tests with NemoJS, ensure you have the following things configured.
+1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+2. Install **NodeJS** from [nodejs.org](https://nodejs.org/en/).
+3. Install **npm**: `npm init`
+4. Install **NemoJS**: `npm install --save-dev nemo`
 
-1. Make sure you have NodeJS installed. You can install it from the official [NodeJS website](https://nodejs.org/en/#home-downloadhead). You can also install NodeJS by running the following command in the terminal.
+## Step 1: Clone the Sample Project
+---
+Clone the TestMu AI NemoJS sample repository to your local machine.
 
-``` js
-$ brew install node
+```bash
+git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample
+cd Nemo-Lambdatest-sample
 ```
 
-2. Run the below command to download npm.
-
-``` js
-$ npm init
-```
-
-3. To download NemoJS, run the following command in the terminal.
-
-``` js
-$ npm install --save-dev nemo
-```
-
-4. To run your Selenium tests with NemoJS, you would need to set your LambdaTest username and access key in the environment variables. To get it, visit [Automation Dashboard](https://automation.lambdatest.com/) and click on the Key button from the top-right.
-
-**For Windows:**
-
-``` js
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-```
-
-**For Mac/Linux:**
-
-``` js
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
-```
-
-5. Install the dependencies by executing the following command.
-
-``` js
+Install the required dependencies:
+```bash
 npm install
 ```
 
-6. Set the environment variables in `nemo.config.js` file with your LambdaTest Username and Access Key.
+## Step 2: Set Your Credentials
+---
+Set your TestMu AI username and access key as environment variables.
 
-## Running The Single Test Case With NemoJS
-* * *
+<Tabs className="docs__val">
 
-To run your single test case with NemoJS on LambdaTest, let’s understand our test case scenario, the below Nemo.js automation script will test a sample to-do list app. The code marks two list items as done, adds a list item, and then outputs the total number of pending items.
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+Set the environment variables in the `nemo.config.js` file with your TestMu AI Username and Access Key.
+
+## Step 3: Configure Your Test Capabilities
+---
+Update the capabilities in `nemo.config.js` to define the browser and platform settings.
 
 ``` js
-//nemo.test.js file
-const assert = require('assert');
-var status = "";
-describe('@firstTest@', function () {
-  before(async function () {
-    this.nemo.driver.executeScript("lambda-name=sample-todo-app-test");
-  });
-  after(async function () {
-    this.nemo.driver.executeScript("lambda-status=" + status);  
-  });
-  it('should load a website', async function () {
-    this.nemo.driver.manage().timeouts().implicitlyWait(5000);
-    await this.nemo.driver.get(this.nemo.data.baseUrl);
-    await this.nemo.driver.get("https://lambdatest.github.io/sample-todo-app/");
-    await this.nemo.view._waitVisible('name:li1', 5000);
-    this.nemo.view._find('name:li1').click();
-    this.nemo.view._find('name:li2').click();
-    this.nemo.view._find('id:sampletodotext').sendKeys("Yey, Let's add it to list");
-    this.nemo.view._find('id:addbutton').click();
-    await this.nemo.view._waitVisible('name:li6', 5000);
-    var page_title = this.nemo.driver.getTitle();
-    if (page_title === "Sample page - lambdatest.com"){
-      status = "passed";
-    }
-    else {
-      status = "failed";
-    }
-  });
-});
+"withCapabilities": [{
+    "build": "LT Nemo Sample Tests",
+    "name": "LT Nemo sample test",
+    "platformName" : "Windows 10",
+    "browserName" : "Chrome",
+    "browserVersion" : "latest",
+    "user": "env:LT_USERNAME",
+    "accessKey": "env:LT_ACCESS_KEY"
+}]
 ```
 
-To run the single test, execute the below command in the terminal.
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
 
+## Step 4: Run the Test
+---
+Execute the test using the following command.
+
+**Single test:**
 ``` js
 npx nemo -P chrome
 ```
 
-## Running The Parallel Tests With NemoJS
-* * *
-
-LambdaTest Selenium Grid allows you to perform parallel testing across 3000+ browsers and OS to automate your several test cases simultaneously. You can execute a single test case across various browsers, or you can run multiple test case scenarios across the same browser but with different browser versions.
-
-Below is the code sample for the Parallel tests. In this code, we will test our Sample to-do app in three browser versions and operating systems.
-
-``` js
-//nemo.config.js file
-const path = require('path');
-
-module.exports = {
-  plugins: {
-    view: {
-      module: 'nemo-view'
-    }
-  },
-  output: {
-    reports: path.resolve('test/functional', 'report')
-  },
-  profiles: {
-    base: {
-      tests: path.resolve('test/functional', '*test.js'),
-      "driver": {
-        "builders": {
-          "usingServer": [ "http://hub.lambdatest.com/wd/hub" ],
-          "withCapabilities": [{
-            "build": "LT Nemo Sample Tests",
-            "name": "LT Nemo sample test",
-            "platform" : "Windows 10",
-            "browserName" : "Chrome",
-            "version" : "89.0",
-            "user": "env:LT_USERNAME",
-            "accessKey": "env:LT_ACCESS_KEY"
-
-          }]
-        }
-      },
-      data: {
-        baseUrl: 'https://www.google.com'
-      },
-      mocha: {
-        timeout: 180000,
-        reporter: 'mochawesome',
-        reporterOptions: {
-          quiet: true
-        }
-      }
-    },
-    chrome: {
-      driver: {
-        "builders": {
-          "usingServer": [ "http://hub.lambdatest.com/wd/hub" ],
-          "withCapabilities": [{
-            "build": "LT Nemo Sample Tests",
-            "name": "LT Nemo sample test",
-            "platform" : "Windows 10",
-            "browserName" : "Chrome",
-            "version" : "latest",
-            "user": "env:LT_USERNAME",
-            "accessKey": "env:LT_ACCESS_KEY"
-
-          }]
-        }
-      },
-      mocha: {
-        timeout: 180000,
-        reporter: 'mochawesome',
-        reporterOptions: {
-          quiet: true
-        }
-      }
-    },
-    chrome_2: {
-      driver: {
-        "builders": {
-          "usingServer": [ "http://hub.lambdatest.com/wd/hub" ],
-          "withCapabilities": [{
-            "build": "LT Nemo Sample Tests",
-            "name": "LT Nemo sample test",
-            "platform" : "Windows 7",
-            "browserName" : "Chrome",
-            "version" : "83.0",
-            "user": "env:LT_USERNAME",
-            "accessKey": "env:LT_ACCESS_KEY"
-
-          }]
-        }
-      },
-      mocha: {
-        timeout: 180000,
-        reporter: 'mochawesome',
-        reporterOptions: {
-          quiet: true
-        }
-      }
-    },
-    firefox: {
-      driver: {
-        "builders": {
-          "usingServer": [ "http://hub.lambdatest.com/wd/hub" ],
-          "withCapabilities": [{
-            "build": "LT Nemo Sample Tests",
-            "name": "LT Nemo sample test",
-            "platform" : "Windows 10",
-            "browserName" : "Firefox",
-            "version" : "latest",
-            "user": "env:LT_USERNAME",
-            "accessKey": "env:LT_ACCESS_KEY"
-
-          }]
-        }
-      },
-      mocha: {
-        timeout: 180000,
-        reporter: 'mochawesome',
-        reporterOptions: {
-          quiet: true
-        }
-      }
-    }
-  }
-}
-```
-
-Now run the below command to run the parallel tests.
-
+**Parallel tests:**
 ``` js
 npx nemo -P chrome,chrome_2,firefox
 ```
 
->
-That’s all! You have successfully performed your Selenium tests with Nemo.js. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or you can also drop a mail to [support@lambdatest.com](mailto:support@lambdatest.com). <br/>Happy testing!
+## Step 5: View Your Results
+---
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+
+The dashboard provides:
+- Video recordings of each test session
+- Screenshots captured at each step
+- Console logs from the browser
+- Network logs for debugging
+- Detailed command logs
+
+## Run NemoJS Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run NemoJS tests with the TestMu AI Agent Skill.
+
+The [nemojs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nemojs-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/nemojs-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Selenium NemoJS Test
+        Selenium With NemoJS
       </span>
     </li>
   </ul>

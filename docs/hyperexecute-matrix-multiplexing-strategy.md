@@ -5,13 +5,17 @@ hide_title: false
 sidebar_label: Matrix Multiplexing Strategy
 description: Discover the power of HyperExecute's Matrix Multiplexing Strategy for efficient cross-browser testing. Optimize test combinations for faster results..
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/
-site_name: LambdaTest
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
+url: https://www.testmuai.com/support/docs/hyperexecute-matrix-multiplexing-strategy/
+site_name: TestMu AI
 slug: hyperexecute-matrix-multiplexing-strategy/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-matrix-multiplexing-strategy/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +25,17 @@ slug: hyperexecute-matrix-multiplexing-strategy/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-matrix-multiplexing-strategy/`
         }]
       })
     }}
@@ -126,12 +130,12 @@ exclusionMatrix:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" fill="none">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.7" fill="#94a3b8" opacity="0.22"/>
+    </pattern>
+
+    <!-- Header gradients -->
+    <linearGradient id="hd1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#334155"/></linearGradient>
+    <linearGradient id="hd2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient>
+    <linearGradient id="hd3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="hd4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+    <linearGradient id="hd5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+
+    <!-- Return loop gradient -->
+    <linearGradient id="loopGrad" x1="1" y1="0" x2="0" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="cardShadow" x="-5%" y="-3%" width="110%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+    <filter id="pillShadow" x="-6%" y="-10%" width="112%" height="128%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+
+    <!-- Icon glow filters -->
+    <filter id="glow1" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#1e293b" flood-opacity="0.1"/>
+    </filter>
+    <filter id="glow2" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#7c3aed" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow3" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#2563eb" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow4" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#0891b2" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow5" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#059669" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Clip paths for card headers (14px radius) -->
+    <clipPath id="clip1"><rect x="62" y="90" width="196" height="300" rx="14"/></clipPath>
+    <clipPath id="clip2"><rect x="282" y="90" width="196" height="300" rx="14"/></clipPath>
+    <clipPath id="clip3"><rect x="502" y="90" width="196" height="300" rx="14"/></clipPath>
+    <clipPath id="clip4"><rect x="722" y="90" width="196" height="300" rx="14"/></clipPath>
+    <clipPath id="clip5"><rect x="942" y="90" width="196" height="300" rx="14"/></clipPath>
+  </defs>
+
+  <!-- ═══════ BACKGROUND ═══════ -->
+  <rect width="1200" height="500" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1200" height="500" rx="16" fill="url(#dotGrid)"/>
+
+  <!-- ═══════ TITLE ═══════ -->
+  <text x="600" y="36" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a" letter-spacing="-0.4">From Change to Proof — The Validation Pipeline</text>
+  <text x="600" y="56" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12.5" fill="#64748b">Every pull request triggers a fully automated AI testing workflow</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CARD 1: PR Opened (x=62)                                      -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g filter="url(#cardShadow)">
+    <rect x="62" y="90" width="196" height="300" rx="14" fill="#fff"/>
+    <rect x="62" y="90" width="196" height="50" fill="url(#hd1)" clip-path="url(#clip1)"/>
+  </g>
+  <text x="160" y="121" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#fff">PR Opened</text>
+
+  <!-- Icon: Git merge/PR -->
+  <g filter="url(#glow1)">
+    <circle cx="160" cy="180" r="28" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  </g>
+  <line x1="152" y1="171" x2="152" y2="191" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="168" y1="171" x2="168" y2="179" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M168 179 C168 185 162 188 152 190" stroke="#1e293b" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="152" cy="168" r="3" fill="#334155"/>
+  <circle cx="168" cy="168" r="3" fill="#334155"/>
+  <circle cx="152" cy="193" r="3" fill="#334155"/>
+
+  <text x="160" y="228" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Trigger Validation</text>
+  <line x1="92" y1="244" x2="228" y2="244" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="94" y="258" width="132" height="26" rx="6" fill="#f1f5f9"/>
+  <text x="160" y="275" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#475569">@KaneAI Validate</text>
+  <text x="160" y="306" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Code diff, PR description,</text>
+  <text x="160" y="322" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">README &amp; agent.md</text>
+  <rect x="108" y="340" width="104" height="22" rx="11" fill="#f1f5f9"/>
+  <text x="160" y="355" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#475569">GitHub PR</text>
+
+  <!-- ═══════ ARROW 1 ═══════ -->
+  <line x1="260" y1="240" x2="272" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M272 236 L280 240 L272 244" fill="#94a3b8"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CARD 2: AI Test Authoring (x=282)                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g filter="url(#cardShadow)">
+    <rect x="282" y="90" width="196" height="300" rx="14" fill="#fff"/>
+    <rect x="282" y="90" width="196" height="50" fill="url(#hd2)" clip-path="url(#clip2)"/>
+  </g>
+  <rect x="296" y="104" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="307" y="120" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fff">1</text>
+  <text x="333" y="120" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#fff">AI Test Authoring</text>
+
+  <!-- Icon: Sparkle star (AI generation) -->
+  <g filter="url(#glow2)">
+    <circle cx="380" cy="180" r="28" fill="#f5f3ff" stroke="#e9d5ff" stroke-width="1"/>
+  </g>
+  <!-- Main 4-pointed star -->
+  <path d="M380 164 L384 175 L395 178 L384 181 L380 192 L376 181 L365 178 L376 175 Z" fill="#7c3aed"/>
+  <!-- Small sparkle top-right -->
+  <path d="M392 165 L393 168 L396 169 L393 170 L392 173 L391 170 L388 169 L391 168 Z" fill="#a78bfa"/>
+  <!-- Small sparkle bottom-left -->
+  <path d="M368 186 L369 189 L372 190 L369 191 L368 194 L367 191 L364 190 L367 189 Z" fill="#a78bfa"/>
+
+  <text x="380" y="228" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Automated</text>
+  <text x="380" y="244" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Test Generation</text>
+  <line x1="312" y1="260" x2="448" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="380" y="282" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">KaneAI generates</text>
+  <text x="380" y="298" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">targeted test cases</text>
+  <text x="380" y="314" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">from code changes</text>
+  <rect x="336" y="334" width="88" height="22" rx="11" fill="#f5f3ff"/>
+  <text x="380" y="349" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#7c3aed">KaneAI Agent</text>
+
+  <!-- ═══════ ARROW 2 ═══════ -->
+  <line x1="480" y1="240" x2="492" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M492 236 L500 240 L492 244" fill="#94a3b8"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CARD 3: Smart Intelligence (x=502)                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g filter="url(#cardShadow)">
+    <rect x="502" y="90" width="196" height="300" rx="14" fill="#fff"/>
+    <rect x="502" y="90" width="196" height="50" fill="url(#hd3)" clip-path="url(#clip3)"/>
+  </g>
+  <rect x="516" y="104" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="527" y="120" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fff">2</text>
+  <text x="553" y="120" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#fff">Smart Intelligence</text>
+
+  <!-- Icon: Neural network / intelligence constellation -->
+  <g filter="url(#glow3)">
+    <circle cx="600" cy="180" r="28" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  </g>
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <line x1="600" y1="178" x2="586" y2="168" stroke="#3b82f6" stroke-width="1.5" opacity="0.35"/>
+  <line x1="600" y1="178" x2="614" y2="168" stroke="#3b82f6" stroke-width="1.5" opacity="0.35"/>
+  <line x1="600" y1="178" x2="586" y2="190" stroke="#3b82f6" stroke-width="1.5" opacity="0.35"/>
+  <line x1="600" y1="178" x2="614" y2="190" stroke="#3b82f6" stroke-width="1.5" opacity="0.35"/>
+  <line x1="586" y1="168" x2="614" y2="168" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+  <line x1="586" y1="190" x2="614" y2="190" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+  <line x1="586" y1="168" x2="586" y2="190" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+  <line x1="614" y1="168" x2="614" y2="190" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+  <!-- Central intelligence node with pulse -->
+  <circle cx="600" cy="178" r="8" stroke="#2563eb" stroke-width="1" fill="none" opacity="0.2"/>
+  <circle cx="600" cy="178" r="5" fill="#2563eb"/>
+  <!-- Outer nodes (test cases found) -->
+  <circle cx="586" cy="168" r="3.5" fill="#3b82f6" opacity="0.75"/>
+  <circle cx="614" cy="168" r="3.5" fill="#3b82f6" opacity="0.75"/>
+  <circle cx="586" cy="190" r="3.5" fill="#3b82f6" opacity="0.75"/>
+  <circle cx="614" cy="190" r="3.5" fill="#3b82f6" opacity="0.75"/>
+
+  <text x="600" y="228" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Similar Test</text>
+  <text x="600" y="244" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Detection</text>
+  <line x1="532" y1="260" x2="668" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="282" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Finds similar existing</text>
+  <text x="600" y="298" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">tests and adds them to</text>
+  <text x="600" y="314" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">the test run</text>
+  <rect x="548" y="334" width="104" height="22" rx="11" fill="#eff6ff"/>
+  <text x="600" y="349" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#2563eb">Test Manager</text>
+
+  <!-- ═══════ ARROW 3 ═══════ -->
+  <line x1="700" y1="240" x2="712" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M712 236 L720 240 L712 244" fill="#94a3b8"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CARD 4: Seamless Execution (x=722)                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g filter="url(#cardShadow)">
+    <rect x="722" y="90" width="196" height="300" rx="14" fill="#fff"/>
+    <rect x="722" y="90" width="196" height="50" fill="url(#hd4)" clip-path="url(#clip4)"/>
+  </g>
+  <rect x="736" y="104" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="747" y="120" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fff">3</text>
+  <text x="773" y="120" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#fff">Seamless Execution</text>
+
+  <!-- Icon: Stacked browser windows with play (parallel execution) -->
+  <g filter="url(#glow4)">
+    <circle cx="820" cy="180" r="28" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1"/>
+  </g>
+  <!-- Back frame -->
+  <rect x="805" y="167" width="24" height="18" rx="3" stroke="#0891b2" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <!-- Front frame -->
+  <rect x="811" y="173" width="24" height="18" rx="3" stroke="#0891b2" stroke-width="1.5" fill="#ecfeff"/>
+  <!-- Frame title bar -->
+  <line x1="811" y1="178" x2="835" y2="178" stroke="#0891b2" stroke-width="1" opacity="0.25"/>
+  <!-- Play triangle -->
+  <polygon points="819,181 829,186 819,191" fill="#0891b2"/>
+
+  <text x="820" y="228" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Parallel Testing</text>
+  <text x="820" y="244" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">on HyperExecute</text>
+  <line x1="752" y1="260" x2="888" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="820" y="282" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Cross-browser, cross-</text>
+  <text x="820" y="298" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">platform execution at</text>
+  <text x="820" y="314" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">scale in minutes</text>
+  <rect x="758" y="334" width="124" height="22" rx="11" fill="#ecfeff"/>
+  <text x="820" y="349" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#0891b2">HyperExecute Grid</text>
+
+  <!-- ═══════ ARROW 4 ═══════ -->
+  <line x1="920" y1="240" x2="932" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M932 236 L940 240 L932 244" fill="#94a3b8"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CARD 5: In-Depth Insights (x=942)                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g filter="url(#cardShadow)">
+    <rect x="942" y="90" width="196" height="300" rx="14" fill="#fff"/>
+    <rect x="942" y="90" width="196" height="50" fill="url(#hd5)" clip-path="url(#clip5)"/>
+  </g>
+  <rect x="956" y="104" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="967" y="120" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#fff">4</text>
+  <text x="993" y="120" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#fff">In-Depth Insights</text>
+
+  <!-- Icon: Rising bar chart with trend line -->
+  <g filter="url(#glow5)">
+    <circle cx="1040" cy="180" r="28" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  </g>
+  <!-- Bar chart bars -->
+  <rect x="1024" y="186" width="6" height="10" rx="1.5" fill="#059669" opacity="0.5"/>
+  <rect x="1032" y="180" width="6" height="16" rx="1.5" fill="#059669" opacity="0.65"/>
+  <rect x="1040" y="174" width="6" height="22" rx="1.5" fill="#059669" opacity="0.8"/>
+  <rect x="1048" y="168" width="6" height="28" rx="1.5" fill="#059669"/>
+  <!-- Trend line -->
+  <polyline points="1027,184 1035,178 1043,172 1051,166" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Highlight dot -->
+  <circle cx="1051" cy="166" r="2.5" fill="#059669"/>
+  <circle cx="1051" cy="166" r="5" stroke="#059669" stroke-width="1" fill="none" opacity="0.25"/>
+
+  <text x="1040" y="228" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">AI Reports &amp;</text>
+  <text x="1040" y="244" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Root Cause Analysis</text>
+  <line x1="972" y1="260" x2="1108" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1040" y="282" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">Actionable diagnosis</text>
+  <text x="1040" y="298" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">with AI RCA posted</text>
+  <text x="1040" y="314" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748b">directly to your PR</text>
+  <rect x="996" y="334" width="88" height="22" rx="11" fill="#ecfdf5"/>
+  <text x="1040" y="349" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#059669">AI RCA Engine</text>
+
+  <!-- ═══════ RETURN LOOP ═══════ -->
+  <path d="M1040 392 L1040 452 Q1040 464 1028 464 L172 464 Q160 464 160 452 L160 396" stroke="url(#loopGrad)" stroke-width="1.5" fill="none"/>
+  <polygon points="156,396 160,386 164,396" fill="#334155"/>
+
+  <!-- Return loop pill -->
+  <rect x="505" y="449" width="230" height="30" rx="15" fill="#fff" stroke="#e2e8f0" stroke-width="1" filter="url(#pillShadow)"/>
+  <text x="620" y="469" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#475569">Results posted back to PR</text>
+</svg>

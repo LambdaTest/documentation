@@ -2,21 +2,23 @@
 id: smartui-baseline-management
 title: Baseline Management in SmartUI
 sidebar_label: Baseline Management
-description: Learn how to manage baselines effectively in LambdaTest SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
+description: Learn how to manage baselines effectively in TestMu AI SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
 keywords:
   - SmartUI Baseline
   - Visual Regression Baseline
   - Baseline Management
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Testing
   - Automatic Baseline
-url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-baseline-management/
+site_name: TestMu AI
 slug: smartui-baseline-management/
+canonical: https://www.testmuai.com/support/docs/smartui-baseline-management/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Baseline Management",
-          "item": "https://www.lambdatest.com/support/docs/smartui-baseline-management/"
+          "item": `${BRAND_URL}/support/docs/smartui-baseline-management/`
         }]
       })
     }}
@@ -50,6 +52,10 @@ In SmartUI, a **Baseline** is the reference image used for comparison against fu
 A baseline represents the "expected" state of your application's UI. When you run a SmartUI test, the new screenshots are compared against this baseline to detect unauthorized visual changes.
 
 A baseline in SmartUI represents the reference point for visual regression testing. It's the set of screenshots against which all future builds are compared.
+
+:::info
+For detailed guidance on approval, reject, move, and merge functions, see our comprehensive [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
 
 ### Types of Baselines
 
@@ -345,8 +351,12 @@ Best practices for updating baselines:
 1. Update after major releases
 2. Update after UI framework changes
 3. Update after design system updates
-4. Document baseline update reasons
+4. Document baseline update reason
+
+:::info
+For detailed guidance on approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+:::
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmuai.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).

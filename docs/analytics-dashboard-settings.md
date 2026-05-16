@@ -5,10 +5,14 @@ sidebar_label: Dashboard Settings
 description: Customize your Analytics Dashboard settings for optimal test analysis. Learn how to adjust settings to fit your testing needs.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-dashboard-settings/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/analytics-dashboard-settings/
+site_name: TestMu AI
 slug: analytics-dashboard-settings/
+canonical: https://www.testmuai.com/support/docs/analytics-dashboard-settings/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +22,17 @@ slug: analytics-dashboard-settings/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-settings/"
+          "item": `${BRAND_URL}/support/docs/analytics-dashboard-settings/`
         }]
       })
     }}
@@ -40,17 +44,20 @@ The Analytics Dashboard Settings page provides a comprehensive set of controls t
 
 ---
 
-### Email Notification Settings
+### Email Notifications
 
 Keep your team informed about dashboard activity and test results by configuring email notifications.
 
 - **Enable/Disable Notifications:** Use the toggle to activate or deactivate email notifications for the dashboard. When disabled, no email updates will be sent.
-- **Notification Frequency:** Choose how often you want to receive email updates. Options typically include Daily, Weekly, or Custom intervals, allowing you to match your team's workflow.
-- **Date Range:** Select the default date range or specify a custom number of days to include in each notification. For example, setting a custom range to 7 will include data from the last 7 days in each email.
-- **Add Recipients:** Enter one or more email addresses to receive notifications. Click **Add** after each address to include multiple recipients. This is useful for keeping stakeholders, QA leads, or team members in the loop.
-- **Update & Save Preferences:** After configuring your preferences, click **Update** to save changes. Your notification settings will take effect immediately.
+- **Frequency:** Choose how often you want to receive email updates from the dropdown. Options include **Daily**, **Weekly**, or **Monthly**.
+- **Time & Period:** Set a specific delivery time for your scheduled reports. Select the hour from the **Time** dropdown (e.g., `9:00`) and choose **AM** or **PM** from the **Period** dropdown.
+- **Date Range:** Select **Default** to use the platform's default date range, or select **Custom** and specify a number of days. For example, setting a custom range to `7` includes data from the last 7 days in each email.
+- **Emails:** Enter one or more email addresses to receive notifications. Click **+ Add** after each address to include multiple recipients. This is useful for keeping stakeholders, QA leads, or team members in the loop.
+- **Update:** After configuring your preferences, click **Update** to save changes. Your notification settings will take effect immediately.
 
 > **Tip:** Use custom date ranges and recipient lists to tailor notifications for different teams or reporting needs.
+
+For a detailed guide on scheduling reports with custom delivery times, see [Report Scheduling](/docs/analytics-report-scheduling/).
 
 ---
 
@@ -131,4 +138,4 @@ This action is irreversible. Once deleted, the dashboard and all its data cannot
 
 ### Additional Support
 
-For more information and advanced configuration options, reach out to our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
+For more information and advanced configuration options, reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com).

@@ -1,18 +1,27 @@
 ---
 id: selenium-xunit
-title: How to Run Selenium Tests With xUnit
-hide_title: true
+title: Selenium With xUnit
 sidebar_label: xUnit
-description: Learn how to run your first Selenium test with xUnit on LambdaTest.
+description: Run xUnit Selenium tests on TestMu AI cloud grid with 3000+ browsers. Set up, configure, and execute C# tests.
 keywords:
-- selenium xunit
-- selenium with xunit
-- selenium with xunit on lambdatest
-- xunit lambdatest
-url: https://www.lambdatest.com/support/docs/selenium-with-xunit/
-site_name: LambdaTest
+  - run xUnit Selenium tests cloud
+  - xUnit Selenium grid setup
+  - xUnit C# automation testing
+  - Selenium xUnit cross browser testing
+  - xUnit parallel testing cloud
+image: /assets/images/og-images/automation-testing-og.png
+url: https://www.testmuai.com/support/docs/selenium-with-xunit/
+site_name: TestMu AI
 slug: selenium-with-xunit/
+canonical: https://www.testmuai.com/support/docs/selenium-with-xunit/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,81 +30,93 @@ slug: selenium-with-xunit/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "name": "Home",
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Run Selenium Tests With xUnit on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/selenium-with-xunit/"
+          "name": "Selenium With xUnit",
+          "item": `${BRAND_URL}/support/docs/selenium-with-xunit/`
         }]
       })
     }}
 ></script>
 
-# Run Selenium Tests With xUnit
 ---
 
-Learn how to run your xUnit automation testing scripts on LambdaTest online Selenium Grid of 10000+ real browsers and operating systems.
+Run xUnit Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and running tests in parallel.
+
+:::tip Sample repo
+All the code used in this guide is available in the sample repository.
+
+<div style={{display: 'flex', justifyContent: 'flex-start'}}>
+<a href="https://github.com/LambdaTest/CSharp-xUnit-Selenium" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+</div>
+:::
 
 ## Prerequisites
 ---
 
-Before you start performing C# automation testing with Selenium using xUnit, you need to:
+Make sure you have the following set up before you start.
 
-1. Download and install Selenium WebDriver from its official website.
-2. Ensure you have the latest version of C#.
-3. .NET framework for guidelines while developing a range of applications using C#.
-4. Download Selenium WebDriver Language Binding for C# and extract them to the appropriate folder. 
-5. Install a .NET Core SDK of 8.0 or greater version.
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install [.NET Core SDK](https://dotnet.microsoft.com/download) 8.0 or later.
+4. Download [Selenium WebDriver](https://www.selenium.dev/downloads/) Language Binding for C#.
 
-## Installing Selenium Dependencies
+## Step 1: Clone the Sample Project
 ---
 
-1. Clone the LambdaTest Selenium xUnit GitHub repository and navigate to the code directory:
+Pull the sample repo to your local machine and navigate into the project directory.
 
-```
+```bash
 git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
 cd CSharp-xUnit-Selenium
 ```
 
-## Setting up Your Authentication
+## Step 2: Set Your Credentials
 ---
 
-Ensure you have your LambdaTest credentials to run C# automation scripts. Get these credentials from the LambdaTest Profile by heading to **Account Settings** > **Password & Security** tab.
+Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-2. Set your LambdaTest Username and Access Key in environment variables.
+Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
-**Windows**:
+<Tabs className="docs__val">
 
-```bash
-set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-```
+<TabItem value="bash" label="macOS / Linux" default>
 
-**macOS/Linux**:
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-export LT_USERNAME="YOUR_USERNAME" 
-export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-```
+</TabItem>
 
-## Running Your First xUnit Test
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 3: Configure Your Test Capabilities
 ---
 
->**Test Scenario**: Check out the sample *SingleTest.cs* file. This xUnit Selenium script tests a sample to-do list app by marking a couple of items as done, adding a new item to the list, and finally displaying the count of pending items as output.
+Define the browser, version, and OS for your test run.
 
-3. Navigate to *[config.json](https://github.com/LambdaTest/CSharp-xUnit-Selenium/blob/master/XUnit-LambdaTest/config.json/)* using VS Code. Replace this code in the *config.json* file in your project.
-
-## Configuring Test Capabilities
----
-
-4.  In the *config.json* file, update your test capabilities. We are passing browser, browser version, and operating system information, along with LambdaTest Selenium Grid capabilities via the capabilities object.
+Update the `config.json` file with your desired capabilities:
 
 ```csharp
 {
@@ -130,72 +151,80 @@ export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 }
 ```
 
-## Executing the Test
+:::tip
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+:::
+
+## Step 4: Run the Test
 ---
 
-5. Build the solution in Visual Studio.
+Build and run xUnit tests from Visual Studio or the command line.
 
-6. Run the tests from the Test Explorer in Visual Studio.
+**From Visual Studio:** Build the solution and run tests from the Test Explorer.
 
-* If you are using macOS or Linux, to run the tests, clean and rebuild the project using the below command:
+**From the terminal (macOS/Linux):**
 
-```csharp
+```bash
 dotnet clean
-```
-
-* Now, run the single test using the below command:
-
-```csharp
 dotnet test --filter "profile=single"
 ```
 
-## Running Your xUnit Tests in Parallel
----
+To run tests in parallel:
 
-**For Windows**:
-
-To execute parallel tests on Windows, run all tests from the Test Explorer in Visual Studio.
-
-**For macOS/Linux**:
-
-To execute parallel tests on macOS or Linux, run the below command:
-
-```csharp
+```bash
 dotnet test --filter "profile=parallel"
 ```
 
-## Testing Locally Hosted Or Privately Hosted Web Projects
+## Step 5: View Your Results
 ---
 
-For testing locally hosted or privately hosted projects with LambdaTest Selenium Grid using LambdaTest Tunnel, follow the [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+Check the Automation Dashboard to see exactly what happened during your test.
 
-Download the LambdaTest Tunnel binary for your OS and run the following command:
+Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
 
-```csharp
-LT -user {user’s login email} -key {user’s access key}
-Tunnel Capability
+- **Video recording** of the full test execution
+- **Screenshots** captured at each step
+- **Console logs** from the browser
+- **Network logs** for every request and response
+- **Selenium command logs** showing each driver action
+
+## Run xUnit Tests Using Agent Skills
+---
+
+Use AI coding assistants to generate and run xUnit tests with the TestMu AI Agent Skill.
+
+The [xunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/xunit-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xunit-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/xunit-skill .cursor/skills/
 ```
 
-**Tunnel Capability**:
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
-```csharp
-"lt:options": {
-      "buildName": "xunit build",
-      "sessionName": "lambdatest xunit sample test",
-      "visual": "true",
-      "plugin": "xunit:sample",
-      "tunnel": "true"
-    }
-```
-
-
-
-
-
-
-
-
-
-
-
-
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Selenium With xUnit
+      </span>
+    </li>
+  </ul>
+</nav>

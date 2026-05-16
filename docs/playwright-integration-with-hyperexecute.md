@@ -10,10 +10,14 @@ keywords:
     - products
     - playwright integration
     - playwright integration with hyperexecute
-url: https://www.lambdatest.com/support/docs/playwright-integration-with-hyperexecute/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/playwright-integration-with-hyperexecute/
+site_name: TestMu AI
 slug: playwright-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/playwright-integration-with-hyperexecute/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +27,17 @@ slug: playwright-integration-with-hyperexecute/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/playwright-integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/playwright-integration-with-hyperexecute/`
         }]
       })
     }}
@@ -163,3 +167,45 @@ However, for larger projects and complex testing scenarios, certain challenges e
   </div>
   </a>  
 </div>
+
+
+## Using the Playwright Agent Skill with TestMu AI
+***
+
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Playwright Agent Skill
+***
+
+Install a Playwright Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

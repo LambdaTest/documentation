@@ -5,13 +5,14 @@ hide_title: false
 sidebar_label: Release Notes
 description: See the release notes for HyperExecute to stay informed about new features, fixes, and enhancements that improve your testing performance.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-release-notes/
+site_name: TestMu AI
 slug: hyperexecute-release-notes/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes/
 ---
 
 <script type="application/ld+json"
@@ -43,17 +44,17 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 
 ## HyperExecute Releases
 
+### MCP releases
+#### May, 2025
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/) | May 28, 2025|
+
 ### CLI releases
 #### January, 2025
 | Release Number | Release Date |
 |----------------|--------------|
 | [Version 0.2.249](/support/docs/hyperexecute-cli-release-notes-0-2-249) | January 13, 2025|
-
-### MCP releases
-#### May, 2025
-| Release Number | Release Date |
-|----------------|--------------|
-| [Version 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0) | May 28, 2025|
 
 ### 2025 releases
 #### December, 2025
@@ -72,7 +73,7 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 #### October, 2025
 | Release Number | Release Date |
 |----------------|--------------|
-| [Version 3.1.0](/support/docs/hyperexecute-release-notes-3-1-0) | Oct 27, 2025|
+| [Version 3.1.0](/support/docs/hyperexecute-release-notes-3-1-0) | Oct 13, 2025|
 | [Version 3.0.8](/support/docs/hyperexecute-release-notes-3-0-8) | Oct 13, 2025|
 
 #### September, 2025
@@ -85,7 +86,6 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 #### August, 2025
 | Release Number | Release Date |
 |----------------|--------------|
-| [Version 3.0.1](/support/docs/hyperexecute-release-notes-3-0-1) | August 25, 2025|
 | [Version 3.0.0](/support/docs/hyperexecute-release-notes-3-0-0) | August 18, 2025|
 | [Version 2.9.9](/support/docs/hyperexecute-release-notes-2-9-9) | August 11, 2025|
 | [Version 2.9.8](/support/docs/hyperexecute-release-notes-2-9-8) | August 04, 2025|

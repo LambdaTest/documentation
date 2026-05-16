@@ -8,17 +8,19 @@ keywords:
  - frameworks
  - operating system
  - hyperexecute
- - lambdatest
+ - testmu ai
  - packages
  - tools
  - dependencies
-url: https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-packages/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-supported-languages-and-packages/
+site_name: TestMu AI
 slug: hyperexecute-supported-languages-and-packages/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-supported-languages-and-packages/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Supported Languages and Addons ",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-packages/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-supported-languages-and-packages/`
         }]
       })
     }}

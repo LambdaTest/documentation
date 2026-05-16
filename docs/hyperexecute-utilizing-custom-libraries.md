@@ -5,14 +5,18 @@ hide_title: false
 sidebar_label: Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
 description: Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - custom library
   - sikulix
   - visual verification
-url: https://www.lambdatest.com/support/docs/hyperexecute-utilizing-custom-libraries/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-utilizing-custom-libraries/
+site_name: TestMu AI
 slug: hyperexecute-utilizing-custom-libraries/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-utilizing-custom-libraries/
 --- 
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +26,17 @@ slug: hyperexecute-utilizing-custom-libraries/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-utilizing-custom-libraries/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-utilizing-custom-libraries/`
         }]
       })
     }}

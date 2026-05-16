@@ -1,25 +1,27 @@
 ---
 id: java-framework
-title: Run your Selenium Java tests on LambdaTest
+title: Selenium With Java
 sidebar_label: Java
-description: Your guide to running tests using Java on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
+description: Run Java Selenium tests on TestMu AI cloud grid across 3000+ browsers and OS combinations.
 keywords:
-  - java selenium
-  - java selenium tutorial
-  - java selenium webdriver
-  - java selenium
-  - java selenium testing
-
-image: /assets/images/og-images/Java-with-Selenium-1-1.jpg
-url: https://www.lambdatest.com/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/
-site_name: LambdaTest
-slug: java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/
+  - java selenium cloud testing
+  - run java tests on selenium grid
+  - java webdriver remote execution
+  - java automation cross browser testing
+  - selenium java cloud grid setup
+image: /assets/images/og-images/selenium-testing-og.png
+url: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
+site_name: TestMu AI
+slug: java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,113 +31,179 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Running Java Automation Testing Scripts On Selenium Grid using TestNG Framework",
-          "item": "https://www.lambdatest.com/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/"
+          "name": "Selenium With Java",
+          "item": `${BRAND_URL}/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
-This guide walks you through the process of running Selenium Java tests on LambdaTest, a cloud-based cross-browser testing platform. By following these steps, you can seamlessly execute automated tests on a wide range of browsers and operating systems using LambdaTest’s Selenium Grid.
+
+---
+
+Run your Java Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 ## Prerequisites
-Before you begin, ensure you have the following:
+---
 
-- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
-- Install Java Development Kit (JDK). We recommend Java version 11
-- Install [Maven](https://maven.apache.org/)
-- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
+Complete these steps before running Java Selenium tests.
 
-## Step 1: Configure your test suite
+1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
+4. Download the latest [Selenium Java Client](https://www.selenium.dev/downloads/) and extract the ZIP file to your project directory.
+5. Add the Selenium JARs to your project dependencies in your IDE.
 
-:::tip Sample repo
-Download or Clone the code sample for the Java from the LambdaTest GitHub repository to run the tests on our Standard Grid.
+<img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="IntelliJ project settings" width="1260" height="1071" className="doc_img"/>
 
-<a href="https://github.com/LambdaTest/java-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
+Navigate to **Dependencies** in module settings, click **+**, and add the downloaded Selenium JARs.
 
-```bash title="terminal"
-git clone https://github.com/LambdaTest/java-selenium-sample.git
-cd java-selenium-sample
+<img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="Selenium JARs added to project dependencies" width="1150" height="740" className="doc_img"/>
+
+## Step 1: Create the Test File
+---
+
+Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
+
+```java title="JavaToDo.java"
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import java.util.HashMap;
+public class JavaTodo {
+    String username = "YOUR_LAMBDATEST_USERNAME";
+    String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
+    static RemoteWebDriver driver = null;
+    String gridURL = "@hub.lambdatest.com/wd/hub";
+    boolean status = false;
+    public static void main(String[] args) {
+        new JavaTodo().test();
+    }
+    public void test() {
+        setUp();
+        try {
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
+
+            driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
+
+            driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+
+            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            tearDown();
+        }
+    }
+    private void setUp() {
+        ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    private void tearDown() {
+        if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
 ```
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+## Step 2: Set Your Credentials
+---
 
-```java title="Test.java"
-public static String hubURL = "https://hub.lambdatest.com/wd/hub";
-```
+Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 
-## Step 2: Update the dependencies
-Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-java">
+  {`String username= "${ YOUR_LAMBDATEST_USERNAME()}"; 
+String accesskey= "${ YOUR_LAMBDATEST_ACCESS_KEY()}";`}
+  </CodeBlock>
+</div>
 
-```bash title="terminal"
-mvn versions:display-dependency-updates
-```
+## Step 3: Configure Capabilities
+---
 
-```xml reference
-https://github.com/LambdaTest/java-selenium-sample/blob/main/pom.xml
-```
+Define the browser, version, and OS for your test run.
 
-## Step 3: Configure your test Capabilities
-LambdaTest requires specific capabilities to set the browser, browser version, operating system, and other configurations for your test.
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-Example desired capabilities for testing on Chrome 120:
-
-```java title="Test.java"
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("browserName", "chrome");
-capabilities.setCapability("version", "120.0");
-capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-capabilities.setCapability("build", "LambdaTestSeleniumSampleApp");
-capabilities.setCapability("name", "LambdaTestJavaSample");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 :::tip
-Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
 :::
 
-## Step 4: Setup your LambdaTest credentials
-In your terminal (as per your respective Operating System), run these command to setup your LambdaTest credentials.
-> You can see your credentials below if you have logged into our platform.
+## Step 4: Run the Test
+---
 
-<Tabs className="docs__val">
-<TabItem value="bash" label="Linux / MacOS" default>
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-</TabItem>
+Execute your Java test from your IDE or terminal.
 
-<TabItem value="powershell" label="Windows" default>
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-</TabItem>
-</Tabs>
+**From your IDE:** Build and run the Java file directly.
 
-## Step 5: Execute your test
-Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on LambdaTest Grid:
-```bash title="terminal"
-mvn clean install exec:java -Dexec.mainClass="com.lambdatest.TEST_FILE_NAME" -Dexec.classpathScope=test -e
+**From the terminal:**
+
+```bash
+cd to/file/location
+javac -classpath ".:/path/to/selenium/jarfile:" JavaTodo.java
+java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
 ```
 
-Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
-<img loading="lazy" src={require('../assets/images/selenium/language-frameworks/java/1.png').default} alt="Image"  className="doc_img"/>
+Your test results appear on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
 
-## Additional Links
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Selenium With Java
+      </span>
+    </li>
+  </ul>
+</nav>

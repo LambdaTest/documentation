@@ -3,20 +3,22 @@ id: tosca-integration-with-hyperexecute-using-commander
 title: Tosca Integration using Commander
 hide_title: true
 sidebar_label: Tosca Integration using Commander
-description: Here is a detailed guide on seamlessly integrating Tosca with HyperExecute using Commander.
+description: This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute 
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - tosca
     - tricentis
-url: https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
+site_name: TestMu AI
 slug: tosca-integration-with-hyperexecute-using-commander/
+canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Tosca Integration with HyperExecute using Commander",
-          "item": "https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-commander/"
+          "item": `${BRAND_URL}/support/docs/tosca-integration-with-hyperexecute-using-commander/`
         }]
       })
     }}
@@ -92,7 +94,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [LambdaTest’s cloud-based Selenium Grid](https://www.lambdatest.com/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/).
+-  Ensure that you have integrated Tosca with [<BrandName />�s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 
@@ -152,7 +154,7 @@ save
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 > The binary for Mac is unsigned. You might get a permission denied warning while executing on mac and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`. <br />
-Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
+Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** ? **Security & Privacy** ? **General** tab.
 
   **Sample Hyperexecute YAML file for TOSCA**:
   ```yaml

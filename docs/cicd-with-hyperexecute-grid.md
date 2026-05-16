@@ -11,11 +11,14 @@ keywords:
     - continuous integration
     - continuous delivery
     - continuous integration tools
-image: /assets/images/og-images/JPG-4.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
+site_name: TestMu AI
 slug: hyperexecute-integration-with-ci-cd-tools/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/
 ---
+
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +28,17 @@ slug: hyperexecute-integration-with-ci-cd-tools/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration With CI/CD Tools",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-integration-with-ci-cd-tools/`
         }]
       })
     }}
@@ -136,19 +139,62 @@ Below are detailed instructions for CI/CD tool integrations to help you get the 
 
 ***
 
-Want to know more about Hyperexecute? Here’s a [link](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) to our Documentation.
+Want to know more about Hyperexecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
+
+
+
+## Using the CI/CD Pipeline Agent Skill with TestMu AI
+***
+
+The [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cicd-pipeline-skill package includes:
+
+```
+cicd-pipeline-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing CI/CD Pipeline Agent Skill
+***
+
+Install a CI/CD Pipeline Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cicd-pipeline-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cicd-pipeline-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cicd-pipeline-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

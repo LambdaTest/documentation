@@ -4,6 +4,7 @@ title: GitLab PR Checks with SmartUI Exec (SDK)
 sidebar_label: GitLab PR Checks (Exec)
 description: Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI SDK/Exec method for web and mobile testing with Selenium, Playwright, Appium, and more.
 slug: smartui-gitlab-pr-checks-exec/
+canonical: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/
 keywords:
   - GitLab PR checks
   - SmartUI SDK
@@ -12,8 +13,8 @@ keywords:
   - Visual regression testing
   - Selenium Playwright Appium
   - npx smartui exec
-url: https://www.lambdatest.com/support/docs/smartui-gitlab-pr-checks-exec/
-site_name: LambdaTest
+url: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/
+site_name: TestMu AI
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI SDK/Exec method**. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
@@ -50,25 +52,25 @@ This guide covers the **SmartUI SDK/Exec approach**, where you use `npx smartui 
 
 Before you begin, ensure you have:
 
-- LambdaTest account with active subscription
+- <BrandName /> account with active subscription
 - GitLab repository with CI/CD enabled
-- SmartUI project created in [LambdaTest SmartUI Dashboard](https://smartui.lambdatest.com/)
+- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://smartui.lambdatest.com/)
 - Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO)
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
-- LambdaTest credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
+- <BrandName /> credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
 - SmartUI CLI installed (or use `npx @lambdatest/smartui-cli`)
 
 ---
 
-## Step 1: Integrate GitLab with LambdaTest
+## Step 1: Integrate GitLab with <BrandName />
 
-1. Go to [LambdaTest Integrations page](https://integrations.lambdatest.com/)
+1. Go to [<BrandName /> Integrations page](https://integrations.lambdatest.com/)
 2. Search for **GitLab** and select the integration
 3. Click on **OAuth** as your preferred authentication method
 4. Click **Install** and authorize the integration
 5. After successful authentication, refresh the Integrations page to verify GitLab is installed
 
-<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png').default} alt="GitLab integration setup in LambdaTest" />
+<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png').default} alt="GitLab integration setup in <BrandName />" />
 
 :::tip Integration Status
 
@@ -100,7 +102,7 @@ The SmartUI configuration file is used to specify project settings. You can also
 
 ## Step 3: Configure GitLab CI/CD Pipeline
 
-Create or update your `.gitlab-ci.yml` file. The key difference with the Exec method is that you use `npx smartui exec --githubURL` to run your tests.
+Create or update your `.gitlab-ci.yml` file. The key difference with the Exec method is that you use `npx smartui exec --gitURL` to run your tests.
 
 ### Complete GitLab CI/CD Configuration
 
@@ -144,9 +146,9 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run tests with SmartUI Exec and GitLab integration
-      npx smartui exec --githubURL "${GIT_URL}" -- npm test
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- npm run test:mobile
+      npx smartui exec --gitURL "${GIT_URL}" -- npm test
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
       
   only:
     - merge_requests
@@ -201,8 +203,8 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run tests with SmartUI Exec and GitLab integration
-      npx smartui exec --githubURL "${GIT_URL}" -- mvn test
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- ./gradlew test (for Gradle)
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- ./gradlew test (for Gradle)
       
   only:
     - merge_requests
@@ -253,9 +255,9 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run tests with SmartUI Exec and GitLab integration
-      npx smartui exec --githubURL "${GIT_URL}" -- pytest
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- python -m unittest discover
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- behave
+      npx smartui exec --gitURL "${GIT_URL}" -- pytest
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- python -m unittest discover
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- behave
       
   only:
     - merge_requests
@@ -306,8 +308,8 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run tests with SmartUI Exec and GitLab integration
-      npx smartui exec --githubURL "${GIT_URL}" -- bundle exec rspec
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- bundle exec cucumber
+      npx smartui exec --gitURL "${GIT_URL}" -- bundle exec rspec
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- bundle exec cucumber
       
   only:
     - merge_requests
@@ -327,17 +329,17 @@ visual_regression_tests:
 2. **GitLab Project ID**: Automatically available as `CI_PROJECT_ID` in GitLab CI/CD
 3. **Commit SHA**: Use `CI_COMMIT_SHA` for regular commits, or `CI_MERGE_REQUEST_SHA` for merge requests
 4. **GitLab API URL**: Construct as `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
-5. **Exec Command**: Use `npx smartui exec --githubURL "${GIT_URL}" -- <your-test-command>`
+5. **Exec Command**: Use `npx smartui exec --gitURL "${GIT_URL}" -- <your-test-command>`
 
 :::info Understanding the SmartUI Exec Command
 
 The `npx smartui exec` command wraps your test execution and provides SmartUI integration:
 
 ```bash
-npx smartui exec --githubURL "<gitlab-url>" -- <your-test-command>
+npx smartui exec --gitURL "<gitlab-url>" -- <your-test-command>
 ```
 
-- `--githubURL`: GitLab API URL for status updates (legacy name, works with GitLab)
+- `--gitURL`: GitLab API URL for status updates (legacy name, works with GitLab)
 - `--`: Separator before your test command
 - `<your-test-command>`: Your normal test command (e.g., `npm test`, `mvn test`, `pytest`)
 
@@ -356,8 +358,8 @@ Configure the following variables in your GitLab project:
 
 | Variable Name | Description |
 |--------------|-------------|
-| `LT_USERNAME` | Your LambdaTest username |
-| `LT_ACCESS_KEY` | Your LambdaTest access key |
+| `LT_USERNAME` | Your <BrandName /> username |
+| `LT_ACCESS_KEY` | Your <BrandName /> access key |
 | `PROJECT_TOKEN` | Your SmartUI project token (found in SmartUI project settings) |
 
 :::info Project Token
@@ -443,7 +445,7 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run web tests with SmartUI Exec
-      npx smartui exec --githubURL "${GIT_URL}" -- npm test
+      npx smartui exec --gitURL "${GIT_URL}" -- npm test
       
   only:
     - merge_requests
@@ -489,7 +491,7 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run Java tests with SmartUI Exec
-      npx smartui exec --githubURL "${GIT_URL}" -- mvn test
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test
       
   only:
     - merge_requests
@@ -537,8 +539,8 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run mobile tests with SmartUI Exec
-      npx smartui exec --githubURL "${GIT_URL}" -- npm run test:mobile
-      # Or: npx smartui exec --githubURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
+      npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
       
   only:
     - merge_requests
@@ -584,7 +586,7 @@ visual_regression_tests:
       echo "GitLab Status URL: ${GIT_URL}"
       
       # Run Java mobile tests with SmartUI Exec
-      npx smartui exec --githubURL "${GIT_URL}" -- mvn test -D suite=mobile-tests.xml
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test -D suite=mobile-tests.xml
       
   only:
     - merge_requests
@@ -609,8 +611,8 @@ visual_regression_tests:
 **Symptoms**: Pipeline runs but no SmartUI status check appears in merge request.
 
 **Solutions**:
-1. Verify GitLab integration is active in [LambdaTest Integrations](https://integrations.lambdatest.com/)
-2. Check that `--githubURL` parameter is correctly set in the exec command
+1. Verify GitLab integration is active in [<BrandName /> Integrations](https://integrations.lambdatest.com/)
+2. Check that `--gitURL` parameter is correctly set in the exec command
 3. Verify GitLab API URL format: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
 4. Ensure `CI_PROJECT_ID` and `CI_COMMIT_SHA` are correctly set
 5. For merge requests, use `CI_MERGE_REQUEST_SHA` instead of `CI_COMMIT_SHA`
@@ -658,10 +660,10 @@ visual_regression_tests:
 
 | Aspect | SmartUI Exec (This Guide) | SmartUI Hooks |
 |--------|---------------------------|---------------|
-| **Command** | Use `npx smartui exec --githubURL <url> -- <command>` | Run tests normally (`npm test`, `mvn test`, `pytest`) |
+| **Command** | Use `npx smartui exec --gitURL <url> -- <command>` | Run tests normally (`npm test`, `mvn test`, `pytest`) |
 | **Integration** | Requires CLI wrapper | Automatic via capabilities |
 | **Setup** | Install SmartUI CLI, configure `.smartui.json` | Add capabilities to test config |
-| **GitLab Integration** | Use `--githubURL` parameter with exec | Add `github.url` capability with `GITHUB_URL` |
+| **GitLab Integration** | Use `--gitURL` parameter with exec | Add `github.url` capability |
 | **Languages** | Java SDK, CLI projects, all frameworks | TypeScript/JS/Java/Python/Ruby/C#/WebdriverIO/Appium |
 | **Project Token** | Required (`PROJECT_TOKEN`) | Not required (uses `LT_USERNAME`/`LT_ACCESS_KEY`) |
 | **Server Address** | May need `SMARTUI_SERVER_ADDRESS` for non-Selenium | Not required |
