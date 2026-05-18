@@ -26,7 +26,7 @@ export function generateCodeExample(endpoint, language, { username, password, pa
   const methodLower = endpoint.method.toLowerCase();
 
   // Build URL with path params substituted
-  let url = `${endpoint.baseUrl}${endpoint.path}`;
+  let url = `${(endpoint.baseUrl || '').replace(/\/+$/, '')}${endpoint.path}`;
   if (endpoint.pathParams) {
     endpoint.pathParams.forEach((p) => {
       url = url.replace(`{${p.name}}`, (params && params[p.name]) || `{${p.name}}`);

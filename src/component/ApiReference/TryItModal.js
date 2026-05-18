@@ -76,7 +76,7 @@ function CodeHighlight({ code, language }) {
 }
 
 function buildCurl(endpoint, username, password, params, baseUrl) {
-  let url = `${baseUrl || endpoint.baseUrl}${endpoint.path}`;
+  let url = `${(baseUrl || endpoint.baseUrl || '').replace(/\/+$/, '')}${endpoint.path}`;
   if (endpoint.pathParams) {
     endpoint.pathParams.forEach((p) => {
       url = url.replace(`{${p.name}}`, params[p.name] || `{${p.name}}`);
@@ -292,7 +292,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
   const [respCopied, setRespCopied] = useState(false);
   const [liveRespCopied, setLiveRespCopied] = useState(false);
   const [localLang, setLocalLang] = useState('cURL');
-  const [selectedServer, setSelectedServer] = useState(effectiveServers[0]?.url || endpoint.baseUrl);
+  const [selectedServer, setSelectedServer] = useState((effectiveServers[0]?.url || endpoint.baseUrl || '').replace(/\/+$/, ''));
   const selectedLang = selectedLangProp !== undefined ? selectedLangProp : localLang;
   const setSelectedLang = onLangChange || setLocalLang;
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
@@ -320,7 +320,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
 
   // Update selected server when endpoint changes
   useEffect(() => {
-    setSelectedServer(effectiveServers[0]?.url || endpoint.baseUrl || '');
+    setSelectedServer((effectiveServers[0]?.url || endpoint.baseUrl || '').replace(/\/+$/, ''));
   }, [effectiveServers, endpoint.baseUrl]);
 
 
@@ -332,7 +332,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
     setLoading(true);
     setResponse(null);
 
-    let url = `${selectedServer}${endpoint.path}`;
+    let url = `${selectedServer.replace(/\/+$/, '')}${endpoint.path}`;
     if (endpoint.pathParams) {
       endpoint.pathParams.forEach((p) => {
         url = url.replace(`{${p.name}}`, params[p.name] || '');
@@ -440,9 +440,10 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                   maxWidth: '100%',
                 }}
               >
-                {effectiveServers.map((s) => (
-                  <option key={s.url} value={s.url}>{s.url}</option>
-                ))}
+                {effectiveServers.map((s) => {
+                  const cleanUrl = s.url.replace(/\/+$/, '');
+                  return <option key={cleanUrl} value={cleanUrl}>{cleanUrl}</option>;
+                })}
               </select>
             ) : (
               <span style={{ fontSize: '13px', fontFamily: 'monospace', color: 'var(--ifm-color-emphasis-800)' }}>{selectedServer}</span>

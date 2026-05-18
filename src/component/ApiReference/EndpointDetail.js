@@ -558,11 +558,11 @@ function UrlBar({ endpoint, onTryIt }) {
   // Fallback if no servers match (shouldn't happen, but safety net)
   const effectiveServers = servers.length > 0 ? servers : allServers.slice(0, 1);
 
-  const [selectedBase, setSelectedBase] = useState(effectiveServers[0].url);
+  const [selectedBase, setSelectedBase] = useState(effectiveServers[0].url.replace(/\/+$/, ''));
   const [copied, setCopied] = useState(false);
 
   function copyUrl() {
-    const url = `${selectedBase}${endpoint.path}`;
+    const url = `${selectedBase.replace(/\/+$/, '')}${endpoint.path}`;
     try {
       navigator.clipboard.writeText(url).catch(() => {
         const ta = document.createElement('textarea');
@@ -576,7 +576,7 @@ function UrlBar({ endpoint, onTryIt }) {
 
   // Keep selectedBase in sync when endpoint changes
   React.useEffect(() => {
-    setSelectedBase(effectiveServers[0].url);
+    setSelectedBase(effectiveServers[0].url.replace(/\/+$/, ''));
   }, [endpoint.path, endpoint.method]);
 
   const segments = parsePathSegments(endpoint.path || '');
@@ -610,9 +610,10 @@ function UrlBar({ endpoint, onTryIt }) {
               flexShrink: 0,
             }}
           >
-            {effectiveServers.map((s) => (
-              <option key={s.url} value={s.url}>{s.url}</option>
-            ))}
+            {effectiveServers.map((s) => {
+              const cleanUrl = s.url.replace(/\/+$/, '');
+              return <option key={cleanUrl} value={cleanUrl}>{cleanUrl}</option>;
+            })}
           </select>
 
           {/* Path segments */}
