@@ -147,7 +147,7 @@ function extractRequestBody(requestBody, spec) {
   }
   const props = schema.properties || {};
   const required = schema.required || [];
-  const properties = Object.entries(props).map(([name, propSchema]) => {
+  let properties = Object.entries(props).map(([name, propSchema]) => {
     let resolved = propSchema.$ref ? resolveRef(propSchema.$ref, spec) || propSchema : propSchema;
     const hasEnum = Array.isArray(resolved.enum) && resolved.enum.length > 0;
     const type = resolved.type || 'string';
@@ -155,6 +155,24 @@ function extractRequestBody(requestBody, spec) {
     const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
     return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
   });
+
+  // Fallback for specs that declare `type: object` without `properties`
+  // (e.g. PUT /api/v1/projects in test_management spec) — derive fields from
+  // the example block so the Try It modal can render editable inputs.
+  if (properties.length === 0) {
+    const example = bodyContent.example ?? schema.example;
+    if (example && typeof example === 'object' && !Array.isArray(example)) {
+      properties = Object.entries(example).map(([name, value]) => {
+        let type = 'string';
+        if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
+        else if (typeof value === 'boolean') type = 'boolean';
+        else if (Array.isArray(value)) type = 'array';
+        else if (typeof value === 'object' && value !== null) type = 'object';
+        return { name, type, required: false, description: '' };
+      });
+    }
+  }
+
   return { contentType, description: requestBody.description || '', properties };
 }
 
