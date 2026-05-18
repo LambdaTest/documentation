@@ -70,7 +70,7 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 Once the integration is complete, follow these steps to link work items with your test cases or test runs:
 
 1. Head to the issues section in Test Manager, click on **Link Issue** and go to Azure DevOps.
-> Note: Issue linking is supported in both Test Cases and Test Runs. To link issues, go to the Issues tab within a Test Case or a Test Run.
+> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 

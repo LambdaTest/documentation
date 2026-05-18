@@ -151,6 +151,10 @@ Execute your manual test instances directly on <BrandName /> Cloud — no local 
 Running test instances on <BrandName /> Cloud gives you access to a wide range of real browsers, devices, and OS combinations — without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
 :::
 
+:::note Track bugs during execution
+Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira or Azure DevOps tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+:::
+
 ## 7. Test Run Options
 
 You can manage your test runs using the options available in the **three-dot menu** on each test run. The following actions are available:
