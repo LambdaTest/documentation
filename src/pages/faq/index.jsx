@@ -312,6 +312,12 @@ export default function FaqPage() {
               </summary>
               <p>In this case, there is no such limit.</p>
               </details>
+
+              <details>
+              <summary>Why my Selenium tests randomly fail on TestMu AI?
+              </summary>
+              <p>Intermittent Selenium failures are often caused by timing issues or blocked requests. Review your test scripts and add proper waits to ensure elements are ready before interaction. Also, check Cloudflare settings, as security rules may block automated traffic, leading to HTTP 403 responses instead of successful HTTP 200 responses.</p>
+              </details>
             </div>
           )}
 
@@ -682,7 +688,9 @@ export default function FaqPage() {
           {/* App & Browser Testing (Real Devices) */}
           {activeTab === 'realdevice' && (
             <div className={faqStyles.accordionGroup}>
-<details>
+
+
+              <details>
               <summary>What type of file formats does {BRAND_NAME} App testing on real devices support?
               </summary>
               <p>Currently, we support the following file formats for App testing on real devices:
@@ -768,6 +776,12 @@ export default function FaqPage() {
               </ul>
 
               </p>
+              </details>
+
+              <details>
+              <summary>Is there a way to share a App Automation release candidate with other team stakeholders?
+              </summary>
+              <p>Yes, you can control who can access the app. You have the option to keep it visible only to yourself (the person who uploaded it) or share it with your team, which allows everyone in the same organization to use it for testing.</p>
               </details>
 
               <details>
