@@ -85,7 +85,7 @@ function flattenSpec(spec) {
       if (!['get', 'post', 'put', 'delete', 'patch'].includes(method)) continue;
       endpoints.push({
         method: method.toUpperCase(),
-        path: pth,
+        path: pth.startsWith('/') ? pth : `/${pth}`,
         summary: op.summary || '',
         description: op.description || op.summary || '',
         tags: op.tags || [],
@@ -128,7 +128,7 @@ function resolveRef(ref, spec) {
   return node || null;
 }
 
-function extractRequestBody(requestBody, spec) {
+function extractRequestBody(requestBody, spec, ctx = {}) {
   if (!requestBody) return null;
   const content = requestBody.content || {};
   const contentType = Object.keys(content)[0] || 'application/json';
@@ -147,7 +147,7 @@ function extractRequestBody(requestBody, spec) {
   }
   const props = schema.properties || {};
   const required = schema.required || [];
-  const properties = Object.entries(props).map(([name, propSchema]) => {
+  let properties = Object.entries(props).map(([name, propSchema]) => {
     let resolved = propSchema.$ref ? resolveRef(propSchema.$ref, spec) || propSchema : propSchema;
     const hasEnum = Array.isArray(resolved.enum) && resolved.enum.length > 0;
     const type = resolved.type || 'string';
@@ -155,6 +155,30 @@ function extractRequestBody(requestBody, spec) {
     const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
     return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
   });
+
+  // Fallback for specs that declare `type: object` without `properties` —
+  // derive fields from the example block so the Try It modal can render
+  // editable inputs. Inferred types and required flags are best-effort;
+  // long-term fix is for spec authors to add proper `properties`.
+  if (properties.length === 0) {
+    const example = bodyContent.example ?? schema.example;
+    if (example && typeof example === 'object' && !Array.isArray(example)) {
+      properties = Object.entries(example).map(([name, value]) => {
+        let type = 'string';
+        if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
+        else if (typeof value === 'boolean') type = 'boolean';
+        else if (Array.isArray(value)) type = 'array';
+        else if (typeof value === 'object' && value !== null) type = 'object';
+        return { name, type, required: false, description: '' };
+      });
+      if (properties.length > 0) {
+        const loc = ctx.method && ctx.path ? `${ctx.method} ${ctx.path}` : '(unknown endpoint)';
+        const src = ctx.specName ? ` [${ctx.specName}]` : '';
+        console.warn(`⚠️  ${loc}${src}: requestBody has no schema.properties; derived ${properties.length} field(s) from example. Spec should declare properties for accurate types/required/descriptions.`);
+      }
+    }
+  }
+
   return { contentType, description: requestBody.description || '', properties };
 }
 
@@ -299,7 +323,7 @@ async function main() {
           ...((auth.length || ep.securityAuth?.length) && { auth: [...(ep.securityAuth || []), ...auth] }),
           ...(pathParams.length && { pathParams }),
           ...(queryParams.length && { queryParams }),
-          ...(ep.requestBody && { requestBody: extractRequestBody(ep.requestBody, spec) }),
+          ...(ep.requestBody && { requestBody: extractRequestBody(ep.requestBody, spec, { specName: name, method: ep.method, path: ep.path }) }),
           responses: simplifyResponses(ep.responses, spec),
           responseSchema: extractResponseSchema(ep.responses, spec),
         };
