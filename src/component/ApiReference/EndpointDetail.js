@@ -558,7 +558,7 @@ function UrlBar({ endpoint, onTryIt }) {
   // Fallback if no servers match (shouldn't happen, but safety net)
   const effectiveServers = servers.length > 0 ? servers : allServers.slice(0, 1);
 
-  const [selectedBase, setSelectedBase] = useState(effectiveServers[0].url.replace(/\/+$/, ''));
+  const [selectedBase, setSelectedBase] = useState((effectiveServers[0]?.url || '').replace(/\/+$/, ''));
   const [copied, setCopied] = useState(false);
 
   function copyUrl() {
@@ -576,7 +576,7 @@ function UrlBar({ endpoint, onTryIt }) {
 
   // Keep selectedBase in sync when endpoint changes
   React.useEffect(() => {
-    setSelectedBase(effectiveServers[0].url.replace(/\/+$/, ''));
+    setSelectedBase((effectiveServers[0]?.url || '').replace(/\/+$/, ''));
   }, [endpoint.path, endpoint.method]);
 
   const segments = parsePathSegments(endpoint.path || '');
