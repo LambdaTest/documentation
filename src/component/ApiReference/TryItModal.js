@@ -76,7 +76,7 @@ function CodeHighlight({ code, language }) {
 }
 
 function buildCurl(endpoint, username, password, params, baseUrl) {
-  let url = `${baseUrl || endpoint.baseUrl}${endpoint.path}`;
+  let url = `${(baseUrl || endpoint.baseUrl).replace(/\/+$/, '')}${endpoint.path}`;
   if (endpoint.pathParams) {
     endpoint.pathParams.forEach((p) => {
       url = url.replace(`{${p.name}}`, params[p.name] || `{${p.name}}`);
@@ -332,7 +332,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
     setLoading(true);
     setResponse(null);
 
-    let url = `${selectedServer}${endpoint.path}`;
+    let url = `${selectedServer.replace(/\/+$/, '')}${endpoint.path}`;
     if (endpoint.pathParams) {
       endpoint.pathParams.forEach((p) => {
         url = url.replace(`{${p.name}}`, params[p.name] || '');
