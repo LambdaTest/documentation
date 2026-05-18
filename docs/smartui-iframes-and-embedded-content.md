@@ -46,6 +46,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Pages often include **iframes**: embedded apps, chat widgets, consent managers, or **video players** (YouTube, Vimeo). SmartUI captures what the **browser paints** in your <BrandName /> session. How much you can **inspect or target in the DOM** depends on whether the iframe is **same-origin** or **cross-origin** with the top page.
 
+## What to expect (summary)
+
+| Question | Short answer |
+|----------|----------------|
+| Are iframes supported? | **Yes** — snapshots reflect the **real browser output**, including iframe regions when they render. |
+| Will third-party iframes always match pixel-for-pixel? | **No** — cross-origin embeds are **timing- and environment-dependent**; that is expected. |
+| Can SmartUI read DOM inside another site’s iframe? | **No** — browsers block that for cross-origin content. |
+
+Embeds load asynchronously; third-party players (YouTube, Vimeo) may show different pixels between runs because of consent, ads, or regional UI. Use waits, **`ignoreDOM`** on the container, or layout comparison when the embed is out of scope.
+
 ## Same-origin vs cross-origin
 
 | Case | What you can expect |
