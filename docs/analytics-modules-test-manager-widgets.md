@@ -12,6 +12,8 @@ keywords:
  - Milestone Trends
  - Execution Progress
  - Test Execution Burndown
+ - Defects by Severity
+ - Tester Assignment
 
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: TestMu AI
@@ -195,5 +197,35 @@ Clicking any point on the Actual line opens a drill-down modal titled **Test Exe
 ### Value Proposition
 
 By comparing the actual burndown against the expected line and watching the footer metrics, you can quickly see whether execution is ahead, on track, or slipping — enabling early course correction, better capacity planning, and more reliable release predictions. The drill-down makes it easy to go from a high-level slip directly to the specific instances that are holding the run back.
+
+## Defects by Severity
+
+The Defects by Severity widget displays a bar chart of Jira defects linked to your test cases and test runs, grouped by their severity level.
+
+### How it works?
+
+* Each bar represents a severity level — **Critical**, **High**, **Medium**, and **Low** — with its value showing the count of linked Jira defects at that severity.
+* Defects are sourced from Jira issues linked to test cases or raised during test runs in Test Manager.
+* Click any bar to drill down into the underlying list of issues for that severity.
+* Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
+
+### Value Proposition
+
+This widget helps you assess release risk at a glance by surfacing how many high-impact defects are outstanding. By focusing on Critical and High severity bars first, you can prioritize the issues most likely to block a release.
+
+## Tester Assignment
+
+The Tester Assignment widget displays a horizontal stacked bar chart with one bar per assigned tester, showing the workload and execution progress of each tester side by side.
+
+### How it works?
+
+* Each bar represents a tester, and its length reflects the total number of test run instances assigned to them.
+* Each bar is broken down into stacked segments by test instance status — **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
+* Click any segment to drill down into the underlying list of test run instances for that tester and status.
+* Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
+
+### Value Proposition
+
+This widget lets you compare workload and execution progress across testers at a glance, making it easy to spot uneven assignment, identify testers who are behind, and rebalance effort to keep a release on track.
 
 
