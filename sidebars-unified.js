@@ -69,7 +69,7 @@ const docsSidebar = [
   },
   {
     type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
-    items: items(s.RealDeviceSidebar),
+    items: s.RealDeviceSidebar.slice(1).flat(),
   },
   {
     type: 'category', label: 'Test Manager', collapsible: true, collapsed: true,
