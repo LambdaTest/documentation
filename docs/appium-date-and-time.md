@@ -100,12 +100,17 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 ---
 ## Supported Platforms
 
-| Platform  | OS Version    | Support Status                  |
-| --------- | ------------- | ------------------------------- |
-| iOS       | 14 and above  |  Fully Supported               |
+| Platform  | OS Version          | Support Status     |
+| --------- | ------------------- | ------------------ |
+| iOS       | 14 and above        | Fully Supported    |
+| Android   | 10 and above        | Fully Supported    |
 
-:::note
-This feature is currently not supported on Android. Support for Android is planned in a future update.
+:::warning Unsupported Android Devices
+Custom date and time configuration is not supported on certain Android device models — primarily from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices, the Appium hook will return the following error:
+
+`Custom date and time hook is not supported on this device. Please try on another device_id.`
+
+If you encounter this error, retry your automation run on a different Android device.
 :::
 
 ---
