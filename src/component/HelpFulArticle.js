@@ -2,10 +2,10 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ThemedImage from "@theme/ThemedImage";
 export default function HelpFulArticle() {
-    const thumbsUpLight = useBaseUrl("/img/thumbsUp_light.svg");
-    const thumbsUpDark = useBaseUrl("/img/thumbsUp_dark.svg");
-    const thumbsDownLight = useBaseUrl("/img/thumbsDown_light.svg");
-    const thumbsDownDark = useBaseUrl("/img/thumbsDown_dark.svg");
+    const thumbsUpLight = useBaseUrl("https://www.testmuai.com/support/img/thumbsUp_light.svg");
+    const thumbsUpDark = useBaseUrl("https://www.testmuai.com/support/img/thumbsUp_dark.svg");
+    const thumbsDownLight = useBaseUrl("https://www.testmuai.com/support/img/thumbsDown_light.svg");
+    const thumbsDownDark = useBaseUrl("https://www.testmuai.com/support/img/thumbsDown_dark.svg");
     return (
         <HelpFulArticleClass 
             thumbsUpLight={thumbsUpLight}
@@ -156,8 +156,8 @@ class HelpFulArticleClass extends React.Component {
                 </div>
                                <div className="social_button">
                         <h3 className='feedback__box__title feedback__box__title_helpful'>Still need help?</h3>
-                        <span onClick={() => window.openLTChatWidget()} className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Chat with Us</span>
-                        <a role="button" tabIndex="0" href="https://community.testmuai.com/" target="_blank" className="chat_btn"><img loading="lazy" src="/support/img/community.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Ask the Community</a>
+                        <span onClick={() => window.openLTChatWidget()} className="chat_btn"><img loading="lazy" src="https://www.testmuai.com/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Chat with Us</span>
+                        <a role="button" tabIndex="0" href="https://community.testmuai.com/" target="_blank" className="chat_btn"><img loading="lazy" src="https://www.testmuai.com/support/img/community.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Ask the Community</a>
                         {/* <a href="https://accounts.lambdatest.com/register" target="_blank"  className="btnlink">Start Free Testing</a> */}
                     </div>
                     </div> 
