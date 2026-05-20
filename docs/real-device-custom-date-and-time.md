@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 
-Testing applications often requires validation across different date, time, and format scenarios. <BrandName /> now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real iOS and Android devices — both in **manual** sessions and via **Appium automation hooks**.
+Testing applications often requires validation across different date, time, and format scenarios. <BrandName /> now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real **iOS (14+)** and **Android (10+)** devices — both in **manual** sessions and via **Appium automation hooks**.
 
 This enables use cases like testing scheduled alerts, AM/PM behaviors, time-bound features, and regional formatting validations.
 
@@ -62,9 +62,9 @@ This enables use cases like testing scheduled alerts, AM/PM behaviors, time-boun
 
 **Step 1:** Log into your <BrandName /> dashboard and navigate to **Real Devices** > **App Testing**.
 
-**Step 2:** Select your desired app and an iOS device (iOS 14+), then click **Start** to launch your session.
+**Step 2:** Select your desired app and a supported device (iOS 14+ or Android 10+), then click **Start** to launch your session.
 
-**Step 3:** Once the session starts, open the **iOS Settings** tab in the left sidebar.
+**Step 3:** Once the session starts, open the **iOS Settings** or **Android Settings** tab in the left sidebar, based on the device platform.
 
 **Step 4:** Click on **Set Date and Time** to open the configuration modal. 
 
@@ -73,6 +73,10 @@ This enables use cases like testing scheduled alerts, AM/PM behaviors, time-boun
 **Step 5:**  In the **modal**, configure the **date**, **time**, and **time format** as needed, then click **Update** to apply the changes to the device.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic-last.png').default} className="doc_img"/>
+
+:::note
+On Android devices, certain models — particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs** — do not support custom date and time configuration. On such devices, the modal will display a **Not Supported** message.
+:::
 
 
 ---
@@ -118,9 +122,12 @@ The modal includes four options to simulate various datetime-related behaviors:
 | Platform | Configuration Methods       | OS Versions Supported |
 | -------- | --------------------------- | --------------------- |
 | iOS      | Manual + Appium Executor    | iOS 14 and above      |
+| Android  | Manual + Appium Executor    | Android 10 and above  |
 
-:::note
-This feature is currently not supported on Android. Support for Android is planned in a future update.
+:::warning
+Custom date and time configuration is not supported on certain Android device models — particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices, the modal will display a **Not Supported** message during manual sessions, and the Appium hook will return the following error during automation:
+
+`Custom date and time hook is not supported on this device. Please try on another device_id.`
 :::
 
 ---
