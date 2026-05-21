@@ -9,6 +9,35 @@ function safeBase64(str) {
   }
 }
 
+// Coerce a string value from an input field to the correct JS type based on the schema type.
+// This ensures array/object/boolean/number fields are sent as their proper types, not strings.
+export function coerceBodyValue(raw, type) {
+  if (!raw && raw !== 0 && raw !== false) return raw;
+  const t = (type || '').toLowerCase();
+  if (t.includes('array') || t.includes('object')) {
+    if (typeof raw === 'string') {
+      const trimmed = raw.trim();
+      if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
+        try { return JSON.parse(trimmed); } catch { /* fall through */ }
+      }
+      // Treat comma-separated values as a string array for array types
+      if (t.includes('array') && trimmed) {
+        return trimmed.split(',').map((s) => s.trim()).filter(Boolean);
+      }
+    }
+    return raw;
+  }
+  if (t.includes('integer') || t.includes('number')) {
+    const n = Number(raw);
+    return isNaN(n) ? raw : n;
+  }
+  if (t === 'boolean') {
+    if (raw === 'true') return true;
+    if (raw === 'false') return false;
+  }
+  return raw;
+}
+
 // prism language mapping — only use languages bundled in prism-react-renderer
 export const LANGUAGES = [
   { label: 'cURL',       prism: 'clike' },
@@ -48,11 +77,16 @@ export function generateCodeExample(endpoint, language, { username, password, pa
   const isMultipart = contentType === 'multipart/form-data';
   const bodyExample = bodyProps.length > 0
     ? Object.fromEntries(bodyProps.map((p) => {
-        const val = (params && params[`__body__${p.name}`]) ||
-          (p.type.includes('integer') || p.type.includes('number') ? 0 :
-           p.type.includes('boolean') ? true :
-           p.type.includes('array') ? [] :
-           `<${p.name}>`);
+        const raw = params && params[`__body__${p.name}`];
+        let val;
+        if (raw) {
+          val = coerceBodyValue(raw, p.type);
+        } else {
+          val = p.type.includes('integer') || p.type.includes('number') ? 0 :
+                p.type.includes('boolean') ? true :
+                p.type.includes('array') ? [] :
+                `<${p.name}>`;
+        }
         return [p.name, val];
       }))
     : null;
