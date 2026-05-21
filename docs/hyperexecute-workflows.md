@@ -66,7 +66,7 @@ Workflows are schedule and platform driven, not commit-driven yet. Workflows can
    - **Workflow name**
    - **Branch name** (source branch containing the YAML)
    - **YAML file path** (path in repo) or add Custom YAML
-3) (Optional) Configure the **schedule** or skip it if you want to run workflow manually.
+3) (Optional) Configure the **schedule** or skip it if you want to run workflow manually. See [Schedule Configuration](#schedule-configuration) for details.
 4) (Optional) You can **link your workflow** by selecting existing workflows to trigger automatically after this workflow completes successfully.
 5) (Optional) You may also define **Workflow Variables** which can be used in the YAML to customize behavior at runtime for a specific workflow.
 6) Click **Finish** and your workflow is ready. Click on Play button in the workflow list to run the job manually.
@@ -83,6 +83,50 @@ If you don’t see a job after clicking Run or after the scheduled time, open th
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/mm0v54k4vzmb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
   </div>
+
+## Schedule Configuration
+
+During workflow creation (Step 2 of 3), you can configure the **Triggering Schedule Details** to automate when and how often your workflow runs.
+
+### Trigger Frequency
+
+You can choose from three trigger options:
+
+- **Once** — The workflow runs automatically as soon as it is created. No manual execution needed.
+- **Later** — Schedule the workflow to run at a specific date and time.
+- **Every** — Set up recurring execution by selecting specific days of the week (Mon–Sun) and a time. For example, you can schedule a workflow to run every Monday, Wednesday, and Friday at 9:00 AM.
+
+:::note
+The schedule is set in your **local timezone** and stored internally in UTC. This ensures workflows trigger at the correct time regardless of where team members are located.
+:::
+
+### Workflow End Date (Expiry)
+
+Every scheduled workflow requires a **Workflow ends on** date. After this date, the workflow will stop executing automatically. This ensures workflows do not run indefinitely and helps manage resource usage.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-schedule-config.png').default} alt="Workflow Schedule Configuration" className="doc_img"/>
+
+:::tip
+You can update the schedule and end date at any time by editing the workflow from the actions menu.
+:::
+
+## Manage Workflows
+
+Once a workflow is created, you can manage it from the workflow list within your Project. Each workflow row displays the schedule, last execution status, and the last 5 jobs.
+
+### Retrigger a Workflow
+
+Click the **Play** button (▶) next to a workflow to manually trigger it. This re-runs the workflow using the same configuration (branch, YAML, and variables). You can also edit variable values at runtime before triggering.
+
+### Workflow Actions Menu
+
+Click the **three dots menu** (⋯) on any workflow to access the following actions:
+
+- **Edit Workflow** — Modify the workflow name, branch, YAML path, schedule, linked workflows, or variables.
+- **Clone Workflow** — Duplicate an existing workflow configuration. This creates a copy with the same settings, which you can then modify as needed.
+- **Delete Workflow** — Permanently remove a workflow. This does not delete any jobs that were previously triggered by the workflow.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-actions-menu.png').default} alt="Workflow Actions Menu" className="doc_img"/>
 
 ## Connected Workflows (Test Chains)
 Use Workflow Linking to form test chains. For example, run a daily smoke suite first and trigger a broader regression only if smoke passes. You can link across projects you own to coordinate multi-repo testing.

@@ -121,6 +121,11 @@ Once the test is complete, you can view the test result on the automation dashbo
 
 For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
 
+## Running QMetry Tests on HyperExecute
+
+If you have completed the QMetry setup above, you can also run your QMetry test scripts on [HyperExecute](/support/docs/getting-started-with-hyperexecute/) for faster, parallelized test execution. HyperExecute supports the QMetry framework and its native reporting, so your existing QMetry test suite can be executed at scale without any changes to your test scripts.
+
+To get started, create a [HyperExecute Project](/support/docs/hyperexecute-projects/) connected to your repository containing the QMetry test scripts, configure your [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/), and trigger the job via the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) or a [Workflow](/support/docs/hyperexecute-workflows/).
 
 > Congrats! You have successfully integrated the QMetry app with your <BrandName /> account and ran your test cases over the <BrandName />'s cloud based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
