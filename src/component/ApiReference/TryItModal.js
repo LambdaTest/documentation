@@ -4,7 +4,7 @@ import { Highlight, themes } from 'prism-react-renderer';
 import MethodBadge from './MethodBadge';
 import InlineText from './InlineText';
 import styles from './TryItModal.module.css';
-import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton } from './langUtils';
+import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton, coerceBodyValue } from './langUtils';
 
 const githubWithGreenKeys = {
   ...themes.github,
@@ -97,7 +97,7 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
   const contentType = endpoint.requestBody?.contentType || 'application/json';
   let bodyLine = '';
   if (bodyProps.length > 0) {
-    const bodyEntries = bodyProps.map((p) => [p.name, params[`__body__${p.name}`] || '']);
+    const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
     if (contentType === 'multipart/form-data') {
       bodyLine = bodyEntries
         .filter(([, v]) => v)
@@ -358,7 +358,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
         fetchBody = fd;
         // Don't set Content-Type for FormData — browser sets it with boundary
       } else {
-        const bodyObj = Object.fromEntries(bodyProps.map((p) => [p.name, params[`__body__${p.name}`] || '']).filter(([, v]) => v));
+        const bodyObj = Object.fromEntries(bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]).filter(([, v]) => v));
         if (Object.keys(bodyObj).length) {
           fetchBody = JSON.stringify(bodyObj);
           fetchHeaders['Content-Type'] = 'application/json';
@@ -557,6 +557,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                     description={p.description}
                     enumValues={p.enum}
                     value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
+                    placeholder={(p.type || '').toLowerCase().includes('array') ? 'e.g. ["val1", "val2"] or val1, val2' : undefined}
                   />
                 ))}
               </CollapsibleSection>
