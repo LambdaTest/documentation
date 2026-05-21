@@ -508,6 +508,11 @@ module.exports = {
                 id: "hyperexecute-algoqa-integration",
               },
               {
+                type: "doc",
+                label: "GitHub App",
+                id: "hyperexecute-github-app-integration",
+              },
+              {
                 type: "category",
                 collapsed: true,
                 label: "Azure Test Plan",

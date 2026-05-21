@@ -407,6 +407,28 @@ env:
   PLATFORM: windows
 ```
 
+#### Spanish Character Encoding
+
+HyperExecute VMs support Spanish character encoding, ensuring tests with Spanish language content and special characters (e.g., ñ, á, é, í, ó, ú, ü, ¿, ¡) execute correctly. You can configure this using the `env` and `pre` flags in your YAML file.
+
+```yaml
+env:
+  LANG: es_ES.UTF-8
+  LC_ALL: es_ES.UTF-8
+
+pre:
+  - sudo locale-gen es_ES.UTF-8
+  - sudo update-locale LANG=es_ES.UTF-8
+```
+
+:::tip
+If you are using Java-based frameworks, you can also set the encoding via `JAVA_TOOL_OPTIONS`:
+```yaml
+env:
+  JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
+```
+:::
+
 ***
 
 ### `runtime`

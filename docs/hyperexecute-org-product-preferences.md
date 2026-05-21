@@ -65,6 +65,10 @@ Now, to access your organization product preferences, follow the below mentioned
   </div>
 </div>
 
+:::tip Session Expiry
+To configure automatic session expiry for your organization, navigate to **Organization Settings → Security → Session Expiry**. You can set the duration for session expiration from predefined options (default: 30 days). Admins can also allow team members to customize their own session expiry settings. Learn more in [Settings and Security](/support/docs/settings-and-security/).
+:::
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
