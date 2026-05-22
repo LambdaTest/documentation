@@ -1,0 +1,113 @@
+---
+id: beta-testers-management
+title: "Beta Testers and Teams Management"
+hide_title: false
+sidebar_label: Beta Testers Management
+description: Add individual beta testers, group them into Beta Teams, and use them to control who can download builds and receive notifications in TestMu AI App Distribution.
+keywords:
+    - lambdaTest
+    - testmu ai beta testers
+    - beta tester management
+    - tester teams
+    - app distribution access control
+    - external testers
+    - qa team management
+url: https://www.testmuai.com/support/docs/beta-testers-management/
+site_name: TestMu AI
+slug: beta-testers-management/
+canonical: https://www.testmuai.com/support/docs/beta-testers-management/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Beta Testers Management",
+          "item": `${BRAND_URL}/support/docs/beta-testers-management/`
+        }]
+      })
+    }}
+></script>
+
+**Beta Testers** in <BrandName /> [App Distribution](/support/docs/app-distribution/) are the people you invite to download builds and receive new-build notifications. You can add testers individually, group them into **Beta Teams**, and then assign teams or individual testers to any app's sharing list.
+
+This is a one-time, **organization-level** setup — once a tester is added, you can reuse them across every app in your organization.
+
+You can manage testers from the sidebar under **Real Device → App Management and Distribution → Beta Testers**.
+
+<!-- <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/beta-testers-members.png').default} alt="Beta Testers page showing the Beta Testers tab with tester emails, team tags, and a Pending invite" className="doc_img"/> -->
+
+---
+
+## Before You Begin
+
+- A <BrandName /> account with **App Distribution enabled** for your organization.
+- The **email addresses** of the testers you want to invite. Testers can be inside or outside your organization, new builds can be accessed via the link received in their mail inbox.
+
+---
+
+## Add Beta Testers
+
+Beta Testers are the individual people you invite to access authenticated builds shared from an app's distribution settings.
+
+**Step 1:** Navigate to **Beta Testers** in the sidebar.
+
+**Step 2:** Click **+ Add Tester**.
+
+**Step 3:** Enter the tester's **email address**. New-build notifications will be sent to this email.
+
+**Step 4 (Optional):** Add the tester directly to one or more existing teams from the same dialog.
+
+**Step 5:** Click **Add Tester**. This sends the tester a welcome email so they can join your organization as a Beta Tester.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/beta-tester.png').default} alt="Add Beta Tester dialog with email field and optional team checkboxes" className="doc_img"/>
+
+:::info Pending invites
+
+Until the tester accepts the invite, a **Pending** tag appears next to their email in the Beta Testers list. You can't add a tester to a team until they accept the invite.
+
+:::
+
+---
+
+## Create Beta Teams
+
+Teams are groups of testers that make it easier to manage access and notifications at scale. Instead of adding individual testers to each app, you assign a team — and all current (and future) members of that team get access automatically.
+
+<!-- <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/beta-teams-list.png').default} alt="Beta Teams tab listing teams with tester counts and descriptions" className="doc_img"/> -->
+
+**Step 1:** Navigate to **Beta Teams**.
+
+**Step 2:** Click **+ Create Team**.
+
+**Step 3:** Enter a **team name** (for example, `QA Team`, `Release Candidates`, `External Testers`) and an optional description.
+
+**Step 4:** Select testers from the list to add as members. Only testers who have accepted their invite are selectable.
+
+**Step 5:** Click **Create Team**.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/beta-teams.png').default} alt="Create Team side panel with name, description, and selectable testers" className="doc_img"/>
+
+When a team is assigned to an app's sharing list, all members of that team can download authenticated builds and receive notifications.
+
+---
+
+## Related Resources
+
+- [App Distribution on Real Devices](/support/docs/app-distribution/) - upload builds, configure sharing, and notify testers.
