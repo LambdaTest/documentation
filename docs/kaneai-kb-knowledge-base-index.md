@@ -11,7 +11,7 @@ keywords:
   - kaneai guides
   - kaneai best practices
   - test authoring
-url: https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index
+url: https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index/
 site_name: TestMu AI
 slug: kaneai-kb-knowledge-base-index/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Knowledge Base",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index/"
         }]
       })
     }}

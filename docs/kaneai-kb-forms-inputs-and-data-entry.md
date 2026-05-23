@@ -11,7 +11,7 @@ keywords:
   - kaneai inputs
   - kaneai data entry
   - form testing
-url: https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry
+url: https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry/
 site_name: TestMu AI
 slug: kaneai-kb-forms-inputs-and-data-entry/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Forms, Inputs & Data Entry",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-forms-inputs-and-data-entry/"
         }]
       })
     }}

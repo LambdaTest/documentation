@@ -1,7 +1,7 @@
 {
     "index_name": "testmuai",
     "start_urls": [
-        "https://www.testmuai.com/support/docs"
+        "https://www.testmuai.com/support/docs/"
     ],
     "stop_urls": [],
     "sitemap_urls": [

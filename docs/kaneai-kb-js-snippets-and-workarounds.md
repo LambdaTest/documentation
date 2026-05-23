@@ -11,7 +11,7 @@ keywords:
   - kaneai js snippet
   - kaneai workaround
   - kaneai limitations
-url: https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds
+url: https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds/
 site_name: TestMu AI
 slug: kaneai-kb-js-snippets-and-workarounds/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "JS Snippets & Workarounds",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds/"
         }]
       })
     }}

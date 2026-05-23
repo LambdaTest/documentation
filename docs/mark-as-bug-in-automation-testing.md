@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * **Real Time Testing:** Test your web-app with live interaction by running it on VMs hosted by TestMu AI cloud server.
 * **Screenshot Testing:** Automated bulk screenshot testing on 25 (browsers + OS) combinations in a single test session.
 * **Responsive Testing:** Perform cross-browser testing across a variety of mobile and desktop devices to ensure your website renders well across different viewports. Run responsive testing on 46 devices in a single test session.
-* **Automation Testing:** Perform automated cross-browser testing with our on-cloud Selenium Grid. Execute parallel testing to reduce your test cycles. Our Selenium Grid is compatible with every [test automation](https://www.testmuai.com/automation-testing) framework that supports Selenium.
+* **Automation Testing:** Perform automated cross-browser testing with our on-cloud Selenium Grid. Execute parallel testing to reduce your test cycles. Our Selenium Grid is compatible with every [test automation](https://www.testmuai.com/automation-testing/) framework that supports Selenium.
 * **Smart UI Testing:** Automated visual regression testing that performs a pixel-to-pixel comparison between multiple images and highlights any UI deviations such as padding, icon, text, and more with respect to the baseline images.
 
 **Did You Know?**
