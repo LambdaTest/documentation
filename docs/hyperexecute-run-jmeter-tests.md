@@ -79,6 +79,7 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
   - **Split CSV :** Enables splitting the input data from a CSV file among different threads or regions. This ensures organized data utilization across parallel executions.
   - **Job Labels :** Add meaningful labels or tags to test executions for better identification and traceability in logs and reports.
   - **Machine count :**  Specify the number of machines (or nodes) to use for parallel test execution. This parameter is essential for scaling test workloads or reducing execution time.
+  - **Java Version :** Choose the Java runtime to execute the tests with. Java 11 is the default; Java 25 is also available.
 
 :::info
 **Supported Regions :** HyperExecute supports the following regions for performance testing
@@ -89,6 +90,13 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
 - Brazil South (São Paulo State, Brazil)
 - Mexico Central (Querétaro State, Mexico)
 :::
+
+### User Properties
+
+Override selected JMeter properties for this run. The following [user properties](https://jmeter.apache.org/usermanual/test_plan.html#properties) are currently configurable:
+
+- **`jmeter.save.saveservice.subresults`** — Whether sub-results (for example, sub-samples generated within a transaction or by HTTP redirects) are written to the results file. Set to `false` to reduce result file size.
+- **`httpclient.socket.https.cps`** — Characters per second cap on HTTPS downloads for the HttpClient sampler. Use it to simulate low-bandwidth conditions; `0` means unlimited.
 
 - Click on the **Run Test** button.
 
