@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Azure DevOps App",
-          "item": `${BRAND_URL}/support/docs/lambdatest-azure-devops-app/`
+          "item": `${BRAND_URL}/support/docs/testmu-azure-devops-app/`
         }]
       })
     }}

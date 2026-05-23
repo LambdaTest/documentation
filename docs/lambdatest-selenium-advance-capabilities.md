@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Advanced Capabilities",
-          "item": `${BRAND_URL}/support/docs/lambdatest-selenium-advance-capabilities/`
+          "item": `${BRAND_URL}/support/docs/testmu-selenium-advance-capabilities/`
         }]
       })
     }}

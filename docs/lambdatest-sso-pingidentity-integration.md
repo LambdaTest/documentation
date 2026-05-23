@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest SSO",
-          "item": `${BRAND_URL}/support/docs/lambdatest-sso-pingidentity-integration`
+          "item": `${BRAND_URL}/support/docs/testmu-sso-pingidentity-integration/`
         }]
       })
     }}

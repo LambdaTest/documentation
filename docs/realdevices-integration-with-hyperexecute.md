@@ -105,7 +105,7 @@ You can seamlessly trigger your favorite mobile app framework test scripts with 
       <p>Test your Android mobile applications on Maestro automation cloud.</p>
     </div>
   </a>
-  <a href="/support/docs/hyperexecute-xcui-testing">
+  <a href="/support/docs/hyperexecute-xcui-testing/">
     <div className="support_inners">
       <h3>XCUI Testing</h3>
       <p>Test your iOS applications on XCUI automation cloud.</p>
