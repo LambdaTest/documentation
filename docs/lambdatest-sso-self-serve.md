@@ -35,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "SSO Self Serve",
-          "item": `${BRAND_URL}/support/docs/testmu-sso-self-serve`
+          "item": `${BRAND_URL}/support/docs/testmu-sso-self-serve/`
         }]
       })
     }}
@@ -87,7 +87,7 @@ Once configured, click on continue
 <h4>Create Connection without Metadata URL </h4>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-without-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection">Manage SSO Connection</a>.
+7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection/">Manage SSO Connection</a>.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 

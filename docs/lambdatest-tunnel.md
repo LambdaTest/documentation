@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Tunnel",
-          "item": `${BRAND_URL}/support/docs/lambdatest-tunnel/`
+          "item": `${BRAND_URL}/support/docs/testmu-tunnel/`
         }]
       })
     }}

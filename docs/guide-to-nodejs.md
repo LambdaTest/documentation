@@ -160,7 +160,7 @@ Do note the use of the remote webdriver here. We have passed browser environment
 To set up your own choice of environment for the test in the code, you can leverage our Capability Generator tool.
 
 <div className="download_btn mb-10">
-<a href="https://www.testmuai.com/capabilities-generator">TestMu AI Capability Generator Tool</a>
+<a href="https://www.testmuai.com/capabilities-generator/">TestMu AI Capability Generator Tool</a>
 </div>
 
 > **Tear Down**: The tear down method helps the <BrandName /> platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.

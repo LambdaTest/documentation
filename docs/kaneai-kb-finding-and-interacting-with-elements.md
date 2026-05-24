@@ -11,7 +11,7 @@ keywords:
   - kaneai locators
   - element targeting
   - natural language testing
-url: https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements
+url: https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements/
 site_name: TestMu AI
 slug: kaneai-kb-finding-and-interacting-with-elements/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Finding & Interacting with Elements",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements/"
         }]
       })
     }}

@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Google Custom Integration",
-          "item": `${BRAND_URL}/support/docs/lambdatest-sso-google-custom-using-saml/`
+          "item": `${BRAND_URL}/support/docs/testmu-sso-google/`
         }]
       })
     }}
