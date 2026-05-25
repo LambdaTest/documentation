@@ -40,7 +40,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). The dashboard is built to be **WCAG-compliant**, ensuring an accessible experience for all users.
+This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/).
+
+:::note WCAG Accessibility
+The HyperExecute dashboard supports **WCAG compliance** as an enterprise feature. To enable WCAG-compliant accessibility for your organization, please contact your account team or reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span>.
+:::
 
 ## Jobs Page
 
@@ -76,10 +80,6 @@ The Jobs page provides a filter bar to narrow down the job list based on the fol
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/job-list/filters-panel.png').default} alt="Job Filters" className="doc_img"/>
 
-To filter jobs for a specific user, click on the **Users** filter and select the desired user from the dropdown list.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-list/filters-user-select.png').default} alt="Filter by User" className="doc_img"/>
-
 ***
 
 ## Job Details Page
@@ -95,7 +95,7 @@ You can click on a particular Job to navigate to the Job Details Page.
   -   **Job Duration**: The time it took to run your entire Job.
   -   **Test Duration**: The time it took to run your tests.
   -   **Type**: The job type (Selenium, Playwright, etc) along with the mode of the job (AutoSplit or Matrix).
-  -   **Git Commit ID** - For jobs triggered via [Workflows](/support/docs/hyperexecute-workflows/) or [sourcePayload](/support/docs/hyperexecute-how-to-configure-sourcePayload/), the git commit hash is displayed in the job metadata, providing traceability to the specific code changes tested.
+  -   **Git Commit ID** - The git commit hash is displayed in the job metadata, providing traceability to the specific code changes tested.
   -   **[Artifacts](/support/docs/hyperexecute-artifacts/)**: Can be used to configure and generate custom reports and artifacts.
   -   **[Report](/support/docs/hyperexecute-reports/)**: A detailed report for your test execution for the Job.
 - The left side shows all the Tasks (Just-in-time testing environments) that were a part of the Job.
