@@ -1466,6 +1466,7 @@ module.exports = {
           "kaneai-ci-cd-automation",
           "test-runs-configurations",
           "kaneai-scheduled-test-runs",
+          "kaneai-test-run-instance-view",
         ],
       },
 
