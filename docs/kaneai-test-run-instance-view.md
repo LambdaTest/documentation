@@ -1,0 +1,183 @@
+---
+id: kaneai-test-run-instance-view
+title: Test Run Instance View
+hide_title: false
+sidebar_label: Test Run Instance View
+description: Learn how to use the new Test Run Instance view in KaneAI to replay execution steps, compare screenshots, inspect command logs, and debug test failures with AI-powered root cause analysis.
+keywords:
+  - test run instance
+  - kaneai execution view
+  - autoplay steps
+  - compare screenshots
+  - command logs
+  - root cause analysis
+  - test debugging
+  - test manager
+url: https://www.testmuai.com/support/docs/kaneai-test-run-instance-view/
+site_name: TestMu AI
+slug: kaneai-test-run-instance-view/
+canonical: https://www.testmuai.com/support/docs/kaneai-test-run-instance-view/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Test Run Instance View",
+          "item": `${BRAND_URL}/support/docs/kaneai-test-run-instance-view/`
+        }]
+      })
+    }}
+></script>
+
+:::note Early Access
+This feature is currently being rolled out in phases and may not be available on all accounts. If you do not see the **New View** badge on your test instances, your account has not been enabled yet.
+:::
+
+The Test Run Instance view provides a step-level execution replay that maps each executed action back to the original steps authored in KaneAI. Instead of reviewing raw automation logs, you can walk through the exact sequence of steps - with screenshots, command details, and failure context - in a single unified interface.
+
+## Test Run Summary Dashboard
+
+When you open a test run, the summary dashboard gives you an at-a-glance view of the entire run.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-listing-new-view.png').default} alt="test-run-summary-dashboard" className="doc_img"/>
+
+Test instances with the **New View** badge support the enhanced instance view described below.
+
+## Test Instance Detail View
+
+Click on any test instance to open the detailed execution view. The page is divided into three main areas: the **Steps Panel** on the left, the **Screenshot/Video Panel** in the center, and the **Inspector Panel** on the right.
+
+### Execution Metadata
+
+The top bar displays key information about the test instance:
+
+- **Status** - Passed or Failed indicator
+- **Duration** - Total execution time
+- **Configurations** - Browser version, OS, and resolution
+- **Version** - Test case version used for this execution
+- **Executed by** - The user or scheduler that triggered the run
+- **Test Case ID** - Link back to the original test case
+- **Labels** - Associated job and task identifiers
+
+For failed tests, a banner prompts you to **Generate RCA** (Root Cause Analysis) or **View failed step** to jump directly to the point of failure.
+
+### Steps Panel
+
+The left panel lists every step that was executed, mapped back to the original steps authored in KaneAI. Each step shows:
+
+- The **action type** (click, assert, set variable, execute JavaScript, navigate, scroll, etc.)
+- The **execution duration** for that step
+- A **pass/fail indicator** (green dot for passed, red dot for failed, gray for skipped)
+- **Variable values** and **assertion results** inline
+
+Steps that include sub-actions - such as loops, conditionals, or JavaScript snippets - are expandable to reveal the full execution detail.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-quick-view.png').default} alt="test-instance-steps-panel" className="doc_img"/>
+
+#### Autoplay Steps
+
+Click the **Autoplay Steps** button at the top of the steps panel to automatically walk through each step in sequence. As each step is highlighted, the center panel updates to show the corresponding screenshot captured during execution. This provides a visual replay of the entire test execution without needing to click through each step manually.
+
+### Screenshot and Video Panel
+
+The center panel shows a screenshot of the application under test at the point when the selected step was executed. You can toggle between:
+
+- **Screenshot view** - A static capture of the page at that step
+- **Video view** - A recorded video of the execution
+
+At the bottom of the panel, a **step progress bar** displays colored dots representing each step - green for passed, red for failed. Click any dot to jump directly to that step.
+
+Hovering over a dot shows a preview tooltip with the step number and action name.
+
+### Compare Original Screenshot
+
+Click **Compare original screenshot** above the screenshot panel to open a side-by-side comparison of:
+
+- **Original while authoring** - The screenshot captured when the test was first authored in KaneAI
+- **Current execution screenshot** - The screenshot from this execution run
+
+This helps you identify UI changes, layout shifts, or missing elements that may have caused a test failure - especially useful when a test that previously passed starts failing after a UI update.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-compare-original-screenshot.png').default} alt="compare-original-screenshot" className="doc_img"/>
+
+## Debugging Failed Tests
+
+When a test instance fails, the view highlights the failure clearly so you can diagnose the issue quickly.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-failure.png').default} alt="failed-test-instance" className="doc_img"/>
+
+- The **failed step** is highlighted with a red border and shows the assertion result (e.g., "Assertion False").
+- Steps after the failure are **grayed out**, indicating they were not executed.
+- The screenshot panel shows the state of the application at the exact moment of failure.
+- Click **View failed step** in the top banner to jump directly to the failure point.
+- Click **Generate RCA** to trigger an AI-powered root cause analysis that examines the failure context and suggests probable causes.
+
+## Command Logs
+
+Click the panel toggle on the right side to open the **All Commands** tab. This panel shows every low-level command that was executed during the test, grouped by step.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instances-command-logs.png').default} alt="command-logs-panel" className="doc_img"/>
+
+Each command group is expandable and shows:
+
+- **Command type** - Execute JavaScript, Command, HTTP request, etc.
+- **Duration** - Time taken for each individual command
+- **Timestamp** - Exact execution time
+- **Script content** - For JavaScript commands, the script that was executed
+
+Use the **Search Commands** bar to find specific commands, or filter using the **View** dropdown to narrow by command type.
+
+## Execution Logs
+
+The right panel provides multiple log tabs for in-depth debugging:
+
+- **Framework** - Logs from the test framework used during execution
+- **Console** - Browser console output captured during the test
+- **Device** - Device-level logs (useful for mobile test instances)
+- **Network** - Network request and response details
+- **HyperExecute** - Raw HyperExecute execution logs including runtime information such as network idle times, DOM load events, and script execution output
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-hyex-logs.png').default} alt="hyperexecute-execution-logs" className="doc_img"/>
+
+Additionally, the following tabs are available for extended analysis:
+
+- **SmartUI** - Visual regression testing results
+- **Performance** - Performance metrics captured during execution
+- **Accessibility** - Accessibility audit results for the tested pages
+
+You can dock the logs panel to the **right** or **bottom** of the screen depending on your preference.
+
+## Navigate Between Tests
+
+Click the **View tests** button in the top-right corner to open a panel listing all test instances in the current test run. This panel lets you:
+
+- **Search** for specific tests by name
+- **Filter** by status - view only failed, passed, or stopped tests
+- **Switch** between tests without navigating back to the test run listing
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-tests-listing.png').default} alt="navigate-between-tests" className="doc_img"/>
+
+---
+
+## Related Guides
+
+- [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) - Create and execute test runs
+- [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/) - Run dependent test cases in order
+- [Test Run Configurations](/support/docs/test-runs-configurations/) - Manage browser and device configurations
+- [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/) - Automate test run scheduling
