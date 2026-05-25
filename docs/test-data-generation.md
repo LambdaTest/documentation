@@ -1,4 +1,4 @@
----
+﻿---
 id: test-data-generation
 title: Test Data Generation
 hide_title: false
@@ -86,7 +86,7 @@ Protect credentials, tokens, and other confidential values from showing up in ne
 
 **Documentation:**
 - [Network Data Masking for Selenium](/support/docs/network-data-masking/)
-- [HyperExecute Lambda Masking (Release 2.3.1)](/support/docs/hyperexecute-release-notes-2-3-1/#mask-your-sensitive-data)
+- [HyperExecute Lambda Masking (Release 2.3.1)](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ---
 
