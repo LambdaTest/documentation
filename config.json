@@ -1,5 +1,5 @@
 {
-    "index_name": "testmuai",
+    "index_name": "lambdatest-internal",
     "start_urls": [
       "https://www.testmuai.com/support/"
     ],
