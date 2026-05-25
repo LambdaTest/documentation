@@ -58,7 +58,6 @@ Click the `Generate New Code` button to go to code generation page where you can
 
 <img loading="lazy" src={require('../assets/images/kane-ai/generate-code-page.png').default} alt="code-generation-dashboard" className="doc_img"/>
 
-
 ## Web Frameworks
 
 ### Selenium
@@ -118,3 +117,37 @@ By default all KaneAI authored tests automation scripts for App are generated in
 :::note
  For now test runs only work for code generation in Selenium - Python & Appium Python. The support for others will be rolled out shortly.
 :::
+
+## Understanding the Code Tab
+
+After code generation completes, the **Code** tab shows the status of each generated code entry and lets you run a Sample Run Execution to validate it before adding the test case to a full Test Run.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/code-gen-view.png').default} alt="KaneAI Code tab showing generated code with status and actions" className="doc_img"/>
+
+### Code Generation States
+
+| State | What it means |
+|---|---|
+| **Generating** | Code is being created. No actions are available until generation finishes. |
+| **Unverified** | Code generation is complete, but a Sample Run Execution has not been run, or the test case has changed since the last run. |
+| **Verifying** | A Sample Run Execution is in progress via HyperExecute. |
+| **Verified** | The most recent Sample Run Execution completed successfully. |
+
+### Actions Available After Code is Generated
+
+Once code is generated, the following actions are available:
+
+- **Execute & Verify** — Triggers a Sample Run Execution on HyperExecute. This runs the generated code the same way a real KaneAI test run would, including respecting assertion outcomes. While the run is in progress, the status changes to **Verifying** and a **Sample execution in progress · View in HyperExecute** link appears. Once complete, the status updates to **Verified** and the button label changes to **Execute**.
+- **Download** — Downloads the generated code to your local machine.
+
+### Sample Run Execution Behavior
+
+- Sample Run Execution can only be initiated from the **Code** tab of a test case.
+- The **Execute** button is always enabled — you can proceed to run the test on HyperExecute regardless of whether a Sample Run Execution has passed, failed, or not been triggered.
+
+### Adding Test Cases to a Test Run
+
+Test cases with generated code can be added to a Test Run regardless of the Sample Run Execution status — whether it passed, failed, or was never triggered. The only cases where a test case is not available for selection in a Test Run are:
+
+- Code generation failed or was not initiated.
+- Code generation is still in progress.
