@@ -2,6 +2,50 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TestMu AI",
+  "legalName": "LambdaTest, Inc.",
+  "alternateName": ["LambdaTest", "LambdaTesting", "Lambda Test", "TestMu AI"],
+  "url": "https://www.testmuai.com",
+  "logo": "https://www.testmuai.com/logo.png",
+  "description": "TestMu AI - AI Powered Testing Tool | AI Testing Agents On Cloud",
+  "foundingDate": "2017",
+  "founder": [
+    { "@type": "Person", "name": "Asad Khan", "jobTitle": "Co-Founder & CEO" },
+    { "@type": "Person", "name": "Jay Singh", "jobTitle": "Co-Founder & Chief Customer Officer" },
+    { "@type": "Person", "name": "Mayank Bhola", "jobTitle": "Co-Founder & Head of Product" },
+    { "@type": "Person", "name": "Mudit Singh", "jobTitle": "Co-Founder & Head of Growth" }
+  ],
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "California",
+      "postalCode": "94102",
+      "streetAddress": "Suite 200, 1390 market Street San Francisco",
+      "addressCountry": "USA"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Noida One, Tower A, 2nd Floor, KLJ, Sector 62",
+      "addressLocality": "Noida",
+      "postalCode": "201309",
+      "addressCountry": "India"
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/testmu-ai/",
+    "https://www.linkedin.com/company/lambdatest/",
+    "https://www.instagram.com/testmuai/",
+    "https://www.facebook.com/testmuai/",
+    "https://x.com/testmuai",
+    "https://www.youtube.com/@TestMuAI",
+    "https://www.pinterest.com/testmuai/",
+    "https://github.com/lambdaTest"
+  ]
+};
+
 function NewTag({ value }) {
   return (
     <span className="newTagColor" style={{ marginLeft: '4px', verticalAlign: 'middle' }}>
@@ -31,6 +75,7 @@ export default function Home() {
       description="Explore guides, API docs, and examples for TestMu AI (Formerly LambdaTest) - the AI-native quality engineering platform.
 "
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <div style={{ overflow: 'hidden' }}>
       {/* Hero */}
       <div className="Doc_intro_cta">
