@@ -95,7 +95,7 @@ Currently, only **GitHub**, **Bitbucket** and **Azure** repositories are support
 
 Click on **Save** button to finish the setup of your project.
 
-
+Once the project is created, the project header displays key details including the framework, language, owner, creation time, and a **GitHub/Bitbucket/Azure repository link**. Click the repository icon to navigate directly to the linked source code repository.
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>

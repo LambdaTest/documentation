@@ -167,3 +167,48 @@ https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration
 The redirect contains the `installation_id` parameter, which is required for configuration.
 
 > **Note:** Only Org Admins can complete this configuration step.
+
+## Multi-Tenant GitHub Support
+
+HyperExecute supports connecting your organization to **multiple GitHub instances** at the same time. This is useful when your team works across both GitHub.com and a private GitHub Enterprise Server (e.g., `ghes.yourcompany.com`).
+
+Each GitHub instance is called a **tenant**, identified by the hostname of the Git provider.
+
+### How It Works
+
+When you create a project, HyperExecute automatically detects the tenant from your repository URL:
+
+| Repository URL | Detected Tenant |
+|---------------|----------------|
+| `https://github.com/my-org/my-repo` | `github.com` |
+| `https://ghes.yourcompany.com/my-org/my-repo` | `ghes.yourcompany.com` |
+
+Each tenant maintains its own:
+- GitHub App configuration (App ID, Installation ID)
+- RSA private key for token generation
+- Short-lived installation access tokens
+
+Credentials are **fully isolated** between tenants — tokens and keys from one GitHub instance are never used for another.
+
+### What You Can Do
+
+- Connect to **multiple GitHub instances** (e.g., GitHub.com + GitHub Enterprise Server)
+- Have **multiple GitHub Apps** on the same tenant for different GitHub organizations
+- Each <BrandName /> org can have **one GitHub App per (tenant + GitHub org name)** combination
+
+### Setup for Non-Default Tenants
+
+For GitHub Enterprise Server or any tenant other than `github.com`:
+
+1. Follow [Approach 2](#approach-2-your-existing-github-app-on-prem) or [Approach 3](#approach-3-private-github-app-on-prem-dedicated-app) to install the GitHub App on your enterprise instance.
+
+2. Create an **org-level secret** for the tenant's private key:
+   `github_app_private_key_<tenant_hostname>`
+   For example, if your GitHub Enterprise Server is `ghes.yourcompany.com`:
+   `github_app_private_key_ghes.yourcompany.com`
+
+3. Complete the registration on the <BrandName /> setup page. The tenant is recorded automatically based on the GitHub App's origin.
+
+:::note
+For the default tenant (`github.com`), the platform's built-in Marketplace GitHub App handles key management automatically — no manual secret creation is needed.
+:::
