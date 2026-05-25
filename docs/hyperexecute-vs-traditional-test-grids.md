@@ -86,4 +86,6 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 - <b>Fine-Grained Concurrency Control:</b> Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
 
+- <b>Linux Autoscaling:</b> HyperExecute automatically scales computing resources up or down based on workload. When test demand increases, additional resources are provisioned dynamically, and when demand decreases, resources are released — ensuring optimal performance without manual intervention.
+
 > For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/key-features-of-hyperexecute/)
