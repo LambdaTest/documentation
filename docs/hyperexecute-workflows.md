@@ -110,13 +110,13 @@ Every scheduled workflow requires a **Workflow ends on** date. After this date, 
 You can update the schedule and end date at any time by editing the workflow from the actions menu.
 :::
 
+### Retrigger a Workflow
+
+Even if you have set up a schedule, you can manually re-trigger a workflow at any time. Click the **Play** button (▶) next to a workflow to trigger it. This re-runs the workflow using the same configuration (branch, YAML, and variables). You can also edit variable values at runtime before triggering.
+
 ## Manage Workflows
 
 Once a workflow is created, you can manage it from the workflow list within your Project. Each workflow row displays the schedule, last execution status, and the last 5 jobs.
-
-### Retrigger a Workflow
-
-Click the **Play** button (▶) next to a workflow to manually trigger it. This re-runs the workflow using the same configuration (branch, YAML, and variables). You can also edit variable values at runtime before triggering.
 
 ### Workflow Actions Menu
 
@@ -160,3 +160,4 @@ Variables let you customize job runs without the need of creating multiple workf
 - **Is dynamic test discovery required?** Yes, Workflows currently work with the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 - **Can I trigger other workflows automatically?** Yes, via Workflow Linking to build [Test Chains](/support/docs/hyperexecute-test-chains/).
 - **Among runtime and workflow variables, what takes precedence?** Runtime value > Workflow‑level defaults.
+- **What timezone are schedules displayed in?** All workflow schedules are displayed in your **local timezone**.
