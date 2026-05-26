@@ -1,11 +1,11 @@
 ---
 id: team-management
 title: Team Management
-hide_title: false
+hide_title: true
 sidebar_label: Team Management
 description: This documentation will help you create and manage teams on TestMu AI.
 keywords:
-- teams management testmu ai
+- team management testmu ai
 - manage teams
 url: https://www.testmuai.com/support/docs/team-management/
 site_name: TestMu AI
@@ -39,88 +39,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-The <BrandName /> Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
+# Team Management
+---
+
+<BrandName /> **Team Management** lets organizations collaborate on Web and App automation testing by creating isolated environments where users and their tests are grouped together.
+
+:::note
+This feature is available exclusively on the **Enterprise plan**. To enable it for your organization, please reach out to your account manager.
+:::
 
 This functionality addresses the need for:
 
-- **Organized Test Management:** Group users and corresponding tests based on specific projects, teams, or departments.
-- **Improved Visibility and Control:** Admins can control user access to specific test data, preventing unauthorized viewing of confidential tests.
-- **Enhanced Team Collaboration:** Facilitate communication and knowledge sharing within designated teams.
+- **Organized test management:** Group users and their tests by specific projects, teams, or departments.
+- **Improved visibility and control:** Admins can control which users access specific test data, preventing unauthorized viewing of confidential tests.
+- **Enhanced team collaboration:** Facilitate communication and knowledge sharing within designated teams.
 
-## Create an Organization
+## Set Your Organization Name
+---
 
-- Go to the **Settings** page > select **Organization Settings** section.
-- Click on the **Teams** tab and edit your **Organization Name**.
+**Step 1:** Navigate to **Settings** and select **Organization Settings**.
+
+**Step 2:** Open the **Teams** tab and edit your **Organization Name**.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/team-management/1.mp4').default} type="video/mp4" />
 </video>
 
-## Create your First Team
+## Create Your First Team
+---
 
-- Click on the **Create Team** button in the Teams page.
-- Enter the name of your team.
+**Step 1:** On the **Teams** page, click **Create Team**.
+
+**Step 2:** Enter a name for your team.
+
 :::info
-You cannot leave the Team name as empty. It is mandatory to enter the name of your team.
+Team name is required and cannot be empty.
 :::
-- Select all the **users** you want to add to your team and click on **Finish** button.
+
+**Step 3:** Select the **users** you want to add to the team and click **Finish**.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/team-management/2.mp4').default} type="video/mp4" />
 </video>
 
-## Edit your Team Settings
+## Edit Your Team Settings
+---
 
-- Go to your **Teams** section.
-- Click on the **three dots (...)** > **Edit** button.
-- Edit your team setting by updating your teams name or by adding/removing the users from the team.
-- Click on the **Finish** button.
+**Step 1:** Open the **Teams** section.
+
+**Step 2:** Click the **three-dot (⋮) menu** next to the team and select **Edit**.
+
+**Step 3:** Update the team's name, or add and remove users.
+
+**Step 4:** Click **Finish**.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/team-management/3.mp4').default} type="video/mp4" />
 </video>
 
-## Delete your Team
+## Delete Your Team
+---
 
-- Go to your **Teams** section.
-- Click on the **three dots (...)** > **Delete** button.
+**Step 1:** Open the **Teams** section.
 
-Your created team will be permanently deleted.
+**Step 2:** Click the **three-dot (⋮) menu** next to the team and select **Delete**.
+
+The team is permanently deleted.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/team-management/4.mp4').default} type="video/mp4" />
 </video>
 
 ## Access Rules for Builds, Tests, and Test Details
+---
 
-This section outlines a series of cases designed to verify test visibility within the system.
+This section explains who can see which test results based on team membership.
 
 :::info
-- All the user roles (admin, user, guest) are independent of the tests visibility in teams.
+Test visibility within teams is independent of user roles (Admin, User, Guest).
 :::
 
-The following scenarios explain who can see the test results and under what circumstances:
+:::tip
+- To restrict a user from accessing all tests, add the user to a team.
+- A user can belong to multiple teams.
+:::
 
-> - To restrict any user from accessing all tests, please ensure to add that user to a team.
-- A user can be a part of multiple teams.
+### Scenario 1: No Teams Exist
 
-### Scenario 1: No Teams are Created
-In this case, any of the user can see all test results.
+All users can see all test results.
 
-### Scenario 2: Teams are Created
-If you create a team, only members of that team and users who are not part of any team can see the test results for that team. Additionally, team members can view their own team's tests as well as the tests run by users who are not associated with any team.
+### Scenario 2: Teams Exist
 
-- #### Users are in Different Teams
-  Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
+Only members of a team can see that team's test results. Users who are not assigned to any team can see test results from all users who are also not in a team — and team members can additionally see those unassigned users' tests.
 
-- #### Users are in the Same Team
-  If you have created a team, then all the users of the same team can see each other's test results.
+#### Users in Different Teams
 
-- #### Users are not in a Team, but Teams exist
-  If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
+If two teams each have five users, neither team can see the other's test results.
 
-### Scenario 3: Users Switches Teams
-When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
+#### Users in the Same Team
 
-### Scenario 4: All Teams are Deleted
-If all teams are removed, then all users can view all test results again.
+All users in the same team can see one another's test results.
+
+#### Users Not in Any Team (When Teams Exist)
+
+Users who are not assigned to any team can still see all test results.
+
+### Scenario 3: A User Switches Teams
+
+When a user is moved from one team (Team A) to another (Team B), they lose access to Team A's test results and gain access to Team B's test results.
+
+### Scenario 4: All Teams Are Deleted
+
+If all teams are removed, every user can view all test results again.
+
+> If you have any questions, please reach out via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us at [support@testmuai.com](mailto:support@testmuai.com).
