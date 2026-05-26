@@ -1,5 +1,5 @@
 ---
-id: behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid
+id: behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid
 title: Selenium With Behave
 sidebar_label: Behave
 description: Run Behave automation scripts on TestMu AI Selenium Grid with 3000+ browser and OS combinations. Setup, config, and execution steps included.

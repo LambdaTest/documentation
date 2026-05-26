@@ -1,5 +1,5 @@
 ---
-id: robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid
+id: robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid
 title: Selenium With Robot Framework
 sidebar_label: Robot
 description: Run Robot Framework Selenium tests on TestMu AI cloud grid with 3000+ browser and OS combinations. Setup, config, and parallel execution included.

@@ -1,5 +1,5 @@
 ---
-id: pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid
+id: pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid
 title: Selenium With PyTest
 sidebar_label: pytest
 description: Run PyTest Selenium test scripts on TestMu AI cloud grid with 3000+ desktop and mobile browsers. Setup, config, and parallel execution guide.
