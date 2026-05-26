@@ -19,6 +19,8 @@ canonical: https://www.testmu.ai/support/docs/sub-organizations/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+
 
 Sub-organizations let you segregate test data across multiple business units within your <BrandName /> account. You can also distribute the concurrency you have purchased among sub-organizations, so each operates independently with its own administrators, users, and settings.
 
