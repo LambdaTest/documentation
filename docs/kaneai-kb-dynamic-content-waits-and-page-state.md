@@ -11,7 +11,7 @@ keywords:
   - kaneai dynamic content
   - kaneai loading
   - async testing
-url: https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state
+url: https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/
 site_name: TestMu AI
 slug: kaneai-kb-dynamic-content-waits-and-page-state/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Dynamic Content, Waits & Page State",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/"
         }]
       })
     }}

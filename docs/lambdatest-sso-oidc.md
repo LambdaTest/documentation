@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "OIDC Integration",
-          "item": `${BRAND_URL}/support/docs/lambdatest-sso-oidc/`
+          "item": `${BRAND_URL}/support/docs/testmu-sso-oidc/`
         }]
       })
     }}

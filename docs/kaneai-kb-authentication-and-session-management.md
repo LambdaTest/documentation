@@ -12,7 +12,7 @@ keywords:
   - kaneai MFA
   - kaneai login testing
   - kaneai session
-url: https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management
+url: https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/
 site_name: TestMu AI
 slug: kaneai-kb-authentication-and-session-management/
 ---
@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Authentication & Session Management",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/"
         }]
       })
     }}

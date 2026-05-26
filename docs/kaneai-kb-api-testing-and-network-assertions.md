@@ -11,7 +11,7 @@ keywords:
   - kaneai network assertions
   - kaneai curl
   - api ui testing
-url: https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions
+url: https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions/
 site_name: TestMu AI
 slug: kaneai-kb-api-testing-and-network-assertions/
 ---
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "API Testing & Network Assertions",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions/"
         }]
       })
     }}

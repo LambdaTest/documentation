@@ -48,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Using Environment Variables for Authentication Credentials
 ***
 
-To provide a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating TestMu AI Authentication Credentials in your test scripts. This allows our cloud servers to establish a secure connection between your local system and our [cloud-based Selenium Grid](https://www.testmuai.com/selenium-automation). This document shows you how to set up your TestMu AI authentication credentials as environment variables for your respective operating system. This setup also helps authenticate your colleague's test cases when executed against an individual account.
+To provide a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating TestMu AI Authentication Credentials in your test scripts. This allows our cloud servers to establish a secure connection between your local system and our [cloud-based Selenium Grid](https://www.testmuai.com/selenium-automation/). This document shows you how to set up your TestMu AI authentication credentials as environment variables for your respective operating system. This setup also helps authenticate your colleague's test cases when executed against an individual account.
 
 ## Where to Find Authentication Credentials
 ---
@@ -117,7 +117,7 @@ Add your credentials as System variables through the Windows Environment Variabl
 ---
 Reference your environment variables in test scripts for each programming language.
 
-Now that we have set up our TestMu AI Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.testmuai.com/selenium-automation) scripts for invoking your automation test suites on TestMu AI Selenium Grid. This section shows you how to reference environment variables for different programming languages.
+Now that we have set up our TestMu AI Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.testmuai.com/selenium-automation/) scripts for invoking your automation test suites on TestMu AI Selenium Grid. This section shows you how to reference environment variables for different programming languages.
 
 ### Java
 ---

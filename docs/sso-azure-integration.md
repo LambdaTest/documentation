@@ -118,7 +118,7 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
 <h4>Create Connection with Metadata URL </h4>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-**Step 14:** Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/lambdatest-sso-manage-connection/">Manage SSO Connection</a>.
+**Step 14:** Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection/">Manage SSO Connection</a>.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 
