@@ -249,7 +249,7 @@ pre:
 
 testDiscovery:
   type: raw 
-  mode: dynamic
+  mode: remote
   command: echo test
 
 testRunnerCommand: node $env:ACCELQ --url "https://poc.accelq.io" --userID "<Accelq UserID>" --apiKey "<Accelq API Key>" --tenantCode "poc" --jobID "<Accelq jobID>"; C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\Dashboard\AQAgentControllerShutdown.exe;

@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-This guide provides a complete reference for integrating C# NUnit SpecFlow tests with HyperExecute, covering edge cases, solutions, YAML setup, artifact management, dynamic test discovery, and reporting.
+This guide provides a complete reference for integrating C# NUnit SpecFlow tests with HyperExecute, covering edge cases, solutions, YAML setup, artifact management, remote test discovery, and reporting.
 
 ## 1. Autosplit
 ### Edge Case
@@ -187,12 +187,12 @@ partialReports:
 Static or incorrect discovery may skip new tests, misdetect test tags, or fail in parallel executions.
 
 ### Solution
-Dynamic discovery automatically detects new @tags or features, enabling parallelization and reducing manual maintenance.
+Remote discovery automatically detects new @tags or features, enabling parallelization and reducing manual maintenance.
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
 ```
 
@@ -230,7 +230,7 @@ Projects may have diverse tagging strategies, making standard discovery unreliab
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   shell: bash
   command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/features | grep 'public void' | cut -d' ' -f2- | awk '{print $3}' | sed 's/()$//'  | sed 's/TestTearDown//g'
 ```

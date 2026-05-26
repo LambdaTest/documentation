@@ -127,7 +127,7 @@ env:
 runson: win
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   args:
     featureFilePath: ${Path}
      

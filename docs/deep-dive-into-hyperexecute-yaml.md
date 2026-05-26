@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yam
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -155,7 +154,9 @@ type: automatic
 In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
 
 #### `mode`
-This attribute defines where the test discovery occurs and how it is executed. HyperExecute now supports three discovery modes: `local`, and `remote`.
+This attribute defines where the test discovery occurs and how it is executed. HyperExecute supports two discovery modes: `local` and `remote`.
+
+> **NOTE:** The earlier `dynamic` discovery mode has been deprecated. Use `remote` instead for all new and existing YAML configurations.
 
 ```yaml
 #test discovery happens on machine where CLI is running
@@ -164,21 +165,14 @@ mode: local  #or
 # test discovery happens in designated HyperExecute VMs
 mode: remote
 ```
-<!-- #test discovery happens on HyperExecute VMs
-mode: dynamic #or -->
+
 **`mode: local`**
 
 - **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
 - **Use Case:** Ideal for small projects or when tests need to be discovered locally.
 - **Limitations:** Requires dependencies installed locally and doesn’t support matrix-based distributions. Debugging logs are generated locally, limiting visibility.
 
-<!-- **`mode: dynamic`**
-
-- **Purpose:** Test discovery occurs on HyperExecute’s VMs during runtime, depending on the concurrency and OS settings.
-- **Use Case:** Suitable for scenarios where distributed test discovery is required across different VMs.
-- **Limitations:** Increases test execution time due to VM-level discovery. It also lacks efficient test distribution across VMs, and is incompatible with YAML 0.2 test discovery runners. -->
-
-**`mode: remote`** <NewTag value="NEW" bgColor="#ffec02" color="#000" />
+**`mode: remote`**
 
 The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines. 
 

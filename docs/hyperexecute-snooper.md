@@ -169,7 +169,7 @@ pre:
 
 testDiscovery:
   type: automatic
-  mode: dynamic
+  mode: remote
   args:
     featureFilePaths: features/sample_website
     frameWork: javascript

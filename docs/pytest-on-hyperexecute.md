@@ -198,7 +198,7 @@ post:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'def' *.py
 
 testRunnerCommand: pytest $test

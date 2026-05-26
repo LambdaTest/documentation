@@ -107,7 +107,7 @@ It also comes with a built-in interface for codeless automation testing and vali
   
   testDiscovery:
     type: raw
-    mode: dynamic
+    mode: remote
     command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'
   
   testRunnerCommand:  katalonc `-noSplash `-runMode=console `-projectPath="G:\foreman\Hyperexecute_Sample\Hyperexecute_Sample.prj" `-retry=0 `-testSuitePath="$test" `-browserType="firefox" `-executionProfile="default" `-apiKey="aaa9402b-6a2e-4621-a4c3-05fe356f5aad" `-`-config `-webui.autoUpdateDrivers=true

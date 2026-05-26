@@ -444,7 +444,7 @@ post:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
 
 testRunnerCommand: pytest -s --verbose $test

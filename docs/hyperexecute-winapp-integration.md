@@ -212,7 +212,7 @@ mergeArtifacts: true
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep 'public class' src/test/java/*.java | awk '{print$3}'
 
 testRunnerCommand:  mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test

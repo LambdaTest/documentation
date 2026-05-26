@@ -210,7 +210,7 @@ uploadArtefacts:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -rni 'Features' -e '@' --include=\*.feature | sed 's/.*@//'
 
 testRunnerCommand: dotnet test --logger "console;verbosity=detailed" --filter "(Category=$test)"

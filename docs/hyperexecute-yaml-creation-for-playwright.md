@@ -157,7 +157,7 @@ cacheDirectories:
 ```
 
 ## Q: What is `testDiscovery` and how can it be configured?
-`testDiscovery` identifies test files or methods to execute. It supports `raw` type with `static` or `dynamic` modes.
+`testDiscovery` identifies test files or methods to execute. It supports `raw` type with `static` or `remote` modes.
 
 **File-level discovery:**
 
@@ -173,7 +173,7 @@ testDiscovery:
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -rn "test(" tests | cut -d: -f1,2
 ```
 
