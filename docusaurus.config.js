@@ -44,7 +44,7 @@ module.exports = {
       }
     },
     typesense: {
-      typesenseCollectionName: 'lambdatest',
+      typesenseCollectionName: 'testmuai',
       typesenseServerConfig: {
         nodes: [
           {

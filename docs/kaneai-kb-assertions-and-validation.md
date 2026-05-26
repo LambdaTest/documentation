@@ -15,7 +15,7 @@ keywords:
   - DOM attribute assertions
   - CSS property assertions
   - textual query
-url: https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation
+url: https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation/
 site_name: TestMu AI
 slug: kaneai-kb-assertions-and-validation/
 ---
@@ -42,7 +42,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Assertions & Validation",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation/"
         }]
       })
     }}

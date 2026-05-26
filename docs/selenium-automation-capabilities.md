@@ -74,7 +74,7 @@ You can generate the capabilities in all six programming languages: Java, PHP, R
   </div>
   </a>
 
-  <a href = "/support/docs/lambdatest-selenium-advance-capabilities/">
+  <a href = "/support/docs/testmu-selenium-advance-capabilities/">
   <div className="support_inners">
     <h3>TestMu AI Advanced Capabilities</h3>
     <p>Discover additional capabilities offered by TestMu AI beyond Selenium defaults for more control over test execution.</p>

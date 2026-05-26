@@ -12,7 +12,7 @@ keywords:
   - kaneai android
   - kaneai iOS
   - mobile automation
-url: https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns
+url: https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns/
 site_name: TestMu AI
 slug: kaneai-kb-mobile-app-testing-patterns/
 ---
@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile App Testing Patterns",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns"
+          "item": "https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns/"
         }]
       })
     }}

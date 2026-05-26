@@ -43,10 +43,10 @@ export default function DocPaginator(props) {
           <p>&copy; {new Date().getFullYear()} TestMu AI Inc. All rights reserved.</p>
           <div className='side_footer_link'>
             <a role="button" tabIndex="0" href='https://status.lambdatest.io/'>Status</a>
-            <a role="button" tabIndex="0" href='https://www.testmuai.com/legal/terms-of-service'>Terms</a>
-            <a role="button" tabIndex="0" href='https://www.testmuai.com/legal/privacy'>Privacy</a>
-            <a role="button" tabIndex="0" href='https://www.testmuai.com/trust/security'>Security</a>
-            <a role="button" tabIndex="0" href='https://www.testmuai.com/pricing'>Pricing</a>
+            <a role="button" tabIndex="0" href='https://www.testmuai.com/legal/terms-of-service/'>Terms</a>
+            <a role="button" tabIndex="0" href='https://www.testmuai.com/legal/privacy/'>Privacy</a>
+            <a role="button" tabIndex="0" href='https://www.testmuai.com/trust/security/'>Security</a>
+            <a role="button" tabIndex="0" href='https://www.testmuai.com/pricing/'>Pricing</a>
             <a role="button" tabIndex="0" href='https://www.testmuai.com/blog/'>Blog</a>
           </div>
         </div>

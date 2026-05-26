@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid",
-          "item": `${BRAND_URL}/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/`
+          "item": `${BRAND_URL}/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
@@ -171,7 +171,7 @@ The first thing to note in this code is the use of remote webdriver. To access <
 In this example we are running a test on **Windows 10**, **Chrome 67 environment**. You can test your own choice of an environment by changing the parameters in the object. You can leverage our capabilities generator tool to create code for your environments.
 
 <div className="download_btn mb-10">
-<a href="https://www.testmuai.com/capabilities-generator">LambdaTest Capability Generator Tool</a>
+<a href="https://www.testmuai.com/capabilities-generator/">LambdaTest Capability Generator Tool</a>
 </div> 
 
 > **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.

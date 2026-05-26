@@ -1,5 +1,5 @@
 ---
-id: python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid
+id: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid
 title: Selenium With Python
 sidebar_label: Python
 description: Run Python Selenium test scripts on TestMu AI cloud grid with 3000+ browser and OS combinations. Step-by-step setup guide included.

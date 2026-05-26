@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "OneLogin Integration",
-          "item": `${BRAND_URL}/support/docs/lambdatest-sso-onelogin-using-saml/`
+          "item": `${BRAND_URL}/support/docs/testmu-sso-onelogin-using-saml/`
         }]
       })
     }}
