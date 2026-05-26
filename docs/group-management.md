@@ -3,9 +3,9 @@ id: group-management
 title: Group Management
 hide_title: true
 sidebar_label: Group Management
-description: This documentation will help you in creating the different groups and allot concurrency to those groups to perform test automation easily.
+description: This documentation will help you create groups and allocate concurrency across them on TestMu AI.
 keywords:
-- group-management-control
+- group management
 - testmu ai
 url: https://www.testmuai.com/support/docs/group-management/
 site_name: TestMu AI
@@ -38,77 +38,86 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Group Based Concurrency Distribution
-***
-<!-- For every enterprise that uses cloud services, access management for those cloud resources is vital. <BrandName /> Group Management is an authorization system that allows seamless access management of <BrandName /> resources. With <BrandName /> group-management, you can control who has access to <BrandName /> resources, how they can leverage those resources, and what domains they can have access to. -->
+# Group Management
+---
 
-The <BrandName /> Group Management will help you in creating the different Groups and allot concurrency to those groups. In this way, you can perform the test automation by dividing the concurrency among the groups.
+<BrandName /> **Group Management** lets you create groups and allocate concurrency across them, so test automation workloads can be distributed and isolated between teams or projects.
 
-## How to Create a New Group?
-***
+:::note
+This feature is available exclusively on the **Enterprise plan**. To enable it for your organization, please reach out to your account manager.
+:::
 
-**Step 1:** Login to your [LambdaTest](https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+:::tip
+All steps below assume you are signed in to your <BrandName /> account. Open the **Profile** icon in the top-right corner and select **Organization Settings** to access the **Groups** tab.
+:::
 
-<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
+## Create a New Group
+---
 
-**Step 2:** Select the <b>'Groups'</b> tab and click on <b>'+ Create'</b>.
+**Step 1:** Open the **Groups** tab and click **+ Create**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-2.png').default} alt="Select Groups tab and click Create"  className="doc_img"/>
 
-**Step 3:** Fill in the group name of your choice, allot the maximum concurrency using the sliders. After providing the details, click on <b>'Next'</b>.
+**Step 2:** Enter a name for your group and set the maximum concurrency using the sliders. Click **Next**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-3.png').default} alt="Define group name and manage concurrency"  className="doc_img"/>
 
-**Step 4:** Select users you want to add to the group, click on <b>'Next'</b>.
+**Step 3:** Select the users you want to add to the group, then click **Next**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-4.png').default} alt="Select users to add to the group"  className="doc_img"/>
 
-**Step 5:** Review the list of users you have selected to add to the group, then click on <b>'Finish'</b>. Your new group will be created successfully.
+**Step 4:** Review the list of users you have selected, then click **Finish**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-5.png').default} alt="Review added users and finish creating group"  className="doc_img"/>
 
-## How to View and Edit a Group?
-***
+Your new group is created.
 
-**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+## View and Edit a Group
+---
 
-<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
-
-**Step 2:** Click on the <b>'Groups'</b> tab, select the desired group you want to view and edit. Click on the 3 dots and then select <b>'Edit'</b> button.
+**Step 1:** Open the **Groups** tab. Click the **three-dot (⋮) menu** next to the group you want to view or edit, and select **Edit**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-6.png').default} alt="Select group and click Edit from context menu"  className="doc_img"/>
 
-**Step 3:** You can view and edit the Group Name and Concurrency settings. After making changes, click on <b>'Next'</b> to proceed.
+**Step 2:** Update the **Group Name** and **Concurrency** settings as needed, then click **Next**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-7.png').default} alt="Edit group name and manage concurrency"  className="doc_img"/>
 
-**Step 4:** You can add or remove users from the group. Select or deselect users as needed, then click on <b>'Add Users'</b> or <b>'Save Changes'</b> to save your modifications.
+**Step 3:** Select or deselect users to add or remove them from the group, then click **Add Users** (when adding) or **Save Changes** to apply your modifications.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-8.png').default} alt="Add or remove users from the group"  className="doc_img"/>
 
+## Delete a Group
+---
 
-<!-- ## How to Edit a Group?
-***
-
-**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on 'Organizational Settings'.
-
-<img loading="lazy" src={require('../assets/images/group-management/step201.webp').default} alt="Image"  className="doc_img"/> -->
-
-## How to Delete a Group?
-***
-
-**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
-
-<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
-
-**Step 2:** Click on the <b>'Groups'</b> tab, select the desired group you want to delete. Click on the 3 dots and then select <b>'Delete'</b> button.
+**Step 1:** Open the **Groups** tab. Click the **three-dot (⋮) menu** next to the group you want to remove, and select **Delete**.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-9.png').default} alt="Select group and click Delete from context menu"  className="doc_img"/>
 
-**Step 3:** A confirmation dialog will appear. Click on the <b>'Delete'</b> button to confirm. Your selected group will be deleted.
+**Step 2:** In the confirmation dialog, click **Delete** to confirm. The selected group is deleted.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-10.png').default} alt="Confirm deletion of the group"  className="doc_img"/>
 
 <br />
 
-> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@testmuai.com.
+> If you have any questions, please reach out via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us at [support@testmuai.com](mailto:support@testmuai.com).
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Group Management
+      </span>
+    </li>
+  </ul>
+</nav>
