@@ -71,7 +71,7 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 - Click Add Test Case to include them.
 
 :::tip
-Only KaneAI test cases for which code generation has been successful will be available for selection here.
+All KaneAI test cases with generated code are available for selection here, regardless of whether Sample Run Execution has been triggered or its outcome. Test cases where code generation has not started or is still in progress will not be available.
 :::
 
 ### Step 4: Assign and Configure Test Cases
