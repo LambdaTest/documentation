@@ -407,9 +407,9 @@ env:
   PLATFORM: windows
 ```
 
-#### Spanish Character Encoding
+#### Special Character Encoding
 
-HyperExecute VMs support Spanish character encoding, ensuring tests with Spanish language content and special characters (e.g., ñ, á, é, í, ó, ú, ü, ¿, ¡) execute correctly. You can configure this using the `env` and `pre` flags in your YAML file.
+HyperExecute VMs support special character encoding, ensuring tests with multilingual content and special characters (e.g., ñ, á, é, í, ó, ú, ü, ¿, ¡) execute correctly. You can configure this using the `env` and `pre` flags in your YAML file.
 
 ```yaml
 env:
