@@ -45,6 +45,10 @@ The best way to analyze your flaky tests is to use Test Intelligence. Test Intel
 </div>
 </div>
 
+:::note Get Flaky Alerts on Slack
+Don't want to keep checking the dashboard? If you have the [Slack Integration](/docs/slack-integration/) enabled, turn on the **Flaky Test Messages** preference to receive a Slack alert the **first time** <BrandName /> detects a test as flaky — including the test name, build, and flake rate. Alerts are opt-in and off by default.
+:::
+
 ## Flakiness Trends
 The Flakiness Trends widget allows the QA teams to analyze the trends of the flaky tests executed on the platform categorized into Passed, Failed, and Flaky which can easily be filtered with the legends added at the top of the graph.
 
