@@ -117,9 +117,7 @@ This section explains who can see which test results based on team membership.
 
 :::info
 Test visibility within teams is independent of user roles (Admin, User, Guest).
-:::
 
-:::tip
 - To restrict a user from accessing all tests, add the user to a team.
 - A user can belong to multiple teams.
 :::
