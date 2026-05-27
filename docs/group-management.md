@@ -47,9 +47,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 This feature is available exclusively on the **Enterprise plan**. To enable it for your organization, please reach out to your account manager.
 :::
 
-:::tip
-All steps below assume you are signed in to your <BrandName /> account. Open the **Profile** icon in the top-right corner and select **Organization Settings** to access the **Groups** tab.
-:::
+## Before You Begin
+---
+
+Sign in to your <BrandName /> account. Open the **Profile** icon in the top-right corner and select **Organization Settings** to access the **Groups** tab. All steps below assume you have this page open.
 
 ## Create a New Group
 ---
