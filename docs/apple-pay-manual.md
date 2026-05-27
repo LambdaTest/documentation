@@ -44,12 +44,14 @@ With <BrandName /> App Live, you can test Apple Pay flows on **Real iOS Devices*
 
 Currently, Apple Pay manual testing in App Live is supported on these iOS real devices:
 
-| iOS Device   | iOS Version |
-|--------------|-------------|
-| iPhone 16    | 18          |
-| iPhone 15    | 17          |
-| iPhone 14    | 16          |
-| iPhone 13    | 15          |
+| iOS Device          | iOS Version |
+|---------------------|-------------|
+| iPhone 17 Pro Max   | 26          |
+| iPhone 17           | 26          |
+| iPhone 16           | 18          |
+| iPhone 15           | 17          |
+| iPhone 14           | 16          |
+| iPhone 13           | 15          |
 
 > We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 
@@ -79,11 +81,34 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 ---
 ### Step 4: Use Apple Pay in App Live
 
+The way you confirm an Apple Pay transaction depends on the iOS version of the device.
+
+<Tabs>
+  <TabItem value="ios-18-below" label="iOS 18 & below" default>
+
 Within the App Live session, you can use Apple Pay via the **Assistive Touch** option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is `123456`). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction.
 
 :::info
 - If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
 :::
+
+  </TabItem>
+  <TabItem value="ios-26-above" label="iOS 26 & above">
+
+Starting **iOS 26**, the Apple Pay confirmation flow has changed. You **no longer** need to use **Assistive Touch** or manually enter the device passcode. Instead, payment is confirmed directly from the **iOS Settings** panel in the App Live session.
+
+**Steps:**
+
+1. Once the **Wallet** is set up and the card is loaded, trigger the Apple Pay payment from your app or the demo website.
+2. In the App Live session, open the **iOS Settings** panel from the left sidebar.
+3. Navigate to the **Apple Pay Wallet → Card** section. The selected card (e.g., Visa) will be displayed with a **Confirm Payment** option.
+   - ![iOS 26 Confirm Payment Card View](../assets/images/real-device-app-testing/Apple_Pay/Apple-pay-iOS26-Confirm-Payment-Card.png)
+4. Click **Confirm Payment**. A panel will appear with the selected card and the **passcode** that is auto-populated.
+5. The system will automatically process the payment and display **Confirming Apple Pay payment...**, followed by **Processing Payment** on the device screen. No manual passcode entry is required.
+   - ![iOS 26 Confirm Payment Passcode](../assets/images/real-device-app-testing/Apple_Pay/Apple-pay-iOS26-Confirm-Payment-Code.png)
+
+  </TabItem>
+</Tabs>
 ---
 
 ## Additional Links
