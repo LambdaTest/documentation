@@ -209,7 +209,7 @@ partialReports:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep 'test_linux' Makefile | sed 's/\(.*\):/\1 /'
 
 testRunnerCommand: make $test

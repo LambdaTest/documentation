@@ -218,7 +218,7 @@ partialReports:
 # Details about HTML Formatter at https://pypi.org/project/behave-html-formatter/
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
 
 # Reports are generated in the pretty JSON format

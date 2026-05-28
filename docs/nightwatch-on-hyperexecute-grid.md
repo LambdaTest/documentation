@@ -218,7 +218,7 @@ partialReports:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/"//g'
 
 testRunnerCommand: ./node_modules/.bin/nightwatch -e $test

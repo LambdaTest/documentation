@@ -175,6 +175,13 @@ Click the **View tests** button in the top-right corner to open a panel listing 
 
 ---
 
+## Limitations
+
+- **Mobile Browser not supported** — The enhanced Test Run Instance view is currently not supported for Mobile Browser test executions.
+- **Applies to newly generated code only** — This view is available only for test cases whose code was generated after the feature was enabled. For older test cases, the previous automation details page will continue to be shown.
+
+---
+
 ## Related Guides
 
 - [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) - Create and execute test runs

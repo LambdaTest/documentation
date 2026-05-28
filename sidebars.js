@@ -1426,6 +1426,8 @@ module.exports = {
               "kaneai-conditional-logic",
               "kaneai-while-loops",
               "kane-ai-network-assertions",
+              "kaneai-advanced-settings",
+              "kaneai-custom-headers",
             ],
           },
           {
@@ -1435,7 +1437,6 @@ module.exports = {
             items: [
               "kaneai-dynamic-url-replacement",
               "kaneai-chrome-options",
-              "kaneai-custom-headers",
               "kaneai-smartui-visual-testing",
             ],
           },

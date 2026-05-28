@@ -233,7 +233,7 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: echo cloud
 
 testRunnerCommand: npx smartui --config .smartui.json exec -- dotnet run $test

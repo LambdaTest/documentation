@@ -112,7 +112,7 @@ partialReports:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep 'test name' xml/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 
 testRunnerCommand: mvn test dependency:resolve

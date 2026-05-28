@@ -100,7 +100,7 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   shell: bash
   command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
 
