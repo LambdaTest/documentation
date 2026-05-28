@@ -196,7 +196,7 @@ pre:
   - bin/deploy.sh
 testDiscovery:
 type: raw
-mode: dynamic
+mode: remote
 command: pytest --co -q tests | sed '$d'
 testRunnerCommand: pytest $test
 sourcePayload:

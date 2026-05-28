@@ -192,7 +192,7 @@ cacheDirectories:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'describe' *.test.js
 
 testRunnerCommand: npm test -- $test

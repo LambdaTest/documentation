@@ -202,7 +202,7 @@ cacheDirectories:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'describe' specs/*.spec.js
 
 testRunnerCommand: npm test $test

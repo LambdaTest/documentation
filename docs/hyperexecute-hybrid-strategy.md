@@ -65,7 +65,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 ### Prerequisites:
 
 -   The version of the YAML file that you are using is `0.1`.    
--   The test discovery mode has to be dynamic.
+-   The test discovery mode has to be `remote`.
 
 > You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
@@ -110,7 +110,7 @@ runson: ${matrix.os}
 ```yaml
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: snooper --featureFilePaths=src/main//Features/ --frameWork=java 
 ```
     
@@ -119,7 +119,7 @@ testDiscovery:
 ```yaml
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: snooper --featureFilePaths=src/main//Features/ --frameWork=java 
     winCommand: snooper --featureFilePaths=src/main//Features/ --frameWork=java 
     macCommand: snooper --featureFilePaths=src/main/**/Features/ --frameWork=java
@@ -166,7 +166,7 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   macCommand: |
     grep 'test name' xml/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
   winCommand: | 

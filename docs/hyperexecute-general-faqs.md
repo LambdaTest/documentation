@@ -119,7 +119,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 #### 13. **Can I group my tests to run in sequence instead of randomly distributing them?**
 
-  Yes, HyperExecute provides directives to group dependent tests together which need to run in sequence. Using dynamic test discovery, users can write unique test discovery commands for every node, where dependent tests will run in sequence. HyperExecute allows various directives to construct sophisticated testing pipelines to fulfill your use cases.
+  Yes, HyperExecute provides directives to group dependent tests together which need to run in sequence. Using remote test discovery, users can write unique test discovery commands for every node, where dependent tests will run in sequence. HyperExecute allows various directives to construct sophisticated testing pipelines to fulfill your use cases.
 
 ***
 

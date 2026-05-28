@@ -185,7 +185,7 @@ In this example, **browser** and **version** are the two choice parameters from 
 ```bash
 testDiscovery: 
     type: raw
-    mode: dynamic
+    mode: remote
     command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 
 testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}
