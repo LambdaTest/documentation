@@ -130,11 +130,17 @@ For more details on mobile app capabilities like biometric authentication, image
 
 ### Android Web
 
-Android Web test cases use the same advanced settings as [iOS App](#ios-app) — Network Configuration, GPS Location, and the same set of session settings applicable to mobile browser sessions on Android.
+Android Web test cases share most settings with [Android App](#android-app), with the following differences:
+
+- **Custom Headers** is available (Toggle + multi-input — add up to 10 custom HTTP headers)
+- **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
 ### iOS Web
 
-iOS Web test cases use the same advanced settings as [iOS App](#ios-app) — Network Configuration, GPS Location, and the same set of session settings applicable to mobile browser sessions on iOS.
+iOS Web test cases share most settings with [iOS App](#ios-app), with the following differences:
+
+- **Custom Headers** is available (Toggle + multi-input — add up to 10 custom HTTP headers)
+- **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
 ## How to Edit Advanced Settings
 
@@ -182,3 +188,4 @@ The version comparison view shows a diff of what changed — for example, update
 
 - **Advanced settings only** — Only advanced settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
 - **New version generated on every apply** — Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
+- **Version history diff for pre-rollout versions** — If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
