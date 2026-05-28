@@ -58,7 +58,7 @@ Workflows are schedule and platform driven, not commit-driven yet. Workflows can
 ## Prerequisites
 - A [HyperExecute Project](/support/docs/hyperexecute-projects/) connected to **GitHub** or **Bitbucket**.
 - A HyperExecute YAML present on the specified branch, or provide a Custom YAML during setup. New to YAML? See [Generate YAML](/support/docs/hyperexecute-generate-sample-yaml/) and the [Deep Dive](/support/docs/deep-dive-into-hyperexecute-yaml/).
-- Note: Workflows currently work with the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
+- Note: Workflows currently work with the [remote mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 
 ## Create a Workflow
 1) In your Project, click **Setup Workflow**.
@@ -157,6 +157,6 @@ Variables let you customize job runs without the need of creating multiple workf
 
 ## FAQ
 - **Which repos are supported for Projects?** Currently **GitHub** and **Bitbucket**.
-- **Is dynamic test discovery required?** Yes, Workflows currently work with the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
+- **Is remote test discovery required?** Yes, Workflows currently work with the [remote mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 - **Can I trigger other workflows automatically?** Yes, via Workflow Linking to build [Test Chains](/support/docs/hyperexecute-test-chains/).
 - **Among runtime and workflow variables, what takes precedence?** Runtime value > Workflow‑level defaults.

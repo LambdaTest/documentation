@@ -191,7 +191,7 @@ cacheDirectories:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'Scenario' *test.js
 
 testRunnerCommand: npx codeceptjs run $test --steps

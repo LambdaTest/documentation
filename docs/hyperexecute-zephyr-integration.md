@@ -176,7 +176,7 @@ post:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep 'public class' src/test/java/com/lambdatest/*.java | awk '{print$3}'
 
 testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test -P single

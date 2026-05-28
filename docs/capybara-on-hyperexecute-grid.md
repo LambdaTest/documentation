@@ -212,7 +212,7 @@ partialReports:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: snooper --featureFilePaths=features/ --frameWork=java
   
 testRunnerCommand: bundle exec cucumber "$test" --format html --out cucumber_results.html
