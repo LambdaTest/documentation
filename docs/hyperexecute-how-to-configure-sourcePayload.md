@@ -112,7 +112,7 @@ cacheDirectories:
   - node_modules
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'describe' ltblogsearch.test.js
 testRunnerCommand: npm test -- $test
 sourcePayload:

@@ -191,7 +191,7 @@ cacheDirectories:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -nri 'describe' tests  | sed 's/:test.*//'
 
 testRunnerCommand: npx playwright test $test

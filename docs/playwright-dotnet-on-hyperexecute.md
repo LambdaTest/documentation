@@ -200,7 +200,7 @@ runtime:
 
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: remote
   command: grep -lr 'GotoAsync' -ir --include=*.cs
   
 post:
