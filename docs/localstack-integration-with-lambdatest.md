@@ -70,7 +70,7 @@ With this integration, teams can perform tests at an impressive speed without co
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+1. A <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 2. A LocalStack account. Don’t have an account, you can create one [here](https://app.localstack.cloud/sign-in).
 
 

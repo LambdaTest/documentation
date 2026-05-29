@@ -64,7 +64,7 @@ All the code used in this guide is available in the sample repository.
 
 Make sure you have the following set up before you start.
 
-1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 3. Install [.NET Core SDK](https://dotnet.microsoft.com/download) 8.0 or later.
 4. Download [Selenium WebDriver](https://www.selenium.dev/downloads/) Language Binding for C#.

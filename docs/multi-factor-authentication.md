@@ -24,7 +24,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 **Multi-Factor Authentication (MFA)** adds an extra verification step at login on top of your password. After entering your password, you also provide a code from an authenticator app (such as Authy, Google Authenticator, or Microsoft Authenticator) or a biometric factor. This significantly reduces the risk of unauthorized access, even if your password is compromised.
 
 :::note
-All steps below assume you are signed in to your <BrandName /> account. If you don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>register for free</a>.
+All steps below assume you are signed in to your <BrandName /> account. If you don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 :::
 
 ## Enable User MFA
