@@ -66,7 +66,7 @@ All the code used in this guide is available in the sample repository.
 
 Make sure you have the following set up before you start.
 
-1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 3. Install [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 1.6 or higher.
 4. Install an IDE such as Eclipse or IntelliJ.

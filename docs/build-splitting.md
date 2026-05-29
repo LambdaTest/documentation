@@ -66,7 +66,7 @@ Follow these steps to configure Build Inactivity Time for your account.
 2. Every user within the organization can set their own build inactivity time.
 :::
 
-1. Log in to your TestMu AI account. Don't have an account, <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>sign up for free</a>.
+1. Log in to your TestMu AI account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 
 2. From the top-right corner, click on the Profile avatar, and navigate to **Profile > Product Preferences**.
