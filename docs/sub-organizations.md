@@ -39,7 +39,7 @@ Before setting up sub-organizations, review the following constraints:
 ## Create Your Sub-Organization
 ---
 
-**Step 1:** Sign in to your <BrandName /> account. If you don't have an account, <a href="https://testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
+**Step 1:** Sign in to your <BrandName /> account. If you don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

@@ -13,10 +13,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
 site_name: TestMu AI
 slug: tricentis-tosca-integration-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 <BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
 
@@ -26,7 +27,7 @@ This topic will be focusing on:
 
 ## Prerequisites For Running Tricentis Tosca Test Cases On Selenium Grid
 ***
-1. Log in to <BrandName />. If you haven’t signed up yet, [click here](https://accounts.lambdatest.com/register).
+1. Log in to <BrandName />. If you haven’t signed up yet, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>click here</a>.
 2. <BrandName /> Authentication Credentials:
    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL.You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 3. [Download Tosca](https://www.tricentis.com/software-testing-tool-trial-demo/) by logging in to the Tosca website.

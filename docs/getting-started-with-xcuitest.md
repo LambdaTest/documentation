@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -209,7 +210,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 <img loading="lazy" src={require('../assets/images/xcui/xcui-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
@@ -236,6 +237,49 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 - For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.
 - We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
 :::
+
+
+
+## Using the XCUITest Agent Skill with TestMu AI
+***
+
+The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The xcuitest-skill package includes:
+
+```
+xcuitest-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing XCUITest Agent Skill
+***
+
+Install a XCUITest Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xcuitest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/xcuitest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

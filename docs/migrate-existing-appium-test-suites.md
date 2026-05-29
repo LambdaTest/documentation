@@ -12,9 +12,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/migrate-existing-appium-test-suites/
 site_name: TestMu AI
 slug: migrate-existing-appium-test-suites/
-canonical: https://www.testmu.ai/support/docs/migrate-existing-appium-test-suites/
+canonical: https://www.testmuai.com/support/docs/migrate-existing-appium-test-suites/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -56,7 +57,7 @@ To move from the local grid to the cloud-based Appium grid, you need to make som
 ## Authentication
 ***
 
-To run tests on <BrandName />, you will need <BrandName /> authentication credentials: <BrandName /> Username and a <BrandName /> Access Key. If you do not have a <BrandName /> account, visit the [<BrandName /> register page](https://accounts.lambdatest.com/register) and create one.
+To run tests on <BrandName />, you will need <BrandName /> authentication credentials: <BrandName /> Username and a <BrandName /> Access Key. If you do not have a <BrandName /> account, visit the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> register page</a> and create one.
 
 You can get the <BrandName /> Username and <BrandName /> Access Key from your <BrandName /> Profile.
 
@@ -174,6 +175,7 @@ for cap in caps:
 ***
 
 >That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

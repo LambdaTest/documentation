@@ -13,10 +13,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/record-and-replay-tests/
 site_name: TestMu AI
 slug: record-and-replay-tests/
-canonical: https://www.testmu.ai/support/docs/record-and-replay-tests/
+canonical: https://www.testmuai.com/support/docs/record-and-replay-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 # Record and Replay Tests using LT Debug 2.0
 ---
@@ -33,7 +34,7 @@ With LT Debug 2.0, you now have the ability to record user interactions through 
 ---
 
 1. Install the [LT Debug Chrome Extension](https://chrome.google.com/webstore/detail/lt-debug/kofahhnmgobkidipanhejacffiigppcd).
-2. Login to your <BrandName /> Account via LT Debug Dashboard. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+2. Login to your <BrandName /> Account via LT Debug Dashboard. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 <img loading="lazy" src={require('../assets/images/record-replay/login.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 

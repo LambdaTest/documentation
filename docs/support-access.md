@@ -13,9 +13,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/support-access/
 site_name: TestMu AI
 slug: support-access/
-canonical: https://www.testmu.ai/support/docs/support-access/
+canonical: https://www.testmuai.com/support/docs/support-access/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -52,7 +53,7 @@ You can directly navigate to the Support Access page by this [**link**](https://
 ## Granting Support Access
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/support-access/lambdatest-dashboard.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

@@ -16,7 +16,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 site_name: TestMu AI
 slug: sharding-espresso-rd-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/sharding-espresso-rd-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -75,7 +76,7 @@ By the end of this topic, you will be able to:
 
 Before you start performing your App automation testing with Espresso, please make sure:
 
-- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>website</a>. You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation Cloud plans on your account.
 
 
@@ -364,6 +365,7 @@ framework:
 To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
 
 > Learn more about it in the [HyperExecute Espresso Documentation](/support/docs/hyperexecute-espresso-testing/)
+
 
 ## Additional Links
 

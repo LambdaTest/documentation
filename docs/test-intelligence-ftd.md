@@ -8,11 +8,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/
 site_name: TestMu AI
 slug: test-intelligence-flakiness-test-detection/
-canonical: https://www.testmu.ai/support/docs/test-intelligence-flakiness-test-detection/
+canonical: https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/
 ---
 
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -58,7 +59,7 @@ To read more about the Flaky Tests Analytics, you can refer the documentation at
 
 There are following Prerequisites to use Flaky Test Detection:
 
-- You should have a <BrandName /> account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
+- You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>here</a>.
 - You should have a test suite with same test name run on the platform at least 10 times.
 
 ## How does the Flaky Test Detection work?

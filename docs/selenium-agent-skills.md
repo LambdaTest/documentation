@@ -65,7 +65,7 @@ Once installed, your AI assistant works like a senior QA automation architect wi
 
 Make sure you have the following set up before you start.
 
-1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you don't have one.
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
 3. Install an AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 

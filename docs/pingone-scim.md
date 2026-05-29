@@ -54,7 +54,7 @@ In this guide, we will walk through integrating PingOne SCIM provisioning with <
 
 ### Step 1 — Copy SCIM Credentials from <BrandName />
 
-Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+Sign in to your <BrandName /> account. Don't have an account, [register for free](https://www.testmuai.com/register/).
 
 Head to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** tab. Copy the **SCIM Base URL** and **Bearer Token**.
 
