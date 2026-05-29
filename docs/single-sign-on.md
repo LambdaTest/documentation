@@ -11,9 +11,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/single-sign-on/
 site_name: TestMu AI
 slug: single-sign-on/
-canonical: https://www.testmu.ai/support/docs/single-sign-on/
+canonical: https://www.testmuai.com/support/docs/single-sign-on/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -76,7 +77,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 ## Enable <BrandName /> SSO
 ***
 
-**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/new-dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -91,7 +92,7 @@ Here are the following benefits of authenticating a Single sign-on to the <Brand
 You can contact the **Support Team**, who will help you enable the SSO feature for your <BrandName /> account. 
 
 
-> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
+> That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

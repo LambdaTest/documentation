@@ -55,7 +55,7 @@ Playwright Android automation is supported on <BrandName /> across **Node.js, Ja
 :::tip Supported Versions
 - Playwright versions **v1.20.0** to **v1.59.0** are supported for Android real device testing (excluding `v1.54.0`).
 - **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()`. All use stock Playwright packages, no custom forks required.
-- Playwright v1.53.2 is currently supported for Playwright C# (for Android & iOS).
+- Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
 
 ## Prerequisites
@@ -389,7 +389,7 @@ var capabilities = new Dictionary<string, object>
         ["network"] = true,
         ["video"] = true,
         ["console"] = true,
-        ["playwrightClientVersion"] = "1.53.2",
+        ["playwrightClientVersion"] = "1.53.0",
     }
 };
 

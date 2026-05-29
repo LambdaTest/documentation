@@ -57,7 +57,7 @@ This guide will cover the basics of getting started with Playwright testing on i
 :::tip Supported Versions
 - Playwright versions **v1.53.0** and above (until **v1.57.0**) are supported for iOS real device testing.
 - All languages use the **stock Playwright packages** — no custom forks or client-side changes required.
-- Playwright v1.53.2 is currently supported for Playwright C# (for Android & iOS).
+- Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
 
 ## Prerequisites
@@ -377,7 +377,7 @@ var capabilities = new Dictionary<string, object>
         ["network"] = true,
         ["video"] = true,
         ["console"] = true,
-        ["playwrightClientVersion"] = "1.53.2",
+        ["playwrightClientVersion"] = "1.53.0",
     }
 };
 

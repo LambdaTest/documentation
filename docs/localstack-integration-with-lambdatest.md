@@ -23,6 +23,7 @@ slug: localstack-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/localstack-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -69,7 +70,7 @@ With this integration, teams can perform tests at an impressive speed without co
 ## Prerequisites
 ***
 
-1. A <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 2. A LocalStack account. Don’t have an account, you can create one [here](https://app.localstack.cloud/sign-in).
 
 

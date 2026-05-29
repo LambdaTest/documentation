@@ -5,7 +5,7 @@ sidebar_label: Command Errors
 description: A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
 keywords:
   - analytics
-url: https://www.testmuai.com/support/docs/analytics-modules-command-logs/
+url: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
 site_name: TestMu AI
 slug: analytics-modules-test-intelligence-command-logs-analytics/
 canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/
@@ -35,7 +35,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
+          "item": `${BRAND_URL}/support/docs/analytics-modules-test-intelligence-command-logs-analytics/`
         }]
       })
     }}
@@ -49,7 +49,7 @@ TestMu AI Analytics help you intelligently analyze your test execution steps on 
 
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
-1. You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://accounts.lambdatest.com/register" onClick={CookieTrackingSignup}>here</a>.
+1. You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>here</a>.
 2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.

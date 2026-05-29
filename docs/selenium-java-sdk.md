@@ -12,7 +12,7 @@ keywords:
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-java-sdk/
 slug: selenium-java-sdk/
-canonical: https://www.testmu.ai/support/docs/selenium-java-sdk/
+canonical: https://www.testmuai.com/support/docs/selenium-java-sdk/
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -69,7 +69,7 @@ Review what the SDK offers out of the box.
 
 Complete these steps before using the SDK.
 
-1. [Create a TestMu AI account](https://accounts.lambdatest.com/register) if you do not have one.
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you do not have one.
 2. Get your TestMu AI [Username and Access Key](https://accounts.lambdatest.com/dashboard).
 3. Install Java 8 or higher.
 4. Install and configure Maven.

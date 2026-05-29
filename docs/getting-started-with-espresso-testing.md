@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-t
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -208,7 +209,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
 <img loading="lazy" src={require('../assets/images/espresso/espresso-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
@@ -231,6 +232,49 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 }'
 ```
 
+
+
+
+## Using the Espresso Agent Skill with TestMu AI
+***
+
+The [espresso-skill](https://github.com/LambdaTest/agent-skills/tree/main/espresso-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The espresso-skill package includes:
+
+```
+espresso-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Espresso Agent Skill
+***
+
+Install a Espresso Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/espresso-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/espresso-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only espresso-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
