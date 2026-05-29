@@ -59,7 +59,7 @@ XCTestPlan improves the organization and efficiency of running automated tests w
 
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **XCUI Test** app (.ipa file).
 
 :::tip

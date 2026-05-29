@@ -64,7 +64,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 ### Step 1: Create your Secrets
 - Click on the **Settings** of your repository.
 - Go to the **Security** option > **Secrets and Variables** > **Actions**.
-- Create your secrets with variable name **LT_USERNAME** and **LT_ACCESS_KEY**. You can fetch your credentials from the [Accounts and Settings dashboard](https://accounts.lambdatest.com/security).
+- Create your secrets with variable name **LT_USERNAME** and **LT_ACCESS_KEY**. You can fetch your credentials from the [Accounts and Settings dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 
 ### Step 2: Create a New Workflow
 -  Navigate to the main page of the repository.

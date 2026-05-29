@@ -60,7 +60,7 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 
 
-**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
 

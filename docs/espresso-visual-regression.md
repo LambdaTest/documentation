@@ -59,7 +59,7 @@ In this documentation, you will learn step-by-step how to perform regression tes
 
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 - Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
@@ -82,7 +82,7 @@ To create a SmartUI Project, follow these steps:
 
 ## Step 2: Set up your Authentication
 
-Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/details/profile).
+Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

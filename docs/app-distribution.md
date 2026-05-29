@@ -70,7 +70,7 @@ App Distribution is currently in **Beta** and only supports builds signed with a
 
 - A <BrandName /> account with **App Distribution enabled** for your organization.
 - An Android (`.apk` / `.aab`) or iOS (`.ipa`) build, no larger than **1 GB**.
-- For CI/CD uploads, your <BrandName /> **username** and **access key** ([find them on your dashboard](https://accounts.lambdatest.com/security)).
+- For CI/CD uploads, your <BrandName /> **username** and **access key** ([find them on your dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security)).
 
 ---
 

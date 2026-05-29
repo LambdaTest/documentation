@@ -53,7 +53,7 @@ In this documentation, you will learn how to trigger a automation script of Java
 
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 
 :::tip

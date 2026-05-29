@@ -57,7 +57,7 @@ Visit the TestMu AI [npm package for TestCafe](https://www.npmjs.com/package/tes
 ---
 Complete these steps before integrating TestCafe with TestMu AI.
 
-1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+1. Create a [TestMu AI account](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
 2. Add the dependency `"testcafe": "<testcafe_version>"` in your `package.json` file.
 
 ## Step 1: Clone the Sample Project

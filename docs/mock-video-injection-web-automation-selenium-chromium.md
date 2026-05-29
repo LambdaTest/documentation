@@ -69,7 +69,7 @@ Chrome treats the file as a looping camera feed, so any `getUserMedia({ video: t
 
 Verify the following before configuring mock video injection.
 
-1. Get a TestMu AI account with Web Automation access from [your dashboard](https://accounts.lambdatest.com/dashboard).
+1. Get a TestMu AI account with Web Automation access from [your dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 2. Prepare a `.mjpeg` video file such as `sample_640x360.mjpeg` (recommended resolution: `640x360` or `1280x720`; Chrome also supports `.y4m` format).
 3. Set TestMu AI credentials as `LT_USERNAME` and `LT_ACCESS_KEY`.
 

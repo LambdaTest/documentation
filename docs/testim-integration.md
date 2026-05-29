@@ -48,7 +48,7 @@ Integrating <BrandName /> with Testim lets you run Testim automated tests on <Br
 
 ## Prerequisites
 - Create an account on Testim.
-- Create a <BrandName /> account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
+- Create a <BrandName /> account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
 - Get your <BrandName /> Username and Access Key.
 
 ## Setting Up the Grid

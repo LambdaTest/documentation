@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ## Steps for Uploading & Downloading Files
 
 1. **Open a Real Device Session**  
-   Log in to your [App Live Dashboard](https://accounts.lambdatest.com/dashboard), upload your app, and select a real device (Android or iOS).  
+   Log in to your [App Live Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), upload your app, and select a real device (Android or iOS).  
 
 2. **Use the Files & Media Panel**  
    From the **right-hand session toolbar**, click the **Files & Media** icon.  

@@ -56,7 +56,7 @@ In this documentation, you will learn how to configure and run your **Kotlin** a
 
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Install the latest version of [**IntelliJ IDEA**](https://www.jetbrains.com/idea/). You can use any other IDE also.
 - Download and install [**Maven**](https://maven.apache.org/). You can use [**Homebrew**](https://brew.sh/) package manager for Linux/macOS.
 - Make sure that Kotlin plugins are enabled/installed in the IntelliJ IDEA if you are using a previous version.
@@ -72,7 +72,7 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 
 ### Step 2: Setup the Environment Variables
 
-You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>

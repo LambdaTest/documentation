@@ -80,7 +80,7 @@ Your default browser opens on a <BrandName /> consent page. Sign in (or confirm,
 </CodeBlock>
 </div>
 
-Find your username and access key on the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Find your username and access key on the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 Use this method for environments without a browser (servers, containers, CI/CD).
 

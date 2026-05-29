@@ -60,7 +60,7 @@ To provide you with a secure [cross-browser testing](https://www.testmuai.com) e
 1. <BrandName /> Username
 2. <BrandName /> Access Key
 
->You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile).
+>You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 #**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
@@ -82,7 +82,7 @@ You can directly copy your Username and Access Key using shortcut key button.
 
 ## Configuring Environment Variables on your Operating System
 
-Before the tests are run, please set the environment variables LT_USERNAME & LT_ACCESS_KEY from the terminal. The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
+Before the tests are run, please set the environment variables LT_USERNAME & LT_ACCESS_KEY from the terminal. The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
 
 ### Download the HyperExecute CLI
 
@@ -98,7 +98,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

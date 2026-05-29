@@ -57,7 +57,7 @@ Run your Java Selenium tests on the TestMu AI cloud grid. This guide covers setu
 Complete these steps before running Java Selenium tests.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
 4. Download the latest [Selenium Java Client](https://www.selenium.dev/downloads/) and extract the ZIP file to your project directory.
 5. Add the Selenium JARs to your project dependencies in your IDE.
@@ -141,7 +141,7 @@ public class JavaTodo {
 ## Step 2: Set Your Credentials
 ---
 
-Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">

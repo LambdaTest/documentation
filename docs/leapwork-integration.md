@@ -68,7 +68,7 @@ LEAPWORK assigns ‘Agents’, or available machines, for you to execute automat
 
 <img loading="lazy" src={require('../assets/images/Leapwork/LW-4.webp').default} alt="Leapwork <BrandName /> integration" width="1366" height="726" className="doc_img"/>
 
-**Step 3:** Log in to your '<BrandName />' profile. If you haven’t done that already, sign up right [here](https://accounts.lambdatest.com/dashboard).
+**Step 3:** Log in to your '<BrandName />' profile. If you haven’t done that already, sign up right [here](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 **Step 4:** Go to your profile in the top-right corner. Fetch the username and access token key for the next step.
 

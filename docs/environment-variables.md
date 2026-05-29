@@ -59,7 +59,7 @@ TestMu AI Authentication Credentials consist of two fields:
 1. TestMu AI Username
 2. TestMu AI Access Key
 
->You can find these authentication credentials by visiting the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) or your [TestMu AI Profile](https://accounts.lambdatest.com/detail/profile).
+>You can find these authentication credentials by visiting the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) or your [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 ### Fetching Authentication Credentials from the Automation Tab
 ---

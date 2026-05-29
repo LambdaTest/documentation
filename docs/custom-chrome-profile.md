@@ -53,7 +53,7 @@ Zip your Chrome profile folder and upload it to the TestMu AI cloud using the AP
 ### Before You Begin
 
 1. Create or locate the Chrome profile folder you want to use.
-2. Get your API authorization credentials from your [TestMu AI dashboard](https://accounts.lambdatest.com/dashboard).
+2. Get your API authorization credentials from your [TestMu AI dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ### Steps
 

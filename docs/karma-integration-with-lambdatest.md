@@ -61,7 +61,7 @@ All the code used in this guide is available in the sample repository.
 ---
 Complete these steps before integrating Karma with TestMu AI.
 
-1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+1. Create a [TestMu AI account](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
 2. Install **NodeJS** and **npm** from [nodejs.org](https://nodejs.org/en/).
 3. Install the latest version of **JavaScript**.
 4. Install [Angular CLI](https://cli.angular.io/): `npm install -g @angular/cli`
