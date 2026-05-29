@@ -172,6 +172,13 @@ A one-line tweak at the top of a 20-step test re-authors all 20 steps on the nex
 | Force full re-authoring | Use `--author` flag for one run |
 | Wipe cache entirely | Run `rm -rf output-<stem>/` |
 
+:::note Replay accuracy improvements (v0.3.3)
+Two fixes make replay results more consistent with the original run:
+
+- **Variables carry through correctly** — values set earlier in a test are now passed to the runner during replay, so variable-dependent steps behave the same as they did when the flow was first recorded.
+- **AI-driven steps use AI intent** — when kane-cli interprets a step, it now uses the AI's own understanding of the intent rather than the human-written description, producing more reliable browser actions on replay.
+:::
+
 ---
 
 ## Reusing Flows with `@import`

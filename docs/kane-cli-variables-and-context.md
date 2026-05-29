@@ -169,6 +169,10 @@ Secret values are masked in displayed output and logs, and are routed to the <Br
 Do not commit credential files to version control. Add `.testmuai/variables/` to your `.gitignore`, or use environment variable substitution in CI/CD.
 :::
 
+:::note v0.3.3 fix
+In replay mode, variable values set earlier in a test are now correctly passed to the runner for subsequent steps. If you observed variables resolving as empty or stale during `testmd run`, upgrading to v0.3.3 resolves this.
+:::
+
 ---
 
 ## Context Files
