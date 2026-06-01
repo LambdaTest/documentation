@@ -69,7 +69,7 @@ accessibility.autoscan    ${True}
 robot --outputdir results tests/
 ```
 
-Then open the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) for the session and the **Accessibility** tab.
+Then open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) for the session and the **Accessibility** tab.
 
 ## Troubleshooting
 

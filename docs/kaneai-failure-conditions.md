@@ -70,7 +70,7 @@ You can set the failure condition in the Authoring mode by clicking on the three
 
 By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
 
-The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
+The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure-conditions-org-settings.png').default} alt="failure_conditions_default_settings" className="doc_img"/>
 

@@ -54,7 +54,7 @@ With various templates available for different test analytics purposes, testers 
 
 ## Prerequisites
 
-You should have an account subscribed to [TestMu AI Account](https://accounts.lambdatest.com) and have relevant test data available in the system.
+You should have an account subscribed to [TestMu AI Account](https://www.testmuai.com/login/) and have relevant test data available in the system.
 
 <img loading="lazy" src={require('../assets/images/analytics/Dashboard-Template.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

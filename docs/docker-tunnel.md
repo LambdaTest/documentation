@@ -59,7 +59,7 @@ With Docker Tunnel, you will also be able to create multiple instances of <Brand
 * * *
 
 1. Download and set up Docker Desktop from [official Docker website](https://www.docker.com/products/docker-desktop).
-2. You also need your <BrandName /> Username and Access Key. You can get these from your [<BrandName />�s profile](https://accounts.lambdatest.com/detail/profile).
+2. You also need your <BrandName /> Username and Access Key. You can get these from your [<BrandName />�s profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 ## How To Use Docker With <BrandName /> Tunnel
 

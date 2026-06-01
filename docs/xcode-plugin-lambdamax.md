@@ -85,7 +85,7 @@ echo "$XCUITTestExecution"
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-play.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/><br/>
 
-7. In the above code, update the required <BrandName /> credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://accounts.lambdatest.com/detail/profile).
+7. In the above code, update the required <BrandName /> credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-profile.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/><br/>
 

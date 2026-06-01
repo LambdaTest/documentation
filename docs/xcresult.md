@@ -58,7 +58,7 @@ On <BrandName />, you can now **generate and download `.xcresult` bundles** for 
 ---
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access Key](https://accounts.lambdatest.com/security).  
+- Your <BrandName /> [Username and Access Key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).  
 - Access to an **iOS app (.ipa)** and an **XCUI Test app (.ipa)**.  
 - Xcode installed locally to view `.xcresult` bundles.  
 

@@ -82,7 +82,7 @@ Once the OAuth application is set up, proceed with the integration steps below.
 
 ## Integrate ServiceNow from your <BrandName /> Account
 
-**Step 1:** Log in to your [LambdaTest](https://accounts.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
+**Step 1:** Log in to your [TestMu AI](https://www.testmuai.com/login/) account. Ensure you have Admin or User level access to manage integrations.
 
 **Step 2:** Navigate to `Settings` -> `Integrations` -> `Bug Tracker`.
 

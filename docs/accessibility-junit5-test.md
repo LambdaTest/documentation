@@ -62,7 +62,7 @@ capabilities.setCapability("accessibility.autoscan", true);
 mvn test
 ```
 
-Open the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) → session → **Accessibility** tab.
+Open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) → session → **Accessibility** tab.
 
 ### 5. Scale to the full suite
 

@@ -64,7 +64,7 @@ All the code used in this guide is available in the sample repository.
 ---
 Complete these steps before running AngularJS tests with Karma on TestMu AI.
 
-1. Create a [TestMu AI account](https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
+1. Create a [TestMu AI account](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
 2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
 3. Install **npm** and upgrade to the latest version: `npm install npm@latest -g`
 4. Install [Angular CLI](https://angular.io/cli): `npm install -g @angular/cli`

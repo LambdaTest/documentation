@@ -88,7 +88,7 @@ git clone https://github.com/LambdaTest/playwright-sample
 npm i
 ```
 
-3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
+3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
    
 For macOS:
 ```bash

@@ -16,7 +16,7 @@ site_name: TestMu AI
 slug: view-lighthouse-performance-metrics/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -62,8 +62,8 @@ metrics with TestMu AI. TestMu AI also allows you to perform cross-browser testi
 ---
 Complete these steps before generating Lighthouse reports.
 
-1. Create a <a href="https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI account</a>.
-2. Get your TestMu AI Username and Access Key from the [Automation Dashboard](https://automation.lambdatest.com/build) or your <a href="https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI Profile</a>.
+1. Create a <a href="https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingSignup}>TestMu AI account</a>.
+2. Get your TestMu AI Username and Access Key from the [Automation Dashboard](https://automation.lambdatest.com/build) or your <a href="https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI Profile</a>.
 
 ## How to Include Lighthouse Performance Metrics in Selenium Automation
 ---

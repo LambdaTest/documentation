@@ -85,7 +85,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
-Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -186,6 +186,6 @@ OR use this command if you have not exported your username and access key in the
   </CodeBlock>
 </div>
 
-Now visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) and click on the Accessibility tab to check the report generated.
+Now visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) and click on the Accessibility tab to check the report generated.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/cypress/hyp-cyp10.gif').default} alt="automation-dashboard" className="doc_img"/>

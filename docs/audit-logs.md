@@ -61,7 +61,7 @@ Audit logs can be used to:
 
 ## How to Access Audit Logs?
 
-**Step 1:** Go to the [LambdaTest](https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on Settings -> **Organization Settings** and navigate to the **Audit Logs** tab.
 

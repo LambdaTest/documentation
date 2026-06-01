@@ -56,7 +56,7 @@ This document details the seamless integration between HyperExecute and Testim, 
 ## Prerequisite
 
 - You will need your Testim account.
-- <BrandName /> account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
+- <BrandName /> account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
 - <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 
 ## Step 1: Setup the Grid
@@ -140,7 +140,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

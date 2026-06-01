@@ -83,7 +83,7 @@ capabilities.setCapability("name", "LambdaTestJavaSample");
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -152,7 +152,7 @@ capability.setCapability("accessibility.needsReview", true); // Include issues t
 
 ### Step 4: Execute and Monitor your Test
 
-Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
+Now execute your tests and visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
 ```bash
 mvn test

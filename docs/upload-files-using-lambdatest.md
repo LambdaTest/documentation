@@ -56,7 +56,7 @@ Upload files to the cloud-based Selenium Grid using the [API for uploading user-
 3. Enter your TestMu AI username and access key to validate your credentials. Click the "Authorise" button to verify the credentials, and click Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
 
 
-> Get your TestMu AI Username and Access Key from your [TestMu AI automation dashboard](https://accounts.lambdatest.com/dashboard). Click on the "key" icon in the top right corner.
+> Get your TestMu AI Username and Access Key from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the "key" icon in the top right corner.
 <img loading="lazy" src={require('../assets/images/uploads/access-key.webp').default} alt="automation key" width="1281" height="721" className="doc_img"/>
 
 4. Click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>

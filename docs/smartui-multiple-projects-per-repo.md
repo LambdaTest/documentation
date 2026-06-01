@@ -51,7 +51,7 @@ SmartUI allows you to manage and test UI components effectively within a single 
 ## Setting Up Multiple Projects in a Repository
 
 ### Prerequisites
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Your SmartUI Project Token
 
 ### Step 1: Organize Your Repository
@@ -65,7 +65,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 ### Step 2: Create your Secrets
 - Click on the **Settings** of your repository.
 - Go to the **Security** option > **Secrets and Variables** > **Actions**.
-- Create your secrets with variable name **LT_USERNAME** and **LT_ACCESS_KEY**. You can fetch your credentials from the [Accounts and Settings](https://accounts.lambdatest.com/security) dashboard.
+- Create your secrets with variable name **LT_USERNAME** and **LT_ACCESS_KEY**. You can fetch your credentials from the [Accounts and Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security) dashboard.
 
 ### Step 3: Create your GitHub Actions Workflow
 - Navigate to the main page of the repository.

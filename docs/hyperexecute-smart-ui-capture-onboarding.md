@@ -221,7 +221,7 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 </Tabs>
 
 :::info Getting Your Credentials
-- **Username and Access Key**: Available in your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- **Username and Access Key**: Available in your [LambdaTest Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
 :::
 

@@ -66,7 +66,7 @@ Once installed, your AI assistant works like a senior QA automation architect wi
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install an AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Step 1: Install the Selenium Agent Skill
@@ -99,7 +99,7 @@ Install **all available framework skills** at once by cloning the repository dir
 
 Add your TestMu AI credentials as environment variables so the generated tests can authenticate with the grid.
 
-Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then run:
+Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then run:
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"

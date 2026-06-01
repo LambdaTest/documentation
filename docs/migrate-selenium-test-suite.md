@@ -64,7 +64,7 @@ If you are moving from BrowserStack or Sauce Labs, use these dedicated migration
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. An existing Selenium test suite in any supported language (Java, JavaScript, Python, C#, PHP, or Ruby).
 
 ## Step 1: Set Your Credentials

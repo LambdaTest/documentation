@@ -206,7 +206,7 @@ OAuth login opens a browser window: AI agents cannot complete this flow. Use Bas
 </CodeBlock>
 </div>
 
-Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`.
+Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`.
 
 ---
 

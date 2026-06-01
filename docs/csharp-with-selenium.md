@@ -68,7 +68,7 @@ Complete the following steps before running C# Selenium tests.
 4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
 5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
 6. [Install .NET Runtime](https://dot.net/v1/dotnet-install.sh) to execute tests on Linux or macOS.
-7. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+7. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ## Step 1: Clone the Sample Project
 ---

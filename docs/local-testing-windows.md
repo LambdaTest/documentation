@@ -232,7 +232,7 @@ Following is the list of command arguments which can be used as modifiers while 
 >**What is an Access Key?**   
 >An Access Key is a unique string used for the identification of your account.    
 As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your <BrandName /> account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
-If you ever misplace your Access key into the hands of someone you don’t trust. You can always regenerate it by navigating to your <BrandName /> Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey).
+If you ever misplace your Access key into the hands of someone you don’t trust. You can always regenerate it by navigating to your <BrandName /> Profile > Account Settings > [Password & Security](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey).
 
 You can find your Access Key while performing any type of testing. Go to **Credentials** in the left sidebar and click the copy icon next to Access Key to retrieve it.
 

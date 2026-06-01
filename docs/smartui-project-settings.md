@@ -58,7 +58,7 @@ This guide provides detailed information on how to navigate and configure the va
 
 To access the Project Settings in SmartUI, you must meet the following requirements:
 
-1. You need an active account with [LambdaTest](https://accounts.lambdatest.com).
+1. You need an active account with [TestMu AI](https://www.testmuai.com/login/).
 2. Ensure you have an active [subscription plan](https://www.testmuai.com/pricing) with a valid screenshots limit.
 3. You must have created a project within the SmartUI web app.
 

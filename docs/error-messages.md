@@ -58,7 +58,7 @@ This happens when the Username or Access Key you passed is missing or invalid.
 
 ### How to Resolve?
 
-1. Go to the TestMu AI [Automation Dashboard](https://accounts.lambdatest.com/dashboard).
+1. Go to the TestMu AI [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 2. Click the key icon at the top-right of the dashboard.
 3. Copy your username and access key.
 
