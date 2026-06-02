@@ -117,7 +117,7 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 ### 2. Clone the sample project
 
-1. Clone the <BrandName />�s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
+1. Clone the <BrandName />'s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-firetv

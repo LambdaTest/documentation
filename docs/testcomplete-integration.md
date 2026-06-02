@@ -47,7 +47,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
-TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks�build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
+TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
 <BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
 
