@@ -136,7 +136,7 @@ Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
 
 [<img alt="Run in Gitpod" width="200px" align="center" src="https://user-images.githubusercontent.com/70570645/169987363-1408c494-4e2a-4f12-8828-c931eac716b0.png" />](https://gitpod.io/#https://github.com/LambdaTest/pyppeteer-sample)
 
-* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [<BrandName /> Credentials](https://accounts.lambdatest.com/detail/profile) to Gitpod as environment variables:
+* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [<BrandName /> Credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables:
 
 ```
 eval $(gp env -e LT_USERNAME=******)

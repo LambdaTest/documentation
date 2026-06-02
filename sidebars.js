@@ -932,123 +932,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "2025 Releases",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "December, 2025",
-                items: [
-                  "hyperexecute-release-notes-3-1-7",
-                  "hyperexecute-release-notes-3-1-6",
-                  "hyperexecute-release-notes-3-1-5",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "November, 2025",
-                items: [
-                  "hyperexecute-release-notes-3-1-4",
-                  "hyperexecute-release-notes-3-1-2",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "October, 2025",
-                items: [
-                  "hyperexecute-release-notes-3-1-0",
-                  "hyperexecute-release-notes-3-0-8",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "September, 2025",
-                items: [
-                  "hyperexecute-release-notes-3-0-6",
-                  "hyperexecute-release-notes-3-0-5",
-                  "hyperexecute-release-notes-3-0-4",
-                  "hyperexecute-release-notes-3-0-3",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "August, 2025",
-                items: [
-                  "hyperexecute-release-notes-3-0-0",
-                  "hyperexecute-release-notes-2-9-9",
-                  "hyperexecute-release-notes-2-9-8",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "July, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-9-7",
-                  "hyperexecute-release-notes-2-9-6",
-                  "hyperexecute-release-notes-2-9-5",
-                  "hyperexecute-release-notes-2-9-4",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "June, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-9-1",
-                  "hyperexecute-release-notes-2-9-0",
-                  "hyperexecute-release-notes-2-8-9",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "May, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-8-8",
-                  "hyperexecute-release-notes-2-8-7",
-                  "hyperexecute-release-notes-2-8-6",
-                  "hyperexecute-release-notes-2-8-5",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "April, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-8-4",
-                  "hyperexecute-release-notes-2-8-2",
-                  "hyperexecute-release-notes-2-8-1",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "March, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-7-8",
-                  "hyperexecute-release-notes-2-7-6",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "February, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-7-3",
-                  "hyperexecute-release-notes-2-7-1",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "January, 2025",
-                items: ["hyperexecute-release-notes-2-7-0"],
-              },
-            ],
+            items: ["hyperexecute-release-notes-2025"],
           },
 
           // 2024 releases
@@ -1056,126 +940,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "2024 Releases",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "December, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-6-5",
-                  "hyperexecute-release-notes-2-6-2",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "November, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-6-0",
-                  "hyperexecute-release-notes-2-5-9",
-                  "hyperexecute-release-notes-2-5-8",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "October, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-5-7",
-                  "hyperexecute-release-notes-2-5-6",
-                  "hyperexecute-release-notes-2-5-5",
-                  "hyperexecute-release-notes-2-5-4",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "September, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-5-3",
-                  "hyperexecute-release-notes-2-5-2",
-                  "hyperexecute-release-notes-2-5-1",
-                  "hyperexecute-release-notes-2-5-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "August, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-4-8",
-                  "hyperexecute-release-notes-2-4-7",
-                  "hyperexecute-release-notes-2-4-6",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "July, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-4-5",
-                  "hyperexecute-release-notes-2-4-4",
-                  "hyperexecute-release-notes-2-4-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "June, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-3-8",
-                  "hyperexecute-release-notes-2-3-7",
-                  "hyperexecute-release-notes-2-3-6",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "May, 2024",
-                items: ["hyperexecute-release-notes-2-3-3"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "April, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-3-1",
-                  "hyperexecute-release-notes-2-3-0",
-                  "hyperexecute-release-notes-2-2-9",
-                  "hyperexecute-release-notes-2-2-8",
-                  "hyperexecute-release-notes-2-2-7",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "March, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-2-6",
-                  "hyperexecute-release-notes-2-2-5",
-                  "hyperexecute-release-notes-2-2-3",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "February, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-2-2",
-                  "hyperexecute-release-notes-2-2-1",
-                  "hyperexecute-release-notes-2-2-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "January, 2024",
-                items: [
-                  "hyperexecute-release-notes-2-1-6",
-                  "hyperexecute-release-notes-2-1-5",
-                ],
-              },
-            ],
+            items: ["hyperexecute-release-notes-2024"],
           },
 
           // 2023 releases
@@ -1183,46 +948,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "2023 Releases",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "December, 2023",
-                items: [
-                  "hyperexecute-release-notes-2-1-4",
-                  "hyperexecute-release-notes-2-1-3",
-                  "hyperexecute-release-notes-2-1-1",
-                  "hyperexecute-release-notes-2-1-0",
-                  "hyperexecute-release-notes-1-139-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "November, 2023",
-                items: [
-                  "hyperexecute-release-notes-1-138-0",
-                  "hyperexecute-release-notes-1-137-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "October, 2023",
-                items: [
-                  "hyperexecute-release-notes-1-136-0",
-                  "hyperexecute-release-notes-1-135-0",
-                  "hyperexecute-release-notes-1-134-0",
-                  "hyperexecute-release-notes-1-133-0",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "September, 2023",
-                items: ["hyperexecute-release-notes-1-131-0"],
-              },
-            ],
+            items: ["hyperexecute-release-notes-2023"],
           },
         ],
       },
@@ -2844,9 +2570,9 @@ module.exports = {
             items: [
               "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid",
               "unit-testing-in-python",
-              "pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
-              "robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
-              "behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
+              "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
+              "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
+              "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
               "automation-testing-selenium-with-lettuce",
             ],
           },

@@ -75,7 +75,7 @@ This page is the **HyperExecute** integration guide for **Accessibility Automati
 2. **Add the same capability keys** you would use locally: `accessibility: true`, optional `accessibility.wcagVersion`, `accessibility.bestPractice`, `accessibility.needsReview`, and either **`lambda-accessibility-scan`** hooks in code or **`accessibility.autoscan`** ([settings reference](/support/docs/accessibility-automation-settings/)).
 3. **Propagate credentials** in the HyperExecute job the same way as your other HE runs (`LT_USERNAME` / `LT_ACCESS_KEY` in env or secrets).
 4. **Run a short suite** (one class or smoke tag) so the HE dashboard shows a single session to inspect.
-5. Open the [Automation Dashboard](https://accounts.lambdatest.com/dashboard) → session → **Accessibility** tab. If the tab is missing, verify the session capabilities in the build log.
+5. Open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) → session → **Accessibility** tab. If the tab is missing, verify the session capabilities in the build log.
 
 ## YAML and test code (integration point)
 

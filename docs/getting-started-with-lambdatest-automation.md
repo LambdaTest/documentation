@@ -57,7 +57,7 @@ Run your Selenium tests on TestMu AI's cloud grid of 3000+ browser and OS combin
 ---
 
 1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/register/) if you don't have one.
-2. Visit the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard) and navigate to the left sidebar and select **Credentials**. Your **Username** and **Access Key** will be visible there, along with options to copy them for use.
+2. Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) and navigate to the left sidebar and select **Credentials**. Your **Username** and **Access Key** will be visible there, along with options to copy them for use.
 3. Set them as environment variables:
 
 <Tabs>

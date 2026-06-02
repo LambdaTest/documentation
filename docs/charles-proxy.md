@@ -131,7 +131,7 @@ Now you need to setup and configure the <BrandName /> Tunnel through which you w
 
 ---
 
-To configure the tunnel, you need to download the **<BrandName />'s Tunnel Binary File** following the steps mentioned in the Prerequisites before. You can find the shell command in the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
+To configure the tunnel, you need to download the **<BrandName />'s Tunnel Binary File** following the steps mentioned in the Prerequisites before. You can find the shell command in the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
 <img loading="lazy" src={require('../assets/images/charles/Charles_RD.png').default} alt="cmd" className="doc_img" width="806" height="544"/>
 

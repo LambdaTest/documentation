@@ -229,7 +229,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 - [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
 - [Network Data Masking for Selenium](/support/docs/network-data-masking/)
-- [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2-3-1/#mask-your-sensitive-data)
+- [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ---
 

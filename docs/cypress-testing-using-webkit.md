@@ -219,7 +219,7 @@ Once you run the above command, below is the project structure for the `lambdate
 lambdatest-cypress run
 ```
 
-6. Visit [<BrandName /> Automation dashboard](https://accounts.lambdatest.com/dashboard) to view your test results. The CLI also has a link to view the Cypress test build.
+6. Visit [<BrandName /> Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) to view your test results. The CLI also has a link to view the Cypress test build.
 
 
 ## Testing Locally Hosted or Privately Hosted Projects 

@@ -53,7 +53,7 @@ Developed by Apple, XCUITest is a framework for user-interface (UI) testing for 
 
 ## Prerequisites
 
-- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **XCUI Test** app (.ipa file).
 
 :::tip

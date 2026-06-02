@@ -76,7 +76,7 @@ You may want to adjust the default order if:
 
 ## Where to Find It
 
-- [Open Smart Locator Priority in Organization Settings](https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority)
+- [Open Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority)
 
 The following screen shows where the setting is located:
 

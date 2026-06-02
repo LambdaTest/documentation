@@ -54,13 +54,13 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 ### Step 1: Setup Your Accounts
 
-- Sign in to your <BrandName /> account. If you don't have an account, **[Register for FREE !!](https://accounts.lambdatest.com/dashboard)**.
+- Sign in to your <BrandName /> account. If you don't have an account, **[Register for FREE !!](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard)**.
 
 - Create your [**SpiraTeam account**](https://www.inflectra.com/Trial/Process.aspx?catalogItemId=90) and login to your account.
 
 ### Step 2: Configure the Integration
 
-- On the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard), click on the **Settings** option and select the **Integrations**.
+- On the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), click on the **Settings** option and select the **Integrations**.
 
 - In the **Bug Tracker Section**, select the **SpiraTeam** and click on the **Connect** button.
 

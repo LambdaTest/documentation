@@ -54,7 +54,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 With the Tunnel Creation option, administrators can choose who has the permission to start a tunnel in your organization. This can ensure that only authorized individuals are allowed to start a tunnel, for example, only admin accounts. By default, all users in the organization can create a tunnel. To allow only for specific users, follow these steps:
 
-**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** -> **Organization Settings**, navigate to **Security** tab and click on **Tunnel Security** button.
 

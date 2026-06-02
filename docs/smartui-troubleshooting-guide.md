@@ -212,7 +212,7 @@ Before diving into specific issues, run through this quick checklist:
    </Tabs>
 
 2. **Get Correct Credentials**:
-   - Log into [<BrandName /> Dashboard](https://accounts.lambdatest.com/detail/profile)
+   - Log into [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
    - Click "Access Key" button
    - Copy username and access key
 

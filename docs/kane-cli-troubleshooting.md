@@ -147,7 +147,7 @@ If they still do not work, regenerate the access key in the dashboard and retry.
 </CodeBlock>
 </div>
 
-Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 ### Basic auth not working
 

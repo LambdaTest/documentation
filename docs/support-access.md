@@ -48,7 +48,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 The Support Access feature allows authorised TestMu AI support personnel to temporarily access your TestMu AI account for triaging and technical assistance purposes. This access is granted only with your consent and can be revoked at any time.
 
 :::tip Quick Link
-You can directly navigate to the Support Access page by this [**link**](https://accounts.lambdatest.com/support).
+You can directly navigate to the Support Access page by this [**link**](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/support).
 :::
 ## Granting Support Access
 ***

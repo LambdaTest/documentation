@@ -48,7 +48,7 @@ In this detailed documentation, learn how you can access and change organization
 Now, to access your organization product preferences, follow the below mentioned steps:
 
 
-**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
 

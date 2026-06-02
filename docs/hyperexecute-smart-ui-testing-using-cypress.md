@@ -81,7 +81,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 
 ### Setup Environment Variable
 
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 For macOS / Linux:

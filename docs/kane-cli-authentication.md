@@ -104,7 +104,7 @@ Saved basic auth is used automatically for subsequent commands run under that pr
 
 ### Where to Find Your Access Key
 
-Sign in to the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password — anyone with your username and access key can run tests on your account.
+Sign in to the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password — anyone with your username and access key can run tests on your account.
 
 ---
 

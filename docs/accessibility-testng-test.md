@@ -84,7 +84,7 @@ mvn test
 
 (or your TestNG CLI / IDE run configuration.)
 
-Then open the [Automation Dashboard](https://accounts.lambdatest.com/dashboard), select the session, and use the **Accessibility** tab for the generated report (same flow as the [Selenium guide](/support/docs/accessibility-automation-test/)).
+Then open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), select the session, and use the **Accessibility** tab for the generated report (same flow as the [Selenium guide](/support/docs/accessibility-automation-test/)).
 
 ## What gets reported
 

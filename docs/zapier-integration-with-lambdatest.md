@@ -25,7 +25,7 @@ Zapier is a cloud-based platform that allows you to easily automate workflows be
 
 ## Prerequisites
 -----------------------------------------------------------------------------------------------------------------------------
-1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
+1. A <BrandName /> account. If you don't have an account, [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
 2. A Zapier account.
 
 ## Integrating Zapier With <BrandName />
