@@ -2570,9 +2570,9 @@ module.exports = {
             items: [
               "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid",
               "unit-testing-in-python",
-              "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
-              "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
-              "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
+              "pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
+              "robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
+              "behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
               "automation-testing-selenium-with-lettuce",
             ],
           },
