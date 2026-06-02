@@ -1,5 +1,5 @@
 ---
-id: getting-started-with-agent-to-agent-testing
+id: getting-started-with-agent-testing-platform
 title: World's First Agentic Testing Platform
 hide_title: false
 sidebar_label: Getting Started
@@ -8,10 +8,10 @@ keywords:
  - agent to agent testing
  - agentic testing
  - ai agent testing
-url: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/
 site_name: TestMu AI
-slug: getting-started-with-agent-to-agent-testing/
-canonical: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
+slug: getting-started-with-agent-testing-platform/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Agent Testing Platform",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-agent-to-agent-testing`
+          "item": `${BRAND_URL}/support/docs/getting-started-with-agent-testing-platform`
         }]
       })
     }}
