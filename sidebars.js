@@ -5021,6 +5021,75 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Checkpoints",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-checkpoints",
+          },
+          {
+            type: "doc",
+            label: "Visual",
+            id: "kane-cli-checkpoint-visual",
+          },
+          {
+            type: "doc",
+            label: "Textual (DOM)",
+            id: "kane-cli-checkpoint-textual",
+          },
+          {
+            type: "doc",
+            label: "URL",
+            id: "kane-cli-checkpoint-url",
+          },
+          {
+            type: "doc",
+            label: "Title",
+            id: "kane-cli-checkpoint-title",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "DevTools",
+            items: [
+              {
+                type: "doc",
+                label: "Overview",
+                id: "kane-cli-checkpoint-devtools",
+              },
+              {
+                type: "doc",
+                label: "Network",
+                id: "kane-cli-checkpoint-devtools-network",
+              },
+              {
+                type: "doc",
+                label: "Console",
+                id: "kane-cli-checkpoint-devtools-console",
+              },
+              {
+                type: "doc",
+                label: "Performance",
+                id: "kane-cli-checkpoint-devtools-performance",
+              },
+              {
+                type: "doc",
+                label: "Cookies",
+                id: "kane-cli-checkpoint-devtools-cookies",
+              },
+              {
+                type: "doc",
+                label: "localStorage",
+                id: "kane-cli-checkpoint-devtools-localstorage",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Agent Mode",
         items: [
           {

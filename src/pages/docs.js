@@ -94,7 +94,7 @@ export default function Home() {
       <div className="primary_main">
       <div className="container">
 
-        {/* Row 1 */}
+        {/* Product grid */}
         <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Web Automation</h2>
@@ -142,10 +142,6 @@ export default function Home() {
               <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Insights</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 2 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
@@ -169,17 +165,6 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
-            <div className="home_inners">
-              <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
-              <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/web-scanner-visual-scan/"><p className="p_home_inners">Visual UI Scans</p></a>
-              <a href="/support/docs/web-scanner-accessibility-scan/"><p className="p_home_inners">Accessibility Scans</p></a>
-              <a href="/support/docs/web-scanner-adding-urls/"><p className="p_home_inners">Adding URLs</p></a>
-              <a href="/support/docs/web-scanner-scheduling-options/"><p className="p_home_inners">Scheduling Options</p></a>
-            </div>
-          </div>
-          <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />KaneAI</h2>
             <div className="home_inners">
               <a href="/support/docs/getting-started-with-kane-ai/"><p className="p_home_inners">Getting Started</p></a>
@@ -190,10 +175,29 @@ export default function Home() {
               <a href="/support/docs/kaneai-ci-cd-automation/"><p className="p_home_inners">Test Automation with CI/CD</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 3 */}
-        <div className="home_main">
+          <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Kane CLI &nbsp;<NewTag value="NEW" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/kane-cli-introduction/"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/support/docs/kane-cli-installation/"><p className="p_home_inners">Installation</p></a>
+              <a href="/support/docs/kane-cli-quickstart/"><p className="p_home_inners">Quick Start</p></a>
+              <a href="/support/docs/kane-cli-writing-objectives/"><p className="p_home_inners">Writing Objectives</p></a>
+              <a href="/support/docs/kane-cli-checkpoints/"><p className="p_home_inners">Checkpoints</p></a>
+              <a href="/support/docs/kane-cli-agent-mode/"><p className="p_home_inners">Agent Mode</p></a>
+              <a href="/support/docs/kane-cli-cli-reference/"><p className="p_home_inners">CLI Reference</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
+              <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/support/docs/web-scanner-visual-scan/"><p className="p_home_inners">Visual UI Scans</p></a>
+              <a href="/support/docs/web-scanner-accessibility-scan/"><p className="p_home_inners">Accessibility Scans</p></a>
+              <a href="/support/docs/web-scanner-adding-urls/"><p className="p_home_inners">Adding URLs</p></a>
+              <a href="/support/docs/web-scanner-scheduling-options/"><p className="p_home_inners">Scheduling Options</p></a>
+            </div>
+          </div>
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent To Agent &nbsp;<NewTag value="BETA" /></h2>
             <div className="home_inners">
@@ -233,10 +237,6 @@ export default function Home() {
               <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Issue Tracker Integration</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 4 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />TestMu AI MCP Server &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
@@ -278,10 +278,6 @@ export default function Home() {
               <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 5 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="settings-light-icon.svg" dark="settings-dark-icon.svg" alt="" />Settings and Security</h2>
             <div className="home_inners">
