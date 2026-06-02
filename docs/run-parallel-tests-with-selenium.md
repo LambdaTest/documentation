@@ -248,7 +248,7 @@ dotnet test --filter "profile=parallel"
 
 Follow these guidelines to get the most out of parallel execution.
 
-- **Match thread count to your concurrency limit.** Running more threads than your plan allows queues the excess sessions. Check your concurrency limit in the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+- **Match thread count to your concurrency limit.** Running more threads than your plan allows queues the excess sessions. Check your concurrency limit in the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 - **Keep tests independent.** Parallel tests must not share state, test data, or depend on execution order. Each test should set up and tear down its own data.
 - **Always call `driver.quit()`.** If a test exits without quitting, the session stays open until the idle timeout expires, wasting concurrency slots.
 - **Use unique build and test names.** Set the `build` and `name` capabilities to identify which parallel thread ran which test on the dashboard.

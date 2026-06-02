@@ -78,7 +78,7 @@ Pass credentials directly on the run command using environment variables from yo
 </CodeBlock>
 </div>
 
-Get your username and access key from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Get your username and access key from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 ## Exit Codes
 

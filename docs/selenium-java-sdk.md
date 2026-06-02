@@ -70,7 +70,7 @@ Review what the SDK offers out of the box.
 Complete these steps before using the SDK.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you do not have one.
-2. Get your TestMu AI [Username and Access Key](https://accounts.lambdatest.com/dashboard).
+2. Get your TestMu AI [Username and Access Key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install Java 8 or higher.
 4. Install and configure Maven.
 5. Prepare an existing Java test project using TestNG (support for additional frameworks is coming soon).

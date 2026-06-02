@@ -75,7 +75,7 @@ Once you install the extension, you'll notice a <BrandName /> icon will be added
 
 <img loading="lazy" src={require('../assets/images/vscode-extension/4.png').default} alt="activate <BrandName /> Screenshot Plugin" width="792" height="342" className="doc_img"/><br/><br/>
 
-2. It will ask you to enter your <BrandName /> e-mail and an access key. You can get them from your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
+2. It will ask you to enter your <BrandName /> e-mail and an access key. You can get them from your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
 
 * Enter your <BrandName /> e-mail and press Enter.
 

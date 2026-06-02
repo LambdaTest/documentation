@@ -69,7 +69,7 @@ Follow these steps to run tests on TestMu AI using **WebdriverIO with BiDi Proto
 
 ### Prerequisites
 1. Install Node.js >= 12.
-2. Get your TestMu AI [Username and Access Key](https://accounts.lambdatest.com/dashboard).
+2. Get your TestMu AI [Username and Access Key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ### Step 1: Set Up the Project
 

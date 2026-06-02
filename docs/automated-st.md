@@ -104,7 +104,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 - Mobile Layout: If you are taking screenshots on mobile devices, you can choose mobile layout as portrait or in landscape mode.
 
-- Defer Time: If your page takes time to load completely, you can set a defer time so that there is ample time for each element to load
+- Defer Time: If your page takes time to load completely, you can set a defer time so that there's ample time for each element to load
 
 - Smart Scroll: You can ignore all the iframes on your page by choosing the smart scroll
 

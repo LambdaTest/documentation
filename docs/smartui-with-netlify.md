@@ -54,7 +54,7 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
 
 ## Prerequisite
 
-1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
+1. A <BrandName /> account. If you don't have an account, [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 2. You need to have a site deployed in your Netlify account.
 

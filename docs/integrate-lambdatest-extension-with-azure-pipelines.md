@@ -76,7 +76,7 @@ Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automat
 *   Azure DevOps (Azure Pipelines) account
 *   <BrandName /> account credentials.
     1.  <BrandName /> Username
-    2.  <BrandName /> Access KeyYou can fetch your account credentials on <BrandName /> from your [profile section](https://accounts.lambdatest.com/detail/profile).
+    2.  <BrandName /> Access KeyYou can fetch your account credentials on <BrandName /> from your [profile section](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 ## How To Install TestMu AI Extension
 

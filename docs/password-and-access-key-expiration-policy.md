@@ -58,7 +58,7 @@ Password expiration and access key expiration are important security features th
 
 By default, password expiration policy is set to **Never**. To change this, follow the below mentioned steps:
 
-**Step 1:** Go to the [LambdaTest](https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Password Expiry** button
 
@@ -89,7 +89,7 @@ You will receive a mail 3 days before the expiration of your password to set a n
 
 By default, access key expiration policy is set to Never. To change this, follow the below mentioned steps:
 
-**Step 1:** Go to the [LambdaTest](https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Access Key Expiry** button
 

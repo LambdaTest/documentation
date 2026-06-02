@@ -68,7 +68,7 @@ Complete the following steps before running Reqnroll Selenium tests.
 3. Install the **.Net** framework for developing applications using C#.
 4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
 5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
-6. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+6. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ## Step 1: Clone the Sample Project
 ---
@@ -92,7 +92,7 @@ source venv/bin/activate
 ---
 Configure your credentials to connect to the TestMu AI grid.
 
-Fetch the TestMu AI Credentials from the [TestMu AI Profile Section](https://accounts.lambdatest.com/dashboard). You can export the environment variables by running the following commands in your terminal.
+Fetch the TestMu AI Credentials from the [TestMu AI Profile Section](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). You can export the environment variables by running the following commands in your terminal.
 
 <Tabs className="docs__val">
 

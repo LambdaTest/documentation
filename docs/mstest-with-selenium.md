@@ -67,7 +67,7 @@ Complete the following steps before running MSTest Selenium tests.
 3. Install the **.Net** framework for developing applications using C#.
 4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
 5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 3.0.0.
-6. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://accounts.lambdatest.com/dashboard).
+6. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ## Step 1: Clone the Sample Project
 ---

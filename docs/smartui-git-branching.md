@@ -62,7 +62,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 
 ### Prerequisites for running Git with SmartUI
 
-- You have an account with [LambdaTest](https://accounts.lambdatest.com).
+- You have an account with [TestMu AI](https://www.testmuai.com/login/).
 - You must have an active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit.
 - You must have created an Project on the SmartUI web app.
 

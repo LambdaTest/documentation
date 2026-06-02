@@ -91,7 +91,7 @@ You can also see <BrandName /> icon in top-right-hand side of the browser.
 
 * * *
 
-**Step 1:** Click on <BrandName /> icon in top-right-hand side of the browser. Here you will need to enter your registered **'<BrandName /> Email ID'** and **'<BrandName /> Access Key'**. You can get your Email address & Access Key from your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) section.
+**Step 1:** Click on <BrandName /> icon in top-right-hand side of the browser. Here you will need to enter your registered **'<BrandName /> Email ID'** and **'<BrandName /> Access Key'**. You can get your Email address & Access Key from your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) section.
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-150-1.webp').default} alt="Account Setup for <BrandName /> Chrome Extension" width="1365" height="657" className="doc_img"/>
 
