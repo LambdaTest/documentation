@@ -973,7 +973,7 @@ module.exports = {
           {
             type: "doc",
             label: "Getting Started",
-            id: "getting-started-with-agent-to-agent-testing",
+            id: "getting-started-with-agent-testing-platform",
           },
           {
             type: "doc",
@@ -1019,7 +1019,7 @@ module.exports = {
           {
             type: "doc",
             label: "FAQs",
-            id: "agent-to-agent-faqs",
+            id: "agent-testing-platform-faqs",
           },
         ],
       },

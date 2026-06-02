@@ -64,7 +64,7 @@ const docsSidebar = [
     items: items(s.RealTimeBrowserTestingSiebar),
   },
   {
-    type: 'category', label: 'Agent To Agent', collapsible: true, collapsed: true,
+    type: 'category', label: 'Agent Testing Platform', collapsible: true, collapsed: true,
     items: items(s.AgentToAgentSidebar),
   },
   {
