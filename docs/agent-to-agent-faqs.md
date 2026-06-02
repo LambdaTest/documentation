@@ -1,5 +1,5 @@
 ---
-id: agent-to-agent-faqs
+id: agent-testing-platform-faqs
 title: Agent to Agent FAQs !!
 hide_title: false
 sidebar_label: FAQs
@@ -7,10 +7,10 @@ description: Get quick answers to all your Agent to Agent queries with our compr
 keywords:
   - Agent to Agent FAQs
   - FAQs
-url: https://www.testmuai.com/support/docs/agent-to-agent-faqs/
+url: https://www.testmuai.com/support/docs/agent-testing-platform-faqs/
 site_name: TestMu AI
-slug: agent-to-agent-faqs/
-canonical: https://www.testmuai.com/support/docs/agent-to-agent-faqs/
+slug: agent-testing-platform-faqs/
+canonical: https://www.testmuai.com/support/docs/agent-testing-platform-faqs/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -36,13 +36,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": `${BRAND_URL}/support/docs/agent-to-agent-faqs/`
+          "item": `${BRAND_URL}/support/docs/agent-testing-platform-faqs/`
         }]
       })
     }}
 ></script>
 
-Below are a few commonly asked questions about our Agent to Agent Testing platform:
+Below are a few commonly asked questions about our Agent Testing Platform:
 
 #### 1. **Does Agent to Agent provide AI-enabled translation or multilingual analysis capabilities for testing?**
 
