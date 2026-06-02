@@ -38,7 +38,7 @@ Cypress is a modern web front-end testing tool built with JavaScript Mocha. It o
 
 Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
 
-In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress� kitchen sink sample app to execute our tests. 
+In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress kitchen sink sample app to execute our tests. 
 
 
 

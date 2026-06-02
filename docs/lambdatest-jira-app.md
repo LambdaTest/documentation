@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> Test Manager integrates directly with the Jira App, allowing you to manage tests seamlessly within the Jira interface. It provides Test Manager functionalities in your Jira environment, boosting workflow efficiency and facilitating improved collaboration among teams.
 
-**Let�s have a look at how to use the <BrandName /> Jira App:**
+**Let's have a look at how to use the <BrandName /> Jira App:**
 
 1. Download the Jira app from the Atlassian Marketplace. Once installed, navigate to **Manage your Apps** under the **Apps** section in your Jira project.
 
