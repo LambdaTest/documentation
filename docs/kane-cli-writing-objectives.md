@@ -55,6 +55,10 @@ The objective string is the most important input to Kane CLI. How you phrase it 
 | ✅ **Assertion** | assert, verify, confirm, check that, ensure | Validates a condition: produces pass/fail |
 | 📦 **Extraction** | store X as 'name' | Reads a value from the page, persists in output |
 
+:::note
+**Assertions** and **extractions** are evaluated as [Checkpoints](/support/docs/kane-cli-checkpoints/). See the reference for all analyze methods (Visual, Textual, URL, Title, DevTools) and comparison operators.
+:::
+
 ### Actions
 
 Use imperative verbs to describe what the agent should do:
