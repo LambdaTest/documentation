@@ -155,7 +155,7 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 ## Geolocation Testing Through VPN with <BrandName /> tunnel
 ***
-Test the performance of your web-app through different [geographic locations](https://www.testmuai.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different geographic locations using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 Use the following arguments in your command line.
 

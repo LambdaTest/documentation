@@ -179,7 +179,7 @@ You will receive the below highlighted message **‘Tunnel stopped successfully
 
 ## Geolocation Testing through VPN with <BrandName /> tunnel
 ***
-Test the performance of your web-app through different [geographic locations](https://www.testmuai.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different geographic locations using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 >**How can Geolocation Testing help you?**    
 **1. SERPs – Search Engine Result Pages:**  For a website that is targeting an audience from different parts of the globe. It is always recommended to have a constant check on SERPs to address your website according to the respective trends of different geographies. This is extremely necessary for clothing brands. Traditional wearing differs from one country to another.   

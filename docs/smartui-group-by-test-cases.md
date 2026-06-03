@@ -40,7 +40,7 @@ It also covers how to get **one Automation / SmartUI build** with **multiple cap
   - **`smartui.takeScreenshot`** with a **`screenshotName`** per capture when you want multiple named screenshots in one run.
   - For **SmartUI CLI** static or exec workflows, a **`PROJECT_TOKEN`** from that project (often ends with `#<projectSlug>` matching the project name).
 - **Prerequisites (optional — Node SDK + `visual: true`):** The SmartUI project must be **Web** type; **Omni** names with **`smartUIProjectName`** + **`visual: true`** cause hub `failed to validate project` — see [Omni vs Web](#omni-vs-web). Prefer the **Hooks** flow above for Omni / Hooks projects.
-- On the **grid**, grouping metadata usually comes from session **`name`**, suite/project, or runner test titles. For **local** `smartui exec` + Cypress or Playwright, see the <a href={`${BRAND_URL}/support/docs/smart-ui-sdk/`}>SmartUI SDK docs</a>.
+- On the **grid**, grouping metadata usually comes from session **`name`**, suite/project, or runner test titles. For **local** `smartui exec` + Cypress or Playwright, see the <a href={`${BRAND_URL}/support/docs/smartui-sdk-config-options/`}>SmartUI SDK docs</a>.
   
 :::note
 **`smartui capture` (static URLs)** uploads screenshots to a build but does **not** attach automation test-case metadata. To validate **Group by → Test Case** with real folders, run **automation on the grid** (for example the [Java Hooks flow](#hooks-java-webhook), or Cypress/Playwright with **`smartui exec`**) so captures are tied to test/session identity.
@@ -139,7 +139,7 @@ Pattern: constant **`build`**, unique **`name`** per session, **`visual: true`**
 ### Cypress / Playwright / other
 
 - Use **`smartui exec`** (or your CI job) with a **single `--buildName`** for the whole suite.
-- Map each **`it` / test** (or file) to a unique snapshot name; consult the <a href={`${BRAND_URL}/support/docs/smart-ui-sdk/`}>SmartUI SDK docs</a> for `testName`, `suiteName`, or `testCaseId` on your stack.
+- Map each **`it` / test** (or file) to a unique snapshot name; consult the <a href={`${BRAND_URL}/support/docs/smartui-sdk-config-options/`}>SmartUI SDK docs</a> for `testName`, `suiteName`, or `testCaseId` on your stack.
 
 ---
 
@@ -278,8 +278,8 @@ Empty test groups will automatically hide if none of their screenshots match the
 
 ## Related Resources
 
-- <a href={`${BRAND_URL}/support/docs/smart-ui-visual-regression-testing/`}>Visual Regression Testing with SmartUI</a>
-- <a href={`${BRAND_URL}/support/docs/smart-ui-sdk/`}>SmartUI SDK Documentation</a>
+- <a href={`${BRAND_URL}/support/docs/smartui-guided-walkthrough/`}>Visual Regression Testing with SmartUI</a>
+- <a href={`${BRAND_URL}/support/docs/smartui-running-your-first-project/`}>SmartUI SDK Documentation</a>
 - <a href={`${BRAND_URL}/support/docs/smartui-selenium-java-sdk/`}>SmartUI Selenium Java SDK</a>
 - <a href={`${BRAND_URL}/support/docs/smartui-cli/`}>SmartUI CLI (`capture` / `exec`)</a>
 - [LambdaTest Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)
