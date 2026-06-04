@@ -1,17 +1,17 @@
 ---
-id: getting-started-with-agent-to-agent-testing
+id: getting-started-with-agent-testing-platform
 title: World's First Agentic Testing Platform
 hide_title: false
 sidebar_label: Getting Started
-description: Validate test chatbots, voice assistants, and hybrid deployments across all interaction types with industry's first Agent-to-Agent testing platform. 
+description: Validate test chatbots, voice assistants, and hybrid deployments across all interaction types with industry's first Agent Testing Platform. 
 keywords:
  - agent to agent testing
  - agentic testing
  - ai agent testing
-url: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
+url: https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/
 site_name: TestMu AI
-slug: getting-started-with-agent-to-agent-testing/
-canonical: https://www.testmuai.com/support/docs/getting-started-with-agent-to-agent-testing/
+slug: getting-started-with-agent-testing-platform/
+canonical: https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -36,21 +36,21 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started with Agent to Agent Testing",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-agent-to-agent-testing`
+          "name": "Getting Started with Agent Testing Platform",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-agent-testing-platform`
         }]
       })
     }}
 ></script>
 
-# Getting Started With Agent to Agent Testing Platform
+# Getting Started With Agent Testing Platform
 
-<BrandName />'s Agent-to-Agent Testing platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
+<BrandName />'s Agent Testing Platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
 
 This unified platform enables comprehensive testing of AI agents including chatbots, voice assistants, and autonomous systems across real-world scenarios, ensuring precision and relevance in performance validation. By matching intelligent systems with equally sophisticated testing frameworks, organizations can achieve the thorough validation that traditional testing methods simply cannot provide for AI applications.
 
 
-## The Need for Agent to Agent Testing
+## The Need for Agent Testing Platform
 
 - **Manual Testing Slows Development:** Manual AI testing takes weeks, creating bottlenecks that delay releases and increase costs while teams struggle to validate infinite response variations.
 
