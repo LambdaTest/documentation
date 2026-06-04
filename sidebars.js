@@ -1225,6 +1225,11 @@ module.exports = {
           "kaneai-edit-test-steps",
         ],
       },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "kaneai-faqs",
+      },
       // {
       //   type: "category",
       //   collapsed: true,
