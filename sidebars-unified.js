@@ -49,6 +49,10 @@ const docsSidebar = [
     items: items(s.KaneAISidebar),
   },
   {
+    type: 'category', label: 'Kane CLI', collapsible: true, collapsed: true,
+    items: items(s.KaneCLISidebar),
+  },
+  {
     type: 'category', label: 'Web Scanner', collapsible: true, collapsed: true,
     items: items(s.WebScannerSidebar),
   },
