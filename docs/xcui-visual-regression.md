@@ -59,7 +59,7 @@ XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS app
 
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **iOS Test** app (.ipa file).
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`LambdaTest SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 
 :::tip Sample repo
 If you do not have any **iOS** app (.ipa) and an **iOS Test** app (.ipa) file, you can run your sample tests on <BrandName /> by using our sample :link: [XCUI app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-app.ipa) and a sample :link: [XCUI Test App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-test-app.ipa).
@@ -73,7 +73,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>Real Device </b> for executing your `XCUI` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
@@ -238,7 +238,7 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 }'
 ```
 
-> You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+> You can check the executed builds over at [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 :::
 ## How to use Sharding

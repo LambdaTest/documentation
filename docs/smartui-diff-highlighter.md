@@ -61,7 +61,7 @@ No extra setup is required: if your screenshot uses **Smart Ignore** comparison,
 
 ### Step 1: Open the comparison view
 
-1. In your [SmartUI dashboard](https://smartui.lambdatest.com/), open the **build** that contains the screenshot you want to review.
+1. In your [SmartUI dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/), open the **build** that contains the screenshot you want to review.
 2. Open the **screenshot/comparison view** (e.g. by clicking the screenshot or “View issues”).
 
 ### Step 2: Open the actions menu

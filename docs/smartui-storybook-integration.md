@@ -64,7 +64,7 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
@@ -72,7 +72,7 @@ The following steps will guide you in running your first Visual Regression test 
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>CLI</b> for executing your `StoryBook` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.

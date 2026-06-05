@@ -152,7 +152,7 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Verify Project Exists**:
-   - Log into [SmartUI Dashboard](https://smartui.lambdatest.com/)
+   - Log into [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
    - Check if project exists
    - Verify project name matches
 

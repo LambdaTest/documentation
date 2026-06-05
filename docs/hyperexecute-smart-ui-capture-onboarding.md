@@ -86,7 +86,7 @@ This integration is ideal for:
 
 The first step is to create a SmartUI project in the dashboard. This project will contain all your builds and visual comparisons.
 
-1. Go to [SmartUI Projects page](https://smartui.lambdatest.com/)
+1. Go to [SmartUI Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the **New Project** button
 3. Select the platform as **CLI** for executing your capture tests
 4. Add the following details:
@@ -528,7 +528,7 @@ npx smartui capture urlTest.json --config config.json --buildName "Release-v1.0"
 
 ### SmartUI Dashboard
 
-1. After test execution completes, navigate to [SmartUI Dashboard](https://smartui.lambdatest.com/)
+1. After test execution completes, navigate to [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Select your project
 3. View the build with your specified build name
 4. Review captured screenshots
