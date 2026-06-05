@@ -1,7 +1,7 @@
 ---
 id: smartui-customscroll
-title: CustomScroll Screenshots in SmartUI
-sidebar_label: CustomScroll Screenshots
+title: custom viewport capture in smartui screenshots
+sidebar_label: Custom Viewport
 description: Learn how to use SmartUI CustomScroll screenshots to preserve page and element scroll positions for pages with nested scroll containers, PDF viewers, data grids, modals, and virtualized lists.
 keywords:
   - smartui
@@ -38,16 +38,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "CustomScroll Screenshots in SmartUI",
+          "name": "Custom Viewport Capture in SmartUI Screenshots",
           "item": `${BRAND_URL}/support/docs/smartui-customscroll/`
         }]
       })
     }}
 ></script>
 
-# CustomScroll Screenshots in SmartUI
+# Custom Viewport Capture in SmartUI Screenshots
 
-In <BrandName /> **SmartUI**, **CustomScroll screenshots** preserve the scroll position that exists when you take a snapshot. This helps SmartUI capture the exact visual state of pages that use nested scroll containers, PDF viewers, document viewers, virtualized lists, infinite-scroll pages, data grids, modals, drawers, and embedded scrollable components.
+In <BrandName /> **SmartUI**, **custom viewport capture screenshots** preserve the scroll position that exists when you take a snapshot. This helps SmartUI capture the exact visual state of pages that use nested scroll containers, PDF viewers, document viewers, virtualized lists, infinite-scroll pages, data grids, modals, drawers, and embedded scrollable components.
 
 Use CustomScroll when the content you want to validate is not fully represented by the top-level page viewport. SmartUI records the active scroll state during snapshot capture, restores it before rendering the screenshot, and compares the resulting image against your baseline.
 
