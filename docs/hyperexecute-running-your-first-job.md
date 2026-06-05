@@ -50,7 +50,7 @@ This page outlines how you can run your first test execution job on HyperExecute
 
 We recommend running your first test execution job using a sample project on HyperExecute. This can be done in three different ways, as mentioned below:
 
-1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://hyperexecute.lambdatest.com/quickstart) for new users) 
+1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) for new users) 
 2. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system): Execute tests from your Local System. (Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
 3. [**Using GitPod**](/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod): Execute tests using GitPod. (Requires a [GitPod](https://gitpod.io/login/) account)
 
@@ -59,7 +59,7 @@ We recommend running your first test execution job using a sample project on Hyp
 As you are running tests directly from the HyperExecute GUI, you don't need to do anything.
 The platform automatically gets the instructions from the HyperExecute YAML file and starts execution using the HyperExecute CLI.
 
-**Step 1:** Go to the [Quickstart](https://hyperexecute.lambdatest.com/quickstart) page.
+**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
 
 **Step 2:** Select your preferred test automation framework and hit **Get Started**.
 
@@ -67,7 +67,7 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 
 **Step 4:** Your test execution is initiated using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in the background.
 
-**Step 5:** Click on **View Test Result** to navigate to [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) where you can see the job getting executed and the test results.
+**Step 5:** Click on **View Test Result** to navigate to [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) where you can see the job getting executed and the test results.
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -89,7 +89,7 @@ To run your Test Scripts on HyperExecute from you Local system, you'll need the 
 
 We will be taking care of everything one by one, just follow the steps given below: 
 
-**Step 1:** Go to the [Quickstart](https://hyperexecute.lambdatest.com/quickstart) page.
+**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
 
 **Step 2:** Choose your test automation framework, Select **Run on Local System** and click on **Get Started**. 
 
@@ -135,7 +135,7 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 
 ## 3. Using Gitpod
 
-**Step 1:** Go to the [Quickstart](https://hyperexecute.lambdatest.com/quickstart) page.
+**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
 
 **Step 2:** Choose your test automation framework, select **Run test on Gitpod** and click on **Get Started**.
 
@@ -148,7 +148,7 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
-**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
 ## HyperExecute Webinar Video
 

@@ -204,7 +204,7 @@ In addition to CLI-based execution, HyperExecute provides a UI-based approach to
 
 ### Step 1: Setup your Gatling Project
 
-1. Go to the [HyperExecute Project's Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
+1. Go to the [HyperExecute Project's Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
 2. Select **Gatling** as your performance testing framework.
 3. Browse and upload your Gatling simulation files (`.java`) to create a new performance test project.
 4. Click on the **Save** button.

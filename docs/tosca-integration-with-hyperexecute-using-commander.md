@@ -56,7 +56,7 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
-**Step 1:** Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/). Click on the **Projects**.
+**Step 1:** Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). Click on the **Projects**.
 
 **Step 2:** Click on the **Setup a New Project** button.
 
@@ -82,10 +82,10 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 **Step 7:** Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute and click on the **Run** button.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step7.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-**Step 8:** Now go to the [**Jobs**](https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
+**Step 8:** Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
+> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
 
 ***
 ## Integrate Tosca with HyperExecute using YAML
@@ -94,7 +94,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [<BrandName />’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
+-  Ensure that you have integrated Tosca with [<BrandName />ï¿½s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 

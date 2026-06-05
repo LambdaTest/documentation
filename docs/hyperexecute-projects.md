@@ -47,7 +47,7 @@ When you run jobs on HyperExecute, connecting them to projects helps you track p
 ### Method 1: Use an Existing Project
 If you already have a project in HyperExecute, follow these steps to connect your jobs to it:
 
-1. Go to [Projects List](https://hyperexecute.lambdatest.com/hyperexecute/projects) tab on HyperExecute Dashboard.
+1. Go to [Projects List](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) tab on HyperExecute Dashboard.
 2. Select and open the project you want to link your jobs to.
 3. Click the copy icon next to the project name. This copies the project configuration you'll need for your YAML file.
 4. Paste the copied details into your YAML file before running your job.

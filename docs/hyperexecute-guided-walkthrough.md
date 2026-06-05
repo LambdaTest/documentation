@@ -48,7 +48,7 @@ The HyperExecute dashboard supports **WCAG compliance** as an enterprise feature
 
 ## Jobs Page
 
-All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.
+All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/1.png').default} alt="Image"  className="doc_img"/>
 

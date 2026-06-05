@@ -72,6 +72,6 @@ Select your Project and the folder where you want to save your test cases. The *
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/save-test-cases.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ### Step 4: Execute your test
-To execute your test, click on the **HyperExecute** button and you will be redirected to the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) where your tests will be executed.
+To execute your test, click on the **HyperExecute** button and you will be redirected to the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) where your tests will be executed.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/execute-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>

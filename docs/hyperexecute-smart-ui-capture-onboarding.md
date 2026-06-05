@@ -521,7 +521,7 @@ npx smartui capture urlTest.json --config config.json --buildName "Release-v1.0"
 
 ### HyperExecute Dashboard
 
-1. Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute)
+1. Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute)
 2. Find your job in the job list
 3. Click on the job to view detailed execution logs
 4. Monitor test progress in real-time
