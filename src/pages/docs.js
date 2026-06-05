@@ -173,6 +173,7 @@ export default function Home() {
               <a href="/support/docs/kane-ai-api-testing/"><p className="p_home_inners">API Testing</p></a>
               <a href="/support/docs/kane-ai-command-guide/"><p className="p_home_inners">Command Types</p></a>
               <a href="/support/docs/kaneai-ci-cd-automation/"><p className="p_home_inners">Test Automation with CI/CD</p></a>
+              <a href="/support/docs/kaneai-faqs/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -182,6 +183,7 @@ export default function Home() {
               <a href="/support/docs/kane-cli-installation/"><p className="p_home_inners">Installation</p></a>
               <a href="/support/docs/kane-cli-quickstart/"><p className="p_home_inners">Quick Start</p></a>
               <a href="/support/docs/kane-cli-writing-objectives/"><p className="p_home_inners">Writing Objectives</p></a>
+              <a href="/support/docs/kane-cli-generate/"><p className="p_home_inners">Generate Test Cases</p></a>
               <a href="/support/docs/kane-cli-checkpoints/"><p className="p_home_inners">Checkpoints</p></a>
               <a href="/support/docs/kane-cli-agent-mode/"><p className="p_home_inners">Agent Mode</p></a>
               <a href="/support/docs/kane-cli-cli-reference/"><p className="p_home_inners">CLI Reference</p></a>

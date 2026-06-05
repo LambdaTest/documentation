@@ -5031,6 +5031,23 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Generate Test Cases",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-generate",
+          },
+          {
+            type: "doc",
+            label: "Workflow",
+            id: "kane-cli-generate-workflow",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Checkpoints",
         items: [
           {

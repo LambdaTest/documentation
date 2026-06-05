@@ -75,7 +75,7 @@ Use whichever option fits your setup:
 3. **Allowlist automation with a request header.** If your application supports it, allow a known custom request header on your test environment so requests carrying it skip the challenge. Keep this to test environments only.
 
 :::tip Get your IPs whitelisted
-Follow the [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/) for the current IP ranges and the exact steps.
+Follow the [TestMu AI Public IP Ranges](/support/docs/testmu-public-ip/) for the current IP ranges and the exact steps.
 :::
 
 ### Do I need a separate, CAPTCHA free environment?
