@@ -13,7 +13,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-writing-objectives/
 site_name: TestMu AI
 slug: kane-cli-writing-objectives/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-writing-objectives/
 ---
 

@@ -12,7 +12,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-cli-reference/
 site_name: TestMu AI
 slug: kane-cli-cli-reference/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-cli-reference/
 ---
 

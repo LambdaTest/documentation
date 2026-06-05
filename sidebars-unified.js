@@ -118,5 +118,4 @@ const docsSidebar = [
 
 module.exports = {
   docsSidebar,
-  KaneCLISidebar: s.KaneCLISidebar,
 };
