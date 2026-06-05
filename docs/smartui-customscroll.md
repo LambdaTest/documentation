@@ -1,6 +1,6 @@
 ---
 id: smartui-customscroll
-title: custom viewport capture in smartui screenshots
+title: Custom Viewport Capture in SmartUI Screenshots
 sidebar_label: Custom Viewport
 description: Learn how to use SmartUI CustomScroll screenshots to preserve page and element scroll positions for pages with nested scroll containers, PDF viewers, data grids, modals, and virtualized lists.
 keywords:
@@ -20,6 +20,8 @@ canonical: https://www.testmu.ai/support/docs/smartui-customscroll/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -66,8 +68,8 @@ CustomScroll is opt-in. Existing snapshots continue to behave the same unless yo
 
 | Option | Type | Default | Use case |
 |--------|------|---------|----------|
-| `pageCustomScroll` | Boolean | `false` | Use when the main page, `body`, or `html` document is the scroll container. |
-| `elementsCustomScroll` | Boolean | `false` | Use when important content is inside a nested scrollable element. |
+| `pageCustomScroll` | Boolean (`true`/`false`) | `false` | Use when the main page, `body`, or `html` document is the scroll container. |
+| `elementsCustomScroll` | Boolean (`true`/`false`) | `false` | Use when important content is inside a nested scrollable element. |
 
 ## Prerequisites
 
@@ -100,10 +102,12 @@ This ensures the screenshot reflects the page or component state your test actua
 CustomScroll does not replace waits. For virtualized, lazy-loaded, or document-heavy pages, wait until the target page, row, or element is visible before taking the snapshot.
 :::
 
-## Java Selenium example
+## Java And Playwright Examples
 
 Use `pageCustomScroll` and `elementsCustomScroll` in the snapshot options when the page and nested content can both scroll.
 
+<Tabs>
+<TabItem value="java" label="Java">
 ```java
 Map<String, Object> options = new HashMap<>();
 options.put("pageCustomScroll", true);
@@ -111,11 +115,8 @@ options.put("elementsCustomScroll", true);
 
 SmartUISnapshot.smartuiSnapshot(driver, "PDF-Viewer-Page-25", options);
 ```
-
-## Playwright example
-
-Use `elementsCustomScroll` for document viewers, data grids, and other nested scrollable containers.
-
+</TabItem>
+<TabItem value="playwright" label="Playwright">
 ```javascript
 await page.goto('https://vault.example.com/ui/#doc_info/2/0/1?anQS=page25');
 
@@ -127,6 +128,8 @@ await smartuiSnapshot(page, 'Vault-PDF-Page-25', {
   pageCustomScroll: false,
 });
 ```
+</TabItem>
+</Tabs>
 
 In this example:
 
@@ -135,7 +138,7 @@ In this example:
 - SmartUI captures the scroll position inside the document viewer.
 - The screenshot reflects the intended document state.
 
-## Enable CustomScroll only where needed
+## Enable CustomScroll Only Where Needed
 
 You can keep standard screenshots unchanged and enable CustomScroll only for scroll-dependent states.
 
@@ -150,16 +153,16 @@ await smartuiSnapshot(page, 'Doc-Viewer-Page-25', {
 await smartuiSnapshot(page, 'Footer');
 ```
 
-## Recommended use cases
+## Recommended Use Cases
 
-### PDF and document viewers
+### PDF and Document Viewers
 
 Use CustomScroll when you need to capture a specific page or section inside a document viewer.
 
 Best for:
 
 - PDF viewers
-- Veeva Vault-style viewers
+- Vault-style viewers
 - Contract viewers
 - Compliance documents
 - Reports
