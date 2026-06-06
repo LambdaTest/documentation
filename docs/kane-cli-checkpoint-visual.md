@@ -12,7 +12,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/
 site_name: TestMu AI
 slug: kane-cli-checkpoint-visual/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/
 ---
 

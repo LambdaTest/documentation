@@ -14,7 +14,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-skills/
 site_name: TestMu AI
 slug: kane-cli-skills/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-skills/
 ---
 

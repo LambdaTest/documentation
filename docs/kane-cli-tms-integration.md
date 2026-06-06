@@ -13,7 +13,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-tms-integration/
 site_name: TestMu AI
 slug: kane-cli-tms-integration/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-tms-integration/
 ---
 

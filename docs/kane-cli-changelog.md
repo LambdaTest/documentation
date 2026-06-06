@@ -11,7 +11,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-changelog/
 site_name: TestMu AI
 slug: kane-cli-changelog/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-changelog/
 ---
 

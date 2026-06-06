@@ -1225,6 +1225,11 @@ module.exports = {
           "kaneai-edit-test-steps",
         ],
       },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "kaneai-faqs",
+      },
       // {
       //   type: "category",
       //   collapsed: true,
@@ -5003,6 +5008,23 @@ module.exports = {
             type: "doc",
             label: "Test Manager Integration",
             id: "kane-cli-tms-integration",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Generate Test Cases",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-generate",
+          },
+          {
+            type: "doc",
+            label: "Workflow",
+            id: "kane-cli-generate-workflow",
           },
         ],
       },
