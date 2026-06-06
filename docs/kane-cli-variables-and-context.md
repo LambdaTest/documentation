@@ -13,7 +13,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-variables-and-context/
 site_name: TestMu AI
 slug: kane-cli-variables-and-context/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-variables-and-context/
 ---
 

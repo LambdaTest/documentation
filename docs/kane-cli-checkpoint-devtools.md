@@ -15,7 +15,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/
 site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/
 ---
 

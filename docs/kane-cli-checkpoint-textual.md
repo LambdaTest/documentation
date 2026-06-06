@@ -12,7 +12,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/
 site_name: TestMu AI
 slug: kane-cli-checkpoint-textual/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/
 ---
 

@@ -13,7 +13,6 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/
 site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-localstorage/
-displayed_sidebar: KaneCLISidebar
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/
 ---
 
