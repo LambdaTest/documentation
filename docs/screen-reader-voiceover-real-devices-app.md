@@ -1,6 +1,6 @@
 ---
 id: screen-reader-voiceover-real-devices-app
-title: Screen Reader (VoiceOver) on iOS Devices
+title: Screen Reader (VoiceOver) on iOS Devices for App Testing
 sidebar_label: VoiceOver (iOS)
 description: Test your app's and website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
 keywords:

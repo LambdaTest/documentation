@@ -1,6 +1,6 @@
 ---
 id: screen-reader-on-real-devices-app
-title: Screen Reader (TalkBack) on Android Devices
+title: Screen Reader (TalkBack) on Android Devices for App Testing
 sidebar_label: TalkBack (Android)
 description: Test your app's accessibility with TestMu AI's Screen Reader. Navigate through app elements with spoken descriptions on real Android devices, ensuring compliance with WCAG standards.
 keywords:
