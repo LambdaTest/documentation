@@ -1,6 +1,6 @@
 ---
 id: kane-cli-authentication
-title: Authentication
+title: Kane CLI Authentication
 sidebar_label: Authentication
 description: Authenticate Kane CLI with OAuth or basic auth, manage multiple profiles, and securely store credentials.
 keywords:
