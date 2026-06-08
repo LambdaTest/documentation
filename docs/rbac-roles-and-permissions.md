@@ -18,7 +18,6 @@ slug: rbac-roles-and-permissions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,7 +53,7 @@ Custom Roles and Permissions is an enterprise-level feature. Please contact your
 
 ## Prerequisites
 
-- You must be an **Admin** of your <BrandName /> organization.
+- You must be an **Admin** of your <BrandName /> organization. 
 - Ensure your organization has the RBAC feature enabled by the <BrandName /> team.
 - Familiarity with [User Management](/support/docs/user-management/) and [Team Management](/support/docs/team-management/) is recommended.
 
@@ -68,12 +67,16 @@ Navigate to **Organization Settings** > **Custom Roles & Permissions** from the 
 
 | Role | Description | Entity Permissions |
 |------|-------------|-------------------|
-| **Admin** | Full access to all products and entities with complete permissions. | List, Read, Create, Update, Delete, Execute on all entities |
-| **User** | Standard access with full permissions on most products and entities. | List, Read, Create, Update, Delete, Execute on all entities |
-| **Guest** | Read-only access across products with limited entity permissions. | List, Read only on entities |
+| **Admin** | Full access to all products and entities, plus organization-level administration such as settings, billing, integrations, and user and team management. | List, Read, Create, Update, Delete, Execute on all entities, plus organization administration |
+| **User** | Full permissions on all products and entities, but without organization-level administration. | List, Read, Create, Update, Delete, Execute on all entities |
+| **Guest** | Read-only access across products. | List, Read only on entities |
 
 :::tip
 Roles are auto-applied at login.
+:::
+
+:::info
+When a user is assigned more than one role, their effective permissions are the combination of all assigned roles, and the most permissive access applies. Permission changes take effect on the user's next request or page load, no re-login is required.
 :::
 
 ## Creating and Applying Custom Roles
@@ -122,42 +125,40 @@ When creating or editing a role, add **List of Products** as an entity and selec
 
 ## Entity Level Access
 
-Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Currently, entity-level access is supported for **Test Manager** only.
+Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Each product exposes its own set of entities, and you can grant specific permissions on each one.
+
+Entity-level access is available for the following products:
+
+| Product | Entities |
+|---------|----------|
+| **Test Manager** | Projects, Test Runs, Test Cases and Test Case Instances |
+| **Automation** | Projects, Builds, Test Case Instances |
+| **HyperExecute** | Projects, Workflows, Organization Settings |
+| **SmartUI** | Projects, Builds |
+| **Analytics & Insights** | Projects (applied to dashboards and reports, read-only) |
 
 :::info
-Support for entity-level access in other products is planned for future releases.
+Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
 :::
 
 ### Select Specific Entities
 
-Assign permissions to specific items within the platform:
+When creating or editing a role, you can assign permissions to specific items rather than to all items of a type, for example, granting access only to selected Test Manager projects or to specific HyperExecute projects.
 
-| Entity | Description |
-|--------|-------------|
-| **Projects** | Grant access to Test Manager projects. |
-| **Test Runs** | Grant access to test runs. |
-| **Test Cases and Test Case Instances** | Grant access to Test Manager test cases and test case instances. |
+### Granular Control
 
-### Granular Control <NewTag value="Coming Soon" bgColor="#ffec02" color="#000" />
+For supported products, you can configure fine-grained permissions on each entity using the following permission levels:
 
-Configure fine-grained permissions within specific product areas:
+- **List**: View items in a list.
+- **Read**: View item details.
+- **Create**: Create new items.
+- **Update**: Modify existing items.
+- **Delete**: Remove items.
+- **Execute**: Run or trigger items (for example, abort a build or trigger a HyperExecute job).
 
-| Entity | Description |
-|--------|-------------|
-| **HyperExecute** | Control permissions for jobs, tasks, stages, and configurations within HyperExecute. |
-| **KaneAI and Test Manager** | Control permissions for test plans, builds, milestones, and other Test Manager entities. |
-| **Automation** | Control permissions for builds, sessions, and automation-related resources. |
-| **Analytics** | Control permissions for dashboards, widgets, and reporting features. |
-| **Organization** | Control permissions for organization-level settings, user management, and team management. |
-
-Each granular entity expands into sub-entities with specific permission levels:
-
-- **List**:View items in a list.
-- **Read**:View item details.
-- **Create**:Create new items.
-- **Update**:Modify existing items.
-- **Delete**:Remove items.
-- **Execute**:Run or trigger items (e.g., execute test runs, trigger jobs).
+:::note
+Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
+:::
 
 
 <nav aria-label="breadcrumbs">
