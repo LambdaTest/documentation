@@ -296,6 +296,6 @@ OR use this command if you have not exported your username and access key in the
 
 ## Step 7: Monitor the Test Execution
 
-Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/xcui/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>

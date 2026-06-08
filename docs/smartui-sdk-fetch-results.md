@@ -59,7 +59,7 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 ## Prerequisites
 
 - Basic understanding of Command Line Interface
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
 

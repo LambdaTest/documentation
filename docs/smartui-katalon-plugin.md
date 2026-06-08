@@ -84,7 +84,7 @@ With this plugin, you can:
 
 ### Step 1: Create a SmartUI Project
 
-1. Go to [SmartUI Projects Page](https://smartui.lambdatest.com/).
+1. Go to [SmartUI Projects Page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2. Click **New Project**.
 3. Select platform as **CLI** (for Katalon integration).
 4. Enter project name, approvers, and tags (optional).
@@ -179,7 +179,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 ## Running Tests
 
 1. Execute your test case as usual in Katalon Studio.
-2. After test completion, visit your [SmartUI Dashboard](https://smartui.lambdatest.com/) to:
+2. After test completion, visit your [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) to:
    - View captured screenshots
    - Compare against baseline images
    - Approve or reject visual changes

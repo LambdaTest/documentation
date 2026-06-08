@@ -79,4 +79,4 @@ https://github.com/LambdaTest/smartui-monorepo-sample/blob/main/.github/workflow
 ### Step 4: Execute your projects
 - Click on the **Actions** button of your repository to trigger the pipeline.
 - Provide the **PROJECT TOKEN** to trigger your code projects.
-- Go to the [SmartUI Dashboard](https://smartui.lambdatest.com/) to check the results.
+- Go to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) to check the results.

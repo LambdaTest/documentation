@@ -33,7 +33,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 - Basic understanding of Selenium and WebDriver is required.
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`LambdaTest SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Access your Hub for your selenium **remote connection** instance at `hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
@@ -69,7 +69,7 @@ The following steps will guide you in running your first Visual Regression test 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>Web</b> for executing your `Selenium` tests. 
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
@@ -487,7 +487,7 @@ config.put("element", "<Required Element>");                    //Add your requi
 
 ## Step 4: View SmartUI Results
 
-You have successfully integrated SmartUI with your Selenium tests. Visit your [SmartUI project](https://smartui.lambdatest.com/projects) to view builds and compare snapshots between different test runs.
+You have successfully integrated SmartUI with your Selenium tests. Visit your [SmartUI project](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects) to view builds and compare snapshots between different test runs.
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 

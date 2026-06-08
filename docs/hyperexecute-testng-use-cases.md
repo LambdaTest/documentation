@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-This guide outlines common **Java + TestNG** scenarios for running tests on [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs)
+This guide outlines common **Java + TestNG** scenarios for running tests on [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs)
 
 ## Q: How can I ensure my tests operate with the appropriate Java version on HyperExecute?
 
