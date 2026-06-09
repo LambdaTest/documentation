@@ -3854,6 +3854,11 @@ module.exports = {
             label: "Handle Sticky Elements",
             id: "smartui-handle-sticky-elements",
           },
+          {
+            type: "doc",
+            label: "CustomScroll Screenshots",
+            id: "smartui-customscroll",
+          },
         ],
       },
 
