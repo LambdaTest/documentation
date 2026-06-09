@@ -213,7 +213,7 @@ To perform automation testing in parallel on Windows, use the below command.
 node ./node_modules/protractor/bin/protractor parallel.conf.js
 ```
 
-Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/). Reliably deploy your code at scale using Semaphore CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/). Reliably deploy your code at scale using Semaphore CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -77,7 +77,7 @@ In order to perform your tests with <BrandName />, you would need the below thin
 
 For this article, we have cloned and used this [Github repository](https://github.com/LambdaTest/webdriverio-selenium-sample/blob/master/.drone.yml).
 
-3. You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
+3. You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/profile.webp').default} alt="Drone CI Integration" width="462" height="325" className="doc_img"/>
 

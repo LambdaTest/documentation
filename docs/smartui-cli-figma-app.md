@@ -56,7 +56,7 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 
 ### 1. Create a SmartUI Project
 
-1. Visit [smartui.lambdatest.com](https://smartui.lambdatest.com)
+1. Visit [smartui.lambdatest.com](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com)
 2. Click **New Project**
 3. Select **Real Devices** as the platform
 4. Enter:

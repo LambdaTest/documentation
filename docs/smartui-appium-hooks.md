@@ -65,7 +65,7 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 ## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.
-- Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`TestMu AI SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Access your Hub for your appium **remote connection** instance at `@mobile-hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
@@ -102,7 +102,7 @@ The following steps will guide you in running your first Visual Regression test 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>Real Device </b> for executing your `Appium` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
@@ -155,7 +155,7 @@ cd LT-appium-nodejs
 
 ## Step 4: Set up your authentication
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className='docs__val'>
 
@@ -249,7 +249,7 @@ Appium with SmartUI is currently only supports the viewport based screenshot com
 npm i && node your_test_script.js
 ```
 
-- You can check the executed builds over at [TestMu AI SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [TestMu AI SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Smart Crop With SmartUI
 

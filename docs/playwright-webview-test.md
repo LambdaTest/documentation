@@ -134,6 +134,6 @@ Replace the `TEST_FILE_NAME` in the below command with your desired test file to
 node playwrightwebview.js
 ```
 
-Visit the [<BrandName /> Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+Visit the [<BrandName /> Web Automation](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) page to check the status of your test execution.
 <img loading="lazy" src={require('../assets/images/playwright-testing/webview-test.png').default} alt="Image"  className="doc_img"/>
 

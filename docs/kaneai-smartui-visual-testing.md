@@ -54,7 +54,7 @@ This guide provides a detailed walkthrough on how to leverage KaneAI to create, 
 ## Creating Your First Visual Test
 
 ### Initiate a Web Test
-To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
+To begin, navigate to the [KaneAI dashboard](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/initiate-web-test.png').default} alt="Initiate a Web Test in KaneAI" className="doc_img"/>
@@ -146,6 +146,6 @@ After the Test Run job is finished, all screenshots captured using the `/Visual 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.png').default} alt="smartui dashboard" className="doc_img"/>
 
 
-1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
+1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.
 3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.

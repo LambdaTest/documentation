@@ -120,7 +120,7 @@ Now the build should be created and run. After the build runs successfully, you 
 
 That is it! You can also add a webhook to your repository to trigger the build whenever a change is done in the repository.
 
-Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://automation.lambdatest.com/).**
+Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).**
 
 
 ## Integrating Buildkite with <BrandName /> via YAML
@@ -164,7 +164,7 @@ steps:
 - If you've configured webhooks, your pipeline will trigger when you push updates to the repository. Otherwise, select New Build in the Buildkite dashboard to trigger the pipeline.
 :::
 
-> Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://automation.lambdatest.com/).**
+> Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).**
 
 Reliably deploy your code at scale using Buildkite integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 

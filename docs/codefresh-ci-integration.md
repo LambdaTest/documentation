@@ -55,7 +55,7 @@ Teams can quickly and easily build, test, and deploy their applications on any c
 1. Signing details of Codefresh CI
 2. A GitHub repository. Here is our sample GitHub repository for [Python Selenium Sample](https://github.com/LambdaTest/python-selenium-sample.git).
 3. **<BrandName /> Authentication Credentials**   
-    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
     
 
 ## Integrating Codefresh CI With <BrandName />

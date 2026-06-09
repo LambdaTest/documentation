@@ -75,7 +75,7 @@ rkresults
 
 1. Build your app with the RKTracer tool embedded.
 2. Login to your <BrandName /> account and perform the automated testing of your app.
-3. Navigate to the [App Automation dashboard](https://appautomation.lambdatest.com/build) on <BrandName />.
+3. Navigate to the [App Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) on <BrandName />.
 4. Download the Device log file from <BrandName /> App Automation dashboard.<br/>
 
 <img loading="lazy" src={require('../assets/images/rktracer-integration/3.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>

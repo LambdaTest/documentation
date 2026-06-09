@@ -145,7 +145,7 @@ Execute the below command in the terminal to run the test.
 python todo.py
 ```
 
-Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) to find the mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) to find the mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
 
 <img loading="lazy" src={require('../assets/images/mobile-web-automation/mobile-web-automation-2.webp').default} alt="Image"  className="doc_img"/>
 

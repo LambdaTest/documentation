@@ -166,7 +166,7 @@ make reqnroll-automation-test
 ---
 Check the test output on the console and the TestMu AI dashboard.
 
-Navigate to the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) to check the status of the test execution.
+Navigate to the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) to check the status of the test execution.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/reqnroll-cloud-execution.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>

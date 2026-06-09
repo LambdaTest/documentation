@@ -103,7 +103,7 @@ It will launch the <BrandName /> Tunnel where you can notice different running T
 ## Local Testing with <BrandName /> Docker Tunnel Extension
 ---
 
-Visit the [<BrandName /> Dashboard](https://automation.lambdatest.com/build), you'll find the Active Tunnel icon on right-side corner. Now that you have set up your <BrandName /> Docker Tunnel, you can begin local testing of your website and web pages.
+Visit the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), you'll find the Active Tunnel icon on right-side corner. Now that you have set up your <BrandName /> Docker Tunnel, you can begin local testing of your website and web pages.
 
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/7.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 

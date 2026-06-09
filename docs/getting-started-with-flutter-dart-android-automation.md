@@ -55,7 +55,7 @@ In this guide, we will explore how to run your first Flutter Dart test on an And
 ## Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
-2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 3. Access to an android **Sample** app (.apk) and an **Sample Test Suite** app (.apk file).
 
 :::tip
@@ -274,7 +274,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 ### Step 5: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 
 ## Running Tests in Parallel

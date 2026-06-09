@@ -65,7 +65,7 @@ Before you begin, ensure you have the following prerequisites in place:
 
 First, you need to create a project in SmartUI. All your visual regression test builds for this project will be grouped here.
 
-1.  Navigate to the [SmartUI Projects page](https://smartui.lambdatest.com/).
+1.  Navigate to the [SmartUI Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  Click on **New Project**.
 3.  Select **CLI** as the platform.
 4.  Provide a **Project Name**, select approvers, and add any relevant tags.
@@ -222,7 +222,7 @@ After the HyperExecute job is finished, all screenshots captured using the `take
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="SmartUI Results" width="768" height="373" className="doc_img"/>
 
-1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
+1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.
 3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
 

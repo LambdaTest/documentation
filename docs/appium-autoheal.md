@@ -153,7 +153,7 @@ Once your app is uploaded and Smart Heal is enabled (either via capabilities or 
 ## Viewing Results in Dashboard
 
 ### Accessing the Dashboard
-Your test results are displayed on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Your test results are displayed on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 ### Filtering Healed Builds
 To display only healed builds, click on the **Configure** option at the top of the dashboard.  

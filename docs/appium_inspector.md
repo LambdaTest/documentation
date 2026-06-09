@@ -144,7 +144,7 @@ Start the Appium Inspector & Select <BrandName /> from the list of Cloud Test Pr
 
 ### Step 3: Configure your Credentials
 
-Enter in your UserName & Access Key. You may find the credentials available on [<BrandName /> Dashboard](https://appautomation.lambdatest.com/)
+Enter in your UserName & Access Key. You may find the credentials available on [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/)
 
 ---
 
@@ -156,7 +156,7 @@ Alternatively, we can also go to our [capabilities generator](https://www.testmu
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-Once this is complete, you can now run the test by clicking on start session. Once you start the session, a video recording along with detailed information and logs of the test run will be available on the [<BrandName /> Dashboard](https://appautomation.lambdatest.com/build).
+Once this is complete, you can now run the test by clicking on start session. Once you start the session, a video recording along with detailed information and logs of the test run will be available on the [<BrandName /> Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

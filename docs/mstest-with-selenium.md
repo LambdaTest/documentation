@@ -161,7 +161,7 @@ dotnet test MS-Test-Cross-Browser.csproj
 ---
 Check the test output on the console and the TestMu AI dashboard.
 
-Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/) to view your test results. The dashboard provides:
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) to view your test results. The dashboard provides:
 
 - Text logs for each test step
 - Screenshots captured during execution

@@ -115,7 +115,7 @@ public class vanilla_android {
 }
 ```
 
-Once you have added the code snippet, the status and remark will be visible on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build) as shown below:
+Once you have added the code snippet, the status and remark will be visible on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) as shown below:
 
 
 <img loading="lazy" src={require('../assets/images/appium-lambdaHooks/01.webp').default} alt="Build Page Remark" width="1200" height="550" className="doc_img"/>

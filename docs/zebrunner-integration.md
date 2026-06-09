@@ -87,7 +87,7 @@ Now that you have integrated <BrandName /> as the Test Environment Provide, you 
 
 ## How To View Test Execution Details On <BrandName /> Platform
 
-As soon as you execute the test from Zebrunner, the test execution will start on <BrandName /> platform as well. To view the test execution details, open the [Automation dashboard](https://automation.lambdatest.com/). You will see your test details on the top, as shown below:
+As soon as you execute the test from Zebrunner, the test execution will start on <BrandName /> platform as well. To view the test execution details, open the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/). You will see your test details on the top, as shown below:
 
  <img loading="lazy" src={require('../assets/images/zebrunner-integration/test-on-lambdatest.webp').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 

@@ -88,7 +88,7 @@ For such _local_ variables, only the scope of the variable can be changed to a g
 
 
 ### Via UI from Variables page
-By visiting the [variables page](https://kaneai.lambdatest.com/variables), you can click on "Create new" option and add relevant details and scope. You can list of all global and environment variables on this page.
+By visiting the [variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables), you can click on "Create new" option and add relevant details and scope. You can list of all global and environment variables on this page.
 You can edit the session value for the variables here which will lead to updation of the value in all new test executions and sessions for that variable.
 
 ### From a Manual Interaction step

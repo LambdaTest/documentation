@@ -403,7 +403,7 @@ Sample Capabilities for both android and iOS web app mentioned below -
 
 ## Navigation in Automation Dashboard
 
-Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 

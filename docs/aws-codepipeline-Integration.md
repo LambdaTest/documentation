@@ -54,7 +54,7 @@ AWS CodePipeline is a cloud-based continuous delivery platform for fully automat
 * Login details in [AWS CodePipeline CI](https://aws.amazon.com/codepipeline/).
 * A GitHub repository. Here is our sample GitHub repository for [AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample.git).
 * **<BrandName /> Authentication Credentials**   
-   Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+   Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
     ```

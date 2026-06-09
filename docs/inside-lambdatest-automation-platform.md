@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-The [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
+The [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
 
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/homepage-guide.gif').default} alt="TestMu AI Automation Dashboard overview" className="doc_img" style={{ width: '100%' }}/>
 

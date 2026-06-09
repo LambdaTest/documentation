@@ -445,7 +445,7 @@ Debug and run your code. Run `iOSApp.java` or `AndroidApp.java` in your editor.
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <BrandName /> [App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <BrandName /> [App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 ## More About Desired Capabilities
 ---

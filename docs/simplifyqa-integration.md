@@ -81,4 +81,4 @@ This document will guide you step-by-step method to integrate the SimplifyQA wit
 - Click on test data and paste the App ID copied from Lambda Test in **APP Id** parameter.
 - In the Execute Tab, choose **Cloud Automation**. Click on <BrandName />.
 - Select Release, Sprint. In the Devices dropdown choose the device of your choice and click on Execute button.
-> To view the <BrandName /> execution, navigate to [automation](https://appautomation.lambdatest.com/build) in the left panel in <BrandName />.
+> To view the <BrandName /> execution, navigate to [automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) in the left panel in <BrandName />.

@@ -81,7 +81,7 @@ testRigor is a Generative AI-based codeless test automation tool that helps comp
  <img loading="lazy" src={require('../assets/images/testrigor-integration/integrations.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 
 
-3. Click the *Enable <BrandName />* checkbox and enter your <BrandName /> Username and Access Key. You can find your credentials in the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build). 
+3. Click the *Enable <BrandName />* checkbox and enter your <BrandName /> Username and Access Key. You can find your credentials in the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). 
 
  <img loading="lazy" src={require('../assets/images/testrigor-integration/enable_lt.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 

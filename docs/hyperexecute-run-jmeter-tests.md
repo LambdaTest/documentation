@@ -61,7 +61,7 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
 
 ## Step 1: Setup your JMeter Project
 
-- Go to the [HyperExecute Project's Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
+- Go to the [HyperExecute Project's Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
 - Browse and Upload your JMeter test files to create a new performance test project.
 - Click on the **Save** button
 

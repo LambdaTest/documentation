@@ -61,14 +61,14 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 ## Prerequisites
 
 - Basic understanding of mobile app testing and Appium
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials
 - An active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit
 
 ## Create a SmartUI Project
 
 The first step is to create a project that will contain all your builds. To create a SmartUI Project:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>CLI</b> for executing your `SDK` tests
 4. Add name of the project, approvers for the changes found, and tags for filtering

@@ -215,7 +215,7 @@ Parallel Testing is one of the most demanding features of <BrandName /> Selenium
 protractor parallel.conf.js
 ```
 
-Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
 Deploy your code in a reliable manner at scale using GitLab CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 

@@ -117,7 +117,7 @@ You can find more information about environment variables in [this guide](/suppo
 
 Store passwords securely using KaneAI Secrets (backed by HashiCorp Vault):
 
-1. Go to [KaneAI Variables](https://kaneai.lambdatest.com/variables)
+1. Go to [KaneAI Variables](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables)
 2. Create a secret variable for the password
 3. Reference it in your test: `type {{secret.admin_password}} in the password field`
 

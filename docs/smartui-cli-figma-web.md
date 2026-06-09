@@ -62,7 +62,7 @@ With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 
 :::note
@@ -90,7 +90,7 @@ The following steps will guide you in running your visual tests for Figma files 
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>CLI</b> for executing your `CLI` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.

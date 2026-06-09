@@ -52,7 +52,7 @@ You can filter your tests on TestMu AI using the various filters available on th
 ---
 Use the filter toolbar on the Timeline tab to narrow down tests by date, user, build, and status.
 
-When you visit the [Timeline](https://automation.lambdatest.com/timeline) on your automation dashboard, you can see a **Filter** icon that allows you to use different filters. 
+When you visit the [Timeline](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline) on your automation dashboard, you can see a **Filter** icon that allows you to use different filters. 
 
 <img loading="lazy" src={require('../assets/images/uploads/filter-tests-on-timeline.webp').default} alt="selenium test" width="1921" height="867" className="doc_img"/>
 
@@ -126,7 +126,7 @@ Use this option to clear all applied filters. Clicking this option returns the T
 ---
 Use the filter toolbar on the Automation Logs tab to filter by build, date, users, status, and tags.
 
-When you visit the [Automation Logs](https://automation.lambdatest.com/logs) on your automation dashboard, you also see a filter toolbar.
+When you visit the [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) on your automation dashboard, you also see a filter toolbar.
 
 <img loading="lazy" src={require('../assets/images/uploads/filter-bar.webp').default} alt="automation test toolbar" width="1024" height="416" className="doc_img"/>
 
@@ -159,7 +159,7 @@ You can also filter tests based on multiple tags. Select multiple custom tags at
 ---
 Use the filter toolbar on the Analytics tab to filter by tags, users, environment, and date range.
 
-When you visit the [Analytics](https://automation.lambdatest.com/analytics) on your automation dashboard, you also see a filter toolbar.
+When you visit the [Analytics](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/analytics) on your automation dashboard, you also see a filter toolbar.
 
 <img loading="lazy" src={require('../assets/images/uploads/filter-test-analytics.webp').default} alt="automation analytics" width="1024" height="415" className="doc_img"/>
 

@@ -152,7 +152,7 @@ Run the below command in your terminal at the root folder of the project:
 
 ## Step 5: Monitor the Test Execution
 
-Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 

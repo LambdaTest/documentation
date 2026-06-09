@@ -53,7 +53,7 @@ Before you begin, ensure you have:
 
 - <BrandName /> account with active subscription
 - GitLab repository with CI/CD enabled
-- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://smartui.lambdatest.com/)
+- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 - Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO)
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
 - <BrandName /> credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)

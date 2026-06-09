@@ -37,7 +37,7 @@ In this topic, you will learn about the:
 
 * **<BrandName /> Authentication Credentials**
 
- Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button. 
+ Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button. 
 * For Linux/Mac:  
 
 <div className="lambdatest__codeblock">
@@ -198,7 +198,7 @@ Once you have cloned the above code, you need to execute the below command to tr
 ```
 $ mvn -Dtest=BasicDemo test
 ```
->Watch the execution of the demo test on the [<BrandName /> Automation Dashboard.](https://automation.lambdatest.com/)
+>Watch the execution of the demo test on the [<BrandName /> Automation Dashboard.](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/)
 
 ## Test Your Locally Hosted Applications On <BrandName /> From Applitools
 -----------------------------------------------------------------------------------------------------------------------------

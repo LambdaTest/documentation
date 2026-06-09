@@ -62,7 +62,7 @@ To upload an app to <BrandName /> for app testing, you would need the following 
 
 * <BrandName /> Credentials
 
-    * Please ensure that you have your <BrandName /> credentials handy, including your <BrandName /> username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your <BrandName /> automation [dashboard](https://automation.lambdatest.com/build).
+    * Please ensure that you have your <BrandName /> credentials handy, including your <BrandName /> username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your <BrandName /> automation [dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
     <img loading="lazy" src={require('../assets/images/fastlane/lambdatest_creds.png').default} alt="add" width="100" height="100" className="doc_img"/>
 

@@ -56,14 +56,14 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 - Java 8 or higher installed on your system
 - Maven or Gradle build tool
 - Familiarity with Java development
-- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 ## Step 1: Establishing a SmartUI Project
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
 
-1. Navigate to the [SmartUI Projects Page](https://smartui.lambdatest.com/).
+1. Navigate to the [SmartUI Projects Page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2. Tap on the `new project` button.
 3. Specify your platform type as `PDF`.
 4. Provide your `project` name, designate `approvers`, and add `tags` (optional).

@@ -59,7 +59,7 @@ Jenkins Pipeline is also referred to as "Pipeline" offers a suite of plugins to 
 3.  Ensure you have the Pipeline plugin, although, it is displayed under the "suggested plugins" during the post-installation setup of Jenkins.
 4.  **<BrandName /> Authentication Credentials**
 
-Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://automation.lambdatest.com)** by clicking on the key icon near the help button.
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com)** by clicking on the key icon near the help button.
 
 *   For Linux/Mac:
 

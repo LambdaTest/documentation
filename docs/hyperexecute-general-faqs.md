@@ -150,7 +150,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 #### 17. **How can I access my <BrandName /> Hub URL?**
 
-  Your <BrandName /> Hub URL can be accessed from our [automation page](https://automation.lambdatest.com/build), along with your username and access key. Click on the **Access Key** button on the right side of your screen to retrieve your Hub URL. The image below indicates exactly where you can find your Hub URL. 
+  Your <BrandName /> Hub URL can be accessed from our [automation page](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), along with your username and access key. Click on the **Access Key** button on the right side of your screen to retrieve your Hub URL. The image below indicates exactly where you can find your Hub URL. 
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/faq/hub.png').default} alt="Image"  className="doc_img"/>
 

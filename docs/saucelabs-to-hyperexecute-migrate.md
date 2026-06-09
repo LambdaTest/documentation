@@ -76,7 +76,7 @@ To migrate your Test from SauceLabs to HyperExecute, you need to follow the belo
 
 ### Step 1: Create your account in HyperExecute
 
-Before starting the migration process, make sure you have created your account in [HyperExecute](https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+Before starting the migration process, make sure you have created your account in [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ### Step 2: Configure CLI and Environment Variables
 
@@ -239,7 +239,7 @@ Run the below command in your downloaded CLI to trigger your test scripts in the
 
 > In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
-Here is the output in the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs).
+Here is the output in the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs).
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/sl_hyp_migration/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 

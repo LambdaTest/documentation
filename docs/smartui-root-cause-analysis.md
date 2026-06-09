@@ -82,7 +82,7 @@ Before you begin, please ensure the build was generated using a **<BrandName /> 
 
 ### Step 1: Activate RCA Mode
 
-1.  Open a visual build from your [SmartUI dashboard](https://smartui.lambdatest.com/).
+1.  Open a visual build from your [SmartUI dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  In the comparison toolbar, click the **RCA** icon.
 <p align="center">
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAicon.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/>

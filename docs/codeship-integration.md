@@ -53,7 +53,7 @@ Codeship is a scalable, cloud-based platform for continuous integration that off
 1. Signing details of Codeship
 2. A GitHub repository. Here is our sample GitHub repository for [Codeship Basic](https://github.com/LambdaTest/protractor-selenium-codeship-basic).
 3. **<BrandName /> Authentication Credentials**   
-    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -170,7 +170,7 @@ protractor parallel.conf.js
 
 Now, any changes commit in your repository will trigger a build and run automation tests in parallel on <BrandName /> Selenium Grid.
 
-Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://automation.lambdatest.com/).**
+Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).**
 
 Reliably deploy your code at scale using Codeship integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 

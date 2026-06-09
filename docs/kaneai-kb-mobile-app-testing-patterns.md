@@ -48,7 +48,7 @@ Mobile native app testing in KaneAI follows many of the same principles as web t
 
 ## Getting Started with Mobile Tests
 
-1. Navigate to the [KaneAI home page](https://kaneai.lambdatest.com/objective)
+1. Navigate to the [KaneAI home page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective)
 2. Choose **App Test** (Android or iOS)
 3. Select a real device from the device cloud
 4. Upload your app (APK for Android, IPA for iOS) or select a previously uploaded app

@@ -120,7 +120,7 @@ pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
 
 ## View your Pyppeteer test results
 
-The [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
+The [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
 
 The below screenshot of <BrandName /> Automation Dashboard shows the pyppeteer build on the left and the build sessions associated with the selected build on the right.
 

@@ -64,7 +64,7 @@ For a complete understanding of approval, reject, move, and merge functions acro
 
 ## Where multiselect appears
 
-1. Sign in to [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+1. Sign in to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2. Open any project → choose a build.
 3. Navigate across tabs (e.g., **New**, **Changes Found**).  
 4. Look for the **selection toolbar** above the screenshot grid.

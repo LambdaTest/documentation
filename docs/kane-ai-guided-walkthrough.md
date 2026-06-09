@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 This guided walkthrough will help you understand the various components and features available, ensuring you can efficiently navigate and use the platform for managing your automated tests after you have successfully [run your first test](/support/docs/kane-ai-web-test/).
 
-> Navigate to the [Test Manager](https://test-manager.lambdatest.com/projects) and [select your project and folder](/support/docs/kane-ai-web-test/#step-3-save-your-test-case) into which you have saved your tests to manage your tests.
+> Navigate to the [Test Manager](https://www.testmuai.com/login/?redirectTo=https://test-manager.lambdatest.com/projects) and [select your project and folder](/support/docs/kane-ai-web-test/#step-3-save-your-test-case) into which you have saved your tests to manage your tests.
 
 ## Projects Page
 All the Test Cases generated are accessible from the Test Manager page in the Test Cases section. Each of the Test Case has a unique `Test Case ID` and `Labels` to uniquely identify them. The top section displays the project name, number of Test Cases in that particular project folder, Test Plans, Builds and its creation details.

@@ -63,7 +63,7 @@ metrics with TestMu AI. TestMu AI also allows you to perform cross-browser testi
 Complete these steps before generating Lighthouse reports.
 
 1. Create a <a href="https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingSignup}>TestMu AI account</a>.
-2. Get your TestMu AI Username and Access Key from the [Automation Dashboard](https://automation.lambdatest.com/build) or your <a href="https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI Profile</a>.
+2. Get your TestMu AI Username and Access Key from the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) or your <a href="https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI Profile</a>.
 
 ## How to Include Lighthouse Performance Metrics in Selenium Automation
 ---
@@ -107,7 +107,7 @@ Once you have run your Selenium automation tests on TestMu AI, you can view the 
 
 Follow the below steps to view the **Lighthouse performance metrics** on TestMu AI:
 
-**1.**  Go to the [Automation Dashboard](https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo, we used a sample **TestNG** script from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium). 
+**1.**  Go to the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo, we used a sample **TestNG** script from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium). 
 
 <img loading="lazy" src={require('../assets/images/uploads/lighthouse_1.webp').default} alt="Image"  width="1921" height="534" className="doc_img"/>
 
