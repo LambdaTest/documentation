@@ -16,7 +16,7 @@ function getLoginUrlWithCookies(baseUrl = `https://accounts.lambdatest.com/login
   }
 
   // Only collect these specific cookies
-  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked'];
+  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked', 'previous_url_testmu'];
 
   // Collect all cookies
   const cookies = document.cookie;

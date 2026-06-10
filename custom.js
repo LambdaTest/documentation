@@ -128,7 +128,7 @@
       );
       if (!isAllowedDomain) return baseUrl;
 
-      const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'msclkid', 'fbclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked'];
+      const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'msclkid', 'fbclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked', 'previous_url_testmu'];
       const cookies = document.cookie;
       if (!cookies || cookies.trim() === '') return baseUrl;
 
@@ -162,6 +162,7 @@
     };
 
     window.addEventListener('DOMContentLoaded', (event) => {
+      writeCookie("previous_url_testmu", document.referrer || window.location.href);
       getUsernameToken('dom');
 
       // Attach CookieTrackingSignup handler to the navbar "Get Started" button
@@ -341,6 +342,7 @@
     (function (history) {
       var pushState = history.pushState;
       history.pushState = function (state) {
+        writeCookie("previous_url_testmu", window.location.href);
         setTimeout(function () {
           if (typeof document !== "undefined") {
             var youtube = document.querySelectorAll(".youtube");
