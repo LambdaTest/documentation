@@ -43,12 +43,14 @@ With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. Fr
 ## Supported Devices
 Currently, the Device Passcode feature in App Automation is enabled on the following iOS real devices:
 
-| iOS Device   | iOS Version |
-|--------------|-------------|
-| iPhone 16    | 18      |
-| iPhone 15    | 17      |
-| iPhone 14    | 16      |
-| iPhone 13    | 15      |
+| iOS Device          | iOS Version |
+|---------------------|-------------|
+| iPhone 17 Pro Max   | 26          |
+| iPhone 17           | 26          |
+| iPhone 16           | 18          |
+| iPhone 15           | 17          |
+| iPhone 14           | 16          |
+| iPhone 13           | 15          |
 
 > We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 ---
@@ -128,6 +130,7 @@ driver.execute_script(
 driver.find_element(By.XPATH,"//*[@name=\"Passcode field\"]").send_keys("123456")
 ```
 
-:::info
- The default passcode is `123456` unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.
- :::
+:::note
+- The default passcode is `123456` unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.
+- On **iOS 26** devices (e.g., iPhone 17, iPhone 17 Pro Max), the passcode step is **not required**. The Apple Pay transaction is completed automatically after the confirmation hook, and you can skip the passcode entry in your automation script.
+:::
