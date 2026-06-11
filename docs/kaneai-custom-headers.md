@@ -62,7 +62,7 @@ Each custom header has a **Type** field that determines how the value is handled
 
 ### Step 1: Create a Web Test
 
-Navigate to the [KaneAI page](https://kaneai.lambdatest.com/objective) and click the **Desktop Browser** option to create a new web test.
+Navigate to the [KaneAI page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click the **Desktop Browser** option to create a new web test.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/create_web_test_custom_headers.png').default} alt="KaneAI objective page" className="doc_img"/>
 

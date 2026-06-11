@@ -124,7 +124,7 @@ Currently, these features only support `Selenium` based tests for Web Automation
 
 To view the Flaky Test Detection report, you can follow the below steps:
 
-- Go to the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+- Go to the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 - Select the Build for which you want to view the flaky tests list.
 - For flaky marked tests, you will see a Flake icon <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />  in the test list.
 - Now, select the test for which you want to view the flaky test details.

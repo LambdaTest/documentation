@@ -263,7 +263,7 @@ Run the following command on the terminal to trigger the tests as per your machi
 </Tabs>
 
 
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution
+Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
 #### Sample YAML File for Auto-Split
 
@@ -389,7 +389,7 @@ Run the following command on the terminal to trigger the tests as per your machi
 
 </Tabs>
 
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
+Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution:
 
 #### Sample YAML File for Matrix
 
@@ -434,7 +434,7 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 1:** Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
 
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Cypress&framework=Cypress-v9)
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Cypress&framework=Cypress-v9)
 
 **Step 2:** Login with TestMu AI credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
 
@@ -447,7 +447,7 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
-**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
 
 ## Additional Details

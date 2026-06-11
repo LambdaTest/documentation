@@ -53,7 +53,7 @@ Oxygen supports <BrandName /> Selenium Grid, meaning you can configure your <Bra
 ## Prerequisites
 -----------------------------------------------------------------------------------------------------------------------------
 * Make sure to [download](https://docs.oxygenhq.org/download-installation-start/download-and-installation/download-oxygen-ide) the Oxygen framework for your operating system.
-* Retrieve your <BrandName /> authentication credentials i.e., your <BrandName /> Username, Access Key and Hub URL. You can do so by visiting the [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and clicking on the key icon near the help button.
+* Retrieve your <BrandName /> authentication credentials i.e., your <BrandName /> Username, Access Key and Hub URL. You can do so by visiting the [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and clicking on the key icon near the help button.
 
 <img loading="lazy" src={require('../assets/images/Oxygen/Oxygen-1.webp').default} alt="oxygen integration" width="1354" height="498" className="doc_img"/>
 

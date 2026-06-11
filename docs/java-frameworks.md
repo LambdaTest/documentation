@@ -186,7 +186,7 @@ javac -classpath ".:/path/to/selenium/jarfile:" JavaTodo.java
 java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
 ```
 
-Your test results appear on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+Your test results appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

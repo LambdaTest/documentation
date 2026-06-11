@@ -169,6 +169,6 @@ You can download the CLI for your desired platform from the below mentioned link
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/4.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
-- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+- Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/5.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>

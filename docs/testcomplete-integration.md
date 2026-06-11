@@ -73,7 +73,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/1.png').default} alt="Synapse Architecture" width="1912" height="996" className="doc_img"/>
 
-2. Visit [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) and copy the <BrandName /> Hub URL.
+2. Visit [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) and copy the <BrandName /> Hub URL.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/2.png').default} alt="Synapse Architecture" width="1908" height="846" className="doc_img"/>
 
@@ -173,7 +173,7 @@ Click on the run button to check your script.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/11.png').default} alt="configuration" className="doc_img"/>
 
-Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://appautomation.lambdatest.com/build).
+Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 
 > In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com). <br />

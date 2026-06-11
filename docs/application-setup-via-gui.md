@@ -69,13 +69,13 @@ Wait for the file to upload and process. A success message will indicate when yo
 > Learn how to [Upload Apps on <BrandName />’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
 
 :::info
-- You can access the [**Virtual Device Dashboard**](https://app.lambdatest.com/console/realtime/app).
+- You can access the [**Virtual Device Dashboard**](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app).
 - For **Virtual Devices**, the steps remain identical to those for Real Devices.  
 - The only difference is that for **iOS applications**, you must upload a **.zip** file instead of an `.ipa` file, as simulators accept `.zip` format.  
 :::
 
 ## Automation Dashboard
-- **Access the App Automation Dashboard :** Log in to your <BrandName /> account and navigate to the [App Automation Dashboard](https://appautomation.lambdatest.com/build).
+- **Access the App Automation Dashboard :** Log in to your <BrandName /> account and navigate to the [App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 - **Upload the Application :** Click the Browse File button in the App tab under the Real Device or Virtual Device section. Select your application file from your local system:
   - **Android :** Upload a `.aab` or `.apk` file.
   - **iOS :** Upload an `.ipa` file.

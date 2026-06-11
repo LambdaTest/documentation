@@ -148,7 +148,7 @@ npm run parallel
 
 ## Step 5: View Your Results
 ---
-After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 The dashboard provides:
 - Video recordings of each test session

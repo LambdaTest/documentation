@@ -166,7 +166,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 1. Firstly, create a folder on your local.
 2. Download the HyperExecute CLI file and put it under this folder. You may download HyperExecute CLI from either of the following ways:
 - Download it from our HyperExecute documentation page [here](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), or
-- "Get Started" through HyperExecute [onboarding](https://hyperexecute.lambdatest.com/quickstart) and download the CLI.
+- "Get Started" through HyperExecute [onboarding](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) and download the CLI.
 3. Refer to the sample `.ipa` files and `.yaml` file given below. Put all of them under this folder.
 - [ProverbialTest.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/ProverbialTest.ipa)
 - [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
@@ -252,9 +252,9 @@ You can refer to this example and screenshot below:
 
 
 5. After the test is started you can follow the test on the below links.
-- [<BrandName /> Automation](https://appautomation.lambdatest.com/build)
+- [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build)
 <img loading="lazy" src={require('../assets/images/app-automation/sharding-appauto.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-- [<BrandName /> HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
+- [<BrandName /> HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute)
 <img loading="lazy" src={require('../assets/images/app-automation/sharding-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::note

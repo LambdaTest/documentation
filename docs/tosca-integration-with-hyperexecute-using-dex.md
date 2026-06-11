@@ -57,7 +57,7 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 ### Step 1: Initialize the Tosca Project
 
-- Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/). Click on the **Projects**.
+- Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). Click on the **Projects**.
 
 - Click on the **Setup a New Project** button.
 
@@ -105,7 +105,7 @@ Click on **Save** button.
 
 ### Step 5: Check the Logs Status in Dashboard
 
-- Now go to the [**Jobs**](https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
+- Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 
 You can also download the video output.
 

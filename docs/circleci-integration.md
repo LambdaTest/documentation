@@ -65,7 +65,7 @@ To perform your karma tests with <BrandName />, you would need the following thi
      ``` 
 
 * <BrandName /> Authentication Credentials
-   - Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.  
+   - Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.  
    
     ```
     $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
@@ -287,7 +287,7 @@ To perform automation testing in parallel on macOS/Linux use the below command.
 $ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests
 ```
 
-Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
 Deploy your code in a reliable manner at scale using CircleCI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 

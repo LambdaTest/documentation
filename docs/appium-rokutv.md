@@ -133,7 +133,7 @@ cd LT-appium-rokutv
 
 ### 3. Set up your authentication
 
-Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className="docs__val">
 
@@ -303,7 +303,7 @@ If you are unable to run the automation script with the above mentioned commands
 | video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE`  | Video recording of the complete screen.                                               |
 | devicelog        | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `devicelog=TRUE` <br/> OR <br/> `devicelog=FALSE` | Enable Device logs.                                                                   |
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 ## Supported Commands
 We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list of all the commands the driver supports from the project's [README](https://github.com/headspinio/appium-roku-driver?tab=readme-ov-file#roku-commands):

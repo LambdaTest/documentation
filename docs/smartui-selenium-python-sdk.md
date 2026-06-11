@@ -60,7 +60,7 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
   
 ```bash
@@ -73,7 +73,7 @@ The following steps will guide you in running your first Visual Regression test 
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.

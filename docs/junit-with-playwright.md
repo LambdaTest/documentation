@@ -134,7 +134,7 @@ mvn clean test
 ## View your test results
 ---
 
-Go to the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JUnit test results.
+Go to the [<BrandName /> Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright JUnit test results.
 
 
 

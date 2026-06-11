@@ -153,7 +153,7 @@ mvn -Dlambdageb.capabilities=capabilities clean test
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
-Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your test results. Each session includes:
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your test results. Each session includes:
 
 - **Video recording** of the full test execution
 - **Screenshots** captured at each step

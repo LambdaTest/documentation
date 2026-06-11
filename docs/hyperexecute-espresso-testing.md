@@ -306,7 +306,7 @@ OR use this command if you have not exported your username and access key in the
   </CodeBlock>
 </div>
 
-> Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+> Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 :::tip Troubleshoot Guide
 

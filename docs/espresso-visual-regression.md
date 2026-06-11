@@ -61,7 +61,7 @@ In this documentation, you will learn step-by-step how to perform regression tes
 
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
-- Go to [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`TestMu AI SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 
 :::tip
 If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android-app.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android_espressotest-app.apk).
@@ -72,7 +72,7 @@ If you do not have any **Android** app (.apk) and an **Android Test** app (.apk)
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>Real Device </b> for executing your `Espresso` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
@@ -247,7 +247,7 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' 
 }'
 ```
 
-> You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+> You can check the executed builds over at [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Types of Sharding
 Sharding can be categorized into two types:

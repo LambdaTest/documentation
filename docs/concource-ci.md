@@ -66,7 +66,7 @@ Concourse CI can be integrated with <BrandName /> to perform automation testing 
 npm install npm@latest -g
 ```
 
-3. <BrandName /> Authentication Credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+3. <BrandName /> Authentication Credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 

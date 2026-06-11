@@ -72,7 +72,7 @@ In this document, we will see how to run Selenium IDE tests on <BrandName /> clo
 ```
 
 
-*   You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
+*   You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
 
 <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="<BrandName /> Access Key" width="462" height="325" className="doc_img"/>
 
@@ -141,7 +141,7 @@ selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces
 ```
 
 
-We have successfully executed all the steps to run Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your <BrandName /> profile](https://automation.lambdatest.com/timeline).
+We have successfully executed all the steps to run Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your <BrandName /> profile](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
 
 Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests: <img loading="lazy" src={require('../assets/images/uploads/SIDE-Runner-execution-snapshot-1.webp').default} alt="test execution snapshots" width="1353" height="493" className="doc_img"/> <img loading="lazy" src={require('../assets/images/uploads/automation-timeline-snapshot.webp').default} alt="automation test timeline" width="1353" height="493" className="doc_img"/>
 

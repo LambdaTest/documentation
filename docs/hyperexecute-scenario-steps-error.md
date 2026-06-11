@@ -77,7 +77,7 @@ If you put the wrong HUB Endpoint in your test file, you will receive the follow
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/scenario-errors/hub_error.png').default} alt="Image"  className="doc_img"/>
 
-To rectify this issue, you need to cross-check your HUB URL. You can also visit [this](https://automation.lambdatest.com/build) website and click on **Access Key** button to get your correct HUB URL.
+To rectify this issue, you need to cross-check your HUB URL. You can also visit [this](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) website and click on **Access Key** button to get your correct HUB URL.
 
 ## Tunnel Error
 

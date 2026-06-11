@@ -181,7 +181,7 @@ OR use this command if you have not exported your username and access key in the
 
 ### Step 5: Monitor and Validate the Test Execution
 
-Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 You can validate the tested API via the pre, post, and scenrios logs in the dashboard.
 
