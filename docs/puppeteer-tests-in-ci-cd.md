@@ -16,7 +16,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/puppeteer-tests-in-ci-cd/
 site_name: TestMu AI
 slug: puppeteer-tests-in-ci-cd/
-canonical: https://www.testmu.ai/support/docs/puppeteer-tests-in-ci-cd/
+canonical: https://www.testmuai.com/support/docs/puppeteer-tests-in-ci-cd/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -67,6 +67,49 @@ Running Puppeteer tests through CI/CD pipeline involves three stages:
 3. If the website under test in hosted on local server, then you will need to configure the <BrandName /> tunnel by setting `tunnel` capability to `true` for running local tests via CI/CD on the <BrandName />. However, if the staging website is publicly accessible then this step is not required. 
 
 4. Ensure your Puppeteer test scripts uses `puppeteer.connect` method to connect to the CDP endpoint at <BrandName />. Additional parameters for assigning a specific browser and OS combination to your <BrandName /> test are contained in the `capabilities` variable.
+
+
+
+## Using the Puppeteer Agent Skill with TestMu AI
+***
+
+The [puppeteer-skill](https://github.com/LambdaTest/agent-skills/tree/main/puppeteer-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The puppeteer-skill package includes:
+
+```
+puppeteer-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Puppeteer Agent Skill
+***
+
+Install a Puppeteer Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/puppeteer-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/puppeteer-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only puppeteer-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

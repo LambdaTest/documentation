@@ -22,7 +22,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/testng-on-hyperexecute-grid/
 site_name: TestMu AI
 slug: testng-on-hyperexecute-grid/
-canonical: https://www.testmu.ai/support/docs/testng-on-hyperexecute-grid/
+canonical: https://www.testmuai.com/support/docs/testng-on-hyperexecute-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -279,6 +279,49 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+
+
+
+## Using the TestNG Agent Skill with TestMu AI
+***
+
+The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The testng-skill package includes:
+
+```
+testng-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing TestNG Agent Skill
+***
+
+Install a TestNG Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/testng-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/testng-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only testng-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

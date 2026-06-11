@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/testing-flutter-apps/
 site_name: TestMu AI
 slug: testing-flutter-apps/
-canonical: https://www.testmu.ai/support/docs/testing-flutter-apps/
+canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -215,6 +215,49 @@ Below is a screenshot showing Appium test automation running with the Flutter In
 
 
 >In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
+
+
+
+## Using the Flutter Testing Agent Skill with TestMu AI
+***
+
+The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The flutter-testing-skill package includes:
+
+```
+flutter-testing-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Flutter Testing Agent Skill
+***
+
+Install a Flutter Testing Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/flutter-testing-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/flutter-testing-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
