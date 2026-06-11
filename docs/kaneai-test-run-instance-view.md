@@ -13,6 +13,8 @@ keywords:
   - root cause analysis
   - test debugging
   - test manager
+  - auto-heal visibility
+  - share test run
 url: https://www.testmuai.com/support/docs/kaneai-test-run-instance-view/
 site_name: TestMu AI
 slug: kaneai-test-run-instance-view/
@@ -89,6 +91,12 @@ The left panel lists every step that was executed, mapped back to the original s
 Steps that include sub-actions - such as loops, conditionals, or JavaScript snippets - are expandable to reveal the full execution detail.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-quick-view.png').default} alt="test-instance-steps-panel" className="doc_img"/>
+
+#### Auto-Heal Visibility
+
+When [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run — without digging through execution logs.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-auto-heal-step.png').default} alt="auto-heal-indicator-on-step" className="doc_img"/>
 
 #### Autoplay Steps
 
@@ -172,6 +180,20 @@ Click the **View tests** button in the top-right corner to open a panel listing 
 - **Switch** between tests without navigating back to the test run listing
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-tests-listing.png').default} alt="navigate-between-tests" className="doc_img"/>
+
+## Share a Test Run Instance
+
+You can share a test run instance page publicly with stakeholders — including people who do not have a <BrandName /> account. Click the **Share** icon in the top-right corner of the instance view to open the share dialog.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-share.png').default} alt="share-test-run-instance" className="doc_img"/>
+
+The share dialog provides the following options:
+
+- **Expiry Duration** - Choose how long the shared link remains accessible (for example, **View: 7 Days**). After the link expires, it can no longer be opened.
+- **Email ID(s)** - Enter one or more email addresses and click **Invite** to send the link directly, with an optional **Message** for context.
+- **Copy Link** - Copy a shareable link to the clipboard and distribute it yourself.
+
+Anyone with an active shared link can view the test run instance — including the steps, screenshots, and execution details — until the link expires.
 
 ---
 

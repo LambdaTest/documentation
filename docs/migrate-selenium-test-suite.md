@@ -326,7 +326,7 @@ bundle exec rspec
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
-Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs.
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs.
 
 ## What Stays the Same
 ---

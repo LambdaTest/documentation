@@ -36,6 +36,23 @@ You can author a drag step in two ways:
 - **Natural Language (NL)** — describe the drag in plain English (e.g. `drag "Card A" to "Column B"`).
 - **Manual Interaction** — perform the gesture on the device or browser viewport and have it captured as a step.
 
+## Drag and Drop vs Click and Drag
+
+KaneAI supports two distinct drag interactions. They look similar but behave differently, and they are **not interchangeable**:
+
+- **Drag and Drop** — the element is first **long-pressed** to pick it up, and only then moved to the target. This is the standard gesture for moving items between containers and works on **all platforms**.
+- **Click and Drag** — the element is pressed and moved **immediately, without any long press**. This is how interactions such as sliders, canvas drawing, and element resizing work, and it is available on **Desktop Web only**.
+
+| | Drag and Drop | Click and Drag |
+| --- | --- | --- |
+| **Gesture** | Long press on the element first, then move it to the target | Press and move in one continuous motion — no long press |
+| **Platforms** | Desktop Web, Android App, iOS App, Mobile Web | Desktop Web only |
+| **Typical scenarios** | Kanban cards, list reordering, container-to-container transfer | Sliders, canvas drawing, element resizing, range selection |
+
+:::note
+If a drag step fails on an element that doesn't respond to a long press (for example a slider thumb or a canvas), the element likely expects **Click and Drag** rather than Drag and Drop. Click and Drag has its own constraints — see [Limitations](#limitations).
+:::
+
 
 ## Supported Platforms
 
@@ -190,12 +207,20 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 - **Cross-context dragging** — drags between iframes or shadow DOMs are not supported.
 - **Multi-element dragging** — cannot drag multiple elements simultaneously.
 - **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder) — on the roadmap; currently rejected with a graceful error.
+- **Click and Drag via NL** — not supported as a natural language test step; supported only via Manual Interaction. Desktop Web only.
+- **Click and Drag speed** — executes slowly by design so the dragged element stays in focus during the movement; faster execution could cause the element to lose focus mid-drag.
 - **NL slider authoring** — not supported. Use Manual Interaction.
 - **NL confirmation gestures** (slide-to-confirm) — not supported. Use Manual Interaction.
 - **Drag and drop on canvas-based elements via NL** — canvas elements rely on custom rendering; use Manual Interaction.
 - **Editing manual drag steps** — source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
 
 ## FAQs
+
+**What is the difference between Drag and Drop and Click and Drag?**
+Drag and Drop long-presses the element to pick it up before moving it, and works on all platforms. Click and Drag presses and moves the element immediately without a long press, and is available on Desktop Web only. See [Drag and Drop vs Click and Drag](#drag-and-drop-vs-click-and-drag).
+
+**Why is my Click and Drag step slow?**
+This is expected. Click and Drag executes deliberately slowly to keep the dragged element in focus throughout the movement — a faster gesture could cause the element to lose focus mid-drag and fail the step.
 
 **Can I author a slider drag with natural language?**
 No. Sliders have moving targets that NL cannot resolve reliably. Use Manual Interaction to capture the slider gesture directly. The captured step replays at ≥ 95% success rate across devices.

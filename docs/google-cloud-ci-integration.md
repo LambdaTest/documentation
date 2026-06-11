@@ -56,7 +56,7 @@ Before integrating Google Cloud CI with <BrandName />, make sure you have the fo
 
 1. A GitHub or a BitBucket repository. All the code samples in this documentation can be found at [<BrandName /> Google Cloud CI](https://github.com/LambdaTest/Java-TestNG-Selenium) repository on GitHub .
 
-2. To integrate test suites with Google Cloud CI, you would need to set your <BrandName /> username and access key in environment variables. You can get them from [Automation Dashboard](https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
+2. To integrate test suites with Google Cloud CI, you would need to set your <BrandName /> username and access key in environment variables. You can get them from [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
 
 *   **For Windows:**
     ```
@@ -127,7 +127,7 @@ A new build can be seen in the Google Cloud CI console. The current status of th
 
 <img loading="lazy" src={require('../assets/images/uploads/image-1.webp').default} alt="Google Cloud CI Integration" width="1024" height="508W" className="doc_img"/>
 
-You can also view the detailed insights of your test execution on [<BrandName /> Automation dashboard](https://automation.lambdatest.com/timeline/).
+You can also view the detailed insights of your test execution on [<BrandName /> Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/).
 
 ## Running Parallel Test Via Google Cloud CI
 

@@ -76,7 +76,7 @@ The conversion flow has four stages:
 
 Start by creating a project in <BrandName /> Test Manager. A project is the container for all your test cases, test runs, and configurations.
 
-1. Navigate to [Test Manager](https://test-manager.lambdatest.com).
+1. Navigate to [Test Manager](https://www.testmuai.com/login/?redirectTo=https://test-manager.lambdatest.com).
 2. Click **Create New Project**.
 3. Enter the project name and description.
 4. Save the project.

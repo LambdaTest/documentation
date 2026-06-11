@@ -20,7 +20,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 site_name: TestMu AI
 slug: puppeteer-testing-with-pytest-pyppeteer/
-canonical: https://www.testmu.ai/support/docs/puppeteer-testing-with-pytest-pyppeteer/
+canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -120,7 +120,7 @@ pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
 
 ## View your Pyppeteer test results
 
-The [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
+The [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
 
 The below screenshot of <BrandName /> Automation Dashboard shows the pyppeteer build on the left and the build sessions associated with the selected build on the right.
 
@@ -147,3 +147,45 @@ eval $(gp env -e LT_ACCESS_KEY=******)
 ```
  eval $(gp env -e)
 ```
+
+
+## Using the Pytest Agent Skill with TestMu AI
+***
+
+The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The pytest-skill package includes:
+
+```
+pytest-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Pytest Agent Skill
+***
+
+Install a Pytest Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/pytest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/pytest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only pytest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

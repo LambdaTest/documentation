@@ -54,7 +54,7 @@ Before you begin, ensure you have:
 
 - <BrandName /> account with active subscription
 - GitLab repository with CI/CD enabled
-- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://smartui.lambdatest.com/)
+- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 - Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO)
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
 - <BrandName /> credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
@@ -364,7 +364,7 @@ Configure the following variables in your GitLab project:
 
 :::info Project Token
 
-The `PROJECT_TOKEN` is different from `LT_USERNAME` and `LT_ACCESS_KEY`. You can find it in your SmartUI project settings in the [SmartUI Dashboard](https://smartui.lambdatest.com/).
+The `PROJECT_TOKEN` is different from `LT_USERNAME` and `LT_ACCESS_KEY`. You can find it in your SmartUI project settings in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 :::
 

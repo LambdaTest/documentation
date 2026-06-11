@@ -3181,6 +3181,7 @@ module.exports = {
               "audio-injection",
               "regular-expression-appium",
               "appium-upload-media",
+              "appium-upload-contacts",
               "network-configurations",
               "app-auto-network-throttling",
               "sim-support",
@@ -3650,6 +3651,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "SmartUI in Automation Dashboard",
+            id: "smartui-automation-dashboard",
+          },
+          {
+            type: "doc",
             label: "Baseline Management",
             id: "smartui-baseline-management",
           },
@@ -3851,6 +3857,11 @@ module.exports = {
             type: "doc",
             label: "Handle Sticky Elements",
             id: "smartui-handle-sticky-elements",
+          },
+          {
+            type: "doc",
+            label: "CustomScroll Screenshots",
+            id: "smartui-customscroll",
           },
         ],
       },

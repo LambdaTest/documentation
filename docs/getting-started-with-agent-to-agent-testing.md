@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Getting Started
 description: Validate test chatbots, voice assistants, and hybrid deployments across all interaction types with industry's first Agent Testing Platform. 
 keywords:
- - agent to agent testing
+ - agent testing
  - agentic testing
  - ai agent testing
 url: https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/

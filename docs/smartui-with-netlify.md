@@ -215,7 +215,7 @@ Your changes will be triggered and deployed.
 
 **Solutions**:
 1. Verify project exists in SmartUI dashboard:
-   - Log into [SmartUI Dashboard](https://smartui.lambdatest.com/)
+   - Log into [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
    - Check if project with specified name exists
    - Create project if it doesn't exist
 

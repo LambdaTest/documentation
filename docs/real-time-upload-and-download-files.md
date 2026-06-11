@@ -63,7 +63,7 @@ The Upload and Download Files feature allows you to manage files directly within
 <Tabs className="docs__val">
 <TabItem value="web-browser" label="Web Browser" default>
 
-**Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
+**Step 1 :** Log in to the [Web Browser Testing](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
@@ -77,7 +77,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="mobile-browser" label="Mobile Browser" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
@@ -91,7 +91,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="mobile-app" label="Mobile App" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
 
 **Step 2 :** Select your OS and the required device, upload your app and then launch your test session.
 

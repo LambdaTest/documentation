@@ -245,7 +245,7 @@ public class HeadlessAutomation {
 }
 ```
 
-After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://automation.lambdatest.com/timeline).
+After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
 
 <img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.webp').default} alt="Image"  className="doc_img" width="768" height="348"/>
 

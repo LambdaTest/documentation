@@ -310,9 +310,9 @@ You can refer to this example and screenshot below:
 
 
 5. After the test is started you can follow the test on the below links.
-- [<BrandName /> Automation](https://appautomation.lambdatest.com/build)
+- [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build)
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_sharding.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-- [<BrandName /> HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
+- [<BrandName /> HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute)
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::note

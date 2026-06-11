@@ -28,7 +28,7 @@ Zalenium offers capabilities to help you define your Desired Capabilities in you
 * Ensure you have a Zalenium Docker setup.
 * **<BrandName /> Authentication Credentials**
 
-   Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
+   Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
 * For Linux/Mac:  
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -55,7 +55,7 @@ export LT_USERNAME=<your username>
 ```
 Kudos! As simple as that, you have integrated Zalenium with the <BrandName /> account. In case you have any questions, feel free to let us know by dropping an email at [support@testmuai.com][2], or just giving a shout to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂
 
-[1]: https://automation.lambdatest.com
+[1]: https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com
 [2]: mailto:support%40lambdatest.com
 
   

@@ -82,7 +82,7 @@ While writing your automation tests, add another capability when you create the 
     driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
     ```
 
-You have successfully created the Build tags. Run your test and navigate to [TestMu AI Automation Dashboard](https://automation.lambdatest.com/timeline/) to see the tags in that build:
+You have successfully created the Build tags. Run your test and navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) to see the tags in that build:
 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp').default} alt="Group/filter" width="1281" height="721" className="doc_img"/>
 
@@ -102,7 +102,7 @@ Select one or more build tags in the filter toolbar to narrow down your test bui
 
 To group or filter the tests on your automation dashboard with Build tags:
 
-Navigate to [TestMu AI Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags** on the right corner of the filter toolbar. 
+Navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags** on the right corner of the filter toolbar. 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp').default} alt="Group/filter" width="1281" height="722" className="doc_img"/>
 
 Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, only the test builds with the tag "Tag1" appear:

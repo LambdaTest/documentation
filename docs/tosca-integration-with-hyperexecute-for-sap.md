@@ -58,7 +58,7 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 ### Step 1: Initialize the Tosca Project
 
-- Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/). Click on the **Projects**.
+- Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). Click on the **Projects**.
 
 - Click on the **Setup a New Project** button.
 
@@ -92,7 +92,7 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 ### Step 4: Check the Logs Status in Dashboard
 
-- Now go to the [**Jobs**](https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
+- Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
+> Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.

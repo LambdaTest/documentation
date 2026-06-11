@@ -90,7 +90,7 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 - **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a free trial to explore KaneAI's key workflows.
 
 <div style={{textAlign: 'center', margin: '20px 0'}}>
-<a href="https://kaneai.lambdatest.com/allocate-kane" style={{display: 'inline-block', backgroundColor: '#1F883D', color: '#ffffff', padding: '8px 18px', borderRadius: '6px', fontSize: '14px', fontWeight: '600', textDecoration: 'none'}}>Start KaneAI Free Trial →</a>
+<a href="https://www.testmuai.com/register/?redirectTo=https://kaneai.lambdatest.com/allocate-kane" style={{display: 'inline-block', backgroundColor: '#1F883D', color: '#ffffff', padding: '8px 18px', borderRadius: '6px', fontSize: '14px', fontWeight: '600', textDecoration: 'none'}}>Start KaneAI Free Trial →</a>
 </div>
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/allocate-free-kane-trial.png').default} alt="KaneAI free trial signup" className="doc_img"/>

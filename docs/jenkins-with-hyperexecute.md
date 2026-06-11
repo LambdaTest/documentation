@@ -108,7 +108,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j7.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
-  After your build is successful, go to the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to monitor the progress of your tests.
+  After your build is successful, go to the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to monitor the progress of your tests.
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j8.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 

@@ -49,7 +49,7 @@ Creating projects within Test Manager is the foundational step in organizing and
 
 **Steps to Create a Project**
 
-1. Log in to the Test Manager and navigate to the dashboard - [http://test-manager.lambdatest.com/](http://test-manager.lambdatest.com/)
+1. Log in to the Test Manager and navigate to the dashboard - [http://test-manager.lambdatest.com/](https://www.testmuai.com/login/?redirectTo=http://test-manager.lambdatest.com/)
 
 2. Click on the **Create Project** button.
 

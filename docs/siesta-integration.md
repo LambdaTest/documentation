@@ -55,7 +55,7 @@ Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. 
 
 2. Download Siesta from official Bryntum website.
 
-3. In order to run your Siesta tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://automation.lambdatest.com/build) to access it.
+3. In order to run your Siesta tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="625" height="374"  className="doc_img"/>
 

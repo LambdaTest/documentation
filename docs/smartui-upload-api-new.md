@@ -60,7 +60,7 @@ This is the guide to setup the **version 2** of the SmartUI upload API.
 ### Prerequisites for running SmartUI
 
 - Basic understanding of HTTP APIs is required.
-- Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [`LambdaTest SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform -
@@ -69,7 +69,7 @@ The following steps will guide you in running your first Visual Regression test 
 
 To create a SmartUI Project, follow these steps:
 
-- Go to [Projects page](https://smartui.lambdatest.com/)
+- Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 - Click on the `new project` button
 - Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 - Click on **Submit**.

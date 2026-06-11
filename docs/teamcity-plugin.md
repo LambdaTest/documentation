@@ -114,7 +114,7 @@ That’s it. Your project has been successfully configured to run tests using th
 
 ## Executing The Test On <BrandName />
 * * *
-Upon executing the project, you can see the test status and the automation report directly on your [automation dashboard](https://automation.lambdatest.com/timeline/).
+Upon executing the project, you can see the test status and the automation report directly on your [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/).
 
 <img loading="lazy" src={require('../assets/images/teamcity-plugin/test-execution.webp').default} alt="automation dashboard" width="768" height="345" className="doc_img"/>
 

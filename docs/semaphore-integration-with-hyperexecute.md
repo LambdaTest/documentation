@@ -95,7 +95,7 @@ Click on **Run the workflow** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/6.png').default} alt="Image"  className="doc_img"/>
 
-- Output in the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) Dashboard
+- Output in the [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) Dashboard
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/7.png').default} alt="Image"  className="doc_img"/>
 

@@ -122,7 +122,7 @@ From the project root directory, execute the below CLI command in your terminal:
 
 ### Step 6: Monitor the Test Execution
 
-Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium//bidi/bidi.png').default} alt="Image" className="doc_img"/>
 

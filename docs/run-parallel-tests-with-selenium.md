@@ -252,14 +252,14 @@ Follow these guidelines to get the most out of parallel execution.
 - **Keep tests independent.** Parallel tests must not share state, test data, or depend on execution order. Each test should set up and tear down its own data.
 - **Always call `driver.quit()`.** If a test exits without quitting, the session stays open until the idle timeout expires, wasting concurrency slots.
 - **Use unique build and test names.** Set the `build` and `name` capabilities to identify which parallel thread ran which test on the dashboard.
-- **Start small.** Begin with 2-3 parallel threads and increase gradually. Monitor the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) for failures caused by test interference.
+- **Start small.** Begin with 2-3 parallel threads and increase gradually. Monitor the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for failures caused by test interference.
 
 ## Verify Your Parallel Runs
 ---
 
 Check the dashboard to confirm tests ran simultaneously.
 
-Visit the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build) and open your build. If tests ran in parallel, you will see multiple sessions with overlapping start times. The build duration should be roughly equal to the duration of the longest individual test, not the sum of all tests.
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) and open your build. If tests ran in parallel, you will see multiple sessions with overlapping start times. The build duration should be roughly equal to the duration of the longest individual test, not the sum of all tests.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

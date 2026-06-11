@@ -223,7 +223,7 @@ npx codeceptjs run --steps googleTest_test.js
 
 ---
 
-Visit the **[<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build)** to view your test results. Each test session shows:
+Visit the **[<BrandName /> Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build)** to view your test results. Each test session shows:
 
 - Test name (synced from your scenario title via `codeceptjs-lambdatest-service`)
 - Pass/fail status

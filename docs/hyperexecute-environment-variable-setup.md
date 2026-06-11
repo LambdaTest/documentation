@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # HyperExecute Environment Variable Setup
 ***
 
-To provide you with a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
+To provide you with a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
 
 ## Where to find <BrandName /> Authentication Credentials?
 ***
@@ -60,7 +60,7 @@ To provide you with a secure [cross-browser testing](https://www.testmuai.com) e
 1. <BrandName /> Username
 2. <BrandName /> Access Key
 
->You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
+>You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/) or your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 #**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 

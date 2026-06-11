@@ -144,7 +144,7 @@ To execute the project run the below command in your terminal at the root folder
 ```bash
 ./hyperexecute --config <yaml-file-path> --download-artifacts --force-clean-artifacts
 ```
-- Now, visit to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to check the status of your project.
+- Now, visit to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to check the status of your project.
 
 - Click on the **SmartUI Tests** button.
 

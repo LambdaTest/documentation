@@ -71,7 +71,7 @@ You can also run your Selenified test automation scripts on <BrandName /> Seleni
 That is all you need to tweak to run your Selenified tests on <BrandName /> Selenium Grid. In case you have any questions, feel free to share them with us in the comments or wave them to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app customer chat support**</span>. You could also email us through [support@testmuai.com][3]. Happy testing! 🙂
 
 [1]: https://github.com/Coveros/selenified
-[2]: https://automation.lambdatest.com
+[2]: https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com
 [3]: mailto:support%40lambdatest.com
 
 <nav aria-label="breadcrumbs">

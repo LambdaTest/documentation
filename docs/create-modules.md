@@ -66,7 +66,7 @@ To export test steps as a module,
 
 ### Step 1: Go to Modules page
 
-- Click on `Modules` button in the navbar to go to the [Modules listing page](https://test-manager.lambdatest.com/module).
+- Click on `Modules` button in the navbar to go to the [Modules listing page](https://www.testmuai.com/login/?redirectTo=https://test-manager.lambdatest.com/module).
 - Click on `Create a Module`.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules-listing-page.png').default} alt="automation-dashboard" className="doc_img"/>

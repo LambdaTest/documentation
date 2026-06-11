@@ -37,7 +37,7 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 ### Prerequisites for running SmartUI with K6
 
 - Basic understanding of K6 is required.
-- Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.
+- Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
 <Tabs className='docs__val' groupId='language'>
@@ -71,7 +71,7 @@ The following steps will guide you in running your first Visual Regression test 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
+1. Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 2. Click on the `new project` button
 3. Select the platform as <b>Web</b> for executing your `K6` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
@@ -176,7 +176,7 @@ Execute the test using the following command:
 npx smartui exec k6 run test.js
 ```
 
-  - You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+  - You can check the executed builds over at [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Best Practices
 

@@ -145,7 +145,7 @@ But here we need to add the Charles proxy server through which we want to route 
 --proxy-port 8888
 ```
 
-> You can get your <BrandName /> Access Key from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+> You can get your <BrandName /> Access Key from the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
 You need to run the above command from the terminal in the directory where you have extracted the **LT binary file** as shown. Make sure that **Charles Proxy Session** is up and running before you can start the tunnel. Now once the tunnel is setup, you will be able to see **"You can start testing now"** in the terminal as shown.
 

@@ -56,7 +56,7 @@ In this guide, we will explore how to run your first Flutter Dart test on an iOS
 ## Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
-2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 3. Access to a Flutter **Sample** test suite (.zip).
 
 :::tip
@@ -173,7 +173,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 ### Step 3: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/builds).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/builds).
 
 ## Capabilities Supported
 
@@ -222,6 +222,49 @@ Do note that Flutter builds when run in parallel, result in separate builds bein
 
 :::
 
+
+
+
+## Using the Flutter Testing Agent Skill with TestMu AI
+***
+
+The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The flutter-testing-skill package includes:
+
+```
+flutter-testing-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Flutter Testing Agent Skill
+***
+
+Install a Flutter Testing Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/flutter-testing-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/flutter-testing-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

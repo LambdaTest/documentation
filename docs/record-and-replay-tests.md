@@ -78,7 +78,7 @@ After ending the recording process in Chrome DevTools, you will notice a <BrandN
 
 <img loading="lazy" src={require('../assets/images/record-replay/dash.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
 
-4. To view your record automated test results, visit the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build).
+4. To view your record automated test results, visit the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/record-replay/results.png').default} alt="image"  className="doc_img" width="1341" height="498"/>
 

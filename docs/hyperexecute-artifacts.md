@@ -80,7 +80,7 @@ uploadArtefacts:
 As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
 :::
 
-**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
 **Step 4:** Click on any of the artifacts generated. You can also download the artifacts from the dashboard
 

@@ -59,7 +59,7 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 ## Prerequisites for Using SmartUI
 
 - Familiarity with HTTP APIs is essential.
-- Visit the [`TestMu AI SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
+- Visit the [`TestMu AI SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
 In the following section, we will walk you through the process of conducting your first Visual Regression test using <BrandName />'s SmartUI platform.
@@ -83,7 +83,7 @@ In the following section, we will walk you through the process of conducting you
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
 
-1. Navigate to the [SmartUI Projects Page](https://smartui.lambdatest.com/).
+1. Navigate to the [SmartUI Projects Page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2. Tap on the `new project` button.
 3. Specify your platform type as `PDF`.
 4. Provide your `project` name, designate `approvers`, and add `tags` (optional).

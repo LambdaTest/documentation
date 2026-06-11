@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
 site_name: TestMu AI
 slug: smartui-running-your-first-project/
-canonical: https://www.testmu.ai/support/docs/smartui-running-your-first-project/
+canonical: https://www.testmuai.com/support/docs/smartui-running-your-first-project/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -57,14 +57,14 @@ This guide will walk you through the process of running your first visual regres
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Selenium is required.
-- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI Selenium SDK integration.
 
 ## Step 1: Create a SmartUI Project
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
-- Go to [Projects page](https://smartui.lambdatest.com/) and click on the **New Project** button.
+- Go to [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and click on the **New Project** button.
 - Select the platform as <b>CLI</b> for executing your **SDK** tests.
 - Add name of the project, approver's name, and tags for any filter or easy navigation.
 - Click on the **Continue** button.
@@ -263,6 +263,47 @@ Now that you've run your first project, explore these resources to enhance your 
 - **Manage Baselines**: Understand [Baseline Management](/support/docs/smartui-baseline-management) for effective test comparisons
 - **Troubleshooting**: If you encounter issues, check the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
 
+## Using the SmartUI Agent Skill with TestMu AI
+***
+
+The [smartui-skill](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The smartui-skill package includes:
+
+```
+smartui-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing SmartUI Agent Skill
+***
+
+Install a SmartUI Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/smartui-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/smartui-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only smartui-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for common issues
@@ -271,3 +312,4 @@ Now that you've run your first project, explore these resources to enhance your 
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Handle pages with dynamic content
 - [Baseline Management](/support/docs/smartui-baseline-management) - Manage your test baselines
 - [SDK Documentation](/support/docs/smartui-selenium-java-sdk) - Framework-specific integration guides
+

@@ -200,7 +200,7 @@ npx playwright test --config=./playwright.config.js
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/playwright/playwright-accessibility-1.png').default} alt="automation-dashboard" className="doc_img"/> <br />
 
-You can access the detailed accessibility report from the [Accessibility Automation Reports Dashboard](https://accessibility.lambdatest.com/automation)
+You can access the detailed accessibility report from the [Accessibility Automation Reports Dashboard](https://www.testmuai.com/login/?redirectTo=https://accessibility.lambdatest.com/automation)
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/playwright/playwright-accessibility.png').default} alt="automation-dashboard" className="doc_img"/>
 

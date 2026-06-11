@@ -46,7 +46,7 @@ In this guide, we'll walk you through the process of generating, and executing a
 ## Steps to generate the test cases
 
 ### Step 1: Create an App Test
-Navigate to the [KaneAI homepage](https://kaneai.lambdatest.com/objective) and click on the **Create an App Test** button to initiate the process of generating test cases for your mobile app. Now select your desired operating system (Android, iOS) and upload your application to the platform to start testing.
+Navigate to the [KaneAI homepage](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click on the **Create an App Test** button to initiate the process of generating test cases for your mobile app. Now select your desired operating system (Android, iOS) and upload your application to the platform to start testing.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/create-app-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
@@ -72,6 +72,6 @@ Select your Project and the folder where you want to save your test cases. The *
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/save-test-cases.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ### Step 4: Execute your test
-To execute your test, click on the **HyperExecute** button and you will be redirected to the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) where your tests will be executed.
+To execute your test, click on the **HyperExecute** button and you will be redirected to the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) where your tests will be executed.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/execute-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>

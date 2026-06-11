@@ -60,13 +60,13 @@ You must do the following in order to run the tests on HyperExecute from your lo
 - Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- Use your login credentials to access [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
+- Use your login credentials to access [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Step 1: Create a SmartUI Project
 
 With the application, create a project in which we will merge all of your builds that have been applied to the project. To initiate a SmartUI Project, take the following actions:
 
-1. Access the [Projects page](https://smartui.lambdatest.com/).
+1. Access the [Projects page](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2. Click the `new project` button now.
 3. Choose the **CLI** or **Web** platform to run your `SDK` tests on.
 4. Include the project name, the approvers of the changes that were discovered, and tags for any filters or simple navigation.
@@ -216,6 +216,6 @@ OR use this command if you have not exported your username and access key in the
 
 ## Step 6: Monitor the Test Execution
 
-Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the status of your job.
+Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the status of your job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>

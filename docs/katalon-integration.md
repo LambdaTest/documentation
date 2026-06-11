@@ -77,7 +77,7 @@ By the end of this topic, you will know:
 
 Before you can start performing App automation using Katalon Studio with Lambdatest, you would need to follow these steps:
 
-- You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+- You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 - [Katalon Studio](https://katalon.com/)
 - Access to an Android app (.apk) or an iOS app (.ipa).
 
@@ -243,7 +243,7 @@ Now we can see that the test starts running.
 
 ### 3. View test execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/katalon-integration-realDevices/023.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 

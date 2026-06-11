@@ -29,7 +29,7 @@ This topic will be focusing on:
 ***
 1. Log in to <BrandName />. If you haven’t signed up yet, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>click here</a>.
 2. <BrandName /> Authentication Credentials:
-   Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL.You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+   Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL.You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 3. [Download Tosca](https://www.tricentis.com/software-testing-tool-trial-demo/) by logging in to the Tosca website.
 
 ## Sample Test Scenario
@@ -168,7 +168,7 @@ Once execution is completed result window populate in Tosca
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_24.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_25.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 

@@ -134,7 +134,7 @@ npm run parallel
 
 ## Step 5: View Your Results
 ---
-After running the test, view your results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/build).
+After running the test, view your results on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 <img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-2.png').default} alt="Image"  className="doc_img"/> <br />
 

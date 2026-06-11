@@ -65,7 +65,7 @@ This document will help you leverage <BrandName /> [Automated Screenshot](https:
 ***
 
 - **<BrandName /> Authentication Credentials**
-Ensure that you have your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button.
+Ensure that you have your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button.
 
 - For Linux/Mac:
 

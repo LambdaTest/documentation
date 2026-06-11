@@ -79,7 +79,7 @@ Once you have installed the necessary dependencies, you are all set to run your 
 ## Sample Node.js & Selenium Automation Script
 ***
 
-Do make sure to add the **Username** and **Key** in the code below. You can find your username and access key using the key icon on the [Automation dashboard](https://automation.lambdatest.com/) or in your [Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) section.
+Do make sure to add the **Username** and **Key** in the code below. You can find your username and access key using the key icon on the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) or in your [Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) section.
 
 ```javascript
 /*

@@ -124,7 +124,7 @@ Choose how repositories are mapped to your projects:
 Click **Complete Setup** to save the configuration.
 
 :::note
-You can change all of these settings later from the [Test Manager Settings > Pull Requests](https://test-manager.lambdatest.com/settings/pull-requests#) tab.
+You can change all of these settings later from the [Test Manager Settings > Pull Requests](https://www.testmuai.com/login/?redirectTo=https://test-manager.lambdatest.com/settings/pull-requests#) tab.
 :::
 
 ### Single Repository Mode
