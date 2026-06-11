@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/
 site_name: TestMu AI
 slug: /
-canonical: https://www.testmu.ai/support/docs///
+canonical: https://www.testmuai.com/support/docs///
 ---
 
 import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';

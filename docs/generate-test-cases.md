@@ -556,6 +556,16 @@ The **Create and Automate** option requires KaneAI access. If you do not have Ka
 
 ---
 
+## Video Walkthrough
+
+Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/images/mobile-app-testing/ai-test-case-generator-walkthrough.mp4').default} type="video/mp4" />
+</video>
+
+---
+
 ## Frequently Asked Questions
 
 **Can I undo a change made through the Conversation Layer?**
