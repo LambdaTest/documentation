@@ -9,7 +9,7 @@ keywords:
  - agent evaluation platform
  - voice agent testing
  - chat agent testing
- - agent to agent testing
+ - agent testing
  - ai agent qa
 url: https://www.testmu.ai/support/docs/ai-agent-testing-platform-overview/
 site_name: LambdaTest
@@ -134,7 +134,7 @@ The platform is built as a cloud-native, API-first system composed of three logi
 
 **Testing Flow:**
 
-`Requirements Input` → `Scenario Generation` → `Agent-to-Agent Execution` → `AI Evaluation` → `Results & Go-Live`
+`Requirements Input` → `Scenario Generation` → `Agent Execution` → `AI Evaluation` → `Results & Go-Live`
 
 <div style={{background:'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',borderRadius:'16px',padding:'32px 24px',margin:'24px 0',fontFamily:'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif',border:'1px solid #e2e8f0'}}>
 

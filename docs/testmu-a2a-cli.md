@@ -6,7 +6,7 @@ sidebar_label: Configure A2A CLI
 description: Install and use TestMu A2A CLI to test chat and phone AI agents from your terminal with scenario generation, red team security, and CI/CD support.
 keywords:
   - testmu a2a cli
-  - agent to agent cli
+  - agent testing cli
   - ai agent testing cli
   - chat agent testing
   - phone agent testing
