@@ -1,11 +1,11 @@
 ---
 id: agent-testing-platform-faqs
-title: Agent to Agent FAQs !!
+title: Agent Testing Platform FAQs
 hide_title: false
 sidebar_label: FAQs
-description: Get quick answers to all your Agent to Agent queries with our comprehensive FAQs! 
+description: Get quick answers to all your Agent Testing Platform queries with our comprehensive FAQs! 
 keywords:
-  - Agent to Agent FAQs
+  - Agent Testing FAQs
   - FAQs
 url: https://www.testmuai.com/support/docs/agent-testing-platform-faqs/
 site_name: TestMu AI
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Below are a few commonly asked questions about our Agent Testing Platform:
 
-#### 1. **Does Agent to Agent provide AI-enabled translation or multilingual analysis capabilities for testing?**
+#### 1. **Does the Agent Testing Platform provide AI-enabled translation or multilingual analysis capabilities for testing?**
 
 Yes. It supports AI-enabled multilingual requirement analysis, allowing teams to extract and analyze requirements from documents written in multiple languages. It generates test scenarios that account for multilingual support requirements defined in agent specifications and supports testing AI agents that handle multiple languages across interactions.
 

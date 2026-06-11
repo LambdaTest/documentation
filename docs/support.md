@@ -204,14 +204,6 @@ import NewTag from '../src/component/newTag';
 
 
 <div className="home_main">
- <div className="home_inners_box">
-       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Agent To Agent &nbsp; <NewTag  value="BETA" /></h2>
-      <div className="home_inners">
-        <a href="/support/docs/getting-started-with-agent-to-agent-testing" ><p className="p_home_inners">Getting Started</p></a>
-        <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First AI Agent</p></a>
-        <a href="/support/docs/agent-to-agent-faqs/"><p className="p_home_inners">FAQs</p></a>
-      </div>
-    </div>
   <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
       <div className="home_inners">

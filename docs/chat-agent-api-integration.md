@@ -8,7 +8,7 @@ keywords:
  - chat agent api
  - agent integration
  - chatbot api
- - agent to agent testing
+ - agent testing
  - api integration guide
 url: https://www.testmuai.com/support/docs/chat-agent-api-integration/
 site_name: TestMu AI
