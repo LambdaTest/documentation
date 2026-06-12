@@ -20,7 +20,7 @@ module.exports = {
       defer: true,
     },
     {
-      src: 'https://assets.testmuai.com/resources/js/lambda_gtm.js',
+      src: 'https://assets.testmuai.com/resources/js/testmu_gtm.js',
       defer: true,
     },
     {
@@ -55,7 +55,7 @@ module.exports = {
       }
     },
     typesense: {
-      typesenseCollectionName: 'lambdatest',
+      typesenseCollectionName: process.env.TYPESENSE_COLLECTION_NAME || 'lambdatest-internal',
       typesenseServerConfig: {
         nodes: [
           {
