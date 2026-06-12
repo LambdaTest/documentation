@@ -10,7 +10,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-run-creation-and-management/
 site_name: TestMu AI
 slug: test-run-creation-and-management/
-canonical: https://www.testmu.ai/support/docs/test-run-creation-and-management/
+canonical: https://www.testmuai.com/support/docs/test-run-creation-and-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -128,6 +128,14 @@ Custom Fields can be filtered only for types: **Single Select Dropdown**, **Mult
 - You can add remarks and attachments at both the individual test step level and the overall test instance level.
 
 <img loading="lazy" src={require('../assets/images/test-run/9.png').default} alt="Real "  className="doc_img"/>
+
+The Remark field supports **rich text formatting**, including:
+- Inline image embedding — paste images directly into the field.
+- Text styling such as bold, italic, bullet lists, and other standard rich text options.
+
+:::note
+Remarks have a maximum limit of **5000 characters**.
+:::
 
 - Attach supporting files or screenshots to the remarks for better context.
 
