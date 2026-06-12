@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.browserstack.com)",
+      "Bash(npm start *)"
+    ]
+  }
+}

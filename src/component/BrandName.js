@@ -13,7 +13,7 @@ function getBrandNameLowercase() {
 
 function getBrandUrl() {
   // Change this value to set your brand URL
-  return 'https://stage.testmuinternal.ai';
+  return 'https://www.testmuai.com';
 }
 
 // Export constants for use in href attributes and other places

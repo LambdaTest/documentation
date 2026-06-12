@@ -40,7 +40,7 @@ export default function DocPaginator(props) {
       <footer>
         <div className="doc_footer">
         
-          <p>&copy; {new Date().getFullYear()} TestMu AI Inc. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TestMu AI (Formerly LambdaTest). All rights reserved.</p>
           <div className='side_footer_link'>
             <a role="button" tabIndex="0" href='https://status.lambdatest.io/'>Status</a>
             <a role="button" tabIndex="0" href='https://www.testmuai.com/legal/terms-of-service/'>Terms</a>

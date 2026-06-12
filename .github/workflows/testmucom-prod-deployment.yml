@@ -1,9 +1,9 @@
-name: 'Deployment (Stage - New Bucket)'
+name: 'Deployment (Prod - testmucom New Bucket)'
 
 on:
   push:
     branches:
-      - stage
+      - testmuCom
 
 jobs:
   Docusaurus:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: stage
+          ref: testmuCom
           fetch-depth: 0
 
       - name: Configure AWS Credentials
@@ -29,6 +29,7 @@ jobs:
           touch .env
           echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
           echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
+          echo "TYPESENSE_COLLECTION_NAME=testmuai" >> .env
 
      
 
@@ -46,12 +47,12 @@ jobs:
         run: |
           cp -R assets/ build/
           cd build/
-          aws s3 sync . s3://lambdatest-stage-support-docs-testmu/support/ --exclude 'robots.txt' --delete
+          aws s3 sync . s3://lambdatest-prod-support-docs-testmucom/support/ --exclude 'robots.txt' --delete
 
       - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id EEMGB6PM4ZZ7A \
+            --distribution-id E3GY6CDKYL9RFL \
             --paths "/support/*"
           sleep 90
 

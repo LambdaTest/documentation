@@ -1225,6 +1225,11 @@ module.exports = {
           "kaneai-edit-test-steps",
         ],
       },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "kaneai-faqs",
+      },
       // {
       //   type: "category",
       //   collapsed: true,
@@ -1547,7 +1552,8 @@ module.exports = {
           "testrail-integration-with-lambdatest-selenium-grid",
           "zebrunner-integration",
           "zephyr-scale",
-          "testmo-integration"
+          "testmo-integration",
+          "alm-octane-integration"
         ],
       },
 
@@ -2570,9 +2576,9 @@ module.exports = {
             items: [
               "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid",
               "unit-testing-in-python",
-              "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
-              "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
-              "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
+              "pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
+              "robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
+              "behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
               "automation-testing-selenium-with-lettuce",
             ],
           },
@@ -3647,6 +3653,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "SmartUI in Automation Dashboard",
+            id: "smartui-automation-dashboard",
+          },
+          {
+            type: "doc",
             label: "Baseline Management",
             id: "smartui-baseline-management",
           },
@@ -3853,6 +3864,11 @@ module.exports = {
             type: "doc",
             label: "Handle Sticky Elements",
             id: "smartui-handle-sticky-elements",
+          },
+          {
+            type: "doc",
+            label: "CustomScroll Screenshots",
+            id: "smartui-customscroll",
           },
         ],
       },
@@ -5015,6 +5031,92 @@ module.exports = {
             type: "doc",
             label: "Test.md",
             id: "kane-cli-testmd",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Generate Test Cases",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-generate",
+          },
+          {
+            type: "doc",
+            label: "Workflow",
+            id: "kane-cli-generate-workflow",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Checkpoints",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-checkpoints",
+          },
+          {
+            type: "doc",
+            label: "Visual",
+            id: "kane-cli-checkpoint-visual",
+          },
+          {
+            type: "doc",
+            label: "Textual (DOM)",
+            id: "kane-cli-checkpoint-textual",
+          },
+          {
+            type: "doc",
+            label: "URL",
+            id: "kane-cli-checkpoint-url",
+          },
+          {
+            type: "doc",
+            label: "Title",
+            id: "kane-cli-checkpoint-title",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "DevTools",
+            items: [
+              {
+                type: "doc",
+                label: "Overview",
+                id: "kane-cli-checkpoint-devtools",
+              },
+              {
+                type: "doc",
+                label: "Network",
+                id: "kane-cli-checkpoint-devtools-network",
+              },
+              {
+                type: "doc",
+                label: "Console",
+                id: "kane-cli-checkpoint-devtools-console",
+              },
+              {
+                type: "doc",
+                label: "Performance",
+                id: "kane-cli-checkpoint-devtools-performance",
+              },
+              {
+                type: "doc",
+                label: "Cookies",
+                id: "kane-cli-checkpoint-devtools-cookies",
+              },
+              {
+                type: "doc",
+                label: "localStorage",
+                id: "kane-cli-checkpoint-devtools-localstorage",
+              },
+            ],
           },
         ],
       },

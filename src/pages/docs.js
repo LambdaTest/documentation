@@ -94,7 +94,7 @@ export default function Home() {
       <div className="primary_main">
       <div className="container">
 
-        {/* Row 1 */}
+        {/* Product grid */}
         <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Web Automation</h2>
@@ -142,17 +142,13 @@ export default function Home() {
               <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Insights</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 2 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
               <a href="/support/docs/what-is-browser-cloud/"><p className="p_home_inners">What is Browser Cloud</p></a>
-              <a href="/support/docs/browser-cloud-quickstart/"><p className="p_home_inners">Launch Session With SDK</p></a>
+              <a href="/support/docs/launch-first-session/"><p className="p_home_inners">Launch Session With SDK</p></a>
               <a href="/support/docs/browser-cloud-skills/"><p className="p_home_inners">Launch Session With Agent Skills</p></a>
-              <a href="/support/docs/browser-cloud-connect/"><p className="p_home_inners">Connect to a Session</p></a>
+              <a href="/support/docs/connect-to-session/"><p className="p_home_inners">Connect to a Session</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -169,6 +165,31 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />KaneAI</h2>
+            <div className="home_inners">
+              <a href="/support/docs/getting-started-with-kane-ai/"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/support/docs/author-your-first-desktop-browser-test/"><p className="p_home_inners">Author Desktop Browser Test</p></a>
+              <a href="/support/docs/author-your-first-mobile-app-test/"><p className="p_home_inners">Author Mobile App Test</p></a>
+              <a href="/support/docs/kane-ai-api-testing/"><p className="p_home_inners">API Testing</p></a>
+              <a href="/support/docs/kane-ai-command-guide/"><p className="p_home_inners">Command Types</p></a>
+              <a href="/support/docs/kaneai-ci-cd-automation/"><p className="p_home_inners">Test Automation with CI/CD</p></a>
+              <a href="/support/docs/kaneai-faqs/"><p className="p_home_inners">FAQs</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Kane CLI &nbsp;<NewTag value="NEW" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/kane-cli-introduction/"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/support/docs/kane-cli-installation/"><p className="p_home_inners">Installation</p></a>
+              <a href="/support/docs/kane-cli-quickstart/"><p className="p_home_inners">Quick Start</p></a>
+              <a href="/support/docs/kane-cli-writing-objectives/"><p className="p_home_inners">Writing Objectives</p></a>
+              <a href="/support/docs/kane-cli-generate/"><p className="p_home_inners">Generate Test Cases</p></a>
+              <a href="/support/docs/kane-cli-checkpoints/"><p className="p_home_inners">Checkpoints</p></a>
+              <a href="/support/docs/kane-cli-agent-mode/"><p className="p_home_inners">Agent Mode</p></a>
+              <a href="/support/docs/kane-cli-cli-reference/"><p className="p_home_inners">CLI Reference</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
               <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
@@ -179,21 +200,6 @@ export default function Home() {
               <a href="/support/docs/web-scanner-scheduling-options/"><p className="p_home_inners">Scheduling Options</p></a>
             </div>
           </div>
-          <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />KaneAI</h2>
-            <div className="home_inners">
-              <a href="/support/docs/getting-started-with-kane-ai/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/author-your-first-desktop-browser-test/"><p className="p_home_inners">Author Desktop Browser Test</p></a>
-              <a href="/support/docs/author-your-first-mobile-app-test/"><p className="p_home_inners">Author Mobile App Test</p></a>
-              <a href="/support/docs/kane-ai-api-testing/"><p className="p_home_inners">API Testing</p></a>
-              <a href="/support/docs/kane-ai-command-guide/"><p className="p_home_inners">Command Types</p></a>
-              <a href="/support/docs/kaneai-ci-cd-automation/"><p className="p_home_inners">Test Automation with CI/CD</p></a>
-            </div>
-          </div>
-        </div>
-
-        {/* Row 3 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing Platform &nbsp;<NewTag value="BETA" /></h2>
             <div className="home_inners">
@@ -233,14 +239,10 @@ export default function Home() {
               <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Issue Tracker Integration</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 4 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />TestMu AI MCP Server &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
-              <a href="/support/docs/testmu-mcp-server/"><p className="p_home_inners">Setting up TestMu AI MCP Server</p></a>
+              <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up TestMu AI MCP Server</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -278,10 +280,6 @@ export default function Home() {
               <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
             </div>
           </div>
-        </div>
-
-        {/* Row 5 */}
-        <div className="home_main">
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="settings-light-icon.svg" dark="settings-dark-icon.svg" alt="" />Settings and Security</h2>
             <div className="home_inners">

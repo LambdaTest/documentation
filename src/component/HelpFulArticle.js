@@ -158,7 +158,7 @@ class HelpFulArticleClass extends React.Component {
                         <h3 className='feedback__box__title feedback__box__title_helpful'>Still need help?</h3>
                         <span onClick={() => window.openLTChatWidget()} className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Chat with Us</span>
                         <a role="button" tabIndex="0" href="https://community.testmuai.com/" target="_blank" className="chat_btn"><img loading="lazy" src="/support/img/community.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Ask the Community</a>
-                        {/* <a href="https://accounts.lambdatest.com/register" target="_blank"  className="btnlink">Start Free Testing</a> */}
+                        {/* <a href="https://testmuai.com/register/" target="_blank"  className="btnlink">Start Free Testing</a> */}
                     </div>
                     </div> 
 

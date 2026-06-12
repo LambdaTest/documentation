@@ -1,4 +1,4 @@
-function getLoginUrlWithCookies(baseUrl = `https://www.testmuai.com/login/`) {
+function getLoginUrlWithCookies(baseUrl = `https://accounts.lambdatest.com/login`) {
   if (typeof document === 'undefined' || typeof window === 'undefined') {
     return baseUrl;
   }
@@ -16,7 +16,7 @@ function getLoginUrlWithCookies(baseUrl = `https://www.testmuai.com/login/`) {
   }
 
   // Only collect these specific cookies
-  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked'];
+  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked', 'previous_url_testmu'];
 
   // Collect all cookies
   const cookies = document.cookie;
@@ -118,6 +118,31 @@ export const setInitialReferrer = () => {
 
   if (!isAllowedDomain) return;
 
+  const authPaths = ['/login', '/register'];
+  const matchesAuthPath = (pathname) =>
+    authPaths.some(path => pathname === path || pathname === path + '/' || pathname.startsWith(path + '?'));
+
+  const isAuthPage = matchesAuthPath(window.location.pathname);
+
+  if (isAuthPage) {
+    if (document.referrer) {
+      try {
+        const referrerUrl = new URL(document.referrer);
+        const referrerHost = referrerUrl.hostname;
+        const isReferrerAllowed = allowedDomains.some(domain =>
+          referrerHost === domain || referrerHost.endsWith(`.${domain}`)
+        );
+        if (isReferrerAllowed && !matchesAuthPath(referrerUrl.pathname)) {
+          writeLocalCookie('initial_referrer', document.referrer, 30);
+          return;
+        }
+      } catch (e) {}
+    }
+    // Direct landing (no referrer, external referrer, or referrer is also auth page)
+    writeLocalCookie('initial_referrer', window.location.href, 30);
+    return;
+  }
+
   writeLocalCookie('initial_referrer', window.location.href, 30);
 };
 export default function CookieTrackingLogin(e) {
@@ -133,16 +158,16 @@ export default function CookieTrackingLogin(e) {
     }
 
     // Get the current href from the anchor element (which may already have GA parameters)
-    const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://www.testmuai.com/login/`;
+    // const anchorElement = e.currentTarget;
+    // const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/login`;
 
-    // Append cookies to the current URL (preserving any existing query params like GA)
-    const urlWithCookies = getLoginUrlWithCookies(currentHref);
+    // // Append cookies to the current URL (preserving any existing query params like GA)
+    // const urlWithCookies = getLoginUrlWithCookies(currentHref);
 
-    // Update the href before navigation
-    if (anchorElement) {
-      anchorElement.href = urlWithCookies;
-    }
+    // // Update the href before navigation
+    // if (anchorElement) {
+    //   anchorElement.href = urlWithCookies;
+    // }
   };
 
   export const CookieTrackingSignup = (e) => {
@@ -158,24 +183,18 @@ export default function CookieTrackingLogin(e) {
       window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
     }
 
-    // Get the current href from the anchor element (which may already have GA parameters)
-    const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://www.testmuai.com/register/`;
+    // // Get the current href from the anchor element (which may already have GA parameters)
+    // const anchorElement = e.currentTarget;
+    // const currentHref = anchorElement?.href || `https://testmuai.com/register/`;
 
-    // Append cookies to the current URL (preserving any existing query params like GA)
-    const urlWithCookies = getLoginUrlWithCookies(currentHref);
+    // // Append cookies to the current URL (preserving any existing query params like GA)
+    // const urlWithCookies = getLoginUrlWithCookies(currentHref);
 
-    // Update the href before navigation
-    if (anchorElement) {
-      anchorElement.href = urlWithCookies;
-    }
+    // // Update the href before navigation
+    // if (anchorElement) {
+    //   anchorElement.href = urlWithCookies;
+    // }
   };
 
-
-setTimeout(() => {
-  if (typeof document !== "undefined") {
-    setInitialReferrer()
-  }
-}, 500);
 
 
