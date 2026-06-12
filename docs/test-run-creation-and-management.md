@@ -129,6 +129,14 @@ Custom Fields can be filtered only for types: **Single Select Dropdown**, **Mult
 
 <img loading="lazy" src={require('../assets/images/test-run/9.png').default} alt="Real "  className="doc_img"/>
 
+The Remark field supports **rich text formatting**, including:
+- Inline image embedding — paste images directly into the field.
+- Text styling such as bold, italic, bullet lists, and other standard rich text options.
+
+:::note
+Remarks have a maximum limit of **5000 characters**.
+:::
+
 - Attach supporting files or screenshots to the remarks for better context.
 
 <img loading="lazy" src={require('../assets/images/test-run/10.png').default} alt="Real "  className="doc_img"/>
