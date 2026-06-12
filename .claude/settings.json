@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "defaultMode": "dontAsk",
-    "allow": [],
-    "additionalDirectories": [
-      "C:\\Users\\salmank\\.claude"
-    ]
-  }
-}
