@@ -102,36 +102,30 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 Enter your `APP_ID` in the YAML file that you have fetched in the above step.
 
 <Tabs className="docs__val">
-<TabItem value="android-rd" label="Android-Real Device" default>
+<TabItem value="android-emu" label="Android-Emulator" default>
+
+> To enable this for your organization, connect with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-emulator.yaml
+```
+</TabItem>
+
+<TabItem value="android-rd" label="Android-Real Device">
+
+> To enable this for your organization, connect with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
 
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-realdevice.yaml
 ```
 </TabItem>
 
-<TabItem value="iOS-Real Device" label="iOS-Real Device" default>
-> To enable execution on iOS real devices, install the following [JAR-file](https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar)
- and include it in your payload. This JAR acts as a wrapper to facilitate compatibility with Maestro when running on iOS real devices.
-```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-realdevice.yaml
-```
-</TabItem>
+<TabItem value="ios-simu" label="iOS-Simulator">
 
-<TabItem value="android-emu" label="Android-Emulator" default>
-
-> To enable this for your organizaton, connect with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
+> To enable this for your organization, connect with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-emulator.yaml
-```
-</TabItem>
-
-<TabItem value="ios-simu" label="iOS-Simulator" default>
-> To enable this for your organizaton, connect with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
-
-
-```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-simulator.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/ios/ios-simulator.yaml
 ```
 </TabItem>
 
@@ -151,12 +145,6 @@ The above command will generate a `report.xml` file in the root directory after 
 ```yaml reference
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
 ```
-When running on iOS real devices, you need to use a dedicated script since the execution flow differs slightly from iOS simulators and Android.
-
-```yaml reference
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest_ios_realdevice.sh
-```
-
 2. Update your HyperExecute YAML file to enable the native reporting in HyperExecute using the generated JUnit XML files.
 
 ```yaml title="hyperexecute.yaml"
