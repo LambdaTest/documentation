@@ -41,6 +41,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+## Version 3.2.29 (14th June 2026)
+- **gRPC / HTTP/2 Tunnel Fix**
+  - Fixed gRPC-over-HTTP/2 traffic hanging through the tunnel for strict HTTP/1.1 CONNECT clients (e.g. Flutter / grpc-dart apps on real devices). The tunnel now replies `HTTP/1.1 200` on the passthrough CONNECT path, so these clients establish the tunnel instead of timing out.
+
 ## Version 3.2.28 (24th May 2026)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
