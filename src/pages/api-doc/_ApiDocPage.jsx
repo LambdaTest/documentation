@@ -207,15 +207,6 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
   const [tryItEndpoint, setTryItEndpoint] = useState(null);
   const [selectedLang, setSelectedLang] = useState('cURL');
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  // Active variant index for endpoints that ship requestBody.variants
-  // (e.g. PUT /api/v1/folder rename/move). Shared between the body section
-  // and the code panel so they stay in sync. Reset whenever the endpoint
-  // navigates.
-  const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
-
-  // Reset the active variant tab whenever we navigate to a different endpoint.
-  const endpointKey = endpoint ? `${endpoint.method}:${endpoint.path}` : null;
-  useEffect(() => { setSelectedVariantIdx(0); }, [endpointKey]);
 
   // Remove alternate links (preserved from original)
   useEffect(() => {
@@ -409,15 +400,13 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
               <EndpointDetail
                 endpoint={endpoint}
                 onTryIt={setTryItEndpoint}
-                selectedVariantIdx={selectedVariantIdx}
-                onVariantChange={setSelectedVariantIdx}
-                mobileCodeSlot={<CodeExamples endpoint={endpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} selectedVariantIdx={selectedVariantIdx} />}
+                mobileCodeSlot={<CodeExamples endpoint={endpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} />}
               />
               <div style={{ height: '80px' }} />
             </main>
 
             <div className={styles.rightPanel}>
-              <CodeExamples endpoint={endpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} selectedVariantIdx={selectedVariantIdx} />
+              <CodeExamples endpoint={endpoint} selectedLang={selectedLang} onLangChange={setSelectedLang} />
             </div>
           </div>
         </div>
@@ -429,7 +418,6 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
             onClose={() => setTryItEndpoint(null)}
             selectedLang={selectedLang}
             onLangChange={setSelectedLang}
-            initialVariantIdx={selectedVariantIdx}
           />
         )}
       </Layout>

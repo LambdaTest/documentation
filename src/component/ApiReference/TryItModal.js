@@ -301,7 +301,7 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
   );
 }
 
-export default function TryItModal({ endpoint, onClose, selectedLang: selectedLangProp, onLangChange, initialVariantIdx = 0 }) {
+export default function TryItModal({ endpoint, onClose, selectedLang: selectedLangProp, onLangChange }) {
   // Determine if this is a V2 endpoint (path contains /v2/ or group name contains V2)
   const isV2Endpoint = (endpoint.path && endpoint.path.toLowerCase().includes('/v2/')) ||
     (endpoint.group && endpoint.group.toLowerCase().includes('v2'));
@@ -329,9 +329,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
   // (buildCurl, handleSend, generateCodeExample) operate on `effectiveEndpoint`
   // and stay variant-agnostic.
   const variants = endpoint.requestBody?.variants || null;
-  const [selectedVariantIdx, setSelectedVariantIdx] = useState(
-    variants && initialVariantIdx < variants.length ? initialVariantIdx : 0
-  );
+  const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
   const selectedVariant = variants ? variants[selectedVariantIdx] : null;
   const effectiveEndpoint = useMemo(() => {
     if (!selectedVariant) return endpoint;
