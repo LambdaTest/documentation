@@ -86,7 +86,7 @@ function formatResponse(value) {
   return JSON.stringify(value, null, 2);
 }
 
-export default function CodeExamples({ endpoint, selectedLang: selectedLangProp, onLangChange }) {
+export default function CodeExamples({ endpoint, selectedLang: selectedLangProp, onLangChange, selectedVariantIdx = 0 }) {
   const [localLang, setLocalLang] = useState('cURL');
   const selectedLang = selectedLangProp !== undefined ? selectedLangProp : localLang;
   const setSelectedLang = onLangChange || setLocalLang;
@@ -99,8 +99,22 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
 
   if (!endpoint) return null;
 
+  // When the endpoint ships requestBody.variants, swap the selected variant's
+  // example + properties into a shimmed endpoint so the snippet matches the
+  // tab the user picked over in the Body section.
+  const variants = endpoint.requestBody?.variants;
+  const effectiveEndpoint = (variants && variants[selectedVariantIdx])
+    ? {
+        ...endpoint,
+        requestBody: {
+          ...endpoint.requestBody,
+          properties: variants[selectedVariantIdx].properties,
+          example: variants[selectedVariantIdx].example,
+        },
+      }
+    : endpoint;
   const langDef = LANGUAGES.find((l) => l.label === selectedLang) || LANGUAGES[0];
-  const code = generateCodeExample(endpoint, selectedLang);
+  const code = generateCodeExample(effectiveEndpoint, selectedLang);
 
   const responses = endpoint.responses || {};
   const responseTabs = Object.keys(responses).filter(

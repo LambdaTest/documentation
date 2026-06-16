@@ -680,7 +680,7 @@ function UrlBar({ endpoint, onTryIt }) {
 
 // ─── Main component ──────────────────────────────────────────────────────────
 
-export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeSlot }) {
+export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeSlot, selectedVariantIdx = 0, onVariantChange }) {
   if (!endpoint) {
     return (
       <div className={styles.empty}>
@@ -765,22 +765,49 @@ export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeS
       )}
 
       {/* Request Body */}
-      {endpoint.requestBody && Array.isArray(endpoint.requestBody.properties) && endpoint.requestBody.properties.length > 0 && (
-        <section className={styles.section}>
-          <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Body</h2>
-            {endpoint.requestBody.contentType && (
-              <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{endpoint.requestBody.contentType}</span>
+      {endpoint.requestBody && (() => {
+        const variants = endpoint.requestBody.variants;
+        const activeVariant = variants && variants[selectedVariantIdx];
+        const bodyProps = activeVariant ? activeVariant.properties : endpoint.requestBody.properties;
+        if (!Array.isArray(bodyProps) || bodyProps.length === 0) return null;
+        return (
+          <section className={styles.section}>
+            <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Body</h2>
+              {endpoint.requestBody.contentType && (
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{endpoint.requestBody.contentType}</span>
+              )}
+            </div>
+            {variants && variants.length > 0 && (
+              <div className="flex gap-1 mb-4 border-b border-gray-200 dark:border-white/10">
+                {variants.map((v, idx) => {
+                  const active = idx === selectedVariantIdx;
+                  return (
+                    <button
+                      key={v.name}
+                      onClick={() => onVariantChange?.(idx)}
+                      className={`px-3 py-2 text-sm font-medium border-b-2 -mb-px transition-colors ${
+                        active
+                          ? 'border-orange-500 text-orange-600 dark:text-orange-400'
+                          : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
+                      }`}
+                      style={{ background: 'transparent', cursor: 'pointer', fontFamily: 'inherit' }}
+                    >
+                      {v.name}
+                    </button>
+                  );
+                })}
+              </div>
             )}
-          </div>
-          {endpoint.requestBody.description && (
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4"><InlineText text={endpoint.requestBody.description} /></p>
-          )}
-          {endpoint.requestBody.properties.map((prop, i) => (
-            <ParamRow key={i} param={prop} />
-          ))}
-        </section>
-      )}
+            {endpoint.requestBody.description && (
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4"><InlineText text={endpoint.requestBody.description} /></p>
+            )}
+            {bodyProps.map((prop, i) => (
+              <ParamRow key={`${selectedVariantIdx}-${i}`} param={prop} />
+            ))}
+          </section>
+        );
+      })()}
 
       {/* Response section */}
       <ResponseSection responses={endpoint.responses} responseSchema={endpoint.responseSchema} />
