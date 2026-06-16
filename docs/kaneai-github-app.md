@@ -183,6 +183,7 @@ folder_id: "your_folder_id"
 assignee: your_user_id
 environment_id: environment_id
 test_url: "https://your-deployed-app-url.com/"
+tunnel_name: "your_tunnel_name"  # Optional: set if using the same tunnel across PRs
 ```
 
 #### Configuration Parameters
@@ -194,6 +195,7 @@ test_url: "https://your-deployed-app-url.com/"
 | `assignee` | The <BrandName /> user ID who will be assigned to test runs for executions |
 | `environment_id` | The target testing environment (browser, OS, device configurations) |
 | `test_url` | The base URL of your application under test (your staging or testing environment URL) |
+| `tunnel_name` | *(Optional)* The name of the LambdaTest tunnel to use for testing. Set this when the same tunnel is reused across all PRs. Can be overridden per PR using the `--tunnel` flag in the trigger comment. |
 
 After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values — project ID, folder ID, assignee, and environment ID — are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 
@@ -247,7 +249,7 @@ To experience the full workflow hands-on, fork the sample repository and run the
 2. **Install the GitHub App** — Install the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on your forked repository (see [Installation](#installation) above).
 3. **Configure your credentials** — Add the `.lambdatest/config.yaml` file with your <BrandName /> project ID, folder ID, and other configuration values (see [Repository Configuration](#repository-configuration)).
 4. **Set up GitHub Pages & Actions** — Enable GitHub Pages and GitHub Actions in your forked repository to handle deployment and workflows.
-5. **Trigger the workflow** — Open a pull request in your fork and comment `@KaneAI Validate this PR` to see the full AI testing pipeline in action.
+5. **Trigger the workflow** — Open a pull request in your fork and comment `@TestMuAI Validate this PR` to see the full AI testing pipeline in action.
 
 ---
 
@@ -267,10 +269,39 @@ The test generation workflow is triggered through a simple comment on any pull r
 
 | Command | Description |
 |---------|-------------|
-| `@KaneAI Validate this PR` | Triggers the full AI testing workflow — analysis, generation, execution, and reporting |
-| `@LambdaTest Validate this PR` | Alias for the above |
+| `@TestMuAI Validate this PR` | Triggers the full AI testing workflow — analysis, generation, execution, and reporting |
+| `@KaneAI Validate this PR` | Alias for the above |
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/1-flow_triggered.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+
+#### Optional Parameters
+
+You can extend any trigger command with optional parameters to customize test execution for a specific PR:
+
+| Parameter | Description |
+|-----------|-------------|
+| `--url <test_url>` | Overrides the `test_url` set in `.lambdatest/config.yaml` for this PR. Useful for ephemeral preview environments where the deployment URL changes per PR. |
+| `--tunnel <tunnel_name>` | Routes test traffic through a named LambdaTest tunnel. Required when testing against a locally hosted or privately accessible environment that is not publicly reachable. |
+
+**Example:**
+
+```
+@TestMuAI Validate this PR --url https://preview-123.your-app.com --tunnel my-tunnel-name
+```
+
+Both parameters are independent — use `--url` alone to override the URL, `--tunnel` alone for private environments, or combine them when both apply.
+
+#### Setting Up Tunnel Testing
+
+When your application runs on a local machine, private network, or staging environment not accessible from the internet, use the `--tunnel` flag to route test traffic through a secure LambdaTest tunnel.
+
+**Before triggering the workflow with `--tunnel`:**
+
+1. Start a LambdaTest tunnel on the machine that can reach your application. The tunnel must be active at the time the workflow is triggered.
+2. Note the tunnel name you assigned when starting the tunnel.
+3. Pass that exact tunnel name as the `--tunnel` value in your PR comment.
+
+For complete setup instructions, refer to the [KaneAI Tunnel Support documentation](https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
 
 
 #### What Happens Next

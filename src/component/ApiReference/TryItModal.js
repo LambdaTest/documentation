@@ -4,7 +4,7 @@ import { Highlight, themes } from 'prism-react-renderer';
 import MethodBadge from './MethodBadge';
 import InlineText from './InlineText';
 import styles from './TryItModal.module.css';
-import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton, coerceBodyValue } from './langUtils';
+import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton, coerceBodyValue, detectFlattenedArrayBody } from './langUtils';
 
 const githubWithGreenKeys = {
   ...themes.github,
@@ -94,19 +94,58 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
   const authLine = hasAuth ? ` \\\n  --header 'Authorization: ${authHeader}'` : '';
 
   const bodyProps = endpoint.requestBody?.properties || [];
+  const rawExample = endpoint.requestBody?.example;
   const contentType = endpoint.requestBody?.contentType || 'application/json';
+  const isMultipart = contentType === 'multipart/form-data';
+  const flattenedBody = !isMultipart ? detectFlattenedArrayBody(endpoint) : null;
+  const userFilledBody = flattenedBody
+    ? flattenedBody.innerFields.some((f) => params[`__body__${f.name}`])
+    : bodyProps.some((p) => params[`__body__${p.name}`]);
+  const useRawExample = !isMultipart && !flattenedBody && !userFilledBody
+    && rawExample != null && typeof rawExample === 'object';
   let bodyLine = '';
-  if (bodyProps.length > 0) {
-    const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
-    if (contentType === 'multipart/form-data') {
+  if (bodyProps.length > 0 || useRawExample || flattenedBody) {
+    if (isMultipart) {
+      const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
       bodyLine = bodyEntries
         .filter(([, v]) => v)
         .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
         .join('');
+    } else if (flattenedBody) {
+      // Assemble inner object from per-field inputs (with example fallback),
+      // wrap under the spec's array key.
+      const inner = {};
+      for (const f of flattenedBody.innerFields) {
+        const raw = params[`__body__${f.name}`];
+        const fromEx = flattenedBody.innerExample[f.name];
+        const val = (raw !== undefined && raw !== '')
+          ? coerceBodyValue(raw, f.type)
+          : fromEx;
+        if (val !== undefined && val !== '') inner[f.name] = val;
+      }
+      const bodyJson = { [flattenedBody.wrapperKey]: [inner] };
+      bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyJson, null, 2)}'`;
     } else {
-      const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v));
-      if (Object.keys(bodyObj).length) {
-        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyObj)}'`;
+      let bodyJson;
+      if (useRawExample) {
+        bodyJson = rawExample;
+      } else {
+        // Empty inputs fall back to the spec example so editing one field
+        // doesn't blank out the others.
+        const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
+        const bodyEntries = bodyProps.map((p) => {
+          const raw = params[`__body__${p.name}`] || '';
+          if (!raw) {
+            const ex = fromExample(p);
+            return [p.name, ex !== undefined ? ex : ''];
+          }
+          return [p.name, coerceBodyValue(raw, p.type)];
+        });
+        const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v !== '' && v !== undefined));
+        if (Object.keys(bodyObj).length) bodyJson = bodyObj;
+      }
+      if (bodyJson !== undefined) {
+        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyJson, null, 2)}'`;
       }
     }
   }
@@ -284,7 +323,69 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [params, setParams] = useState({});
+  // Variant-aware view of the request body: when the spec ships multiple
+  // payload shapes for one endpoint (e.g. PUT folder rename/move), the modal
+  // picks one tab and presents it as the effective body. Downstream helpers
+  // (buildCurl, handleSend, generateCodeExample) operate on `effectiveEndpoint`
+  // and stay variant-agnostic.
+  const variants = endpoint.requestBody?.variants || null;
+  const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
+  const selectedVariant = variants ? variants[selectedVariantIdx] : null;
+  const effectiveEndpoint = useMemo(() => {
+    if (!selectedVariant) return endpoint;
+    return {
+      ...endpoint,
+      requestBody: {
+        ...endpoint.requestBody,
+        properties: selectedVariant.properties,
+        example: selectedVariant.example,
+      },
+    };
+  }, [endpoint, selectedVariant]);
+  // Compute once at render time — both the params initializer and the body
+  // section need it, and `effectiveEndpoint` is stable for the variant's lifetime.
+  const flattenedBody = detectFlattenedArrayBody(effectiveEndpoint);
+
+  // Build the per-variant prefill — also reused when the user switches tabs.
+  function computeInitialParams() {
+    const initial = {};
+    if (flattenedBody) {
+      for (const f of flattenedBody.innerFields) {
+        const val = flattenedBody.innerExample[f.name];
+        initial[`__body__${f.name}`] = val == null ? '' : String(val);
+      }
+      return initial;
+    }
+    const ex = effectiveEndpoint.requestBody?.example;
+    const props = effectiveEndpoint.requestBody?.properties || [];
+    if (ex && typeof ex === 'object' && !Array.isArray(ex)) {
+      for (const p of props) {
+        if (ex[p.name] === undefined) continue;
+        const v = ex[p.name];
+        initial[`__body__${p.name}`] = v == null ? '' : String(v);
+      }
+    }
+    return initial;
+  }
+  // Prefill body fields with the spec example so the form is usable on first
+  // open. Flattened-array bodies expose inner primitive fields; plain bodies
+  // get one prefilled input per property.
+  const [params, setParams] = useState(computeInitialParams);
+
+  // Reset & re-prefill body params whenever the active variant changes.
+  // Other params (path/query/auth) are not affected by variant switches.
+  useEffect(() => {
+    if (!variants) return;
+    setParams((prev) => {
+      const next = {};
+      for (const k of Object.keys(prev)) {
+        if (!k.startsWith('__body__')) next[k] = prev[k];
+      }
+      const fresh = computeInitialParams();
+      return { ...next, ...fresh };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedVariantIdx]);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [activeResTab, setActiveResTab] = useState(null);
@@ -347,18 +448,53 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
       ? `Basic ${safeBase64(`${username}:${password}`)}`
       : '';
 
-    const bodyProps = endpoint.requestBody?.properties || [];
-    const contentType = endpoint.requestBody?.contentType || 'application/json';
+    const bodyProps = effectiveEndpoint.requestBody?.properties || [];
+    const rawExample = effectiveEndpoint.requestBody?.example;
+    const contentType = effectiveEndpoint.requestBody?.contentType || 'application/json';
+    const isMultipart = contentType === 'multipart/form-data';
+    const flattenedBodyHS = !isMultipart ? detectFlattenedArrayBody(effectiveEndpoint) : null;
+    const userFilledBody = flattenedBodyHS
+      ? flattenedBodyHS.innerFields.some((f) => params[`__body__${f.name}`])
+      : bodyProps.some((p) => params[`__body__${p.name}`]);
+    const useRawExample = !isMultipart && !flattenedBodyHS && !userFilledBody
+      && rawExample != null && typeof rawExample === 'object';
     let fetchBody;
     let fetchHeaders = { ...(authHeader && { Authorization: authHeader }) };
-    if (bodyProps.length > 0) {
-      if (contentType === 'multipart/form-data') {
+    if (bodyProps.length > 0 || useRawExample || flattenedBodyHS) {
+      if (isMultipart) {
         const fd = new FormData();
         bodyProps.forEach((p) => { if (params[`__body__${p.name}`]) fd.append(p.name, params[`__body__${p.name}`]); });
         fetchBody = fd;
         // Don't set Content-Type for FormData — browser sets it with boundary
+      } else if (flattenedBodyHS) {
+        const inner = {};
+        for (const f of flattenedBodyHS.innerFields) {
+          const raw = params[`__body__${f.name}`];
+          const fromEx = flattenedBodyHS.innerExample[f.name];
+          const val = (raw !== undefined && raw !== '')
+            ? coerceBodyValue(raw, f.type)
+            : fromEx;
+          if (val !== undefined && val !== '') inner[f.name] = val;
+        }
+        fetchBody = JSON.stringify({ [flattenedBodyHS.wrapperKey]: [inner] });
+        fetchHeaders['Content-Type'] = 'application/json';
+      } else if (useRawExample) {
+        fetchBody = JSON.stringify(rawExample);
+        fetchHeaders['Content-Type'] = 'application/json';
       } else {
-        const bodyObj = Object.fromEntries(bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]).filter(([, v]) => v));
+        // Empty inputs fall back to the spec example so partial edits don't
+        // strip the other example values.
+        const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
+        const bodyObj = Object.fromEntries(
+          bodyProps.map((p) => {
+            const raw = params[`__body__${p.name}`] || '';
+            if (!raw) {
+              const ex = fromExample(p);
+              return [p.name, ex !== undefined ? ex : ''];
+            }
+            return [p.name, coerceBodyValue(raw, p.type)];
+          }).filter(([, v]) => v !== '' && v !== undefined)
+        );
         if (Object.keys(bodyObj).length) {
           fetchBody = JSON.stringify(bodyObj);
           fetchHeaders['Content-Type'] = 'application/json';
@@ -384,16 +520,16 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
     }
   }
 
-  const curlCode = buildCurl(endpoint, username, password, params, selectedServer);
+  const curlCode = buildCurl(effectiveEndpoint, username, password, params, selectedServer);
   const langDef = LANGUAGES.find((l) => l.label === selectedLang) || LANGUAGES[0];
   const codeToShow = selectedLang === 'cURL'
     ? curlCode
-    : generateCodeExample(endpoint, selectedLang, { username, password, params });
+    : generateCodeExample(effectiveEndpoint, selectedLang, { username, password, params });
   const hasAuth = endpoint.auth && endpoint.auth.length > 0;
   const hasQuery = endpoint.queryParams && endpoint.queryParams.length > 0;
   const hasPath = endpoint.pathParams && endpoint.pathParams.length > 0;
-  const bodyProps = endpoint.requestBody?.properties || [];
-  const hasBody = bodyProps.length > 0;
+  const bodyProps = effectiveEndpoint.requestBody?.properties || [];
+  const hasBody = bodyProps.length > 0 || !!variants;
 
   // Static spec responses — always shown
   const specResponses = endpoint.responses || {};
@@ -548,18 +684,56 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
             {hasBody && (
               <CollapsibleSection
                 title="Body"
-                description={endpoint.requestBody.description || null}
+                description={effectiveEndpoint.requestBody?.description || null}
               >
-                {bodyProps.map((p) => (
-                  <ParamField
-                    key={p.name} label={p.name}
-                    type={p.type} required={p.required}
-                    description={p.description}
-                    enumValues={p.enum}
-                    value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
-                    placeholder={(p.type || '').toLowerCase().includes('array') ? 'e.g. ["val1", "val2"] or val1, val2' : undefined}
-                  />
-                ))}
+                {variants && (
+                  <div style={{
+                    display: 'flex', gap: '6px', padding: '8px 20px 0', borderBottom: '1px solid var(--ifm-color-emphasis-200)',
+                  }}>
+                    {variants.map((v, idx) => {
+                      const active = idx === selectedVariantIdx;
+                      return (
+                        <button
+                          key={v.name}
+                          onClick={() => setSelectedVariantIdx(idx)}
+                          style={{
+                            padding: '8px 14px', fontSize: '13px', fontWeight: active ? 600 : 500,
+                            border: 'none', borderBottom: `2px solid ${active ? '#ED5F00' : 'transparent'}`,
+                            background: 'transparent', cursor: 'pointer',
+                            color: active ? '#ED5F00' : 'var(--ifm-color-emphasis-700)',
+                            fontFamily: 'inherit', marginBottom: '-1px',
+                          }}
+                        >
+                          {v.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+                {flattenedBody ? (
+                  flattenedBody.innerFields.map((f) => (
+                    <ParamField
+                      key={f.name}
+                      label={f.name}
+                      type={f.type}
+                      required={f.required}
+                      description={f.description}
+                      value={params[`__body__${f.name}`] || ''}
+                      onChange={(v) => updateParam(`__body__${f.name}`, v)}
+                    />
+                  ))
+                ) : (
+                  bodyProps.map((p) => (
+                    <ParamField
+                      key={p.name} label={p.name}
+                      type={p.type} required={p.required}
+                      description={p.description}
+                      enumValues={p.enum}
+                      value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
+                      placeholder={(p.type || '').toLowerCase().includes('array') ? 'e.g. ["val1", "val2"] or val1, val2' : undefined}
+                    />
+                  ))
+                )}
               </CollapsibleSection>
             )}
           </div>
