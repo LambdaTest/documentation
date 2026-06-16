@@ -134,6 +134,7 @@ const REQUEST_BODY_EXAMPLE_OVERRIDES = {
       }),
     };
   },
+  // TE-17800: same key rename for the update endpoint.
   'Test Manager|PUT|/api/v1/folder': (ex) => {
     if (!ex || typeof ex !== 'object' || !('parent_folder_id' in ex)) return ex;
     const { parent_folder_id, ...rest } = ex;

@@ -54,8 +54,8 @@ export function detectFlattenedArrayBody(endpoint) {
   if (!Array.isArray(arr) || arr.length !== 1) return null;
   const inner = arr[0];
   if (!inner || typeof inner !== 'object' || Array.isArray(inner)) return null;
-  // Only flatten when every inner value is primitive — keeps the form usable
-  // and avoids nested-textarea complexity.
+  // Bail when any inner value is an array or non-null object — the flat form
+  // can't represent nesting. `null` values are accepted (typed as string).
   const innerFields = Object.entries(inner).map(([name, value]) => {
     let type = 'string';
     if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
@@ -122,7 +122,9 @@ export function generateCodeExample(endpoint, language, { username, password, pa
     for (const f of flattenedBody.innerFields) {
       const raw = params && params[`__body__${f.name}`];
       const fromEx = flattenedBody.innerExample[f.name];
-      const val = (raw !== undefined && raw !== '') ? raw : fromEx;
+      const val = (raw !== undefined && raw !== '')
+        ? coerceBodyValue(raw, f.type)
+        : fromEx;
       if (val !== undefined && val !== '') inner[f.name] = val;
     }
     bodyExample = { [flattenedBody.wrapperKey]: [inner] };

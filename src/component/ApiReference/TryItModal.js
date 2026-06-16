@@ -118,7 +118,9 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
       for (const f of flattenedBody.innerFields) {
         const raw = params[`__body__${f.name}`];
         const fromEx = flattenedBody.innerExample[f.name];
-        const val = (raw !== undefined && raw !== '') ? raw : fromEx;
+        const val = (raw !== undefined && raw !== '')
+          ? coerceBodyValue(raw, f.type)
+          : fromEx;
         if (val !== undefined && val !== '') inner[f.name] = val;
       }
       const bodyJson = { [flattenedBody.wrapperKey]: [inner] };
@@ -128,7 +130,7 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
       if (useRawExample) {
         bodyJson = rawExample;
       } else {
-        // Untyped fields fall back to the spec example so editing one field
+        // Empty inputs fall back to the spec example so editing one field
         // doesn't blank out the others.
         const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
         const bodyEntries = bodyProps.map((p) => {
@@ -422,7 +424,9 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
         for (const f of flattenedBodyHS.innerFields) {
           const raw = params[`__body__${f.name}`];
           const fromEx = flattenedBodyHS.innerExample[f.name];
-          const val = (raw !== undefined && raw !== '') ? raw : fromEx;
+          const val = (raw !== undefined && raw !== '')
+            ? coerceBodyValue(raw, f.type)
+            : fromEx;
           if (val !== undefined && val !== '') inner[f.name] = val;
         }
         fetchBody = JSON.stringify({ [flattenedBodyHS.wrapperKey]: [inner] });
@@ -431,7 +435,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
         fetchBody = JSON.stringify(rawExample);
         fetchHeaders['Content-Type'] = 'application/json';
       } else {
-        // Untyped fields fall back to the spec example so partial edits don't
+        // Empty inputs fall back to the spec example so partial edits don't
         // strip the other example values.
         const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
         const bodyObj = Object.fromEntries(
