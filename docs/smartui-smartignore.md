@@ -83,7 +83,7 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 
 #### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
-If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+If you are using SmartUI Hooks for web automation (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using the `smartUI.smartIgnore` capability.
 
 ```javascript
 const capabilities = {
@@ -93,12 +93,18 @@ const capabilities = {
     accessKey: process.env.LT_ACCESS_KEY,
     visual: true,
     'smartUI.project': 'My-Project',
-    ignoreType: ['smartignore']
+    'smartUI.smartIgnore': true
   }
 };
 ```
 
-> Smart Ignore is a strategy mode. Prefer `ignoreType` strategy configuration over a standalone `smartignore: true` flag.
+For Selenium with Java, set the same capability inside your `LT:Options`:
+
+```java
+ltOptions.put("smartUI.smartIgnore", true);
+```
+
+> **Note:** In the web automation Hooks flow, the Smart Ignore comparison mode must be enabled with the `smartUI.smartIgnore: true` capability. The `ignoreType: ['smartignore']` configuration does **not** switch the comparison mode to Smart Ignore for web automation Hooks. Smart Ignore takes effect from the subsequent execution build (the first build establishes the baseline, and the comparison applies on the next build).
 
 For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
