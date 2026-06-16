@@ -134,13 +134,57 @@ const REQUEST_BODY_EXAMPLE_OVERRIDES = {
       }),
     };
   },
-  // TE-17800: same key rename for the update endpoint.
-  'Test Manager|PUT|/api/v1/folder': (ex) => {
-    if (!ex || typeof ex !== 'object' || !('parent_folder_id' in ex)) return ex;
-    const { parent_folder_id, ...rest } = ex;
-    return { ...rest, parent_id: 'parent_id' };
-  },
+  // PUT /api/v1/folder is now in REQUEST_BODY_VARIANTS_OVERRIDES below — the
+  // upstream example omits the `action` discriminator and conflates rename/move.
 };
+
+// Variant overrides expose multiple body shapes for one endpoint. The modal
+// renders a tab per variant; each variant has its own example + derived fields.
+// Use this when an endpoint accepts distinct payload shapes selected by a
+// discriminator (e.g. PUT /api/v1/folder uses `action: "update"` vs "move").
+const REQUEST_BODY_VARIANTS_OVERRIDES = {
+  // TE-17800: PUT /api/v1/folder serves two operations:
+  //  - Rename: action="update", no parent_id/entity_type/serial_no
+  //  - Move:   action="move",   adds parent_id + entity_type + serial_no
+  // The upstream YAML ships a single example that matches neither real payload.
+  'Test Manager|PUT|/api/v1/folder': () => ([
+    {
+      name: 'Rename',
+      example: {
+        id: 'folder_id',
+        action: 'update',
+        entity_id: 'project_id',
+        name: 'Test Folder - LambdaTest Demo',
+      },
+    },
+    {
+      name: 'Move',
+      example: {
+        id: 'folder_id',
+        action: 'move',
+        entity_id: 'project_id',
+        entity_type: 'project',
+        name: 'Test Folder - LambdaTest Demo',
+        parent_id: 'parent_id',
+        serial_no: 1,
+      },
+    },
+  ]),
+};
+
+// Infer flat field metadata from a primitive-only example object — same logic
+// used by the legacy schema-less-fallback path, factored out for variant reuse.
+function inferFieldsFromExample(example) {
+  if (!example || typeof example !== 'object' || Array.isArray(example)) return [];
+  return Object.entries(example).map(([name, value]) => {
+    let type = 'string';
+    if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
+    else if (typeof value === 'boolean') type = 'boolean';
+    else if (Array.isArray(value)) type = 'array';
+    else if (typeof value === 'object' && value !== null) type = 'object';
+    return { name, type, required: false, description: '' };
+  });
+}
 
 function resolveRef(ref, spec) {
   if (!ref || !ref.startsWith('#/')) return null;
@@ -195,28 +239,37 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
   // editable inputs. Inferred types and required flags are best-effort;
   // long-term fix is for spec authors to add proper `properties`.
   if (properties.length === 0) {
-    if (exampleValue && typeof exampleValue === 'object' && !Array.isArray(exampleValue)) {
-      properties = Object.entries(exampleValue).map(([name, value]) => {
-        let type = 'string';
-        if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
-        else if (typeof value === 'boolean') type = 'boolean';
-        else if (Array.isArray(value)) type = 'array';
-        else if (typeof value === 'object' && value !== null) type = 'object';
-        return { name, type, required: false, description: '' };
-      });
-      if (properties.length > 0) {
-        const loc = ctx.method && ctx.path ? `${ctx.method} ${ctx.path}` : '(unknown endpoint)';
-        const src = ctx.specName ? ` [${ctx.specName}]` : '';
-        console.warn(`⚠️  ${loc}${src}: requestBody has no schema.properties; derived ${properties.length} field(s) from example. Spec should declare properties for accurate types/required/descriptions.`);
-      }
+    properties = inferFieldsFromExample(exampleValue);
+    if (properties.length > 0) {
+      const loc = ctx.method && ctx.path ? `${ctx.method} ${ctx.path}` : '(unknown endpoint)';
+      const src = ctx.specName ? ` [${ctx.specName}]` : '';
+      console.warn(`⚠️  ${loc}${src}: requestBody has no schema.properties; derived ${properties.length} field(s) from example. Spec should declare properties for accurate types/required/descriptions.`);
     }
   }
+
+  // Variant overrides: attach per-tab examples + derived fields when an
+  // endpoint serves multiple payload shapes (e.g. PUT folder rename vs move).
+  const variantsFn = overrideKey ? REQUEST_BODY_VARIANTS_OVERRIDES[overrideKey] : null;
+  const variants = variantsFn
+    ? variantsFn().map((v) => ({
+        name: v.name,
+        example: v.example,
+        properties: inferFieldsFromExample(v.example),
+      }))
+    : null;
+
+  // When variants are present, the first one becomes the canonical top-level
+  // example + properties so non-variant-aware consumers (e.g. the static
+  // CodeExamples panel) show a sensible default instead of stale spec data.
+  const finalExample = variants && variants.length > 0 ? variants[0].example : exampleValue;
+  const finalProperties = variants && variants.length > 0 ? variants[0].properties : properties;
 
   return {
     contentType,
     description: requestBody.description || '',
-    properties,
-    ...(exampleValue !== undefined && { example: exampleValue }),
+    properties: finalProperties,
+    ...(finalExample !== undefined && { example: finalExample }),
+    ...(variants && variants.length > 0 && { variants }),
   };
 }
 
