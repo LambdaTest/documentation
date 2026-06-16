@@ -38,6 +38,35 @@ export function coerceBodyValue(raw, type) {
   return raw;
 }
 
+// Detect bodies shaped like `{ wrapper: [ { ...primitive fields } ] }` (e.g.
+// Test Manager Create Folder). When matched, the form can render the inner
+// object's primitive fields directly and the body assembly wraps them back
+// into the array shape — giving the same per-field UX as a flat-body endpoint.
+export function detectFlattenedArrayBody(endpoint) {
+  if (!endpoint || !endpoint.requestBody) return null;
+  const props = endpoint.requestBody.properties || [];
+  if (props.length !== 1) return null;
+  const only = props[0];
+  if (only.type !== 'array') return null;
+  const example = endpoint.requestBody.example;
+  if (!example || typeof example !== 'object' || Array.isArray(example)) return null;
+  const arr = example[only.name];
+  if (!Array.isArray(arr) || arr.length !== 1) return null;
+  const inner = arr[0];
+  if (!inner || typeof inner !== 'object' || Array.isArray(inner)) return null;
+  // Only flatten when every inner value is primitive — keeps the form usable
+  // and avoids nested-textarea complexity.
+  const innerFields = Object.entries(inner).map(([name, value]) => {
+    let type = 'string';
+    if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
+    else if (typeof value === 'boolean') type = 'boolean';
+    else if (Array.isArray(value) || (typeof value === 'object' && value !== null)) return null;
+    return { name, type, required: false, description: '' };
+  });
+  if (innerFields.some((f) => f === null)) return null;
+  return { wrapperKey: only.name, innerFields, innerExample: inner };
+}
+
 // prism language mapping — only use languages bundled in prism-react-renderer
 export const LANGUAGES = [
   { label: 'cURL',       prism: 'clike' },
@@ -75,21 +104,50 @@ export function generateCodeExample(endpoint, language, { username, password, pa
   const bodyProps = endpoint.requestBody?.properties || [];
   const contentType = endpoint.requestBody?.contentType || 'application/json';
   const isMultipart = contentType === 'multipart/form-data';
-  const bodyExample = bodyProps.length > 0
-    ? Object.fromEntries(bodyProps.map((p) => {
-        const raw = params && params[`__body__${p.name}`];
-        let val;
-        if (raw) {
-          val = coerceBodyValue(raw, p.type);
-        } else {
-          val = p.type.includes('integer') || p.type.includes('number') ? 0 :
-                p.type.includes('boolean') ? true :
-                p.type.includes('array') ? [] :
-                `<${p.name}>`;
-        }
-        return [p.name, val];
-      }))
-    : null;
+  const rawExample = endpoint.requestBody?.example;
+  const flattenedBody = !isMultipart ? detectFlattenedArrayBody(endpoint) : null;
+  const userFilledBody = flattenedBody
+    ? flattenedBody.innerFields.some((f) => params && params[`__body__${f.name}`])
+    : bodyProps.some((p) => params && params[`__body__${p.name}`]);
+  // Use the spec's example block as the body when the user hasn't typed
+  // anything — keeps nested arrays/objects that property-based synthesis
+  // would flatten to `[]` (e.g. Test Manager Create Folder's `folders[]`).
+  const useRawExample = !isMultipart && !flattenedBody && !userFilledBody
+    && rawExample != null && typeof rawExample === 'object';
+  let bodyExample;
+  if (flattenedBody) {
+    // Assemble the inner object from per-field inputs (with example fallback),
+    // wrap under the spec's array key so the snippet matches the spec shape.
+    const inner = {};
+    for (const f of flattenedBody.innerFields) {
+      const raw = params && params[`__body__${f.name}`];
+      const fromEx = flattenedBody.innerExample[f.name];
+      const val = (raw !== undefined && raw !== '') ? raw : fromEx;
+      if (val !== undefined && val !== '') inner[f.name] = val;
+    }
+    bodyExample = { [flattenedBody.wrapperKey]: [inner] };
+  } else if (useRawExample) {
+    bodyExample = rawExample;
+  } else if (bodyProps.length > 0) {
+    bodyExample = Object.fromEntries(bodyProps.map((p) => {
+      const raw = params && params[`__body__${p.name}`];
+      const fromExample = rawExample && typeof rawExample === 'object' ? rawExample[p.name] : undefined;
+      let val;
+      if (raw) {
+        val = coerceBodyValue(raw, p.type);
+      } else if (fromExample !== undefined) {
+        val = fromExample;
+      } else {
+        val = p.type.includes('integer') || p.type.includes('number') ? 0 :
+              p.type.includes('boolean') ? true :
+              p.type.includes('array') ? [] :
+              `<${p.name}>`;
+      }
+      return [p.name, val];
+    }));
+  } else {
+    bodyExample = null;
+  }
 
   switch (language) {
     case 'cURL': {

@@ -117,6 +117,30 @@ function categorizeParams(parameters) {
   return { auth, pathParams, queryParams };
 }
 
+// Local patches for known-wrong examples in upstream specs.
+// Each function takes the raw example and returns the corrected one.
+// Remove the matching entry once the upstream YAML is fixed.
+const REQUEST_BODY_EXAMPLE_OVERRIDES = {
+  // TE-17800: upstream uses `parent_folder_id`, real API expects `parent_id`.
+  // Rename both the key and its self-referential placeholder value.
+  'Test Manager|POST|/api/v1/folder': (ex) => {
+    if (!ex || !Array.isArray(ex.folders)) return ex;
+    return {
+      ...ex,
+      folders: ex.folders.map((f) => {
+        if (!f || typeof f !== 'object' || !('parent_folder_id' in f)) return f;
+        const { parent_folder_id, ...rest } = f;
+        return { ...rest, parent_id: 'parent_id' };
+      }),
+    };
+  },
+  'Test Manager|PUT|/api/v1/folder': (ex) => {
+    if (!ex || typeof ex !== 'object' || !('parent_folder_id' in ex)) return ex;
+    const { parent_folder_id, ...rest } = ex;
+    return { ...rest, parent_id: 'parent_id' };
+  },
+};
+
 function resolveRef(ref, spec) {
   if (!ref || !ref.startsWith('#/')) return null;
   const parts = ref.slice(2).split('/');
@@ -145,6 +169,15 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
     }
     schema = merged;
   }
+  // Resolve the example up front (with local override) so derived property names
+  // from the example fallback below also pick up the correction.
+  const rawExample = bodyContent.example ?? schema.example;
+  const overrideKey = (ctx.specName && ctx.method && ctx.path)
+    ? `${ctx.specName}|${ctx.method}|${ctx.path}`
+    : null;
+  const overrideFn = overrideKey ? REQUEST_BODY_EXAMPLE_OVERRIDES[overrideKey] : null;
+  const exampleValue = overrideFn ? overrideFn(rawExample) : rawExample;
+
   const props = schema.properties || {};
   const required = schema.required || [];
   let properties = Object.entries(props).map(([name, propSchema]) => {
@@ -161,9 +194,8 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
   // editable inputs. Inferred types and required flags are best-effort;
   // long-term fix is for spec authors to add proper `properties`.
   if (properties.length === 0) {
-    const example = bodyContent.example ?? schema.example;
-    if (example && typeof example === 'object' && !Array.isArray(example)) {
-      properties = Object.entries(example).map(([name, value]) => {
+    if (exampleValue && typeof exampleValue === 'object' && !Array.isArray(exampleValue)) {
+      properties = Object.entries(exampleValue).map(([name, value]) => {
         let type = 'string';
         if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
         else if (typeof value === 'boolean') type = 'boolean';
@@ -179,7 +211,12 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
     }
   }
 
-  return { contentType, description: requestBody.description || '', properties };
+  return {
+    contentType,
+    description: requestBody.description || '',
+    properties,
+    ...(exampleValue !== undefined && { example: exampleValue }),
+  };
 }
 
 function schemaToExample(schema, spec, seen = new Set()) {
