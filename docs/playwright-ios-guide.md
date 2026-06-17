@@ -54,6 +54,12 @@ Playwright test automation on real iOS devices is now supported on <BrandName />
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
+:::info Currently in BETA
+
+Playwright testing on real iOS devices is currently in **Beta**. To enable this feature for your organization, please contact your <span className="doc__lt" onClick={() => window.openLTChatWidget()}>account team</span> to have the feature flag turned on.
+
+:::
+
 :::tip Supported Versions
 - Playwright versions **v1.53.0** and above (until **v1.57.0**) are supported for iOS real device testing.
 - All languages use the **stock Playwright packages** — no custom forks or client-side changes required.
