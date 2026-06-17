@@ -1413,6 +1413,7 @@ module.exports = {
           "backlog-integration",
           "favro-integration",
           "zapier-integration-with-lambdatest",
+          "n8n-integration",
           "axosoft-integration",
         ],
       },

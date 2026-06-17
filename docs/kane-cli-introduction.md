@@ -1,8 +1,8 @@
 ---
 id: kane-cli-introduction
-title: Kane CLI
+title: Kane CLI Documentation - Getting Started
 sidebar_label: Introduction
-description: "Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline."
+description: Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline.
 keywords:
   - kane cli
   - kaneai
