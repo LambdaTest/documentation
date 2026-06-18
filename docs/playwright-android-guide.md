@@ -152,8 +152,8 @@ const { chromium } = require("playwright");
   const capabilities = {
     "LT:Options": {
       platformName: "android",
-      deviceName: "Pixel.*",
-      platformVersion: "1[0-9]",
+      deviceName: ".*",
+      platformVersion: ".*",
       isRealMobile: true,
       build: "Playwright Android Build",
       name: "Playwright Android Test",
@@ -216,8 +216,8 @@ const { _android } = require("playwright");
   const capabilities = {
     "LT:Options": {
       platformName: "android",
-      deviceName: "Pixel.*",
-      platformVersion: "1[0-9]",
+      deviceName: ".*",
+      platformVersion: ".*",
       isRealMobile: true,
       build: "Playwright Android Build",
       name: "Playwright Android Test",
@@ -303,8 +303,8 @@ def main():
     capabilities = {
         "LT:Options": {
             "platformName": "android",
-            "deviceName": "Pixel.*",
-            "platformVersion": "1[0-9]",
+            "deviceName": ".*",
+            "platformVersion": ".*",
             "isRealMobile": True,
             "build": "Playwright Android Build",
             "name": "Playwright Android Test",
@@ -377,8 +377,8 @@ public class PlaywrightAndroidTest {
     public static void main(String[] args) {
         Map<String, Object> ltOptions = new LinkedHashMap<>();
         ltOptions.put("platformName", "android");
-        ltOptions.put("deviceName", "Pixel.*");
-        ltOptions.put("platformVersion", "1[0-9]");
+        ltOptions.put("deviceName", ".*");
+        ltOptions.put("platformVersion", ".*");
         ltOptions.put("isRealMobile", true);
         ltOptions.put("build", "Playwright Android Build");
         ltOptions.put("name", "Playwright Android Test");
@@ -451,8 +451,8 @@ var capabilities = new Dictionary<string, object>
     ["LT:Options"] = new Dictionary<string, object>
     {
         ["platformName"] = "android",
-        ["deviceName"] = "Pixel.*",
-        ["platformVersion"] = "1[0-9]",
+        ["deviceName"] = ".*",
+        ["platformVersion"] = ".*",
         ["isRealMobile"] = true,
         ["build"] = "Playwright Android Build",
         ["name"] = "Playwright Android Test",
