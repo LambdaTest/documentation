@@ -96,7 +96,7 @@ Maximum number of test cases that can be queued = n + 150
 
 Queuing timeout could happen because of the below:
 
-**Tests in Queue Taking Too Long to Complete:** Tests are queued for only 10 minutes. If the tests in your queue exceed the 10-minute timeline, they are removed from queue. This aborts the execution of your tests, leading to a timeout error.
+**Tests in Queue Taking Too Long to Complete:** Tests are queued for only 15 minutes. If the tests in your queue exceed the 15-minute timeline, they are removed from queue. This aborts the execution of your tests, leading to a timeout error.
 
 * * *
 
