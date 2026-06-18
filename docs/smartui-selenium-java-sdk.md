@@ -382,6 +382,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+You can also pass a resolved `WebElement` object directly to the `smartuiSnapshot` function. This is especially useful when stable locators (such as IDs or XPaths) are not available, as you can locate the element using any strategy in your test code and pass the reference directly.
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
@@ -427,6 +429,17 @@ HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
 locator.put("cssSelector", "Required Selector");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+</TabItem>
+
+<TabItem value='ElementWebElement' label='Capture Element by WebElement'>
+
+```java title="This is a sample for your configuration for Java to capture an element by passing a WebElement object."
+WebElement element = driver.findElement(By.id("Required ID")); // locate using any strategy
+HashMap<String, Object> options = new HashMap<>();
+options.put("element", element);
 driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```

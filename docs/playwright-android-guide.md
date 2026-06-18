@@ -84,7 +84,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 | Language | Supported Playwright Versions |
 |----------|-------------------------------|
 | **JavaScript (Node.js)** | Up to **v1.59.0** |
-| **Java, Python, C#** | Up to **v1.53.2** |
+| **Java, Python, C#** | Up to **v1.53.0** |
 
 <Tabs className="docs__val">
 
@@ -152,8 +152,8 @@ const { chromium } = require("playwright");
   const capabilities = {
     "LT:Options": {
       platformName: "android",
-      deviceName: "Pixel 5",
-      platformVersion: "11",
+      deviceName: ".*",
+      platformVersion: ".*",
       isRealMobile: true,
       build: "Playwright Android Build",
       name: "Playwright Android Test",
@@ -216,8 +216,8 @@ const { _android } = require("playwright");
   const capabilities = {
     "LT:Options": {
       platformName: "android",
-      deviceName: "Pixel 5",
-      platformVersion: "11",
+      deviceName: ".*",
+      platformVersion: ".*",
       isRealMobile: true,
       build: "Playwright Android Build",
       name: "Playwright Android Test",
@@ -301,8 +301,8 @@ def main():
     capabilities = {
         "LT:Options": {
             "platformName": "android",
-            "deviceName": "Pixel 5",
-            "platformVersion": "11",
+            "deviceName": ".*",
+            "platformVersion": ".*",
             "isRealMobile": True,
             "build": "Playwright Android Build",
             "name": "Playwright Android Test",
@@ -375,8 +375,8 @@ public class PlaywrightAndroidTest {
     public static void main(String[] args) {
         Map<String, Object> ltOptions = new LinkedHashMap<>();
         ltOptions.put("platformName", "android");
-        ltOptions.put("deviceName", "Pixel 5");
-        ltOptions.put("platformVersion", "11");
+        ltOptions.put("deviceName", ".*");
+        ltOptions.put("platformVersion", ".*");
         ltOptions.put("isRealMobile", true);
         ltOptions.put("build", "Playwright Android Build");
         ltOptions.put("name", "Playwright Android Test");
@@ -446,8 +446,8 @@ var capabilities = new Dictionary<string, object>
     ["LT:Options"] = new Dictionary<string, object>
     {
         ["platformName"] = "android",
-        ["deviceName"] = "Pixel 5",
-        ["platformVersion"] = "11",
+        ["deviceName"] = ".*",
+        ["platformVersion"] = ".*",
         ["isRealMobile"] = true,
         ["build"] = "Playwright Android Build",
         ["name"] = "Playwright Android Test",
