@@ -84,7 +84,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 | Language | Supported Playwright Versions |
 |----------|-------------------------------|
 | **JavaScript (Node.js)** | Up to **v1.59.0** |
-| **Java, Python, C#** | Up to **v1.53.2** |
+| **Java, Python, C#** | Up to **v1.53.0** |
 
 <Tabs className="docs__val">
 
@@ -141,23 +141,92 @@ dotnet add package Microsoft.Playwright
 
 <TabItem value="nodejs" label="Node.js" default>
 
+Node.js supports both the Chromium API (`chromium.connect()`) and the Android-native API (`_android.connect()`).
+
+**Using `chromium.connect()`**
+
+```javascript title="playwright-android-test.js"
+const { chromium } = require("playwright");
+
+(async () => {
+  const capabilities = {
+    "LT:Options": {
+      platformName: "android",
+      deviceName: "Pixel.*",
+      platformVersion: "1[0-9]",
+      isRealMobile: true,
+      build: "Playwright Android Build",
+      name: "Playwright Android Test",
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      network: true,
+      video: true,
+      console: true,
+      playwrightClientVersion: "1.53.0",
+    },
+  };
+
+  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+    JSON.stringify(capabilities)
+  )}`;
+
+  const browser = await chromium.connect(cdpUrl);
+  const context = browser.contexts()[0] || (await browser.newContext());
+  const page = context.pages()[0] || (await context.newPage());
+
+  await page.goto("https://duckduckgo.com", { timeout: 30000 });
+  await page.locator('[name="q"]').fill("LambdaTest");
+  await page.locator('[name="q"]').press("Enter");
+  await page.waitForTimeout(3000);
+
+  const title = await page.title();
+  console.log("Page title:", title);
+
+  try {
+    if (title.includes("LambdaTest")) {
+      await page.evaluate(
+        (_) => {},
+        `lambdatest_action: ${JSON.stringify({
+          action: "setTestStatus",
+          arguments: { status: "passed", remark: "Title verified" },
+        })}`
+      );
+    }
+  } catch (e) {
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: "setTestStatus",
+        arguments: { status: "failed", remark: e.message },
+      })}`
+    );
+  }
+
+  await page.close();
+  await browser.close();
+})();
+```
+
+**Using `_android.connect()`**
+
 ```javascript title="playwright-android-test.js"
 const { _android } = require("playwright");
 
 (async () => {
   const capabilities = {
     "LT:Options": {
-      "platformName": "android",
-      "deviceName": "Pixel 5",
-      "platformVersion": "11",
-      "isRealMobile": true,
-      "build": "Playwright Android Build",
-      "name": "Playwright Android Test",
-      "user": process.env.LT_USERNAME,
-      "accessKey": process.env.LT_ACCESS_KEY,
-      "network": true,
-      "video": true,
-      "console": true,
+      platformName: "android",
+      deviceName: "Pixel.*",
+      platformVersion: "1[0-9]",
+      isRealMobile: true,
+      build: "Playwright Android Build",
+      name: "Playwright Android Test",
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      network: true,
+      video: true,
+      console: true,
+      playwrightClientVersion: "1.53.0",
     },
   };
 
@@ -234,8 +303,8 @@ def main():
     capabilities = {
         "LT:Options": {
             "platformName": "android",
-            "deviceName": "Pixel 5",
-            "platformVersion": "11",
+            "deviceName": "Pixel.*",
+            "platformVersion": "1[0-9]",
             "isRealMobile": True,
             "build": "Playwright Android Build",
             "name": "Playwright Android Test",
@@ -306,19 +375,22 @@ import java.util.Map;
 
 public class PlaywrightAndroidTest {
     public static void main(String[] args) {
-        Map<String, Object> ltOptions = Map.of(
-            "platformName", "android",
-            "deviceName", "Pixel 5",
-            "platformVersion", "11",
-            "isRealMobile", true,
-            "build", "Playwright Android Build",
-            "name", "Playwright Android Test",
-            "user", System.getenv("LT_USERNAME"),
-            "accessKey", System.getenv("LT_ACCESS_KEY"),
-            "network", true,
-            "video", true,
-            "console", true
-        );
+        Map<String, Object> ltOptions = new LinkedHashMap<>();
+        ltOptions.put("platformName", "android");
+        ltOptions.put("deviceName", "Pixel.*");
+        ltOptions.put("platformVersion", "1[0-9]");
+        ltOptions.put("isRealMobile", true);
+        ltOptions.put("build", "Playwright Android Build");
+        ltOptions.put("name", "Playwright Android Test");
+        ltOptions.put("user", System.getenv("LT_USERNAME"));
+        ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
+        ltOptions.put("network", true);
+        ltOptions.put("video", true);
+        ltOptions.put("console", true);
+        ltOptions.put("playwrightClientVersion", "1.53.0");
+
+        Map<String, Object> capabilities = new LinkedHashMap<>();
+        capabilities.put("LT:Options", ltOptions);
 
         Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
         String capsJson = new Gson().toJson(capabilities);
@@ -379,8 +451,8 @@ var capabilities = new Dictionary<string, object>
     ["LT:Options"] = new Dictionary<string, object>
     {
         ["platformName"] = "android",
-        ["deviceName"] = "Pixel 5",
-        ["platformVersion"] = "11",
+        ["deviceName"] = "Pixel.*",
+        ["platformVersion"] = "1[0-9]",
         ["isRealMobile"] = true,
         ["build"] = "Playwright Android Build",
         ["name"] = "Playwright Android Test",
