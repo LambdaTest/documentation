@@ -4270,6 +4270,14 @@ module.exports = {
         "analytics-sub-organization-widgets",
       ],
     },
+    {
+      type: "category",
+      collapsed: false,
+      label: "API Reference",
+      items: [
+        "analytics-public-api-usage-report",
+      ],
+    },
     "insights-best-practices",
     "analytics-faqs",
   ],
