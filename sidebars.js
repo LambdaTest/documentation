@@ -3205,7 +3205,8 @@ module.exports = {
               "smart-heal-appium",
               "apple-pay-auto",
               "button-text-click",
-              "ios-shake-gesture-appautomation"
+              "ios-shake-gesture-appautomation",
+              "appium-terminal-logs"
             ],
           },
           {
