@@ -1,0 +1,39 @@
+---
+title: "Touch Target Sizing"
+sidebarTitle: "Touch Target Sizing"
+description: "Rule-level Accessibility guidance for Touch Target Sizing."
+"og:description": "Rule-level Accessibility guidance for Touch Target Sizing."
+---
+
+Touch targets should be large enough for reliable interaction.
+
+<Info>
+**WCAG Reference**
+**Maps to:** WCAG 2.5.5 Target Size (Enhanced) | **Applies to:** WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.1 | **Level:** AAA | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
+</Info>
+
+## What this rule checks
+
+This rule checks whether iOS controls provide enough touch area and spacing for reliable interaction.
+
+## Why it matters
+
+Small or tightly packed targets make interaction harder for users with motor impairments and for anyone using assistive touch patterns.
+
+## Common failure patterns
+
+- icons or text buttons smaller than the recommended touch area
+- adjacent controls with almost no spacing between them
+- visually large controls whose tappable region is much smaller than the rendered component
+
+## Remediation guidance
+
+- increase the tappable region of small controls
+- add spacing between adjacent actions
+- verify that custom components preserve touch size across device sizes
+
+## Related docs
+
+- [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

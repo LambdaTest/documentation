@@ -1,6 +1,6 @@
 ---
 title: "Authentication & Session Management"
-sidebarTitle: "Authentication & Session Management"
+sidebarTitle: "Test Authentication & Sessions"
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
@@ -70,7 +70,7 @@ Set different values for each environment:
 - **Production**: `login_email` = `readonly@example.com`
 
 <Tip>
-You can find more information about environment variables in [this guide](/docs/kane-ai-using-variables/#environments).
+You can find more information about environment variables in [this guide](/support/docs/kane-ai-using-variables/#environments).
 </Tip>
 ### Secrets (For Sensitive Data)
 
@@ -260,7 +260,7 @@ For session timeout testing, consider setting a short timeout in your test envir
 </Note>
 ## Custom Headers for Authentication
 
-For applications that require auth tokens in headers, use KaneAI's [Custom Headers](/docs/kaneai-custom-headers) feature:
+For applications that require auth tokens in headers, use KaneAI's [Custom Headers](/support/docs/kaneai-custom-headers) feature:
 
 1. In session settings, add custom headers
 2. Example: `Authorization: Bearer <your-token>`
@@ -283,3 +283,46 @@ This is useful for:
 | **Add waits after SSO redirects** | SSO flows involve multiple page loads |
 | **Test session persistence** | Refresh the page after login to verify session |
 | **Test logout properly** | Verify that navigating to protected pages redirects to login |
+
+## TOTP Authentication for MFA Logins
+
+Teams testing SSO or MFA-protected applications often need a six-digit OTP as the second factor. Native TOTP support in KaneAI generates those codes on the fly from the shared secret key, keeps the entire login journey inside KaneAI with identical behavior in Replay, generated code, and CI, and injects the code directly into your test steps — no external scripts or servers required.
+
+### How TOTP Works
+
+1. **Register the TOTP secret** once during authoring via the secret key.
+2. At runtime, KaneAI calculates the correct time-based OTP code every 30 seconds.
+3. Reference the TOTP code as a smart variable inside any test step, assertion, or API call.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/SlashTOTP.jpg' alt="Add TOTP secret key" className="doc_img" />
+
+### Prerequisites
+
+- A TOTP-compatible login flow (e.g., Google Authenticator, Okta Verify, Microsoft Authenticator).
+- The **secret key** (base32 encoded) associated with the account you want KaneAI to log in as.
+
+### Add a TOTP Secret Key
+
+1. Start a web authoring session and press **/**.
+2. Choose **Add TOTP Authentication Key**.
+3. Enter the base32 secret directly, or reference a TestMu AI Secret using `{{` syntax.
+4. Click **Save**.
+5. A **smart variable** is generated that returns the six-digit code for the secret key when invoked.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/TOTPKey.jpg' alt="Add TOTP secret modal" className="doc_img" />
+
+### Insert the TOTP Into Your Test
+
+1. Navigate to the OTP input field in your application.
+2. Use the generated smart variable in your instruction, such as `Enter {{totp}} in verify field`.
+3. KaneAI fetches and inserts the six-digit code.
+
+<img loading="lazy" src='/assets/images/kane-ai/features/InsertTOTP.jpg' alt="Insert OTP variable" className="doc_img" />
+
+### TOTP FAQ
+
+**Does KaneAI store my secret securely?**
+Yes. Secrets are encrypted, stored in Vault, and never exposed in logs or generated code.
+
+**Do mobile tests support TOTP?**
+Yes. The `{{totp}}` smart variable generated from the secret key is available in both Web and Mobile test steps.

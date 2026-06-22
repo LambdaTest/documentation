@@ -1,0 +1,185 @@
+---
+title: "Android Accessibility Rules - Quick Reference"
+sidebarTitle: "Android"
+description: "Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines."
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Manual', 'Accessibility Testing Settings']
+"og:description": "Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+<AccordionGroup>
+  <Accordion title="Missing Image Alt" icon="image">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 1.1.1 |
+    | **Level** | A |
+    | **Impact** | Critical |
+
+    Images lack alternative text descriptions that screen readers can announce to users. Add `android:contentDescription` to meaningful images or set to empty string for decorative images to ensure proper accessibility support.
+  </Accordion>
+
+  <Accordion title="Missing View Accessibility" icon="eye">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Interactive elements like buttons, clickable views, or custom controls lack proper accessibility labels that describe their purpose. Ensure all interactive Views have clear `android:contentDescription` or associated labels for screen readers.
+  </Accordion>
+
+  <Accordion title="Unlabeled Checkbox Element" icon="square-check">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Checkbox controls are missing accessible names that describe their purpose or current state. Provide descriptive labels using `android:text`, `android:contentDescription`, or associated TextView labels so users understand what they're selecting.
+  </Accordion>
+
+  <Accordion title="Insufficient Color Ratio" icon="palette">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 1.4.3 |
+    | **Level** | AA |
+    | **Impact** | Serious |
+
+    Text elements don't meet minimum contrast ratio requirements making them difficult to read for users with visual impairments. Maintain 4.5:1 ratio for normal text and 3:1 for large text by adjusting colors or background.
+  </Accordion>
+
+  <Accordion title="Missing Field Label" icon="tag">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 3.3.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Input fields like EditText lack descriptive labels that identify their purpose to users. Provide clear labels using `android:hint`, associated TextView with `android:labelFor`, or TextInputLayout to describe expected input.
+  </Accordion>
+
+  <Accordion title="Non-accessible Interaction" icon="hand-pointer">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Custom interactive elements, buttons, or gesture-based controls cannot be accessed or activated through assistive technology. Ensure all interactive elements have proper focus handling, role definition, and descriptive labels.
+  </Accordion>
+
+  <Accordion title="Missing Screen Title" icon="heading">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 2.4.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Activities or screens lack descriptive titles that help users understand their current location in the app. Set meaningful titles using `setTitle()` or `supportActionBar?.title` for proper navigation context.
+  </Accordion>
+
+  <Accordion title="Unlabeled Toggle Control" icon="toggle-on">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    Switch, toggle, or similar controls are missing accessible names that explain what they control and their current state. Provide descriptive labels that clearly indicate what the toggle affects (e.g., "Wi-Fi enabled").
+  </Accordion>
+
+  <Accordion title="Mismatched Label Text" icon="not-equal">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 2.5.3 |
+    | **Level** | A |
+    | **Impact** | Serious |
+
+    The visible text label on a control differs from the programmatically accessible name, causing confusion for screen reader users. Ensure the accessible name includes or matches the visible text exactly.
+  </Accordion>
+
+  <Accordion title="Missing Input Value" icon="keyboard">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Moderate |
+
+    Text fields are missing programmatic values that assistive technology can read, making it difficult for users to understand current input state. Ensure EditText values are properly exposed and announced by screen readers.
+  </Accordion>
+
+  <Accordion title="Inaccessible Text Focus" icon="crosshairs">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Moderate |
+
+    Text elements that receive focus lack proper accessibility properties, confusing screen reader users about their purpose. Either provide clear interactive roles and descriptions or remove focus capability for non-interactive text.
+  </Accordion>
+
+  <Accordion title="Misplaced Field Label" icon="arrows-up-down">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 3.3.2 |
+    | **Level** | A |
+    | **Impact** | Moderate |
+
+    Form labels are not positioned correctly relative to their controls or lack proper programmatic association. Ensure labels appear visually before controls and use `android:labelFor` for proper screen reader announcement order.
+  </Accordion>
+
+  <Accordion title="Nested Control Issues" icon="layer-group">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Moderate |
+
+    Interactive elements are incorrectly nested inside other interactive elements, creating focus traps and navigation confusion. Separate interactive elements into distinct, non-nested components to ensure proper accessibility navigation.
+  </Accordion>
+
+  <Accordion title="Unnamed Nested Element" icon="sitemap">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 4.1.2 |
+    | **Level** | A |
+    | **Impact** | Moderate |
+
+    Elements within containers lack their own accessible names when they should be independently accessible. Provide distinct labels for nested interactive elements or mark decorative elements as non-focusable.
+  </Accordion>
+
+  <Accordion title="Fixed Orientation Lock" icon="mobile-screen">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 1.3.4 |
+    | **Level** | AA |
+    | **Impact** | Moderate |
+
+    App restricts viewing to only portrait or landscape orientation without accessibility justification. Support both orientations or provide alternative access methods for users who cannot rotate their devices due to physical constraints.
+  </Accordion>
+
+  <Accordion title="Undersized Touch Target" icon="up-down-left-right">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 2.5.5 |
+    | **Level** | AAA |
+    | **Impact** | Moderate |
+
+    Interactive elements are smaller than the recommended minimum touch target size, making them difficult to activate for users with motor impairments. Ensure all touch targets are at least 48dp x 48dp.
+  </Accordion>
+
+  <Accordion title="Insufficient Target Spacing" icon="arrows-left-right">
+    | Property | Value |
+    |----------|-------|
+    | **WCAG** | 2.5.5 |
+    | **Level** | AAA |
+    | **Impact** | Moderate |
+
+    Interactive elements are placed too close together without adequate spacing, increasing risk of accidental activation. Provide sufficient spacing between adjacent touch targets to prevent targeting errors for users with limited dexterity.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+We are continuously expanding our App Accessibility guidelines. Visit this page for the latest updates and new requirements.
+</Warning>

@@ -1,14 +1,12 @@
 ---
 title: "Error Codes Reference"
 sidebarTitle: "Error Codes"
-description: "Complete reference of Kane CLI result codes: what each code means, why it occurred, and what action to take. Designed for both human and AI agent consumption."
 keywords: ['kane cli error codes', 'kane cli result codes', 'kaneai errors', 'testmu ai', 'agent error handling', 'kane cli troubleshooting']
+description: "Complete reference of Kane CLI result codes: what each code means, why it occurred, and what action to take. Designed for both human and AI agent consumption."
 "og:description": "Complete reference of Kane CLI result codes: what each code means, why it occurred, and what action to take. Designed for both human and AI agent consumption."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 Every Kane CLI run ends with a `result_code` in the `run_end` event. This page lists every code, explains what triggered it, and tells you what to do next.
 
@@ -40,7 +38,7 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ---
 
-## 1xx — Success
+## 1xx -- Success
 
 ### 100 COMPLETE
 
@@ -53,7 +51,7 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ---
 
-## 2xx — Cancelled
+## 2xx -- Cancelled
 
 ### 200 USER_CANCELLED
 
@@ -66,7 +64,7 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ---
 
-## 3xx — Stuck
+## 3xx -- Stuck
 
 The agent ran into a dead end. These are not crashes - the agent recognized it could not make further progress.
 
@@ -99,7 +97,7 @@ The agent ran into a dead end. These are not crashes - the agent recognized it c
 
 ---
 
-## 4xx — Agent Error
+## 4xx -- Agent Error
 
 An internal agent component failed. These typically indicate a transient issue or a problem with the session state.
 
@@ -141,7 +139,7 @@ An internal agent component failed. These typically indicate a transient issue o
 
 ---
 
-## 5xx — Infra Error
+## 5xx -- Infra Error
 
 Platform or infrastructure failures. These are independent of the objective itself.
 
@@ -190,11 +188,13 @@ Platform or infrastructure failures. These are independent of the objective itse
 | **What happened** | The <BrandName /> controller returned a `401 Unauthorized` response. Your authentication token has expired or is invalid. |
 | **Action** | Refresh your authentication token: |
 
+<div className="lambdatest__codeblock">
 ```bash
 kane-cli login
 # or re-run login with basic auth
-kane-cli login --username "YOUR_LT_USERNAME" --access-key "YOUR_LT_ACCESS_KEY"
+kane-cli login --username "YOUR_LAMBDATEST_USERNAME" --access-key "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+</div>
 
 Verify with `kane-cli whoami`, then retry the run.
 
@@ -209,7 +209,7 @@ Verify with `kane-cli whoami`, then retry the run.
 
 ---
 
-## 6xx — Blocker
+## 6xx -- Blocker
 
 An external obstacle on the target website prevented the agent from completing the objective. These are not agent bugs - they require changes to the environment or objective.
 
@@ -229,7 +229,7 @@ An external obstacle on the target website prevented the agent from completing t
 | **Reason code** | `blocker.paywall` |
 | **Status** | `ERROR` |
 | **What happened** | The page requires a paid subscription to access the content the objective needs. |
-| **Action** | Provide credentials for a subscribed account via [variables](/docs/kane-cli-variables-and-context/), or test against a non-paywalled environment. |
+| **Action** | Provide credentials for a subscribed account via [variables](/support/docs/kane-cli-variables-and-context/), or test against a non-paywalled environment. |
 
 ### 640 BLOCKED
 
@@ -256,7 +256,7 @@ An external obstacle on the target website prevented the agent from completing t
 | **Reason code** | `blocker.auth_no_credentials` |
 | **Status** | `ERROR` |
 | **What happened** | The agent encountered a login page but no credentials were provided in the objective or variables. |
-| **Action** | Provide login credentials using [variables](/docs/kane-cli-variables-and-context/): |
+| **Action** | Provide login credentials using [variables](/support/docs/kane-cli-variables-and-context/): |
 
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
@@ -267,7 +267,7 @@ kane-cli run "Log in and navigate to dashboard" \
 
 ---
 
-## 7xx — Assertion Error
+## 7xx -- Assertion Error
 
 The agent completed its actions but one or more assertions or checkpoints did not pass.
 
@@ -354,6 +354,6 @@ esac
 
 ## Related Resources
 
-- [Agent Mode](/docs/kane-cli-agent-mode/): NDJSON output format and event schema
-- [Troubleshooting](/docs/kane-cli-troubleshooting/): Common issues and fixes
-- [CLI Reference](/docs/kane-cli-cli-reference/): Full flag and command reference
+- [Agent Mode](/support/docs/kane-cli-agent-mode/): NDJSON output format and event schema
+- [Troubleshooting](/support/docs/kane-cli-troubleshooting/): Common issues and fixes
+- [CLI Reference](/support/docs/kane-cli-cli-reference/): Full flag and command reference

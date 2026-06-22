@@ -1,18 +1,16 @@
 ---
 title: "Kane CLI Skills for AI Agents"
 sidebarTitle: "Skills"
-description: "Install the Kane CLI skill for Claude Code, Codex CLI, or Gemini CLI to enable browser automation directly from your AI coding agent."
 keywords: ['kane cli skill', 'claude code skill', 'codex cli', 'gemini cli', 'kaneai', 'testmu ai', 'ai agent browser testing']
+description: "Install the Kane CLI skill for Claude Code, Codex CLI, or Gemini CLI to enable browser automation directly from your AI coding agent."
 "og:description": "Install the Kane CLI skill for Claude Code, Codex CLI, or Gemini CLI to enable browser automation directly from your AI coding agent."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
----
-
 A Kane CLI **skill** is a markdown instruction file that teaches an AI coding agent how to use `kane-cli`: when to invoke it, how to build commands, how to parse NDJSON output, how to present results, and how to handle failures. Install the skill once, and your agent handles browser automation tasks automatically whenever you ask.
 
-Skills work on top of [Agent Mode](/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.
+Skills work on top of [Agent Mode](/support/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.
 
 <Note>
 Skills are plain markdown files. Review and customize them by editing the installed file after download.
@@ -34,8 +32,9 @@ If you prefer to install manually for a specific agent, follow the instructions 
 
 ## Install by Agent
 
-<Tabs>
-  <Tab title="Claude Code">
+<Tabs groupId="agent-platform">
+
+<Tab title="Claude Code">
 
 The Kane CLI skill for Claude Code is a `SKILL.md` file placed in your skills directory.
 
@@ -74,9 +73,9 @@ After installing, Claude Code automatically loads the skill. No restart required
 "Search for 'laptops' on Amazon and store the top 3 prices"
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Codex CLI">
+<Tab title="Codex CLI">
 
 The Kane CLI skill for Codex CLI is appended to your `AGENTS.md` file. Codex reads `AGENTS.md` at the project root or from `~/.codex/AGENTS.md` globally.
 
@@ -113,9 +112,9 @@ cat /tmp/kane-cli-agents.md >> AGENTS.md
 "Run the login test and tell me what happened"
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Gemini CLI">
+<Tab title="Gemini CLI">
 
 The Kane CLI skill for Gemini CLI is a `SKILL.md` file placed in your Gemini skills directory.
 
@@ -149,7 +148,8 @@ curl -o .gemini/skills/kane-cli/SKILL.md \
 "Verify the registration flow works end to end"
 ```
 
-  </Tab>
+</Tab>
+
 </Tabs>
 
 ---
@@ -158,13 +158,15 @@ curl -o .gemini/skills/kane-cli/SKILL.md \
 
 OAuth login opens a browser window: AI agents cannot complete this flow. Use Basic Auth instead:
 
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli login \
-  --username "YOUR_LT_USERNAME" \
-  --access-key "YOUR_LT_ACCESS_KEY"
+kane-cli login \\
+  --username "YOUR_LAMBDATEST_USERNAME" \\
+  --access-key "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+</div>
 
-Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`.
+Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`.
 
 ---
 
@@ -190,4 +192,4 @@ When you ask your AI agent to test something on the web, the skill:
 | Codex CLI | `~/.codex/AGENTS.md` (appended section) | `AGENTS.md` (appended section) |
 | Gemini CLI | `~/.gemini/skills/kane-cli/SKILL.md` | `.gemini/skills/kane-cli/SKILL.md` |
 
-Source files: [github.com/LambdaTest/kane-cli/tree/main/skills](https://github.com/LambdaTest/kane-cli/tree/main/skills)
+Source files: [github.com/LambdaTest/kane-cli/tree/main/skills](https://github.com/LambdaTest/kane-cli/blob/main/docs/user-guide/getting-started.md)

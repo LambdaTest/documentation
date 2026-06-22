@@ -1,0 +1,68 @@
+---
+title: "API Reference - TestMu AI Browser Cloud"
+sidebarTitle: "REST API Reference"
+keywords: ['browser cloud api', 'rest api browser cloud', 'browser cloud endpoints', 'api reference']
+description: "REST API reference for TestMu AI Browser Cloud. Planned endpoints for sessions, context, profiles, files, extensions, quick actions, and tunnels."
+"og:description": "REST API reference for TestMu AI Browser Cloud. Planned endpoints for sessions, context, profiles, files, extensions, quick actions, and tunnels."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+<Warning>
+**Planned — not yet available.** The REST API described below is a preview of the planned endpoint structure. It is not live yet. Until it ships, use the [TestMu AI Browser SDK](/support/docs/browser-cloud-quickstart/) for full programmatic access from Node.js.
+</Warning>
+
+The REST API will expose all TestMu AI Browser SDK capabilities over HTTP, making
+<BrandName /> Browser Cloud accessible from any programming language. In the meantime, the [TestMu AI Browser SDK quickstart](/support/docs/browser-cloud-quickstart/) provides full access to all these capabilities from Node.js.
+
+Here's a preview of the planned endpoint structure:
+
+## Planned Endpoints
+
+```
+Sessions
+  POST   /v1/sessions              Create a session
+  GET    /v1/sessions              List sessions
+  GET    /v1/sessions/:id          Get session details
+  GET    /v1/sessions/:id/live     Get live session details
+  DELETE /v1/sessions/:id          Release a session
+  DELETE /v1/sessions              Release all sessions
+
+Context
+  GET    /v1/sessions/:id/context          Get full context
+  PUT    /v1/sessions/:id/context          Set full context
+  GET    /v1/sessions/:id/context/cookies  Get cookies
+  PUT    /v1/sessions/:id/context/cookies  Set cookies
+  DELETE /v1/sessions/:id/context          Clear context
+
+Profiles
+  GET    /v1/profiles              List profiles
+  POST   /v1/profiles              Create/save profile
+  GET    /v1/profiles/:id          Get profile
+  PUT    /v1/profiles/:id          Update profile
+  DELETE /v1/profiles/:id          Delete profile
+
+Files
+  POST   /v1/sessions/:id/files           Upload file
+  GET    /v1/sessions/:id/files           List files
+  GET    /v1/sessions/:id/files/:path     Download file
+  GET    /v1/sessions/:id/files/archive   Download all (zip)
+  DELETE /v1/sessions/:id/files/:path     Delete file
+  DELETE /v1/sessions/:id/files           Delete all files
+
+Extensions
+  POST   /v1/extensions            Register extension
+  GET    /v1/extensions            List extensions
+  GET    /v1/extensions/:id        Get extension
+  DELETE /v1/extensions/:id        Delete extension
+
+Quick Actions
+  POST   /v1/scrape               Scrape a URL
+  POST   /v1/screenshot           Screenshot a URL
+  POST   /v1/pdf                  Generate PDF from URL
+
+Tunnel
+  POST   /v1/tunnel/start         Start tunnel
+  POST   /v1/tunnel/stop          Stop tunnel
+  GET    /v1/tunnel/status        Get tunnel status
+```

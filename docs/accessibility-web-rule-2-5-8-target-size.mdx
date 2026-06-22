@@ -1,0 +1,43 @@
+---
+title: "Target Size (Minimum) (2.5.8)"
+sidebarTitle: "Target Size (2.5.8)"
+description: "Rule-level Accessibility guidance for Target Size Minimum (WCAG 2.5.8 Level AA)."
+"og:description": "Rule-level Accessibility guidance for Target Size Minimum (WCAG 2.5.8 Level AA)."
+---
+
+Interactive targets must be at least 24 by 24 CSS pixels in size, with exceptions for inline links, targets whose size is determined by the user agent, and targets with sufficient spacing.
+
+
+<Info>
+**WCAG Reference**
+**Applies to:** WCAG 2.2
+**Introduced in:** WCAG 2.2 | **Level:** AA | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+</Info>
+
+
+## What this rule checks
+
+The scanner measures the rendered size of interactive elements (buttons, links, form controls) and flags those smaller than 24x24 CSS pixels that do not meet any exception criteria.
+
+## Why it matters
+
+Users with motor impairments, tremors, or limited dexterity need adequately sized targets to tap or click accurately. Small targets lead to frequent mis-taps and frustration.
+
+## Common failure patterns
+
+- icon buttons (close, favorite, share) rendered at 16x16 pixels with no padding
+- densely packed toolbar buttons with no spacing between them
+- small checkbox or radio button hit areas that rely on the browser default size
+- action links in compact table rows with minimal padding
+
+## Remediation guidance
+
+- ensure clickable areas are at least 24x24 CSS pixels (44x44 is recommended for touch interfaces)
+- add padding or transparent borders to increase the hit area without changing the visual size
+- use `min-width` and `min-height` on interactive elements
+- increase spacing between adjacent small targets so users can tap accurately
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

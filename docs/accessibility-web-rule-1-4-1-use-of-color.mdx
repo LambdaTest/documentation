@@ -1,0 +1,41 @@
+---
+title: "Use of Color (1.4.1)"
+sidebarTitle: "Use of Color (1.4.1)"
+description: "Rule-level Accessibility guidance for Use of Color (WCAG 1.4.1 Level A)."
+"og:description": "Rule-level Accessibility guidance for Use of Color (WCAG 1.4.1 Level A)."
+---
+
+Color must not be the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
+
+<Info>
+**WCAG Reference**
+**Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)
+</Info>
+
+## What this rule checks
+
+The scanner flags instances where meaning is communicated exclusively through color without a secondary visual indicator such as text, icons, patterns, or underlines.
+
+## Why it matters
+
+Users with color-vision deficiency, low vision, or monochrome displays cannot distinguish elements when the only differentiator is color. Adding a secondary cue ensures everyone perceives the intended meaning.
+
+## Common failure patterns
+
+- required form fields marked only with red text
+- chart series differentiated only by color with no patterns or labels
+- links within body text that are distinguished only by color (no underline or icon)
+- status indicators (success/error) using only green/red with no text or icon
+
+## Remediation guidance
+
+- pair color with a text label, icon, pattern, or border change
+- underline links or add a visible icon to distinguish them from surrounding text
+- use patterns, hatching, or data labels in charts alongside color
+- test the interface with a color-blindness simulator to confirm the secondary cue is visible
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

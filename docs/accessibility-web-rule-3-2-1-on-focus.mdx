@@ -1,0 +1,40 @@
+---
+title: "On Focus (3.2.1)"
+sidebarTitle: "On Focus (3.2.1)"
+description: "Rule-level Accessibility guidance for On Focus (WCAG 3.2.1 Level A)."
+"og:description": "Rule-level Accessibility guidance for On Focus (WCAG 3.2.1 Level A)."
+---
+
+Receiving focus on a component must not trigger an unexpected change of context such as a page navigation, form submission, or modal opening.
+
+<Info>
+**WCAG Reference**
+**Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html)
+</Info>
+
+## What this rule checks
+
+The scanner identifies elements that initiate a context change (navigation, submit, new window) when they receive keyboard focus rather than when they are explicitly activated.
+
+## Why it matters
+
+Keyboard and screen-reader users move focus to explore the page before deciding to act. If focus alone triggers an action, users lose control and may be taken to an unexpected page or state.
+
+## Common failure patterns
+
+- dropdown selects that navigate to a new page as soon as an option receives focus
+- links or buttons that auto-submit a form on focus
+- components that open a new browser window or tab when tabbed into
+
+## Remediation guidance
+
+- trigger context changes only on explicit activation (click, Enter, Space)
+- for select menus that act as navigation, add a separate "Go" button
+- never attach `onfocus` handlers that cause navigation, submission, or window changes
+- test by tabbing through all interactive elements without pressing Enter
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

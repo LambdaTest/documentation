@@ -1,0 +1,118 @@
+---
+title: "Run Sessions in Parallel - TestMu AI Browser Cloud"
+sidebarTitle: "Run Sessions in Parallel"
+keywords: ['browser cloud parallel sessions', 'concurrent browser sessions', 'batch scraping', 'parallel agents', 'concurrency control browser automation']
+description: "Run multiple isolated TestMu AI Browser Cloud sessions concurrently, with concurrency limits and reliable cleanup, to scale scraping and agent workloads."
+"og:description": "Run multiple isolated TestMu AI Browser Cloud sessions concurrently, with concurrency limits and reliable cleanup, to scale scraping and agent workloads."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+Run many cloud browsers at once. Each session is fully isolated - its own cookies, storage, and state - so your agent can scrape, test, or automate across dozens of URLs concurrently instead of one at a time.
+
+## Why You Need This
+
+A single session processes one workflow at a time. When your agent needs data from 50 URLs, doing them sequentially is slow and wastes wall-clock time while each page loads. Because every <BrandName /> Browser Cloud session is isolated, you can run many in parallel without them interfering with each other - cutting a 50-minute sequential job down to a few minutes.
+
+## Run Sessions Concurrently
+
+Each session is independent, so you can create, drive, and release several at once with `Promise.all`:
+
+```typescript
+import { Browser } from '@testmuai/browser-cloud';
+
+const client = new Browser();
+
+async function scrapeUrl(url: string) {
+    const session = await client.sessions.create({
+        adapter: 'puppeteer',
+        lambdatestOptions: {
+            build: 'Parallel Scrape',
+            name: url,
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
+
+    try {
+        const browser = await client.puppeteer.connect(session);
+        const page = (await browser.pages())[0];
+        await page.goto(url);
+        const title = await page.title();
+        await browser.close();
+        return { url, title };
+    } finally {
+        await client.sessions.release(session.id);
+    }
+}
+
+const urls = ['https://a.com', 'https://b.com', 'https://c.com'];
+const results = await Promise.all(urls.map(scrapeUrl));
+```
+
+Each `scrapeUrl` call owns its session end to end and releases it in a `finally` block, so one failure never leaks another session.
+
+## Limit Concurrency
+
+Running unlimited sessions at once can exceed your account's parallel limit. Process URLs in fixed-size batches so only N sessions are ever live together:
+
+```typescript
+async function batchRun<T, R>(
+    items: T[],
+    concurrency: number,
+    worker: (item: T) => Promise<R>
+): Promise<R[]> {
+    const results: R[] = [];
+    for (let i = 0; i < items.length; i += concurrency) {
+        const batch = items.slice(i, i + concurrency);
+        results.push(...await Promise.all(batch.map(worker)));
+    }
+    return results;
+}
+
+// Run 50 URLs, 5 sessions at a time
+const results = await batchRun(urls, 5, scrapeUrl);
+```
+
+<Note>
+Your concurrency limit is set by your <BrandName /> plan's parallel-session count. Set `concurrency` at or below that number to avoid queued sessions.
+</Note>
+
+## Quick Actions in Parallel
+
+If you only need to scrape, screenshot, or PDF and don't need to interact with the page, [Quick Actions](/support/docs/browser-cloud-quick-actions/) skip session management entirely - run them concurrently the same way:
+
+```typescript
+const pages = await batchRun(
+    urls,
+    5,
+    (url) => client.scrape({ url, format: 'markdown' })
+);
+```
+
+## Clean Up Everything
+
+If your process exits mid-run, release every active session so none are left billing or recording. Pair per-session `release()` with a `releaseAll()` safety net in your shutdown handler:
+
+```typescript
+process.on('SIGINT', async () => {
+    await client.sessions.releaseAll();
+    process.exit(0);
+});
+```
+
+You can also check what is currently live at any point:
+
+```typescript
+const active = client.sessions.list();
+console.log(`${active.length} sessions still running`);
+```
+
+## Best Practices
+
+- **Always release in a `finally` block.** One worker throwing should never leak the others' sessions.
+- **Keep `concurrency` at or below your plan's parallel limit.** Above it, extra sessions queue and you lose the speedup.
+- **Use a distinct `name` per session** (the URL or task id) so each run is easy to find on the [dashboard](/support/docs/browser-cloud-debugging/).
+- **Reuse one `Browser` client** across all workers - you do not need a new client per session.

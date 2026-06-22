@@ -1,6 +1,6 @@
 ---
 title: "Finding & Interacting with Elements"
-sidebarTitle: "Finding & Interacting with Elements"
+sidebarTitle: "Find & Interact With Elements"
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
@@ -139,6 +139,52 @@ If an element is not visible in the current viewport, KaneAI can scroll to find 
 <Note>
 `scroll until` is currently supported on **Web only**. For mobile app, use `scroll down X times` combined with a wait step.
 </Note>
+### Scroll Until Element on Mobile
+
+On mobile, elements are often below the fold or deep within long scrollable pages. The **Scroll Until Element** feature scrolls automatically until the target you describe becomes visible — no selectors or manual scroll logic required.
+
+Reference the element by what is visibly present on the screen:
+
+- Visible text (e.g., `Login button`)
+- Element type (e.g., `input field`)
+
+<Note>
+Natural language commands do **not** support technical selectors such as IDs, XPaths, or CSS attributes on mobile. Always describe what is visibly present on the screen.
+</Note>
+
+Write the command in action-oriented language — state what to find and what to do once found:
+
+```
+scroll until search bar is visible and click on it
+scroll down until element with text Shipping Policy is visible
+scroll inside a subsection until date input field and click on it
+scroll inside the dropdown until New option and select it
+```
+
+#### Mobile Scroll Limitations
+
+**Mobile app authoring:**
+
+- **Scroll limit** — a maximum of 20 scroll attempts is performed. If the element is not found within 20 scrolls, the action fails.
+- **Horizontal scrolling** — not supported; only vertical scrolling is available.
+- **Nested containers** — scrolling inside specific container elements is not supported; only the main viewport can be scrolled.
+- **Directional extremes** — `scroll to top` and `scroll to bottom` are not supported.
+
+**Mobile browser authoring:**
+
+- **Element eligibility** — applies only to interactable elements (buttons, links, dropdowns, inputs). Plain text or static labels are not supported.
+- **Native popups** — scrolling inside native browser popups or system alerts is not supported.
+- **Horizontal scrolling** — not supported.
+
+#### Troubleshooting Mobile Scroll
+
+| Behavior | Cause | Fix |
+|---|---|---|
+| Maximum scroll limit reached | Element is beyond 20 scrolls or not present | Verify the element appears within 20 scrolls |
+| Element not found (mobile browser) | Non-interactable or plain-text element | Target a button, link, or input field instead |
+| Scroll timeout (app agent) | Element is inside a nested container | Use manual scroll steps if the element is not in the main viewport |
+| Command not recognized | IDs, XPaths, or attributes used | Rewrite using visible text or element type (e.g., `button`) |
+
 ## Tab & Window Management
 
 Many real-world flows open new tabs (e.g., clicking "Terms & Conditions" or a payment gateway).
@@ -218,7 +264,7 @@ document.querySelector('my-component').shadowRoot.querySelector('.hidden-btn').c
 ```
 
 <Info>
-See the [JS Snippets & Workarounds](/docs/kaneai-kb-js-snippets-and-workarounds) guide for a comprehensive list of scenarios where JS scripting is the recommended approach.
+See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds) guide for a comprehensive list of scenarios where JS scripting is the recommended approach.
 </Info>
 ## Quick Reference: Element Interaction Commands
 

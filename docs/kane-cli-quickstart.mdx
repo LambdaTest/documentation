@@ -1,14 +1,12 @@
 ---
 title: "Quick Start"
 sidebarTitle: "Quick Start"
-description: "Authenticate Kane CLI and run your first browser automation test in under 5 minutes."
 keywords: ['kane cli quickstart', 'kaneai', 'testmu ai', 'browser test', 'first test']
+description: "Authenticate Kane CLI and run your first browser automation test in under 5 minutes."
 "og:description": "Authenticate Kane CLI and run your first browser automation test in under 5 minutes."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 This guide takes you from a fresh install to a passing run in under five minutes.
 
@@ -18,12 +16,13 @@ This guide takes you from a fresh install to a passing run in under five minutes
 npm install -g @testmuai/kane-cli
 ```
 
-Once `kane-cli --version` prints a version number, you are ready. See [Installation](/docs/kane-cli-installation/) for platform requirements and troubleshooting.
+Once `kane-cli --version` prints a version number, you are ready. See [Installation](/support/docs/kane-cli-installation/) for platform requirements and troubleshooting.
 
 ## Step 2: Authenticate
 
-<Tabs>
-  <Tab title="OAuth (Recommended)">
+<Tabs groupId="auth-method">
+
+<Tab title="OAuth (Recommended)">
 
 ```bash
 kane-cli login
@@ -31,36 +30,41 @@ kane-cli login
 
 Your default browser opens on a <BrandName /> consent page. Sign in (or confirm, if you are already signed in), authorise the CLI, and the page will tell you it is safe to close the tab. Control returns to your terminal and your credentials are stored under `~/.testmuai/kaneai/profiles/`.
 
-  </Tab>
+</Tab>
 
-  <Tab title="Basic Auth">
+<Tab title="Basic Auth">
 
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli login \
-  --username "YOUR_LT_USERNAME" \
-  --access-key "YOUR_LT_ACCESS_KEY"
+kane-cli login \\
+  --username "YOUR_LAMBDATEST_USERNAME" \\
+  --access-key "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+</div>
 
-Find your username and access key on the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Find your username and access key on the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 Use this method for environments without a browser (servers, containers, CI/CD).
 
-  </Tab>
+</Tab>
 
-  <Tab title="CI/CD">
+<Tab title="CI/CD">
 
 For non-interactive CI pipelines, pass credentials inline:
 
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli run "your objective" \
-  --username "YOUR_LT_USERNAME" \
-  --access-key "YOUR_LT_ACCESS_KEY" \
+kane-cli run "your objective" \\
+  --username "YOUR_LAMBDATEST_USERNAME" \\
+  --access-key "YOUR_LAMBDATEST_ACCESS_KEY" \\
   --headless --agent
 ```
+</div>
 
-Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [CI/CD Integration](/docs/kane-cli-cicd/) for platform-specific guides.
+Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [CI/CD Integration](/support/docs/kane-cli-cicd/) for platform-specific guides.
 
-  </Tab>
+</Tab>
+
 </Tabs>
 
 Verify authentication at any time:
@@ -69,7 +73,7 @@ Verify authentication at any time:
 kane-cli whoami
 ```
 
-If you prefer username and access key, or need to manage multiple accounts, see [Authentication](/docs/kane-cli-authentication/).
+If you prefer username and access key, or need to manage multiple accounts, see [Authentication](/support/docs/kane-cli-authentication/).
 
 ## Step 3: Open the TUI
 
@@ -120,7 +124,7 @@ By default each run starts on the KaneAI playground site. The agent navigates fr
 
 ## What Happens at the End of a Run
 
-When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. For details on the upload, the share-link experience, and the run mode toggle, see [Test Manager Integration](/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/docs/kane-cli-configuration/).
+When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. For details on the upload, the share-link experience, and the run mode toggle, see [Test Manager Integration](/support/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/support/docs/kane-cli-configuration/).
 
 <Tip>
 Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you can type objectives, see step-by-step progress, and chain multiple tests in one session with persistent browser state.
@@ -128,8 +132,8 @@ Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you c
 
 ## Next Steps
 
-- [Writing Objectives](/docs/kane-cli-writing-objectives/): Learn the three patterns: actions, assertions, extractions
-- [Modes of Operation](/docs/kane-cli-modes/): Understand Interactive TUI, Headless CLI, and Agent Mode
-- [Authentication](/docs/kane-cli-authentication/): Manage profiles and credential methods
-- [Variables & Context](/docs/kane-cli-variables-and-context/): Parameterize tests with credentials and project-specific context
-- [CI/CD Integration](/docs/kane-cli-cicd/): Add Kane CLI to your pipeline
+- [Writing Objectives](/support/docs/kane-cli-writing-objectives/): Learn the three patterns: actions, assertions, extractions
+- [Modes of Operation](/support/docs/kane-cli-modes/): Understand Interactive TUI, Headless CLI, and Agent Mode
+- [Authentication](/support/docs/kane-cli-authentication/): Manage profiles and credential methods
+- [Variables & Context](/support/docs/kane-cli-variables-and-context/): Parameterize tests with credentials and project-specific context
+- [CI/CD Integration](/support/docs/kane-cli-cicd/): Add Kane CLI to your pipeline

@@ -1,0 +1,40 @@
+---
+title: "Unnamed Nested Element"
+sidebarTitle: "Unnamed Nested Element"
+description: "Rule-level Accessibility guidance for Unnamed Nested Element on Android."
+"og:description": "Rule-level Accessibility guidance for Unnamed Nested Element on Android."
+---
+
+Nested Android elements that carry meaningful content must have their own accessible name rather than inheriting an ambiguous or empty label from a parent container.
+
+<Info>
+**WCAG Reference**
+**Maps to:** WCAG 4.1.2 Name, Role, Value | **Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+</Info>
+
+## What this rule checks
+
+The scanner identifies nested views (images, icons, text) inside a focusable parent container that do not have their own accessible label, causing their meaning to be lost in TalkBack's aggregated announcement of the parent.
+
+## Why it matters
+
+When a focusable container aggregates all child text into a single announcement, individual elements lose context. Users cannot distinguish between a product image, a price label, and an add-to-cart button if they are all merged into one announcement.
+
+## Common failure patterns
+
+- image icons inside a clickable row with no individual `contentDescription`
+- status badges (unread count, priority indicator) that are visually meaningful but unnamed
+- grouped elements where only the parent has an accessible name, hiding the details of children
+
+## Remediation guidance
+
+- add `contentDescription` to each meaningful child element within a group
+- if the parent should aggregate children, compose the parent's `contentDescription` to include all relevant child information
+- use `android:importantForAccessibility="no"` only on truly decorative children
+- test with TalkBack at different granularity levels (character, word, element) to confirm all meaningful content is announced
+
+## Related docs
+
+- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

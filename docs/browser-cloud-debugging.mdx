@@ -1,0 +1,125 @@
+---
+title: "Debugging & Observability - TestMu AI Browser Cloud"
+sidebarTitle: "Replay and Debug Sessions"
+keywords: ['browser cloud debugging', 'session recording', 'browser cloud logs', 'session observability', 'troubleshooting browser cloud']
+description: "Watch, replay, and debug your agent's browser sessions with video recordings, console logs, and network capture."
+"og:description": "Watch, replay, and debug your agent's browser sessions with video recordings, console logs, and network capture."
+---
+
+Watch, replay, and troubleshoot your agent's browser sessions. Every session automatically records video, console logs, and network requests - accessible from the TestMu AI dashboard.
+
+
+## Built-In Observability
+
+When your agent runs at 3am and does something unexpected, you need to know
+exactly what happened. Every session runs on TestMu AI's infrastructure,
+which means every session automatically comes with video recordings, console
+logs, and network request capture - no extra setup required.
+
+
+## TestMu AI Web Automation Dashboard
+
+Every session appears on the TestMu AI Web Automation Dashboard:
+
+```
+https://automation.lambdatest.com/logs/
+```
+
+From the dashboard you can:
+
+- Watch **live video** of the browser as your agent interacts with it
+- **Replay** recorded sessions after they complete
+- View captured **console logs**
+- Inspect **network requests**
+- Review **screenshots**
+- Check **test results** (pass/fail)
+
+
+## Organizing Sessions
+
+Use `build` and `name` in `lambdatestOptions` to organize sessions on the
+dashboard. This is especially helpful when running multiple agents or scenarios:
+
+```typescript
+const session = await client.sessions.create({
+    lambdatestOptions: {
+        build: 'Price Monitor Agent - v2.1',
+        name: 'Extract Competitor Pricing - Amazon',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+            video: true,     // Record video
+            console: true,   // Capture console logs,
+        }
+    }
+});
+```
+
+
+## Debug URLs
+
+Every session provides URLs for viewing:
+
+```typescript
+console.log(session.debugUrl);          // Dashboard URL for this session
+console.log(session.sessionViewerUrl);  // Live stream of the browser
+```
+
+
+## SDK Console Output
+
+The SDK logs connection steps and actions to stdout:
+
+```
+Adapter: Connecting to session session_123_abc via Puppeteer...
+Adapter: Set stealth user-agent: Mozilla/5.0 (Windows NT 10.0...
+Adapter: Set stealth viewport: 1907x1063
+Adapter: Humanized interactions enabled
+Adapter: Loading profile my-app-login
+```
+
+
+## Common Issues
+
+Here are the most common issues and how to fix them.
+
+**Connection Timeout**
+
+```
+Error: Timed out after 30000ms while waiting for the WebSocket
+```
+
+Causes: Invalid `LT_USERNAME` or `LT_ACCESS_KEY`, TestMu AI service outage,
+or network firewall blocking WebSocket connections.
+
+Fix: Verify your credentials, check the TestMu AI status page, try a different
+network.
+
+
+**Session Not Found**
+
+```
+Session session_xyz not found
+```
+
+Cause: Session was already released or timed out. The default timeout is 5
+minutes.
+
+Fix: Increase with `timeout: 600000` (10 minutes) in your session config.
+
+
+**Playwright Requires Node 18+**
+
+```
+Playwright requires Node.js 18 or higher.
+```
+
+Fix: Upgrade Node.js with `nvm install 18 && nvm use 18`.
+
+
+**Profile Not Loading**
+
+Cause: On the first run, there's no saved profile yet.
+
+Fix: This is normal. The profile is created when `browser.close()` is called.
+Subsequent runs will load it.

@@ -1,14 +1,12 @@
 ---
 title: "Modes of Operation"
 sidebarTitle: "Modes"
-description: "Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations."
 keywords: ['kane cli modes', 'interactive tui', 'headless cli', 'agent mode', 'kaneai', 'testmu ai']
+description: "Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations."
 "og:description": "Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 Kane CLI has three modes. Choose based on who (or what) is running the test.
 
@@ -193,7 +191,7 @@ Below the summary, Kane CLI prints any of the following links:
 
 ### Feedback Prompt
 
-After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for details.
+After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for details.
 
 ---
 
@@ -213,7 +211,7 @@ With `--agent`:
 
 This mode is how Claude Code, Codex CLI, and Gemini CLI consume Kane CLI results. The agent reads the NDJSON stream, parses the final `run_end` event, and presents results to you.
 
-See [Agent Mode](/docs/kane-cli-agent-mode/) for the full event schema and parsing guide.
+See [Agent Mode](/support/docs/kane-cli-agent-mode/) for the full event schema and parsing guide.
 
 <Tip>
 Always combine `--agent` with `--headless` in non-interactive environments to prevent display server errors.

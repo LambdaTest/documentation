@@ -1,0 +1,42 @@
+---
+title: "How to Connect to TestMu AI Browser Cloud"
+sidebarTitle: "Set Up the SDK"
+keywords: ['browser cloud connection', 'browser cloud sdk', 'browser cloud api', 'ai agent integration', 'browser automation sdk']
+description: "Connect your agents to TestMu AI Browser Cloud using the TestMu AI Browser SDK."
+"og:description": "Connect your agents to TestMu AI Browser Cloud using the TestMu AI Browser SDK."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+***
+
+The TestMu AI Browser SDK is the primary way to integrate your agents with <BrandName /> Browser Cloud. It handles session creation, browser connections, stealth, profiles, and more from a single Node.js client.
+
+## TestMu AI Browser SDK
+***
+
+The TestMu AI Browser SDK is the fastest way to get your agents into the Browser
+Cloud. It gives you full programmatic control over sessions, adapters, stealth,
+profiles, files, extensions, and tunnels directly from your Node.js application.
+
+### What you need to get started
+***
+
+- **Node.js 16+** installed on your machine
+- Install the SDK:
+
+```bash
+npm install @testmuai/browser-cloud
+```
+
+### Initialize the Client
+***
+
+From here, you can create sessions, configure stealth mode, manage profiles,
+upload files, load extensions, and open tunnels - all through a single client
+instance.
+
+```typescript
+import { Browser } from '@testmuai/browser-cloud';
+const client = new Browser();
+```

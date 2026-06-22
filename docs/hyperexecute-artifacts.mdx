@@ -1,0 +1,143 @@
+---
+title: "Job Artifacts"
+sidebarTitle: "Upload & Download Artifacts"
+description: "Learn how to generate the Artifacts for your desired framework and seamlessly interact with artifacts through the HyperExecute UI."
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
+"og:description": "Learn how to generate the Artifacts for your desired framework and seamlessly interact with artifacts through the HyperExecute UI."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
+
+Following the completion of a Job, these artifacts are automatically stored in the **artifacts folder**, distinguishing previous files into **old-artifacts** on subsequent runs while retaining the recent files in artifacts.
+
+## Steps to Generate and Download Artifacts
+Follow the below mentioned steps to generate the Artifacts for your desired framework:
+
+**Step 1:** Go to the HyperExecute YAML file
+
+**Step 2:** Add the below mentioned parameters in the YAML file to generate the Artifacts
+
+```yaml
+uploadArtifacts:
+    - name: Executed-Job-Artifacts #user defined name of the artifact
+      path:
+        - src/test/index.html #path of the generated artifact
+    - name: My-Job-Artifacts
+      path:
+        - src/collect/info.html
+```
+<Note>
+- If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.**
+
+- You can replace the Artifacts folder name value with any of the Matrix parameters value.
+
+```yaml
+matrix:
+   os: [win]
+   browser: ["chrome-latest-1", "firefox-latest-2"]
+
+mergeArtifacts: true
+uploadArtefacts:
+  - name: $browser
+    path: 
+      - allure-results/
+```
+
+As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
+</Note>
+
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
+
+**Step 4:** Click on any of the artifacts generated. You can also download the artifacts from the dashboard
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifacts.gif' alt="Image" />
+
+Here is the sample artifact generated.
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/artifact4.png' alt="Image" />
+
+## Construct artifact URLs
+
+HyperExecute also allows you to access your _Artifacts_ directly from the HyperExecute UI and create shareable URLs for them.
+
+### Navigating Artifacts
+
+To view or download your Artifacts, click the **Artifacts** button.
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/0.png' alt="Image" />
+
+#### For a Single file
+
+If you only have one file as an _Artifact_, then a preview of the file will be opened on your browser. 
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/1.png' alt="Image" />
+
+#### For Multiple files
+
+If you have multiple files as an _Artifact_, then you will get an option to download all the files directly.
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/4.png' alt="Image" />
+
+### Managing Test Artifacts URL
+
+To make the most of this feature, follow the steps below.
+
+<Note>
+**Prioritize**: To access your _Artiacts_ for a particular _Job ID_, they must have a name.
+</Note>
+
+#### 1. Constructing the URL
+
+The URL to view an _Artifact_ in a standard job is:
+
+`https://hyperexecute.lambdatest.com/artifact/view/<job-id>?artifactName=<artifact-name>`
+
+- Insert the **_Job ID_** of your test and the name of your _Artifact_ in place of the `<job-id>` and `<artifact-name>` placeholder values.
+    
+- This URL will take you to a page where you can access the _Artifact_ and its contents.
+
+For example, if you want to access the _Artifacts_ for a job with _Job ID_: `2d835a95-e7ea-4ea7-83e8-608c2f71d95c`, and the name of your _Artifact_ is `ExecutionSnapshots`, then your URL should be:
+
+`https://hyperexecute.lambdatest.com/artifact/view/`**2d835a95-e7ea-4ea7-83e8-608c2f71d95c**`?artifactName=`**ExecutionSnapshots**
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/3.png' alt="Image" />
+
+***
+
+#### 2. Additional Filters
+
+You can also use this feature to cycle through the files in your _Artifacts_.
+
+**1. `filter=*.log`:** You can filter through all of your files by adding this at the end of your URL. However, you will have to insert the entire path of your _Artifacts_ folder or the names of the folder you want to use the filter in.  
+      
+- For example, if you want to filter through the `.html` files of a folder called `site` with the path `/target/site/`, for the same job that was used above, then your URL will be:
+
+`https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&`**filter=target/site/*.html**
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/4.png' alt="Image" />
+
+***
+
+**2. `view=flat`:** If you add this at the end of the Artifact URL, then you will be able to view your artifacts in a list instead of a tree structure.
+
+- For example, if you want to view the results of the filter used above in a flat manner, then your URL will be:  
+
+`https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&filter=target/site/*.html&`**view=flat**
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/5.png' alt="Image" />
+
+***
+
+**3. `&taskId=<task-id>`:** If you want to access the Artifacts for a particular task, then add this in your URL.  
+
+- For example, if you want to view the _Artifacts_ for a task with _Task ID_ `df8604cf-7af2-48b6-903d-786028078640` for the same job that was used above, then your URL will be:  
+
+`https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&`**taskId=2731df9f-bc9f-4fbc-85c4-fe675aeffeb7**
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/6.png' alt="Image" />
+
+***

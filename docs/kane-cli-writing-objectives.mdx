@@ -1,11 +1,9 @@
 ---
 title: "Writing Objectives"
 sidebarTitle: "Writing Objectives"
-description: "Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results."
 keywords: ['kane cli objectives', 'natural language testing', 'kaneai', 'testmu ai', 'browser automation', 'write test objectives']
+description: "Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results."
 "og:description": "Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results."
----
-
 ---
 
 The objective string is the most important input to Kane CLI. How you phrase it determines what the agent does and whether it succeeds. Objectives follow three patterns that you can combine freely.
@@ -17,6 +15,10 @@ The objective string is the most important input to Kane CLI. How you phrase it 
 | 🎯 **Action** | go to, click, type, fill, search, scroll, hover, select, submit | Performs browser actions |
 | ✅ **Assertion** | assert, verify, confirm, check that, ensure | Validates a condition: produces pass/fail |
 | 📦 **Extraction** | store X as 'name' | Reads a value from the page, persists in output |
+
+<Note>
+**Assertions** and **extractions** are evaluated as [Checkpoints](/support/docs/kane-cli-checkpoints/). See the reference for all analyze methods (Visual, Textual, URL, Title, DevTools) and comparison operators.
+</Note>
 
 ### Actions
 

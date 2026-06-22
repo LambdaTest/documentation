@@ -1,0 +1,104 @@
+---
+title: "AI Agent Testing & Evaluation Platform — Solution Overview"
+sidebarTitle: "Overview"
+description: "A purpose-built quality-assurance platform for verifying, benchmarking, and continuously monitoring AI-powered agents across voice, chat, and multimodal interaction channels."
+keywords: ['ai agent testing platform', 'agent evaluation platform', 'voice agent testing', 'chat agent testing', 'agent testing', 'ai agent qa']
+"og:description": "A purpose-built quality-assurance platform for verifying, benchmarking, and continuously monitoring AI-powered agents across voice, chat, and multimodal interaction channels."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+## Executive Summary
+
+Enterprises are investing heavily in AI-powered agents to handle customer interactions at scale — through phone calls, chat interfaces, and multimodal workflows. However, deploying these agents into production without rigorous, repeatable quality validation creates significant business risk: erratic behavior, regulatory exposure, and poor customer experience that is difficult to detect with conventional testing tools.
+
+This platform directly solves that problem. It is an end-to-end, AI-native testing and evaluation solution that automatically generates hundreds of realistic test scenarios, executes them across voice and chat channels, and scores agent behavior across more than fifteen quality dimensions — all without requiring manual scripting.
+
+The platform supports **four interaction modalities**: inbound phone calls, outbound phone calls, chat/webhook agents, and AI-generated image evaluation. A continuous scheduling engine and a production-readiness ("Go-Live") assessment module close the loop from development through post-launch monitoring.
+
+## Market Analysis & Industry Context
+
+### Voice AI Market Growth
+
+AI voice agents are one of the fastest-growing enterprise technology categories. The market reached an estimated **$47 billion in 2025**, expanding at roughly **34% CAGR** since 2022, with projections toward **$89 billion by 2028**.
+
+| Metric | Value |
+|--------|-------|
+| AI voice agent market (2025) | **$47B** |
+| Market CAGR since 2022 | **34%** |
+| YoY growth in enterprise deployments | **340%** |
+| Fortune 500 companies in production | **67%** |
+
+### The Testing Gap
+
+The rapid proliferation of AI agents has created a critical quality gap. Traditional test automation tools fail when applied to AI systems:
+
+- **Non-determinism:** The same prompt can produce different outputs on every run
+- **Multi-turn complexity:** AI agents must maintain context across many conversation turns
+- **Evaluation subjectivity:** Metrics like empathy, accuracy, and compliance require AI-powered scoring
+
+## Platform Differentiators
+
+| Differentiator | Description |
+|---------------|-------------|
+| **Multi-Modal Coverage** | Single platform covers inbound phone, outbound phone, chat/webhook, and image modalities |
+| **AI-Generated Test Scenarios** | Upload documents and the platform generates 60–100+ diverse scenarios automatically |
+| **Real Phone-Call Execution** | Tests executed as actual telephone calls with full audio analysis |
+| **15+ Evaluation Dimensions** | Conversations scored across hallucination, bias, compliance, and more |
+| **Continuous Scheduled Testing** | Cron-based scheduling runs full test suites automatically |
+| **Go-Live Readiness Assessment** | Aggregate production-readiness verdict (Green / Yellow / Red) |
+
+## Supported Agent Types
+
+| Agent Type | How It Works | Primary Use Case |
+|-----------|-------------|-----------------|
+| **Inbound Phone Agent** | Platform places a real outbound call to the agent's phone number | IVR systems, inbound customer support voice bots |
+| **Outbound Phone Agent** | Platform provisions a recipient phone number; agent places call to it | Sales dialers, collections agents |
+| **Chat / Webhook Agent** | Platform sends multi-turn HTTP messages to the agent's API endpoint | Customer service chatbots, FAQ bots |
+| **Image Generation Agent** | Platform submits generation prompts and evaluates returned images | AI design tools, content generation |
+
+## Evaluation Dimensions
+
+Every completed conversation is automatically scored across quality dimensions on a 0.0–1.0 scale:
+
+| Evaluation Dimensions | | |
+|----------------------|-|-|
+| Hallucination Detection | Bias Detection | Response Quality |
+| Context Awareness | Completeness | Conversation Flow |
+| User Satisfaction | Intent Recognition | Multi-Turn Reasoning |
+| Error Handling & Recovery | Consistency | Proactive Behavior |
+| Compliance & Governance | Data Privacy | Security Posture |
+
+## Go-Live Readiness Assessment
+
+| Verdict | Description |
+|---------|-------------|
+| 🟢 **GREEN** | All critical thresholds met. Cleared for production deployment. |
+| 🟡 **YELLOW** | Most thresholds met; conditional approval with identified risk areas. |
+| 🔴 **RED** | Critical thresholds not met. Remediation required before deployment. |
+
+## Onboarding & Time-to-Value
+
+| Step | What Happens | Estimated Time |
+|------|-------------|---------------|
+| **1. Project Setup** | Create project, configure agent endpoint or phone number | 5–10 minutes |
+| **2. Requirements Upload** | Upload product specifications (PDF, DOCX, images, audio, video) | 5 minutes |
+| **3. Scenario Generation** | Platform generates 60–100+ test scenarios | 3–8 minutes |
+| **4. First Test Run** | Execute sample suite against the agent | 20–40 minutes |
+| **5. Threshold Configuration** | Tune pass/fail thresholds per dimension | 15 minutes |
+| **6. Schedule & Automate** | Configure recurring runs and CI/CD hooks | 10 minutes |
+
+<Tip>
+**No engineering effort required:** The platform's AI reads your existing documentation and produces deployment-ready test cases. Teams without a dedicated QA function can achieve professional-grade agent validation from day one.
+</Tip>
+
+## Summary
+
+| Key Metric | Value |
+|-----------|-------|
+| Agent modalities supported | **4** (inbound voice, outbound voice, chat, image) |
+| Test scenarios auto-generated per project | **60–100+** |
+| Evaluation dimensions scored per conversation | **18+** |
+| Behavioral test categories | **16** |

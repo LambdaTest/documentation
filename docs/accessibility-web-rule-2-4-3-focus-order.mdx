@@ -1,0 +1,41 @@
+---
+title: "Focus Order (2.4.3)"
+sidebarTitle: "Focus Order (2.4.3)"
+description: "Rule-level Accessibility guidance for Focus Order (WCAG 2.4.3 Level A)."
+"og:description": "Rule-level Accessibility guidance for Focus Order (WCAG 2.4.3 Level A)."
+---
+
+When a page can be navigated sequentially, interactive components must receive focus in an order that preserves meaning and operability.
+
+<Info>
+**WCAG Reference**
+**Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html)
+</Info>
+
+## What this rule checks
+
+The scanner verifies that the tab order of interactive elements follows a logical reading sequence and does not jump unexpectedly between unrelated sections.
+
+## Why it matters
+
+Keyboard users experience a page as a linear sequence of focusable elements. An illogical focus order makes it difficult to understand context, complete multi-step forms, or predict where focus will move next.
+
+## Common failure patterns
+
+- positive `tabindex` values that override the natural DOM order
+- visually reordered layouts (CSS Grid/Flexbox `order`) where DOM order does not match visual order
+- dynamically injected content that receives focus before the user reaches the trigger
+- modals or drawers that do not move focus into themselves on open
+
+## Remediation guidance
+
+- rely on DOM source order rather than positive `tabindex` values
+- ensure CSS visual reordering matches the underlying DOM sequence
+- move focus into modals, dialogs, and drawers when they open, and return it when they close
+- test with keyboard-only navigation to confirm the sequence feels natural
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

@@ -1,14 +1,12 @@
 ---
 title: "CI/CD Integration"
 sidebarTitle: "CI/CD"
-description: "Integrate Kane CLI into GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker for automated browser testing."
 keywords: ['kane cli cicd', 'github actions browser testing', 'kaneai', 'testmu ai', 'ci cd browser tests']
+description: "Integrate Kane CLI into GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker for automated browser testing."
 "og:description": "Integrate Kane CLI into GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker for automated browser testing."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 Kane CLI runs headlessly in CI/CD pipelines using credentials passed as environment variables or inline flags. Tests fail fast on assertion errors and return standard exit codes for pipeline control flow.
 
@@ -24,7 +22,6 @@ These patterns apply to every CI system; the platform-specific recipes below dif
 
 <Warning>
 **Chrome Requirement**
-
 The runner spawns Chrome itself, so the CI image must have Chrome available on `PATH`. If your runner image cannot install Chrome, point Kane CLI at a remote browser with `--cdp-endpoint <url>` or `--ws-endpoint <url>` (for example, a <BrandName /> `wss://` endpoint).
 </Warning>
 
@@ -32,17 +29,19 @@ The runner spawns Chrome itself, so the CI image must have Chrome available on `
 
 Pass credentials directly on the run command using environment variables from your secrets store:
 
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli run "Verify checkout flow completes" \
-  --url https://staging.myapp.com \
-  --username "$LT_USERNAME" \
-  --access-key "$LT_ACCESS_KEY" \
-  --headless \
-  --agent \
+kane-cli run "Verify checkout flow completes" \\
+  --url https://staging.myapp.com \\
+  --username "YOUR_LAMBDATEST_USERNAME" \\
+  --access-key "YOUR_LAMBDATEST_ACCESS_KEY" \\
+  --headless \\
+  --agent \\
   --timeout 300
 ```
+</div>
 
-Get your username and access key from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Get your username and access key from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 ## Exit Codes
 
@@ -65,8 +64,9 @@ Get your username and access key from the <BrandName /> [dashboard](https://acco
 
 ## Platform Guides
 
-<Tabs>
-  <Tab title="GitHub Actions">
+<Tabs groupId="ci-platform">
+
+<Tab title="GitHub Actions">
 
 Store `LT_USERNAME` and `LT_ACCESS_KEY` as repository secrets under **Settings > Secrets and variables > Actions**.
 
@@ -112,9 +112,9 @@ jobs:
           path: ~/.testmuai/kaneai/sessions/
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="GitLab CI">
+<Tab title="GitLab CI">
 
 Define `LT_USERNAME` and `LT_ACCESS_KEY` as masked CI/CD variables in your project settings.
 
@@ -150,9 +150,9 @@ kane-cli:
     expire_in: 7 days
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Jenkins">
+<Tab title="Jenkins">
 
 Store credentials in **Jenkins > Manage Jenkins > Manage Credentials**. The two `credentials(...)` IDs refer to Username/Password or Secret Text credentials configured in Jenkins.
 
@@ -194,9 +194,9 @@ pipeline {
 
 The pipeline fails on any non-zero exit code from the `sh` step, which matches Kane CLI's exit-code semantics.
 
-  </Tab>
+</Tab>
 
-  <Tab title="Bitbucket Pipelines">
+<Tab title="Bitbucket Pipelines">
 
 Add `LT_USERNAME` and `LT_ACCESS_KEY` as repository variables under **Repository settings > Repository variables**.
 
@@ -222,9 +222,9 @@ pipelines:
           - ~/.testmuai/kaneai/sessions/**
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title="Docker / Generic">
+<Tab title="Docker / Generic">
 
 The shell command below works in any CI that can run a Linux container with Chrome installed:
 
@@ -251,7 +251,8 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 
 `--cdp-endpoint <url>` works the same way for browsers that expose a Chrome DevTools Protocol URL. With either flag, Kane CLI skips its own Chrome launch and connects to the endpoint you provide.
 
-  </Tab>
+</Tab>
+
 </Tabs>
 
 ---

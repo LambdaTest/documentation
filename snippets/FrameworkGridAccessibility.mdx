@@ -1,0 +1,175 @@
+export const FrameworkGridAccessibility = () => {
+  const seleniumFrameworks = [
+    {
+      title: 'Java',
+      icon: '/support/assets/images/getting-started/java-icon.webp',
+      items: [
+        { name: 'Selenium', link: '/support/docs/accessibility-automation-test' },
+        { name: 'TestNG', link: '/support/docs/accessibility-testng-test' },
+        { name: 'JUnit 5', link: '/support/docs/accessibility-junit5-test' },
+        { name: 'Cucumber', link: '/support/docs/accessibility-cucumber-java-test' },
+      ]
+    },
+    {
+      title: 'C#',
+      icon: '/support/assets/images/getting-started/c-sharp-icon.webp',
+      items: [
+        { name: 'NUnit', link: '/support/docs/accessibility-nunit-csharp-test' },
+      ]
+    },
+    {
+      title: 'Python',
+      icon: '/support/assets/images/getting-started/python-icon.webp',
+      items: [
+        { name: 'Robot Framework', link: '/support/docs/accessibility-robot-framework-test' },
+      ]
+    },
+  ];
+
+  const cypressFrameworks = [
+    {
+      title: '',
+      icon: '/support/assets/images/getting-started/cypress_logo.png',
+      items: [
+        { name: 'Cypress v10', link: '/support/docs/cypress-v10-accessibility-test' },
+        { name: 'Cypress v9', link: '/support/docs/cypress-v9-accessibility-test' },
+      ]
+    },
+  ];
+
+  const playwrightFrameworks = [
+    {
+      title: 'JavaScript',
+      icon: '/support/assets/images/getting-started/color-js.webp',
+      items: [
+        { name: 'Playwright', link: '/support/docs/playwright-accessibility-test' },
+      ]
+    },
+  ];
+
+  const appiumFrameworks = [
+    {
+      title: '',
+      icon: '/support/assets/images/getting-started/appium.jpeg',
+      items: [
+        { name: 'Native App (Overview)', link: '/support/docs/accessibility-native-app-automation-test' },
+        { name: 'Appium TestNG', link: '/support/docs/accessibility-appium-testng' },
+        { name: 'Appium WebdriverIO', link: '/support/docs/accessibility-appium-webdriverio' },
+      ]
+    },
+  ];
+
+  return (
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 no-link my-6 p-[1rem]">
+      <Tabs>
+        <Tab title="Selenium">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 p-8">
+            {seleniumFrameworks.map((fw, index) => (
+              <div key={index} className="flex flex-col items-start">
+                <img
+                    src={fw.icon}
+                    alt={fw.title}
+                    className="w-12 h-12 mb-4 object-contain"
+                    loading="lazy"
+                />
+                <div className="flex flex-col gap-2">
+                  {fw.items.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.link}
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="Cypress">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
+            {cypressFrameworks.map((fw, index) => (
+              <div key={index} className="flex flex-col items-start">
+                <img
+                    src={fw.icon}
+                    alt={fw.title}
+                    className="w-12 h-12 mb-4 object-contain"
+                    loading="lazy"
+                />
+                <div className="flex flex-col gap-2">
+                  {fw.items.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.link}
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="Playwright">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
+            {playwrightFrameworks.map((fw, index) => (
+              <div key={index} className="flex flex-col items-start">
+                <img
+                    src={fw.icon}
+                    alt={fw.title}
+                    className="w-12 h-12 mb-4 object-contain"
+                    loading="lazy"
+                />
+                <div className="flex flex-col gap-2">
+                  {fw.items.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.link}
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="Appium">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
+            {appiumFrameworks.map((fw, index) => (
+              <div key={index} className="flex flex-col items-start">
+                <img
+                    src={fw.icon}
+                    alt={fw.title}
+                    className="w-12 h-12 mb-4 object-contain"
+                    loading="lazy"
+                />
+                <div className="flex flex-col gap-2">
+                  {fw.items.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.link}
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Tab>
+      </Tabs>
+      <div className="bg-gray-50 dark:bg-gray-700/30 p-6 text-center border-t border-gray-200 dark:border-gray-700">
+        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed m-0">
+            In case your favorite framework or tool isn't listed here, just give us a <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.
+            <br />
+            In case of any other problems, feel free to <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Contact Us</span>.
+        </p>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,82 @@
+---
+title: "Accessibility Capture Screenshot"
+sidebarTitle: "Capture Screenshot"
+description: "The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers."
+keywords: ['TestMu AI', 'Accessibility', 'Testing', 'Manual', 'Accessibility Testing Settings', 'Fragment identifier', 'wcag']
+"og:description": "The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+Automatically capture visual evidence of accessibility issues during automated testing. Screenshots include red bounding boxes that highlight the exact location of accessibility violations, providing immediate visual context for debugging and issue resolution.
+
+## Enable Capture Screenshot
+
+### Manual Testing
+
+---
+
+1. Navigate to **Accessibility Tool** → **Settings** → **Other Settings**
+2. Enable **Capture Screenshots**
+3. Run your accessibility scan to capture annotated screenshots
+   <img loading="lazy" src='/assets/images/accessibility-testing/features/accessibility-capture-screenshot.png' alt="Accessibility Passed Test Cases" style={{ width: "650px", height: "auto"}} />
+
+### Automation Testing
+
+---
+
+Add the `accessibility.captureScreenshot: true` capability to your test configuration:
+
+```javascript
+'LT:Options': {
+    "accessibility": true,
+    "accessibility.wcagversion": "wcag21aa",
+    "accessibility.bestPractice": true,
+    "accessibility.needsReview": false,
+    "accessibility.captureScreenshot": true,
+    "accessibility.passedTestCases": false
+}
+```
+
+## Understanding Screenshot Capture
+
+---
+
+### Visual Annotations
+
+Screenshots include visual indicators that help identify accessibility issues:
+
+- **Red Bounding Boxes**: Highlight elements with accessibility violations
+- **Full Page Coverage**: Captures entire webpage content, not just visible viewport
+- **Issue Mapping**: Each highlighted area corresponds to specific violations in the report
+
+<Note>
+This feature is available across all supported testing frameworks and in Accessibility Devtools
+</Note>
+
+## Results and Dashboard
+
+---
+
+### Accessibility Dashboard
+
+When enabled, screenshots appear in the Accessibility tab of your Automation Dashboard:
+
+<img loading="lazy" src='/assets/images/accessibility-testing/features/accessibility-capture-screenshot-example.png' alt="Accessibility Passed Test Cases"  />
+
+- **Image View Section**: Dedicated area for viewing captured screenshots
+- **Thumbnail Gallery**: Quick overview of all captured screenshots from the test session
+- **Issue Correlation**: Click on violations to see corresponding highlighted areas on screenshots
+
+## When to Enable
+
+---
+
+**Enable screenshot capture when:**
+
+- Debugging complex accessibility issues that require visual context
+- Creating comprehensive accessibility documentation
+- Working with teams that need visual evidence for issue understanding
+- Conducting accessibility audits or compliance reviews

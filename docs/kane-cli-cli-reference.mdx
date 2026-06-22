@@ -1,14 +1,12 @@
 ---
 title: "CLI Reference"
 sidebarTitle: "CLI Reference"
-description: "Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure."
 keywords: ['kane cli reference', 'kane cli commands', 'kaneai', 'testmu ai', 'cli flags']
+description: "Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure."
 "og:description": "Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 ## Commands
 
@@ -67,7 +65,7 @@ kane-cli login [--profile <name>]
 kane-cli login --username <user> --access-key <key> [--profile <name>]
 ```
 
-See [Authentication](/docs/kane-cli-authentication/) for details on profiles and auth methods.
+See [Authentication](/support/docs/kane-cli-authentication/) for details on profiles and auth methods.
 
 ---
 
@@ -113,7 +111,7 @@ kane-cli profiles switch <name>  # Switch the active profile
 kane-cli profiles delete <name>  # Delete a profile
 ```
 
-See [Authentication — Profiles](/docs/kane-cli-authentication/#profiles) for details.
+See [Authentication — Profiles](/support/docs/kane-cli-authentication/#profiles) for details.
 
 ---
 
@@ -134,7 +132,7 @@ kane-cli config folder [id]                # Set Test Manager folder (interactiv
 Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these — ask the user to run them directly.
 </Note>
 
-See [Configuration](/docs/kane-cli-configuration/) for the full settings reference.
+See [Configuration](/support/docs/kane-cli-configuration/) for the full settings reference.
 
 ---
 
@@ -211,7 +209,7 @@ kane-cli feedback \
 | `code_export.language` | `python` | `--code-language` flag |
 | `code_export.skip_validation` | `true` | TUI menu or `--skip-code-validation` flag |
 
-Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](/docs/kane-cli-configuration/) for details.
+Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](/support/docs/kane-cli-configuration/) for details.
 
 ---
 

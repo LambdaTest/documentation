@@ -1,6 +1,6 @@
 ---
 title: "Modules in KaneAI"
-sidebarTitle: "Modules"
+sidebarTitle: "Create & Reuse Modules"
 description: "Learn how to create, version, and bulk-update reusable test modules in KaneAI."
 keywords: ['testmu ai automation', 'testmu ai kaneai', 'kaneai modules', 'modules versioning', 'bulk update', 'module version', 'test case management']
 "og:description": "Learn how to create, version, and bulk-update reusable test modules in KaneAI."
@@ -30,7 +30,7 @@ For example, if you want to group test steps related to login functionality, hig
 ### Step 3: Create and Save your Module
 - With the relevant test steps selected, click on the Create Module button.
 - Enter a module name and description:
-    - **Name :** "Login Flow for <BrandName />.com"
+    - **Name :** "Login Flow for TestMu AI.com"
     - **Description :** "This is the login flow module."
 
 <img loading="lazy" src='/assets/images/kane-ai/features/modules/3.png' alt="automation-dashboard" />
@@ -114,9 +114,22 @@ Only modules that are **not linked to any test cases** can be deleted. If a modu
 <img loading="lazy" src='/assets/images/kane-ai/knowledge-base/modules-versioning/image2.png' alt="Image" className="doc_img img_center" />
 
 ### Comparing and Reverting Module Versions
-- Compare different versions of a module.
-- Review modifications made between versions.
-- Revert to a previous version if required.
+
+You can compare any two versions of a module to see exactly what changed, and revert to an earlier version if an update introduces problems.
+
+**Compare two versions:**
+
+1. Open the module and go to the **Version History** section.
+2. Select the two versions you want to compare.
+3. Review the differences — added, removed, or modified steps are highlighted.
+
+**Revert to a previous version:**
+
+1. Open the module and go to **Version History**.
+2. Select the version you want to restore.
+3. Confirm the revert.
+
+Reverting creates a new version rather than deleting the intermediate ones, so the module keeps a complete audit trail.
 
 <img loading="lazy" src='/assets/images/kane-ai/knowledge-base/modules-versioning/image3.png' alt="Image" className="doc_img img_center" />
 
@@ -163,8 +176,6 @@ Only modules that are **not linked to any test cases** can be deleted. If a modu
     - Accept the new version.
     - Continue using the current version.
 - The newly updated version will reflect the added test step.
-
-By implementing these enhancements, module management is now more efficient, flexible, and user-friendly. Users can seamlessly create, modify, and reuse test modules to streamline automation testing.
 
 <img loading="lazy" src='/assets/images/kane-ai/knowledge-base/modules-versioning/image9.png' alt="Image" className="doc_img img_center" />
 

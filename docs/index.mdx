@@ -1,47 +1,275 @@
 ---
-title: "Kane CLI"
+mode: "custom"
+title: "TestMu AI Documentation"
 sidebarTitle: "Introduction"
-description: "Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline."
-keywords: ['kane cli', 'kaneai', 'browser automation', 'testmu ai', 'ai cli', 'natural language testing']
-"og:description": "Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline."
-slug: /
 ---
 
----
+{/* ===================== HERO ===================== */}
+<div className="w-full bg-gray-100 dark:bg-[#171a21]">
+  <div className="mx-auto max-w-7xl px-5 py-10 sm:py-14">
+    <div className="flex flex-col items-center gap-8 lg:flex-row">
+      <div className="w-full text-left lg:w-3/5">
+        <h1 className="m-0 text-3xl font-semibold text-gray-900 dark:text-white sm:text-4xl">
+          TestMu AI (Formerly LambdaTest) Documentation
+        </h1>
+        <p className="mt-4 max-w-xl text-base font-normal text-gray-600 dark:text-gray-300">
+          Explore our docs and guides to build, run, and scale your tests across desktop and mobile platforms.
+        </p>
+        <button
+          type="button"
+          className="mt-8 hidden w-full max-w-xl cursor-pointer items-center rounded-full bg-white py-4 pl-4 pr-4 text-left text-sm leading-6 text-gray-500 lg:flex"
+          id="home-search-entry"
+          style={{ boxShadow: '0px 1px 4px 0px rgba(8, 9, 10, 0.25), 0px 0px 0px 4px rgba(255, 255, 255, 0.20)' }}
+          onClick={() => document.getElementById('search-bar-entry').click()}
+        >
+          <svg
+            className="ml-1.5 mr-2 h-4 w-4 flex-none bg-primary hover:bg-gray-600 dark:bg-primary-dark dark:hover:bg-white/70"
+            style={{
+              maskImage: 'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center center',
+            }}
+          />
+          Search or ask...
+        </button>
+      </div>
+      <div className="w-full lg:w-2/5">
+        <img src="/assets/images/support/home_light.png" alt="TestMu AI" className="mx-auto max-h-80 w-full object-contain" />
+      </div>
+    </div>
+  </div>
+</div>
 
-**Kane CLI** `kane-cli` is an AI-powered browser automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates websites, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser.
+<div className="mx-auto max-w-7xl px-5 py-12 sm:py-16">
 
-- **Run browser tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
-- **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes
-- **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify web UIs on your behalf
+{/* ===================== HOW IT WORKS ===================== */}
+<h2 className="m-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">How it works</h2>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  TestMu AI (Formerly LambdaTest) is an AI-native quality engineering platform that covers the full testing lifecycle: planning, authoring, execution, and analysis. Everything is available through a web application and through SDKs, CLIs, and a REST API that plug into your existing frameworks and CI/CD.
+</p>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  At TestMu AI, we organize testing into four phases. Each test flows through them in order, and what you learn in Analysis feeds back into your next Plan.
+</p>
 
-```bash
-# Install
-npm install -g @testmuai/kane-cli
+<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-2">
+      <span className="grid h-6 w-6 place-items-center rounded-md bg-primary text-xs font-bold text-white">01</span>
+      <h3 className="m-0 text-[15px] font-semibold text-gray-900 dark:text-white">Test Planning</h3>
+    </div>
+    <p className="mt-2 text-[13px] text-gray-600 dark:text-gray-300">Decide what to test and write your test cases.</p>
+  </div>
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-2">
+      <span className="grid h-6 w-6 place-items-center rounded-md bg-primary text-xs font-bold text-white">02</span>
+      <h3 className="m-0 text-[15px] font-semibold text-gray-900 dark:text-white">Test Authoring</h3>
+    </div>
+    <p className="mt-2 text-[13px] text-gray-600 dark:text-gray-300">Build tests yourself or have AI generate them.</p>
+  </div>
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-2">
+      <span className="grid h-6 w-6 place-items-center rounded-md bg-primary text-xs font-bold text-white">03</span>
+      <h3 className="m-0 text-[15px] font-semibold text-gray-900 dark:text-white">Test Execution</h3>
+    </div>
+    <p className="mt-2 text-[13px] text-gray-600 dark:text-gray-300">Run your suite on browsers, devices, and apps.</p>
+  </div>
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-2">
+      <span className="grid h-6 w-6 place-items-center rounded-md bg-primary text-xs font-bold text-white">04</span>
+      <h3 className="m-0 text-[15px] font-semibold text-gray-900 dark:text-white">Test Analysis</h3>
+    </div>
+    <p className="mt-2 text-[13px] text-gray-600 dark:text-gray-300">Triage results, debug failures, and find root causes.</p>
+  </div>
+</div>
 
-# Authenticate
-kane-cli login
+{/* ===================== POPULAR PRODUCTS ===================== */}
+<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Popular products</h2>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  New here? These are the most common places to start.
+</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <a href="/support/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">KaneAI</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Describe a test in plain language across web, mobile, and API.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-agent-to-agent-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="robot" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Agent Testing</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test chatbots, voicebots, and phone agents for hallucinations and bias.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Automation</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Selenium, Cypress, Playwright at scale across 3,000+ environments.</p>
+  </a>
+  <a href="/support/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Automation</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Appium, Espresso, XCUITest on real iOS and Android devices.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">HyperExecute</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run your suites up to 70% faster with intelligent orchestration.</p>
+  </a>
+  <a href="/support/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Manager</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Write or generate test cases, organize cycles, and track coverage.</p>
+  </a>
+  <a href="/support/docs/smart-visual-regression-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="image" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">SmartUI</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Catch visual bugs using AI image comparison, ignoring rendering noise.</p>
+  </a>
+  <a href="/support/docs/accessibility-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="universal-access" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Accessibility</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Scan pages and apps against WCAG and ADA compliance standards.</p>
+  </a>
+</div>
 
-# Run your first test
-kane-cli run --url https://example.com "Click the 'More information' link and verify the page loads"
-```
+{/* ===================== PRODUCTS BY PHASE ===================== */}
+<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Products by phase</h2>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  Browse the documentation for each product, organized by the four phases.
+</p>
 
-## Three Modes
+{/* --- Test Planning --- */}
+<h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Planning</h3>
+<p className="m-0 text-sm text-gray-600 dark:text-gray-300">Decide what to test and organize it before anything runs.</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Manager</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Write or generate test cases, organize cycles, and link requirements.</p>
+  </a>
+</div>
 
-| Mode | Command | Best For |
-|------|---------|----------|
-| **Interactive TUI** | `kane-cli --tui` | Development, exploration, chained multi-run sessions |
-| **Non-Interactive CLI Mode** | `kane-cli run "..." --headless --agent` | CI/CD pipelines, shell scripts |
-| **Agent Mode** | `kane-cli run "..." --agent` | AI coding agents (Claude, Codex, Gemini) |
+{/* --- Test Authoring --- */}
+<h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Authoring</h3>
+<p className="m-0 text-sm text-gray-600 dark:text-gray-300">Create your tests, for your app and for your AI agents.</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">KaneAI</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Describe tests in plain language; KaneAI writes, runs, and exports them.</p>
+  </a>
+  <a href="/support/docs/kane-cli-quickstart" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="terminal" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Kane CLI</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run natural-language test authoring from your terminal and CI pipelines.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-agent-to-agent-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="robot" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Agent Testing</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test chatbots, voicebots, and phone agents for hallucinations and bias.</p>
+  </a>
+  <a href="/support/docs/browser-cloud-intro" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="cloud" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Browser Cloud</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Real Chrome sessions letting AI agents act on the live web.</p>
+  </a>
+  <a href="/support/docs/testmu-mcp-server" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">MCP Server</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Connect your IDE and AI assistants to your test data.</p>
+  </a>
+</div>
 
-## Next Steps
+{/* --- Test Execution --- */}
+<h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Execution</h3>
+<p className="m-0 text-sm text-gray-600 dark:text-gray-300">Run your tests at scale, automated or manual.</p>
 
-- [Installation](/docs/kane-cli-installation/): Install Kane CLI and verify your setup
-- [Quick Start](/docs/kane-cli-quickstart/): Authenticate and run your first test in 5 minutes
-- [Authentication](/docs/kane-cli-authentication/): OAuth, basic auth, and profile management
-- [Writing Objectives](/docs/kane-cli-writing-objectives/): Learn how to write effective natural language objectives
-- [Configuration](/docs/kane-cli-configuration/): Window size, Chrome profiles, Test Manager project, and run mode
-- [Test Manager Integration](/docs/kane-cli-tms-integration/): Uploads, share links, code export, and session history
-- [Agent Mode](/docs/kane-cli-agent-mode/): Use Kane CLI with AI coding agents
-- [CI/CD Integration](/docs/kane-cli-cicd/): Add Kane CLI to your pipeline
-- [Skills](/docs/kane-cli-skills/): Install the Kane CLI skill for Claude, Codex, or Gemini
+<div className="mt-5 flex items-baseline gap-3">
+  <h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Automated</h4>
+  <span className="text-[13px] text-gray-600 dark:text-gray-300">Run your own test scripts across browsers, devices, and CI.</span>
+</div>
+<div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Automation</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Selenium, Cypress, Playwright across 3,000+ browser and OS combinations.</p>
+  </a>
+  <a href="/support/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Automation</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Appium, Espresso, XCUITest on real and virtual mobile devices.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">HyperExecute</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Orchestration engine running your suites up to 70% faster automatically.</p>
+  </a>
+  <a href="/support/docs/smart-visual-regression-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="image" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">SmartUI</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Catch visual bugs using AI image comparison across all screens.</p>
+  </a>
+  <a href="/support/docs/accessibility-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="universal-access" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Accessibility</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Scan pages and native apps against WCAG and ADA standards.</p>
+  </a>
+  <a href="/support/docs/web-scanner-overview" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="magnifying-glass" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Scanner</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run visual and accessibility audits across thousands of URLs automatically.</p>
+  </a>
+</div>
+
+<div className="mt-7 flex items-baseline gap-3">
+  <h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Manual <span className="font-normal text-gray-600 dark:text-gray-300">· Real Time</span></h4>
+  <span className="text-[13px] text-gray-600 dark:text-gray-300">Test interactively, by yourself, on the same cloud.</span>
+</div>
+<div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="desktop" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Desktop</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test any website on desktop browsers running on real machines.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile Web (Virtual Device)</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test websites on mobile browsers running on virtual emulator devices.</p>
+  </a>
+  <a href="/support/docs/browser-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile Web (Real Device)</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test websites on mobile browsers running on real cloud devices.</p>
+  </a>
+  <a href="/support/docs/app-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile App (Real Device)</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test native iOS and Android apps on real cloud devices.</p>
+  </a>
+  <a href="/support/docs/getting-started-with-mobile-app-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile App (Virtual Device)</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test native iOS and Android apps on virtual emulator devices.</p>
+  </a>
+  <a href="/support/docs/accessibility-app-scanner" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Accessibility Scanner</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run accessibility checks live on a real Android device session.</p>
+  </a>
+</div>
+
+{/* --- Test Analysis --- */}
+<h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Analysis</h3>
+<p className="m-0 text-sm text-gray-600 dark:text-gray-300">Turn your test results into decisions.</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/analytics-test-insights" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="chart-line" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Insights</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Read every run: pass/fail trends, flaky tests, and root causes.</p>
+  </a>
+</div>
+
+{/* ===================== OTHER USE CASES ===================== */}
+<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Other use cases</h2>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  Test in your own environment, connect to your existing stack, and manage your team and account.
+</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/support/docs/testing-locally-hosted-pages" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="fingerprint" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Locally Hosted Websites</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test localhost, staging, or firewalled sites through a secure tunnel.</p>
+  </a>
+  <a href="/support/docs/integrations-with-ci-cd-tools" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Third-Party Integrations</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Connect CI/CD, Jira, Slack, GitHub, Jenkins, and 120+ other tools.</p>
+  </a>
+  <a href="/support/docs/account-management" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+    <div className="flex items-center gap-3"><Icon icon="gear" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Account Management</h4></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Manage team members, roles, organizations, billing, and security.</p>
+  </a>
+</div>
+
+{/* ===================== CTA ===================== */}
+<div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-2xl border border-gray-200 bg-gradient-to-r from-[#fbf0e8] to-gray-50 p-7 dark:border-white/10 dark:from-[#2a1a10] dark:to-[#15110f] sm:flex-row sm:items-center">
+  <div>
+    <h3 className="m-0 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Want a guided walkthrough?</h3>
+    <p className="mt-1.5 max-w-xl text-sm text-gray-600 dark:text-gray-300">See how TestMu AI fits your team's testing workflow, with a live demo from our engineers.</p>
+  </div>
+  <a href="https://www.testmuai.com/demo/" className="inline-flex flex-none items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white no-underline transition hover:brightness-110">
+    Book a Demo
+    <Icon icon="arrow-right" size={15} color="#fff" />
+  </a>
+</div>
+
+</div>

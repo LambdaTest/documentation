@@ -1,18 +1,16 @@
 ---
 title: "Configuration"
 sidebarTitle: "Configuration"
-description: "Configure Kane CLI settings including window size, Chrome profiles, Test Manager project and folder, run mode, and code export."
 keywords: ['kane cli configuration', 'kane cli config', 'kane cli settings', 'kaneai', 'testmu ai', 'chrome profile', 'window size']
+description: "Configure Kane CLI settings including window size, Chrome profiles, Test Manager project and folder, run mode, and code export."
 "og:description": "Configure Kane CLI settings including window size, Chrome profiles, Test Manager project and folder, run mode, and code export."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
 
----
-
 Kane CLI stores persistent settings at `~/.testmuai/kaneai/tui-config.json`. Most settings are managed through `kane-cli config` subcommands; a few are managed through interactive pickers in TUI mode, and one (code export) is toggled from the TUI menu.
 
-Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/` — see [Authentication](/docs/kane-cli-authentication/).
+Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/` — see [Authentication](/support/docs/kane-cli-authentication/).
 
 ---
 
@@ -98,7 +96,7 @@ You can also set a project ID directly without the picker:
 kane-cli config project <project-id>
 ```
 
-See [Test Manager Integration](/docs/kane-cli-tms-integration/) for how project selection feeds into uploads.
+See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how project selection feeds into uploads.
 
 ### Test Manager Folder
 
@@ -114,7 +112,7 @@ To set a folder ID without the picker:
 kane-cli config folder <folder-id>
 ```
 
-See [Test Manager Integration](/docs/kane-cli-tms-integration/) for how folder selection feeds into uploads.
+See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how folder selection feeds into uploads.
 
 ### Mode
 
@@ -140,7 +138,7 @@ The `code_export` block enables and configures generated code output produced af
   - `--code-language <lang>` to pick the output language (only `python` is supported)
   - `--skip-code-validation` / `--no-skip-code-validation` to control post-codegen validation
 
-Code export requires a Test Manager upload, so it is only meaningful when a project is configured. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full upload pipeline.
+Code export requires a Test Manager upload, so it is only meaningful when a project is configured. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for the full upload pipeline.
 
 ---
 

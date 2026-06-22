@@ -1,14 +1,12 @@
 ---
 title: "Troubleshooting"
 sidebarTitle: "Troubleshooting"
-description: "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
 keywords: ['kane cli troubleshooting', 'kaneai errors', 'testmu ai', 'chrome failed to launch', 'authentication failed']
+description: "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
 "og:description": "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-
----
 
 ## Log Locations
 
@@ -42,7 +40,7 @@ Kane CLI manages a Chrome process and connects to it over the Chrome DevTools Pr
    lsof -i :9222-9230
    ```
 3. Quit any extra Chrome processes hoarding the 9222–9230 port range
-4. Pick a different Chrome user-data directory, or quit the Chrome instance using it. See [Chrome Management](/docs/kane-cli-configuration/#chrome-management)
+4. Pick a different Chrome user-data directory, or quit the Chrome instance using it. See [Chrome Management](/support/docs/kane-cli-configuration/#chrome-management)
 5. If you only need to connect to an already-running Chrome:
    ```bash
    kane-cli run "..." --cdp-endpoint http://localhost:9222
@@ -92,11 +90,13 @@ Kill any existing processes, then retry.
 
 Verify both values against the credentials shown in your <BrandName /> dashboard, then pass them on the command line:
 
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli run "<objective>" \
-  --username "YOUR_LT_USERNAME" \
-  --access-key "YOUR_LT_ACCESS_KEY"
+kane-cli run "<objective>" \\
+  --username "YOUR_LAMBDATEST_USERNAME" \\
+  --access-key "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+</div>
 
 If they still do not work, regenerate the access key in the dashboard and retry.
 
@@ -105,12 +105,13 @@ If they still do not work, regenerate the access key in the dashboard and retry.
 **Cause:** No profile exists yet.
 
 **Fix:** Run the login flow:
-
+<div className="lambdatest__codeblock">
 ```bash
-kane-cli login --username "YOUR_LT_USERNAME" --access-key "YOUR_LT_ACCESS_KEY"
+kane-cli login --username "YOUR_LAMBDATEST_USERNAME" --access-key "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+</div>
 
-Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**.
+Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 ### Basic auth not working
 
@@ -147,7 +148,7 @@ Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.c
 
 **Fix:**
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
-2. **File location.** Confirm your file is in the right place — see [loading order](/docs/kane-cli-variables-and-context/#loading-order).
+2. **File location.** Confirm your file is in the right place — see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
 3. **Inline test.** Bypass file loading by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
@@ -246,7 +247,7 @@ node --version   # Must be 18 or higher
 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is informational — your current version still works. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
+The notice is informational — your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
 
 ---
 

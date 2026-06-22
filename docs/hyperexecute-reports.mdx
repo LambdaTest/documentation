@@ -1,0 +1,709 @@
+---
+title: "Job Reports"
+sidebarTitle: "Configure Job Reports"
+description: "Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by TestMu AI. Configure per-framework job reports, receive them via email, and reference every supported framework in one place."
+keywords: ['TestMu AI Hyperexecute', 'TestMu AI Hyperexecute help', 'TestMu AI Hyperexecute documentation']
+"og:description": "Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by TestMu AI."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+HyperExecute Job Reports provide summarized job information, including status counts and links to tests. They are designed to offer deep insights into the performance of your tests so you can identify issues, track progress, and enhance your testing workflow. You can generate and download detailed reports at the end of job execution that help you analyze the outcome of your tests based on your framework. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
+
+## Steps to Generate and Download Reports
+
+Follow the below mentioned steps to generate the Reports for your desired framework:
+
+**Step 1:** Go to the HyperExecute YAML file.
+
+**Step 2:** Add the below mentioned parameters in the YAML file to generate the Reports.
+
+- You must set the `report` flag to **true**.
+- You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it.
+
+```yaml
+report: true
+partialReports:
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+```
+
+<Warning>
+If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
+</Warning>
+
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
+
+**Step 4:** Click on the **Open** button of the **Reports**.
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/reports.gif' alt="Image" />
+
+Here is the sample report generated.
+
+<img loading="lazy" src='/assets/images/hyperexecute/features/artifacts-reports/report4.png' alt="Image" />
+
+## Generate Multiple Reports
+If you want to generate multiple reports of different types supported by HyperExecute, simply add the required specifications in the `partialReports` field as shown below:
+
+```yaml
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
+```
+
+## Regex Support for Dynamic Report Paths
+You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
+
+Example:
+```yaml title="hyperexecute.yaml"
+partialReports:
+  location: reports/**/cucumber/
+  # location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
+```
+
+Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+
+```java title="Testrunner.java"
+plugin = {
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+}
+```
+
+## Receive Reports and Artifacts via Email
+
+Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. HyperExecute lets you receive Job Reports and Artifacts directly to your specified email addresses, eliminating the need for manual downloads so you can access critical job information instantly.
+
+### YAML Configuration
+
+To receive the Artifacts and Reports via mail, add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent:
+
+```yaml
+email:
+  to:
+    - <your_email_id@example.com>
+    - <another_email_id@example.com>
+```
+
+You can also use the `currentUser` tag to send the reports to the email ID associated with your <BrandName /> account:
+
+```yaml
+email:
+  to:
+    - currentUser
+```
+
+### Receive your Artifacts via Email
+
+Mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
+
+<Note>
+**NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
+</Note>
+
+```yaml
+uploadArtifacts:
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+      - xmlresults.xml
+    email:
+      to:
+        - <your_email_id@example.com>
+        - <another_email_id@example.com>
+
+  - name: Reports 2
+    path:
+      - ProtractorTestReport.html
+      - xmlresults.xml
+    email:
+      to:
+        - currentUser
+```
+
+### Receive your Job Report via Email
+
+**Step 1:** Set the `report` flag to `true` in the HyperExecute YAML.
+
+**Step 2:** Make sure to check the `location`, `type` and `frameworkName` fields in the `partialReports` flag are configured correctly.
+
+**Step 3:** Add the `email` flag with `to` tag in the YAML file configuration:
+
+```yaml
+report: true
+partialReports:
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+  email:
+    to:
+      - <your_email_id@example.com>
+      - <another_email_id@example.com>
+```
+
+### Correct format of entering the Email IDs
+
+The Email IDs that you enter must be valid. You can enter your email IDs in the formats mentioned below:
+
+```yaml
+- John Doe <johndoe@example.com>
+- John <johndoe@example.com>
+- johndoe@example.com
+```
+
+However, if your email IDs are added in an unsupported format, the feature will not work. A few examples of unsupported email ID formats are added below:
+
+```yaml
+- John Doe johndoe@example.com>
+- John <<johndoe@example.com>
+- John johndoe@example.com
+- John Doe
+```
+
+Once your email IDs are added, you can download the report from the email, or open the clickable link in the email and view the report on your browser.
+
+### Dynamically set your email address
+Instead of hardcoding the email address in your YAML configuration, you can use a variable that is set dynamically when you pass the execution command.
+
+In this example, the `${email}` and `${email1}` variables are used to specify the email address. You can pass the value of this variable using the [`vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag as an argument when executing your test via CLI.
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+# highlight-start
+  email:
+      to:
+        - "${email}"
+        - "${email1}"
+# highlight-end
+
+uploadArtifacts:
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+# highlight-start
+    email:
+      to:
+        - "${email}"
+        - "${email1}"
+# highlight-end
+```
+
+This is how you can pass the value of your email address via CLI:
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
+```
+
+<Note>
+**If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.**
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+# highlight-start
+  email:
+      to:
+        - "${email}"
+# highlight-end
+
+uploadArtifacts:
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+# highlight-start
+    email:
+      to:
+        - "${email}"
+# highlight-end
+```
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com,abc@xyz.com,def@wxy.com"
+```
+</Note>
+
+## Supported Frameworks Reference
+
+HyperExecute supports consolidated reports for a wide range of frameworks. The `partialReports` block is nearly identical across frameworks — only the `frameworkName`, `type`, and report `location` change. The table below lists every supported framework, its exact `frameworkName` value, the report `type`, and the typical report `location`. Frameworks that need extra setup (a listener, runner option, or reporter config) have a short subsection below the table.
+
+| Framework | `frameworkName` | `type` | Report `location` | Notes |
+| --- | --- | --- | --- | --- |
+| Extent (v ≤ 2) | `extent` | `json` | `reports/json` | Java/TestNG/Selenium. Uses `com.relevantcodes` `extentreports` 2.41.2 and a custom listener. See [Extent Report](#extent-report). |
+| Extent (v > 2) | `extent` | `json` | `reports/json` | Uses `com.aventstack` `extentreports` 5.x with `ExtentHtmlReporter`. See [Extent Report](#extent-report). |
+| Extent Native | `extent-native` | `json` | `reports/json` | Consolidated HTML built from per-VM JSON. Requires Extent v5 (`com.aventstack`). See [Extent Native Report](#extent-native-report). |
+| Native TestNG | `testng-native` | `json` | location of the `emailable-report.html` file | Consolidated HTML generated by the TestNG framework. See [Native TestNG Report](#native-testng-report). |
+| TestNG | `testng` | `html` | `target/surefire-reports/html` | Default TestNG surefire HTML report. |
+| Allure | `allure` | `html` | `reports` (parent of `allure-results`) | Multi-language. Supports optional `configPath` for custom plugins. See [Allure Report](#allure-report). |
+| Cucumber | `cucumber` | `json` | `target/cucumber-reports/` | Requires the JSON plugin in `@CucumberOptions`. See [Cucumber Report](#cucumber-report). |
+| Playwright HTML | `playwright` | `html` | `playwright-report` | Built-in HTML reporter; must set `open: 'never'`. See [Playwright HTML Report](#playwright-html-report). |
+| SpecFlow | `specflow` | `html` | `YOUR_REPORTS_LOCATION` | BDD for .NET. See [SpecFlow Report](#specflow-report). |
+| Custom SpecFlow | `specflow-custom` | `xml` | `YOUR_REPORTS_LOCATION` | Tag/suite-based summaries, supports `email.metaInfo`. See [Custom SpecFlow Report](#custom-specflow-report). |
+| Cypress Mochawesome | `cypress` | `html` | `cypress/results` | Uses `cypress-multi-reporters` + mochawesome (JSON merged). Do not change `reportDir`. See [Cypress Mochawesome Report](#cypress-mochawesome-report). |
+| JUnit XML | `junit` | `xml` | `reports/` | XML-based unit test result format. |
+| Karate | `karate` | `html` | `target` | Karate framework HTML report. |
+| Robot | `robot` | `json` | `Reports` | Requires `--outputdir Reports` in `testRunnerCommand`. See [Robot Report](#robot-report). |
+| Katalon | `katalon` | `html` | `Reports/` | Katalon Studio HTML report (consolidated for Katalon 10+). See [Katalon Report](#katalon-report). |
+
+<Note>
+The baseline concept is the same across all frameworks: produce your framework's report into a known directory, then point `partialReports.location` at that directory (or its parent, where noted). Set `report: true` and provide the matching `frameworkName` and `type`.
+</Note>
+
+## Framework-specific Setup
+
+### Extent Report
+Extent Reports is a powerful reporting library that generates visually appealing, detailed test reports — including pass/fail/skip status, logs, screenshots, and system/environment details. It is popular in Selenium, Appium, and API testing frameworks.
+
+**Version ≤ 2** — add the dependency to `pom.xml`:
+
+```xml title="pom.xml"
+<dependency>
+  <groupId>com.relevantcodes</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>2.41.2</version>
+</dependency>
+```
+
+Create a listener (e.g. `ExtentReportListenerV2.java`) that initializes and flushes Extent Reports during execution:
+
+```java title="ExtentReportListenerV2.java"
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult
+public class ExtentReportListenerV2 implements ITestListener {
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        // Initialize ExtentReports with the report path
+        extent = new ExtentReports("extent-report.html", true);
+        extent.addSystemInfo("Environment", "QA").addSystemInfo("User", "Tester");
+    }
+```
+
+**Version > 2** — add the latest dependency to `pom.xml`:
+
+```xml title="pom.xml"
+<dependency>
+  <groupId>com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>5.0.9</version> {/* Use latest version available */}
+</dependency>
+```
+
+For Extent Reports > 2, use `ExtentHtmlReporter` in `ExtentReportListener.java`:
+
+```java title="ExtentReportListener.java"
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult
+public class ExtentReportListener implements ITestListener {
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
+        htmlReporter.config().setTheme(Theme.STANDARD);
+        htmlReporter.config().setDocumentTitle("Test Report");
+        htmlReporter.config().setReportName("Automation Test Results")
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+    }
+```
+
+HyperExecute YAML:
+
+```yaml
+report: true
+partialReports:
+    type: json
+    location: reports/json
+    frameworkName: extent
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/extent.png' alt="Image" />
+
+### Extent Native Report
+Extent Native Reports offer a standardized summary extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job, consolidated into a single HTML report.
+
+**Prerequisites:**
+1. Upgrade to Extent reporting version 5 in `pom.xml`.
+2. Update import statements from `com.relevantcodes` (version 2) to `com.aventstack` (version 5).
+
+Upgrade the dependency:
+
+```xml
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.0</version>
+</dependency>
+```
+
+Modify import statements:
+
+```java
+// Before
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+// After
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+```
+
+Generate individual JSON reports in your codebase — these serve as the source for the Extent Native Reports — then configure the YAML:
+
+```yaml
+report: true
+partialReports:
+    type: json
+    location: reports/json
+    frameworkName: extent-native
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/extent-native.png' alt="Image" />
+
+### Native TestNG Report
+The Native TestNG Reports offer a standardized summary extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job, consolidated into an HTML report generated by the TestNG framework.
+
+Ensure that the `emailable-report.html` file is generated within your test-suite, then configure the YAML:
+
+```yaml
+report: true
+partialReports:
+    type: json
+    location: <location_of_the_emailable-report.html_file>
+    frameworkName: testng-native
+```
+
+### Allure Report
+Allure Framework is a versatile, lightweight, multi-language test reporting tool that produces a concise, visually appealing web report. If your testing framework already generates Allure reports, HyperExecute generates a consolidated Allure report for each job.
+
+To configure the Allure reporter in the **WDIO framework**, update `wdio.conf.js`:
+
+```javascript title="wdio.conf.js"
+export const config = {
+    reporters: [['allure', {
+        outputDir: 'reports/allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
+}
+```
+
+- `outputDir` specifies where Allure results are stored (here `reports/allure-results`). This parent folder is essential for HyperExecute integration.
+- `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` customize reporting options.
+
+<Tip>
+**Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory.**
+
+```yaml title="allure.properties"
+allure.results.directory=reports/allure-results
+```
+</Tip>
+
+HyperExecute YAML:
+
+```yaml
+report: true
+partialReports:
+  location: reports
+  type: html
+  frameworkName: allure
+```
+
+<Note>
+**NOTE:** The above example is only for the WDIO framework. The baseline concept remains the same across all frameworks: the allure-results should be saved in a parent folder, and that parent folder's location is provided in the `location` parameter of `partialReports` in the HyperExecute YAML file.
+</Note>
+
+<Info>
+**To enrich Allure reports with more specific details, you can use custom plugins. These plugins require configurations to function properly.**
+
+Use the `configPath` flag within the HyperExecute YAML to specify the location of the configuration file containing the custom plugin settings. This is passed as `allure --config <CONFIG_PATH>`.
+
+```yaml
+report: true
+partialReports:
+  location: reports
+  # highlight-next-line
+  configPath: allure-config.yml
+  type: html
+  frameworkName: allure
+```
+</Info>
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/allure.png' alt="Image" />
+
+**Allure Test Insights** give you an overview of test execution results — test status and duration — via a dedicated widget. Refer to the [Allure API Test Insights with HyperExecute documentation](/support/docs/analytics-allure-api-widgets/) for a comprehensive explanation.
+
+<img loading="lazy" src='/assets/images/analytics/api-test-report.webp' alt="cmd" width="800" height="400"  />
+
+### Cucumber Report
+Cucumber reporting visualizes test results for the Cucumber BDD framework, where tests are written in plain Gherkin syntax. Cucumber provides basic CLI reporting, while plugins generate rich HTML or JSON reports.
+
+In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths:
+
+```javascript title="TestRunner.java"
+@CucumberOptions(
+        features = "src/main/java/Features",
+        glue = {"Steps"},
+        tags = {"~@Ignore"},
+        format = {
+                "pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        },plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+```
+
+Explanation of plugin options:
+
+- **pretty:** Outputs readable format in console.
+- **html:target/cucumber-reports/cucumber-pretty:** Generates HTML report in the target directory.
+- **json:target/cucumber-reports/CucumberTestReport.json:** Generates JSON report, often required for CI/CD and advanced reporting.
+- **rerun:target/cucumber-reports/rerun.txt:** Logs any failed scenarios for rerun.
+
+HyperExecute YAML:
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+ location: target/cucumber-reports/
+ frameworkName: cucumber
+ type: json
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/cucumber.png' alt="Image" />
+
+### Playwright HTML Report
+Playwright offers built-in, interactive HTML reports for visualizing your test runs.
+
+In `playwright.config.js`, enable the HTML reporter:
+
+```javascript title="playwright.config.js"
+import { devices } from '@playwright/test';
+
+const config = {
+  ...//
+  reporter: [['html', { open: 'never' }]],
+  ...//
+};
+```
+
+<Note>
+- In the case of HyperExecute, we always have to set the value of `open: never`.
+- By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
+</Note>
+
+HyperExecute YAML:
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  frameworkName: playwright
+  location: playwright-report
+  type: html
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/playwright-html-report.gif' alt="Image" />
+
+### SpecFlow Report
+SpecFlow is a free tool for automating tests using BDD, often used for .NET projects.
+
+<Note>
+We also offer a [Custom SpecFlow report](#custom-specflow-report).
+</Note>
+
+Configure all necessary dependencies in your project, then configure the report parameters in the HyperExecute YAML:
+
+```yaml
+report: true
+partialReports:
+  location: YOUR_REPORTS_LOCATION
+  type: html
+  frameworkName: specflow
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/specflow.png' alt="Image" />
+
+### Custom SpecFlow Report
+The custom SpecFlow report provides detailed, tag-based and suite-based test summaries delivered via email.
+
+**Prerequisites:** a valid <BrandName /> account, a configured HyperExecute environment, and a SpecFlow-based test suite.
+
+Modify the YAML configuration file:
+
+```yaml
+report: true
+partialReports:
+  location: YOUR_REPORTS_LOCATION
+  type: xml
+  frameworkName: specflow-custom
+  email:
+    to: [YOUR_EMAIL_ID]
+    metaInfo: [ "project-name:YOUR_CUSTOM_PROJECT_NAME", "project-env: YOUR_CUSTOM_PROJECT_ENV" ]
+```
+
+Explanation:
+- `report: true` → Enables the reporting feature.
+- `partialReports.location` → Specifies the directory where the partial reports will be stored.
+- `partialReports.type: xml` → Configures the report format as XML.
+- `partialReports.frameworkName: specflow-custom` → Sets the framework name.
+- `email.to` → Defines the recipient email address where the reports will be sent.
+- `email.metaInfo` → Adds metadata, including project name and environment details, to the report.
+
+Add the following capability in your test script to ensure the correct execution status is recorded:
+
+`((IJavaScriptExecutor)driver).ExecuteScript($"lambda-info=suitename:YOUR_SUITE_NAME:passed");`
+
+Explanation:
+- This script sends test execution information (suite name and status) to <BrandName />.
+- Replace `YOUR_SUITE_NAME` with the appropriate suite name.
+- The passed status can be dynamically changed based on the test result.
+
+Once executed, the custom SpecFlow report is generated and emailed. It includes tag-based and suite-based test summaries and details, counts of tests passed/failed/skipped, and meta information such as project name and environment.
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/custom-specflow.png' alt="Image" />
+
+### Cypress Mochawesome Report
+The Mochawesome reporter is a custom Cypress reporter that generates clean, interactive standalone HTML reports with filtering and stack traces for failures.
+
+In `cypress.config.js`, enable Mochawesome via `cypress-multi-reporters`:
+
+```javascript title="cypress.config.js"
+"reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": [
+      "mochawesome"
+    ],
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": true,
+      "html": false,
+      "json": true
+    }
+  }
+```
+
+<Note>
+- The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
+- The `html` option should be set to `false` because the JSON files are merged later, and the mocha-merge utility does not support HTML files.
+- Ensure the `reportDir` path is set to `"cypress/results"` — this path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
+</Note>
+
+HyperExecute YAML:
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  frameworkName: cypress
+  location: cypress/results
+  type: html
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.gif' alt="Image" />
+
+### JUnit XML Report
+A JUnit XML report is an XML-based test result file format representing test execution results, including which tests passed, failed, or were skipped, along with associated error messages.
+
+Configure all necessary dependencies in your project, then configure the HyperExecute YAML:
+
+```yaml
+report: true
+partialReports:
+    frameworkName: junit
+    location: reports/
+    type: xml
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/junit-xml-report.png' alt="Image" />
+
+### Karate Report
+The Karate framework supports detailed HTML test execution reports.
+
+<Note>
+Ensure your project is configured with the **Karate framework** and all test scripts are in place.
+</Note>
+
+Configure all necessary dependencies, then configure the HyperExecute YAML:
+
+```yaml
+report: true
+partialReports:
+    location: target
+    type: html
+    frameworkName: karate
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/knowledge-base/reports/karate-reports.png' alt="Image" />
+
+### Robot Report
+Robot Framework is a generic, open-source, keyword-driven automation framework for acceptance testing, ATDD, and RPA.
+
+<Note>
+Ensure your project is configured with the Robot framework and all test scripts are in place.
+</Note>
+
+Add the `--outputdir` option to your runner command, then configure the report parameters:
+
+```yaml
+testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports
+
+report: true
+partialReports:
+  type: json
+  location: Reports
+  frameworkName: robot
+```
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/robot-report.png' alt="Image" />
+
+### Katalon Report
+HyperExecute integrates with Katalon Studio to generate and view detailed execution reports, including test case status (Pass/Fail/Skipped), execution time and duration, environment and browser details, and stack traces for failed tests.
+
+<Note>
+Ensure your project is configured with the [Katalon framework](https://www.lambdatest.com/support/docs/katalon-integration-with-hyperexecute/) and all test scripts are in place.
+</Note>
+
+Add the following configurations in your YAML file:
+
+```yaml
+report: true
+partialReports:
+  type: html
+  location: Reports/
+  frameworkName: katalon
+```
+
+<Note>
+This image shows the consolidated report of Katalon 10+ versions.
+</Note>
+
+<img loading="lazy" src='/assets/images/hyperexecute/release-notes/katalon-report.png' alt="Image" />
+
+## Related Reports
+
+Beyond per-framework reports, HyperExecute also offers the [Error Categorization Report](/support/docs/error-categorization-report/), which classifies test failures systematically — grouping failures with shared characteristics, enabling navigation through problematic test stages, and providing downloadable data for analysis and resolution.

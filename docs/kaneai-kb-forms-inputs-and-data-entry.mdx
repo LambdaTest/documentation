@@ -1,6 +1,6 @@
 ---
 title: "Forms, Inputs & Data Entry"
-sidebarTitle: "Forms, Inputs & Data Entry"
+sidebarTitle: "Fill Forms, Inputs & Data Entry"
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
@@ -29,7 +29,7 @@ type ${username} in the username field
 ```
 
 <Tip>
-Parameters once used in authoring can be used to input different data values via dataset. See the [Parameters](/docs/kane-ai-using-parameters/) guide for more information.
+Parameters once used in authoring can be used to input different data values via dataset. See the [Parameters](/support/docs/kane-ai-using-parameters/) guide for more information.
 </Tip>
 For test data that needs to be unique each run, use **smart variables**:
 
@@ -39,7 +39,7 @@ type {{smart.random_phone}} in the phone number field
 ```
 
 <Tip>
-Smart variables like `{{smart.random_email}}` generate unique values every run, which is ideal for registration flows where duplicate emails would fail. See the [Smart Variables](/docs/kane-ai-smart-variables/) guide for the full list.
+Smart variables like `{{smart.random_email}}` generate unique values every run, which is ideal for registration flows where duplicate emails would fail. See the [Smart Variables](/support/docs/kane-ai-smart-variables/) guide for the full list.
 </Tip>
 ## Dropdown & Select Menus
 
@@ -177,7 +177,7 @@ upload file {{FILE_sample_report_pd}} to the file input
 ```
 
 <Note>
-For detailed instructions, refer to [File Upload & Download Testing](/docs/kaneai-upload-and-download-files).
+For detailed instructions, refer to [File Upload & Download Testing](/support/docs/kaneai-upload-and-download-files).
 </Note>
 ## OTP & PIN Fields
 
@@ -202,7 +202,7 @@ click on "Verify" button
 assert "Welcome, John" is visible
 ```
 
-For real TOTP-based MFA, see the [TOTP Authentication](/docs/kaneai-totp) guide.
+For real TOTP-based MFA, see the [TOTP Authentication](/support/docs/kaneai-totp) guide.
 
 ## Sliders & Range Inputs
 

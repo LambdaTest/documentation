@@ -1,0 +1,42 @@
+---
+title: "Label in Name (2.5.3)"
+sidebarTitle: "Label in Name (2.5.3)"
+description: "Rule-level Accessibility guidance for Label in Name (WCAG 2.5.3 Level A)."
+"og:description": "Rule-level Accessibility guidance for Label in Name (WCAG 2.5.3 Level A)."
+---
+
+When a UI component has a visible text label, the accessible name must contain the visible text so that voice-input users can activate the control by speaking its visible label.
+
+
+<Info>
+**WCAG Reference**
+**Applies to:** WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.1 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html)
+</Info>
+
+
+## What this rule checks
+
+The scanner compares the visible label text with the computed accessible name and flags mismatches where the visible text is not included in the accessible name.
+
+## Why it matters
+
+Voice-input users say "click [visible label]" to interact with controls. If the accessible name differs from the visible label, the voice command fails and the user cannot activate the control.
+
+## Common failure patterns
+
+- a button that shows "Submit" visually but has `aria-label="Send form data"`
+- an input labeled "Email" visually but `aria-labelledby` points to a hidden element with different text
+- icon buttons with visible tooltip text that does not match the `aria-label`
+
+## Remediation guidance
+
+- ensure the accessible name starts with or contains the visible label text
+- prefer visible `<label>` elements over `aria-label` when visible text is available
+- when `aria-label` is needed, include the visible text within it (e.g., `aria-label="Submit order form"` for a button labeled "Submit")
+- test with voice-input software to confirm controls can be activated by speaking their visible label
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)
