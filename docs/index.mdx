@@ -1,6 +1,7 @@
 ---
 mode: "custom"
 title: "TestMu AI Documentation"
+description: "Explore guides, API docs, and examples for TestMu AI (Formerly LambdaTest) - the AI-native quality engineering platform."
 sidebarTitle: "Introduction"
 ---
 
@@ -17,7 +18,7 @@ sidebarTitle: "Introduction"
         </p>
         <button
           type="button"
-          className="mt-8 hidden w-full max-w-xl cursor-pointer items-center rounded-full bg-white py-4 pl-4 pr-4 text-left text-sm leading-6 text-gray-500 lg:flex"
+          className="mt-8 flex w-full max-w-xl cursor-pointer items-center rounded-full bg-white py-4 pl-4 pr-4 text-left text-sm leading-6 text-gray-500"
           id="home-search-entry"
           style={{ boxShadow: '0px 1px 4px 0px rgba(8, 9, 10, 0.25), 0px 0px 0px 4px rgba(255, 255, 255, 0.20)' }}
           onClick={() => document.getElementById('search-bar-entry').click()}
@@ -87,38 +88,30 @@ sidebarTitle: "Introduction"
 <p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
   New here? These are the most common places to start.
 </p>
-<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-  <a href="/support/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">KaneAI</h4></div>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">KaneAI</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Describe a test in plain language across web, mobile, and API.</p>
   </a>
-  <a href="/support/docs/getting-started-with-agent-to-agent-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="robot" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Agent Testing</h4></div>
-    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test chatbots, voicebots, and phone agents for hallucinations and bias.</p>
+  <a href="/docs/getting-started-with-desktop-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="display" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Real Time Testing</span></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test your site or app live on 3,000+ real browsers and devices.</p>
   </a>
-  <a href="/support/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Automation</h4></div>
+  <a href="/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Web Automation</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Selenium, Cypress, Playwright at scale across 3,000+ environments.</p>
   </a>
-  <a href="/support/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Automation</h4></div>
+  <a href="/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">App Automation</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Appium, Espresso, XCUITest on real iOS and Android devices.</p>
   </a>
-  <a href="/support/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">HyperExecute</h4></div>
+  <a href="/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">HyperExecute</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run your suites up to 70% faster with intelligent orchestration.</p>
   </a>
-  <a href="/support/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Manager</h4></div>
+  <a href="/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Test Manager</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Write or generate test cases, organize cycles, and track coverage.</p>
-  </a>
-  <a href="/support/docs/smart-visual-regression-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="image" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">SmartUI</h4></div>
-    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Catch visual bugs using AI image comparison, ignoring rendering noise.</p>
-  </a>
-  <a href="/support/docs/accessibility-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="universal-access" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Accessibility</h4></div>
-    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Scan pages and apps against WCAG and ADA compliance standards.</p>
   </a>
 </div>
 
@@ -132,8 +125,8 @@ sidebarTitle: "Introduction"
 <h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Planning</h3>
 <p className="m-0 text-sm text-gray-600 dark:text-gray-300">Decide what to test and organize it before anything runs.</p>
 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Manager</h4></div>
+  <a href="/docs/test-manager" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="list-check" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Test Manager</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Write or generate test cases, organize cycles, and link requirements.</p>
   </a>
 </div>
@@ -142,24 +135,24 @@ sidebarTitle: "Introduction"
 <h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Authoring</h3>
 <p className="m-0 text-sm text-gray-600 dark:text-gray-300">Create your tests, for your app and for your AI agents.</p>
 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">KaneAI</h4></div>
+  <a href="/docs/getting-started-with-kane-ai" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="wand-magic-sparkles" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">KaneAI</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Describe tests in plain language; KaneAI writes, runs, and exports them.</p>
   </a>
-  <a href="/support/docs/kane-cli-quickstart" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="terminal" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Kane CLI</h4></div>
+  <a href="/docs/kane-cli-quickstart" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="terminal" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Kane CLI</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run natural-language test authoring from your terminal and CI pipelines.</p>
   </a>
-  <a href="/support/docs/getting-started-with-agent-to-agent-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="robot" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Agent Testing</h4></div>
+  <a href="/docs/getting-started-with-agent-to-agent-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="robot" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Agent Testing</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test chatbots, voicebots, and phone agents for hallucinations and bias.</p>
   </a>
-  <a href="/support/docs/browser-cloud-intro" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="cloud" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Browser Cloud</h4></div>
+  <a href="/docs/browser-cloud-intro" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="cloud" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Browser Cloud</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Real Chrome sessions letting AI agents act on the live web.</p>
   </a>
-  <a href="/support/docs/testmu-mcp-server" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">MCP Server</h4></div>
+  <a href="/docs/testmu-mcp-server" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">MCP Server</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Connect your IDE and AI assistants to your test data.</p>
   </a>
 </div>
@@ -169,63 +162,67 @@ sidebarTitle: "Introduction"
 <p className="m-0 text-sm text-gray-600 dark:text-gray-300">Run your tests at scale, automated or manual.</p>
 
 <div className="mt-5 flex items-baseline gap-3">
-  <h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Automated</h4>
+  <span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Automated</span>
   <span className="text-[13px] text-gray-600 dark:text-gray-300">Run your own test scripts across browsers, devices, and CI.</span>
 </div>
 <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Automation</h4></div>
+  <a href="/docs/getting-started-with-testmu-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="code" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Web Automation</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Selenium, Cypress, Playwright across 3,000+ browser and OS combinations.</p>
   </a>
-  <a href="/support/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Automation</h4></div>
+  <a href="/docs/app-automation" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">App Automation</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run Appium, Espresso, XCUITest on real and virtual mobile devices.</p>
   </a>
-  <a href="/support/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">HyperExecute</h4></div>
+  <a href="/docs/getting-started-with-hyperexecute" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="bolt" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">HyperExecute</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Orchestration engine running your suites up to 70% faster automatically.</p>
   </a>
-  <a href="/support/docs/smart-visual-regression-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="image" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">SmartUI</h4></div>
+  <a href="/docs/smart-visual-regression-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="image" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">SmartUI</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Catch visual bugs using AI image comparison across all screens.</p>
   </a>
-  <a href="/support/docs/accessibility-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="universal-access" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Accessibility</h4></div>
+  <a href="/docs/accessibility-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="universal-access" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Accessibility</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Scan pages and native apps against WCAG and ADA standards.</p>
   </a>
-  <a href="/support/docs/web-scanner-overview" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="magnifying-glass" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Web Scanner</h4></div>
+  <a href="/docs/web-scanner-overview" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="magnifying-glass" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Web Scanner</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run visual and accessibility audits across thousands of URLs automatically.</p>
+  </a>
+  <a href="/docs/testing-locally-hosted-pages" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="fingerprint" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Test Locally Hosted Websites</span></div>
+    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test localhost, staging, or firewalled sites through a secure tunnel.</p>
   </a>
 </div>
 
 <div className="mt-7 flex items-baseline gap-3">
-  <h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Manual <span className="font-normal text-gray-600 dark:text-gray-300">· Real Time</span></h4>
+  <span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Manual <span className="font-normal text-gray-600 dark:text-gray-300">· Real Time</span></span>
   <span className="text-[13px] text-gray-600 dark:text-gray-300">Test interactively, by yourself, on the same cloud.</span>
 </div>
 <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="desktop" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Desktop</h4></div>
+  <a href="/docs/getting-started-with-desktop-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="desktop" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Desktop</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test any website on desktop browsers running on real machines.</p>
   </a>
-  <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile Web (Virtual Device)</h4></div>
+  <a href="/docs/getting-started-with-mobile-browser-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Mobile Web (Virtual Device)</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test websites on mobile browsers running on virtual emulator devices.</p>
   </a>
-  <a href="/support/docs/browser-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile Web (Real Device)</h4></div>
+  <a href="/docs/browser-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Mobile Web (Real Device)</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test websites on mobile browsers running on real cloud devices.</p>
   </a>
-  <a href="/support/docs/app-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile App (Real Device)</h4></div>
+  <a href="/docs/app-testing-on-real-devices" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Mobile App (Real Device)</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test native iOS and Android apps on real cloud devices.</p>
   </a>
-  <a href="/support/docs/getting-started-with-mobile-app-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Mobile App (Virtual Device)</h4></div>
+  <a href="/docs/getting-started-with-mobile-app-real-time-testing" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen-button" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Mobile App (Virtual Device)</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test native iOS and Android apps on virtual emulator devices.</p>
   </a>
-  <a href="/support/docs/accessibility-app-scanner" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="mobile-screen" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">App Accessibility Scanner</h4></div>
+  <a href="/docs/accessibility-app-scanner" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="mobile-screen" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">App Accessibility Scanner</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Run accessibility checks live on a real Android device session.</p>
   </a>
 </div>
@@ -234,28 +231,32 @@ sidebarTitle: "Introduction"
 <h3 className="mt-14 mb-1 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Test Analysis</h3>
 <p className="m-0 text-sm text-gray-600 dark:text-gray-300">Turn your test results into decisions.</p>
 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/analytics-test-insights" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="chart-line" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Insights</h4></div>
+  <a href="/docs/analytics-test-insights" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="chart-line" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Test Insights</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Read every run: pass/fail trends, flaky tests, and root causes.</p>
   </a>
 </div>
 
-{/* ===================== OTHER USE CASES ===================== */}
-<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Other use cases</h2>
+{/* ===================== INTEGRATIONS ===================== */}
+<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Integrations</h2>
 <p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
-  Test in your own environment, connect to your existing stack, and manage your team and account.
+  Connect TestMu AI to your existing stack: CI/CD, issue trackers, and chat.
 </p>
 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  <a href="/support/docs/testing-locally-hosted-pages" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="fingerprint" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Test Locally Hosted Websites</h4></div>
-    <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Test localhost, staging, or firewalled sites through a secure tunnel.</p>
-  </a>
-  <a href="/support/docs/integrations-with-ci-cd-tools" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Third-Party Integrations</h4></div>
+  <a href="/docs/integrations-with-ci-cd-tools" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="plug" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Third-Party Integrations</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Connect CI/CD, Jira, Slack, GitHub, Jenkins, and 120+ other tools.</p>
   </a>
-  <a href="/support/docs/account-management" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md dark:border-white/10 dark:bg-white/5">
-    <div className="flex items-center gap-3"><Icon icon="gear" size={20} /><h4 className="m-0 text-base font-semibold text-gray-900 dark:text-white">Account Management</h4></div>
+</div>
+
+{/* ===================== ACCOUNT ===================== */}
+<h2 className="mt-16 mb-0 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Account & settings</h2>
+<p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+  Manage your team, organization, billing, and security.
+</p>
+<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="/docs/account-management" className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 no-underline cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#c24e00] hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-[#c24e00]">
+    <div className="flex items-center gap-3"><Icon icon="gear" size={20} /><span className="m-0 text-base font-semibold text-gray-900 dark:text-white transition-colors group-hover:text-[#c24e00] dark:group-hover:text-[#c24e00]">Account Management</span></div>
     <p className="m-0 text-sm leading-relaxed text-gray-600 dark:text-gray-300">Manage team members, roles, organizations, billing, and security.</p>
   </a>
 </div>
@@ -263,8 +264,8 @@ sidebarTitle: "Introduction"
 {/* ===================== CTA ===================== */}
 <div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-2xl border border-gray-200 bg-gradient-to-r from-[#fbf0e8] to-gray-50 p-7 dark:border-white/10 dark:from-[#2a1a10] dark:to-[#15110f] sm:flex-row sm:items-center">
   <div>
-    <h3 className="m-0 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Want a guided walkthrough?</h3>
-    <p className="mt-1.5 max-w-xl text-sm text-gray-600 dark:text-gray-300">See how TestMu AI fits your team's testing workflow, with a live demo from our engineers.</p>
+    <p className="m-0 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Want a guided walkthrough?</p>
+    <p className="mt-1.5 max-w-xl text-sm text-gray-600 dark:text-gray-300">See how TestMu AI fits your team's testing workflow, with a live demo from our experts.</p>
   </div>
   <a href="https://www.testmuai.com/demo/" className="inline-flex flex-none items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white no-underline transition hover:brightness-110">
     Book a Demo

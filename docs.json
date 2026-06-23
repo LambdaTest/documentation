@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "LambdaTest",
+  "name": "TestMu AI (Formerly LambdaTest)",
   "colors": {
     "primary": "#c24e00",
     "light": "#c24e00",
@@ -51,44 +51,55 @@
         "icon": "terminal",
         "pages": [
           {
-            "group": "Getting Started",
+            "group": "Kane CLI",
             "pages": [
-              "docs/kane-cli-installation",
-              "docs/kane-cli-quickstart",
-              "docs/kane-cli-authentication"
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "pages": [
-              "docs/kane-cli-modes",
-              "docs/kane-cli-configuration",
-              "docs/kane-cli-writing-objectives",
-              "docs/kane-cli-variables-and-context"
-            ]
-          },
-          {
-            "group": "Integrations & Automation",
-            "pages": [
-              "docs/kane-cli-tms-integration",
-              "docs/kane-cli-cicd",
-              "docs/kane-cli-parallel-execution"
-            ]
-          },
-          {
-            "group": "Agent Mode",
-            "pages": [
-              "docs/kane-cli-agent-mode",
-              "docs/kane-cli-skills"
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "docs/kane-cli-cli-reference",
-              "docs/kane-cli-error-codes",
-              "docs/kane-cli-troubleshooting",
-              "docs/kane-cli-changelog"
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "docs/kane-cli-introduction",
+                  "docs/kane-cli-installation",
+                  "docs/kane-cli-authentication",
+                  "docs/kane-cli-quickstart"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Core Concepts",
+                "pages": [
+                  "docs/kane-cli-modes",
+                  "docs/kane-cli-configuration",
+                  "docs/kane-cli-writing-objectives",
+                  "docs/kane-cli-variables-and-context"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Integrations & Automation",
+                "pages": [
+                  "docs/kane-cli-tms-integration",
+                  "docs/kane-cli-cicd",
+                  "docs/kane-cli-parallel-execution"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Agent Mode",
+                "pages": [
+                  "docs/kane-cli-agent-mode",
+                  "docs/kane-cli-skills"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "docs/kane-cli-cli-reference",
+                  "docs/kane-cli-error-codes",
+                  "docs/kane-cli-troubleshooting",
+                  "docs/kane-cli-changelog"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -98,51 +109,62 @@
         "icon": "cloud",
         "pages": [
           {
-            "group": "Get Started",
+            "group": "Browser Cloud",
             "pages": [
-              "docs/browser-cloud-intro",
-              "docs/browser-cloud-quickstart",
-              "docs/browser-cloud-quick-actions",
-              "docs/browser-cloud-skills"
-            ]
-          },
-          {
-            "group": "Connect & Manage Sessions",
-            "pages": [
-              "docs/browser-cloud-how-to-connect",
-              "docs/browser-cloud-connect",
-              "docs/browser-cloud-sessions-overview",
-              "docs/browser-cloud-session-lifecycle"
-            ]
-          },
-          {
-            "group": "Persist Login & State",
-            "pages": [
-              "docs/browser-cloud-profiles",
-              "docs/browser-cloud-context"
-            ]
-          },
-          {
-            "group": "Make Your Agent Production-Ready",
-            "pages": [
-              "docs/browser-cloud-stealth",
-              "docs/browser-cloud-tunnel",
-              "docs/browser-cloud-files",
-              "docs/browser-cloud-extensions",
-              "docs/browser-cloud-parallel-sessions"
-            ]
-          },
-          {
-            "group": "View & Debug Sessions",
-            "pages": [
-              "docs/browser-cloud-debugging"
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "docs/browser-cloud-session-configuration",
-              "docs/browser-cloud-api-reference"
+              {
+                "group": "Get Started",
+                "pages": [
+                  "docs/browser-cloud-intro",
+                  "docs/browser-cloud-quickstart",
+                  "docs/browser-cloud-quick-actions",
+                  "docs/browser-cloud-skills"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Connect & Manage Sessions",
+                "pages": [
+                  "docs/browser-cloud-how-to-connect",
+                  "docs/browser-cloud-connect",
+                  "docs/browser-cloud-sessions-overview",
+                  "docs/browser-cloud-session-lifecycle"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Persist Login & State",
+                "pages": [
+                  "docs/browser-cloud-profiles",
+                  "docs/browser-cloud-context"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Make Your Agent Production-Ready",
+                "pages": [
+                  "docs/browser-cloud-stealth",
+                  "docs/browser-cloud-tunnel",
+                  "docs/browser-cloud-files",
+                  "docs/browser-cloud-extensions",
+                  "docs/browser-cloud-parallel-sessions"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "View & Debug Sessions",
+                "pages": [
+                  "docs/browser-cloud-debugging"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "docs/browser-cloud-session-configuration",
+                  "docs/browser-cloud-api-reference"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -164,22 +186,27 @@
         "icon": "robot",
         "pages": [
           {
-            "group": "Get Started",
-            "expanded": false,
+            "group": "Agent Testing",
             "pages": [
-              "docs/ai-agent-testing-platform-overview",
-              "docs/agent-features-and-metrics",
-              "docs/testing-your-first-ai-agent",
-              "docs/testmu-a2a-cli",
-              "docs/chat-agent-api-integration"
-            ]
-          },
-          {
-            "group": "Reference",
-            "expanded": false,
-            "pages": [
-              "docs/getting-started-with-agent-testing-platform",
-              "docs/agent-testing-platform-faqs"
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/ai-agent-testing-platform-overview",
+                  "docs/agent-features-and-metrics",
+                  "docs/testing-your-first-ai-agent",
+                  "docs/testmu-a2a-cli",
+                  "docs/chat-agent-api-integration"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-agent-testing-platform",
+                  "docs/agent-testing-platform-faqs"
+                ]
+              }
             ]
           }
         ]
@@ -189,121 +216,150 @@
         "icon": "robot",
         "pages": [
           {
-            "group": "Get Started",
+            "group": "Kane AI",
             "pages": [
-              "docs/getting-started-with-kane-ai",
-              "docs/author-your-first-desktop-browser-test",
-              "docs/author-your-first-mobile-browser-test",
-              "docs/author-your-first-mobile-app-test",
-              "docs/kane-ai-test-plan"
-            ]
-          },
-          {
-            "group": "Write Test Steps",
-            "pages": [
-              "docs/kane-ai-command-guide",
-              "docs/kaneai-kb-finding-and-interacting-with-elements",
-              "docs/kaneai-kb-forms-inputs-and-data-entry",
-              "docs/kaneai-kb-assertions-and-validation",
-              "docs/kaneai-kb-dynamic-content-waits-and-page-state",
-              "docs/kaneai-manual-interaction",
-              "docs/kane-ai-click-interactions",
-              "docs/kane-ai-scroll-in-feature",
-              "docs/kane-ai-drag-drop",
-              "docs/kane-ai-javascript-execution",
-              "docs/kaneai-rename-instructions"
-            ]
-          },
-          {
-            "group": "Use Test Data",
-            "pages": [
-              "docs/kane-ai-using-variables",
-              "docs/kane-ai-secrets",
-              "docs/kane-ai-smart-variables",
-              "docs/kane-ai-using-parameters",
-              "docs/kane-ai-using-datasets"
-            ]
-          },
-          {
-            "group": "Add Logic & Reusable Modules",
-            "pages": [
-              "docs/kaneai-conditional-logic",
-              "docs/kaneai-while-loops",
-              "docs/kane-ai-modules",
-              "docs/kaneai-bulk-module-update",
-              "docs/kaneai-modules-versions-and-enhancement"
-            ]
-          },
-          {
-            "group": "Test APIs, Databases & Visual UI",
-            "pages": [
-              "docs/kaneai-kb-authentication-and-session-management",
-              "docs/kaneai-totp",
-              "docs/kane-ai-api-testing",
-              "docs/kaneai-database",
-              "docs/kaneai-upload-and-download-files",
-              "docs/kaneai-smartui-visual-testing"
-            ]
-          },
-          {
-            "group": "Configure the Test Session",
-            "pages": [
-              "docs/kaneai-advanced-settings",
-              "docs/kaneai-chrome-options",
-              "docs/kaneai-custom-headers",
-              "docs/kane-ai-geolocation-tunnel-proxy",
-              "docs/kaneai-smart-locator-priority"
-            ]
-          },
-          {
-            "group": "Test Native Mobile Apps",
-            "pages": [
-              "docs/kaneai-kb-mobile-app-testing-patterns",
-              "docs/kaneai-mobile-app-capabilities",
-              "docs/biometric-authentication",
-              "docs/camera-image-injection",
-              "docs/disable-screenshot-block",
-              "docs/video-injection",
-              "docs/kane-ai-deeplink-support",
-              "docs/kaneai-gps-location",
-              "docs/kaneai-network-throttling",
-              "docs/kaneai-mobile-app-accessibility"
-            ]
-          },
-          {
-            "group": "Run Tests",
-            "pages": [
-              "docs/kaneai-hyperexecute-test-run-execution",
-              "docs/test-runs-configurations",
-              "docs/kaneai-sequential-test-runs",
-              "docs/kaneai-scheduled-test-runs",
-              "docs/kaneai-dynamic-url-replacement"
-            ]
-          },
-          {
-            "group": "Debug & Triage Failures",
-            "pages": [
-              "docs/kaneai-test-run-instance-view",
-              "docs/kaneai-failure-conditions",
-              "docs/kaneai-auto-heal"
-            ]
-          },
-          {
-            "group": "Scale & Automate",
-            "pages": [
-              "docs/kaneai-ci-cd-automation",
-              "docs/kane-ai-jira-integration",
-              "docs/kaneai-github-app",
-              "docs/kane-ai-automation-code-generation",
-              "docs/kaneai-create-pr"
-            ]
-          },
-          {
-            "group": "Reference & Troubleshooting",
-            "pages": [
-              "docs/error-handling-kaneai",
-              "docs/kaneai-faqs",
-              "docs/kaneai-release-notes"
+              {
+                "group": "Get Started",
+                "pages": [
+                  "docs/getting-started-with-kane-ai",
+                  "docs/author-your-first-desktop-browser-test",
+                  "docs/author-your-first-mobile-browser-test",
+                  "docs/author-your-first-mobile-app-test",
+                  "docs/kane-ai-test-plan"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Write Test Steps",
+                "pages": [
+                  "docs/kane-ai-command-guide",
+                  "docs/kaneai-kb-finding-and-interacting-with-elements",
+                  "docs/kaneai-kb-forms-inputs-and-data-entry",
+                  "docs/kaneai-kb-assertions-and-validation",
+                  "docs/kaneai-kb-dynamic-content-waits-and-page-state",
+                  "docs/kaneai-manual-interaction",
+                  "docs/kane-ai-click-interactions",
+                  "docs/kane-ai-scroll-in-feature",
+                  "docs/kane-ai-drag-drop",
+                  "docs/kane-ai-javascript-execution",
+                  "docs/kaneai-rename-instructions",
+                  "docs/kane-ai-web-test-writing-guidelines",
+                  "docs/kaneai-edit-test-steps",
+                  "docs/kaneai-kb-js-snippets-and-workarounds"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Use Test Data",
+                "pages": [
+                  "docs/kane-ai-using-variables",
+                  "docs/kane-ai-secrets",
+                  "docs/kane-ai-smart-variables",
+                  "docs/kane-ai-using-parameters",
+                  "docs/kane-ai-using-datasets",
+                  "docs/kane-ai-using-json-variables",
+                  "docs/kaneai-variables-and-parameters"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Add Logic & Reusable Modules",
+                "pages": [
+                  "docs/kaneai-conditional-logic",
+                  "docs/kaneai-while-loops",
+                  "docs/kane-ai-modules",
+                  "docs/kaneai-bulk-module-update",
+                  "docs/kaneai-modules-versions-and-enhancement"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Test APIs, Databases & Visual UI",
+                "pages": [
+                  "docs/kaneai-kb-authentication-and-session-management",
+                  "docs/kaneai-totp",
+                  "docs/kane-ai-api-testing",
+                  "docs/kaneai-database",
+                  "docs/kaneai-upload-and-download-files",
+                  "docs/kaneai-smartui-visual-testing",
+                  "docs/kane-ai-network-assertions",
+                  "docs/kaneai-kb-api-testing-and-network-assertions"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Configure the Test Session",
+                "pages": [
+                  "docs/kaneai-advanced-settings",
+                  "docs/kaneai-chrome-options",
+                  "docs/kaneai-custom-headers",
+                  "docs/kane-ai-geolocation-tunnel-proxy",
+                  "docs/kaneai-smart-locator-priority"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Test Native Mobile Apps",
+                "pages": [
+                  "docs/kaneai-kb-mobile-app-testing-patterns",
+                  "docs/biometric-authentication",
+                  "docs/camera-image-injection",
+                  "docs/disable-screenshot-block",
+                  "docs/video-injection",
+                  "docs/kane-ai-deeplink-support",
+                  "docs/kaneai-gps-location",
+                  "docs/kaneai-network-throttling",
+                  "docs/kaneai-mobile-app-accessibility",
+                  "docs/kane-ai-mobile-app-capabilities",
+                  "docs/kaneai-scroll-until-mobile"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Run Tests",
+                "pages": [
+                  "docs/kaneai-hyperexecute-test-run-execution",
+                  "docs/test-runs-configurations",
+                  "docs/kaneai-sequential-test-runs",
+                  "docs/kaneai-scheduled-test-runs",
+                  "docs/kaneai-dynamic-url-replacement"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Debug & Triage Failures",
+                "pages": [
+                  "docs/kaneai-test-run-instance-view",
+                  "docs/kaneai-failure-conditions",
+                  "docs/kaneai-auto-heal"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Scale & Automate",
+                "pages": [
+                  "docs/kaneai-ci-cd-automation",
+                  "docs/kane-ai-jira-integration",
+                  "docs/kaneai-github-app",
+                  "docs/kane-ai-automation-code-generation",
+                  "docs/kaneai-create-pr"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Reference & Troubleshooting",
+                "pages": [
+                  "docs/kaneai-kb-knowledge-base-index",
+                  "docs/kane-ai-app-test-writing-guidelines",
+                  "docs/error-handling-kaneai",
+                  "docs/kaneai-faqs",
+                  "docs/kane-ai-free-trial-is-here",
+                  "docs/kaneai-release-notes",
+                  "docs/kaneai-release-notes-0-0-2",
+                  "docs/kaneai-release-notes-0-0-1"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -313,200 +369,218 @@
         "icon": "bolt",
         "pages": [
           {
-            "group": "Understand HyperExecute",
+            "group": "HyperExecute",
             "pages": [
-              "docs/getting-started-with-hyperexecute",
-              "docs/hyperexecute-vs-traditional-test-grids",
-              "docs/key-features-of-hyperexecute"
-            ]
-          },
-          {
-            "group": "Set Up & Authenticate",
-            "pages": [
-              "docs/hyperexecute-environment-variable-setup",
-              "docs/hyperexecute-how-to-configure-tunnel"
-            ]
-          },
-          {
-            "group": "Run Your First Job",
-            "pages": [
-              "docs/hyperexecute-running-your-first-job",
-              "docs/hyperexecute-guided-walkthrough",
-              "docs/hyperexecute-cli-gui",
-              "docs/saucelabs-to-hyperexecute-migrate"
-            ]
-          },
-          {
-            "group": "Configure Your YAML",
-            "pages": [
-              "docs/deep-dive-into-hyperexecute-yaml",
-              "docs/hyperexecute-generate-sample-yaml",
-              "docs/hyperexecute-yaml-version0.2",
-              "docs/hyperexecute-inherit-config",
-              "docs/hyperexecute-snooper",
-              "docs/hyperexecute-yaml-capability-overrides",
-              "docs/hyperexecute-how-to-configure-os-and-browser",
-              "docs/hyperexecute-how-to-configure-sourcePayload",
-              "docs/hyperexecute-gitignore",
-              "docs/hyperexecute-how-to-save-and-manage-secrets",
-              "docs/hyperexecute-how-to-manage-project-level-secrets",
-              "docs/hyperexecute-build-mobile-apps-using-tools",
-              "docs/hyperexecute-testng-use-cases",
-              "docs/hyperexecute-python-use-cases",
-              "docs/hyperexecute-csharp-use-cases",
-              "docs/hyperexecute-yaml-creation-for-playwright",
-              "docs/hyperexecute-how-to-perform-dependent-test-based-discovery",
-              "docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng"
-            ]
-          },
-          {
-            "group": "Languages & Frameworks",
-            "pages": [
-              "docs/hyperexecute-supported-languages-and-frameworks"
-            ]
-          },
-          {
-            "group": "Scale Your Test Runs",
-            "pages": [
-              "docs/hyperexecute-test-splitting-and-multiplexing",
-              "docs/hyperexecute-auto-split-strategy",
-              "docs/hyperexecute-matrix-multiplexing-strategy",
-              "docs/hyperexecute-hybrid-strategy",
-              "docs/hyperexecute-how-to-find-correct-concurrency",
-              "docs/hyperexecute-shared-cloud-usage-limit",
-              "docs/hyperexecute-prioritize-tests",
-              "docs/hyperexecute-failfast",
-              "docs/hyperexecute-test-muting",
-              "docs/hyperexecute-rerun-failed-tests",
-              "docs/hyperexecute-background-services",
-              "docs/hyperexecute-auto-healing",
-              "docs/hyperexecute-projects",
-              "docs/hyperexecute-workflows",
-              "docs/hyperexecute-test-chains",
-              "docs/hyperexecute-jobs-archiving",
-              "docs/hyperexecute-how-smart-caching-boosts-tests-speed",
-              "docs/hyperexecute-org-product-preferences"
-            ]
-          },
-          {
-            "group": "View Results & Reports",
-            "pages": [
-              "docs/hyperexecute-status",
-              "docs/hyperexecute-reports",
-              "docs/hyperexecute-artifacts",
-              "docs/error-categorization-report",
-              "docs/hyperexecute-task-metrics",
-              "docs/ai-test-failure-analysis",
-              "docs/hyperexecute-widgets",
-              "docs/hyperexecute-test-widgets",
-              "docs/analytics-modules-hyperexecute"
-            ]
-          },
-          {
-            "group": "Debug Failed Jobs",
-            "pages": [
-              "docs/hyperexecute-how-to-debug-job",
-              "docs/hyperexecute-cli-errors",
-              "docs/hyperexecute-pre-steps-error",
-              "docs/hyperexecute-scenario-steps-error",
-              "docs/hyperexecute-how-to-resolve-version-conflict"
-            ]
-          },
-          {
-            "group": "Set Up Private Cloud",
-            "pages": [
-              "docs/hyperexecute-private-cloud-benefits",
-              "docs/hyperexecute-private-cloud-setup-with-azure",
-              "docs/hyperexecute-private-cloud-setup-with-aws",
-              "docs/hyperexecute-private-cloud-on-jumphost",
-              "docs/hyperexecute-vnet-peering-for-private-cloud",
-              "docs/hyperexecute-github-app-integration"
-            ]
-          },
-          {
-            "group": "Integrate With SmartUI (Visual Testing)",
-            "pages": [
-              "docs/smart-ui-testing",
-              "docs/hyperexecute-smart-ui-capture-onboarding",
-              "docs/hyperexecute-smart-ui-testing-using-selenium",
-              "docs/hyperexecute-smart-ui-testing-using-cypress",
-              "docs/hyperexecute-smart-ui-test-using-playwright",
-              "docs/hyperexecute-smart-ui-sdk-selenium-javascript",
-              "docs/hyperexecute-smart-ui-sdk-maestro"
-            ]
-          },
-          {
-            "group": "Integrate with CI/CD",
-            "pages": [
-              "docs/cicd-with-hyperexecute-grid",
-              "docs/github-actions-with-hyperexecute",
-              "docs/gitlab-integration-with-hyperexecute",
-              "docs/jenkins-with-hyperexecute",
-              "docs/bitbucket-pipeline-with-hyperexecute",
-              "docs/circle-ci-with-hyperexecute",
-              "docs/azure-with-hyperexecute",
-              "docs/aws-codepipeline-with-hyperexecute",
-              "docs/travis-ci-with-hyperexecute",
-              "docs/teamcity-with-hyperexecute",
-              "docs/gocd-integration-with-hyperexecute",
-              "docs/bamboo-integration-with-hyperexecute",
-              "docs/semaphore-integration-with-hyperexecute"
-            ]
-          },
-          {
-            "group": "Integrate Test Tools",
-            "pages": [
-              "docs/hyperexecute-integration-with-products",
-              "docs/hyperexecute-azure-test-plan",
-              "docs/tosca-integration-with-hyperexecute-using-commander",
-              "docs/tosca-integration-with-hyperexecute-using-dex",
-              "docs/tosca-integration-with-hyperexecute-for-sap",
-              "docs/hyperexecute-accelq-integration",
-              "docs/hyperexecute-algoqa-integration",
-              "docs/katalon-integration-with-hyperexecute",
-              "docs/hyperexecute-provar-integration",
-              "docs/hyperexecute-qtest-integration",
-              "docs/hyperexecute-sikuli-integration",
-              "docs/hyperexecute-testim-integration",
-              "docs/hyperexecute-testsigma-integration",
-              "docs/hyperexecute-winapp-integration",
-              "docs/hyperexecute-zephyr-integration",
-              "docs/hyperexecute-slack-integration"
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "docs/hyperexecute-cli-run-tests-on-hyperexecute-grid",
-              "docs/hyperexecute-browser-list-api",
-              "docs/hyperexecute-supported-languages-and-packages",
-              "docs/hyperexecute-emu-simu-devices-list"
-            ]
-          },
-          {
-            "group": "Troubleshoot & FAQs",
-            "pages": [
-              "docs/hyperexecute-faqs",
-              "docs/hyperexecute-general-faqs",
-              "docs/hyperexecute-yaml-faqs",
-              "docs/hyperexecute-cli-faqs",
-              "docs/hyperexecute-feature-faqs",
-              "docs/hyperexecute-platform-faqs",
-              "docs/hyperexecute-pricing-faqs",
-              "docs/hyperexecute-security-faqs",
-              "docs/hyperexecute-enterprise-faqs"
-            ]
-          },
-          {
-            "group": "Release Notes",
-            "pages": [
-              "docs/hyperexecute-release-notes",
-              "docs/hyperexecute-release-notes-2025",
-              "docs/hyperexecute-release-notes-2024",
-              "docs/hyperexecute-release-notes-2023",
-              "docs/hyperexecute-cli-release-notes-0-2-249",
-              "docs/hyperexecute-mcp-server-release-notes-1-0-0",
-              "docs/hyperexecute-release-notes-2-6-8"
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "docs/getting-started-with-hyperexecute",
+                  "docs/hyperexecute-vs-traditional-test-grids",
+                  "docs/key-features-of-hyperexecute"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Set Up & Authenticate",
+                "pages": [
+                  "docs/hyperexecute-environment-variable-setup",
+                  "docs/hyperexecute-how-to-configure-tunnel"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Run Your First Job",
+                "pages": [
+                  "docs/hyperexecute-running-your-first-job",
+                  "docs/hyperexecute-guided-walkthrough",
+                  "docs/hyperexecute-cli-gui",
+                  "docs/saucelabs-to-hyperexecute-migrate"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Configure Your YAML",
+                "pages": [
+                  "docs/deep-dive-into-hyperexecute-yaml",
+                  "docs/hyperexecute-generate-sample-yaml",
+                  "docs/hyperexecute-yaml-version0.2",
+                  "docs/hyperexecute-inherit-config",
+                  "docs/hyperexecute-snooper",
+                  "docs/hyperexecute-yaml-capability-overrides",
+                  "docs/hyperexecute-how-to-configure-os-and-browser",
+                  "docs/hyperexecute-how-to-configure-sourcePayload",
+                  "docs/hyperexecute-gitignore",
+                  "docs/hyperexecute-how-to-save-and-manage-secrets",
+                  "docs/hyperexecute-how-to-manage-project-level-secrets",
+                  "docs/hyperexecute-build-mobile-apps-using-tools",
+                  "docs/hyperexecute-testng-use-cases",
+                  "docs/hyperexecute-python-use-cases",
+                  "docs/hyperexecute-csharp-use-cases",
+                  "docs/hyperexecute-yaml-creation-for-playwright",
+                  "docs/hyperexecute-how-to-perform-dependent-test-based-discovery",
+                  "docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Languages & Frameworks",
+                "pages": [
+                  "docs/hyperexecute-supported-languages-and-frameworks"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Scale Your Test Runs",
+                "pages": [
+                  "docs/hyperexecute-test-splitting-and-multiplexing",
+                  "docs/hyperexecute-auto-split-strategy",
+                  "docs/hyperexecute-matrix-multiplexing-strategy",
+                  "docs/hyperexecute-hybrid-strategy",
+                  "docs/hyperexecute-how-to-find-correct-concurrency",
+                  "docs/hyperexecute-shared-cloud-usage-limit",
+                  "docs/hyperexecute-prioritize-tests",
+                  "docs/hyperexecute-failfast",
+                  "docs/hyperexecute-test-muting",
+                  "docs/hyperexecute-rerun-failed-tests",
+                  "docs/hyperexecute-background-services",
+                  "docs/hyperexecute-auto-healing",
+                  "docs/hyperexecute-projects",
+                  "docs/hyperexecute-workflows",
+                  "docs/hyperexecute-test-chains",
+                  "docs/hyperexecute-jobs-archiving",
+                  "docs/hyperexecute-how-smart-caching-boosts-tests-speed",
+                  "docs/hyperexecute-org-product-preferences"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "View Results & Reports",
+                "pages": [
+                  "docs/hyperexecute-status",
+                  "docs/hyperexecute-reports",
+                  "docs/hyperexecute-artifacts",
+                  "docs/error-categorization-report",
+                  "docs/hyperexecute-task-metrics",
+                  "docs/ai-test-failure-analysis",
+                  "docs/hyperexecute-widgets",
+                  "docs/hyperexecute-test-widgets",
+                  "docs/analytics-modules-hyperexecute"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Debug Failed Jobs",
+                "pages": [
+                  "docs/hyperexecute-how-to-debug-job",
+                  "docs/hyperexecute-cli-errors",
+                  "docs/hyperexecute-pre-steps-error",
+                  "docs/hyperexecute-scenario-steps-error",
+                  "docs/hyperexecute-how-to-resolve-version-conflict"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Set Up Private Cloud",
+                "pages": [
+                  "docs/hyperexecute-private-cloud-benefits",
+                  "docs/hyperexecute-private-cloud-setup-with-azure",
+                  "docs/hyperexecute-private-cloud-setup-with-aws",
+                  "docs/hyperexecute-private-cloud-on-jumphost",
+                  "docs/hyperexecute-vnet-peering-for-private-cloud",
+                  "docs/hyperexecute-github-app-integration"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Integrate With SmartUI (Visual Testing)",
+                "pages": [
+                  "docs/smart-ui-testing",
+                  "docs/hyperexecute-smart-ui-capture-onboarding",
+                  "docs/hyperexecute-smart-ui-testing-using-selenium",
+                  "docs/hyperexecute-smart-ui-testing-using-cypress",
+                  "docs/hyperexecute-smart-ui-test-using-playwright",
+                  "docs/hyperexecute-smart-ui-sdk-selenium-javascript",
+                  "docs/hyperexecute-smart-ui-sdk-maestro"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Integrate with CI/CD",
+                "pages": [
+                  "docs/cicd-with-hyperexecute-grid",
+                  "docs/github-actions-with-hyperexecute",
+                  "docs/gitlab-integration-with-hyperexecute",
+                  "docs/jenkins-with-hyperexecute",
+                  "docs/bitbucket-pipeline-with-hyperexecute",
+                  "docs/circle-ci-with-hyperexecute",
+                  "docs/azure-with-hyperexecute",
+                  "docs/aws-codepipeline-with-hyperexecute",
+                  "docs/travis-ci-with-hyperexecute",
+                  "docs/teamcity-with-hyperexecute",
+                  "docs/gocd-integration-with-hyperexecute",
+                  "docs/bamboo-integration-with-hyperexecute",
+                  "docs/semaphore-integration-with-hyperexecute"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Integrate Test Tools",
+                "pages": [
+                  "docs/hyperexecute-integration-with-products",
+                  "docs/hyperexecute-azure-test-plan",
+                  "docs/tosca-integration-with-hyperexecute-using-commander",
+                  "docs/tosca-integration-with-hyperexecute-using-dex",
+                  "docs/tosca-integration-with-hyperexecute-for-sap",
+                  "docs/hyperexecute-accelq-integration",
+                  "docs/hyperexecute-algoqa-integration",
+                  "docs/katalon-integration-with-hyperexecute",
+                  "docs/hyperexecute-provar-integration",
+                  "docs/hyperexecute-qtest-integration",
+                  "docs/hyperexecute-sikuli-integration",
+                  "docs/hyperexecute-testim-integration",
+                  "docs/hyperexecute-testsigma-integration",
+                  "docs/hyperexecute-winapp-integration",
+                  "docs/hyperexecute-zephyr-integration",
+                  "docs/hyperexecute-slack-integration"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "docs/hyperexecute-cli-run-tests-on-hyperexecute-grid",
+                  "docs/hyperexecute-browser-list-api",
+                  "docs/hyperexecute-supported-languages-and-packages",
+                  "docs/hyperexecute-emu-simu-devices-list"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Troubleshoot & FAQs",
+                "pages": [
+                  "docs/hyperexecute-general-faqs",
+                  "docs/hyperexecute-yaml-faqs",
+                  "docs/hyperexecute-cli-faqs",
+                  "docs/hyperexecute-feature-faqs",
+                  "docs/hyperexecute-platform-faqs",
+                  "docs/hyperexecute-pricing-faqs",
+                  "docs/hyperexecute-security-faqs",
+                  "docs/hyperexecute-enterprise-faqs"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Release Notes",
+                "pages": [
+                  "docs/hyperexecute-release-notes",
+                  "docs/hyperexecute-release-notes-2025",
+                  "docs/hyperexecute-release-notes-2024",
+                  "docs/hyperexecute-release-notes-2023",
+                  "docs/hyperexecute-cli-release-notes-0-2-249",
+                  "docs/hyperexecute-mcp-server-release-notes-1-0-0"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -516,180 +590,200 @@
         "icon": "image",
         "pages": [
           {
-            "group": "Get Started",
+            "group": "SmartUI",
             "pages": [
-              "docs/smart-visual-regression-testing",
-              "docs/smartui-running-your-first-project",
-              "docs/smart-visual-testing"
-            ]
-          },
-          {
-            "group": "Run Tests With the SDK",
-            "pages": [
-              "docs/smartui-selenium-java-sdk",
-              "docs/smartui-selenium-js-sdk",
-              "docs/smartui-selenium-csharp-sdk",
-              "docs/smartui-selenium-python-sdk",
-              "docs/smartui-selenium-ruby-sdk",
-              "docs/smartui-playwright-sdk",
-              "docs/smartui-playwright-java-sdk",
-              "docs/smartui-playwright-python-sdk",
-              "docs/smartui-cypress-sdk",
-              "docs/smartui-puppeteer-sdk",
-              "docs/smartui-wdio-sdk",
-              "docs/smartui-testcafe-sdk",
-              "docs/smartui-k6-setup",
-              "docs/smartui-katalon-plugin"
-            ]
-          },
-          {
-            "group": "Run Tests With Hooks",
-            "pages": [
-              "docs/selenium-visual-regression",
-              "docs/playwright-visual-regression",
-              "docs/puppeteer-visual-regression",
-              "docs/smart-ui-cypress",
-              "docs/smartui-hooks-element-screenshot",
-              "docs/smartui-hooks-layout-fullpage-smartignore"
-            ]
-          },
-          {
-            "group": "Test Mobile Apps",
-            "pages": [
-              "docs/smartui-appium-sdk",
-              "docs/smartui-appium-java-sdk",
-              "docs/smartui-appium-hooks",
-              "docs/espresso-visual-regression",
-              "docs/xcui-visual-regression"
-            ]
-          },
-          {
-            "group": "Capture via CLI & API",
-            "pages": [
-              "docs/smartui-cli",
-              "docs/smartui-cli-upload",
-              "docs/smartui-upload-api-v2"
-            ]
-          },
-          {
-            "group": "Test Designs, Components & Documents",
-            "pages": [
-              "docs/smartui-storybook-integration",
-              "docs/smartui-cli-figma",
-              "docs/smartui-cli-figma-web",
-              "docs/smartui-cli-figma-app",
-              "docs/smartui-pdf-comparison"
-            ]
-          },
-          {
-            "group": "Review & Manage Results",
-            "pages": [
-              "docs/smartui-automation-dashboard",
-              "docs/smartui-guided-walkthrough",
-              "docs/smartui-diff-highlighter",
-              "docs/smartui-draw-on-ui",
-              "docs/smartui-multiselect-bulkops",
-              "docs/smartui-smart-comments",
-              "docs/smartui-export-build-data",
-              "docs/smartui-audit-logs",
-              "docs/smartui-group-by-test-cases",
-              "docs/smartui-slack-integration"
-            ]
-          },
-          {
-            "group": "Manage Baselines",
-            "pages": [
-              "docs/smartui-baseline-management",
-              "docs/smartui-approval-workflow-guide",
-              "docs/smartui-ab-testing-variations"
-            ]
-          },
-          {
-            "group": "AI Insights & Root Cause",
-            "pages": [
-              "docs/smartui-visual-ai-agent",
-              "docs/smartui-root-cause-analysis",
-              "docs/smartui-mcp-server"
-            ]
-          },
-          {
-            "group": "Stabilize Screenshots",
-            "pages": [
-              "docs/smartui-smartignore",
-              "docs/smartui-handle-dynamic-data",
-              "docs/smartui-handle-lazy-loading",
-              "docs/smartui-handle-sticky-elements",
-              "docs/smartui-handle-videos",
-              "docs/smartui-customscroll",
-              "docs/smartui-freeze-animations",
-              "docs/smartui-custom-css",
-              "docs/smartui-iframes-and-embedded-content",
-              "docs/smartui-shadow-dom"
-            ]
-          },
-          {
-            "group": "Tune Comparison & Thresholds",
-            "pages": [
-              "docs/smartui-layout-comparison",
-              "docs/smartui-mismatch-thresholds",
-              "docs/test-settings-options",
-              "docs/smartui-project-settings",
-              "docs/smart-ui-build-options"
-            ]
-          },
-          {
-            "group": "Configure Capture & Environment",
-            "pages": [
-              "docs/smartui-sdk-config-options",
-              "docs/smartui-sdk-capabilities",
-              "docs/smartui-cli-env-variables",
-              "docs/smartui-cli-exec",
-              "docs/smartui-cli-build-name",
-              "docs/smartui-cli-responsive-dom",
-              "docs/smartui-sdk-tunnel",
-              "docs/smartui-cli-basic-auth",
-              "docs/smartui-cli-request-headers",
-              "docs/smartui-multiple-assets-hosts"
-            ]
-          },
-          {
-            "group": "Git Baseline Workflows",
-            "pages": [
-              "docs/smartui-cli-git-branching",
-              "docs/smartui-git-branching",
-              "docs/smartui-smart-git-strategy",
-              "docs/smartui-branch-merging",
-              "docs/smartui-build-merging",
-              "docs/smartui-multiple-projects-per-repo"
-            ]
-          },
-          {
-            "group": "Integrate With CI/CD Tools",
-            "pages": [
-              "docs/smartui-with-github-actions",
-              "docs/smartui-with-gitlab",
-              "docs/smartui-with-azure",
-              "docs/smartui-with-bitbucket",
-              "docs/smartui-with-circle-ci",
-              "docs/smartui-with-travis-ci",
-              "docs/smartui-with-semaphore",
-              "docs/smartui-with-buildkite",
-              "docs/smartui-with-netlify"
-            ]
-          },
-          {
-            "group": "PR Status Checks",
-            "pages": [
-              "docs/smartui-github-app-integration",
-              "docs/smartui-gitlab-pr-checks-exec"
-            ]
-          },
-          {
-            "group": "Reference & Troubleshooting",
-            "pages": [
-              "docs/smartui-cli-complete-reference",
-              "docs/smartui-sdk-fetch-results",
-              "docs/smartui-troubleshooting-guide"
+              {
+                "group": "Get Started",
+                "pages": [
+                  "docs/smart-visual-regression-testing",
+                  "docs/smartui-running-your-first-project",
+                  "docs/smart-visual-testing"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Run Tests With the SDK",
+                "pages": [
+                  "docs/smartui-selenium-java-sdk",
+                  "docs/smartui-selenium-js-sdk",
+                  "docs/smartui-selenium-csharp-sdk",
+                  "docs/smartui-selenium-python-sdk",
+                  "docs/smartui-selenium-ruby-sdk",
+                  "docs/smartui-playwright-sdk",
+                  "docs/smartui-playwright-java-sdk",
+                  "docs/smartui-playwright-python-sdk",
+                  "docs/smartui-cypress-sdk",
+                  "docs/smartui-puppeteer-sdk",
+                  "docs/smartui-wdio-sdk",
+                  "docs/smartui-testcafe-sdk",
+                  "docs/smartui-k6-setup",
+                  "docs/smartui-katalon-plugin"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Run Tests With Hooks",
+                "pages": [
+                  "docs/selenium-visual-regression",
+                  "docs/playwright-visual-regression",
+                  "docs/puppeteer-visual-regression",
+                  "docs/smart-ui-cypress",
+                  "docs/smartui-hooks-element-screenshot",
+                  "docs/smartui-hooks-layout-fullpage-smartignore"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Test Mobile Apps",
+                "pages": [
+                  "docs/smartui-appium-sdk",
+                  "docs/smartui-appium-java-sdk",
+                  "docs/smartui-appium-hooks",
+                  "docs/espresso-visual-regression",
+                  "docs/xcui-visual-regression"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Capture via CLI & API",
+                "pages": [
+                  "docs/smartui-cli",
+                  "docs/smartui-cli-upload",
+                  "docs/smartui-upload-api-v2"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Test Designs, Components & Documents",
+                "pages": [
+                  "docs/smartui-storybook-integration",
+                  "docs/smartui-cli-figma",
+                  "docs/smartui-cli-figma-web",
+                  "docs/smartui-cli-figma-app",
+                  "docs/smartui-pdf-comparison"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Review & Manage Results",
+                "pages": [
+                  "docs/smartui-automation-dashboard",
+                  "{docs/smartui-guided-walkthrough}",
+                  "docs/smartui-diff-highlighter",
+                  "docs/smartui-draw-on-ui",
+                  "docs/smartui-multiselect-bulkops",
+                  "docs/smartui-smart-comments",
+                  "docs/smartui-export-build-data",
+                  "docs/smartui-audit-logs",
+                  "docs/smartui-group-by-test-cases",
+                  "docs/smartui-slack-integration"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Manage Baselines",
+                "pages": [
+                  "docs/smartui-baseline-management",
+                  "docs/smartui-approval-workflow-guide",
+                  "docs/smartui-ab-testing-variations"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "AI Insights & Root Cause",
+                "pages": [
+                  "docs/smartui-visual-ai-agent",
+                  "docs/smartui-root-cause-analysis"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Stabilize Screenshots",
+                "pages": [
+                  "docs/smartui-smartignore",
+                  "docs/smartui-handle-dynamic-data",
+                  "docs/smartui-handle-lazy-loading",
+                  "docs/smartui-handle-sticky-elements",
+                  "docs/smartui-handle-videos",
+                  "docs/smartui-customscroll",
+                  "docs/smartui-freeze-animations",
+                  "docs/smartui-custom-css",
+                  "docs/smartui-iframes-and-embedded-content",
+                  "docs/smartui-shadow-dom"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Tune Comparison & Thresholds",
+                "pages": [
+                  "docs/smartui-layout-comparison",
+                  "docs/smartui-mismatch-thresholds",
+                  "docs/test-settings-options",
+                  "docs/smartui-project-settings",
+                  "docs/smart-ui-build-options"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Configure Capture & Environment",
+                "pages": [
+                  "docs/smartui-sdk-config-options",
+                  "docs/smartui-sdk-capabilities",
+                  "docs/smartui-cli-env-variables",
+                  "docs/smartui-cli-exec",
+                  "docs/smartui-cli-build-name",
+                  "docs/smartui-cli-responsive-dom",
+                  "docs/smartui-sdk-tunnel",
+                  "docs/smartui-cli-basic-auth",
+                  "docs/smartui-cli-request-headers",
+                  "docs/smartui-multiple-assets-hosts"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Git Baseline Workflows",
+                "pages": [
+                  "docs/smartui-cli-git-branching",
+                  "docs/smartui-git-branching",
+                  "docs/smartui-smart-git-strategy",
+                  "docs/smartui-branch-merging",
+                  "docs/smartui-build-merging",
+                  "docs/smartui-multiple-projects-per-repo"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Integrate With CI/CD Tools",
+                "pages": [
+                  "docs/smartui-with-github-actions",
+                  "docs/smartui-with-gitlab",
+                  "docs/smartui-with-azure",
+                  "docs/smartui-with-bitbucket",
+                  "docs/smartui-with-circle-ci",
+                  "docs/smartui-with-travis-ci",
+                  "docs/smartui-with-semaphore",
+                  "docs/smartui-with-buildkite",
+                  "docs/smartui-with-netlify"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "PR Status Checks",
+                "pages": [
+                  "docs/smartui-github-app-integration",
+                  "docs/smartui-gitlab-pr-checks-exec"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Reference & Troubleshooting",
+                "pages": [
+                  "docs/smartui-cli-complete-reference",
+                  "docs/smartui-sdk-fetch-results",
+                  "docs/smartui-troubleshooting-guide"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -699,78 +793,92 @@
         "icon": "clipboard-check",
         "pages": [
           {
-            "group": "Get Started with Test Manager",
+            "group": "Test Management",
             "pages": [
-              "docs/test-manager"
-            ]
-          },
-          {
-            "group": "Set Up Your Project",
-            "pages": [
-              "docs/create-projects",
-              "docs/system-and-custom-fields"
-            ]
-          },
-          {
-            "group": "Create & Import Test Cases",
-            "pages": [
-              "docs/manual-test-case-creation",
-              "docs/generate-test-cases",
-              "docs/csv-import",
-              "docs/one-click-migration-from-testrail",
-              "docs/one-click-migration-from-xray",
-              "docs/one-click-migration-from-zephyr-scale"
-            ]
-          },
-          {
-            "group": "Organize & Maintain Test Cases",
-            "pages": [
-              "docs/test-case-repository",
-              "docs/test-case-versioning",
-              "docs/create-modules",
-              "docs/copy-and-move-support-for-test-cases",
-              "docs/bulk-update-fields",
-              "docs/export-test-cases"
-            ]
-          },
-          {
-            "group": "Run Tests & Track Execution",
-            "pages": [
-              "docs/test-run-creation-and-management",
-              "docs/test-runs-configurations",
-              "docs/sync-test-instance",
-              "docs/test-instance-audit-logs",
-              "docs/milestone-creation-and-management"
-            ]
-          },
-          {
-            "group": "Link Automated Tests",
-            "pages": [
-              "docs/automated-test-cases-with-ai",
-              "docs/automated-test-cases-linked-using-dashboard",
-              "docs/automated-test-cases-linked-using-capability",
-              "docs/manual-to-automated-test-conversion"
-            ]
-          },
-          {
-            "group": "Track Defects with Jira & Azure DevOps",
-            "pages": [
-              "docs/track-issues-in-test-runs",
-              "docs/link-jira-issues-with-test-manager",
-              "docs/link-ado-issues-with-test-manager"
-            ]
-          },
-          {
-            "group": "Analyze Results",
-            "pages": [
-              "docs/insights-dashboard",
-              "docs/tms-reports"
-            ]
-          },
-          {
-            "group": "Access Management",
-            "pages": [
-              "docs/kaneai-test-manager-access-management"
+              {
+                "group": "Get Started",
+                "pages": [
+                  "docs/test-manager"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Set Up Your Project",
+                "pages": [
+                  "docs/create-projects",
+                  "docs/system-and-custom-fields"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Create & Import Test Cases",
+                "pages": [
+                  "docs/manual-test-case-creation",
+                  "docs/generate-test-cases",
+                  "docs/csv-import",
+                  "docs/one-click-migration-from-testrail",
+                  "docs/one-click-migration-from-xray",
+                  "docs/one-click-migration-from-zephyr-scale"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Organize & Maintain Test Cases",
+                "pages": [
+                  "docs/test-case-repository",
+                  "docs/test-case-versioning",
+                  "docs/create-modules",
+                  "docs/copy-and-move-support-for-test-cases",
+                  "docs/bulk-update-fields",
+                  "docs/export-test-cases"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Run Tests & Track Execution",
+                "pages": [
+                  "docs/test-run-creation-and-management",
+                  "docs/test-runs-configurations",
+                  "docs/sync-test-instance",
+                  "docs/test-instance-audit-logs",
+                  "docs/milestone-creation-and-management"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Link Automated Tests",
+                "pages": [
+                  "docs/automated-test-cases-with-ai",
+                  "docs/automated-test-cases-linked-using-dashboard",
+                  "docs/automated-test-cases-linked-using-capability",
+                  "docs/manual-to-automated-test-conversion"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Track Defects with Jira & Azure DevOps",
+                "pages": [
+                  "docs/track-issues-in-test-runs",
+                  "docs/link-jira-issues-with-test-manager",
+                  "docs/link-ado-issues-with-test-manager"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Analyze Results",
+                "pages": [
+                  "docs/insights-dashboard",
+                  "docs/tms-reports"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Access Management",
+                "pages": [
+                  "docs/kaneai-test-manager-access-management"
+                ],
+                "expanded": false
+              }
             ]
           }
         ]
@@ -779,222 +887,226 @@
         "tab": "Accessibility",
         "icon": "universal-access",
         "pages": [
-          "docs/accessibility-testing",
           {
-            "group": "Scan in Your Browser (DevTools)",
+            "group": "Accessibility Testing",
             "pages": [
-              "docs/accessibility-devtools",
-              "docs/accessibility-testing-run-quick-scan",
-              "docs/accessibility-testing-full-page-scanner",
-              "docs/accessibility-testing-partial-page-scanner",
-              "docs/accessibility-testing-multi-page-scanner",
-              "docs/accessibility-testing-workflow-scanner",
-              "docs/accessibility-keyboard-scan",
-              "docs/accessibility-pdf-accessibility-scanning",
-              "docs/accessibility-devtools-settings",
-              "docs/accessibility-fragment-identifier",
-              "docs/accessibility-update-devtools-extension"
-            ]
-          },
-          {
-            "group": "Scan with Web Scanner",
-            "pages": [
-              "docs/web-scanner-overview",
-              "docs/web-scanner-getting-started",
-              "docs/web-scanner-accessibility-scan",
-              "docs/web-scanner-adding-urls",
-              "docs/web-scanner-scheduling-options",
-              "docs/web-scanner-advanced-features"
-            ]
-          },
-          {
-            "group": "Automate Accessibility Tests",
-            "pages": [
-              "docs/accessibility-automation"
-            ]
-          },
-          {
-            "group": "Languages & Frameworks",
-            "pages": [
-              "docs/accessibility-supported-languages-and-frameworks"
-            ]
-          },
-          {
-            "group": "Configure Automation",
-            "pages": [
-              "docs/accessibility-automation-settings",
-              "docs/accessibility-capture-screenshot",
-              "docs/deque-integration"
-            ]
-          },
-          {
-            "group": "Run at Scale (HyperExecute & CI/CD)",
-            "pages": [
-              "docs/selenium-hyperexecute-accessibility-tests",
-              "docs/cypress-v10-hyprerexecute-accessibility-tests",
-              "docs/cypress-v9-hyprerexecute-accessibility-tests",
-              "docs/accessibility-cicd-integration-guide"
-            ]
-          },
-          {
-            "group": "Schedule Recurring Scans",
-            "pages": [
-              "docs/accessibility-test-scheduling",
-              "docs/accessibility-test-scheduling-scan",
-              "docs/accessibility-sitemap-extraction-url-import",
-              "docs/accessibility-test-scheduling-crawler",
-              "docs/accessibility-test-scheduling-login-authentication",
-              "docs/accessibility-test-scheduling-edit"
-            ]
-          },
-          {
-            "group": "Test Mobile App Accessibility",
-            "pages": [
-              "docs/accessibility-app-scanner",
-              "docs/kaneai-mobile-app-accessibility",
-              "docs/accessibility-settings-ios",
-              "docs/accessibility-tag-support"
-            ]
-          },
-          {
-            "group": "Test Manually with Screen Readers",
-            "pages": [
-              "docs/screen-reader-on-accessibility",
-              "docs/accessibility-nvda-windows",
-              "docs/accessibility-jaws-windows",
-              "docs/accessibility-voiceover-macos",
-              "docs/accessibility-talkback-android",
-              "docs/screen-reader-on-real-devices-app",
-              "docs/screen-reader-on-real-devices-browser",
-              "docs/screen-reader-voiceover-real-devices-app",
-              "docs/screen-reader-voiceover-real-devices-browser",
-              "docs/accessibility-rules-checklist"
-            ]
-          },
-          {
-            "group": "View Your Scan Results",
-            "pages": [
-              "docs/accessibility-testing-navigating-dashboard",
-              "docs/accessibility-testing-dashboard-issue-summary",
-              "docs/accessibility-testing-dashboard-all-issues",
-              "docs/accessibility-web-score",
-              "docs/accessibility-passed-test-cases",
-              "docs/analytics-modules-accessibility-widgets"
-            ]
-          },
-          {
-            "group": "Fix & Share Issues",
-            "pages": [
-              "docs/accessibility-ai-issue-detection-agent",
-              "docs/accessibility-issue-remediation-guide",
-              "docs/accessibility-hide-restore-issues",
-              "docs/accessibility-exporting-sharing-reports",
-              "docs/accessibility-report-integrations",
-              "docs/accessibility-report-bug",
-              "docs/accessibility-vpat-report-generation"
-            ]
-          },
-          {
-            "group": "FAQs & Reference",
-            "pages": [
-              "docs/accessibility-choosing-the-right-tool",
-              "docs/accessibility-compliance-guide",
-              "docs/accessibility-supported-wcag-browsers",
-              "docs/accessibility-faq"
-            ]
-          },
-          {
-            "group": "Web WCAG Rule Reference",
-            "pages": [
-              "docs/accessibility-web-what-we-cover",
-              "docs/accessibility-web-rule-repository",
-              "docs/accessibility-web-rule-1-1-1-non-text-content",
-              "docs/accessibility-web-rule-1-3-1-info-and-relationships",
-              "docs/accessibility-web-rule-1-3-4-orientation",
-              "docs/accessibility-web-rule-1-4-1-use-of-color",
-              "docs/accessibility-web-rule-1-4-2-audio-control",
-              "docs/accessibility-web-rule-1-4-3-contrast-minimum",
-              "docs/accessibility-web-rule-1-4-10-reflow",
-              "docs/accessibility-web-rule-1-4-11-non-text-contrast",
-              "docs/accessibility-web-rule-1-4-12-text-spacing",
-              "docs/accessibility-web-rule-2-1-1-keyboard",
-              "docs/accessibility-web-rule-2-1-2-no-keyboard-trap",
-              "docs/accessibility-web-rule-2-1-4-character-key-shortcuts",
-              "docs/accessibility-web-rule-2-2-1-timing-adjustable",
-              "docs/accessibility-web-rule-2-2-2-pause-stop-hide",
-              "docs/accessibility-web-rule-2-3-1-three-flashes",
-              "docs/accessibility-web-rule-2-4-1-bypass-blocks",
-              "docs/accessibility-web-rule-2-4-2-page-titled",
-              "docs/accessibility-web-rule-2-4-3-focus-order",
-              "docs/accessibility-web-rule-2-4-4-link-purpose",
-              "docs/accessibility-web-rule-2-4-7-focus-visible",
-              "docs/accessibility-web-rule-2-4-11-focus-not-obscured",
-              "docs/accessibility-web-rule-2-5-1-pointer-gestures",
-              "docs/accessibility-web-rule-2-5-2-pointer-cancellation",
-              "docs/accessibility-web-rule-2-5-3-label-in-name",
-              "docs/accessibility-web-rule-2-5-4-motion-actuation",
-              "docs/accessibility-web-rule-2-5-7-dragging-movements",
-              "docs/accessibility-web-rule-2-5-8-target-size",
-              "docs/accessibility-web-rule-3-2-1-on-focus",
-              "docs/accessibility-web-rule-3-2-2-on-input",
-              "docs/accessibility-web-rule-3-2-6-consistent-help",
-              "docs/accessibility-web-rule-3-3-1-error-identification",
-              "docs/accessibility-web-rule-3-3-2-labels-or-instructions",
-              "docs/accessibility-web-rule-3-3-7-redundant-entry",
-              "docs/accessibility-web-rule-3-3-8-accessible-authentication",
-              "docs/accessibility-web-rule-4-1-1-parsing",
-              "docs/accessibility-web-rule-4-1-2-name-role-value",
-              "docs/accessibility-web-rule-4-1-3-status-messages"
-            ]
-          },
-          {
-            "group": "Android WCAG Rule Reference",
-            "pages": [
-              "docs/accessibility-android-what-we-cover",
-              "docs/accessibility-android-what-we-do-not-cover",
-              "docs/accessibility-android-rules",
-              "docs/accessibility-android-rule-repository",
-              "docs/accessibility-android-rule-fixed-orientation-lock",
-              "docs/accessibility-android-rule-inaccessible-text-focus",
-              "docs/accessibility-android-rule-insufficient-color-ratio",
-              "docs/accessibility-android-rule-insufficient-target-spacing",
-              "docs/accessibility-android-rule-interactive-role-undefined",
-              "docs/accessibility-android-rule-mismatched-label-text",
-              "docs/accessibility-android-rule-misplaced-field-label",
-              "docs/accessibility-android-rule-missing-field-label",
-              "docs/accessibility-android-rule-missing-image-alt",
-              "docs/accessibility-android-rule-missing-input-value",
-              "docs/accessibility-android-rule-missing-screen-title",
-              "docs/accessibility-android-rule-missing-view-accessibility",
-              "docs/accessibility-android-rule-nested-control-issues",
-              "docs/accessibility-android-rule-non-accessible-interaction",
-              "docs/accessibility-android-rule-undersized-touch-target",
-              "docs/accessibility-android-rule-unlabeled-checkbox-element",
-              "docs/accessibility-android-rule-unlabeled-toggle-control",
-              "docs/accessibility-android-rule-unnamed-nested-element"
-            ]
-          },
-          {
-            "group": "iOS WCAG Rule Reference",
-            "pages": [
-              "docs/accessibility-ios-what-we-cover",
-              "docs/accessibility-ios-rules",
-              "docs/accessibility-ios-rule-repository",
-              "docs/accessibility-ios-rule-accessibility-label-not-punctuated",
-              "docs/accessibility-ios-rule-accessibility-role-definition",
-              "docs/accessibility-ios-rule-assistive-technology-access",
-              "docs/accessibility-ios-rule-button-element-capitalisation-check",
-              "docs/accessibility-ios-rule-color-contrast-issues",
-              "docs/accessibility-ios-rule-duplicate-accessibility-label",
-              "docs/accessibility-ios-rule-dynamic-type-support",
-              "docs/accessibility-ios-rule-missing-accessibility-labels",
-              "docs/accessibility-ios-rule-missing-button-element-label",
-              "docs/accessibility-ios-rule-missing-checkbox-element-label",
-              "docs/accessibility-ios-rule-missing-editable-element-label",
-              "docs/accessibility-ios-rule-missing-image-element-label",
-              "docs/accessibility-ios-rule-missing-switch-element-label",
-              "docs/accessibility-ios-rule-text-truncation-issues",
-              "docs/accessibility-ios-rule-touch-target-sizing"
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-testing"
+                ]
+              },
+              {
+                "group": "Scan With DevTools",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-devtools",
+                  "docs/accessibility-testing-run-quick-scan",
+                  "docs/accessibility-testing-full-page-scanner",
+                  "docs/accessibility-testing-partial-page-scanner",
+                  "docs/accessibility-testing-multi-page-scanner",
+                  "docs/accessibility-testing-workflow-scanner",
+                  "docs/accessibility-keyboard-scan",
+                  "docs/accessibility-pdf-accessibility-scanning",
+                  "docs/accessibility-devtools-settings",
+                  "docs/accessibility-fragment-identifier",
+                  "docs/accessibility-update-devtools-extension"
+                ]
+              },
+              {
+                "group": "Automate Accessibility Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-automation",
+                  "docs/accessibility-supported-languages-and-frameworks",
+                  "docs/accessibility-automation-settings",
+                  "docs/accessibility-capture-screenshot",
+                  "docs/deque-integration"
+                ]
+              },
+           
+              {
+                "group": "Schedule Recurring Scans",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-test-scheduling",
+                  "docs/accessibility-test-scheduling-scan",
+                  "docs/accessibility-sitemap-extraction-url-import",
+                  "docs/accessibility-test-scheduling-crawler",
+                  "docs/accessibility-test-scheduling-login-authentication",
+                  "docs/accessibility-test-scheduling-edit"
+                ]
+              },
+              {
+                "group": "Test Mobile App Accessibility",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-app-scanner",
+                  "docs/kaneai-mobile-app-accessibility",
+                  "docs/accessibility-settings-ios",
+                  "docs/accessibility-tag-support"
+                ]
+              },
+              {
+                "group": "Test with Screen Readers",
+                "expanded": false,
+                "pages": [
+                  "docs/screen-reader-on-accessibility",
+                  "docs/accessibility-nvda-windows",
+                  "docs/accessibility-jaws-windows",
+                  "docs/accessibility-voiceover-macos",
+                  "docs/accessibility-talkback-android",
+                  "docs/screen-reader-on-real-devices-app",
+                  "docs/screen-reader-on-real-devices-browser",
+                  "docs/screen-reader-voiceover-real-devices-app",
+                  "docs/screen-reader-voiceover-real-devices-browser"
+                ]
+              },
+              {
+                "group": "View Your Scan Results",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-testing-navigating-dashboard",
+                  "docs/accessibility-testing-dashboard-issue-summary",
+                  "docs/accessibility-testing-dashboard-all-issues",
+                  "docs/accessibility-web-score",
+                  "docs/accessibility-passed-test-cases",
+                  "docs/analytics-modules-accessibility-widgets"
+                ]
+              },
+              {
+                "group": "Fix & Share Issues",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-ai-issue-detection-agent",
+                  "docs/accessibility-issue-remediation-guide",
+                  "docs/accessibility-hide-restore-issues",
+                  "docs/accessibility-exporting-sharing-reports",
+                  "docs/accessibility-report-integrations",
+                  "docs/accessibility-report-bug",
+                  "docs/accessibility-vpat-report-generation"
+                ]
+              },
+
+                 {
+                "group": "Run at Scale (HyperExecute & CI/CD)",
+                "expanded": false,
+                "pages": [
+                  "docs/selenium-hyperexecute-accessibility-tests",
+                  "docs/cypress-v10-hyprerexecute-accessibility-tests",
+                  "docs/cypress-v9-hyprerexecute-accessibility-tests",
+                  "docs/accessibility-cicd-integration-guide"
+                ]
+              },
+              {
+                "group": "Web WCAG Rule Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-web-what-we-cover",
+                  "docs/accessibility-web-rule-repository",
+                  "docs/accessibility-web-rule-1-1-1-non-text-content",
+                  "docs/accessibility-web-rule-1-3-1-info-and-relationships",
+                  "docs/accessibility-web-rule-1-3-4-orientation",
+                  "docs/accessibility-web-rule-1-4-1-use-of-color",
+                  "docs/accessibility-web-rule-1-4-2-audio-control",
+                  "docs/accessibility-web-rule-1-4-3-contrast-minimum",
+                  "docs/accessibility-web-rule-1-4-10-reflow",
+                  "docs/accessibility-web-rule-1-4-11-non-text-contrast",
+                  "docs/accessibility-web-rule-1-4-12-text-spacing",
+                  "docs/accessibility-web-rule-2-1-1-keyboard",
+                  "docs/accessibility-web-rule-2-1-2-no-keyboard-trap",
+                  "docs/accessibility-web-rule-2-1-4-character-key-shortcuts",
+                  "docs/accessibility-web-rule-2-2-1-timing-adjustable",
+                  "docs/accessibility-web-rule-2-2-2-pause-stop-hide",
+                  "docs/accessibility-web-rule-2-3-1-three-flashes",
+                  "docs/accessibility-web-rule-2-4-1-bypass-blocks",
+                  "docs/accessibility-web-rule-2-4-2-page-titled",
+                  "docs/accessibility-web-rule-2-4-3-focus-order",
+                  "docs/accessibility-web-rule-2-4-4-link-purpose",
+                  "docs/accessibility-web-rule-2-4-7-focus-visible",
+                  "docs/accessibility-web-rule-2-4-11-focus-not-obscured",
+                  "docs/accessibility-web-rule-2-5-1-pointer-gestures",
+                  "docs/accessibility-web-rule-2-5-2-pointer-cancellation",
+                  "docs/accessibility-web-rule-2-5-3-label-in-name",
+                  "docs/accessibility-web-rule-2-5-4-motion-actuation",
+                  "docs/accessibility-web-rule-2-5-7-dragging-movements",
+                  "docs/accessibility-web-rule-2-5-8-target-size",
+                  "docs/accessibility-web-rule-3-2-1-on-focus",
+                  "docs/accessibility-web-rule-3-2-2-on-input",
+                  "docs/accessibility-web-rule-3-2-6-consistent-help",
+                  "docs/accessibility-web-rule-3-3-1-error-identification",
+                  "docs/accessibility-web-rule-3-3-2-labels-or-instructions",
+                  "docs/accessibility-web-rule-3-3-7-redundant-entry",
+                  "docs/accessibility-web-rule-3-3-8-accessible-authentication",
+                  "docs/accessibility-web-rule-4-1-1-parsing",
+                  "docs/accessibility-web-rule-4-1-2-name-role-value",
+                  "docs/accessibility-web-rule-4-1-3-status-messages"
+                ]
+              },
+              {
+                "group": "Android WCAG Rule Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-android-what-we-cover",
+                  "docs/accessibility-android-what-we-do-not-cover",
+                  "docs/accessibility-android-rules",
+                  "docs/accessibility-android-rule-repository",
+                  "docs/accessibility-android-rule-fixed-orientation-lock",
+                  "docs/accessibility-android-rule-inaccessible-text-focus",
+                  "docs/accessibility-android-rule-insufficient-color-ratio",
+                  "docs/accessibility-android-rule-insufficient-target-spacing",
+                  "docs/accessibility-android-rule-interactive-role-undefined",
+                  "docs/accessibility-android-rule-mismatched-label-text",
+                  "docs/accessibility-android-rule-misplaced-field-label",
+                  "docs/accessibility-android-rule-missing-field-label",
+                  "docs/accessibility-android-rule-missing-image-alt",
+                  "docs/accessibility-android-rule-missing-input-value",
+                  "docs/accessibility-android-rule-missing-screen-title",
+                  "docs/accessibility-android-rule-missing-view-accessibility",
+                  "docs/accessibility-android-rule-nested-control-issues",
+                  "docs/accessibility-android-rule-non-accessible-interaction",
+                  "docs/accessibility-android-rule-undersized-touch-target",
+                  "docs/accessibility-android-rule-unlabeled-checkbox-element",
+                  "docs/accessibility-android-rule-unlabeled-toggle-control",
+                  "docs/accessibility-android-rule-unnamed-nested-element"
+                ]
+              },
+              {
+                "group": "iOS WCAG Rule Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-ios-what-we-cover",
+                  "docs/accessibility-ios-rules",
+                  "docs/accessibility-ios-rule-repository",
+                  "docs/accessibility-ios-rule-accessibility-label-not-punctuated",
+                  "docs/accessibility-ios-rule-accessibility-role-definition",
+                  "docs/accessibility-ios-rule-assistive-technology-access",
+                  "docs/accessibility-ios-rule-button-element-capitalisation-check",
+                  "docs/accessibility-ios-rule-color-contrast-issues",
+                  "docs/accessibility-ios-rule-duplicate-accessibility-label",
+                  "docs/accessibility-ios-rule-dynamic-type-support",
+                  "docs/accessibility-ios-rule-missing-accessibility-labels",
+                  "docs/accessibility-ios-rule-missing-button-element-label",
+                  "docs/accessibility-ios-rule-missing-checkbox-element-label",
+                  "docs/accessibility-ios-rule-missing-editable-element-label",
+                  "docs/accessibility-ios-rule-missing-image-element-label",
+                  "docs/accessibility-ios-rule-missing-switch-element-label",
+                  "docs/accessibility-ios-rule-text-truncation-issues",
+                  "docs/accessibility-ios-rule-touch-target-sizing"
+                ]
+              },
+              {
+                "group": "FAQs & Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/accessibility-choosing-the-right-tool",
+                  "docs/accessibility-compliance-guide",
+                  "docs/accessibility-rules-checklist",
+                  "docs/accessibility-supported-wcag-browsers",
+                  "docs/accessibility-faq"
+                ]
+              }
             ]
           }
         ]
@@ -1083,6 +1195,14 @@
     }
   },
   "redirects": [
+    {
+      "source": "/docs/smartui-mcp-server",
+      "destination": "/docs/testmu-mcp-server"
+    },
+    {
+      "source": "/docs/accessibility-mcp-server",
+      "destination": "/docs/accessibility-automation"
+    },
     {
       "source": "/docs/agent-to-agent-faqs",
       "destination": "/docs/agent-testing-platform-faqs"
@@ -1322,14 +1442,6 @@
     {
       "source": "/docs/selenium-hyprerexecute-accessibility-tests",
       "destination": "/docs/selenium-hyperexecute-accessibility-tests"
-    },
-    {
-      "source": "/docs/cypress-v10-hyprerexecute-accessibility-tests",
-      "destination": "/docs/cypress-v10-hyperexecute-accessibility-tests"
-    },
-    {
-      "source": "/docs/cypress-v9-hyprerexecute-accessibility-tests",
-      "destination": "/docs/cypress-v9-hyperexecute-accessibility-tests"
     },
     {
       "source": "/docs/visual-ui-testing",
