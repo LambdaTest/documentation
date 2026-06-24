@@ -556,7 +556,6 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                     type={p.type} required={p.required}
                     description={p.description}
                     enumValues={p.enum}
-                    placeholder={p.example !== undefined ? String(p.example) : undefined}
                     value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
                   />
                 ))}

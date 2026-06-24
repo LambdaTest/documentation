@@ -154,21 +154,8 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
     const type = resolved.type || 'string';
     const format = resolved.format || null;
     const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
-    const example = resolved.example !== undefined ? resolved.example : undefined;
-    return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }), ...(example !== undefined && { example }) };
+    return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
   });
-
-  // Enrich properties with examples from the body-level example object
-  // when individual properties don't have their own example value.
-  const bodyExample = bodyContent.example ?? schema.example;
-  if (bodyExample && typeof bodyExample === 'object' && !Array.isArray(bodyExample) && properties.length > 0) {
-    properties = properties.map((prop) => {
-      if (prop.example === undefined && bodyExample[prop.name] !== undefined) {
-        return { ...prop, example: bodyExample[prop.name] };
-      }
-      return prop;
-    });
-  }
 
   // Fallback for specs that declare `type: object` without `properties` —
   // derive fields from the example block so the Try It modal can render
@@ -183,7 +170,7 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
         else if (typeof value === 'boolean') type = 'boolean';
         else if (Array.isArray(value)) type = 'array';
         else if (typeof value === 'object' && value !== null) type = 'object';
-        return { name, type, required: false, description: '', example: value };
+        return { name, type, required: false, description: '' };
       });
       if (properties.length > 0) {
         const loc = ctx.method && ctx.path ? `${ctx.method} ${ctx.path}` : '(unknown endpoint)';
