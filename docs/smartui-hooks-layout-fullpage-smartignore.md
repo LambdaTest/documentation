@@ -2,7 +2,7 @@
 id: smartui-hooks-layout-fullpage-smartignore
 title: SmartUI Hooks - Layout, Full Page, and Smart Ignore
 sidebar_label: Hooks Layout + Full Page
-description: SmartUI Hooks on LambdaTest—layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
+description: SmartUI Hooks on LambdaTest covering layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
 keywords:
   - smartui hooks
   - layout testing hooks
@@ -16,24 +16,50 @@ slug: smartui-hooks-layout-fullpage-smartignore/
 canonical: https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-smartignore/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TestMu AI",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore",
+          "item": `${BRAND_URL}/support/docs/smartui-hooks-layout-fullpage-smartignore/`
+        }]
+      })
+    }}
+></script>
+
 # SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore
 
 Use this page when you run **SmartUI Hooks** on LambdaTest (for example Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
-:::danger Capability vs hook—read this first
+:::info Capability vs hook, read this first
 For **Hooks**, engineering behavior is:
 
 | Goal | Where to configure | Notes |
 |------|-------------------|--------|
-| **Layout** comparison | **`smartui.takeScreenshot` hook options** (per screenshot) | Pass `ignoreType: ["layout"]` (and related layout flags) in the **Map/object** passed to `executeScript("smartui.takeScreenshot", options)`. **Layout is not enabled for Hooks by setting layout fields only in `LT:Options` capabilities**—that path is not supported the way teams often expect. |
+| **Layout** comparison | **`smartui.takeScreenshot` hook options** (per screenshot) | Pass `ignoreType: ["layout"]` (and related layout flags) in the **Map/object** passed to `executeScript("smartui.takeScreenshot", options)`. **Layout is not enabled for Hooks by setting layout fields only in `LT:Options` capabilities**. That path is not supported the way teams often expect. |
 | **Smart Ignore** | **`LT:Options`** | Set **`smartUI.smartIgnore`: `true`** on the session for baseline and comparison runs. |
 | **Project** | **`LT:Options`** | Set **`smartUI.project`** (and `visual`, auth) as usual. |
 
-If you need **layout via capabilities alone** (no hook options), treat that as a **product / roadmap** ask—track with your account team (for example internal idea **LTPM-3632**). This doc reflects **current** Hooks behavior.
+If you need **layout via capabilities alone** (no hook options), treat that as a **product / roadmap** ask, and track it with your account team (for example internal idea **LTPM-3632**). This doc reflects **current** Hooks behavior.
 :::
 
 :::info Smart Ignore vs Ignore DOM / Select DOM
-With **Smart Ignore**, use either **Ignore DOM** or **Select DOM** in the dashboard where applicable—not both on the same flow.
+With **Smart Ignore**, use either **Ignore DOM** or **Select DOM** in the dashboard where applicable, not both on the same flow.
 :::
 
 ## 1. Session capabilities (`LT:Options`)
@@ -90,13 +116,13 @@ These patterns **do not** turn on Smart Ignore reliably:
 Use **`smartUI.smartIgnore`: `true`** only.
 :::
 
-### Layout — not via standalone layout capabilities for Hooks
+### Layout: not via standalone layout capabilities for Hooks
 
 Do **not** expect **`ignoreType: ["layout"]`**, **`smartUI.layout`**, or nested **`smartUI.options`** layout blocks **alone** in `LT:Options` to enable layout comparison for Hooks. Validated behavior is: **pass layout in the hook** (next section).
 
 ---
 
-## 2. Layout comparison — pass options to `smartui.takeScreenshot`
+## 2. Layout comparison: pass options to `smartui.takeScreenshot`
 
 Pass a **single map** to `executeScript("smartui.takeScreenshot", options)` including **`screenshotName`** and **`ignoreType`**.
 
@@ -115,7 +141,7 @@ options.put("screenshotName", "my-layout-screenshot-01");
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", options);
 ```
 
-Session **`LT:Options`** for this flow typically needs at least **`smartUI.project`** (and `visual`, credentials)—**not** a separate layout capability block for the same effect.
+Session **`LT:Options`** for this flow typically needs at least **`smartUI.project`** (and `visual`, credentials), **not** a separate layout capability block for the same effect.
 
 ### JavaScript
 
@@ -176,7 +202,7 @@ Runs using a **project token** may show the **project creator**. Use the intende
 
 ---
 
-## 6. Troubleshooting
+## 7. Troubleshooting
 
 | Problem | What to do |
 |--------|------------|
@@ -187,7 +213,7 @@ Runs using a **project token** may show the **project creator**. Use the intende
 
 ## Related Docs
 
-- [Layout Comparison in SmartUI SDK](/support/docs/smartui-layout-testing/) — SDK `smartuiSnapshot` path (different from Hooks).
+- [Layout Comparison in SmartUI SDK](/support/docs/smartui-layout-testing/) (SDK `smartuiSnapshot` path, different from Hooks).
 - [Smart Ignore](/support/docs/smartui-smartignore/)
 - [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/)
 - [Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)
