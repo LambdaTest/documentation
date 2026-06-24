@@ -1,0 +1,82 @@
+---
+title: "Button Click By Text (OCR)"
+sidebarTitle: "Click Buttons by Text (OCR)"
+keywords: ['button click by text', 'OCR button click', 'app test automation', 'lambda executor', 'canvas based testing', 'dynamic UI testing', 'app testing appium', 'app testing', 'real devices', 'virtual devices', 'icon click']
+description: "Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable."
+"og:description": "Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable."
+---
+
+import { RealDeviceTag } from "/snippets/RealDeviceTag.mdx";
+import { VirtualDeviceTag } from "/snippets/VirtualDeviceTag.mdx";
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Button Click By Text is an OCR-powered feature that allows you to click UI elements using their visible text or icon description when traditional locator strategies are not feasible.
+
+Because the feature is powered by an LLM, you can also provide a natural language description of an icon (for example, "label": "search icon" or "label": "three-dot menu"), and the system will intelligently identify and click the matching element on the screen.
+
+This approach is particularly useful when:
+
+- Accessibility IDs or XPath locators are unavailable
+- The UI is canvas-based or dynamically rendered
+- Native locators are unstable or frequently changing
+
+This feature is supported across both **Android** and **iOS** real and virtual devices via the `lambda_executor` command.
+
+## Executor Contract
+
+The feature is exposed via `driver.execute_script` using the `lambda_executor` interface:
+
+```python
+driver.execute_script('lambda_executor: {
+  "action": "buttonTextClick",
+  "arguments": {
+    "label": "Continue"
+  }
+}')
+```
+
+## Arguments Specification
+
+### Required Arguments
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `label` | String | Full visible text of the button to click, or a description of an icon (e.g., `"search icon"`, `"three-dot menu"`). It is recommended to use the entire string to avoid OCR misses. |
+
+### Optional Arguments
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `timeout` | Number (seconds) | `0` | Max time to wait for text to appear (up to 30 seconds). |
+| `operation` | String | `single` | Type of click operation. Supported values: `single`, `double`, `long`. |
+| `matchMode` | Enum | `contain` | Text match strategy. Supported values: `exact`, `contain`. |
+| `ignoreCase` | Boolean | `true` | Enable case-insensitive matching. |
+| `ignoreSpaces` | Boolean | `true` | Ignore extra spaces in the text. |
+
+### Advanced Arguments
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `index` | Number | Click the nth matched button (0-based index). Useful when multiple buttons share the same text. |
+
+## Full Executor Example
+
+```python
+driver.execute_script('lambda_executor: {
+  "action": "buttonTextClick",
+  "arguments": {
+    "label": "Pay Now",
+    "timeout": 0,
+    "matchMode": "contain",
+    "ignoreCase": true,
+    "ignoreSpaces": true,
+    "index": 0
+  }
+}')
+```
+
+## Failure States & Errors
+
+| Scenario | Error Code | Message |
+|----------|------------|---------|
+| Text not found | `ERROR_TEXT_NOT_FOUND` | Button with text not found |

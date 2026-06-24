@@ -1,365 +1,220 @@
 
 export const FrameworkGridHyperexecute = () => {
-  const seleniumFrameworks = [
+  const I = '/support/assets/images/getting-started/';
+  const tools = [
     {
-      title: 'Java',
-      icon: '/support/assets/images/getting-started/java-icon.webp',
-      items: [
-        { name: 'TestNG', link: '/support/docs/testng-on-hyperexecute-grid' },
-        { name: 'JUnit', link: '/support/docs/junit-on-hyperexecute-grid' },
-        { name: 'Cucumber', link: '/support/docs/cucumber-on-hyperexecute-grid' },
-      ]
+      name: 'Selenium',
+      icon: I + 'selenium.png',
+      languages: [
+        { name: 'Java', icon: I + 'java-icon.webp', frameworks: [
+          { name: 'TestNG', link: '/support/docs/testng-on-hyperexecute-grid' },
+          { name: 'JUnit', link: '/support/docs/junit-on-hyperexecute-grid' },
+          { name: 'Cucumber', link: '/support/docs/cucumber-on-hyperexecute-grid' },
+        ]},
+        { name: 'JavaScript', icon: I + 'color-js.webp', frameworks: [
+          { name: 'WebdriverIO', link: '/support/docs/webdriverio-on-hyperexecute-grid' },
+          { name: 'Protractor', link: '/support/docs/protractor-on-hyperexecute-grid' },
+          { name: 'Nightwatch', link: '/support/docs/nightwatch-on-hyperexecute-grid' },
+          { name: 'BiDi', link: '/support/docs/hyperexecute-bidi-testing' },
+        ]},
+        { name: 'C#', icon: I + 'c-sharp-icon.webp', frameworks: [
+          { name: 'NUnit', link: '/support/docs/nunit-on-hyperexecute-grid' },
+          { name: 'SpecFlow', link: '/support/docs/specflow-on-hyperexecute-grid' },
+          { name: 'Reqnroll', link: '/support/docs/reqnroll-on-hyperexecute-grid' },
+        ]},
+        { name: 'Python', icon: I + 'python-icon.webp', frameworks: [
+          { name: 'PyUnit', link: '/support/docs/pyunit-on-hyperexecute-grid' },
+          { name: 'PyTest', link: '/support/docs/pytest-on-hyperexecute-grid' },
+          { name: 'Robot', link: '/support/docs/robot-on-hyperexecute-grid' },
+          { name: 'Behave', link: '/support/docs/behave-on-hyperexecute-grid' },
+        ]},
+        { name: 'Ruby', icon: I + 'ruby-icon.webp', frameworks: [
+          { name: 'Ruby', link: '/support/docs/ruby-on-hyperexecute-grid/' },
+          { name: 'Capybara', link: '/support/docs/capybara-on-hyperexecute-grid' },
+        ]},
+      ],
     },
     {
-      title: 'JavaScript',
-      icon: '/support/assets/images/getting-started/color-js.webp',
-      items: [
-        { name: 'WebdriverIO', link: '/support/docs/webdriverio-on-hyperexecute-grid' },
-        { name: 'Protractor', link: '/support/docs/protractor-on-hyperexecute-grid' },
-        { name: 'Nightwatch', link: '/support/docs/nightwatch-on-hyperexecute-grid' },
-        { name: 'BiDi', link: '/support/docs/hyperexecute-bidi-testing' },
-      ]
+      name: 'Playwright',
+      icon: I + 'playwright.png',
+      languages: [
+        { name: 'Python', icon: I + 'python-icon.webp', frameworks: [
+          { name: 'Python', link: '/support/docs/playwright-python-on-hyperexecute' },
+          { name: 'PyTest', link: '/support/docs/pytest-on-hyperexecute' },
+        ]},
+        { name: 'JavaScript', icon: I + 'color-js.webp', frameworks: [
+          { name: 'VanillaJs', link: '/support/docs/playwright-vanillajs-on-hyperexecute' },
+          { name: 'CodeceptJs', link: '/support/docs/playwright-codeceptjs-on-hyperexecute' },
+          { name: 'Jest', link: '/support/docs/playwright-jest-on-hyperexecute' },
+        ]},
+        { name: 'Java', icon: I + 'java-icon.webp', frameworks: [
+          { name: 'JUnit', link: '/support/docs/playwright-junit-on-hyperexecute' },
+        ]},
+        { name: 'C#', icon: I + 'c-sharp-icon.webp', frameworks: [
+          { name: '.Net', link: '/support/docs/playwright-dotnet-on-hyperexecute' },
+        ]},
+      ],
     },
     {
-      title: 'C#',
-      icon: '/support/assets/images/getting-started/c-sharp-icon.webp',
-      items: [
-        { name: 'NUnit', link: '/support/docs/nunit-on-hyperexecute-grid' },
-        { name: 'SpecFlow', link: '/support/docs/specflow-on-hyperexecute-grid' },
-      ]
+      name: 'Puppeteer',
+      icon: I + 'puppeteer.png',
+      languages: [
+        { name: 'JavaScript', icon: I + 'color-js.webp', frameworks: [
+          { name: 'Jest', link: '/support/docs/jest-on-hyperexecute' },
+          { name: 'Mocha', link: '/support/docs/mocha-on-hyperexecute' },
+          { name: 'CodeceptJs', link: '/support/docs/codecept-on-hyperexecute' },
+        ]},
+      ],
     },
     {
-      title: 'Python',
-      icon: '/support/assets/images/getting-started/python-icon.webp',
-      items: [
-        { name: 'PyUnit', link: '/support/docs/pyunit-on-hyperexecute-grid' },
-        { name: 'PyTest', link: '/support/docs/pytest-on-hyperexecute-grid' },
-        { name: 'Robot', link: '/support/docs/robot-on-hyperexecute-grid' },
-        { name: 'Behave', link: '/support/docs/behave-on-hyperexecute-grid' },
-      ]
+      name: 'Cypress',
+      icon: I + 'cypress_logo.png',
+      languages: [
+        { name: '', icon: I + 'cypress_logo.png', frameworks: [
+          { name: 'Cypress v9', link: '/support/docs/cypressv9-on-hyperexecute' },
+          { name: 'Cypress v10', link: '/support/docs/cypressv10-on-hyperexecute' },
+        ]},
+      ],
     },
     {
-      title: 'Ruby',
-      icon: '/support/assets/images/getting-started/ruby-icon.webp',
-      items: [
-        { name: 'Ruby', link: '/support/docs/ruby-on-hyperexecute-grid/' },
-        { name: 'Capybara', link: '/support/docs/capybara-on-hyperexecute-grid' },
-      ]
+      name: 'API (Karate)',
+      icon: I + 'api.png',
+      languages: [
+        { name: '', icon: I + 'api.png', frameworks: [
+          { name: 'Karate', link: '/support/docs/hyperexecute-karate-testing' },
+        ]},
+      ],
+    },
+    {
+      name: 'Performance',
+      icon: I + 'gattling.png',
+      languages: [
+        { name: 'k6', icon: I + 'k6.png', frameworks: [
+          { name: 'k6', link: '/support/docs/hyperexecute-k6-testing' },
+        ]},
+        { name: 'JMeter', icon: I + 'jmeter.png', frameworks: [
+          { name: 'JMeter', link: '/support/docs/hyperexecute-run-jmeter-tests' },
+        ]},
+      ],
+    },
+    {
+      name: 'Appium',
+      icon: I + 'appium.jpeg',
+      mobile: true,
+      languages: [
+        { name: '', icon: I + 'appium.jpeg', frameworks: [
+          { name: 'Native Apps', link: '/support/docs/hyperexecute-appium-testing' },
+          { name: 'Web Apps', link: '/support/docs/hyperexecute-webapp-appium-testing' },
+          { name: 'Virtual Devices', link: '/support/docs/hyperexecute-appium-virtual-device' },
+        ]},
+      ],
+    },
+    {
+      name: 'Espresso',
+      icon: I + 'espresso.png',
+      mobile: true,
+      languages: [
+        { name: '', icon: I + 'espresso.png', frameworks: [
+          { name: 'Espresso', link: '/support/docs/hyperexecute-espresso-testing' },
+        ]},
+      ],
+    },
+    {
+      name: 'XCUI',
+      icon: I + 'xcui.jpeg',
+      mobile: true,
+      languages: [
+        { name: '', icon: I + 'xcui.jpeg', frameworks: [
+          { name: 'XCUI', link: '/support/docs/hyperexecute-xcui-testing' },
+        ]},
+      ],
+    },
+    {
+      name: 'Maestro',
+      icon: I + 'maestro.png',
+      mobile: true,
+      web: true,
+      languages: [
+        { name: '', icon: I + 'maestro.png', frameworks: [
+          { name: 'Maestro', link: '/support/docs/hyperexecute-maestro-testing' },
+        ]},
+      ],
+    },
+    {
+      name: 'Detox',
+      icon: I + 'color-js.webp',
+      mobile: true,
+      languages: [
+        { name: '', icon: I + 'color-js.webp', frameworks: [
+          { name: 'Detox (React Native)', link: '/support/docs/hyperexecute-detox-testing' },
+        ]},
+      ],
     },
   ];
 
-  const cypressFrameworks = [
-    {
-      title: '',
-      icon: '/support/assets/images/getting-started/cypress_logo.png',
-      items: [
-        { name: 'Cypress v9', link: '/support/docs/cypressv9-on-hyperexecute' },
-        { name: 'Cypress v10', link: '/support/docs/cypressv10-on-hyperexecute' },
-      ]
-    },
+  const byName = (n) => tools.find((t) => t.name === n);
+  const groups = [
+    { title: 'Web, API & Performance', tools: ['Selenium', 'Playwright', 'Puppeteer', 'Cypress', 'Maestro', 'API (Karate)', 'Performance'].map(byName) },
+    { title: 'Mobile App Testing', tools: tools.filter((t) => t.mobile) },
   ];
 
-  const appiumFrameworks = [
-    {
-      title: '',
-      icon: '/support/assets/images/getting-started/appium.jpeg',
-      items: [
-        { name: 'Native Apps', link: '/support/docs/hyperexecute-appium-testing' },
-        { name: 'Web Apps', link: '/support/docs/hyperexecute-appium-testing' },
-      ]
-    },
-  ];
-
-  const espressoFrameworks = [
-    {
-      title: '',
-      icon: '/support/assets/images/getting-started/espresso.png',
-      items: [
-        { name: 'Espresso', link: '/support/docs/hyperexecute-espresso-testing' },
-      ]
-    },
-  ];
-
-  const maestroFrameworks = [
-    {
-      title: '',
-      icon: '/support/assets/images/getting-started/maestro.png',
-      items: [
-        { name: 'Maestro', link: '/support/docs/hyperexecute-maestro-testing' },
-      ]
-    },
-  ];
-
-  const xcuiFrameworks = [
-    {
-      title: '',
-      icon: '/support/assets/images/getting-started/xcui.jpeg',
-      items: [
-        { name: 'XCUI', link: '/support/docs/hyperexecute-xcui-testing' },
-      ]
-    },
-  ];
-
-  const puppeteerFrameworks = [
-    {
-      title: 'JavaScript',
-      icon: '/support/assets/images/getting-started/color-js.webp',
-      items: [
-        { name: 'Jest', link: '/support/docs/jest-on-hyperexecute' },
-        { name: 'Mocha', link: '/support/docs/mocha-on-hyperexecute' },
-        { name: 'CodeceptJs', link: '/support/docs/codecept-on-hyperexecute' },
-      ]
-    },
-  ];
-
-  const playwrightFrameworks = [
-    {
-      title: 'Python',
-      icon: '/support/assets/images/getting-started/python-icon.webp',
-      items: [
-        { name: 'PyTest', link: '/support/docs/pytest-on-hyperexecute' },
-        { name: 'Python', link: '/support/docs/playwright-vanillajs-on-hyperexecute' },
-      ]
-    },
-    {
-      title: 'JavaScript',
-      icon: '/support/assets/images/getting-started/color-js.webp',
-      items: [
-        { name: 'VanillaJs', link: '/support/docs/playwright-vanillajs-on-hyperexecute' },
-        { name: 'CodeceptJs', link: '/support/docs/playwright-codeceptjs-on-hyperexecute' },
-        { name: 'Jest', link: '/support/docs/playwright-jest-on-hyperexecute' },
-      ]
-    },
-    {
-      title: 'Java',
-      icon: '/support/assets/images/getting-started/java-icon.webp',
-      items: [
-        { name: 'JUnit', link: '/support/docs/playwright-junit-on-hyperexecute' },
-      ]
-    },
-    {
-      title: 'C#',
-      icon: '/support/assets/images/getting-started/c-sharp-icon.webp',
-      items: [
-        { name: '.Net', link: '/support/docs/playwright-dotnet-on-hyperexecute' },
-      ]
-    },
-  ];
+  const boxes = groups.map((g, gi) => {
+    let hh = 0;
+    const ks = g.tools.map((t) => t.name).join('|') + '#' + gi;
+    for (let i = 0; i < ks.length; i++) { hh = (hh * 31 + ks.charCodeAt(i)) >>> 0; }
+    const base = 'lfg' + hh.toString(36);
+    const rules = g.tools.map((_, i) =>
+      `#${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgp:nth-of-type(${i + 1}){display:flex}` +
+      `#${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgt:nth-of-type(${i + 1}){color:#c24e00;border-bottom-color:#c24e00}` +
+      `.dark #${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgt:nth-of-type(${i + 1}){color:#f08a4b;border-bottom-color:#f08a4b}`
+    ).join('');
+    return { title: g.title, tools: g.tools, base, rules };
+  });
 
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 no-link my-6 p-[1rem]">
-      <Tabs>
-        <Tab title="Selenium">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 p-8">
-            {seleniumFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img 
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain" 
-                    loading="lazy"
-                />
-               
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
+    <div className="not-prose my-6 flex flex-col gap-6">
+      {boxes.map((box, bi) => (
+        <div key={bi}>
+          <h3 className="m-0 mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">{box.title}</h3>
+          <div id={box.base} className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800/40">
+            <style>{`#${box.base} .lfgp{display:none}` + box.rules}</style>
+            {box.tools.map((t, i) => (
+              <input key={'r' + i} type="radio" name={box.base} id={`${box.base}-${i}`} className="lfgr" defaultChecked={i === 0} style={{ display: 'none' }} />
             ))}
-          </div>
-        </Tab>
-        <Tab title="Playwright">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {playwrightFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+            <div className="lfgb">
+              <div className="flex flex-wrap gap-x-6 border-b border-gray-200 px-5 dark:border-gray-700">
+                {box.tools.map((t, i) => (
+                  <label key={'t' + i} htmlFor={`${box.base}-${i}`} className="lfgt -mb-px flex cursor-pointer items-center gap-2 border-b-2 border-transparent py-3 text-sm font-medium text-gray-500 transition-colors hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+                    <img src={t.icon} alt={t.name} className="h-4 w-4 flex-none object-contain" loading="lazy" />
+                    {t.name}
+                  </label>
+                ))}
               </div>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="Puppeteer">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {puppeteerFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+              <div className="p-6 sm:p-8">
+                {box.tools.map((t, i) => (
+                  <div key={'p' + i} className="lfgp flex-wrap gap-x-14 gap-y-10">
+                    {t.languages.map((lang, li) => (
+                      <div key={li} className="min-w-[130px]">
+                        <div className="mb-4 flex items-center gap-2.5">
+                          <img src={lang.icon} alt={lang.name} className="h-7 w-7 flex-none object-contain" loading="lazy" />
+                          {lang.name ? <span className="text-[15px] font-semibold text-gray-900 dark:text-white">{lang.name}</span> : null}
+                        </div>
+                        <div className="flex flex-col gap-2.5">
+                          {lang.frameworks.map((fw, fi) => (
+                            <a key={fi} href={fw.link} className="text-sm leading-snug text-gray-600 no-underline transition-colors hover:text-[#c24e00] dark:text-gray-400 dark:hover:text-[#f08a4b]">
+                              {fw.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </Tab>
-        <Tab title="Cypress">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {cypressFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="Appium">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {appiumFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="Espresso">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {espressoFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="Maestro">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {maestroFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="XCUI">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
-            {xcuiFrameworks.map((fw, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                    src={fw.icon}
-                    alt={fw.title}
-                    className="w-12 h-12 mb-4 object-contain"
-                    loading="lazy"
-                />
-                <div className="flex flex-col gap-2">
-                  {fw.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.link}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Tab>
-      </Tabs>
-      <div className="bg-gray-50 dark:bg-gray-700/30 p-6 text-center border-t border-gray-200 dark:border-gray-700">
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed m-0">
-            In case your favorite framework or tool isn't listed here, just give us a <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.
-            <br />
-            In case of any other problems, feel free to <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Contact Us</span>.
-        </p>
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

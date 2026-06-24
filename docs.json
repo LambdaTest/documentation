@@ -69,7 +69,26 @@
                   "docs/kane-cli-modes",
                   "docs/kane-cli-configuration",
                   "docs/kane-cli-writing-objectives",
-                  "docs/kane-cli-variables-and-context"
+                  "docs/kane-cli-variables-and-context",
+                  "docs/kane-cli-generate",
+                  "docs/kane-cli-generate-workflow"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Checkpoints",
+                "pages": [
+                  "docs/kane-cli-checkpoints",
+                  "docs/kane-cli-checkpoint-visual",
+                  "docs/kane-cli-checkpoint-textual",
+                  "docs/kane-cli-checkpoint-title",
+                  "docs/kane-cli-checkpoint-url",
+                  "docs/kane-cli-checkpoint-devtools",
+                  "docs/kane-cli-checkpoint-devtools-console",
+                  "docs/kane-cli-checkpoint-devtools-cookies",
+                  "docs/kane-cli-checkpoint-devtools-localstorage",
+                  "docs/kane-cli-checkpoint-devtools-network",
+                  "docs/kane-cli-checkpoint-devtools-performance"
                 ],
                 "expanded": false
               },
@@ -96,7 +115,8 @@
                   "docs/kane-cli-cli-reference",
                   "docs/kane-cli-error-codes",
                   "docs/kane-cli-troubleshooting",
-                  "docs/kane-cli-changelog"
+                  "docs/kane-cli-changelog",
+                  "docs/kane-cli-testmd"
                 ],
                 "expanded": false
               }
@@ -174,9 +194,25 @@
         "icon": "plug",
         "pages": [
           {
-            "group": "Overview",
+            "group": "MCP Server",
             "pages": [
-              "docs/testmu-mcp-server"
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/testmu-mcp-server"
+                ]
+              },
+              {
+                "group": "MCP Tools for Products",
+                "expanded": false,
+                "pages": [
+                  "docs/automation-mcp-server",
+                  "docs/hyperexecute-mcp-server",
+                  "docs/accessibility-mcp-server",
+                  "docs/smartui-mcp-server"
+                ]
+              }
             ]
           }
         ]
@@ -258,7 +294,8 @@
                   "docs/kane-ai-using-parameters",
                   "docs/kane-ai-using-datasets",
                   "docs/kane-ai-using-json-variables",
-                  "docs/kaneai-variables-and-parameters"
+                  "docs/kaneai-variables-and-parameters",
+                  "docs/test-data-generation"
                 ],
                 "expanded": false
               },
@@ -394,7 +431,8 @@
                   "docs/hyperexecute-running-your-first-job",
                   "docs/hyperexecute-guided-walkthrough",
                   "docs/hyperexecute-cli-gui",
-                  "docs/saucelabs-to-hyperexecute-migrate"
+                  "docs/saucelabs-to-hyperexecute-migrate",
+                  "docs/hyperexecute-supported-languages-and-frameworks"
                 ],
                 "expanded": false
               },
@@ -422,13 +460,7 @@
                 ],
                 "expanded": false
               },
-              {
-                "group": "Languages & Frameworks",
-                "pages": [
-                  "docs/hyperexecute-supported-languages-and-frameworks"
-                ],
-                "expanded": false
-              },
+             
               {
                 "group": "Scale Your Test Runs",
                 "pages": [
@@ -668,7 +700,7 @@
                 "group": "Review & Manage Results",
                 "pages": [
                   "docs/smartui-automation-dashboard",
-                  "{docs/smartui-guided-walkthrough}",
+                  "docs/smartui-guided-walkthrough",
                   "docs/smartui-diff-highlighter",
                   "docs/smartui-draw-on-ui",
                   "docs/smartui-multiselect-bulkops",
@@ -925,7 +957,6 @@
                   "docs/deque-integration"
                 ]
               },
-           
               {
                 "group": "Schedule Recurring Scans",
                 "expanded": false,
@@ -988,8 +1019,7 @@
                   "docs/accessibility-vpat-report-generation"
                 ]
               },
-
-                 {
+              {
                 "group": "Run at Scale (HyperExecute & CI/CD)",
                 "expanded": false,
                 "pages": [
@@ -1110,6 +1140,520 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Web Scanner",
+        "icon": "magnifying-glass",
+        "pages": [
+          {
+            "group": "Scan with Web Scanner",
+            "expanded": false,
+            "pages": [
+              "docs/web-scanner-overview",
+              "docs/web-scanner-getting-started",
+              "docs/web-scanner-accessibility-scan",
+              "docs/web-scanner-adding-urls",
+              "docs/web-scanner-scheduling-options",
+              "docs/web-scanner-advanced-features",
+              "docs/web-scanner-visual-scan"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Insights",
+        "icon": "chart-line",
+        "pages": [
+          {
+            "group": "Insights",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/analytics-overview",
+                  "docs/analytics-create-dashboard",
+                  "docs/analytics-dashboard-templates",
+                  "docs/analytics-widgets",
+                  "docs/analytics-widgets-tests-overview-landing"
+                ]
+              },
+              {
+                "group": "Build & Configure Widgets",
+                "expanded": false,
+                "pages": [
+                  "docs/dashboards-custom-widgets",
+                  "docs/analytics-bar-line-widgets",
+                  "docs/analytics-table-widgets",
+                  "docs/analytics-heatmap-widgets",
+                  "docs/analytics-allure-api-widgets",
+                  "docs/analytics-sub-organization-widgets",
+                  "docs/analytics-widget-filter-by-regex",
+                  "docs/analytics-filter-by-custom-data",
+                  "docs/analytics-widget-drill-down-export"
+                ]
+              },
+              {
+                "group": "Insights by Product (Modules)",
+                "expanded": false,
+                "pages": [
+                  "docs/analytics-modules-automation-test-overview",
+                  "docs/analytics-modules-manual-test-overview",
+                  "docs/analytics-modules-hyperexecute",
+                  "docs/analytics-modules-smartui-analytics",
+                  "docs/analytics-modules-test-manager-widgets",
+                  "docs/analytics-modules-accessibility-widgets",
+                  "docs/analytics-modules-test-intelligence-command-logs-analytics",
+                  "docs/analytics-modules-error-insights",
+                  "docs/analytics-modules-groups",
+                  "docs/analytics-modules-resource-utilization",
+                  "docs/concurrency-widget"
+                ]
+              },
+              {
+                "group": "Test Intelligence (AI)",
+                "expanded": false,
+                "pages": [
+                  "docs/test-intelligence-overview",
+                  "docs/defect-analysis-prediction",
+                  "docs/test-intelligence-flakiness-test-detection",
+                  "docs/analytics-modules-test-intelligence-flaky-test-analytics",
+                  "docs/analytics-test-failure-classification",
+                  "docs/analytics-ai-root-cause-analysis",
+                  "docs/analytics-smart-tags-test-intelligence",
+                  "docs/test-intelligence-command-error-logs-analytics"
+                ]
+              },
+              {
+                "group": "Deep-Dive Insights",
+                "expanded": false,
+                "pages": [
+                  "docs/analytics-test-insights",
+                  "docs/analytics-unique-instances-retry-detection",
+                  "docs/analytics-test-case-insights",
+                  "docs/analytics-build-insights",
+                  "docs/analytics-build-comparison",
+                  "docs/analytics-project-report",
+                  "docs/analytics-test-time-trends",
+                  "docs/insights-app-profiling",
+                  "docs/insights-private-desktop",
+                  "docs/insights-private-real-devices",
+                  "docs/insights-usage-report"
+                ]
+              },
+              {
+                "group": "Share & Schedule",
+                "expanded": false,
+                "pages": [
+                  "docs/analytics-dashboard-edit-layout",
+                  "docs/analytics-dashboard-settings",
+                  "docs/analytics-dashboard-features",
+                  "docs/analytics-dashboard-copilot",
+                  "docs/analytics-report-scheduling"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/insights-best-practices",
+                  "docs/analytics-faqs"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Web Automation",
+        "icon": "code",
+        "pages": [
+          {
+            "group": "Overview",
+            "pages": [
+              "docs/getting-started-with-testmu-automation"
+            ]
+          },
+          {
+            "group": "Selenium",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/testmu-running-your-first-selenium-test",
+                  "docs/run-parallel-tests-with-selenium",
+                  "docs/selenium-agent-skills",
+                  "docs/selenium-supported-languages-and-frameworks",
+                  "docs/supported-browsers-and-operating-systems-for-the-web-interface"
+                ]
+              },
+              {
+                "group": "Migrate Test Suites",
+                "expanded": false,
+                "pages": [
+                  "docs/migrate-selenium-test-suite",
+                  "docs/browserstack-to-testmu-migration-guide",
+                  "docs/saucelabs-to-testmu-migration-guide"
+                ]
+              },
+              {
+                "group": "Configure Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/selenium-automation-capabilities",
+                  "docs/selenium-default-capabilities",
+                  "docs/selenium-three-capabilities",
+                  "docs/selenium-four-capabilities",
+                  "docs/testmu-selenium-advance-capabilities",
+                  "docs/lambda-hooks",
+                  "docs/basic-authentication-for-web-automation"
+                ]
+              },
+              {
+                "group": "Test in Local Environments",
+                "expanded": false,
+                "pages": [
+                  "docs/test-locally-hosted-websites-with-selenium",
+                  "docs/run-selenium-test-behind-the-proxy"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/perform-selenium-automation-on-headless-browsers",
+                  "docs/auto-heal",
+                  "docs/smart-wait",
+                  "docs/selenium-bidi-integration",
+                  "docs/selenium-geolocation-capabilities",
+                  "docs/configure-timezones",
+                  "docs/network-throttling",
+                  "docs/ie-mode-on-edge",
+                  "docs/mock-video-injection-web-automation-selenium-chromium",
+                  "docs/upload-custom-chrome-profile",
+                  "docs/upload-files-using-testmu",
+                  "docs/selenium-mask-your-data",
+                  "docs/network-data-masking",
+                  "docs/custom-headers",
+                  "docs/custom-dns-map",
+                  "docs/mark-as-bug-in-automation-testing",
+                  "docs/selenium-lighthouse-reports",
+                  "docs/download-files-using-testmu-selenium-grid"
+                ]
+              },
+              {
+                "group": "Manage Your Runs",
+                "expanded": false,
+                "pages": [
+                  "docs/filter-your-selenium-tests",
+                  "docs/command-annotations",
+                  "docs/change-individual-test-details",
+                  "docs/sharing-test-results",
+                  "docs/live-interaction",
+                  "docs/build-splitting",
+                  "docs/build-inactivity-time",
+                  "docs/group-and-filter-your-test-builds-using-build-tags",
+                  "docs/group-tests-using-custom-tags"
+                ]
+              },
+              {
+                "group": "Debug Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/debugging-options",
+                  "docs/telemetry-logs",
+                  "docs/har_log-viewer"
+                ]
+              },
+              {
+                "group": "Troubleshoot Techniques",
+                "expanded": false,
+                "pages": [
+                  "docs/error-messages",
+                  "docs/timeouts-issues-and-resolutions",
+                  "docs/performance-tips"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Cypress",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-cypress-testing",
+                  "docs/run-your-cypress-tests-in-parallel",
+                  "docs/cypress-agent-skills",
+                  "docs/supported-cypress-versions",
+                  "docs/supported-browsers-and-os"
+                ]
+              },
+              {
+                "group": "Configure Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/cypress-capabilities-reference",
+                  "docs/cypress-cli-commands",
+                  "docs/cyp-environment",
+                  "docs/run-settings"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/cypress-testing-using-webkit",
+                  "docs/screen-resolution-testing-with-cypress",
+                  "docs/private-dependencies-cypress",
+                  "docs/npm-via-tunnel",
+                  "docs/download-artefacts-cypress"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "expanded": false,
+                "pages": [
+                  "docs/integrate-testmu-with-cypress",
+                  "docs/applitools-integration-cypress",
+                  "docs/report-portal-cypress",
+                  "docs/cyp-multi-reporters",
+                  "docs/cypress-detailed-command-logs"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Playwright",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/playwright-testing",
+                  "docs/parallel-testing-with-playwright",
+                  "docs/playwright-sdk",
+                  "docs/playwright-agent-skills",
+                  "docs/playwright-browsers-and-os",
+                  "docs/migrate-existing-playwright-tests",
+                  "docs/capabilities-for-playwright",
+                  "docs/playwright-bundled-browser-support"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/playwright-auto-heal",
+                  "docs/playwright-lighthouse-library",
+                  "docs/local-testing-using-playwright"
+                ]
+              },
+              {
+                "group": "Test on Mobile Web",
+                "expanded": false,
+                "pages": [
+                  "docs/playwright-android-guide",
+                  "docs/playwright-ios-guide",
+                  "docs/playwright-webview-test",
+                  "docs/playwright-android-capabilities"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "expanded": false,
+                "pages": [
+                  "docs/playwright-test-runner",
+                  "docs/playwright-with-cucumberjs",
+                  "docs/playwright-tests-in-ci-cd"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Puppeteer",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/puppeteer-testing",
+                  "docs/puppeteer-agent-skills",
+                  "docs/capabilities-for-puppeteer",
+                  "docs/local-testing-with-puppeteer",
+                  "docs/puppeteer-tests-in-ci-cd"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "k6",
+            "pages": [
+              "docs/k6-browser-testing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "App Automation",
+        "icon": "mobile",
+        "pages": [
+          {
+            "group": "Appium Testing",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-appium-testing",
+                  "docs/app-automation-dashboard",
+                  "docs/appium-languages-and-frameworks",
+                  "docs/live-debug-in-app-automation",
+                  "docs/appium-inspector-integration"
+                ]
+              },
+              {
+                "group": "Configure Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/application-setup-via-api",
+                  "docs/upload-apps-on-real-device-cloud",
+                  "docs/appium-firebase-app-upload",
+                  "docs/desired-capabilities-in-appium",
+                  "docs/supported-appium-versions",
+                  "docs/supported-appium-plugins",
+                  "docs/list-of-supported-locales",
+                  "docs/supported-timezone",
+                  "docs/app-testing-apis",
+                  "docs/appium-testmu-hooks",
+                  "docs/appium-install-uninstall-testmu-hooks",
+                  "docs/appium-uploading-retrieving-files",
+                  "docs/migrate-existing-appium-test-suites",
+                  "docs/migrate-appium-tests-from-browserstack-and-saucelabs"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/testing-locally-hosted-apps",
+                  "docs/camera-image-injection",
+                  "docs/video-injection",
+                  "docs/audio-injection",
+                  "docs/biometric-authentication",
+                  "docs/regular-expression-appium",
+                  "docs/appium-upload-filemedia",
+                  "docs/appium-upload-contacts",
+                  "docs/app-auto-network-throttling",
+                  "docs/sim-support-realdevices",
+                  "docs/appium-ip-geolocation",
+                  "docs/appium-date-and-time",
+                  "docs/appium-app-performance",
+                  "docs/app-automation-slack-notifications",
+                  "docs/appium-ios-app-settings",
+                  "docs/ios-keychain-cleanup",
+                  "docs/group-folder-redirect-on-real-device",
+                  "docs/adb-commands-support",
+                  "docs/login-to-google-account-on-android",
+                  "docs/disable-screenshot-block",
+                  "docs/appium-custom-headers",
+                  "docs/http-basic-authentication",
+                  "docs/device-passcode-appautomation",
+                  "docs/set-device-dark-mode",
+                  "docs/appium-autoheal",
+                  "docs/apple-pay-auto",
+                  "docs/button-text-click",
+                  "docs/ios-shake-gesture-appautomation"
+                ]
+              },
+              {
+                "group": "Automate TV Apps",
+                "expanded": false,
+                "pages": [
+                  "docs/appium-appletv",
+                  "docs/appium-firetv",
+                  "docs/appium-rokutv",
+                  "docs/appium-androidtv"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Espresso Testing",
+            "pages": [
+              {
+                "group": "Configure Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/espresso-supported-capabilities",
+                  "docs/espresso-env-variables-settings",
+                  "docs/espresso-automation-on-emulators-simulators",
+                  "docs/regular-expression-espresso",
+                  "docs/supported-locales-espresso",
+                  "docs/troubleshoot-espresso-tests",
+                  "docs/debugging-espresso-tests"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/espresso-mockwebserver-localhost",
+                  "docs/espresso-junit-report",
+                  "docs/speedup-espresso",
+                  "docs/sharding-espresso"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "XCUI Testing",
+            "pages": [
+              {
+                "group": "Configure Your Tests",
+                "expanded": false,
+                "pages": [
+                  "docs/xcui-supported-capabilities",
+                  "docs/xcui-automation-on-emulators-simulators",
+                  "docs/regular-expression-xcui",
+                  "docs/supported-locales-xcui",
+                  "docs/speedup-xcui"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "expanded": false,
+                "pages": [
+                  "docs/ios-ipa-files-xcui",
+                  "docs/xctestplan",
+                  "docs/xcui-visual-regression",
+                  "docs/sharding-xcui",
+                  "docs/xcui-xml-report",
+                  "docs/xcui-report"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Flutter Testing",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-flutter-dart-android-automation",
+                  "docs/getting-started-with-flutter-dart-ios-automation",
+                  "docs/flutter-supported-capabilities",
+                  "docs/testing-flutter-apps",
+                  "docs/virtual-device-flutter-apps",
+                  "docs/appium-flutter-integration"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ],
     "global": {
@@ -1151,13 +1695,13 @@
       },
       {
         "label": "Login",
-        "href": "https://accounts.lambdatest.com/login?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+        "href": "https://www.testmuai.com/login/?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Get Started Free",
-      "href": "https://accounts.lambdatest.com/register?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+      "href": "https://www.testmuai.com/register/?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
     }
   },
   "contextual": {
@@ -1196,14 +1740,6 @@
   },
   "redirects": [
     {
-      "source": "/docs/smartui-mcp-server",
-      "destination": "/docs/testmu-mcp-server"
-    },
-    {
-      "source": "/docs/accessibility-mcp-server",
-      "destination": "/docs/accessibility-automation"
-    },
-    {
       "source": "/docs/agent-to-agent-faqs",
       "destination": "/docs/agent-testing-platform-faqs"
     },
@@ -1228,11 +1764,11 @@
       "destination": "/docs/insights-dashboard"
     },
     {
-      "source": "/docs/lambdatest-jira-app",
+      "source": "/docs/testmu-jira-app",
       "destination": "/docs/link-jira-issues-with-test-manager"
     },
     {
-      "source": "/docs/lambdatest-azure-devops-app",
+      "source": "/docs/testmu-azure-devops-app",
       "destination": "/docs/link-ado-issues-with-test-manager"
     },
     {

@@ -1,0 +1,35 @@
+---
+title: "Choose Browsers and OS for Playwright Tests"
+sidebarTitle: "Supported Browsers & OSes"
+keywords: ['playwright browsers', 'playwright os', 'playwright supported browsers', 'testmu ai playwright']
+description: "Learn how to select browsers and operating systems for running Playwright tests on TestMu AI."
+"og:description": "Learn how to select browsers and operating systems for running Playwright tests on TestMu AI."
+---
+
+To run Playwright tests on TestMu AI, define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+
+## Browser and OS Capabilities
+---
+
+| Key | Expected Values | Description |
+|-----|----------------|-------------|
+| `browserName` | Chrome, Microsoft Edge, pw-chromium, pw-webkit, pw-firefox | Browser to test on |
+| `browserVersion` | Chrome 83+, Edge 83+ | Browser version to test on |
+| `platform` | **Windows**: 11, 10, 8, 8.1, 7. **macOS**: Monterey, Big Sur, Catalina, Mojave | Platform name |
+
+```js
+const capabilities = {
+  'browserName': 'Chrome',
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+  }
+}
+```
+
+## Supported Playwright Bundled Browsers
+---
+
+For the full compatibility matrix of Playwright versions and their bundled browsers, check the [Playwright bundled browser support list](/support/docs/playwright-bundled-browser-support/).

@@ -1,95 +1,97 @@
+
 export const FrameworkGrid = () => {
-  const frameworks = [
+  const I = '/support/assets/images/getting-started/';
+  const tools = [
     {
-      title: 'Java',
-      icon: '/support/assets/images/getting-started/java-icon.webp',
-      items: [
-        { name: 'Java', link: '/support/docs/appium-java/' },
-        { name: 'JUnit', link: '/support/docs/appium-java-junit/' },
-        { name: 'JBehave', link: '/support/docs/appium-java-jbehave/' },
-        { name: 'Cucumber', link: '/support/docs/appium-java-cucumber/' },
-        { name: 'TestNG', link: '/support/docs/appium-java-testng/' },
-      ]
+      name: 'Appium',
+      icon: I + 'appium.jpeg',
+      languages: [
+        { name: 'Java', icon: I + 'java-icon.webp', frameworks: [
+          { name: 'Java', link: '/support/docs/appium-java/' },
+          { name: 'JUnit', link: '/support/docs/appium-java-junit/' },
+          { name: 'JBehave', link: '/support/docs/appium-java-jbehave/' },
+          { name: 'Cucumber', link: '/support/docs/appium-java-cucumber/' },
+          { name: 'TestNG', link: '/support/docs/appium-java-testng/' },
+        ]},
+        { name: 'Kotlin', icon: I + 'java-icon.webp', frameworks: [
+          { name: 'Kotlin', link: '/support/docs/appium-kotlin' },
+        ]},
+        { name: 'JavaScript', icon: I + 'color-js.webp', frameworks: [
+          { name: 'JavaScript', link: '/support/docs/appium-nodejs/' },
+          { name: 'WebDriverIO', link: '/support/docs/appium-nodejs-webdriverio/' },
+          { name: 'Mocha', link: '/support/docs/appium-nodejs-mocha/' },
+        ]},
+        { name: 'Python', icon: I + 'python-icon.webp', frameworks: [
+          { name: 'Python', link: '/support/docs/appium-python/' },
+          { name: 'Behave', link: '/support/docs/appium-python-behave/' },
+          { name: 'Robot', link: '/support/docs/appium-python-robot/' },
+          { name: 'Gauge', link: '/support/docs/appium-python-gauge/' },
+          { name: 'PyTest', link: '/support/docs/appium-python-pytest/' },
+        ]},
+        { name: 'Ruby', icon: I + 'ruby-icon.webp', frameworks: [
+          { name: 'Ruby', link: '/support/docs/appium-ruby/' },
+          { name: 'Cucumber', link: '/support/docs/appium-ruby-cucumber/' },
+          { name: 'RSpec', link: '/support/docs/appium-ruby-rspec/' },
+        ]},
+        { name: 'PHP', icon: I + 'php-icon.webp', frameworks: [
+          { name: 'PHP', link: '/support/docs/appium-php/' },
+          { name: 'Behat', link: '/support/docs/appium-php-behat/' },
+        ]},
+        { name: 'C#', icon: I + 'c-sharp-icon.webp', frameworks: [
+          { name: 'C#', link: '/support/docs/appium-csharp/' },
+          { name: 'NUnit', link: '/support/docs/appium-csharp-nunit/' },
+        ]},
+      ],
     },
-    {
-      title: 'JavaScript',
-      icon: '/support/assets/images/getting-started/color-js.webp',
-      items: [
-        { name: 'JavaScript', link: '/support/docs/appium-nodejs/' },
-        { name: 'WebDriverIO', link: '/support/docs/appium-nodejs-webdriverio/' },
-        { name: 'Mocha', link: '/support/docs/appium-nodejs-mocha/' },
-      ]
-    },
-    {
-      title: 'Python',
-      icon: '/support/assets/images/getting-started/python-icon.webp',
-      items: [
-        { name: 'Python', link: '/support/docs/appium-python/' },
-        { name: 'Behave', link: '/support/docs/appium-python-behave/' },
-        { name: 'Robot', link: '/support/docs/appium-python-robot/' },
-        { name: 'Gauge', link: '/support/docs/appium-python-gauge/' },
-        { name: 'PyTest', link: '/support/docs/appium-python-pytest/' },
-      ]
-    },
-    {
-      title: 'Ruby',
-      icon: '/support/assets/images/getting-started/ruby-icon.webp',
-      items: [
-        { name: 'Ruby', link: '/support/docs/appium-ruby/' },
-        { name: 'Cucumber', link: '/support/docs/appium-ruby-cucumber/' },
-        { name: 'RSpec', link: '/support/docs/appium-ruby-rspec/' },
-      ]
-    },
-    {
-      title: 'PHP',
-      icon: '/support/assets/images/getting-started/php-icon.webp',
-      items: [
-        { name: 'PHP', link: '/support/docs/appium-php/' },
-        { name: 'Behat', link: '/support/docs/appium-php-behat/' },
-      ]
-    },
-    {
-      title: 'C#',
-      icon: '/support/assets/images/getting-started/c-sharp-icon.webp',
-      items: [
-        { name: 'C#', link: '/support/docs/appium-csharp/' },
-        { name: 'NUnit', link: '/support/docs/appium-csharp-nunit/' },
-      ]
-    }
   ];
 
+  let h = 0;
+  const keyStr = tools.map((t) => t.name).join('|');
+  for (let i = 0; i < keyStr.length; i++) { h = (h * 31 + keyStr.charCodeAt(i)) >>> 0; }
+  const base = 'lfg' + h.toString(36);
+  const rules = tools.map((_, i) =>
+    `#${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgp:nth-of-type(${i + 1}){display:flex}` +
+    `#${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgt:nth-of-type(${i + 1}){color:#c24e00;border-bottom-color:#c24e00}` +
+    `.dark #${base} .lfgr:nth-of-type(${i + 1}):checked~.lfgb .lfgt:nth-of-type(${i + 1}){color:#f08a4b;border-bottom-color:#f08a4b}`
+  ).join('');
+
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 no-link my-6">
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-8 p-8">
-        {frameworks.map((fw, index) => (
-          <div key={index} className="flex flex-col items-start">
-            <img 
-                src={fw.icon}
-                alt={fw.title}
-                className="w-12 h-12 mb-4 object-contain" 
-                loading="lazy"
-            />
-            
-            <div className="flex flex-col gap-2">
-              {fw.items.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors no-underline"
-                >
-                  {item.name}
-                </a>
+    <div id={base} className="not-prose my-6 overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800/40">
+      <style>{`#${base} .lfgp{display:none}` + rules}</style>
+      {tools.map((t, i) => (
+        <input key={'r' + i} type="radio" name={base} id={`${base}-${i}`} className="lfgr" defaultChecked={i === 0} style={{ display: 'none' }} />
+      ))}
+      <div className="lfgb">
+        <div className="flex flex-wrap gap-x-6 border-b border-gray-200 px-5 dark:border-gray-700">
+          {tools.map((t, i) => (
+            <label key={'t' + i} htmlFor={`${base}-${i}`} className="lfgt -mb-px flex cursor-pointer items-center gap-2 border-b-2 border-transparent py-3 text-sm font-medium text-gray-500 transition-colors hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              <img src={t.icon} alt={t.name} className="h-4 w-4 flex-none object-contain" loading="lazy" />
+              {t.name}
+            </label>
+          ))}
+        </div>
+        <div className="p-6 sm:p-8">
+          {tools.map((t, i) => (
+            <div key={'p' + i} className="lfgp flex-wrap gap-x-14 gap-y-10">
+              {t.languages.map((lang, li) => (
+                <div key={li} className="min-w-[130px]">
+                  <div className="mb-4 flex items-center gap-2.5">
+                    <img src={lang.icon} alt={lang.name} className="h-7 w-7 flex-none object-contain" loading="lazy" />
+                    {lang.name ? <span className="text-[15px] font-semibold text-gray-900 dark:text-white">{lang.name}</span> : null}
+                  </div>
+                  <div className="flex flex-col gap-2.5">
+                    {lang.frameworks.map((fw, fi) => (
+                      <a key={fi} href={fw.link} className="text-sm leading-snug text-gray-600 no-underline transition-colors hover:text-[#c24e00] dark:text-gray-400 dark:hover:text-[#f08a4b]">
+                        {fw.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="bg-gray-50 dark:bg-gray-700/30 p-6 text-center border-t border-gray-200 dark:border-gray-700">
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed m-0">
-            We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.
-            <br />
-            Don't worry, you can still run the test. <span className="text-blue-600 dark:text-blue-400 cursor-pointer hover:underline" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.
-        </p>
+          ))}
+        </div>
+
       </div>
     </div>
   );

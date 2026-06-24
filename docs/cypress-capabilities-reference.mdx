@@ -1,0 +1,60 @@
+---
+title: "Cypress Capabilities Reference"
+sidebarTitle: "Specify Automation Capabilities"
+keywords: ['cypress capabilities', 'cypress configuration', 'cypress lambdatest config', 'testmu ai cypress']
+description: "Complete reference of all configuration capabilities for running Cypress tests on TestMu AI."
+"og:description": "Complete reference of all configuration capabilities for running Cypress tests on TestMu AI."
+---
+
+This page provides a quick reference of all configuration keys available in the `lambdatest-config.json` file for running Cypress tests on TestMu AI. For detailed examples of each capability, learn how to [configure Cypress test execution](/support/docs/run-settings/).
+
+## Authentication
+---
+
+| Key | Description | Type |
+|-----|-------------|------|
+| `lambdatest_auth.username` | Your TestMu AI username | String |
+| `lambdatest_auth.access_key` | Your TestMu AI access key | String |
+
+## Browser Configuration
+---
+
+| Key | Description | Type |
+|-----|-------------|------|
+| `browsers[].browser` | Browser name (Chrome, Firefox, Edge) | String |
+| `browsers[].platform` | Operating system (Windows 10, macOS Ventura) | String |
+| `browsers[].versions` | Array of browser versions | Array |
+
+## Run Settings
+---
+
+| Key | Description |
+|-----|-------------|
+| `cypress_config_file` | Path to Cypress config file |
+| `specs` | Spec file patterns to run |
+| `exclude_specs` | Spec files to exclude |
+| `build-name` | Build identifier |
+| `project-name` | Project identifier |
+| `tags` | Group tests by tag |
+| `parallels` | Number of parallel sessions |
+| `npm_dependencies` | Required NPM packages |
+| `ignore_files` | Files to exclude from upload |
+| `geo_location` | Country code for geolocation |
+| `max_duration` | Spec timeout in minutes (2-240) |
+| `headless` | Run in headless mode |
+| `network` | Capture network logs |
+| `resolution` | Machine resolution |
+| `useNodeVersion` | Node.js version (18, 20, 22) |
+
+## Tunnel Settings
+---
+
+| Key | Description |
+|-----|-------------|
+| `tunnel_settings.tunnel` | Enable tunnel for local testing |
+| `tunnel_settings.tunnel_name` | Tunnel connection name |
+
+## CLI Reference
+---
+
+Check out the complete list of [Cypress CLI commands](/support/docs/cypress-cli-commands/) for all available flags and options.

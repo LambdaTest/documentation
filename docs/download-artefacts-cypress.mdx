@@ -1,0 +1,94 @@
+---
+title: Downloading Artefacts For A Cypress Project
+sidebarTitle: "Download Test Artifacts"
+description: "This article guides you on how to download the artefacts for a cypress project from TestMu AI Cloud machine."
+
+keywords: ['Cypress Automation', 'Cypress Testing Guide', 'Cypress Artefacts', 'Download Artefacts', 'Artefacts for Cypress', 'Cypress Test Automation', 'Cypress Automation Testing', 'Running Cypress Tests', 'Cypress Project']
+"og:description": "This article guides you on how to download the artefacts for a cypress project from TestMu AI Cloud machine."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+import { GitHubButton } from '/snippets/GitHubButton.mdx';
+
+
+This article guides you on how to download the artefacts for a Cypress project from <BrandName /> Cloud machine.
+
+<Tip>
+**Sample repo**
+
+In this demo we are demonstrating using <BrandName />'s sample Cypress Cloud repo. You can find all the resources used for this article in the linked repo. <GitHubButton url="https://github.com/LambdaTest/Cypress-Cloud" />
+
+</Tip>
+
+## Downloading The Data From The <BrandName /> Cloud Machine
+
+---
+
+Assuming that you have run a Cypress test on testmu ai platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
+
+### Update <BrandName /> Cypress CLI
+
+---
+
+Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
+
+```bash
+npm install -g lambdatest-cypress-cli
+```
+
+### Add downloads Capability
+
+---
+
+Add **"downloads"** capability in the `lambdatest-config.json` file and define the files/directories that you wanted to download in this capability. You can mention multiple file paths in this capability separated by a comma. Refer to the below example for the same.
+
+<img loading="lazy" src='/assets/images/cypress/cypress4.png' alt="Image" width="1282" height="722" />
+
+### Add --sync Flag
+
+---
+
+Append `–-sync` flag in the run command as mentioned below and run your test on the <BrandName /> platform. 
+
+```bash
+lambdatest-cypress run --sync=true
+```
+
+Once the test gets executed, you will find a `build_id` on the console corresponding to the executed test.
+
+<img loading="lazy" src='/assets/images/cypress/cypress5.png' alt="Image" width="1282" height="722" />
+
+### Get session_id In lambdatest_run.json
+---
+
+Go to your `lambdatest_run.json` file and copy the `session_id`.
+
+```json title=lambdatest_run.json
+{
+   "build_id": "7724863",
+   "session_id": "6c899177-047e-4432-a9a7-17776e23aae3"
+}
+```
+
+Now pass the session_id by running the following command.
+
+```json
+lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3
+```
+
+### View The Downloaded Folder
+---
+
+- A new folder with the name **lambdatest-artifacts** will get created in the **root** directory of your project and all the files will be downloaded in this folder.
+
+<img loading="lazy" src='/assets/images/cypress/cypress6.png' alt="Image" width="1282" height="722" />
+
+- The file name will be created with the session_id combined with the browser name, browser version, and the test id corresponding to it.
+
+  <img loading="lazy" src='/assets/images/cypress/cypress7.png' alt="Image" width="1282" height="722" />
+
+<Tip>
+**Support**
+
+That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+</Tip>

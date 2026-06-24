@@ -1,0 +1,44 @@
+---
+title: "Basic Authentication for Safari Web Automation"
+sidebarTitle: "Handle Basic Authentication"
+description: "Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 3000+ real mobile devices."
+keywords: ['basic authentication', 'safari web automation', 'web automation', 'basic authentication for web automation', 'app testing', 'real devices']
+"og:description": "Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 3000+ real mobile devices."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+## Introduction
+---
+Basic Authentication is a method for an HTTP user agent to provide a user name and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic <credentials>`, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.
+
+To provide support for Basic Authentication in Safari during Web Automation, we have introduced a new lambda hook in our `iOS` Real Device (RD) web sessions.
+
+<Info>
+1. This hook is not compatible with any app-based sessions.
+2. The capability `autoAcceptAlerts` must be set to `false`.
+</Info>
+
+## How to Use
+---
+Here is an example of how to use the Basic Authentication hook in Python:
+
+```python
+data = {
+  "username": "admin",
+  "password": "admin",
+  "url": "https://the-internet.herokuapp.com/basic_auth",
+}
+driver.execute_script("lambda-ios-set-basic-auth", data)
+```
+
+<Info>
+**It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.**
+
+</Info>
+
+## Limitations
+---
+Please note, this hook is designed to be used exclusively with Safari on iOS Real Device (RD) web sessions and is not compatible with Android sessions or any app-based sessions.
