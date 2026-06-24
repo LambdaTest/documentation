@@ -55,7 +55,7 @@ For **Hooks**, engineering behavior is:
 | **Smart Ignore** | **`LT:Options`** | Set **`smartUI.smartIgnore`: `true`** on the session for baseline and comparison runs. |
 | **Project** | **`LT:Options`** | Set **`smartUI.project`** (and `visual`, auth) as usual. |
 
-If you need **layout via capabilities alone** (no hook options), treat that as a **product / roadmap** ask, and track it with your account team (for example internal idea **LTPM-3632**). This doc reflects **current** Hooks behavior.
+If you need **layout via capabilities alone** (no hook options), treat that as a feature request and raise it with your account team. This doc reflects **current** Hooks behavior.
 :::
 
 :::info Smart Ignore vs Ignore DOM / Select DOM
@@ -209,7 +209,7 @@ Runs using a **project token** may show the **project creator**. Use the intende
 | Layout never activates; only tried `LT:Options` | Move **`ignoreType: ["layout"]`** into **`smartui.takeScreenshot`** options (§2). |
 | Smart Ignore never activates | Set **`smartUI.smartIgnore`: true** in **`LT:Options`**; verify in session metadata. |
 | Tried `smartUI.layout` | Not the supported Hooks switch for layout; use hook **options** instead. |
-| Prospect cannot use dashboard toggles only | Hooks still need correct **hook** + **capability** split per this page. |
+| Want to rely on dashboard toggles only | Hooks still need the correct **hook** + **capability** split per this page. |
 
 ## Related Docs
 
