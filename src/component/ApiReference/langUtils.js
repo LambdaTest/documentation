@@ -49,7 +49,8 @@ export function generateCodeExample(endpoint, language, { username, password, pa
   const bodyExample = bodyProps.length > 0
     ? Object.fromEntries(bodyProps.map((p) => {
         const val = (params && params[`__body__${p.name}`]) ||
-          (p.type.includes('integer') || p.type.includes('number') ? 0 :
+          (p.example !== undefined ? p.example :
+           p.type.includes('integer') || p.type.includes('number') ? 0 :
            p.type.includes('boolean') ? true :
            p.type.includes('array') ? [] :
            `<${p.name}>`);

@@ -667,13 +667,15 @@ function UrlBar({ endpoint, onTryIt }) {
         )}
       </button>
 
-      <button
-        className={styles.tryItBtn}
-        style={{ background: btnColor }}
-        onClick={() => onTryIt?.(effectiveEndpoint)}
-      >
-        Try it <span className={styles.playIcon}>&#9654;</span>
-      </button>
+      {!effectiveEndpoint.deprecated && (
+        <button
+          className={styles.tryItBtn}
+          style={{ background: btnColor }}
+          onClick={() => onTryIt?.(effectiveEndpoint)}
+        >
+          Try it <span className={styles.playIcon}>&#9654;</span>
+        </button>
+      )}
     </div>
   );
 }
@@ -709,6 +711,14 @@ export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeS
       >
         {endpoint.name}
       </h1>
+
+      {/* Deprecated banner */}
+      {endpoint.deprecated && (
+        <div className={styles.deprecatedBanner}>
+          <span style={{ fontSize: '18px', flexShrink: 0 }}>&#9888;</span>
+          <span><strong>Deprecated</strong> — This endpoint is deprecated and may be removed in a future version.</span>
+        </div>
+      )}
 
       {/* Description */}
       {endpoint.description && (

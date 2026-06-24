@@ -88,6 +88,7 @@ function flattenSpec(spec) {
         path: pth.startsWith('/') ? pth : `/${pth}`,
         summary: op.summary || '',
         description: op.description || op.summary || '',
+        deprecated: !!op.deprecated,
         tags: op.tags || [],
         parameters: op.parameters || [],
         requestBody: op.requestBody || null,
@@ -153,8 +154,21 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
     const type = resolved.type || 'string';
     const format = resolved.format || null;
     const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
-    return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
+    const example = resolved.example !== undefined ? resolved.example : undefined;
+    return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }), ...(example !== undefined && { example }) };
   });
+
+  // Enrich properties with examples from the body-level example object
+  // when individual properties don't have their own example value.
+  const bodyExample = bodyContent.example ?? schema.example;
+  if (bodyExample && typeof bodyExample === 'object' && !Array.isArray(bodyExample) && properties.length > 0) {
+    properties = properties.map((prop) => {
+      if (prop.example === undefined && bodyExample[prop.name] !== undefined) {
+        return { ...prop, example: bodyExample[prop.name] };
+      }
+      return prop;
+    });
+  }
 
   // Fallback for specs that declare `type: object` without `properties` —
   // derive fields from the example block so the Try It modal can render
@@ -169,7 +183,7 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
         else if (typeof value === 'boolean') type = 'boolean';
         else if (Array.isArray(value)) type = 'array';
         else if (typeof value === 'object' && value !== null) type = 'object';
-        return { name, type, required: false, description: '' };
+        return { name, type, required: false, description: '', example: value };
       });
       if (properties.length > 0) {
         const loc = ctx.method && ctx.path ? `${ctx.method} ${ctx.path}` : '(unknown endpoint)';
@@ -320,6 +334,7 @@ async function main() {
           method: ep.method,
           path: ep.path,
           description: ep.description,
+          ...(ep.deprecated && { deprecated: true }),
           ...((auth.length || ep.securityAuth?.length) && { auth: [...(ep.securityAuth || []), ...auth] }),
           ...(pathParams.length && { pathParams }),
           ...(queryParams.length && { queryParams }),
