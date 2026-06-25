@@ -181,6 +181,27 @@
   }
 }
 
+/* Deprecated banner */
+.deprecatedBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  color: #92400e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+[data-theme='dark'] .deprecatedBanner {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
 /* Code block */
 .codeBlock {
   background: var(--ifm-color-emphasis-100);

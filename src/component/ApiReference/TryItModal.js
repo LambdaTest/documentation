@@ -356,15 +356,6 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
       }
       return initial;
     }
-    const ex = effectiveEndpoint.requestBody?.example;
-    const props = effectiveEndpoint.requestBody?.properties || [];
-    if (ex && typeof ex === 'object' && !Array.isArray(ex)) {
-      for (const p of props) {
-        if (ex[p.name] === undefined) continue;
-        const v = ex[p.name];
-        initial[`__body__${p.name}`] = v == null ? '' : String(v);
-      }
-    }
     return initial;
   }
   // Prefill body fields with the spec example so the form is usable on first
