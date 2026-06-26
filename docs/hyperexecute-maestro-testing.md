@@ -130,6 +130,100 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/io
 </Tabs>
 > HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
 
+### Run Tests on iOS Virtual Devices
+To run tests on iOS Virtual Devices, make the following changes in your `hyperexecute.yaml` file:
+
+- Change the `runson` key to `ios26`.
+- Set the `devices` array to `["iPhone 17"]`.
+
+Here is the complete `hyperexecute.yaml` for running Maestro tests on iOS Virtual Devices:
+
+```yaml title="hyperexecute.yaml"
+# Define the version of the configuration file
+version: "0.2"
+
+# Enable autosplit for test execution
+autosplit: true
+
+# Set the concurrency level for test execution (2 devices in parallel)
+concurrency: 2
+
+# Specify the target platform for test execution (iOS in this case)
+# runson: ios
+runson: ios26
+
+# Enable dynamic allocation of resources
+dynamicAllocation: true
+
+# Test framework configuration
+framework:
+  # Name of the test framework (raw in this case)
+  name: raw
+  args:
+    # List of devices to run tests on (iPhone 17 on iOS 26.0 in this case)
+    # devices: [".*-.*", ".*-.*", ".*-.*"]
+    devices: ["iPhone 17"]
+    # devices: [".*-26.0"]
+    # Enable or disable video recording support
+    video: true
+    # Enable or disable device log support
+    deviceLog: true
+    # App ID to be installed (mandatory field, using <app_id>)
+    # x86 build
+    # appId: lt://APP10160362031781245339521143 #Need to upload .zip file
+    # ARM Build for iOS 26.0 & above
+    appId: lt://APP123456789012345678901234567
+    # Build name for identification on the automation dashboard
+    buildName: maestro-t1
+    # Timeout for device queue
+    queueTimeout: 600
+    # Configuration fields specific to running raw tests
+    # region: ap
+    disableReleaseDevice: true
+    reservation: false
+    isRealMobile: false
+    network: true
+    platformName: ios
+
+env:
+  MAESTRO: true
+  MAESTRO_LOGS_DIR: MaestroLogs
+
+# Pre-install required dependencies using pip
+# will need java and maestro inside the container
+pre:
+  - chmod +x maestro-test/setup-script-iOS.sh
+  - chmod +x ./maestro-test/runTest_ios.sh
+  - ./maestro-test/setup-script-iOS.sh
+
+# Test discovery configuration
+testDiscovery:
+  # Command to discover tests from the test.txt file
+  command: cat ./maestro-test/discover-iOS.txt
+  # Test discovery mode can be static/dynamic
+  mode: static
+  # Test type is raw (custom test implementation)
+  type: raw
+
+# Command to run the tests using the testRunnerCommand
+testRunnerCommand: ./maestro-test/runTest_ios.sh $test 
+    
+# Only report the status of the test framework
+frameworkStatusOnly: true
+
+report: true
+partialReports:
+  - location: .
+    type: xml
+    frameworkName: junit
+
+jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
+```
+
+:::note
+Ensure that the app is built for ARM or Universal (Dual-Architecture) and not as an x86-only binary. As shown in the `appId` field above, use the ARM build for iOS 26.0 and above.
+:::
+
 ## Step 5: Generate JUnit XML Report
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
 
