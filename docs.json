@@ -456,7 +456,6 @@
                 ],
                 "expanded": false
               },
-             
               {
                 "group": "Scale Your Test Runs",
                 "pages": [
@@ -895,12 +894,6 @@
                 "pages": [
                   "docs/insights-dashboard",
                   "docs/tms-reports"
-                ],
-                "expanded": false
-              },
-              {
-                "group": "Access Management",
-                "pages": [
                 ],
                 "expanded": false
               }
@@ -1655,31 +1648,12 @@
                 "pages": [
                   "docs/getting-started-with-desktop-browser-real-time-testing",
                   "docs/real-time-desktop-browser-testing-tools",
-                  "docs/pre-loaded-chrome-extension"
-                ]
-              },
-              {
-                "group": "Real Time - Virtual Mobile",
-                "expanded": false,
-                "pages": [
-                  {
-                    "group": "Mobile Web",
-                    "expanded": false,
-                    "pages": [
-                      "docs/getting-started-with-mobile-browser-real-time-testing",
-                      "docs/real-time-mobile-browser-testing-tools",
-                      "docs/webview-testing-in-android"
-                    ]
-                  },
-                  {
-                    "group": "Mobile App",
-                    "expanded": false,
-                    "pages": [
-                      "docs/getting-started-with-mobile-app-real-time-testing",
-                      "docs/real-time-mobile-app-testing-tools",
-                      "docs/troubleshooting-ios-app-testing"
-                    ]
-                  }
+                  "docs/pre-loaded-chrome-extension",
+                  "docs/developer-tools",
+                  "docs/real-time-locally-hosted-pages",
+                  "docs/real-time-upload-and-download-files",
+                  "docs/real-time-recents-and-favourites",
+                  "docs/real-time-testing-troubleshooting"
                 ]
               },
               {
@@ -1690,16 +1664,34 @@
                   "docs/chrome-os-web-browser-testing",
                   "docs/chrome-os-app-testing"
                 ]
-              },
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Mobile (Virtual Device)",
+        "icon": "mobile",
+        "pages": [
+          {
+            "group": "Mobile (Virtual Device)",
+            "pages": [
               {
-                "group": "Common Real-Time Features",
+                "group": "Mobile Web",
                 "expanded": false,
                 "pages": [
-                  "docs/developer-tools",
-                  "docs/real-time-locally-hosted-pages",
-                  "docs/real-time-upload-and-download-files",
-                  "docs/real-time-recents-and-favourites",
-                  "docs/real-time-testing-troubleshooting"
+                  "docs/getting-started-with-mobile-browser-real-time-testing",
+                  "docs/real-time-mobile-browser-testing-tools",
+                  "docs/webview-testing-in-android"
+                ]
+              },
+              {
+                "group": "Mobile App",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-mobile-app-real-time-testing",
+                  "docs/real-time-mobile-app-testing-tools",
+                  "docs/troubleshooting-ios-app-testing"
                 ]
               }
             ]
@@ -1783,18 +1775,19 @@
         ]
       },
       {
-        "tab": "App Testing",
+        "tab": "Mobile (Real Device)",
         "icon": "mobile-screen",
         "pages": [
           {
-            "group": "App Testing",
+            "group": "Mobile (Real Device)",
             "pages": [
               {
                 "group": "Get Started",
                 "expanded": false,
                 "pages": [
                   "docs/real-device-testing-overview",
-                  "docs/app-testing-on-real-devices"
+                  "docs/app-testing-on-real-devices",
+                  "docs/browser-testing-on-real-devices"
                 ]
               },
               {
@@ -1845,12 +1838,6 @@
                 ]
               },
               {
-                "group": "Test Accessibility",
-                "expanded": false,
-                "pages": [
-                ]
-              },
-              {
                 "group": "Inspect & Debug",
                 "expanded": false,
                 "pages": [
@@ -1867,34 +1854,7 @@
                 ]
               },
               {
-                "group": "Private Cloud",
-                "expanded": false,
-                "pages": [
-                  "docs/public-cloud-vs-private-cloud",
-                  "docs/select-pre-installed-apps",
-                  "docs/private-device-allocation-to-teams"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Mobile Web (Real Device)",
-        "icon": "mobile-screen-button",
-        "pages": [
-          {
-            "group": "Mobile Web (Real Device)",
-            "pages": [
-              {
-                "group": "Get Started",
-                "expanded": false,
-                "pages": [
-                  "docs/browser-testing-on-real-devices"
-                ]
-              },
-              {
-                "group": "In-Session Tools",
+                "group": "Browser - In-Session Tools",
                 "expanded": false,
                 "pages": [
                   "docs/how-to-use-in-session-testing-tools",
@@ -1907,10 +1867,19 @@
                 ]
               },
               {
-                "group": "Accessibility on Real-Device Browsers",
+                "group": "Browser - Accessibility",
                 "expanded": false,
                 "pages": [
                   "docs/assistive-touch-on-real-ios-browser"
+                ]
+              },
+              {
+                "group": "Private Cloud",
+                "expanded": false,
+                "pages": [
+                  "docs/public-cloud-vs-private-cloud",
+                  "docs/select-pre-installed-apps",
+                  "docs/private-device-allocation-to-teams"
                 ]
               }
             ]
