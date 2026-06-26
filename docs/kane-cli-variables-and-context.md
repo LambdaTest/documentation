@@ -65,7 +65,6 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 |-------|----------|------|---------|-------------|
 | `value` | Yes | string | — | The variable's value. Entries without `value` are ignored. |
 | `secret` | No | boolean | `false` | When `true`, the value is masked in logs and routed to the <BrandName /> secrets store instead of being synced as plain Test Manager variables. |
-| `syntax` | No | string | `{{<name>}}` | Custom placeholder syntax. Defaults to the double-brace form using the variable name. |
 
 ### Usage in Objectives
 
