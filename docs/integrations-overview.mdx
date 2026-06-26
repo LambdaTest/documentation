@@ -1,0 +1,67 @@
+---
+title: "Integrations Overview"
+sidebarTitle: "Overview"
+description: "An introduction to TestMu AI integrations — connect your bug trackers, project management tools, CI/CD pipelines, test management systems, chat tools, and codeless platforms to your testing workflow."
+keywords: ['testmu ai integrations', 'lambdatest integrations', 'bug tracker integration', 'ci cd integration', 'test management integration', 'how to integrate testmu ai']
+"og:description": "An introduction to TestMu AI integrations — connect your bug trackers, project management tools, CI/CD pipelines, test management systems, chat tools, and codeless platforms to your testing workflow."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+## What are <BrandName /> Integrations?
+
+<BrandName /> integrations connect your testing on <BrandName /> to the tools your team already uses — issue trackers, project boards, CI/CD pipelines, test management systems, chat and on-call tools, observability platforms, and third-party test-authoring tools. Instead of switching contexts, you log bugs, trigger test runs, sync results, and receive alerts from inside your existing workflow.
+
+This page explains the integration categories, the one-time setup that most integrations share, and where to find the right integration for each moment in your testing journey.
+
+## How integrations work
+
+Most <BrandName /> integrations fall into one of two connection models:
+
+- **In-session integrations** (bug trackers, project management, chat tools): you authenticate the third-party tool once in your <BrandName /> account, then log bugs or push notifications directly from a live test session — with the screenshot, annotations, and test-environment details attached automatically.
+- **Pipeline & framework integrations** (CI/CD, codeless tools, test management): you supply your <BrandName /> **Username** and **Access Key** to the external tool (usually as environment variables), and it runs tests on the <BrandName /> grid or pushes results back.
+
+<Note>
+Your **Username** and **Access Key** are available in your [<BrandName /> Account Settings](https://accounts.lambdatest.com/security/username-accesskey). Most integrations need these two credentials — set them once and reuse them across every integration in this section.
+</Note>
+
+### Set up an in-session integration
+
+1. Sign in to your <BrandName /> account and open the **Integrations** page.
+2. Find your tool, click **Install**, and authorize it (OAuth) or paste the tool's API token / webhook URL.
+3. Start a real-time or automated test. When you spot an issue, use the in-session bug-logging panel to file it directly to your connected tool.
+
+### Set up a pipeline or framework integration
+
+1. Add your <BrandName /> **Username** and **Access Key** to the external tool's environment or configuration.
+2. Point your test capabilities or hub URL at the <BrandName /> grid.
+3. Trigger the pipeline or test run; results appear in your <BrandName /> dashboard and, where supported, in the external tool.
+
+## Integration categories
+
+Pick the category that matches what you are trying to do:
+
+| Category | Use it when you want to… | Examples |
+|---|---|---|
+| **Log Bugs to Issue Trackers** | File a bug from a live session to a dedicated issue tracker | Jira, Azure DevOps, Bugzilla, YouTrack, Mantis |
+| **Log Bugs to Project & Work Management Tools** | File a bug to a work/project board | Asana, Trello, ClickUp, monday.com, GitHub |
+| **Sync Test Results to Test Management** | Push pass/fail results into a test-case management system | TestRail, Zephyr Scale, Testmo, ALM Octane |
+| **Connect Third-Party Testing Tools** | Author or run tests in a codeless/low-code or framework tool on the grid | Katalon, Testsigma, Ranorex, Applitools |
+| **Run Tests in Your CI/CD Pipeline** | Wire your test suite into continuous integration | Jenkins, GitLab CI, CircleCI, Azure Pipelines, Bitrise |
+| **Get Test Alerts & Notifications** | Route test and bug events to your team's chat or on-call | Slack, Microsoft Teams, PagerDuty, OpsGenie |
+| **Monitor Test Analytics & Coverage** | Pipe test telemetry into an observability tool | New Relic, Datadog, Sumo Logic |
+| **Automate Workflows** | Trigger downstream automation from <BrandName /> events | Zapier, n8n, Webhooks |
+| **<BrandName /> Plugins & Extensions** | Test from your browser, IDE, or build tool | VS Code, Chrome, Xcode, fastlane, gradle |
+
+## Where to start
+
+- **Found a bug while testing?** Go to **Log Bugs to Issue Trackers** or **Log Bugs to Project & Work Management Tools** and connect your tracker.
+- **Have a working test suite to run on every commit?** Go to **Run Tests in Your CI/CD Pipeline**.
+- **Want results in your test-management tool?** Go to **Sync Test Results to Test Management**.
+- **Want your team notified on failures?** Go to **Get Test Alerts & Notifications**.
+
+<Note>
+Don't see your tool? <BrandName /> also supports generic [Webhooks](/docs/webhooks-integration) and [Zapier](/docs/zapier-integration-with-lambdatest) / [n8n](/docs/n8n-integration) automation, which connect to thousands of additional apps.
+</Note>

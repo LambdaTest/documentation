@@ -1,0 +1,45 @@
+---
+title: "Real Device Testing Overview"
+sidebarTitle: "Overview"
+description: "An introduction to manual app and browser testing on the TestMu AI Real Device Cloud — what it is, when to use it, and how the app and browser testing journeys work."
+keywords: ['testmu ai real device cloud', 'manual app testing', 'real device browser testing', 'manual testing on real devices', 'app testing on real devices']
+"og:description": "An introduction to manual app and browser testing on the TestMu AI Real Device Cloud — what it is, when to use it, and how the app and browser testing journeys work."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+## What is Real Device Testing?
+
+<BrandName /> Real Device Testing lets you manually test your mobile apps and websites on real Android and iOS devices in the cloud, in a live interactive session — no physical device lab required. You get a real device streamed to your browser, with full access to gestures, hardware features, network controls, and debugging tools.
+
+Use it to reproduce device-specific bugs, validate UI on real hardware, test features that emulators can't fake (camera, biometrics, SIM, GPS), and run accessibility checks with native screen readers.
+
+## App testing vs. browser testing
+
+Real Device Testing covers two distinct journeys. Pick the one that matches what you're testing:
+
+| You're testing… | Use | Start here |
+|---|---|---|
+| A native or hybrid **mobile app** (`.apk` / `.ipa`) | **App Testing** | [Run Your First App Test](/docs/app-testing-on-real-devices) |
+| A **website** in a mobile browser on a real device | **Browser Testing** | [Run Your First Browser Test](/docs/browser-testing-on-real-devices) |
+
+Both journeys share the same in-session capabilities — simulate real-world conditions, test accessibility, and review results — applied to either your app or a browser.
+
+## What you can do in a session
+
+- **Manage and install apps** — upload builds, manage versions, or install directly from the Play Store, App Store, TestFlight, App Center, or Firebase. *(App Testing)*
+- **Use in-session tools** — screenshots, recordings, file upload/download, ADB shell, and bug marking.
+- **Simulate real-world conditions** — GPS geolocation, network profiles, SIM, camera image injection, biometric auth, dark mode, date/time, audio injection, and more.
+- **Test accessibility** — navigate with TalkBack (Android) and VoiceOver (iOS) screen readers and adjust iOS accessibility settings.
+- **Inspect and debug** — the UI inspector, on-device DevTools for WebViews, and live app performance profiling.
+- **Review results** — replay sessions, view logs, and analyze artifacts in the [manual tests dashboard](/docs/manual-tests-dashboard).
+
+<Note>
+Some capabilities (App Distribution, Apple Pay, audio injection, app profiling, device passcode, screen readers) are **beta** or require enablement by your organization admin or <BrandName /> support. Each feature page notes its requirements.
+</Note>
+
+## Need dedicated devices?
+
+If your team needs reserved, secured, or pre-configured devices, see [Private Cloud](/docs/public-cloud-vs-private-cloud) — allocate private devices to teams and start sessions with apps already installed.

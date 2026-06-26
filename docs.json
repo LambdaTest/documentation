@@ -339,10 +339,6 @@
                 "group": "Test Native Mobile Apps",
                 "pages": [
                   "docs/kaneai-kb-mobile-app-testing-patterns",
-                  "docs/biometric-authentication",
-                  "docs/camera-image-injection",
-                  "docs/disable-screenshot-block",
-                  "docs/video-injection",
                   "docs/kane-ai-deeplink-support",
                   "docs/kaneai-gps-location",
                   "docs/kaneai-network-throttling",
@@ -495,8 +491,7 @@
                   "docs/hyperexecute-task-metrics",
                   "docs/ai-test-failure-analysis",
                   "docs/hyperexecute-widgets",
-                  "docs/hyperexecute-test-widgets",
-                  "docs/analytics-modules-hyperexecute"
+                  "docs/hyperexecute-test-widgets"
                 ],
                 "expanded": false
               },
@@ -870,7 +865,6 @@
                 "group": "Run Tests & Track Execution",
                 "pages": [
                   "docs/test-run-creation-and-management",
-                  "docs/test-runs-configurations",
                   "docs/sync-test-instance",
                   "docs/test-instance-audit-logs",
                   "docs/milestone-creation-and-management"
@@ -907,7 +901,6 @@
               {
                 "group": "Access Management",
                 "pages": [
-                  "docs/kaneai-test-manager-access-management"
                 ],
                 "expanded": false
               }
@@ -974,7 +967,6 @@
                 "expanded": false,
                 "pages": [
                   "docs/accessibility-app-scanner",
-                  "docs/kaneai-mobile-app-accessibility",
                   "docs/accessibility-settings-ios",
                   "docs/accessibility-tag-support"
                 ]
@@ -1002,8 +994,7 @@
                   "docs/accessibility-testing-dashboard-issue-summary",
                   "docs/accessibility-testing-dashboard-all-issues",
                   "docs/accessibility-web-score",
-                  "docs/accessibility-passed-test-cases",
-                  "docs/analytics-modules-accessibility-widgets"
+                  "docs/accessibility-passed-test-cases"
                 ]
               },
               {
@@ -1519,7 +1510,6 @@
                 "expanded": false,
                 "pages": [
                   "docs/application-setup-via-api",
-                  "docs/upload-apps-on-real-device-cloud",
                   "docs/appium-firebase-app-upload",
                   "docs/desired-capabilities-in-appium",
                   "docs/supported-appium-versions",
@@ -1547,14 +1537,12 @@
                   "docs/appium-upload-filemedia",
                   "docs/appium-upload-contacts",
                   "docs/app-auto-network-throttling",
-                  "docs/sim-support-realdevices",
                   "docs/appium-ip-geolocation",
                   "docs/appium-date-and-time",
                   "docs/appium-app-performance",
                   "docs/app-automation-slack-notifications",
                   "docs/appium-ios-app-settings",
                   "docs/ios-keychain-cleanup",
-                  "docs/group-folder-redirect-on-real-device",
                   "docs/adb-commands-support",
                   "docs/login-to-google-account-on-android",
                   "docs/disable-screenshot-block",
@@ -1628,7 +1616,6 @@
                 "pages": [
                   "docs/ios-ipa-files-xcui",
                   "docs/xctestplan",
-                  "docs/xcui-visual-regression",
                   "docs/sharding-xcui",
                   "docs/xcui-xml-report",
                   "docs/xcui-report"
@@ -1649,6 +1636,580 @@
                   "docs/testing-flutter-apps",
                   "docs/virtual-device-flutter-apps",
                   "docs/appium-flutter-integration"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Real Time Testing",
+        "icon": "display",
+        "pages": [
+          {
+            "group": "Real Time Testing",
+            "pages": [
+              {
+                "group": "Real Time - Desktop",
+                "expanded": false,
+                "pages": [
+                  "docs/getting-started-with-desktop-browser-real-time-testing",
+                  "docs/real-time-desktop-browser-testing-tools",
+                  "docs/pre-loaded-chrome-extension"
+                ]
+              },
+              {
+                "group": "Real Time - Virtual Mobile",
+                "expanded": false,
+                "pages": [
+                  {
+                    "group": "Mobile Web",
+                    "expanded": false,
+                    "pages": [
+                      "docs/getting-started-with-mobile-browser-real-time-testing",
+                      "docs/real-time-mobile-browser-testing-tools",
+                      "docs/webview-testing-in-android"
+                    ]
+                  },
+                  {
+                    "group": "Mobile App",
+                    "expanded": false,
+                    "pages": [
+                      "docs/getting-started-with-mobile-app-real-time-testing",
+                      "docs/real-time-mobile-app-testing-tools",
+                      "docs/troubleshooting-ios-app-testing"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Real Time - ChromeOS",
+                "expanded": false,
+                "pages": [
+                  "docs/chrome-os-testing",
+                  "docs/chrome-os-web-browser-testing",
+                  "docs/chrome-os-app-testing"
+                ]
+              },
+              {
+                "group": "Common Real-Time Features",
+                "expanded": false,
+                "pages": [
+                  "docs/developer-tools",
+                  "docs/real-time-locally-hosted-pages",
+                  "docs/real-time-upload-and-download-files",
+                  "docs/real-time-recents-and-favourites",
+                  "docs/real-time-testing-troubleshooting"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Tunnel",
+        "icon": "network-wired",
+        "pages": [
+          {
+            "group": "Tunnel",
+            "pages": [
+              {
+                "group": "Get Started with Tunnel",
+                "expanded": false,
+                "pages": [
+                  "docs/lambdatest-tunnel",
+                  "docs/testing-locally-hosted-pages",
+                  "docs/local-testing-windows",
+                  "docs/local-testing-macos",
+                  "docs/local-testing-linux"
+                ]
+              },
+              {
+                "group": "Launch Tunnel via GUI or Docker",
+                "expanded": false,
+                "pages": [
+                  "docs/underpass-tunnel-application",
+                  "docs/docker-tunnel",
+                  "docs/docker-tunnel-extension"
+                ]
+              },
+              {
+                "group": "Configure Tunnel",
+                "expanded": false,
+                "pages": [
+                  "docs/lambda-tunnel-modifiers",
+                  "docs/advanced-tunnel-features",
+                  "docs/environment-variables-supported-by-lambda-tunnel"
+                ]
+              },
+              {
+                "group": "Connect Through Proxies & Private Networks",
+                "expanded": false,
+                "pages": [
+                  "docs/dedicated-proxy",
+                  "docs/bypass-proxy-domains",
+                  "docs/socks5-proxy-support",
+                  "docs/http2-support",
+                  "docs/charles-proxy",
+                  "docs/site-to-site-ipsec-vpn-setup"
+                ]
+              },
+              {
+                "group": "Scale & Share Tunnels",
+                "expanded": false,
+                "pages": [
+                  "docs/sharing-lambda-tunnel",
+                  "docs/load-balancing-in-lambda-tunnel"
+                ]
+              },
+              {
+                "group": "Use Tunnel in Your Automation & CI Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/maven-tunnel-for-locally-hosted-web-applications"
+                ]
+              },
+              {
+                "group": "Troubleshoot & Reference",
+                "expanded": false,
+                "pages": [
+                  "docs/troubleshooting-lambda-tunnel",
+                  "docs/set-open-file-limit-while-using-proxy",
+                  "docs/tunnel-release-notes"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "App Testing",
+        "icon": "mobile-screen",
+        "pages": [
+          {
+            "group": "App Testing",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/real-device-testing-overview",
+                  "docs/app-testing-on-real-devices"
+                ]
+              },
+              {
+                "group": "Manage Apps & Builds",
+                "expanded": false,
+                "pages": [
+                  "docs/upload-apps-on-real-device-cloud",
+                  "docs/app-manager",
+                  "docs/app-settings",
+                  "docs/ios-entitlements",
+                  "docs/install-apps-from-play-store",
+                  "docs/install-apps-from-test-flight",
+                  "docs/install-apps-from-app-store",
+                  "docs/install-apps-from-app-center",
+                  "docs/install-apps-from-firebase",
+                  "docs/app-distribution",
+                  "docs/beta-testers-management",
+                  "docs/group-folder-redirect-on-real-device"
+                ]
+              },
+              {
+                "group": "Use In-Session Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/how-to-use-testing-tools-in-session",
+                  "docs/gesture-support-ios",
+                  "docs/upload-files-media",
+                  "docs/real-device-adb-shell",
+                  "docs/multi-device-testing"
+                ]
+              },
+              {
+                "group": "Simulate Real-World Conditions",
+                "expanded": false,
+                "pages": [
+                  "docs/ip-geolocation-on-real-devices-app",
+                  "docs/network-configurations-in-real-devices",
+                  "docs/sim-support-realdevices",
+                  "docs/camera-image-injection-on-real-devices",
+                  "docs/biometric-authentication-on-real-devices",
+                  "docs/contacts-on-real-devices",
+                  "docs/set-date-time-hour-format-real-devices",
+                  "docs/dark-mode-on-real-devices",
+                  "docs/assistive-touch-on-real-ios-devices",
+                  "docs/apple-pay-manual",
+                  "docs/audio-injection-manual",
+                  "docs/device-passcode-on-realdevice"
+                ]
+              },
+              {
+                "group": "Test Accessibility",
+                "expanded": false,
+                "pages": [
+                ]
+              },
+              {
+                "group": "Inspect & Debug",
+                "expanded": false,
+                "pages": [
+                  "docs/ui-inspector",
+                  "docs/devtools-on-real-devices-app",
+                  "docs/manual-app-profiling"
+                ]
+              },
+              {
+                "group": "Review Results",
+                "expanded": false,
+                "pages": [
+                  "docs/manual-tests-dashboard"
+                ]
+              },
+              {
+                "group": "Private Cloud",
+                "expanded": false,
+                "pages": [
+                  "docs/public-cloud-vs-private-cloud",
+                  "docs/select-pre-installed-apps",
+                  "docs/private-device-allocation-to-teams"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Mobile Web (Real Device)",
+        "icon": "mobile-screen-button",
+        "pages": [
+          {
+            "group": "Mobile Web (Real Device)",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/browser-testing-on-real-devices"
+                ]
+              },
+              {
+                "group": "In-Session Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/how-to-use-in-session-testing-tools",
+                  "docs/audio-injection-manual-browser",
+                  "docs/ip-geolocation-on-real-devices-browser",
+                  "docs/network-configurations-in-browser",
+                  "docs/contacts-on-real-devices-browser",
+                  "docs/set-date-time-hour-format-real-devices-browser",
+                  "docs/dark-mode-on-browser"
+                ]
+              },
+              {
+                "group": "Accessibility on Real-Device Browsers",
+                "expanded": false,
+                "pages": [
+                  "docs/assistive-touch-on-real-ios-browser"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "icon": "plug",
+        "pages": [
+          {
+            "group": "Integrations",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/integrations-overview"
+                ]
+              },
+              {
+                "group": "Integrate With Bug Tracking Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/jira-integration",
+                  "docs/jira-self-hosted-integration",
+                  "docs/azure-devops-integration",
+                  "docs/bugzilla-integration",
+                  "docs/mantis-integration",
+                  "docs/youtrack-integration",
+                  "docs/redmine-integration",
+                  "docs/fogbugz-integration",
+                  "docs/bugasura-integration",
+                  "docs/bugherd-integration",
+                  "docs/bugsnag-integration",
+                  "docs/devrev-integration",
+                  "docs/airbrake-integration",
+                  "docs/assembla-integration",
+                  "docs/rally-integration",
+                  "docs/servicenow-integration",
+                  "docs/spirateam-integration",
+                  "docs/userback-integration",
+                  "docs/zenkit-integration",
+                  "docs/zipboard-integration",
+                  "docs/zoho-bugtracker-integration",
+                  "docs/goodday-integration",
+                  "docs/notion-integration",
+                  "docs/linear-app-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Project Management Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/asana-integration",
+                  "docs/airtable-integration",
+                  "docs/trello-integration",
+                  "docs/monday-integration",
+                  "docs/miro-integration",
+                  "docs/clickup-integration",
+                  "docs/backlog-integration",
+                  "docs/breeze-integration",
+                  "docs/favro-integration",
+                  "docs/hive-integration",
+                  "docs/integrating-wrike-with-lambdatest",
+                  "docs/project-management-tools-paymo-integration",
+                  "docs/teamwork-integration",
+                  "docs/targetprocess-integration",
+                  "docs/taiga-integration",
+                  "docs/shortcut-integration",
+                  "docs/axosoft-integration",
+                  "docs/zohoproject-integration",
+                  "docs/project-management-tools-github-integration",
+                  "docs/github-repo-based-oauth-integration",
+                  "docs/project-management-tools-gitlab-integration",
+                  "docs/project-management-tools-bitbucket-integration",
+                  "docs/pivotal-tracker-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Test Management Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/testrail-integration-with-lambdatest-selenium-grid",
+                  "docs/testmo-integration",
+                  "docs/zephyr-scale-integration",
+                  "docs/alm-octane-integration",
+                  "docs/qmetry-integration",
+                  "docs/practitest-integration",
+                  "docs/zebrunner-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Codeless Testing Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/accelq-integration",
+                  "docs/algoshack-integration",
+                  "docs/katalon-integration-with-lambdatest",
+                  "docs/katalon-integration",
+                  "docs/running-groovy-script-in-katalon",
+                  "docs/leapwork-integration",
+                  "docs/testsigma-integration",
+                  "docs/testim-integration",
+                  "docs/testrigor-integration",
+                  "docs/testingwhiz-integration",
+                  "docs/ranorex-integration-with-lambdatest",
+                  "docs/tricentis-tosca-integration-testmu-selenium-grid",
+                  "docs/ghost-inspector-integration",
+                  "docs/simplifyqa-integration",
+                  "docs/uipath-integration",
+                  "docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid",
+                  "docs/testcomplete-integration",
+                  "docs/cerberus-integration",
+                  "docs/vividus-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Test Frameworks & Engines",
+                "expanded": false,
+                "pages": [
+                  "docs/selenified-integration-with-lambdatest",
+                  "docs/npm-plugin-for-testcafe-integration-with-lambdatest",
+                  "docs/siesta-integration",
+                  "docs/oxygen-integration",
+                  "docs/applitools-integration-with-lambdatest"
+                ]
+              },
+              {
+                "group": "Integrate With Test Data & App Sources",
+                "expanded": false,
+                "pages": [
+                  "docs/genrocket-integration",
+                  "docs/localstack-integration-with-lambdatest",
+                  "docs/app-center-integration",
+                  "docs/app-automation-using-app-center"
+                ]
+              },
+              {
+                "group": "Integrate With CI/CD Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/jenkins-plugin",
+                  "docs/integrating-lambdaTest-with-jenkins-freestyle-project",
+                  "docs/integrating-your-jenkins-pipeline-with-lambdatest",
+                  "docs/integrating-lambdatest-report-with-jenkins-pipeline",
+                  "docs/azure-pipeline",
+                  "docs/integrate-lambdatest-extension-with-azure-pipelines",
+                  "docs/teamcity-integration",
+                  "docs/teamcity-plugin",
+                  "docs/gocd-integration",
+                  "docs/yaml-integration",
+                  "docs/bitrise-integration",
+                  "docs/bitrise-integration-xcuitest",
+                  "docs/run-espresso-tests-in-bitrise",
+                  "docs/gitlab-ci-integration",
+                  "docs/bitbucket-pipelines-integration",
+                  "docs/circleci-integration",
+                  "docs/travis-ci-with-lambdatest",
+                  "docs/bamboo-integration",
+                  "docs/buildkite-integration",
+                  "docs/codefresh-ci-integration",
+                  "docs/codeship-integration",
+                  "docs/concource-ci",
+                  "docs/drone-ci",
+                  "docs/semaphore-ci-integration",
+                  "docs/google-cloud-ci-integration",
+                  "docs/aws-codepipeline-Integration",
+                  "docs/appveyor-ci-integration",
+                  "docs/netlify-integration-with-lambdatest",
+                  "docs/webhooks-integration",
+                  "docs/zalenium-integration-with-lambdatest"
+                ]
+              },
+              {
+                "group": "Integrate With Communication Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/slack-integration",
+                  "docs/microsoft-teams-integration",
+                  "docs/microsoft-team",
+                  "docs/webex-teams-integration",
+                  "docs/flock-integration",
+                  "docs/google-chat-integration",
+                  "docs/integrating-mattermost-with-lambdatest",
+                  "docs/rocketchat-integration-with-lambdatest",
+                  "docs/zoho-cliq-integration",
+                  "docs/opsgenie-integration",
+                  "docs/pagerduty-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Monitoring Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/new-relic-integration",
+                  "docs/sumo-logic-integration",
+                  "docs/datadog-integration",
+                  "docs/rktracer-integration"
+                ]
+              },
+              {
+                "group": "Integrate With Automation Tools",
+                "expanded": false,
+                "pages": [
+                  "docs/zapier-integration-with-lambdatest",
+                  "docs/n8n-integration"
+                ]
+              },
+              {
+                "group": "Use TestMu Plugins & Extensions",
+                "expanded": false,
+                "pages": [
+                  "docs/chrome-extension",
+                  "docs/vscode-extension",
+                  "docs/xcode-plugin-lambdamax",
+                  "docs/wordpress-plugin",
+                  "docs/record-and-replay-tests",
+                  "docs/fastlane-with-lambdatest",
+                  "docs/gradle-integration-with-lambdatest"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Account Management",
+        "icon": "user-gear",
+        "pages": [
+          {
+            "group": "Account Management",
+            "pages": [
+              {
+                "group": "Get Started",
+                "expanded": false,
+                "pages": [
+                  "docs/account-management"
+                ]
+              },
+              {
+                "group": "Billing & Subscriptions",
+                "expanded": false,
+                "pages": [
+                  "docs/manage-subscriptions",
+                  "docs/credits-management"
+                ]
+              },
+              {
+                "group": "Manage Users & Teams",
+                "expanded": false,
+                "pages": [
+                  "docs/user-management",
+                  "docs/team-management",
+                  "docs/group-management",
+                  "docs/sub-organizations",
+                  "docs/service-accounts"
+                ]
+              },
+              {
+                "group": "Roles, Permissions & Licenses",
+                "expanded": false,
+                "pages": [
+                  "docs/rbac-roles-and-permissions",
+                  "docs/role-based-access-control",
+                  "docs/kaneai-test-manager-access-management",
+                  "docs/manage-ai-capabilities"
+                ]
+              },
+              {
+                "group": "Single Sign-On (SSO)",
+                "expanded": false,
+                "pages": [
+                  "docs/testmu-sso-self-serve",
+                  "docs/testmu-sso-manage-connection",
+                  "docs/testmu-sso-google",
+                  "docs/testmu-sso-okta-integration",
+                  "docs/testmu-sso-onelogin-using-saml",
+                  "docs/testmu-sso-pingidentity-integration",
+                  "docs/testmu-sso-oidc",
+                  "docs/sso-azure-integration"
+                ]
+              },
+              {
+                "group": "Security & Audit",
+                "expanded": false,
+                "pages": [
+                  "docs/multi-factor-authentication",
+                  "docs/password-and-access-key-expiration-policy",
+                  "docs/tunnel-security",
+                  "docs/audit-logs",
+                  "docs/support-access"
+                ]
+              },
+              {
+                "group": "Close Your Account",
+                "expanded": false,
+                "pages": [
+                  "docs/delete-testmu-account"
                 ]
               }
             ]
@@ -1739,6 +2300,42 @@
     }
   },
   "redirects": [
+    {
+      "source": "/docs/testing-apps-locally",
+      "destination": "/docs/testing-locally-hosted-apps"
+    },
+    {
+      "source": "/docs/delete-lambdatest-account",
+      "destination": "/docs/delete-testmu-account"
+    },
+    {
+      "source": "/docs/lambdatest-sso-self-serve",
+      "destination": "/docs/testmu-sso-self-serve"
+    },
+    {
+      "source": "/docs/lambdatest-sso-manage-connection",
+      "destination": "/docs/testmu-sso-manage-connection"
+    },
+    {
+      "source": "/docs/lambdatest-sso-google",
+      "destination": "/docs/testmu-sso-google"
+    },
+    {
+      "source": "/docs/lambdatest-sso-okta-integration",
+      "destination": "/docs/testmu-sso-okta-integration"
+    },
+    {
+      "source": "/docs/lambdatest-sso-onelogin-using-saml",
+      "destination": "/docs/testmu-sso-onelogin-using-saml"
+    },
+    {
+      "source": "/docs/lambdatest-sso-pingidentity-integration",
+      "destination": "/docs/testmu-sso-pingidentity-integration"
+    },
+    {
+      "source": "/docs/lambdatest-sso-oidc",
+      "destination": "/docs/testmu-sso-oidc"
+    },
     {
       "source": "/docs/agent-to-agent-faqs",
       "destination": "/docs/agent-testing-platform-faqs"

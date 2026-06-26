@@ -1,0 +1,126 @@
+---
+title: "Roles and Permissions (RBAC)"
+sidebarTitle: "Roles and Permissions (RBAC)"
+keywords: ['rbac', 'roles and permissions', 'custom roles', 'access control', 'lambdatest rbac', 'product access', 'granular permissions']
+description: "Learn how to use Custom Roles and Permissions (RBAC) on LambdaTest to control product-level access and granular permissions across your organization."
+"og:description": "Learn how to use Custom Roles and Permissions (RBAC) on LambdaTest to control product-level access and granular permissions across your organization."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+<BrandName /> **Roles and Permissions (RBAC)** allows organization admins to define fine-grained access control across products, projects, and features. With Custom Roles and Permissions, you can control which team members have access to specific products, what actions they can perform, and ensure that each user only sees what is relevant to their role.
+
+This is especially useful for large enterprises with multiple teams where different groups need access to different parts of the platform, for example, one team working exclusively with KaneAI and Test Manager, while another only needs access to SmartUI and Automation.
+
+<Info>
+Custom Roles and Permissions is an enterprise-level feature. Please contact your account manager or reach out to [support@testmuai.com](mailto:support@testmuai.com) to get it enabled for your organization.
+</Info>
+
+## Prerequisites
+
+- You must be an **Admin** of your <BrandName /> organization. 
+- Ensure your organization has the RBAC feature enabled by the <BrandName /> team.
+- Familiarity with [User Management](/support/docs/user-management/) and [Team Management](/support/docs/team-management/) is recommended.
+
+## Understanding Default Roles
+
+Navigate to **Organization Settings** > **Custom Roles & Permissions** from the left sidebar. You will see the **Custom Roles & Permissions** page displaying all existing roles in your organization.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/roles-and-permissions-page.png').default} alt="Roles and Permissions page showing default roles" className="doc_img"/>
+
+<BrandName /> provides three default roles out of the box:
+
+| Role | Description | Entity Permissions |
+|------|-------------|-------------------|
+| **Admin** | Full access to all products and entities, plus organization-level administration such as settings, billing, integrations, and user and team management. | List, Read, Create, Update, Delete, Execute on all entities, plus organization administration |
+| **User** | Full permissions on all products and entities, but without organization-level administration. | List, Read, Create, Update, Delete, Execute on all entities |
+| **Guest** | Read-only access across products. | List, Read only on entities |
+
+<Tip>
+Roles are auto-applied at login.
+</Tip>
+
+<Info>
+When a user is assigned more than one role, their effective permissions are the combination of all assigned roles, and the most permissive access applies. Permission changes take effect on the user's next request or page load, no re-login is required.
+</Info>
+
+## Creating and Applying Custom Roles
+
+Custom roles give you the flexibility to tailor access permissions to match your organization's specific needs. Unlike the default roles (Admin, User, Guest), which cannot be edited, custom roles allow you to define exactly which products, entities, and actions each team member can access. To set up custom permissions, you need to create a custom role.
+
+**Step 1:** On the **Custom Roles & Permissions** page, click the **Create New Role** button in the top-right corner.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/roles-and-permissions-page.png').default} alt="Roles and Permissions page showing default roles and Create New Role button" className="doc_img"/>
+
+**Step 2:** In the **Create New Role** dialog, enter a **Role Name** that clearly describes the role's purpose (e.g., "SmartUI Tester", "KaneAI Developer", "QA Lead").
+
+**Step 3:** You can configure product-level access or entity-level access based on your requirements.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/create-new-role.png').default} alt="Create New Role dialog with entity dropdown showing Select Specific, Product Access, and Granular Control sections" className="doc_img"/>
+
+**Step 4:** Click **Create** to complete the process.
+
+**Step 5:** Assign the custom role to users or teams based on your use case:
+
+- **To assign to individual users:** Navigate to **Organization Settings** > **Members**, click on the user's row or the options menu, and assign the custom role.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/apply-custom-roles.png').default} alt="Apply custom roles to users from the Members page" className="doc_img"/>
+
+- **To assign to a team:** Navigate to **Organization Settings** > **Teams**, select a team, and assign the desired custom role. All members of the team will automatically inherit the same permissions.
+
+<img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/team-custom-role-access.png').default} alt="Assign custom roles to teams" className="doc_img"/>
+
+## Product Level Access
+
+Product-level access lets you control which <BrandName /> products a user can see and interact with. This is the most impactful RBAC setting as it determines what shows up on a user's dashboard, sidebar, and which URLs they can visit.
+
+When creating or editing a role, add **List of Products** as an entity and select only the products this role should have access to, such as KaneAI, HyperExecute, SmartUI, and more.
+
+### What happens when a product is restricted?
+
+- The product is **hidden from the sidebar** and **dashboard** for the user.
+- If a user tries to directly access a restricted product URL, they are redirected to a **403 page**.
+
+
+### When to use Product Level Access
+
+- **Security & compliance**:Restrict sensitive products like Insights or Settings to admins and leads only, ensuring regular testers don't have access to org-level analytics or configurations.
+- **Onboarding new members**:New team members can be given a limited role with access to only Real Time and Automation while they ramp up, then gradually expanded to include KaneAI and HyperExecute.
+- **Client or vendor access**:External contractors working on a specific product area (e.g., mobile testing) can be restricted to only Real Device and Automation without exposing the rest of the platform.
+
+## Entity Level Access
+
+Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Each product exposes its own set of entities, and you can grant specific permissions on each one.
+
+Entity-level access is available for the following products:
+
+| Product | Entities |
+|---------|----------|
+| **Test Manager** | Projects, Test Runs, Test Cases and Test Case Instances |
+| **Automation** | Projects, Builds, Test Case Instances |
+| **HyperExecute** | Projects, Workflows, Organization Settings |
+| **SmartUI** | Projects, Builds |
+| **Analytics & Insights** | Projects (applied to dashboards and reports, read-only) |
+
+<Info>
+Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
+</Info>
+
+### Select Specific Entities
+
+When creating or editing a role, you can assign permissions to specific items rather than to all items of a type, for example, granting access only to selected Test Manager projects or to specific HyperExecute projects.
+
+### Granular Control
+
+For supported products, you can configure fine-grained permissions on each entity using the following permission levels:
+
+- **List**: View items in a list.
+- **Read**: View item details.
+- **Create**: Create new items.
+- **Update**: Modify existing items.
+- **Delete**: Remove items.
+- **Execute**: Run or trigger items (for example, abort a build or trigger a HyperExecute job).
+
+<Note>
+Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
+</Note>

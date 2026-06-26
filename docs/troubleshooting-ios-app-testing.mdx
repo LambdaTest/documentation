@@ -1,0 +1,76 @@
+---
+title: "Troubleshooting iOS App Testing"
+sidebarTitle: "Fix iOS App Build Errors"
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+
+
+While uploading `.app` files on Simulators, you may encounter issues such as the app crashing immediately or the error *"No .app found inside zip"*. These problems typically occur when the app is not built correctly for the Simulator platform.
+
+<Tip>
+For a complete step-by-step guide on building your iOS app for Simulator testing, see [Building Your iOS App for Simulator Testing](/docs/build-ios-app-for-simulator-testing/).
+</Tip>
+## Common Issues
+
+### App crashes immediately with "App quit unexpectedly"
+
+**Cause:** Your `.app` is built for physical iOS devices (Mach-O Platform 2 — `iphoneos`) instead of the iOS Simulator (Platform 7 — `iphonesimulator`).
+
+**Solution:** Rebuild your app targeting the iOS Simulator SDK. In Xcode, select a **Simulator destination** (e.g., *iPhone 15 Pro*) instead of *Any iOS Device*, then build. For command line builds, use the `-sdk iphonesimulator` flag:
+
+```bash
+xcodebuild -project YourProject.xcodeproj \
+           -scheme YourScheme \
+           -configuration Debug \
+           -sdk iphonesimulator \
+           -arch arm64 \
+           build
+```
+
+You can verify the platform using:
+
+```bash
+vtool -show-build YourApp.app/YourApp
+```
+
+The output should show `platform: IOSSIMULATOR` (Platform 7).
+
+<Info>
+Your Simulator build must include the **arm64** architecture. There is no need to exclude it from Simulator builds.
+</Info>
+### "No .app found inside zip" error
+
+**Cause:** The `.zip` archive structure is incorrect. The `.app` bundle should be at the root of the archive.
+
+**Solution:**
+1. Build your app for the Simulator (as described above).
+2. Locate the `.app` file in Xcode: right-click the `.app` under **Products** and select **Show in Finder**.
+3. Right-click the `.app` file in Finder and select **Compress** to create the `.zip` file.
+
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/project-file.webp' alt="Open project in Xcode" width="1281" height="722"/>
+
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/show-in-finder.webp' alt="Show in Finder" width="1281" height="722"/>
+
+ <img loading="lazy" src='/assets/images/troubleshoot-ios-testing/zip-file.webp' alt="Compress to zip" width="1281" height="722"/>
+
+Your `.zip` file is now ready for upload on <BrandName /> servers.
+
+### Build fails with architecture errors
+
+**Cause:** The project may have incorrect architecture settings.
+
+**Solution:** In Xcode **Build Settings**, verify:
+
+| Setting | Value |
+|---|---|
+| **Architectures** | `$(ARCHS_STANDARD)` |
+| **Base SDK** | iOS |
+| **Supported Platforms** | iOS Simulator |
+
+Ensure you are **not** excluding arm64 from Simulator builds.
+
+---
+
+That's all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.

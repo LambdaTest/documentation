@@ -1,0 +1,145 @@
+---
+title: "Audio Injection Manual Testing on Real Device Browsers"
+sidebarTitle: "Inject Audio"
+keywords: ['audio injection', 'manual testing', 'browser testing', 'real time', 'microphone input', 'voice commands', 'live input', 'real devices', 'testmu ai audio testing']
+description: "Manually test microphone-driven web flows on real Android and iOS device browsers in Real Time by injecting pre-recorded audio files or streaming live input from your system mic."
+"og:description": "Manually test microphone-driven web flows on real Android and iOS device browsers in Real Time by injecting pre-recorded audio files or streaming live input from your system mic."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+**Audio Injection** lets you simulate microphone input on real Android and iOS device browsers during a manual **Real Time** browser session. Use it to test speech-to-text web apps, voice search on the mobile web, browser-based voice assistants, web-based KYC voice verification, and any other microphone-dependent web feature — without speaking into a physical mic.
+
+With <BrandName /> Real Time browser testing, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device browser.
+
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+
+---
+
+## Use Cases
+
+- **Web voice search**: Validate browser-based voice search and dictation flows.
+- **Speech-to-text web apps**: Confirm transcription accuracy on the mobile web.
+- **Web-based KYC**: Test identity flows that record a voice sample in the browser.
+- **WebRTC and conferencing**: Verify mic capture in browser conferencing tools.
+- **Live exploratory testing**: Use Live Input to drive ad-hoc voice interactions on web pages in real time.
+
+---
+
+## Supported Platforms
+
+| Platform | Minimum OS Version | 
+|---|---|
+| **Android** | Android 13 (SDK 33) and above 
+| **iOS** | iOS 16 and above 
+
+Audio Injection is supported on **selected real devices only**
+
+---
+
+## Supported File Formats
+
+| Format | Max Size |
+|---|---|
+| MP3 | 200 MB |
+| WAV | 200 MB |
+
+Files are uploaded one at a time and injected one at a time per session.
+
+---
+
+## Manual Audio Injection Workflow in Browser Testing
+
+### Step 1: Enable Audio Injection in Advanced Settings
+
+1. Go to the <BrandName /> **Dashboard** and open **Real Device Browser Testing**.
+2. Click **Advanced Settings** on top.
+3. Toggle **Enable Audio Injection** on.
+
+Once enabled, the device list is filtered to show **only the devices that support Audio Injection** for the respective OS.
+
+---
+
+### Step 2: Select a Device and Start Your Session
+
+1. From the filtered device list, pick a supported Android or iOS real device along with the browser you want to test on.
+2. Click **Start** to launch the session.
+
+---
+
+### Step 3: Open Media Injection
+
+1. Inside the live browser session, locate **Media Injection** in the in-session toolbar.
+2. Click to open the Media Injection panel.
+3. Switch to the **Audio** tab.
+
+You will see two options:
+
+- **Select Files** — inject a pre-recorded audio file
+- **Inject Live Input** — stream audio from your system microphone in real time
+
+---
+
+### Step 4a: Inject an Audio File
+
+Use this mode when you want a deterministic, repeatable input — for example, the same voice query run across many device-browser combinations.
+
+1. In the **Audio** tab, select **Select Files**.
+2. Click **Upload** and choose an `.mp3` or `.wav` file (up to **200 MB**, one file at a time).
+3. Once uploaded, the file appears in your audio library (latest 5 uploaded).
+4. In the browser, navigate to the page that captures microphone input (e.g., tap a voice search icon or **Start Recording**).
+5. Grant the page mic permission when prompted.
+6. Select the uploaded file and click **Inject**.
+7. Once a file is injected, the controls are limited to **Play** and **Pause** — clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the browser captures it as if the user were speaking.
+8. To switch audio, select a different file and click **Inject** on it. Only **one file can be injected at a time**, and the new file replaces the previously injected one.
+
+<Tip>
+Inject and start playback **after** the page has opened the mic. Some recognizers need 1–2 seconds of silence to initialize before they accept speech.
+</Tip>
+
+---
+
+### Step 4b: Use Live Input
+
+Use this mode when you want to drive the device microphone interactively — for example, having an unscripted conversation with a web voice assistant or testing custom prompts on the fly.
+
+1. In the **Audio** tab, select **Inject Live Input**.
+2. Grant microphone access to your browser when prompted.
+3. In the device browser, open the page that captures microphone input.
+4. Click **Start** — your system microphone is now streamed directly into the device's mic.
+5. Speak into your mic. The web page receives your voice in real time.
+6. Click **Stop** to end the live stream.
+
+<Note>
+Live Input streams from the same browser tab running the Real Time session. Avoid muting your system mic or switching tabs mid-session — the stream will be interrupted.
+</Note>
+
+---
+
+## Execution Rules
+
+- The web page must be granted microphone permission. Audio Injection does **not** bypass permission prompts.
+- Only one audio source is active at a time — switching from **Files** to **Live Input** (or vice versa) replaces the previous source.
+- For files, only one file can be injected and played at a time.
+- The last injected audio is the active source until you stop it or inject another.
+
+---
+
+## Tips and Best Practices
+
+- Keep audio files short (under 5 minutes) for predictable timing.
+- Use 16 kHz mono MP3 or WAV for the most consistent results across Android and iOS browsers.
+- For voice-recognition pages, allow the device 1–2 seconds of silence before injecting speech.
+- Use **Files** for repeatable regression runs across device-browser pairs; use **Live Input** for exploratory and conversational testing.
+
+---
+
+## Related Resources
+
+- [Audio Injection Manual Testing (App)](/docs/audio-injection-manual/) — Same feature on App Live
+- [Audio Injection on Real Devices (Automation)](/docs/audio-injection/) — Inject audio via Appium / Selenium tests
+- [Browser Testing on Real Devices](/docs/browser-testing-on-real-devices/)
+
+---
+
+> **Need help?** Reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@testmuai.com**.
