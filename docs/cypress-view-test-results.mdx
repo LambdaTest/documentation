@@ -1,0 +1,41 @@
+---
+title: "View Cypress Test Results on TestMu AI"
+sidebarTitle: "View Your Test Results"
+keywords: ['cypress test results', 'cypress dashboard', 'cypress automation dashboard', 'testmu ai cypress']
+description: "Learn how to view and analyze your Cypress test results on the TestMu AI Automation Dashboard."
+"og:description": "Learn how to view and analyze your Cypress test results on the TestMu AI Automation Dashboard."
+---
+
+After running your Cypress tests, view the results on the [TestMu AI Automation Dashboard](https://automation.lambdatest.com/).
+
+## Available Information
+---
+
+The Automation Dashboard provides the following for each test session:
+
+- **Live video feed** of test execution
+- **Screenshots** for each test run
+- **Console logs** from the browser
+- **Terminal logs** from the CLI
+- **Network logs** - learn how to [capture network logs for Cypress tests](/support/docs/cypress-network-logs/)
+- **Command logs** - learn how to [set up detailed command logs for Cypress](/support/docs/cypress-detailed-command-logs/)
+
+## Test Statuses
+---
+
+| Status | Description |
+|--------|-------------|
+| Completed | All tests finished successfully |
+| Failed | One or more tests failed |
+| Stopped | Test was manually stopped |
+
+## Sync Mode Results
+---
+
+When running tests with `--sync` mode, the CLI waits for test completion and displays results in the terminal. HTML and JSON reports are saved to the `results` folder automatically.
+
+```bash
+lambdatest-cypress run --sync
+```
+
+Check out this guide to [download test artifacts in Cypress](/support/docs/download-artefacts-cypress/). To investigate test failures, learn how to [debug your failed Cypress tests](/support/docs/cypress-debug-failed-tests/).

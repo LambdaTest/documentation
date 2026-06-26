@@ -1,0 +1,49 @@
+---
+title: "Specify NPM Dependencies for Cypress Tests"
+sidebarTitle: "Specify NPM Dependencies"
+keywords: ['cypress npm dependencies', 'cypress npm packages', 'cypress dependencies', 'testmu ai cypress']
+description: "Learn how to specify NPM package dependencies for your Cypress tests on TestMu AI."
+"og:description": "Learn how to specify NPM package dependencies for your Cypress tests on TestMu AI."
+---
+
+TestMu AI detects your test dependencies in two ways. Using `npm_dependencies` is recommended over `package.json` because it avoids installing unnecessary packages and reduces build time.
+
+## Using npm_dependencies (Recommended)
+---
+
+Specify only the packages required for test execution in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "npm_dependencies": {
+      "cypress": "12.0.0",
+      "cypress-mochawesome-reporter": "^3.0.0"
+    }
+  }
+}
+```
+
+## Using package.json
+---
+
+TestMu AI automatically reads dependencies from your `package.json` file. However, this often includes non-essential packages like linters and formatters that increase build time.
+
+```json package.json
+{
+  "devDependencies": {
+    "cypress": "12.0.0",
+    "eslint": "8.0.0"
+  }
+}
+```
+
+<Tip>
+Use `npm_dependencies` instead of `package.json` to list only the packages needed for test execution. This reduces build time on the platform.
+</Tip>
+
+## Private and Tunnel Dependencies
+---
+
+- To use private npm packages with registry authentication, learn how to [run Cypress tests with private dependencies](/support/docs/private-dependencies-cypress/).
+- To install npm packages from a registry behind a private VPN, learn how to [install NPM packages via tunnel](/support/docs/npm-via-tunnel/).

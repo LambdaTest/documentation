@@ -1,0 +1,46 @@
+---
+title: "Exclude Files from Test Uploads in Cypress"
+sidebarTitle: "Exclude Files from Test Uploads"
+keywords: ['cypress exclude files', 'cypress ignore files', 'cypress test uploads', 'testmu ai cypress']
+description: "Learn how to exclude unnecessary files from your Cypress test uploads on TestMu AI to optimize upload time."
+"og:description": "Learn how to exclude unnecessary files from your Cypress test uploads on TestMu AI to optimize upload time."
+---
+
+When you run Cypress tests on TestMu AI, the CLI zips your project directory and uploads it to the cloud. You can exclude unnecessary files to speed up uploads and avoid errors from unsupported file types.
+
+Consider excluding files when:
+- Your project zip exceeds recommended size limits
+- Uploads fail or take longer than expected
+- Unnecessary files like build artifacts or media are included
+
+## Using the Configuration File
+---
+
+Add the `ignore_files` key in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "ignore_files": "static/*.pdf, some-folder/*"
+  }
+}
+```
+
+You can pass file paths, directory patterns, or glob expressions as comma-separated values.
+
+## Using the CLI
+---
+
+Use the `--if` flag when running tests:
+
+```bash
+lambdatest-cypress run --if "some-folder/*.pdf"
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--if, --ignore_files` | Files to ignore in the zip project | String |
+
+<Tip>
+Exclude files like `node_modules/`, large media files, or build artifacts that are not required for test execution. To download test outputs after execution, learn how to [download test artifacts in Cypress](/support/docs/download-artefacts-cypress/).
+</Tip>

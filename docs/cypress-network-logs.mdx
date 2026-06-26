@@ -1,0 +1,43 @@
+---
+title: "Capture Network Logs for Cypress Tests"
+sidebarTitle: "Capture Network Logs"
+keywords: ['cypress network logs', 'cypress har logs', 'cypress network debugging', 'testmu ai cypress']
+description: "Learn how to capture network logs for your Cypress tests on TestMu AI for debugging network-related issues."
+"og:description": "Learn how to capture network logs for your Cypress tests on TestMu AI for debugging network-related issues."
+---
+
+Network logs capture browser network traffic, latency, and HTTP requests/responses during Cypress test execution. Use these logs to debug slow page loads, failed API calls, and other network-related issues.
+
+## Enable Network Logs
+---
+
+Set the `network` key to `true` in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "network": true
+  }
+}
+```
+
+Or use the `--net` flag via the CLI:
+
+```bash
+lambdatest-cypress run --net true
+```
+
+## Additional Network Flags
+---
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--net, --network` | Capture network logs | String |
+| `--net_http2, --network_http2` | Capture HTTP2 network logs | Boolean |
+| `--net_ws, --network_ws` | Bypass WebSocket calls for network logs | Boolean |
+| `--net_sse, --network_sse` | Bypass SSE events for network logs | Boolean |
+
+## View Network Logs
+---
+
+After test execution, view the captured network logs from the TestMu AI Automation Dashboard under the session details for each test. For other debugging tools, learn how to [debug your failed Cypress tests](/support/docs/cypress-debug-failed-tests/).

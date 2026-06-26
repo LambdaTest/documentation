@@ -1,0 +1,82 @@
+---
+title: "Manage Local Tunnel Binary Instances"
+sidebarTitle: "Manage Tunnel Binary Instances"
+keywords: ['manage tunnel binary', 'testmu ai tunnel status', 'stop tunnel binary', 'tunnel info api', 'local binary instance selenium']
+description: "Check the status of a running TestMu AI Tunnel binary and stop it programmatically using the Info API."
+"og:description": "Check the status of a running TestMu AI Tunnel binary and stop it programmatically using the Info API."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+The <BrandName /> Tunnel binary exposes a local Info API that lets you check whether the tunnel is running and stop it without manually killing the process. This is useful in CI pipelines where you need to programmatically manage tunnel lifecycle.
+
+## Before You Begin
+
+---
+
+- Download the <BrandName /> Tunnel binary for your OS.
+- Get your username and access key from [your <BrandName /> dashboard](https://accounts.lambdatest.com/dashboard).
+
+| Download Links |
+|---|
+| [Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip) |
+| [macOS](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) |
+| [Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) |
+
+## Step 1: Start the Tunnel with Info API Enabled
+
+---
+
+Pass `--infoAPIPort` when starting the tunnel to expose the Info API on a local port. You can use any available port; port `8000` is used in the examples below.
+
+```bash
+LT --user YOUR_EMAIL --key YOUR_ACCESS_KEY --tunnelName YOUR_TUNNEL_NAME --infoAPIPort 8000
+```
+
+Once the tunnel connects, the Info API is available at `http://127.0.0.1:8000`.
+
+## Step 2: Check Tunnel Status
+
+---
+
+Send a GET request to the `/api/v1.0/info` endpoint to retrieve the current status of the running tunnel.
+
+```bash
+curl http://127.0.0.1:8000/api/v1.0/info
+```
+
+The response includes tunnel connection details and current state.
+
+## Step 3: Stop the Tunnel
+
+---
+
+Send a DELETE request to `/api/v1.0/stop` to gracefully shut down the tunnel.
+
+```bash
+curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop
+```
+
+The binary disconnects and exits after processing this request.
+
+## Auto-Update
+
+---
+
+The <BrandName /> Tunnel binary checks for the latest version every time it starts and updates itself automatically. You do not need to re-download the binary for version upgrades.
+
+## Tips
+
+---
+
+- Use a unique `--tunnelName` for each binary instance when running multiple tunnels in parallel. Reusing the same name across concurrent connections causes local errors.
+- Use `--log-level debug` during setup to get detailed tunnel logs for troubleshooting.
+- For a full list of tunnel arguments, run `LT --help` in your terminal.
+
+## Related Resources
+
+---
+
+- [Advanced TestMu AI Tunnel Features](/support/docs/advanced-tunnel-features/)
+- [TestMu AI Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/)
+- [Test Locally Hosted Websites with Selenium](/support/docs/test-locally-hosted-websites-with-selenium/)

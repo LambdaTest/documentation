@@ -1,0 +1,39 @@
+---
+title: "Simulate IP Geolocation for Cypress Tests"
+sidebarTitle: "Simulate IP Geolocation"
+keywords: ['cypress geolocation', 'cypress ip geolocation', 'cypress geo location', 'testmu ai cypress']
+description: "Learn how to simulate geolocation for Cypress tests on TestMu AI to test location-specific website behavior."
+"og:description": "Learn how to simulate geolocation for Cypress tests on TestMu AI to test location-specific website behavior."
+---
+
+TestMu AI allows you to simulate traffic from different geographic locations when running Cypress tests. Use this to test location-based content such as pricing pages, language preferences, or region-specific features.
+
+## Using the Configuration File
+---
+
+Add the `geo_location` key in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "geo_location": "US"
+  }
+}
+```
+
+## Using the CLI
+---
+
+Use the `--geo` flag when running tests:
+
+```bash
+lambdatest-cypress run --geo US
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--geo, --geo_location` | Pass the Geo country code | String |
+
+<Note>
+All specs in a single build run from the same geolocation. To test from multiple locations, run separate builds for each location. You can also [configure test timezones](/support/docs/cypress-configure-timezones/) to simulate timezone-specific behavior.
+</Note>

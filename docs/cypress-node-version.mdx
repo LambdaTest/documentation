@@ -1,0 +1,44 @@
+---
+title: "Specify Node.js Version for Cypress Tests"
+sidebarTitle: "Specify Node.js Version"
+keywords: ['cypress node version', 'cypress nodejs', 'cypress runtime', 'testmu ai cypress']
+description: "Learn how to specify a Node.js version for running Cypress tests on TestMu AI."
+"og:description": "Learn how to specify a Node.js version for running Cypress tests on TestMu AI."
+---
+
+TestMu AI allows you to specify the Node.js version used during Cypress test execution. This ensures compatibility with your project's dependencies and avoids runtime issues.
+
+## Supported Versions
+---
+
+| Input Value | Exact Version Installed |
+|-------------|------------------------|
+| 18 | 18.17.1 |
+| 20 | 20.18.0 |
+| 22 | 22.11.0 |
+
+## Using the Configuration File
+---
+
+Add the `useNodeVersion` key in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "useNodeVersion": "20"
+  }
+}
+```
+
+## Using the CLI
+---
+
+Use the `--nodeV` flag when running tests:
+
+```bash
+lambdatest-cypress run --nodeV 20
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--nodeV, --useNodeVersion` | Specify Node.js version for Cypress runtime | String |

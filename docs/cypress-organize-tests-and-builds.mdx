@@ -1,0 +1,48 @@
+---
+title: "Organize Your Cypress Tests and Builds"
+sidebarTitle: "Organize Your Tests and Builds"
+keywords: ['cypress organize tests', 'cypress build name', 'cypress project name', 'cypress tags', 'testmu ai cypress']
+description: "Learn how to organize your Cypress tests and builds on TestMu AI using build names, project names, and tags."
+"og:description": "Learn how to organize your Cypress tests and builds on TestMu AI using build names, project names, and tags."
+---
+
+Name and categorize your Cypress builds for easier filtering and analysis on the TestMu AI Automation Dashboard. Use build names, project names, and tags to group related test runs.
+
+## Configuration Keys
+---
+
+Add the following keys in the `run_settings` section of your `lambdatest-config.json` file:
+
+| Key | Description | Type |
+|-----|-------------|------|
+| `build-name` | Name of the build for your test | String |
+| `project-name` | Name of your project | String |
+| `tags` | Group your tests by tag | String |
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "build-name": "Cypress Regression",
+    "project-name": "MyApp",
+    "tags": "Sprint1"
+  }
+}
+```
+
+## Using the CLI
+---
+
+You can also set the build name and tags using the CLI:
+
+```bash
+lambdatest-cypress run --bn "Nightly Build #42" -t "smoke"
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--bn, --build-name` | Set build name | String |
+| `-t, --tags` | Run tests with specific tags | String |
+
+<Tip>
+Use dynamic build names via the CLI instead of hardcoding them in the config file. This gives each test run a unique identifier, making it easier to [view your test results](/support/docs/cypress-view-test-results/) on the dashboard.
+</Tip>

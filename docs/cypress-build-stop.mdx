@@ -1,0 +1,35 @@
+---
+title: "Stop a Cypress Build"
+sidebarTitle: "Stop a Running Build"
+keywords: ['cypress stop build', 'cypress build stop', 'cypress cancel build', 'testmu ai cypress']
+description: "Learn how to stop a running Cypress build on TestMu AI using the CLI."
+"og:description": "Learn how to stop a running Cypress build on TestMu AI using the CLI."
+---
+
+You can stop a running Cypress build using the `build-stop` command in the TestMu AI Cypress CLI. This is useful when a test has crashed or is running longer than expected.
+
+## Stop by Session ID
+---
+
+```bash
+lambdatest-cypress build-stop --id <session_id>
+```
+
+## Stop the Last Session
+---
+
+```bash
+lambdatest-cypress build-stop --sls
+```
+
+## Available Flags
+---
+
+| Flag | Purpose |
+|------|---------|
+| `--id, --session_id` | Stop a specific test session by its ID |
+| `--sls, --stop_last_session` | Stop the most recent test session |
+
+<Note>
+It may take some time for the build to stop completely after you run the command. To prevent long-running specs automatically, learn how to [set a spec timeout for Cypress tests](/support/docs/cypress-spec-timeout/).
+</Note>

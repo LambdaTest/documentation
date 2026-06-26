@@ -1,0 +1,45 @@
+---
+title: "Run Cypress Tests on Locally Hosted Websites"
+sidebarTitle: "Test Locally Hosted Websites"
+keywords: ['cypress local testing', 'cypress tunnel', 'cypress localhost', 'cypress private testing', 'testmu ai cypress']
+description: "Learn how to test locally hosted or privately hosted websites with Cypress on TestMu AI using the tunnel feature."
+"og:description": "Learn how to test locally hosted or privately hosted websites with Cypress on TestMu AI using the tunnel feature."
+---
+
+To test locally hosted or privately hosted websites on TestMu AI, set up the [TestMu AI Tunnel for testing locally hosted pages](/support/docs/testing-locally-hosted-pages/) or download the [UnderPass desktop app](/support/docs/underpass-tunnel-application/).
+
+## When You Need Local Testing
+---
+
+- Your application runs on `localhost`
+- Your application is on a staging server behind a firewall
+- Your application is accessible only through a VPN or proxy
+
+## Enable the Tunnel
+---
+
+Once the TestMu AI Tunnel or UnderPass is running, activate the tunnel in your `lambdatest-config.json`:
+
+```json lambdatest-config.json
+{
+  "tunnel_settings": {
+    "tunnel": true,
+    "tunnel_name": "your-tunnel-name"
+  }
+}
+```
+
+Or use the CLI flags:
+
+```bash
+lambdatest-cypress run --tun true --tname "your-tunnel-name"
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--tun, --tunnel` | Enable TestMu AI Tunnel | String |
+| `--tname, --tunnel_name` | Set tunnel name | String |
+
+<Tip>
+Use unique tunnel names when running multiple tunnel connections simultaneously. To install npm packages from a private registry via the tunnel, learn how to [install NPM packages via tunnel](/support/docs/npm-via-tunnel/).
+</Tip>

@@ -1,0 +1,462 @@
+---
+title: "JavaScript Executors for Selenium on TestMu AI"
+sidebarTitle: "JavaScript Executors"
+keywords: ['selenium javascript executor', 'lambda-status selenium', 'lambda-file-exists selenium', 'lt intercept network selenium', 'lambda throttle network', 'selenium executeScript testmu ai']
+description: "TestMu AI Selenium JavaScript executor reference: test status, file operations, network interception, and performance throttling for cloud grid tests."
+"og:description": "TestMu AI Selenium JavaScript executor reference: test status, file operations, network interception, and performance throttling for cloud grid tests."
+---
+
+When you run Selenium tests on the TestMu AI cloud grid, you can call custom JavaScript executor commands using `executeScript()` (or `execute_script()`) to control test behavior beyond standard WebDriver. These commands let you mark test status on the dashboard, inspect and retrieve files on the test VM, intercept and mock network requests, and simulate degraded CPU and network conditions. Each command is called inline with no additional libraries required.
+
+<Note>
+All commands on this page are TestMu AI-specific extensions and are not part of the W3C WebDriver specification. They work with Selenium 4.x across the supported language bindings (Java, Python, Node.js, and others).
+</Note>
+
+## Quick Reference
+
+---
+
+Use the table below to find the right executor for your task and jump to its full reference.
+
+| Executor | Category | Returns | Description |
+|---|---|---|---|
+| `lambda-status` | Test Status | — | Mark test as passed or failed |
+| `lambda-file-exists` | File Operations | Boolean | Check if a downloaded file exists on the VM |
+| `lambda-file-stats` | File Operations | Object | Get name, size, md5, and modified time for a file |
+| `lambda-file-content` | File Operations | String (base64) | Retrieve file contents as a base64-encoded string |
+| `lambda-file-list` | File Operations | Array | List filenames in the downloads directory |
+| `lambda-files-download` | File Operations | — | Force-download a file to the VM |
+| `lt:intercept:redirect` | Network Control | — | Redirect a request URL to a different URL |
+| `lt:intercept:response` | Network Control | — | Return a custom mock response for a URL |
+| `lt:intercept:error` | Network Control | — | Inject a network error for a URL |
+| `lt:throttle:cpu` | Performance | — | Simulate CPU slowdown |
+| `lambda-throttle-network` | Performance | — | Simulate network conditions (speed and latency) |
+| `lt:downloadHAR` | Debugging | — | Download a HAR file for the session |
+
+---
+
+## Test Status
+
+---
+
+Use `lambda-status` to tell the TestMu AI dashboard whether your test passed or failed. Without this call, the session ends with an "unknown" status on the dashboard regardless of what your test assertions report.
+
+### lambda-status
+
+Call `lambda-status` with the value `passed` or `failed` before `driver.quit()`. Always place it inside a `try` block so it fires even when the test throws an exception.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+// Selenium 4.x, Java 17
+((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+# Selenium 4.x, Python 3.12
+driver.execute_script("lambda-status=passed")
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+// Selenium 4.x, Node.js 20
+await driver.executeScript("lambda-status=failed");
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## File Operations
+
+---
+
+Use these executors to verify and retrieve files that your test downloads inside the test VM. Files are stored in the VM's downloads directory and are only accessible during the active session. Because downloads are asynchronous, poll with a short delay rather than checking immediately after triggering a download.
+
+### lambda-file-exists
+
+Returns `true` if the specified file exists in the VM's downloads directory, `false` otherwise.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+Boolean exists = (Boolean) ((JavascriptExecutor) driver)
+    .executeScript("lambda-file-exists=report.pdf");
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+exists = driver.execute_script("lambda-file-exists=report.pdf")
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+const exists = await driver.executeScript("lambda-file-exists=report.pdf");
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lambda-file-stats
+
+Returns a metadata object for the specified file containing `name`, `size` (bytes), `md5` hash, and last-modified timestamp.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+Object stats = ((JavascriptExecutor) driver)
+    .executeScript("lambda-file-stats=report.pdf");
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+stats = driver.execute_script("lambda-file-stats=report.pdf")
+print(stats)
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lambda-file-content
+
+Returns the file's contents as a base64-encoded string. Decode it locally to save the file to disk.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+String encoded = ((JavascriptExecutor) driver)
+    .executeScript("lambda-file-content=report.pdf").toString();
+byte[] data = Base64.getDecoder().decode(encoded);
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+import base64
+encoded = driver.execute_script("lambda-file-content=report.pdf")
+data = base64.b64decode(encoded)
+with open("report.pdf", "wb") as f:
+    f.write(data)
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+const encoded = await driver.executeScript("lambda-file-content=report.pdf");
+const fs = require("fs");
+fs.writeFileSync("report.pdf", encoded, { encoding: "base64" });
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lambda-file-list
+
+Returns an array of filenames in the VM's downloads directory whose names begin with the given prefix. Pass an empty string to list all files.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+Object files = ((JavascriptExecutor) driver)
+    .executeScript("lambda-file-list=report");
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+files = driver.execute_script("lambda-file-list=report")
+print(files)  # array of filenames starting with "report"
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+const files = await driver.executeScript("lambda-file-list=report");
+console.log(files);
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lambda-files-download
+
+Forces a file to download from the TestMu AI file store to the VM's downloads directory. Use this as a fallback if `lambda:userFiles` did not pre-load the file before the session started.
+
+<Tabs groupId="language">
+  <Tab title="Java">
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-files-download=sample_640x360.mjpeg");
+```
+
+  </Tab>
+  <Tab title="Python">
+
+```python
+driver.execute_script("lambda-files-download=sample_640x360.mjpeg")
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+await driver.executeScript("lambda-files-download=sample_640x360.mjpeg");
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Network Control
+
+---
+
+Use these executors to intercept requests and simulate network behavior during a session, without changing your backend.
+
+### lt:intercept:redirect
+
+Redirects all requests matching the given URL pattern to a different URL for the remainder of the session.
+
+<Tabs groupId="language">
+  <Tab title="Python">
+
+```python
+driver.execute_script("lt:intercept:redirect", {
+    "url": "https://www.google.com",
+    "redirectUrl": "https://www.bing.com"
+})
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+await driver.executeScript("lt:intercept:redirect", {
+    url: "https://www.google.com",
+    redirectUrl: "https://www.bing.com"
+});
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lt:intercept:response
+
+Returns a custom mock response for all requests matching a URL pattern. Use this to test how your app handles specific API responses without calling the real endpoint.
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `url` | String | Yes | URL pattern to intercept |
+| `response.status` | Integer | No | HTTP status code (default: 200) |
+| `response.headers` | Object | No | Custom response headers |
+| `response.body` | String | No | Response body content |
+
+<Tabs groupId="language">
+  <Tab title="Python">
+
+```python
+driver.execute_script("lt:intercept:response", {
+    "url": "https://api.example.com/data",
+    "response": {
+        "status": 200,
+        "headers": {"Content-Type": "application/json"},
+        "body": "{\"key\":\"value\"}"
+    }
+})
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+await driver.executeScript("lt:intercept:response", {
+    url: "https://api.example.com/data",
+    response: {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+        body: '{"key":"value"}'
+    }
+});
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lt:intercept:error
+
+Injects a network error for all requests matching a URL pattern. Use this to test how your app handles connectivity failures for specific endpoints.
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `url` | String | Yes | URL pattern to intercept |
+| `error` | String | Yes | Error type to inject |
+
+**Supported error types:** `Failed`, `Aborted`, `TimedOut`, `AccessDenied`, `ConnectionClosed`, `ConnectionReset`, `ConnectionRefused`, `ConnectionAborted`, `ConnectionFailed`, `NameNotResolved`, `InternetDisconnected`, `AddressUnreachable`
+
+```python
+driver.execute_script("lt:intercept:error", {
+    "url": "https://api.example.com/data",
+    "error": "TimedOut"
+})
+```
+
+---
+
+## Performance
+
+---
+
+Use these executors to simulate degraded CPU and network conditions during a session. These let you test app behavior under resource-constrained environments without changing your infrastructure.
+
+### lt:throttle:cpu
+
+Simulates CPU slowdown. A `rate` of `2` means 2x slower than normal; `4` means 4x slower. The throttle applies for the rest of the session.
+
+<Tabs groupId="language">
+  <Tab title="Python">
+
+```python
+driver.execute_script("lt:throttle:cpu", {"rate": 4})
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+await driver.executeScript("lt:throttle:cpu", { rate: 2 });
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### lambda-throttle-network
+
+Simulates network conditions by setting download speed, upload speed, and latency. Pass a custom object with specific values, or use one of the predefined profile names below.
+
+<Tabs groupId="language">
+  <Tab title="Python">
+
+```python
+# Custom values
+driver.execute_script("lambda-throttle-network", {
+    "download": 750,
+    "upload": 250,
+    "latency": 100
+})
+
+# Named profile
+driver.execute_script("lambda-throttle-network", "Regular 3G")
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+await driver.executeScript("lambda-throttle-network", "Offline");
+```
+
+  </Tab>
+</Tabs>
+
+**Predefined profiles:**
+
+| Profile | Download | Upload | Latency |
+|---|---|---|---|
+| `offline` | 0 kb/s | 0 kb/s | 0 ms |
+| `GPRS` | 50 kb/s | 20 kb/s | 500 ms |
+| `Regular 2G` | 250 kb/s | 50 kb/s | 300 ms |
+| `Good 2G` | 450 kb/s | 150 kb/s | 150 ms |
+| `Regular 3G` | 750 kb/s | 250 kb/s | 100 ms |
+| `Good 3G` | 1 Mb/s | 750 kb/s | 40 ms |
+| `Regular 4G` | 4 Mb/s | 3 Mb/s | 20 ms |
+| `DSL` | 2 Mb/s | 1 Mb/s | 5 ms |
+| `WiFi` | 30 Mb/s | 15 Mb/s | 2 ms |
+| `online` | No limit | No limit | No limit |
+
+---
+
+## Debugging
+
+---
+
+Use `lt:downloadHAR` to capture and export the full network activity log for a session in HAR (HTTP Archive) format. Open the resulting file in a HAR viewer to inspect all requests, responses, and timings.
+
+### lt:downloadHAR
+
+Downloads network activity for the current session as a HAR file. Set `job_id` to the active WebDriver session ID, which you retrieve at runtime using the examples below.
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `job_id` | String | Yes | The active WebDriver session ID |
+| `output_file` | String | Yes | Filename for the saved HAR file |
+
+<Tabs groupId="language">
+  <Tab title="Python">
+
+```python
+session_id = driver.session_id
+driver.execute_script("lt:downloadHAR", {
+    "job_id": session_id,
+    "output_file": "network.har"
+})
+```
+
+  </Tab>
+  <Tab title="Node.js">
+
+```javascript
+const session = await driver.getSession();
+await driver.executeScript("lt:downloadHAR", {
+    job_id: session.getId(),
+    output_file: "network.har"
+});
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Related Resources
+
+---
+
+- [Download Files Using TestMu AI Selenium Grid](/support/docs/download-files-using-testmu-selenium-grid/)
+- [Extended Debugging Options for Selenium Testing](/support/docs/extended-debugging-options/)
+- [Mock Video Injection on Web Automation](/support/docs/mock-video-injection-web-automation-selenium-chromium/)

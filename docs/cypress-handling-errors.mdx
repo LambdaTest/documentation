@@ -1,0 +1,43 @@
+---
+title: "Troubleshoot Cypress Test Errors"
+sidebarTitle: "Troubleshoot Test Errors"
+keywords: ['cypress errors', 'cypress troubleshooting', 'cypress debugging', 'testmu ai cypress']
+description: "Learn how to identify and resolve common errors when running Cypress tests on TestMu AI."
+"og:description": "Learn how to identify and resolve common errors when running Cypress tests on TestMu AI."
+---
+
+When running Cypress tests on TestMu AI, errors typically fall into three categories. Use this guide to identify and resolve common issues.
+
+## Build Submission Errors
+---
+
+These occur when submitting tests to the platform.
+
+| Error Type | Cause | Resolution |
+|-----------|-------|------------|
+| JSON errors | Malformed JSON in `lambdatest-config.json` | Validate your JSON using a formatter tool |
+| Authentication errors | Incorrect username or access key | Verify credentials on the [TestMu AI Automation Dashboard](https://accounts.lambdatest.com/dashboard) |
+| Validation errors | Unsupported CLI arguments or config values | Check the [Cypress CLI commands reference](/support/docs/cypress-cli-commands/) |
+
+## Build Run Errors
+---
+
+These occur during build initialization on the platform.
+
+| Error Type | Cause | Resolution |
+|-----------|-------|------------|
+| Config file errors | Invalid `cypress_config_file` path | Verify the file path in `lambdatest-config.json` |
+| Missing NPM packages | Dependencies not installed | Add required packages to `npm_dependencies` in your [run settings](/support/docs/run-settings/) |
+| Plugin errors | Support files or plugins unavailable | Reinstall missing plugins and verify file paths |
+
+## Test Run Errors
+---
+
+These are runtime errors that appear in the TestMu AI Automation Dashboard after test execution begins. Use these tools to investigate:
+
+- **Video recordings** - Retrace the steps leading to failure
+- **Console logs** - Check browser output for JavaScript errors
+- **Network logs** - Inspect API calls and response codes. Learn how to [capture network logs for Cypress tests](/support/docs/cypress-network-logs/)
+- **Command logs** - View detailed Cypress commands. Learn how to [set up detailed command logs](/support/docs/cypress-detailed-command-logs/)
+
+For more debugging techniques, learn how to [debug your failed Cypress tests](/support/docs/cypress-debug-failed-tests/).

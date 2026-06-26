@@ -1,0 +1,36 @@
+---
+title: "Set Record Flag for Cypress Tests"
+sidebarTitle: "Set Record Flag"
+keywords: ['cypress record flag', 'cypress dashboard integration', 'cypress record key', 'testmu ai cypress']
+description: "Learn how to use the record flag to publish Cypress test results to the Cypress Dashboard from TestMu AI."
+"og:description": "Learn how to use the record flag to publish Cypress test results to the Cypress Dashboard from TestMu AI."
+---
+
+The record flag enables Cypress test results to be published to the Cypress Dashboard while running tests on TestMu AI.
+
+## Prerequisites
+---
+
+You need the following from your [Cypress Dashboard](https://dashboard.cypress.io/):
+- **Project ID** - found in Project > Project Settings > General
+- **Record Key** - found in Project > Project Settings > Record Keys
+
+## Using the CLI
+---
+
+Pass the record flag and key using the `--cy` argument:
+
+```bash
+lambdatest-cypress run --cy="--record;--key <your_record_key>"
+```
+
+## Setup Steps
+---
+
+1. Open the [Cypress Dashboard](https://dashboard.cypress.io/) and navigate to **Project > Project Settings**.
+2. Copy the **Project ID** from the General section.
+3. Copy the **Record Key** from the Record Keys section.
+4. Define the Project ID in your `cypress.json` (v9) or `cypress.config.js` (v10+).
+5. Run your tests with the `--cy` flag as shown above.
+
+For a detailed walkthrough with screenshots, learn how to [integrate TestMu AI with Cypress Dashboard](/support/docs/integrate-testmu-with-cypress/).

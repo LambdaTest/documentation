@@ -1,0 +1,39 @@
+---
+title: "Run Cypress Tests in Headless Mode"
+sidebarTitle: "Run Tests in Headless Mode"
+keywords: ['cypress headless', 'cypress headless mode', 'cypress headless testing', 'testmu ai cypress']
+description: "Learn how to run your Cypress tests in headless mode on TestMu AI for faster test execution."
+"og:description": "Learn how to run your Cypress tests in headless mode on TestMu AI for faster test execution."
+---
+
+Headless mode runs Cypress tests without rendering a visible browser UI. This can speed up test execution in CI/CD pipelines where visual output is not needed.
+
+## Using the Configuration File
+---
+
+Set the `headless` key to `true` in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "headless": true
+  }
+}
+```
+
+## Using the CLI
+---
+
+Use the `--headless` flag when running tests:
+
+```bash
+lambdatest-cypress run --headless
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--headless, --headless-mode` | Run tests in headless mode | Boolean |
+
+<Note>
+Video recordings and screenshots are still captured in headless mode. You can [view your test results](/support/docs/cypress-view-test-results/) on the Automation Dashboard as usual.
+</Note>

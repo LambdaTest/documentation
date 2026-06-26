@@ -1,0 +1,29 @@
+---
+title: "Change Browser Window Size for Playwright Tests"
+sidebarTitle: "Change Browser Window Size"
+keywords: ['playwright window size', 'playwright viewport', 'playwright browser size', 'testmu ai playwright']
+description: "Learn how to change the browser viewport size for Playwright tests on TestMu AI."
+"og:description": "Learn how to change the browser viewport size for Playwright tests on TestMu AI."
+---
+
+The default viewport size for Playwright tests is 1280x720. You can set a custom viewport when creating a new browser context or resize it for individual pages.
+
+## Set Viewport on Context
+---
+
+```js
+const context = await browser.newContext({
+  viewport: { width: 1280, height: 1024 }
+});
+```
+
+## Resize Viewport for a Page
+---
+
+```js
+await page.setViewportSize({ width: 1600, height: 1200 });
+```
+
+<Note>
+Viewport size is different from OS-level screen resolution. To change the machine resolution, see how to [change desktop resolution for Playwright tests](/support/docs/playwright-screen-resolution/).
+</Note>

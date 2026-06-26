@@ -1,0 +1,57 @@
+---
+title: "Set Browser Options for Playwright Tests"
+sidebarTitle: "Set Browser Options"
+keywords: ['playwright browser options', 'playwright chrome options', 'playwright edge options', 'testmu ai playwright']
+description: "Learn how to set Chrome and Edge browser options for Playwright tests on TestMu AI."
+"og:description": "Learn how to set Chrome and Edge browser options for Playwright tests on TestMu AI."
+---
+
+Playwright lets you set browser arguments for Chromium-based browsers. Use `goog:chromeOptions` for Chrome and `ms:edgeOptions` for Edge.
+
+## Chrome Options
+---
+
+```js
+const capabilities = {
+  'browserName': 'Chrome',
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'goog:chromeOptions': [
+      '--user-agent=<Any custom user agent>',
+    ],
+  }
+}
+
+const browser = await chromium.connect({
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+})
+```
+
+## Edge Options
+---
+
+```js
+const capabilities = {
+  'browserName': 'MicrosoftEdge',
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'ms:edgeOptions': [
+      '--user-agent=<Any custom user agent>',
+    ],
+  }
+}
+
+const browser = await chromium.connect({
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+})
+```
+
+<Note>
+You can use any Chromium-based argument from the [list of Chromium command line switches](https://peter.sh/experiments/chromium-command-line-switches/).
+</Note>

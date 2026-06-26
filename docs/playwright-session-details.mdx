@@ -1,0 +1,47 @@
+---
+title: "Get Session Details for Playwright Tests"
+sidebarTitle: "Get Session Details"
+keywords: ['playwright session details', 'playwright test details', 'playwright session info', 'testmu ai playwright']
+description: "Learn how to retrieve session details from your Playwright tests on TestMu AI."
+"og:description": "Learn how to retrieve session details from your Playwright tests on TestMu AI."
+---
+
+When you run a Playwright test on TestMu AI, the platform generates logs for each test session. Use the `getTestDetails` action to retrieve session information from within your test script.
+
+## Retrieve Session Details
+---
+
+```js
+let response = JSON.parse(await page.evaluate(_ => {},
+  `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`
+))
+console.log(response);
+```
+
+## Sample Response
+---
+
+```json
+{
+  "data": {
+    "test_id": "RWA9R-AC4V8-GJRET-YHBO2",
+    "build_id": 9415381,
+    "name": "Playwright Sample Test",
+    "test_type": "playwright",
+    "platform": "win10",
+    "browser": "Chrome",
+    "browser_version": "107.0",
+    "status_ind": "running",
+    "session_id": "RWA9R-AC4V8-GJRET-YHBO2",
+    "build_name": "Playwright Sample Build",
+    "create_timestamp": "2022-12-07 10:53:16",
+    "console_logs_url": "https://api.lambdatest.com/automation/api/v1/sessions/.../log/console",
+    "network_logs_url": "https://api.lambdatest.com/automation/api/v1/sessions/.../log/network",
+    "video_url": "https://automation.lambdatest.com/public/video?testID=..."
+  },
+  "message": "Retrieve session was successful",
+  "status": "success"
+}
+```
+
+The response includes URLs for console logs, network logs, command logs, video recordings, and screenshots for the session.

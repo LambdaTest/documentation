@@ -1,0 +1,85 @@
+---
+title: "Test File Downloads in Cypress"
+sidebarTitle: "Test File Downloads"
+keywords: ['cypress file download', 'cypress download testing', 'cypress-downloadfile', 'testmu ai cypress']
+description: "Learn how to test file downloads in your Cypress tests using the cypress-downloadfile package."
+"og:description": "Learn how to test file downloads in your Cypress tests using the cypress-downloadfile package."
+---
+
+You can test file downloads in your Cypress tests using the `cypress-downloadfile` npm package. Use `cy.readFile` to verify text-based files (`.doc`, `.csv`, `.pdf`) and `cy.verifyDownload` for binary files (`.zip`, `.png`, `.jpg`).
+
+## Step 1: Add the Dependency
+---
+
+Add `cypress-downloadfile` to your `lambdatest-config.json`:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "npm_dependencies": {
+      "cypress-downloadfile": "^1.2.1"
+    }
+  }
+}
+```
+
+## Step 2: Register the Plugin
+---
+
+**cypress/support/commands.js:**
+```javascript
+require('cypress-downloadfile/lib/downloadFileCommand');
+```
+
+**cypress/plugins/index.js** (Cypress v9) or **cypress.config.js** (Cypress v10+):
+```javascript
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
+module.exports = (on, config) => {
+  on('task', { downloadFile });
+};
+```
+
+## Step 3: Download and Verify
+---
+
+```javascript
+describe('File download test', () => {
+  it('downloads and verifies a document', () => {
+    cy.downloadFile(
+      'https://example.com/sample.doc',
+      'Downloads',
+      'test.doc'
+    );
+    cy.readFile('./Downloads/test.doc')
+      .should('exist');
+  });
+});
+```
+
+## Verify Binary Files
+---
+
+For binary files like images or archives, use the `cy-verify-downloads` package:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "npm_dependencies": {
+      "cypress-downloadfile": "^1.2.1",
+      "cy-verify-downloads": "^0.2.0"
+    }
+  }
+}
+```
+
+```javascript
+// cypress/support/commands.js
+require('cy-verify-downloads').addCustomCommand();
+
+// In your test
+cy.verifyDownload('test.jpg');
+```
+
+<Tip>
+To exclude large files from your test uploads, learn how to [exclude files from Cypress test uploads](/support/docs/cypress-exclude-files/). To retrieve files generated during test execution, learn how to [download test artifacts](/support/docs/download-artefacts-cypress/).
+</Tip>

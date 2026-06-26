@@ -1,0 +1,33 @@
+---
+title: "Debug Your Playwright Tests"
+sidebarTitle: "Debug Your Tests"
+keywords: ['playwright debug', 'playwright debugging', 'playwright network logs', 'playwright video logs', 'testmu ai playwright']
+description: "Learn how to debug Playwright tests on TestMu AI using network logs, console logs, and video recordings."
+"og:description": "Learn how to debug Playwright tests on TestMu AI using network logs, console logs, and video recordings."
+---
+
+Enable debugging capabilities to capture network logs, console logs, and video recordings for your Playwright tests on TestMu AI.
+
+## Debugging Capabilities
+---
+
+| Key | Values | Description |
+|-----|--------|-------------|
+| `network` | true/false | Capture network logs |
+| `console` | true/false | Capture browser console logs |
+| `video` | true/false | Record video of the entire screen |
+
+```js
+const capabilities = {
+  'LT:Options': {
+    'network': true,
+    'console': true,
+    'video': true,
+  }
+}
+```
+
+## View Logs on the Dashboard
+---
+
+After test execution, view captured logs from the TestMu AI Automation Dashboard under the session details for each test. You can also [get session details programmatically](/support/docs/playwright-session-details/) to retrieve direct URLs for logs and recordings.

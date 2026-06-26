@@ -1,0 +1,40 @@
+---
+title: "Configure Timezones for Cypress Tests"
+sidebarTitle: "Configure Test Timezones"
+keywords: ['cypress timezone', 'cypress configure timezone', 'cypress custom timezone', 'testmu ai cypress']
+description: "Learn how to set a custom timezone for your Cypress tests on TestMu AI."
+"og:description": "Learn how to set a custom timezone for your Cypress tests on TestMu AI."
+---
+
+When testing websites that display different content based on the user's timezone, you can set a custom timezone for the remote machine running your Cypress tests. This affects how date and time functions behave in your application during testing.
+
+## Using the CLI
+---
+
+```bash
+lambdatest-cypress run --tz "US/Eastern"
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--tz, --timezone` | Set custom timezone on the test machine | String |
+
+## Common Timezone Values
+---
+
+| Region | Timezone Value |
+|--------|----------------|
+| US Eastern | `US/Eastern` |
+| US Pacific | `US/Pacific` |
+| United Kingdom | `Europe/London` |
+| India | `Asia/Kolkata` |
+| Japan | `Asia/Tokyo` |
+| Australia | `Australia/Sydney` |
+| Germany | `Europe/Berlin` |
+| Brazil | `America/Sao_Paulo` |
+| Singapore | `Asia/Singapore` |
+| UAE | `Asia/Dubai` |
+
+<Tip>
+To test location-based content like pricing or language preferences, you can also [simulate IP geolocation for Cypress tests](/support/docs/cypress-geolocation/).
+</Tip>

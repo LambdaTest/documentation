@@ -1,0 +1,36 @@
+---
+title: "Organize Your Playwright Tests and Builds"
+sidebarTitle: "Organize Your Tests and Builds"
+keywords: ['playwright organize tests', 'playwright build name', 'playwright project name', 'playwright tags', 'testmu ai playwright']
+description: "Learn how to organize Playwright tests using build names, project names, and tags on TestMu AI."
+"og:description": "Learn how to organize Playwright tests using build names, project names, and tags on TestMu AI."
+---
+
+Name and categorize your Playwright builds for easier filtering and analysis on the TestMu AI Automation Dashboard.
+
+## Capabilities
+---
+
+| Key | Description | Example |
+|-----|-------------|---------|
+| `build` | Build number or name | `"Playwright Sample Build"` |
+| `name` | Name of a test | `"Playwright Sample Test"` |
+| `projectName` | Name of a project | `"Playwright Sample Project"` |
+| `tags` | Group your Playwright tests | `["tag1", "tag2", "tag3"]` |
+| `buildTags` | Group your Playwright builds | `["build1", "build2"]` |
+
+```js
+const capabilities = {
+  'LT:Options': {
+    'build': 'Playwright Regression',
+    'name': 'Homepage Test',
+    'projectName': 'MyApp',
+    'tags': ['smoke', 'regression'],
+    'buildTags': ['nightly'],
+  }
+}
+```
+
+<Tip>
+Use environment variables for `build` and `projectName` instead of hardcoding them. This gives each test run a unique identifier and makes it easier to [view your Playwright test results](/support/docs/playwright-view-test-results/).
+</Tip>

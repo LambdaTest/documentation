@@ -1,0 +1,58 @@
+---
+title: "Get Started With Selenium Testing"
+sidebarTitle: "Overview"
+keywords: ['testmu ai automation', 'selenium automation grid', 'selenium grid online', 'online selenium automation', 'selenium automation grid online', 'testmu ai selenium automation grid', 'selenium tutorial', 'selenium getting started', 'testmu ai getting started']
+description: "Run Selenium tests on TestMu AI's cloud grid. 3000+ browser and OS combinations, parallel execution, video recordings, and built-in debugging."
+"og:description": "Run Selenium tests on TestMu AI's cloud grid. 3000+ browser and OS combinations, parallel execution, video recordings, and built-in debugging."
+---
+
+---
+
+Run your Selenium tests on TestMu AI's cloud grid of 3000+ browser and OS combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
+
+
+## Before You Begin
+---
+
+1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/register/) if you don't have one.
+2. Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) and navigate to the left sidebar and select **Credentials**. Your **Username** and **Access Key** will be visible there, along with options to copy them for use.
+3. Set them as environment variables:
+
+<Tabs>
+  <Tab title="macOS / Linux">
+  ```bash
+  export LT_USERNAME="YOUR_USERNAME"
+  export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+  ```
+  </Tab>
+  <Tab title="Windows">
+  ```powershell
+  set LT_USERNAME="YOUR_USERNAME"
+  set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+  ```
+  </Tab>
+</Tabs>
+
+Your tests connect to the grid at:
+
+```
+https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
+```
+
+## Choose How to Start
+---
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px'}}>
+  <Card title="Run Your First Test" href="/support/docs/testmu-running-your-first-selenium-test/">
+  New to cloud testing? Clone a sample project, set credentials, and run your first Selenium script on the grid.
+</Card>
+  <Card title="Migrate Your Test Suite" href="/support/docs/migrate-selenium-test-suite/">
+  Already have Selenium tests? Change the hub URL, add credentials, and run them on the cloud.
+</Card>
+  <Card title="Explore the Dashboard" href="/support/docs/inside-testmu-platform/">
+  See where test results live - video playback, command logs, screenshots, and analytics.
+</Card>
+  <Card title="Configure Capabilities" href="/support/docs/selenium-automation-capabilities/">
+  Control which browser, version, OS, and advanced features your tests use.
+</Card>
+</div>

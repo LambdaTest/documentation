@@ -1,0 +1,61 @@
+---
+title: "Integrate TestMu AI With Jenkins Freestyle Project"
+sidebarTitle: "Integrate TestMu AI With Jenkins Freestyle Project"
+description: "This document will help you integrate your Jenkins freestyle project with TestMu AI to ensure your Selenium testing scripts are executed on a cloud-based Grid of 3000+ real browsers."
+keywords: ['jenkins', 'freestyle project', 'testmu ai', 'jenkins integration', 'testmu ai integration with jenkins', 'jenkins freestlye']
+"og:description": "This document will help you integrate your Jenkins freestyle project with TestMu AI to ensure your Selenium testing scripts are executed on a cloud-based Grid of 3000+ real browsers."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+---
+
+***
+
+Integrate <BrandName /> Jenkins plugin with your Jenkins Freestyle project for:   
+*   Configure your <BrandName /> credentials for your Jenkins jobs.
+*   Set up and tear down the Lambda Tunnel binary file to perform automated cross browser testing even on your locally hosted web apps.
+*   Embed all the test results such as video logs, network logs, and screenshots of every step performed through <BrandName /> with your Jenkins job results.
+
+<Warning>
+Note: Before you proceed, make sure to integrate [<BrandName /> plugin for Jenkins](/support/docs/jenkins-with-lambdatest/).
+</Warning>
+
+
+**Step 1:** Create a **New Item** in Jenkins and select **Freestyle Project**. 
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/1.webp' alt="Image" width="1919" height="900" /> 
+**Step 2:** Go to Source Code Management and feed the repository URL.
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/2.webp' alt="Image" width="1024" height="482" /> 
+**Step 3:** Under the Built Environments, select <BrandName /> and specify your desired capabilities. If you wish to run multiple jobs in parallel then you can **Add Selenium Test Capability**. 
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/3.webp' alt="Image" width="1024" height="483" /> 
+
+>**Note:** It is recommended to check your network connectivity by **pinging <BrandName />**.
+
+**Step 4:** Add a build step to **Execute Shell**. 
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/4.webp' alt="Image" width="1024" height="481" /> 
+**Step 5:** Hit the below command to **Execute Shell** and hit **save**.
+
+```
+python google-search-testmu ai.py
+```
+
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/5.webp' alt="Image" width="1024" height="484" /> 
+
+<Tip>
+**Best Practices**
+
+**Build naming**
+
+Define `LT_BUILD_NAME` in your script using  `${BUILD_TAG}`, and reference the same in your test capabilities. This ensures that each <BrandName /> run is correctly mapped to its corresponding Jenkins build.
+</Tip>
+
+**Step 6:** Click on **Apply & Save** to set your configurations and then click on **"Build Now"** to execute your test.
+
+## Test On Locally Hosted Web Applications
+
+* * *
+
+While specifying build environments, check the box to **Use Local Tunnel**. You can then specify a Tunnel name if you like, your <BrandName /> Credentials will be automatically fetched.
+<img loading="lazy" src='/assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/6.webp' alt="Image" width="1024" height="483" /> 
+
+Kudos! That is all you need to know for integrating your Jenkins freestyle project with <BrandName />. In case of any questions, feel free to give us a shout. You can also drop an email to [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)

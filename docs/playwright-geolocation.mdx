@@ -1,0 +1,24 @@
+---
+title: "Simulate IP Geolocation for Playwright Tests"
+sidebarTitle: "Simulate IP Geolocation"
+keywords: ['playwright geolocation', 'playwright ip geolocation', 'playwright geo location', 'testmu ai playwright']
+description: "Learn how to simulate geolocation for Playwright tests on TestMu AI."
+"og:description": "Learn how to simulate geolocation for Playwright tests on TestMu AI."
+---
+
+Run your Playwright tests across 53+ geographies using the `geoLocation` capability. This is useful for testing location-based content such as pricing, language, or region-specific features.
+
+## Configuration
+---
+
+```js
+const capabilities = {
+  'LT:Options': {
+    'geoLocation': 'US',
+  }
+}
+```
+
+| Key | Values | Description |
+|-----|--------|-------------|
+| `geoLocation` | Country code (e.g., `US`, `GB`, `DE`, `IN`) | Simulate traffic from the specified country |

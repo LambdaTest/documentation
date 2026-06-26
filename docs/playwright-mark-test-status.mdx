@@ -1,0 +1,37 @@
+---
+title: "Mark Playwright Tests as Passed or Failed"
+sidebarTitle: "Mark Test Status"
+keywords: ['playwright test status', 'playwright mark passed', 'playwright mark failed', 'testmu ai playwright']
+description: "Learn how to mark Playwright tests as passed or failed on TestMu AI."
+"og:description": "Learn how to mark Playwright tests as passed or failed on TestMu AI."
+---
+
+By default, the status of each successfully run test is marked as **Completed** on TestMu AI. Since assertions run client-side, you need to explicitly mark tests as **Passed** or **Failed** based on your testing requirements.
+
+## Mark as Passed
+---
+
+```js
+await page.evaluate(_ => {},
+  `lambdatest_action: ${JSON.stringify({
+    action: 'setTestStatus',
+    arguments: { status: 'passed', remark: 'Title matched' }
+  })}`
+)
+```
+
+## Mark as Failed
+---
+
+```js
+await page.evaluate(_ => {},
+  `lambdatest_action: ${JSON.stringify({
+    action: 'setTestStatus',
+    arguments: { status: 'failed', remark: 'Title not matched' }
+  })}`
+)
+```
+
+<Tip>
+Call these methods from an `afterEach` or `afterAll` hook where assertion results are available, so the status accurately reflects the test outcome.
+</Tip>

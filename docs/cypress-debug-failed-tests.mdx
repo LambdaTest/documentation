@@ -1,0 +1,45 @@
+---
+title: "Debug Failed Cypress Tests"
+sidebarTitle: "Debug Your Failed Tests"
+keywords: ['cypress debug', 'cypress failed tests', 'cypress debugging', 'cypress video logs', 'testmu ai cypress']
+description: "Learn how to debug failed Cypress tests on TestMu AI using video recordings, network logs, and console logs."
+"og:description": "Learn how to debug failed Cypress tests on TestMu AI using video recordings, network logs, and console logs."
+---
+
+TestMu AI provides several debugging tools on the Automation Dashboard to help you investigate failed Cypress tests.
+
+## Video Recording
+---
+
+Every Cypress test run is recorded as it executes on the remote machine. Use the video playback to retrace the steps leading to a test failure. Videos are available in the session details on the Automation Dashboard.
+
+## Console Logs
+---
+
+Browser console output is captured for each test session. Check console logs for JavaScript errors, warnings, or unexpected output that may have caused the failure.
+
+## Network Logs
+---
+
+Network logs capture HTTP requests, responses, and latency data. Enable them by setting `network` to `true`:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "network": true
+  }
+}
+```
+
+For advanced network log options, learn how to [capture network logs for Cypress tests](/support/docs/cypress-network-logs/).
+
+## Command Logs
+---
+
+For detailed Cypress command-by-command logs showing each step of test execution, set up the `cypress-terminal-report` package. Learn how to [set up detailed command logs for Cypress](/support/docs/cypress-detailed-command-logs/).
+
+## Next Steps
+---
+
+- [View your test results](/support/docs/cypress-view-test-results/) on the Automation Dashboard
+- [Troubleshoot common Cypress test errors](/support/docs/cypress-handling-errors/)

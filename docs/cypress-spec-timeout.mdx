@@ -1,0 +1,41 @@
+---
+title: "Set Spec Timeout for Cypress Tests"
+sidebarTitle: "Set Spec Timeout"
+keywords: ['cypress spec timeout', 'cypress max duration', 'cypress test timeout', 'testmu ai cypress']
+description: "Learn how to set a maximum duration for Cypress test sessions on TestMu AI to prevent tests from blocking parallel execution."
+"og:description": "Learn how to set a maximum duration for Cypress test sessions on TestMu AI to prevent tests from blocking parallel execution."
+---
+
+If a spec file encounters issues during execution, the test session can run indefinitely and block parallel sessions. Set a maximum duration to automatically stop long-running specs and free up resources for other tests.
+
+The `max_duration` value must be an integer within the range of **2 to 240 minutes**.
+
+## Using the Configuration File
+---
+
+Add the `max_duration` key in the `run_settings` section of your `lambdatest-config.json` file:
+
+```json lambdatest-config.json
+{
+  "run_settings": {
+    "max_duration": 30
+  }
+}
+```
+
+## Using the CLI
+---
+
+Use the `--md` flag when running tests:
+
+```bash
+lambdatest-cypress run --md 30
+```
+
+| Flag | Purpose | Type |
+|------|---------|------|
+| `--md, --max_duration` | Stop test if running longer than specified minutes | Integer |
+
+<Note>
+If you provide a value outside the 2-240 range, the platform uses its default timeout behavior. To stop a build manually, learn how to [stop a running Cypress build](/support/docs/cypress-build-stop/).
+</Note>

@@ -1,0 +1,29 @@
+---
+title: "Change Desktop Resolution for Playwright Tests"
+sidebarTitle: "Change Desktop Resolution"
+keywords: ['playwright screen resolution', 'playwright resolution', 'playwright desktop resolution', 'testmu ai playwright']
+description: "Learn how to change the desktop screen resolution for Playwright tests on TestMu AI."
+"og:description": "Learn how to change the desktop screen resolution for Playwright tests on TestMu AI."
+---
+
+Playwright tests run with a `1920x1080` resolution by default on desktop browsers. Use the `resolution` capability to set a different screen resolution.
+
+## Supported Resolutions
+---
+
+| Platform | Available Resolutions |
+|----------|----------------------|
+| **Windows 11 & 10** | 1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080, 2048x1536 |
+| **macOS** | 1024x768, 1280x960, 1280x1024, 1600x1200, 1920x1080 |
+
+```js
+const capabilities = {
+  'LT:Options': {
+    'resolution': '2048x1536',
+  }
+}
+```
+
+<Note>
+The `resolution` capability changes the OS-level screen resolution, not the browser viewport. To change the viewport, see how to [change browser window size for Playwright tests](/support/docs/playwright-browser-window-size/).
+</Note>

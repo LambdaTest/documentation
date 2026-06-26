@@ -1,0 +1,112 @@
+---
+title: "Fix Idle Timeout Errors in Selenium Tests"
+sidebarTitle: "Idle Timeout"
+keywords: ['selenium idle timeout', 'idleTimeout capability', 'selenium session timeout', 'fix idle timeout selenium', 'selenium test terminated']
+description: "Fix the idle timeout error in Selenium tests by configuring the idleTimeout capability and using driver.quit() correctly."
+"og:description": "Fix the idle timeout error in Selenium tests by configuring the idleTimeout capability and using driver.quit() correctly."
+---
+
+import { BrandName } from "/snippets/BrandName.mdx";
+
+If the <BrandName /> Selenium grid does not receive any command from your test for 120 seconds, it terminates the session and returns an idle timeout error. This protects grid machines from being held indefinitely by stalled tests.
+
+## What the Error Looks Like
+
+---
+
+```
+Test was terminated because the grid has not received any requests for 120 seconds.
+To avoid this, use idleTimeout in desired capabilities. e.g: set 'idleTimeout':'270'.
+```
+
+## Common Causes
+
+---
+
+- A long `Thread.sleep()` or `time.sleep()` call with no Selenium command between steps.
+- Network latency, especially over a VPN, delaying commands past the 120-second limit.
+- A missing or misplaced `driver.quit()` in exception handling, leaving sessions open.
+
+## Fix 1: Extend the Idle Timeout
+
+---
+
+Use the `idleTimeout` capability to increase the inactivity limit. The value is in seconds, with a maximum of 1800.
+
+```java Java
+HashMap<String, Object> ltOptions = new HashMap<>();
+ltOptions.put("idleTimeout", 270);
+options.setCapability("LT:Options", ltOptions);
+```
+
+```python Python
+lt_options = {
+    "idleTimeout": 270
+}
+options.set_capability("LT:Options", lt_options)
+```
+
+```javascript Node.js
+const capabilities = {
+    "LT:Options": {
+        idleTimeout: 270
+    }
+};
+```
+
+```csharp C#
+var ltOptions = new Dictionary<string, object>();
+ltOptions["idleTimeout"] = 270;
+options.AddAdditionalOption("LT:Options", ltOptions);
+```
+
+```ruby Ruby
+caps = {
+    "LT:Options": {
+        idleTimeout: 270
+    }
+}
+```
+
+<Tip>
+Keep `idleTimeout` between 270 and 360 seconds. Setting it to the maximum (1800 seconds) can cause performance issues and ties up grid capacity if your test stalls.
+</Tip>
+
+## Fix 2: Call driver.quit() in Exception Handling
+
+---
+
+If your test throws an exception before reaching `driver.quit()`, the session stays open until it times out. Wrap teardown in a `finally` block so the session always closes.
+
+```java Java
+@AfterTest
+public void tearDown() {
+    try {
+        ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+    } finally {
+        driver.quit();
+    }
+}
+```
+
+```python Python
+def tearDown(self):
+    try:
+        self.driver.execute_script("lambda-status=passed")
+    finally:
+        self.driver.quit()
+```
+
+## Fix 3: Check for Network Latency
+
+---
+
+If you are on a VPN, commands from your machine may take longer than 120 seconds to reach the <BrandName /> grid. To verify, browse `https://hub.lambdatest.com/wd/hub/session` from your machine. If it returns a response like `{"status":404,"value":{"message":"method not allowed"}}`, your network can reach the grid. If you get no response, your firewall or VPN may be blocking access.
+
+## Related Resources
+
+---
+
+- [Timeouts - Errors and Resolutions](/support/docs/timeouts-issues-and-resolutions/)
+- [Selenium Capabilities for Version 4 and Above](/support/docs/selenium-four-capabilities/)
+- [Run Selenium Tests in Parallel](/support/docs/run-parallel-tests-with-selenium/)
