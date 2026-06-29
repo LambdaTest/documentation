@@ -85,7 +85,7 @@ The following are the steps to use Command Logs Analytics:
 
    A line or bar chart is displayed with the x-axis representing the timestamp of the tests run and the y-axis representing the total number of unique errors in tests with command logs of respective response statuses. 
 
-   <img loading="lazy" src="https://www.testmuai.com/resources/images/errorAi.png" alt="cmd" width="768" height="373" className="doc_img"/>
+   <img loading="lazy" src="https://assets.testmuai.com/resources/images/errorAi.png" alt="cmd" width="768" height="373" className="doc_img"/>
 
    **Use Cases**
    1. Tracking response status trends over time
@@ -121,7 +121,7 @@ The following are the steps to use Command Logs Analytics:
 
    A table displays unique error messages, occurrences dots, the percentage of occurrences, the timestamp of the last error message, and tests with the error message command logs.
 
-   <img loading="lazy" src="https://www.testmuai.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+   <img loading="lazy" src="https://assets.testmuai.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
 
    **Use Cases**
    6. Identifying common error messages for prioritizing bug fixes
