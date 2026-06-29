@@ -47,7 +47,7 @@ Analyzing your failed tests is a crucial part of your test automation strategy. 
 <BrandName /> provides you with the Command Logs Analytics feature to analyze your failed commands or steps. It provides you with the list of errors that are causing your test runs to fail. You can also view the history of the errors and the number of times the error has occurred in the past. This helps you to identify the errors and fix them to improve the quality of your test suite.
 
 
-<img loading="lazy" src="https://www.testmuai.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src="https://assets.testmuai.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>
 
 
 ## How does the Command Error Logs Analytics work?
