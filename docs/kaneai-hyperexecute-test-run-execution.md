@@ -166,7 +166,11 @@ The generated HTML report includes:
 The generated Extent report provides a rich interactive view of test execution results, accessible from the HyperExecute Job page. It includes:
 
 - **Dashboard** — A visual summary of the test run with pass/fail statistics and trend data.
-- **Test Details** — Step-by-step breakdown of each test case with status, logs, and failure details.
+- **Test Details** — Step-by-step breakdown of each test case with status and screenshots.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/extent-report-overview.png').default} alt="Extent report dashboard overview" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/extent-report-detail.png').default} alt="Extent report test detail view" className="doc_img"/>
 
 **Email Report**
 
