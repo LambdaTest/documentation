@@ -62,7 +62,7 @@ Our platform goes beyond simple error detection by classifying different types o
 
 ### Command Logs Error Trends Forecast
 
-Harness the capabilities of our advanced algorithms to identify trends in errors. By leveraging historical data and predictive analysis, <img loading="lazy" src="https://www.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence helps you anticipate and prevent future issues, ultimately improving the overall quality of your applications.
+Harness the capabilities of our advanced algorithms to identify trends in errors. By leveraging historical data and predictive analysis, <img loading="lazy" src="https://assets.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence helps you anticipate and prevent future issues, ultimately improving the overall quality of your applications.
 
 ### Anomalies in Test Execution Across Environments
 
@@ -70,7 +70,7 @@ Detecting anomalies in test execution is crucial for ensuring consistency and re
 
 ## Advantages of Test Intelligence
 
-By leveraging the features of <img loading="lazy" src="https://www.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence, you unlock numerous advantages for your QA testing processes:
+By leveraging the features of <img loading="lazy" src="https://assets.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence, you unlock numerous advantages for your QA testing processes:
 
 - Streamlined and efficient identification of flaky tests.
 - Enhanced error management and prioritization.
@@ -81,9 +81,9 @@ By leveraging the features of <img loading="lazy" src="https://www.testmuai.com/
 
 ## Get Started with Test Intelligence
 
-Ready to experience the power of <img loading="lazy" src="https://www.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence? Getting started is simple:
+Ready to experience the power of <img loading="lazy" src="https://assets.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence? Getting started is simple:
 
-1. Sign up for our <img loading="lazy" src="https://www.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence platform and gain access to a world of transformation testing capabilities.
+1. Sign up for our <img loading="lazy" src="https://assets.testmuai.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence platform and gain access to a world of transformation testing capabilities.
 2. Integrate your Automation test suite with Web Automation plan and start leveraging the intelligent features of our platform.
 3. Explore the intuitive interface and dive into the automated analysis of your test data.
 4. Discover valuable insights, address issues proactively, and optimize your testing process for better results.
