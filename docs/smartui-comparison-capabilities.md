@@ -2,7 +2,7 @@
 id: smartui-comparison-capabilities
 title: Set SmartUI Comparison Modes at the Session Level
 sidebar_label: Comparison via Capabilities
-description: Enable SmartUI comparison modes such as layout, Smart Ignore, and ignore regions once in LT:Options and apply them to every screenshot in the session, with per-screenshot overrides.
+description: Enable SmartUI comparison modes such as layout and Smart Ignore once in LT:Options and apply them to every screenshot in the session, with per-screenshot overrides.
 keywords:
   - smartui comparison capabilities
   - smartUI.ignoreType layout
@@ -69,7 +69,10 @@ Set any of these in the `LT:Options` block for the session:
 |------------|------|--------|
 | `smartUI.ignoreType` | array | Comparison type applied to every screenshot, for example `["layout"]` for layout comparison. |
 | `smartUI.smartIgnore` | boolean | Enables [Smart Ignore](/support/docs/smartui-smartignore/) for the whole session. |
-| `smartUI.ignoreRegions` | object | Session-default ignore regions (by coordinates or selector) applied to every screenshot. |
+
+:::note
+Over the CDP-based drivers (Puppeteer and Playwright via CDP), `smartUI.ignoreType` is also accepted under its alias **`smartUIIgnoreType`**. Both keys are equivalent; use whichever your driver expects.
+:::
 
 :::note
 Set the same comparison capabilities on both the baseline and the comparison runs so the two builds are compared in the same mode.
@@ -189,66 +192,21 @@ capabilities.SetCapability("smartUI.smartIgnore", true); // applies to every scr
 </TabItem>
 </Tabs>
 
-## 3. Ignore regions for the whole session
+## 3. Ignore regions are set per screenshot, not per session
 
-Set `smartUI.ignoreRegions` in `LT:Options` to apply the same ignored areas to every screenshot, so you do not have to repeat them per screenshot. Regions can be defined by coordinates or by selector.
-
-<Tabs className="docs__val" groupId="language">
-<TabItem value="java" label="Java" default>
+There is no session-level ignore-regions capability. Ignore regions are configured **per screenshot** through the `ignoreDOM` (and `selectDOM`) argument on each `smartui.takeScreenshot` call, where you can pass selectors, pixel coordinates, or a live `WebElement`:
 
 ```java
-import java.util.HashMap;
+HashMap<String, String[]> ignoreByCoord = new HashMap<>();
+ignoreByCoord.put("coordinates", new String[]{"847,185,1571,734"});
 
-HashMap<String, Object> ignoreRegions = new HashMap<>();
-ignoreRegions.put("coordinates", new String[]{"847,185,1571,734"});
-ignoreRegions.put("cssSelector", new String[]{".promo-banner"});
-
-ltOptions.put("smartUI.project", "Your_Project_Name");
-ltOptions.put("smartUI.ignoreRegions", ignoreRegions); // applies to every screenshot
+Map<String, Object> options = new HashMap<>();
+options.put("screenshotName", "home-page");
+options.put("ignoreDOM", ignoreByCoord); // applies to this screenshot only
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", options);
 ```
 
-</TabItem>
-<TabItem value="nodejs" label="NodeJS">
-
-```javascript
-'LT:Options': {
-  'smartUI.project': 'Your_Project_Name',
-  'smartUI.ignoreRegions': {
-    coordinates: ['847,185,1571,734'],
-    cssSelector: ['.promo-banner'],
-  }, // applies to every screenshot
-},
-```
-
-</TabItem>
-<TabItem value="python" label="Python">
-
-```python
-lt_options = {
-    "smartUI.project": "Your_Project_Name",
-    "smartUI.ignoreRegions": {
-        "coordinates": ["847,185,1571,734"],
-        "cssSelector": [".promo-banner"],
-    },  # applies to every screenshot
-}
-```
-
-</TabItem>
-<TabItem value="csharp" label="C#">
-
-```csharp
-var ignoreRegions = new Dictionary<string, object>
-{
-    { "coordinates", new[] { "847,185,1571,734" } },
-    { "cssSelector", new[] { ".promo-banner" } }
-};
-capabilities.SetCapability("smartUI.ignoreRegions", ignoreRegions); // applies to every screenshot
-```
-
-</TabItem>
-</Tabs>
-
-For the full set of coordinate and `WebElement` options on the Web Hooks path, see [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/).
+For the full set of coordinate, selector, and `WebElement` options on the Web Hooks path, see [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/).
 
 ## 4. Override the session default for one screenshot
 
@@ -267,7 +225,6 @@ options.put("ignoreType", Arrays.asList()); // override: compare this one in ful
 |---------|-------|--------|
 | `smartUI.ignoreType: ["layout"]` | `LT:Options` | Every screenshot uses layout comparison by default. |
 | `smartUI.smartIgnore: true` | `LT:Options` | Smart Ignore applied across the session. |
-| `smartUI.ignoreRegions` | `LT:Options` | The same ignore regions applied to every screenshot. |
 | A comparison option on a screenshot | `smartui.takeScreenshot` | Overrides the session default for that screenshot only. |
 
 ## Baseline and comparison notes
