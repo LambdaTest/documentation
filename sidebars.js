@@ -3581,6 +3581,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Region Ignore + Select",
+                id: "smartui-hooks-region-ignore",
+              },
+              {
+                type: "doc",
                 label: "Hooks Layout + Full Page",
                 id: "smartui-hooks-layout-fullpage-smartignore",
               },
