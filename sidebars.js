@@ -3576,6 +3576,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Comparison via Capabilities",
+                id: "smartui-comparison-capabilities",
+              },
+              {
+                type: "doc",
                 label: "Playwright Hooks",
                 id: "playwright-visual-regression",
               },
