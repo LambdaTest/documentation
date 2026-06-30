@@ -134,8 +134,23 @@ const REQUEST_BODY_EXAMPLE_OVERRIDES = {
       }),
     };
   },
-  // PUT /api/v1/folder is now in REQUEST_BODY_VARIANTS_OVERRIDES below — the
-  // upstream example omits the `action` discriminator and conflates rename/move.
+  // TE-17800: same key rename for the update endpoint.
+  'Test Manager|PUT|/api/v1/folder': (ex) => {
+    if (!ex || typeof ex !== 'object' || !('parent_folder_id' in ex)) return ex;
+    const { parent_folder_id, ...rest } = ex;
+    return { ...rest, parent_id: 'parent_id' };
+  },
+  // Upstream spec uses "web" for desktop platform; correct value is "desktop".
+  'Test Manager|POST|/api/v1/environments': (ex) => {
+    if (!ex || !Array.isArray(ex.configurations)) return ex;
+    return {
+      ...ex,
+      configurations: ex.configurations.map((c) => {
+        if (!c || typeof c !== 'object' || c.platform !== 'web') return c;
+        return { ...c, platform: 'desktop' };
+      }),
+    };
+  },
 };
 
 // Variant overrides expose multiple body shapes for one endpoint. The modal
