@@ -3219,7 +3219,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Integrations",
-            items: ["appium-inspector"],
+            items: ["appium-inspector", "alttester-unity-game-automation"],
           },
           {
             type: "category",
