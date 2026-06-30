@@ -277,14 +277,14 @@ config["ignoreDOM"] = {
 
 ## Validation and errors
 
-Coordinates are validated at two levels:
+Coordinates are validated at two levels — note that only the **format** check happens on the hooks ingestion path; **page-bounds** elimination is a downstream comparison-engine behaviour, not part of the hooks request validation:
 
-| Level | Checks | On failure |
-|-------|--------|------------|
-| Format | Exactly four numeric components, all non-negative, `top < bottom`, `left < right`. | The `smartui.takeScreenshot` call returns a clear error and the screenshot is not taken. |
-| Page bounds | The rectangle lies inside the rendered page / viewport. | An out-of-page rectangle is dropped with a warning; it simply produces no ignore/select box. |
+| Level | Where | Checks | On failure |
+|-------|-------|--------|------------|
+| Format | Hooks ingestion | A `coordinates` entry must parse to **exactly four numeric components**, all **non-negative**, with `left < right` and `top < bottom`. | The `smartui.takeScreenshot` call returns a clear `400` error and the screenshot is **not taken** at all (the whole call is rejected, not just the one region). |
+| Page bounds | Downstream (comparison engine) | The rectangle lies inside the rendered page / viewport. | A rectangle that falls outside the page is handled downstream — it simply produces no ignore/select box. This elimination is performed by the comparison engine, not by the hooks request validation. |
 
-`WebElement` regions are not coordinate-validated; if the element cannot be resolved it yields no box.
+`WebElement` regions are not coordinate-validated; if the element cannot be resolved it yields no box. The element handle is read from the standard W3C `webElement` key, with a legacy `ELEMENT` key accepted as a fallback.
 
 ## Notes
 
