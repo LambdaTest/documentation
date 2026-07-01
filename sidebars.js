@@ -1890,6 +1890,11 @@ module.exports = {
             id: "accessibility-app-scanner",
           },
           {
+            type: "doc",
+            label: "Scan Configurations",
+            id: "accessibility-app-scanner-scan-configurations",
+          },
+          {
             type: "category",
             collapsed: true,
             label: "Appium Automation",
@@ -1898,6 +1903,11 @@ module.exports = {
               id: "accessibility-native-app-automation-test",
             },
             items: [
+              {
+                type: "doc",
+                label: "Scan Configurations",
+                id: "accessibility-automation-scan-configurations",
+              },
               {
                 type: "doc",
                 label: "Appium TestNG",
