@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 # Set SmartUI Comparison Modes at the Session Level
 
-SmartUI now lets you declare a comparison mode **once at the session level** and have it apply to every screenshot in that run. Set the mode in `LT:Options` alongside your other capabilities, and SmartUI uses it as the default for each `smartui.takeScreenshot` call — no need to repeat the option on every screenshot.
+SmartUI now lets you declare a comparison mode **once at the session level** and have it apply to every screenshot in that run. Set the mode in `LT:Options` alongside your other capabilities, and SmartUI uses it as the default for each `smartui.takeScreenshot` call, no need to repeat the option on every screenshot.
 
 This is ideal when a whole project or test suite should share the same comparison behaviour. A team can switch a project between comparison modes by changing a single capability line, while individual screenshots can still opt into a different mode when they need to.
 
@@ -140,7 +140,7 @@ capabilities.SetCapability("smartUI.ignoreType", new[] { "layout" }); // applies
 </TabItem>
 </Tabs>
 
-With this set, your screenshot calls stay clean — no comparison option is needed on each one:
+With this set, your screenshot calls stay clean, no comparison option is needed on each one:
 
 ```java
 Map<String, Object> options = new HashMap<>();

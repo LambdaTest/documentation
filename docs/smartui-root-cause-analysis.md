@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <NewTag value="Beta" color="#000" bgColor="#ffec02" />
 
-Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed—whether it's a style update, content change, or layout shift.
+Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed: whether it's a style update, content change, or layout shift.
 
 ## Why use Smart RCA?
 - **Speed**: Instantly find why a pixel-level mismatch occurred.
@@ -88,7 +88,7 @@ Before you begin, please ensure the build was generated using a **<BrandName /> 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAicon.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/>
 </p>
 
-When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure—you're ready to investigate immediately.
+When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure, you're ready to investigate immediately.
 
 ### Step 2: Investigate DOM Differences Visually
 
