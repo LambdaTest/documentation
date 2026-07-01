@@ -2,7 +2,7 @@
 id: kane-cli-installation
 title: Installing Kane CLI
 sidebar_label: Installation
-description: Install Kane CLI using npm. Supports macOS (Apple Silicon and Intel), Linux (x64), and Windows (x64).
+description: Install Kane CLI using npm. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64).
 keywords:
   - kane cli
   - install kane cli

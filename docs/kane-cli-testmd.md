@@ -357,11 +357,13 @@ Click "Proceed to Checkout", fill in shipping details, and assert the order conf
 **`tests/helpers/login.md`:**
 
 ```markdown
+# Login helper
+
+## Open the login page
 Go to https://app.example.com/login.
-Enter {{username}} in the email field.
-Enter {{password}} in the password field.
-Click "Sign In".
-Assert the dashboard loads.
+
+## Sign in
+Enter {{username}} in the email field and {{password}} in the password field, then click "Sign In". Assert the dashboard loads.
 ```
 
 **Run:**
