@@ -47,6 +47,7 @@ App Scanner is a manual mobile-app workflow. If you are running Appium code, use
 
 ## Related docs
 
+- [Scan Configurations for Mobile App Accessibility (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/)
 - [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
 - [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
