@@ -194,7 +194,7 @@ capabilities.SetCapability("smartUI.smartIgnore", true); // applies to every scr
 
 ## 3. Ignore regions are set per screenshot, not per session
 
-There is no session-level ignore-regions capability. Ignore regions are configured **per screenshot** through the `ignoreDOM` (and `selectDOM`) argument on each `smartui.takeScreenshot` call, where you can pass selectors, pixel coordinates, or a live `WebElement`:
+There is no session-level ignore-regions capability. Ignore regions are configured **per screenshot** through the `ignoreDOM` (and `selectDOM`) argument on each `smartui.takeScreenshot` call, where you can pass DOM selectors or pixel coordinates:
 
 ```java
 HashMap<String, String[]> ignoreByCoord = new HashMap<>();
@@ -206,7 +206,7 @@ options.put("ignoreDOM", ignoreByCoord); // applies to this screenshot only
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", options);
 ```
 
-For the full set of coordinate, selector, and `WebElement` options on the Web Hooks path, see [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/).
+For the full set of coordinate and selector options on the Web Hooks path, see [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/).
 
 ## 4. Override the session default for one screenshot
 
