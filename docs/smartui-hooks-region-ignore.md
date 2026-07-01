@@ -1,13 +1,13 @@
 ---
 id: smartui-hooks-region-ignore
-title: Ignore and Select Regions on SmartUI Web Hooks (Coordinates and WebElement)
+title: Ignore and Select Regions on SmartUI Web Hooks (Coordinates and Selectors)
 sidebar_label: Region Ignore + Select
-description: Define ignore and select regions on the SmartUI Web Hooks path using pixel coordinates or a live Selenium WebElement, in addition to DOM selectors, with ignoreDOM and selectDOM.
+description: Define ignore and select regions on the SmartUI Web Hooks path using pixel coordinates in addition to DOM selectors, with ignoreDOM and selectDOM.
 keywords:
   - smartui ignoreDOM
   - smartui selectDOM
   - ignore region coordinates
-  - ignore region webelement
+  - ignore region selector
   - smartui web hooks region ignore
   - visual regression ignore area
 url: https://www.testmuai.com/support/docs/smartui-hooks-region-ignore/
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Ignore and Select Regions on SmartUI Web Hooks (Coordinates and WebElement)",
+          "name": "Ignore and Select Regions on SmartUI Web Hooks (Coordinates and Selectors)",
           "item": `${BRAND_URL}/support/docs/smartui-hooks-region-ignore/`
         }]
       })
@@ -46,14 +46,14 @@ import TabItem from '@theme/TabItem';
 
 # Ignore and Select Regions on SmartUI Web Hooks
 
-On the **Web Hooks** path (Selenium with `driver.executeScript("smartui.takeScreenshot", config)`), you can define an ignore or select region in three ways: a **DOM selector**, raw **pixel coordinates**, or a live Selenium **`WebElement`**. Coordinates and `WebElement` regions work the same way as selectors and need no extra setup.
+On the **Web Hooks** path (Selenium with `driver.executeScript("smartui.takeScreenshot", config)`), you can define an ignore or select region in two ways: a **DOM selector** or raw **pixel coordinates**. Coordinate regions work the same way as selectors and need no extra setup.
 
-Both `ignoreDOM` and `selectDOM` support all three input modes:
+Both `ignoreDOM` and `selectDOM` support both input modes:
 
 - **`ignoreDOM`** excludes the given region(s) from comparison.
 - **`selectDOM`** restricts the comparison to only the given region(s).
 
-This gives the Web Hooks path the same region controls already available on RD Hooks and the CLI SDK, so you can express dynamic areas the way that best fits your test — for example, ignoring an element you already hold a handle to, or a fixed rectangle on the page.
+This gives the Web Hooks path the same region controls already available on RD Hooks and the CLI SDK, so you can express dynamic areas the way that best fits your test — for example, an element matched by selector, or a fixed rectangle on the page.
 
 ## 1. Ignore a region by coordinates
 
@@ -107,63 +107,12 @@ driver.execute_script("smartui.takeScreenshot", {
 </Tabs>
 
 :::note
-The origin the coordinates are measured from depends on `fullPage` — viewport-relative for a normal shot, full stitched-page-relative for a full-page shot. See [Coordinate space](#4-coordinate-space-viewport-vs-full-page).
+The origin the coordinates are measured from depends on `fullPage` — viewport-relative for a normal shot, full stitched-page-relative for a full-page shot. See [Coordinate space](#3-coordinate-space-viewport-vs-full-page).
 :::
 
-## 2. Ignore a region by WebElement
+## 2. Select a region instead of ignoring it (`selectDOM`)
 
-Pass a live Selenium `WebElement` under a `webElement` key. SmartUI resolves the element to its on-page rectangle and ignores it. This is handy for dynamic elements you already have a handle to in your test.
-
-<Tabs className="docs__val" groupId="language">
-<TabItem value="java" label="Java" default>
-
-```java
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-WebElement el = driver.findElement(By.id("dynamic-banner"));
-
-HashMap<String, Object> ignoreByElement = new HashMap<>();
-ignoreByElement.put("webElement", el);
-
-Map<String, Object> config = new HashMap<>();
-config.put("screenshotName", "home");
-config.put("ignoreDOM", ignoreByElement);
-
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
-// the element's current bounding box is excluded from the comparison
-```
-
-</TabItem>
-<TabItem value="nodejs" label="NodeJS">
-
-```javascript
-const el = await driver.findElement(By.id('dynamic-banner'));
-
-await driver.executeScript('smartui.takeScreenshot', {
-  screenshotName: 'home',
-  ignoreDOM: { webElement: el },
-});
-```
-
-</TabItem>
-<TabItem value="python" label="Python">
-
-```python
-el = driver.find_element(By.ID, "dynamic-banner")
-
-driver.execute_script("smartui.takeScreenshot", {
-    "screenshotName": "home",
-    "ignoreDOM": {"webElement": el},
-})
-```
-
-</TabItem>
-</Tabs>
-
-## 3. Select a region instead of ignoring it (`selectDOM`)
-
-Everything above works identically for `selectDOM`. Where `ignoreDOM` excludes a region, `selectDOM` restricts the comparison to only the given region(s). Both `coordinates` and `webElement` are supported.
+Everything above works identically for `selectDOM`. Where `ignoreDOM` excludes a region, `selectDOM` restricts the comparison to only the given region(s). Both DOM selectors and `coordinates` are supported.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
@@ -174,10 +123,10 @@ HashMap<String, String[]> selectByCoord = new HashMap<>();
 selectByCoord.put("coordinates", new String[]{"0,0,1280,200"});
 config.put("selectDOM", selectByCoord);
 
-// ...or compare only this element's box
-HashMap<String, Object> selectByElement = new HashMap<>();
-selectByElement.put("webElement", driver.findElement(By.id("price-table")));
-config.put("selectDOM", selectByElement);
+// ...or compare only the region of a matched element
+HashMap<String, String[]> selectBySelector = new HashMap<>();
+selectBySelector.put("cssSelector", new String[]{"#price-table"});
+config.put("selectDOM", selectBySelector);
 ```
 
 </TabItem>
@@ -187,8 +136,8 @@ config.put("selectDOM", selectByElement);
 // compare ONLY this rectangle
 config.selectDOM = { coordinates: ['0,0,1280,200'] };
 
-// ...or compare only this element's box
-config.selectDOM = { webElement: await driver.findElement(By.id('price-table')) };
+// ...or compare only the region of a matched element
+config.selectDOM = { cssSelector: ['#price-table'] };
 ```
 
 </TabItem>
@@ -198,14 +147,14 @@ config.selectDOM = { webElement: await driver.findElement(By.id('price-table')) 
 # compare ONLY this rectangle
 config["selectDOM"] = {"coordinates": ["0,0,1280,200"]}
 
-# ...or compare only this element's box
-config["selectDOM"] = {"webElement": driver.find_element(By.ID, "price-table")}
+# ...or compare only the region of a matched element
+config["selectDOM"] = {"cssSelector": ["#price-table"]}
 ```
 
 </TabItem>
 </Tabs>
 
-## 4. Coordinate space — viewport vs full page
+## 3. Coordinate space — viewport vs full page
 
 Coordinates are interpreted as absolute pixel coordinates **in the space of the produced screenshot image**. The origin depends on the `fullPage` option of the screenshot:
 
@@ -214,54 +163,45 @@ Coordinates are interpreted as absolute pixel coordinates **in the space of the 
 | `false` (default) | Viewport / element shot | Top-left of the captured **viewport**; `y` within the visible area. |
 | `true` | Stitched full-page shot | Top-left of the **full stitched page**; `y` increases down the entire scrollable page. |
 
-So for a full-page screenshot, supply coordinates relative to the whole page (a region below the fold has a large `top` / `bottom`), not relative to the current viewport. `webElement` regions need no such consideration — the element is resolved live, so it lands correctly in either mode.
+So for a full-page screenshot, supply coordinates relative to the whole page (a region below the fold has a large `top` / `bottom`), not relative to the current viewport. Selector regions need no such consideration — they are resolved live against the DOM, so they land correctly in either mode.
 
-## 5. Combine selectors, coordinates, and WebElements
+## 4. Combine selectors and coordinates
 
-Within a single `ignoreDOM` (or `selectDOM`) the three input modes are **additive** — all resolved regions are combined.
+Within a single `ignoreDOM` (or `selectDOM`) the two input modes are **additive** — all resolved regions are combined.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
 ```java
-WebElement el = driver.findElement(By.id("dynamic-banner"));
-
 Map<String, Object> ignore = new HashMap<>();
 ignore.put("cssSelector", new String[]{".promo"});          // selector
 ignore.put("coordinates", new String[]{"847,185,1571,734"}); // coordinates
-ignore.put("webElement", el);                                // WebElement
 
 config.put("ignoreDOM", ignore);
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
-// all three regions are ignored
+// both regions are ignored
 ```
 
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
 
 ```javascript
-const el = await driver.findElement(By.id('dynamic-banner'));
-
 config.ignoreDOM = {
   cssSelector: ['.promo'],         // selector
   coordinates: ['847,185,1571,734'], // coordinates
-  webElement: el,                  // WebElement
 };
-// all three regions are ignored
+// both regions are ignored
 ```
 
 </TabItem>
 <TabItem value="python" label="Python">
 
 ```python
-el = driver.find_element(By.ID, "dynamic-banner")
-
 config["ignoreDOM"] = {
     "cssSelector": [".promo"],          # selector
     "coordinates": ["847,185,1571,734"],  # coordinates
-    "webElement": el,                   # WebElement
 }
-# all three regions are ignored
+# both regions are ignored
 ```
 
 </TabItem>
@@ -273,7 +213,6 @@ config["ignoreDOM"] = {
 |------------|---------------------------------------------------|------------------|--------|
 | Selector | `id` / `class` / `xpath` / `cssSelector` | Live DOM (`getBoundingClientRect()`) | Region of the matched element(s). |
 | Coordinate | `coordinates: ["x1,y1,x2,y2"]` | The produced-image space (viewport or full page) | Exactly the supplied rectangle. |
-| WebElement | `webElement: <WebElement>` | Live element, resolved server-side | The element's current bounding box. |
 
 ## Validation and errors
 
@@ -284,13 +223,11 @@ Coordinates are validated at two levels — note that only the **format** check 
 | Format | Hooks ingestion | A `coordinates` entry must parse to **exactly four numeric components**, all **non-negative**, with `left < right` and `top < bottom`. | The `smartui.takeScreenshot` call returns a clear `400` error and the screenshot is **not taken** at all (the whole call is rejected, not just the one region). |
 | Page bounds | Downstream (comparison engine) | The rectangle lies inside the rendered page / viewport. | A rectangle that falls outside the page is handled downstream — it simply produces no ignore/select box. This elimination is performed by the comparison engine, not by the hooks request validation. |
 
-`WebElement` regions are not coordinate-validated; if the element cannot be resolved it yields no box. The element handle is read from the standard W3C `webElement` key, with a legacy `ELEMENT` key accepted as a fallback.
-
 ## Notes
 
 - **Scope:** this applies to the Web Hooks path (Selenium `executeScript("smartui.takeScreenshot", ...)`). RD Hooks and the CLI SDK already support these inputs.
-- **Empty or mixed configs:** a config containing only `coordinates` or only `webElement` (no selector) is honoured — it is not treated as "no DOM region." Selector, coordinate, and `WebElement` in one `ignoreDOM` are additive.
-- **Identical to selector-based ignore:** coordinate and `WebElement` regions resolve to the same kind of ignored/selected box as selectors, so the comparison result matches an equivalent selector-based ignore.
+- **Empty or mixed configs:** a config containing only `coordinates` (no selector) is honoured — it is not treated as "no DOM region." Selector and coordinate regions in one `ignoreDOM` are additive.
+- **Identical to selector-based ignore:** coordinate regions resolve to the same kind of ignored/selected box as selectors, so the comparison result matches an equivalent selector-based ignore.
 
 ## Related Docs
 
