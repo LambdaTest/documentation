@@ -50,6 +50,7 @@ This page is for direct Appium-based automation. If you are authoring the flow i
 
 ## Related docs
 
+- [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
 - [Appium TestNG](/support/docs/accessibility-appium-testng/)
 - [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)
