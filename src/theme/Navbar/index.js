@@ -149,10 +149,31 @@ function DotsIcon() {
   );
 }
 
+const MOBILE_BREAKPOINT = 996;
+
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia(query).matches;
+  });
+
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const update = () => setMatches(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, [query]);
+
+  return matches;
+}
+
 export default function Navbar() {
   const location = useLocation();
   const [colorMode, setColorModeState] = useState(getStoredTheme);
   const [dotsOpen, setDotsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -162,8 +183,35 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  // Close dots dropdown on route change or outside click
-  useEffect(() => { setDotsOpen(false); }, [location.pathname]);
+  // Close menus on route change
+  useEffect(() => {
+    // setDotsOpen(false);
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Close mobile drawer when switching to desktop viewport
+  useEffect(() => {
+    if (!isMobile) setMobileMenuOpen(false);
+  }, [isMobile]);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (!mobileMenuOpen || !isMobile) return undefined;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [mobileMenuOpen, isMobile]);
+
+  // Close mobile drawer on Escape
+  useEffect(() => {
+    if (!mobileMenuOpen) return undefined;
+    function handleKeyDown(e) {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [mobileMenuOpen]);
+  /*
   useEffect(() => {
     if (!dotsOpen) return;
     function handleClick(e) {
@@ -172,6 +220,7 @@ export default function Navbar() {
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
   }, [dotsOpen]);
+  */
 
   function toggleColorMode() {
     const next = colorMode === 'dark' ? 'light' : 'dark';
@@ -191,6 +240,16 @@ export default function Navbar() {
 
       {/* ── Desktop Row 1 ── */}
       <div className={styles.row1}>
+        <button
+          type="button"
+          className={styles.hamburgerBtn}
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open navigation menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          <HamburgerIcon />
+        </button>
+
         <a href="https://www.testmuai.com" className={styles.logoLink}>
           <img src="/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
           <img src="/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
@@ -218,11 +277,12 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile-only: search + sparkle + 3-dots */}
+        {/* Mobile-only: search */}
         <div className={styles.mobileRight}>
           <button className={styles.mobileIconBtn} onClick={triggerSearch} aria-label="Search">
             <SearchIcon />
           </button>
+          {/*
           <div className={styles.dotsWrapper} data-dots-menu="true">
             <button className={styles.mobileIconBtn} onClick={() => setDotsOpen(o => !o)} aria-label="More options">
               <DotsIcon />
@@ -237,6 +297,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
+          */}
         </div>
       </div>
 
@@ -255,6 +316,86 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+
+      {/* ── Mobile drawer ── */}
+      {mobileMenuOpen && isMobile && (
+        <>
+          <button
+            type="button"
+            className={styles.mobileOverlay}
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close navigation menu"
+          />
+          <div className={styles.mobileDrawer} role="dialog" aria-modal="true" aria-label="Navigation menu">
+            <div className={styles.mobileDrawerHeader}>
+              <a href="https://www.testmuai.com" className={styles.logoLink}>
+                <img src="/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
+                <img src="/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
+              </a>
+              <div className={styles.mobileDrawerHeaderActions}>
+                <div className={styles.mobileThemeToggle}>
+                  <button
+                    type="button"
+                    className={`${styles.mobileThemeToggleBtn} ${colorMode === 'light' ? styles.mobileThemeToggleBtnActive : ''}`}
+                    onClick={() => { if (colorMode !== 'light') toggleColorMode(); }}
+                    aria-label="Light mode"
+                  >
+                    <SunIcon />
+                  </button>
+                  <button
+                    type="button"
+                    className={`${styles.mobileThemeToggleBtn} ${colorMode === 'dark' ? styles.mobileThemeToggleBtnActive : ''}`}
+                    onClick={() => { if (colorMode !== 'dark') toggleColorMode(); }}
+                    aria-label="Dark mode"
+                  >
+                    <MoonIcon />
+                  </button>
+                </div>
+                <button type="button" className={styles.mobileDrawerCloseBtn} onClick={() => setMobileMenuOpen(false)} aria-label="Close navigation menu">
+                  <CloseIcon />
+                </button>
+              </div>
+            </div>
+
+            <a id="signbtn-mobile" href="/register/" className={styles.mobileMenuGetStarted}>
+              Get Started
+            </a>
+
+            <nav className={styles.mobileDrawerNav}>
+              {NAV_LINKS.map(({ to, label }) => (
+                <a
+                  key={to}
+                  href={to}
+                  className={`${styles.mobileMenuLink} ${isActiveLink(location.pathname, to, label) ? styles.mobileMenuLinkActive : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>{label}</span>
+                </a>
+              ))}
+
+              <div className={styles.mobileMenuDivider} />
+
+              <a
+                href="https://github.com/LambdaTest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mobileMenuLink}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <GithubIcon />
+                <span>Github</span>
+              </a>
+              <a
+                href="/login/"
+                className={styles.mobileMenuLink}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Login</span>
+              </a>
+            </nav>
+          </div>
+        </>
+      )}
 
     </nav>
   );
