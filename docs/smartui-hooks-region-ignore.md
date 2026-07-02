@@ -59,6 +59,10 @@ This gives the Web Hooks path the same region controls already available on RD H
 
 Pass a `coordinates` entry (a list of `"x1,y1,x2,y2"` strings) under `ignoreDOM`. SmartUI excludes those rectangles from the comparison. The four values are the left, top, right, and bottom edges of the rectangle in pixels.
 
+<img loading="lazy" src={require('../assets/images/smartui-hooks-region-ignore/coordinate-rectangle.png').default} alt="A coordinate rectangle: x1,y1 is the top-left corner (left=50, top=50) and x2,y2 is the bottom-right corner (right=300, bottom=300), giving a 250 x 250 region." width="503" height="490" className="doc_img img_center"/>
+
+For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)` — a 250 × 250 rectangle.
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
@@ -190,6 +194,7 @@ config.ignoreDOM = {
   cssSelector: ['.promo'],         // selector
   coordinates: ['847,185,1571,734'], // coordinates
 };
+await driver.executeScript('smartui.takeScreenshot', config);
 // both regions are ignored
 ```
 
@@ -201,18 +206,12 @@ config["ignoreDOM"] = {
     "cssSelector": [".promo"],          # selector
     "coordinates": ["847,185,1571,734"],  # coordinates
 }
+driver.execute_script("smartui.takeScreenshot", config)
 # both regions are ignored
 ```
 
 </TabItem>
 </Tabs>
-
-## Behaviour summary
-
-| Input mode | How you pass it (under `ignoreDOM` / `selectDOM`) | Resolved against | Result |
-|------------|---------------------------------------------------|------------------|--------|
-| Selector | `id` / `class` / `xpath` / `cssSelector` | Live DOM (`getBoundingClientRect()`) | Region of the matched element(s). |
-| Coordinate | `coordinates: ["x1,y1,x2,y2"]` | The produced-image space (viewport or full page) | Exactly the supplied rectangle. |
 
 ## Validation and errors
 
