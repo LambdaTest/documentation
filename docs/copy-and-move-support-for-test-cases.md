@@ -82,6 +82,16 @@ The Copy and Move feature for test cases helps streamline the organization of te
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_copy_res.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+**How to Duplicate a Single Test Case**
+
+You can also duplicate an individual test case directly from the test case list without using Bulk Actions.
+
+1. Hover over the test case you want to duplicate and click the three-dot menu icon on the right.
+
+2. Select **Duplicate Test Case** from the dropdown. The test case will be copied following the same flow as bulk copy.
+
+<img loading="lazy" src={require('../assets/images/test-manager/test-cases/duplicate-test-case.png').default} alt=" " className="doc_img"/>
+
 **How to Move Multiple Test Cases to other Projects & Folders**
 
 1. Select multiple test cases of your choice, Click on the **Bulk Actions** button located at the top right of the screen. From the dropdown menu, choose **Move**.  
