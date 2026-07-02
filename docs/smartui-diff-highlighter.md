@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Diff Highlighter & Navigation
 
-When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation—so you spend less time scanning and more time deciding what to accept or reject.
+When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation, so you spend less time scanning and more time deciding what to accept or reject.
 
 ## What You Get
 
@@ -74,9 +74,9 @@ On the comparison view, open the **actions menu** (e.g. the 3-dot or actions dro
 
 In the actions menu you’ll see:
 
-- **Previous** — moves focus to the **previous** diff (above the current one).
-- **Highlight** — runs the **highlight animation**: popping circles traverse each diff from **top to bottom**, so you can see every change location in sequence.
-- **Next** — moves focus to the **next** diff (below the current one).
+- **Previous**: moves focus to the **previous** diff (above the current one).
+- **Highlight**: runs the **highlight animation**: popping circles traverse each diff from **top to bottom**, so you can see every change location in sequence.
+- **Next**: moves focus to the **next** diff (below the current one).
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/diff-highlight/prev_diff.png').default} alt="Previous Diff Button" className="doc_img" />
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/diff-highlight/highlight_diff.png').default} alt="Highlight Diff Button" className="doc_img" />
@@ -89,7 +89,7 @@ Use **Highlight** when you want to quickly see all diffs without clicking throug
 - On clicking the **Previous** or **Next** buttons, the view will zoom into that specific diff and highlight it with a bounded box.
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/diff-highlight/on_clickingnext_prev.png').default} alt="Zoom and highlight in box" className="doc_img"/>
 - You can continue to use overlay toggles, zoom, slider/side-by-side, and **Mark as bug** or approval actions as usual.
-- Diff navigation and highlight do **not** replace existing comparison tools—they only make it easier to find where the changes are.
+- Diff navigation and highlight do **not** replace existing comparison tools, they only make it easier to find where the changes are.
 
 ## Highlight animation
 
@@ -132,9 +132,9 @@ To use diff navigation and highlight, ensure the screenshot is compared with **S
 
 ## Related docs
 
-- [Smart Ignore](/support/docs/smartui-smartignore) — Reduce noise and use diff regions for navigation.
-- [Layout Testing](/support/docs/smartui-layout-testing) — Compare layout structure (diff navigation for this mode coming later).
-- [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues) — Basics of the comparison view.
+- [Smart Ignore](/support/docs/smartui-smartignore): Reduce noise and use diff regions for navigation.
+- [Layout Testing](/support/docs/smartui-layout-testing): Compare layout structure (diff navigation for this mode coming later).
+- [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues): Basics of the comparison view.
 
 
 <nav aria-label="breadcrumbs">

@@ -53,7 +53,7 @@ Both `ignoreDOM` and `selectDOM` support both input modes:
 - **`ignoreDOM`** excludes the given region(s) from comparison.
 - **`selectDOM`** restricts the comparison to only the given region(s).
 
-This gives the Web Hooks path the same region controls already available on RD Hooks and the CLI SDK, so you can express dynamic areas the way that best fits your test — for example, an element matched by selector, or a fixed rectangle on the page.
+This gives the Web Hooks path the same region controls already available on RD Hooks and the CLI SDK, so you can express dynamic areas the way that best fits your test: for example, an element matched by selector, or a fixed rectangle on the page.
 
 ## 1. Ignore a region by coordinates
 
@@ -111,7 +111,7 @@ driver.execute_script("smartui.takeScreenshot", {
 </Tabs>
 
 :::note
-The origin the coordinates are measured from depends on `fullPage` — viewport-relative for a normal shot, full stitched-page-relative for a full-page shot. See [Coordinate space](#3-coordinate-space-viewport-vs-full-page).
+The origin the coordinates are measured from depends on `fullPage`: viewport-relative for a normal shot, full stitched-page-relative for a full-page shot. See [Coordinate space](#3-coordinate-space-viewport-vs-full-page).
 :::
 
 ## 2. Select a region instead of ignoring it (`selectDOM`)
@@ -158,7 +158,7 @@ config["selectDOM"] = {"cssSelector": ["#price-table"]}
 </TabItem>
 </Tabs>
 
-## 3. Coordinate space — viewport vs full page
+## 3. Coordinate space: viewport vs full page
 
 Coordinates are interpreted as absolute pixel coordinates **in the space of the produced screenshot image**. The origin depends on the `fullPage` option of the screenshot:
 
@@ -167,11 +167,11 @@ Coordinates are interpreted as absolute pixel coordinates **in the space of the 
 | `false` (default) | Viewport / element shot | Top-left of the captured **viewport**; `y` within the visible area. |
 | `true` | Stitched full-page shot | Top-left of the **full stitched page**; `y` increases down the entire scrollable page. |
 
-So for a full-page screenshot, supply coordinates relative to the whole page (a region below the fold has a large `top` / `bottom`), not relative to the current viewport. Selector regions need no such consideration — they are resolved live against the DOM, so they land correctly in either mode.
+So for a full-page screenshot, supply coordinates relative to the whole page (a region below the fold has a large `top` / `bottom`), not relative to the current viewport. Selector regions need no such consideration; they are resolved live against the DOM, so they land correctly in either mode.
 
 ## 4. Combine selectors and coordinates
 
-Within a single `ignoreDOM` (or `selectDOM`) the two input modes are **additive** — all resolved regions are combined.
+Within a single `ignoreDOM` (or `selectDOM`) the two input modes are **additive**: all resolved regions are combined.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
@@ -215,16 +215,17 @@ driver.execute_script("smartui.takeScreenshot", config)
 
 ## Validation and errors
 
-Coordinates are validated at two levels — note that only the **format** check happens on the hooks ingestion path; **page-bounds** elimination is a downstream comparison-engine behaviour, not part of the hooks request validation:
+Coordinates are validated at two levels. Note that only the **format** check happens on the hooks ingestion path; **page-bounds** elimination is a downstream comparison-engine behaviour, not part of the hooks request validation:
 
 | Level | Where | Checks | On failure |
 |-------|-------|--------|------------|
 | Format | Hooks ingestion | A `coordinates` entry must parse to **exactly four numeric components**, all **non-negative**, with `left < right` and `top < bottom`. | The `smartui.takeScreenshot` call returns a clear `400` error and the screenshot is **not taken** at all (the whole call is rejected, not just the one region). |
-| Page bounds | Downstream (comparison engine) | The rectangle lies inside the rendered page / viewport. | A rectangle that falls outside the page is handled downstream — it simply produces no ignore/select box. This elimination is performed by the comparison engine, not by the hooks request validation. |
+| Page bounds | Downstream (comparison engine) | The rectangle lies inside the rendered page / viewport. | A rectangle that falls outside the page is handled downstream; it simply produces no ignore/select box. This elimination is performed by the comparison engine, not by the hooks request validation. |
 
 ## Notes
 
-- **Empty or mixed configs:** a config containing only `coordinates` (no selector) is honoured — it is not treated as "no DOM region." Selector and coordinate regions in one `ignoreDOM` are additive.
+- **Scope:** this applies to the Web Hooks path (Selenium `executeScript("smartui.takeScreenshot", ...)`). RD Hooks and the CLI SDK already support these inputs.
+- **Empty or mixed configs:** a config containing only `coordinates` (no selector) is honoured; it is not treated as "no DOM region." Selector and coordinate regions in one `ignoreDOM` are additive.
 - **Identical to selector-based ignore:** coordinate regions resolve to the same kind of ignored/selected box as selectors, so the comparison result matches an equivalent selector-based ignore.
 
 ## Related Docs

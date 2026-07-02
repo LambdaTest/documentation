@@ -1890,6 +1890,11 @@ module.exports = {
             id: "accessibility-app-scanner",
           },
           {
+            type: "doc",
+            label: "Scan Configurations",
+            id: "accessibility-app-scanner-scan-configurations",
+          },
+          {
             type: "category",
             collapsed: true,
             label: "Appium Automation",
@@ -1898,6 +1903,11 @@ module.exports = {
               id: "accessibility-native-app-automation-test",
             },
             items: [
+              {
+                type: "doc",
+                label: "Scan Configurations",
+                id: "accessibility-automation-scan-configurations",
+              },
               {
                 type: "doc",
                 label: "Appium TestNG",
@@ -5020,6 +5030,16 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "API Calls",
+            id: "kane-cli-api-calls",
+          },
+          {
+            type: "doc",
+            label: "Browser State",
+            id: "kane-cli-browser-state",
+          },
+          {
+            type: "doc",
             label: "Variables & Context",
             id: "kane-cli-variables-and-context",
           },
@@ -5121,6 +5141,11 @@ module.exports = {
                 type: "doc",
                 label: "localStorage",
                 id: "kane-cli-checkpoint-devtools-localstorage",
+              },
+              {
+                type: "doc",
+                label: "Clipboard",
+                id: "kane-cli-checkpoint-devtools-clipboard",
               },
             ],
           },
