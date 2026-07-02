@@ -50,9 +50,9 @@ Pages often include **iframes**: embedded apps, chat widgets, consent managers, 
 
 | Question | Short answer |
 |----------|----------------|
-| Are iframes supported? | **Yes** — snapshots reflect the **real browser output**, including iframe regions when they render. |
-| Will third-party iframes always match pixel-for-pixel? | **No** — cross-origin embeds are **timing- and environment-dependent**; that is expected. |
-| Can SmartUI read DOM inside another site’s iframe? | **No** — browsers block that for cross-origin content. |
+| Are iframes supported? | **Yes**: snapshots reflect the **real browser output**, including iframe regions when they render. |
+| Will third-party iframes always match pixel-for-pixel? | **No**: cross-origin embeds are **timing- and environment-dependent**; that is expected. |
+| Can SmartUI read DOM inside another site’s iframe? | **No**: browsers block that for cross-origin content. |
 
 Embeds load asynchronously; third-party players (YouTube, Vimeo) may show different pixels between runs because of consent, ads, or regional UI. Use waits, **`ignoreDOM`** on the container, or layout comparison when the embed is out of scope.
 
@@ -69,7 +69,7 @@ SmartUI does not override the browser’s security model; plan comparisons accor
 
 For **`<video>`** elements and **embedded players** (often in iframes), SmartUI’s **first-frame** behavior and troubleshooting are documented here:
 
-- [Handle Pages with Videos](/support/docs/smartui-handle-videos/) — includes guidance when **embedded videos via iframe** misbehave, **`ignoreDOM`** on the iframe region, and **CORS / accessibility** of iframe content.
+- [Handle Pages with Videos](/support/docs/smartui-handle-videos/): includes guidance when **embedded videos via iframe** misbehave, **`ignoreDOM`** on the iframe region, and **CORS / accessibility** of iframe content.
 
 ## Element screenshots and frame context
 
@@ -80,7 +80,7 @@ When you use **SmartUI Hooks** to capture a **specific element** (for example [`
 
 ## Full-page and viewport captures
 
-**Full-page** and **viewport** screenshots reflect the **composed** page the browser draws. Same-origin iframes generally composite like any other content. Cross-origin embeds still draw a **rectangle**; what appears inside it depends on the embed loading, cookies, and network—so baselines can be **noisier** than static HTML.
+**Full-page** and **viewport** screenshots reflect the **composed** page the browser draws. Same-origin iframes generally composite like any other content. Cross-origin embeds still draw a **rectangle**; what appears inside it depends on the embed loading, cookies, and network, so baselines can be **noisier** than static HTML.
 
 **Mitigations:** explicit waits, stable viewport size, and **`ignoreDOM`** (or annotations) on the iframe **container** when the embed is intentionally out of scope for the test.
 

@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-**Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects—who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
+**Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects: who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
 
 ---
 
@@ -93,15 +93,15 @@ For a **single screenshot**, the **screenshot-level** log is that asset’s base
 
 ## What each level shows
 
-**Project history** — Project created/deleted; settings updated; builds merged to baseline.
+**Project history**: Project created/deleted; settings updated; builds merged to baseline.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/project_level_history.png').default} alt="Project-level audit history" />
 
-**Build history** — Build created/completed/failed; re-runs (re-execute vs re-run comparison); bulk approve/reject; build deleted.
+**Build history**: Build created/completed/failed; re-runs (re-execute vs re-run comparison); bulk approve/reject; build deleted.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/build_level_history.png').default} alt="Build-level audit history" />
 
-**Screenshot history** — Approvals and rejections (single and bulk); live comparisons; ignore zones/annotations; screenshot added/deleted.
+**Screenshot history**: Approvals and rejections (single and bulk); live comparisons; ignore zones/annotations; screenshot added/deleted.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/screenshot_level_history.png').default} alt="Screenshot-level audit history" />
 
@@ -125,25 +125,25 @@ Every event shows **who**, **when**, and **what**:
 
 Use filters to narrow by **who** (user or system), **what** (event type), **branch**, or **screenshot name**.
 
-**By user or system** — Filter by specific users for accountability, or by **System** to see only automated events (e.g. auto-approvals).
+**By user or system**: Filter by specific users for accountability, or by **System** to see only automated events (e.g. auto-approvals).
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/filters_users.png').default} alt="Filter by team members" />
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/filters_system_logs.png').default} alt="Filter by System actions" />
 
-**By event type** — e.g. Approve, Reject, Merged to Baseline, Build Re-executed.
+**By event type**: e.g. Approve, Reject, Merged to Baseline, Build Re-executed.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/filters_events.png').default} alt="Filter by event type" />
 
-**By branch** — Restrict to a Git branch.
+**By branch**: Restrict to a Git branch.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/filters_branches.png').default} alt="Filter by branch" />
 
-**By screenshot name** — Search for a specific snapshot.
+**By screenshot name**: Search for a specific snapshot.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/filters_screenshots.png').default} alt="Filter by screenshot name" />
 
-**Bulk actions** — One event per bulk approve/reject; hover or click to see a visual preview of the screenshots included.
+**Bulk actions**: One event per bulk approve/reject; hover or click to see a visual preview of the screenshots included.
 
 <img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/ss_preview_build_level.png').default} alt="Preview of screenshots in a bulk action" />
 
@@ -191,5 +191,5 @@ Use the **Event type** filter in the UI to restrict to these categories.
 
 ## Related documentation
 
-- [Approval & Baseline Management](/support/docs/smartui-approval-workflow-guide/) — How approve, reject, move, and merge affect baselines.
-- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) — How bulk actions work and how they appear in audit logs.
+- [Approval & Baseline Management](/support/docs/smartui-approval-workflow-guide/): How approve, reject, move, and merge affect baselines.
+- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/): How bulk actions work and how they appear in audit logs.
