@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-devtools
 title: DevTools Assertions
 sidebar_label: Overview
-description: "Verify data that is not visible on the page — HTTP network traffic, console output, performance metrics, cookies, and localStorage."
+description: "Verify data that is not visible on the page — HTTP network traffic, console output, performance metrics, cookies, localStorage, and clipboard."
 keywords:
   - devtools assertion
   - network
@@ -41,7 +41,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/
       }) }}
 ></script>
 
-DevTools assertions let you verify data that isn't visible on the page — HTTP network traffic, browser console output, performance metrics, cookies, and localStorage. KaneAI captures this data automatically in the background; you just write what to check.
+DevTools assertions let you verify data that isn't visible on the page — HTTP network traffic, browser console output, performance metrics, cookies, localStorage, and clipboard. KaneAI captures this data automatically in the background; you just write what to check.
 
 ## Available Domains
 
@@ -52,6 +52,7 @@ DevTools assertions let you verify data that isn't visible on the page — HTTP 
 | [Performance](/support/docs/kane-cli-checkpoint-devtools-performance/) | Core Web Vitals | LCP, CLS, INP, FCP, TTFB |
 | [Cookies](/support/docs/kane-cli-checkpoint-devtools-cookies/) | Browser cookies | Names, values, flags (httpOnly, secure, sameSite) |
 | [localStorage](/support/docs/kane-cli-checkpoint-devtools-localstorage/) | Browser localStorage | Key-value pairs stored in the browser |
+| [Clipboard](/support/docs/kane-cli-checkpoint-devtools-clipboard/) | Browser clipboard | Copied text, HTML, image, and formats present |
 
 ## How It Works
 
