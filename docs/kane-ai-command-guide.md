@@ -87,9 +87,13 @@ If you prefer, you can also set custom wait timeouts directly in the step menu:
 
 1. Click the step menu
 2. Select **Step Timeout**
-3. Enter your preferred timeout value (up to 300 seconds)
+3. Enter your preferred timeout value (min 1 second, max 300 seconds)
 
-Use custom wait timeout when dealing with slow page loads or dynamic content.
+Use custom wait timeout when dealing with slow page loads or dynamic content. Step Timeout is a dynamic ceiling — the step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads.
+
+:::note
+Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing.
+:::
 
 **When to Use Explicit & Custom Waits**
 
