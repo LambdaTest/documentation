@@ -80,7 +80,7 @@ For individual steps that need more time, set a custom timeout via the step menu
 
 1. Click the **step menu** (three dots)
 2. Select **Step Timeout**
-3. Enter your timeout value (up to 300 seconds)
+3. Enter your timeout value (min **1** second, max **300** seconds; default is **10** seconds when unset)
 
 **When to use custom timeout:**
 - Waiting for file uploads to complete
@@ -89,6 +89,10 @@ For individual steps that need more time, set a custom timeout via the step menu
 
 :::tip Recommendation
 Prefer **custom step timeout** over explicit waits when you're waiting for a specific element to appear. Custom timeouts are dynamic — they proceed as soon as the element is ready, while explicit waits always wait the full duration.
+:::
+
+:::note Supported platforms
+Step Timeout is available for **Web**, **Mobile Web**, and **App (Android and iOS)** testing. It applies only to element-based interactions (click, type, search, clear); fixed `wait` steps and assertions are unaffected.
 :::
 
 ## Real-World Dynamic Content Scenarios
