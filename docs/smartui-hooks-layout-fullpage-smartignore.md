@@ -2,7 +2,7 @@
 id: smartui-hooks-layout-fullpage-smartignore
 title: SmartUI Hooks - Layout, Full Page, and Smart Ignore
 sidebar_label: Hooks Layout + Full Page
-description: SmartUI Hooks on LambdaTest: layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
+description: SmartUI Hooks on LambdaTest covering layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
 keywords:
   - smartui hooks
   - layout testing hooks
@@ -16,11 +16,37 @@ slug: smartui-hooks-layout-fullpage-smartignore/
 canonical: https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-smartignore/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TestMu AI",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore",
+          "item": `${BRAND_URL}/support/docs/smartui-hooks-layout-fullpage-smartignore/`
+        }]
+      })
+    }}
+></script>
+
 # SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore
 
 Use this page when you run **SmartUI Hooks** on LambdaTest (for example Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
-:::danger Capability vs hook: read this first
+:::info Capability vs hook, read this first
 For **Hooks**, engineering behavior is:
 
 | Goal | Where to configure | Notes |
@@ -29,7 +55,7 @@ For **Hooks**, engineering behavior is:
 | **Smart Ignore** | **`LT:Options`** | Set **`smartUI.smartIgnore`: `true`** on the session for baseline and comparison runs. |
 | **Project** | **`LT:Options`** | Set **`smartUI.project`** (and `visual`, auth) as usual. |
 
-If you need **layout via capabilities alone** (no hook options), treat that as a **product / roadmap** ask, and track it with your account team. This doc reflects **current** Hooks behavior.
+If you need **layout via capabilities alone** (no hook options), treat that as a feature request and raise it with your account team. This doc reflects **current** Hooks behavior.
 :::
 
 :::info Smart Ignore vs Ignore DOM / Select DOM
@@ -176,18 +202,18 @@ Runs using a **project token** may show the **project creator**. Use the intende
 
 ---
 
-## 6. Troubleshooting
+## 7. Troubleshooting
 
 | Problem | What to do |
 |--------|------------|
 | Layout never activates; only tried `LT:Options` | Move **`ignoreType: ["layout"]`** into **`smartui.takeScreenshot`** options (§2). |
 | Smart Ignore never activates | Set **`smartUI.smartIgnore`: true** in **`LT:Options`**; verify in session metadata. |
 | Tried `smartUI.layout` | Not the supported Hooks switch for layout; use hook **options** instead. |
-| Prospect cannot use dashboard toggles only | Hooks still need correct **hook** + **capability** split per this page. |
+| Want to rely on dashboard toggles only | Hooks still need the correct **hook** + **capability** split per this page. |
 
 ## Related Docs
 
-- [Layout Comparison in SmartUI SDK](/support/docs/smartui-layout-testing/): SDK `smartuiSnapshot` path (different from Hooks).
+- [Layout Comparison in SmartUI SDK](/support/docs/smartui-layout-testing/) (SDK `smartuiSnapshot` path, different from Hooks).
 - [Smart Ignore](/support/docs/smartui-smartignore/)
 - [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/)
 - [Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)

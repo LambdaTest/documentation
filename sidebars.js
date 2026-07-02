@@ -1890,6 +1890,11 @@ module.exports = {
             id: "accessibility-app-scanner",
           },
           {
+            type: "doc",
+            label: "Scan Configurations",
+            id: "accessibility-app-scanner-scan-configurations",
+          },
+          {
             type: "category",
             collapsed: true,
             label: "Appium Automation",
@@ -1898,6 +1903,11 @@ module.exports = {
               id: "accessibility-native-app-automation-test",
             },
             items: [
+              {
+                type: "doc",
+                label: "Scan Configurations",
+                id: "accessibility-automation-scan-configurations",
+              },
               {
                 type: "doc",
                 label: "Appium TestNG",
@@ -3205,7 +3215,8 @@ module.exports = {
               "smart-heal-appium",
               "apple-pay-auto",
               "button-text-click",
-              "ios-shake-gesture-appautomation"
+              "ios-shake-gesture-appautomation",
+              "appium-terminal-logs"
             ],
           },
           {
@@ -3218,7 +3229,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Integrations",
-            items: ["appium-inspector"],
+            items: ["appium-inspector", "alttester-unity-game-automation"],
           },
           {
             type: "category",
@@ -3570,8 +3581,18 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Region Ignore + Select",
+                id: "smartui-hooks-region-ignore",
+              },
+              {
+                type: "doc",
                 label: "Hooks Layout + Full Page",
                 id: "smartui-hooks-layout-fullpage-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Comparison via Capabilities",
+                id: "smartui-comparison-capabilities",
               },
               {
                 type: "doc",
@@ -5009,6 +5030,16 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "API Calls",
+            id: "kane-cli-api-calls",
+          },
+          {
+            type: "doc",
+            label: "Browser State",
+            id: "kane-cli-browser-state",
+          },
+          {
+            type: "doc",
             label: "Variables & Context",
             id: "kane-cli-variables-and-context",
           },
@@ -5110,6 +5141,11 @@ module.exports = {
                 type: "doc",
                 label: "localStorage",
                 id: "kane-cli-checkpoint-devtools-localstorage",
+              },
+              {
+                type: "doc",
+                label: "Clipboard",
+                id: "kane-cli-checkpoint-devtools-clipboard",
               },
             ],
           },

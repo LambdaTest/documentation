@@ -1,0 +1,180 @@
+---
+id: accessibility-automation-scan-configurations
+title: Scan Configurations via Capabilities (Automation)
+sidebar_label: Scan Configurations (Capabilities)
+description: Configure mobile app accessibility scans in automation through Appium capabilities—master toggle, WCAG version, and Best Practice, Beta, and AI rule groups.
+keywords:
+  - mobile accessibility automation
+  - accessibility capabilities
+  - wcagVersion capability
+  - bestPractice betaRules aiEnabled
+  - appium accessibility scan config
+url: https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/
+site_name: TestMu AI
+slug: accessibility-automation-scan-configurations/
+canonical: https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Native App Automation",
+          "item": `${BRAND_URL}/support/docs/accessibility-native-app-automation-test/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Scan Configurations via Capabilities",
+          "item": `${BRAND_URL}/support/docs/accessibility-automation-scan-configurations/`
+        }]
+      })
+    }}
+></script>
+
+# Scan Configurations via Capabilities (Automation)
+
+In automation there is no scan-configuration panel. The scan scope is supplied through each test's **capabilities**, so every test carries its own configuration and the effective rule set is derived from these values. This is the automation counterpart to the manual [Scan Configurations](/support/docs/accessibility-app-scanner-scan-configurations/) panel.
+
+:::note
+Per-rule enable/disable picking is a **Manual-only** feature and is not used in automation. In automation, the rule set is computed from the WCAG version plus the group toggles.
+:::
+
+## When to use this
+
+Use these capabilities when users **already run Appium** against <BrandName /> real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups—without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
+
+## Prerequisites
+
+- An Appium test project targeting <BrandName /> **real devices** (Android or iOS).
+- `LT_USERNAME` / `LT_ACCESS_KEY` available to the process.
+- Accessibility enabled on the session via the `accessibility` master capability.
+
+## Capabilities reference
+
+| Capability | Type | Allowed values | Default (RD App Automation) |
+|---|---|---|---|
+| `accessibility` | boolean | `true` / `false` | — (master toggle; must be `true` to enable a11y scanning) |
+| `accessibility.wcagVersion` | string | `wcag2a`, `wcag2aa`, `wcag2aaa`, `wcag21a`, `wcag21aa`, `wcag21aaa`, `wcag22a`, `wcag22aa`, `wcag22aaa` | `wcag21aa` |
+| `accessibility.bestPractice` | boolean | `true` / `false` | `true` |
+| `accessibility.betaRules` | boolean | `true` / `false` | `true` |
+| `accessibility.aiEnabled` | boolean | `true` / `false` | `false` |
+
+Notes:
+
+- Defaults apply only when `accessibility` is `true` and the specific capability is omitted.
+- `accessibility.aiEnabled` is the same AI toggle used elsewhere in accessibility; it is reused here.
+- A backend capability `accessibility.needsReview` also exists but is not part of the standard automation scan config (defaults off).
+
+## How the effective rule set is computed
+
+The rule set for a test is derived from the WCAG version and the group toggles, using the same logic as the manual panel:
+
+- **WCAG inheritance.** A higher version or level includes the lower ones. Selecting `wcag21aa` runs every rule whose success criterion is in WCAG **2.0 or 2.1** at level **A or AA**. WCAG 2.2 rules and AAA-only rules are not included until the version or level is raised.
+- **Group combination.** Some rules carry a Best Practice, Beta, or AI tag. A rule runs only if **both** its WCAG criterion is in range **and** every tag it carries is switched on. For example, a Best Practice rule is skipped when `accessibility.bestPractice` is `false`, even if its WCAG criterion is in range.
+
+## Example: setting capabilities
+
+Enable accessibility, target WCAG 2.1 AA, keep Best Practice and Beta rules on, and leave AI rules off.
+
+<Tabs className="hidden">
+<TabItem value="json" label="Capabilities (JSON)" default>
+
+```json
+{
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21aa",
+  "accessibility.bestPractice": true,
+  "accessibility.betaRules": true,
+  "accessibility.aiEnabled": false
+}
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+MutableCapabilities caps = new MutableCapabilities();
+caps.setCapability("accessibility", true);
+caps.setCapability("accessibility.wcagVersion", "wcag21aa");
+caps.setCapability("accessibility.bestPractice", true);
+caps.setCapability("accessibility.betaRules", true);
+caps.setCapability("accessibility.aiEnabled", false);
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+caps = {
+    "accessibility": True,
+    "accessibility.wcagVersion": "wcag21aa",
+    "accessibility.bestPractice": True,
+    "accessibility.betaRules": True,
+    "accessibility.aiEnabled": False,
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+const capabilities = {
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21aa",
+  "accessibility.bestPractice": true,
+  "accessibility.betaRules": true,
+  "accessibility.aiEnabled": false,
+};
+```
+
+</TabItem>
+</Tabs>
+
+With these capabilities in place, the scan is triggered at each stable screen:
+
+```java
+driver.executeScript("lambda-accessibility-scan");
+```
+
+Only the rules in the effective set are evaluated, and the report for that build contains results for exactly those rules.
+
+## What to expect in results
+
+- **Scoped results.** Each scan reports violations only for the rules in the test's effective set. Rules outside the WCAG range or behind an off group toggle do not appear and do not affect the accessibility score for that scan.
+- **Configuration recorded with the test.** The WCAG version and group toggles are stored alongside the scan, so the team can always see how a given result was produced.
+- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated—grouped by category and searchable—so the exact selected rules can be confirmed for any scan.
+
+The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category:
+
+{/* IMAGE PLACEHOLDER — report Applied Settings panel showing the rules evaluated for the scan. Save the screenshot at the path below, then uncomment.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-configurations/applied-settings-report.png').default} alt="Accessibility report header with WCAG 2.1 AA, Best Practices and Beta Rules tags, and the Applied Settings panel listing evaluated rules grouped by category such as Accessibility Labels" className="doc_img"/>
+*/}
+
+## Product boundary
+
+This page covers configuring scans through **capabilities in automation**. For hand-picking individual rules and reusing last-used settings in the **manual** App Scanner flow, see [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/).
+
+## Related docs
+
+- [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
+- [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/)
+- [Appium TestNG](/support/docs/accessibility-appium-testng/)
+- [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
+- [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)

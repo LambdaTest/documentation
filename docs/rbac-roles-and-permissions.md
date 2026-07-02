@@ -137,6 +137,36 @@ Entity-level access is available for the following products:
 | **SmartUI** | Projects, Builds |
 | **Analytics & Insights** | Projects (applied to dashboards and reports, read-only) |
 
+Each product exposes a different set of entities. Here is what each one represents.
+
+**Test Manager**
+
+- **Projects**: A workspace that groups all test cases, test runs, and related assets for one application or team.
+- **Test Runs**: A grouping of test cases with chosen browser, device, and OS configurations, created to execute and track them together.
+- **Test Cases**: Individual test scenarios stored in a centralized repository and reused across multiple test runs.
+- **Test Case Instances**: The per-configuration executions of a test case inside a test run, each tracked with its own status.
+
+**Automation**
+
+- **Projects**: A container that groups related automation builds and sessions and serves as the unit you scope access to.
+- **Builds**: A named grouping of automation test sessions, set through the build capability, used to collect and filter related executions.
+- **Test Case Instances**: Individual automation test sessions executed on a specific browser, OS, or device configuration within a build.
+
+**HyperExecute**
+
+- **Projects**: A centralized space for organizing and managing test executions by grouping similar tests, controlling access, and tracking progress.
+- **Workflows**: Schedule-driven orchestration that runs HyperExecute jobs on a defined schedule, without requiring CI/CD integration.
+- **Organization Settings**: Organization-level HyperExecute preferences, such as auto-mute tests and test viewing preferences.
+
+**SmartUI**
+
+- **Projects**: A container that groups all visual regression builds and screenshots for a single application.
+- **Builds**: A named collection of screenshots grouped for visual comparison and baseline management within a project.
+
+**Analytics & Insights**
+
+- **Projects**: The read-only reporting scope that controls which dashboards and reports a user can view.
+
 :::info
 Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
 :::
