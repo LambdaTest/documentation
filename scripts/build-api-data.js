@@ -140,17 +140,6 @@ const REQUEST_BODY_EXAMPLE_OVERRIDES = {
     const { parent_folder_id, ...rest } = ex;
     return { ...rest, parent_id: 'parent_id' };
   },
-  // Upstream spec uses "web" for desktop platform; correct value is "desktop".
-  'Test Manager|POST|/api/v1/environments': (ex) => {
-    if (!ex || !Array.isArray(ex.configurations)) return ex;
-    return {
-      ...ex,
-      configurations: ex.configurations.map((c) => {
-        if (!c || typeof c !== 'object' || c.platform !== 'web') return c;
-        return { ...c, platform: 'desktop' };
-      }),
-    };
-  },
 };
 
 function resolveRef(ref, spec) {
