@@ -95,7 +95,9 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 **2. Add Steps and Modules in between Steps**
 
-**3. Importing or Creating a Module:**
+**3. Duplicate a Step:** Click the three-dot menu on any created step and select `Duplicate Step` to create a copy of that step immediately below it. This option is available for individual steps only and is not available for Modules.
+
+**4. Importing or Creating a Module:**
 
 - Select Test Steps & click on the `Create Module` option to make a sharable module out of them. 
 
