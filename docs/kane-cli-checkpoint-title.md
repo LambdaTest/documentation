@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-title
 title: Title Assertions
 sidebar_label: Title
-description: "Verify the browser tab document.title — useful for confirming navigation reached the expected page."
+description: "Verify the browser tab document.title, useful for confirming navigation reached the expected page."
 keywords:
   - page title assertion
   - document.title
@@ -63,4 +63,4 @@ Store the page title
 
 1. KaneAI reads `page.title()` directly
 2. The title string is compared against the expected value
-3. No screenshot or DOM analysis needed — this is a direct read
+3. No screenshot or DOM analysis needed, this is a direct read

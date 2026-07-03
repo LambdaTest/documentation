@@ -33,7 +33,7 @@ Bug Report turns confirmed accessibility findings into engineering work items in
 1. Open **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** and select the finding you want tracked.
 2. Choose **Report bug** (or equivalent) from the row or detail actions.
 3. Confirm the **title** auto-fills from the rule or element; edit so engineers recognize the user impact.
-4. Attach **screenshots or HAR** if the dialog offers uploads—speeds reproduction.
+4. Attach **screenshots or HAR** if the dialog offers uploads (speeds reproduction).
 5. Pick the **integration project** (Jira/Azure/etc.) if connected via **[Integrations](/support/docs/accessibility-report-integrations/)**; otherwise copy the deep link into your tracker manually.
 6. After the engineering fix ships, **re-run** the scan and link the new build to the same ticket for closure.
 

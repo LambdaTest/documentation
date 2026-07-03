@@ -65,10 +65,10 @@ The same three URLs are tracked as **distinct** targets:
 
 ## Benefits
 
-- **Granular issue tracking** — See and triage issues for specific sections or hash states instead of one blended bucket.
-- **Better SPA support** — Hash-based routing and deep links are easier to reason about in the dashboard and reports.
-- **Clearer workflow** — Assign and manage work per fragment when that matches how your app is structured.
-- **Richer reporting** — Reports can reflect section- or state-specific findings where the base URL alone would hide variation.
+- **Granular issue tracking**: See and triage issues for specific sections or hash states instead of one blended bucket.
+- **Better SPA support**: Hash-based routing and deep links are easier to reason about in the dashboard and reports.
+- **Clearer workflow**: Assign and manage work per fragment when that matches how your app is structured.
+- **Richer reporting**: Reports can reflect section- or state-specific findings where the base URL alone would hide variation.
 
 ---
 

@@ -51,11 +51,11 @@ Plan extra time for **VoiceOver**, **Switch Control**, **device rotation**, and 
 
 | Area | Manual verification focus |
 |------|---------------------------|
-| **1.2.x Time-based media** | In-app video/audio — captions, descriptions, live captions — validate with real content. |
-| **1.3.2–1.3.5 structure & input purpose** | Meaningful sequence, sensory-only instructions, orientation lock justification, `UITextContentType` / WebView `lang` — design and assistive-tech pass. |
-| **2.x keyboard / focus / timing (full)** | Complete tasks with VoiceOver and hardware keyboard; session timeouts and motion — exercise beyond rule snapshots. |
-| **3.x language, errors, help** | Error suggestion quality, legal safeguards, help consistency — product and compliance review. |
-| **AAA criteria** | Optional stretch goals — schedule only when AAA is explicitly in scope. |
+| **1.2.x Time-based media** | In-app video/audio (captions, descriptions, live captions): validate with real content. |
+| **1.3.2–1.3.5 structure & input purpose** | Meaningful sequence, sensory-only instructions, orientation lock justification, `UITextContentType` / WebView `lang`: design and assistive-tech pass. |
+| **2.x keyboard / focus / timing (full)** | Complete tasks with VoiceOver and hardware keyboard; session timeouts and motion: exercise beyond rule snapshots. |
+| **3.x language, errors, help** | Error suggestion quality, legal safeguards, help consistency: product and compliance review. |
+| **AAA criteria** | Optional stretch goals: schedule only when AAA is explicitly in scope. |
 
 ## Related docs
 

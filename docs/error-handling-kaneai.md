@@ -146,7 +146,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 ### Time Sensitive Assertion
 **Description:** The instruction attempts to validate temporary UI elements such as toasts, spinners, or banners. These elements are short-lived and may lead to unreliable results; use stable post-conditions instead. <br />
-**Common Authoring Error:** Example — assert toast says "Forecast job deleted". <br />
+**Common Authoring Error:** Example: assert toast says "Forecast job deleted". <br />
 **Suggested Ways:** Instead, check something stable (e.g., row is gone, job is absent).
 
 ---
@@ -168,7 +168,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 ---
 
 ### Persistent Loader
-**Description:** If a loading spinner or progress indicator stays visible for too long—specifically, after waiting multiple times or for more than 30 seconds—it usually means the system is stuck and not progressing as expected.<br />
+**Description:** If a loading spinner or progress indicator stays visible for too long (specifically, after waiting multiple times or for more than 30 seconds), it usually means the system is stuck and not progressing as expected.<br />
 **Common Authoring Error:** Waiting forever for the loader to go away without handling timeouts.<br />
 **Suggested Ways:** Implement a timeout to stop waiting after a reasonable period. Use checks that confirm when the page or content has fully loaded instead of relying only on the loader disappearing.
 
@@ -176,7 +176,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 ### Dead Click
 
-**Description:** If you keep clicking the same element but nothing happens—no change on the screen, no popup, and no response—this means the click isn’t having any effect.<br />
+**Description:** If you keep clicking the same element but nothing happens (no change on the screen, no popup, and no response), this means the click isn’t having any effect.<br />
 **Common Authoring Error:** Repeatedly clicking on an element that isn’t interactive or is disabled.<br />
 **Suggested Ways:** Make sure the element you want to click can actually be clicked and will trigger some action before clicking it. stop the flow if clicks don’t cause any response.
 
@@ -206,7 +206,7 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 ---
 
-### While Loop — Maximum Iterations Reached
+### While Loop: Maximum Iterations Reached
 
 **Error Code:** `LOOP_MAX_LIMIT_REACHED` <br />
 **Error Message:** *While loop exceeded maximum iterations. This may be due to an issue with the loop condition or the actions within the loop.* <br />
@@ -216,31 +216,31 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 ---
 
-### While Loop — Infinite Loop Detected
+### While Loop: Infinite Loop Detected
 
 **Error Code:** `INFINITE_LOOP_DETECTED` <br />
 **Error Message:** *The while loop appears to be an infinite loop. Please review the loop condition and the actions within the loop to ensure that the loop will terminate properly.* <br />
-**Description:** KaneAI detected a While Loop condition / body combination that cannot terminate — typically a condition that is independent of anything the body changes, or a comparison that is always true (for example, `1 == 1`). <br />
+**Description:** KaneAI detected a While Loop condition / body combination that cannot terminate, typically a condition that is independent of anything the body changes, or a comparison that is always true (for example, `1 == 1`). <br />
 **Common Authoring Error:** A While Loop whose body does not touch any value referenced by the condition, or a condition built from constants only. <br />
-**Suggested Ways:** Ensure the body contains at least one step that changes a value referenced by the condition — increment a counter, click a control that updates UI state, or wait for a status transition. If the condition uses constants, rewrite it so it depends on a variable or UI state that evolves during the loop.
+**Suggested Ways:** Ensure the body contains at least one step that changes a value referenced by the condition: increment a counter, click a control that updates UI state, or wait for a status transition. If the condition uses constants, rewrite it so it depends on a variable or UI state that evolves during the loop.
 
 ---
 
-### While Loop — Both Operands Are Parameters
+### While Loop: Both Operands Are Parameters
 
 **Error Code:** `BOTH_OPERANDS_AS_PARAMETERS` <br />
 **Error Message:** *Both operands in the while loop condition are parameters. Only one operand should be a parameter.* <br />
-**Description:** Both sides of a [While Loop](/support/docs/kaneai-while-loops/) condition are test parameters (for example, `${max_retries} > ${default_retries}`). Parameter values are fixed for the lifetime of a run, so such a condition cannot change between iterations — it would either loop forever or never enter. <br />
+**Description:** Both sides of a [While Loop](/support/docs/kaneai-while-loops/) condition are test parameters (for example, `${max_retries} > ${default_retries}`). Parameter values are fixed for the lifetime of a run, so such a condition cannot change between iterations. It would either loop forever or never enter. <br />
 **Common Authoring Error:** Comparing two dataset parameters directly in the loop condition, such as `${threshold} > ${limit}`. <br />
-**Suggested Ways:** Replace one operand with a runtime‑updated value — a counter variable incremented inside the body, a value read from the UI via a query, or a literal. Valid examples include `{{counter}} < ${max_retries}`, `${status} == "ready"`, and `{{cart_empty}} == false`.
+**Suggested Ways:** Replace one operand with a runtime‑updated value: a counter variable incremented inside the body, a value read from the UI via a query, or a literal. Valid examples include `{{counter}} < ${max_retries}`, `${status} == "ready"`, and `{{cart_empty}} == false`.
 
 ---
 
-### While Loop — Cannot Be Created via Natural Language
+### While Loop: Cannot Be Created via Natural Language
 
 **Error Code:** `WHILE_NOT_SUPPORTED_VIA_NL` <br />
 **Error Message:** *Looping is supported via slash commands only. Type / and select While Loop to add a loop.* <br />
-**Description:** A natural‑language step was used to describe a loop (for example, *"repeat until the cart is empty"*, *"while the spinner is visible, do X"*, or *"keep clicking Next"*). The natural‑language pipeline does not expand these phrases into loops — [While Loops](/support/docs/kaneai-while-loops/) can only be added through the **/** slash command menu. <br />
+**Description:** A natural‑language step was used to describe a loop (for example, *"repeat until the cart is empty"*, *"while the spinner is visible, do X"*, or *"keep clicking Next"*). The natural‑language pipeline does not expand these phrases into loops. [While Loops](/support/docs/kaneai-while-loops/) can only be added through the **/** slash command menu. <br />
 **Common Authoring Error:** Typing looping phrases like *"keep clicking Load more until no more results appear"* as a regular step instead of creating a While Loop block. <br />
 **Suggested Ways:** Remove the looping phrase from the plain‑English step. Open the slash menu (`/`), select **While Loop**, enter the loop condition, and add the per‑iteration action as a body step inside the loop.
 

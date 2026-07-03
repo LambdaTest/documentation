@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-<BrandName /> supports connectivity via IPsec Site-to-Site VPN (S2S VPN) for clients who need to test web applications hosted on internal/private networks that are not publicly accessible. This allows <BrandName /> cloud infrastructure to reach your privately hosted test environments directly over an encrypted, authenticated tunnel — just as if both networks are on the same LAN.
+<BrandName /> supports connectivity via IPsec Site-to-Site VPN (S2S VPN) for clients who need to test web applications hosted on internal/private networks that are not publicly accessible. This allows <BrandName /> cloud infrastructure to reach your privately hosted test environments directly over an encrypted, authenticated tunnel, just as if both networks are on the same LAN.
 
 :::info Executive Summary
 An IPsec Site-to-Site VPN creates a permanent, encrypted tunnel between your network gateway and <BrandName /> cloud, enabling secure access to internal staging environments, development servers, and private applications without exposing them to the public internet.

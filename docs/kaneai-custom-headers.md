@@ -114,15 +114,15 @@ You can also click **View details** in the test case sidebar to see the full lis
 
 ## Example Use Cases
 
-- **Session Management** — Send a custom `X-Session-ID` header to track user sessions across requests:
+- **Session Management**: Send a custom `X-Session-ID` header to track user sessions across requests:
   ```
   X-Session-ID: 1234567890
   ```
-- **Authentication Tokens** — Use the **Secret** type to inject API keys or bearer tokens without exposing them in plain text:
+- **Authentication Tokens**: Use the **Secret** type to inject API keys or bearer tokens without exposing them in plain text:
   ```
   Authorization: {{secrets.org.BearerToken}}
   ```
-- **Content Negotiation** — Override the `Accept` header to test specific response formats:
+- **Content Negotiation**: Override the `Accept` header to test specific response formats:
   ```
   Accept: application/json
   ```
