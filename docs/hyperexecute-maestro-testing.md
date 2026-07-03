@@ -309,7 +309,7 @@ framework:
 and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.
 
 ```yaml reference title="android-launch.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-launch.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-launch.yaml
 ```
 
 ### Step 3: Execute your Test Suite
