@@ -87,7 +87,7 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 
 - Select a folder to filter and view only its test instances. The status summary (Passed, Failed, Not Started, Skipped) is displayed in the top-right corner of the listing for the selected folder.
 - Collapse or expand folders for easier navigation.
-- Click the **three-dot menu** on the **Folders** header to toggle **Include Child Folders** — when enabled (default), selecting a parent folder also displays test instances from its child folders.
+- Click the **three-dot menu** on the **Folders** header to toggle **Include Child Folders**. When enabled (default), selecting a parent folder also displays test instances from its child folders.
 
 <img loading="lazy" src={require('../assets/images/test-run/6.png').default} alt="Real "  className="doc_img"/>
 
@@ -110,9 +110,9 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 
 A filter bar above the test instance list lets you narrow down a test run by:
 
-- **Test instance attributes** — Status, Assignee, Platform, OS, Browser, Resolution, Device.
-- **Test case attributes** — Tags, Priority, Test Case Status.
-- **Test Case Custom Fields** — available under **More Filters**.
+- **Test instance attributes**: Status, Assignee, Platform, OS, Browser, Resolution, Device.
+- **Test case attributes**: Tags, Priority, Test Case Status.
+- **Test Case Custom Fields**: available under **More Filters**.
 
 Filters work on both Manual and Automation test runs, apply at the **All Test Instances** view as well as at any folder, and persist as you switch between folders. The active filter state is also reflected in the page URL, so you can bookmark or share a filtered view.
 
@@ -130,7 +130,7 @@ Custom Fields can be filtered only for types: **Single Select Dropdown**, **Mult
 <img loading="lazy" src={require('../assets/images/test-run/9.png').default} alt="Real "  className="doc_img"/>
 
 The Remark field supports **rich text formatting**, including:
-- Inline image embedding — paste images directly into the field.
+- Inline image embedding: paste images directly into the field.
 - Text styling such as bold, italic, bullet lists, and other standard rich text options.
 
 :::note
@@ -143,7 +143,7 @@ Remarks have a maximum limit of **5000 characters**.
 
 ## 6. Execute Test Runs on <BrandName /> Cloud
 
-Execute your manual test instances directly on <BrandName /> Cloud — no local setup or environment configuration required. This allows your team to run manual tests on real browsers and devices hosted on the cloud, making it one of the most efficient ways to validate your test cases.
+Execute your manual test instances directly on <BrandName /> Cloud, no local setup or environment configuration required. This allows your team to run manual tests on real browsers and devices hosted on the cloud, making it one of the most efficient ways to validate your test cases.
 
 **To execute a test run:**
 
@@ -156,7 +156,7 @@ Execute your manual test instances directly on <BrandName /> Cloud — no local 
 <img loading="lazy" src={require('../assets/images/test-run/14.png').default} alt="Real "  className="doc_img"/>
 
 :::tip Why execute on the Cloud?
-Running test instances on <BrandName /> Cloud gives you access to a wide range of real browsers, devices, and OS combinations — without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
+Running test instances on <BrandName /> Cloud gives you access to a wide range of real browsers, devices, and OS combinations, without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
 :::
 
 :::note Track bugs during execution

@@ -2,7 +2,7 @@
 id: kane-cli-generate
 title: Generating Test Cases with AI
 sidebar_label: Overview
-description: "Turn a plain-language description of what you want to test into structured test scenarios and test cases with kane-cli generate — refine in plain language, then save the functional cases as runnable _test.md files."
+description: "Turn a plain-language description of what you want to test into structured test scenarios and test cases with kane-cli generate: refine in plain language, then save the functional cases as runnable _test.md files."
 keywords:
   - kane cli generate
   - kane cli test case generation
@@ -41,17 +41,17 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-generate/
     }}
 ></script>
 
-`kane-cli generate` turns a plain-language description of *what you want to test* into structured **test scenarios** and **test cases** — without writing them by hand and without launching a browser. This page covers AI test-case generation from both the command line and the interactive kane-cli TUI.
+`kane-cli generate` turns a plain-language description of *what you want to test* into structured **test scenarios** and **test cases**, without writing them by hand and without launching a browser. This page covers AI test-case generation from both the command line and the interactive kane-cli TUI.
 
 A generation produces:
 
-- **Test Scenarios** — logical groupings of related checks (e.g. "Login", "Checkout").
-- **Test Cases** — the individual checks inside each scenario, each typed **Positive**, **Negative**, or **Edge**.
+- **Test Scenarios**: logical groupings of related checks (e.g. "Login", "Checkout").
+- **Test Cases**: the individual checks inside each scenario, each typed **Positive**, **Negative**, or **Edge**.
 
 You generate, review the result, **refine** it in plain language as many times as you like, and optionally **save** the functional cases as runnable `_test.md` files that [`kane-cli testmd`](/support/docs/kane-cli-testmd/) can execute and replay.
 
 :::note
-For the full picture of AI test-case generation — including richer inputs (files, PDFs, issue links) and pushing cases into Test Manager or automation — see the [AI test-case generation guide](https://www.testmuai.com/support/docs/generate-test-cases-with-ai/). The **CLI here takes a text description** and writes local `_test.md` files. See [Limits and scope](#limits-and-scope).
+For the full picture of AI test-case generation, including richer inputs (files, PDFs, issue links) and pushing cases into Test Manager or automation, see the [AI test-case generation guide](https://www.testmuai.com/support/docs/generate-test-cases-with-ai/). The **CLI here takes a text description** (optionally with local files attached via [`--files`](#attaching-files-for-context)) and writes local `_test.md` files. See [Limits and scope](#limits-and-scope).
 :::
 
 ## Quick start
@@ -75,12 +75,12 @@ The request id (`23271` above) is printed at the end of each generation and is h
 
 ## The three modes
 
-`generate` runs **one turn per command, then exits** — you continue a request by running the command again with `--req <id>`. (That's the scripted/headless surface; run interactively, kane-cli opens a live TUI session instead — see [Interactive mode (TUI)](#interactive-mode-tui).)
+`generate` runs **one turn per command, then exits**. You continue a request by running the command again with `--req <id>`. (That's the scripted/headless surface; run interactively, kane-cli opens a live TUI session instead, see [Interactive mode (TUI)](#interactive-mode-tui).)
 
 | Mode | Command | What it does |
 |---|---|---|
 | **New** | `kane-cli generate "<what to test>"` | Starts a fresh request and generates scenarios + cases. Prints a request id. |
-| **Refine** | `kane-cli generate "<change>" --refine --req <id>` | Adjusts an existing request in plain language — add coverage, narrow scope, change focus. |
+| **Refine** | `kane-cli generate "<change>" --refine --req <id>` | Adjusts an existing request in plain language: add coverage, narrow scope, change focus. |
 | **Save** | `kane-cli generate --save --req <id> [--out <dir>]` | Writes the request's **functional** cases to `_test.md` files. No new generation. |
 
 `--refine` and `--save` both require `--req`. `--refine` needs a change description; `--save` takes no description.
@@ -94,56 +94,75 @@ The request id (`23271` above) is printed at the end of each generation and is h
 | `--name <name>` | Names the run and the saved suite folder. |
 | `--scenario-limit <n>` | Maximum number of scenarios to generate. |
 | `--per-scenario-limit <n>` | Maximum test cases per scenario. |
-| `--memory` | Use the **memory layer** — reuse relevant existing test cases and reduce duplicates. |
+| `--memory` | Use the **memory layer**: reuse relevant existing test cases and reduce duplicates. |
+| `--files <paths>` | Comma-separated local files to attach as context (new generations and refines only). See [Attaching files for context](#attaching-files-for-context). |
 | `--project <id>` / `--folder <id>` | Test Manager project / folder. |
 | `--agent` | Emit structured NDJSON on stdout (auto-on when run non-interactively / piped). |
-| `--env`, `--username`, `--access-key` | Environment and authentication — same as [`kane-cli run`](/support/docs/kane-cli-quickstart/). See [Authentication](/support/docs/kane-cli-authentication/). |
+| `--env`, `--username`, `--access-key` | Environment and authentication, same as [`kane-cli run`](/support/docs/kane-cli-quickstart/). See [Authentication](/support/docs/kane-cli-authentication/). |
+
+## Attaching files for context
+
+Give the generator more to work from by attaching local files with `--files` (a comma-separated list of paths) on a **new** generation or a **refine**:
+
+```bash
+kane-cli generate "test the login flow described in the attached spec" --files ./login-spec.pdf,./wireframe.png
+```
+
+The files are sent along with your description and reflected in the generated scenarios and cases: attach a spec, a screenshot of the UI, a PDF or Word document, or a CSV of inputs.
+
+- **Supported types**: documents (`.txt`, `.json`, `.xml`, `.csv`, `.pdf`, `.docx`, `.xlsx`), images (`.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.webp`), audio (`.mp3`, `.wav`, `.m4a`), and video (`.mp4`, `.mov`, `.webm`, `.mpeg`, `.mpga`).
+- **Limits**: up to **10 files**, each **50 MB** or smaller.
+- **Checked before anything is sent**: all paths are validated as a set. If any is missing, an unsupported type, too large, or over the count, the command stops and lists the offending paths so nothing is uploaded by mistake. Files outside the current directory are allowed but flagged with a warning.
+- **Not with `--save`**: files attach to a generation or refine, not a save (`--files` with `--save` is rejected).
+
+In the interactive TUI, type `@` in the generate prompt to attach a file inline instead of passing `--files`.
 
 ## Interactive mode (TUI)
 
-The commands above are the scripted surface. The kane-cli TUI **launches in Run mode** (for running tests) by default — switch to **Generate mode** with **`/generate`**, and back with `/run`. Or jump straight in: running `kane-cli generate "<objective>"` in a terminal (without `--agent`) opens the TUI directly in Generate mode and submits your objective.
+The commands above are the scripted surface. The kane-cli TUI **launches in Run mode** (for running tests) by default. Switch to **Generate mode** with **`/generate`**, and back with `/run`. Or jump straight in: running `kane-cli generate "<objective>"` in a terminal (without `--agent`) opens the TUI directly in Generate mode and submits your objective.
 
-Unlike the one-turn command-line surface, the TUI is a **live session** — generated scenarios stay pinned in a **Scenarios** box that you refine and browse in place:
+Unlike the one-turn command-line surface, the TUI is a **live session**: generated scenarios stay pinned in a **Scenarios** box that you refine and browse in place:
 
 | Input | Action |
 |---|---|
-| *(type any text)* | **Refine** — describe a change in plain language; the set updates in place |
-| `/view [S<n>]` | Open the **scenario browser** — drill scenarios → cases → case detail |
+| *(type any text)* | **Refine**: describe a change in plain language; the set updates in place |
+| `@<file>` | **Attach a file**: type `@` to pick a local file to add as context (same files as `--files`) |
+| `/view [S<n>]` | Open the **scenario browser**: drill scenarios → cases → case detail |
 | `/save` | Save the functional cases to `<cwd>/.testmuai/tests/…` |
 | `/cancel` | Cancel the current generation |
 | `/run` | Switch back to Run mode |
 
-In the scenario browser: `↑↓` move · `↵` open · `◂ ▸` previous/next sibling · `x` remove a case · `←`/`esc` back. **Non-functional cases** (Security, Performance, …) show a **gray `✓`** with a "won't be saved" note — `/save` writes only functional cases (see [Saving is functional-only](#saving-is-functional-only)).
+In the scenario browser: `↑↓` move · `↵` open · `◂ ▸` previous/next sibling · `x` remove a case · `←`/`esc` back. **Non-functional cases** (Security, Performance, …) show a **gray `✓`** with a "won't be saved" note. `/save` writes only functional cases (see [Saving is functional-only](#saving-is-functional-only)).
 
-If generation asks a **clarifying question**, just type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/` — run them with [`kane-cli testmd run`](/support/docs/kane-cli-testmd/).
+If generation asks a **clarifying question**, just type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/`, run them with [`kane-cli testmd run`](/support/docs/kane-cli-testmd/).
 
 ## How a result is shaped
 
 Each generated case carries:
 
 - a **title** and **steps**,
-- a **type** — Positive (expected to pass), Negative (tests failure handling), or Edge (corner cases),
-- a **category** — e.g. *Functional*, *Security*, *Performance*,
+- a **type**: Positive (expected to pass), Negative (tests failure handling), or Edge (corner cases),
+- a **category**: e.g. *Functional*, *Security*, *Performance*,
 - a **priority**.
 
 Scenarios are ordered by importance. The full result is returned at the end of the turn so it can be reviewed before you refine or save.
 
 ## Saving is functional-only
 
-`--save` writes **only test cases whose category is *Functional*** — those are the ones that translate into runnable `_test.md` tests. Non-functional cases (Security, Performance, and so on) are still generated and shown, but they are **not** written to disk. If a request has no functional cases, `--save` writes nothing and tells you so.
+`--save` writes **only test cases whose category is *Functional***: those are the ones that translate into runnable `_test.md` tests. Non-functional cases (Security, Performance, and so on) are still generated and shown, but they are **not** written to disk. If a request has no functional cases, `--save` writes nothing and tells you so.
 
-Saved files are ordinary `_test.md` tests in the standard format — identical to a hand-written one. From there everything in [the testmd docs](/support/docs/kane-cli-testmd/) applies: run them, edit them, replay them from cache, commit them to git.
+Saved files are ordinary `_test.md` tests in the standard format, identical to a hand-written one. From there everything in [the testmd docs](/support/docs/kane-cli-testmd/) applies: run them, edit them, replay them from cache, commit them to git.
 
 This is the intended path: **generate authors test cases → testmd runs them.**
 
 ## Limits and scope
 
-- **Input is a text description.** File, PDF, audio, and issue-link inputs (and the web product's "Create / Create and Automate") are not part of the CLI.
+- **Input is a text description, optionally with attached files.** Attach local files with `--files` (a spec, screenshot, PDF, or CSV) to give the generator more context. Issue-link inputs and the web product's "Create / Create and Automate" are not part of the CLI.
 - **Refinement is whole-request.** You refine the request as a whole in plain language; targeting an individual scenario or case from the CLI is not yet supported.
 - **Scenario and per-scenario counts** are bounded by `--scenario-limit` / `--per-scenario-limit`.
 
 ## Next steps
 
-- [The generate workflow](/support/docs/kane-cli-generate-workflow/) — the new → refine → save → run loop, worked examples, and exit codes.
-- [Running tests with testmd](/support/docs/kane-cli-testmd/) — run and replay the `_test.md` files `--save` produces.
-- [Authentication](/support/docs/kane-cli-authentication/) — logging in and choosing an environment.
+- [The generate workflow](/support/docs/kane-cli-generate-workflow/): the new → refine → save → run loop, worked examples, and exit codes.
+- [Running tests with testmd](/support/docs/kane-cli-testmd/): run and replay the `_test.md` files `--save` produces.
+- [Authentication](/support/docs/kane-cli-authentication/): logging in and choosing an environment.

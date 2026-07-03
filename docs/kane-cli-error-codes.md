@@ -297,7 +297,7 @@ An external obstacle on the target website prevented the agent from completing t
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
   --url https://myapp.com/login \
-  --variables '{"username": {"value": "test@example.com"}, "password": {"value": "s3cret", "sensitive": true}}' \
+  --variables '{"username": {"value": "test@example.com"}, "password": {"value": "s3cret", "secret": true}}' \
   --agent
 ```
 

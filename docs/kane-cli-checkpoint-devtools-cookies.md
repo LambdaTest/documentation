@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-devtools-cookies
 title: Cookies Assertions
 sidebar_label: Cookies
-description: "Verify browser cookies — names, values, and flags such as httpOnly, secure, and sameSite — set during test execution."
+description: "Verify browser cookies (names, values, and flags such as httpOnly, secure, and sameSite) set during test execution."
 keywords:
   - cookies assertion
   - session cookie
@@ -40,13 +40,13 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-co
       }) }}
 ></script>
 
-Cookie assertions let you verify browser cookies — check existence, values, and security attributes like httpOnly, secure, and sameSite.
+Cookie assertions let you verify browser cookies: check existence, values, and security attributes like httpOnly, secure, and sameSite.
 
 ## How Capture Works
 
 Cookies are captured as a **point-in-time snapshot** when the checkpoint triggers:
 
-- **On-demand capture**: Cookies are read from the browser context at the moment the assertion runs — not accumulated over time
+- **On-demand capture**: Cookies are read from the browser context at the moment the assertion runs, not accumulated over time
 - **Current state only**: You see exactly what cookies exist right now, including any set by the page's JavaScript or server responses
 - **All cookies visible**: Unlike `document.cookie` in JavaScript, KaneAI can see httpOnly cookies too
 - **Domain-scoped**: Cookies are captured for all domains the browser has visited in this session
@@ -57,7 +57,7 @@ Because cookies are captured at assertion time:
 
 - If you need to check cookies set by a specific page, assert on the **same page** or **after** you've visited it
 - If cookies are needed in a later step (e.g., after navigating away), extract and store them first
-- Cookies persist in the browser across steps (unlike network/console which reset) — but asserting on a different domain may show different cookies
+- Cookies persist in the browser across steps (unlike network/console which reset), but asserting on a different domain may show different cookies
 
 ## What You Can Query
 

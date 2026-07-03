@@ -73,7 +73,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <img loading="lazy" src={require('../assets/images/mark_as_bug/mark-as-bug-2.webp').default} alt="Image" width="1344" height="653" className="doc_img"/>
 
-**Step 3:** Once the screenshot testing is complete, you will have all the screenshots categorized by browsers selected from your input—double-click on any screenshot you may want to validate.
+**Step 3:** Once the screenshot testing is complete, you will have all the screenshots categorized by browsers selected from your input. Double-click on any screenshot you may want to validate.
 
 <img loading="lazy" src={require('../assets/images/mark_as_bug/mark-as-bug-screenshot-3.webp').default} alt="Image" width="1344" height="653" className="doc_img"/>
 

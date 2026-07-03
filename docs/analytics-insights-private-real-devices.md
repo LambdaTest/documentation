@@ -97,11 +97,11 @@ We provide a range of filters to help you customize your insights dashboard. You
 
 ## Custom Widgets for Private Devices
 
-The widgets above provide standard, pre-built dashboards for private real device insights. If you need more tailored views — such as per-device test counts, duration breakdowns by product, or bar chart comparisons — you can build **custom widgets** using the Custom Widget builder.
+The widgets above provide standard, pre-built dashboards for private real device insights. If you need more tailored views (such as per-device test counts, duration breakdowns by product, or bar chart comparisons), you can build **custom widgets** using the Custom Widget builder.
 
 All custom widgets for private devices use the filter `is_dedicated = Equals = true` to scope data to your dedicated devices only.
 
-For step-by-step instructions and recommended widget configurations, see [Custom Widgets — Private/Dedicated Device Widgets](/support/docs/dashboards-custom-widgets/#privatededicated-device-widgets).
+For step-by-step instructions and recommended widget configurations, see [Custom Widgets: Private/Dedicated Device Widgets](/support/docs/dashboards-custom-widgets/#privatededicated-device-widgets).
 
 ## Support
 

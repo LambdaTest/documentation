@@ -76,8 +76,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Capabilities:**
 - **SAML 2.0** based authentication with any compatible IdP
-- **Just-in-Time (JIT) provisioning** — automatically create user accounts on first login
-- **SCIM provisioning** — automated user lifecycle management (create, update, deactivate)
+- **Just-in-Time (JIT) provisioning**: automatically create user accounts on first login
+- **SCIM provisioning**: automated user lifecycle management (create, update, deactivate)
 - **Supported identity providers**: Okta, Azure AD, PingOne, JumpCloud, and any SAML 2.0 compliant IdP
 
 **Documentation:**
@@ -112,10 +112,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Capabilities:**
 - **Custom roles** with configurable permissions
-- **Product-level access control** — restrict access to specific products (Web Automation, App Automation, HyperExecute, etc.)
-- **Entity-level permissions** — control access to projects, test cases, test runs, and configurations
-- **Organization-level role assignment** — manage roles centrally for all users
-- **Pre-built roles** — Admin, Manager, User, and Guest with sensible defaults
+- **Product-level access control**: restrict access to specific products (Web Automation, App Automation, HyperExecute, etc.)
+- **Entity-level permissions**: control access to projects, test cases, test runs, and configurations
+- **Organization-level role assignment**: manage roles centrally for all users
+- **Pre-built roles**: Admin, Manager, User, and Guest with sensible defaults
 
 **Documentation:**
 - [Roles and Permissions (RBAC)](/support/docs/rbac-roles-and-permissions/)
@@ -127,9 +127,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> maintains enterprise-grade security across the platform with industry-standard certifications and encryption.
 
 **Certifications & Compliance:**
-- **SOC 2 Type II** certified — security, availability, processing integrity, confidentiality, and privacy (report available under NDA)
-- **ISO 27001** certified — information security management
-- **GDPR** compliant — data privacy and protection
+- **SOC 2 Type II** certified: security, availability, processing integrity, confidentiality, and privacy (report available under NDA)
+- **ISO 27001** certified: information security management
+- **GDPR** compliant: data privacy and protection
 
 **Encryption:**
 - **Data in transit**: TLS 1.2 or higher for all communications
@@ -138,7 +138,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - **Credentials**: Multi-layer bcrypt hashing, no plaintext storage
 
 **Infrastructure Security:**
-- Clean VM/device per test session — no data leakage between sessions
+- Clean VM/device per test session, no data leakage between sessions
 - Immediate data deletion from VMs/devices after test completion
 - Network isolation and secure service-to-service authentication
 - Private tenant deployment for AI features (Azure OpenAI)
@@ -155,7 +155,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 | Deployment | Description | Best For |
 |-----------|-------------|----------|
-| **SaaS Cloud** | Fully managed cloud platform — no infrastructure to maintain | Most organizations |
+| **SaaS Cloud** | Fully managed cloud platform, no infrastructure to maintain | Most organizations |
 | **Private Cloud** | Dedicated cloud infrastructure with isolated resources | Organizations requiring data isolation |
 | **On-Premise** | Self-hosted deployment within your own infrastructure | Highly regulated industries, air-gapped environments |
 
@@ -176,10 +176,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> provides comprehensive team management capabilities to organize users, control access, and manage testing at scale across your organization.
 
 **Capabilities:**
-- **Organizations** — top-level entity for managing users, billing, and settings
-- **Sub-Organizations** — create separate sub-orgs for departments, teams, or business units with independent analytics and concurrency tracking
-- **Groups** — organize users into groups for easier access management and resource allocation
-- **User Management** — invite, manage, and remove users with role-based permissions
+- **Organizations**: top-level entity for managing users, billing, and settings
+- **Sub-Organizations**: create separate sub-orgs for departments, teams, or business units with independent analytics and concurrency tracking
+- **Groups**: organize users into groups for easier access management and resource allocation
+- **User Management**: invite, manage, and remove users with role-based permissions
 
 **Documentation:**
 - [Team Management](/support/docs/team-management/)
@@ -190,20 +190,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Integrations
 
-<BrandName /> integrates with the tools your enterprise already uses — from project management and CI/CD to communication and reporting.
+<BrandName /> integrates with the tools your enterprise already uses, from project management and CI/CD to communication and reporting.
 
 **Project Management:**
-- **Jira** — native app with bidirectional sync, AI test generation from tickets
-- **Azure DevOps** — native app with work item linking and AI generation
+- **Jira**: native app with bidirectional sync, AI test generation from tickets
+- **Azure DevOps**: native app with work item linking and AI generation
 
 **Source Control & CI/CD:**
-- **GitHub App** — PR-based test triggering, auto test generation, RCA, status checks
-- **Jenkins, GitHub Actions, GitLab CI, CircleCI, Azure Pipelines** — full CI/CD integration
-- **HyperExecute CLI** — integrate test execution into any pipeline
+- **GitHub App**: PR-based test triggering, auto test generation, RCA, status checks
+- **Jenkins, GitHub Actions, GitLab CI, CircleCI, Azure Pipelines**: full CI/CD integration
+- **HyperExecute CLI**: integrate test execution into any pipeline
 
 **Communication:**
-- **Slack** — build and dashboard notifications
-- **Microsoft Teams** — build and dashboard notifications
+- **Slack**: build and dashboard notifications
+- **Microsoft Teams**: build and dashboard notifications
 
 **APIs:**
 - RESTful APIs for test management, execution, and artifact retrieval
@@ -220,9 +220,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> provides built-in capabilities to generate, manage, and protect the test data your teams use across automation. Teams can author synthetic datasets for data-driven tests, mask sensitive payloads in network logs and recordings, and parameterize tests so the same flow runs across environments and inputs without rework.
 
 **Capabilities:**
-- **Synthetic data generation** — author datasets in KaneAI Test Manager, populate values manually, autofill with AI based on parameter names, or import from CSV; default datasets are immutable and every dataset carries full version history with revert/restore support
-- **Data masking** — mask sensitive payloads (passwords, tokens, API keys, auth headers, cookies) in HTTP network logs via the `network.mask` Selenium capability; mask credentials, geolocation, and storage state captured in HyperExecute test recordings (Lambda Masking)
-- **Parameterization** — pass dynamic values into test cases at runtime using variables, secrets (encrypted), smart variables (resolved at execution), parameters, and datasets to reuse the same test across environments such as staging, pre-prod, and prod
+- **Synthetic data generation**: author datasets in KaneAI Test Manager, populate values manually, autofill with AI based on parameter names, or import from CSV. Default datasets are immutable and every dataset carries full version history with revert/restore support
+- **Data masking**: mask sensitive payloads (passwords, tokens, API keys, auth headers, cookies) in HTTP network logs via the `network.mask` Selenium capability. Mask credentials, geolocation, and storage state captured in HyperExecute test recordings (Lambda Masking)
+- **Parameterization**: pass dynamic values into test cases at runtime using variables, secrets (encrypted), smart variables (resolved at execution), parameters, and datasets to reuse the same test across environments such as staging, pre-prod, and prod
 
 **Documentation:**
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
@@ -238,14 +238,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> provides enterprise-grade reporting and analytics with AI-powered insights to help QA managers and executives make data-driven decisions.
 
 **Capabilities:**
-- **Pre-built dashboard templates** — get started instantly with common views
-- **Custom dashboards** — build your own with heatmap, bar, line, table, pie, and billboard widgets
-- **AI Test Intelligence** — Smart Tags (Flaky, Always Failing, New Failures), Flaky Test Detection, Failure Categorization AI
-- **AI Root Cause Analysis (AI RCA)** — LLM-powered failure diagnosis with actionable fix recommendations
-- **Build Insights and Comparison** — compare builds side-by-side to track quality trends
-- **Sub-Organization analytics** — drill down into team-level and sub-org performance
-- **Dashboard sharing** — shareable links with configurable expiry and password protection
-- **Data export** — export up to 1,000 records for external analysis
+- **Pre-built dashboard templates**: get started instantly with common views
+- **Custom dashboards**: build your own with heatmap, bar, line, table, pie, and billboard widgets
+- **AI Test Intelligence**: Smart Tags (Flaky, Always Failing, New Failures), Flaky Test Detection, Failure Categorization AI
+- **AI Root Cause Analysis (AI RCA)**: LLM-powered failure diagnosis with actionable fix recommendations
+- **Build Insights and Comparison**: compare builds side-by-side to track quality trends
+- **Sub-Organization analytics**: drill down into team-level and sub-org performance
+- **Dashboard sharing**: shareable links with configurable expiry and password protection
+- **Data export**: export up to 1,000 records for external analysis
 
 **Documentation:**
 - [Insights Overview](/support/docs/analytics-overview/)
@@ -284,9 +284,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Data Protection:**
 - **Data Processing Agreement (DPA)** available with Standard Contractual Clauses
-- **Customer as Data Controller** — you retain ownership and control of your test data
-- **<BrandName /> as Data Processor** — we process data only as instructed
-- **No PII/PHI storage** by default — system does not collect or require identifiable personal data
+- **Customer as Data Controller**: you retain ownership and control of your test data
+- **<BrandName /> as Data Processor**: we process data only as instructed
+- **No PII/PHI storage** by default: system does not collect or require identifiable personal data
 
 **Data Retention:**
 - Default 60-day retention across all products
@@ -312,11 +312,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> provides tools for controlled test execution management and scheduled rollouts, ensuring enterprises can manage changes systematically.
 
 **Capabilities:**
-- **Scheduled Workflows** — run test suites on a schedule (one-time, recurring, with expiry dates) without CI/CD
-- **Connected Workflows (Test Chains)** — chain workflows across projects for sequential execution — run regression only if smoke passes
-- **Workflow Variables** — parameterize runs to reuse the same configuration across environments (staging, pre-prod, prod)
-- **Feature flags** — enterprise customers can control feature availability at the org level
-- **Version control integration** — GitHub and Bitbucket integration for branch-level test execution
+- **Scheduled Workflows**: run test suites on a schedule (one-time, recurring, with expiry dates) without CI/CD
+- **Connected Workflows (Test Chains)**: chain workflows across projects for sequential execution, run regression only if smoke passes
+- **Workflow Variables**: parameterize runs to reuse the same configuration across environments (staging, pre-prod, prod)
+- **Feature flags**: enterprise customers can control feature availability at the org level
+- **Version control integration**: GitHub and Bitbucket integration for branch-level test execution
 
 **Documentation:**
 - [HyperExecute Workflows](/support/docs/hyperexecute-workflows/)
@@ -355,7 +355,7 @@ If you're evaluating <BrandName /> for your enterprise and need additional detai
 
 - **Enterprise Sales**: Contact your account manager
 - **Security Questionnaire**: Request via [support@testmuai.com](mailto:support@testmuai.com)
-- **SOC 2 Report**: Available under NDA — contact enterprise sales
+- **SOC 2 Report**: Available under NDA. Contact enterprise sales
 - **Architecture Diagram**: Available upon request with NDA in place
 
 <nav aria-label="breadcrumbs">

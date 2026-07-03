@@ -97,7 +97,7 @@ If you select "**No**":
 
 If you select "**Yes**":
 
-<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/missed-elements-yes.png').default} alt="Yes — missing elements prompt" className="doc_img" width="1360" height="768" />
+<img loading="lazy" src={require('/assets/images/accessibility-testing/keyboard-scanner/missed-elements-yes.png').default} alt="Yes: missing elements prompt" className="doc_img" width="1360" height="768" />
 
 - You'll see the prompt: "Please click on the interactive element(s) that were missed in the tab order"
 - Click on any interactive elements (buttons, links, form fields, etc.) that should be keyboard accessible but weren't in the tab list.

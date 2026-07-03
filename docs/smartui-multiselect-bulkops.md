@@ -174,7 +174,7 @@ Once approved diffs represent the new expected UI, promote them to Baseline:
   <TabItem value='granular-selection' label='Stay Granular'>
 
 <ul>
-<li>Bulk actions are powerful—always double-check each screenshot thumbnail.</li>
+<li>Bulk actions are powerful: always double-check each screenshot thumbnail.</li>
 <li>Use single selection for high-risk diffs (checkout, payments, authentication).</li>
 </ul>
 
@@ -234,7 +234,7 @@ Once approved diffs represent the new expected UI, promote them to Baseline:
 <p><strong>Fixes</strong>:</p>
 <ul>
 <li>Only <strong>Approved</strong> screenshots can be promoted; re-approve if needed.</li>
-<li>Baseline updates can take a minute to propagate—refresh or reopen the build.</li>
+<li>Baseline updates can take a minute to propagate: refresh or reopen the build.</li>
 <li>Ensure the associated branch/build is not locked by automated workflows.</li>
 </ul>
 

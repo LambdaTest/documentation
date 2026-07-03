@@ -2,7 +2,7 @@
 id: accessibility-appium-webdriverio
 title: Appium WebdriverIO
 sidebar_label: Appium WebdriverIO
-description: Appium WebdriverIO with Accessibility—WDIO config, async hooks, lambda-accessibility-scan, and reports.
+description: "Appium WebdriverIO with Accessibility: WDIO config, async hooks, lambda-accessibility-scan, and reports."
 slug: accessibility-appium-webdriverio/
 url: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 site_name: TestMu AI

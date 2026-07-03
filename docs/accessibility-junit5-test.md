@@ -2,7 +2,7 @@
 id: accessibility-junit5-test
 title: JUnit 5
 sidebar_label: JUnit 5
-description: Run Accessibility Automation with Selenium and JUnit 5—capabilities, lifecycle hooks, and dashboard reporting.
+description: "Run Accessibility Automation with Selenium and JUnit 5: capabilities, lifecycle hooks, and dashboard reporting."
 keywords:
   - TestMu AI
   - Accessibility
@@ -17,7 +17,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-junit5-test/
 
 # JUnit 5
 
-Use this guide when your **Selenium** tests use **JUnit 5 (Jupiter)**. Accessibility is still driven entirely by **grid capabilities** and the **`lambda-accessibility-scan`** hook (or **auto-scan**), identical to the [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) flow—only the test lifecycle annotations differ.
+Use this guide when your **Selenium** tests use **JUnit 5 (Jupiter)**. Accessibility is still driven entirely by **grid capabilities** and the **`lambda-accessibility-scan`** hook (or **auto-scan**), identical to the [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) flow. Only the test lifecycle annotations differ.
 
 > **Browsers:** Use **Chrome or Edge** with supported versions for Accessibility Automation.
 

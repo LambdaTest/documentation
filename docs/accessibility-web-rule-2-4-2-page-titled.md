@@ -32,7 +32,7 @@ The page title is the first thing a screen reader announces when a page loads. I
 
 ## Remediation guidance
 
-- write titles in the format "Page Purpose — Site Name" (e.g., "Order History — Acme Store")
+- write titles in the format "Page Purpose - Site Name" (e.g., "Order History - Acme Store")
 - update `document.title` on route changes in single-page applications
 - include key differentiators when pages are similar (e.g., "Edit Profile" vs. "View Profile")
 - keep titles concise but specific enough to identify the page without seeing it

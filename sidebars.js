@@ -3229,7 +3229,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Integrations",
-            items: ["appium-inspector"],
+            items: ["appium-inspector", "alttester-unity-game-automation"],
           },
           {
             type: "category",
@@ -3581,8 +3581,18 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Region Ignore + Select",
+                id: "smartui-hooks-region-ignore",
+              },
+              {
+                type: "doc",
                 label: "Hooks Layout + Full Page",
                 id: "smartui-hooks-layout-fullpage-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Comparison via Capabilities",
+                id: "smartui-comparison-capabilities",
               },
               {
                 type: "doc",
@@ -5020,6 +5030,16 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "API Calls",
+            id: "kane-cli-api-calls",
+          },
+          {
+            type: "doc",
+            label: "Browser State",
+            id: "kane-cli-browser-state",
+          },
+          {
+            type: "doc",
             label: "Variables & Context",
             id: "kane-cli-variables-and-context",
           },
@@ -5121,6 +5141,11 @@ module.exports = {
                 type: "doc",
                 label: "localStorage",
                 id: "kane-cli-checkpoint-devtools-localstorage",
+              },
+              {
+                type: "doc",
+                label: "Clipboard",
+                id: "kane-cli-checkpoint-devtools-clipboard",
               },
             ],
           },
