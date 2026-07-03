@@ -145,7 +145,7 @@ If you are new to the product, read **[Getting Started with Accessibility Testin
 
 - you need the **dashboard**, issue breakdowns, exports, or ticketing handoff after any scan type
 
-**Core flow:** [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/) → [Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/) → [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/) (reports may also surface **[Accessibility Web Score](/support/docs/accessibility-web-score/)** when enabled).
+**Core flow:** [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/) → [Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/) → [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/) (reports may also surface **[Accessibility Score](/support/docs/accessibility-web-score/)** when enabled).
 
 **Sharing and tracking:**
 
@@ -167,7 +167,7 @@ In the sidebar, **Features** is grouped as **Web**, **Mobile**, and **Common** (
 - [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)
 - [AI Issue Detection Agent](/support/docs/accessibility-ai-issue-detection-agent/)
 - [Capture Screenshot](/support/docs/accessibility-capture-screenshot/)
-- [Accessibility Web Score](/support/docs/accessibility-web-score/)
+- [Accessibility Score](/support/docs/accessibility-web-score/)
 - [Fragment Identifier](/support/docs/accessibility-fragment-identifier/)
 - [PDF Accessibility Scanning](/support/docs/accessibility-pdf-accessibility-scanning/)
 
