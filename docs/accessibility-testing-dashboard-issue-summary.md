@@ -40,4 +40,4 @@ Use this view when you want to understand report shape and severity before drill
 ## Related docs
 
 - [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
-- [Accessibility Web Score](/support/docs/accessibility-web-score/)
+- [Accessibility Score](/support/docs/accessibility-web-score/)

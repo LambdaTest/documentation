@@ -95,7 +95,7 @@ VPAT readers expect evidence beyond automation.
 1. **Export** the report state you want frozen for this VPAT version ([Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)). Exports reflect **filters and hide/restore** at export time. Export intentionally.
 2. Build an **evidence index**: map each major VPAT section or WCAG theme to one or more attachments (export file name, dashboard link if permitted internally, ticket IDs).
 3. **Draft table rows** in the official template: for each criterion, add **Conformance**, **Remarks**, and pointers to evidence. Prefer concise remarks that quote scan type, date, and scope (“WCAG 2.1 AA DevTools scan on v2.3.1, 2026-04-10, customer checkout only”).
-4. For **Accessibility Web Score** or similar summaries, use them only as **supporting context**, not as a substitute for criterion-by-criterion statements. See **[Accessibility Web Score](/support/docs/accessibility-web-score/)**.
+4. For **Accessibility Score** or similar summaries, use them only as **supporting context**, not as a substitute for criterion-by-criterion statements—see **[Accessibility Score](/support/docs/accessibility-web-score/)**.
 
 ### Phase 6: Internal review and publication
 
@@ -140,5 +140,5 @@ Before you call the VPAT draft “ready for review,” confirm you have:
 - [Choosing the Right Tool](/support/docs/accessibility-choosing-the-right-tool/)
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
 - [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
-- [Accessibility Web Score](/support/docs/accessibility-web-score/)
+- [Accessibility Score](/support/docs/accessibility-web-score/)
 - [Screen reader testing overview](/support/docs/screen-reader-on-accessibility/)
