@@ -33,12 +33,12 @@ We offer multiple options for comparing the **Baseline** and the **Test Output**
 
 Here are common **pixel-to-pixel** comparison options. The first group is **actively used** through `smartUI.options` (or your framework’s equivalent) in typical integrations:
 
-- `largeImageThreshold` — Pixel granularity for how comparison blocks are formed.
-- `errorType` — How differences are highlighted (`movement`, `flat`, etc.).
-- `ignore` — Reduces P2P false positives (`antialiasing`, `alpha`, `colors`, `nothing`).
-- `transparency` — Overlay transparency for the diff view.
+- `largeImageThreshold`: Pixel granularity for how comparison blocks are formed.
+- `errorType`: How differences are highlighted (`movement`, `flat`, etc.).
+- `ignore`: Reduces P2P false positives (`antialiasing`, `alpha`, `colors`, `nothing`).
+- `transparency`: Overlay transparency for the diff view.
 
-The sections **[Bounding Boxes](#bounding-boxes---compare-only-specific-area)**, **[Ignore Boxes](#ignore-boxes---ignore-only-specific-area)**, and **[Ignore Areas Colored](#ignore-areas-colored---removes-the-colored-content-from-the-comparison)** describe **region- and color-based** comparison. Examples nest keys under **`smartUI.options`** / **`smart_ui.options`** like the options above; **still validate** with your integration or support—see the warning before **Bounding Boxes**. For region-level control in the product UI, prefer **[Draw on UI / annotations](/support/docs/smartui-draw-on-ui/)**.
+The sections **[Bounding Boxes](#bounding-boxes---compare-only-specific-area)**, **[Ignore Boxes](#ignore-boxes---ignore-only-specific-area)**, and **[Ignore Areas Colored](#ignore-areas-colored---removes-the-colored-content-from-the-comparison)** describe **region- and color-based** comparison. Examples nest keys under **`smartUI.options`** / **`smart_ui.options`** like the options above; **still validate** with your integration or support, see the warning before **Bounding Boxes**. For region-level control in the product UI, prefer **[Draw on UI / annotations](/support/docs/smartui-draw-on-ui/)**.
 
 ## Examples with comparison settings
 
@@ -234,14 +234,14 @@ let capabilities = {
 ---
 
 :::warning `boundingBoxes`, `ignoredBoxes`, `ignoreAreasColoredWith`
-These three comparison modes exist in SmartUI’s **pixel-to-pixel** model. The examples below nest them under **`smartUI.options`** (Selenium) and **`smart_ui.options`** (Cypress)—the same shape as **Image Threshold** through **Transparency**—but **behavior can still vary by integration**; **do not copy into production** without validating against your session or with **[support](mailto:support@testmuai.com)**. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with support.
+These three comparison modes exist in SmartUI’s **pixel-to-pixel** model. The examples below nest them under **`smartUI.options`** (Selenium) and **`smart_ui.options`** (Cypress), the same shape as **Image Threshold** through **Transparency**, but **behavior can still vary by integration**; **do not copy into production** without validating against your session or with **[support](mailto:support@testmuai.com)**. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with support.
 :::
 
 ### Bounding Boxes - Compare only specific area {#bounding-boxes---compare-only-specific-area}
 
 The bounding boxes are the areas created on the screenshot which needs to be compared with the baseline ignoring other areas from the screenshot.
 
-**Reference only —** verify with support before relying on capability wiring.
+**Reference only:** verify with support before relying on capability wiring.
 
 This specific case is used to compare only a specific area of the screenshot from the **baseline**.
 
@@ -316,7 +316,7 @@ let capabilities = {
 
 ### Ignore Boxes - Ignore only specific area {#ignore-boxes---ignore-only-specific-area}
 
-**Reference only —** verify with support before relying on capability wiring.
+**Reference only:** verify with support before relying on capability wiring.
 
 The ignored boxes are the areas created on the screenshot which needs to be ignored with the baseline comparing the other areas from the screenshot.
 
@@ -393,7 +393,7 @@ let capabilities = {
 
 ### Ignore Areas Colored - Removes the colored content from the comparison {#ignore-areas-colored---removes-the-colored-content-from-the-comparison}
 
-**Reference only —** verify with support before relying on capability wiring.
+**Reference only:** verify with support before relying on capability wiring.
 
 You can exclude the pixels that match the specified color on a **baseline** image from the comparison view. This feature will ignore that specific regions with the color pixels and shows the comparison view.
 

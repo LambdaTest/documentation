@@ -137,7 +137,7 @@ After running your tests, the **Visual Build** becomes available in the dashboar
 <img loading="lazy" src={require('../assets/images/web-scanner/visual-build.png').default} alt="Visual Build" className="doc_img"/>
 
 ### Build Status
-Easily track the state of each screenshot — **Approved**, **Changes Found**, **New**, **Under Review**, and more.
+Easily track the state of each screenshot: **Approved**, **Changes Found**, **New**, **Under Review**, and more.
 
 <p align="center">
   <img loading="lazy" src={require('../assets/images/web-scanner/threedot-visual.png').default} alt="Build Status View" className="doc_img"/>

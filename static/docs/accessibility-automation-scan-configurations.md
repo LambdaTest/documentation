@@ -1,3 +1,53 @@
+---
+id: accessibility-automation-scan-configurations
+title: Scan Configurations via Capabilities (Automation)
+sidebar_label: Scan Configurations (Capabilities)
+description: "Configure mobile app accessibility scans in automation through Appium capabilities: master toggle, WCAG version, and Best Practice, Beta, and AI rule groups."
+keywords:
+  - mobile accessibility automation
+  - accessibility capabilities
+  - wcagVersion capability
+  - bestPractice betaRules aiEnabled
+  - appium accessibility scan config
+url: https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/
+site_name: TestMu AI
+slug: accessibility-automation-scan-configurations/
+canonical: https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Native App Automation",
+          "item": `${BRAND_URL}/support/docs/accessibility-native-app-automation-test/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Scan Configurations via Capabilities",
+          "item": `${BRAND_URL}/support/docs/accessibility-automation-scan-configurations/`
+        }]
+      })
+    }}
+></script>
+
 # Scan Configurations via Capabilities (Automation)
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
@@ -8,7 +58,7 @@ Per-rule enable/disable picking is a **Manual-only** feature and is not used in 
 
 ## When to use this
 
-Use these capabilities when users **already run Appium** against TestMu AI real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups, without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
+Use these capabilities when users **already run Appium** against <BrandName /> real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups, without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
 
 ## Prerequisites
 
@@ -99,7 +149,7 @@ Only the rules in the effective set are evaluated, and the report for that build
 The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category:
 
 {/* IMAGE PLACEHOLDER: report Applied Settings panel showing the rules evaluated for the scan. Save the screenshot at the path below, then uncomment.
-
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-configurations/applied-settings-report.png').default} alt="Accessibility report header with WCAG 2.1 AA, Best Practices and Beta Rules tags, and the Applied Settings panel listing evaluated rules grouped by category such as Accessibility Labels" className="doc_img"/>
 */}
 
 ## Product boundary

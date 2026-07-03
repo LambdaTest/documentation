@@ -183,7 +183,7 @@ Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/logi
 
 **Fix:**
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
-2. **File location.** Confirm your file is in the right place — see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
+2. **File location.** Confirm your file is in the right place, see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
 3. **Inline test.** Bypass file loading by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
@@ -282,7 +282,7 @@ node --version   # Must be 18 or higher
 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is informational — your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
+The notice is informational, your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
 
 ---
 

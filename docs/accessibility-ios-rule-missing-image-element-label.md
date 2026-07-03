@@ -21,7 +21,7 @@ The scanner identifies image elements that are visible on screen and carry meani
 
 ## Why it matters
 
-VoiceOver users cannot see images. Without a label, they miss the information the image conveys — whether it is a product photo, an avatar, a status icon, or a chart.
+VoiceOver users cannot see images. Without a label, they miss the information the image conveys, whether it is a product photo, an avatar, a status icon, or a chart.
 
 ## Common failure patterns
 

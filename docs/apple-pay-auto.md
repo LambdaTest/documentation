@@ -24,7 +24,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <RealDeviceTag value="Real Device" /> 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
-For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely—without relying on production cards.
+For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely, without relying on production cards.
 
 With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 

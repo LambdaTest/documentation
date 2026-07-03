@@ -61,7 +61,7 @@ Pass a `coordinates` entry (a list of `"x1,y1,x2,y2"` strings) under `ignoreDOM`
 
 <img loading="lazy" src={require('../assets/images/smartui-hooks-region-ignore/coordinate-rectangle.png').default} alt="A coordinate rectangle: x1,y1 is the top-left corner (left=50, top=50) and x2,y2 is the bottom-right corner (right=300, bottom=300), giving a 250 x 250 region." width="503" height="490" className="doc_img img_center"/>
 
-For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)` — a 250 × 250 rectangle.
+For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)`, a 250 × 250 rectangle.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>

@@ -1,9 +1,9 @@
 ---
 id: selenium-hyperexecute-accessibility-tests
-title: HyperExecute integration — Selenium accessibility automation
+title: "HyperExecute integration: Selenium accessibility automation"
 hide_title: false
 sidebar_label: HyperExecute (Selenium)
-description: HyperExecute integration guide — run Selenium-based Accessibility Automation on the HyperExecute grid, align YAML with accessibility capabilities, and open reports after the job completes.
+description: "HyperExecute integration guide: run Selenium-based Accessibility Automation on the HyperExecute grid, align YAML with accessibility capabilities, and open reports after the job completes."
 keywords:
     - TestMu AI
     - Accessibility
@@ -40,19 +40,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "HyperExecute — Selenium accessibility automation",
+          "name": "HyperExecute: Selenium accessibility automation",
           "item": `${BRAND_URL}/support/docs/selenium-hyperexecute-accessibility-tests/`
         }]
       })
     }}
 ></script>
 
-# HyperExecute integration — Selenium accessibility automation
+# HyperExecute integration: Selenium accessibility automation
 
-This page is the **HyperExecute** integration guide for **Accessibility Automation** when your tests use **Selenium**. It assumes you already run Selenium jobs on HyperExecute (YAML + CLI) and need the same **accessibility** session capabilities and reporting behavior on the grid—not a generic Selenium-only tutorial. For framework setup on local or other grids, start with **[Accessibility Automation](/support/docs/accessibility-automation/)** and the **[Selenium](/support/docs/accessibility-automation-test/)** setup doc.
+This page is the **HyperExecute** integration guide for **Accessibility Automation** when your tests use **Selenium**. It assumes you already run Selenium jobs on HyperExecute (YAML + CLI) and need the same **accessibility** session capabilities and reporting behavior on the grid, not a generic Selenium-only tutorial. For framework setup on local or other grids, start with **[Accessibility Automation](/support/docs/accessibility-automation/)** and the **[Selenium](/support/docs/accessibility-automation-test/)** setup doc.
 
 :::note
-**Scope:** Selenium test code + `hyperexecute.yaml` orchestration on HyperExecute. If the Accessibility tab never appears on sessions, confirm `accessibility: true` (and related caps) in the process HyperExecute actually runs, and that Accessibility is enabled for your organization—contact support if needed.
+**Scope:** Selenium test code + `hyperexecute.yaml` orchestration on HyperExecute. If the Accessibility tab never appears on sessions, confirm `accessibility: true` (and related caps) in the process HyperExecute actually runs, and that Accessibility is enabled for your organization. Contact support if needed.
 :::
 
 ## Prerequisites
@@ -65,7 +65,7 @@ This page is the **HyperExecute** integration guide for **Accessibility Automati
 ## High-level flow (HyperExecute)
 
 1. Keep your Selenium suite configured for **HyperExecute** (YAML, discovery, `testRunnerCommand`).
-2. Enable **Accessibility** capabilities in the same session options you pass to `RemoteWebDriver` (or equivalent)—HyperExecute forwards them like any other capability.
+2. Enable **Accessibility** capabilities in the same session options you pass to `RemoteWebDriver` (or equivalent). HyperExecute forwards them like any other capability.
 3. Trigger the job with the **HyperExecute CLI** using your YAML.
 4. When the build finishes, open the session in the **Automation** dashboard and use the **Accessibility** tab for the report.
 
@@ -79,12 +79,12 @@ This page is the **HyperExecute** integration guide for **Accessibility Automati
 
 ## YAML and test code (integration point)
 
-HyperExecute does **not** replace Selenium capabilities—it **orchestrates** the same test JAR or Node project. The integration work is making sure the command HyperExecute runs is the profile that sets accessibility caps. Ensure:
+HyperExecute does **not** replace Selenium capabilities. It **orchestrates** the same test JAR or Node project. The integration work is making sure the command HyperExecute runs is the profile that sets accessibility caps. Ensure:
 
 - Your **test process** still loads the code path that sets `accessibility` on `RemoteWebDriver` / options.
 - **Discovery** in `hyperexecute.yaml` points at the same `mvn`/`gradle`/`npm` command you use locally for Accessibility runs.
 
-Example pattern (illustrative only—adapt to your repo’s actual `runson`, `pre`, and `testRunnerCommand`):
+Example pattern (illustrative only, adapt to your repo’s actual `runson`, `pre`, and `testRunnerCommand`):
 
 ```yaml
 version: 0.1
@@ -107,7 +107,7 @@ If your team keeps caps in **environment-specific property files**, inject those
 ## Related docs
 
 - [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
-- [Selenium — Accessibility Automation setup](/support/docs/accessibility-automation-test/)
+- [Selenium: Accessibility Automation setup](/support/docs/accessibility-automation-test/)
 - [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 - [HyperExecute YAML parameters](/support/docs/hyperexecute-yaml-parameters/)

@@ -2,7 +2,7 @@
 id: accessibility-app-scanner
 title: Accessibility App Scanner (Overview)
 sidebar_label: Accessibility App Scanner
-description: Manual mobile app accessibility testing on real devices—upload, session, scan screens, review issues, and export reports.
+description: "Manual mobile app accessibility testing on real devices: upload, session, scan screens, review issues, and export reports."
 slug: accessibility-app-scanner/
 url: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 site_name: TestMu AI
@@ -15,7 +15,7 @@ Accessibility App Scanner is the **manual** mobile app workflow for reviewing ac
 
 ## When to use this
 
-Use App Scanner when you want to **inspect** Android or iOS app screens interactively and validate findings as you move through the app—ideal for exploratory passes, design reviews, or reproducing issues filed by users.
+Use App Scanner when you want to **inspect** Android or iOS app screens interactively and validate findings as you move through the app, ideal for exploratory passes, design reviews, or reproducing issues filed by users.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Use App Scanner when you want to **inspect** Android or iOS app screens interact
 2. **Pick a real device** pool that matches your target users (OS + locale).
 3. **Launch the session** and wait until the app is installed and foregrounded.
 4. **Navigate critical journeys** (onboarding, login, checkout, settings). After each major screen stabilizes, trigger the **scan** action the UI provides.
-5. **Review issues** in the side panel or overlay—open each item to see rule text, element context, and suggested remediation where available.
+5. **Review issues** in the side panel or overlay, open each item to see rule text, element context, and suggested remediation where available.
 6. **Save or end** the session so results appear under Accessibility **Reports** for dashboard analysis ([Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)).
 7. Optional: run a **[Screen Reader](/support/docs/screen-reader-on-accessibility/)** pass on the same build for manual confirmation.
 

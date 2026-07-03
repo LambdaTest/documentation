@@ -188,7 +188,7 @@ Each tenant maintains its own:
 - RSA private key for token generation
 - Short-lived installation access tokens
 
-Credentials are **fully isolated** between tenants — tokens and keys from one GitHub instance are never used for another.
+Credentials are **fully isolated** between tenants, tokens and keys from one GitHub instance are never used for another.
 
 ### What You Can Do
 
@@ -210,5 +210,5 @@ For GitHub Enterprise Server or any tenant other than `github.com`:
 3. Complete the registration on the <BrandName /> setup page. The tenant is recorded automatically based on the GitHub App's origin.
 
 :::note
-For the default tenant (`github.com`), the platform's built-in Marketplace GitHub App handles key management automatically — no manual secret creation is needed.
+For the default tenant (`github.com`), the platform's built-in Marketplace GitHub App handles key management automatically, no manual secret creation is needed.
 :::

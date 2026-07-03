@@ -1,3 +1,51 @@
+---
+id: accessibility-app-scanner-scan-configurations
+title: Scan Configurations for Mobile App Accessibility (Manual)
+sidebar_label: Scan Configurations
+description: "Configure which accessibility rules run on a manual mobile app scan: pick a WCAG level, toggle rule groups, enable individual rules, and reuse last-used settings."
+keywords:
+  - mobile accessibility scan configuration
+  - wcag conformance level
+  - accessibility rule groups
+  - best practice beta ai rules
+  - app scanner accessibility
+url: https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/
+site_name: TestMu AI
+slug: accessibility-app-scanner-scan-configurations/
+canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Accessibility App Scanner",
+          "item": `${BRAND_URL}/support/docs/accessibility-app-scanner/`
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Scan Configurations",
+          "item": `${BRAND_URL}/support/docs/accessibility-app-scanner-scan-configurations/`
+        }]
+      })
+    }}
+></script>
+
 # Scan Configurations for Mobile App Accessibility (Manual)
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
@@ -20,13 +68,13 @@ Use Scan Configurations when users want to scope a manual scan to only the relev
 6. **Run the scan.** Only the selected rules are evaluated on the device, and the report contains results for exactly those rules.
 
 {/* IMAGE PLACEHOLDER: App Scanner home screen with the Scan Settings summary (original screenshot, compressed to under 100 KB). Save the file at the path below, then uncomment.
-
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-settings-home.png').default} alt="App Accessibility Scanner home screen showing the Scan Settings summary (WCAG 2.1 AA, Best Practices On, Beta Rules On, AI Detection Off, Rules 15/15) and the gear icon that opens scan configuration" className="doc_img"/>
 */}
 
 ## Configuration Options Details
 
 {/* IMAGE PLACEHOLDER: scan configuration panel (original screenshot). Save the file at the path below, then uncomment.
-
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-settings-panel.png').default} alt="Scan configuration panel showing WCAG version and level, rule group toggles (Best Practice, Beta, AI-powered), and individual rules grouped by category" className="doc_img"/>
 */}
 
 ### WCAG version and level (with inheritance)
@@ -48,7 +96,9 @@ Some rules carry a special tag in addition to their WCAG criterion. Each tag has
 | **Beta** | Newer rules still being refined (for example, traversal-order and certain contrast or touch-target checks). | ON |
 | **AI-powered** | Rules evaluated by AI Detention Agent (for example, *Image in Text* detection). | OFF |
 
+:::tip
 A rule tagged "Best Practice" will **not** run if the Best Practice toggle is off, even if its WCAG criterion is in range. The same applies to Beta and AI-powered rules. If an expected rule does not run, check its group toggle.
+:::
 
 ### Individual rules and categories
 

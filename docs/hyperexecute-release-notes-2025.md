@@ -96,7 +96,7 @@ Performance testing often needs more than a single test run. Workflows allow you
 
 ## Version 3.1.4
 ### Enhanced Support for Azure Repositories in HyperExecute Projects
-We have introduced an enhancement to the HyperExecute [Custom Project feature](/support/docs/hyperexecute-projects/#setup-custom-project) to support Azure Repos. This enables you with code repositories hosted in Azure DevOps to execute tests directly on HyperExecute—without relying on Jenkins or any external CI/CD tool.
+We have introduced an enhancement to the HyperExecute [Custom Project feature](/support/docs/hyperexecute-projects/#setup-custom-project) to support Azure Repos. This enables you with code repositories hosted in Azure DevOps to execute tests directly on HyperExecute, without relying on Jenkins or any external CI/CD tool.
 
 With this update, you can now configure Azure Repos in the same intuitive manner as GitHub, or Bitbucket. Simply provide the repository details and Personal Access Token (PAT), and HyperExecute will fetch the code and trigger workflows seamlessly.
 
@@ -161,7 +161,7 @@ HyperExecute categorizes logs into Errors and Warnings using intelligent pattern
 
 ## Version 3.0.5
 ### Feature: syncStart
-HyperExecute now supports the `syncStart` directive in the job YAML. When enabled, all VMs in `autosplit` or `matrix` mode start their tasks simultaneously after allocation—ideal for benchmarking or comparative test runs.
+HyperExecute now supports the `syncStart` directive in the job YAML. When enabled, all VMs in `autosplit` or `matrix` mode start their tasks simultaneously after allocation, ideal for benchmarking or comparative test runs.
 
 If some VMs are not ready within 15 minutes, the job starts with the available ones.
 
@@ -370,7 +370,7 @@ framework:
 
 ## Version 2.9.4
 ### YAML-Based Capability Overrides for Selenium Tests
-You can now override Selenium capabilities directly from your `hyperexecute.yaml` file using the new `ltOptions` flag. This enhancement allows you to define key-value pairs—like browser type, version, logs, video, tunnel, and more without changing your test scripts.
+You can now override Selenium capabilities directly from your `hyperexecute.yaml` file using the new `ltOptions` flag. This enhancement allows you to define key-value pairs, like browser type, version, logs, video, tunnel, and more without changing your test scripts.
 
 **Why it matters?**
 - Avoid code changes for environment-specific needs.

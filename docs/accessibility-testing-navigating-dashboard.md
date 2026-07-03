@@ -28,7 +28,7 @@ Continue reading to understand the dashboard's purpose and how to navigate betwe
 1. **Sign in** to TestMu AI and open **Accessibility** from the product navigation (exact placement can vary by account layout).
 2. **Locate the report list** for your workspace: completed DevTools sessions, automation builds, scheduled scans, or Web Scanner imports should each appear as rows or cards once processing has finished.
 3. **Pick a report** by name, time, or URL. If nothing appears, confirm the upstream run finished (Automation dashboard for Selenium, or your scan wizard for scheduling/Web Scanner).
-4. **Scan the header** for counts, severity mix, and (if shown) **Accessibility Score**—use this as a triage compass before drilling down.
+4. **Scan the header** for counts, severity mix, and (if shown) **Accessibility Web Score**. Use this as a triage compass before drilling down.
 5. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** for grouped insight, then **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** for line-item work.
 6. Use **filters** (date, user, scan type, WCAG-related fields where available) to narrow large histories.
 7. When you are ready to share evidence, use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** or integrations from **[Integrations](/support/docs/accessibility-report-integrations/)**.

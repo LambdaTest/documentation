@@ -27,7 +27,7 @@ Use this page when you want to scan many URLs and do not want to add them one by
 
 1. Open **[Test Scheduling](/support/docs/accessibility-test-scheduling/)** and start **[Create Scheduled Scan](/support/docs/accessibility-test-scheduling-scan/)** (or edit an existing schedule).
 2. Choose **manual**, **CSV**, or **sitemap** import depending on where your canonical URL list lives.
-3. For **sitemap**, supply the sitemap URL (often `https://example.com/sitemap.xml`). Wait for extraction to finish, then **review** the list—remove admin-only, duplicate, or non-HTML URLs.
+3. For **sitemap**, supply the sitemap URL (often `https://example.com/sitemap.xml`). Wait for extraction to finish, then **review** the list: remove admin-only, duplicate, or non-HTML URLs.
 4. For **CSV**, align columns with the template your team uses (path, locale, or environment columns if applicable). Validate in a spreadsheet before upload.
 5. For **manual** entry, paste critical journeys first (login, checkout, settings), then broaden coverage.
 6. Save the URL set, then continue with authentication and schedule steps in the scheduling wizard.

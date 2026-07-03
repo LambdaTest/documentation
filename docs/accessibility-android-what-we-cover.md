@@ -54,11 +54,11 @@ Reserve time for **TalkBack**, **Switch Access**, **font scaling**, and **real d
 
 | Area | Manual verification focus |
 |------|---------------------------|
-| **1.2.x Time-based media** | In-app media — captions, descriptions — validate with representative assets. |
-| **1.3.2–1.3.3 · 1.4.x beyond contrast** | Sequence, sensory-only instructions, resize/reflow/hover content — interactive and visual review. |
-| **2.x keyboard / focus / timing (full)** | Full flows with TalkBack; session and motion behavior — validate beyond rule snapshots. |
-| **3.x language, errors, help** | Error suggestions, legal safeguards — product and compliance review. |
-| **AAA criteria** | Optional stretch goals — plan when AAA is explicitly in scope. |
+| **1.2.x Time-based media** | In-app media (captions, descriptions), validate with representative assets. |
+| **1.3.2–1.3.3 · 1.4.x beyond contrast** | Sequence, sensory-only instructions, resize/reflow/hover content: interactive and visual review. |
+| **2.x keyboard / focus / timing (full)** | Full flows with TalkBack; session and motion behavior, validate beyond rule snapshots. |
+| **3.x language, errors, help** | Error suggestions, legal safeguards: product and compliance review. |
+| **AAA criteria** | Optional stretch goals, plan when AAA is explicitly in scope. |
 
 ## Related docs
 

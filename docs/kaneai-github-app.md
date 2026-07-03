@@ -3,7 +3,7 @@ id: github-app-integration
 title: TestMu Cloud GitHub App Integration
 hide_title: true
 sidebar_label: KaneAI GitHub App Integration
-description: Transform every pull request into a validation surface with AI-powered test generation, execution on HyperExecute, and Root Cause Analysis — all without leaving GitHub.
+description: Transform every pull request into a validation surface with AI-powered test generation, execution on HyperExecute, and Root Cause Analysis, all without leaving GitHub.
 keywords:
   - github app
   - testmu ai integration
@@ -51,7 +51,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 **Your pull requests should deliver proof, not just code.**
 
-The <BrandName /> Cloud GitHub App brings KaneAI — our AI testing agent — directly into your GitHub workflow. When a developer opens a pull request, KaneAI analyzes the changes, generates targeted test cases, executes them at scale on HyperExecute, and reports back with AI-powered Root Cause Analysis. The entire cycle runs in minutes, and every update appears right inside your PR.
+The <BrandName /> Cloud GitHub App brings KaneAI, our AI testing agent, directly into your GitHub workflow. When a developer opens a pull request, KaneAI analyzes the changes, generates targeted test cases, executes them at scale on HyperExecute, and reports back with AI-powered Root Cause Analysis. The entire cycle runs in minutes, and every update appears right inside your PR.
 
 No context switching. No manual test authoring. No waiting.
 
@@ -63,19 +63,19 @@ No context switching. No manual test authoring. No waiting.
 
 #### Automated AI Test Authoring
 
-Automatically generate test coverage for every pull request. KaneAI reads your code diff, PR description, README, and custom agent instructions to create automated tests that reflect actual business logic — not generic boilerplate.
+Automatically generate test coverage for every pull request. KaneAI reads your code diff, PR description, README, and custom agent instructions to create automated tests that reflect actual business logic, not generic boilerplate.
 
 #### Smart Intelligence
 
-KaneAI scans your existing test inventory in <BrandName /> Test Manager to find semantically similar test cases relevant to the PR changes. These existing tests are added alongside the newly generated test cases into the test run and executed on HyperExecute — maximizing test coverage by combining new and proven tests in a single validation cycle.
+KaneAI scans your existing test inventory in <BrandName /> Test Manager to find semantically similar test cases relevant to the PR changes. These existing tests are added alongside the newly generated test cases into the test run and executed on HyperExecute, maximizing test coverage by combining new and proven tests in a single validation cycle.
 
 #### Seamless Execution
 
-Tests run automatically and seamlessly on <BrandName />'s HyperExecute infrastructure — in parallel across browsers, devices, and platforms. Time to first signal is measured in minutes, not hours.
+Tests run automatically and seamlessly on <BrandName />'s HyperExecute infrastructure, in parallel across browsers, devices, and platforms. Time to first signal is measured in minutes, not hours.
 
 #### In-Depth Insights
 
-Detailed execution reports enriched with AI-powered Root Cause Analysis, offering actionable recommendations. When tests fail, KaneAI analyzes logs, screenshots, network traces, and stack traces to surface the specific root cause — directly in your PR comment.
+Detailed execution reports enriched with AI-powered Root Cause Analysis, offering actionable recommendations. When tests fail, KaneAI analyzes logs, screenshots, network traces, and stack traces to surface the specific root cause, directly in your PR comment.
 
 ---
 
@@ -195,7 +195,7 @@ test_url: "https://your-deployed-app-url.com/"
 | `environment_id` | The target testing environment (browser, OS, device configurations) |
 | `test_url` | The base URL of your application under test (your staging or testing environment URL) |
 
-After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values — project ID, folder ID, assignee, and environment ID — are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
+After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values (project ID, folder ID, assignee, and environment ID) are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/github-actions-three.png').default} alt="Copy configuration values from integration sidebar" className="doc_img"/>
 
@@ -228,7 +228,7 @@ your-repo/
 
 ---
 
-## Try It Out — Sample Repository
+## Try It Out: Sample Repository
 
 Explore the GitHub App workflow using our public sample repository:
 
@@ -243,11 +243,11 @@ Browse the open pull requests to see:
 
 To experience the full workflow hands-on, fork the sample repository and run the GitHub App in your own environment:
 
-1. **Fork the repository** — Click **Fork** on the [sample repository](https://github.com/LambdaTest/ai-native-quality-validation-sample) to create a copy under your GitHub account.
-2. **Install the GitHub App** — Install the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on your forked repository (see [Installation](#installation) above).
-3. **Configure your credentials** — Add the `.lambdatest/config.yaml` file with your <BrandName /> project ID, folder ID, and other configuration values (see [Repository Configuration](#repository-configuration)).
-4. **Set up GitHub Pages & Actions** — Enable GitHub Pages and GitHub Actions in your forked repository to handle deployment and workflows.
-5. **Trigger the workflow** — Open a pull request in your fork and comment `@KaneAI Validate this PR` to see the full AI testing pipeline in action.
+1. **Fork the repository**: Click **Fork** on the [sample repository](https://github.com/LambdaTest/ai-native-quality-validation-sample) to create a copy under your GitHub account.
+2. **Install the GitHub App**: Install the [<BrandName /> Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on your forked repository (see [Installation](#installation) above).
+3. **Configure your credentials**: Add the `.lambdatest/config.yaml` file with your <BrandName /> project ID, folder ID, and other configuration values (see [Repository Configuration](#repository-configuration)).
+4. **Set up GitHub Pages & Actions**: Enable GitHub Pages and GitHub Actions in your forked repository to handle deployment and workflows.
+5. **Trigger the workflow**: Open a pull request in your fork and comment `@TestMuAI Validate this PR` to see the full AI testing pipeline in action.
 
 ---
 
@@ -267,10 +267,39 @@ The test generation workflow is triggered through a simple comment on any pull r
 
 | Command | Description |
 |---------|-------------|
-| `@KaneAI Validate this PR` | Triggers the full AI testing workflow — analysis, generation, execution, and reporting |
-| `@LambdaTest Validate this PR` | Alias for the above |
+| `@TestMuAI Validate this PR` | Triggers the full AI testing workflow: analysis, generation, execution, and reporting |
+| `@KaneAI Validate this PR` | Alias for the above |
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/1-flow_triggered.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
+
+#### Optional Parameters
+
+You can extend any trigger command with optional parameters to customize test execution for a specific PR:
+
+| Parameter | Description |
+|-----------|-------------|
+| `--url <test_url>` | Overrides the `test_url` set in `.lambdatest/config.yaml` for this PR. Useful for ephemeral preview environments where the deployment URL changes per PR. |
+| `--tunnel <tunnel_name>` | Routes test traffic through a named LambdaTest tunnel. Required when testing against a locally hosted or privately accessible environment that is not publicly reachable. |
+
+**Example:**
+
+```
+@TestMuAI Validate this PR --url https://preview-123.your-app.com --tunnel my-tunnel-name
+```
+
+Both parameters are independent. Use `--url` alone to override the URL, `--tunnel` alone for private environments, or combine them when both apply.
+
+#### Setting Up Tunnel Testing
+
+When your application runs on a local machine, private network, or staging environment not accessible from the internet, use the `--tunnel` flag to route test traffic through a secure LambdaTest tunnel.
+
+**Before triggering the workflow with `--tunnel`:**
+
+1. Start a LambdaTest tunnel on the machine that can reach your application. The tunnel must be active at the time the workflow is triggered.
+2. Note the tunnel name you assigned when starting the tunnel.
+3. Pass that exact tunnel name as the `--tunnel` value in your PR comment.
+
+For complete setup instructions, refer to the [KaneAI Tunnel Support documentation](https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
 
 
 #### What Happens Next
@@ -283,14 +312,14 @@ After you post the trigger comment, KaneAI immediately begins working:
 4. **Test Generation**: Intelligent test cases are created with appropriate assertions, validations, and edge case handling.
 
 :::tip Fast Feedback
-The first signal — test plan and progress tracker — appears in your PR within approximately **1 minute** of triggering the workflow. Full execution and reporting typically completes within minutes, depending on test volume and complexity.
+The first signal, test plan and progress tracker, appears in your PR within approximately **1 minute** of triggering the workflow. Full execution and reporting typically completes within minutes, depending on test volume and complexity.
 :::
 
 ---
 
 ## Live PR Updates, Step by Step
 
-From the moment you trigger the workflow, KaneAI posts real-time updates directly in your pull request. Every phase — from analysis through execution to reporting — is visible without leaving GitHub. Here is what happens at each stage.
+From the moment you trigger the workflow, KaneAI posts real-time updates directly in your pull request. Every phase, from analysis through execution to reporting, is visible without leaving GitHub. Here is what happens at each stage.
 
 #### Step 1: Real-Time Progress Tracker
 
@@ -304,14 +333,14 @@ As soon as the workflow begins, KaneAI posts a comprehensive progress tracker co
 - **Test Run Management**: Execution status, including configuration, triggering, monitoring, and completion
 - **Reporting Status**: Final report generation and PR approval recommendation
 
-The tracker automatically updates as each stage completes — no manual refreshes required.
+The tracker automatically updates as each stage completes, no manual refreshes required.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/2-progress-tracker.png').default} alt="KaneAI Progress Tracker" className="doc_img"/>
 
 
 #### Step 2: Automated AI Test Authoring
 
-Once KaneAI completes test generation, a detailed comment lists every test case that was created. These are not generic tests — they reflect the specific code changes in your PR and your application's business context.
+Once KaneAI completes test generation, a detailed comment lists every test case that was created. These are not generic tests. They reflect the specific code changes in your PR and your application's business context.
 
 Each entry includes:
 
@@ -328,13 +357,13 @@ This comment updates dynamically as test authoring progresses, so you can monito
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/3-test-cases-generated.png').default} alt="AI Generated Test Cases" className="doc_img"/>
 
 
-#### Step 3: Smart Intelligence — Similar Test Detection
+#### Step 3: Smart Intelligence (Similar Test Detection)
 
 KaneAI does not rely solely on newly generated tests. It scans your existing test inventory in <BrandName /> Test Manager to find semantically similar test cases that are relevant to the PR changes. These existing tests are added on top of the newly generated test cases into the test run for execution on HyperExecute. This is **Smart Intelligence** at work.
 
-- **Maximizes coverage** — Combines AI-generated tests with proven existing test cases, ensuring both new and established scenarios are validated in a single run.
-- **Leverages your test library** — Your team's existing test cases become active participants in every PR validation, not just historical records.
-- **Builds institutional knowledge** — Every test run enriches the system's understanding of your project, making future test suggestions progressively more accurate.
+- **Maximizes coverage**: Combines AI-generated tests with proven existing test cases, ensuring both new and established scenarios are validated in a single run.
+- **Leverages your test library**: Your team's existing test cases become active participants in every PR validation, not just historical records.
+- **Builds institutional knowledge**: Every test run enriches the system's understanding of your project, making future test suggestions progressively more accurate.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/4-similar-test-cases.png').default} alt="Semantically Similar Test Cases" className="doc_img"/>
 
@@ -347,7 +376,7 @@ When test execution begins, a dedicated comment provides live status updates dir
 - **Real-Time Execution Status**: Live updates as tests run, including pass/fail counts and completion percentage
 - **HyperExecute Dashboard Link**: Direct access to detailed logs, screenshots, video recordings, and network traces
 
-Tests run in parallel across browsers, devices, and operating systems on <BrandName />'s HyperExecute infrastructure — delivering results at scale without queuing delays.
+Tests run in parallel across browsers, devices, and operating systems on <BrandName />'s HyperExecute infrastructure, delivering results at scale without queuing delays.
 
 :::note
 Test run link in this comment can be accessed by any user in your organization who has <BrandName /> Test Manager access.
@@ -374,7 +403,7 @@ For any failing test, KaneAI performs automated **Root Cause Analysis (RCA)** by
 - Network request logs and timing
 - Stack traces and error messages
 
-The RCA summary is posted directly in your PR, along with a clear recommendation — approve, request changes, or investigate further. Your team gets a readable diagnosis, not a raw stack dump.
+The RCA summary is posted directly in your PR, along with a clear recommendation: approve, request changes, or investigate further. Your team gets a readable diagnosis, not a raw stack dump.
 
 :::note
 Test run link in this comment can be accessed by any user in your organization who has <BrandName /> Test Manager access.
@@ -389,10 +418,10 @@ Test run link in this comment can be accessed by any user in your organization w
 
 The <BrandName /> Cloud GitHub App eliminates the gap between code change and validated confidence. Instead of treating testing as a separate phase that happens after development, every pull request becomes a self-validating artifact.
 
-- **Automated AI Test Authoring** — KaneAI handles test design, script generation, and execution. Your team reviews results, not writes boilerplate.
-- **Smart Intelligence** — AI finds existing test cases semantically relevant to your PR changes and adds them alongside newly generated tests, maximizing coverage with every validation run.
-- **Seamless Execution** — Tests run automatically inside your PR workflow. Developers, QA engineers, and stakeholders all see the same information in the same place — no context switching required.
-- **In-Depth Insights** — AI Root Cause Analysis transforms cryptic test failures into actionable diagnoses with recommended fixes.
+- **Automated AI Test Authoring**: KaneAI handles test design, script generation, and execution. Your team reviews results, not writes boilerplate.
+- **Smart Intelligence**: AI finds existing test cases semantically relevant to your PR changes and adds them alongside newly generated tests, maximizing coverage with every validation run.
+- **Seamless Execution**: Tests run automatically inside your PR workflow. Developers, QA engineers, and stakeholders all see the same information in the same place, no context switching required.
+- **In-Depth Insights**: AI Root Cause Analysis transforms cryptic test failures into actionable diagnoses with recommended fixes.
 
 :::note
 Every test run, result, and AI recommendation is permanently recorded in your PR history, providing a complete audit trail for compliance and retrospective analysis.
@@ -402,7 +431,7 @@ Every test run, result, and AI recommendation is permanently recorded in your PR
 
 ## Video Walkthrough
 
-Watch the video below for a complete walkthrough of the <BrandName /> Cloud GitHub App in action — from installation to AI-powered test generation and reporting.
+Watch the video below for a complete walkthrough of the <BrandName /> Cloud GitHub App in action, from installation to AI-powered test generation and reporting.
 
 <div className="ytframe">
 <div className="youtube" data-embed="GTiqj7FFWfg" data-loading-attribute="eager">

@@ -58,12 +58,12 @@ Certain iOS apps may retain user data such as login details across different tes
 This happens because when an app is uninstalled, any Keychain data associated with it **remains on the device**, as iOS does not automatically clear it.  
 While this data is isolated from other apps, it can persist unless specifically removed.
 
-To prevent data from carrying over across sessions, <BrandName /> offers an option to automatically clear all Keychain entries after your test ends — ensuring a clean environment for every run.
+To prevent data from carrying over across sessions, <BrandName /> offers an option to automatically clear all Keychain entries after your test ends, ensuring a clean environment for every run.
 
 ## Keychain Access Groups During App Resigning
 
 When <BrandName /> resigns your iOS application using a wildcard provisioning profile (to enable installation on real devices), the app’s **keychain-access-groups** entitlement is preserved.  
-However, the **Bundle Seed ID** (also known as Team ID) — a critical part of access groups — gets replaced during resigning.
+However, the **Bundle Seed ID** (also known as Team ID), a critical part of access groups, gets replaced during resigning.
 
 As a result, app functionalities that depend on the original access group may break if not handled properly.  
 By enabling Keychain support, <BrandName /> takes care of these changes, allowing your app to continue using Keychain securely even after resigning.

@@ -2,7 +2,7 @@
 id: accessibility-jaws-windows
 title: JAWS on Windows
 sidebar_label: JAWS on Windows
-description: JAWS on Windows for enterprise manual accessibility validation—sessions, web modes, and triage patterns.
+description: "JAWS on Windows for enterprise manual accessibility validation: sessions, web modes, and triage patterns."
 slug: accessibility-jaws-windows/
 url: https://www.testmuai.com/support/docs/accessibility-jaws-windows/
 site_name: TestMu AI
@@ -22,7 +22,7 @@ Use JAWS when your team needs to validate important desktop screen-reader flows 
 1. Launch **JAWS** before the browser if your IT policy requires it; otherwise JAWS attaches to the active window.
 2. Open **Chrome or Edge** (match your automated scan browsers where possible).
 3. Press **Insert + Space** to enter **Forms mode** when interacting with native controls, and return to virtual cursor for reading-heavy pages (JAWS announces mode changes).
-4. Use **Insert + F6** for headings list, **Insert + F7** for links list—fast ways to audit IA after a scan.
+4. Use **Insert + F6** for headings list, **Insert + F7** for links list, fast ways to audit IA after a scan.
 5. Document findings with **speech history** (Insert + Space, then H) when filing bugs.
 
 ## What to validate

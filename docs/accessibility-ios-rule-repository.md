@@ -10,7 +10,7 @@ slug: accessibility-ios-rule-repository/
 
 Use this repository to browse iOS accessibility rules and remediation guidance.
 
-This repository groups iOS accessibility rules—VoiceOver, labeling, touch targets, and related mobile requirements—with pointers into deeper rule pages. Open it when an App Scanner or Native App Automation report cites an iOS finding and you want WCAG-aligned context and remediation next steps.
+This repository groups iOS accessibility rules (VoiceOver, labeling, touch targets, and related mobile requirements) with pointers into deeper rule pages. Open it when an App Scanner or Native App Automation report cites an iOS finding and you want WCAG-aligned context and remediation next steps.
 
 ## When to use this
 
