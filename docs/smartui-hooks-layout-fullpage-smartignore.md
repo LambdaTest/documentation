@@ -169,11 +169,7 @@ Add **`fullPage: true`** in the same map when you need a full-page capture for t
 
 ## 3. Full-page screenshot
 
-Use the name-only full-page hook, or pass `fullPage: true` in the `smartui.takeScreenshot` config object:
-
-```javascript
-driver.executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
-```
+Pass `fullPage: true` in the `smartui.takeScreenshot` config object:
 
 ```javascript
 await driver.executeScript("smartui.takeScreenshot", {
@@ -182,7 +178,7 @@ await driver.executeScript("smartui.takeScreenshot", {
 });
 ```
 
-For **layout + full page** in one call, use the **config object** form in §2 with `fullPage: true` and `ignoreType: ["layout"]`.
+For **layout + full page** in one call, use the same config object with `fullPage: true` and `ignoreType: ["layout"]`.
 
 ---
 
