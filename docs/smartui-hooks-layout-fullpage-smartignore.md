@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Use this page when you run **SmartUI Hooks** on LambdaTest (for example Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
-:::info Capability vs hook, read this first
+:::note Capability vs hook, read this first
 For **Hooks**, engineering behavior is:
 
 | Goal | Where to configure | Notes |
@@ -58,7 +58,7 @@ For **Hooks**, engineering behavior is:
 If you need **layout via capabilities alone** (no hook options), treat that as a feature request and raise it with your account team. This doc reflects **current** Hooks behavior.
 :::
 
-:::info Smart Ignore vs Ignore DOM / Select DOM
+:::note Smart Ignore vs Ignore DOM / Select DOM
 With **Smart Ignore**, use either **Ignore DOM** or **Select DOM** in the dashboard where applicable, not both on the same flow.
 :::
 
@@ -108,7 +108,7 @@ capabilities.SetCapability("smartUI.smartIgnore", true);
 ```
 
 :::warning Do not use these for Smart Ignore (Hooks + Java)
-These patterns **do not** turn on Smart Ignore reliably:
+These patterns **do not** turn on Smart Ignore:
 
 - `ltOptions.put("ignoreType", Arrays.asList("smartignore"));` without `smartUI.smartIgnore`
 - `ltOptions.put("smartignore", true);` at the root of `LT:Options`
@@ -167,17 +167,22 @@ Add **`fullPage: true`** in the same map when you need a full-page capture for t
 
 ---
 
-## 3. Full-page screenshot (name-only hook)
+## 3. Full-page screenshot
 
-```java
-((JavascriptExecutor) driver).executeScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");
+Use the name-only full-page hook, or pass `fullPage: true` in the `smartui.takeScreenshot` config object:
+
+```javascript
+driver.executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
 ```
 
-```csharp
-((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");
+```javascript
+await driver.executeScript("smartui.takeScreenshot", {
+  screenshotName: "<Your Screenshot Name>",
+  fullPage: true,
+});
 ```
 
-For **layout + full page** in one call, prefer the **config object** form in §2 with `fullPage: true` and `ignoreType: ["layout"]`.
+For **layout + full page** in one call, use the **config object** form in §2 with `fullPage: true` and `ignoreType: ["layout"]`.
 
 ---
 
