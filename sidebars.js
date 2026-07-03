@@ -1933,6 +1933,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Accessibility Score",
+            id: "accessibility-web-score",
+          },
+          {
+            type: "doc",
             label: "Issue Summary",
             id: "accessibility-testing-dashboard-issue-summary",
           },
@@ -1990,11 +1995,6 @@ module.exports = {
                 type: "doc",
                 label: "Capture Screenshot",
                 id: "accessibility-capture-screenshot",
-              },
-              {
-                type: "doc",
-                label: "Accessibility Web Score",
-                id: "accessibility-web-score",
               },
               {
                 type: "doc",
