@@ -94,7 +94,7 @@ The `FILE_` variable behavior described above applies to **Web tests**. In **App
 
 ## File Upload in App Tests
 
-File upload behaves differently in App tests than in Web tests. In a Web test, <BrandName /> creates a file variable for each upload. App tests skip this step entirely — no file variable is created, so you never reference uploaded files with double-curly-brace syntax.
+File upload behaves differently in App tests than in Web tests. In a Web test, <BrandName /> creates a file variable for each upload. App tests skip this step entirely. No file variable is created, so you never reference uploaded files with double-curly-brace syntax.
 
 ### How it works
 

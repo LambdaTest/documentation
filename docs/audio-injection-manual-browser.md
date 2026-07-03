@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Audio Injection Manual Testing on Real Device Browsers
 
-**Audio Injection** lets you simulate microphone input on real Android and iOS device browsers during a manual **Real Time** browser session. Use it to test speech-to-text web apps, voice search on the mobile web, browser-based voice assistants, web-based KYC voice verification, and any other microphone-dependent web feature — without speaking into a physical mic.
+**Audio Injection** lets you simulate microphone input on real Android and iOS device browsers during a manual **Real Time** browser session. Use it to test speech-to-text web apps, voice search on the mobile web, browser-based voice assistants, web-based KYC voice verification, and any other microphone-dependent web feature, without speaking into a physical mic.
 
 With <BrandName /> Real Time browser testing, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device browser.
 
@@ -118,14 +118,14 @@ Once enabled, the device list is filtered to show **only the devices that suppor
 
 You will see two options:
 
-- **Select Files** — inject a pre-recorded audio file
-- **Inject Live Input** — stream audio from your system microphone in real time
+- **Select Files**: inject a pre-recorded audio file
+- **Inject Live Input**: stream audio from your system microphone in real time
 
 ---
 
 ### Step 4a: Inject an Audio File
 
-Use this mode when you want a deterministic, repeatable input — for example, the same voice query run across many device-browser combinations.
+Use this mode when you want a deterministic, repeatable input, for example, the same voice query run across many device-browser combinations.
 
 1. In the **Audio** tab, select **Select Files**.
 2. Click **Upload** and choose an `.mp3` or `.wav` file (up to **200 MB**, one file at a time).
@@ -133,7 +133,7 @@ Use this mode when you want a deterministic, repeatable input — for example, t
 4. In the browser, navigate to the page that captures microphone input (e.g., tap a voice search icon or **Start Recording**).
 5. Grant the page mic permission when prompted.
 6. Select the uploaded file and click **Inject**.
-7. Once a file is injected, the controls are limited to **Play** and **Pause** — clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the browser captures it as if the user were speaking.
+7. Once a file is injected, the controls are limited to **Play** and **Pause**. Clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the browser captures it as if the user were speaking.
 8. To switch audio, select a different file and click **Inject** on it. Only **one file can be injected at a time**, and the new file replaces the previously injected one.
 
 :::tip
@@ -144,17 +144,17 @@ Inject and start playback **after** the page has opened the mic. Some recognizer
 
 ### Step 4b: Use Live Input
 
-Use this mode when you want to drive the device microphone interactively — for example, having an unscripted conversation with a web voice assistant or testing custom prompts on the fly.
+Use this mode when you want to drive the device microphone interactively, for example, having an unscripted conversation with a web voice assistant or testing custom prompts on the fly.
 
 1. In the **Audio** tab, select **Inject Live Input**.
 2. Grant microphone access to your browser when prompted.
 3. In the device browser, open the page that captures microphone input.
-4. Click **Start** — your system microphone is now streamed directly into the device's mic.
+4. Click **Start**. Your system microphone is now streamed directly into the device's mic.
 5. Speak into your mic. The web page receives your voice in real time.
 6. Click **Stop** to end the live stream.
 
 :::note
-Live Input streams from the same browser tab running the Real Time session. Avoid muting your system mic or switching tabs mid-session — the stream will be interrupted.
+Live Input streams from the same browser tab running the Real Time session. Avoid muting your system mic or switching tabs mid-session. The stream will be interrupted.
 :::
 
 ---
@@ -162,7 +162,7 @@ Live Input streams from the same browser tab running the Real Time session. Avoi
 ## Execution Rules
 
 - The web page must be granted microphone permission. Audio Injection does **not** bypass permission prompts.
-- Only one audio source is active at a time — switching from **Files** to **Live Input** (or vice versa) replaces the previous source.
+- Only one audio source is active at a time. Switching from **Files** to **Live Input** (or vice versa) replaces the previous source.
 - For files, only one file can be injected and played at a time.
 - The last injected audio is the active source until you stop it or inject another.
 
@@ -179,8 +179,8 @@ Live Input streams from the same browser tab running the Real Time session. Avoi
 
 ## Related Resources
 
-- [Audio Injection Manual Testing (App)](/docs/audio-injection-manual/) — Same feature on App Live
-- [Audio Injection on Real Devices (Automation)](/docs/audio-injection/) — Inject audio via Appium / Selenium tests
+- [Audio Injection Manual Testing (App)](/docs/audio-injection-manual/): Same feature on App Live
+- [Audio Injection on Real Devices (Automation)](/docs/audio-injection/): Inject audio via Appium / Selenium tests
 - [Browser Testing on Real Devices](/docs/browser-testing-on-real-devices/)
 
 ---

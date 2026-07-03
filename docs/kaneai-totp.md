@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 ## Introduction
 
-Teams often need to test SSO or MFA‑protected applications where the second factor is a six‑digit OTP. Native TOTP support in KaneAI generates those codes on the fly from the shared secret key, keeps the entire login journey inside KaneAI with identical behavior in Replay, generated code, and CI, and lets you inject the code directly into your test steps — no external scripts or servers required.
+Teams often need to test SSO or MFA‑protected applications where the second factor is a six‑digit OTP. Native TOTP support in KaneAI generates those codes on the fly from the shared secret key, keeps the entire login journey inside KaneAI with identical behavior in Replay, generated code, and CI, and lets you inject the code directly into your test steps, no external scripts or servers required.
 
 TOTP variables are now **global by default**. You create them once and reuse them across all test cases and modules in your organization.
 
@@ -67,17 +67,17 @@ TOTP variables are now **global by default**. You create them once and reuse the
 
 You can create a global TOTP variable in two ways:
 
-#### Option A — From the Variables Page
+#### Option A: From the Variables Page
 
 1. Open **Test Manager** and navigate to **Variables > TOTP Variables**.
 2. Click **+ Create new**.
 3. Enter a **Variable Name** (e.g., `sso_totp`).
-4. Enter the **TOTP Secret Key** — paste the Base32 secret directly or reference an org secret using `{{` syntax.
+4. Enter the **TOTP Secret Key**: paste the Base32 secret directly or reference an org secret using `{{` syntax.
 5. Click **Create TOTP Variable**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/totp/create-global-totp.png').default} alt="Create TOTP Variable modal" className="doc\_img"/>
 
-#### Option B — From the Authoring Session
+#### Option B: From the Authoring Session
 
 1. Start a KaneAI authoring session and press **/**.
 2. Choose **Add TOTP Authentication Key**.
@@ -87,7 +87,7 @@ You can create a global TOTP variable in two ways:
 ### Use a TOTP Variable in Your Test
 
 1. Navigate to the OTP input field in your application.
-2. Reference the variable in your instruction — for example, "Enter `{{totp.sso_totp}}` in verify field".
+2. Reference the variable in your instruction, for example, "Enter `{{totp.sso_totp}}` in verify field".
 3. KaneAI generates and inserts the current six‑digit code automatically.
 
 ## Migrating Existing Local TOTP Variables

@@ -88,5 +88,5 @@ Wait for the file to upload and process. A success message will indicate when yo
 
 :::info
 - The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.  
-- To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload — the rest of the flow remains identical.
+- To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload. The rest of the flow remains identical.
 :::

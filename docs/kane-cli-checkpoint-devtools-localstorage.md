@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-devtools-localstorage
 title: localStorage Assertions
 sidebar_label: localStorage
-description: "Verify key-value pairs stored in the browser localStorage during test execution — auth tokens, feature flags, cached data."
+description: "Verify key-value pairs stored in the browser localStorage during test execution: auth tokens, feature flags, cached data."
 keywords:
   - localstorage assertion
   - browser storage
@@ -39,7 +39,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-lo
       }) }}
 ></script>
 
-localStorage assertions let you verify data stored in the browser's `window.localStorage` — check key existence, values, and item counts.
+localStorage assertions let you verify data stored in the browser's `window.localStorage`: check key existence, values, and item counts.
 
 ## How Capture Works
 
@@ -54,7 +54,7 @@ localStorage is captured as a **point-in-time snapshot** when the checkpoint tri
 
 Because localStorage is captured at assertion time:
 
-- Assert on localStorage while you're **on the page** that set the values — navigating to a different domain means a different localStorage
+- Assert on localStorage while you're **on the page** that set the values. Navigating to a different domain means a different localStorage
 - If values are needed later, extract and store them before navigating away
 - localStorage persists across steps (unlike network/console) as long as you stay on the same origin
 

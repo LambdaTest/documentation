@@ -54,9 +54,9 @@ Use the below commands to move around the page:
 |--------------|------------------------------------------------|
 | Open URL     | `go to https://example.com`  ,  `open https://example.com` |
 | Click        | `click on login button`                        |
-| Double / N-Click | `double click the title`  ,  `click the button 5 times` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| Right Click  | `right click on the file row` (web only) — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| Long Press   | `long press the menu icon for 3 seconds` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| Double / N-Click | `double click the title`  ,  `click the button 5 times`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| Right Click  | `right click on the file row` (web only), see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| Long Press   | `long press the menu icon for 3 seconds`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
 | Type Text    | `enter "user@example.com"`  ,  `type "password123"` |
 | Clear Field  | `clear email input field`                      |
 | Select Date  | `select 21st september date`                   |
@@ -89,7 +89,7 @@ If you prefer, you can also set custom wait timeouts directly in the step menu:
 2. Select **Step Timeout**
 3. Enter your preferred timeout value (min 1 second, max 300 seconds)
 
-Use custom wait timeout when dealing with slow page loads or dynamic content. Step Timeout is a dynamic ceiling — the step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads.
+Use custom wait timeout when dealing with slow page loads or dynamic content. Step Timeout is a dynamic ceiling. The step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads.
 
 :::note
 Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing.

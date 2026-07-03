@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Modules in KaneAI let you group a sequence of test steps into a single reusable unit. Instead of re-authoring the same steps in every test case, you create a module once and import it wherever it is needed. This reduces duplication, improves consistency, and makes maintenance easier — when a workflow changes, you update the module and propagate the change across test cases.
+Modules in KaneAI let you group a sequence of test steps into a single reusable unit. Instead of re-authoring the same steps in every test case, you create a module once and import it wherever it is needed. This reduces duplication, improves consistency, and makes maintenance easier. When a workflow changes, you update the module and propagate the change across test cases.
 
 Modules support **variables**, **parameters**, and **secrets**, so you can pass dynamic data into each module execution rather than hard-coding values.
 
@@ -79,9 +79,9 @@ Begin by authoring your test in KaneAI and executing the steps that you want to 
 
 1. Click **Create Module**.
 2. Enter the module details:
-   - **Name** — A descriptive name (e.g., `[Web] Login Flow`)
-   - **Description** — What the module does and when to use it
-   - **Tags** — Keywords for easier discovery
+   - **Name**: A descriptive name (e.g., `[Web] Login Flow`)
+   - **Description**: What the module does and when to use it
+   - **Tags**: Keywords for easier discovery
 3. Click **Create Module** to save.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/3.png').default} alt="create-module-dialog" className="doc_img"/>
@@ -168,15 +168,15 @@ Modules in KaneAI are **platform-specific**. Each platform has distinct interact
 
 Adopt a consistent **name prefix** and **tag** strategy to make platform context immediately clear and modules easy to filter.
 
-**Name prefixes** — Add a platform prefix at the start of every module name:
+**Name prefixes**: Add a platform prefix at the start of every module name:
 
-- **`[Web]`** — Desktop Web modules
-- **`[Android-App]`** — Android native app modules
-- **`[Android-Browser]`** — Android browser modules
-- **`[iOS-App]`** — iOS native app modules
-- **`[iOS-Browser]`** — iOS browser modules
+- **`[Web]`**: Desktop Web modules
+- **`[Android-App]`**: Android native app modules
+- **`[Android-Browser]`**: Android browser modules
+- **`[iOS-App]`**: iOS native app modules
+- **`[iOS-Browser]`**: iOS browser modules
 
-**Tags** — Add platform tags to each module so you can filter the module listing by platform:
+**Tags**: Add platform tags to each module so you can filter the module listing by platform:
 
 - `desktop-web`, `android-app`, `android-browser`, `ios-app`, `ios-browser`
 
@@ -184,13 +184,13 @@ Using both prefixes and tags together gives you the best of both worlds: prefixe
 
 You can extend this convention for other distinctions:
 
-- **`[Web][Staging]`** — Environment-specific modules
-- **`[Android-App][Auth]`** — Feature-area grouping
-- Tags like `login`, `checkout`, `onboarding` — Workflow-based categorization
+- **`[Web][Staging]`**: Environment-specific modules
+- **`[Android-App][Auth]`**: Feature-area grouping
+- Tags like `login`, `checkout`, `onboarding`: Workflow-based categorization
 
 ### Keep Modules Focused
 
-Each module should represent a **single, cohesive workflow** (e.g., login, checkout, form submission). Avoid creating overly large modules that combine unrelated steps — they become harder to maintain and less reusable.
+Each module should represent a **single, cohesive workflow** (e.g., login, checkout, form submission). Avoid creating overly large modules that combine unrelated steps. They become harder to maintain and less reusable.
 
 ### Use Variables and Parameters
 
@@ -204,8 +204,8 @@ Add a meaningful description to every module so other team members understand wh
 
 ## Related Guides
 
-- [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) — Track changes, compare versions, and revert modules
-- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) — Update a module version across multiple test cases in one action
+- [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/): Track changes, compare versions, and revert modules
+- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/): Update a module version across multiple test cases in one action
 
 ---
 

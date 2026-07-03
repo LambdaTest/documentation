@@ -2,7 +2,7 @@
 id: accessibility-nvda-windows
 title: NVDA on Windows
 sidebar_label: NVDA on Windows
-description: Platform-specific screen reader reference for NVDA on Windows—setup, navigation basics, and what to validate after automated scans.
+description: "Platform-specific screen reader reference for NVDA on Windows: setup, navigation basics, and what to validate after automated scans."
 slug: accessibility-nvda-windows/
 url: https://www.testmuai.com/support/docs/accessibility-nvda-windows/
 site_name: TestMu AI

@@ -2,7 +2,7 @@
 id: accessibility-appium-testng
 title: Appium TestNG
 sidebar_label: Appium TestNG
-description: Appium TestNG with Accessibility—session capabilities, lambda-accessibility-scan checkpoints, and dashboard review.
+description: "Appium TestNG with Accessibility: session capabilities, lambda-accessibility-scan checkpoints, and dashboard review."
 slug: accessibility-appium-testng/
 url: https://www.testmuai.com/support/docs/accessibility-appium-testng/
 site_name: TestMu AI

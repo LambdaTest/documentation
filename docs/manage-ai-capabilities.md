@@ -116,7 +116,7 @@ When the toggle is set to **OFF**, the following AI features are hidden across a
 ---
 
 :::note
-- **Existing AI-generated content is preserved.** When AI is disabled, all previously AI-generated content — test cases, test steps, RCA reports, autofill values, and scenario tags — remains visible and fully editable. Only new AI invocations are blocked.
+- **Existing AI-generated content is preserved.** When AI is disabled, all previously AI-generated content (test cases, test steps, RCA reports, autofill values, and scenario tags) remains visible and fully editable. Only new AI invocations are blocked.
 - **Only Org Admins** can modify this setting. Non-admin users cannot access the Organization Settings page.
 - **The setting applies organization-wide.** All users in the organization are affected when the toggle is changed.
 :::

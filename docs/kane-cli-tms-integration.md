@@ -57,12 +57,12 @@ This is the default behaviour for every session in both the TUI and the CLI. You
 
 When a session ends, Kane CLI runs an upload pipeline that finalises the test case in Test Manager. Two kinds of artefacts move from your machine to <BrandName />:
 
-- **Screenshots** — uploaded incrementally as the agent runs. By the time the session ends, most of them are already in place. PNG screenshots are converted to WebP before upload.
-- **Run artefacts and metadata** — packaged at session exit. This includes per-run action logs, an execution blob describing the run (objective, status, steps, durations, variables in scope), and the zipped contents of the session run directories.
+- **Screenshots**: uploaded incrementally as the agent runs. By the time the session ends, most of them are already in place. PNG screenshots are converted to WebP before upload.
+- **Run artefacts and metadata**: packaged at session exit. This includes per-run action logs, an execution blob describing the run (objective, status, steps, durations, variables in scope), and the zipped contents of the session run directories.
 
 You see a short progress indicator at exit covering these stages: `convert` (preparing metadata), `zip` (packaging run directories), `presign` (requesting upload URLs), `upload` (sending the zip and metadata), and `finalize` (committing the test case in Test Manager). If code export is enabled, a `code_export` stage runs after `finalize`. If it is disabled, that stage is reported as skipped.
 
-If the upload fails, Kane CLI prints the error and exits. The local session directory is preserved either way — see [Session History on Disk](#session-history-on-disk).
+If the upload fails, Kane CLI prints the error and exits. The local session directory is preserved either way, see [Session History on Disk](#session-history-on-disk).
 
 ---
 
@@ -157,9 +157,9 @@ The same code is also available alongside the test case in Test Manager.
 
 When the upload finishes successfully, Kane CLI prints a small links block to the terminal. You see up to three links, depending on what was generated:
 
-- **ShareLink** — a shareable session URL on <BrandName /> Test Manager. Anyone you send this link to can view the run summary without needing access to the project. Links are issued with a seven-day expiry.
-- **TestCase** — a direct URL to the test case dashboard inside your Test Manager project. Use this when you are signed in to <BrandName /> and want to drill into the run.
-- **CodeExport** — a `file://` link to the directory on your machine that holds the generated Playwright code. Only shown when code export is enabled and produced files.
+- **ShareLink**: a shareable session URL on <BrandName /> Test Manager. Anyone you send this link to can view the run summary without needing access to the project. Links are issued with a seven-day expiry.
+- **TestCase**: a direct URL to the test case dashboard inside your Test Manager project. Use this when you are signed in to <BrandName /> and want to drill into the run.
+- **CodeExport**: a `file://` link to the directory on your machine that holds the generated Playwright code. Only shown when code export is enabled and produced files.
 
 The links survive the terminal exit and remain in your scrollback.
 

@@ -2,7 +2,7 @@
 id: accessibility-testng-test
 title: TestNG
 sidebar_label: TestNG
-description: Run Accessibility Automation with Selenium and TestNG—capabilities, hooks, TestNG suite layout, and how to review reports in the dashboard.
+description: "Run Accessibility Automation with Selenium and TestNG: capabilities, hooks, TestNG suite layout, and how to review reports in the dashboard."
 keywords:
   - TestMu AI
   - Accessibility

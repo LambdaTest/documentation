@@ -29,7 +29,7 @@ DevTools is not the same as:
 
 - **Accessibility Automation**, which runs through test frameworks
 - **Test Scheduling** (Accessibility), which runs recurring web scans inside the Accessibility product
-- **Web Scanner**, the separate Web Scanner product for URL lists and scans—different navigation tree from Accessibility Test Scheduling
+- **Web Scanner**, the separate Web Scanner product for URL lists and scans, different navigation tree from Accessibility Test Scheduling
 
 ## Typical workflow
 

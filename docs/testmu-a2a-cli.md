@@ -336,7 +336,7 @@ Note the project ID from the output.
 
 **Step 2: Set the agent prompt.** This is the most important step - the prompt drives scenario generation, evaluation criteria, and go-live assessments.
 
-From a YAML file (recommended — define everything in one place):
+From a YAML file (recommended, define everything in one place):
 
 ```bash
 testmu-a2a prompts set --project <project_id> --from-file prompt.yaml

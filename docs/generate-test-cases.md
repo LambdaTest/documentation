@@ -65,13 +65,13 @@ This feature is designed to save time, improve test coverage, and streamline the
 ## Highlights
 
 ### Conversation Layer
-Refine, correct, expand, and restructure your AI-generated test scenarios and test cases using natural language — no manual editing required. The Conversation Layer brings a **chat-driven workflow** directly into your generation session, letting you iterate in real time without starting over.
+Refine, correct, expand, and restructure your AI-generated test scenarios and test cases using natural language, no manual editing required. The Conversation Layer brings a **chat-driven workflow** directly into your generation session, letting you iterate in real time without starting over.
 
-- **Natural language control** — Describe changes in plain English, and the AI applies them instantly.
-- **Live streaming updates** — Watch scenarios and test cases update in real time as the AI processes your request.
-- **Precise targeting** — Use `@` references to target specific scenarios or test cases for modification.
-- **Context-aware** — The AI retains your full session context including uploaded files, linked issues, and prior instructions.
-- **File-based refinement** — Upload updated specs or requirements mid-session and ask the AI to fill coverage gaps.
+- **Natural language control**: Describe changes in plain English, and the AI applies them instantly.
+- **Live streaming updates**: Watch scenarios and test cases update in real time as the AI processes your request.
+- **Precise targeting**: Use `@` references to target specific scenarios or test cases for modification.
+- **Context-aware**: The AI retains your full session context including uploaded files, linked issues, and prior instructions.
+- **File-based refinement**: Upload updated specs or requirements mid-session and ask the AI to fill coverage gaps.
 
 ### Custom Instructions
 
@@ -141,15 +141,15 @@ The **Memory Layer** is an intelligent context retrieval system that enhances AI
 
 When you initiate a test case generation session, the following process occurs automatically:
 
-1. **Input Analysis** — The AI analyzes your prompt, requirements, and custom instructions.
-2. **Context Retrieval** — The system queries a vector database to retrieve the most relevant existing test cases from your test case repository.
-3. **Context-Aware Generation** — The retrieved content is embedded into the prompt sent to the AI, enabling it to generate test cases that are aware of your existing coverage, non-duplicative, and complementary to your current test suite.
+1. **Input Analysis**: The AI analyzes your prompt, requirements, and custom instructions.
+2. **Context Retrieval**: The system queries a vector database to retrieve the most relevant existing test cases from your test case repository.
+3. **Context-Aware Generation**: The retrieved content is embedded into the prompt sent to the AI, enabling it to generate test cases that are aware of your existing coverage, non-duplicative, and complementary to your current test suite.
 
 ### Benefits
 
-- **Duplicate Prevention** — The AI recognizes test cases that already exist in your repository and avoids regenerating them.
-- **Contextual Relevance** — New test cases are informed by the language, structure, and patterns used in your existing test suite.
-- **Incremental Improvement** — Each generation session builds upon your accumulated testing knowledge.
+- **Duplicate Prevention**: The AI recognizes test cases that already exist in your repository and avoids regenerating them.
+- **Contextual Relevance**: New test cases are informed by the language, structure, and patterns used in your existing test suite.
+- **Incremental Improvement**: Each generation session builds upon your accumulated testing knowledge.
 :::note
 The Memory Layer operates automatically in the background, you can choose to enable or disable Memory enhancement feature before triggering a session.
 :::
@@ -326,11 +326,11 @@ When the Conversation Layer is active, the workspace is divided into two primary
 **Chat Interface (Left Panel)**
 
 The left panel is your chat interface for refining test output:
-- **Message input** — Type your refinement instructions in natural language at the bottom of the panel.
-- **Conversation history** — All messages and AI responses are preserved within the session.
-- **@ Autocomplete** — Type `@` to trigger an autocomplete dropdown for referencing specific scenarios or test cases.
-- **File attachments** — Attach files directly within the conversation using the attachment button.
-- **Confirmation prompts** — The AI asks for confirmation when a change affects more than 5 test cases.
+- **Message input**: Type your refinement instructions in natural language at the bottom of the panel.
+- **Conversation history**: All messages and AI responses are preserved within the session.
+- **@ Autocomplete**: Type `@` to trigger an autocomplete dropdown for referencing specific scenarios or test cases.
+- **File attachments**: Attach files directly within the conversation using the attachment button.
+- **Confirmation prompts**: The AI asks for confirmation when a change affects more than 5 test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/chat_interface_panel.png').default} alt="chat-interface-panel" width="1347" height="616" className="doc_img"/>
 
@@ -338,10 +338,10 @@ The left panel is your chat interface for refining test output:
 **Live Output View (Right Panel)**
 
 The right panel is the primary workspace showing your generated test scenarios and test cases:
-- **Real-time updates** — Affected scenarios and test cases update with a streaming animation as changes are processed.
-- **Scenario cards** — Each scenario is displayed as an expandable card containing its test cases.
-- **Visual indicators** — Scenarios and test cases being modified are visually highlighted during streaming.
-- **Full test case details** — Expand any test case to view its steps, expected results, preconditions, and other fields.
+- **Real-time updates**: Affected scenarios and test cases update with a streaming animation as changes are processed.
+- **Scenario cards**: Each scenario is displayed as an expandable card containing its test cases.
+- **Visual indicators**: Scenarios and test cases being modified are visually highlighted during streaming.
+- **Full test case details**: Expand any test case to view its steps, expected results, preconditions, and other fields.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/live_output_view.png').default} alt="live-output-view" width="1347" height="616" className="doc_img"/>
 
@@ -349,10 +349,10 @@ The right panel is the primary workspace showing your generated test scenarios a
 **Session Context Drawer**
 
 To review the context used for your current generation session, click the **pencil icon** located just above the chat input box at the bottom left. This opens a side drawer displaying:
-- **Attached Files** — All files uploaded during the session.
-- **Organization Instructions** — Organization-level custom instructions applied to the session.
-- **Project Instructions** — Project-level custom instructions applied to the session.
-- **Linked Issues** — Jira or Azure DevOps issues linked to the session.
+- **Attached Files**: All files uploaded during the session.
+- **Organization Instructions**: Organization-level custom instructions applied to the session.
+- **Project Instructions**: Project-level custom instructions applied to the session.
+- **Linked Issues**: Jira or Azure DevOps issues linked to the session.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/session_context_drawer.png').default} alt="session-context-drawer" width="1347" height="616" className="doc_img"/>
 
@@ -366,7 +366,7 @@ Use the context drawer to verify that the AI is working with the correct inputs.
 1. **You send a message** in the chat interface describing what you want to change.
 2. **The AI interprets your intent** and determines which scenarios or test cases to modify.
 3. **Changes stream in real time** to the live output view on the right.
-4. **You review and iterate** — send follow-up messages to fine-tune further.
+4. **You review and iterate**: send follow-up messages to fine-tune further.
 
 #### @ Referencing System
 
@@ -398,9 +398,9 @@ Restructure how your test cases are grouped and organized.
 
 | Action | Example Prompt |
 |--------|----------------|
-| Group by feature or module | Reorganize all test cases by feature — create separate scenarios for User Authentication, Shopping Cart, Checkout, and Order History |
+| Group by feature or module | Reorganize all test cases by feature, create separate scenarios for User Authentication, Shopping Cart, Checkout, and Order History |
 | Split by test type | Split @S1 into three separate scenarios: one for positive flows, one for negative/error cases, and one for boundary conditions |
-| Group by platform or environment | These test cases are mixed. Group them by platform — create one scenario for Web Desktop, one for Mobile Web, and one for Mobile App |
+| Group by platform or environment | These test cases are mixed. Group them by platform, create one scenario for Web Desktop, one for Mobile Web, and one for Mobile App |
 | Create user journey scenarios | Create end-to-end user journey scenarios. Combine login, product search, add to cart, and checkout into a complete "Customer Purchase Journey" scenario |
 
 
@@ -412,7 +412,7 @@ Add new test cases or scenarios to improve coverage.
 |--------|----------------|
 | Add missing test types | Add negative test cases to @S1 covering invalid email formats, passwords shorter than 8 characters, usernames with special characters, and empty field submissions |
 | Add security tests | We need security coverage for @S3. Add test cases for SQL injection, XSS attacks, CSRF validation, and session hijacking across all input fields |
-| Add platform-specific tests | Add mobile-specific test cases to @S2 — include touch gestures, pinch to zoom, orientation changes, and offline mode scenarios |
+| Add platform-specific tests | Add mobile-specific test cases to @S2, include touch gestures, pinch to zoom, orientation changes, and offline mode scenarios |
 | Fill coverage gaps from uploaded files | I've attached the updated requirements document. Review it against our current test cases and create new ones for any features or user stories we haven't covered yet |
 | Add new scenarios | Create a new scenario for the password reset flow with test cases covering successful reset, expired reset links, invalid tokens, rate limiting, and already-used tokens |
 
@@ -477,19 +477,19 @@ Precisely modify specific scenarios or test cases using `@` references.
 
 
 :::tip Pro Tips for Effective Refinement
-- **Use `@` references for precision** — Target specific scenarios (`@S1`) or test cases (`@S2.C3`) to ensure the AI modifies exactly what you intend
-- **Combine multiple actions** — Request several changes in one message: "Remove all Low priority test cases from @S1, add 2 boundary tests for the email field, and rename remaining test cases to include the module name"
-- **Provide updated context mid-session** — Upload revised specifications or link Jira/Azure DevOps tickets at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
-- **Start broad, then refine** — First organize scenarios at a high level, then drill down to individual test cases
+- **Use `@` references for precision**: Target specific scenarios (`@S1`) or test cases (`@S2.C3`) to ensure the AI modifies exactly what you intend
+- **Combine multiple actions**: Request several changes in one message: "Remove all Low priority test cases from @S1, add 2 boundary tests for the email field, and rename remaining test cases to include the module name"
+- **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps tickets at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
+- **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
 :::
 
 #### Re-Generation Settings
 
 The Test Case Generator provides several controls that work alongside the Conversation Layer:
 
-- **Max Scenarios** — Control the maximum number of scenarios generated in a session.
-- **Max Test Cases per Scenario** — Set the upper limit for test cases within each individual scenario.
-- **Regenerate Scenarios** — Regenerate all scenarios utilizing existing context and to regenerate fresh Scenarions and Test Cases.
+- **Max Scenarios**: Control the maximum number of scenarios generated in a session.
+- **Max Test Cases per Scenario**: Set the upper limit for test cases within each individual scenario.
+- **Regenerate Scenarios**: Regenerate all scenarios utilizing existing context and to regenerate fresh Scenarions and Test Cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/regeneration_settings.png').default} alt="regeneration-settings" width="1347" height="616" className="doc_img"/>
 
@@ -517,9 +517,9 @@ The Conversation Layer consumes AI credits based on the scope of each refinement
 
 The following capabilities are planned for future releases:
 
-- **Undo and versioning** — No rollback mechanism for individual conversation-driven changes.
-- **Step-level referencing** — You cannot reference individual steps within a test case. Instead, reference the test case and describe the change.
-- **Coverage queries** — Asking analytical questions (e.g., "Do we have tests for invalid amounts?") without requesting a change is not supported.
+- **Undo and versioning**: No rollback mechanism for individual conversation-driven changes.
+- **Step-level referencing**: You cannot reference individual steps within a test case. Instead, reference the test case and describe the change.
+- **Coverage queries**: Asking analytical questions (e.g., "Do we have tests for invalid amounts?") without requesting a change is not supported.
 
 ---
 
@@ -569,7 +569,7 @@ Create and Automate is currently an experimental feature. Review your test steps
 | Issue | Resolution |
 |-------|------------|
 | Conversation Layer panel not visible | Ensure you have generated at least one set of scenarios. The Conversation Layer activates after the initial generation completes. Refresh the page if needed. |
-| Changes not appearing in Live Output View | Check your internet connection. Large changes may take longer to process. If the issue persists, send a new message — the AI resumes from the current state. |
+| Changes not appearing in Live Output View | Check your internet connection. Large changes may take longer to process. If the issue persists, send a new message. The AI resumes from the current state. |
 | AI modified the wrong scenario or test case | Use explicit  Scenario (`@S1`) or Test Case (`@S1.C1`) references to avoid ambiguity. Rephrase your message with a direct reference and send it again. |
 | File upload fails | Verify the file does not exceed the 50 MB size limit and that you have not exceeded the 10-file session limit. |
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |

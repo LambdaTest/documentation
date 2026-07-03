@@ -2,7 +2,7 @@
 id: accessibility-cicd-integration-guide
 title: CI/CD Integration Guide
 sidebar_label: CI/CD Integration Guide
-description: Connect Accessibility Automation to CI/CD—secrets, matrix jobs, gating, and where to review reports after each build.
+description: "Connect Accessibility Automation to CI/CD: secrets, matrix jobs, gating, and where to review reports after each build."
 keywords:
   - TestMu AI
   - Accessibility
@@ -17,7 +17,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-cicd-integration-
 
 # CI/CD Integration Guide
 
-Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**—not only from a laptop.
+Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**, not only from a laptop.
 
 ## Typical CI/CD use cases
 
@@ -34,11 +34,11 @@ Use this guide when you want **Accessibility Automation** (Selenium capabilities
 
 ## Onboarding checklist
 
-1. **Store secrets** as `LT_USERNAME` and `LT_ACCESS_KEY` (or your platform’s secret manager) and inject them into the job—never commit keys to the repo ([credentials guide](/support/docs/using-environment-variables-for-authentication-credentials/)).
+1. **Store secrets** as `LT_USERNAME` and `LT_ACCESS_KEY` (or your platform’s secret manager) and inject them into the job, never commit keys to the repo ([credentials guide](/support/docs/using-environment-variables-for-authentication-credentials/)).
 2. **Reuse the same command** you already use locally (`mvn test`, `dotnet test`, `npm test`, etc.) so CI exercises the identical driver bootstrap that sets `accessibility: true`.
 3. **Start with a smoke slice** (one suite or `@Tag`) so pipeline time stays predictable; expand coverage after reports look correct.
 4. **Open the Automation dashboard** after the first green CI run and confirm the **Accessibility** tab populates; bookmark the filtered view for your team.
-5. **Optional gating:** treat critical/serious new issues like other quality gates—document who can override flakes.
+5. **Optional gating:** treat critical/serious new issues like other quality gates, document who can override flakes.
 
 ## Example: GitHub Actions (pattern)
 
@@ -72,10 +72,10 @@ Adapt `run` to your build tool; the important part is that the invoked tests set
 ## Where to review results
 
 - **Automation** build → **Accessibility** tab for the session ([Selenium flow](/support/docs/accessibility-automation-test/)).
-- For **HyperExecute**, see [HyperExecute integration — Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
+- For **HyperExecute**, see [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
 
 ## Related docs
 
 - [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
 - [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
-- [HyperExecute integration — Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/)
+- [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/)
