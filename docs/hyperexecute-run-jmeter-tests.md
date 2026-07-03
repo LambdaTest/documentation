@@ -95,8 +95,8 @@ Download or Clone the code sample for the JMeter Performance Testing from the <B
 
 Override selected JMeter properties for this run. The following [user properties](https://jmeter.apache.org/usermanual/test_plan.html#properties) are currently configurable:
 
-- **`jmeter.save.saveservice.subresults`** — Whether sub-results (for example, sub-samples generated within a transaction or by HTTP redirects) are written to the results file. Set to `false` to reduce result file size.
-- **`httpclient.socket.https.cps`** — Characters per second cap on HTTPS downloads for the HttpClient sampler. Use it to simulate low-bandwidth conditions; `0` means unlimited.
+- **`jmeter.save.saveservice.subresults`**: Whether sub-results (for example, sub-samples generated within a transaction or by HTTP redirects) are written to the results file. Set to `false` to reduce result file size.
+- **`httpclient.socket.https.cps`**: Characters per second cap on HTTPS downloads for the HttpClient sampler. Use it to simulate low-bandwidth conditions; `0` means unlimited.
 
 - Click on the **Run Test** button.
 

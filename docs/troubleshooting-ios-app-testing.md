@@ -53,7 +53,7 @@ For a complete step-by-step guide on building your iOS app for Simulator testing
 
 ### App crashes immediately with "App quit unexpectedly"
 
-**Cause:** Your `.app` is built for physical iOS devices (Mach-O Platform 2 — `iphoneos`) instead of the iOS Simulator (Platform 7 — `iphonesimulator`).
+**Cause:** Your `.app` is built for physical iOS devices (Mach-O Platform 2: `iphoneos`) instead of the iOS Simulator (Platform 7: `iphonesimulator`).
 
 **Solution:** Rebuild your app targeting the iOS Simulator SDK. In Xcode, select a **Simulator destination** (e.g., *iPhone 15 Pro*) instead of *Any iOS Device*, then build. For command line builds, use the `-sdk iphonesimulator` flag:
 

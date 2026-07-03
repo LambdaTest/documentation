@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-**Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information — guidance, conventions, and notes that apply across runs.
+**Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information: guidance, conventions, and notes that apply across runs.
 
 ---
 
@@ -63,7 +63,7 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 
 | Field | Required | Type | Default | Description |
 |-------|----------|------|---------|-------------|
-| `value` | Yes | string | — | The variable's value. Entries without `value` are ignored. |
+| `value` | Yes | string | None | The variable's value. Entries without `value` are ignored. |
 | `secret` | No | boolean | `false` | When `true`, the value is masked in logs and routed to the <BrandName /> secrets store instead of being synced as plain Test Manager variables. |
 
 ### Usage in Objectives
@@ -86,10 +86,10 @@ Before the objective is sent to the agent, `{{email}}` and `{{password}}` are re
 
 Variables are merged from four sources in this order. Later sources override earlier ones for the same key:
 
-1. **Global directory** — `~/.testmuai/kaneai/variables/*.json`
-2. **Local project directory** — `.testmuai/variables/*.json` (relative to where you invoke `kane-cli`)
-3. **File flag** — `--variables-file <path>`
-4. **Inline flag** — `--variables '<json>'` (highest priority)
+1. **Global directory**: `~/.testmuai/kaneai/variables/*.json`
+2. **Local project directory**: `.testmuai/variables/*.json` (relative to where you invoke `kane-cli`)
+3. **File flag**: `--variables-file <path>`
+4. **Inline flag**: `--variables '<json>'` (highest priority)
 
 Within a directory, files are read in alphabetical order; later files override earlier files for duplicate keys. Files that fail to parse as JSON are skipped with a warning.
 
@@ -136,7 +136,7 @@ For values you want available across every project on your machine, place `*.jso
 └── shared.json
 ```
 
-Global variables have the lowest precedence — anything else with the same key wins.
+Global variables have the lowest precedence, anything else with the same key wins.
 
 ### Example Variable File
 
@@ -171,7 +171,7 @@ Do not commit credential files to version control. Add `.testmuai/variables/` to
 
 ## Context Files
 
-Context files are plain Markdown files whose contents are passed to the agent alongside your objective. Use them for standing instructions — coding conventions, accounts to use, sites to avoid, or domain knowledge the agent should always have.
+Context files are plain Markdown files whose contents are passed to the agent alongside your objective. Use them for standing instructions: coding conventions, accounts to use, sites to avoid, or domain knowledge the agent should always have.
 
 ### Two Levels
 
@@ -223,7 +223,7 @@ kane-cli run "your objective" \
   --local-context ./custom-local.md
 ```
 
-If a context file is missing or empty, it is silently ignored — no error is raised.
+If a context file is missing or empty, it is silently ignored, no error is raised.
 
 ### What to Put in Context
 

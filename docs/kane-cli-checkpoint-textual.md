@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-textual
 title: Textual (DOM) Assertions
 sidebar_label: Textual (DOM)
-description: "Extract data from the DOM — element states, attributes, and computed styles — and assert on values that may not be visible in a screenshot."
+description: "Extract data from the DOM (element states, attributes, and computed styles) and assert on values that may not be visible in a screenshot."
 keywords:
   - dom assertion
   - textual assertion
@@ -38,7 +38,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/
       }) }}
 ></script>
 
-Textual assertions extract data from the page's DOM — element states, attributes, and computed styles that aren't always visible in a screenshot.
+Textual assertions extract data from the page's DOM: element states, attributes, and computed styles that aren't always visible in a screenshot.
 
 ## When It's Used
 

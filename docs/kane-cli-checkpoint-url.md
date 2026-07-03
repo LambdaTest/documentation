@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-url
 title: URL Assertions
 sidebar_label: URL
-description: "Check values in the browser address bar — current URL path, query parameters, fragments, and redirect targets."
+description: "Check values in the browser address bar: current URL path, query parameters, fragments, and redirect targets."
 keywords:
   - url assertion
   - query parameter assertion
@@ -37,7 +37,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-url/
       }) }}
 ></script>
 
-URL assertions check values in the browser's address bar — the current URL path, query parameters, fragments, and redirect targets.
+URL assertions check values in the browser's address bar: the current URL path, query parameters, fragments, and redirect targets.
 
 ## When It's Used
 
@@ -73,4 +73,4 @@ If URL contains /login then enter credentials, else go to profile
 
 1. KaneAI reads the current `page.url` value directly
 2. The URL string is compared against the expected value using the specified operator
-3. No screenshot or DOM analysis needed — this is a direct read
+3. No screenshot or DOM analysis needed, this is a direct read

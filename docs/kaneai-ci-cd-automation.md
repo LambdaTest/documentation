@@ -93,7 +93,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
 - **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
 - **report_enabled**: Set to `true` to generate an HTML report for the test run. The report can be accessed from the HyperExecute Job page after execution. See [Reports](/support/docs/kaneai-hyperexecute-test-run-execution/#reports) for details.
-- **extent_report_enabled**: Set to `true` to generate an Extent report for the test run. The report can be accessed from the HyperExecute Job page after execution. Only one report type can be enabled at a time — use either `report_enabled` or `extent_report_enabled`, not both.
+- **extent_report_enabled**: Set to `true` to generate an Extent report for the test run. The report can be accessed from the HyperExecute Job page after execution. Only one report type can be enabled at a time. Use either `report_enabled` or `extent_report_enabled`, not both.
 - **report_email_to**: An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when `report_enabled` is set to `true`.
 
 :::note

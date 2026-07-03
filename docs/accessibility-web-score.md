@@ -2,7 +2,7 @@
 id: accessibility-web-score
 title: Accessibility Web Score
 sidebar_label: Accessibility Web Score
-description: How the Accessibility Web Score works—severity weights, issue density, formula, bands, and how to use it without mistaking it for legal compliance.
+description: "How the Accessibility Web Score works: severity weights, issue density, formula, bands, and how to use it without mistaking it for legal compliance."
 keywords:
   - TestMu AI
   - Accessibility
@@ -17,7 +17,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 
 # Accessibility Web Score
 
-The **Accessibility Web Score** is a unified metric that represents the accessibility health of your website or application workflow. Instead of only reading long reports, the score gives you a **clear, actionable number** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders—**together** with issue detail and any manual testing your program requires.
+The **Accessibility Web Score** is a unified metric that represents the accessibility health of your website or application workflow. Instead of only reading long reports, the score gives you a **clear, actionable number** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders, **together** with issue detail and any manual testing your program requires.
 
 :::caution Not legal or WCAG certification
 The score is **not** the same as WCAG conformance sign-off, VPAT completion, or legal accessibility certification. Always interpret it with **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)**, **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)**, and your own manual coverage ([compliance guide](/support/docs/accessibility-compliance-guide/)).
@@ -32,7 +32,7 @@ The Accessibility Web Score helps:
 - **Accessibility teams** monitoring problem areas and regression risk  
 - **Developers** who want quick feedback on whether a change **improved or hurt** accessibility before merge  
 
-If you ship digital products for real users, the score is a useful **signal**—not the only bar for “done.”
+If you ship digital products for real users, the score is a useful **signal**, not the only bar for “done.”
 
 ## Where to find it
 
@@ -106,17 +106,17 @@ The **same formula idea** applies whether you are viewing a **single page** or a
 
 ## What impacts your score
 
-- **Severity distribution** — More weight on critical/serious issues lowers the score faster than many minor-only findings.  
-- **Issue density** — More issues **per element** lowers the score; a complex page with more elements affects **y** relative to a tiny page.  
-- **Total element count** — Larger DOMs change the density denominator; the formula is built so density stays meaningful across page sizes.  
+- **Severity distribution**: More weight on critical/serious issues lowers the score faster than many minor-only findings.  
+- **Issue density**: More issues **per element** lowers the score; a complex page with more elements affects **y** relative to a tiny page.  
+- **Total element count**: Larger DOMs change the density denominator; the formula is built so density stays meaningful across page sizes.  
 
 ## Improving your score
 
 Focus on **high-impact** changes:
 
-1. **Fix critical issues first** — They carry the most weight and usually block real users.  
-2. **Reduce density** — Systematic patterns (wrong component library defaults, shared header issues) hurt more than one-off edge cases.  
-3. **Re-scan after meaningful fixes** — Compare score **and** issue lists run-over-run; use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** for audit trails.  
+1. **Fix critical issues first**: They carry the most weight and usually block real users.  
+2. **Reduce density**: Systematic patterns (wrong component library defaults, shared header issues) hurt more than one-off edge cases.  
+3. **Re-scan after meaningful fixes**: Compare score **and** issue lists run-over-run; use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** for audit trails.  
 
 For fix order and rule context, use the **[Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)** and platform checklists: [Web](/support/docs/accessibility-web-what-we-cover/) · [iOS](/support/docs/accessibility-ios-what-we-cover/) · [Android](/support/docs/accessibility-android-what-we-cover/).
 
@@ -124,7 +124,7 @@ For fix order and rule context, use the **[Accessibility Issue Remediation Guide
 
 1. Open the report from **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)** and note the score **vs** the previous comparable build.  
 2. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** to see **which severities and rules** moved.  
-3. Only then decide if the score alone is enough for a stakeholder update—or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.  
+3. Only then decide if the score alone is enough for a stakeholder update, or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.  
 
 ## Remember
 

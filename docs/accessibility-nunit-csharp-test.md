@@ -2,7 +2,7 @@
 id: accessibility-nunit-csharp-test
 title: NUnit (C#)
 sidebar_label: NUnit (C#)
-description: Run Accessibility Automation with Selenium C# and NUnit—RemoteWebDriver capabilities, test lifecycle, and reports.
+description: "Run Accessibility Automation with Selenium C# and NUnit: RemoteWebDriver capabilities, test lifecycle, and reports."
 keywords:
   - TestMu AI
   - Accessibility
@@ -70,7 +70,7 @@ Automation Dashboard → build → **Accessibility** tab (same as [Selenium guid
 
 | Symptom | What to check |
 |--------|----------------|
-| Capability ignored | Selenium 4 requires `AddAdditionalOption` on `ChromeOptions` (or equivalent) for vendor-specific keys—verify spelling. |
+| Capability ignored | Selenium 4 requires `AddAdditionalOption` on `ChromeOptions` (or equivalent) for vendor-specific keys. Verify spelling. |
 | No report | Confirm hook or autoscan as above. |
 
 ## Related docs

@@ -3,7 +3,7 @@ id: hyperexecute-how-to-manage-project-level-secrets
 title: Manage Project Level Secrets in HyperExecute
 hide_title: false
 sidebar_label: Project-Level Secrets
-description: Learn how to manage project-level secrets in HyperExecute—scope credentials per project, restrict access, and keep sensitive data secure.
+description: Learn how to manage project-level secrets in HyperExecute, scope credentials per project, restrict access, and keep sensitive data secure.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
@@ -97,7 +97,7 @@ env:
 | **Access Control** | Controlled by user account permissions | Controlled by project permissions |
 
 ## Why Use Project-Level Secrets?
-- **Centralized Management :** Keep all secrets related to a test framework or application in one place—the project.
+- **Centralized Management :** Keep all secrets related to a test framework or application in one place: the project.
 - **Team Collaboration :** Multiple team members can access the same secrets via shared project access.
 - **Simplified CI/CD Setup :** Reference your project in the YAML, and secrets are injected automatically without extra configuration.
 - **Security :** Secrets remain encrypted and are never logged or exposed in your code.

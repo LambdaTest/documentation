@@ -3,7 +3,7 @@ id: testing-your-first-ai-agent
 title: Testing Your First AI Agent
 hide_title: false
 sidebar_label: Test Your First AI Agent
-description: Step-by-step guide to setting up and running your first AI agent test on TestMu AI—configure inputs, run validations, and review results.
+description: "Step-by-step guide to setting up and running your first AI agent test on TestMu AI: configure inputs, run validations, and review results."
 keywords:
  - agent testing
  - agentic testing

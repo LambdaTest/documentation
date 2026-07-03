@@ -39,7 +39,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-browser-state/
       }) }}
 ></script>
 
-Objectives can directly manage cookies, localStorage, and the clipboard — useful for seeding state before a flow (skip a login, dismiss a consent banner) and for testing copy/paste behavior.
+Objectives can directly manage cookies, localStorage, and the clipboard, useful for seeding state before a flow (skip a login, dismiss a consent banner) and for testing copy/paste behavior.
 
 ## Cookies
 
@@ -51,7 +51,7 @@ Clear all cookies
 ```
 
 - Values accept `{{variables}}`: `set a cookie named session with value {{auth_token}}`
-- A cookie without an explicit domain applies to the **current page's site** — navigate first
+- A cookie without an explicit domain applies to the **current page's site**. Navigate first
 - Reload or navigate after setting if the page must pick the cookie up
 - Provide `path` together with a domain; a path alone is rejected by the browser
 
@@ -63,13 +63,13 @@ Delete the lang key from localStorage
 Clear localStorage
 ```
 
-- Storage is **per-site** — navigate to the target site before setting
+- Storage is **per-site**. Navigate to the target site before setting
 - Reload after setting if the app only reads storage on page load
 - Values accept `{{variables}}`
 
 ## Clipboard
 
-The run uses an **isolated test clipboard** — your real OS clipboard is never read or written. Site Copy buttons are captured into it automatically.
+The run uses an **isolated test clipboard**. Your real OS clipboard is never read or written. Site Copy buttons are captured into it automatically.
 
 ```
 Write "John Tester" to the clipboard
@@ -77,13 +77,13 @@ Click the message field, then paste from the clipboard
 Clear the clipboard
 ```
 
-- **Paste targets the focused field** — click or focus the field first, then paste (`Ctrl/Cmd+V` in an objective works the same way)
+- **Paste targets the focused field**: click or focus the field first, then paste (`Ctrl/Cmd+V` in an objective works the same way)
 - Text and images both paste; rich editors receive a real paste event
 - Typical flows: *write → click field → paste*, or *click the site's Copy button → click field → paste*
 
 ## Verifying state
 
-Each of these has a matching assertion family — see [Cookies](/support/docs/kane-cli-checkpoint-devtools-cookies/), [localStorage](/support/docs/kane-cli-checkpoint-devtools-localstorage/), and [Clipboard](/support/docs/kane-cli-checkpoint-devtools-clipboard/):
+Each of these has a matching assertion family. See [Cookies](/support/docs/kane-cli-checkpoint-devtools-cookies/), [localStorage](/support/docs/kane-cli-checkpoint-devtools-localstorage/), and [Clipboard](/support/docs/kane-cli-checkpoint-devtools-clipboard/):
 
 ```
 Set a cookie named session with value abc123, reload, and verify the page shows you as logged in

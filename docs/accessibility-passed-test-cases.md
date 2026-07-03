@@ -29,7 +29,7 @@ Passed checks help teams:
 
 ## How to enable and read Passed Test Cases (onboarding)
 
-1. Open an Accessibility **report settings** or **scan configuration** surface where passed checks are exposed (wording may appear as “Passed tests”, “Include passing checks”, or similar—UI varies by scan type).
+1. Open an Accessibility **report settings** or **scan configuration** surface where passed checks are exposed (wording may appear as “Passed tests”, “Include passing checks”, or similar, UI varies by scan type).
 2. Turn the option **on** before the next run if you want auditors to see green checks alongside violations.
 3. After the run, open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** and look for passed-rule summaries or toggles that reveal passing rules.
 4. Pair passes with **[Accessibility Web Score](/support/docs/accessibility-web-score/)** trends so leadership sees improvement, not only open defects.

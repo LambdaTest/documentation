@@ -94,7 +94,7 @@ Steps that include sub-actions - such as loops, conditionals, or JavaScript snip
 
 #### Auto-Heal Visibility
 
-When [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run — without digging through execution logs.
+When [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run, without digging through execution logs.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-auto-heal-step.png').default} alt="auto-heal-indicator-on-step" className="doc_img"/>
 
@@ -183,7 +183,7 @@ Click the **View tests** button in the top-right corner to open a panel listing 
 
 ## Share a Test Run Instance
 
-You can share a test run instance page publicly with stakeholders — including people who do not have a <BrandName /> account. Click the **Share** icon in the top-right corner of the instance view to open the share dialog.
+You can share a test run instance page publicly with stakeholders, including people who do not have a <BrandName /> account. Click the **Share** icon in the top-right corner of the instance view to open the share dialog.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-share.png').default} alt="share-test-run-instance" className="doc_img"/>
 
@@ -193,14 +193,14 @@ The share dialog provides the following options:
 - **Email ID(s)** - Enter one or more email addresses and click **Invite** to send the link directly, with an optional **Message** for context.
 - **Copy Link** - Copy a shareable link to the clipboard and distribute it yourself.
 
-Anyone with an active shared link can view the test run instance — including the steps, screenshots, and execution details — until the link expires.
+Anyone with an active shared link can view the test run instance (including the steps, screenshots, and execution details) until the link expires.
 
 ---
 
 ## Limitations
 
-- **Mobile Browser not supported** — The enhanced Test Run Instance view is currently not supported for Mobile Browser test executions.
-- **Applies to newly generated code only** — This view is available only for test cases whose code was generated after the feature was enabled. For older test cases, the previous automation details page will continue to be shown.
+- **Mobile Browser not supported**: The enhanced Test Run Instance view is currently not supported for Mobile Browser test executions.
+- **Applies to newly generated code only**: This view is available only for test cases whose code was generated after the feature was enabled. For older test cases, the previous automation details page will continue to be shown.
 
 ---
 
