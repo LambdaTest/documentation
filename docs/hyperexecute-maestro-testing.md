@@ -279,7 +279,7 @@ This ensures that each test result is saved with a unique name like test1.xml, t
 ## Step 7: Monitor the Test Execution
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="1034" className="doc_img"/>
 
 
 ## Additional Information: Launching Pre-Installed Apps with Maestro
@@ -309,7 +309,7 @@ framework:
 and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.
 
 ```yaml reference title="android-launch.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-launch.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-launch.yaml
 ```
 
 ### Step 3: Execute your Test Suite
