@@ -89,7 +89,7 @@ Custom roles give you the flexibility to tailor access permissions to match your
 
 **Step 2:** In the **Create New Role** dialog, enter a **Role Name** that clearly describes the role's purpose (e.g., "SmartUI Tester", "KaneAI Developer", "QA Lead").
 
-**Step 3:** You can configure product-level access or entity-level access based on your requirements.
+**Step 3:** You can configure [product-level access](#product-level-access) or entity-level access based on your requirements. Entity-level access is covered in detail below.
 
 <img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/create-new-role.png').default} alt="Create New Role dialog with entity dropdown showing Select Specific, Product Access, and Granular Control sections" className="doc_img"/>
 
@@ -105,25 +105,7 @@ Custom roles give you the flexibility to tailor access permissions to match your
 
 <img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/team-custom-role-access.png').default} alt="Assign custom roles to teams" className="doc_img"/>
 
-## Product Level Access
-
-Product-level access lets you control which <BrandName /> products a user can see and interact with. This is the most impactful RBAC setting as it determines what shows up on a user's dashboard, sidebar, and which URLs they can visit.
-
-When creating or editing a role, add **List of Products** as an entity and select only the products this role should have access to, such as KaneAI, HyperExecute, SmartUI, and more.
-
-### What happens when a product is restricted?
-
-- The product is **hidden from the sidebar** and **dashboard** for the user.
-- If a user tries to directly access a restricted product URL, they are redirected to a **403 page**.
-
-
-### When to use Product Level Access
-
-- **Security & compliance**:Restrict sensitive products like Insights or Settings to admins and leads only, ensuring regular testers don't have access to org-level analytics or configurations.
-- **Onboarding new members**:New team members can be given a limited role with access to only Real Time and Automation while they ramp up, then gradually expanded to include KaneAI and HyperExecute.
-- **Client or vendor access**:External contractors working on a specific product area (e.g., mobile testing) can be restricted to only Real Device and Automation without exposing the rest of the platform.
-
-## Entity Level Access
+### Entity Level Access
 
 Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Each product exposes its own set of entities, and you can grant specific permissions on each one.
 
@@ -171,11 +153,11 @@ Each product exposes a different set of entities. Here is what each one represen
 Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
 :::
 
-### Select Specific Entities
+#### Select Specific Entities
 
 When creating or editing a role, you can assign permissions to specific items rather than to all items of a type, for example, granting access only to selected Test Manager projects or to specific HyperExecute projects.
 
-### Granular Control
+#### Granular Control
 
 For supported products, you can configure fine-grained permissions on each entity using the following permission levels:
 
@@ -189,6 +171,24 @@ For supported products, you can configure fine-grained permissions on each entit
 :::note
 Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
 :::
+
+## Product Level Access
+
+Product-level access lets you control which <BrandName /> products a user can see and interact with. This is the most impactful RBAC setting as it determines what shows up on a user's dashboard, sidebar, and which URLs they can visit.
+
+When creating or editing a role, add **List of Products** as an entity and select only the products this role should have access to, such as KaneAI, HyperExecute, SmartUI, and more.
+
+### What happens when a product is restricted?
+
+- The product is **hidden from the sidebar** and **dashboard** for the user.
+- If a user tries to directly access a restricted product URL, they are redirected to a **403 page**.
+
+
+### When to use Product Level Access
+
+- **Security & compliance**:Restrict sensitive products like Insights or Settings to admins and leads only, ensuring regular testers don't have access to org-level analytics or configurations.
+- **Onboarding new members**:New team members can be given a limited role with access to only Real Time and Automation while they ramp up, then gradually expanded to include KaneAI and HyperExecute.
+- **Client or vendor access**:External contractors working on a specific product area (e.g., mobile testing) can be restricted to only Real Device and Automation without exposing the rest of the platform.
 
 
 <nav aria-label="breadcrumbs">
