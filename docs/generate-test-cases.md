@@ -249,6 +249,9 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/linked_jira_view_test_cases_generation.png').default} alt="linked_jira_view_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
+:::note
+For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
+:::
 
 ##### Configure Generation Settings
 Before triggering a generation session, you can configure the following settings to control the AI's output:
@@ -527,7 +530,7 @@ Once you have generated and refined your test scenarios and test cases, it's tim
 
 
 #### Option 1: Create Test Cases
-Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning.
+Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
