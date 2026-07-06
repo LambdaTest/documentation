@@ -49,7 +49,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**23.105.12.32/27**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.106.34.192/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**209.58.137.40/29**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
-|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**23.105.162.225**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.105.174.26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**199.7.167.8/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
@@ -81,6 +81,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**3.111.139.20**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**54.255.17.88**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**3.64.247.89**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+|**23.106.127.152/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**4.247.183.49**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**20.234.234.192**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**137.174.189.0/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+|**104.45.207.170**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**4.224.6.32/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.253.69.48/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.242.202.160/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
