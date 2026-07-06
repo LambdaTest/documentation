@@ -78,9 +78,25 @@ You can optionally add **Description** for the Report too but adding **Name** is
 **Recurring Reports:**
 You can select the `Recurring` option, add **Recipients** & **Frequency** to automatically get the mail notification with the reports timely. 
 
-This is how the execution reports will look like:
+This is how the reports will look like:
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/execution-report.png').default} alt="Reports Overview" className="doc_img"/>
+### Execution History Report
+
+The detailed Execution History Report lists each Test Instance in the selected test run(s) with the following information: Test Case ID and name, execution status, test run name, step count, configuration (platform, OS, and device), mode, executed by, and executed at. Each row includes a link to navigate directly to that test instance in the product.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/execution-report.png').default} alt="Execution History Report" className="doc_img"/>
+
+**Step-level data in CSV export**
+
+When you download the report as a CSV, each step for every test instance is listed as a separate row, including:
+
+- **Step** — The step description
+- **Expected Outcome** — The expected result for that step
+- **Step Status** — The execution status of the step, supporting standard statuses (Passed, Failed, Skipped) as well as any custom statuses configured for your project
+
+:::info
+Step-level execution tracking in reports is currently in slow rollout. To get early access, raise a request to our support team.
+:::
 
 :::tip
  All the Reports can be Downloaded as CSV files.  
