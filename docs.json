@@ -255,143 +255,192 @@
             "group": "Kane AI",
             "pages": [
               {
-                "group": "Get Started",
+                "group": "Getting Started",
+                "expanded": false,
                 "pages": [
                   "docs/getting-started-with-kane-ai",
-                  "docs/author-your-first-desktop-browser-test",
-                  "docs/author-your-first-mobile-browser-test",
-                  "docs/author-your-first-mobile-app-test",
-                  "docs/kane-ai-test-plan"
-                ],
-                "expanded": false
+                  {
+                    "group": "Author Your First Test",
+                    "expanded": false,
+                    "pages": [
+                      "docs/author-your-first-desktop-browser-test",
+                      "docs/author-your-first-mobile-browser-test",
+                      "docs/author-your-first-mobile-app-test"
+                    ]
+                  }
+                ]
               },
               {
-                "group": "Write Test Steps",
+                "group": "Writing Tests",
+                "expanded": false,
                 "pages": [
+                  "docs/kaneai-kb-knowledge-base-index",
                   "docs/kane-ai-command-guide",
-                  "docs/kaneai-kb-finding-and-interacting-with-elements",
-                  "docs/kaneai-kb-forms-inputs-and-data-entry",
-                  "docs/kaneai-kb-assertions-and-validation",
-                  "docs/kaneai-kb-dynamic-content-waits-and-page-state",
-                  "docs/kaneai-manual-interaction",
-                  "docs/kane-ai-click-interactions",
-                  "docs/kane-ai-scroll-in-feature",
-                  "docs/kane-ai-drag-drop",
-                  "docs/kane-ai-javascript-execution",
-                  "docs/kaneai-rename-instructions",
-                  "docs/kane-ai-web-test-writing-guidelines",
-                  "docs/kaneai-edit-test-steps",
-                  "docs/kaneai-kb-js-snippets-and-workarounds"
-                ],
-                "expanded": false
+                  {
+                    "group": "Authoring Guides",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-kb-finding-and-interacting-with-elements",
+                      "docs/kaneai-kb-forms-inputs-and-data-entry",
+                      "docs/kaneai-kb-assertions-and-validation",
+                      "docs/kaneai-kb-dynamic-content-waits-and-page-state"
+                    ]
+                  },
+                  {
+                    "group": "Interactions",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kane-ai-click-interactions",
+                      "docs/kane-ai-scroll-in-feature",
+                      "docs/kane-ai-drag-drop",
+                      "docs/kaneai-manual-interaction",
+                      "docs/kaneai-upload-and-download-files"
+                    ]
+                  },
+                  {
+                    "group": "Logic & Control Flow",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-conditional-logic",
+                      "docs/kaneai-while-loops",
+                      "docs/kane-ai-javascript-execution",
+                      "docs/kaneai-kb-js-snippets-and-workarounds"
+                    ]
+                  },
+                  {
+                    "group": "Session Configuration",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-advanced-settings",
+                      "docs/kaneai-chrome-options"
+                    ]
+                  },
+                  {
+                    "group": "Mobile Testing",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-kb-mobile-app-testing-patterns",
+                      "docs/kaneai-scroll-until-mobile"
+                    ]
+                  }
+                ]
               },
               {
-                "group": "Use Test Data",
+                "group": "Test Data & Variables",
+                "expanded": false,
                 "pages": [
+                  "docs/kaneai-variables-and-parameters",
                   "docs/kane-ai-using-variables",
                   "docs/kane-ai-secrets",
                   "docs/kane-ai-smart-variables",
                   "docs/kane-ai-using-parameters",
-                  "docs/kane-ai-using-datasets",
-                  "docs/kane-ai-using-json-variables",
-                  "docs/kaneai-variables-and-parameters",
-                  "docs/test-data-generation"
-                ],
-                "expanded": false
+                  "docs/kane-ai-using-datasets"
+                ]
               },
               {
-                "group": "Add Logic & Reusable Modules",
+                "group": "Advanced Testing",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-conditional-logic",
-                  "docs/kaneai-while-loops",
-                  "docs/kane-ai-modules",
-                  "docs/kaneai-bulk-module-update",
-                  "docs/kaneai-modules-versions-and-enhancement"
-                ],
-                "expanded": false
-              },
-              {
-                "group": "Test APIs, Databases & Visual UI",
-                "pages": [
-                  "docs/kaneai-kb-authentication-and-session-management",
-                  "docs/kaneai-totp",
-                  "docs/kane-ai-api-testing",
-                  "docs/kaneai-database",
-                  "docs/kaneai-upload-and-download-files",
-                  "docs/kaneai-smartui-visual-testing",
-                  "docs/kane-ai-network-assertions",
-                  "docs/kaneai-kb-api-testing-and-network-assertions"
-                ],
-                "expanded": false
-              },
-              {
-                "group": "Configure the Test Session",
-                "pages": [
-                  "docs/kaneai-advanced-settings",
-                  "docs/kaneai-chrome-options",
-                  "docs/kaneai-custom-headers",
                   "docs/kane-ai-geolocation-tunnel-proxy",
-                  "docs/kaneai-smart-locator-priority"
-                ],
-                "expanded": false
+                  {
+                    "group": "API & Network",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kane-ai-api-testing",
+                      "docs/kaneai-kb-api-testing-and-network-assertions",
+                      "docs/kane-ai-network-assertions",
+                      "docs/kaneai-custom-headers"
+                    ]
+                  },
+                  {
+                    "group": "Authentication & Security",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-kb-authentication-and-session-management",
+                      "docs/kaneai-totp"
+                    ]
+                  },
+                  "docs/kaneai-database",
+                  "docs/kaneai-smartui-visual-testing",
+                  {
+                    "group": "Mobile",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-mobile-app-capabilities",
+                      "docs/kane-ai-deeplink-support",
+                      "docs/kaneai-network-throttling",
+                      "docs/kaneai-gps-location",
+                      "docs/kaneai-mobile-app-accessibility"
+                    ]
+                  }
+                ]
               },
               {
-                "group": "Test Native Mobile Apps",
+                "group": "Modules & Reusability",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-kb-mobile-app-testing-patterns",
-                  "docs/kane-ai-deeplink-support",
-                  "docs/kaneai-gps-location",
-                  "docs/kaneai-network-throttling",
-                  "docs/kaneai-mobile-app-accessibility",
-                  "docs/kane-ai-mobile-app-capabilities",
-                  "docs/kaneai-scroll-until-mobile"
-                ],
-                "expanded": false
+                  "docs/kane-ai-modules",
+                  "docs/kaneai-modules-versions-and-enhancement",
+                  "docs/kaneai-bulk-module-update",
+                  "docs/kaneai-rename-instructions"
+                ]
               },
               {
-                "group": "Run Tests",
+                "group": "Running Tests",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-hyperexecute-test-run-execution",
                   "docs/test-runs-configurations",
-                  "docs/kaneai-sequential-test-runs",
-                  "docs/kaneai-scheduled-test-runs",
-                  "docs/kaneai-dynamic-url-replacement"
-                ],
-                "expanded": false
+                  {
+                    "group": "Execution",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-hyperexecute-test-run-execution",
+                      "docs/kaneai-sequential-test-runs",
+                      "docs/kaneai-scheduled-test-runs",
+                      "docs/kaneai-dynamic-url-replacement"
+                    ]
+                  },
+                  {
+                    "group": "Code Export & CI/CD",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kane-ai-automation-code-generation",
+                      "docs/kaneai-ci-cd-automation"
+                    ]
+                  },
+                  {
+                    "group": "Results",
+                    "expanded": false,
+                    "pages": [
+                      "docs/kaneai-test-run-instance-view"
+                    ]
+                  }
+                ]
               },
               {
-                "group": "Debug & Triage Failures",
+                "group": "Debugging & Reliability",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-test-run-instance-view",
+                  "docs/kaneai-auto-heal",
+                  "docs/kaneai-smart-locator-priority",
                   "docs/kaneai-failure-conditions",
-                  "docs/kaneai-auto-heal"
-                ],
-                "expanded": false
+                  "docs/error-handling-kaneai"
+                ]
               },
               {
-                "group": "Scale & Automate",
+                "group": "Integrations",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-ci-cd-automation",
                   "docs/kane-ai-jira-integration",
-                  "docs/kaneai-github-app",
-                  "docs/kane-ai-automation-code-generation",
-                  "docs/kaneai-create-pr"
-                ],
-                "expanded": false
+                  "docs/kaneai-github-app"
+                ]
               },
               {
-                "group": "Reference & Troubleshooting",
+                "group": "FAQs",
+                "expanded": false,
                 "pages": [
-                  "docs/kaneai-kb-knowledge-base-index",
-                  "docs/kane-ai-app-test-writing-guidelines",
-                  "docs/error-handling-kaneai",
-                  "docs/kaneai-faqs",
-                  "docs/kane-ai-free-trial-is-here",
-                  "docs/kaneai-release-notes",
-                  "docs/kaneai-release-notes-0-0-2",
-                  "docs/kaneai-release-notes-0-0-1"
-                ],
-                "expanded": false
+                  "docs/kaneai-faqs"
+                ]
               }
             ]
           }
@@ -1785,65 +1834,58 @@
                 "group": "Get Started",
                 "expanded": false,
                 "pages": [
-                  "docs/real-device-testing-overview",
-                  "docs/app-testing-on-real-devices",
-                  "docs/browser-testing-on-real-devices"
+                  "docs/real-device-testing-overview"
                 ]
               },
               {
-                "group": "Manage Apps & Builds",
+                "group": "App Manager",
                 "expanded": false,
                 "pages": [
                   "docs/upload-apps-on-real-device-cloud",
                   "docs/app-manager",
                   "docs/app-settings",
-                  "docs/ios-entitlements",
-                  "docs/install-apps-from-play-store",
-                  "docs/install-apps-from-test-flight",
-                  "docs/install-apps-from-app-store",
-                  "docs/install-apps-from-app-center",
-                  "docs/install-apps-from-firebase",
-                  "docs/app-distribution",
-                  "docs/beta-testers-management",
-                  "docs/group-folder-redirect-on-real-device"
+                  "docs/install-app",
+                  "docs/app-distribution"
                 ]
               },
               {
-                "group": "Use In-Session Tools",
+                "group": "Features",
                 "expanded": false,
                 "pages": [
-                  "docs/how-to-use-testing-tools-in-session",
                   "docs/gesture-support-ios",
                   "docs/upload-files-media",
-                  "docs/real-device-adb-shell",
-                  "docs/multi-device-testing"
-                ]
-              },
-              {
-                "group": "Simulate Real-World Conditions",
-                "expanded": false,
-                "pages": [
-                  "docs/ip-geolocation-on-real-devices-app",
-                  "docs/network-configurations-in-real-devices",
-                  "docs/sim-support-realdevices",
+                  "docs/multi-device-testing",
                   "docs/camera-image-injection-on-real-devices",
                   "docs/biometric-authentication-on-real-devices",
+                  "docs/audio-injection-manual",
+                  "docs/assistive-touch-on-real-ios-devices",
+                  "docs/device-passcode-on-realdevice",
+                  "docs/manual-app-profiling",
+                  "docs/ip-geolocation-on-real-devices-app",
+                  "docs/sim-support-realdevices",
                   "docs/contacts-on-real-devices",
                   "docs/set-date-time-hour-format-real-devices",
                   "docs/dark-mode-on-real-devices",
-                  "docs/assistive-touch-on-real-ios-devices",
-                  "docs/apple-pay-manual",
-                  "docs/audio-injection-manual",
-                  "docs/device-passcode-on-realdevice"
+                  "docs/apple-pay-manual"
                 ]
               },
               {
-                "group": "Inspect & Debug",
+                "group": "In-Session Tools",
                 "expanded": false,
                 "pages": [
+                  "docs/how-to-use-testing-tools-in-session",
                   "docs/ui-inspector",
                   "docs/devtools-on-real-devices-app",
-                  "docs/manual-app-profiling"
+                  "docs/network-configurations-in-real-devices",
+                  "docs/real-device-adb-shell",
+                  "docs/select-pre-installed-apps"
+                ]
+              },
+              {
+                "group": "Private Cloud",
+                "expanded": false,
+                "pages": [
+                  "docs/public-cloud-vs-private-cloud"
                 ]
               },
               {
@@ -1851,35 +1893,6 @@
                 "expanded": false,
                 "pages": [
                   "docs/manual-tests-dashboard"
-                ]
-              },
-              {
-                "group": "Browser - In-Session Tools",
-                "expanded": false,
-                "pages": [
-                  "docs/how-to-use-in-session-testing-tools",
-                  "docs/audio-injection-manual-browser",
-                  "docs/ip-geolocation-on-real-devices-browser",
-                  "docs/network-configurations-in-browser",
-                  "docs/contacts-on-real-devices-browser",
-                  "docs/set-date-time-hour-format-real-devices-browser",
-                  "docs/dark-mode-on-browser"
-                ]
-              },
-              {
-                "group": "Browser - Accessibility",
-                "expanded": false,
-                "pages": [
-                  "docs/assistive-touch-on-real-ios-browser"
-                ]
-              },
-              {
-                "group": "Private Cloud",
-                "expanded": false,
-                "pages": [
-                  "docs/public-cloud-vs-private-cloud",
-                  "docs/select-pre-installed-apps",
-                  "docs/private-device-allocation-to-teams"
                 ]
               }
             ]
@@ -2269,6 +2282,114 @@
     }
   },
   "redirects": [
+    {
+      "source": "/docs/why-we-need-kane-ai",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/use-cases-of-kane-ai",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kane-ai-test-plan",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kaneai-test",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kane-ai-test-video",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kaneai-manual-interaction-video",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kaneai-edit-test-steps",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/kaneai-edit-teststeps-video",
+      "destination": "/docs/getting-started-with-kane-ai"
+    },
+    {
+      "source": "/docs/app-testing-on-real-devices",
+      "destination": "/docs/real-device-testing-overview"
+    },
+    {
+      "source": "/docs/browser-testing-on-real-devices",
+      "destination": "/docs/real-device-testing-overview"
+    },
+    {
+      "source": "/docs/ios-entitlements",
+      "destination": "/docs/app-settings"
+    },
+    {
+      "source": "/docs/group-folder-redirect-on-real-device",
+      "destination": "/docs/app-settings"
+    },
+    {
+      "source": "/docs/install-apps-from-play-store",
+      "destination": "/docs/install-app"
+    },
+    {
+      "source": "/docs/install-apps-from-test-flight",
+      "destination": "/docs/install-app"
+    },
+    {
+      "source": "/docs/install-apps-from-app-store",
+      "destination": "/docs/install-app"
+    },
+    {
+      "source": "/docs/install-apps-from-app-center",
+      "destination": "/docs/install-app"
+    },
+    {
+      "source": "/docs/install-apps-from-firebase",
+      "destination": "/docs/install-app"
+    },
+    {
+      "source": "/docs/beta-testers-management",
+      "destination": "/docs/app-distribution"
+    },
+    {
+      "source": "/docs/how-to-use-in-session-testing-tools",
+      "destination": "/docs/how-to-use-testing-tools-in-session"
+    },
+    {
+      "source": "/docs/audio-injection-manual-browser",
+      "destination": "/docs/audio-injection-manual"
+    },
+    {
+      "source": "/docs/ip-geolocation-on-real-devices-browser",
+      "destination": "/docs/ip-geolocation-on-real-devices-app"
+    },
+    {
+      "source": "/docs/network-configurations-in-browser",
+      "destination": "/docs/network-configurations-in-real-devices"
+    },
+    {
+      "source": "/docs/contacts-on-real-devices-browser",
+      "destination": "/docs/contacts-on-real-devices"
+    },
+    {
+      "source": "/docs/set-date-time-hour-format-real-devices-browser",
+      "destination": "/docs/set-date-time-hour-format-real-devices"
+    },
+    {
+      "source": "/docs/dark-mode-on-browser",
+      "destination": "/docs/dark-mode-on-real-devices"
+    },
+    {
+      "source": "/docs/assistive-touch-on-real-ios-browser",
+      "destination": "/docs/assistive-touch-on-real-ios-devices"
+    },
+    {
+      "source": "/docs/private-device-allocation-to-teams",
+      "destination": "/docs/public-cloud-vs-private-cloud"
+    },
     {
       "source": "/docs/testing-apps-locally",
       "destination": "/docs/testing-locally-hosted-apps"
