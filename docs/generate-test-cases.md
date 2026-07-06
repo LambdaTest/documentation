@@ -250,6 +250,9 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/linked_jira_view_test_cases_generation.png').default} alt="linked_jira_view_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
+:::note
+For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
+:::
 
 ##### Configure Generation Settings
 Before triggering a generation session, you can configure the following settings to control the AI's output:
@@ -528,17 +531,35 @@ Once you have generated and refined your test scenarios and test cases, it's tim
 
 
 #### Option 1: Create Test Cases
-Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning.
+Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
 #### Option 2: Create and Automate with KaneAI
-Select the desired test cases and click **Create and Automate** to save the test cases to your repository and automate the generated test cases through KaneAI. This option streamlines the transition from test design to test automation. 
+Select the desired test cases and click **Create and Automate** to save the test cases to your repository and submit them to KaneAI for automated authoring. Clicking this button opens the **Create and Automate Test Cases** dialog, where you configure automation settings before KaneAI begins authoring. The dialog displays the number of distinct test cases selected and how many are automation-ready.
 
-<!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_and_automate_test_cases.png').default} alt="create-and-automate-test-cases" width="1347" height="616" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create_automate_dialog_desktop.png').default} alt=" " className="doc_img"/>
+
+The dialog is organized into three platform tabs — **Desktop Browser**, **Mobile Browser**, and **Mobile App**. Each tab contains three sections:
+
+**Test Settings**
+
+Configure how KaneAI authors the test cases. You can set the **Agent Concurrency** (number of concurrent KaneAI agents, from 1 to 105), toggle **Generate data dynamically** to enable runtime data generation for adaptive tests, and toggle **Dismiss pop-ups** to automatically handle pop-ups and notifications during execution.
+
+**Test Configurations**
+
+Select the target environment for your tests. Mobile Browser and Mobile App tabs allow you to choose specific device, OS, and version combinations for test execution.
+
+**Advanced Settings**
+
+Configure environment-level settings for your test run. All platforms support **Network Configuration** to connect via a tunnel or proxy, and **Timezone** to set the execution timezone. Each platform also includes additional settings specific to that environment. For a full reference of available options per platform, see [Advanced Settings in KaneAI](/support/docs/kaneai-advanced-settings/).
 
 :::note
 The **Create and Automate** option requires KaneAI access. If you do not have KaneAI enabled on your account, use the **Create** option to save test cases manually.
+:::
+
+:::info Experimental Feature
+Create and Automate is currently an experimental feature. Review your test steps once the test cases have been created and automated.
 :::
 
 ---
