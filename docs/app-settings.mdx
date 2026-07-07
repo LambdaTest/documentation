@@ -1,6 +1,6 @@
 ---
-title: "App Settings in Real Device Cloud"
-sidebarTitle: "Configure App-Level Features"
+title: "App-Level Features"
+sidebarTitle: "App-Level Features"
 description: "Explore App Settings in TestMu AI's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation."
 keywords: ['app settings']
 "og:description": "Explore App Settings in TestMu AI's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation."
@@ -35,3 +35,73 @@ Check out our detailed [support documentation](/support/docs/disable-screenshot-
 ## Default Network Logs
 
 Enable this feature to seamlessly initiate network log capturing at the beginning of each session within your application. By enabling this setting at the app level, you prioritize the logging of network activities over device logs, ensuring comprehensive monitoring of network interactions right from the start.
+
+## Preserve iOS Entitlements
+
+We support all ipa files generated from different Certificates & Profiles.
+
+However, to install these apps on our devices, we resign your applications with our Resigning Certificate.
+
+This is true for all Certificates & Profiles except the applications generated using an Enterprise Account.
+
+### Disabling Re-Signing In Manual App Testing
+***
+
+<Info>
+- Your application must be an Enterprise Application.
+
+</Info>
+
+When you upload an application that is generated through an Enterprise Account, you have the option at the beginning of your test to disable re-signing by toggling iOS Entitlements.
+
+Once you toggle the iOS Entitlements option, your application's certificates will be preserved.
+
+<img loading="lazy" src='/assets/images/entitlements/1.webp' alt="monday integration" width="626" height="439" />
+
+### Disabling Re-Signing In App Automation
+***
+
+<Info>
+- Your application must be an Enterprise Application.
+
+</Info>
+
+You can prevent re-signing your application with the "resignApp" capability. Upload your enterprise application & specify the capability as "false" to prevent it from being re-signed.
+
+KEY|VALUE|DESCRIPTION
+--|--|--
+| resignApp            | TYPE: BOOLEAN <br /> DEFAULT: True <br /> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br /> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br /> 3. This is only for iOS-specific applications and devices |
+If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
+
+## Redirect Group Folders
+
+<BrandName /> supports **Group Folder Redirect** for iOS apps on Real Devices.  
+This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
+
+---
+
+### Use Cases 
+
+- Ensure your app maintains **file system access** after being re-signed on Real Devices.  
+- Prevent issues when your app relies on the **shared App Group container**, which becomes inaccessible after resigning.  
+- Guarantee consistent **storage and retrieval of files** by using the app’s private container.  
+
+---
+
+### Using Group Folder Redirect in Manual Testing
+
+**Step 1**: Click on the Real Devices > App Testing
+
+**Step 2**: Upload your application. Open the **App Settings** to enable the **Group Folder Redirect** toggle.
+
+![Group-Folder-Redirect](/assets/images/real-device-app-testing/Group-folder-redirect/Group-Folder-redirects.png)
+
+**Step 4**: Select your device and start your Real Device testing session.  
+
+---
+
+<Note>
+- An **instrumented version** of your app with Group Folder Redirect support will launch.  
+- The app will store and retrieve files from its **private container directory** instead of the shared App Group container.  
+- File system features will function consistently even after app resigning.
+</Note>
