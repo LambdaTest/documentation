@@ -1,0 +1,40 @@
+# Generate your HyperExecute YAML file
+
+You can also generate the HyperExecute YAML directly from the HyperExecute Portal. To accomplish this, follow the below mentioned steps:
+
+**Step 1:**  Go to [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute), click on the **Help Center**  and select **Generate YAML** from the dropdown.
+
+**Step 2:** Select your preferred test automation framework.
+
+**Step 3:** You will be redirected to the configuring section, where you can configure the HyperExecute YAML parameters. Click on **Generate YAML** button.
+
+**Step 4:**  Once done, you can download the YAML file using the small icon on top. Alternatively, you can copy the contents of the file and modify them further according to your needs on your favorite IDE.
+
+> HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/hyperexecute-supported-languages-and-frameworks/).
+
+## Sample HyperExecute YAML
+A sample HyperExecute YAML file looks like this:
+
+```yaml
+---
+version: 0.1
+runson: linux
+
+autosplit: true
+concurrency: 2
+
+pre:
+- mvn dependency:resolve
+
+testDiscovery:
+type: raw
+mode: static
+command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+
+testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
+
+retryOnFailure: true
+maxRetries: 1
+
+jobLabel: [selenium-testng, linux, v1, autosplit]
+```
