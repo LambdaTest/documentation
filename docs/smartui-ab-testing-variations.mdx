@@ -92,7 +92,7 @@ For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Ma
 2. Open the **screenshot** (comparison / review view).
 3. Click the **A/B** icon on the screenshot toolbar.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-testicon.png').default} alt="A/B testing icon on the SmartUI screenshot review page to open the variations panel" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-testicon.png" alt="A/B testing icon on the SmartUI screenshot review page to open the variations panel" width="960" className="doc_img" />
 
 The **variations pane** opens on the **right**. The steps below assume you stay in this pane unless noted.
 
@@ -102,7 +102,7 @@ The **variations pane** opens on the **right**. The steps below assume you stay 
 
 When the pane opens, you see the **default variation**:
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-defaultvariation.png').default} alt="A/B testing panel showing the default variation derived from the current build baseline" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-defaultvariation.png" alt="A/B testing panel showing the default variation derived from the current build baseline" width="960" className="doc_img" />
 
 - It reflects the **current baseline** for this screenshot in this **build context**, per your project’s **SmartUI baseline rules** (for example the latest **approved** reference for that build strategy).
 - It is **dynamic**: if the governing baseline changes (approval, move to baseline, branch rules), the default variation **follows** that reference—it is not a separate image you pin manually.
@@ -117,11 +117,11 @@ You **cannot** assign another variation to replace this **default** slot. **Defa
 2. SmartUI creates a variation from the **current capture** (the screenshot you are viewing).
 3. From the **next build onward**, new captures for this name are compared against the **default** and **every user-added** variation. That activates multi-baseline A/B for this screenshot.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-addnew.png').default} alt="Add new variation control in the A/B testing panel to save the current capture as an additional baseline" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-addnew.png" alt="Add new variation control in the A/B testing panel to save the current capture as an additional baseline" width="960" className="doc_img" />
 
 Each added variation stays active until you **delete** it or **end A/B testing**.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-initiated.png').default} alt="A/B testing active with multiple variations listed in the right-hand panel for the screenshot" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-initiated.png" alt="A/B testing active with multiple variations listed in the right-hand panel for the screenshot" width="960" className="doc_img" />
 
 ---
 
@@ -131,7 +131,7 @@ Each added variation stays active until you **delete** it or **end A/B testing**
 
 When a new build processes this screenshot, the pane shows **Matched with** and the **variation name** when a capture aligns with one of your references. SmartUI picks the **closest** match among active variations (typically the **lowest diff percentage** within your comparison threshold).
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-matchedwithvariation.png').default} alt="Matched with label in the A/B panel showing which variation the latest capture matched" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-matchedwithvariation.png" alt="Matched with label in the A/B panel showing which variation the latest capture matched" width="960" className="doc_img" />
 
 Only **one** variation is shown as the match for triage at a time—the best fit for that capture.
 
@@ -163,9 +163,9 @@ For variations you added with **Add new** (not the dynamic **default**):
 | **Update** | Replace the variation’s reference with the **current capture** when that alternate “good” state changed. |
 | **Delete** | Remove a variation you no longer need. You cannot delete the **default** slot. |
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-variation-rename.png').default} alt="Rename a user-added variation in the A/B testing panel" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-variation-rename.png" alt="Rename a user-added variation in the A/B testing panel" width="960" className="doc_img" />
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-variation-delete.png').default} alt="Delete a user-added variation from the A/B testing panel" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-variation-delete.png" alt="Delete a user-added variation from the A/B testing panel" width="960" className="doc_img" />
 
 To return to a **single** baseline without picking a winner yet, delete user-added variations one by one. To **commit** to one outcome and remove the rest in one step, use **End A/B testing** below.
 
@@ -179,9 +179,9 @@ When the experiment is finished:
 2. **Select the variation** that should be the **only** baseline for this screenshot going forward.
 3. Confirm. SmartUI promotes that choice and **deletes the other variations**, returning this screenshot to **single-baseline** mode until you add variations again.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-endtest.png').default} alt="End A/B testing flow to choose one variation as the winning baseline" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-endtest.png" alt="End A/B testing flow to choose one variation as the winning baseline" width="960" className="doc_img" />
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-endtest-confirmation.png').default} alt="Confirmation when ending A/B testing and promoting one variation as the sole baseline" width="960" className="doc_img" />
+<img loading="lazy" src="/assets/images/smart-visual-testing/a-b-testing/a-b-test-endtest-confirmation.png" alt="Confirmation when ending A/B testing and promoting one variation as the sole baseline" width="960" className="doc_img" />
 
 ---
 

@@ -647,12 +647,7 @@
               {
                 "group": "Release Notes",
                 "pages": [
-                  "docs/hyperexecute-release-notes",
-                  "docs/hyperexecute-release-notes-2025",
-                  "docs/hyperexecute-release-notes-2024",
-                  "docs/hyperexecute-release-notes-2023",
-                  "docs/hyperexecute-cli-release-notes-0-2-249",
-                  "docs/hyperexecute-mcp-server-release-notes-1-0-0"
+                  "docs/hyperexecute-release-notes"
                 ],
                 "expanded": false
               }
@@ -2282,6 +2277,26 @@
     }
   },
   "redirects": [
+    {
+      "source": "/docs/hyperexecute-release-notes-2025",
+      "destination": "/docs/hyperexecute-release-notes"
+    },
+    {
+      "source": "/docs/hyperexecute-release-notes-2024",
+      "destination": "/docs/hyperexecute-release-notes"
+    },
+    {
+      "source": "/docs/hyperexecute-release-notes-2023",
+      "destination": "/docs/hyperexecute-release-notes"
+    },
+    {
+      "source": "/docs/hyperexecute-cli-release-notes-0-2-249",
+      "destination": "/docs/hyperexecute-release-notes"
+    },
+    {
+      "source": "/docs/hyperexecute-mcp-server-release-notes-1-0-0",
+      "destination": "/docs/hyperexecute-release-notes"
+    },
     {
       "source": "/docs/why-we-need-kane-ai",
       "destination": "/docs/getting-started-with-kane-ai"

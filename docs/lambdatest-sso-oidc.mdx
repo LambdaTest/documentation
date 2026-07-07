@@ -55,7 +55,7 @@ The exact steps vary by identity provider, but the general process involves crea
 
 3. **Create New Registration**: Click **New registration** to create a new application registration.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-registration.png').default} alt="Azure App Registration" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-registration.png" alt="Azure App Registration" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 4. **Configure Application Details**:
    - **Name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> OIDC Integration"
@@ -63,7 +63,7 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Redirect URI**: Leave this blank for now (we'll configure it later)
    - Click **Register** to create the application
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-registration-2.png').default} alt="Azure App Registration" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-registration-2.png" alt="Azure App Registration" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 
 ### Step 2: Configure Application Settings
@@ -88,13 +88,13 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Expires**: Select your preferred expiration period (recommended: 24 months)
    - Click **Add**
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-client-secret-create.png').default} alt="Azure App Client Register" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-client-secret-create.png" alt="Azure App Client Register" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 3. **Copy Secret Value**: 
    - **Important**: Copy the secret value immediately - it won't be shown again
    - Store this securely as you'll need it for <BrandName /> configuration
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-client-secret.png').default} alt="Azure Client Secret" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-client-secret.png" alt="Azure Client Secret" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 > **Important**: Store the client secret securely as you'll need it for <BrandName /> configuration. Most providers only show the secret once.
 
@@ -108,7 +108,7 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Redirect URI**: Enter the redirect URI provided by <BrandName /> (typically: `https://lambdatest.auth0.com/login/callback`)
    - Click **Save**
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-redirect.png').default} alt="Azure Redirect URI" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-redirect.png" alt="Azure Redirect URI" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 ### Step 5: Collect OpenID Connect Metadata
 
@@ -126,7 +126,7 @@ The exact steps vary by identity provider, but the general process involves crea
 
 2. **Verify Well-Known URL**: You can test the URL in your browser to ensure it returns valid JSON configuration.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-oidc-metadata.png').default} alt="Azure Metadata URL" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
+<img loading="lazy" src="/assets/images/lambdatest-sso-oidc/app-oidc-metadata.png" alt="Azure Metadata URL" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 > **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
 
