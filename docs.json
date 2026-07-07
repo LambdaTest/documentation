@@ -633,14 +633,7 @@
               {
                 "group": "Troubleshoot & FAQs",
                 "pages": [
-                  "docs/hyperexecute-general-faqs",
-                  "docs/hyperexecute-yaml-faqs",
-                  "docs/hyperexecute-cli-faqs",
-                  "docs/hyperexecute-feature-faqs",
-                  "docs/hyperexecute-platform-faqs",
-                  "docs/hyperexecute-pricing-faqs",
-                  "docs/hyperexecute-security-faqs",
-                  "docs/hyperexecute-enterprise-faqs"
+                  "docs/hyperexecute-faqs"
                 ],
                 "expanded": false
               },
@@ -2404,6 +2397,38 @@
     {
       "source": "/docs/private-device-allocation-to-teams",
       "destination": "/docs/public-cloud-vs-private-cloud"
+    },
+    {
+      "source": "/docs/hyperexecute-general-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-yaml-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-cli-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-feature-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-platform-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-pricing-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-security-faqs",
+      "destination": "/docs/hyperexecute-faqs"
+    },
+    {
+      "source": "/docs/hyperexecute-enterprise-faqs",
+      "destination": "/docs/hyperexecute-faqs"
     },
     {
       "source": "/docs/testing-apps-locally",
