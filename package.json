@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "prestart": "node scripts/generate-static-md.js",
     "start": "docusaurus start",
+    "prebuild": "node scripts/generate-static-md.js",
+    "generate-static-md": "node scripts/generate-static-md.js",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

@@ -1,0 +1,71 @@
+# GitLab Integration with HyperExecute
+
+GitLab is a web-based Git repository that provides free open and private repositories, issue-following capabilities, and wikis. It is a complete DevOps platform that enables professionals to perform all the tasks in a project, from project planning and source code management to monitoring and security.
+
+This document will show you how to integrate GitLab Pipeline with HyperExecute to greatly shorten your test cycles.
+
+## How To Integrate GitLab Pipeline with Hyperexecute
+
+To integrate GitLab Pipeline with HyperExecute, follow the below steps:
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+**Sample repo**
+Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the HyperExecute.
+
+ View on GitHub
+
+### 1. Log into your GitLab account
+
+### 2. Create a New Project
+
+To create a new project and connect your external repository to GitLab CI/CD, click the **Run CI/CD for external repository** tab on the bottom right.
+
+### 3. Connect Your External Repository:
+
+On GitLab, you can either connect your external repository from [GitHub](https://www.github.com) or by URL. In this example, we will connect our external repository by URL.
+
+To connect your external repository by URL, fill in the required information in the form below and click the **Create Project** button at the bottom of the page.
+
+### 4. Configure the Pipeline
+- To configure the new pipeline that you just created, click the **Configure Pipeline** button in the center of the page.
+
+- Click on the **+Set up CI/CD** button as shown below.
+
+- Create a new `.gitlab-ci.yml` file at the root of the repository.
+
+Below is a sample of GitLab YAML created for your reference:
+
+```bash
+## Define the image to use (adjust for macOS if needed)
+image: ubuntu:latest
+
+## Define pipelines (can have multiple pipelines)
+pipelines:
+## Default pipeline (can be named differently)
+default:
+## Branches to trigger this pipeline on (adjust as needed)
+branches:
+- master
+
+## Define steps in the pipeline
+steps:
+## Download Hyperexecute CLI (descriptive name)
+- name: Download Hyperexecute CLI
+script: |
+wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+chmod u+x hyperexecute
+
+## Run Hyperexecute tests (descriptive name)
+- name: Run Hyperexecute Tests
+script: |
+./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file_path>
+```
+
+### 5. Run Your Job
+- To commit your changes and run your job, click the **Commit Changes** button.
+
+**Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
+
+>
+**Run your tests at speeds never seen before. Happy testing! :)**
