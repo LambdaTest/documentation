@@ -1,6 +1,6 @@
 ---
 title: "Assistive Touch on Real iOS Devices"
-sidebarTitle: "Use Assistive Touch"
+sidebarTitle: "Assistive Touch"
 description: "Simulate system-level actions like Home, Notification Center, Screenshot, and more during manual testing on real iOS devices."
 keywords: ['assistive touch', 'ios gestures', 'manual app testing', 'navigation testing', 'screenshot testing', 'shake gesture', 'app switcher', 'testmu ai ios', 'real devices']
 "og:description": "Simulate system-level actions like Home, Notification Center, Screenshot, and more during manual testing on real iOS devices."
@@ -17,7 +17,10 @@ This allows you to replicate gestures such as going to the Home Screen, opening 
 To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 </Note>
 
-## Use Cases
+<Tabs>
+  <Tab title="App">
+
+### Use Cases
 
 - Navigate to the Home Screen after completing a flow (e.g., logout, relaunch).
 - Open the Notification Center to test notification-related workflows.
@@ -25,14 +28,14 @@ To enable it for your organization, please contact us via <span className="doc__
 - Capture screenshots for UI validation or bug reporting.
 - Simulate a shake gesture to test motion-based features.
 
-## Supported Devices
+### Supported Devices
 
 | Device Type | Supported OS Version |
 |-------------|----------------------|
 | iPhone      | iOS 14 and above     |
 | iPad        | iPadOS 14 and above  |
 
-## Supported Actions
+### Supported Actions
 
 | Action | Description |
 |--------|-------------|
@@ -42,7 +45,7 @@ To enable it for your organization, please contact us via <span className="doc__
 | **Screenshot** | Captures the current screen. |
 | **Shake Gesture** | Simulates device shake for undo or motion triggers. |
 
-## Using Assistive Touch in Manual Testing
+### Using Assistive Touch in Manual Testing
 
 **Step 1:** Start a manual testing session on a real iOS device in **App Live** or **Browser Live**.
 
@@ -53,3 +56,46 @@ To enable it for your organization, please contact us via <span className="doc__
 **Step 3:** Tap the Assistive Actions icon to open the gesture menu, then select the desired action to simulate it on the device
 
 ![Gesture Functions](/assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.png)
+
+  </Tab>
+  <Tab title="Browser">
+
+### Use Cases
+
+- Navigate to the Home Screen after completing a flow (e.g., logout, relaunch).
+- Open the Notification Center to test notification-related workflows.
+- Switch between apps to validate background/foreground behavior.
+- Capture screenshots for UI validation or bug reporting.
+- Simulate a shake gesture to test motion-based features.
+
+### Supported Devices
+
+| Device Type | Supported OS Version |
+|-------------|----------------------|
+| iPhone      | iOS 14 and above     |
+| iPad        | iPadOS 14 and above  |
+
+### Supported Actions
+
+| Action | Description |
+|--------|-------------|
+| **Home Button** | Returns to the Home Screen. |
+| **Notification Center** | Pulls down the system notification tray. |
+| **App Switcher** | Opens multitasking to switch or close apps. |
+| **Screenshot** | Captures the current screen. |
+| **Shake Gesture** | Simulates device shake for undo or motion triggers. |
+
+### Using Assistive Touch in Manual Testing
+
+**Step 1:** Start a manual testing session on a real iOS device in **App Live** or **Browser Live**.
+
+**Step 2:** From the session toolbar, open the **iOS Settings** panel and toggle **Assistive Touch on** .
+
+![Assistive Touch Settings](/assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.png)
+
+**Step 3:** Tap the Assistive Actions icon to open the gesture menu, then select the desired action to simulate it on the device
+
+![Gesture Functions](/assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.png)
+
+  </Tab>
+</Tabs>
