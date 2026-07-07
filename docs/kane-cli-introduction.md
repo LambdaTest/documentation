@@ -61,6 +61,15 @@ kane-cli login
 kane-cli run --url https://example.com "Click the 'More information' link and verify the page loads"
 ```
 
+## Supported IDEs
+
+Kane CLI runs from the integrated terminal of your editor, so you can drive browser tests without leaving your development environment. It is supported in:
+
+- **Eclipse-based IDEs**: run Kane CLI from the integrated terminal in Eclipse and Eclipse-based plugins.
+- **Visual Studio**: run Kane CLI from the Visual Studio integrated terminal.
+- **Xcode**: for mobile testing on Xcode, use the dedicated [TestMu Xcode plugin](https://www.testmuai.com/support/docs/xcode-plugin-testmu/).
+- **Web-based IDEs**: run Kane CLI from browser-based editors with an integrated terminal.
+
 ## Three Modes
 
 | Mode | Command | Best For |
