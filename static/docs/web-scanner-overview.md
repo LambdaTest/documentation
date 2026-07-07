@@ -1,0 +1,50 @@
+# Web Scanner Overview
+
+## What is TestMu AI Web Scanner?
+
+TestMu AI Web Scanner is an AI-powered, browser-based scanning platform designed to help teams identify and resolve visual and accessibility issues across web applications. It enables both automated Visual UI Regression Testing and WCAG-compliant Accessibility Testing, allowing organizations to proactively catch visual bugs and accessibility violations across thousands of URLs at scale.
+
+This tool empowers QA teams, developers, and compliance managers to perform scheduled scans on public or locally-hosted sites, compare builds visually with pixel-perfect precision, and generate audit-ready accessibility reports.
+
+## Why Web Scanner?
+
+Manual testing of large web applications for layout shifts, broken UI, or WCAG non-compliance is slow and error-prone. TestMu AI Web Scanner solves this by enabling:
+
+* Automated visual comparisons across multiple browsers and resolutions powered by SmartUI
+* Accessibility audits powered by dynamic WCAG checks
+* Smart scheduling of one-time or recurring scans
+* Support for authenticated and local testing pages
+* Seamless redirection to SmartUI and Accessibility Dashboards
+
+## Supported Scan Types
+
+### 1. Visual UI Scan
+
+Visual scans detect pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
+
+#### Key Capabilities
+
+- **Cross-Browser Validation**: Test UI across Chrome, Firefox, Edge, and Safari.
+- **Responsive Testing**: Check layouts on 8 desktop sizes and 200+ mobile viewports (Android & iOS).
+- **Custom Configurations**: Override defaults with your own SmartUI JSON settings.
+- **Accurate Screenshots**: Use delays to capture pages with animations or dynamic content.
+- **History & Comparison**: Access past scans to track changes, compare builds, and spot regressions.
+
+### 2. Accessibility Scan
+
+Accessibility scans audit your pages against WCAG 2.x standards, surfacing violations and recommendations to improve inclusivity.
+
+**Key Features:**
+* WCAG 2.0/2.1 AA compliance and more
+* "Needs Review" toggle for human-verifiable issues
+* Best Practices flagging
+* Deep scan reports with severity filters
+* Smart filters for recurring violations
+* Exportable reports
+
+## Ideal Users
+
+* **Frontend QA Teams:** Perform nightly visual regression scans across builds
+* **Accessibility Engineers:** Validate compliance across thousands of URLs
+* **Product Owners:** Monitor web releases for visual or WCAG health
+* **Agencies:** Provide clients with before/after visual proof and compliance reports

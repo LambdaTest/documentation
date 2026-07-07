@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "prestart": "node scripts/build-api-data.js && node scripts/generate-api-pages.js",
+    "prestart": "node scripts/build-api-data.js && node scripts/generate-api-pages.js && node scripts/generate-static-md.js",
     "start": "docusaurus start",
-    "prebuild": "node scripts/build-api-data.js && node scripts/generate-api-pages.js",
+    "prebuild": "node scripts/build-api-data.js && node scripts/generate-api-pages.js && node scripts/generate-static-md.js",
+    "generate-static-md": "node scripts/generate-static-md.js",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
