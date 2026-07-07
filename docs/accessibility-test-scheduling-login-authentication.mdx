@@ -30,14 +30,14 @@ If the site is not reachable from the public internet, combine login with **loca
 2. Expand **Advanced options**.
 3. Under login settings, use **Add** next to **Add login configurations** to open the modal.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/login-configs.png').default} className="doc_img" alt="Advanced options in the schedule wizard with Add login configurations" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/login-configs.png" className="doc_img" alt="Advanced options in the schedule wizard with Add login configurations" />
 
 ### From the dashboard
 
 1. Open **Login configurations** from the Accessibility (or Web Scanner scheduling) area of the dashboard, as labeled in your product.
 2. The **login modal** opens. You can review existing profiles or add a new one.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/login-modal.png').default} className="doc_img" alt="Login modal listing saved configurations with option to add a new configuration" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/login-modal.png" className="doc_img" alt="Login modal listing saved configurations with option to add a new configuration" />
 
 ## Create a configuration
 
@@ -70,7 +70,7 @@ Use when the server responds with **HTTP Basic** authentication (browser-style u
 | Username | Yes | Username sent with Basic auth. |
 | Password | Yes | Password sent with Basic auth. |
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/basic_auth.png').default} className="doc_img" alt="Basic authentication fields: login URL, username, and password" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/basic_auth.png" className="doc_img" alt="Basic authentication fields: login URL, username, and password" />
 
 ### Form authentication
 
@@ -86,7 +86,7 @@ Use when, after opening the **Login Page URL**, the username field, password fie
 | Login Button CSS Selector | Yes | CSS selector for the control that submits the form (for example **Sign in**). |
 | Post-login URL | No | If set, helps verify navigation to a URL that indicates a successful login. |
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/form_auth.png').default} className="doc_img" alt="Form authentication with selectors and optional post-login URL" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/form_auth.png" className="doc_img" alt="Form authentication with selectors and optional post-login URL" />
 
 ### Multi-page authentication
 
@@ -101,7 +101,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 | Username CSS Selector | Yes | Selector for the username or email field. |
 | Next Button CSS Selector | Yes | Selector for the control that advances to the password step. |
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-username.png').default} className="doc_img" alt="Multi-page login step one: username page fields" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/multi-page-username.png" className="doc_img" alt="Multi-page login step one: username page fields" />
 
 #### Step 2 — Password page
 
@@ -112,7 +112,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 | Password CSS Selector | Yes | Selector for the password field. |
 | Login Button CSS Selector | Yes | Selector for the control that completes sign-in. |
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-password.png').default} className="doc_img" alt="Multi-page login step two: password page fields" />
+<img loading="lazy" src="/assets/images/accessibility-testing/features/login/multi-page-password.png" className="doc_img" alt="Multi-page login step two: password page fields" />
 
 #### Step 3 — After login
 

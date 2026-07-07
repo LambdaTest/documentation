@@ -49,7 +49,7 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
 **Step 1:** Log in to your Bitbucket account. Go to repositories & import the <BrandName /> Git repository for Bitbucket Pipelines. You will be facing the below screen after import is successful.
 
-<img loading="lazy" src={require('../assets/images/bigbucket-pipeline/1.webp').default} alt="Bitbucket Pipelines" width="1267" height="500" className="doc_img"/>
+<img loading="lazy" src="/assets/images/bigbucket-pipeline/1.webp" alt="Bitbucket Pipelines" width="1267" height="500" className="doc_img"/>
 
 **Step 2:** After importing the Git repository, fetch the [yml file](https://github.com/qa-repo/protractor-selenium-bitbucket-sample/blob/master/bitbucket-pipelines.yml) to run your automation tests using the Protractor framework on <BrandName /> Selenium Grid.
 
@@ -72,11 +72,11 @@ pipelines:
 ```
 **Step 3:** Now, you need to add <BrandName /> environment variables into your Bitbucket pipelines. These environment variables will help to authenticate your test before they are executed on <BrandName /> Selenium Grid. Go to **Settings** */} **General** */} **Username aliases** */} **Repository variables**.
 
-<img loading="lazy" src={require('../assets/images/bigbucket-pipeline/2.webp').default} alt="Bitbucket Pipelines" width="1286" height="615" className="doc_img"/>
+<img loading="lazy" src="/assets/images/bigbucket-pipeline/2.webp" alt="Bitbucket Pipelines" width="1286" height="615" className="doc_img"/>
 
 **Step 4:** After adding the environment variables, you need to visit your pipeline & click on **Rerun**.
 
-<img loading="lazy" src={require('../assets/images/bigbucket-pipeline/3.webp').default} alt="Bitbucket Pipelines" width="1264" height="528" className="doc_img"/>
+<img loading="lazy" src="/assets/images/bigbucket-pipeline/3.webp" alt="Bitbucket Pipelines" width="1264" height="528" className="doc_img"/>
 
 **Step 5:** Run the below command to execute a test on <BrandName /> Selenium Grid.
 

@@ -29,7 +29,7 @@ In this document, we will see how to run Selenium IDE tests on <BrandName /> clo
 
 *   You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
 
-<img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="<BrandName /> Access Key" width="462" height="325" className="doc_img"/>
+<img loading="lazy" src="/assets/images/uploads/profile-1.webp" alt="<BrandName /> Access Key" width="462" height="325" className="doc_img"/>
 
 For the demonstration of executing Selenium IDE tests on the <BrandName /> grid, we’ll create a test suite that comprises of four test cases- two to perform a search for ‘<BrandName />’ on Google & DuckDuckGo, and the other two to perform a search for ‘<BrandName /> Blog’ on Google & DuckDuckGo.
 
@@ -39,8 +39,8 @@ For the demonstration of executing Selenium IDE tests on the <BrandName /> grid,
 
 The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
 
-*   Right click on the test suite and go to Settings. <img loading="lazy" src={require('../assets/images/uploads/open-settings-in-Selenium-IDE.webp').default} alt="Test Suite Settings" width="898" height="422" className="doc_img"/>
-*   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src={require('../assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp').default} alt="Test Suite Properties" width="893" height="323" className="doc_img"/>
+*   Right click on the test suite and go to Settings. <img loading="lazy" src="/assets/images/uploads/open-settings-in-Selenium-IDE.webp" alt="Test Suite Settings" width="898" height="422" className="doc_img"/>
+*   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src="/assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp" alt="Test Suite Properties" width="893" height="323" className="doc_img"/>
 *   Save the SIDE project.
 
 We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on <BrandName /> Selenium Cloud Grid.
@@ -98,7 +98,7 @@ selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces
 
 We have successfully executed all the steps to run Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your <BrandName /> profile](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
 
-Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests: <img loading="lazy" src={require('../assets/images/uploads/SIDE-Runner-execution-snapshot-1.webp').default} alt="test execution snapshots" width="1353" height="493" className="doc_img"/> <img loading="lazy" src={require('../assets/images/uploads/automation-timeline-snapshot.webp').default} alt="automation test timeline" width="1353" height="493" className="doc_img"/>
+Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests: <img loading="lazy" src="/assets/images/uploads/SIDE-Runner-execution-snapshot-1.webp" alt="test execution snapshots" width="1353" height="493" className="doc_img"/> <img loading="lazy" src="/assets/images/uploads/automation-timeline-snapshot.webp" alt="automation test timeline" width="1353" height="493" className="doc_img"/>
 
 ## How To Run Multiple Test Cases Within Same Test Suite?
 
@@ -108,8 +108,8 @@ You might have lots of individual tests in a single test suite to test all featu
 
 Selenium IDE provides the feature to overcome this as well. In order to run multiple test cases within the same test suite with a single instance of a browser, the Persist session option in the Selenium IDE can be used. Below are the steps for how to do so:
 
-1.  Click over the three dot option of the test suite. Choose the setting option. <img loading="lazy" src={require('../assets/images/uploads/click-on-3-dots-1.webp').default} alt="test suite settings" width="1905" height="1025"  className="doc_img"/>
-2.  Then choose persist session option and submit. <img loading="lazy" src={require('../assets/images/uploads/select-persist-sessions-1.webp').default} alt="persist session" width="1905" height="1025" className="doc_img"/>
+1.  Click over the three dot option of the test suite. Choose the setting option. <img loading="lazy" src="/assets/images/uploads/click-on-3-dots-1.webp" alt="test suite settings" width="1905" height="1025"  className="doc_img"/>
+2.  Then choose persist session option and submit. <img loading="lazy" src="/assets/images/uploads/select-persist-sessions-1.webp" alt="persist session" width="1905" height="1025" className="doc_img"/>
 3.  For the second query, you pass the variable value through the SIDE Runner using command line. You can use the SIDE Runner's "**param**" flag to pass the values. For example:
 
 ```javascript

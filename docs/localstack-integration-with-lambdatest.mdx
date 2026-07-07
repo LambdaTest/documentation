@@ -45,11 +45,11 @@ In this section, we will set up out LocalStack account to generate our API keys.
 
 **Step 1:** To get generate your API key, head to **Account**. 
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/local-three.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/local-three.webp" alt="add" width="1346" height="647" className="doc_img"/>
 
 **Step 2:** Select the **API Keys** tab.  
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/local-four.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/local-four.webp" alt="add" width="1346" height="647" className="doc_img"/>
 
 **Step 3:** Generate and **copy your API Key**. 
 
@@ -105,7 +105,7 @@ The above command will create the **S3 buckets**, put the bucket names into the 
 
 > **Note:** You can visit **webapp.s3-website.localhost.localstack.cloud:4566** on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-one.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-one.webp" alt="add" width="1346" height="647" className="doc_img"/>
 
 **Step 3:** You can fetch the function URL by running the following commands:
 
@@ -113,7 +113,7 @@ The above command will create the **S3 buckets**, put the bucket names into the 
 awslocal lambda list-function-url-configs --function-name presign 
 awslocal lambda list-function-url-configs --function-name list
 ```
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-two.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-two.webp" alt="remove" width="1347" height="644" className="doc_img"/>
 
 **Step 4:** You can now upload an image file and download the resized file from the `localstack-thumbnails-app-resized` bucket.
 
@@ -162,13 +162,13 @@ sourcePayload:
   accessToken: ${{ .secrets.PAT }}
 ```
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-three.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-three.webp" alt="remove" width="1347" height="644" className="doc_img"/>
 
 **Step 2:** Commit the he.yml file on your repository. Ensure that the `LOCALSTACK_API_KEY` secret has been configured in your GitHub repository as a secret. 
 
 **Step 3:** Navigate to the **Settings** page of the repository, and from the sidebar, click **Secrets and Variables**. Click **Actions** and click the **New Repository Secret** button to add the `HE. LOCALSTACK_API_KEY`. This key is added to the HyperExecute Portal.
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-four.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-four.webp" alt="remove" width="1347" height="644" className="doc_img"/>
 
 **Step 4:** To create the GitHub Actions pipeline `YAML` file, navigate to the repository where your code is available. In this example, you can assume that we are adding this to the previous code sample that we demonstrated. 
 
@@ -195,10 +195,10 @@ wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
 
 **Step 6:** Save the configuration in your GitHub Actions pipeline. Below is an example of how a test that is run on the GitHub Actions pipeline gets executed:
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-five.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-five.webp" alt="remove" width="1347" height="644" className="doc_img"/>
 
 Below is an example of a **HyperExecute** job that was triggered through the above pipeline:
 
-<img loading="lazy" src={require('../assets/images/localstack-integration/localstack-six.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
+<img loading="lazy" src="/assets/images/localstack-integration/localstack-six.webp" alt="remove" width="1347" height="644" className="doc_img"/>
 
 > That was all you need to know for <BrandName /> + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
